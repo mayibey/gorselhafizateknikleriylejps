@@ -1,0 +1,253 @@
+[
+ {
+  "kanun_id": 41,
+  "kart_id": "41-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Alt sınır 3 yıl yerine 5 yıl yapıldı; artırım oranı m.3/1'deki üçte bir-yarı oranıyla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık suçunun konusu tütün mamulü ise bu fıkra uyarınca verilecek hapis cezası beş yıldan az olamaz.”",
+    "“Kaçakçılık suçunun konusu akaryakıt ise verilecek ceza üçte birinden yarısına kadar artırılır.”"
+   ],
+   "dogrusu": [
+    "Konusu akaryakıt, tütün veya alkollü içki olan kaçakçılıkta bu fıkra uyarınca verilecek ceza üç yıldan az olamaz (m.3/10)",
+    "Konusu akaryakıt olan kaçakçılıkta fıkralara göre verilecek cezalar yarısından iki katına kadar artırılır (m.3/10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Teşebbüste ceza indirimi yapıldığı iddia edildi (fıkra no güncel metinde 22)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık fiilleri teşebbüs aşamasında kalırsa, faile tamamlanmış suça göre indirilmiş ceza verilir.”"
+   ],
+   "dogrusu": [
+    "Kaçakçılık fiilleri teşebbüs aşamasında kalmış olsa bile tamamlanmış gibi cezalandırılır (m.3/22)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Birlikte işlemede kişi sayısı üçten ikiye indirildi; örgüt artırımı iki kattan yarıya indirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık suçunun iki kişi tarafından birlikte işlenmesi hâlinde verilecek ceza yarı oranında artırılır.”",
+    "“Kaçakçılık suçunun bir örgütün faaliyeti çerçevesinde işlenmesi hâlinde verilecek ceza yarı oranında artırılır.”"
+   ],
+   "dogrusu": [
+    "Ceza, suçun üç veya daha fazla kişi tarafından birlikte işlenmesi hâlinde yarı oranında artırılır (m.4/2)",
+    "Suç bir örgütün faaliyeti çerçevesinde işlenirse verilecek ceza iki kat artırılır (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Görevli için artırım yarı yerine iki kat yapıldı (örgüt oranıyla karıştırma); meslek kolaylığı artırımı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık suçunun, kaçakçılığı önlemekle görevli kişilerce işlenmesi hâlinde verilecek ceza iki kat artırılır.”",
+    "“Meslek ve sanatın sağladığı kolaylıklardan yararlanılarak işlenen kaçakçılık suçlarında cezada artırım yapılmaz.”"
+   ],
+   "dogrusu": [
+    "Suçu kaçakçılıkla mücadele görevlisi işlerse veya mesleğinin kolaylığından yararlanılırsa ceza iki kat değil, yarı oranında artırılır (m.4/4)",
+    "Suç meslek ve sanatın sağladığı kolaylıklardan yararlanılarak işlenirse verilecek ceza yarı oranında artırılır (m.4/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-12",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Göz yuman görevlinin sıfatı müşterek failden yardım edene indirildi (fıkra no güncel metinde 6)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılığı önlemekle görevli olup suçun işlenmesine kasten göz yuman kişi, yardım eden sıfatıyla cezalandırılır.”"
+   ],
+   "dogrusu": [
+    "Kaçakçılığı önlemekle görevli olup suçun işlenmesine kasten göz yuman kişi, işlenen suçun müşterek faili olarak sorumlu tutulur (m.4/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-13",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Hapis alt sınırı 10 yıldan 5 yıla indirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçak eşya toplum sağlığını tehdit edecek nitelikteyse verilecek hapis cezasının alt sınırı beş yıldır.”"
+   ],
+   "dogrusu": [
+    "Kaçak eşya Devletin güvenliğini bozacak veya toplum sağlığını tehdit edecek nitelikteyse hapis cezası on yıldan az olamaz (m.4/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-18",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kaçak akaryakıtın teslim makamı gümrük idaresine kaydırıldı; masraflar döner sermayeye yüklendi (m.11/6 akaryakıtı hariç tutar)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçak akaryakıt, yakalandığı yerde tutanakla gümrük idaresine teslim edilir.”",
+    "“Kaçak akaryakıtın muhafaza ve nakliye masrafları Gümrük ve Ticaret Bakanlığı döner sermaye işletmesi gelirlerinden karşılanır.”"
+   ],
+   "dogrusu": [
+    "Kaçak akaryakıt gümrük idaresine değil, il özel idaresine; olmayan yerde yatırım izleme ve koordinasyon başkanlığına teslim edilir (m.11/8)",
+    "Kaçak akaryakıtın muhafaza ve nakliye masraflarını duruma göre il özel idaresi veya yatırım izleme ve koordinasyon başkanlığı karşılar (m.11/8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-19",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Taşıt müsaderesi koşulsuz gösterildi; seçimlik koşullar birlikte aranır gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçak eşya taşımasında bilerek kullanılan her taşıma aracı, başka bir koşul aranmaksızın müsadere edilir.”",
+    "“Taşıma aracının müsaderesi için kaçak eşyanın gizli tertibatta saklanması ve yükün tamamını oluşturması birlikte aranır.”"
+   ],
+   "dogrusu": [
+    "Taşıt ancak gizli tertibat, yükün tamamı veya ağırlıklı bölümü ya da yasak veya zararlı eşya koşullarından biri varsa müsadere edilebilir (m.13/1)",
+    "Taşıt müsaderesi için sayılan koşulların birlikte değil, yalnızca birinin gerçekleşmesi yeterlidir (m.13/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-21",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Görevli mahkeme genel olarak ağır ceza gösterildi; teklif eden ve belirleyen makamlar yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık Kanunu kapsamına giren suçlar dolayısıyla açılan davalar ağır ceza mahkemelerinde görülür.”",
+    "“Kaçakçılık davalarına bakacak asliye ceza mahkemeleri, Hâkimler ve Savcılar Kurulunun teklifi üzerine Adalet Bakanlığınca belirlenir.”"
+   ],
+   "dogrusu": [
+    "Kaçakçılık davaları HSK'ca belirlenen asliye ceza mahkemelerinde görülür; bağlantılı resmî belgede sahtecilikte ağır ceza görevlidir (m.17/2)",
+    "Görevli asliye ceza mahkemeleri, Adalet Bakanlığının teklifi üzerine HSK tarafından belirlenir (m.17/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-23",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Görevli kurumlara MİT eklendi; görevlilerin harekete geçmesi mülkî amir iznine bağlandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Millî İstihbarat Teşkilatı, Kaçakçılıkla Mücadele Kanunundaki fiilleri önleme, izleme ve araştırmakla yükümlü kurumlar arasında sayılmıştır.”",
+    "“Operasyon gerektiren kaçakçılık olayından haberdar olan görevliler, mahallin en büyük mülkî amirinin iznini almadan kanunî görevlerine başlayamaz.”"
+   ],
+   "dogrusu": [
+    "Fiilleri önleme, izleme ve araştırmakla yükümlüler mülkî amirler, gümrük, Emniyet, Jandarma ve Sahil Güvenlik personelidir; MİT sayılmamıştır (m.19/1)",
+    "Görevliler operasyon gerektiren olaylarda kanunî görevlerine başlar ve aynı zamanda mahallin en büyük mülkî amirine bilgi verir (m.19/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-25",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "KART_CELISKI (kapsam): hüküm m.22/1'i 'dur ihtarına uymayan ve kaçan her şüpheli' için genel kural gibi yazıyor ve 'yakalamak amacıyla kaçana ateş edilmez' diye genelliyor; resmî metin yalnız belirlenen kapı ve yollar dışından gümrük bölgesine girmek, çıkmak veya geçmek isteyen kişiyi düzenler (başka hâllerde 2803/PVSK silah kullanma hükümleri ayrıca uygulanabilir). Kutu: kaçana yakalamak amacıyla hedefe ateş serbest gösterildi; avukatlık ücreti memura yüklendi",
+  "duzeltme": {
+   "hukum": "Gümrük Kanunu gereğince belirlenen kapı ve yollardan başka yerlerden gümrük bölgesine girmek, çıkmak veya geçmek isteyen kişi dur uyarısına uymazsa havaya ateş edilerek uyarı yinelenir; ancak silahla karşılığa yeltenilmesi veya sair surette meşru müdafaa durumunda yetkili memurlar saldırıyı etkisiz kılacak oranda doğrudan hedefe ateş edebilir; silah kullanan memura kurumunca avukat sağlanır (m.22/1)",
+   "sinavda_boyle_yazarlar": [
+    "“Gümrük bölgesine izinsiz yerlerden girmek isteyen kişi dur uyarısına uymazsa, yetkili memurlar yakalamak amacıyla doğrudan hedefe ateş edebilir.”",
+    "“Silah kullanmaları nedeniyle haklarında soruşturma açılan memurlar, avukatlık ücretini kendileri karşılar.”"
+   ],
+   "dogrusu": [
+    "Dur uyarısına uyulmazsa havaya ateşle uyarı yinelenir; hedefe ateş ancak silahla karşılık veya meşru müdafaa durumunda yapılabilir (m.22/1)",
+    "Silah kullanmaları nedeniyle soruşturma açılan memurlara bağlı oldukları kurumca avukat sağlanır ve ücreti kurumca karşılanır (m.22/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-26",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Uyarı ateşi aşaması atlandı; deniz araçlarına yanaşma yetkisi savcı emrine bağlandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Durma ihtarına uymayan deniz aracına uyarı ateşi yapılmadan doğrudan durmaya zorlayacak şekilde üzerine ateş edilir.”",
+    "“Kaçakçılıkla görevliler, gümrük bölgesindeki deniz araçlarına ancak Cumhuriyet savcısının emriyle yanaşıp yük ve belgelerini inceleyebilir.”"
+   ],
+   "dogrusu": [
+    "İhtara uymayan deniz aracına önce uyarı ateşi yapılır; buna da uymayıp kaçmaya devam ederse durmaya zorlayacak şekilde ateş edilir (m.22/2)",
+    "Kaçakçılıkla görevliler, gümrük bölgesindeki her nevi deniz aracına yanaşıp yük ve belgelerini incelemeye yetkilidir (m.22/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-27",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İhbarsız yakalamada muhbir payı Hazineye bırakıldı; yarı yarıya dağılım m.23/1-a oranlarıyla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İhbarsız yakalama olaylarında muhbir payına düşen ikramiye Hazineye irat kaydedilir.”",
+    "“Dağıtılacak ikramiyenin yüzde yetmiş beşi muhbirlere, yüzde yirmi beşi elkoyanlara verilir.”"
+   ],
+   "dogrusu": [
+    "İhbarsız yakalama olaylarında ikramiyenin tamamı elkoyma ikramiyesine hak kazananlara ödenir (m.23/2)",
+    "Dağıtılacak ikramiyenin yüzde ellisi muhbirlere, yüzde ellisi elkoyma ikramiyesine hak kazananlara verilir (m.23/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-28",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Görevliye muhbir ikramiyesi verildi; elkoyma ikramiyesi yalnız fiilen katılanlara daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılığı önlemekle görevli jandarma personeli, ihbarda bulunduğu olaylarda muhbir ikramiyesi de alabilir.”",
+    "“Elkoyma ikramiyesine yalnızca yakalama işlemine bizzat ve fiilen katılan görevliler hak kazanır.”"
+   ],
+   "dogrusu": [
+    "Kaçakçılığı önleme, izleme ve soruşturmakla yükümlü olanlara muhbir ikramiyesi ödenmez; yalnız elkoyma ikramiyesine hak kazanabilirler (m.23/2)",
+    "Yakalamaya fiilen katılanlar yanında iletişim tespiti, teknik izleme, bilgi toplama, analiz veya planlamayla katkı sağlayanlar da elkoyma ikramiyesine hak kazanır (m.23/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-29",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Damga vergisi istisnası kaldırıldı; olay başı ve yıllık tavan yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık ikramiyeleri, damga vergisi dâhil hiçbir vergi, resim ve harca tâbi tutulmaz.”",
+    "“Elkoyma ikramiyesi olay başına 120.000, bir yılda 30.000 gösterge rakamının memur aylık katsayısıyla çarpımını geçemez.”"
+   ],
+   "dogrusu": [
+    "Kaçakçılık ikramiyeleri damga vergisi hariç vergi, resim ve harca tâbi tutulmaz (m.23/3)",
+    "Elkoyma ikramiyesi olay başına 30.000, bir yılda 120.000 gösterge rakamının memur aylık katsayısıyla çarpımını geçemez (m.23/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-30",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Hudut birlikleri ve görevlendirilen Deniz Kuvvetleri personeli ikramiye dışında gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kara Kuvvetleri Komutanlığı hudut birlikleri personeline kaçakçılık ikramiyesi ödenmez.”",
+    "“Yardım talebiyle kaçakçılıkla mücadele görevi verilen Deniz Kuvvetleri Komutanlığı personeli ikramiyeden yararlanamaz.”"
+   ],
+   "dogrusu": [
+    "Kara sınırlarında görevli Kara Kuvvetleri hudut birlikleri personeline de bu maddedeki esaslara göre ikramiye ödenir (m.23/7)",
+    "Yardım talebiyle kaçakçılıkla mücadele görevi verilen Deniz Kuvvetleri Komutanlığı personeline de ikramiye ödenir (m.23/7)"
+   ]
+  }
+ }
+]

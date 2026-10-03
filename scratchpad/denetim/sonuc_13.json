@@ -1,0 +1,260 @@
+[
+  {"kanun_id": 135, "kart_id": "135-0", "sorun": "hukum_hatali",
+   "aciklama": "m.1 amaç metni yürürlükten kalkan 2009 Tebliğinden (ulaşım, malzeme, hizmet yoğunluğu, renk kodu sistemi); güncel m.1'e göre yazıldı, kırmızı kutudaki açıklama notu ayıklandı.",
+   "duzeltme": {
+     "hukum": "Amaç: acil servislerin çağın gerekleri ve günümüz ihtiyaçlarına uygun geliştirilmesi; personel ve hizmet kıstasları, fiziki şartlar, tıbbi teknoloji ve donanımın asgari standartlarının belirlenmesi; hastane öncesi acil sağlık hizmetleriyle etkin koordinasyon; acil servislerin tesisin statüsüne, bölgenin ihtiyaç ve şartlarına göre seviyelendirilmesi; triyaj, tedavi süreçleri, konsültasyon, yatış, sevk ve nöbet hizmetlerine ilişkin usul ve esasların belirlenmesi (m.1); kapsam: ağız ve diş sağlığı hastaneleri ve merkezleri hariç kamu, özel ve üniversitelere ait tüm yataklı sağlık tesisleri ve buralarda görev yapan personel; özel tesisler ile vakıf üniversitesi hastaneleri, Özel Hastaneler Yönetmeliğinin acil ünite ve servis hükümleri saklı kalmak kaydıyla Tebliğe tabidir (m.2); dayanak: 3359 sayılı Sağlık Hizmetleri Temel Kanunu m.3, 1 sayılı Cumhurbaşkanlığı Kararnamesi m.355/1-a, e ve m.508, Yataklı Tedavi Kurumları İşletme Yönetmeliği ve Acil Sağlık Hizmetleri Yönetmeliği m.15 (m.3)",
+     "sinavda_boyle_yazarlar": [
+       "Özel hastaneler ve vakıf üniversitesi hastaneleri bu Tebliğin kapsamı dışındadır",
+       "Ağız ve diş sağlığı hastaneleri de bu Tebliğ kapsamındadır"
+     ],
+     "dogrusu": [
+       "Kapsam dışında kalan yalnız ağız ve diş sağlığı hastaneleri ve merkezleridir; özel ve vakıf üniversitesi hastaneleri de Tebliğe tabidir (m.2)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-1", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.4 ile uyumlu; kırmızı kutuda yanlış ifade yerine doğrusunu da içeren açıklama notu vardı, ayıklandı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Acil servis seviyesini Genel Müdürlük belirler, il sağlık müdürlüğü onaylar"
+     ],
+     "dogrusu": [
+       "Acil servis seviyesini il sağlık müdürlüğü belirler, Genel Müdürlük onaylar (m.4/ç, m.5/1)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-2", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Tanımlar güncel m.4 (2024 değişiklikleri dahil) ile uyumlu; kırmızı kutuda doğrusunu da içeren açıklama notu vardı, ayıklandı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "İcapçı tabip nöbetini hastanede fiilen tutan tabiptir"
+     ],
+     "dogrusu": [
+       "İcapçı tabip ev nöbeti tutar; nöbetini hastanede fiilen tutan nöbetçi tabiptir (m.4/ğ, m)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-4", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.5/3-4 ile uyumlu; kırmızı kutuda doğrusunu da içeren açıklama notu vardı, ayıklandı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Aynı binada ayrı kurulan erişkin ve çocuk acil servislerin fizik mekân kıstasları ayrı ayrı değerlendirilir"
+     ],
+     "dogrusu": [
+       "Aynı binada ayrı kurulan acil servislerde fizik mekân kıstasları toplam üzerinden, hizmet kıstasları ayrı ayrı değerlendirilir (m.5/3-a)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-11", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.8/1-2 ile uyumlu; kırmızı kutuda iki yanlış ve doğruları tek açıklama notunda birleşikti, ayrıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Triyaj eğitimini il sağlık müdürlüğü verir",
+       "Triyajda yalnız Ek-4 tablosu kullanılabilir"
+     ],
+     "dogrusu": [
+       "Triyaj eğitimini acil servis sorumlu tabibi verir veya verdirir; Ek-4 dışında uluslararası kabul görmüş yöntem de kullanılabilir (m.8/2)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-12", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.8/3-4 ile uyumlu; kırmızı kutuda doğrusunu da içeren açıklama notu vardı, ayıklandı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Kayıt ve triyaj aynı anda yapılamıyorsa önce kayıt, sonra triyaj yapılır"
+     ],
+     "dogrusu": [
+       "Kayıt ve triyaj aynı anda yapılamıyorsa önce triyaj, sonra kayıt yapılır (m.8/3)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-13", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.8/5-6 (2024 değişikliği dahil) ile uyumlu; kırmızı kutuda not ve tekrar vardı, Doğrusu ikinci yanlışı karşılamıyordu.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "112 ambulansıyla getirilen hastaya acil serviste ayrıca triyaj yapılır",
+       "Ayrı ambulans kayıt kabul ve değerlendirme bankosu tüm seviyelerdeki acil servislerde zorunludur"
+     ],
+     "dogrusu": [
+       "112 ambulansıyla gelen hastaya ayrıca triyaj yapılmaz, ihtiyacına göre kırmızı veya sarı alana alınır (m.8/5)",
+       "Ayrı ambulans bankosu, ambulans vakası karşılayan III. seviye acil servislerde kurulur (m.8/6)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-14", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.8/7 ile uyumlu; kırmızı kutuda doğrusunu da içeren açıklama notu vardı, ayıklandı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Yoğunluğu azaltacak önlemleri baştabip öngörür, acil servis sorumlu tabibi onaylar"
+     ],
+     "dogrusu": [
+       "Yoğunluğu azaltacak önlemleri acil servis sorumlu tabibi öngörür, baştabip onaylar (m.8/7)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-15", "sorun": "hukum_hatali",
+   "aciklama": "Hüküm (triyaj sırası, bekleme salonu, kritik hastaya derhal işlem, pnömotik sistem, 'refakatçi kabul edilmez' kesin kuralı) yürürlükten kalkan 2009 Tebliği m.9'a ait; güncel m.9/1-3'te refakatçi istisnai durumda tabip onayıyla kabul edilebilir.",
+   "duzeltme": {
+     "madde": ["9"],
+     "baslik": "Refakatçi, numune taşıma ve hasta nakli",
+     "hukum": "Kırmızı ve sarı alanda hasta refakatçisi kabul edilmemesi esastır; istisnai durumlarda tabip onayıyla refakatçi kabul edilir (m.9/1); hasta yakını, hastanın açık onayı hâlinde anamnez alımı gibi işlemlere refakat edebilir (m.9/2); hasta yakınlarına numune örnekleri veya benzeri taşıma işi yaptırılmaz; görüntüleme gibi işlemler için yönlendirme personeli bilgi verir, yönlendirme işaret ve uyarıları kullanılır; ihtiyacı olan hastaların nakli taşıma personelince yapılır; tabip lüzum görürse bu işlemler sırasında hastaya bir sağlık personeli refakat eder (m.9/3)",
+     "sinavda_boyle_yazarlar": [
+       "Kırmızı ve sarı alanda refakatçi hiçbir durumda kabul edilemez",
+       "Hasta yakını numune örneklerini laboratuvara taşıyabilir"
+     ],
+     "dogrusu": [
+       "Kırmızı ve sarı alanda refakatçi kabul edilmemesi esastır; istisnai durumlarda tabip onayıyla kabul edilir (m.9/1)",
+       "Hasta yakınlarına numune veya benzeri taşıma işi yaptırılmaz (m.9/3)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-16", "sorun": "hukum_hatali",
+   "aciklama": "Hüküm (sosyal hizmet uzmanının işlem bilgilendirmesi, kırmızı alanda eğitimli personel, karşılama-taşıma elemanı) yürürlükten kalkan 2009 Tebliği m.9/4-5'e ait; güncel m.9/4-5'e göre yazıldı.",
+   "duzeltme": {
+     "madde": ["9"],
+     "baslik": "Bilgilendirme, mahremiyet, sosyal hizmet uzmanı ve psikolog",
+     "hukum": "Hastanın tıbbi durumu ve yapılacak tıbbi uygulamalar konusunda hastaya veya öncelikle velisi ya da vasisine, yoksa birinci derece yakınına veya yakınlarından birine ilgili tabip veya personel tarafından mahremiyet gözetilerek bilgilendirme yapılır; acil serviste her tıbbi işlemde hasta mahremiyetine, tıbbi etik kurallara ve hasta hakları ilkelerine uyulması zorunludur (m.9/4); ihtiyaç duyulan durumlarda hasta ve yakınlarıyla yapılacak görüşmelere eşlik etmesi için sosyal hizmet uzmanı ve psikolog çağrılır veya görevlendirilir (m.9/5)",
+     "sinavda_boyle_yazarlar": [
+       "Hastanın tıbbi durumu hakkındaki bilgilendirmeyi kural olarak sosyal hizmet uzmanı yapar",
+       "Velisi veya vasisi bulunsa bile bilgilendirme öncelikle hastanın birinci derece yakınına yapılır"
+     ],
+     "dogrusu": [
+       "Bilgilendirmeyi ilgili tabip veya personel yapar; sosyal hizmet uzmanı ve psikolog gerektiğinde görüşmelere eşlik eder (m.9/4-5)",
+       "Bilgilendirme hastaya veya öncelikle velisi ya da vasisine, yoksa birinci derece yakınına yapılır (m.9/4)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-21", "sorun": "hukum_hatali",
+   "aciklama": "Hüküm (özel tesislerde I-II-III seviye, II. seviyede biri dahili biri cerrahi 2 uzman) yürürlükten kalkan 2009 Tebliği m.12/14'e ait; güncel m.10/14-15 kamu ve özel tüm tesisler için tabip ve vardiya personeli sayısı öngörür.",
+   "duzeltme": {
+     "madde": ["10"],
+     "baslik": "Seviyeye göre asgari tabip ve sağlık personeli",
+     "hukum": "Kamu ve özel tesislerdeki I. seviye acil servislerde hizmet en az 1 tabip ve her vardiyada en az 2 sağlık personeliyle yürütülür, ihtiyaçta ilgili dal uzmanı kuruma davet edilir; II. seviyede hizmet uzman tabiplerin denetim ve sorumluluğunda tabiplerce verilir, gerekirse tüm branş uzmanları dahil edilerek en az 2 tabibe acil servis nöbeti verilir; genel hastanelerde dahili ve cerrahi klinikler için birer uzmana branş nöbeti verilir; her vardiyada tabipler hariç en az 4 sağlık personeli görev yapar; III. seviyede faaliyet izin belgesinde yazılı olması kaydıyla iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı ve hastalıkları branşlarında acil branş nöbeti zorunludur, uzman yeterliyse diğer branşlarda da tutulabilir; karma, erişkin ve çocuk acil servislerde tabipler hariç her vardiyada en az 8 sağlık personeli görev yapar (m.10/14); I. seviyede hastanenin diğer birimlerinin nöbeti acil nöbetçi tabiplerince yürütülebilir, başvurusu fazla hastanelerde tüm hastane tabiplerini kapsayan ayrı nöbet listesi düzenlenir; II. ve III. seviyede acil servis nöbetçi tabipleri hastane genelindeki diğer nöbetlere görevlendirilemez (m.10/15)",
+     "sinavda_boyle_yazarlar": [
+       "II. seviye acil servislerde her vardiyada tabipler hariç en az 2 sağlık personeli görev yapar",
+       "III. seviye acil servislerde zorunlu acil branş nöbetleri arasında anestezi ve reanimasyon da vardır"
+     ],
+     "dogrusu": [
+       "Vardiya başına en az sağlık personeli: I. seviyede 2, II. seviyede tabipler hariç 4, III. seviye karma, erişkin, çocuk acilde tabipler hariç 8 (m.10/14)",
+       "III. seviyede iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı branşlarında acil branş nöbeti zorunludur (m.10/14)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-22", "sorun": "hukum_hatali",
+   "aciklama": "30 dakika süre, mavi kod, HBS mesaj sistemi, sıralı nöbetçi ve nöbet ücreti kesintisi (m.12/15-16) yürürlükten kalkan 2009 Tebliğine ait; güncel Tebliğde konsültasyon m.11/9-14'tedir ve süre yerine 'mümkün olan en kısa süre' esası vardır.",
+   "duzeltme": {
+     "madde": ["11"],
+     "baslik": "Konsültasyon: yazılı, geri alınamaz, kesin sonuçlu",
+     "hukum": "Konsültasyon müdavi ve konsültan tabiplerin tam iş birliğiyle yürütülür, davetlere mümkün olan en kısa sürede icabet edilir (m.11/9); icap nöbeti dışında, mümkünse en az bir tabip yalnız acil servis konsültasyonu için görevlendirilebilir, görev listesi ilgililere tebliğ edilir (m.11/10); mesai dışı konsültasyonu öncelikle ilgili branşın tesis içindeki nöbetçi tabibi, yoksa icap nöbetçisi verir; davet ve konsültan görüşü yazılıdır, SBYS'de geri alınamayacak şekilde elektronik imza veya tabibin şifresiyle yapılır, kâğıt üzerinde ise kaşe ve imza bulunur; davetlerde \"acil servis\" ve/veya \"kırmızı alan\" ibaresi yer alır; davetler idarece kaydedilip saklanabilecek yöntemlerle yapılır, davet, geliş ve sonuçlandırma süreleri ile telefon görüşmeleri kayda alınır (m.11/11); konsültan hastanın durumunu net belirtir ve takip, yatış veya taburculukla kesin sonuca bağlar; tekrarlayan tetkik ve ardışık tedavi önerilemez, bu durumda hastayı o branş yatırır (m.11/12); acil tedavi sürecinde gerekli olmayan tetkik, tedavi ve konsültasyonlar yatıştan sonra yatırıldığı klinikçe yapılır; girişimsel işlem öngörülürse hasta o kliniğe yatırılarak işlem yapılır (m.11/13); aksaklıkları müdavi ve konsültan tabipler baştabipliğe bildirir, düzenlemeyi baştabip yapar (m.11/14)",
+     "sinavda_boyle_yazarlar": [
+       "Mesai dışında acil servis konsültasyonunu öncelikle icap nöbetçisi tabip verir",
+       "Konsültasyon daveti ve konsültan görüşü sözlü olarak da yapılabilir",
+       "Konsültan tabip tekrarlayan tetkik ve ardışık tedavi önerebilir"
+     ],
+     "dogrusu": [
+       "Mesai dışı konsültasyonu önce ilgili branşın tesisteki nöbetçi tabibi, yoksa icap nöbetçisi verir; davet ve görüş yazılıdır (m.11/11)",
+       "Konsültan tekrarlayan tetkik ve ardışık tedavi öneremez; bu durumda hastayı o branş yatırır (m.11/12)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-26", "sorun": "hukum_hatali",
+   "aciklama": "Hüküm (stabil sevkli hastanın yeniden değerlendirilmemesi, acil cerrahi, yoğun bakım yatağı, post op ara bakım ünitesi) yürürlükten kalkan 2009 Tebliği m.14/4-5'e ait; güncel karşılığı m.11/8 ve m.14/4.",
+   "duzeltme": {
+     "madde": ["11", "14"],
+     "baslik": "Koordinasyonla klinikler arası sevk edilen hasta",
+     "hukum": "Tesislerin ilgili birimleri arasındaki koordinasyonla başka bir tesisin yoğun bakım veya yataklı klinik gibi birimine sevk edilen hasta, sevki kabul eden tabip tarafından hiçbir gerekçeyle reddedilemez veya acil servise yönlendirilemez; gerekirse il düzeyinde SBYS'ye entegre otomasyon kurulur; kayıt ve yatış için acil servisi aksatmayacak idari düzenleme yapılır; böyle sevk edilmek istenen hasta için ilgili birim veya tabip, acil serviste değerlendirmek üzere hasta kabulü yapamaz (m.11/8); bu hastaların sorumluluğu ilgili klinik veya tabip kabul işlemini yapıncaya kadar sevk eden tesistedir ve hasta acil servis tabibine teslim edilemez; 112 ekipleri bu hastaları ilgili servise veya yoğun bakıma teslim eder (m.14/4)",
+     "sinavda_boyle_yazarlar": [
+       "Koordinasyonla başka tesisin yataklı kliniğine sevk edilen hasta önce acil serviste değerlendirilir",
+       "Klinikler arası sevkle getirilen hasta acil servis tabibine teslim edilir"
+     ],
+     "dogrusu": [
+       "Koordinasyonla kliniğe sevk edilen hasta reddedilemez, acil servise yönlendirilemez; 112 ekibi onu ilgili servise veya yoğun bakıma teslim eder (m.11/8, m.14/4)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-27", "sorun": "hukum_hatali",
+   "aciklama": "Ambulansın en fazla 15 dakikada ayrılması, KKM talimatına göre hazırlık ve Geçici m.3 entegrasyon süreleri yürürlükten kalkan 2009 Tebliğine ait; güncel m.14'te dakika sınırı yok, ambulans ekibi hastayı teslim etmeden ayrılmaz.",
+   "duzeltme": {
+     "madde": ["14"],
+     "baslik": "112 Komuta Kontrol Merkezi ile koordinasyon",
+     "hukum": "Tüm sağlık tesisleri acil servis hizmetlerinin etkin ve koordineli yürütülmesi ve hasta bilgisinin paylaşımı için, müdürlüğün ve/veya Bakanlığın denetiminde mevcut bilgi sistemlerine entegre ortak kayıt sistemi kurmak zorundadır (m.14/1); ileri tetkik ve tedavi gereken hastaların diğer tesislere acil nakli, nihai tedavinin sağlanacağı tesisin belirlenmesi dahil 112 Komuta Kontrol Merkezinin yönetim ve koordinasyonunda yürütülür; nakil elektronik sistemler veya nakil formlarıyla yapılır; sevk bekleyen hasta tedavi reddi imzalar ya da izinsiz ayrılırsa acil servis müdavi tabibi veya konsültan tabip 112 Komuta Kontrol Merkezine bilgi verir (m.14/2); acil servis tabibi, ambulans ekibi görevine dönebilsin diye ambulansla getirilen vakaların ivedilikle teslim alınmasını sağlar; ambulans ekibi hastayı teslim etmeden acil servisten ayrılmaz; bu hastaların kayıt işlemleri sağlık tesisi personelince öncelikli yapılır (m.14/3); 112 Komuta Kontrol Merkezi olağandışı durumlar ve durumu kritik hastalar için ilgili acil servise bilgi verir (m.14/5)",
+     "sinavda_boyle_yazarlar": [
+       "Sevk edilecek hastaneyi gönderen hastanenin baştabibi belirler",
+       "Ambulans ekibi hastayı teslim etmeden acil servisten ayrılabilir"
+     ],
+     "dogrusu": [
+       "Acil nakillerde nihai tedavi tesisinin belirlenmesi dahil süreç 112 Komuta Kontrol Merkezinin yönetim ve koordinasyonundadır (m.14/2)",
+       "Ambulans ekibi hastayı teslim etmeden ayrılmaz; acil servis tabibi hastayı ivedilikle teslim alır (m.14/3)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-28", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.13 ile uyumlu; kırmızı kutuda açıklama notu ve tekrar vardı, Doğrusu yarım cümleydi.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "ASKOM kararları valilik onayıyla yürürlüğe girer",
+       "ASKOM bünyesindeki sevk değerlendirme komisyonları en az 5 üyeden oluşur"
+     ],
+     "dogrusu": [
+       "ASKOM kararları il sağlık müdürünün onayıyla yürürlüğe girer; sevk değerlendirme komisyonları en az 3 üyeden oluşur (m.13/1, 6)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-29", "sorun": "hukum_hatali",
+   "aciklama": "Sevk Değerlendirme ve Denetleme Komisyonu (ayda 1 toplantı, ilçe denetimi 2 ayda bir) yürürlükten kalkan 2009 Tebliği m.16'ya ait (güncel m.16 eski Tebliği kaldıran maddedir); sevk komisyonunun güncel karşılığı m.13/6-7 zaten 135-28'de olduğundan kart, hiçbir kartta bulunmayan güncel m.12 sevk ve nakil esaslarıyla yeniden yazıldı.",
+   "duzeltme": {
+     "madde": ["12"],
+     "baslik": "Acil servisten sevk ve nakil esasları",
+     "hukum": "İlk değerlendirmeden sonra tesisin uzman, donanım, yatak ve tedavi kapasitesi uygunsa hasta başka tesise sevk edilmez, hizmet o tesiste verilir (m.12/1); hastanın durumu stabil oluncaya kadar sevk edilmemesi esastır; stabilizasyon ve acil tedavi sağlanamıyor ve sevk mutlaka gerekiyorsa uygun koşullarla sevk edilir; hastanın sevk edildiği tesis kabul için gerekli tedbirleri almak ve gecikmeksizin tedaviye başlamakla yükümlüdür (m.12/2); sevk edilen hastanın sorumluluğu, tedavi edileceği tesise kabulü sağlanana kadar sevk eden tesistedir; acilde sevk bekleyen hastanın sorumluluğu, sevk kararı veren branş acil nöbeti tutuyorsa nöbetçi tabibe, yoksa konsültan tabibe aittir; sevk kararını ilgili branştaki nöbetçi tabip, acil servis sorumlu tabibi veya acil tıp uzmanı verebilir; sevk formunu nöbetçi idari uzman tabip, sevk kararı veren tabip, acil servis sorumlu tabibi veya acil tıp uzmanından biri onaylar; sevk gerekçesi net belirtilir (m.12/3); kapasite aşımında kliniğe yatırılmayı bekleyen hastalar, aynı il içinde ilgili branşta icap/nöbet tutulan ve uygun yatağı olan kamu tesislerine 112 Komuta Kontrol Merkezi aracılığıyla ve müdürlük koordinasyonunda sevk edilir (m.12/4); ambulanslı sevklerde otomasyon üzerinden SKKM ile acil servis/hastane yönetimi arasında tam iletişim zorunludur; uygunsuz sevkleri önlemek için acil servisten sevk talepleri acil servis sorumlusu ve/veya acilden sorumlu baştabip yardımcısınca onaylanır; il dışı sevk taleplerini il sağlık müdürünün görevlendireceği hizmet başkanı veya başkan yardımcısı onaylar (m.12/5)",
+     "sinavda_boyle_yazarlar": [
+       "Acil servise gelen hasta, durumu stabil olmasa da ilk fırsatta sevk edilir",
+       "Sevk edilen hastanın sorumluluğu ambulans hastaneden ayrıldığı anda alıcı tesise geçer",
+       "İl dışı sevk taleplerini hastanenin baştabibi onaylar"
+     ],
+     "dogrusu": [
+       "Hasta stabil oluncaya kadar sevk edilmez; sorumluluk, tedavi edileceği tesise kabulüne kadar sevk eden tesistedir (m.12/2-3)",
+       "İl dışı sevki, il sağlık müdürünün görevlendirdiği hizmet başkanı veya başkan yardımcısı onaylar (m.12/5)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-30", "sorun": "hukum_hatali",
+   "aciklama": "m.17/1-4 atıfları (6 ayda bir periyodik denetim, izleme ve değerlendirme cetvelleri, Bakanlıkça idari işlem) yürürlükten kalkan 2009 Tebliğine ait (güncel m.17 yürürlük maddesi); hüküm yalnız m.15/1-4'e göre yazıldı, kırmızı kutudaki not ayıklandı.",
+   "duzeltme": {
+     "madde": ["15"],
+     "hukum": "Tebliğe uygun yürütme ve koordinasyondan müdürlükler, baştabipler, acil servisten sorumlu baştabip yardımcıları ve acil servis sorumlu tabipleri birinci derecede ve müteselsilen sorumludur (m.15/1); müdürlükler acil servis işleyişini Tebliğ kriterlerine göre denetler, sorunlara tedbir alır, gerekirse denetim sonuçlarını raporlayıp Genel Müdürlüğe bildirir (m.15/2); denetim müdürlükçe belirlenen ekiple yapılır, ekipte ilgili hizmet başkanlığı personeli bulunur, gerekirse birden çok ekip kurulur; denetim sonucunda seviye, tip ve tescilde değişiklik işlemi başlatılabilir; Genel Müdürlük her zaman resen denetim veya inceleme yapabilir (m.15/3); aykırılıkta kamu tesislerinde kasıt, ihmal veya kusur şüphesi bulunanlara tabi oldukları mevzuata göre disiplin hükümleri, özel tesislerde 3359 sayılı Kanunun ek 11. maddesi uygulanır (m.15/4)",
+     "sinavda_boyle_yazarlar": [
+       "Acil servis hizmetlerinin Tebliğe uygun yürütülmesinden yalnız acil servis sorumlu tabibi sorumludur",
+       "Özel sağlık tesislerindeki acil servislerde Tebliğe aykırılıkta 657 sayılı Kanunun disiplin hükümleri uygulanır"
+     ],
+     "dogrusu": [
+       "Müdürlük, baştabip, acilden sorumlu baştabip yardımcısı ve sorumlu tabip müteselsilen sorumludur; özel tesislerde 3359 sayılı Kanun ek m.11 uygulanır (m.15/1, 4)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-31", "sorun": "yanlis_aslinda_dogru",
+   "aciklama": "Hüküm güncel m.15/5-7 ile uyumlu; kırmızı kutuda iki yanlış ve doğruları tek açıklama notunda birleşikti, ayrıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": [
+       "Acil servis sorumlu tabibini il sağlık müdürlüğü görevlendirir",
+       "Acil tıp eğitim kliniği bulunan hastanede acil servis sorumlu tabibi baştabipçe ayrıca seçilir"
+     ],
+     "dogrusu": [
+       "Sorumlu tabibi baştabip görevlendirir; acil tıp eğitim kliniği olan hastanede klinik idari sorumlusu zaten sorumlu tabiptir (m.15/6-7)"
+     ]
+   }},
+
+  {"kanun_id": 135, "kart_id": "135-32", "sorun": "hukum_hatali",
+   "aciklama": "Geçici m.1 '2 ay, Bakanlığa bildirim' ve Geçici m.2 '31/12/2020 fiziki uyum, muafiyet' yürürlükten kalkan 2009 Tebliğine ait; güncel Geçici m.1'de süre 2 yıldır; m.16 (2009 Tebliğinin kaldırılması) ve m.17 (yürürlük) eklendi. Doğrusu '2 ay' diyordu, düzeltildi.",
+   "duzeltme": {
+     "madde": ["16", "17", "18"],
+     "baslik": "Yürürlükten kaldırma, geçiş, yürürlük ve yürütme",
+     "hukum": "16/10/2009 tarihli ve 27378 sayılı Resmî Gazete'de yayımlanan eski Acil Servis Tebliği yürürlükten kaldırılmıştır (m.16); Tebliğin yayımından önce mevcut olan acil servislerin seviyelendirme ve tescil işlemleri yayım tarihinden itibaren 2 yıl içinde tamamlanır, işlemler bitene kadar bu acil servisler mevcut tescil seviyelerine göre hizmet vermeye devam eder (Geçici m.1); Tebliğ yayımı tarihinde yürürlüğe girer (m.17); hükümlerini Sağlık Bakanı yürütür (m.18); yayımlandığı Resmî Gazete 13/9/2022 tarihli ve 31952 sayılı, değişiklikler 13/5/2023-32189 ve 11/10/2024-32689",
+     "sinavda_boyle_yazarlar": [
+       "Tebliğ hükümlerini Cumhurbaşkanı yürütür",
+       "Mevcut acil servislerin seviyelendirme ve tescil işlemleri 2 ay içinde tamamlanır"
+     ],
+     "dogrusu": [
+       "Tebliğ hükümlerini Sağlık Bakanı yürütür; mevcut acil servislerin seviyelendirme ve tescili yayımdan itibaren 2 yıl içinde tamamlanır (m.18, Geçici m.1)"
+     ]
+   }}
+]

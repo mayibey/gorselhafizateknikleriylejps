@@ -1,0 +1,243 @@
+{
+ "kanun_id": 57,
+ "ad": "Suç Eşyası Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_57.json",
+ "kartlar": [
+  {
+   "id": "57-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Suç eşyası: ispat aracı olarak yararlı görülen, suçta kullanılan veya suçun işlenmesine tahsis edilen ya da kullanılmak üzere hazırlanan, suçtan meydana gelen ya da üretimi-bulundurulması-kullanılması-taşınması-alım satımı suç oluşturan eşya; kazanç: suçla elde edilen veya suçun konusunu oluşturan maddî menfaatler ve dönüşümleri; emanet bürosu: Cumhuriyet başsavcılığı nezdinde suç eşyasının muhafazasını yürüten birim; UYAP: Ulusal Yargı Ağı Bilişim Sistemi (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suç eşyası yalnız suçta kullanılan alettir\" yanlış; tanım geniş"
+   ],
+   "dogrusu": [
+    "Suç eşyası · kazanç · emanet bürosu · UYAP"
+   ]
+  },
+  {
+   "id": "57-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Emanet bürosu ve denetim",
+   "hukum": "Suç eşyası işlemleri Cumhuriyet başsavcılığının sürekli gözetim ve denetimi altında emanet bürosunca yürütülür; emanet memuru yoksa görev başsavcının teklifiyle adalet komisyonunca yazı işleri müdürü veya zabıt kâtibine geçici verilir; ağır ceza başsavcılıklarında ayrıca müdür görevlendirilir; görevli kefalete bağlanır; UYAP kayıtlarından emanet personeli sorumludur; depo pencereli ise demir parmaklıklı, çift kilitli çelik/demir kapılı, kamera ile kontrol edilir; Devlet sırrı içeren belge ve aygıtlar yüksek güvenlikli kasada saklanır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Emanet bürosu kolluk bünyesindedir\" yanlış; başsavcılık nezdinde"
+   ],
+   "dogrusu": [
+    "Cumhuriyet başsavcılığının sürekli gözetim ve denetimi · emanet bürosunca · adalet komisyonunca · müdür · UYAP · çift kilitli · kamera · Devlet sırrı · yüksek güvenlikli kasada"
+   ]
+  },
+  {
+   "id": "57-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Muhafaza altına alma ve elkoyma",
+   "hukum": "İspat aracı veya müsadere konusu değerler muhafaza altına alınır; rızayla teslim edilmezse elkonur; hâkim kararı, gecikmesinde sakınca hâlinde savcının, savcıya ulaşılamazsa kolluk amirinin yazılı emri ile elkoyma yapan kolluk tutanak düzenler; tutanağa eşyanın ayırt edici nitelikleri, takdir edilen değeri, hangi suçtan kimden nereden alındığı, soruşturma numarası, hazır bulunanların ve kolluğun kimlikleri, yer-tarih-saat yazılır, imza veya parmak izi alınır; eşya temiz ambalaja konulup dikişsiz/içten makine dikişli torba, sandık, zarf veya kutuya yerleştirilir, açıldığında belli olan mühür bandı, kurşun veya mum ile mühürlenir, etiket yazılıp başsavcılığa tevdi edilir; hâkim kararsız elkoyma 24 saat içinde hâkim onayına sunulur, hâkim 48 saat içinde açıklar, yoksa kendiliğinden kalkar; elkoyma mağdura başsavcılıkça gecikmeksizin bildirilir; teslim alma savcı talimatıyla emanet memurunca; elkonulan kimse her zaman hâkimden elkoymanın kaldırılmasını isteyebilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "24 saat (sunma) ile 48 saat (karar) çapraz verilir",
+    "Hâkim kararsız elkoyma 72 saatte hâkime sunulur"
+   ],
+   "dogrusu": [
+    "24 saat; hâkim 48 saatte karar (m.5)"
+   ]
+  },
+  {
+   "id": "57-3",
+   "madde": [
+    "5",
+    "7"
+   ],
+   "baslik": "Ambalajsız eşya teslim alınmaz",
+   "hukum": "Emanet memuru, m.5'teki usule göre ambalajlanmamış veya mühürlenmemiş suç eşyasını teslim alamaz (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Emanet memuru acil hâlde mühürsüz eşyayı kabul eder\" yanlış"
+   ],
+   "dogrusu": [
+    "ambalajlanmamış veya mühürlenmemiş · teslim alamaz"
+   ]
+  },
+  {
+   "id": "57-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tasnif ve muhafaza",
+   "hukum": "Suç eşyası nitelik ve yıllarına göre tasnif edilir; emanet memuru depodaki yeri, sıra, raf, giriş-çıkış tarihlerini barkod sistemiyle kaydeder; bilgisayar, kütük, ses-görüntü kayıt aygıtları gibi elektronik eşya nem, ısı, manyetik alan ve darbeden korunan müstakil alanlarda; kimyasal ve biyolojik eşya için müstakil alan (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Elektronik eşya diğer eşyayla birlikte saklanır\" yanlış"
+   ],
+   "dogrusu": [
+    "tasnif · barkod sistemiyle · müstakil alanlarda"
+   ]
+  },
+  {
+   "id": "57-5",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İnceleme için verilmesi ve iadesi",
+   "hukum": "Mahkeme ve resmî dairelerin incelemek üzere istediği eşya, savcının onayıyla zimmet kaydına imza alınarak teslim edilir; mahkeme ve başsavcılık istekleri UYAP üzerinden güvenli e-imzalı yapılır; zorunluluk yoksa mühür sökülmez, sökülürse yeniden mühürlenir ve en az iki nüsha tutanak; mühürsüz, etiketsiz, makbuzsuz veya açma-kapama-iade tutanaksız eşya iade kabul edilmez; iade edilmeyen eşyanın sebebi üçer aylık fasılalarla sorulur; yetkisizlik-görevsizlik hâlinde eşya evrakın bulunduğu yere gönderilir, nakli büyük maliyet veya zarar doğuracaksa ilk bulunduğu yerde muhafaza edilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İade edilmeyen eşya aylık sorulur\" yanlış; üç ayda bir"
+   ],
+   "dogrusu": [
+    "savcının onayıyla · UYAP üzerinden güvenli e-imzalı · mühür sökülmez · en az iki nüsha tutanak · üçer aylık · ilk bulunduğu yerde"
+   ]
+  },
+  {
+   "id": "57-6",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Kıymetli eşya ve bozulacak eşya",
+   "hukum": "Kıymetli maden/taştan mamul, antika, tedavül etmeyen paralar, kambiyo senetleri, hisse senedi ve tahviller emanet bürosundaki kasada saklanır; banka kasası kiralamak gerekirse Adalet Bakanlığına bildirilir; kasa en az iki kişi tarafından açılıp kapanır, kasa defteri kasa içinde durur; fikri-sınai mülkiyet suçlarında CD, DVD, giyim, kitap gibi eşya sığmıyorsa savcı talimatıyla numune alınıp kalanı mahallin en büyük mal memurluğuna; bozulacak, değer kaybedecek veya saklanması zor eşya için soruşturmada hâkimden, kovuşturmada mahkemeden sonuç beklenmeden satış veya teslim kararı istenir, masraf sanıktan alınmak üzere kovuşturma giderlerinden, satış bedeli emanetçe saklanır (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kasa emanet memuru tarafından tek başına açılır\" yanlış; en az iki kişi"
+   ],
+   "dogrusu": [
+    "kasada · Adalet Bakanlığına · en az iki kişi · numune · mahallin en büyük mal memurluğuna · hâkimden · mahkemeden · satış"
+   ]
+  },
+  {
+   "id": "57-7",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Başka yere gönderme ve ateşli silahlar",
+   "hukum": "Emanet memurunun teslim aldığı suç eşyasının Yönetmelikteki hâller dışında başka yere nakli Cumhuriyet savcısının yazılı emriyle mümkündür; 6136 kapsamındaki elkonulan ateşli silahlar ile emanet bürosunda muhafazası sakıncalı görülen mermi ve her türlü patlayıcı madde, nitelikleri ve kullanılmaya elverişliliği savcı tarafından bilirkişiyle belirlendikten sonra, mahkemece karar verilinceye kadar Cumhuriyet başsavcılığının yazılı emri ile mahallî jandarma birlik komutanlıklarına ait mahfuz bina ve depolarda muhafaza edilir; üç nüsha tutanakla teslim (biri teslim alana, biri emanet bürosunda, biri başsavcılıkta); depodan alma-iade emanet memuru ve savcının imzalarını taşıyan yazıyla; jandarma depolarında miktar itibarıyla muhafazası mümkün olmayan silah-mermi-patlayıcı, birlik komutanının başvurusu ve hâkim/mahkeme kararıyla numune alıkonularak Kara Kuvvetleri Komutanlığının görevlendirdiği birlik, bakım merkezi ve mühimmat depolarına teslim edilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hâkim kararıyla gönderilir\" ve \"Emanet bürosunda saklanır\" şıkları yanlış",
+    "Suç eşyası hâkim kararıyla başka yere gönderilir",
+    "Elkonulan ateşli silahlar emanet bürosunda saklanır"
+   ],
+   "dogrusu": [
+    "Savcının yazılı emriyle (m.11)",
+    "Jandarma birlik depolarında (m.11)"
+   ]
+  },
+  {
+   "id": "57-8",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Taşıtlar",
+   "hukum": "Fiilen elkonulması gereken kara, deniz ve hava araçlarının teslim alınması savcı talimatıyla emanet bürosunca; emanet kaydından sonra mahallin en büyük mal memurluğuna üç nüsha tutanakla teslim edilir, istendiğinde iade için; depodan alma-iade emanet memuru + savcı imzalı yazıyla (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Elkonulan araçlar jandarma deposunda saklanır\" yanlış; mal memurluğu"
+   ],
+   "dogrusu": [
+    "kara, deniz ve hava araçlarının · mahallin en büyük mal memurluğuna"
+   ]
+  },
+  {
+   "id": "57-9",
+   "madde": [
+    "16"
+   ],
+   "baslik": "İade ve elden çıkarma kararları",
+   "hukum": "Savcı, hâkim veya mahkemenin iade/elden çıkarma kararları emanet makbuzuyla en geç 2 gün içinde başsavcılığa tevdi edilir; başsavcılık emanet bürosuna gönderir; teminat veya rayiç değer karşılığı karar verilmişse mal memurluğuna yatırıldığına dair makbuz eklenir; emanet memuru kararları esas kaydına işler ve kartonunda saklar (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"5 gün\" tuzak; 2 gün"
+   ],
+   "dogrusu": [
+    "en geç 2 gün · mal memurluğuna · kartonunda"
+   ]
+  },
+  {
+   "id": "57-10",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Müsadere ve iade kararlarının yerine getirilmesi",
+   "hukum": "İade edilen eşya kimlik belgesiyle, imza/mühür/parmak izi alınarak teslim ve tesellüm tutanağı ile sahibine, yasal temsilcisine veya vekiline; bu işlem Cumhuriyet savcısının huzurunda yapılır; resmî kuruluşa yazı ile alındı karşılığı; yabancıya ait eşya kendisine veya ülkesinin sefaret/konsolosluğuna; müsadereye konu edilemeyen eşya delil olarak mahkemesine; elkonulamayan değerlerin karşılığı için kesinleşmiş karar mal memurluğuna, infazı 6183 ile; uyuşturucu 2313 Yönetmeliği ve Haşhaş Yönetmeliğine göre; ateşli silah-mermi-patlayıcı MSB'ye Teslim Yönetmeliğine göre; diğer müsadere edilen eşya mahallin en büyük mal memurluğuna veya ilgili dairelere (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"İade emanet memuru tarafından tek başına yapılır\" yanlış; savcı huzurunda"
+   ],
+   "dogrusu": [
+    "teslim ve tesellüm tutanağı · Cumhuriyet savcısının huzurunda · yabancıya · sefaret/konsolosluğuna · mahkemesine · mal memurluğuna · 6183 · MSB'ye Teslim Yönetmeliğine · mahallin en büyük mal memurluğuna"
+   ]
+  },
+  {
+   "id": "57-11",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Sonuçların takibi ve sayım",
+   "hukum": "Emanete tesliminden itibaren 1 yıl içinde hakkında karar verilmemiş eşya ve paralar başsavcılığa bildirilir; yazı işleri müdürleri en geç 15 gün içinde durumu bildirir; dava karara bağlanmış ama eşya hakkında karar yoksa ilgilisi veya savcı ek karar ister; eşyanın vasfında tereddütte savcı ek karar ister; her yıl sonunda depo mevcudu ile kayıtların sayım ve kontrolü yapılıp tutanağa bağlanır (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sayım altı ayda bir\" yanlış; yıl sonu"
+   ],
+   "dogrusu": [
+    "1 yıl · en geç 15 gün · ek karar · her yıl sonunda · sayım ve kontrolü"
+   ]
+  },
+  {
+   "id": "57-12",
+   "madde": [
+    "24",
+    "21"
+   ],
+   "baslik": "Alınmayan eşyanın satışı — 1 ay / 2 ay",
+   "hukum": "İadesine karar verilip meşruhatlı tebligata rağmen sahiplerince 1 ay içinde alınmayan veya tebligat yapılamayanlara ait eşya en geç 2 ay içinde satılarak bedeli millî bankada ilgilisi adına vadeli hesaba yatırılır; satışa karar veren merci eşyanın bulunduğu yer sulh ceza hâkimi; değeri satış masrafını karşılamayacaksa hâkim kararıyla imha (m.24); sahibi tespit edilemeyen eşya TMK bulunmuş eşya hükümlerine göre; teslim alınmayan kıymetli evrak zamanaşımı süresince emanette (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Üç ay, altı ay\" şıkları yanlış",
+    "Alınmayan eşya 3 ay sonra 6 ay içinde satılır"
+   ],
+   "dogrusu": [
+    "1 ay / 2 ay (m.21)"
+   ]
+  },
+  {
+   "id": "57-13",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Sahibi ölmüş / gaip",
+   "hukum": "İadesine karar verilmiş olup sahibi ölmüş veya gaiplik kararı alınmış kişilere ait eşya yetkili sulh hukuk hâkimine tevdi olunur (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sulh ceza hâkimi\" (satış mercii) ile karıştırılır",
+    "Ölmüş sahibin eşyası sulh ceza hâkimine verilir"
+   ],
+   "dogrusu": [
+    "Sulh hukuk hâkimi (m.23)"
+   ]
+  },
+  {
+   "id": "57-14",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Ekonomik değeri olmayan eşyanın imhası",
+   "hukum": "İadesine karar verilip süresinde alınmayan ve ekonomik değeri bulunmayan eşyanın imhasına Cumhuriyet savcısı başkanlığında emanet memuru ve bir zabıt kâtibinden oluşan komisyonca karar verilir, imha komisyon huzurunda yapılıp tutanağa bağlanır; zabıt kâtibini adalet komisyonu, yoksa kıdemli hâkim belirler (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"İmhaya sulh ceza hâkimi karar verir\" yanlış; savcı başkanlığındaki komisyon"
+   ],
+   "dogrusu": [
+    "ekonomik değeri bulunmayan · Cumhuriyet savcısı başkanlığında emanet memuru ve bir zabıt kâtibinden"
+   ]
+  },
+  {
+   "id": "57-15",
+   "madde": [
+    "25"
+   ],
+   "baslik": "UYAP'ta tutulacak kayıtlar",
+   "hukum": "Emanet bürosunda suç eşyası esas kaydı, kasa kaydı, muhabere kaydı, zimmet kaydı, kıymetli eşya kaydı UYAP'ta tutulur; kayıtlar takvim yılına göre tutulur, emanet memurunca güvenli e-imza ile onaylanır (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "Fiziki kartonlar (karar kartonu, makbuz kartonu, zimmet kartonu) ayrı sorulur; denetim Adalet müfettişlerine aittir",
+    "Depo kaydı UYAP'ta zorunlu kayıttır",
+    "Kayıtlar MERNİS'te tutulur"
+   ],
+   "dogrusu": [
+    "Değildir; esas, kasa, muhabere, zimmet, kıymetli eşya (m.25)",
+    "UYAP (m.25)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

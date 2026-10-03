@@ -1,0 +1,20 @@
+[
+{"kanun_id": 53, "kart_id": "53-0", "sorun": "kirmizi_kutu", "aciklama": "Kendi mülkünde bulmada ikramiye yokluğu ve 3 günlük haber verme süresi bozuldu",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Taşınır kültür varlığını kendi mülkünde bulan kişiye, takdir edilen bedelin %80'i ikramiye olarak ödenir.”", "“Taşınır kültür varlığı bulunduğunu bilenlerin bunu müzeye haber verme süresi on beş gündür.”"],
+              "dogrusu": ["Varlık bulanın kendi mülkünde ise değeri ödenerek müzelerce satın alınır; ayrıca ikramiye verilmez (m.3/a)", "Varlık en geç 3 gün içinde en yakın müzeye, köyde muhtara, diğer yerlerde mülki idare amirine haber verilir (m.3)"]}},
+{"kanun_id": 53, "kart_id": "53-1", "sorun": "kirmizi_kutu", "aciklama": "Paylaşım (yarı yarıya) ve oran (%80) bozuldu",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Varlık başkasının mülkünde bulunmuşsa takdir edilen bedelin %80'inin tamamı bulana ödenir.”", "“Başkasının mülkünde bulunan varlık için bulan ile mülk sahibi arasında paylaştırılacak ikramiye, bedelin %40'ıdır.”"],
+              "dogrusu": ["Varlık başkasının mülkünde bulunursa takdir edilen bedelin %80'i bulan ile mülk sahibi arasında yarı yarıya paylaştırılır (m.3/b)", "Başkasının mülkünde bulunan varlıkta paylaştırılan ikramiye bedelin %80'idir; %40 oranı Devlet arazisinde bulana ödenir (m.3/b)"]}},
+{"kanun_id": 53, "kart_id": "53-2", "sorun": "kirmizi_kutu", "aciklama": "%40 oranı ve ikramiyenin yalnız bulana ödenmesi bozuldu",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Varlık Devlete ait arazide bulunmuşsa takdir edilen bedelin %80'i bulana ikramiye olarak ödenir.”", "“Devlete ait arazide bulunan varlığın ikramiyesi, bulan ile Hazine arasında eşit olarak paylaştırılır.”"],
+              "dogrusu": ["Varlık Devlete ait arazide bulunmuşsa takdir edilen bedelin %40'ı bulana ikramiye olarak ödenir (m.3/c)", "Devlet arazisinde bulunan varlıkta bedelin %40'ı bulana ödenir; eşit paylaşım başkasının mülkünde bulunan varlık içindir (m.3/c)"]}},
+{"kanun_id": 53, "kart_id": "53-3", "sorun": "kirmizi_kutu", "aciklama": "İade edilen varlıkta tasarruf serbestisi ve 1 yıllık süre bozuldu",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Belgeyle sahibine iade edilen varlık üzerinde sahibi satış gibi tasarruflarda bulunamaz.”", "“Korunması gerekli olmayan varlıkların sahiplerince müzeden alınması için tanınan süre iki yıldır.”"],
+              "dogrusu": ["Belgeyle iade edilen varlık üzerinde sahibi her türlü tasarrufta bulunabilir (m.3/d)", "Sahiplerince bir yıl içinde alınmayan varlıklar müzelerde saklanabilir veya usulüne uygun olarak Devletçe satılabilir (m.3/d)"]}},
+{"kanun_id": 53, "kart_id": "53-4", "sorun": "kirmizi_kutu", "aciklama": "Üst dilim oranı (%7,5), ayrı ayrı ödeme kuralı ve ilk dilim oranı (%30) bozuldu",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Gizlenmiş sayılan varlıkların değerinin 100.000 liradan yukarı olan kısmı için %9 oranında ikramiye ödenir.”", "“Gizlenmiş varlığı haber veren ile yakalayan kamu görevlisi, hesaplanan ikramiyeyi aralarında bölüşür.”", "“Gizlenmiş varlığın değerinin 5.000 liraya kadar olan kısmı için %25 oranında ikramiye ödenir.”"],
+              "dogrusu": ["Değerin 100.000 liradan yukarı olan kısmı için %7,5 oranında ikramiye ödenir (m.4)", "İkramiye haber veren ve yakalayana ayrı ayrı ödenir; aynı sıfattaki birden fazla kişi ise kendi aralarında eşit paylaşır (m.4)", "Değerin 5.000 liraya kadar olan kısmı için %30 oranında ikramiye ödenir (m.4)"]}},
+{"kanun_id": 53, "kart_id": "53-5", "sorun": "kirmizi_kutu", "aciklama": "İkramiye ödenmeyecek iki hâl tersine çevrildi",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Taşınmaz kültür ve tabiat varlıklarını ihbar edenlere de ihbar ikramiyesi ödenir.”", "“Varlığı Bakanlıkça önceden bilinen taşınır kültür varlıklarını haber verenlere ihbar ikramiyesi ödenir.”"],
+              "dogrusu": ["Taşınmaz kültür ve tabiat varlıkları için ihbar ikramiyesi ödenmez (m.5)", "Varlığı Bakanlıkça önceden bilinen taşınır kültür ve tabiat varlıkları için de ihbar ikramiyesi ödenmez (m.5)"]}}
+]

@@ -1,0 +1,330 @@
+{
+ "kanun_id": 24,
+ "ad": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_24.json",
+ "kartlar": [
+  {
+   "id": "24-0",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzin türleri",
+   "hukum": "Personele verilecek izinler dörttür: yıllık izin, mazeret izinleri, sıhhi izinler, yurt dışı izinleri (m.5/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "listeye ücretsiz izin, idari izin, harp izni, eğitim izni eklenir ya da sıralama bozulur"
+   ],
+   "dogrusu": [
+    "İzin türleri"
+   ]
+  },
+  {
+   "id": "24-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzin işlemlerini kim yürütür",
+   "hukum": "Her türlü izin işlemi, özlük işlemlerinin yerine getirildiği makamlarca yürütülür (m.5/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca İçişleri Bakanlığı\" veya \"sadece amirin takdiri\" denir"
+   ],
+   "dogrusu": [
+    "İzin işlemlerini kim yürütür"
+   ]
+  },
+  {
+   "id": "24-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Adli makama çağrılma",
+   "hukum": "Şüpheli, sanık, tanık, mağdur veya bilirkişi olarak çağrılan personelin görevden ayrı kaldığı süre kanuni izinlerinden mahsup edilmez; amiri, çağrıya esas süre ve yol süresini gözeterek gönderir (m.5/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"mazeret izninden düşülür\" denir ya da sıfat listesinden biri (mağdur/bilirkişi) çıkarılır"
+   ],
+   "dogrusu": [
+    "Şüpheli …"
+   ]
+  },
+  {
+   "id": "24-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Vekâlet ve izin yetkisi",
+   "hukum": "İzin vermeye yetkili amirlerin yerine vekâlet edenler, vekâlet ettikleri kadronun izin verme yetkisine sahiptir (m.5/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "\"vekil izin veremez, yetki asile aittir\" biçiminde ters çevrilir"
+   ],
+   "dogrusu": [
+    "Vekâlet ve izin yetkisi"
+   ]
+  },
+  {
+   "id": "24-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Spor müsabakaları",
+   "hukum": "3289 sayılı Kanunun 29 uncu maddesi uyarınca milletlerarası seviyede yurt içi ve yurt dışı spor müsabakaları ile hazırlık çalışmalarına katılan personel, organizasyonun devamı süresince izinli sayılır (m.5/1-f)",
+   "sinavda_boyle_yazarlar": [
+    "\"yıllık izninden düşülür\" veya \"sadece yurt içi müsabakalar\" denir"
+   ],
+   "dogrusu": [
+    "3289 sayılı Kanunun 29 uncu maddesi uyarınca milletlerarası seviyede yurt içi ve yurt dışı spor müsabakaları ile hazırlık çalışmalarına katılan personel …"
+   ]
+  },
+  {
+   "id": "24-5",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Savaş ve olağanüstü hal",
+   "hukum": "2803 sayılı Kanunun ek 3 üncü maddesi uyarınca izin süreleri kısaltılabilir veya kaldırılabilir; personel izinden geriye çağrılabilir (m.5/1-g)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde kaldırılamaz\", \"sadece yarıya indirilir\" ya da \"yalnızca yurt dışı izinleri etkilenir\" denir"
+   ],
+   "dogrusu": [
+    "Savaş ve olağanüstü hal"
+   ]
+  },
+  {
+   "id": "24-6",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Hizmet ihtiyacıyla geri çağırma",
+   "hukum": "Geri çağırma yetkisi asgari yıllık izin planlamasını onaylayan makamdadır; çağrı yazılı veya sözlü olabilir, her hâlde görevlendirme yazısıyla yazılı hale getirilir (m.5/1-ğ)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece yazılı olur\" denir veya yetki doğrudan birlik komutanına verilir"
+   ],
+   "dogrusu": [
+    "Geri çağırma yetkisi asgari yıllık izin planlamasını onaylayan makamdadır …"
+   ]
+  },
+  {
+   "id": "24-7",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Geri çağırmanın masrafı",
+   "hukum": "İzinden dönüş ve tekrar izne gidiş masrafları 6245 sayılı Harcırah Kanununa göre personele ödenir (m.5/1-ğ)",
+   "sinavda_boyle_yazarlar": [
+    "\"masraf personele aittir\" ya da \"ödeme yapılmaz\" denir"
+   ],
+   "dogrusu": [
+    "Geri çağırmanın masrafı"
+   ]
+  },
+  {
+   "id": "24-8",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzin saati",
+   "hukum": "İzinlerin başlangıç ve bitiş saati günün başlangıç saatidir; istisnai durumlarda izin vermeye yetkili amir farklı saat belirleyebilir (m.5/1-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"mesai bitiş saatidir\" denir veya amirin farklı saat belirleme yetkisi yok sayılır"
+   ],
+   "dogrusu": [
+    "İzin saati"
+   ]
+  },
+  {
+   "id": "24-9",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Yurda dönüş",
+   "hukum": "Yurt dışında izinde iken dönme kararı tebliğ edilen personel 48 saat içinde, en kısa yoldan ve en seri vasıta ile dönüşe geçer; mücbir sebeple bu süre uzatılabilir (m.5/1-i)",
+   "sinavda_boyle_yazarlar": [
+    "süre 24/36/72 saat yapılır, \"en seri\" yerine \"en ekonomik vasıta\" yazılır, sürenin uzatılabilirliği inkâr edilir"
+   ],
+   "dogrusu": [
+    "Yurt dışında izinde iken dönme kararı tebliğ edilen personel 48 saat içinde …"
+   ]
+  },
+  {
+   "id": "24-10",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İl dışına çıkış",
+   "hukum": "Personel görev yaptığı ilin dışına izinsiz çıkamaz; hafta sonu, yılbaşı, ulusal, resmî ve dinî bayramlarda ve idari izinli günlerde verilen il dışı izinleri kanuni izinlerden mahsup edilmez (m.5/1-j)",
+   "sinavda_boyle_yazarlar": [
+    "\"bu izinler yıllık izinden düşülür\" denir ya da yasak \"yurt dışına çıkamaz\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "Personel görev yaptığı ilin dışına izinsiz çıkamaz …"
+   ]
+  },
+  {
+   "id": "24-11",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzinsiz gidilebilecek yerler",
+   "hukum": "Mesai dışında, genel tatil ve idari izinli günlerde il sınırları içinde izinsiz gidilebilecek yerleri mülki teşkilata tabi birliklerde il valileri, Ankara'da Jandarma Genel Komutanlığı, diğer illerde asgari alay ve eşiti birlik komutanı/kurum amiri belirler (m.5/1-k)",
+   "sinavda_boyle_yazarlar": [
+    "üç makamdan biri değiştirilir, hepsi tek makamda toplanır"
+   ],
+   "dogrusu": [
+    "Mesai dışında …"
+   ]
+  },
+  {
+   "id": "24-12",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kursiyerler",
+   "hukum": "Kurs süresince planlı tatiller dışında izin verilmez; geçerli özrü olanlara kurs bitiş tarihini aşmamak kaydıyla kursu veren birim yıllık, mazeret veya mazeret izni verebilir, verilen izin birliğe yazılı bildirilir (m.5/1-m)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde izin verilemez\" denir veya izni birliğinin vereceği söylenir"
+   ],
+   "dogrusu": [
+    "Kurs süresince planlı tatiller dışında izin verilmez …"
+   ]
+  },
+  {
+   "id": "24-13",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Yurt dışı kuralları kimi bağlar",
+   "hukum": "m.20 kapsamı subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman jandarma ve uzman erbaşlardır (m.20/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"tüm er ve erbaşlar\" eklenir ya da liste \"yalnızca subay ve astsubaylar\"a daraltılır"
+   ],
+   "dogrusu": [
+    "Yurt dışı kuralları kimi bağlar"
+   ]
+  },
+  {
+   "id": "24-14",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Silah yasağı",
+   "hukum": "Seyahat maksadıyla yurt dışına giden personel şahsi, zati ve miri silahını götüremez (m.20/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece miri silah yasak, şahsi silah götürülebilir\" veya \"İçişleri Bakanlığı izniyle götürebilir\" denir"
+   ],
+   "dogrusu": [
+    "Silah yasağı"
+   ]
+  },
+  {
+   "id": "24-15",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Üniforma",
+   "hukum": "Yurt dışında izinli personel zorunlu olmadıkça üniforma giyemez (m.20/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde giyemez\" ya da \"tamamen kendi takdirinde\" biçiminde mutlaklaştırılır"
+   ],
+   "dogrusu": [
+    "Üniforma"
+   ]
+  },
+  {
+   "id": "24-16",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Mesken ve yaşayış",
+   "hukum": "Mevzuat ve malî imkânlarına göre uygun bir meskende ve meslekî şerefe uygun şekilde yaşamak zorundadır (m.20/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "ölçüt \"rütbe\", \"kıdem\" veya \"bulunduğu ülkenin konut standardı\" yapılır"
+   ],
+   "dogrusu": [
+    "Mesken ve yaşayış"
+   ]
+  },
+  {
+   "id": "24-17",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Yurt dışı uyarı yükümlülüğü",
+   "hukum": "Yurt dışına izinli gidecek personele hareket tarzları, istihbarata karşı koyma ve koruyucu güvenlik önlemleri konusunda uyarıcı bilgileri bağlı bulunduğu birlik, karargâh ve kurum amirlikleri ve komutanlıkları verir (m.20/2)",
+   "sinavda_boyle_yazarlar": [
+    "görev büyükelçiliğe, MİT'e veya İçişleri Bakanlığına yüklenir"
+   ],
+   "dogrusu": [
+    "Yurt dışına izinli gidecek personele hareket tarzları …"
+   ]
+  },
+  {
+   "id": "24-18",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İKK esasları",
+   "hukum": "İzinli olarak yurt dışında bulunan personel, Jandarma Genel Komutanlığınca belirlenen istihbarata karşı koyma ve koruyucu güvenlik esaslarına uyar (m.20/3)",
+   "sinavda_boyle_yazarlar": [
+    "esasları belirleyen makam MİT/Genelkurmay/İçişleri Bakanlığı gösterilir ya da uyma \"isteğe bağlı\" denir"
+   ],
+   "dogrusu": [
+    "İKK esasları"
+   ]
+  },
+  {
+   "id": "24-19",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzin kaydı ve dosyalama",
+   "hukum": "Kullanılan izinler merkezi personel bilgi sisteminin izin bölümüne işlenir; izin belgeleri birlik ve sayısal özlük dosyalarında saklanır (m.5/1-c)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece birlik dosyasında saklanır\" denir"
+   ],
+   "dogrusu": [
+    "İzin kaydı ve dosyalama"
+   ]
+  },
+  {
+   "id": "24-20",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Atamada izin devri",
+   "hukum": "Atama ile birliğinden ayrılan personelin o yıl izin kullanıp kullanmadığı, kullandıysa süre ve tarihleri ayrılış/katılış belgelerinin izin bölümüne yazılır ve onaylanır (m.5/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"yeni birlik izin bilgisini dikkate almaz\" denir"
+   ],
+   "dogrusu": [
+    "Atama ile birliğinden ayrılan personelin o yıl izin kullanıp kullanmadığı …"
+   ]
+  },
+  {
+   "id": "24-21",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İletişim zorunluluğu",
+   "hukum": "Personel, kendisine her zaman ulaşılabilecek iletişim vasıtalarını ve adreslerini izin belgesinde belirtmek zorundadır (m.5/1-l)",
+   "sinavda_boyle_yazarlar": [
+    "\"isteğe bağlıdır\" veya \"sadece yurt dışı izinlerinde zorunludur\" denir"
+   ],
+   "dogrusu": [
+    "İletişim zorunluluğu"
+   ]
+  },
+  {
+   "id": "24-22",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İzne aykırılığın sonucu",
+   "hukum": "İzinden süresinde dönmeyenler, izin konusunda gerçeğe aykırı beyanda bulunanlar ve mazeretsiz/müsaadesiz olarak izin sıra çizelgesine aykırı hareket edenler hakkında yasal işlem yapılır (m.5/1-ı)",
+   "sinavda_boyle_yazarlar": [
+    "yaptırım \"izin hakkının tamamen kaldırılması\" gibi metinde olmayan bir sonuca bağlanır"
+   ],
+   "dogrusu": [
+    "İzinden süresinde dönmeyenler …"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

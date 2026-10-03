@@ -1,0 +1,144 @@
+{
+ "kanun_id": 74,
+ "ad": "3466 sayılı Uzman Jandarma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_74.json",
+ "kartlar": [
+  {
+   "id": "74-0",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Aylık ve ek gösterge",
+   "hukum": "Uzman jandarmalara 926 sayılı TSK Personel Kanununda uzman jandarmalar için belirlenen gösterge tablosuna göre aylık verilir; ayrıca dereceleri itibarıyla Kanuna ekli Ek-1 sayılı ek gösterge cetveli uygulanır (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylık 3466'ya ekli Ek-1 gösterge tablosuna göre verilir\" yanlış; aylık 926'daki tabloya göre, Ek-1 ek gösterge cetveli"
+   ],
+   "dogrusu": [
+    "926 sayılı TSK Personel Kanununda uzman jandarmalar için belirlenen gösterge tablosuna · Ek-1"
+   ]
+  },
+  {
+   "id": "74-1",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Ödemelerin dayanağı",
+   "hukum": "Silahlı Kuvvetler tazminatı, aile yardımı, doğum yardımı, ölüm yardımı ödeneği ve yakacak yardımı 926 sayılı Kanun, tayın bedeli 2155 sayılı Kanun, emniyet ve asayiş hizmeti muhtelif ücret ödemesi 2803 sayılı Kanun esaslarına göre ödenir; durumları uyanlar 2629 sayılı Kanun hükümlerinden faydalanır (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tayın bedeli 926 sayılı Kanuna göre ödenir\" veya \"emniyet ve asayiş ücreti 926'ya göre ödenir\" yanlış; 2155 ve 2803",
+    "Tayın bedeli 926 sayılı Kanuna göre ödenir"
+   ],
+   "dogrusu": [
+    "2155 sayılı Kanun (m.21)"
+   ]
+  },
+  {
+   "id": "74-2",
+   "madde": [
+    "21"
+   ],
+   "baslik": "30 Ağustos terfi farkı",
+   "hukum": "Her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii onanan uzman jandarmalara, terfinin onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir (m.21/son)",
+   "sinavda_boyle_yazarlar": [
+    "\"Terfi farkı bir sonraki yılın başından itibaren ödenir\" veya \"tam aylık fark olarak ödenir\" yanlış; takip eden aybaşına kadar kıst",
+    "30 Ağustos'ta terfi edenlerin aylık farkları ödenmez"
+   ],
+   "dogrusu": [
+    "Takip eden aybaşına kadar kıst ödenir (m.21)"
+   ]
+  },
+  {
+   "id": "74-3",
+   "madde": [
+    "22"
+   ],
+   "baslik": "İlk atanmada aylığa hak kazanma",
+   "hukum": "İlk defa göreve atanan uzman jandarmalar, uzman jandarma çavuşluğa nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır; ancak uzman jandarma okullarından mezun olup yeni görev yerlerine ataması yapılanların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylığa göreve başlama tarihinden itibaren hak kazanılır\" yanlış; nasıp tarihini takip eden aybaşından",
+    "İlk atananlar göreve başladıkları günden itibaren aylığa hak kazanır"
+   ],
+   "dogrusu": [
+    "Nasıp tarihini takip eden aybaşından (m.22)"
+   ]
+  },
+  {
+   "id": "74-4",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Adaylara harçlık",
+   "hukum": "Uzman jandarma adaylarına okuldaki eğitim ve öğrenim süresince uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının net tutarında harçlık ödenir; bu harçlıklar hiçbir kesintiye ve vergiye tabi değildir ve borç için haczedilemez (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harçlık uzman jandarma çavuş aylığının brüt tutarı kadardır\" veya \"damga vergisi kesilir\" veya \"nafaka borcu için haczedilebilir\" yanlış; brüt aylığın net tutarı, hiçbir kesinti-vergi yok, haczedilemez",
+    "Aday harçlıkları vergiye tabidir ve borç için haczedilebilir",
+    "Aday harçlığı uzman jandarma çavuşun brüt aylığı tutarındadır"
+   ],
+   "dogrusu": [
+    "Kesinti-vergi yok, haczedilemez (m.23)",
+    "Birinci kademe brüt aylığının net tutarı (m.23)"
+   ]
+  },
+  {
+   "id": "74-5",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Yolluk ve gündelikler",
+   "hukum": "Uzman jandarma çavuşlarından görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız sürekli görevle ayrılanlara yolluk ödenir\" yanlış; sürekli veya geçici"
+   ],
+   "dogrusu": [
+    "sürekli veya geçici · yürürlükteki özel kanun hükümlerine"
+   ]
+  },
+  {
+   "id": "74-6",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Mal bildirimi",
+   "hukum": "Uzman jandarmalar kendileri ile eşlerine ve velayet altındaki çocuklarına ait taşınır ve taşınmaz mallar, alacak ve borçları hakkında özel kanundaki hükümler uyarınca mal bildiriminde bulunur (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız taşınmaz mallar bildirilir\" veya \"anne-babanın malları da bildirilir\" yanlış; taşınır-taşınmaz, alacak-borç; kendisi, eşi, velayet altındaki çocukları"
+   ],
+   "dogrusu": [
+    "kendileri ile eşlerine ve velayet altındaki çocuklarına · taşınır ve taşınmaz mallar, alacak ve borçları · özel kanundaki"
+   ]
+  },
+  {
+   "id": "74-7",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Emekli Sandığı, fiili hizmet zammı, OYAK",
+   "hukum": "Uzman jandarmalar 5434 sayılı Emekli Sandığı Kanunu ile ilgilendirilir ve bu Kanunun 32'nci maddesinin (a) fıkrasındaki fiili hizmet süresi zammından yararlanır; 205 sayılı Kanunla kurulan Ordu Yardımlaşma Kurumunun daimi üyesidirler (m.26/a-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"OYAK'a isteğe bağlı üyedirler\" yanlış; daimi üyedirler",
+    "Uzman jandarmalar OYAK'ın isteğe bağlı üyesidir"
+   ],
+   "dogrusu": [
+    "Daimi üyesidir (m.26)"
+   ]
+  },
+  {
+   "id": "74-8",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Emeklilik ayları",
+   "hukum": "Emeklilik hakkını kazananlar emekliliklerini Ocak, Şubat, Temmuz veya Ağustos ayları içinde isteyebilir; bu aylar dışındaki istemler ancak Jandarma Genel Komutanının hizmet gerekleri itibarıyla uygun görmesi hâlinde kabul edilebilir (m.26/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu aylar dışındaki istemler İçişleri Bakanının onayıyla kabul edilir\" yanlış; Jandarma Genel Komutanının uygun görmesi",
+    "Emekliliğini Ocak, Nisan, Temmuz veya Ekim aylarında isteyebilir",
+    "Diğer aylardaki emeklilik istemleri İçişleri Bakanının onayıyla kabul edilir"
+   ],
+   "dogrusu": [
+    "Ocak, Şubat, Temmuz, Ağustos (m.26)",
+    "Jandarma Genel Komutanının uygun görmesi (m.26)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

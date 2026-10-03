@@ -1,0 +1,513 @@
+{
+ "kanun_id": 15,
+ "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_15.json",
+ "kartlar": [
+  {
+   "id": "15-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yazışmanın esas ortamı",
+   "hukum": "Resmî yazışmalar e-Yazışma Teknik Rehberi'ne uygun, güvenli elektronik imzalı belgelerle yapılır; bu belgeler elektronik ortamda paylaşılır ve elektronik ortamda saklanır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"elektronik ortamda saklanmaz\" denir"
+   ],
+   "dogrusu": [
+    "Resmî yazışmalar e-Yazışma Teknik Rehberi'ne uygun …"
+   ]
+  },
+  {
+   "id": "15-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Çıktının imzalanması yasağı",
+   "hukum": "Güvenli elektronik imzalı belge çıktısı alınarak el yazısıyla imzalanmaz ve fiziksel ortamda saklanmaz (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"çıktısı alınıp ıslak imza ile de imzalanır\" denir"
+   ],
+   "dogrusu": [
+    "Çıktının imzalanması yasağı"
+   ]
+  },
+  {
+   "id": "15-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "El yazısıyla imza ne zaman",
+   "hukum": "Sadece zorunlu hâllerde veya olağanüstü durumlarda; gönderme ve saklama fiziksel ortam şartlarına göre yapılır (m.4/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"idarenin takdirine göre her zaman\" denir"
+   ],
+   "dogrusu": [
+    "El yazısıyla imza ne zaman"
+   ]
+  },
+  {
+   "id": "15-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Nüsha sayısı",
+   "hukum": "Elektronik ortamda güvenli elektronik imzalı belge tek nüsha; zorunlu/olağanüstü durumda paraflı nüsha idarede kalacak şekilde en az iki nüsha (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde iki nüsha\" ya da \"en fazla iki nüsha\" denir"
+   ],
+   "dogrusu": [
+    "Nüsha sayısı"
+   ]
+  },
+  {
+   "id": "15-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kâğıt boyutu",
+   "hukum": "Belgeler A4 (210x297 mm) boyutu dikkate alınarak hazırlanır; ekler farklı form, format veya ebatta olabilir (m.6/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "ekler için de A4 zorunluluğu uydurulur"
+   ],
+   "dogrusu": [
+    "Kâğıt boyutu"
+   ]
+  },
+  {
+   "id": "15-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yazı tipi ve punto",
+   "hukum": "\"Times New Roman\" veya \"Arial\" normal stilde; Times New Roman 12, Arial 11 punto esastır (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "şıkka \"Calibri\" konur ya da puntolar ters çevrilir"
+   ],
+   "dogrusu": [
+    "Yazı tipi ve punto"
+   ]
+  },
+  {
+   "id": "15-6",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Punto düşürme sınırı",
+   "hukum": "Gerekli hâllerde yazı alanında 9 puntoya, iletişim bilgileri kısmında 8 puntoya kadar düşürülebilir (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "iki sınır yer değiştirilir (yazı alanı 8, iletişim 9 denir)"
+   ],
+   "dogrusu": [
+    "Punto düşürme sınırı"
+   ]
+  },
+  {
+   "id": "15-7",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Kenar boşluğu",
+   "hukum": "Yazı alanı sayfanın üst, sol ve sağ kenarından 1,5 cm boşluk bırakılarak düzenlenir; logo kullanılırsa üst boşluk 0,5 cm olur (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"alt kenardan da 1,5 cm\" eklenir ya da logo hâli 1 cm denir"
+   ],
+   "dogrusu": [
+    "Kenar boşluğu"
+   ]
+  },
+  {
+   "id": "15-8",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Logo kullanımı",
+   "hukum": "İdareler tercihen kurumsal logo kullanabilir; tek logo belgenin en üst orta kısmında \"T.C.\" ibaresini ortalayacak şekilde ya da \"Başlık\" alanını ortalayacak şekilde üst sol kısımda yer alır; iki logo varsa hiyerarşide üst idarenin logosu solda, alt olanınki sağda olur (m.9/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"logo zorunludur\" denir ya da sol-sağ sırası ters çevrilir"
+   ],
+   "dogrusu": [
+    "İdareler tercihen kurumsal logo kullanabilir …"
+   ]
+  },
+  {
+   "id": "15-9",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Başlık (antet)",
+   "hukum": "Başlık, belgeyi gönderen idarenin adının belirtildiği bölümdür ve yazı alanının üst kısmına ortalanarak yazılır (m.10/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"belgenin gönderildiği (muhatap) idare\" veya \"sağ köşeye/alt kısma yazılır\" denir"
+   ],
+   "dogrusu": [
+    "Başlık (antet)"
+   ]
+  },
+  {
+   "id": "15-10",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Başlık satır düzeni",
+   "hukum": "İlk satır \"T.C.\", ikinci satır idarenin adı büyük harflerle, üçüncü satır birimin adı ilk harfleri büyük; yazımda DETSİS kayıtları esas alınır (m.10/2, m.10/6)",
+   "sinavda_boyle_yazarlar": [
+    "idare adı küçük harfli gösterilir"
+   ],
+   "dogrusu": [
+    "Başlık satır düzeni"
+   ]
+  },
+  {
+   "id": "15-11",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Sayı zorunluluğu",
+   "hukum": "Belgelerde sayı bulunması zorunludur; sayı, hazırlama sürecine göre \"E\" (elektronik), \"Z\" (zorunlu hâl) veya \"O\" (olağanüstü durum) ibaresi, DETSİS numarası, standart dosya planı kodu ve kayıt numarasından oluşur, araları kısa çizgiyle ayrılır (m.11/1)",
+   "sinavda_boyle_yazarlar": [
+    "harflerin karşılığı değiştirilir (\"O\" = özel gibi)"
+   ],
+   "dogrusu": [
+    "Belgelerde sayı bulunması zorunludur …"
+   ]
+  },
+  {
+   "id": "15-12",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kayıt numarasının eşsizliği",
+   "hukum": "Her belgenin hazırlanma sürecine göre kayıt numarasının eşsiz olması zorunludur (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"aynı numara farklı belgelerde kullanılabilir\" denir"
+   ],
+   "dogrusu": [
+    "Kayıt numarasının eşsizliği"
+   ]
+  },
+  {
+   "id": "15-13",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Tarihin yazımı",
+   "hukum": "Tarih, sayı ile aynı satırda yazı alanının en sağında; gün ve ay iki haneli, yıl dört haneli (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "tarih sola alınır ya da \"yıl iki haneli\" denir"
+   ],
+   "dogrusu": [
+    "Tarihin yazımı"
+   ]
+  },
+  {
+   "id": "15-14",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Belge tarihi neye göre",
+   "hukum": "En son yetkilinin güvenli elektronik imzasına ait zaman damgasındaki tarih belge tarihi sayılır (m.12/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"belgenin EBYS'ye kaydedildiği tarih\" denir"
+   ],
+   "dogrusu": [
+    "Belge tarihi neye göre"
+   ]
+  },
+  {
+   "id": "15-15",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Metin alanının sınırları",
+   "hukum": "Metin alanı, \"Muhatap\" veya varsa \"İlgi\" ile \"İmza\" arasındaki kısımdır (m.16/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Başlık ile İmza arası\" ya da \"Konu ile İmza arası\" denir"
+   ],
+   "dogrusu": [
+    "Metin alanının sınırları"
+   ]
+  },
+  {
+   "id": "15-16",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Paragraf ve sayı yazımı",
+   "hukum": "Paragrafa 1,25 cm içeriden başlanır, metin iki yana hizalanır, paragraf araları boş bırakılmaz; dört ve dörtten çok haneli sayılar sondan üçlü gruplara ayrılıp nokta ile, kesirler virgülle yazılır (m.16/4, m.16/7)",
+   "sinavda_boyle_yazarlar": [
+    "nokta ile virgülün işlevi ters çevrilir"
+   ],
+   "dogrusu": [
+    "Paragrafa 1,25 cm içeriden başlanır …"
+   ]
+  },
+  {
+   "id": "15-17",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Arz mı rica mı",
+   "hukum": "Alt makamlara \"rica ederim\", üst ve aynı düzeydeki makamlara \"arz ederim\"; karışık dağıtımda \"arz ve rica ederim\" (m.16/12-a,b)",
+   "sinavda_boyle_yazarlar": [
+    "arz ve rica yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Arz mı rica mı"
+   ]
+  },
+  {
+   "id": "15-18",
+   "madde": [
+    "17"
+   ],
+   "baslik": "İmza bölümünün yeri",
+   "hukum": "Metnin bitiminden itibaren iki ilâ dört satır boşluk bırakılır; ad ilk harfi büyük, soyad büyük harflerle, altına unvan, yazı alanının en sağında ortalanarak yazılır (m.17/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki ilâ üç\" veya \"üç ilâ beş satır\" denir"
+   ],
+   "dogrusu": [
+    "Metnin bitiminden itibaren iki ilâ dört satır boşluk bırakılır …"
+   ]
+  },
+  {
+   "id": "15-19",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Elektronik imzada ibare yasağı",
+   "hukum": "Elektronik ortamda imzalayanın ad-soyadı üzerinde \"güvenli elektronik imzalıdır\" türü bir ibareye, şekle veya ifadeye yer verilmez (m.17/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"ad-soyad üstüne e-imza ibaresi yazılır\" denir"
+   ],
+   "dogrusu": [
+    "Elektronik imzada ibare yasağı"
+   ]
+  },
+  {
+   "id": "15-20",
+   "madde": [
+    "17",
+    "21"
+   ],
+   "baslik": "El yazısı imza/paraf kalemi",
+   "hukum": "Zorunlu hâl ve olağanüstü durumda imza ve paraf, kaybolmayacak ve kâğıda işleyecek mavi renkli kalemle atılır (m.17/6, m.21/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"siyah kalem\" denir"
+   ],
+   "dogrusu": [
+    "El yazısı imza/paraf kalemi"
+   ]
+  },
+  {
+   "id": "15-21",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Birden fazla imza sıralaması",
+   "hukum": "İki imzada üst unvan sahibi sağda; ikiden fazla imzada en üst unvan en solda olmak üzere soldan sağa unvan sırası izlenir (m.17/11)",
+   "sinavda_boyle_yazarlar": [
+    "iki yönlü kural tek kurala indirilip \"her zaman en üst solda\" denir"
+   ],
+   "dogrusu": [
+    "Birden fazla imza sıralaması"
+   ]
+  },
+  {
+   "id": "15-22",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Yetki devri ve vekâlet yazımı",
+   "hukum": "Yetki devrinde ikinci satıra \"Vali a.\", \"Genel Müdür a.\" gibi ibare; vekâlette ikinci satıra \"Başkan V.\", \"Rektör V.\" yazılır (m.17/9-10)",
+   "sinavda_boyle_yazarlar": [
+    "\"a.\" ile \"V.\" kısaltmaları değiştirilir"
+   ],
+   "dogrusu": [
+    "Yetki devri ve vekâlet yazımı"
+   ]
+  },
+  {
+   "id": "15-23",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Dağıtımda gereği ve bilgi",
+   "hukum": "Belgenin gereğini yerine getirecekler \"Gereği:\", içerikten haberdar olması istenenler \"Bilgi:\" kısmına yazılır (m.19/2)",
+   "sinavda_boyle_yazarlar": [
+    "iki kısmın tanımı ters verilir"
+   ],
+   "dogrusu": [
+    "Dağıtımda gereği ve bilgi"
+   ]
+  },
+  {
+   "id": "15-24",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Süreli belgeler",
+   "hukum": "\"ACELE\" ibareli belgeye derhâl ve süratle, \"GÜNLÜDÜR\" ibareli belgeye belirtilen süre içinde cevap verilir; bu ibareler yazı alanının sağ üst köşesine kırmızı renkle ve sadece birinci sayfaya yazılır (m.26/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "ibare sol üst köşeye/siyah renge çekilir veya her sayfaya yazılır denir"
+   ],
+   "dogrusu": [
+    "\"ACELE\" ibareli belgeye derhâl ve süratle, \"GÜNLÜDÜR\" ibareli belgeye belirtilen süre içinde cevap verilir …"
+   ]
+  },
+  {
+   "id": "15-25",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Gizlilik derecesi ve ortam",
+   "hukum": "\"Hizmete Özel\" belgelerin tüm işlemleri elektronik ortamda; \"Özel\" ve üstü gizlilik dereceli belgelerin işlemleri fiziksel ortamda yapılır (m.25/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Gizlilik derecesi ve ortam"
+   ]
+  },
+  {
+   "id": "15-26",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Gizlilik derecesinden kim sorumlu",
+   "hukum": "Belgenin imzacısı olan yetkili makam, gizlilik derecesinin belirlenmesinden sorumludur (m.25/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"evrak birimi\" veya \"hazırlayan personel\" denir"
+   ],
+   "dogrusu": [
+    "Gizlilik derecesinden kim sorumlu"
+   ]
+  },
+  {
+   "id": "15-27",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Üstveri ile belge görüntüsü",
+   "hukum": "Üstveri elemanları belgenin ayrılmaz bütünüdür; tarih ve sayı gibi belge görüntüsündeki bilgiler ile üstveri bilgileri arasında fark olamaz (m.28/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"küçük farklar kabul edilir\" denir"
+   ],
+   "dogrusu": [
+    "Üstveri ile belge görüntüsü"
+   ]
+  },
+  {
+   "id": "15-28",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Rehbere uygun olmayan belgeyi reddetme",
+   "hukum": "İdare, e-Yazışma Teknik Rehberi'ne uygun hazırlanmamış belgeyi reddedebilir ve durumu, belgenin ulaştığı tarihi takip eden ikinci iş gününün sonuna kadar gönderen idareye sebepleriyle bildirir (m.30/4)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"iki gün/beş iş günü\" yapılır"
+   ],
+   "dogrusu": [
+    "İdare …"
+   ]
+  },
+  {
+   "id": "15-29",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Şifreli belgede bildirim yapılmazsa",
+   "hukum": "Bildirimde bulunulmazsa şifreli belge açılmış, içeriğine erişilmiş ve rehbere uygun hazırlandığı kabul edilmiş sayılır (m.30/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"belge geçersiz sayılır\" denir"
+   ],
+   "dogrusu": [
+    "Şifreli belgede bildirim yapılmazsa"
+   ]
+  },
+  {
+   "id": "15-30",
+   "madde": [
+    "29"
+   ],
+   "baslik": "ASLI GİBİDİR",
+   "hukum": "Zorunlu/olağanüstü durumda ya da Yönetmelik öncesi fiziksel belgeden örnek çıkarılırsa \"ASLI GİBİDİR\" konur, yetkilendirilmiş görevlice ad-soyad-unvan-tarih belirtilerek imzalanır ve asıl belge gibi kabul edilir (m.29/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"onaylı örnek asıl sayılmaz\" denir"
+   ],
+   "dogrusu": [
+    "Zorunlu/olağanüstü durumda ya da Yönetmelik öncesi fiziksel belgeden örnek çıkarılırsa \"ASLI GİBİDİR\" konur …"
+   ]
+  },
+  {
+   "id": "15-31",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Bilgi ve görüş talebi süresi",
+   "hukum": "Süre belirtilmeyen bilgi ve görüş talepleri, talebin ulaşmasından itibaren en geç on beş iş günü içinde yerine getirilir (m.33/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"15 gün\" (iş günü değil) veya \"10 iş günü\" denir"
+   ],
+   "dogrusu": [
+    "Bilgi ve görüş talebi süresi"
+   ]
+  },
+  {
+   "id": "15-32",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Belge talebi süresi",
+   "hukum": "Süre belirtilmeyen belge talepleri en geç beş iş günü içinde yerine getirilir; talep yazıları günlü yazılır (m.33/1)",
+   "sinavda_boyle_yazarlar": [
+    "belge ile bilgi-görüş süreleri yer değiştirilir (15 ve 5 ters verilir)"
+   ],
+   "dogrusu": [
+    "Belge talebi süresi"
+   ]
+  },
+  {
+   "id": "15-33",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Cevap gelmezse",
+   "hukum": "Belgeye süresi içinde cevap verilmemesi durumunda muhataba tekit yazısı yazılabilir (m.34/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tekit zorunludur\" ya da \"doğrudan iade edilir\" denir"
+   ],
+   "dogrusu": [
+    "Cevap gelmezse"
+   ]
+  },
+  {
+   "id": "15-34",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Yönetmeliğe aykırı yazı",
+   "hukum": "Muhatap, ilgili maddeler belirtilerek uyarılabilir; durum devam ederse süreli belgeler hariç müteakip belgeler gerekçesiyle iade edilebilir (m.35/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"süreli belgeler de iade edilir\" denir"
+   ],
+   "dogrusu": [
+    "Yönetmeliğe aykırı yazı"
+   ]
+  },
+  {
+   "id": "15-35",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Dilekçenin bitiş ibaresi",
+   "hukum": "Kişilerin dilekçesinin \"arz ederim\" ile bitmemesi, \"rica ederim\" veya başka ibareyle bitmesi işleme alınmasına engel değildir (m.31/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"arz ile bitmeyen dilekçe işleme konulmaz\" denir"
+   ],
+   "dogrusu": [
+    "Dilekçenin bitiş ibaresi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

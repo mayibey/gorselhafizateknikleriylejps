@@ -1,0 +1,115 @@
+[
+ {
+  "kanun_id": 44,
+  "kart_id": "44-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Muhafaza makamı savcılıktan jandarmaya kaydırıldı; zapt yetkisi yalnız zabıtaya daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmanın zaptettiği uyuşturucu maddeler suç delili olarak jandarma birliğinin deposunda muhafaza altına alınır.”",
+    "“Uyuşturucu maddeleri zaptetmeye yalnızca zabıta yetkilidir; gümrük ve sağlık memurlarının zapt yetkisi yoktur.”"
+   ],
+   "dogrusu": [
+    "Zaptedilen uyuşturucu maddeler, sahipleri belli olsun veya olmasın, suç delili olarak Cumhuriyet savcılığınca muhafaza altına alınır (m.20)",
+    "Uyuşturucu maddeleri zabıtanın yanında gümrük memurları, sağlık müfettiş ve müdürleri, hükümet tabipleri gibi görevliler de tutanakla zapteder (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Müsadere kararını veren makam sulh ceza hâkimliğinden mülkî amire kaydırıldı; teslim yeri mülkî amirlikten savcılığa kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Zaptedilen uyuşturucu maddelerin müsaderesine mahallin mülkî amiri karar verir.”",
+    "“Müsaderesine karar verilen uyuşturucu maddeler mühürlü olarak Cumhuriyet başsavcılığına teslim edilir.”"
+   ],
+   "dogrusu": [
+    "Uyuşturucu maddelerin müsaderesine, kesin raporlar alındıktan sonra soruşturmanın her safhasında sulh ceza hâkimliğince karar verilir (m.20)",
+    "Müsaderesine karar verilen uyuşturucu maddeler mühürlü olarak mahallî mülkî amirliğe teslim edilir (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İmha kolluk amirine bağlandı; savcı nezareti kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Müsaderesine karar verilen uyuşturucu maddeler, kolluk amirinin kararıyla ve onun başkanlığındaki heyet huzurunda imha edilir.”",
+    "“Uyuşturucu maddelerin imhasında il savcısı veya yardımcısının nezaretçi olarak bulunması gerekmez.”"
+   ],
+   "dogrusu": [
+    "İmha, valinin görevlendirdiği yetkili başkanlığındaki heyet huzurunda, savcı nezaretinde yapılır (m.21)",
+    "Uyuşturucu imha heyetine il savcısı veya yardımcısı nezaretçi olarak katılır (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kenevir yetiştiriciliği her hâlde yasak gösterildi; izin makamı Sağlık Bakanlığına kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye'de kenevir yetiştiriciliği, hangi amaçla olursa olsun tamamen yasaktır.”",
+    "“Lif, tohum ve sap üretimi amacıyla kenevir yetiştiriciliği Sağlık Bakanlığının iznine tabidir.”"
+   ],
+   "dogrusu": [
+    "Lif, tohum, sap ve tıbbi ürün gibi amaçlarla kenevir, Tarım ve Orman Bakanlığının izniyle yetiştirilebilir (m.23)",
+    "Lif, tohum ve sap üretimi amaçlı kenevir yetiştiriciliği Tarım ve Orman Bakanlığının iznine tabidir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İmha masrafı Hazineye yüklendi; imha emri veren makam mülkî amirden savcıya kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzinsiz yetiştirilen kenevirin imhası nedeniyle ortaya çıkan masraf, izinsiz ekim yapandan tahsil edilmez.”",
+    "“İzinsiz yetiştirilen kenevir, Cumhuriyet savcısının emriyle zabıta tarafından imha edilir.”"
+   ],
+   "dogrusu": [
+    "İmha masrafı sonradan izinsiz ekim yapanlardan 6183 sayılı Kanuna göre tahsil edilir (m.23)",
+    "İzinsiz kenevir, ziraat mühendisinin raporu üzerine mahallin en büyük mülkî amirinin emriyle zabıtaca imha edilir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kendi kullanımı için ekime esrar amaçlı ekimin cezası (4-12 yıl) verildi; esrar amaçlı ekim izinsiz ekimin adlî para cezasıyla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Münhasıran kendi kullanımı için esrar elde etmek amacıyla kenevir ekimi yapan kişi dört yıldan on iki yıla kadar hapis cezası ile cezalandırılır.”",
+    "“Esrar elde etmek amacıyla kenevir ekimi yapan kişiye yalnızca elli günden az olmamak üzere adlî para cezası verilir.”"
+   ],
+   "dogrusu": [
+    "Münhasıran kendi kullanımı için esrar elde etmek amacıyla kenevir eken kişi bir yıldan üç yıla kadar hapis cezası alır (m.23)",
+    "Esrar elde etmek amacıyla kenevir ekimi dört yıldan on iki yıla kadar hapis ve adlî para cezası gerektirir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "KART_CELISKI (kapsam): hüküm tedbirleri belirsiz biçimde 'bu suçlar' için geçerli gösteriyor; resmî metin CMK m.135 ve m.140 tedbirlerini yalnız esrar elde etmek amacıyla kenevir ekme suçu bakımından öngörür (izinsiz kenevir ekimi gibi diğer m.23 suçları için değil). Kutu: gizli soruşturmacı hükmü Kanunda sayılmış gösterildi; iletişimin denetlenmesi tedbiri dışlandı",
+  "duzeltme": {
+   "hukum": "Esrar elde etmek amacıyla kenevir ekme suçu bakımından CMK'nın iletişimin tespiti, dinlenmesi ve kayda alınması (m.135) ile teknik araçlarla izleme (m.140) tedbirlerine ilişkin hükümleri uygulanabilir; gizli soruşturmacı hükmü sayılmamıştır (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "“Esrar elde etmek amacıyla kenevir ekme suçunda 2313 sayılı Kanun, CMK'nın gizli soruşturmacı hükmünün de uygulanabileceğini öngörmüştür.”",
+    "“Esrar elde etmek amacıyla kenevir ekme suçunda iletişimin tespiti, dinlenmesi ve kayda alınması tedbiri uygulanamaz.”"
+   ],
+   "dogrusu": [
+    "2313 sayılı Kanun bu suç için yalnız CMK'nın iletişimin denetlenmesi ve teknik araçla izleme hükümlerini öngörür; gizli soruşturmacı sayılmamıştır (m.23)",
+    "Esrar amaçlı kenevir ekme suçunda CMK m.135 uyarınca iletişimin tespiti, dinlenmesi ve kayda alınması uygulanabilir (m.23)"
+   ]
+  }
+ }
+]

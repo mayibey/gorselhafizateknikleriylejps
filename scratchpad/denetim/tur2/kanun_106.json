@@ -1,0 +1,91 @@
+{
+ "kanun_id": 106,
+ "ad": "Şehitlik Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_106.json",
+ "kartlar": [
+  {
+   "id": "106-0",
+   "madde": [
+    "1",
+    "2"
+   ],
+   "baslik": "Amaç ve tanımlar",
+   "hukum": "Şehitlik yerlerinin tespiti, tescili, tahsisi, yönetimi, inşası, bakımı, korunması ve kimlerin defnedileceği (m.1); tahsis: Hazine/Devlet/kamu taşınmazlarının YİKOB'a veya il özel idaresine tahsisi; tescil: edinilen taşınmazların büyükşehirde YİKOB, diğer illerde il özel idaresi adına tapuya tescili (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şehitlikler MSB adına tescil edilir\" yanlış"
+   ],
+   "dogrusu": [
+    "kimlerin defnedileceği · tahsis · YİKOB'a veya il özel idaresine · tescil · büyükşehirde YİKOB, diğer illerde il özel idaresi"
+   ]
+  },
+  {
+   "id": "106-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Şehitliklere defnedilecek kişiler",
+   "hukum": "(a) MSB, Genelkurmay, Kuvvet K.lıklarında subay, sözleşmeli subay, astsubay, uzman erbaş, sözleşmeli erbaş-er; JGK Jandarma Hizmetleri Sınıfı ve SGK Sahil Güvenlik Hizmetleri Sınıfı personeli, sözleşmeli subay-astsubay, uzman erbaş, sözleşmeli erbaş-er; Emniyet Hizmetleri Sınıfı, MİT mensupları, yedek subay, yedek astsubay, erbaş-erlerden: 5434 m.45/64/56 ve 5510 m.47 hâllerinde, 2330 Nakdi Tazminat Kanunu hâllerinde, 2453 (yurt dışı görevli), 2566, 2629 (uçuş-paraşüt-dalgıç), 2935 OHAL, 2937 MİT, 3160, 3497 (kara sınırları), 3713 m.21, 4536 (patlayıcı madde) hâllerinde hayatını kaybedenler; (b) diğer kamu personeli benzer hâllerde; (c) geçici ve gönüllü köy korucuları (442 m.74/4, 2330, 2935, 3713, 4536); (ç) diğer kişiler (2330, 2935 görevlendirilenler, 3713 m.21/j, 4536, MKE personeli); (d) 3713 m.21/i kapsamındakiler; (e) 2780 sayılı Kanun kapsamındaki uçuş-dalış-atlayış eğitimindeki askerî öğrenciler; (f) bu hâllerde yaralanıp sonradan bu sebeple ölenler; defnedilmeyenler: kasıt, disiplinsizlik veya suç teşkil eden eylem sonucu ölenler; bünyesel rahatsızlık, intihar, uyuşturucu-keyif verici madde, kendini elverişsiz hâle getirme sonucu ölenler; kanuni izin, hava değişimi ve bunlara gidiş-dönüşte ölenler ile bakaya, firar, izin ve hava değişimi tecavüzünde ölenler (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"İzinde ölen asker şehitliğe defnedilir\" yanlış",
+    "Kanuni izinde ölen asker şehitliğe defnedilir"
+   ],
+   "dogrusu": [
+    "Defnedilmez (m.3)"
+   ]
+  },
+  {
+   "id": "106-2",
+   "madde": [
+    "4",
+    "5",
+    "6"
+   ],
+   "baslik": "Defin kararı makamları ve beyan",
+   "hukum": "Defin kararını MSB ve Genelkurmay personeli ile askerlik yükümlüleri için bağlı bulundukları kuvvet komutanlığı; Kara, Deniz ve Hava Kuvvetleri personeli için bağlı bulundukları komutanlık veya yetki vereceği makam; JGK Jandarma Hizmetleri Sınıfı, SGK Sahil Güvenlik Hizmetleri Sınıfı ve EGM personeli için olayın meydana geldiği il valiliği; MİT mensupları için MİT Müsteşarlığı; yurt dışında görevli olanlar için bağlı bulundukları kurumlar; bunlar dışında kalanlar için olayın meydana geldiği il valiliği verir (m.4); defin kararı veren makam sırasıyla eşinden, en büyük reşit çocuğundan, anasından, babasından, en büyük reşit kardeşinden hangi şehitliğe/mezarlığa defin istediğine dair yazılı beyan alır (yalnız bir yakınından) ve defin ili valiliğine bildirir; hazırlıklar defin yeri valiliğince yapılır; şehitlik dışı definler yerel yönetimlerle koordine edilir (m.5); gaiplik kararı alınanlar için eş, çocuk, ana, baba veya kardeş talebiyle valilikçe temsili mezar yaptırılır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Beyan ana ve babadan birlikte alınır\" yanlış; sıraya göre bir yakından",
+    "Defin beyanı en büyük reşit kardeşten öncelikle alınır"
+   ],
+   "dogrusu": [
+    "Eşten; kardeş sonda (m.5)"
+   ]
+  },
+  {
+   "id": "106-3",
+   "madde": [
+    "7",
+    "8",
+    "9"
+   ],
+   "baslik": "Şehitlik yerleri, yönetim ve düzenleme",
+   "hukum": "Şehitlik olarak belirlenen yerler: savaşta ölenlerin defnedildiği yerler, hareket hâlindeki birliklerin toplu bulunduğu yerlerde ölenlerin defnedildiği yerler, m.3'tekiler için ayrılan yerler; belirleme yurt içinde valiliklerce, yurt dışında Dışişleri Bakanlığı vasıtasıyla ilgili ülkeyle mutabakatla; belirlenen yerler büyükşehirde YİKOB, diğer illerde il özel idaresi adına tescil; Hazine/kamu taşınmazları Maliye Bakanlığı veya maliki idarece tahsis (m.7); yönetim-inşa-bakım-onarım-koruma yurt içinde valilikler, yurt dışında büyükelçilikler (yoksa Dışişleri temsilcilikleri) (m.8); düzenleme: Ek-2 tip anıt projesi (özellikli şehitliklerde özel proje), yeterli tören alanı, çevre emniyet duvarı, bütçeye göre albüm binası ve bekçi evi, aydınlatma-sulama-teraslama-bahçe-yaya yolları standartları valiliklerce, mevcut imalatlar azami değerlendirilir, ada-parsel planı, mezarlar birden başlayarak numaralanır ve sıra numarasına göre defin (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığınca\" ve \"YİKOB'ca\" şıkları yanlış",
+    "Şehitlik yeri yurt içinde İçişleri Bakanlığınca belirlenir",
+    "Altyapı standartlarını YİKOB belirler"
+   ],
+   "dogrusu": [
+    "Valilikçe (m.7)",
+    "Valilikler (m.9)"
+   ]
+  },
+  {
+   "id": "106-4",
+   "madde": [
+    "10",
+    "11",
+    "12"
+   ],
+   "baslik": "Ödenek, mezarlar, kayıtlar",
+   "hukum": "Yurt içi şehitliklerin keşif raporları müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir, giderler İçişleri bütçesinden; yakınlarının talebiyle şehitlik dışına defnedilenlerin mezar inşa-bakım ödeneği de Mart sonuna kadar valilikçe İçişleri'ne; yurt dışı şehitliklerin ödenek ihtiyacı büyükelçilik/temsilcilikçe Ağustos ayı sonuna kadar Dışişleri Bakanlığına, giderler Dışişleri bütçesinden (m.10); mezarlar Ek-1 tip mezar projesine göre valiliklerce inşa ettirilir; şehitlik dışına defnedilenlerin mezarı yakınları talep edip uygun bulunursa valilikçe bakım-onarım (m.11); şehitliklerde kayıt defteri: kimlik, fotoğraf, ölüm ve defin tarihi, defin sebebi, karar makamının yazı tarih-numarası, ada-parsel-mezar numarası; karar makamı isterse bilgiler deftere kaydedilmez (m.12); Cebeci'deki Dışişleri Şehitliği işlemleri Dışişleri Bakanlığınca (m.13); karar makamlarınca yapılacak işlemler ilgili makamlarca belirlenir (m.14); Yönetmelik yayımından 1 ay sonra yürürlüğe girer (m.15), Cumhurbaşkanı yürütür (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt içi keşif raporları Ağustos sonuna kadar\" yanlış; Mart",
+    "Yurt dışı ödenek Mart sonuna kadar"
+   ],
+   "dogrusu": [
+    "Ağustos; yurt içi Mart (m.10)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

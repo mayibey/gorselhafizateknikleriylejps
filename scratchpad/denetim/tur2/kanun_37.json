@@ -1,0 +1,151 @@
+{
+ "kanun_id": 37,
+ "ad": "2860 sayılı Yardım Toplama Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_37.json",
+ "kartlar": [
+  {
+   "id": "37-0",
+   "madde": [
+    "6"
+   ],
+   "baslik": "İzin zorunluluğu ve men",
+   "hukum": "Kişiler ve kuruluşlar yetkili makamdan izin almadan yardım toplayamaz; kamu yararına çalışan dernek, kurum ve vakıflardan hangilerinin izinsiz toplayabileceği Cumhurbaşkanınca belirlenip ilan edilir; izin alınmadan girişilen yardım toplama faaliyeti güvenlik kuvvetlerince derhâl men edilir ve sorumlular hakkında kovuşturma yapılır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "izinsiz toplayabilecekleri \"İçişleri Bakanlığı\" belirler denir",
+    "İzinsiz yardım toplama savcı emriyle durdurulur"
+   ],
+   "dogrusu": [
+    "Güvenlik kuvvetlerince derhâl men edilir (m.6)"
+   ]
+  },
+  {
+   "id": "37-1",
+   "madde": [
+    "6"
+   ],
+   "baslik": "İnternette izinsiz yardım",
+   "hukum": "İzinsiz yardım toplamanın internet ortamında yapıldığı tespit edilirse valilik veya İçişleri Bakanlığı içerik ve yer sağlayıcıya içeriğin çıkarılması için bildirimde bulunur; içerik yirmi dört saat içinde çıkarılmaz veya sağlayıcıya ulaşılamazsa sulh ceza hâkimliğine erişimin engellenmesi için başvurulur; karara CMK'ya göre itiraz edilebilir; engelleme içeriğe erişimin engellenmesi (URL) yöntemiyle verilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "erişim engelleme kararını \"valilik\" verir denir"
+   ],
+   "dogrusu": [
+    "internet ortamında · valilik veya İçişleri Bakanlığı · yirmi dört saat · sulh ceza hâkimliğine · içeriğe erişimin engellenmesi (URL)"
+   ]
+  },
+  {
+   "id": "37-2",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İzin makamı",
+   "hukum": "Faaliyet bir ilin birden fazla ilçesini kapsıyorsa vali, bir ilçenin sınırları içindeyse kaymakam; birden fazla ili kapsıyorsa faaliyete girişecek kişi veya kuruluşun yerleşim yerinin bulunduğu ilin valisi izin verir ve bu valilik ilgili valiliklere ve İçişleri Bakanlığına bilgi verir; işlemler dernekler birimlerince yürütülür (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "birden fazla il için \"İçişleri Bakanlığı izni\" denir",
+    "Birden fazla ili kapsayan yardım için İçişleri Bakanlığından izin alınır"
+   ],
+   "dogrusu": [
+    "Yerleşim yerinin valisinden; Bakanlığa bilgi verilir (m.7)"
+   ]
+  },
+  {
+   "id": "37-3",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Başvuru",
+   "hukum": "Yardım toplayacak kişi ve kuruluşlar isteklerini dilekçeyle yetkili makama bildirir; gazete ve dergiler için dilekçeyi sorumlu yazı işleri müdürü verir; yardım toplama öğrenim kurumları yararına veya kurum içinde yapılacaksa dilekçeye kurum sorumlusunun yazılı izni eklenir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "okul için izin şartı atlanır"
+   ],
+   "dogrusu": [
+    "dilekçeyle · sorumlu yazı işleri müdürü · öğrenim kurumları · kurum sorumlusunun yazılı izni"
+   ]
+  },
+  {
+   "id": "37-4",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İnceleme ve karar süresi",
+   "hukum": "İzin makamı işin önemini, faaliyete girişeceklerin yeterliğini, hizmetin amaca ve kamu yararına uygunluğunu, faaliyetin başarıya ulaşıp ulaşamayacağını inceler ve sonucu en geç iki ay içinde başvurana bildirir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "süre bir ay yapılır"
+   ],
+   "dogrusu": [
+    "yeterliğini · kamu yararına · en geç iki ay"
+   ]
+  },
+  {
+   "id": "37-5",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Süre",
+   "hukum": "Yardım toplama süresinin takdiri izin veren makama aittir; bu süre bir yılı geçemez; haklı sebeplerin bulunması hâlinde verilen süre izin veren makamca uzatılabilir — uzatmadaki \"bir yılı geçmemek üzere\" ibaresi Anayasa Mahkemesince iptal edilmiştir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"uzatma bir yılı geçemez\" hâlâ yürürlükteymiş gibi sorulur — 2026'da doğru cevap \"kural olarak en çok bir yıl; haklı sebeple izin makamınca uzatılabilir\" idi",
+    "Yardım toplama süresi uzatmayla bir yılı geçemez"
+   ],
+   "dogrusu": [
+    "Uzatma tavanı iptal edildi; ana süre bir yıl (m.10)"
+   ]
+  },
+  {
+   "id": "37-6",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Sorumlu kurul",
+   "hukum": "Gerçek kişiler yardım toplama için en az üç kişilik sorumlu kurul oluşturmak zorundadır; tüzel kişilerin sorumlu kurulu yönetim organlarıdır; kurulda görev alanlar ve değişiklikler izin makamına on gün içinde bildirilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "kurul iki kişi yapılır"
+   ],
+   "dogrusu": [
+    "en az üç kişilik sorumlu kurul · yönetim organlarıdır · on gün"
+   ]
+  },
+  {
+   "id": "37-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Gazete ve dergiler",
+   "hukum": "Gazete ve dergilerce toplanacak para yardımları bankada özel bir hesaba yatırılır; yardıma katılanların adları ve tutarı, aksi yönde istek olmadıkça yayımlanır; faaliyet sonunda toplanan miktar açıklanır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "özel bir hesaba · yayımlanır · açıklanır"
+   ]
+  },
+  {
+   "id": "37-8",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Kamu görevlileri ve güvenlik kuvvetleri",
+   "hukum": "Kamu görevlileri vali veya kaymakamdan izin almadıkça yardım toplama faaliyetinde çalışamaz; izin verilenlere hiçbir ad altında ücret verilemez (Türk Hava Kurumunun kurban derisi, fitre ve zekât zarfı işlerinde görevlendirdiği personel hariç); Silahlı Kuvvetler, hâkim ve savcılar, güvenlik kuvvetleri mensupları ve özel kolluk görevlileri yardım toplama faaliyetlerinde çalışamaz (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"güvenlik kuvvetleri mensupları vali izniyle çalışabilir\" denir",
+    "Güvenlik kuvvetleri mensupları izinle yardım toplayabilir"
+   ],
+   "dogrusu": [
+    "Çalışamaz (m.13)"
+   ]
+  },
+  {
+   "id": "37-9",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Sorumluluk",
+   "hukum": "Yardım toplama faaliyetine girişenler; faaliyetin düzenli ve verimli yürütülmesinden, süresi içinde sonuçlandırılmasından, toplanan para ve eşyanın korunmasından ve amaca uygun kullanılmasından sorumludur (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"hedeflenen yardım miktarına ulaşılması\" eklenir — çıkmış soruda yanlış şık buydu",
+    "Hedeflenen miktara ulaşmak sorumluluklardan biridir"
+   ],
+   "dogrusu": [
+    "Değildir (m.14)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

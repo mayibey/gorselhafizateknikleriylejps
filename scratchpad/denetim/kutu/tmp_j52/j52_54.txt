@@ -1,0 +1,83 @@
+AD: Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik
+====================================================================================================
+#0 id=54-0 madde=['5'] baslik=Özel güvenlik komisyonu
+HUKUM: Her ilde valinin görevlendireceği bir vali yardımcısı başkanlığında; il emniyet müdürlüğü, il jandarma komutanlığı, ticaret odası ve sanayi odası temsilcilerinden oluşur (sanayi odası yoksa ticaret ve sanayi odası); izin isteyen kişi/kuruluşun temsilcisi ilgili toplantıya üye olarak katılır; üye tam sayısının yarısının bir fazlasıyla toplanır, oy çokluğuyla karar alır, eşitlikte başkanın tarafı, çekimser oy yok; özel güvenlik hizmeti komisyon kararı üzerine valinin iznine bağlıdır (m.5)
+TUZAK_SATIRI: "Vali başkanlık eder" yanlış; vali yardımcısı. "Çekimser oy kullanılabilir" yanlış
+MEVCUT_DOGRUSU: []
+  TZ-Y: Belediye başkanlığı özel güvenlik komisyonunda temsilci bulundurur
+  TZ-D: Bulundurmaz (m.5)
+  TZ-Y: Komisyona vali başkanlık eder
+  TZ-D: Vali yardımcısı (m.5)
+====================================================================================================
+#1 id=54-1 madde=['6'] baslik=Komisyonun görevleri
+HUKUM: Kişinin talebiyle korunmaya, kurumların özel güvenlik birimi kurmasına/hizmet satın almasına karar vermek; azami personel sayısını, silah-teçhizat miktar ve niteliğini, fiziki ve aletli tedbirleri belirlemek; para-değerli eşya nakli ve geçici korumada kullanılacak silah sayısını belirlemek; görev alanını belirlemek ve zorunlu hâlde genişletmek; para nakli-cenaze gibi umumi yerlerdeki hizmetlerde kamu hürriyetleri için sınırlandırıcı karar almak; uygulamanın sona erdirilmesine karar vermek; denetim sonrası valinin talebiyle tedbir kararlaştırmak (m.6)
+TUZAK_SATIRI: "Komisyon görevlilere çalışma izni verir" yanlış; çalışma izni valilik/Bakanlık
+MEVCUT_DOGRUSU: ['Çalışma izni vermek Komisyonun görevleri arasında sayılmaz (m.6)']
+====================================================================================================
+#2 id=54-3 madde=['12'] baslik=Koruma ve güvenlik planı
+HUKUM: Özel güvenlik birimleri ve şirketleri, hizmet verecekleri tesis ve alanlara ilişkin koruma ve güvenlik planlarını hizmetin başlamasından itibaren en geç 30 gün içinde hazırlar, güncel örneğini valilik talebi veya denetimlerde ibraz için hazır tutar (m.12)
+TUZAK_SATIRI: "Plan 15 gün içinde valiliğe verilir" yanlış; 30 gün, hazır bulundurulur
+MEVCUT_DOGRUSU: ['Koruma ve güvenlik planı hizmet başladıktan sonra en geç 30 gün içinde hazırlanır, valiliğe verilmez, ibraz için hazır tutulur (m.12)']
+====================================================================================================
+#3 id=54-4 madde=['17'] baslik=Çalışma izni ve muafiyetler
+HUKUM: Güvenlik soruşturması olumlu olanlara ruhsat harcı yatırınca Özel Güvenlik Görevlisi Kimlik Kartı verilir; genel kolluk ve MİT emeklileri ile en az 5 yıl fiilen çalışıp ayrılanlarda temel eğitim şartı aranmaz; güvenlikle ilgili fakülte/MYO mezunlarında silah eğitimi dışında temel eğitim aranmaz; güvenlik soruşturması ve arşiv araştırması her 5 yılda bir yenilenir; şartlardan biri kaybedilirse kimlik ve çalışma izni Bakanlık/valilikçe iptal edilir (m.17)
+TUZAK_SATIRI: "3 yıl çalışıp ayrılan" yanlış; 5 yıl
+MEVCUT_DOGRUSU: ["Genel kolluk veya MİT'te en az 5 yıl fiilen çalışıp kendi isteğiyle ayrılanlarda temel eğitim şartı aranmaz (m.17)"]
+====================================================================================================
+#4 id=54-6 madde=['22'] baslik=Üniforma
+HUKUM: Üniforma TSK, genel kolluk ve özel kolluk renk, biçim ve motifinde olamaz; üniformada şirketi tanıtıcı isim/logo bulunur; birimlerin üniforması Komisyon onayına, şirketlerinki Bakanlık onayına sunulur; gece görevinde, spor müsabakalarında, konser ve sahne gösterilerinde arkasında "ÖZEL GÜVENLİK" yazılı reflektif yelek giyilir (m.22)
+TUZAK_SATIRI: Şirket üniformasını "Komisyon onaylar" yanlış; Bakanlık
+MEVCUT_DOGRUSU: ['Şirketlerin üniforma ve teçhizatını Bakanlık, özel güvenlik birimlerininkini Komisyon onaylar (m.22)']
+====================================================================================================
+#5 id=54-7 madde=['24'] baslik=Silah izni
+HUKUM: Önce fiziki önlem ve güvenlik cihazlarına öncelik; Komisyon orantılılık ilkesiyle kalıcı etkisi olmayan kimyasallara izin verebilir; yeterli olmayacaksa 6136'ya göre ruhsatlandırılabilen yarı otomatik tabancalar ve 2521 kapsamındaki av silahlarının bulundurulmasına ve taşınmasına Komisyon karar verir; sayı ve nitelik kararda yazılır; silah taşıyacak görevlide 6136 şartları aranır (m.24)
+TUZAK_SATIRI: "Silah iznini valilik verir" yanlış; Komisyon
+MEVCUT_DOGRUSU: ['Silah bulundurma ve taşımaya Komisyon karar verir; sayı ve nitelik kararda yazılır (m.24)']
+====================================================================================================
+#6 id=54-8 madde=['29'] baslik=Fişek — 25 adet
+HUKUM: İzin verilen her silah için 25 adet fişek alınmasına izin verilir; miktar Komisyon kararı ve valinin onayı ile artırılabilir; görevde sarf edilip tutanakla tespit edilen eksik fişek tamamlanır; eğitim fişekleri sınırlamaya tabi değil; silah ve fişek nakli, silah taşıma yetkisi olan valiliğin uygun gördüğü kişi tarafından yapılabilir (m.29)
+TUZAK_SATIRI: "50 fişek" tuzak; 25
+MEVCUT_DOGRUSU: ['Her silah için 25 fişek; miktar Komisyon kararı ve vali onayıyla artırılabilir (m.29)']
+====================================================================================================
+#7 id=54-9 madde=['30'] baslik=Silah ve fişek devri — 6 ay + 2 ay
+HUKUM: İzni iptal edilen veya ihtiyaç fazlası bildiren kişi/kuruluşların silah ve fişekleri genel hükümlere göre devredilir; 6 ay içinde devir olmazsa takip eden 2 ay içinde 6136'ya göre ruhsat başvurusu zorunlu; ruhsatlandırılmayan silahlar müsadere için adli makamlara; tüfekler ve tam otomatik tabancalar devredilebilir, genel kolluğa bağışlanabilir veya imha için valilikçe MKE'ye verilir; devir/hibe/imha/satış öncesi Bölge Kriminal Polis Laboratuvarı ekspertiz raporu (m.30)
+TUZAK_SATIRI: "1 yıl içinde devir" yanlış; 6 ay + 2 ay
+MEVCUT_DOGRUSU: ["Devir 6 ay içinde yapılmazsa takip eden 2 ay içinde 6136'ya göre ruhsat başvurusu zorunludur (m.30)"]
+====================================================================================================
+#8 id=54-10 madde=['33'] baslik=Temel eğitim — 120 saat / 100 saat
+HUKUM: Adaylar asgari 120 saat eğitim alır, 20 saati silah ve atış; ateşli silah taşımayacaklar için silah eğitimi zorunlu değil, temel eğitim 100 saatten az olamaz; günde 8, haftada 48 saatten fazla olamaz; ders saati 40 dakika, aralar 10 dakika; haftada bir gün istirahat; atışta 25 fişekten en az 15 isabet şart; silahlı görevlilere her yıl en az 25 fişek hizmet içi atış; atış poligonu 15 gün içinde valiliğe bildirilir; havalimanı görevlileri Sivil Havacılık Güvenliği, liman görevlileri ISPS Kod derslerini alır (m.33)
+TUZAK_SATIRI: "25 fişekten 20 isabet" yanlış; 15
+MEVCUT_DOGRUSU: []
+  TZ-Y: Silahsız görevlinin temel eğitimi 120 saattir
+  TZ-D: 100 saatten az olamaz (m.33)
+====================================================================================================
+#9 id=54-11 madde=['34'] baslik=Yenileme eğitimi — 5 yılda bir, 60 saat
+HUKUM: Görevliler ve yöneticiler kimlik kartı yenilemek için 5 yılda bir yenileme eğitimi alır; en az 60 ders saati, 8 saati silah ve atış; en az 20 özel güvenlik görevlisi istihdam eden birimlerde valilik incelemesiyle yerinde yapılabilir (şirketten hizmet alanlar yerinde yapamaz); eğitim süresince iş akdi devam eder, özlük hakları kesilemez (m.34)
+TUZAK_SATIRI: "Yenileme 3 yılda bir" yanlış; 5 yıl
+MEVCUT_DOGRUSU: []
+  TZ-Y: Yenileme eğitimi 3 yılda bir
+  TZ-D: 5 yıl (m.34)
+====================================================================================================
+#10 id=54-12 madde=['36', '37'] baslik=Yazılı sınav
+HUKUM: Sorular Merkezi Sınav Komisyonunca hazırlanır, illerde yapılır; sınav en az 15 gün önce ilan edilir; temel eğitim yazılı sınavı 80 soru + silah bilgisi 20 soru; yenileme sınavı 40 + 20 soru; gözlemci ve uygulamalı sınav komisyonu personelini valilik belirler (m.36-37)
+TUZAK_SATIRI: "Sorular valilikçe hazırlanır" yanlış; Merkezi Sınav Komisyonu
+MEVCUT_DOGRUSU: ['Yazılı sınav sorularını Merkezi Sınav Komisyonu hazırlar (m.37)']
+====================================================================================================
+#11 id=54-13 madde=['38'] baslik=Uygulamalı sınav — 5 fişek
+HUKUM: Uygulamalı sınavda Bakanlıkça belirlenen mesafeden 5 adet fişek üzerinden atış ile adayların atış becerisi ölçülür; uygulamalı sınav yazılı sınavdan hemen sonra yapılır; aday çoksa birden fazla komisyon kurulabilir, sınav sonraki günlerde tamamlanabilir (m.38)
+TUZAK_SATIRI: "50 metre mesafe" şıkları uydurma; mesafeyi Bakanlık belirler
+MEVCUT_DOGRUSU: []
+  TZ-Y: Uygulamalı sınavda 25 fişekle atış yapılır
+  TZ-D: 5 fişek; 25 fişek eğitimde (m.38)
+====================================================================================================
+#12 id=54-14 madde=['43'] baslik=Denetim — JGK ve EGM sorumluluk bölgesi
+HUKUM: Bakanlık ve valilikler özel güvenlik şirketlerini, alarm izleme merkezlerini, birimleri ve eğitim kurumlarını her zaman denetleyebilir; Bakanlık adına denetimler sorumluluk bölgesi esasına göre JGK ve EGM merkez teşkilatına bağlı birimlerce yapılır (m.43)
+TUZAK_SATIRI: "Denetim yalnız EGM'ce yapılır" yanlış
+MEVCUT_DOGRUSU: []
+  TZ-Y: Özel güvenlik denetimini yalnız EGM yapar
+  TZ-D: JGK ve EGM, sorumluluk bölgesine göre (m.43)
+====================================================================================================
+#13 id=54-15 madde=['45', '44'] baslik=Denetimin kapsamı ve sonucu
+HUKUM: Faaliyet ve çalışma izinleri, mali sorumluluk sigortası, üçüncü kişilerle sözleşmelerin usulü ve valiliğe bildirimi, görev alanına uyum, silah-teçhizat ruhsatı ve korunması, kayıt ve defterler, eğitim hizmetleri incelenir (m.44); rapor bir sureti denetlenen birimde, biri valiliğe, ilgisine göre Bakanlığa; eksiklikler yazılı bildirilir ve asgari 7 gün süre verilir; giderilmezse Kanun m.19-20 cezaları; amaç dışı faaliyet gösteren/suç kaynağına dönüşen şirket ve eğitim kurumlarının faaliyet izni Bakanlıkça, alarm merkezlerinin yeterlilik belgesi valilikçe iptal edilir (m.45)
+TUZAK_SATIRI: "Eksiklik için 30 gün süre" yanlış; asgari 7 gün
+MEVCUT_DOGRUSU: ['Eksikliklerin giderilmesi için asgari 7 gün süre verilir (m.45)']

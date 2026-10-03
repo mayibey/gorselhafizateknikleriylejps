@@ -1,0 +1,748 @@
+{
+ "kanun_id": 70,
+ "ad": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\havacilik\\pack_70.json",
+ "kartlar": [
+  {
+   "id": "70-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kanunun kapsamı",
+   "hukum": "Kanun; pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi personeli, görev ekibi personeli, paraşütçü, denizaltıcı, ADS pilotu, dalgıç ve kurbağa adamlar ile bunların adayları ve hava/deniz vasıtaları içinde bulunan veya görevlendirilen diğer personel hakkında uygulanır (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"adaylar kapsam dışıdır\" denir"
+   ],
+   "dogrusu": [
+    "bunların adayları · diğer personel"
+   ]
+  },
+  {
+   "id": "70-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kıstas aylık",
+   "hukum": "En yüksek Devlet memuru aylığının (ek gösterge dâhil) brüt tutarıdır (m.3/h)",
+   "sinavda_boyle_yazarlar": [
+    "\"albay maaşı\" yazılır — bu 1989'da değiştirildi, artık geçersiz"
+   ],
+   "dogrusu": [
+    "En yüksek Devlet memuru aylığının (ek gösterge dâhil) brüt tutarıdır"
+   ]
+  },
+  {
+   "id": "70-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Hizmet yılı",
+   "hukum": "1 Eylül'de başlayıp 31 Ağustos'ta biten 12 aylık dönemdir (m.3/ğ, m.3/s)",
+   "sinavda_boyle_yazarlar": [
+    "\"1 Ocak - 31 Aralık\" denir"
+   ],
+   "dogrusu": [
+    "1 Eylül'de başlayıp 31 Ağustos'ta biten"
+   ]
+  },
+  {
+   "id": "70-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Uçuş hizmet süresi",
+   "hukum": "Uçucuların okul veya uçuş kurslarında ilk uçuşa başlama tarihlerinden itibaren uçuculuktan ayrılmalarına kadar geçen uçuculuk süreleridir (m.3/r)",
+   "sinavda_boyle_yazarlar": [
+    "başlangıç \"diploma alma\", \"diplomanın onaylandığı tarih\" veya \"son uçuşu tamamlama\" diye verilir — 2026'da beş şıkkın dördü bu bozmalardı",
+    "Uçuş hizmet süresi diplomanın onaylandığı tarihte başlar"
+   ],
+   "dogrusu": [
+    "İlk uçuşa başlama tarihinde başlar (m.3/r)"
+   ]
+  },
+  {
+   "id": "70-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Uçucu kimdir",
+   "hukum": "Pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi ve bunların adaylarıdır (m.3/o)",
+   "sinavda_boyle_yazarlar": [
+    "görev ekibi de uçucu sayılır denir — görev ekibi uçucu değildir"
+   ],
+   "dogrusu": [
+    "uçuş ekibi"
+   ]
+  },
+  {
+   "id": "70-5",
+   "madde": [
+    "7",
+    "3"
+   ],
+   "baslik": "Pilotun ikiye ayrılması",
+   "hukum": "Pilotlar jet pilotu ve pervaneli pilotu olmak üzere ikiye ayrılır; jet statüsünün devamı için m.7/1-a'daki zorunlu uçuş saatlerinin jet uçağında uçulması şarttır (m.3/k)",
+   "sinavda_boyle_yazarlar": [
+    "\"jet pilotu bir kez kazanılır, kaybedilmez\" denir"
+   ],
+   "dogrusu": [
+    "jet pilotu · pervaneli pilotu · jet uçağında"
+   ]
+  },
+  {
+   "id": "70-6",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Jet pilotu tazminatı",
+   "hukum": "Uçuş hizmet yılı 15 yıl ve yukarısı için kıstas aylığın %130'u, 15 yıldan azı için %116'sı (m.4/a)",
+   "sinavda_boyle_yazarlar": [
+    "iki oran yer değiştirilir ya da eşik 10 yıl yapılır"
+   ],
+   "dogrusu": [
+    "15 yıl ve yukarısı için kıstas aylığın %130'u · %116'sı"
+   ]
+  },
+  {
+   "id": "70-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Pervaneli pilot tazminatı",
+   "hukum": "15 yıl ve yukarısı %95, 15 yıldan azı %83 (m.4/b)",
+   "sinavda_boyle_yazarlar": [
+    "jet oranlarıyla karıştırılır"
+   ],
+   "dogrusu": [
+    "%95 · %83"
+   ]
+  },
+  {
+   "id": "70-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Silah sistem subayı",
+   "hukum": "Silah sistem subayı ve adaylarına kıstas aylığın %100'ü (m.4/c)",
+   "sinavda_boyle_yazarlar": [
+    "%75, %125 veya %150 verilir"
+   ],
+   "dogrusu": [
+    "%100'ü"
+   ]
+  },
+  {
+   "id": "70-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Seyrüsefer ve taktik koordine subayı",
+   "hukum": "Her ikisine de kıstas aylığın %73'ü (m.4/ç, m.4/d)",
+   "sinavda_boyle_yazarlar": [
+    "ikisine farklı oran verilir"
+   ],
+   "dogrusu": [
+    "%73'ü"
+   ]
+  },
+  {
+   "id": "70-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Uçuş ve görev ekibi oranları",
+   "hukum": "Uçuş ekibi subayı %73, uçuş ekibi astsubayı %71, görev ekibi subayı %71, görev ekibi astsubayı %70, görev ekibi uzman jandarma ve uzman erbaşı %69, 657'ye tabi Sağlık ve Yardımcı Sağlık Hizmetleri sınıfındaki görev ekibi personeli %50 (m.4/e-ı)",
+   "sinavda_boyle_yazarlar": [
+    "uçuş ekibi astsubayı ile görev ekibi subayının aynı oranda (%71) olduğu gözden kaçırılır"
+   ],
+   "dogrusu": [
+    "%73 · %71 · %71 · %70 · %69 · %50"
+   ]
+  },
+  {
+   "id": "70-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Harp okulu öğrencisinin uçuş eğitimi",
+   "hukum": "Harp okulu öğrencileri ile sözleşmeli subay adaylarına, pilotluk eğitimine başlamadan önce havacılık ders konuları içinde yapacakları fiilî uçuş eğitiminin her uçuş saati başına kıstas aylığın %5'i ödenir (m.4 son fıkra)",
+   "sinavda_boyle_yazarlar": [
+    "%10, %15, %20 veya %25 verilir; ya da \"aylık\" ödendiği söylenir — bu saat başına bir ödemedir"
+   ],
+   "dogrusu": [
+    "pilotluk eğitimine başlamadan önce · her uçuş saati başına kıstas aylığın %5'i"
+   ]
+  },
+  {
+   "id": "70-12",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Paraşütçü tazminatı",
+   "hukum": "Paraşütçü ve adaylarına, zorunlu yıllık atlayış miktarının yarısını tamamladıkları sürece kıstas aylığın %68'i üzerinden ek cetveldeki oranda aylık atlayış tazminatı ödenir (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tamamını tamamlamak şart\" denir"
+   ],
+   "dogrusu": [
+    "yarısını · %68'i"
+   ]
+  },
+  {
+   "id": "70-13",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Özel Kuvvetler ilavesi",
+   "hukum": "Özel Kuvvetler Komutanlığında veya kuvvet komutanlığına bağlı taburlarda bilfiil görev yapan paraşütçülerde ek cetvel oranları subay ve sözleşmeli subay için 20, astsubay ve sözleşmeli astsubay için 15, uzman jandarma ve uzman erbaş için 10 puan artırılır (m.5/2)",
+   "sinavda_boyle_yazarlar": [
+    "puanlar \"yüzde\" gibi gösterilir veya sıraları değiştirilir"
+   ],
+   "dogrusu": [
+    "20 · 15 · 10"
+   ]
+  },
+  {
+   "id": "70-14",
+   "madde": [
+    "5"
+   ],
+   "baslik": "\"Paraşütle atlayamaz\" raporu",
+   "hukum": "Görev esnasında engelli hâle gelip \"paraşütle atlayamaz\" raporu alan personel, diğer kadro görevine ataması yapılıncaya kadar bu haktan yararlanmaya devam eder (m.5/2 son cümle)",
+   "sinavda_boyle_yazarlar": [
+    "\"rapor alınca hemen kesilir\" denir"
+   ],
+   "dogrusu": [
+    "diğer kadro görevine ataması yapılıncaya kadar"
+   ]
+  },
+  {
+   "id": "70-15",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Paraşütçü + dalgıç",
+   "hukum": "Görevinin ihtisası gereği aynı zamanda dalgıç ve kurbağa adam olarak eğitim ve görev yapanlara, zorunlu yıllık dalış süresinin üçte birini tamamladıkları sürece oranlar 10'ar puan artırılır (m.5/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarısını\" denir"
+   ],
+   "dogrusu": [
+    "üçte birini · 10'ar puan"
+   ]
+  },
+  {
+   "id": "70-16",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Öğrenci ve er atlayışı",
+   "hukum": "Askerî öğrenciler ile askerî paraşütçü olmak üzere seçilen erbaş ve erlere okul/kursta her atlayış başına %2; temel atlayışlarını tamamlayıp eğitime devam eden öğrenciler ile paraşütçü kadrosunda görevlendirilen erbaş/erlere her atlayış başına %4; yılda 40 atlayıştan fazlası dikkate alınmaz (m.5/4)",
+   "sinavda_boyle_yazarlar": [
+    "40 sınırı unutturulur veya 50 yapılır"
+   ],
+   "dogrusu": [
+    "her atlayış başına %2 · her atlayış başına %4 · yılda 40 atlayıştan fazlası dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "70-17",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Dalış tazminat oranları",
+   "hukum": "ADS pilotu ve kursiyeri %82, denizaltıcı subay/sözleşmeli subay %82, denizaltıcı astsubay %73, denizaltıcı uzman erbaş %65, dalgıç ve havadan başka gazla dalan kurbağa adam %67, hava ile dalan kurbağa adam %65 (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "iki kurbağa adam türü yer değiştirilir"
+   ],
+   "dogrusu": [
+    "%82 · %82 · %73 · denizaltıcı uzman erbaş %65 · havadan başka gazla · %67 · hava ile · %65"
+   ]
+  },
+  {
+   "id": "70-18",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Dalış kursiyerleri",
+   "hukum": "Denizaltıcı, ADS pilotu, dalgıç ve kurbağa adam kursu gören sözleşmeli subay adayları ile kurbağa adam kursu gören harp okulu öğrencilerine kurs süresince kıstas aylığın %10'u ödenir (m.6/2)",
+   "sinavda_boyle_yazarlar": [
+    "%5 ile karıştırılır — %5 erbaş/erlerin kurs oranıdır"
+   ],
+   "dogrusu": [
+    "sözleşmeli subay adayları · harp okulu öğrencilerine · %10'u"
+   ]
+  },
+  {
+   "id": "70-19",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Erbaş-er dalış",
+   "hukum": "Seçilen erbaş ve erlere kursa katılmayı takip eden aybaşından itibaren %5, kursu başarıp kadroda görevlendirildikleri sürece %10 (m.6/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "%5 · %10"
+   ]
+  },
+  {
+   "id": "70-20",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Zorunlu uçuş saatleri",
+   "hukum": "Uçuş tazminatı için bir yılda en az: uçuş hizmeti 10 yıldan az veya tüm uçuşu 1500 saatin altında olanlar 60 saat; 10-20 yıl veya 1500-2500 saat arası 30 saat; 20 yıldan veya 2500 saatten fazla olanlar 15 saat (m.7/a)",
+   "sinavda_boyle_yazarlar": [
+    "60 saat yerine 70, 80, 90 veya 100 verilir; 2026'da seyrüsefer subayı üzerinden tam bu soruldu"
+   ],
+   "dogrusu": [
+    "10 yıldan az veya tüm uçuşu 1500 saatin altında · 60 saat · 10-20 yıl veya 1500-2500 saat · 30 saat · 20 yıldan veya 2500 saatten fazla · 15 saat"
+   ]
+  },
+  {
+   "id": "70-21",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Zorunlu atlayış sayıları",
+   "hukum": "Asteğmen-yüzbaşı ile astsubay astçavuş-kıdemli üstçavuş 24; binbaşı-general ile kademeli kıdemli üstçavuş ve üzeri 12; uzman jandarma ve uzman erbaşlarda 1-15 yıl 24, 16 yıl ve üzeri 12 atlayış (m.7/b)",
+   "sinavda_boyle_yazarlar": [
+    "rütbe grupları karıştırılır"
+   ],
+   "dogrusu": [
+    "24 · 12 · 1-15 yıl 24 · 16 yıl ve üzeri 12"
+   ]
+  },
+  {
+   "id": "70-22",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Denizaltıcı dalış saatleri",
+   "hukum": "10 yıldan az veya 1500 saatin altı 60 saat; 10-20 yıl veya 1500-2500 saat 30 saat; 20 yıldan veya 2500 saatten fazla 15 saat (m.7/c)",
+   "sinavda_boyle_yazarlar": [
+    "dalgıç eşikleriyle karıştırılır"
+   ],
+   "dogrusu": [
+    "60 saat · 30 saat · 15 saat"
+   ]
+  },
+  {
+   "id": "70-23",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Dalgıç-kurbağa adam saatleri",
+   "hukum": "10 yıldan az veya 600 saatin altı 60 saat; 10-20 yıl veya 600-900 saat 30 saat; 20 yıldan veya 900 saatten fazla 15 saat (m.7/ç)",
+   "sinavda_boyle_yazarlar": [
+    "denizaltıcının 1500/2500 eşikleri buraya yazılır"
+   ],
+   "dogrusu": [
+    "600 saatin altı · 600-900 saat · 900 saatten"
+   ]
+  },
+  {
+   "id": "70-24",
+   "madde": [
+    "7"
+   ],
+   "baslik": "ADS pilotunun %50 şartı",
+   "hukum": "ADS pilotları, kadro görevinde bulundukları sürece (ç) bendindeki yıllık dalış saatlerinin %50'sini ADS ile tamamlamak zorundadır; tamamlayamayan kalan süreyi ADS haricinde tamamlar (m.7/ç son)",
+   "sinavda_boyle_yazarlar": [
+    "\"tamamı ADS ile\" denir"
+   ],
+   "dogrusu": [
+    "%50'sini ADS ile"
+   ]
+  },
+  {
+   "id": "70-25",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Süre aranmama",
+   "hukum": "20 uçuş/dalış hizmet yılı veya 2500 saatten fazla uçuşu/dalışı olanlar ile 20 dalış yılı veya 900 saatten fazla dalışı olan ADS pilotu/dalgıç/kurbağa adam ve belirli üst rütbelilerden (veya 500'den fazla atlayışı olan paraşütçülerden) statü ve hakları saklı kalmak üzere 3 yıla kadar zorunlu uçuş/atlayış/dalış süresi aranmayabilir (m.7/d-2)",
+   "sinavda_boyle_yazarlar": [
+    "1, 2, 4 veya 5 yıl verilir"
+   ],
+   "dogrusu": [
+    "3 yıla kadar"
+   ]
+  },
+  {
+   "id": "70-26",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sınır ötesi muafiyeti",
+   "hukum": "Paraşütçü, denizaltıcı, dalgıç ve kurbağa adamlardan zorunlu atlayış/dalışını sınır ötesi operasyonlar nedeniyle tamamlayamayanlar hakkında da 3 yıla kadar bu süreler aranmaz (m.7/d-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız olağanüstü hâlde\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "sınır ötesi operasyonlar · 3 yıla kadar"
+   ]
+  },
+  {
+   "id": "70-27",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Eksik tamamlayanın kesintisi",
+   "hukum": "Yıllık zorunlu uçuş saati, atlayış miktarı veya dalış süresini tamamlamayanların tazminatının %50'si, müteakip hizmet yılı başlangıcından itibaren kesilir; normal tazminat, eksik kalan süre/miktarın tamamlanmasını takip eden aybaşından itibaren ödenmeye başlar (m.7/e)",
+   "sinavda_boyle_yazarlar": [
+    "\"tamamı kesilir\" ya da \"takvim yılı başından itibaren\" denir — 2026'da öncül tam buradan bozulmuştu",
+    "Eksik uçuş saatinde tazminatın tamamı kesilir",
+    "Kesinti takvim yılı başından itibaren uygulanır"
+   ],
+   "dogrusu": [
+    "%50'si kesilir (m.7/e)",
+    "Hizmet yılı başlangıcından (1 Eylül) itibaren (m.7/e)"
+   ]
+  },
+  {
+   "id": "70-28",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İhtar şartı",
+   "hukum": "Tazminat alabilmek için, bir yıl içinde emrinde çalıştığı en yakın iki üst derece amirinin imzasını taşıyan yazılı iki ihtar veya aylık bir fena faaliyet raporu almamış olmak şarttır; alanın tazminatının %50'si tebliğ tarihini izleyen aybaşından kesilir ve olumlu kanaat raporu alınana kadar devam eder (m.7/f)",
+   "sinavda_boyle_yazarlar": [
+    "\"oda hapsi cezası\", \"tek imzalı olumsuz sicil\" ya da \"üç üst amirin ortak imzası\" diye değiştirilir — 2026'nın vaka sorusu buydu"
+   ],
+   "dogrusu": [
+    "en yakın iki üst derece amirinin imzasını taşıyan yazılı iki ihtar · aylık bir fena faaliyet raporu"
+   ]
+  },
+  {
+   "id": "70-29",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Hava değişimi süreleri",
+   "hukum": "Uçuş/atlayış/dalış görevi sırasındaki kaza ve diğer sağlık nedenleriyle hava değişimi alan veya geçici olarak başka hizmete nakledilenlere iki yıl, ruh sağlığı hastalıkları nedeniyle hava değişimi alanlara bir yıl süreyle son aldıkları tazminat ödenir; bu süreler hizmetten sayılır ve uçuş zorunluluğu aranmaz (m.7/g)",
+   "sinavda_boyle_yazarlar": [
+    "iki süre yer değiştirilir ya da ruh sağlığına 6 ay verilir",
+    "Ruh sağlığı nedeniyle hava değişiminde de 2 yıl ödenir"
+   ],
+   "dogrusu": [
+    "Ruh sağlığında 1 yıl (m.7/g)"
+   ]
+  },
+  {
+   "id": "70-30",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yurt dışı daimi görev",
+   "hukum": "Uçuş/atlayış/dalışla ilgisi olmayan yurt dışı daimi göreve atananların bu süreleri hizmet süresinden sayılır, ancak yurttan ayrılışı izleyen aybaşından itibaren tazminatları kesilir (m.7/ğ)",
+   "sinavda_boyle_yazarlar": [
+    "\"süre de sayılmaz\" denir"
+   ],
+   "dogrusu": [
+    "hizmet süresinden sayılır · yurttan ayrılışı izleyen aybaşından itibaren tazminatları kesilir"
+   ]
+  },
+  {
+   "id": "70-31",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Fazla uçuş toptan ödemesi",
+   "hukum": "Zorunlu uçuş saatinden fazla uçulan her saat için, hizmet yılının son ayındaki uçuş tazminatının; jet pilotu, pervaneli pilotu, silah sistem subayı ve seyrüsefer subayı için %7'si, taktik koordine subayı ile uçuş ekibi ve görev ekibi personeli için %5,5'i oranında her yıl toptan ödeme yapılır; 80 saatten fazla uçuşlar dikkate alınmaz (m.7/h)",
+   "sinavda_boyle_yazarlar": [
+    "80 saat sınırı kaldırılır veya iki oran yer değiştirilir"
+   ],
+   "dogrusu": [
+    "fazla · %7'si · %5,5'i · 80 saatten fazla uçuşlar dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "70-32",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Masa başına atanan pilot",
+   "hukum": "Bilfiil uçuş gerektirmeyen kadro görevine atanan, 10'uncu uçuş hizmet yılını tamamlamış ve toplam uçuşu 1000 saatten fazla olan pilot, silah sistem subayı, seyrüsefer subayı ve uçuş ekibi personeline, zorunlu uçuş saatlerini tamamlamaları şartıyla 80 saatlik uçuş karşılığının %80'i yıllık uçuş tazminatı olarak ödenir; bu oran 18 uçuş hizmet yılını dolduran jet pilotları için %160 uygulanır (m.7/h)",
+   "sinavda_boyle_yazarlar": [
+    "%80 ile %160 karıştırılır veya 1000 saat şartı düşürülür"
+   ],
+   "dogrusu": [
+    "10'uncu uçuş hizmet yılını tamamlamış ve toplam uçuşu 1000 saatten fazla · 80 saatlik uçuş karşılığının %80'i · 18 uçuş hizmet yılını dolduran jet pilotları için %160"
+   ]
+  },
+  {
+   "id": "70-33",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Ek ödeme: 18 yıllık jet pilotu",
+   "hukum": "18 yıllık uçuş hizmet süresini tamamlayan jet pilotlarına, toptan ödemeye esas 80 saati aşan her uçuş saati için hizmet yılının son ayındaki uçuş tazminatının %14'ü oranında her hizmet yılı sonunda ayrıca ödeme yapılır; 40 saatten fazla uçuşlar dikkate alınmaz (Ek m.1)",
+   "sinavda_boyle_yazarlar": [
+    "40 saatlik üst sınır 80 yapılır ya da oran %10 verilir"
+   ],
+   "dogrusu": [
+    "80 saati aşan · %14'ü · 40 saatten fazla uçuşlar dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "70-34",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yıpranma tazminatı şartları",
+   "hukum": "Uçuş/atlayış/dalış kıymetlendirme kurulu kararıyla; 8 uçuş hizmet yılını tamamladıktan sonra daimi yer hizmetine nakledilen pilot, silah sistem subayı, seyrüsefer subayı ve taktik koordine subaylarına; 12 uçuş hizmet yılını tamamlayan uçuş ekibi ve görev ekibi personeline; 8 atlayış yılını tamamlayan paraşütçülere; 8 dalış yılını tamamlayan denizaltıcı, ADS pilotu, dalgıç ve kurbağa adamlara ödenir (m.8/a)",
+   "sinavda_boyle_yazarlar": [
+    "uçuş ekibinin 12 yılı da 8 yapılır"
+   ],
+   "dogrusu": [
+    "8 uçuş hizmet yılını · 12 uçuş hizmet yılını · 8 atlayış yılını · 8 dalış yılını"
+   ]
+  },
+  {
+   "id": "70-35",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yıpranma oranı ve süresi",
+   "hukum": "Ayrıldıkları tarihteki derece ve kademelerinin gösterge ve ek gösterge rakamlarının aylık katsayıyla çarpımının %10'u kadar aylık yıpranma tazminatı ödenir; ancak bu tazminat 10 yıldan sonra ödenmez (m.8/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"%10'u – 5 yıl\", \"%20'si – 10 yıl\" gibi çiftler verilir; 2026'da tam bu çift sorulmuştu",
+    "Yıpranma tazminatı süresiz ödenir"
+   ],
+   "dogrusu": [
+    "10 yıldan sonra ödenmez (m.8/b)"
+   ]
+  },
+  {
+   "id": "70-36",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yıpranma ödenmeyen hâl",
+   "hukum": "Uçuş, atlayış ve dalış görevlerinden disiplinsizlik nedeniyle veya kendi istekleriyle ayrılanlara yıpranma tazminatı ödenmez (m.8/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"kendi isteğiyle ayrılana da ödenir\" denir",
+    "Kendi isteğiyle ayrılan da yıpranma tazminatı alır"
+   ],
+   "dogrusu": [
+    "Alamaz (m.8/c)"
+   ]
+  },
+  {
+   "id": "70-37",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Diğer personelin tazminatı",
+   "hukum": "Uçmak/dalmak suretiyle görev almayan ama bu vasıtalarda bulunan veya kontrol-tecrübe maksadıyla görevlendirilen ve aylık tazminat almayan personele her uçuş/dalış saati başına kıstas aylığın %1'i; bir ayda ödenecek tutar kıstas aylığın %10'unu geçemez (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "aylık tavan kaldırılır"
+   ],
+   "dogrusu": [
+    "her uçuş/dalış saati başına kıstas aylığın %1'i · kıstas aylığın %10'unu geçemez"
+   ]
+  },
+  {
+   "id": "70-38",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Öğretmen yetiştirme ikramiyesi",
+   "hukum": "Uçuş/paraşüt/dalgıç/denizaltı öğretmenleri ile dikey rüzgâr tünelinde eğitim verenlere, her uçuş/atlayış grubu/dalış saati başına kıstas aylığın %0,6'sı tutarında yetiştirme ikramiyesi ayrıca ödenir; öğretmenliğin yapıldığı ayın sonunda verilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "%6 yazılır ya da \"aybaşında peşin\" denir — peşin olan aylık tazminattır, bu ay sonundadır",
+    "Öğretmen ikramiyesi aybaşında peşin ödenir"
+   ],
+   "dogrusu": [
+    "Ayın sonunda ödenir (m.10)"
+   ]
+  },
+  {
+   "id": "70-39",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Hizmet süresinin hesabı",
+   "hukum": "Başlangıç, okul veya kurslarda ilk uçuşa/atlayışa/dalışa başlanılan tarihtir; ayrılma tarihi ise kıymetlendirme kurulu karar tasdik tarihi, yetkili sağlık kurulu raporu tasdik tarihi, istekle ayrılanlarda dilekçe tarihi, görev ekibinde kadro dışına atamada ilişik kesme tarihidir (m.12/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "istekle ayrılmada \"onay tarihi\" denir; kanun dilekçe tarihini esas alır"
+   ],
+   "dogrusu": [
+    "ilk uçuşa/atlayışa/dalışa başlanılan tarihtir · dilekçe tarihi · ilişik kesme tarihidir"
+   ]
+  },
+  {
+   "id": "70-40",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yıl yuvarlaması",
+   "hukum": "Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır, 6 aydan az süreler dikkate alınmaz; hizmet yılları her yıl 1 Eylül'e göre düzenlenir (m.12/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"her artık süre tam yıla tamamlanır\" denir"
+   ],
+   "dogrusu": [
+    "6 ay ve daha fazla süreler tam yıla tamamlanır · 1 Eylül'e göre"
+   ]
+  },
+  {
+   "id": "70-41",
+   "madde": [
+    "12"
+   ],
+   "baslik": "23 yıl tavanı",
+   "hukum": "23 yıl ve daha fazla uçuculuk, paraşütçülük veya dalıcılık hizmet süresi olanlara 23'üncü hizmet yılı karşılığında gösterilen oranda aylık tazminat ödenir (m.12/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"süre arttıkça oran artmaya devam eder\" denir"
+   ],
+   "dogrusu": [
+    "23'üncü hizmet yılı"
+   ]
+  },
+  {
+   "id": "70-42",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Şehitlik-engellilik kapsamı",
+   "hukum": "Uçucu, paraşütçü, denizaltıcı, ADS pilotu, dalgıç ve kurbağa adamlar ile adayları; ayrıca hangi meslek ve sınıftan olursa olsun vazifeli olarak askerî hava vasıtasında/denizaltıda bulunan personel, bu vasıtalarda bulundukları esnada veya paraşütle atlayış faaliyetlerinin etkisiyle şehit olur veya engelli hâle gelirse bu Kanuna göre tazminat alır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız uçucular\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "hangi meslek ve sınıftan olursa olsun"
+   ]
+  },
+  {
+   "id": "70-43",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Şehitlik tazminatı",
+   "hukum": "Şehit olanların kanunî mirasçılarına kıstas aylığın 100 katı ödenir (m.14/a)",
+   "sinavda_boyle_yazarlar": [
+    "50 veya 200 kat denir"
+   ],
+   "dogrusu": [
+    "100 katı"
+   ]
+  },
+  {
+   "id": "70-44",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Engellilik tazminatı",
+   "hukum": "Yaşamak için gerekli hareketleri yapmaktan aciz ve hayatını başkasının yardımıyla sürdürecek şekilde malul olanlara kıstas aylığın 200 katı; diğerlerine engellilik derecesine göre (a) bendindeki tutarın 1. derece %75, 2. %65, 3. %55, 4. %45, 5. %35, 6. %25'i ödenir (m.14/b)",
+   "sinavda_boyle_yazarlar": [
+    "dereceler arası fark 10 puan yerine 5 puan yapılır"
+   ],
+   "dogrusu": [
+    "200 katı · 1. derece %75, 2. %65, 3. %55, 4. %45, 5. %35, 6. %25'i"
+   ]
+  },
+  {
+   "id": "70-45",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Göreve son veren yaralanma",
+   "hukum": "Yaralanma ve engellilik durumu bu derecelerde olmamakla birlikte görevden ayrılmasına neden olmuşsa, şehitlik tutarının %20'si ödenir (m.14/c)",
+   "sinavda_boyle_yazarlar": [
+    "%25 veya %10 denir"
+   ],
+   "dogrusu": [
+    "görevden ayrılmasına neden olmuşsa · %20'si"
+   ]
+  },
+  {
+   "id": "70-46",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Ana-baba payı",
+   "hukum": "Şehidin eş ve füruu veya yalnızca füruu ile içtima eden, ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı %10 verilir, kalan diğer mirasçılara ödenir; ancak ana-babaya verilen tazminat çocukların her birine ödenenden fazla olamaz (m.14/d)",
+   "sinavda_boyle_yazarlar": [
+    "son cümledeki üst sınır atlanır"
+   ],
+   "dogrusu": [
+    "ana ve babanın her birine ayrı ayrı %10 · ana-babaya verilen tazminat çocukların her birine ödenenden fazla olamaz"
+   ]
+  },
+  {
+   "id": "70-47",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Statünün kaybı",
+   "hukum": "Kuvvet komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca teşkil edilecek yetkili kurullarca, görevin gerektirdiği nitelikleri kaybettiği veya görev isteklerini yerine getirmediği anlaşılanların statüsüne son verilir (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "kararı sağlık kurulunun verdiği söylenir"
+   ],
+   "dogrusu": [
+    "nitelikleri kaybettiği · görev isteklerini yerine getirmediği"
+   ]
+  },
+  {
+   "id": "70-48",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Ödeme usulü",
+   "hukum": "Aylık tazminat aybaşında peşin olarak ödenir ve damga vergisi hariç herhangi bir vergiye tabi değildir (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki/üç taksit hâlinde\" veya \"gelir vergisi hariç\" denir — 2026'nın doğru cevabı \"peşin olarak – damga vergisi\" idi",
+    "Tazminat gelir vergisi hariç vergiye tabi değildir"
+   ],
+   "dogrusu": [
+    "Damga vergisi hariçtir (m.17)"
+   ]
+  },
+  {
+   "id": "70-49",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Çifte tazminat yasağı",
+   "hukum": "Pilot paraşütçülere ayrıca atlayış tazminatı ödenmez; paraşütçüler uçuş tazminatından yararlanamaz; denizaltı, ADS pilotu, dalgıç ve kurbağa adam hizmetlerinden ancak birinden tazminat ödenir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"hepsinden ayrı ayrı alınır\" denir",
+    "Paraşütçü hem atlayış hem uçuş tazminatı alır"
+   ],
+   "dogrusu": [
+    "Uçuş tazminatından yararlanamaz (m.18/b)"
+   ]
+  },
+  {
+   "id": "70-50",
+   "madde": [
+    "13",
+    "14",
+    "19"
+   ],
+   "baslik": "2330 ile ilişki",
+   "hukum": "Bu Kanun kapsamına girenlerden 2330 sayılı Kanuna göre görev yaparken m.13'teki faaliyetlerden şehit olan veya engelli hâle gelenler m.14'e göre tazminat alır, ayrıca 2330 sayılı Kanundan yararlanamaz (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"her ikisinden de alır\" denir",
+    "Şehit olan ayrıca 2330 sayılı Kanundan da yararlanır"
+   ],
+   "dogrusu": [
+    "Yararlanamaz (m.19)"
+   ]
+  },
+  {
+   "id": "70-51",
+   "madde": [
+    "2"
+   ],
+   "baslik": "JGK ve SGK personeli",
+   "hukum": "JGK ve SGK kadrolarında istihdam edilen personel için, Kanundaki TSK'ya yapılan atıflar ilgisine göre JGK ve SGK'ya, Genelkurmay Başkanlığına yapılan atıflar İçişleri Bakanlığına yapılmış sayılır (Ek m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Millî Savunma Bakanlığına\" veya \"Cumhurbaşkanlığına\" denir — 2026'da tam bu soruldu"
+   ],
+   "dogrusu": [
+    "TSK'ya · JGK ve SGK'ya · Genelkurmay Başkanlığına · İçişleri Bakanlığına"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

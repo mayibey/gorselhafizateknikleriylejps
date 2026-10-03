@@ -1,0 +1,83 @@
+{
+ "kanun_id": 65,
+ "ad": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_65.json",
+ "kartlar": [
+  {
+   "id": "65-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Bakanlık: İçişleri; Genel Müdürlük: Nüfus ve Vatandaşlık İşleri; çocuk: 18 yaşını tamamlamamış kişi; çok vatandaşlık: Türk vatandaşının aynı anda birden çok vatandaşlığa sahip olması; göçmen: Türk soyundan ve Türk kültürüne bağlı olup yerleşmek amacıyla gelip İskân Kanunu uyarınca göçmen kabul edilen kişi; ikamet: yabancının yasal ikamet izniyle Türkiye'de bulunması; Mavi Kart: Kanunun 28. maddesi kapsamındakilere (izinle çıkanlara) verilen kart; mutad mesken: yerleşim yeri; nüfus olayı: doğum, ölüm, evlenme, boşanma, evlat edinme, tanıma, kayıt düzeltme, gaiplik gibi kişisel durum sicilinde değişiklik yapan olay; TC kimlik numarası: 11 rakam (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Göçmen, Türkiye'ye gelen her yabancıdır\" yanlış; Türk soyu ve kültürü + İskân Kanunu",
+    "Göçmen = Türkiye'ye yerleşen her yabancı"
+   ],
+   "dogrusu": [
+    "Türk soyundan, Türk kültürüne bağlı, İskân Kanunu ile kabul edilen (m.3)"
+   ]
+  },
+  {
+   "id": "65-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İki kazanma yolu",
+   "hukum": "Türk vatandaşlığı doğumla veya sonradan olmak üzere iki yolla kazanılır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklarda \"Türkiye'de Türk anadan doğan / Türk babadan olan çocuk doğumundan itibaren vatandaştır\" ifadeleri doğrudur",
+    "Türk vatandaşlığı ancak doğumla kazanılır"
+   ],
+   "dogrusu": [
+    "Doğumla veya sonradan (m.5)"
+   ]
+  },
+  {
+   "id": "65-2",
+   "madde": [
+    "10"
+   ],
+   "baslik": "18 yaş sonrası yurt dışı doğum bildirimi",
+   "hukum": "Bakanlıkça yapılan inceleme sonucu Türk vatandaşı anadan doğduğu veya babadan olduğu tespit edilen kişi, doğumundan itibaren Türk vatandaşı olarak aile kütüğüne tescil edilir; ispata yarayacak yeterli bilgi-belge yoksa talep Bakanlıkça reddedilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Geç bildirilen çocuk bildirim tarihinden itibaren vatandaş olur\" yanlış; doğumundan itibaren",
+    "Geç bildirilen çocuk bildirim tarihinden itibaren vatandaştır"
+   ],
+   "dogrusu": [
+    "Doğumundan itibaren (m.10)"
+   ]
+  },
+  {
+   "id": "65-3",
+   "madde": [
+    "32",
+    "12"
+   ],
+   "baslik": "Türkiye'de doğan yabancı çocuk ve bulunmuş çocuk",
+   "hukum": "Kanunun 11. maddesindeki şartları taşıdığı tespit edilen çocuk (Türkiye'de doğan, ana-babasından vatandaşlık kazanamayan) doğumundan itibaren Türk vatandaşlığını kazanır ve yerleşim yerinin son hanesinden sonraki haneye tescil edilir; şartları taşımayanların talebi reddedilir; Türkiye'de bulunmuş çocuk Nüfus Hizmetleri Yönetmeliği m.32'ye göre aile kütüğüne tescil edilir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Türkiye'de doğan her yabancı çocuk vatandaş olur\" yanlış; ana-babadan vatandaşlık kazanamayanlar"
+   ],
+   "dogrusu": [
+    "doğumundan itibaren · Türkiye'de bulunmuş çocuk"
+   ]
+  },
+  {
+   "id": "65-4",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yeniden kazanma — ikamet şartı",
+   "hukum": "Kanunun 13 ve 43. maddelerindeki kişiler (çıkma izniyle kaybedenler, ana-babaya bağlı kaybedenler vb.) millî güvenlik engeli yoksa Türkiye'de ikamet şartı aranmaksızın; Kanunun 14. maddesindeki kişiler (kaybettirme kararıyla kaybedenler vb.) millî güvenlik engeli yoksa Türkiye'de 3 yıl ikamet şartıyla yeniden kazanabilir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yeniden kazanmada herkes için 5 yıl ikamet\" yanlış",
+    "Kaybettirme ile kaybeden ikametsiz yeniden kazanır"
+   ],
+   "dogrusu": [
+    "3 yıl ikamet (m.22)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

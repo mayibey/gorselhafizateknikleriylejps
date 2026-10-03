@@ -1,0 +1,160 @@
+{
+ "kanun_id": 80,
+ "ad": "488 Sayılı Damga Vergisi Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_80.json",
+ "kartlar": [
+  {
+   "id": "80-0",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Nüsha kuralı",
+   "hukum": "Bir nüshadan fazla düzenlenen kâğıtlardan maktu vergiye tabi olanların her bir nüshası ayrı ayrı aynı miktarda; nispi vergiye tabi olanların ise sadece bir nüshası damga vergisine tabidir; poliçe ve emre yazılı ticari senetlerin yalnız tedavüle çıkarılan nüshaları vergiye tabi tutulur (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nispi vergide her nüsha ayrı ayrı vergilendirilir\" yanlış; maktuda her nüsha, nispide tek nüsha",
+    "Nispi vergiye tabi kâğıdın her nüshası ayrı ayrı vergilendirilir",
+    "Poliçe ve emre yazılı ticari senetlerin tüm nüshaları vergiye tabidir"
+   ],
+   "dogrusu": [
+    "Sadece bir nüsha (m.5)",
+    "Yalnız tedavüle çıkarılan nüshaları (m.5)"
+   ]
+  },
+  {
+   "id": "80-1",
+   "madde": [
+    "9",
+    "14"
+   ],
+   "baslik": "İstisnalar ve oranların yeri",
+   "hukum": "Kanuna ekli (2) sayılı tabloda yazılı kâğıtlar damga vergisinden müstesnadır (m.9); kâğıtların damga vergisi Kanuna ekli (1) sayılı tabloda yazılı nispet veya miktarlarda alınır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"İstisna kâğıtlar (1) sayılı tabloda gösterilir\" yanlış; istisnalar (2) sayılı tabloda, nispet ve miktarlar (1) sayılı tabloda",
+    "Damga vergisinden müstesna kâğıtlar (1) sayılı tabloda yer alır"
+   ],
+   "dogrusu": [
+    "(2) sayılı tabloda (m.9)"
+   ]
+  },
+  {
+   "id": "80-2",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Bir kâğıt için azami vergi tutarı",
+   "hukum": "Her bir kâğıt için hesaplanacak vergi, (1) sayılı tablodaki sınırlamalar saklı kalmak üzere Kanunda yazılı azami tutarı aşamaz (metinde 800 bin Yeni Türk Lirası; dipnota göre bu tutar Seri No:67 Tebliğ ile 1/1/2023'ten itibaren 10.732.371,80 TL olarak tespit edilmiştir); bir önceki yılda uygulanan azami tutar her takvim yılı başından geçerli olmak üzere o yıl için tespit ve ilan olunan yeniden değerleme oranında artırılır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Azami tutar her yıl enflasyon oranında artırılır\" yanlış; yeniden değerleme oranında"
+   ],
+   "dogrusu": [
+    "azami tutarı aşamaz · yeniden değerleme oranında"
+   ]
+  },
+  {
+   "id": "80-3",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Cumhurbaşkanının oran yetkisi",
+   "hukum": "Cumhurbaşkanı, yeniden değerleme oranının %50 fazlasını geçmemek ve %20'sinden az olmamak üzere yeni oranlar tespit etmeye yetkilidir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"%20 fazlasını geçmemek ve %50'sinden az olmamak\" yanlış; sayıların yeri ters çevrilir: %50 fazlası tavan, %20'si taban",
+    "Cumhurbaşkanı yeniden değerleme oranının %20 fazlasını geçmemek üzere oran belirler"
+   ],
+   "dogrusu": [
+    "%50 fazlasını geçmemek, %20'sinden az olmamak (m.14)"
+   ]
+  },
+  {
+   "id": "80-4",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Mukavelenamede bedel artışı ve devir",
+   "hukum": "Belli parayı ihtiva eden mukavelenamelerin değiştirilmesi hâlinde artan miktar aynı nispette vergiye tabidir; ancak azami tutardan vergi alınmış mukavelenamelerin diğer hükümleri değişmeden yalnız bedeli artarsa bu hüküm uygulanmaz (artan bedelden vergi alınmaz); bunların devri hâlinde aslından alınan verginin dörtte biri alınır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mukavelename devrinde aslından alınan verginin yarısı alınır\" yanlış; dörtte biri",
+    "Mukavelename devrinde aslından alınan verginin yarısı alınır"
+   ],
+   "dogrusu": [
+    "Dörtte biri (m.14)"
+   ]
+  },
+  {
+   "id": "80-5",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Süre uzatımı ve yabancı ülke kâğıtları",
+   "hukum": "Mukavelenamelerin müddetinin uzatılması hâlinde aynı miktar veya nispette vergi alınır; akreditif mektup ve telgraflarında süre uzatılırsa verginin dörtte biri alınır; yabancı memleketlerden Türkiye üzerine düzenlenen kâğıtlar aynı miktarda, yabancı memleketlerin birinden diğeri üzerine düzenlenip Türkiye'de tedavüle çıkarılanlar ise yarı nispette vergiye tabidir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Akreditif süre uzatımında verginin tamamı alınır\" yanlış; dörtte biri (tam vergi mukavelename süre uzatımında)",
+    "Akreditif süre uzatımında verginin tamamı alınır",
+    "Yabancı ülkeler arasında düzenlenip Türkiye'de tedavüle çıkarılan kâğıtlar aynı miktarda vergilendirilir"
+   ],
+   "dogrusu": [
+    "Dörtte biri (m.14)",
+    "Yarı nispette (m.14)"
+   ]
+  },
+  {
+   "id": "80-6",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Ödenmeyen verginin sorumluları",
+   "hukum": "Damga vergisi ödenmeyen veya noksan ödenen kâğıtların vergi ve cezasından, mükelleflere rücu hakkı olmak üzere kâğıtları ibraz edenler sorumludur; birden fazla kişi tarafından imza edilen kâğıtlara ait vergi ve cezanın tamamından imza edenler müteselsilen sorumludur; bunlar arasında vergiden müstesna olanların bulunması damga vergisinin noksan ödenmesini gerektirmez (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"İmza sahipleri kendi hisseleri oranında sorumludur\" yanlış; vergi ve cezanın tamamından müteselsilen sorumludurlar",
+    "Birden fazla imzalı kâğıtta imzalardan birinin vergiden müstesna olması vergiyi azaltır"
+   ],
+   "dogrusu": [
+    "Noksan ödenmeyi gerektirmez (m.24)"
+   ]
+  },
+  {
+   "id": "80-7",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Muaf kurumların düzenlediği kâğıtlar",
+   "hukum": "Damga vergisinden muaf kuruluşlarca kişilerin (1) sayılı tablodaki işlemleriyle ilgili düzenlenen ve sadece bu kurumların imzasını taşıyan kâğıtlara ait verginin tamamı kişiler tarafından ödenir; vergi hiç veya noksan ödenirse vergi ve cezanın tamamından kişilerle birlikte kurumlar müteselsilen sorumludur; Kanunun 22 nci maddesinin birinci fıkrasının (a) bendi kapsamında bulunanlar, taraf oldukları işlemlere ait kâğıtların vergisinin beyan ve ödenmesinden sorumludur ve ödenmezse vergi, ceza ve fer'ileri, vergi için diğer taraflara rücu hakkı olmak üzere bunlardan alınır (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Muaf kurumun imzasını taşıyan kâğıdın vergisi hiç ödenmezse yalnız kurum sorumludur\" yanlış; kişilerle birlikte kurum müteselsilen sorumludur"
+   ],
+   "dogrusu": [
+    "muaf kuruluşlarca · sadece bu kurumların imzasını taşıyan · tamamı kişiler · kişilerle birlikte kurumlar müteselsilen · beyan ve ödenmesinden"
+   ]
+  },
+  {
+   "id": "80-8",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Resmî daire ve noter kâğıtları",
+   "hukum": "Resmî daireler veya noterlerce düzenlenerek kişilere verilen veya dairede bırakılan ve vergisi hiç alınmayan veya noksan alınan kâğıtların vergisi mükelleflere, cezası düzenleyenlere aittir; vergi ve ceza, vergi için mükelleflere rücu hakkı olmak üzere kâğıtları düzenleyenlerden alınır (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Vergi ve cezanın ikisi de mükellefe aittir\" yanlış; vergi mükellefe, ceza düzenleyene",
+    "Noterce düzenlenen kâğıtta vergi alınmamışsa ceza mükellefe aittir"
+   ],
+   "dogrusu": [
+    "Ceza düzenleyene (m.24)"
+   ]
+  },
+  {
+   "id": "80-9",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Resmî daire memurunun mecburiyeti",
+   "hukum": "Resmî dairelerin ilgili memurları kendilerine ibraz edilen kâğıtların damga vergisini aramaya ve vergisi hiç ödenmemiş veya noksan ödenmiş olanları bir tutanakla tespit etmeye veya tutanağı düzenlemek üzere vergi dairesine göndermeye mecburdur (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Memur eksik vergiyi kendisi tahsil etmeye veya kâğıdı imha etmeye mecburdur\" yanlış; aramaya, tutanakla tespite veya vergi dairesine göndermeye mecburdur"
+   ],
+   "dogrusu": [
+    "damga vergisini aramaya · bir tutanakla tespit etmeye · vergi dairesine göndermeye"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

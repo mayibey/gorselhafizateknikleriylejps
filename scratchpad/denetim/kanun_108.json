@@ -1,0 +1,302 @@
+{
+ "kanun_id": 108,
+ "ad": "Astsubay Sicil Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_108.json",
+ "kartlar": [
+  {
+   "id": "108-0",
+   "madde": [
+    "3",
+    "4"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Rütbe, nasıp, kıdem, normal/en az/en çok bekleme süresi 926'daki gibi; fiilî bekleme süresi: nasıp düzeltmesiyle verilen itibari süreler hariç rütbede fiilen bulunulan süre; terfi yılı 30 Ağustos-30 Ağustos; kademe bekleme süresi en az bir terfi yılı; sicil alma eğilimi: asgari beş yıllık sicil notu olanlar için, sicil üstü değerlendirme notlarının standart sapmasının üç katının ortalamaya eklenip çıkarılmasıyla bulunan aralık; geri bildirim; ayırt edici nitelik ve kıstas (alt nitelik); rütbe kademeliliği: nasıptan itibaren üç yılını tamamlayan başçavuşların kademeli başçavuşluğa, kıdemli başçavuşların kademeli kıdemli başçavuşluğa, kademeli kıdemli başçavuşlukta üç yılını tamamlayanların ikinci kademeli kıdemli başçavuşluğa yükselmesi; kademe ilerlemesi maaş artışı; yeterlik; yeterlik derecesi; sicil notu: sicil belgesi notlarının ortalaması + FYDT notu; sicil notu ortalaması: çavuşta bulunulan rütbe; kıdemli çavuşta çavuşluktan itibaren; üstçavuşta üstçavuş %100 + kıdemli çavuş %70; kıdemli üstçavuşta %100/%90/%70; başçavuşta %100/%90/%85/%70; kıdemli başçavuşta %100/%95/%90/%85/%70; sicil tam notu 100; sicil süresi bir terfi yılı; genel değerlendirme kategorisi: ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ, YETERSİZ; genel değerlendirme notu: sırasıyla 93, 85, 71, 59,99 (m.3); dayanak 926 (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yetersiz kategorisi 60 puan\" yanlış; 59,99 (kademe ilerlemesini keser)"
+   ],
+   "dogrusu": [
+    "fiilî bekleme süresi · terfi yılı 30 Ağustos-30 Ağustos · kademe bekleme süresi · sicil alma eğilimi · beş yıllık · standart sapmasının üç katının · geri bildirim · ayırt edici nitelik · kıstas (alt nitelik) · rütbe kademeliliği · üç yılını · kademe ilerlemesi · yeterlik · yeterlik derecesi · sicil notu · sicil notu ortalaması · sicil tam notu 100 · sicil süresi · genel değerlendirme kategorisi · genel değerlendirme notu · 93, 85, 71, 59,99"
+   ]
+  },
+  {
+   "id": "108-1",
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "baslik": "Sicil üstlerinin sorumluluğu ve kimler",
+   "hukum": "Sicil düzenlemek üstlük ve komutanlığın en önemli özel yetkilerinden; tarafsızlık, adalet ve vicdanî kanaat; sicil üstleri astlarını iyi tanımak zorunda (haberli-habersiz denetlemeler, sınavlar, özel görevler, tatbikatlar); birinci sicil üstleri astları hakkında mutlak kanaat sahibi olmaktan sorumlu; eksik siciller imza-işaret-gerekçe-kanaat hariç geri çevrilmeden düzeltilir (m.5); birinci sicil üstleri: KKK'da kıt'alarda en az takım komutanı, bölük komutanı ve eşidi; Deniz'de bölüm amiri/ikinci komutan/başçarkçı, kara birliklerinde takım-bölük komutanı, karargâhta kısım amiri; Hava'da filo harekât subayı, kıt'a komutanı, kısım amiri, takım komutanı; özellikli bölgelerde birinci sicil üstleri Kuvvet Komutanı teklifi ve Genelkurmay Başkanı onayıyla ayrıca düzenlenebilir; birinci sicil üstlerinin en az başçavuş (asteğmen hariç) rütbesinde olması şart; MSB ve Bakanlık teşkilatındaki amir konumundaki sivil personel (şube müdürü dâhil) kendi teşkilatındaki astsubayların sicil üstüdür; komutanlık, askerlik şubesi başkanlığı, müdürlük, atölye şefliği kadrolarındaki başçavuş ve üstü astsubaylar emrindeki astsubaylara birinci sicil üstü olarak sicil verir; amir konumundaki asteğmenler ve başçavuştan alt rütbeli astsubaylar sicil düzenleyemez, ancak üç aylık çalışma süresini tamamlamışlarsa kanaatlerini yazılı olarak birinci sicil üstüne bildirir (m.6); ikinci sicil üstü birincinin, üçüncü ikincinin bir üst görev yerindeki komutan/amiri; astsubaylar ikinci ve üçüncü sicil üstü olamaz (m.7); yalnız bir veya iki sicil üstü varsa siciller aynen işlem görür (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubay kıdemli üstçavuş birinci sicil üstü olabilir\" yanlış; en az başçavuş",
+    "Astsubay üstçavuş birinci sicil üstü olabilir",
+    "Astsubaylar ikinci sicil üstü olabilir"
+   ],
+   "dogrusu": [
+    "En az başçavuş (m.6)",
+    "Olamaz (m.7)"
+   ]
+  },
+  {
+   "id": "108-2",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Özel durumlarda sicil üstleri",
+   "hukum": "Atandığı yer dışında çalıştırılanlar ve birlikte başka birliğin emrine/desteğine verilenlerin sicil üstleri, geçici görev 3 ay ve daha fazla ise görev yaptıkları yerin bağlantısına göre; 3 aydan az geçici görev ve kursta sicil atamalı birlikçe (m.9); millî temsilcilik, müttefik karargâh ve yurt dışı görev yerlerindekilerin sicil üstleri Genelkurmay Başkanlığınca saptanır, Yönergede gösterilir (m.10); MİT'te görevli astsubayların sicil üstleri Genelkurmay'ca (m.11); TSK dışı Devlet hizmeti ve Türk Hava Kurumunda çalışanlarınki Genelkurmay'ca (m.12); saptanamayan hâllerde bağlantıya göre Genelkurmay, MSB veya Kuvvet Komutanlığı (m.13); bir astsubayın birinci, ikinci veya üçüncü sicil üstü aynı şahıs olamaz (m.14); sicil üstü asil veya vekil olarak o görev yerinde sicili düzenlenecek kişiyle sicil dönemi içinde fiilen en az üç ay görev yapmadıkça sicil düzenleyemez (muharebe hâlinde Genelkurmay belirler); kurs, izin, 3 aydan az geçici görev, istirahat, hastane ve hava değişimi gibi yasal mazeret sürelerinin toplam bir ayı fiilî görevden sayılır; Genelkurmay Başkanı, MSB, Kuvvet Komutanları, MSB Müsteşarı ve orgeneral/oramiraller önceki yıllarda birlikte çalıştığı personele üç ay şartı aranmaksızın sicil düzenleyebilir (m.15); sicil düzenlenemeyecek hâller: kıdemli veya aynı nasıplı astsubay hakkında; sonradan kalksa bile evlilik bağı, kan veya sıhrî usul-füru hısımlığı, evlat edinme, üçüncü dereceye kadar kan, ikinci dereceye kadar sıhrî civar hısımlığı; sicil üstünün açıkta veya tutuklu olması; bu hâllerde bir üst görev yerindeki sicil üstü yetkili (m.16); yabancı silahlı kuvvet mensubu subay/astsubaylar Türk astsubaylarının sicil üstü olamaz (m.17); hiçbir makam ve amir sicil üstlerine müdahale edemez, telkinde bulunamaz; gerekçelerin kılavuza göre kontrolü ve disiplin cezaları-adli işlemlerin değerlendirmede dikkate alınmasının hatırlatılması telkin sayılmaz (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mazeret sürelerinin tamamı fiilî görevden sayılır\" yanlış; toplam bir ayı",
+    "Sicil üstü 2 ay birlikte çalışınca sicil verebilir"
+   ],
+   "dogrusu": [
+    "3 ay (m.15)"
+   ]
+  },
+  {
+   "id": "108-3",
+   "madde": [
+    "19",
+    "20"
+   ],
+   "baslik": "Sicil belgesi ve bölümleri",
+   "hukum": "Belge şekli EK-1 (m.19); belge altı bölüm: (a) temel nitelikler (her astsubayda olması gereken, nota tahvil edilmez, zafiyette disiplinsizlik/ahlâki durumdan ayırma); (b) sicil üstlerinin değerlendirmesi: genel değerlendirme (kategori) (ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ, YETERSİZ) ve ayırt edici nitelikler; (c) başarılı olabileceği görevler (iki öncelikle: kıta, karargâh-kurum, eğitim-öğretim, teknik); (d) müstakil görev yapma kabiliyeti (Yapar / Yapamaz); (e) sicil üstü olabilme durumu (olabilir / olamaz); (f) yurt dışı görev yapabilme (Vardır / Yoktur) (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temel nitelikler nota tahvil edilir\" yanlış"
+   ],
+   "dogrusu": [
+    "EK-1 · altı bölüm · temel nitelikler · nota tahvil edilmez · sicil üstlerinin değerlendirmesi · genel değerlendirme (kategori) · ayırt edici nitelikler · başarılı olabileceği görevler · müstakil görev yapma kabiliyeti · sicil üstü olabilme durumu · yurt dışı görev yapabilme"
+   ]
+  },
+  {
+   "id": "108-4",
+   "madde": [
+    "16",
+    "21",
+    "22"
+   ],
+   "baslik": "Sicil belgelerinin düzenlenmesi",
+   "hukum": "Birinci sicil üstü emrindeki bütün astsubayların sicilini doldurur; en az üç ay birlikte fiilen görev şart; nitelik tanım ve standartları Genelkurmay'ın \"TSK Sicil Belgesi Düzenleme Kılavuzu\"nda; sicil üstleri astsubaylar için not takdiri yapmaz, kıstas işaretler; bilgilerin doğru doldurulmasından birinci sicil üstü sorumlu; birinci sicil üstü \"başarılı olabileceği görevler\"i işaretler; ilâve kanaatler yazılabilir ve atama-seçimde kullanılabilir; ÜSTÜN BAŞARILI ve KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE ile YETERSİZ ve EMSALLERİNİN ALTINDA değerlendirmeleri için NE ZAMAN, NEREDE, NEDEN sorularına cevap veren en az 20 kelime (150 karakter) gerekçe zorunlu; birinci sicil üstü elektronik işlemi bitirince ikinciye bilgi verir; ikinci sicil üstü katılıyorsa \"Birinci Sicil Üstüne Katılıyorum\"u işaretler, katılmıyorsa değerlendirme yapar; mutlaka tamamını işaretlemesi gereken hâller: birinci sicil üstü yeterli süre çalışmamışsa, 2 Mayıs'taki birinci sicil üstü yeterli süre çalışmamışsa, görevden ayrılma ve kanaat değişikliğinde; m.16 hâllerinde ikinci sicil üstü birinci gibi işaretler; ikinci sicil üstü olan Kuvvet Komutanları, MSB Müsteşarı, orgeneral/oramiraller yeterince tanımadığı personel için sicil tanzim etmeyebilir; üçüncü sicil üstlerinin sicil tanzimi kendi isteğine bağlı, ancak birinci/ikinci sicil üstü değerlendirme yapamamışsa veya işaretledikleri kategori arasında birden fazla seviye farkı varsa (orgeneral/oramiral üçüncü sicil üstleri hariç) mutlaka değerlendirme yapar; üçüncü sicil üstleri kıstas işaretleme ve kanaat yazma hariç yetkilerini yazılı emirle ikinciye devredebilir; personel başkanlığı incelemesinde sicil üstlerinin notları arasında 20 veya daha fazla fark varsa Sicil Değerlendirme ve Denetleme Kurulunda görüşülür; belgeler en az müstakil tugay ve eşidi birliklerce toplanıp Personel Başkanlığına; sicil doldurma esasları sınıf okulu müfredatına dâhil; görevden ayrılma (30 Ağustos-2 Mayıs arası): üç ayı tamamlayan birinci sicil üstü kendi bölümünü işaretler, yeni birinci sicil üstüne devreder (m.21); birden fazla birinci/ikinci sicil üstüyle görev yapılmasında m.21'e göre (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Üçüncü sicil üstü her zaman sicil düzenler\" yanlış; kendi isteğine bağlı (istisnalar hariç)"
+   ],
+   "dogrusu": [
+    "bütün · en az üç ay · \"TSK Sicil Belgesi Düzenleme Kılavuzu\" · not takdiri yapmaz · birinci sicil üstü · ÜSTÜN BAŞARILI ve KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE ile YETERSİZ ve EMSALLERİNİN ALTINDA · NE ZAMAN, NEREDE, NEDEN · en az 20 kelime (150 karakter) · ikinci sicil üstü · mutlaka tamamını işaretlemesi gereken hâller · Kuvvet Komutanları, MSB Müsteşarı, orgeneral/oramiraller · üçüncü sicil üstlerinin sicil tanzimi kendi isteğine bağlı · birden fazla seviye farkı · mutlaka · 20 veya daha fazla fark · Sicil Değerlendirme ve Denetleme Kurulunda · en az müstakil tugay ve eşidi · görevden ayrılma (30 Ağustos-2 Mayıs arası)"
+   ]
+  },
+  {
+   "id": "108-5",
+   "madde": [
+    "85",
+    "23",
+    "24"
+   ],
+   "baslik": "Zaman, gönderme, gizlilik, belge ekleme",
+   "hukum": "Siciller 2 Mayıs itibarıyla düzenlenir, en az tugay ve eşidi birliklerce en geç 30 Mayıs'ta Personel Başkanlığında bulundurulur; Genelkurmay tarihleri değiştirebilir; bu siciller o yılın 30 Ağustos'unda düzenlenmiş kabul edilir; kanaat değişikliği ve disiplinsizlik-ahlâki durum hariç, düzenleme tarihi ile 30 Ağustos arasında ayrıca sicil düzenlenmez; düzenlenemezse \"Değerlendirmenin Nedeni\"nde \"Süresiz Sicil Belgesi\" işaretlenir; üç ayı doldurmadığı için sicil düzenlenmeyenlerden terfi sırasında olmayanlar 30 Ağustos, terfi sırasında olanlar 1 Temmuz'a kadar dolduruyorsa doldurdukları tarih itibarıyla sicil; sicil vermek için üst sicil üstünün takdiriyle 1-5 gün tahsis; terfi sırasında olup 926 m.85 sicil mecburiyetini 30 Ağustos'a kadar tamamlayacaklar için süreyi doldurduğu tarih itibarıyla sicil (m.23); matbu siciller kapalı, mühürlü, \"ÖZEL\" gizlilik dereceli zarf içinde ikinci bir zarfla; elektronik sicilde suret gönderilmez; optik okuyucu için katlanmaz (m.24); siciller \"ÖZEL\" gizlilik dereceli, yetkisize gösterilemez, kısmı yok edilemez; yetkisiz açan/açıklayan hakkında yasal işlem (m.25); (*) işaretli kıstas işaretlenirse o sicil süresi içinde düzenlenmiş belge eklemek zorunlu (mahkeme kararı, disiplin cezası, tutanak vb.) (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Siciller GİZLİ gizlilik derecelidir\" yanlış; ÖZEL",
+    "Siciller 30 Ağustos'ta düzenlenir"
+   ],
+   "dogrusu": [
+    "2 Mayıs'ta düzenlenir, 30 Ağustos'ta düzenlenmiş sayılır (m.23)"
+   ]
+  },
+  {
+   "id": "108-6",
+   "madde": [
+    "28",
+    "27"
+   ],
+   "baslik": "Personel başkanlığı işlemleri ve nota tahvil",
+   "hukum": "Belgeler sicil subaylarınca kontrol, eksikler tamamlatılır; matbu formlar optik okuyucuda; işaretlemeler bilgisayarla nota tahvil: kategori aralıkları ÜSTÜN BAŞARILI 90-100, BAŞARILI 75-89,99, YETERLİ 60-74,99, YETERSİZ 0-59,99; genel değerlendirme notu 93/85/71/59,99 olarak alınır, ayırt edici nitelik işaretlemelerinin EK-5 ağırlık puanları eklenip çıkarılarak sicil üstü değerlendirme notu; \"emsallerinin üstünde\" işaretlerinde ağırlıklar üstün başarılı 7, başarılı 5, yeterli 4'e; \"emsallerinin altında\" işaretlerinde üstün başarılı 3, başarılı 10, yeterli 11'e bölünür; bir/iki/üç sicil üstü varsa notların ortalaması o yılın sicil üstü değerlendirme notu (iki hane); 100 üzerinden not 95'e tahvil edilir; FYDT sonucu 60 ve üzeri ise 5, değilse 0 eklenir; toplam = sicil notu; birden fazla aynı seviye sicil üstünün notlarının ortalaması alınır; sicil notu %60'ın altında olanların listesi Personel Başkanınca onaylanıp kademe ilerlemesi yapamayan personel olarak yayımlanır (son kademedekiler hariç); bunlar Sicil Değerlendirme ve Denetleme Kurulunda görüşülür; her astsubayın sicil alma eğilimi belirlenir (asgari beş yıllık not; kıdemli üstçavuş ve üstü için kıdemli çavuşluktan itibaren); eğilimden fazla/düşük not alanlar kurulda görüşülür, kasıtlı veya keyfî sicil iptal edilir, sicil üstü hakkında idari-yasal işlem ve bir daha sicil üstü olamama; iptal edilen siciller dikkate alınmaz; birinci temel niteliğin \"b\" kıstası işaretlenenler istihbarat başkanlıklarına; geri besleme m.28; analiz-kontrol ilgili sicil subayı ve kısım amiri/şube müdürünce onaylanarak sicil notu tekemmül eder; atama ve görevlendirmede \"başarılı olabileceği görevler\", \"müstakil görev\", \"sicil üstü olabilme\", \"yurt dışı görev\" işaretlemeleri dikkate alınır (m.27); geri bildirim: sicil üstlerine personelin son üç yıl sicil notları bildirilir; nitelik analizleriyle eksikler eğitim müfredatına; kıdem sıraları her yıl Aralık ayına kadar yayımlanır (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"FYDT notu 10 puandır\" yanlış; 5",
+    "Yetersiz kategorisi 60 puan olarak alınır",
+    "FYDT notu sicil notuna 10 puan katkı sağlar"
+   ],
+   "dogrusu": [
+    "59,99 (m.27)",
+    "5 (m.27)"
+   ]
+  },
+  {
+   "id": "108-7",
+   "madde": [
+    "29",
+    "30"
+   ],
+   "baslik": "Temel nitelikler ve olumsuz işaretleme",
+   "hukum": "Temel nitelikler bulunmaması hâlinde TSK'dan ayrılmayı gerektiren nitelikler; tam sahip olanlar için birinci kıstas, şüphe duyulanlar için \"b\" kıstası ve belge eklenir; sahip olmadığından emin olunanlardan Yüksek Disiplin Kurulları Yönetmeliği şartlarını taşıyanlar hakkında o yönetmeliğe göre işlem; \"b\" işaretlenen personelin her üç sicil üstü de mutlaka işlem yapar (m.29); sicil üstlerinin tamamı birinci niteliğin \"b\"sini işaretlerse \"TSK İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi\"ne göre işlem; yalnız biri işaretlerse üçüncü sicil üstü nihaî durumu belirler; ikinci ve üçüncü nitelikler ilk defa \"b\" ile değerlendirilen personel bir sonraki döneme kadar takip ve kontrol altında; \"b\" üst üste iki dönem işaretlenebilir, üçüncü dönemde \"b\" ile değerlendirilmez, yasal işlem ve YDK'dan ayırma cezası teklifi yapılır (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temel nitelik b işareti üç dönem konabilir\" yanlış; iki"
+   ],
+   "dogrusu": [
+    "birinci kıstas · \"b\" kıstası · her üç sicil üstü de · sicil üstlerinin tamamı birinci niteliğin \"b\"sini · \"TSK İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi\" · takip ve kontrol altında · üst üste iki dönem · üçüncü dönemde · ayırma cezası teklifi"
+   ]
+  },
+  {
+   "id": "108-8",
+   "madde": [
+    "31",
+    "32",
+    "33"
+   ],
+   "baslik": "Sicil Değerlendirme ve Denetleme Kurulları",
+   "hukum": "Kuvvet Komutanlıklarınca hazırlanan yönergelerdeki miktarda kadrolu personelden, personel başkanlıkları bünyesinde kurulur; uygun rütbede liyakatli personel (m.31); Kuvvet'çe hazırlanıp Genelkurmay uygun görüşüyle yürürlüğe giren yönergeye göre çalışır; öncelikle problemli sicilleri, sonra geri besleme için diğerlerini inceler; kurul mevcut durumu değerlendirir, not takdir etmez, kuruluş bağlantısına göre çalışır (m.32); yetki ve görevleri: not takdir etmez; notun sicil alma eğiliminden fazla/düşük olmasının nedenlerini inceler, sicil üstüyle irtibata geçebilir, kasıtlı-keyfî sicilleri saptar ve Kuvvet Komutanının onayını müteakip iptal eder; sicil üstü olamayacak personeli tespit edip atama birimlerine duyurur; %60 altı personelin durumunu görüşür; menfi sicil, gerekçe-kanaat ile not arasında uyumsuz sicilleri değerlendirir ve iptal edebilir; geri besleme için veri sağlar (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurul sicil notunu değiştirebilir\" yanlış; iptal eder, not takdir etmez",
+    "Kurul sicil notu takdir edebilir"
+   ],
+   "dogrusu": [
+    "Takdir etmez; iptal eder (m.33)"
+   ]
+  },
+  {
+   "id": "108-9",
+   "madde": [
+    "85",
+    "34",
+    "62"
+   ],
+   "baslik": "Terfi esasları ve sicil notu ortalaması",
+   "hukum": "Terfi için 926'daki şartlar; 926 m.85/b gereğince kıdem alanlar için fiilî bekleme süresinin üçte ikisi; küsurat bir ve üzerinde alt tama, birin altında bire iblağ; astsubay nasbedilenlerin muvazzaf askerlikte geçen süreleri kıdemden sayılır, nasıpları düzeltilir, terfi/kademe nasbı götürüldüğü yılın 30 Ağustos'u; görevde yaralanıp uzun tedavi görenlerin terfisi ortalamaya göre, 926 m.85/b-c şartları aranmadan (m.34); yeterlik terfi yılında bulunan sicil notu ortalamasıyla; eşitlikte bulunulan rütbedeki ortalama, sonra bir önceki rütbeler, hâlâ eşitse m.62/e-f (m.35); sicil notu ortalaması: çavuşta çavuşlukta, kıdemli çavuşta çavuşluk + kıdemli çavuşlukta alınan notların aritmetik ortalaması; üstçavuş, kıdemli üstçavuş, başçavuş ve kıdemli başçavuş için her rütbenin ortalaması × rütbe sicil notu katsayısı (rütbe katkısı) toplanır, toplam katsayıya bölünür; muteber notu olmayan rütbenin katsayısı hesaba girmez; iki hane yürütülür; bekleme süresinin son yılında kıdemli çavuşluğa nasıptan itibaren geçerli sicil notları toplanıp adede bölünür (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kıdem alanlarda üçte iki hesabında küsurat her zaman üst tama\" yanlış; 1 ve üstünde alt tama, altındaysa 1"
+   ],
+   "dogrusu": [
+    "üçte ikisi · bir ve üzerinde alt tama, birin altında bire · muvazzaf askerlikte geçen süreleri kıdemden sayılır · sicil notu ortalaması · üstçavuş, kıdemli üstçavuş, başçavuş ve kıdemli başçavuş · rütbe sicil notu katsayısı · kıdemli çavuşluğa nasıptan itibaren"
+   ]
+  },
+  {
+   "id": "108-10",
+   "madde": [
+    "85",
+    "83",
+    "106"
+   ],
+   "baslik": "Terfi işlemleri ve sonraki yıllar",
+   "hukum": "Terfi sırasındaki astsubaylar sınıfları itibarıyla ortalaması en yüksekten sıralanır; %60 ve üstü olanlar 926 m.85 şartlarıyla en yüksek yeterlik derecesinden başlanarak terfi; kadro açığı olmadığı için terfi edemeyenler derece ilerlemesi yapar (onay Personel Başkanlığı); 926 m.83, 100, 106'ya göre 30 Ağustos'tan sonra terfi durumunda olanlar kadro açığı aranmadan derhal, nasıp emsaline; terfi işlemlerine 1 Temmuz'da başlanır (m.37); belirli oranda sicil mecburiyetini hava değişimi, atanma, kurs gibi zorunlu nedenlerle tamamlayamayanlar tamamladıkları tarihi izleyen 30 Ağustos'ta terfi, nasıp emsaline; sicil belgelerinin düzenlenmesinden sonra 30 Ağustos'a kadar tamamlayanlar 926 m.81'e bağlı kalınmaksızın derhal (m.38); terfi edemeyenlerden çavuş ve kıdemli çavuşların tamamı, ortalaması %50 (dâhil)-%60 arası üstçavuş, kıdemli üstçavuş ve başçavuşlar hizmete devam ettirildikleri sürece sonraki yıllarda yeniden terfi işlemine (m.39); sonraki yıllarda terfi edenlerin yeni rütbe bekleme süresi nasıp tarihinden başlar (m.40)",
+   "sinavda_boyle_yazarlar": [
+    "\"%50'nin altındaki üstçavuş sonraki yıl tekrar terfi işlemine girer\" yanlış; %50-60 arası",
+    "Kadro açığı yoksa astsubay terfi edemez ve kademe de alamaz"
+   ],
+   "dogrusu": [
+    "Derece ilerlemesi yapar (m.37)"
+   ]
+  },
+  {
+   "id": "108-11",
+   "madde": [
+    "41",
+    "42"
+   ],
+   "baslik": "Açıkta, tutuklu, firarda olanların terfisi; kıdemden düşme",
+   "hukum": "Bekleme süresinde açığa alınan, tutuklanan, firar/izin tecavüzünde bulunanlar (kısa süreli kaçma/izin geçirme hariç) için hazırlıklar yokmuş gibi yürütülür; terfi sırasında: 30 Ağustos'ta açığı devam edenler, hapis cezasıyla açığı kaldırılıp hükmü kesinleşmemişler, fiilleri hizmete engel olmadığı için karar beklenmeden açığı kaldırılanların terfileri yapılmaz, yapılmışsa iptal; KYOK, beraat, muhakemenin men'i, davanın düşmesi, tecil, kısa hapis, tedbir/para cezasına çevirme kararı kesinleşenler emsal şartlarıyla derhal terfi, nasıp emsaline; ilişik kesmeyi gerektirmeyen hürriyeti bağlayıcı cezada infaz sonrası nasıp düzeltilir, yeni nasıba göre ilk 30 Ağustos'ta terfi; tutuklular ve hükmü kesinleşmemişler için aynı; firar/izin tecavüzü devam edenler ve davası sürenler terfi edemez; beraat vb. ile derhal; mahkûmiyet kesinleşenlerin nasbı infaz sonrası düzeltilir; sicil mecburiyetini tamamlayamadığı için terfi edemeyenler ilk 30 Ağustos'ta (m.41); kıdemden düşülen süreler (kısa hapis, tecil, tedbir/para cezası hariç): gözaltı-tutukluluk-hükümlülük (infaz süresi dikkate alınarak), açığı gerektiren suçtan mahkûmiyette açıkta geçen süre, askerî mahkeme kararıyla sabit firar/izin tecavüzü süreleri; işlem firar-açık için hükmün kesinleşmesini, hapis için infazı müteakip son rütbe nasbının aleyhe düzeltilmesiyle derhal; infazın durdurulmasıyla tahliye kısmen infaz sayılır; kısmen infazda geri kalan kısım başka rütbede infaz edilirse aynı rütbe nasbı düzeltilir (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kısa süreli kaçma da terfiyi durdurur\" yanlış; hariç"
+   ],
+   "dogrusu": [
+    "yokmuş gibi · 30 Ağustos'ta açığı devam edenler · terfileri yapılmaz, yapılmışsa iptal · derhal · nasıp düzeltilir · kıdemden düşülen süreler · son rütbe nasbının aleyhe düzeltilmesiyle · kısmen infaz"
+   ]
+  },
+  {
+   "id": "108-12",
+   "madde": [
+    "43",
+    "44",
+    "45"
+   ],
+   "baslik": "Savaş takdirnamesi, harp gaibi, sınıf değiştirme, sıhhi izin, kademe ilerlemesi",
+   "hukum": "Savaş takdirnamesi alan astsubaya bir defaya mahsus iki yıl kıdem, terfi durumuna girenler şartlar aranmaksızın derhal terfi; giremeyenler sıraya girince şartsız terfi (m.43); harp gaibi, esir, enterne edilenlerden terfiye engeli olmayanların esarette geçen süresi bekleme süresinden sayılır; bekleme hariç şartları kazanmışların terfisi derhal; kazanmamışlardan iki yıllık sicili olanlar o yıl, olmayanlar iki yıllık sicil sağlanınca; bir rütbeden fazla geri kalanlar her rütbede iki yıllık sicille; kadro açığı aranmaz; mahkûm olanların süreleri düşülür (m.44); sınıf değiştirenler eski ve yeni sınıf sicilleriyle yeni sınıfta terfi (m.45); sıhhi izin terfiye engel değil, bekleme süresinden sayılır (m.46); kademe ilerlemesi: çavuş-kıdemli çavuş-üstçavuş-kıdemli üstçavuş-başçavuşlardan terfi sırasında olmayanlar ve terfi edemeyenler ile kademeli başçavuş-kıdemli başçavuş-kademeli kıdemli başçavuş-iki kademeli kıdemli başçavuşlar EK-VIII gösterge tablosuna göre; MYO mezunu ve fakülte/yüksekokul/MYO bitirip temel eğitimle astsubay olanlar EK-VIII/A'ya göre (m.47); sicil notu Personel Başkanlığınca m.27'ye göre hesaplanır (m.48); terfi/kademelilik sırasında olmayanlardan sicil notu %60'ın altında olanların listesi Personel Başkanınca onaylanıp asgari tugay seviyesinde yayımlanır; listede olmayanlar \"Kademe İlerlemesi Onay Çizelgesi\" (EK-3)'ne geçirilir, asgari alay ve eşidi komutanlıkça onaylanır; son kademedekiler için çizelge hazırlanmaz (m.49); terfi/kademelilik yapamayanlardan o yıl sicil notu %60 ve üstü olanlar kademe ilerlemesi yapar, işlem Personel Başkanlığınca (m.50); öğrenim, kurs, hava değişimi, istirahat, tedavi nedeniyle sicil düzenlenemeyenler ve sicil notu iptal edilenlerin kademe ilerlemesi sicil notu ortalamasına göre (o yılın sicil notu sayılmaz); geçerli sicili olmayanların kademe ilerlemesi olumlu sicil tanzim edilinceye kadar yapılmaz, sonra emsal tarihinden (m.51); açıkta-tutuklu-firarda olanların kademe ilerlemesi m.41'deki mantıkla (m.52); nasbı lehe düzeltilenlerin kademe intibakı onay metnindeki tarihten (yoksa onay tarihinden), nasıp düzeltme emri sureti maaş bordrosuna; müteakip 30 Ağustos'ta yeniden ilerleyebilir (m.53); nasbı aleyhe düzeltilenlerin kademe ilerlemesi yeni nasba göre kademe aylığına intibak edinceye kadar yapılmaz (m.54); kanunî izinler, sıhhi izin ve bekleme süresinden sayılan durumlar terfi yılından sayılır; aleyhe nasıp düzeltmeleri toplamı bir yılı geçmiyorsa sonraki terfi yılları tamamlanmış sayılır (m.55); harp gaibi/esirlerin kademe ilerlemesi dönüşlerine kadar yapılmaz, suçu sabit olmayanlar sicil şartsız derhal emsal kademesine (m.56)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sıhhi izin bekleme süresinden sayılmaz\" yanlış; sayılır"
+   ],
+   "dogrusu": [
+    "Savaş takdirnamesi · iki yıl kıdem · derhal · harp gaibi, esir, enterne · iki yıllık sicili olanlar · kadro açığı aranmaz · sınıf değiştirenler · sıhhi izin · EK-VIII · MYO mezunu ve fakülte/yüksekokul/MYO bitirip temel eğitimle astsubay olanlar EK-VIII/A · %60'ın altında · asgari tugay · \"Kademe İlerlemesi Onay Çizelgesi\" (EK-3) · asgari alay ve eşidi · %60 ve üstü · sicil notu iptal edilenlerin · sicil notu ortalamasına · onay metnindeki tarihten · bir yılı geçmiyorsa"
+   ]
+  },
+  {
+   "id": "108-13",
+   "madde": [
+    "57",
+    "94",
+    "59"
+   ],
+   "baslik": "Yetersizlik ve istifade edilememe",
+   "hukum": "Astsubay çavuş hariç, son on yıl içinde, ikisi farklı birinci ve ikinci sicil üstlerinden olmak üzere üçüncü kez %60'ın altında sicil notu alanlar hakkında yetersizlikten ayırma; şartlar: son on yılda üç farklı yıla ait %60 altı not; bu notların asgari dört farklı sicil üstünce (en az iki farklı birinci, en az iki farklı ikinci sicil üstü) verilmiş olması; birinci ve ikinci kez %60 altı alanların sicil üstleri değiştirilecek şekilde tedbir alınır (m.57); başçavuşların bekleme süresinin üçüncü yılında aldıkları sicil ortalaması %60'ın altında olanlar ile rütbesinin son kademesine geldiği hâlde terfi edemeyen çavuş ve kıdemli çavuşlar \"Kendisinden İstifade Edilemez\" kabul edilir, 926 m.94/a-3 gereği emeklilik işlemi (m.59)",
+   "sinavda_boyle_yazarlar": [
+    "\"İki kez %60 altı alan ayrılır\" yanlış; üçüncü kez",
+    "İki kez %60 altı sicil alan ayrılır"
+   ],
+   "dogrusu": [
+    "Üçüncü kez (10 yılda, 4 farklı sicil üstü) (m.57)"
+   ]
+  },
+  {
+   "id": "108-14",
+   "madde": [
+    "62"
+   ],
+   "baslik": "Kıdem ve kıdem sırası",
+   "hukum": "Rütbelerde kıdem onay metnindeki tarihten; aynı tarihte nasbedilenlerde okul not ortalaması, branşlara göre yetiştirilenlerde branş mevcutları 100 kabul edilerek başarı derecesi, eşitse sicil numarası küçük olan; aynı rütbe ve nasıplılarda her yıl yeterlik derecesi; kaynağı farklı olup kıyaslanamayanlarda sıra: (1) Astsubay MYO mezunları, (3) uzman erbaşlıktan astsubay olanlar, (4) kıt'a erbaş ve erlerinden astsubay olanlar, (5) sözleşmeli astsubaylıktan muvazzafa geçenler, (6) sivil kaynaktan muvazzaf astsubay olanlar, (7) sözleşmeli astsubaylar; farklı sınıflarda: yeterlik derecesi → astsubaylık hizmet süresi → bir önceki rütbeye yükselme tarihi → önceki rütbenin son yıl yeterliği; sınıfı değiştirilenler yeni sınıf aynı nasıplılarının sonunda (onay tarihi esas); nasbı lehe düzeltilenler ve üstün başarı kıdemi alanlar aynı nasıplıların sonunda, aleyhe düzeltilenler yeni nasıplıların başında; kuvvetleri ayrı olanlarda kıdem almadan yükselen önce, sonra önceki rütbeye yükselme tarihi önce olan, eşitlikte kara, deniz, hava (m.62)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaştan astsubay olan, MYO mezunundan kıdemlidir\" yanlış"
+   ],
+   "dogrusu": [
+    "onay metnindeki tarihten · okul not ortalaması · sicil numarası küçük · yeterlik derecesi · (1) Astsubay MYO mezunları, (3) uzman erbaşlıktan astsubay olanlar, (4) kıt'a erbaş ve erlerinden astsubay olanlar, (5) sözleşmeli astsubaylıktan muvazzafa geçenler, (6) sivil kaynaktan muvazzaf astsubay olanlar, (7) sözleşmeli astsubaylar · aynı nasıplıların sonunda · başında · kara, deniz, hava"
+   ]
+  },
+  {
+   "id": "108-15",
+   "madde": [
+    "63",
+    "64",
+    "66"
+   ],
+   "baslik": "Özlük dosyaları",
+   "hukum": "Muvazzaf ve sözleşmeli astsubayların her birine nasıpta ikişer özlük dosyası; bölümler: özlük, atanma, terfi-kıdem-kademe, takdir-ödül, adli işlemler, sağlık, kurslar ve meslek programları, nasıp öncesi işlemler (8 grup); atananların kıt'a özlük dosyası atandığı birliğe gönderilir, yazıda devam eden/sonuçlanan hukuki-adli işlemler belirtilir; detaylar Kuvvet yönergesiyle (m.63); kıt'a özlük dosyası birinci sicil üstünde, diğeri Kuvvet Personel Başkanlığında; muhafazadan sicil üstleri ve şube müdürleri sorumlu (m.64); yurt dışı sürekli göreve atananların kıt'a dosyası ilgili makama; diğer yurt dışı görevlilerinki yurt içindeki sicil üstünce muhafaza (m.66); TSK'dan ayrılanların kıt'a dosyası Kuvvet Komutanlığına (m.68); Personel Başkanlığına gelen siciller incelenir, uygun olanlar sicil subayı, kısım amiri ve şube müdürünce imzalanınca kesinleşir; uygun düzenlenmemişler üçüncü sicil üstlerine iade; imza ve işaretleme hataları dışındaki hatalar inceleyen şubece düzeltilebilir (m.71); matbu siciller okunaklı, kazınmaz-silinmez; kanaat düzeltmesi üzeri okunacak şekilde çizilip yeniden yazılır ve sicil üstünce imzalanır (m.72)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özlük dosyası 6 gruptan oluşur\" yanlış; 8"
+   ],
+   "dogrusu": [
+    "ikişer · özlük, atanma, terfi-kıdem-kademe, takdir-ödül, adli işlemler, sağlık, kurslar ve meslek programları, nasıp öncesi işlemler · kıt'a özlük dosyası · kıt'a özlük dosyası birinci sicil üstünde · Kuvvet Personel Başkanlığında · Kuvvet Komutanlığına · sicil subayı, kısım amiri ve şube müdürünce · kesinleşir · üçüncü sicil üstlerine iade"
+   ]
+  },
+  {
+   "id": "108-16",
+   "madde": [
+    "85",
+    "62",
+    "73"
+   ],
+   "baslik": "Üstün başarı nedeniyle terfi",
+   "hukum": "926 m.85 şartlarını taşıyan üstçavuş, kıdemli üstçavuş ve başçavuşların bekleme sürelerinin bitiminden bir yıl önce, bulundukları rütbeye ait her yılki sicil notu %95 ve üstü ve sicil notu ortalaması %90 ve üstü olanlardan, bu rütbelerde en az iki ayrı birinci veya ikinci sicil üstünden not alanlar, ortalaması en yüksekten sınıfları içinde sıralanır; muharip sınıflarda mevcudu 12 ve az, yardımcı sınıflarda 24 ve az olan sınıflar birleştirilir; eşitlikte bulunulan rütbe ortalaması → önceki rütbeler → daha fazla farklı sicil üstünden not alan → m.62; EK-4 Üstün Başarılı Personel Sıralama Formu; Kuvvet Komutanınca uygun görülenler sınıf mevcudunun muharip %8, yardımcı %4'ü oranında bir üst rütbeye; birleştirilen sınıflarda aynı sınıftan yalnız bir personel; küsurat üst tama; komando/özel kuvvetler kurslu ve iç güvenlik harekâtında şerit rozet-madalya-ödül alanlara öncelik; cezalı veya yargılanması devam edenler seçilmeyebilir; üstçavuşluk, kıdemli üstçavuşluk ve başçavuşlukta birer defa, en fazla üç defa yararlanılır (m.73)",
+   "sinavda_boyle_yazarlar": [
+    "\"Üstün başarı terfisinden sınırsız yararlanılır\" yanlış; en fazla 3",
+    "Üstün başarı terfisi için ortalama %95 gerekir"
+   ],
+   "dogrusu": [
+    "Her yıl %95, ortalama %90 (m.73)"
+   ]
+  },
+  {
+   "id": "108-17",
+   "madde": [
+    "74",
+    "75",
+    "76"
+   ],
+   "baslik": "Ceza infazı, lehe nasıp, rütbe kademeliliği, intibak, eksik bekleme",
+   "hukum": "Kıdemden düşmeyi gerektiren cezanın infazı sırasında terfi/kademelilik/kademe sırasına girenlerin işlemi yapılmaz; tahliye sonrası nasıp düzeltilir; emsali terfi etmişse ilk 30 Ağustos'ta terfi, nasıp emsaline; kademe ilerlemesinde rütbe aranmaksızın en son sicile göre (m.74); kıdem alanlar ve nasbı lehe düzeltilenlerden emsali terfi etmişler diğer şartlarla derhal terfi (m.75); rütbe kademeliliği şartları: başçavuş/kıdemli başçavuş rütbesinde bulunmak; nasbından itibaren ilgili rütbede üç yılını tamamlamak (kademeli kıdemli başçavuşluk için kıdemli başçavuşluğun 3., ikinci kademeli için 6. yılı); rütbesine ait en az bir geçerli sicil; rütbe içindeki sicil ortalaması %60 ve üstü; onay Personel Başkanlığı; görevde yaralanıp uzun tedavi görenlerde sicil şartları aranmadan ortalamaya göre (m.76); açıkta-tutuklu-firarda olanların kademeliliği m.41 mantığıyla (m.77); nasbı lehe/aleyhe düzeltilenlerin kademeliliği yeni nasba göre (m.78); harp gaibi/esirlerin kademeliliği dönüşe kadar yapılmaz, suçu sabit olmayanlar 926 m.101-103 gereği sicil şartsız derhal (m.79); yükseköğrenim yapan astsubaylar ile fakülte/yüksekokul/MYO mezunu olup temel eğitimle nasbedilenlerin yükseköğrenim intibakı ve maaş derecesinin 3. kademesine gelenlerin bir üst derecenin 1. kademesine yükseltilmesi Personel Başkanlığınca (m.80); kendi hesabına fakülte/yüksekokul/MYO bitirip temel eğitimle astsubay nasbedilenlerin astsubay MYO'dan yıl olarak fazla öğrenim süreleri bekleme süresinden düşülür: öğrenim 3 yıl → çavuşlukta 1 yıl; 4 yıl → çavuşlukta 2 yıl; 5 yıl → çavuşlukta 2 + kıdemli çavuşlukta 1; 6 yıl → çavuşlukta 2 + kıdemli çavuşlukta 2 yıl eksik; 926 m.82 gereği askerlik sırasında astsubay olup askerlik süresi kıdemden sayılanların eksik bekleme süreleri her rütbede en az bir yıl müspet sicil şartıyla müteakip rütbelerden düşülür (m.82); 1972 Yönetmeliği yürürlükten kaldırıldı (m.83); 31 Ağustos 1998'den geçerli (m.84)",
+   "sinavda_boyle_yazarlar": [
+    "\"6 yıllık fakülte bitiren 4 yılın tamamını çavuşlukta düşer\" yanlış; 2 çavuş + 2 kıdemli çavuş",
+    "4 yıllık fakülte mezunu astsubay çavuşlukta 1 yıl eksik bekler"
+   ],
+   "dogrusu": [
+    "2 yıl (m.82)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

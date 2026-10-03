@@ -1,0 +1,134 @@
+[
+ {
+  "kanun_id": 45,
+  "kart_id": "45-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Fon tanımı para ve dövize daraltıldı; gayri maddi hak ve alacaklar tanım dışı gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Terörizmin Finansmanının Önlenmesi Hakkında Kanuna göre fon, yalnızca para ve dövizi ifade eder.”",
+    "“Gayri maddi haklar ve alacaklar, 6415 sayılı Kanundaki fon tanımının dışında kalır.”"
+   ],
+   "dogrusu": [
+    "Fon yalnız para değildir; değeri para ile temsil edilebilen taşınır, taşınmaz her türlü mal, hak, alacak ve bunları temsil eden belgedir (m.2/1-c)",
+    "Değeri para ile temsil edilebilen maddi veya gayri maddi her türlü hak ve alacak da fon sayılır (m.2/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Fonun fiilen kullanılması şart gösterildi; ceza aralığı düşürüldü; belli bir fiille ilişkilendirme şartı eklendi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Terörizmin finansmanı suçundan ceza verilebilmesi için sağlanan fonun bir suçun işlenmesinde kullanılmış olması şarttır.”",
+    "“Teröriste bilerek ve isteyerek fon sağlayan kişi bir yıldan beş yıla kadar hapis cezası ile cezalandırılır.”",
+    "“Fon sağlama suçunun oluşması için fonun belli bir terör eylemiyle ilişkilendirilmiş olması gerekir.”"
+   ],
+   "dogrusu": [
+    "Terörizmin finansmanından ceza verilebilmesi için fonun bir suçun işlenmesinde kullanılmış olması şartı aranmaz (m.4/3)",
+    "Teröriste veya terör örgütüne bilerek ve isteyerek fon sağlayan ya da toplayan kişi beş yıldan on yıla kadar hapis cezası alır (m.4/1)",
+    "Terör suçlarında kullanılacağını bilerek ve isteyerek, belli bir fiille ilişkilendirilmeden dahi teröriste fon sağlamak suçtur (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yabancı devlet aleyhine suçta Adalet Bakanı talebi şartı kaldırıldı; nüfuz kötüye kullanımında artırım yarıdan iki kata çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Terörizmin finansmanı suçu yabancı bir devlet aleyhine işlenmişse soruşturma ve kovuşturma re'sen yapılır.”",
+    "“Terörizmin finansmanı suçunun kamu görevinin sağladığı nüfuz kötüye kullanılarak işlenmesi hâlinde ceza iki katına çıkarılır.”"
+   ],
+   "dogrusu": [
+    "Suç yabancı devlet veya uluslararası kuruluş aleyhine işlenmişse soruşturma ve kovuşturma Adalet Bakanının talebine bağlıdır (m.4/6)",
+    "Suç kamu görevinin sağladığı nüfuz kötüye kullanılarak işlenirse verilecek ceza yarı oranında artırılır (m.4/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "BMGK kararlarının Cumhurbaşkanı kararı olmadan doğrudan uygulandığı iddia edildi; bildirim makamı Dışişlerinden Hazine ve Maliyeye kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“BM Güvenlik Konseyinin malvarlığı dondurma kararları, Türkiye'de ayrıca bir karar alınmaksızın doğrudan uygulanır.”",
+    "“BM Güvenlik Konseyi kararları uyarınca alınan dondurma kararları, Hazine ve Maliye Bakanlığı tarafından Güvenlik Konseyine bildirilir.”"
+   ],
+   "dogrusu": [
+    "BMGK'nın malvarlığı dondurma kararlarının uygulanmasına yönelik Cumhurbaşkanı kararı Resmî Gazete'de yayımlanır ve gecikmeksizin uygulanır (m.5/1)",
+    "Alınan kararlar Dışişleri Bakanlığı tarafından Birleşmiş Milletler Güvenlik Konseyine bildirilir (m.5/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İki bakanın birlikte kararı tek bakana indirildi; 48 saat ile 5 gün yer değiştirildi; altı aylık değerlendirme yıllığa çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye'de bulunan malvarlığının dondurulmasına İçişleri Bakanı tek başına karar verir.”",
+    "“Dondurma kararı beş gün içinde mahkeme onayına sunulur ve mahkeme kırk sekiz saat içinde karar verir.”",
+    "“Değerlendirme Komisyonu, Türkiye'deki malvarlığına ilişkin dondurma kararını yalnızca yılda bir kez yeniden değerlendirir.”"
+   ],
+   "dogrusu": [
+    "Türkiye'deki malvarlığının dondurulmasına Komisyon önerisiyle Hazine ve Maliye Bakanı ile İçişleri Bakanı birlikte karar verir (m.7/3)",
+    "Dondurma kararı kırk sekiz saat içinde Ankara ağır ceza mahkemesinin onayına sunulur; mahkeme beş gün içinde karar verir (m.7/4)",
+    "Değerlendirme Komisyonu, makul sebeplerin devam edip etmediğini en geç altışar aylık dönemlerle değerlendirir (m.7/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Mali araştırma makamı MASAK'tan MİT'e kaydırıldı; araştırma sonuçlarının sunulduğu yer Komisyondan mahkemeye kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Malvarlığının dondurulması kararları hakkındaki mali araştırma Millî İstihbarat Teşkilâtı tarafından yerine getirilir.”",
+    "“Malvarlığının dondurulmasına ilişkin araştırma sonuçları, Başkanlık tarafından doğrudan mahkemeye sunulur.”"
+   ],
+   "dogrusu": [
+    "Malvarlığı dondurma kararlarıyla ilgili mali araştırmayı Millî İstihbarat Teşkilâtı değil, MASAK Başkanlığı yapar (m.8/1)",
+    "Araştırma sonuçları, Başkanlık tarafından Değerlendirme Komisyonuna sunulur (m.8/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kararın hüküm doğurma anı Resmî Gazete yayımından tebliğe kaydırıldı; kaldırma kararlarının yayımlanmadığı iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Malvarlığının dondurulması kararı Resmî Gazete'de yayımlanmaz; ilgiliye ayrıca tebliğ edildiği tarihte hukuki sonuç doğurur.”",
+    "“Malvarlığının dondurulmasının kaldırılmasına ilişkin kararlar Resmî Gazete'de yayımlanmaz, yalnızca ilgiliye bildirilir.”"
+   ],
+   "dogrusu": [
+    "Dondurma kararı Resmî Gazete'de yayımı ile hukuki sonuç doğurur ve yayım tarihinde ilgiliye tebliğ edilmiş sayılır (m.11/1; m.12/1)",
+    "Malvarlığının dondurulmasının kaldırılmasına ilişkin kararlar da Resmî Gazete'de yayımlanır ve yayımıyla hukuki sonuç doğurur (m.11/1; m.12/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "30 günlük (malvarlığı sahibi) ve 7 günlük (talep edilen kurum) bildirim süreleri yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hakkında dondurma kararı verilen kişi, malvarlığı bilgilerini kararın yayımından itibaren en geç yedi gün içinde Başkanlığa bildirir.”",
+    "“Dondurma kararının yerine getirilmesi istenen kurumların nezdindeki malvarlığı bilgilerini Başkanlığa bildirme süresi, talep tarihinden itibaren otuz gündür.”"
+   ],
+   "dogrusu": [
+    "Hakkında dondurma kararı verilen kişi, malvarlığı bilgilerini kararın Resmî Gazete'de yayımından itibaren en geç otuz gün içinde Başkanlığa bildirir (m.12/3)",
+    "Yerine getirme talebi yapılan kişi ve kurumlar, nezdindeki malvarlığı bilgilerini talep tarihinden itibaren yedi gün içinde Başkanlığa bildirir (m.12/5)"
+   ]
+  }
+ }
+]

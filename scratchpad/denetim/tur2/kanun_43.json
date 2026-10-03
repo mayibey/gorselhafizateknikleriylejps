@@ -1,0 +1,127 @@
+{
+ "kanun_id": 43,
+ "ad": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_43.json",
+ "kartlar": [
+  {
+   "id": "43-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İl spor güvenlik kurulu başkanı",
+   "hukum": "İl spor güvenlik kurulu vali veya görevlendireceği vali yardımcısının başkanlığında; belediye başkanlığı, il jandarma komutanlığı, il emniyet müdürlüğü, gençlik ve spor, il sağlık ve il millî eğitim müdürlükleri, ilgili federasyon ve amatör spor kulüpleri konfederasyonu temsilcileri, valinin belirleyeceği bir hukukçu ve stat güvenliğinden sorumlu yönetim kurulu üyelerinden oluşur; ilçe kurulu kaymakam başkanlığında oluşur (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Vali başkanlık eder\" şıkkı yanlış; vali yardımcısı. Jandarma üyedir",
+    "İl spor güvenlik kuruluna vali başkanlık eder",
+    "Jandarma kurulun üyesi değildir"
+   ],
+   "dogrusu": [
+    "Vali yardımcısı (m.4)",
+    "Üyedir (m.4)"
+   ]
+  },
+  {
+   "id": "43-1",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kurulun görevi",
+   "hukum": "İl veya ilçe spor güvenlik kurulları, müsabaka ve seyir alanında spor kulüplerinin bulundurmakla yükümlü olduğu özel güvenlik görevlilerinin sayısını ve görev alacakları yerleri belirlemekle yetkilidir (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurul sadece tavsiye verir, karar almaz\" yanlış; tedbir kararı alır"
+   ],
+   "dogrusu": [
+    "tedbirleri belirler"
+   ]
+  },
+  {
+   "id": "43-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel güvenlik kimlik bildirimi",
+   "hukum": "Müsabakada görev yapacak özel güvenlik görevlilerinin kimlikleri müsabakadan en az 48 saat önce kolluğa bildirilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"24 saat\" tuzak; 48 saat",
+    "Özel güvenlik kimlikleri 24 saat önce bildirilir",
+    "Giriş araması için hâkim kararı gerekir"
+   ],
+   "dogrusu": [
+    "48 saat (m.6)",
+    "Mülkî amirin yazılı emri (m.6)"
+   ]
+  },
+  {
+   "id": "43-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel güvenlik genel kolluğun gözetiminde",
+   "hukum": "Kulüpler, genel kolluk ile birlikte görev yapmak üzere yeterli sayıda özel güvenlik görevlisi bulundurur (m.6/1); genel kolluk ve özel güvenlik görevlileri müsabaka güvenlik amiri ve yardımcısının emir ve denetiminde birlikte görev yapar, güvenlik amiri tribünlerdeki genel kolluk sayısının artırılmasına her zaman karar verebilir (m.7/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genel kolluk tribüne hiç giremez\" yanlış"
+   ],
+   "dogrusu": [
+    "özel güvenlik · genel kolluğun gözetim ve denetiminde"
+   ]
+  },
+  {
+   "id": "43-4",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Müsabakaya girişte arama",
+   "hukum": "Genel kolluk görevlileri ile bunların gözetiminde özel güvenlik görevlileri, mülkî amirin yazılı emrine istinaden spor alanına girişte izleyicilerin üstünü ve eşyasını teknik cihazlarla ve gerektiğinde el ile kontrol edip arayabilir (m.12/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hâkim kararı gerekir\" yanlış; mülkî amir yazılı emri"
+   ],
+   "dogrusu": [
+    "özel güvenlik · mülkî amirin yazılı emri"
+   ]
+  },
+  {
+   "id": "43-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Müsabaka güvenlik amiri",
+   "hukum": "Müsabaka güvenlik amiri veya yardımcısı güvenlik önlemlerinin yürütülmesi ve denetlenmesinde ilgili kişi ve kuruluşlarla koordinasyonu sağlar (m.7/1); her spor güvenlik birimi amiri, futbolda en üst lig ve bir altındaki lig için her kulüple ilgili bir kolluk görevlisini gözlemci olarak görevlendirir; gözlemci deplasman dâhil kulübün bütün maçlarında görev alır (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Güvenlik amirini federasyon atar\" yanlış; kolluk görevlendirir"
+   ],
+   "dogrusu": [
+    "müsabaka güvenlik amiri · koordinasyonu · gözlemci kolluk"
+   ]
+  },
+  {
+   "id": "43-6",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Spor alanına sokulması yasak maddeler",
+   "hukum": "Müsabaka, seyir ve antrenman alanları ile taraftarların toplu seyahat ettiği araçlara ruhsatlı dahi olsa ateşli silahlar, kesici, ezici, bereleyici veya delici aletler ile patlayıcı, parlayıcı, yanıcı veya yakıcı maddeler ve uyuşturucu veya uyarıcı maddeler sokulamaz; alkollü içecek sokulması, kullanılması ve satılmasının usul ve esaslarını federasyonlar belirler (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ruhsatlı silahla girilebilir\" şıkkı yanlış",
+    "Ruhsatlı silah spor alanına sokulabilir"
+   ],
+   "dogrusu": [
+    "Sokulamaz (m.12)"
+   ]
+  },
+  {
+   "id": "43-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Seyyar satıcı ve alkol",
+   "hukum": "Genel kolluk görevlileri ve belediye zabıtası, kesici-delici aletler, patlayıcı-yanıcı maddeler ile uyuşturucu-uyarıcı maddeleri spor alanında seyyar olarak satan, satışa arz eden, dağıtan veya dağıtmak için bulunduranları bu alandan uzaklaştırmakla yükümlüdür (m.12/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belediye zabıtası uzaklaştırır\" yerine kolluk"
+   ],
+   "dogrusu": [
+    "seyyar satıcılar"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

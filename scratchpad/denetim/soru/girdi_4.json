@@ -1,0 +1,1069 @@
+[
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-21",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Adli mercilere çağrı",
+  "hukum": "Tanıklık veya bilirkişilik dışında adlî yargı mercilerine çağrıldığında, tutuklu/hükümlü iken veya görevden uzaklaştırıldığı sürede resmî kıyafet giyilemez (m.15/8)",
+  "tuzak": "istisna tersine çevrilip \"tanıklık/bilirkişilik sebebiyle çağrıldığında giyemez\" denir (2024 MEBS'in doğru cevabı)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-22",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Pardösü ve yağmurluk",
+  "hukum": "Yakaları kaldırılmaz, kuşak ceplere sokulmaz, daima bağlı bulundurulur (m.15/9-i)",
+  "tuzak": "\"yakaları kaldırılır, kuşak cebe sokulur\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-23",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Çanta",
+  "hukum": "Resmî kıyafetle sadece koyu renk ve sade desenli çantalar sol elde taşınabilir (m.15/9-k)",
+  "tuzak": "\"sağ elde\" veya \"her renk çanta\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-24",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Kimlik kartı",
+  "hukum": "Güvenlik ve istihbarata karşı koyma gibi istisnai durumlar dışında, resmî ve sivil hâlde her zaman üzerinde bulundurulur; yetkili makam isterse gösterilmesi zorunludur (m.15/10)",
+  "tuzak": "\"sadece resmî kıyafetliyken taşınır\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-26",
+  "madde": [
+   "17"
+  ],
+  "baslik": "Esas duruşta yön",
+  "hukum": "Âmirle konuşurken hemen esas duruşa geçilir, baş çevrilmez; âmir yan taraftaysa yerinde dönüşle cephe âmire çevrilir (m.17/4)",
+  "tuzak": "\"cephe sabit tutulur, baş âmirin bulunduğu yöne çevrilir\" (çıkmışta bu şık yanlış cevaptır)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-30",
+  "madde": [
+   "18"
+  ],
+  "baslik": "Millî marşta duruş",
+  "hukum": "Millî marş çalınırken açık yerde şapkalı, kapalı yerde şapkasız olarak cephe marşın çalındığı yöne dönülüp saygı duruşunda bulunulur (m.18/11)",
+  "tuzak": "\"açık ve kapalı yerlerde şapkasız\" (2024 MEBS'in doğru cevabı bu çarpıtmaydı)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-40",
+  "madde": [
+   "26"
+  ],
+  "baslik": "Nöbet esasları",
+  "hukum": "Nöbet görevi müşterek görevlerin belli bir sıra ve süreyle yapılması için ihdas edilir; nöbetin tesisi, personelin tespiti, hakkaniyetli sıra ve kayıtlar ilgili yönetmelik ve yönerge esaslarına göre yürütülür (m.26)",
+  "tuzak": "bu yönetmelikte olmayan somut nöbet saatleri (24 saat, 8 saat gibi) buraya yazılır — nöbet süreleri bu yönetmelikte yok",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-41",
+  "madde": [
+   "32"
+  ],
+  "baslik": "Afet ve acil durum",
+  "hukum": "Birlik komutanları afet ve acil durumları mahallin en büyük mülki âmirine haber vermekle sorumludur; vali veya kaymakamın isteyeceği yardımları üstlerinden emir beklemeksizin ve gecikmeksizin yerine getirir, sonra sıralı âmirlerine ve JGK/SGK'ya haber verir (m.32/1-2)",
+  "tuzak": "\"üstünden emir aldıktan sonra yardım eder\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-42",
+  "madde": [
+   "2",
+   "3"
+  ],
+  "baslik": "Kapsam ve dayanak",
+  "hukum": "Yönetmelik JGK, SGK ve Jandarma ve Sahil Güvenlik Akademisindeki karargâh, birlik, kurumlar ile personeli kapsar, işçiler kendi mevzuatına tabidir; dayanak 2803 sayılı Kanunun 24'üncü ve 2692 sayılı Kanunun 23'üncü maddesidir (m.2, m.3)",
+  "tuzak": "işçiler kapsama sokulur ya da dayanak 5442/2559 gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-1",
+  "madde": [
+   "5"
+  ],
+  "baslik": "İzin işlemlerini kim yürütür",
+  "hukum": "Her türlü izin işlemi, özlük işlemlerinin yerine getirildiği makamlarca yürütülür (m.5/1-ç)",
+  "tuzak": "\"yalnızca İçişleri Bakanlığı\" veya \"sadece amirin takdiri\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-6",
+  "madde": [
+   "5"
+  ],
+  "baslik": "Hizmet ihtiyacıyla geri çağırma",
+  "hukum": "Geri çağırma yetkisi asgari yıllık izin planlamasını onaylayan makamdadır; çağrı yazılı veya sözlü olabilir, her hâlde görevlendirme yazısıyla yazılı hale getirilir (m.5/1-ğ)",
+  "tuzak": "\"sadece yazılı olur\" denir veya yetki doğrudan birlik komutanına verilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-7",
+  "madde": [
+   "5"
+  ],
+  "baslik": "Geri çağırmanın masrafı",
+  "hukum": "İzinden dönüş ve tekrar izne gidiş masrafları 6245 sayılı Harcırah Kanununa göre personele ödenir (m.5/1-ğ)",
+  "tuzak": "\"masraf personele aittir\" ya da \"ödeme yapılmaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-19",
+  "madde": [
+   "5"
+  ],
+  "baslik": "İzin kaydı ve dosyalama",
+  "hukum": "Kullanılan izinler merkezi personel bilgi sisteminin izin bölümüne işlenir; izin belgeleri birlik ve sayısal özlük dosyalarında saklanır (m.5/1-c)",
+  "tuzak": "\"sadece birlik dosyasında saklanır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-20",
+  "madde": [
+   "5"
+  ],
+  "baslik": "Atamada izin devri",
+  "hukum": "Atama ile birliğinden ayrılan personelin o yıl izin kullanıp kullanmadığı, kullandıysa süre ve tarihleri ayrılış/katılış belgelerinin izin bölümüne yazılır ve onaylanır (m.5/1-b)",
+  "tuzak": "\"yeni birlik izin bilgisini dikkate almaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-21",
+  "madde": [
+   "5"
+  ],
+  "baslik": "İletişim zorunluluğu",
+  "hukum": "Personel, kendisine her zaman ulaşılabilecek iletişim vasıtalarını ve adreslerini izin belgesinde belirtmek zorundadır (m.5/1-l)",
+  "tuzak": "\"isteğe bağlıdır\" veya \"sadece yurt dışı izinlerinde zorunludur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 24,
+  "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+  "kart_id": "24-22",
+  "madde": [
+   "5"
+  ],
+  "baslik": "İzne aykırılığın sonucu",
+  "hukum": "İzinden süresinde dönmeyenler, izin konusunda gerçeğe aykırı beyanda bulunanlar ve mazeretsiz/müsaadesiz olarak izin sıra çizelgesine aykırı hareket edenler hakkında yasal işlem yapılır (m.5/1-ı)",
+  "tuzak": "yaptırım \"izin hakkının tamamen kaldırılması\" gibi metinde olmayan bir sonuca bağlanır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_24.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-0",
+  "madde": [
+   "1"
+  ],
+  "baslik": "Kanunun kapsamı",
+  "hukum": "Ateşli silahlar, mermileri, silahın ana veya balistik önemi haiz parçaları (namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesi) ve salt saldırı-savunma için yapılmış bıçak/aletlerin ülkeye sokulması, yapılması, satılması, satın alınması, taşınması veya bulundurulması bu Kanuna tabidir (m.1)",
+  "tuzak": "sadece silah ve mermi sayılıp \"parçalar kapsam dışıdır\" denir; parçalar da kapsamdadır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-6",
+  "madde": [
+   "2"
+  ],
+  "baslik": "Yurda sokma yasağı ve istisnası",
+  "hukum": "Ateşli silah, mermi ve saldırı-savunma aletlerinin ülkeye sokulması yasaktır; diplomatik ayrıcalıktan yararlananlar, yurt dışında hükümet adına silah armağan edilen resmî görevliler ve dış temsilcilikte görevli elçi/konsolos/subay/güvenlik memurları için tek bir silaha ve mermisine mahsus izin verilebilir; yurt dışına kıta ile gönderilen subay ve astsubayların kimlik kartlarında kayıtlı silahları için yurda girişte izin şartı aranmaz (m.2)",
+  "tuzak": "istisna \"sınırsız sayıda silah\" gibi gösterilir; tek silahla sınırlıdır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-7",
+  "madde": [
+   "6"
+  ],
+  "baslik": "Ruhsat süresi",
+  "hukum": "Taşıma ve bulundurma ruhsatları, yenileme harcı alınmak şartıyla beş yıl için geçerlidir (m.6/1)",
+  "tuzak": "üç yıl veya on yıl denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-9",
+  "madde": [
+   "6"
+  ],
+  "baslik": "İptalden sonra yeniden ruhsat",
+  "hukum": "Gerekli şartları taşıyanlara üçbin Türk Lirası idari para cezası ödemeleri kaydıyla tekrar ruhsat verilebilir; bu idari para cezasını vermeye mülki amir yetkilidir (m.6/1)",
+  "tuzak": "cezayı mahkeme veya Cumhuriyet savcısı verir denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-10",
+  "madde": [
+   "6"
+  ],
+  "baslik": "Süre kaydı aranmayanlar",
+  "hukum": "Cumhurbaşkanı, Cumhurbaşkanı yardımcıları, bakanlar, TBMM üyeleri, Genelkurmay Başkanı, Kuvvet Komutanları, Jandarma Genel Komutanı, Sahil Güvenlik Komutanı, Emniyet Genel Müdürü gibi görevlerde bulunanlar ile gazilerin ve şehit/gazi yakınlarının ruhsatlarında süre kaydı aranmaz (m.6/2)",
+  "tuzak": "\"herkesin ruhsatı beş yıllıktır\" denerek istisna silinir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-11",
+  "madde": [
+   "6"
+  ],
+  "baslik": "Mermi ruhsatı",
+  "hukum": "Ruhsata bağlanmış silahlara ait yerli ve yabancı menşeli mermiler için ayrıca ruhsat aranmaz; silah ruhsatı mermiler için de geçerlidir (m.6/2)",
+  "tuzak": "\"mermi için ayrı ruhsat gerekir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-12",
+  "madde": [
+   "6"
+  ],
+  "baslik": "Taşıma ruhsatının geçerli olmadığı yer",
+  "hukum": "Silah taşıma ruhsatları nereden verilmiş olursa olsun Ek 1 inci maddede sayılan yerler dışında geçerlidir (m.6)",
+  "tuzak": "\"ruhsatlı silah her yere sokulabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-13",
+  "madde": [
+   "7"
+  ],
+  "baslik": "Kimler taşıyabilir/bulundurabilir",
+  "hukum": "Cumhurbaşkanı, bakanlar, yasama organı üyeleri ve bu görevlerde bulunmuş olanlar; özel kanununa göre yetkili olanlar; Cumhurbaşkanı kararıyla belirlenen kamu görevlileri; sayılan emekli asker/mülki/adli/emniyet personeli; valilerce verilen izin vesikasını alanlar; güvenlik korucuları; en az bir dönem muhtarlık veya belediye başkanlığı yapmış olanlar (m.7)",
+  "tuzak": "tart, ihraç, meslekten çıkarma veya ayırma işlemine tabi tutulanların da yararlandığı söylenir; onlar açıkça hariç tutulmuştur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-14",
+  "madde": [
+   "7"
+  ],
+  "baslik": "Emekli uzman erbaş şartı",
+  "hukum": "Uzman erbaşların bu haktan yararlanması için en az on yıl görev yapıp sözleşmesinin uzatılmaması veya kendi isteğiyle ayrılmış olması gerekir; Emniyet hizmetleri sınıfı personeli için de istifa/kurum değiştirmede en az on yıl şartı vardır (m.7/1-4/A)",
+  "tuzak": "süre beş yıl gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-15",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Bölgesel izin ve toplu arama",
+  "hukum": "Lüzum görülen mıntıkalarda Cumhurbaşkanı kararıyla valiler tarafından halka silah bulundurma ve taşıma müsaadesi verilebileceği gibi toplu silah araması da yapılabilir (m.8)",
+  "tuzak": "yetki doğrudan valiye ya da İçişleri Bakanlığına verilmiş gösterilir; Cumhurbaşkanı kararı şarttır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-16",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Devir yasağı",
+  "hukum": "Taşıma müsaadesi olanlar silahlarını resmî ruhsatı olmayan kimseye satamaz, geçici de olsa başkasına veremez (m.9)",
+  "tuzak": "\"kısa süreli emanet serbesttir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-32",
+  "madde": [
+   "4",
+   "14"
+  ],
+  "baslik": "Bıçak kaçakçılığı",
+  "hukum": "m.4'teki bıçak veya aletleri ülkeye sokan, sokmaya kalkışan, aracılık eden, ülkede yapan, bir yerden bir yere taşıyan veya yollayan: iki yıldan beş yıla kadar hapis ve ikiyüz günden az olmamak üzere adlî para cezası; niteliği veya sayıca azlığı hâlinde ceza yarısına kadar indirilir; teşekkül kuran, yöneten veya mensubu olanlar için ceza beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasıdır (m.14/1-2)",
+  "tuzak": "indirim \"üçte bir\" gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-39",
+  "madde": [
+   "12",
+   "13"
+  ],
+  "baslik": "Askerî savaş silahları",
+  "hukum": "m.12 ve m.13'e aykırı eylemler top, havan, roketatar, uçaksavar, tanksavar, ağır ve hafif makinalı tüfek ve benzeri askerî amaçlı savaş silahlarına veya mermilerine ilişkinse cezalar bir kat artırılır (Ek m.5)",
+  "tuzak": "artırım yarı oranında gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-40",
+  "madde": [
+   "7"
+  ],
+  "baslik": "Bulundurma ruhsatı iki türlüdür",
+  "hukum": "Silah ruhsatı almasına mani hâli olmayan her Türk vatandaşı bulundurmak maksadıyla silah satın alabilir; bulundurma ruhsatı mesken ya da işyeri için olmak üzere iki şekilde verilir (Ek m.7)",
+  "tuzak": "\"bulundurma ruhsatı hem mesken hem işyerini birlikte kapsar\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-41",
+  "madde": [
+   "7"
+  ],
+  "baslik": "Nakil belgesi",
+  "hukum": "Bulundurma ruhsatlı silahın bir yerden başka yere nakli için mahallin en büyük mülki amirinin vereceği nakil belgesi gerekir; bu belge atış poligonuna gidiş-dönüş için de geçerlidir ve silah belgede yazılı gün ve güzergâh dışında dışarı çıkarılamaz (Ek m.7)",
+  "tuzak": "belgeyi kolluk birimi verir denir ya da \"poligon için ayrı izin gerekir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-42",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Zati demirbaş silah",
+  "hukum": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığınca temin edilen tabanca ve mermiler, kendi bünyelerindeki subay, astsubay, uzman jandarma ve uzman erbaşlara görevlerinde kullanmak üzere bedeli mukabili zati demirbaş silah olarak satılır (Ek m.8)",
+  "tuzak": "silahın bedelsiz verildiği ya da erbaş/erleri de kapsadığı söylenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 25,
+  "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+  "kart_id": "25-43",
+  "madde": [
+   "11"
+  ],
+  "baslik": "Poligon açma izni",
+  "hukum": "Kamu kuruluşlarının poligonları dışında, özel şahısların trap-skeet, atış alanı ile tabanca ve tüfek atış poligonu açması İçişleri Bakanlığının iznine tabidir (Ek m.11)",
+  "tuzak": "izni valilik veya Gençlik ve Spor Bakanlığı verir denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_25.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-2",
+  "madde": [
+   "2"
+  ],
+  "baslik": "İfade alma ile sorgu farkı",
+  "hukum": "İfade alma: şüphelinin kolluk veya Cumhuriyet savcısı tarafından dinlenmesi; sorgu: şüpheli veya sanığın hâkim veya mahkeme tarafından dinlenmesi (m.2/1-g,h)",
+  "tuzak": "ikisi ters çevrilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-3",
+  "madde": [
+   "2"
+  ],
+  "baslik": "Suçüstü üç hâl",
+  "hukum": "(1) İşlenmekte olan suç, (2) henüz işlenmiş fiil ile fiilin hemen ardından kolluk, zarar gören veya başkalarınca takip edilerek yakalanan kişinin suçu, (3) fiilin pek az önce işlendiğini gösteren eşya veya delille yakalanan kişinin suçu (m.2/1-j)",
+  "tuzak": "üç hâlden biri düşürülür",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-4",
+  "madde": [
+   "2"
+  ],
+  "baslik": "Toplu suç",
+  "hukum": "Aralarında iştirak iradesi bulunmasa da üç veya daha fazla kişi tarafından işlenen suçtur (m.2/1-k)",
+  "tuzak": "\"iştirak iradesi şarttır\" denir veya sayı iki yapılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-7",
+  "madde": [
+   "90"
+  ],
+  "baslik": "Şikâyete bağlılık istisnası",
+  "hukum": "Soruşturması şikâyete bağlı olsa bile çocuklara, beden veya akıl hastalığı, malûllük veya güçsüzlüğü nedeniyle kendini idareden aciz olanlara karşı işlenen suçüstü hâllerinde yakalama şikâyete bağlı değildir (m.90/3)",
+  "tuzak": "\"her hâlde şikâyet şarttır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-9",
+  "madde": [
+   "91"
+  ],
+  "baslik": "Gözaltının şartı",
+  "hukum": "Gözaltı, tedbirin soruşturma yönünden zorunlu olmasına ve kişinin suç işlediği şüphesini gösteren somut delillerin varlığına bağlıdır (m.91/2)",
+  "tuzak": "\"soyut şüphe yeter\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-12",
+  "madde": [
+   "93"
+  ],
+  "baslik": "Kelepçe şartı",
+  "hukum": "Yakalanan veya nakledilen kişilere kaçacaklarına ya da kendisi veya başkalarının hayat ve beden bütünlüğü bakımından tehlike arz ettiğine ilişkin belirtilerin varlığı hâlinde kelepçe takılabilir (m.93)",
+  "tuzak": "\"her yakalanana kelepçe takılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-14",
+  "madde": [
+   "95"
+  ],
+  "baslik": "Yakalananın yakınına haber",
+  "hukum": "Şüpheli veya sanık yakalandığında, gözaltına alındığında veya gözaltı uzatıldığında Cumhuriyet savcısının emriyle bir yakınına veya belirlediği kişiye gecikmeksizin haber verilir; yabancı ise yazılı olarak karşı çıkmadıkça vatandaşı olduğu devletin konsolosluğuna bildirilir (m.95)",
+  "tuzak": "haber verme yetkisi kolluğa verilir ya da yabancıda bildirim \"her hâlde zorunlu\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-18",
+  "madde": [
+   "100"
+  ],
+  "baslik": "Tutuklama yasağı",
+  "hukum": "Sadece adlî para cezasını gerektiren suçlarda veya vücut dokunulmazlığına karşı kasten işlenenler hariç hapis cezasının üst sınırı iki yıldan fazla olmayan suçlarda tutuklama kararı verilemez (m.100/4)",
+  "tuzak": "istisna cümlesi düşürülür",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-21",
+  "madde": [
+   "102"
+  ],
+  "baslik": "Çocukta tutukluluk",
+  "hukum": "Bu süreler, fiili işlediği sırada on beş yaşını doldurmamış çocuklarda yarı, on sekiz yaşını doldurmamış çocuklarda dörtte üç oranında uygulanır (m.102/5)",
+  "tuzak": "iki oran yer değiştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-22",
+  "madde": [
+   "109"
+  ],
+  "baslik": "Adlî kontrol nedir",
+  "hukum": "Tutuklama sebepleri varken, tutuklama yerine şüphelinin bir veya birden fazla yükümlülüğe tâbi tutulmasıdır: yurt dışına çıkamamak, belirlenen yerlere başvurmak, taşıt kullanamamak, tedaviye tâbi olmak, güvence yatırmak, silah bulunduramamak veya taşıyamamak, konutunu terk etmemek, belirli bölgeye gitmemek gibi (m.109)",
+  "tuzak": "listeye \"ev hapsi yerine cezaevi\" gibi uydurma bir yükümlülük eklenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-23",
+  "madde": [
+   "109"
+  ],
+  "baslik": "Adlî kontrolde mahsup",
+  "hukum": "Adlî kontrolde geçen süre kural olarak cezadan mahsup edilemez; ancak konutunu terk etmemek yükümlülüğünde geçen her iki gün, mahsupta bir gün sayılır (m.109/6)",
+  "tuzak": "\"her gün bir gün sayılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-33",
+  "madde": [
+   "128"
+  ],
+  "baslik": "Hesabın askıya alınması",
+  "hukum": "Nitelikli hırsızlık, nitelikli dolandırıcılık ve banka/kredi kartının kötüye kullanılması suçlarında makul şüphe varsa, banka, ödeme veya kripto varlık hizmet sağlayıcısı hesabı kırk sekiz saate kadar askıya alabilir; işlem derhâl Cumhuriyet başsavcılığına ve hesap sahibine bildirilir, savcı itiraz üzerine yirmi dört saat içinde karar verir (m.128/A)",
+  "tuzak": "süre 24 saat yapılır ya da yetki savcıya verilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-34",
+  "madde": [
+   "135"
+  ],
+  "baslik": "İletişimin dinlenmesi",
+  "hukum": "Somut delillere dayanan kuvvetli şüphe ve başka suretle delil elde edilememesi hâlinde, hâkim veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının kararıyla iletişim dinlenebilir, kayda alınabilir; savcı kararını derhâl hâkim onayına sunar, hâkim en geç yirmi dört saat içinde karar verir (m.135/1)",
+  "tuzak": "\"makul şüphe yeterlidir\" denir ya da \"başka suretle delil elde edilememesi\" şartı düşürülür",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-35",
+  "madde": [
+   "135"
+  ],
+  "baslik": "Dinleme süresi",
+  "hukum": "Tedbir kararı en çok iki ay için verilebilir, bir ay daha uzatılabilir; örgüt faaliyeti çerçevesinde işlenen suçlarda hâkim, her defasında bir aydan fazla olmamak ve toplam üç ayı geçmemek üzere ek uzatma verebilir (m.135/4)",
+  "tuzak": "süreler tek bir rakama indirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-36",
+  "madde": [
+   "135"
+  ],
+  "baslik": "Tanıklıktan çekinecekle iletişim",
+  "hukum": "Şüpheli veya sanığın tanıklıktan çekinebilecek kişilerle arasındaki iletişim kayda alınamaz; alınmışsa kayıtlar derhâl yok edilir (m.135/3)",
+  "tuzak": "\"hâkim izin verirse kaydedilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-37",
+  "madde": [
+   "135"
+  ],
+  "baslik": "Mobil telefonun yeri",
+  "hukum": "Şüpheli veya sanığın yakalanabilmesi için mobil telefonun yeri hâkim, gecikmesinde sakınca varsa savcı kararıyla tespit edilebilir; en çok iki ay, bir ay uzatılabilir (m.135/5)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-40",
+  "madde": [
+   "140"
+  ],
+  "baslik": "Teknik araçlarla izleme",
+  "hukum": "Sayılan suçlarda, şüphelinin kamuya açık yerlerdeki faaliyetleri ve işyeri teknik araçlarla izlenebilir, ses veya görüntü kaydı alınabilir; karar hâkime, gecikmesinde sakınca varsa savcıya aittir; en çok üç hafta, bir hafta uzatılabilir, örgüt suçlarında ek uzatmalarla toplam dört haftayı geçemez. Bu madde hükümleri kişinin konutunda uygulanamaz (m.140)",
+  "tuzak": "\"konutta da uygulanır\" denir — en sevilen bozma budur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-41",
+  "madde": [
+   "141"
+  ],
+  "baslik": "Tazminat hâlleri",
+  "hukum": "Kanuna aykırı yakalanan/tutuklanan, kanunî gözaltı süresi içinde hâkim önüne çıkarılmayan, hakları hatırlatılmadan tutuklanan, beraat eden veya kovuşturmaya yer olmadığına karar verilen, araması ölçüsüz yapılan, eşyasına koşulsuz elkonulan kişiler maddî ve manevî her türlü zararını Devletten isteyebilir (m.141)",
+  "tuzak": "\"ilgili kolluk görevlisinden istenir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-42",
+  "madde": [
+   "145"
+  ],
+  "baslik": "Davetiye ile çağırma",
+  "hukum": "İfadesi alınacak veya sorgusu yapılacak kişi davetiye ile çağrılır; çağrılma nedeni açıkça belirtilir, gelmezse zorla getirileceği yazılır (m.145)",
+  "tuzak": "\"doğrudan zorla getirilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-48",
+  "madde": [
+   "157"
+  ],
+  "baslik": "Soruşturmanın gizliliği",
+  "hukum": "Kanunun başka hüküm koyduğu hâller saklı kalmak ve savunma haklarına zarar vermemek koşuluyla soruşturma evresindeki usul işlemleri gizlidir (m.157)",
+  "tuzak": "\"her hâlde mutlaktır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-51",
+  "madde": [
+   "161"
+  ],
+  "baslik": "Adlî kolluğun savcıya bağlılığı",
+  "hukum": "Adlî kolluk görevlileri; elkoydukları olayları, yakalanan kişileri ve uygulanan tedbirleri emrinde çalıştıkları Cumhuriyet savcısına derhâl bildirmek ve savcının adliyeye ilişkin bütün emirlerini gecikmeksizin yerine getirmekle yükümlüdür. Savcı emirlerini yazılı, acele hâllerde sözlü verir; sözlü emir en kısa sürede yazılı olarak da bildirilir (m.161/2-3)",
+  "tuzak": "\"emir yalnız yazılı olabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-52",
+  "madde": [
+   "8",
+   "12"
+  ],
+  "baslik": "Adlî kolluk kimdir",
+  "hukum": "Emniyet Teşkilatı Kanunu m.8, 9, 12; 2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.7; Gümrük KHK m.8 ve 2692 sayılı Sahil Güvenlik Komutanlığı Kanunu m.4'te belirtilen soruşturma işlemlerini yapan güvenlik görevlileridir. Adlî kolluk, adlî görevlerin haricindeki hizmetlerde üstlerinin emrindedir (m.164)",
+  "tuzak": "\"her işte savcının emrindedir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-53",
+  "madde": [
+   "165"
+  ],
+  "baslik": "Diğer kolluğun adlî görevi",
+  "hukum": "Gerektiğinde veya savcının talebi hâlinde diğer kolluk birimleri de adlî kolluk görevini yerine getirmekle yükümlüdür (m.165)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-54",
+  "madde": [
+   "168"
+  ],
+  "baslik": "Olay yerinde men yetkisi",
+  "hukum": "Olay yerinde işlemlere başlayan adlî kolluk görevlisi; işlemlere engel olan veya aldığı tedbirlere aykırı davranan kişileri, işlemler sonuçlanıncaya kadar ve gerektiğinde zor kullanarak bundan men eder (m.168)",
+  "tuzak": "\"savcı emri gerekir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-60",
+  "madde": [
+   "17",
+   "231"
+  ],
+  "baslik": "HAGB'nin uygulanmayacağı suçlar",
+  "hukum": "İşkence ve eziyet suçları ile kamu görevlisinin görevi sebebiyle işlediği ve Anayasa m.17 kapsamında kötü muamele sayılabilecek suçlar hakkında HAGB uygulanmaz (m.231/14)",
+  "tuzak": "istisna hiç yokmuş gibi sorulur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-61",
+  "madde": [
+   "234"
+  ],
+  "baslik": "Mağdurun hakları",
+  "hukum": "Soruşturmada delil toplanmasını isteme, belge örneği isteme, baro tarafından avukat görevlendirilmesini isteme, kovuşturmaya yer olmadığı kararına itiraz; kovuşturmada duruşmadan haberdar edilme, kamu davasına katılma, tanık daveti isteme, kanun yollarına başvurma (m.234)",
+  "tuzak": "\"istemi hâlinde anlatılır\" denir — kanun kendiliğinden anlatmayı emreder",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-62",
+  "madde": [
+   "234"
+  ],
+  "baslik": "Vekil zorunluluğu",
+  "hukum": "Mağdur on sekiz yaşını doldurmamış, sağır veya dilsiz ya da meramını ifade edemeyecek derecede malûl ise ve vekili yoksa, istemi aranmaksızın vekil görevlendirilir (m.234/2)",
+  "tuzak": "\"talebi hâlinde\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-63",
+  "madde": [
+   "106",
+   "141"
+  ],
+  "baslik": "Uzlaştırma kapsamı",
+  "hukum": "Şikâyete bağlı suçlar ile şikâyete bağlı olup olmadığına bakılmaksızın kasten yaralama (üçüncü fıkra hariç), taksirle yaralama, tehdit (m.106/1), konut dokunulmazlığının ihlali, hırsızlık (m.141), güveni kötüye kullanma, dolandırıcılık (m.157), suç eşyasının satın alınması, çocuğun kaçırılması ve alıkonulması gibi suçlarda uzlaştırma girişiminde bulunulur (m.253/1)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-64",
+  "madde": [
+   "253"
+  ],
+  "baslik": "Uzlaştırma yasağı",
+  "hukum": "Şikâyete bağlı olsa bile cinsel dokunulmazlığa karşı suçlarda, ısrarlı takip suçunda ve hakaret suçunda uzlaştırma yoluna gidilemez (m.253/3)",
+  "tuzak": "hakaret listeden çıkarılıp \"uzlaşmaya tâbidir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-65",
+  "madde": [
+   "253",
+   "12"
+  ],
+  "baslik": "Uzlaşma teklifine cevap süresi",
+  "hukum": "Kendisine uzlaşma teklif edilen kişi yedi gün içinde kararını bildirmezse teklifi reddetmiş sayılır; uzlaştırmacı işlemleri belgelerin verilmesinden itibaren en geç otuz gün içinde sonuçlandırır, büro bu süreyi her defasında yirmi günü geçmemek üzere en fazla iki kez uzatabilir (m.253/4, 12)",
+  "tuzak": "süre 15 gün yapılır ya da sessizlik \"kabul\" sayılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-66",
+  "madde": [
+   "253"
+  ],
+  "baslik": "Uzlaşmanın sonucu",
+  "hukum": "Edim defaten yerine getirilirse kovuşturmaya yer olmadığı kararı verilir; edim ileri tarihe bırakılır, taksite bağlanır veya süreklilik arz ederse kamu davasının açılmasının ertelenmesi kararı verilir. Uzlaştırma sonuçsuz kalırsa tekrar uzlaştırma yoluna gidilemez (m.253/18-19)",
+  "tuzak": "iki sonuç yer değiştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-68",
+  "madde": [
+   "268"
+  ],
+  "baslik": "Sulh ceza kararlarına itiraz",
+  "hukum": "Sulh ceza hâkimliği kararlarına itirazı, numara olarak kendisini izleyen hâkimlik; son numaralı hâkimlik için bir numaralı hâkimlik inceler. Tutuklama ve adlî kontrole ilişkin kararlara itirazı ise yargı çevresindeki asliye ceza mahkemesi hâkimi inceler (m.268/3-a,b)",
+  "tuzak": "tutuklama itirazı da \"bir sonraki sulh ceza\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-72",
+  "madde": [
+   "12"
+  ],
+  "baslik": "Yetkili mahkeme",
+  "hukum": "Davaya bakma yetkisi suçun işlendiği yer mahkemesine aittir; teşebbüste son icra hareketinin yapıldığı, kesintisiz suçlarda kesintinin gerçekleştiği, zincirleme suçlarda son suçun işlendiği yer mahkemesi yetkilidir (m.12)",
+  "tuzak": "teşebbüste \"ilk icra hareketi\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-73",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Bağlantı",
+  "hukum": "Bir kişi birden fazla suçtan sanık olursa veya bir suçta birden fazla sanık bulunursa bağlantı var sayılır; suçtan sonra suçluyu kayırma, delilleri yok etme, gizleme veya değiştirme fiilleri de bağlantılı suç sayılır (m.8)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-74",
+  "madde": [
+   "43"
+  ],
+  "baslik": "Tanığın çağrılması",
+  "hukum": "Tanıklar çağrı kâğıdı ile çağrılır ve gelmemenin sonuçları bildirilir; çağrı telefon, telgraf, faks, elektronik posta gibi araçlarla da yapılabilir, ancak bu durumda çağrı kâğıdına bağlanan sonuçlar uygulanmaz (m.43)",
+  "tuzak": "\"e-posta ile çağrı da aynı sonucu doğurur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-75",
+  "madde": [
+   "74"
+  ],
+  "baslik": "Gözlem altına alma",
+  "hukum": "Şüpheli veya sanığın akıl hastası olup olmadığını saptamak için, uzman hekimin önerisi üzerine, savcı ve müdafiin dinlenmesinden sonra resmî sağlık kurumunda gözlem altına alınmasına soruşturmada sulh ceza hâkimi, kovuşturmada mahkeme karar verir. Gözlem süresi üç haftayı, ek sürelerle toplam üç ayı geçemez (m.74)",
+  "tuzak": "süreler karıştırılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-77",
+  "madde": [
+   "79"
+  ],
+  "baslik": "Moleküler genetik inceleme",
+  "hukum": "Moleküler genetik incelemelere sadece hâkim karar verebilir; incelenecek bulgu bilirkişiye adı, soyadı, adresi ve doğum tarihi bildirilmeksizin verilir (m.79)",
+  "tuzak": "savcıya da yetki verilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-78",
+  "madde": [
+   "83"
+  ],
+  "baslik": "Keşif",
+  "hukum": "Keşif; hâkim, mahkeme, naip hâkim, istinabe olunan hâkim/mahkeme ile gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı tarafından yapılır (m.83)",
+  "tuzak": "kolluğa yetki verilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-79",
+  "madde": [
+   "85"
+  ],
+  "baslik": "Yer gösterme",
+  "hukum": "Cumhuriyet savcısı, yüklenen suç hakkında açıklamada bulunmuş şüpheliye yer gösterme işlemi yaptırabilir; belirli ağır suçlarda adlî kolluk amiri de yaptırmaya yetkilidir. Soruşturmayı geciktirmemek kaydıyla müdafi de hazır bulunabilir (m.85)",
+  "tuzak": "\"her şüpheliye yaptırılabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 26,
+  "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+  "kart_id": "26-80",
+  "madde": [
+   "38"
+  ],
+  "baslik": "UYAP zorunluluğu",
+  "hukum": "Her türlü ceza muhakemesi işleminde UYAP kullanılır; elektronik imzalı belgenin elle atılan imzalı belgeyle çelişmesi hâlinde UYAP'taki güvenli elektronik imzalı belge geçerli kabul edilir; elektronik ortamda yapılan işlemlerde süre gün sonunda biter (m.38/A)",
+  "tuzak": "\"ıslak imzalı belge üstündür\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_26.json"
+ },
+ {
+  "kanun_id": 27,
+  "kanun": "1774 sayılı Kimlik Bildirme Kanunu",
+  "kart_id": "27-9",
+  "madde": [
+   "3",
+   "4"
+  ],
+  "baslik": "İdarî para cezası",
+  "hukum": "m.3 ve m.4'teki yükümlülüklerden her birine aykırı hareket edenlere idarî para cezası verilir (m.15)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_27.json"
+ },
+ {
+  "kanun_id": 28,
+  "kanun": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+  "kart_id": "28-3",
+  "madde": [
+   "4"
+  ],
+  "baslik": "Kanuna tâbi olmayan toplantılar",
+  "hukum": "Siyasi partiler, meslek kuruluşları, sendikalar, vakıflar, dernekler ve tüzel kişilerin kendi tüzüklerine göre yapacakları kapalı yer toplantıları; kanun veya gelenek-göreneğe göre yapılan tören, şenlik, karşılama ve uğurlamalar; spor, bilimsel, ticarî ve ekonomik amaçlı toplantılar; Cumhurbaşkanı, yardımcıları ve bakanların Devlet işleri hakkındaki toplantıları ile milletvekillerinin halkla sohbet niteliğindeki görüşmeleri (m.4)",
+  "tuzak": "derneklerin açık yer toplantısı da istisna sayılır — istisna yalnız kapalı yerdir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_28.json"
+ },
+ {
+  "kanun_id": 28,
+  "kanun": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+  "kart_id": "28-7",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Umuma açık yer",
+  "hukum": "Toplantının yapıldığı yer, toplantı süresince umuma açık yer sayılır (m.8)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_28.json"
+ },
+ {
+  "kanun_id": 28,
+  "kanun": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+  "kart_id": "28-11",
+  "madde": [
+   "23"
+  ],
+  "baslik": "Kanuna aykırı sayılan toplantılar",
+  "hukum": "Bildirim verilmeden ya da belirtilen gün-saat dışında; ateşli silah, havai fişek, molotof, patlayıcı, kesici-delici alet, taş, sopa, demir bilye, sapan, zincir, yakıcı-aşındırıcı eczalar, sis-gaz maddeleri ile; yasadışı örgüt amblemi taşıyarak veya üniformayı andırır giysi giyerek; kimliği gizlemek için yüzü kısmen veya tamamen örterek; belirlenen yerler dışında; bildirimdeki amaç dışına çıkılarak; yasaklama veya erteleme süresi bitmeden; dağılma kararı verildiği hâlde yapılan toplantılar kanuna aykırıdır (m.23)",
+  "tuzak": "yüzü örtme listeden çıkarılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_28.json"
+ },
+ {
+  "kanun_id": 28,
+  "kanun": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+  "kart_id": "28-15",
+  "madde": [
+   "24",
+   "25"
+  ],
+  "baslik": "Suç işleyenlerin yakalanması",
+  "hukum": "Topluluk içinde suç işleyenleri ve suçluları yakalamak için m.24'teki emir ve ihtarların yapılmasına gerek yoktur (m.25)",
+  "tuzak": "\"suçluyu yakalamak için de ihtar şart\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_28.json"
+ },
+ {
+  "kanun_id": 29,
+  "kanun": "4915 sayılı Kara Avcılığı Kanunu",
+  "kart_id": "29-15",
+  "madde": [
+   "28"
+  ],
+  "baslik": "Avdan men ve mülkiyetin kamuya geçirilmesi",
+  "hukum": "Yasak fiili işleyenler derhâl avdan men edilir; elkonulan av hayvanları ve eşyanın mülkiyetinin kamuya geçirilmesine mahallî mülkî amir karar verir; cansız hayvanlar ve ürünler Genel Müdürlükçe satılır, canlılar doğaya bırakılır; tahribat nedeniyle hükmolunacak tazminat türlere göre Genel Müdürlükçe tespit edilen değerler üzerinden hesaplanır (m.28)",
+  "tuzak": "mülkiyet kararı mahkemeye verilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_29.json"
+ },
+ {
+  "kanun_id": 30,
+  "kanun": "1380 sayılı Su Ürünleri Kanunu",
+  "kart_id": "30-7",
+  "madde": [
+   "23"
+  ],
+  "baslik": "Yönetmelikle konulan yasaklar",
+  "hukum": "Av vasıtalarının asgarî vasıf ve şartları ile bölge, mevsim, zaman, tür, ağırlık, irilik gibi vasıflar bakımından yasak, sınırlama ve yükümlülükler yönetmelikle düzenlenir (m.23)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_30.json"
+ },
+ {
+  "kanun_id": 30,
+  "kanun": "1380 sayılı Su Ürünleri Kanunu",
+  "kart_id": "30-13",
+  "madde": [
+   "19",
+   "36"
+  ],
+  "baslik": "Ceza yapısı",
+  "hukum": "Ruhsatsız ticarî avcılıkta kişiye ve gemi sahibine ayrı ayrı idarî para cezası; yönetmeliğe aykırı ticarî avcılıkta ruhsat tezkeresi ilk seferde bir ay, ikincide üç ay geri alınır, tekrarında iptal edilir; içsular, Karadeniz, Marmara ve Boğazlar'da ağla avlanma amaçlı ışık kullanan gemi sahibine ağır ceza ve ışık donanımına elkoyma; m.19'a aykırı (patlayıcı-zehir) avcılıkta ürün ve aletlere elkoyma ve mülkiyetin kamuya geçirilmesi; balık geçidi yapmayana on sekiz aya kadar süre verilip giderilmezse ağır ceza (m.36)",
+  "tuzak": "\"ilk ihlalde ruhsat iptal edilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_30.json"
+ },
+ {
+  "kanun_id": 31,
+  "kanun": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+  "kart_id": "31-18",
+  "madde": [
+   "62"
+  ],
+  "baslik": "Şartlı mülteci",
+  "hukum": "Aynı sebeplerle Avrupa ülkeleri dışında meydana gelen olaylar nedeniyle ülkesi dışında bulunan kişiye şartlı mülteci statüsü verilir; üçüncü ülkeye yerleştirilinceye kadar Türkiye'de kalmasına izin verilir (m.62)",
+  "tuzak": "iki tanım yer değiştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_31.json"
+ },
+ {
+  "kanun_id": 32,
+  "kanun": "6831 sayılı Orman Kanunu",
+  "kart_id": "32-1",
+  "madde": [
+   "15"
+  ],
+  "baslik": "İzne bağlı işler",
+  "hukum": "Ormanın gelişmesi için idarenin fennî işleri dışında; fidan sökmek ve dal kesmek, orman hasılatı elde etmek ve (C) bendindeki faydaları sağlamak orman idaresinin izin ve müsaadesine bağlıdır (m.15)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_32.json"
+ },
+ {
+  "kanun_id": 32,
+  "kanun": "6831 sayılı Orman Kanunu",
+  "kart_id": "32-11",
+  "madde": [
+   "78"
+  ],
+  "baslik": "Orman memurunun silah kullanma hâlleri",
+  "hukum": "Silah taşımaya yetkili olanlar görevleri sırasında: (A) TCK'daki hakkın kullanılması, meşru savunma veya zorunluluk hâllerinde; (B) tecavüz veya taarruza yarayan alet ve silah taşıyanlara derhâl teslim emredildiği hâlde uyulmayıp fiilen tecavüz ve taarruzda bulunulması ve bunun başka şekilde def'ine imkân olmaması; (C) teslim edilen alet ve silahları, elkonan nakil vasıtaları ile orman emvalini veya memurun silahını almak ya da orman bölge ve muhafaza binalarına zorla girmek maksadıyla yapılan tecavüzün başka şekilde def'ine imkân bulunamaması hâllerinde silahlarını kullanabilir (m.78)",
+  "tuzak": "\"kaçan kaçak odun taşıyıcısına ateş edilebilir\" denir — kaçma tek başına silah kullanma sebebi değildir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_32.json"
+ },
+ {
+  "kanun_id": 32,
+  "kanun": "6831 sayılı Orman Kanunu",
+  "kart_id": "32-13",
+  "madde": [
+   "110",
+   "83"
+  ],
+  "baslik": "Görevli mahkeme",
+  "hukum": "Orman suçlarına ilişkin davalardan m.110/3'tekiler asliye ceza, m.110/4'tekiler ağır ceza, m.110/5'tekiler özel görevli ağır ceza mahkemesinde, diğerleri sulh ceza mahkemesinde görülür; orman davaları mahkemelerce acele işlerden sayılır (m.83)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_32.json"
+ },
+ {
+  "kanun_id": 34,
+  "kanun": "2918 sayılı Karayolları Trafik Kanunu",
+  "kart_id": "34-0",
+  "madde": [
+   "3"
+  ],
+  "baslik": "Temel tanımlar",
+  "hukum": "Trafik: yayaların, hayvanların ve araçların karayolu üzerindeki hâl ve hareketleri; karayolu: trafik için kamunun yararlanmasına açık arazi şeridi, köprüler ve alanlar; erişme kontrollü karayolu (otoyol): transit trafiğe tahsis edilen, giriş-çıkışın belirli yerler dışında yasak olduğu, yaya, hayvan ve motorsuz araçların giremediği yol; banket: yaya yolu ayrılmamış karayolunda taşıt yolu kenarı ile şev başı arasında kalan, olağan olarak yaya ve hayvanların kullandığı kısım; geçiş yolu: araçların bir mülke girip çıkması için yapılmış yolun karayolu üzerindeki kısmı (m.3)",
+  "tuzak": "banket ile yaya yolu karıştırılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_34.json"
+ },
+ {
+  "kanun_id": 34,
+  "kanun": "2918 sayılı Karayolları Trafik Kanunu",
+  "kart_id": "34-11",
+  "madde": [
+   "36"
+  ],
+  "baslik": "Belgesiz araç kullanma",
+  "hukum": "Sürücü belgesi olmayanların araç kullanması ve kullanmasına izin verilmesi yasaktır; belge olmadan araç kullanana ağır idarî para cezası; belgesi geçici veya tedbiren geri alındığı hâlde kullanana ve belgesi iptal edildiği hâlde kullanana bunun beş katı ceza; araç kullanmasına izin veren işletene de tescil plakası üzerinden belgesiz sürücüyle aynı ceza (m.36)",
+  "tuzak": "geri alınmış belgeyle sürme cezası belgesiz sürmeyle eşitlenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_34.json"
+ },
+ {
+  "kanun_id": 34,
+  "kanun": "2918 sayılı Karayolları Trafik Kanunu",
+  "kart_id": "34-14",
+  "madde": [
+   "46"
+  ],
+  "baslik": "Yol kesme ve otoyolda ihlal",
+  "hukum": "Ardı ardına şerit değiştirme, otoyol ve yerleşim dışı bölünmüş yolda ters yön ve keyfî durma-yol kesme ihlallerinde ağır ceza, sürücü belgesi altmış gün geri alınır ve araç altmış gün men edilir; trafikte saldırı amaçlı takip en ağır cezayla cezalandırılır; yol kesme otoyol, köprü, viyadük veya tünelde yapılırsa ceza ve süreler iki kat; beş yıl içinde ikinci defa geri alınan belgeler iptal edilir; kanuna uygun toplantı ve gösteri yürüyüşü sırasında yol kesme kabahati oluşmaz (m.46)",
+  "tuzak": "toplantı istisnası atlanır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/jandarma/pack_34.json"
+ }
+]

@@ -1,0 +1,83 @@
+{
+ "kanun_id": 49,
+ "ad": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_49.json",
+ "kartlar": [
+  {
+   "id": "49-0",
+   "madde": [
+    "8"
+   ],
+   "baslik": "İzinsiz tesis kurma",
+   "hukum": "Tarım ve Orman Bakanlığından tesis kurma ve faaliyet izni almadan tütün mamulü, makaron, yaprak sigara kâğıdı, sigara filtresi, etil alkol, metanol veya alkollü içki üretmek üzere fabrika, tesis veya imalathane kuran ve işleten 1 yıldan 3 yıla kadar hapis ve 5.000 günden 10.000 güne kadar adli para cezası (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Pipo\" sayılmaz; makaron, sigara kâğıdı, metanol sayılır",
+    "Pipo üretmek için tesis izni gerekir"
+   ],
+   "dogrusu": [
+    "Pipo sayılmaz; makaron, sigara kâğıdı, filtre, etil alkol, metanol (m.8)"
+   ]
+  },
+  {
+   "id": "49-1",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Şahsî tüketim istisnası",
+   "hukum": "Ticari amaç olmaksızın kendi ürettiği ürünlerle şahsî tüketimi için 50 kg'ı aşmayan sarmalık kıyılmış tütün veya 350 litreyi aşmayan fermente alkollü içki üreten kişi bu ceza kapsamında değildir (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklarda 25 kg/250 L, 100 kg/500 L verilir; doğrusu 50 kg / 350 L",
+    "Kendi tüketimi için 100 kg tütün üretilebilir"
+   ],
+   "dogrusu": [
+    "50 kg (m.8)"
+   ]
+  },
+  {
+   "id": "49-2",
+   "madde": [
+    "8"
+   ],
+   "baslik": "İdari para cezaları",
+   "hukum": "Bakanlık düzenlemelerine aykırı raf/teşhir, özendirici kampanya-promosyon yapanlara, otomatik satış makinesiyle veya bahis/ödül yoluyla tütün-alkol verenlere idari para cezası; satış belgesi olmadan toptan/perakende satış yapanlara idari para cezası ve ürünlere elkoyma; satış belgesi olmadan internet üzerinden satış yapan sitelere erişim engellenir (m.8/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belgesiz satış hapis gerektirir\" yanlış; idari para cezası (kaçak/bandrolsüz değilse)"
+   ],
+   "dogrusu": [
+    "otomatik satış makinesiyle · satış belgesi olmadan · erişim engellenir"
+   ]
+  },
+  {
+   "id": "49-3",
+   "madde": [
+    "8"
+   ],
+   "baslik": "İdari yaptırım kararlarına dava",
+   "hukum": "İdari yaptırım kararlarına karşı kararın tebliğinden itibaren 15 gün içinde idare mahkemesinde dava açılabilir; dava açılması kararın yerine getirilmesini durdurmaz (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dava açılması infazı durdurur\" ve \"30 gün\" şıkları yanlış",
+    "İdari yaptırıma dava açmak infazı durdurur",
+    "Dava süresi 30 gündür"
+   ],
+   "dogrusu": [
+    "Durdurmaz (m.8)",
+    "15 gün (m.8)"
+   ]
+  },
+  {
+   "id": "49-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Ürünlerin müsaderesi",
+   "hukum": "İzinsiz üretilen ürünler, üretimde kullanılan makine ve araçlar müsadere edilir; ele geçirilen alkollü içki ve tütün mamulleri tasfiyeye tabidir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Makine sahibine iade edilir\" yanlış"
+   ],
+   "dogrusu": [
+    "müsadere"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

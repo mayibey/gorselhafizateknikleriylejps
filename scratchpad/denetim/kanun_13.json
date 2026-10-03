@@ -1,0 +1,631 @@
+{
+ "kanun_id": 13,
+ "ad": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_13.json",
+ "kartlar": [
+  {
+   "id": "13-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ön sözleşme",
+   "hukum": "TSK birlik, karargâh, kurum ve kuruluşları ile adaylar arasında, askerî eğitim dönemi başlangıcı ile subaylık/astsubaylık nasıp onayı tarihine kadar geçecek süreyi kapsayan sözleşme (m.3/a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "askerî eğitim dönemi başlangıcı ile subaylık/astsubaylık nasıp onayı tarihine kadar"
+   ]
+  },
+  {
+   "id": "13-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sözleşme tanımı",
+   "hukum": "Askerî eğitimi başarıyla tamamlayanlarla yapılan, üç yıldan az, dokuz yıldan fazla olmamak üzere hizmet yükümlülüğü getiren yazılı belge (m.3/b)",
+   "sinavda_boyle_yazarlar": [
+    "1-3 yıl",
+    "2-9 yıl",
+    "1-5 yıl"
+   ],
+   "dogrusu": [
+    "Sözleşme 3-9 yıl arası (m.3/b, m.6, m.10)"
+   ]
+  },
+  {
+   "id": "13-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sözleşmeli subay rütbeleri",
+   "hukum": "Teğmen, üsteğmen ve yüzbaşı (m.3/e)",
+   "sinavda_boyle_yazarlar": [
+    "Listeye \"binbaşı\" eklenir"
+   ],
+   "dogrusu": [
+    "Teğmen, üsteğmen ve yüzbaşı"
+   ]
+  },
+  {
+   "id": "13-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sözleşmeli astsubay rütbeleri",
+   "hukum": "Astsubay çavuş, astsubay kıdemli çavuş, astsubay üstçavuş, astsubay kıdemli üstçavuş (m.3/f)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Astsubay çavuş, astsubay kıdemli çavuş, astsubay üstçavuş, astsubay kıdemli üstçavuş"
+   ]
+  },
+  {
+   "id": "13-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Emsal",
+   "hukum": "Sözleşmeli subay için nasbedildiği yıl harp okullarından, sözleşmeli astsubay için nasbedildiği yıl astsubay meslek yüksekokullarından mezun olan muvazzaflar (m.3/h)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "harp okullarından · astsubay meslek yüksekokullarından"
+   ]
+  },
+  {
+   "id": "13-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sözleşme yılı",
+   "hukum": "Sözleşmenin yürürlüğe girdiği ay ve günü başlangıç kabul eden her bir yıllık süre (m.3/ı)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Sözleşme yılı"
+   ]
+  },
+  {
+   "id": "13-6",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlişiği kesilenler alınmaz",
+   "hukum": "Askerî okullardan ve TSK'dan her ne sebeple olursa olsun ilişiği kesilen personel sözleşmeli subay olarak alınmaz; ancak askerlik yükümlülüğünü yerine getirmekte olanlar veya terhis edilenler olabilir (m.4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "her ne sebeple olursa olsun"
+   ]
+  },
+  {
+   "id": "13-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Sözleşmeli subayda aranan nitelikler",
+   "hukum": "Türk vatandaşı olmak; öğrenim koşullarını taşımak; sağlık şartlarını taşımak; kamusal hakları kullanmaktan yoksun bırakılmamış olmak; sayılan suçlardan mahkûm olmamak; güvenlik soruşturması olumlu sonuçlanmış olmak; sınavlarda başarılı olmak (m.4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kamusal hakları kullanmaktan yoksun bırakılmamış olmak · güvenlik soruşturması olumlu"
+   ]
+  },
+  {
+   "id": "13-8",
+   "madde": [
+    "4",
+    "8"
+   ],
+   "baslik": "Affa rağmen engel",
+   "hukum": "Cezası ertelenmiş, seçenek yaptırıma çevrilmiş, af kapsamına girmiş veya hükmün açıklanmasının geri bırakılmasına karar verilmiş olsa dahi; Devletin güvenliğine karşı suçlar, yüz kızartıcı suçlar, kaçakçılık, ihaleye fesat, devlet sırlarını açığa vurma ile firar, amir veya üste fiilen taarruz, emre itaatsizlikte ısrar, üste hakaret, mukavemet, fesat ve isyan suçlarından mahkûmiyet engeldir (m.4/e, m.8/e)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "hükmün açıklanmasının geri bırakılmasına · firar, amir veya üste fiilen taarruz, emre itaatsizlikte ısrar, üste hakaret, mukavemet, fesat ve isyan"
+   ]
+  },
+  {
+   "id": "13-9",
+   "madde": [
+    "4",
+    "8"
+   ],
+   "baslik": "Sicil şartı",
+   "hukum": "TSK'da istihdam edilenler ile yedek subay/yedek astsubay olarak hizmet yapanların aldıkları sicilin sicil tam notunun %85 veya daha üstünde olması şarttır; ayrıca sıralı üstlerinden olumlu nitelik belgesi almak zorunludur (m.4, m.8)",
+   "sinavda_boyle_yazarlar": [
+    "rakamlar birbirine karıştırılır",
+    "%60",
+    "%90"
+   ],
+   "dogrusu": [
+    "Üst yaş subayda 27/32, astsubayda 27/24 (m.4, m.8)",
+    "Sicil şartı %85 (m.4, m.8)"
+   ]
+  },
+  {
+   "id": "13-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Askerî hâkim istisnası",
+   "hukum": "Askerî hâkim sınıfına sözleşmeli subay statüsünde personel alınmaz (m.4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Askerî hâkim sınıfına sözleşmeli subay statüsünde personel alınmaz"
+   ]
+  },
+  {
+   "id": "13-11",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Sözleşmeli astsubay yaş sınırı",
+   "hukum": "Fakülte, yüksekokul veya meslek yüksekokulu mezunlarından, müracaat yılının ocak ayının ilk günü itibarıyla dört yıl veya daha fazla süreli yükseköğrenim bitirenler için yirmi yedi, dört yıldan az süreli bitirenler için yirmi dört yaşını bitirmemiş olanlar ve aynı şartları taşıyan uzman erbaşlar (m.8)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "dört yıl veya daha fazla · yirmi yedi · dört yıldan az · yirmi dört · uzman erbaşlar"
+   ]
+  },
+  {
+   "id": "13-12",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Astsubayda askerlik istisnası",
+   "hukum": "İlişiği kesilenler alınmaz; ancak kısa dönem erbaş/er ya da 1111 sayılı Kanuna tabi erbaş ve er olarak askerliğini yapıp terhis edilenler veya hâlen yapmakta olanlar sözleşmeli astsubay olabilir (m.8)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kısa dönem erbaş/er"
+   ]
+  },
+  {
+   "id": "13-13",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Subaylıkta ilk rütbe",
+   "hukum": "Askerî eğitimi başarıyla tamamlayanlarla sözleşme yapılır ve bu kişiler teğmen rütbesine nasbedilir (m.6)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "teğmen"
+   ]
+  },
+  {
+   "id": "13-14",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Astsubaylıkta ilk rütbe ve süre",
+   "hukum": "Eğitimi başaranlar astsubay çavuş rütbesine nasbedilir; sözleşme süreleri üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir yıldan az ve üç yıldan fazla\", \"iki yıldan az ve dokuz yıldan fazla\""
+   ],
+   "dogrusu": [
+    "astsubay çavuş · üç yıldan az ve dokuz yıldan fazla olmamak · yönetmelikte"
+   ]
+  },
+  {
+   "id": "13-15",
+   "madde": [
+    "6",
+    "10"
+   ],
+   "baslik": "Yenileme",
+   "hukum": "Yönetmelikteki şartları taşıyanların talepleri hâlinde sözleşmeleri yenilenebilir; rütbe yaş haddini dolduranlar hakkında 5434 sayılı Kanun uygulanır (m.6, m.10)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "talepleri hâlinde"
+   ]
+  },
+  {
+   "id": "13-16",
+   "madde": [
+    "6",
+    "10"
+   ],
+   "baslik": "Talebe bakılmaksızın uzatma",
+   "hukum": "Terörle mücadele sırasında veya bu görevden dolayı alıkonulma ya da kaybolma hâli ve seferberlik, savaş veya silahlı çatışmayı gerektirecek hâl ile savaş hâllerinde; Kuvvet Komutanları, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının göstereceği lüzum üzerine, Millî Savunma Bakanlığı veya İçişleri Bakanlığının onayı ile talebe bakılmaksızın uzatılabilir (m.6, m.10)",
+   "sinavda_boyle_yazarlar": [
+    "Onay makamı \"Genelkurmay Başkanı\" olarak verilir — eski metindir",
+    "Genelkurmay Başkanı\" (mülga metin)"
+   ],
+   "dogrusu": [
+    "Süre uzatım onayı MSB veya İçişleri Bakanlığı (m.6, m.10)"
+   ]
+  },
+  {
+   "id": "13-17",
+   "madde": [
+    "6",
+    "10"
+   ],
+   "baslik": "Sözleşme işlemlerini kim yapar",
+   "hukum": "Kuvvet Komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı (m.6, m.10)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Kuvvet Komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı"
+   ]
+  },
+  {
+   "id": "13-18",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Muvazzaf astsubaylığa geçiş yılları",
+   "hukum": "Dördüncü fiilî hizmet yılı başından itibaren on ikinci fiilî hizmet yılının bitimine kadar (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "7-12'nci yıl\" (subayınkiyle karıştırılır)"
+   ],
+   "dogrusu": [
+    "Muvazzaf astsubaylığa 4-12'nci yıl arasında başvuru (m.11)"
+   ]
+  },
+  {
+   "id": "13-19",
+   "madde": [
+    "7",
+    "11"
+   ],
+   "baslik": "Geçenlerin istifa yasağı",
+   "hukum": "Muvazzaf subaylığa/astsubaylığa geçirilenler, nasbedildikleri tarihten başlamak üzere on beş yıl hizmet etmedikçe istifa edemezler (m.7, m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"on yıl\" (mülga metin)",
+    "10 yıl"
+   ],
+   "dogrusu": [
+    "Geçenler 15 yıl hizmetsiz istifa edemez (m.7, m.11)"
+   ]
+  },
+  {
+   "id": "13-20",
+   "madde": [
+    "7",
+    "11"
+   ],
+   "baslik": "Yaş hükmü uygulanmaz",
+   "hukum": "Muvazzaf subaylığa geçirileceklerde 926 sayılı Kanunun 14'üncü, muvazzaf astsubaylığa geçirileceklerde 68'inci maddesindeki yaş hükümleri uygulanmaz (m.7, m.11)",
+   "sinavda_boyle_yazarlar": [
+    "5-10'uncu yıl"
+   ],
+   "dogrusu": [
+    "Muvazzaf subaylığa 7-12'nci yıl arasında başvuru (m.7)"
+   ]
+  },
+  {
+   "id": "13-21",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Öğretim üyeleri",
+   "hukum": "TSK bünyesindeki ön lisans/lisans/lisansüstü kurumlarda öğretim üyesi kadrolarında atamalı görev yapanlarda fiilî hizmet yılı şartı aranmaz (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "öğretim üyesi kadrolarında atamalı"
+   ]
+  },
+  {
+   "id": "13-22",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Rütbe bekleme süreleri",
+   "hukum": "Sözleşmeli subay ve astsubayların rütbe bekleme süreleri hakkında 926 sayılı Kanunda muvazzaflar için belirlenen süreler uygulanır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "926 sayılı Kanunda muvazzaflar için belirlenen süreler"
+   ]
+  },
+  {
+   "id": "13-23",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Kadro açığı yoksa",
+   "hukum": "Üst rütbede kadro açığı bulunmadığı için terfi edemeyenler, şartları taşımak kaydıyla sözleşme müddeti sonuna kadar derece ilerlemesi yaparlar (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "sözleşme müddeti sonuna kadar derece ilerlemesi"
+   ]
+  },
+  {
+   "id": "13-24",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yenileme bildirimi — 3 ay",
+   "hukum": "Her sözleşme süresinin sona ermesinden en az üç ay önce taraflar yenileyeceklerine dair yazılı bildirimde bulunmazlarsa sözleşme kendiliğinden sona erer (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir ay\", \"altı ay\"",
+    "1 ay",
+    "6 ay"
+   ],
+   "dogrusu": [
+    "Yenileme bildirimi 3 ay önce (m.12)"
+   ]
+  },
+  {
+   "id": "13-25",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Tek taraflı fesih yasağı",
+   "hukum": "Sözleşmeli subay veya astsubaylar, sözleşme süreleri sona ermeden sözleşmelerini tek taraflı olarak feshedemezler (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "istedikleri an fesih hakları vardır"
+   ],
+   "dogrusu": [
+    "Sözleşmeliler süre bitmeden tek taraflı fesih yapamaz (m.12)"
+   ]
+  },
+  {
+   "id": "13-26",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yurt dışı öğrenim uzatması",
+   "hukum": "Nasıptan sonra yabancı memleketlere altı ay veya daha uzun süreli öğrenim, staj, kurs, ihtisas için gidenlerin sözleşme süreleri, gidiş-dönüş arasındaki sürenin iki katı kadar uzatılır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "altı ay veya daha uzun · iki katı"
+   ]
+  },
+  {
+   "id": "13-27",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yurt içi öğrenim uzatması",
+   "hukum": "TSK hesabına yurt içindeki fakülte/yüksekokullarda öğrenim veya mesleğiyle ilgili ihtisas yapanların süresi, buralarda geçen süre kadar uzatılır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "buralarda geçen süre kadar"
+   ]
+  },
+  {
+   "id": "13-28",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yurt dışı sürekli görev ve uzmanlık",
+   "hukum": "Yurt dışına sürekli göreve atananların süresi, devraldıkları ve devrettikleri tarihler arasındaki süre kadar; yurt içinde tıpta/diş hekimliğinde uzmanlık, yan dal uzmanlık veya doktora bitirenlerinki bu sürelerin yarısı kadar uzatılır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "devraldıkları ve devrettikleri tarihler arasındaki süre kadar · bu sürelerin yarısı kadar"
+   ]
+  },
+  {
+   "id": "13-29",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Aylıksız izin",
+   "hukum": "926 sayılı Kanuna göre aylıksız izin alanların sözleşme süreleri, kullandıkları aylıksız izin süresi kadar uzatılır (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kullandıkları aylıksız izin süresi kadar"
+   ]
+  },
+  {
+   "id": "13-30",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Uzatmanın tavanı",
+   "hukum": "Uzatılan süreler, 5434 sayılı Kanunda rütbeleri itibarıyla belirtilen yaş haddini geçemez (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yaş haddini geçemez"
+   ]
+  },
+  {
+   "id": "13-31",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Tabip subaylar",
+   "hukum": "Sözleşmeli tabip subaylar Devlet hizmet yükümlülüğüne tabi değildir; tıpta uzmanlık sınavını kazananlar kıta, kurum ve karargâhlarda üç yıllık hizmetini tamamladıktan sonra uzmanlık eğitimine başlayabilir (m.12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Devlet hizmet yükümlülüğüne tabi değildir · üç yıllık hizmetini tamamladıktan sonra"
+   ]
+  },
+  {
+   "id": "13-32",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ön sözleşmenin feshi",
+   "hukum": "Askerî eğitimde başarısız veya disiplinsiz bulunmak; sağlık kurullarınca devam edemez kararı; aday olma şartlarından birini taşımadığının sonradan anlaşılması veya kaybedilmesi; askerî eğitimin üçte birine katılmamak (m.13/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "başarısız veya disiplinsiz · devam edemez · askerî eğitimin üçte birine"
+   ]
+  },
+  {
+   "id": "13-33",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Bir kez telafi hakkı",
+   "hukum": "Görevini icra ederken veya görevi dolayısıyla saldırıya/kazaya uğrayan ya da meslek hastalığına yakalanma nedeniyle eğitimin üçte birine devam edemeyip başarısız sayılanlar, bir kez olmak üzere sonraki dönem eğitime planlanır (m.13/1-d)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bir kez olmak üzere"
+   ]
+  },
+  {
+   "id": "13-34",
+   "madde": [
+    "13"
+   ],
+   "baslik": "İdarece fesih — sicil ve başarı",
+   "hukum": "Sınıf okullarındaki eğitimde başarısız olmak; disiplinsizlik ve ahlaki durum nedeniyle görev yapamayacağının sicil ve kanaat raporuyla anlaşılması; yetersizlik nedeniyle kendisinden istifade edilemeyeceğinin sicil belgesiyle anlaşılması (m.13/2-a,b,c)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "disiplinsizlik ve ahlaki durum · yetersizlik"
+   ]
+  },
+  {
+   "id": "13-35",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Disiplin cezası eşiği",
+   "hukum": "Kararın kesinleştiği tarihten geriye doğru bir yıl içinde toplamda otuz gün ve daha fazla oda hapsi veya hizmet yerini terk etmeme cezasına mahkûm olmak veya son bir yılda en az iki disiplin amirinden toplam sekiz defa veya daha fazla disiplin cezası almak (m.13/2-f)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bir yıl içinde toplamda otuz gün ve daha fazla · veya · en az iki disiplin amirinden toplam sekiz defa veya daha fazla"
+   ]
+  },
+  {
+   "id": "13-36",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Diğer fesih sebepleri",
+   "hukum": "Yasa dışı siyasi, yıkıcı, bölücü, irticai faaliyette bulunmak (g); nitelik ve şartlardan birini taşımadığının sonradan anlaşılması veya kaybedilmesi (h); yabancı uyruklu kişiyle evliliği Millî Savunma Bakanlığınca uygun görülmemek veya Türk vatandaşlığını kaybetmek (ı); sağlık kurullarınca göreve devamın mümkün olmaması (i); sınıfında görev yapamayacağına karar verilenlerin başka sınıfta istihdamına gerek duyulmaması (j) (m.13/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yabancı uyruklu kişiyle evliliği Millî Savunma Bakanlığınca uygun görülmemek"
+   ]
+  },
+  {
+   "id": "13-37",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Sıhhi izin eşiği — 90 gün",
+   "hukum": "Bir sözleşme yılı içinde alınan hava değişimi, istirahat ve benzeri sıhhi izin süresi toplamı doksan günü geçmek fesih sebebidir (m.13/2-k)",
+   "sinavda_boyle_yazarlar": [
+    "\"altmış günü geçmek\" — çıkmış sorunun yanlış şıkkı tam olarak budur",
+    "altmış günü geçmek",
+    "taksirli suçtan mahkûmiyet de fesih sebebidir"
+   ],
+   "dogrusu": [
+    "Sıhhi izin eşiği 90 gün (m.13/2-k)",
+    "Taksirli suçlar hariç 1 ay+ hürriyeti bağlayıcı ceza fesih sebebi (m.13/2-e)"
+   ]
+  },
+  {
+   "id": "13-38",
+   "madde": [
+    "13"
+   ],
+   "baslik": "90 gün istisnası",
+   "hukum": "Görev sırasında/nedeniyle saldırı-kazaya uğrayanlar veya meslek hastalığına yakalananlar; kanser, tüberküloz, kronik böbrek yetmezliği, ruh ve sinir hastalıkları gibi uzun tedavi gerektiren hastalığa yakalanıp toplam ve fiilen üç yılı geçmemek şartıyla tedavi/istirahat/hava değişimine tabi tutulanlar; yatarak tedavi görenler ile aylıklı veya aylıksız doğum izni alanlar bu hesaba girmez (m.13/2-k)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kanser, tüberküloz, kronik böbrek yetmezliği, ruh ve sinir hastalıkları · toplam ve fiilen üç yılı geçmemek · aylıklı veya aylıksız doğum izni"
+   ]
+  },
+  {
+   "id": "13-39",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Terör malulleri",
+   "hukum": "3713 sayılı Kanun kapsamında malul olan istekliler; bilgi ve tecrübelerinin faydalı olması, fiziki noksanlıklarını kapatabilmeleri, ilgili komutanlıkça uygun görülmeleri ve kadronun sağlık niteliklerini taşımaları şartıyla sözleşmeleri uzatılabilir (m.13 son fıkra)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "uzatılabilir"
+   ]
+  },
+  {
+   "id": "13-40",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Mali haklar",
+   "hukum": "Sözleşmeli subay ve astsubaylar, emsali rütbe ve derecedeki muvazzaflar hakkında uygulanan aylık, tazminat, yan ödeme ve diğer malî ve sosyal haklardan aynen istifade eder (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "İş Kanunu hükümleri uygulanır, sözleşmeleri iş sözleşmesidir"
+   ],
+   "dogrusu": [
+    "Emsali muvazzafların mali haklarından aynen yararlanır (m.15)"
+   ]
+  },
+  {
+   "id": "13-41",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Rütbesiz derece yükselmesi",
+   "hukum": "Sözleşmeli subaylardan on beşinci, sözleşmeli astsubaylardan on sekizinci fiilî hizmet yılını tamamlayanlardan; son üç yıla ait sicil notu ortalaması sicil tam notunun %60 ve üstünde olan ve bulunduğu derecede en az üç yılını, bu derecenin üçüncü kademesinde bir yılını tamamlayanlar rütbe verilmeksizin bir üst dereceye yükseltilir (m.15)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "on beşinci · on sekizinci · %60 ve üstünde · en az üç yılını · üçüncü kademesinde bir yılını · rütbe verilmeksizin bir üst dereceye"
+   ]
+  },
+  {
+   "id": "13-42",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Sonraki ilerlemeler",
+   "hukum": "Bunlara müteakip yıllarda olumlu sicil aldıkları her hizmet yılı için kademe ilerlemesi, şartları taşırlarsa her üç yılda bir derece ilerlemesi yaptırılır (m.15)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "her hizmet yılı için kademe ilerlemesi · her üç yılda bir derece ilerlemesi"
+   ]
+  },
+  {
+   "id": "13-43",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Sosyal haklar",
+   "hukum": "Sözleşme süresince sosyal hakları ve sağlık işlemlerinde 211 sayılı Kanunun muvazzaflara ilişkin hükümleri uygulanır (m.16)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "211 sayılı Kanunun muvazzaflara ilişkin hükümleri"
+   ]
+  },
+  {
+   "id": "13-44",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Ayrılış sonrası sağlık — 10 yıl",
+   "hukum": "Kendi kusuru olmaksızın sözleşmesi yenilenmeyenler ile vefat, sıhhi izin süresini aşma, kadronun kaldırılması, kadronun sağlık niteliğini kaybetme nedeniyle sözleşmesi sona erenler ve bakmakla yükümlü oldukları için; hizmet edilen süre kadar ve en çok on yıl ücretsiz muayene-tedavi (m.16/a)",
+   "sinavda_boyle_yazarlar": [
+    "süreler ters çevrilir"
+   ],
+   "dogrusu": [
+    "Ayrılış sonrası sağlık 10 yıl / 5 yıl (m.16)"
+   ]
+  },
+  {
+   "id": "13-45",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Ayrılış sonrası sağlık — 5 yıl",
+   "hukum": "Kendi istekleriyle sözleşmesi yenilenmeyenler için hizmet edilen sürenin yarısı kadar ve en çok beş yıl (m.16/b)",
+   "sinavda_boyle_yazarlar": [
+    "İki süre yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Kendi istekleriyle · hizmet edilen sürenin yarısı kadar ve en çok beş yıl"
+   ]
+  },
+  {
+   "id": "13-46",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Çifte yararlanma yasağı",
+   "hukum": "Kamu kurumlarının ve sosyal güvenlik kurumlarının sağlık hizmetlerinden yararlanma hakkı doğanlar, bu hakları sürdükçe bu maddeye göre sağlanan haklardan ve asker hastanelerinden yararlanamaz (m.16)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Kamu kurumlarının ve sosyal güvenlik kurumlarının sağlık hizmetlerinden yararlanma hakkı doğanlar …"
+   ]
+  },
+  {
+   "id": "13-47",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Sağlık yardımı — 12 ay, 2/3",
+   "hukum": "Sözleşmesi sağlık nedeniyle sona erenlerden tedavisine devam edilenlere, sona erme tarihinden başlamak üzere on iki ayı geçmemek kaydıyla, görevdeki emsallerinin net maaşlarının 2/3'ü oranında her ay sağlık yardımı ödenir; hiçbir kesinti yapılmaz; malullük aylığı bağlananlarda yardım kesilir (m.16)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "on iki ayı geçmemek · 2/3'ü · hiçbir kesinti yapılmaz"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

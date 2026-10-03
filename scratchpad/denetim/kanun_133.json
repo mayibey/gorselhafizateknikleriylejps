@@ -1,0 +1,101 @@
+{
+ "kanun_id": 133,
+ "ad": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_133.json",
+ "kartlar": [
+  {
+   "id": "133-0",
+   "madde": [
+    "1",
+    "2",
+    "5"
+   ],
+   "baslik": "Amaç, kapsam, dayanak, tanımlar",
+   "hukum": "Ses ve gaz fişeği atabilen silahların nitelikleri, imali, ithali, ihracı, satışı, edinilmesi, bulundurulması, nakli ve taşınması ile izin-kayıt-tescil işlemleri (m.1); kurusıkı olarak da anılan silahlar (m.2); dayanak 5729 sayılı Kanun m.5 (m.3); tanımlar: aksam (gövde, namlu, kapak/sürgü, toplu tabanca fişek haznesi, ateşleme tertibatı); Bakanlık: Sanayi ve Teknoloji Bakanlığı; bilgi sistemi: Bakanlık (Sanayi ve Teknoloji) tarafından oluşturulan e-devlet/kimlik doğrulamalı yazılım altyapısı; dağıtıcı: mermi, av malzemesi veya yivsiz tüfek satışı için ruhsatlı, kurusıkı da satabilen gerçek/tüzel kişi; genel satış amaçlı üretim (yurt içi + yurt dışı) / ihracat amaçlı üretim (yalnız yurt dışı); kırma tabanca (namlu mafsal etrafında kırılarak elle doldurma); kolluk birimi: illerde il emniyet müdürlükleri ve il jandarma komutanlıkları, ilçelerde ilçe emniyet müdürlüğü/amirliği ve ilçe jandarma komutanlıkları; kuruluş izni (Bakanlıktan); merkezi kayıt sistemi: İçişleri Bakanlığı bünyesinde kurulan veri tabanı; namlu: yivsiz-setsiz metal boru; prototip; ses ve gaz fişeği atabilen silah: 6136'ya tabi silah vasfında olmayan, mermi çekirdeği-saçma-katı cisim içeren fişekleri atamayacak şekilde imal edilmiş silah; şarjörlü tabanca; tam otomatik (tetik çekili tutulduğunda sürekli atış); tek tek atım yapan silah; teknik sorumlu (mühendis); toplu tabanca (silindir hazne); üretici; üretim izni (kuruluş ve prototip izninden sonra); yarı otomatik (her tetik çekiminde tek atış); yetki belgesi: kolluğa e-devletten müracaatla verilen, satışın takip-kontrolünü sağlayan ön onay belgesi/kodu; yetkili personel (MERSİS/ESBİS'te tanımlı); genel özellikler: boyut, marka, model, piyasaya arz durumu; teknik özellikler: çap/kalibre (fişek ölçüsü mm/inç), sınıf: çalışma prensibine göre sınıflandırma, şekil: fişek beslemesine göre sınıflandırma, tip: namlu iç yapısı (kapalı, eksen kaçıklığı, emniyet saclı, pimli) (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sınıf fişek beslemesine göre\" yanlış; sınıf = çalışma prensibi, şekil = fişek beslemesi",
+    "Bilgi sistemi İçişleri Bakanlığı bünyesindedir"
+   ],
+   "dogrusu": [
+    "Sanayi ve Teknoloji Bakanlığı; İçişleri'ninki merkezi kayıt sistemi (m.4)"
+   ]
+  },
+  {
+   "id": "133-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Üretim esasları",
+   "hukum": "Yalnız kurusıkı fişeği kullanabilecek, mermi çekirdeği-saçma-katı cisim içeren fişeği atamayacak yapı; çalışma prensibi tam otomatik olamaz; gaz çıkışı namlu ucundan olanlarda: namluda emniyet pimi varsa fişek yatağı hariç namlu uzunluğunun en az yarısı uzunlukta çelik namlu emniyet sacı + sacın geniş yüzeyine dik çelik namlu emniyet pimi; pim yoksa emniyet sacı kısmı fişek yatağıyla aynı eksende olmayacak şekilde en az 1,20 mm eksen kaçıklığı; emniyet sacı en az 610HV30 Vickers sertlikte, döndürülemez-çekilemez, fişek yatağı bitiminden en fazla 12 mm mesafede; birden fazla sac varsa toplamı namlu uzunluğunun 2/3'ünden fazla; gaz çıkışı fişek yatağı bitiminde olanlarda: en az 700HV30 sertlikte namlu emniyet çelikleri namlu çapını tam kapatacak şekilde fişek yatağı bitiminden en fazla 20 mm mesafede, delinmeyi engelleyen geometri, döndürülemez-çıkarılamaz-tahribatsız sökülemez; namlu ile gövde hasar vermeden ayrılamaz; namlu ucunda kalan boşluk 1 cm'den fazla olamaz; namlu ağzı çevresi tahribatsız çıkmayan turuncu boya; namlu uzunluğu (fişek yatağı hariç) 300 mm'yi, tüm uzunluk 500 mm'yi geçemez; görünüm kırma, toplu veya şarjörlü tabanca şeklinde, güvenlik kuvvetlerinin tam otomatik silahı görünümünde olamaz; kapak/sürgü ile namlu veya gövdeye (toplu tabancada gövde veya topa) marka, model, çap ve Bakanlıkça belirlenen formatta seri numarası silinmeyecek şekilde (atlamasız, mükerrersiz, Ek-7); fişek yatağı ve şarjör ölçüleri Ek-4 fişeklerine uygun; şarjör yatağı boşluğu dışı dolu; ihracat amaçlı üretimde tam otomatik yasağı (b), 1 cm boşluk (e), turuncu boya (f) ve tabanca görünümü (ğ) şartları aranmaz; Ek-4'te olmayan fişek için ülke standardı beyanı (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Namlu ucu boşluğu 2 cm'ye kadar\" yanlış; 1 cm"
+   ],
+   "dogrusu": [
+    "atamayacak · tam otomatik olamaz · gaz çıkışı namlu ucundan · en az yarısı · namlu emniyet sacı · namlu emniyet pimi · en az 1,20 mm eksen kaçıklığı · en az 610HV30 Vickers · en fazla 12 mm · 2/3'ünden fazla · gaz çıkışı fişek yatağı bitiminde · en az 700HV30 · namlu emniyet çelikleri · en fazla 20 mm · namlu ile gövde hasar vermeden ayrılamaz · namlu ucunda kalan boşluk 1 cm'den fazla olamaz · namlu ağzı çevresi tahribatsız çıkmayan turuncu boya · namlu uzunluğu (fişek yatağı hariç) 300 mm'yi, tüm uzunluk 500 mm'yi geçemez · kırma, toplu veya şarjörlü tabanca · tam otomatik silahı görünümünde olamaz · marka, model, çap · seri numarası · ihracat amaçlı üretimde · aranmaz"
+   ]
+  },
+  {
+   "id": "133-2",
+   "madde": [
+    "6",
+    "7",
+    "5"
+   ],
+   "baslik": "Kuruluş izni, prototip izni, üretim izni, aksam, teknik sorumlu",
+   "hukum": "Üretecek kuruluşlar Bakanlıktan (Sanayi ve Teknoloji) kuruluş izni alır; önce faaliyet konusu ve tesis adresiyle ticaret sicil kaydı ve yetkili personel Ticaret Sicil/Esnaf Sicil Gazetesinde; başvuru belgeleri: işyerinin güvenlik bakımından uygunluğuna dair illerde valilik, ilçelerde kaymakamlık yazısı, KEP beyanı, MERSİS/TC no; uygunluk yazısı İçişleri Bakanlığına ve firmaya; kuruluş izni geçerliliğini yitirir: alınmasını müteakip 2 yıl içinde prototip üretim izni için müracaat edilmemesi; Üretim İzin Belgelerinin süresi bitimini takip eden 12. ayın sonunda yeni ürün müracaatı olmaması (m.6); prototip üretim izni: ilk defa üretilecek veya özellikleri değişen her silah için; kuruluş izni + Sanayi Sicil Belgesi; başvuruda aksam listesi (bünyede yapılacak / yarı mamul / komple satın alınacak / ithal), Ek-6 teknik resim (Ek-4 fişek beyanıyla), Marka Tescil Belgesi no veya Marka Kullanım Sözleşmesi, teknik sorumlu sözleşmesi; uygunluk yazısı teknik resimle İçişleri ve firmaya; prototip izni 2 yıl geçerli; yalnız marka şekli-ismi/model ismi/seri numarası değişikliğinde kriminal incelemesiz Üretim İzin Belgesi (m.7); üretim izni: prototip izni alınan her silahtan 2 adet + kesiti alınmış 1 namlu + teknik resim, jandarma veya polis kriminal laboratuvarlarınca teknik resimle karşılaştırılarak ve m.5 esasları bakımından incelenir (namlu içi kesitten, diğer hususlar bir silahtan; silahlar mühürlenerek firmaya iade); fotoğraflı inceleme raporu; sertlik ölçümleri kriminal laboratuvarca incelenmez; rapor Bakanlığa ulaşınca 5 yıl geçerli Üretim İzin Belgesi (Ek-2), İçişleri ve firmaya; süre bitiminden en az 30 gün önce müracaatla kriminal incelemesiz yenileme, 30 günden az kalan veya süresi dolan belge yenilenmez; talep üzerine iptal; faaliyeti sona eren firma iptal için başvurur, mühürlü numuneleri Bakanlıkça belirlenen başka firmaya teslim eder; gerçek silaha dönüştürülme ve suça karışma sıklığı nedeniyle yurt içinde İçişleri Bakanı, yurt dışında Dışişleri Bakanı onaylı görüşle izinler Bakanlıkça iptal; firma sahibinin/yetkili personelin terör örgütü veya MGK'ca millî güvenliğe karşı yapılarla irtibatı tespitinde belgeler/yetkiler iptal (m.8); aksam üretimi: yalnız aksam üreten firmalar nihai ürün üretmemek koşuluyla Bakanlıktan yetki (valilik/kaymakamlık güvenlik yazısı, KEP, MERSİS/TC); 5 yıl geçerli aksam üreticisi yetkisi; aksamlar yalnız yetkili aksam üreticilerinden; Üretim İzin Belgesi olan firma aynı zamanda aksam üreticisi sayılır (m.9); teknik sorumlu: (il sınırında ikamet ve tek il şartı Danıştay kararıyla yürütmesi durduruldu); imalatı bilir, izler, yanlışları düzelttirir; firma sınıfları: A sınıfı 30 ve daha fazla ürün (tam zamanlı en az 1 teknik sorumlu, başka firmada çalışamaz), B sınıfı 10-29 ürün (kısmî zamanlı; bir teknik sorumlu en fazla 5 B firması), C sınıfı 9 ve daha az (en fazla 10 C firması); 5'ten az B'de çalışan eksik her B için 2 C firmasında; üst sınıfa geçişte yeterlilik 30 gün içinde; teknik sorumlu sözleşme öncesi belgelerdeki ürünlerin sonraki üretiminden de sorumlu; aykırılıkta tüm sorumlulukları iptal, 5 yıl teknik sorumlu olamaz; terör irtibatında iptal; sözleşme feshedilince yeni teknik sorumlu onaylanana kadar nihai mamul üretilemez; yalnız aksam üreticilerinde teknik sorumlu zorunlu değil; şube açmada aynı il şartı aranmaz (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kuruluş iznini İçişleri Bakanlığı verir\" yanlış; İçişleri'ne yalnız uygunluk yazısı gönderilir",
+    "Kuruluş iznini valilik verir",
+    "Kuruluş izni 1 yıl içinde prototip müracaatı yoksa düşer",
+    "Üretim İzin Belgesi 2 yıl geçerlidir",
+    "Sertlik ölçümlerini kriminal laboratuvar yapar"
+   ],
+   "dogrusu": [
+    "Sanayi ve Teknoloji Bakanlığı (valilik yalnız güvenlik yazısı) (m.6)",
+    "2 yıl (m.6)",
+    "5 yıl (prototip izni 2 yıl) (m.8)",
+    "Yapmaz (m.8)"
+   ]
+  },
+  {
+   "id": "133-3",
+   "madde": [
+    "5",
+    "11",
+    "12"
+   ],
+   "baslik": "İhracat, ithalat",
+   "hukum": "İhracat amaçlı üretilip iade edilen veya fuar-test için çıkarılıp geri getirilen silahlardan m.5/1 esaslarına uymayanlar yurt içi piyasaya arz edilemez; üretici veya ihracatçı dağıtıcı tarafından geri getirilenlere ithalat hükümleri uygulanmaz; hariçte işleme rejimi yarı mamulleri hariç; İçişleri veya Dışişleri Bakanı onaylı talep ile belirlenen ülkelere ihracatta son kullanıcı belgesi istenebilir; GTİP kodunun yanlış beyanında dağıtıcının İçişleri ruhsatı ve üreticinin tüm Üretim İzin Belgeleri 2 yıl askıya, tekrarında son sürenin 2 katı (m.11); ithalat: her model için Ek-6 teknik resimle kuruluş izni bulunan firma Bakanlığa başvurur, ön ithal izin yazısı ile 3 adet ithal edilebilir; firma ön izin + onaylı teknik resim + 2 numune ile İçişleri Bakanlığına, jandarma/polis kriminal laboratuvarı inceler, m.5 esaslarına uygunsa İçişleri Bakanlığınca ithal izni; aksam ithali yalnız mevcut Üretim İzin Belgesindeki ürünlerde kullanmak şartıyla Üretim İzin Belgeli firmalarca, İçişleri Bakanlığına taahhütname + miktar ile başvuru, İçişleri izni; aksamı madde dışı kullananın tüm Üretim İzin Belgeleri 3 ay askıya; film, tiyatro, sinema, şenlik, kutlama ve tören silahlarında ilk dört fıkra aranmaz, geçici ithalat izni EGM uygun görüşüyle Gümrük İdaresince, süre sonunda EGM'ye bildirimle yeniden ihraç veya MKE A.Ş.'de imha için EGM'ye teslim (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"İthal izni Sanayi ve Teknoloji Bakanlığınca verilir\" yanlış; İçişleri (Sanayi yalnız ön ithal izni)"
+   ],
+   "dogrusu": [
+    "yurt içi piyasaya arz edilemez · İçişleri veya Dışişleri Bakanı onaylı talep · son kullanıcı belgesi · GTİP kodunun yanlış beyanında · 2 yıl askıya · 2 katı · ithalat · kuruluş izni bulunan firma · ön ithal izin yazısı · 3 adet · 2 numune · İçişleri Bakanlığına · İçişleri Bakanlığınca ithal izni · aksam ithali · 3 ay askıya · film, tiyatro, sinema, şenlik, kutlama ve tören · EGM uygun görüşüyle Gümrük İdaresince · MKE A.Ş.'de imha"
+   ]
+  },
+  {
+   "id": "133-4",
+   "madde": [
+    "13",
+    "3",
+    "14"
+   ],
+   "baslik": "Satış, yetki belgesi, satın alma, devir, nakil, denetim",
+   "hukum": "Satış mermi, av malzemesi veya yivsiz tüfek satışı için ruhsatlandırılmış yerlerce; satan yerler sattıkları mamullerin cins, çap, seri numarası ve alıcının ad-adresini gösteren bilgisayar listelerini bir ay içinde kolluk birimlerine bildirir (merkezi kayıt sistemiyle depo giriş-çıkışında anlık); yurt içine satılanların kutularına Ek-1 yasal uyarı + kullanım kılavuzu (m.13); yetki belgesi: dağıtıcı, Kanun m.3/1 şartlarını taşıyanlara satar; merkezi kayıt sistemiyle başvuru elektronik; yetki belgesi 6 ay geçerli; her yetki belgesiyle 1 adet silah; Türkiye'de ikamet eden yabancılara, turistlere, mültecilere, şartlı mülteci ve ikincil koruma statüsü sahipleri, insani ikamet izni sahipleri ve geçici koruma sağlananlara satılamaz; şartları sağlamayana/yetki belgesi olmayana satan dağıtıcının İçişleri Bakanlığınca verilen bayilik belgesi 5 yıl iptal (m.14); satın alma: silah sadece dağıtıcılardan; yetki belgesi sahibi bu belgeyle dağıtıcıdan satın alır; satın alan fatura tarihinden itibaren bir aylık bildirim süresi içinde fatura ve silahla kolluk birimine müracaat eder, kolluk her silah için Ek-3 Ses ve Gaz Fişeği Atabilen Silah Bildirim Kartı düzenler; film-tiyatro-şenlik-tören silahlarında satın alma yetkilendirme ve izin işlemleri EGM'ce, genel şartlar aranmaz, süreli izin, bildirim kartı düzenlenmez, süre sonunda MKE A.Ş.'de imha için EGM'ye teslim veya ihraç (m.15); devir: devralacak kişi Ek-5 Devir Sözleşmesi düzenler, merkezi kayıt sistemiyle devralanın yetki belgesi zorunlu; devir kolluk birimi nezaretinde, sözleşme ve silahla; kolluk Ek-3 Bildirim Kartı düzenler, devredenin kaydından düşüm kolluğa; vefatta vasiyetname/miras sözleşmesine göre, yoksa mirasçıların tümünün muvafakatiyle mirasçılardan birine devir, anlaşamazlarsa tereke paylaşımı yargı kararı (m.16); nakil: fişekleri boşaltılarak, her an kullanıma ve erişime imkân vermeyecek şekilde, bir kutu içinde Ek-3 Bildirim Kartı ile; bu şartların dışında nakil taşıma sayılır; bayiden veya üçüncü şahıstan alımdan bildirimine kadar bir aylık süre içinde aynı usulle ve fatura veya Ek-5 belgesiyle; merkezi kayıt sisteminde üretici-dağıtıcı satışları sistemin nakil belgesiyle; aykırılıkta Kanun m.4; usule uygun olarak posta veya kargoyla nakledilebilir (m.17); denetim: üreticiler Bakanlığın (Sanayi ve Teknoloji) koordinasyonunda, İçişleri ile Bakanlık personelinden/il teşkilatlarından heyetle yılda en az bir kez; dağıtıcılar ve piyasadaki silahlar İçişleri Bakanlığı koordinasyonunda Bakanlık ve İçişleri heyetiyle; denetimde silah ücreti üreticiye ait uygunluk değerlendirme kuruluşunda test edilebilir; esasları karşılamayan ürünlerin Üretim İzin Belgesi iptal edilebilir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Satın alan kişi bildirim için 3 ay içinde kolluğa gider\" yanlış; fatura tarihinden itibaren 1 ay",
+    "Yetki belgesi 1 yıl geçerlidir ve 2 silah alınabilir",
+    "Turistlere kurusıkı satılabilir",
+    "Satın almak isteyen bildirim kartıyla kolluğa başvurur",
+    "Kurusıkı fişekli olarak kutuda nakledilebilir"
+   ],
+   "dogrusu": [
+    "6 ay, 1 silah (m.14)",
+    "Satılamaz (m.14)",
+    "Yetki belgesiyle dağıtıcıya; kart sonra kolluk düzenler (m.15)",
+    "Fişekleri boşaltılarak (m.17)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

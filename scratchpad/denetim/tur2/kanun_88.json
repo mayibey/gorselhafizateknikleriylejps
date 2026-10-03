@@ -1,0 +1,128 @@
+{
+ "kanun_id": 88,
+ "ad": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_88.json",
+ "kartlar": [
+  {
+   "id": "88-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, kapsam, ilkeler, tip sözleşme, türler",
+   "hukum": "Amaç 4734'e göre yapılan ihalelerin sözleşmelerinin düzenlenme ve uygulanma esasları (m.1); 4734'e tabi kurumların ihaleleri sonucu düzenlenen sözleşmeleri kapsar (m.2); tanımlar 4734'teki (m.3); sözleşmelerde ihale dokümanına aykırı hüküm olamaz; Kanunda belirtilen hâller dışında sözleşme hükümleri değiştirilemez, ek sözleşme düzenlenemez; taraflar eşit hak ve yükümlülüklere sahip (m.4); Tip Sözleşmeler Resmî Gazete'de yayımlanır, idareler tip sözleşme esas alır; mal ve hizmet alımlarında Kurumun uygun görüşüyle isteklilerin mutat sözleşmeleri kullanılabilir (m.5); sözleşme türleri: (a) yapımda uygulama projesi ve mahal listesine dayalı işin tamamı için anahtar teslimi götürü bedel; (b) mal/hizmette ayrıntılı özellik ve miktarı belirlenen işin tamamı için götürü bedel; (c) ön/kesin proje ve birim fiyat tariflerine (mal/hizmette ayrıntılı özelliklere) dayalı her iş kaleminin miktarı × teklif birim fiyatı = birim fiyat sözleşme; (d) yapımda bir kısım anahtar teslimi, bir kısım birim fiyat = karma sözleşme; (e) çerçeve anlaşmaya dayalı münferit sözleşme (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yapım işlerinde götürü bedel sözleşme\" değil, anahtar teslimi götürü bedel; mal/hizmette götürü bedel"
+   ],
+   "dogrusu": [
+    "sözleşme hükümleri değiştirilemez, ek sözleşme düzenlenemez · eşit hak ve yükümlülüklere · Tip Sözleşmeler Resmî Gazete'de · Kurumun uygun görüşüyle · sözleşme türleri · anahtar teslimi götürü bedel · götürü bedel · birim fiyat sözleşme · karma sözleşme · münferit sözleşme"
+   ]
+  },
+  {
+   "id": "88-1",
+   "madde": [
+    "7",
+    "8",
+    "9"
+   ],
+   "baslik": "Zorunlu hususlar, fiyat farkı, sigorta, mücbir sebep, muayene",
+   "hukum": "Sözleşmede işin adı-miktarı, bedel-tür-süre, fiyat farkı, kesin teminat, gecikme cezası, mücbir sebep, muayene-kabul, fesih gibi hususlar zorunludur (m.7); fiyat farkı esas ve usullerini Kamu İhale Kurumunun teklifi üzerine Cumhurbaşkanı belirler, sözleşme imzalandıktan sonra değiştirilemez (m.8); yapımda yüklenici sigorta yaptırmak zorundadır (m.9); mücbir sebepler: doğal afetler, kanuni grev, genel salgın hastalık, kısmî veya genel seferberlik ilânı ve Kurumca belirlenecek benzeri hâller; mücbir sebep 20 gün içinde yazılı bildirilmeli ve belgelendirilmelidir (m.10); muayene ve kabul en az üç kişilik komisyonca yapılır (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fiyat farkı esaslarını KİK belirler\" yanlış; KİK teklif eder, Cumhurbaşkanı belirler",
+    "Fiyat farkı esaslarını Kamu İhale Kurumu belirler",
+    "Kanuni olmayan grev de mücbir sebeptir"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı (KİK teklifiyle) (m.8)",
+    "Yalnız kanuni grev (m.10)"
+   ]
+  },
+  {
+   "id": "88-2",
+   "madde": [
+    "12",
+    "13",
+    "14"
+   ],
+   "baslik": "Kesin teminat hükümleri",
+   "hukum": "Fiyat farkı ödenmesi öngörülen işlerde fiyat farkı olarak ödenecek bedelin (sözleşme bedelindeki artış tutarının) %6'sı oranında ek kesin teminat; hakedişlerden kesinti suretiyle de karşılanabilir (m.12); taahhüt uygun yerine getirilip borç olmadığı tespit edilince kesin ve ek kesin teminatlar: yapım işlerinde geçici kabul tutanağının onaylanmasından sonra yarısı, SGK ilişiksiz belgesi getirilmesi ve kesin kabul tutanağının onaylanmasından sonra kalanı; yapım dışı işlerde ilişiksiz belgesinden sonra garanti süresi varsa yarısı, garanti bitince kalanı; garanti yoksa tamamı iade; yüklenicinin idareye ve SGK'ya borçları ile vergi kesintileri ödenmezse teminat protesto çekmeye gerek kalmaksızın paraya çevrilerek mahsup; piyasadan hazır alınıp satılan mal alımında ilişiksiz belgesi aranmaz (m.13); mahsup gerekmeyen hâllerde kesin hesap-kesin kabul onayından (diğer işlerde kabul veya garanti bitiminden) itibaren 2 yıl içinde yazılı uyarıya rağmen talep edilmeyen teminat mektupları hükümsüz kalır ve bankasına iade edilir; mektup dışı teminatlar Hazineye gelir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"%3\" geçici teminat oranıdır",
+    "Ek kesin teminat %3'tür"
+   ],
+   "dogrusu": [
+    "%6 (m.12)"
+   ]
+  },
+  {
+   "id": "88-3",
+   "madde": [
+    "15",
+    "16",
+    "17"
+   ],
+   "baslik": "Değişiklik, devir, ölüm-iflas",
+   "hukum": "Sözleşme imzalandıktan sonra bedel aşılmamak ve karşılıklı anlaşmak kaydıyla yalnız (a) işin yapılma/teslim yeri, (b) işin süresinden önce yapılması kaydıyla süre ve ödeme şartları değiştirilebilir (m.15); sözleşme zorunlu hâllerde ihale yetkilisinin yazılı izniyle devredilebilir; devralanda ilk ihaledeki şartlar aranır; isim-statü değişikliği hariç devir tarihini izleyen 3 yıl içinde aynı yüklenici başka sözleşme devredemez/devralamaz; izinsiz devirde fesih + m.20, 22, 26 (m.16); ölüm: sözleşme feshedilip tasfiye, teminat ve alacaklar varislere; aynı şartları taşıyan varisler ölümü izleyen 30 gün içinde kesin teminat vererek devralabilir; iflas: fesih, yasaklama hariç m.20-22; ağır hastalık, tutukluluk, mahkûmiyet: oluşunu izleyen 30 gün içinde idarenin kabul edeceği vekil tayin edilirse devam, yoksa fesih (m.17); ortak girişimde ortaklardan birinin ölüm-iflas-hastalık-tutukluluğu-dağılması sözleşmeye engel değil; pilot/koordinatör ortağın iflas-hastalık-tutukluluk-mahkûmiyet-dağılmasında fesih; pilot ortağın ölümünde fesih ve tasfiye, teminat iade, 30 gün içinde diğer ortakların teklifi ve idarenin uygun görmesiyle sözleşme yenilenebilir; diğer ortakların ölümünde kalanlar sorumluluğu üstlenir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözleşme devri Kurumun izniyle\" yanlış; ihale yetkilisi",
+    "Sözleşme Kurumun izniyle devredilir"
+   ],
+   "dogrusu": [
+    "İhale yetkilisi (m.16)"
+   ]
+  },
+  {
+   "id": "88-4",
+   "madde": [
+    "19",
+    "20",
+    "21"
+   ],
+   "baslik": "Fesih",
+   "hukum": "Yüklenicinin feshi: mücbir sebep dışında mali acz nedeniyle taahhüdü yerine getiremeyeceğini gerekçeli yazıyla bildirirse protestosuz kesin ve ek kesin teminatlar gelir kaydedilir, sözleşme feshedilip tasfiye (m.19); idarenin feshi: (a) taahhüdün uygun yerine getirilmemesi veya süresinde bitirilmemesi üzerine gecikme cezası uygulanmak üzere en az 10 gün süreli ve nedenleri açıkça belirtilen ihtara rağmen devamı; (b) m.25 yasak fiillerin tespiti → teminatlar gelir, fesih, tasfiye (m.20); ihale sürecinde yasak fiil sözleşmeden sonra tespit edilirse teminat gelir + fesih; ancak taahhüdün en az %80'i tamamlanmışsa ve tamamlattırılmasında kamu yararı varsa (ivedilik, başkasına yaptırılamama, fiilin tamamlamayı engellememesi) idare feshetmeksizin tamamlatabilir, bu durumda m.26 yasaklama + teminat tutarı kadar ceza (m.21); m.19'da talebin idareye intikali, m.20/a'da sürenin bitimi, m.20/b ve m.21'de tespit tarihi itibarıyla feshedilmiş sayılır; bu tarihleri izleyen 7 gün içinde fesih kararı, kararı izleyen 5 gün içinde yükleniciye bildirim; teminatlar alındığı tarihten gelir kaydedileceği tarihe kadar TEFE ile güncellenir, fark yükleniciden tahsil; hakedişten kesinti yoluyla teminatta yapılmayan iş kadar teminat da güncellenerek tahsil; gelir kaydedilen teminat borca mahsup edilemez; m.26 yasaklama + zarar tazmini (m.22); mücbir sebeple fesihte tasfiye ve teminatlar iade (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fesih ihtarı 20 gün\" eski hüküm; 10 gün",
+    "Fesih için 20 günlük ihtar gerekir"
+   ],
+   "dogrusu": [
+    "10 gün (m.20)"
+   ]
+  },
+  {
+   "id": "88-5",
+   "madde": [
+    "24",
+    "25",
+    "26"
+   ],
+   "baslik": "İş artışı-eksilişi, yasak fiiller, yasaklama",
+   "hukum": "Öngörülemeyen durumlarla zorunlu iş artışı, proje içinde kalması ve asıl işten ayrılamaması şartıyla anahtar teslimi götürü bedel yapımda %10'a, birim fiyat mal-hizmet-yapımda %20'ye kadar aynı yükleniciye yaptırılabilir; birim fiyat yapımda Cumhurbaşkanı %40'a kadar artırabilir; iş sözleşme bedelinin %80'inden düşük tamamlanacaksa yüklenici işi bitirir ve sözleşme bedelinin %80'i ile yaptığı iş tutarı arasındaki farkın %5'i ödenir (m.24); yasak fiillerde 1-2 yıl yasaklama (m.25-26); suç oluşturan fiillerde ayrıca mahkeme kararıyla 1-3 yıl yasaklama (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"Anahtar teslimi yapımda iş artışı %20\" yanlış; %10",
+    "Anahtar teslimi yapımda %20 iş artışı yapılabilir"
+   ],
+   "dogrusu": [
+    "%10; birim fiyatta %20 (m.24)"
+   ]
+  },
+  {
+   "id": "88-6",
+   "madde": [
+    "28",
+    "29",
+    "30"
+   ],
+   "baslik": "Görevlilerin sorumluluğu, 15 yıl, son hükümler",
+   "hukum": "Muayene-kabul komisyonu başkan ve üyeleri, yapı denetim görevlileri ve diğer ilgililer görevlerini kanuni gereklere uygun/tarafsız yapmaz, ihmal-kusurla zarara yol açarsa disiplin cezası + ceza kovuşturması + tazmin; hüküm giyen idare görevlileri bu Kanun kapsamındaki işlerde görevlendirilemez, yetkili kadrolara atanamaz (m.28); görevliler ve danışmanlar yüklenicilerin gizli bilgi-belgelerini ifşa edemez (m.29); yapım işlerinde yüklenici ve alt yükleniciler fen ve sanat kurallarına aykırılık, hileli malzeme nedeniyle zarardan işe başlamadan kesin kabule kadar ve kesin kabul onay tarihinden itibaren 15 yıl müteselsilen sorumlu (m.30); yapı denetim görevlileri denetim eksikliğinden 15 yıl yükleniciyle müteselsilen (m.31); danışmanlık hizmet sunucuları tasarım hatası, yanlış yaklaşık maliyet vb. zarardan doğrudan, yapı denetiminde yükleniciyle birlikte 15 yıl (m.32); tedarikçiler kusurlu-standart dışı malzemeden doğrudan sorumlu (m.33); hizmet sunucuları doğrudan sorumlu (m.34); hüküm yoksa teminatlarda 4734 (m.35), diğer hâllerde Borçlar Kanunu (m.36), tebliğde Tebligat Kanunu (m.37); değişiklik ancak bu Kanuna ekleme/değişiklikle (m.38); 4734 ihalelerinin sözleşmelerinde 2886 sayılı Devlet İhale Kanunu uygulanmaz; TOKİ sözleşmelerinde özel esasları Cumhurbaşkanı belirler (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hüküm bulunmayan hâllerde 2886 uygulanır\" yanlış; Borçlar Kanunu (2886 uygulanmaz)",
+    "Hüküm bulunmayan hâllerde 2886 uygulanır"
+   ],
+   "dogrusu": [
+    "Borçlar Kanunu; 2886 uygulanmaz (m.36, 39)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

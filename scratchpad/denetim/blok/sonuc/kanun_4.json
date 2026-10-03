@@ -1,0 +1,109 @@
+[
+ {
+  "kanun_id": 4,
+  "madde": "2",
+  "baslik": "Memur ya da zabıta eliyle tebligat",
+  "oz": "Üç durumda tebligat, kurumun kendi memurları ya da mahalli mülkiye amirinin emriyle zabıta eliyle yaptırılır: diğer kanunlarda özel hüküm varsa, gecikmesinde zarar umulan işlerde ve aynı yerdeki daire ve kurumlar arasında ya da buralardaki kişilere yapılacak tebligatta. Zor kullanmayı gerektiren ya da hazırlık tahkikatına (soruşturmasına) ilişkin görevlerin zabıtaca yapılacağına dair hükümler ile Kanunun ikinci babındaki özel hükümler saklıdır.",
+  "sorulur": [
+   "Tebligatın kim eliyle yaptırılacağı sorulur; doğrusu “kurumun kendi memurları veya mahalli mülkiye amirinin emriyle zabıta”dır. Savcının emri, “yalnız PTT memurları”, zabıta amirinin kendi takdiri ve ihtiyar heyeti çeldiricidir.",
+   "Olay sorusu: gecikmesinde zarar doğacak bir işte kurum tebligatı kendi memuruyla ya da mülkiye amirinin emriyle zabıtaya yaptırabilir.",
+   "Saklı tutulan hükümler sorulur: zor kullanma ya da hazırlık tahkikatına ilişkin görevlerin zabıtaca yapılmasına dair hükümler saklıdır."
+  ],
+  "akilda": [
+   "Üç durum, iki yol: özel kanun, gecikmede zarar, aynı yerdeki kurumlar → kendi memuru ya da zabıta.",
+   "Zabıtaya emri mahalli mülkiye amiri verir; savcı ya da zabıtanın kendi amiri değil."
+  ],
+  "karis": [
+   {
+    "madde": "21",
+    "neden": "Orada zabıta, muhatap bulunamayınca evrakın bırakıldığı yerdir; burada tebligatı yapandır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.2/1-2); metin arasındaki 1-3 numaralı dipnotlar ibare değişikliklerine ilişkin."
+ },
+ {
+  "kanun_id": 4,
+  "madde": "3",
+  "baslik": "PTT'nin tebligat ücret tarifesi",
+  "oz": "Posta ve Telgraf Teşkilatının (PTT) bu Kanuna göre yapacağı işler için alacağı ücretleri, yine bu işletme ayrı bir tarifeyle belirler. Ücreti bir bakanlık ya da kararname değil, PTT'nin kendi tarifesi tespit eder.",
+  "sorulur": [
+   "Boşluk doldurma: ücretler bu işletme tarafından “ayrı bir tarife” ile belirlenir; Cumhurbaşkanlığı kararnamesi, Bakanlar Kurulu kararı, Kanuna ekli cetvel ve yönetmelik çeldiricidir."
+  ],
+  "akilda": [
+   "Ücreti işi yapan belirler: PTT kendi işinin ücretini ayrı bir tarifeyle tespit eder."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.3)."
+ },
+ {
+  "kanun_id": 4,
+  "madde": "21",
+  "baslik": "Muhatap bulunamazsa ya da reddederse",
+  "oz": "Muhatap ve yerine tebliğ yapılabilecek kişilerden hiçbiri adreste bulunmaz ya da evrakı almayı reddederse, tebliğ memuru evrakı o yerin muhtarına, ihtiyar heyeti üyelerinden birine ya da zabıta amir veya memuruna imza karşılığı teslim eder. Teslim alanın adresini içeren ihbarname binanın kapısına yapıştırılır; adreste bulunmamada durum mümkünse en yakın komşuya, varsa yönetici ya da kapıcıya da bildirilir. İhbarnamenin kapıya yapıştırıldığı tarih tebliğ tarihidir.",
+  "sorulur": [
+   "Tebliğ tarihi sorulur; cevap hep ihbarnamenin kapıya yapıştırıldığı tarihtir. Muhtara teslim, komşuya haber, evrakın fiilen alındığı gün ve “yedinci gün” çeldiricidir.",
+   "Evrakın kime bırakılacağı sorulur: muhtar, ihtiyar heyeti üyesi ya da zabıta. Bu durumda komşu, yönetici ve kapıcıya evrak verilmez, yalnız haber verilir.",
+   "Olay sorusu: muhatap evrakı almayı reddederse de aynı yol izlenir; “evrak iade edilir” ya da “zorla teslim edilir” şıkları yanlıştır."
+  ],
+  "akilda": [
+   "Üçlü kod “Muhtar-Kapı-Tarih”: evrak muhtara (ya da heyet üyesine, zabıtaya), ihbarname kapıya, tebliğ tarihi yapıştırma günü.",
+   "Komşuya, yöneticiye, kapıcıya evrak değil haber verilir; tarihi belirleyen yalnız kapıya yapıştırma günüdür.",
+   "Adres kayıt sistemindeki adreste muhatap hiç oturmamış olsa bile aynı yol izlenir; muhtar, heyet üyesi ve zabıta evrakı almak zorundadır."
+  ],
+  "karis": [
+   {
+    "madde": "24",
+    "neden": "Orada muhtar, heyet üyesi ya da zabıta tanık olarak çağrılır; burada evrak onlara bırakılır."
+   },
+   {
+    "madde": "22",
+    "neden": "Muhatap yerine evrak alacak kişide görünüşe göre 18 yaş ve ehliyet şartı aranır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.21/1-3); metin arasındaki 5-6 numaralı dipnotlar önceki maddelere ait."
+ },
+ {
+  "kanun_id": 4,
+  "madde": "22",
+  "baslik": "Muhatap yerine tebliğde yaş ve ehliyet",
+  "oz": "Muhatap yerine evrakı alacak kişinin görünüşüne göre 18 yaşından küçük olmaması ve açıkça ehliyetsiz görünmemesi gerekir. Yaş için nüfus kaydına değil görünüşe bakılır; görünüşte yetişkin ama bariz biçimde ehliyetsiz birine de tebliğ yapılmaz.",
+  "sorulur": [
+   "Sayı doğrudan sorulur: görünüşe göre en az 18 yaş; şıklarda 18'e yakın başka yaşlar durur.",
+   "Boşluk doldurma: “………… onsekiz yaşından aşağı olmaması” cümlesinde cevap “görünüşüne nazaran”dır; “nüfus kaydına göre” şıkkı yanlıştır.",
+   "Olay sorusu: kapıyı açan küçük yaştaki çocuğa ya da görünüşte yetişkin ama bariz ehliyetsiz kişiye evrak teslim edilmez."
+  ],
+  "akilda": [
+   "18 görünüşe göredir: kimlik sorulmaz, göze bakılır. İki şart birlikte: 18 altında görünmemek ve açıkça ehliyetsiz olmamak."
+  ],
+  "karis": [
+   {
+    "madde": "21",
+    "neden": "Muhatap ve yerine alabilecek kimse yoksa evrak muhtar, heyet üyesi ya da zabıtaya bırakılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.22); sondaki 8 ve 9 dipnot numaralarıdır."
+ },
+ {
+  "kanun_id": 4,
+  "madde": "24",
+  "baslik": "İmza atamayana parmak bastırılarak tebliğ",
+  "oz": "Muhatap yazı bilmiyor ya da imza atamıyorsa, komşularından bir kişinin huzurunda sol elinin baş parmağı bastırılarak tebliğ yapılır. Bu parmak yoksa aynı elin başka parmağı, sol el yoksa sağ elin baş parmağı, o da yoksa diğer parmaklarından biri bastırılır; iki eli de yoksa evrak kendisine verilir. Durum mazbataya yazılır, hazır bulunana imzalatılır. Okuryazar komşu yoksa ya da imzadan kaçınırsa muhtar, ihtiyar heyeti üyesi ya da zabıta memuru çağrılır.",
+  "sorulur": [
+   "Hangi el, hangi parmak, kimin huzurunda üçlüsü sorulur: sol el, baş parmak, komşulardan bir kişi; sağ el ve işaret parmağı çeldiricidir.",
+   "Yanlış ifade sorusunda “iki eli olmayana tebligat yapılamaz” şıkkı konur; doğrusu evrakın kendisine verilmesidir.",
+   "Okuryazar komşu bulunmazsa ne yapılacağı sorulur: muhtar, ihtiyar heyeti üyesi ya da zabıta memuru çağrılır; evrakı kapıya yapıştırmak ya da iade etmek yanlıştır."
+  ],
+  "akilda": [
+   "“Sol-baş-komşu”: sol elin baş parmağı, bir komşunun huzurunda.",
+   "Parmak merdiveni: sol baş → sol diğer → sağ baş → sağ diğer; iki el de yoksa evrak kendisine verilir.",
+   "Tanık yoksa yedek üçlü: muhtar, ihtiyar heyeti üyesi ya da zabıta memuru."
+  ],
+  "karis": [
+   {
+    "madde": "21",
+    "neden": "Orada muhtar, heyet üyesi ya da zabıtaya evrak bırakılır; burada tanık olarak çağrılırlar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.24/1-5)."
+ }
+]

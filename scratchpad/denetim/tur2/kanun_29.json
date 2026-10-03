@@ -1,0 +1,263 @@
+{
+ "kanun_id": 29,
+ "ad": "4915 sayılı Kara Avcılığı Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_29.json",
+ "kartlar": [
+  {
+   "id": "29-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Merkez Av Komisyonu",
+   "hukum": "Bakanın veya Bakan Yardımcısının başkanlığında; Genel Müdürlükten üç, Bakanlığın diğer birimlerinden iki, JGK, Orman Genel Müdürlüğü ve EGM'den birer, orman fakültesi ve biyoloji bölümlerinden iki bilim insanı, doğa koruma STK'larından dört, dokuz coğrafi bölgeden dokuz avcı kuruluşu temsilcisi ve bir avlak temsilcisi olmak üzere toplam yirmi beş üyeden oluşur; kararı kesindir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "JGK listeden çıkarılır ya da karar \"Bakanlık onayına tâbi\" denir",
+    "Merkez Av Komisyonu kararı Bakanlık onayıyla kesinleşir"
+   ],
+   "dogrusu": [
+    "Karar kesindir (m.3)"
+   ]
+  },
+  {
+   "id": "29-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "İl av komisyonu",
+   "hukum": "Valinin veya vali yardımcısının başkanlığında; ilgili müdürlükler, il emniyet müdürlüğü, jandarma teşkilatı ve gönüllü kuruluş temsilcileri ile mahallî avcı kuruluşlarından üç üye olmak üzere toplam on bir üyeden oluşur; gerekirse valilik ilçe av komisyonu kurabilir. İlçe kararları ilde, il kararları Merkez Av Komisyonunda değerlendirilir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "il komisyonunun sayısı 25 yapılır"
+   ],
+   "dogrusu": [
+    "il emniyet müdürlüğü, jandarma teşkilatı · toplam on bir üyeden · ilçe av komisyonu"
+   ]
+  },
+  {
+   "id": "29-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Koruma altındaki yaban hayvanları",
+   "hukum": "Korunması gereken av hayvanları Merkez Av Komisyonunca, av hayvanı dışındaki yaban hayvanları Bakanlıkça koruma altına alınır; karar Resmî Gazete'de yayımlanır. Koruma altındaki yaban hayvanları avlanamaz; yaban hayvanları üreme, tüy değiştirme ve göç dönemlerinde rahatsız edilemez, yavru ve yumurtaları toplanamaz, memeliler kış uykusunda rahatsız edilemez (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız avlanması yasaktır\" denir"
+   ],
+   "dogrusu": [
+    "Merkez Av Komisyonunca · Bakanlıkça · Resmî Gazete'de · üreme, tüy değiştirme ve göç · kış uykusunda"
+   ]
+  },
+  {
+   "id": "29-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Av süreleri ve miktarları",
+   "hukum": "Avlanma sürelerinin başlama-bitiş tarihlerini, avlanma günlerini ve av miktarlarını il av komisyonlarının görüşü doğrultusunda Merkez Av Komisyonu; özel ve örnek avlaklarda Genel Müdürlük belirler. Merkez Av Komisyonunca tespit edilen av miktarı ve süreleri dışında avlanılamaz. Radyo ve televizyonlar av sezonunun başlamasından on beş gün önce ve sona ermesinden itibaren on beş gün eğitici yayın yapmak zorundadır; yılda üç saatten az olamaz (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "yayın süresi 30 gün yapılır"
+   ],
+   "dogrusu": [
+    "il av komisyonlarının görüşü doğrultusunda Merkez Av Komisyonu · Genel Müdürlük · dışında avlanılamaz · on beş gün önce ve sona ermesinden itibaren on beş gün · üç saatten"
+   ]
+  },
+  {
+   "id": "29-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Avlanma yasakları",
+   "hukum": "Avlanma, avcılık belgesi ve avlanma izni almak şartıyla, izin verilen silah, araç ve eğitilmiş hayvanlarla yapılır. Zehirle avlanmak yasaktır. Haznesi iki fişek alacak şekilde sınırlandırılmamış otomatik, yarı otomatik, pompalı yivsiz av tüfekleri ile havalı tüfek ve tabancalar avda kullanılamaz. Kara, hava ve yüzer araçlarla, ses, manyetik dalga, ışık yayan araçlarla, canlı mühre, tuzak, kapan ile avlanılamaz; men edilen bu cihazların pazar ve ticarethanelerde bulundurulması ve satışı da yasaktır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "sınırlandırılmış tüfek de yasaklar arasına konur — 2026'nın öncül III'ü buydu",
+    "Haznesi iki fişekle sınırlandırılmış yarı otomatik tüfek avda kullanılamaz"
+   ],
+   "dogrusu": [
+    "Kullanılabilir; yasak olan sınırlandırılmamış olandır (m.6)"
+   ]
+  },
+  {
+   "id": "29-5",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Avlak izinleri",
+   "hukum": "Özel avlaklarda avlanmak avlak sahibinin, Devlet, genel ve örnek avlaklarda Genel Müdürlüğün iznine bağlıdır. Yasak yerlerde avlanmaya ancak av hayvanlarının çoğaldığı ve zararlı olduğu hâllerde Bakanlıkça izin verilebilir. Av yılı içinde bir türün nesli tehlikeye girerse avlanmanın açık olduğu avlaklarda avı geçici yasaklamaya Bakanlık yetkilidir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "özel avlakta izin makamı Genel Müdürlük yapılır"
+   ],
+   "dogrusu": [
+    "Özel avlaklarda · avlak sahibinin · Genel Müdürlüğün · çoğaldığı ve zararlı olduğu · geçici yasaklamaya Bakanlık"
+   ]
+  },
+  {
+   "id": "29-6",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Avcılık belgesi",
+   "hukum": "Türk vatandaşlarına bir defaya mahsus verilir ve her yıl vize edilir; alacak olanlar eğitim ve yeterlik sınavına tâbi tutulur. 6136'ya göre yivli av tüfeği alanlar da avlanmak için ayrıca avcılık belgesi almak zorundadır. Türkiye'de ikamet eden yabancılara belge verilmesinde mütekabiliyet aranır; avcı turistlere geçici avcılık belgesi verilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"yivli tüfek ruhsatı olan ayrıca belge almaz\" denir",
+    "Yivli av tüfeği ruhsatı olan ayrıca avcılık belgesi almaz"
+   ],
+   "dogrusu": [
+    "Alır (m.13)"
+   ]
+  },
+  {
+   "id": "29-7",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Av turizmi",
+   "hukum": "Av turu, fotoğraf-film çekimi ve gözlem turu yaptıracak seyahat acenteleri Genel Müdürlükten av turizmi izin belgesi almaya; avcı turistler geçici avcılık belgesi alıp avlayacakları hayvanları bu belgeye kaydettirmeye mecburdur; Askerî Yasak Bölgeler Kanunu hükümleri saklıdır (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "turistin sürekli belge alabileceği söylenir"
+   ],
+   "dogrusu": [
+    "av turizmi izin belgesi · geçici avcılık belgesi · kaydettirmeye"
+   ]
+  },
+  {
+   "id": "29-8",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Ticaret yasağı",
+   "hukum": "Uluslararası sözleşmelerle ticareti yasaklanan ve avlanma esaslarına aykırı avlanan yaban hayvanları canlı veya cansız olarak, et, yumurta, deri, post, boynuz ve türevleri satılamaz, satın alınamaz, nakledilemez, ithal ve ihraç edilemez; sergilenmek için ithaline izin verilenler de satılamaz (m.18)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "satılamaz, satın alınamaz, nakledilemez, ithal ve ihraç edilemez"
+   ]
+  },
+  {
+   "id": "29-9",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Kolluğun av yetkisi",
+   "hukum": "Avcılığın kontrolü Genel Müdürlük ve Orman Genel Müdürlüğünce yapılır; PVSK ve 2803 hükümleri saklıdır. Genel kolluk ile orman muhafaza memurları, av ve doğa koruma memurları ve saha bekçileri; aykırı davrananları avlanmadan men etmeye, tutanak düzenlemeye, hayvanlara ve yasak eşyaya elkoymaya ve yakalamaya yetkilidir. Av yasağına aykırı davrananlar tutanaktan sonra derhâl serbest bırakılır; kimliği tespit edilemeyenler en yakın köy muhtarı veya ihtiyar heyetine, olmazsa en yakın zabıta merkezine götürülür. Görevli memurun bulunmadığı yerlerde kır ve köy bekçileri ile köy muhtarları da aynı yetkiyi haizdir. Elkonulan silahlar soruşturma evrakıyla Cumhuriyet başsavcılığına gönderilir; canlı av hayvanları hemen, yaralılar tedaviden sonra doğaya salınır (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"gözaltına alınır\" denir",
+    "Av yasağına aykırı davranan gözaltına alınır"
+   ],
+   "dogrusu": [
+    "Tutanaktan sonra derhâl serbest bırakılır (m.20)"
+   ]
+  },
+  {
+   "id": "29-10",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Belge gösterme zorunluluğu",
+   "hukum": "Avcılar talep hâlinde orman muhafaza memurlarına, av ve doğa koruma memurlarına, saha bekçilerine, polis ve jandarmaya, köy ve kır bekçilerine, köy muhtarı ve ihtiyar heyeti üyelerine belge ve izinleri ile avladıkları hayvanları ibraz etmek zorundadır; köy ve kır bekçileri, muhtar ve ihtiyar heyeti üyeleri ihbarda ve takipte orman memurlarına yardıma mecburdur (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"komisyon üyelerine de gösterilir\" denir — çıkmış soruda tam bu çeldiriciydi"
+   ],
+   "dogrusu": [
+    "orman muhafaza memurlarına, av ve doğa koruma memurlarına, saha bekçilerine, polis ve jandarmaya, köy ve kır bekçilerine, köy muhtarı ve ihtiyar heyeti üyelerine · ibraz etmek zorundadır · yardıma mecburdur"
+   ]
+  },
+  {
+   "id": "29-11",
+   "madde": [
+    "20",
+    "21"
+   ],
+   "baslik": "Fahri av müfettişi",
+   "hukum": "Genel Müdürlükçe belirlenen kişilere fahri av müfettişliği verilebilir; yasak avlanmayı tespit ettiklerinde tutanağı en geç bir hafta içinde en yakın Genel Müdürlük taşra birimine teslim ederler; yasak fiili fahri av müfettişi işlerse ceza iki misli uygulanır, belgeleri iptal edilir ve bir daha verilmez (m.20, m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"aynı ceza uygulanır\" denir"
+   ],
+   "dogrusu": [
+    "en geç bir hafta · fahri av müfettişi işlerse ceza iki misli"
+   ]
+  },
+  {
+   "id": "29-12",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Orman memurlarının silahı",
+   "hukum": "Orman muhafaza memurları, av ve doğa koruma memurları ve saha bekçilerine Cumhurbaşkanınca belirlenen silahlar demirbaş olarak verilir; silahlarını 6831 sayılı Orman Kanunu m.78'deki hâllerde kullanabilirler (m.20)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "demirbaş · 6831 sayılı Orman Kanunu m.78'deki hâllerde"
+   ]
+  },
+  {
+   "id": "29-13",
+   "madde": [
+    "21",
+    "24"
+   ],
+   "baslik": "Ağır cezalar: zehir ve ekosistem",
+   "hukum": "Yaban hayvanlarının beslendiği ortamı zehirleyenler iki yıldan beş yıla kadar hapis; zehirle avlananlar bir yıldan üç yıla kadar hapis ve elli günden az olmamak üzere adlî para cezası; avlanma yoluyla bir türün yok olması ya da ekolojik dengenin bozulması tehlikesine neden olanlar iki yıldan beş yıla kadar hapis; bu hâllerde avcılık belgesi iptal edilir ve bir daha verilmez (m.21, m.24)",
+   "sinavda_boyle_yazarlar": [
+    "iki hapis aralığı yer değiştirilir"
+   ],
+   "dogrusu": [
+    "zehirleyenler iki yıldan beş yıla kadar hapis · zehirle avlananlar bir yıldan üç yıla kadar hapis ve elli günden az olmamak üzere adlî para cezası · yok olması · ekolojik dengenin bozulması · iki yıldan beş yıla kadar hapis · bir daha verilmez"
+   ]
+  },
+  {
+   "id": "29-14",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Belgesiz avlanma cezası",
+   "hukum": "Avcılık belgesi almadan avlananlara ağır, avlanma izni olmadan veya avlakta izinsiz avlananlara daha hafif, yabancı avcılık belgesi olmadan avlananlara daha da hafif idarî para cezası verilir; belgeyi yanında taşımadan avlananlara küçük bir ceza vardır. Bu maddedeki fiillerin beş yıl içinde tekrarında ceza üç katı uygulanır (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"beş yıl içinde tekrarda iki katı\" denir"
+   ],
+   "dogrusu": [
+    "yanında taşımadan · beş yıl içinde tekrarında ceza üç katı"
+   ]
+  },
+  {
+   "id": "29-15",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Avdan men ve mülkiyetin kamuya geçirilmesi",
+   "hukum": "Yasak fiili işleyenler derhâl avdan men edilir; elkonulan av hayvanları ve eşyanın mülkiyetinin kamuya geçirilmesine mahallî mülkî amir karar verir; cansız hayvanlar ve ürünler Genel Müdürlükçe satılır, canlılar doğaya bırakılır; tahribat nedeniyle hükmolunacak tazminat türlere göre Genel Müdürlükçe tespit edilen değerler üzerinden hesaplanır (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "mülkiyet kararı mahkemeye verilir"
+   ],
+   "dogrusu": [
+    "derhâl avdan men edilir · mülkiyetinin kamuya geçirilmesine mahallî mülkî amir · Genel Müdürlükçe tespit edilen değerler"
+   ]
+  },
+  {
+   "id": "29-16",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Tekrarda belge iptali",
+   "hukum": "m.21, m.23 ve m.24'teki fiillerin tekrarı hâlinde avcılık belgesi iptal edilir ve iki yıl süreyle belge verilmez; iki yıl sonunda yeniden belge için idarî para cezalarının ve tazminatın tahsil edilmiş olması şarttır; yenilenen belgeden sonra tekrar edilirse belge bir daha verilmez (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "süre bir yıl yapılır"
+   ],
+   "dogrusu": [
+    "tekrarı · iki yıl · tahsil edilmiş olması · bir daha verilmez"
+   ]
+  },
+  {
+   "id": "29-17",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Cezayı kim verir",
+   "hukum": "Bu Kanuna göre idarî para cezaları Genel Müdürlük bölge müdürü veya yetki verdiği personeli ile orman işletme şefi tarafından verilir (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "ceza yetkisi kolluğa veya mülki amire verilir",
+    "İdarî para cezasını jandarma verir"
+   ],
+   "dogrusu": [
+    "Bölge müdürü / orman işletme şefi verir (m.30)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

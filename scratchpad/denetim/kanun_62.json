@@ -1,0 +1,199 @@
+{
+ "kanun_id": 62,
+ "ad": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_62.json",
+ "kartlar": [
+  {
+   "id": "62-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "Umumi Hıfzıssıhha, 1608 sayılı Kanun, PVSK, 3572 sayılı İşyeri Açma Kanunu, Büyükşehir, İl Özel İdaresi ve Belediye Kanunları ile İmar Kanunu ek 11'e dayanır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yönetmelik yalnız Belediye Kanununa dayanır\" yanlış"
+   ],
+   "dogrusu": [
+    "PVSK"
+   ]
+  },
+  {
+   "id": "62-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İş yerlerinde genel şartlar",
+   "hukum": "İş sağlığı-güvenliği tedbirleri; mesken olarak kayıtlı bağımsız bölümlerde kahvehane, bar, lokanta, imalathane vb. için kat maliklerinin oy birliği; tapuda iş yeri görünen yerde umuma açık yer için oy çokluğu (yönetim planında aksi yoksa); sinema, otel, hamam, akaryakıt istasyonu vb. için yapı kullanma izni; umuma açık yerlerde kolluk görüşü; tehlikeli madde tesislerine mevzuattaki uzaklık; karayolu kenarında geçiş yolu izin belgesi; umuma açık yerler, patlayıcı satış yerleri, 30'dan fazla çalışanı olan yerler, iş hanı-çarşılar için itfaiye raporu; meyhane, bar, kahvehane, internet salonu ve açıkta alkol satan yerlerin okul, yurt ve mabede mevzuattaki uzaklıkta olması; LPG tüp satış yerlerinde kamera (kayıtlar 30 gün saklanır); turizm işletme belgeli tesisleri yalnız Kültür ve Turizm Bakanlığı denetler; umuma açık yerler için şartlar ruhsat öncesi yerinde kontrol edilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mesken bölümünde oy çokluğu yeter\" yanlış; oy birliği"
+   ],
+   "dogrusu": [
+    "mesken · oy birliği · oy çokluğu · yapı kullanma izni · kolluk görüşü · karayolu kenarında geçiş yolu izin belgesi · 30'dan fazla çalışanı · itfaiye raporu · okul, yurt ve mabede · kamera · 30 gün · Kültür ve Turizm Bakanlığı · yerinde kontrol"
+   ]
+  },
+  {
+   "id": "62-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Ruhsatsız iş yeri açılamaz",
+   "hukum": "Yetkili idareden ruhsat alınmadan iş yeri açılamaz; başka kurumların izinleri ruhsat yükümlülüğünü kaldırmaz; ruhsatsız açılan yer yetkili idarece kapatılır; ruhsat yetkili idarenin en üst amiri veya görevlendirdiği yetkili tarafından imzalanır, ayrıca meclis/encümen kararı gerekmez; başvurana alındı belgesi verilir, eksiklikler alındıda gösterilir; süreler eksik belgelerin tamamlanmasıyla başlar (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ruhsat için encümen kararı gerekir\" yanlış"
+   ],
+   "dogrusu": [
+    "yetkili idarece kapatılır · en üst amiri veya görevlendirdiği yetkili · alındı belgesi"
+   ]
+  },
+  {
+   "id": "62-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kolluğa bildirim — 7 gün",
+   "hukum": "Verilen ruhsat örnekleri aylık olarak sigorta il müdürlüğüne ve ticaret/esnaf siciline; umuma açık istirahat ve eğlence yerleri için düzenlenen ruhsatların bir örneği en geç 7 gün içinde yetkili idarece kolluğa gönderilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"15 gün\" tuzak; 7 gün"
+   ],
+   "dogrusu": [
+    "umuma açık istirahat ve eğlence yerleri · en geç 7 gün · kolluğa"
+   ]
+  },
+  {
+   "id": "62-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Devir, nakil, ölüm",
+   "hukum": "Faaliyet konusu, alanı ve adres değişmemek kaydıyla devirde devralan adına dosya esas alınarak yeni ruhsat düzenlenir; yeni ortak alınması/ayrılmasında yeni ruhsat düzenlenmez; başka adrese nakilde yeniden ruhsat; sokak adı/numara değişikliğinde yeni ruhsat yok, bilgiler güncellenir; sahibin ölümünde mirasçılar adına eski ruhsatın intibakı; yenileme/intibak için en geç 3 ay (mirasçılar 6 ay) içinde başvuru; tespitte 15 gün ek süre, sonunda ruhsat iptal (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mirasçılar 3 ay içinde başvurur\" yanlış; 6 ay"
+   ],
+   "dogrusu": [
+    "yeni ruhsat · başka adrese nakilde yeniden ruhsat · ölümünde · intibakı · en geç 3 ay · 6 ay · 15 gün"
+   ]
+  },
+  {
+   "id": "62-5",
+   "madde": [
+    "29"
+   ],
+   "baslik": "İçkili yer bölgesi",
+   "hukum": "İçkili yer bölgesi, mülkî idare amirinin genel güvenlik ve asayiş görüşü doğrultusunda belediye sınırları ve mücavir alan içinde belediye meclisi, bu sınırlar dışında il genel meclisi tarafından tespit edilir; içkili yer bölgesi dışında içkili yer açılamaz (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belediye encümeni\" (açılış-kapanış saatini belirler) ve \"mülkî idare amiri\" (görüş verir) şıkları tuzak",
+    "Belediye sınırında içkili yer bölgesini belediye encümeni belirler",
+    "Mülkî idare amiri içkili yer bölgesini tespit eder"
+   ],
+   "dogrusu": [
+    "Belediye meclisi; encümen saatleri belirler (m.29, 33)",
+    "Yalnız görüş verir (m.29)"
+   ]
+  },
+  {
+   "id": "62-6",
+   "madde": [
+    "30"
+   ],
+   "baslik": "İçkili yer bölgesi olamayacak yerler",
+   "hukum": "Hükümet binaları, hapishane ve ıslahevleri, mabetler, sanat müesseseleri, maden ocakları, inşaat yerleri, patlayıcı-yanıcı madde üretilen/satılan yerler ve gaz dolum tesisleri yakınında; konaklama yerleri hariç otoyol ve karayollarının her iki tarafında sınır çizgisine 200 metreden yakın; otogar ve terminallerde; resmî ve özel okul binaları, ilk-orta öğretim yurtları ve anaokullarına 100 metreden yakın mesafede içkili yer bölgesi tespit edilemez (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "Mesafeler çapraz verilir"
+   ],
+   "dogrusu": [
+    "yakınında · otoyol ve karayollarının · 200 metreden · otogar ve terminallerde · okul binaları, ilk-orta öğretim yurtları ve anaokullarına 100 metreden"
+   ]
+  },
+  {
+   "id": "62-7",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Umuma açık yer açma izni ve izinsiz açılan yer",
+   "hukum": "Umuma açık istirahat ve eğlence yeri açma izni belediye sınırları içinde belediye, dışında il özel idaresi; ruhsat öncesi kolluk görüşü alınır, kolluk yerin kolay kontrol edilebilir konumda olup olmadığını dikkate alarak görüşünü mülkî idare amiri vasıtasıyla 7 gün içinde bildirir; başvurular 1 ay içinde sonuçlandırılır; meyhane, kahvehane, kıraathane, bar, elektronik oyun merkezi, internet salonu ve açık alkol satan yerler örgün eğitim kurumları, özel öğretim kursları, yükseköğretim hariç yurtlar ve anaokullarından kapıdan kapıya en az 100 metre uzakta olmalı (turizm yörelerinde okul tatilinde aranmaz; özel öğretim kurumlarıyla aynı binada olamaz); taşıtların umuma açık yer olarak kullanılmasında liman başkanlığı/ilgili kurum görüşü; izin almadan açılan yerler yetkili idarece tutanakla ve mühürlenerek re'sen kapatılır; kollukça izinsiz açıldığı tespit edilen yerler tutanakla kapatılmak üzere yetkili idareye bildirilir, yetkili idare kapatarak en geç 3 gün içinde kolluğa bilgi verir; açıkta alkol ve nargile sunan yerlere kesinleşmemiş ruhsat düzenlenir, 1 ay içinde satış/sunum belgesi ibrazıyla kesinleşir, yoksa iptal (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kolluk re'sen mühürleyerek kapatır\" yanlış; yetkili idare kapatır",
+    "Kolluk izinsiz açılan yeri re'sen mühürler"
+   ],
+   "dogrusu": [
+    "Yetkili idareye tutanakla bildirir, idare kapatır, 3 günde bilgi verir (m.32)"
+   ]
+  },
+  {
+   "id": "62-8",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Açılış-kapanış saatleri ve sabahçı kahvesi",
+   "hukum": "Umuma açık yerlerin açılış ve kapanış saatleri belediye sınırları içinde belediye encümeni, dışında il encümeni tarafından tespit edilir; iskele, istasyon, terminal, benzin istasyonu, fuar-panayır gibi zorunluluk arz eden yer ve zamanlarda sabahçı kahvesi ve benzeri tesislere kolluk görüşü alınarak yetkili idarece geçici veya sürekli izin (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kapanış saatini belediye meclisi belirler\" yanlış; encümen"
+   ],
+   "dogrusu": [
+    "belediye encümeni · il encümeni · sabahçı kahvesi · kolluk görüşü"
+   ]
+  },
+  {
+   "id": "62-9",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Mesafe ölçümü",
+   "hukum": "100 metre uzaklık ölçümünde bina/tesislerin varsa bahçe kapısı, yoksa bina kapısı, birden fazla kapı varsa en yakını esas alınır; ölçüm mevcut cadde-sokaklar üzerinden yaya yolu kullanılarak, yaya kurallarına göre gidilebilecek en kısa mesafe; yetkili idare okul mesafesini, özel öğretim kurumuyla aynı binada olup olmadığını ve içkili yer bölgesinde olup olmadığını tespit eder (m.34)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kuş uçuşu 100 m\" yanlış",
+    "Okul mesafesi kuş uçuşu 100 m"
+   ],
+   "dogrusu": [
+    "Yaya yoluyla kapıdan kapıya (m.34)"
+   ]
+  },
+  {
+   "id": "62-10",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Çalıştırılacak kişiler",
+   "hukum": "Eğlence, oyun, içki amaçlı umuma açık yerlerde 18 yaşından küçükler çalıştırılamaz; çalışanların ad-soyad, TC kimlik no, adli sicil ve bulaşıcı hastalık beyanları yetkili idareye verilir; bulaşıcı hastalık sağlık raporu işe başlamadan önce alınır ve 6 ayda bir yenilenip iş yerinde hazır bulundurulur (ruhsat aşamasında istenmez, denetimde gösterilir); genel kadın olarak tescil edilenler çalıştırılamaz; sahne sanatçıları için bilgi-belge istenmez; konsomatrisler yalnız pavyon ruhsatlı yerlerde; yabancılar yabancı mevzuatına tabi (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık raporu yılda bir yenilenir\" yanlış; 6 ay",
+    "16 yaşındaki kahvehanede çalışabilir",
+    "Sağlık raporu yılda bir yenilenir"
+   ],
+   "dogrusu": [
+    "18 yaşından küçük çalıştırılamaz (m.36)",
+    "6 ayda bir (m.36)"
+   ]
+  },
+  {
+   "id": "62-11",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Müzik yayını",
+   "hukum": "İş yerlerindeki müzik yayınları Çevresel Gürültü Kontrol Yönetmeliği kapsamında verilen müzik yayın izni ile yapılır; izin ruhsata işlenmez, görevliler sorunca gösterilmek üzere iş yerinde bulundurulur; izni iptal edilen yer müzik dışı faaliyete devam eder, iptale rağmen müzik yaparsa ek 3. maddeye göre işlem (m.38)",
+   "sinavda_boyle_yazarlar": [
+    "\"Müzik yayın izni ruhsata işlenir\" yanlış",
+    "Müzik yayın izni ruhsata işlenir"
+   ],
+   "dogrusu": [
+    "İşlenmez (m.38)"
+   ]
+  },
+  {
+   "id": "62-12",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Kimlik bildirme",
+   "hukum": "Her türlü konaklama yeri işleticisi yatacak kişilerin (TC veya yabancı; ücretli-ücretsiz, gündüz-gece) kimlik ve geliş-gidiş kayıtlarını günü gününe tutup kolluk denetimine hazır bulundurur; işletmeci veya mesul müdür çalışanın işe girişini/ayrılışını 1774 sayılı Kanun yönetmeliğindeki belgeyle 24 saat içinde kolluğa bildirir; kolluğa bildirilen çalışana işletici kimlik belgesi verir, kolluk istediğinde gösterilir (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çalışan ayrılışı 3 gün içinde bildirilir\" yanlış; 24 saat"
+   ],
+   "dogrusu": [
+    "konaklama yeri · günü gününe · kolluk denetimine hazır · ayrılışını · 24 saat · kimlik belgesi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

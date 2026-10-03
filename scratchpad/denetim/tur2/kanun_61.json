@@ -1,0 +1,98 @@
+{
+ "kanun_id": 61,
+ "ad": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_61.json",
+ "kartlar": [
+  {
+   "id": "61-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "Yönetmelik, 5395 sayılı Çocuk Koruma Kanununun 32 ve 47. maddelerine dayanılarak hazırlanmıştır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "Dayanak maddesi sorulursa 32 ve 47"
+   ],
+   "dogrusu": [
+    "32 ve 47"
+   ]
+  },
+  {
+   "id": "61-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Soruşturma — savcı bizzat",
+   "hukum": "Suça sürüklenen çocuk hakkındaki soruşturma çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır; gecikmesinde sakınca hâlinde çocuk bürosunda görevli olmayan savcılar da yapabilir; çocuk mahkemesi olmayan yerlerde başsavcılık iş bölümündeki savcı; suçun işlendiği yerin ağır ceza mahkemesi ile çocuk mahkemesi farklı yerdeyse savcı fezleke düzenleyip o yer başsavcılığına gönderir; ifade ve diğer işlemlerde çocuğun yanında sosyal çalışma görevlisi bulundurulabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çocuğun ifadesi kolluk tarafından alınır\" yanlış; savcı bizzat",
+    "Suça sürüklenen çocuğun ifadesini kolluk alır"
+   ],
+   "dogrusu": [
+    "Çocuk bürosu savcısı bizzat (m.5)"
+   ]
+  },
+  {
+   "id": "61-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Mağdur çocuğun dinlenmesi",
+   "hukum": "Mağdur çocuk tanık olarak dinlenirken yemin hariç CMK tanıklık hükümleri uygulanır; suçun etkisiyle psikolojisi bozulmuş mağdur çocuk soruşturmada tanık olarak bir defa dinlenebilir (zorunluluk hâlleri saklı); dinlenirken psikoloji, psikiyatri, tıp veya eğitim alanında uzman bulundurulur (bilirkişi hükümleri uygulanır) (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mağdur çocuğa yemin verdirilir\" yanlış",
+    "Mağdur çocuk her aşamada tekrar dinlenir",
+    "Mağdur çocuğa yemin verdirilir"
+   ],
+   "dogrusu": [
+    "Soruşturmada bir defa (m.5)",
+    "Yemin hariç (m.5)"
+   ]
+  },
+  {
+   "id": "61-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Savcının Kuruma bildirim yükümü ve yaş düzeltme",
+   "hukum": "Savcı soruşturmayı yürütürken korunma ihtiyacı olan çocuğu Aile Bakanlığına bildirmekle yükümlü; Kurum derhâl inceleme yapar, sosyal inceleme raporunu talep yazısıyla hâkime sunar, bir örneğini savcılığa gönderir; savcı da hâkimden tedbir isteyebilir; yakalama-gözaltı-ifadede Yakalama Yönetmeliğinin çocuk hükümleri uygulanır; 12 yaşından küçükler ve 15 yaşını doldurmamış sağır-dilsizler için delil toplama ve başka failleri belirleme amacıyla soruşturma yapılabilir; görünüşte 12'den büyük ama nüfusta küçük olan veya nüfus yaşı gerçek yaşı olmayan çocuğun yaşı hukuk mahkemesinde düzeltilmeden kamu davası açılamaz (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"12 yaş altı için hiç soruşturma yapılmaz\" yanlış; delil ve diğer failler için yapılır"
+   ],
+   "dogrusu": [
+    "Aile Bakanlığına bildirmekle yükümlü · Yakalama Yönetmeliğinin çocuk hükümleri · 12 yaşından küçükler · hukuk mahkemesinde düzeltilmeden kamu davası açılamaz"
+   ]
+  },
+  {
+   "id": "61-4",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Kolluğun çocuk birimi — bildirim",
+   "hukum": "Çocuklarla ilgili kolluk görevi öncelikle çocuk birimlerince; çocukların kolluktaki yetişkinlerle karşılaşması engellenir; işleme başlandığında durum derhâl çocuğun veli/vasisine veya bakımını üstlenene, baroya ve Aile Bakanlığına (SHÇEK), kurumda kalıyorsa kurum temsilcisine bildirilir; ancak çocuğu suça azmettirdiğinden veya istismar ettiğinden şüphelenilen yakınlarına bilgi verilmez, keyfiyet tutanakla savcıya bildirilir; çocuğun yararı aksini gerektirmedikçe kollukta yanında yakınlarından biri devamlı bulunabilir (azmettiren/istismar eden yakın bulundurulmaz) (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Baroya bildirilmez\" yanlış; baroya bildirilir",
+    "Çocuğu suça azmettiren veliye de bildirim yapılır"
+   ],
+   "dogrusu": [
+    "Yapılmaz; savcıya tutanakla bildirilir (m.16)"
+   ]
+  },
+  {
+   "id": "61-5",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Aileye teslim edilemeyen çocuk",
+   "hukum": "Kolluğun çocuk birimi, suça sürüklenen çocuğun teslim edileceği veli/vasi/bakımını üstleneni bulamaz ya da bunların çocuğu azmettirdiğinden/istismar ettiğinden şüphelenirse teslim edemez; Cumhuriyet savcısının talimatını alarak Aile Bakanlığına (SHÇEK) teslim eder; teslim edilen çocuğun ailesinin yeterli gözetimi sağlayamadığını öğrenirse derhâl Kuruma bildirir; korunma ihtiyacı olan çocuk için bekleme yararına aykırıysa çocuk birimi güvenliği sağlayıp en kısa sürede Kuruma teslim eder; suç mağduru korunma ihtiyacı olan çocuğun Kuruma teslimi savcı talimatıyla (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kolluk çocuğu kendi kararıyla Kuruma teslim eder\" — suça sürüklenen çocukta savcı talimatı şart",
+    "Kolluk çocuğu doğrudan Aile müdürlüğüne teslim eder"
+   ],
+   "dogrusu": [
+    "Savcı talimatıyla (m.16)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

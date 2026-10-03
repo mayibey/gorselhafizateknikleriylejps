@@ -1,0 +1,155 @@
+{
+ "kanun_id": 33,
+ "ad": "4342 sayılı Mera Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_33.json",
+ "kartlar": [
+  {
+   "id": "33-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Mera: hayvan otlatılması için tahsis edilen veya kadimden beri bu amaçla kullanılan yer; yaylak: çiftçilerin hayvanlarıyla yaz mevsimini geçirdiği yer; kışlak: hayvanların kış mevsiminde barındırıldığı yer; çayır: taban suyu yüksek veya sulanabilen, biçilmeye elverişli, genellikle kuru ot üretimi için kullanılan yer; otlak: mera ile aynı nitelikte yer; otlatma hakkı: çiftçilerin her birinin otlatabileceği büyükbaş hayvan birimi sayısı; otlatma kapasitesi: bir alanda doğal kaynaklara zarar vermeden otlatılabilecek birim miktarı; büyükbaş hayvan birimi: 500 kg canlı ağırlık (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "çayır ile mera yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Mera · yaylak · yaz · kışlak · kış · çayır · biçilmeye elverişli · kuru ot · otlak · otlatma hakkı · otlatma kapasitesi · büyükbaş hayvan birimi"
+   ]
+  },
+  {
+   "id": "33-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tahsis, tahdit, tespit",
+   "hukum": "Tahsis: mera, yaylak ve kışlakların bir veya birkaç köy ya da belediyeye bırakılması; tahdit: mera olduğuna karar verilen yerlerin sınırlarının 1/5000 ölçekli haritalarda belirtilip arazide kalıcı işaretlerle işaretlenmesi; tespit: bir yerin mera olup olmadığının resmî evrak ve bilirkişi ifadeleriyle belgelenmesi (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "üç kavram birbirine karıştırılır"
+   ],
+   "dogrusu": [
+    "Tahsis · tahdit · 1/5000 ölçekli haritalarda · tespit"
+   ]
+  },
+  {
+   "id": "33-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Hukukî durum",
+   "hukum": "Mera, yaylak ve kışlakların kullanma hakkı köy veya belediyeye aittir; bu yerler Devletin hüküm ve tasarrufu altındadır; özel mülkiyete geçirilemez, amacı dışında kullanılamaz, zamanaşımı uygulanamaz, sınırları daraltılamaz; ancak kullanım hakkı kiralanabilir. Amaç dışı kullanımla bozulan meraların eski hâline getirilme masrafları sebebiyet verenlerden tahsil edilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"kullanım hakkı kiralanamaz\" denir",
+    "Meralar zamanaşımıyla kazanılabilir",
+    "Mera kullanım hakkı kiralanamaz"
+   ],
+   "dogrusu": [
+    "Zamanaşımı uygulanamaz (m.4)",
+    "Kiralanabilir (m.4)"
+   ]
+  },
+  {
+   "id": "33-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Mera komisyonu",
+   "hukum": "Tespit, tahdit ve tahsis Tarım ve Orman Bakanlığınca yapılır; bu amaçla vali yardımcısı başkanlığında; Bakanlık il müdürü, konu uzmanı ziraat mühendisi, DSİ, OGM temsilcileri, ilgili köy veya mahalle muhtarı, defterdarlıktan bir hukukçu, Millî Emlak, Kadastro, Ziraat Odası temsilcileri ve ilgisine göre genel kolluk biriminde görevli bir temsilci olmak üzere on bir kişiden oluşan komisyon kurulur; komisyonlar valilik onayıyla oluşturulur; ölçme ve harita işleri için komisyona bağlı teknik ekipler kurulur (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "kolluk temsilcisi listeden çıkarılır ya da üye sayısı on yapılır",
+    "Mera komisyonunda kolluk temsilcisi bulunmaz"
+   ],
+   "dogrusu": [
+    "Genel kolluk temsilcisi üyedir (m.6)"
+   ]
+  },
+  {
+   "id": "33-4",
+   "madde": [
+    "75",
+    "19"
+   ],
+   "baslik": "Muhtar ve belediye başkanının sorumluluğu",
+   "hukum": "Muhtarlar ve belediye başkanları; mera, yaylak ve kışlakların ve sınır işaretlerinin korunmasından ve tahsis amacına uygun kullanılmasından sorumludur; bu amaçla Mera Yönetim Birlikleri kurulur. Tecavüz olduğunda durumu derhâl Bakanlık il veya ilçe müdürlüğüne, müdürlükler de valilik veya kaymakamlığa bildirir; bu makamlarca 3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun veya Devlet İhale Kanunu m.75 uyarınca işlem yapılır (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "bildirim zinciri atlanıp \"muhtar doğrudan tahliye eder\" denir",
+    "Mera tecavüzünde muhtar doğrudan tahliye yapar"
+   ],
+   "dogrusu": [
+    "Bildirir; valilik/kaymakamlık 3091'e göre işlem yapar (m.19)"
+   ]
+  },
+  {
+   "id": "33-5",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İnşaat yasağı",
+   "hukum": "Yaylak ve kışlaklarda; Köy Kanunu'ndaki inşaatlar ile valiliklerden izin alınarak imar mevzuatına göre yapılacak mandıra, suluk, sundurma ve süreklilik göstermeyen barınak ve ağıllar ile turizme açılan bölgelerdeki ahşap yapılar dışında ev, ahır ve benzeri inşaat yapılamaz (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"ahır yapılabilir\" denir",
+    "Yaylakta kalıcı ahır yapılabilir"
+   ],
+   "dogrusu": [
+    "Yapılamaz (m.20)"
+   ]
+  },
+  {
+   "id": "33-6",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yararlanma şartı",
+   "hukum": "Çiftçi ailelerinin meradan yararlanabilmesi için köy veya belediye sınırları içinde tahsis tarihinde en az altı aydan beri ikamet ediyor olmaları gerekir; Devletçe naklen yerleştirilenler için bu şart aranmaz; başka yere yerleşmek amacıyla ayrılanlar hakkını kaybeder, sürekli ikamet amacıyla geri dönenlere hak komisyon kararıyla tanınabilir; göçerler hakkında da bu Kanun uygulanır (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "süre bir yıl yapılır"
+   ],
+   "dogrusu": [
+    "en az altı aydan beri · Devletçe naklen yerleştirilenler · kaybeder · komisyon kararıyla · göçerler"
+   ]
+  },
+  {
+   "id": "33-7",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Aşırı otlatma yasağı",
+   "hukum": "Meraya komisyonun tahsis kararında belirtilen miktardan fazla hayvan sokulamaz; bakım ve ıslah sonucu kapasite artarsa köy veya belediyenin teklifiyle ya da doğrudan komisyonca yeniden tespit yapılarak hayvan miktarı artırılabilir (m.23)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "fazla hayvan sokulamaz · komisyonca"
+   ]
+  },
+  {
+   "id": "33-8",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Yararlananların yükümlülükleri",
+   "hukum": "Yararlanan çiftçi aileleri, komisyonca gerekli görülürse valiliğin onayıyla bakım ve ıslah giderlerine katılmakla yükümlüdür; katılım nakdî olabileceği gibi işçilik, araç, makine şeklinde de olabilir; her yıl komisyonca belirlenen ücreti öderler; otlatma hakkının üstünde hayvan otlatanlardan ücret, fazla her hayvan için üç katı olarak tahsil edilir; tahsilat köy sandığına veya belediye bütçesinde ayrı hesaba gelir kaydedilir ve amacı dışında kullanılamaz; takip ve tahsilde 6183 sayılı Kanun uygulanır (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki katı\" denir",
+    "Fazla hayvan otlatandan iki kat ücret alınır"
+   ],
+   "dogrusu": [
+    "Üç kat (m.26)"
+   ]
+  },
+  {
+   "id": "33-9",
+   "madde": [
+    "26",
+    "27"
+   ],
+   "baslik": "Yükümlülüğü yerine getirmeyenler",
+   "hukum": "m.26'ya uymayanların yararlanma hakları, Bakanlık taşra teşkilatının teklifi ve valilik onayıyla en az 7, en çok 30 gün geçici olarak, aynı fiilin tekrarında bir otlatma dönemi için iptal edilir. Yasaklanmış yerlerde otlatmaya devam edenler, mera arazisini sürerek tahrip edenler ve izinsiz inşaat yapanlar hakkında valilik tarafından 3091 sayılı Kanun ile TCK'ya göre işlem yapılır; bu fiilleri zamanında duyurmayan muhtar ve belediye başkanı hakkında genel hükümlere göre işlem yapılır (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "geçici askıya alma süresi \"en çok 60 gün\" denir"
+   ],
+   "dogrusu": [
+    "valilik onayıyla en az 7, en çok 30 gün · aynı fiilin tekrarında bir otlatma dönemi · Yasaklanmış yerlerde otlatmaya devam edenler, mera arazisini sürerek tahrip edenler ve izinsiz inşaat yapanlar · valilik · 3091 sayılı Kanun"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

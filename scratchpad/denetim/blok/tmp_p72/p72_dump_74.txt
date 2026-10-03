@@ -1,0 +1,214 @@
+### 3466 sayılı Uzman Jandarma Kanunu (id 74) kapsam=liste branslar=['maliye', 'personel']
+tum_madde_nolari: ['21', '22', '23', '24', '25', '26', 'Ek 1', 'Ek 2', 'Ek 3', 'Geçici 1', 'Geçici 2', 'Geçici 3', 'Geçici 4', 'Geçici 5', 'Geçici 6', 'Geçici 7']
+NASIL SORULUYOR: Çıkmış (2026 subay maliye kitapçığı, iki soru): **"mali hükümlere göre hangisi yanlıştır?" → "emekliliği Ocak, Nisan, Temmuz veya Ekim aylarında isteyebilir" yanlış; doğrusu Ocak, Şubat, Temmuz, Ağustos**; aynı sorunun doğru şıkları m.21 (30 Ağustos terfi farkı kıst), m.22 (aybaşından aylığa hak kazanma), m.23 (adaylara harçlık, vergisiz ve haczedilemez) ve m.24 (yolluk özel kanuna göre) cümleleriydi. İkinci soru: **hangi ayda yapılan emeklilik istemi ancak JGK Komutanının uygun görmesiyle kabul edilir → Mayıs**. Kitapçıklardaki diğer Uzman Jandarma soruları (bekleme süreleri, izin, eğitim süresi, astsubaylığa geçiş) kapsam dışı maddelerden. Kalıp: metinden birebir cümleyle "yanlıştır" sorusu ve ay-sayı değiştirme. Ezber: aylık 926'daki uzman jandarma tablosu, ek gösterge Ek-1; tayın 2155; asayiş ücreti 2803; harçlık = uzman jandarma çavuş 1. kademe brüt aylığının net tutarı; emeklilik ayları O-Ş-T-A.
+
+====================================================================================================
+MADDE 21  (soru_sayisi=5)
+RESMI: Uzman Jandarmalara 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununda Uzman Jandarmalar için belirlenen gösterge tablosuna göre aylık verilir. (Değişik:1/7/2022-7417/12 md.) Ayrıca, Uzman Jandarmalara dereceleri itibarıyla ekli Ek-1 sayılı ek gösterge cetveli ile belirlenen ek gösterge rakamları uygulanır. Uzman Jandarmalara, Silahlı Kuvvetler Tazminatı, (...)11 aile yardım ödeneği, doğum yardım ödeneği, ölüm yardımı ödeneği ve yakacak yardımı 926 sayılı Kanun, tayın bedeli 2155 sayılı Kanun, emniyet ve asayiş hizmeti muhtelif ücret ödemesi 2803 sayılı Kanun esaslarına göre ödenir. Durumları uyanlar, 2629 sayılı Kanun hükümlerinden faydalanırlar. (Ek fıkra: 12/6/2003-4892/7 md.; Mülga: 11/10/2011-KHK-666/7 md.) (Ek fıkra: 24/7/2008-5793/20 md.) Her yıl 30 Ağustos Zafer Bayramı günü rütbe 11 Bu aradaki "mahrumiyet yeri ödeneği" ibaresi 2/12/1993 tarih ve 3920 sayılı Kanunun 2 nci maddesi ile yürürlükten kaldırılmıştır. terfii onanan uzman jandarmalara rütbe terfiinin onaylandığı tarihten itibaren, takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir. İlk Atanmada Aylığa Hak Kazanma
+
+  KART 74-0 [Aylık ve ek gösterge]
+    HUKUM: Uzman jandarmalara 926 sayılı TSK Personel Kanununda uzman jandarmalar için belirlenen gösterge tablosuna göre aylık verilir; ayrıca dereceleri itibarıyla Kanuna ekli Ek-1 sayılı ek gösterge cetveli uygulanır (m.21/1)
+    YANLIS: Uzman jandarmalara aylık, 3466 sayılı Kanuna ekli Ek-1 gösterge tablosuna göre verilir
+    DOGRU: Aylık 926 sayılı Kanundaki uzman jandarma gösterge tablosuna göre verilir; 3466'ya ekli Ek-1 ek gösterge cetvelidir (m.21)
+  KART 74-1 [Ödemelerin dayanağı]
+    HUKUM: Silahlı Kuvvetler tazminatı, aile yardımı, doğum yardımı, ölüm yardımı ödeneği ve yakacak yardımı 926 sayılı Kanun, tayın bedeli 2155 sayılı Kanun, emniyet ve asayiş hizmeti muhtelif ücret ödemesi 2803 sayılı Kanun esaslarına göre ödenir; durumları uyanlar 2629 sayılı Kanun hükümlerinden faydalanır (m.21/1)
+    YANLIS: Uzman jandarmaların tayın bedeli 926 sayılı Kanuna göre ödenir
+    YANLIS: Emniyet ve asayiş hizmeti muhtelif ücret ödemesi 926 sayılı Kanuna göre ödenir
+    DOGRU: Tayın bedeli 2155, emniyet ve asayiş hizmeti muhtelif ücreti 2803 sayılı Kanuna göre ödenir (m.21)
+  KART 74-2 [30 Ağustos terfi farkı]
+    HUKUM: Her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii onanan uzman jandarmalara, terfinin onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir (m.21/son)
+    YANLIS: 30 Ağustos'ta terfi edenlerin aylık farkı bir sonraki yılın başından itibaren ödenir
+    YANLIS: 30 Ağustos'ta terfi edenlerin aylık farkları ödenmez
+    DOGRU: 30 Ağustos'ta terfi edenlere, onay tarihinden takip eden aybaşına kadarki aylık farkları kıst olarak ödenir (m.21)
+  KARIS_ADAY: [{"madde": "26", "kac_celdiricide": 4}]
+  SORU 1: 3466 sayılı Uzman Jandarma Kanunu'na göre, Uzman Jandarmalara hangi Kanunda Uzman Jandarmalar için belirlenen gösterge tablosuna göre aylık verilir?
+     * 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu
+       2155 sayılı Kanun
+       2803 sayılı Kanun
+       5434 sayılı Türkiye Cumhuriyeti Emekli Sandığı Kanunu
+       657 sayılı Devlet Memurları Kanunu
+  SORU 2: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman Jandarmalara yapılan ödemeler ile dayanak kanunlarının eşleştirilmesinde aşağıdakilerden hangisi YANLIŞTIR?
+       Aile yardım ödeneği – 926 sayılı Kanun
+       Doğum yardım ödeneği – 926 sayılı Kanun
+     * Durumları uyanların yararlandığı haklar – 926 sayılı Kanun
+       Tayın bedeli – 2155 sayılı Kanun
+       Emniyet ve asayiş hizmeti ücret ödemesi – 2803 sayılı Kanun
+  SORU 3: 3466 sayılı Kanun'a göre Uzman Jandarmalara ödenen tayın bedeli hangi Kanun esaslarına göre ödenir?
+       926 sayılı Kanun
+       2803 sayılı Kanun
+       2629 sayılı Kanun
+     * 2155 sayılı Kanun
+       205 sayılı Kanun
+  SORU 4: 3466 sayılı Kanun'a göre emniyet ve asayiş hizmeti dolayısıyla yapılan muhtelif ücret ödemesi hangi Kanun esaslarına göre yapılır?
+       2629 sayılı Kanun
+       2155 sayılı Kanun
+       926 sayılı Kanun
+       205 sayılı Kanun
+     * 2803 sayılı Kanun
+  SORU 5: 3466 sayılı Uzman Jandarma Kanunu'na göre, her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii onanan Uzman Jandarmalara, terfiin onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları nasıl ödenir?
+     * Kıst olarak
+       Tam aylık olarak
+       Peşin ve tam olarak
+       Ertesi yıl toplu olarak
+       Ödenmez
+
+====================================================================================================
+MADDE 22  (soru_sayisi=4)
+RESMI: İlk defe göreve atanan Uzman Jandarmalar, Uzman Jandarma Çavuşluğa nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanırlar. (Ek: 12/6/2003-4892/8 md.) Ancak, uzman jandarma okullarından mezun olanlardan yeni görev yerlerine ataması yapılan uzman jandarmaların, takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir. Adayların Harçlığı
+
+  KART 74-3 [İlk atanmada aylığa hak kazanma]
+    HUKUM: İlk defa göreve atanan uzman jandarmalar, uzman jandarma çavuşluğa nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır; ancak uzman jandarma okullarından mezun olup yeni görev yerlerine ataması yapılanların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir (m.22)
+    YANLIS: İlk atanan uzman jandarmalar göreve başladıkları günden itibaren aylığa hak kazanır
+    DOGRU: İlk atanan uzman jandarmalar, uzman jandarma çavuşluğa nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır (m.22)
+  KARIS_ADAY: [{"madde": "24", "kac_celdiricide": 1}]
+  SORU 1: 3466 sayılı Uzman Jandarma Kanunu'na göre, ilk defa göreve atanan Uzman Jandarmalar, Uzman Jandarma Çavuşluğa ne zamandan itibaren aylığa hak kazanırlar?
+       Nasıp tarihinden itibaren
+     * Nasıp tarihini takip eden aybaşından itibaren
+       Göreve başladığı günden itibaren
+       Atama onayının tebliğ edildiği tarihten itibaren
+       Nasıp tarihinden bir ay sonraki günden itibaren
+  SORU 2: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman jandarma okullarından mezun olup yeni görev yerlerine ataması yapılan uzman jandarmaların, takip eden aybaşına kadar olan döneme ait kıst aylıkları nasıl ödenir?
+       Aybaşını takiben ödenir
+       Yıl sonunda toplu ödenir
+     * Peşin ödenir
+       Ödenmez
+       Yalnızca talep halinde ödenir
+  SORU 3: 3466 sayılı Uzman Jandarma Kanunu'na göre, 3466 sayılı Kanunda sayılan düzenlemelere göre aşağıdakilerden hangisi YANLIŞTIR?
+       İlk defa göreve atananlar nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır
+       Uzman jandarma okullarından mezun olup yeni görev yerine atananların kıst aylıkları peşin ödenir
+       Genel kural, aylığın nasıp tarihini takip eden aybaşından itibaren hak kazanılmasıdır
+     * Aylığa hak kazanma tarihi ile nasıp tarihi her zaman aynı gündür
+       Yeni görev yerine atananlara ilişkin kıst aylık-peşin ödeme hükmü sonradan (Ek: 4892/8 md.) eklenmiştir
+  SORU 4: 3466 sayılı Uzman Jandarma Kanunu'na göre aşağıdakilerden hangileri doğrudur?
+I. Uzman jandarma okullarından mezun olup yeni görev yerlerine ataması yapılanların, takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir.
+II. İlk defa göreve atanan uzman jandarmalar, uzman jandarma çavuşluğa nasıp tarihinden itibaren aylığa hak kazanır.
+III. 30 Ağustos'ta rütbe terfii onanan uzman jandarmalara, terfinin onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir.
+       I, II ve III
+       Yalnız I
+       II ve III
+       I ve II
+     * I ve III
+
+====================================================================================================
+MADDE 23  (soru_sayisi=3)
+RESMI: Uzman Jandarma adaylarına okuldaki eğitim ve öğrenim süresince, uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının net tutarında harçlık ödenir. Bu harçlıklar hiçbir kesintiye ve vergiye tabi olmadığı gibi borç için de haczedilemez. Yolluk Giderleri ve Gündelikler
+
+  KART 74-4 [Adaylara harçlık]
+    HUKUM: Uzman jandarma adaylarına okuldaki eğitim ve öğrenim süresince uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının net tutarında harçlık ödenir; bu harçlıklar hiçbir kesintiye ve vergiye tabi değildir ve borç için haczedilemez (m.23)
+    YANLIS: Aday harçlığı uzman jandarma çavuşun brüt aylığı tutarındadır
+    YANLIS: Aday harçlıkları vergiye tabidir ve borç için haczedilebilir
+    DOGRU: Aday harçlığı, uzman jandarma çavuş birinci kademe brüt aylığının net tutarı kadardır (m.23)
+    DOGRU: Aday harçlıkları hiçbir kesinti ve vergiye tabi değildir, borç için haczedilemez (m.23)
+  KARIS_ADAY: [{"madde": "22", "kac_celdiricide": 1}]
+  SORU 1: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman Jandarma adaylarına okuldaki eğitim ve öğrenim süresince ödenen harçlık, uzman jandarma çavuş rütbesinin hangi tutarında ödenir?
+       Birinci kademe brüt aylığının tamamı tutarında
+       Son kademe brüt aylığının net tutarında
+       Birinci kademe net aylığının yarısı tutarında
+       Emsal astsubay aylığının net tutarında
+     * Birinci kademe brüt aylığının net tutarında
+  SORU 2: 3466 sayılı Uzman Jandarma Kanunu'na göre, harçlık, uzman jandarma çavuş rütbesinin birinci kademe...... aylığının...... tutarında ödenir.
+     * brüt / net
+       net / brüt
+       brüt / brüt
+       net / net
+       gösterge / brüt
+  SORU 3: 3466 sayılı Uzman Jandarma Kanunu'na göre uzman jandarma adaylarına okuldaki eğitim ve öğrenim süresince ne kadar harçlık ödenir?
+       Uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının yarısı tutarında
+     * Uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının net tutarında
+       Astsubay çavuş rütbesinin birinci kademe brüt aylığının net tutarında
+       Er harçlığının iki katı tutarında
+       Net asgari ücret tutarında
+
+====================================================================================================
+MADDE 24  (soru_sayisi=1)
+RESMI: Uzman Jandarma Çavuşlarından, görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir. Mal Bildirimi
+
+  KART 74-5 [Yolluk ve gündelikler]
+    HUKUM: Uzman jandarma çavuşlarından görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir (m.24)
+    YANLIS: Yalnız sürekli görevle görev yerinden ayrılanlara yolluk ödenir
+    DOGRU: Sürekli veya geçici olarak görev yerinden ayrılanların yolluk ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir (m.24)
+  KARIS_ADAY: [{"madde": "21", "kac_celdiricide": 2}, {"madde": "26", "kac_celdiricide": 1}]
+  SORU 1: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman Jandarma Çavuşlarının görevin ifası için sürekli veya geçici olarak görev yerinden ayrılmalarında yolluk giderleri ve gündelikleri neye göre ödenir?
+       Jandarma Genel Komutanlığı iç talimatına göre
+       926 sayılı Kanun hükümlerine göre
+     * Yürürlükteki özel kanun hükümlerine göre
+       2803 sayılı Kanun hükümlerine göre
+       Emsal astsubay uygulamasına göre
+
+====================================================================================================
+MADDE 25  (soru_sayisi=2)
+RESMI: Uzman Jandarmalar kendileri ile eşlerine ve velayet altındaki çocuklarına ait taşınır ve taşınmaz malları, alacak ve borçları hakkında, özel kanundaki hükümler uyarınca mal bildiriminde bulunurlar. Emeklilik ve Ordu Yardımlaşma Kurumu ile İlişkiler
+
+  KART 74-6 [Mal bildirimi]
+    HUKUM: Uzman jandarmalar kendileri ile eşlerine ve velayet altındaki çocuklarına ait taşınır ve taşınmaz mallar, alacak ve borçları hakkında özel kanundaki hükümler uyarınca mal bildiriminde bulunur (m.25)
+    YANLIS: Uzman jandarmalar mal bildiriminde yalnız taşınmaz mallarını bildirir
+    YANLIS: Mal bildirimine anne ve babanın malları da girer
+    DOGRU: Kendisi, eşi ve velayetindeki çocuklarının taşınır, taşınmaz malları ile alacak ve borçları bildirilir (m.25)
+  SORU 1: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman Jandarmalar, mal bildiriminde kimlere ait taşınır ve taşınmaz malları, alacak ve borçları bildirmekle yükümlüdür?
+       Yalnızca kendilerine ait olanları
+       Yalnızca eşlerine ait olanları
+       Kendileri, eşleri ve tüm birinci derece akrabalarına ait olanları
+     * Kendileri ile eşlerine ve velayet altındaki çocuklarına ait olanları
+       Kendileri ve ergin çocuklarına ait olanları
+  SORU 2: 3466 sayılı Uzman Jandarma Kanunu'na göre, mal bildirimi kapsamına aşağıdakilerden hangisi girmez?
+       Uzman jandarmanın kendisine ait taşınır malları
+       Eşine ait taşınmaz malları
+       Velayeti altındaki çocuklarına ait alacakları
+       Kendisine ait borçları
+     * Reşit olup velayeti altında bulunmayan çocuğuna ait malları
+
+====================================================================================================
+MADDE 26  (soru_sayisi=6)
+RESMI: Uzman Jandarmalar; a) 5434 sayılı Türkiye Cumhuriyeti Emekli Sandığı Kanunu ile ilgilendirilirler ve bu Kanunun 32 nci madde (a) fıkrasında belirtilen fiili hizmet süresi zammından yararlanırlar. b) 3 Ocak 1961 tarih ve 205 sayılı Kanunla kurulan Ordu Yardımlaşma Kurumunun daimi üyesi olup bu Kanun hükümlerine bağlıdırlar. c) (Değişik: 24/4/2008-5758/10 md.) Emeklilik hakkını kazananlar emekliliklerini Ocak, Şubat, Temmuz veya Ağustos ayları içinde isteyebilir. Bu aylar dışındaki emeklilik istemleri ancak, Jandarma Genel Komutanının hizmet gerekleri itibarıyla uygun görmesi halinde kabul edilebilir. BEŞİNCİ BÖLÜM Çeşitli Hükümler Kıyafet
+
+  KART 74-7 [Emekli Sandığı, fiili hizmet zammı, OYAK]
+    HUKUM: Uzman jandarmalar 5434 sayılı Emekli Sandığı Kanunu ile ilgilendirilir ve bu Kanunun 32'nci maddesinin (a) fıkrasındaki fiili hizmet süresi zammından yararlanır; 205 sayılı Kanunla kurulan Ordu Yardımlaşma Kurumunun daimi üyesidirler (m.26/a-b)
+    YANLIS: Uzman jandarmalar OYAK'ın isteğe bağlı üyesidir
+    DOGRU: Uzman jandarmalar 205 sayılı Kanunla kurulan Ordu Yardımlaşma Kurumunun daimi üyesidir (m.26/b)
+  KART 74-8 [Emeklilik ayları]
+    HUKUM: Emeklilik hakkını kazananlar emekliliklerini Ocak, Şubat, Temmuz veya Ağustos ayları içinde isteyebilir; bu aylar dışındaki istemler ancak Jandarma Genel Komutanının hizmet gerekleri itibarıyla uygun görmesi hâlinde kabul edilebilir (m.26/c)
+    YANLIS: Emekliliğini Ocak, Nisan, Temmuz veya Ekim aylarında isteyebilir
+    YANLIS: Diğer aylardaki emeklilik istemleri İçişleri Bakanının onayıyla kabul edilir
+    DOGRU: Emeklilik Ocak, Şubat, Temmuz veya Ağustos aylarında istenebilir (m.26/c)
+    DOGRU: Bu aylar dışındaki istemler ancak Jandarma Genel Komutanı uygun görürse kabul edilir (m.26/c)
+  KARIS_ADAY: [{"madde": "21", "kac_celdiricide": 5}, {"madde": "25", "kac_celdiricide": 1}]
+  SORU 1: 3466 sayılı Kanun'a göre Uzman Jandarmalar hangi Kanun ile ilgilendirilirler ve bu Kanunda (a) fıkrasında belirtilen fiili hizmet süresi zammından yararlanırlar?
+     * 5434 sayılı Türkiye Cumhuriyeti Emekli Sandığı Kanunu
+       657 sayılı Devlet Memurları Kanunu
+       5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu
+       926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu
+       205 sayılı Kanun
+  SORU 2: 3466 sayılı Uzman Jandarma Kanunu'na göre, uzman Jandarmalar, 3 Ocak 1961 tarih ve 205 sayılı Kanunla kurulan hangi kurumun daimi üyesidirler?
+       T.C. Emekli Sandığı
+       Sosyal Güvenlik Kurumu
+     * Ordu Yardımlaşma Kurumu (OYAK)
+       Askeri Yardımlaşma Kurumu
+       Devlet Memurları Yardımlaşma Sandığı
+  SORU 3: 3466 sayılı Uzman Jandarma Kanunu'na göre, emeklilik hakkını kazanan Uzman Jandarmalar, emekliliklerini hangi aylar içinde isteyebilirler?
+       Ocak, Nisan, Temmuz, Ekim
+       Mart, Haziran, Eylül, Aralık
+       Yalnızca Ocak ve Temmuz
+     * Ocak, Şubat, Temmuz, Ağustos
+       Yılın herhangi bir ayında
+  SORU 4: 3466 sayılı Uzman Jandarma Kanunu'na göre, ocak, Şubat, Temmuz veya Ağustos ayları dışındaki emeklilik istemleri hangi makamın hizmet gerekleri itibarıyla uygun görmesi halinde kabul edilebilir?
+       İçişleri Bakanı
+       Milli Savunma Bakanı
+       Cumhurbaşkanı
+       T.C. Emekli Sandığı Genel Müdürü
+     * Jandarma Genel Komutanı
+  SORU 5: 3466 sayılı Uzman Jandarma Kanunu'nun mali hükümlerine göre aşağıdakilerden hangisi yanlıştır?
+     * Uzman jandarmalar, 5434 sayılı Kanun'daki fiili hizmet süresi zammından yararlanamaz.
+       Uzman jandarmalar Ordu Yardımlaşma Kurumunun daimi üyesidir.
+       Uzman jandarmalar kendileri, eşleri ve velayetleri altındaki çocuklarına ait mallar için mal bildiriminde bulunur.
+       Uzman jandarmalar 5434 sayılı Türkiye Cumhuriyeti Emekli Sandığı Kanunu ile ilgilendirilir.
+       Uzman jandarmalara tayın bedeli 2155 sayılı Kanun esaslarına göre ödenir.
+  SORU 6: 3466 sayılı Uzman Jandarma Kanunu'na göre emeklilik hakkını kazanan uzman jandarma, aşağıdaki aylardan hangilerinde emekliliğini (başka bir onaya gerek kalmaksızın) isteyebilir?
+I. Ocak
+II. Nisan
+III. Temmuz
+IV. Ağustos
+       Yalnız III
+       I, II ve III
+       I ve II
+       II, III ve IV
+     * I, III ve IV

@@ -1,0 +1,383 @@
+{
+ "kanun_id": 117,
+ "ad": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_117.json",
+ "kartlar": [
+  {
+   "id": "117-0",
+   "madde": [
+    "1",
+    "2",
+    "60"
+   ],
+   "baslik": "Amaç, kapsam, dayanak ve tanımlar",
+   "hukum": "Düzenleyici ve denetleyici kurumlar hariç, genel yönetim kapsamındaki kamu idarelerinde iç kontrol ve ön malî kontrol faaliyetlerinin ilke, iş, işlem ve süreçlerini belirler (m.1); dayanağı 5018 sayılı Kanunun 55, 56, 57 ve 58. maddeleridir (m.2); ön malî kontrol: gelir, gider, varlık ve yükümlülüklere ilişkin malî karar ve işlemlerin idarenin bütçesi, bütçe tertibi, kullanılabilir ödenek tutarı, harcama programı, finansman programı, bütçe kanunu ve diğer malî mevzuata uygunluğu ile kaynakların etkili, ekonomik ve verimli kullanılması yönünden kontrolü; görüş yazısı: ön malî kontrol sonucunda işlemin uygun bulunup bulunmadığına dair yazılı görüş veya dayanak belge üzerine yazılan şerh; malî hizmetler birimi: 5018 m.60 görevlerini yürüten birim; üst yönetici metinde bakanlıklarda müsteşar, Millî Savunma Bakanlığında bakan, diğer idarelerde en üst yönetici, il özel idarelerinde vali, belediyelerde belediye başkanı olarak tanımlanır; \"Bakanlık\" metinde Maliye Bakanlığıdır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Düzenleyici ve denetleyici kurumlar da bu Usul ve Esaslara tabidir\" yanlış; hariçtir. Ayrıca belge üzerine düşülen şerh de \"görüş yazısı\" sayılır",
+    "Düzenleyici ve denetleyici kurumlar bu Usul ve Esaslara tabidir"
+   ],
+   "dogrusu": [
+    "Hariçtir (m.1)"
+   ]
+  },
+  {
+   "id": "117-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İç kontrolün amaçları",
+   "hukum": "(a) kamu gelir, gider, varlık ve yükümlülüklerinin etkili, ekonomik ve verimli yönetimi, (b) kanunlara ve düzenlemelere uygun faaliyet, (c) malî karar ve işlemlerde usulsüzlük ve yolsuzluğun önlenmesi, (d) karar ve izleme için düzenli, zamanında ve güvenilir rapor ve bilgi edinilmesi, (e) varlıkların kötüye kullanılması ve israfının önlenmesi, kayıplara karşı korunması (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç kontrolün amacı kamu görevlisini cezalandırmaktır\" yanlış; amaç önleme, uygunluk ve güvenilir bilgidir"
+   ],
+   "dogrusu": [
+    "etkili, ekonomik ve verimli · usulsüzlük ve yolsuzluğun önlenmesi · kötüye kullanılması ve israfının önlenmesi"
+   ]
+  },
+  {
+   "id": "117-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "İç kontrolün temel ilkeleri",
+   "hukum": "(a) yönetim sorumluluğu çerçevesinde yürütülür, (b) öncelikle riskli alanlar dikkate alınır, (c) sorumluluk işlem sürecindeki bütün görevlileri kapsar, (d) malî ve malî olmayan tüm işlemleri kapsar, (e) sistem yılda en az bir kez değerlendirilir ve önlemler belirlenir, (f) mevzuata uygunluk, saydamlık, hesap verebilirlik, ekonomiklik, etkinlik, etkililik gibi iyi malî yönetim ilkeleri esas alınır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç kontrol sorumluluğu yalnız malî hizmetler birimine aittir\" yanlış; işlem sürecindeki bütün görevlileri kapsar",
+    "İç kontrol yalnız malî işlemleri kapsar"
+   ],
+   "dogrusu": [
+    "Malî ve malî olmayan tüm işlemleri kapsar (m.6)"
+   ]
+  },
+  {
+   "id": "117-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İç kontrolün beş unsuru",
+   "hukum": "(a) Kontrol ortamı: yönetici ve çalışanların iç kontrole olumlu bakışı, etik değerler, dürüst yönetim; görev-yetkinin uzmanlığa önem verilerek bilgili ve yeterli kişilere verilmesi, performans değerlendirmesi, açık organizasyon yapısı; (b) Risk değerlendirmesi: stratejik plan ve performans programındaki hedeflere ulaşmada iç ve dış kaynaklı risklerin, değişen koşullar dikkate alınarak sürekli değerlendirilmesi; (c) Kontrol faaliyetleri: önleyici, tespit edici ve düzeltici her türlü kontrol; (d) Bilgi ve iletişim: bilginin kaydedilmesi, tasnifi ve ilgililere uygun şekilde ve sürede iletilmesi; (e) Gözetim: sistemin sürekli izlenmesi, gözden geçirilmesi ve değerlendirilmesi (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç denetim, iç kontrolün beş unsurundan biridir\" yanlış; unsurlar kontrol ortamı, risk değerlendirmesi, kontrol faaliyetleri, bilgi ve iletişim, gözetimdir",
+    "İç denetim iç kontrolün beş unsurundan biridir"
+   ],
+   "dogrusu": [
+    "Unsurlar kontrol ortamı, risk değerlendirmesi, kontrol faaliyetleri, bilgi ve iletişim, gözetim (m.7)"
+   ]
+  },
+  {
+   "id": "117-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yetki ve sorumluluklar",
+   "hukum": "Üst yöneticiler iç kontrol sisteminin kurulması ve gözetilmesinden, harcama yetkilileri görev alanlarında idari ve malî işlemlere ilişkin iç kontrolün işleyişinden sorumludur; malî hizmetler birimi sistemin kurulması, standartların uygulanması ve geliştirilmesi çalışmalarını yapar ve ön malî kontrolü yürütür; muhasebe yetkilileri kayıtların usulüne ve standartlara uygun, saydam ve erişilebilir tutulmasından sorumludur; yöneticiler mesleki değerler, dürüst yönetim, yeterli personel, standartlara uyum ve saydamlıktan sorumludur (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç kontrol sisteminin kurulmasından muhasebe yetkilisi sorumludur\" yanlış; üst yönetici",
+    "İç kontrol sisteminin kurulmasından malî hizmetler birimi sorumludur"
+   ],
+   "dogrusu": [
+    "Üst yönetici kurar ve gözetir (m.8)"
+   ]
+  },
+  {
+   "id": "117-5",
+   "madde": [
+    "8"
+   ],
+   "baslik": "İç kontrol güvence beyanı ve yıllık değerlendirme",
+   "hukum": "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkilileri her yıl, iş ve işlemlerinin amaçlara, iyi malî yönetim ilkelerine, kontrol düzenlemelerine ve mevzuata uygun gerçekleştirildiğini içeren iç kontrol güvence beyanını düzenler ve birim faaliyet raporları ile idare faaliyet raporlarına ekler; iç kontrol düzenlemeleri ve işleyişi yöneticilerin görüşü, kişi/idarelerin talep ve şikâyetleri ile iç ve dış denetim raporları dikkate alınarak yılda en az bir kez değerlendirilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Güvence beyanı Sayıştaya ayrıca gönderilen bağımsız bir belgedir\" yanlış; faaliyet raporlarına eklenir"
+   ],
+   "dogrusu": [
+    "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkilileri · iç kontrol güvence beyanını · birim faaliyet raporları ile idare faaliyet raporlarına ekler · iç ve dış denetim raporları · yılda en az bir kez"
+   ]
+  },
+  {
+   "id": "117-6",
+   "madde": [
+    "5",
+    "9"
+   ],
+   "baslik": "İç kontrol standartları ve merkezî uyumlaştırma",
+   "hukum": "İç kontrol standartları merkezî uyumlaştırma görevi çerçevesinde Bakanlıkça belirlenir ve yayımlanır; idareler malî ve malî olmayan tüm işlemlerinde bu standartlara uymak zorundadır; Kanun ve standartlara aykırı olmamak koşuluyla idareler kendi yöntem, süreç ve özellikli işlemleri için standart belirleyebilir (m.5); iç kontrole ilişkin standart ve yöntemleri Bakanlık belirler, geliştirir ve uyumlaştırır: iç kontrol standartlarını belirler ve uyumu izler; ön malî kontrole ilişkin standart ve yöntemler ile ön malî kontrole tabi işlemleri belirler; koordinasyon ve rehberlik sağlar; idarelerle işbirliği yapar, çalışma toplantıları düzenler; idarelerden rapor ve bilgi alarak işleyişi izler; malî hizmetler birimlerinin çalışma usul ve esaslarını belirler; iyi uygulama örneklerini araştırır; eğitim programları hazırlar (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç kontrol standartlarını Sayıştay belirler ve bunlara yalnız malî işlemlerde uyulur\" yanlış; Bakanlık belirler, malî olmayan işlemler de dâhildir"
+   ],
+   "dogrusu": [
+    "merkezî uyumlaştırma görevi · Bakanlıkça · malî ve malî olmayan tüm işlemlerinde · Bakanlık · ön malî kontrole ilişkin standart ve yöntemler ile ön malî kontrole tabi işlemleri · rehberlik · malî hizmetler birimlerinin çalışma usul ve esaslarını"
+   ]
+  },
+  {
+   "id": "117-7",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ön malî kontrolün kapsamı",
+   "hukum": "Ön malî kontrol idarelerin yönetim sorumluluğu çerçevesinde harcama birimleri ve malî hizmetler birimi tarafından yerine getirilir; harcama birimlerinin kontrolleri + malî hizmetler biriminin kontrollerinden oluşur; işlemler bütçe, tertip, kullanılabilir ödenek, ayrıntılı harcama veya finansman programı, bütçe kanunu ve diğer malî mevzuata uygunluk yönünden kontrol edilir; kaynakların etkili, ekonomik ve verimli kullanımı açısından kontrolü harcama birimleri de yapar (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ön malî kontrol yalnız malî hizmetler birimince yapılır\" yanlış; harcama birimleri de yapar"
+   ],
+   "dogrusu": [
+    "yönetim sorumluluğu · harcama birimleri ve malî hizmetler birimi · uygunluk · kaynakların etkili, ekonomik ve verimli kullanımı açısından kontrolü harcama birimleri"
+   ]
+  },
+  {
+   "id": "117-8",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Ön malî kontrolün niteliği",
+   "hukum": "Uygun görüş verilip verilmemesi danışma ve önleyici niteliktedir, harcama yetkilisi için bağlayıcı değildir; işlemin ön malî kontrole tabi tutulması ve uygun görüş verilmiş olması harcama yetkilileri ve gerçekleştirme görevlilerinin sorumluluğunu ortadan kaldırmaz (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ön malî kontrol görüşü harcama yetkilisini bağlar\" yanlış",
+    "Ön malî kontrol görüşü harcama yetkilisi için bağlayıcıdır",
+    "Uygun görüş alınmışsa harcama yetkilisinin sorumluluğu kalkar"
+   ],
+   "dogrusu": [
+    "Danışma ve önleyici niteliktedir, bağlayıcı değildir (m.11)",
+    "Kalkmaz (m.11)"
+   ]
+  },
+  {
+   "id": "117-9",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Ön malî kontrol süreci ve süreç kontrolü",
+   "hukum": "Malî hizmetler biriminin kontrolüne tabi işlemler birime gönderilir, görüş yazısı düzenlenip ilgili birime gönderilir; yazılı görüşler ayrıntılı, açık ve gerekçeli olmak zorundadır; görüş yazısı işlem dosyasında saklanır ve bir örneği ödeme emri belgesine eklenir; harcama birimlerinde süreç kontrolü yapılır: her işlem önceki işlemlerin kontrolünü içerecek şekilde tasarlanır; süreç kontrolü için malî işlemlerin süreç akış şeması hazırlanır ve üst yöneticinin onayıyla yürürlüğe konur (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Süreç akış şeması harcama yetkilisinin onayıyla yürürlüğe girer\" yanlış; üst yönetici onayı"
+   ],
+   "dogrusu": [
+    "görüş yazısı · ayrıntılı, açık ve gerekçeli · ödeme emri belgesine eklenir · süreç kontrolü · malî işlemlerin süreç akış şeması hazırlanır ve üst yöneticinin onayıyla"
+   ]
+  },
+  {
+   "id": "117-10",
+   "madde": [
+    "28",
+    "12"
+   ],
+   "baslik": "Ödeme emrini düzenleyen gerçekleştirme görevlisi",
+   "hukum": "Harcama yetkilileri yardımcıları veya hiyerarşik olarak en yakın üst kademe yöneticileri arasından bir veya daha fazla gerçekleştirme görevlisini ödeme emri belgesi düzenlemekle görevlendirir; bu görevliler ödeme emri ve ekleri üzerinde ön malî kontrol yapar ve belgeye \"Kontrol edilmiş ve uygun görülmüştür\" şerhi düşerek imzalar; 3152 m.28/A kapsamında il yatırım izleme ve koordinasyon başkanlıklarınca yapılan alım ve yapım işlerinde ödeneği aktaran idarenin ildeki il müdürü ve eşdeğeri bu görevli olarak belirlenebilir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ödeme emri belgesini düzenleyecek gerçekleştirme görevlisini muhasebe yetkilisi görevlendirir\" yanlış; harcama yetkilisi"
+   ],
+   "dogrusu": [
+    "yardımcıları veya hiyerarşik olarak en yakın üst kademe yöneticileri · ödeme emri belgesi düzenlemekle · \"Kontrol edilmiş ve uygun görülmüştür\" · ildeki il müdürü ve eşdeğeri"
+   ]
+  },
+  {
+   "id": "117-11",
+   "madde": [
+    "17",
+    "26",
+    "13"
+   ],
+   "baslik": "Kontrol usulü",
+   "hukum": "Uygun görülen işlemde dayanak belgeye \"Kontrol edilmiş ve uygun görülmüştür\" şerhi düşülür veya yazılı görüş düzenlenir; uygun görülmezse nedenleri açıkça belirtilen görüş yazısı belgeler eklenerek ilgili birime gönderilir; malî hizmetler birimince m.17 (taahhüt evrakı-sözleşme tasarısı) ve m.26 (yurt dışı kira katkısı) kontrollerinde yazılı görüş zorunludur; giderilebilir eksikliklerde, eksiklik ve düzeltme yolu belirtilip düzeltilmesi kaydıyla uygun görüş verilebilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taahhüt evrakı kontrolünde şerh yeterlidir, yazılı görüş gerekmez\" yanlış; yazılı görüş zorunlu"
+   ],
+   "dogrusu": [
+    "\"Kontrol edilmiş ve uygun görülmüştür\" · nedenleri açıkça belirtilen görüş yazısı · m.17 (taahhüt evrakı-sözleşme tasarısı) ve m.26 (yurt dışı kira katkısı) · yazılı görüş zorunludur · düzeltilmesi kaydıyla uygun"
+   ]
+  },
+  {
+   "id": "117-12",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Kontrol yetkisi",
+   "hukum": "Malî hizmetler biriminde ön malî kontrol yetkisi malî hizmetler birimi yöneticisine aittir, yazılı görüş ve şerhleri o imzalar; bu yetkiyi sınırlarını açıkça belirterek yazılı olarak yardımcısına veya iç kontrol alt birim yöneticisine devredebilir; birim yöneticisi aynı zamanda harcama yetkilisiyse ön malî kontrolü iç kontrol alt birim yöneticisi yürütür; birimin kontrolü iç kontrol alt birimi eliyle yapılır; harcama birimlerinde ödeme emri üzerindeki kontrolü ödeme emrini düzenleyen gerçekleştirme görevlisi yapar (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Malî hizmetler birimi yöneticisi kontrol yetkisini sözlü olarak devredebilir\" yanlış; sınırları belirtilerek yazılı"
+   ],
+   "dogrusu": [
+    "malî hizmetler birimi yöneticisine · sınırlarını açıkça belirterek yazılı olarak · iç kontrol alt birim yöneticisine · aynı zamanda harcama yetkilisiyse · iç kontrol alt birim yöneticisi · iç kontrol alt birimi · ödeme emrini düzenleyen gerçekleştirme görevlisi"
+   ]
+  },
+  {
+   "id": "117-13",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Görevler ayrılığı ilkesi",
+   "hukum": "Harcama yetkilisi ile muhasebe yetkilisi görevi aynı kişide birleşemez; malî hizmetler biriminde ön malî kontrol görevini yürütenler onay belgesi, şartname ve sözleşme tasarılarının hazırlanması, belgelendirme, mal-hizmet teslim alınması gibi hazırlık ve uygulama aşamalarında görevlendirilemez ve ihale komisyonu ile muayene ve kabul komisyonunda başkan veya üye olamaz (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ön malî kontrol görevlisi muayene ve kabul komisyonunda üye olabilir\" yanlış",
+    "Ön malî kontrol görevlisi ihale komisyonunda üye olabilir"
+   ],
+   "dogrusu": [
+    "Olamaz (m.15)"
+   ]
+  },
+  {
+   "id": "117-14",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Kanun tasarılarının malî yükü",
+   "hukum": "Gelirleri azaltacak veya giderleri artıracak ve idareye yükümlülük getirecek kanun tasarıları malî yükünün hesaplanması için malî hizmetler birimine gönderilir; malî yük en az üç yıllık dönem için hesaplanıp orta vadeli program ve malî plan çerçevesinde stratejik plan, performans programı ve bütçeye etkisi yönünden değerlendirilir; sosyal güvenliğe yönelik tasarılarda en az yirmi yıllık aktüeryal hesaplama yapılır (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sosyal güvenliğe yönelik tasarılarda malî yük üç yıllık hesaplanır\" yanlış; en az yirmi yıllık aktüeryal hesap"
+   ],
+   "dogrusu": [
+    "en az üç yıllık · sosyal güvenliğe yönelik tasarılarda en az yirmi yıllık aktüeryal"
+   ]
+  },
+  {
+   "id": "117-15",
+   "madde": [
+    "1",
+    "17"
+   ],
+   "baslik": "Taahhüt evrakı ve sözleşme tasarıları",
+   "hukum": "İhale kanunlarına tabi olsun olmasın, tutarı mal ve hizmet alımlarında 1 milyon TL'yi, yapım işlerinde 3 milyon TL'yi aşan taahhüt evrakı ve sözleşme tasarıları ön malî kontrole tabidir; bu tutarlara KDV dâhil değildir; Çevre ve Şehircilik Bakanlığı, Karayolları ve DSİ yapım işleri ile il yatırım izleme ve koordinasyon başkanlıklarının yapım işlerinde tutar iki kat uygulanır; idareler bu tutarlar içinde kalmak ve üst yönetici onayıyla risk analizine göre farklı tutarlar belirleyebilir; 3833 m.1 kapsamı projeler, yurt dışındaki TSK birliklerinin mahallinden temin ettiği mal-hizmetler ve 2942 Kamulaştırma Kanunu harcamalarına ait taahhüt evrakı tutarı ne olursa olsun kontrole tabi değildir; dosya harcama yetkilisince gönderilir ve en geç on iş günü içinde kontrol edilir (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yapım işlerinde sınır 1 milyon TL'dir ve KDV dâhildir\" yanlış; 3 milyon TL, KDV hariç",
+    "Yapım işlerinde ön malî kontrol eşiği KDV dâhil 1 milyon TL'dir",
+    "Kamulaştırma Kanunu kapsamındaki harcamaların taahhüt evrakı tutarı aşarsa kontrole tabidir"
+   ],
+   "dogrusu": [
+    "3 milyon TL, KDV hariç (m.17)",
+    "Tutarı ne olursa olsun tabi değildir (m.17)"
+   ]
+  },
+  {
+   "id": "117-16",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Ödenek gönderme belgeleri",
+   "hukum": "Bütçe ödeneklerinin dağıtımı ödenek gönderme belgesiyle yapılır; belge harcama yetkilisince imzalandıktan sonra malî hizmetler birimine gönderilir; bütçe kanunu, tertip, ayrıntılı harcama/finansman programı ve dağıtım esaslarına uygunluk yönünden kontrol edilen belgeler en geç üç iş günü içinde sonuçlandırılır; uygun görülmeyenler gerekçeli yazıyla harcama yetkilisine gönderilir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ödenek gönderme belgeleri on iş günü içinde kontrol edilir\" yanlış; üç iş günü"
+   ],
+   "dogrusu": [
+    "ödenek gönderme belgesiyle · harcama yetkilisince imzalandıktan sonra · en geç üç iş günü · gerekçeli yazıyla harcama yetkilisine"
+   ]
+  },
+  {
+   "id": "117-17",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Ödenek aktarma işlemleri",
+   "hukum": "Kurum içi aktarmalar harcama birimlerinin talebi üzerine malî hizmetler biriminin bütçe ve performans programı alt birimince hazırlanır ve üst yöneticinin onayına sunulmadan önce iç kontrol alt birimince kontrol edilir; en geç iki iş günü içinde sonuçlandırılır; mevzuata aykırı talepler gerekçeli yazıyla harcama yetkilisine gönderilir (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ödenek aktarmaları üst yönetici onayından sonra kontrol edilir\" yanlış; onaya sunulmadan önce",
+    "Ödenek aktarma talepleri beş iş günü içinde sonuçlandırılır"
+   ],
+   "dogrusu": [
+    "İki iş günü (m.19)"
+   ]
+  },
+  {
+   "id": "117-18",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Kadro dağılım cetvelleri",
+   "hukum": "190 sayılı KHK'ya tabi idarelerin cetvelleri Bakanlık ve Devlet Personel Başkanlığı ile uygunluk sağlandıktan sonra, 78 sayılı KHK'ya tabi olanlar YÖK onayından sonra kontrole tabidir; cetveller en geç beş iş günü içinde kontrol edilir; ödemeler onaylı cetvellere göre yapılır; değişiklikler de aynı şekilde kontrol edilir; 190 sayılı KHK'ya tabi olmayan idarelerde kadro ihdas ve değişiklikleri aynı sürede kontrol edilir; TSK personelinin kadroları ile millî güvenlik nedeniyle gizli kalması gereken kadrolara bu madde uygulanmaz (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"TSK personel kadroları da kadro dağılım cetveli kontrolüne tabidir\" yanlış; uygulanmaz"
+   ],
+   "dogrusu": [
+    "Bakanlık ve Devlet Personel Başkanlığı ile uygunluk sağlandıktan sonra · YÖK onayından sonra · en geç beş iş günü · onaylı cetvellere · TSK personelinin kadroları ile millî güvenlik nedeniyle gizli kalması gereken kadrolara bu madde uygulanmaz"
+   ]
+  },
+  {
+   "id": "117-19",
+   "madde": [
+    "48",
+    "21",
+    "22"
+   ],
+   "baslik": "Seyahat kartı ve seyyar görev tazminatı",
+   "hukum": "6245 m.48 uyarınca İçişleri, Maliye ve Ulaştırma Bakanlıklarınca müştereken belirlenen esaslara göre seyahat kartı verilecek personel listesi, esaslara uygunluk ve ödenek yeterliliği yönünden en geç üç iş günü içinde kontrol edilir (m.21); her birim, bölge, il ve ilçe için ayrı hazırlanan seyyar görev dağılım listeleri 6245, ilgili düzenlemeler, bütçe ödeneği ve Bakanlıkça vize edilen cetvellere uygunluk yönünden en geç üç iş günü içinde kontrol edilir; uygun görülmeyenler gerekçeli yazıyla ilgili birime gönderilir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Seyahat kartı listeleri beş iş günü içinde kontrol edilir\" yanlış; üç iş günü"
+   ],
+   "dogrusu": [
+    "İçişleri, Maliye ve Ulaştırma Bakanlıklarınca · seyahat kartı · en geç üç iş günü · seyyar görev dağılım listeleri · en geç üç iş günü"
+   ]
+  },
+  {
+   "id": "117-20",
+   "madde": [
+    "23",
+    "152",
+    "24"
+   ],
+   "baslik": "Geçici işçi, yan ödeme ve sözleşmeli personel",
+   "hukum": "Bütçe kanunundaki yetki çerçevesinde genel bütçeli, özel bütçeli idareler ve sosyal güvenlik kurumlarında geçici işçi pozisyon (adam/ay) sayılarının aylar ve birimler itibarıyla dağılımı; norm kadroya geçmemiş mahallî idarelerde İçişleri Bakanlığı vizesinden sonra birimlere dağılım cetvelleri kontrole tabidir; en geç beş iş günü (m.23); 657 m.152'ye dayanan Bakanlar Kurulu kararı uyarınca serbest kadro üzerinden hazırlanan yan ödeme cetveli ve birim dağılım listeleri malî hizmetler birimince kontrol edilir, süreç ve üst yönetici onayı o kararın esaslarına göre yürür (m.24); Bakanlıkça vize edilen cetvellere ve tip sözleşmeye uygun çalıştırılacak personelle ve vizesiz çalıştırılabilecek sözleşmeli personelle yapılacak sözleşmeler en geç beş iş günü içinde sonuçlandırılır (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözleşmeli personel sözleşmeleri üç iş günü içinde sonuçlandırılır\" yanlış; beş iş günü"
+   ],
+   "dogrusu": [
+    "geçici işçi pozisyon (adam/ay) sayılarının aylar ve birimler itibarıyla dağılımı · İçişleri Bakanlığı vizesinden sonra · en geç beş iş günü · yan ödeme cetveli · tip sözleşmeye · sözleşmeli personelle · en geç beş iş günü"
+   ]
+  },
+  {
+   "id": "117-21",
+   "madde": [
+    "26",
+    "13"
+   ],
+   "baslik": "Yurt dışı kira katkısı",
+   "hukum": "657 ve 926 sayılı TSK Personel Kanununa tabi olup yurt dışı kadrolara sürekli görevle atanan personelin yurt dışı kira katkısı işlem dosyası birimlerince hazırlanıp malî hizmetler birimine gönderilir; bütçe kanunu ve Bakanlık esaslarına uygunluk yönünden incelenir, uygun olanlara en geç üç iş günü içinde uygun görüş verilir; bu kontrolde yazılı görüş zorunludur (m.26, m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışı kira katkısı yalnız 657'ye tabi memurlar içindir\" yanlış; 926 sayılı Kanuna tabi TSK personeli de kapsamdadır"
+   ],
+   "dogrusu": [
+    "926 sayılı TSK Personel Kanununa · sürekli görevle · en geç üç iş günü · yazılı görüş zorunludur"
+   ]
+  },
+  {
+   "id": "117-22",
+   "madde": [
+    "27"
+   ],
+   "baslik": "İdarelerce yapılacak düzenlemeler",
+   "hukum": "Sayılanlar dışındaki malî işlemlerin de malî hizmetler birimine kontrol ettirilmesi için düzenleme yapılabilir; bu düzenlemeler üst yöneticinin onayıyla yürürlüğe girer; kontrole tabi işlemler riskli alanlar dikkate alınarak tür, tutar ve konu itibarıyla belirlenir ve yılda bir kez değerlendirilir; iç kontrol ve ön malî kontrol düzenlemeleri üst yönetici onayını izleyen on iş günü içinde Bakanlığa bildirilir (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"İdare düzenlemeleri Bakanlık onayıyla yürürlüğe girer\" yanlış; üst yönetici onayıyla girer, Bakanlığa sonradan bildirilir"
+   ],
+   "dogrusu": [
+    "üst yöneticinin onayıyla · riskli alanlar · yılda bir kez · on iş günü içinde Bakanlığa bildirilir"
+   ]
+  },
+  {
+   "id": "117-23",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Uygun görüş verilmeyen işlemler",
+   "hukum": "Ön malî kontrolde uygun görüş verilmediği hâlde harcama yetkililerince gerçekleştirilen işlemlerin kayıtları malî hizmetler birimince tutulur ve aylık dönemler itibarıyla üst yöneticiye bildirilir; bu kayıtlar iç ve dış denetim sırasında denetçilere de sunulur (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uygun görüş verilmeyen işlemler yıllık olarak Sayıştaya bildirilir\" yanlış; aylık olarak üst yöneticiye bildirilir"
+   ],
+   "dogrusu": [
+    "kayıtları malî hizmetler birimince tutulur · aylık dönemler itibarıyla üst yöneticiye · iç ve dış denetim"
+   ]
+  },
+  {
+   "id": "117-24",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Kontrol süresi",
+   "hukum": "Malî hizmetler birimi kontrol ve uygun görüş işlemlerini belirlenen sürede sonuçlandırmak zorundadır; süreler malî hizmetler biriminin evrak giriş kayıt tarihini izleyen iş günü başlar; birimin talebi ve üst yöneticinin onayı üzerine süreler bir katına kadar artırılabilir (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"Süreler evrakın birime ulaştığı gün başlar ve iki katına kadar artırılabilir\" yanlış; izleyen iş günü başlar, bir katına kadar artırılır",
+    "Kontrol süreleri iki katına kadar uzatılabilir"
+   ],
+   "dogrusu": [
+    "Bir katına kadar, üst yönetici onayıyla (m.29)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,126 @@
+{
+ "kanun_id": 43,
+ "ad": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_43.json",
+ "kartlar": [
+  {
+   "id": "43-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İl spor güvenlik kurulu başkanı",
+   "hukum": "Her ilde vali yardımcısı başkanlığında; belediye, il emniyet müdürlüğü, il jandarma komutanlığı, gençlik ve spor il müdürlüğü, sağlık, spor federasyonu, ev sahibi kulüp temsilcilerinden oluşan il spor güvenlik kurulu kurulur; ilçelerde kaymakam başkanlığında ilçe kurulu oluşturulabilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Vali başkanlık eder\" şıkkı yanlış; vali yardımcısı. Jandarma üyedir",
+    "İl spor güvenlik kuruluna vali başkanlık eder",
+    "Jandarma kurulun üyesi değildir"
+   ],
+   "dogrusu": [
+    "Vali yardımcısı (m.4)",
+    "Üyedir (m.4)"
+   ]
+  },
+  {
+   "id": "43-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kurulun görevi",
+   "hukum": "Kurul, müsabaka güvenliğine ilişkin tedbirleri belirler, güvenlik planlarını onaylar, riskli müsabakaları tespit eder ve genel/özel kolluk sayısını belirler (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurul sadece tavsiye verir, karar almaz\" yanlış; tedbir kararı alır"
+   ],
+   "dogrusu": [
+    "tedbirleri belirler"
+   ]
+  },
+  {
+   "id": "43-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel güvenlik kimlik bildirimi",
+   "hukum": "Müsabakada görev yapacak özel güvenlik görevlilerinin kimlikleri müsabakadan en az 48 saat önce kolluğa bildirilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"24 saat\" tuzak; 48 saat",
+    "Özel güvenlik kimlikleri 24 saat önce bildirilir"
+   ],
+   "dogrusu": [
+    "48 saat (m.6)"
+   ]
+  },
+  {
+   "id": "43-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel güvenlik genel kolluğun gözetiminde",
+   "hukum": "Spor alanı içinde güvenlik özel güvenlik tarafından sağlanır; özel güvenlik genel kolluğun gözetim ve denetiminde görev yapar; yetersiz kalırsa genel kolluk müdahale eder (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genel kolluk tribüne hiç giremez\" yanlış"
+   ],
+   "dogrusu": [
+    "özel güvenlik · genel kolluğun gözetim ve denetiminde"
+   ]
+  },
+  {
+   "id": "43-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Müsabakaya girişte arama",
+   "hukum": "Seyircilerin üst ve eşya araması müsabaka alanına girişte özel güvenlik tarafından, genel kolluğun gözetiminde ve mülkî amirin yazılı emri ile yapılır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hâkim kararı gerekir\" yanlış; mülkî amir yazılı emri",
+    "Giriş araması için hâkim kararı gerekir"
+   ],
+   "dogrusu": [
+    "Mülkî amirin yazılı emri (m.6)"
+   ]
+  },
+  {
+   "id": "43-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Müsabaka güvenlik amiri",
+   "hukum": "Her müsabaka için kolluk tarafından bir müsabaka güvenlik amiri görevlendirilir; genel kolluk, özel güvenlik ve federasyon görevlileri arasında koordinasyonu sağlar; müsabakayı izleyen gözlemci kolluk görevlisi rapor tutar (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Güvenlik amirini federasyon atar\" yanlış; kolluk görevlendirir"
+   ],
+   "dogrusu": [
+    "müsabaka güvenlik amiri · koordinasyonu · gözlemci kolluk"
+   ]
+  },
+  {
+   "id": "43-6",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Spor alanına sokulması yasak maddeler",
+   "hukum": "Silah (ruhsatlı olsa bile), kesici-delici aletler, patlayıcı, meşale, sis bombası, alkollü içki ve şişe gibi maddeler spor alanına sokulamaz; şüpheli kişiler alana alınmaz (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ruhsatlı silahla girilebilir\" şıkkı yanlış",
+    "Ruhsatlı silah spor alanına sokulabilir"
+   ],
+   "dogrusu": [
+    "Sokulamaz (m.12)"
+   ]
+  },
+  {
+   "id": "43-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Seyyar satıcı ve alkol",
+   "hukum": "Spor alanı çevresinde seyyar satıcılar kolluk tarafından uzaklaştırılır; alkollü içki satışı ve alana sokulması yasaktır (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belediye zabıtası uzaklaştırır\" yerine kolluk"
+   ],
+   "dogrusu": [
+    "seyyar satıcılar"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

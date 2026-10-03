@@ -1,0 +1,627 @@
+{
+ "kanun_id": 72,
+ "ad": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_72.json",
+ "kartlar": [
+  {
+   "id": "72-0",
+   "madde": [
+    "133"
+   ],
+   "baslik": "Yabancı ordularda hizmet için aylıklı izin",
+   "hukum": "Yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara Millî Savunma Bakanlığınca; Jandarma ve Sahil Güvenlik subaylarına İçişleri Bakanlığınca dört yıla kadar aylıklı izin verilebilir (m.133)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma Genel Komutanlığınca\" veya \"Millî Savunma Bakanlığınca\" yanlış; JSG subayları için İçişleri Bakanlığı",
+    "Jandarma ve Sahil Güvenlik subaylarına yabancı ordularda hizmet için aylıklı izni Jandarma Genel Komutanlığı verir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığı (m.133)"
+   ]
+  },
+  {
+   "id": "72-1",
+   "madde": [
+    "133"
+   ],
+   "baslik": "Yabancı orduda geçen sürenin aylığı ve kıdemi",
+   "hukum": "Bu şekilde görevlendirilenlerin aylıkları Millî Savunma, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı bütçelerinden ödenir; yabancı memleketlerde geçen hizmet süreleri fiilî hizmetlerinden ve kıdemlerinden sayılır (m.133)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yabancı orduda geçen süre kıdemden sayılmaz\" yanlış; hem fiilî hizmetten hem kıdemden sayılır"
+   ],
+   "dogrusu": [
+    "Millî Savunma, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı bütçelerinden · fiilî hizmetlerinden ve kıdemlerinden sayılır"
+   ]
+  },
+  {
+   "id": "72-2",
+   "madde": [
+    "135"
+   ],
+   "baslik": "Mali hükümlerin uygulanma esası",
+   "hukum": "Subay ve astsubayların aylık ve ödenekleri ile hizmetle ilgili her çeşit ödemeler, özel kanun hükümleri saklı kalmak şartı ile bu Kanunda yazılı esaslar dâhilinde yürütülür (m.135)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özel kanunlar uygulanmaz, yalnız 926 uygulanır\" yanlış; özel kanun hükümleri saklıdır"
+   ],
+   "dogrusu": [
+    "özel kanun hükümleri saklı kalmak şartı ile"
+   ]
+  },
+  {
+   "id": "72-3",
+   "madde": [
+    "136"
+   ],
+   "baslik": "Aylık tanımı",
+   "hukum": "Aylık; Silahlı Kuvvetlere mensup subay ve astsubayların fiilî kadrolarına, rütbe, kıdem ve kademe yıllarına göre kendilerine ay itibarıyla ödenen paradır (m.136/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylık, göreve göre değil yalnız hizmet yılına göre ödenir\" yanlış; fiilî kadro, rütbe, kıdem ve kademe yıllarına göre"
+   ],
+   "dogrusu": [
+    "fiilî kadrolarına, rütbe, kıdem ve kademe yıllarına göre · ay itibarıyla"
+   ]
+  },
+  {
+   "id": "72-4",
+   "madde": [
+    "136"
+   ],
+   "baslik": "Temsil giderleri ve ödül tanımı",
+   "hukum": "Temsil giderleri: belirli makamları işgal edenlere görevleri icabı gerçek giderleri karşılamak üzere bütçeye konulan ödenekten özel yönetmeliği hükümlerine göre ödenen para (m.136/c); Ödül: bu Kanunun ilgili bölümlerinde belirtilen hâllerden dolayı verilen nakdî ve aynî armağan (m.136/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ödül yalnız nakdî armağandır\" yanlış; nakdî ve aynî armağandır"
+   ],
+   "dogrusu": [
+    "Temsil giderleri · gerçek giderleri karşılamak · özel yönetmeliği · Ödül · nakdî ve aynî armağan"
+   ]
+  },
+  {
+   "id": "72-5",
+   "madde": [
+    "136"
+   ],
+   "baslik": "Zamlar ve mali sorumluluk tazminatı",
+   "hukum": "İş güçlüğü zammı: niteliği ve çalışma şartları bakımından güç olan işlerde çalışanlara; İş riski zammı: hayat ve sağlık için tehlike arz eden hizmetlerde çalışanlara; Eleman teminindeki güçlük zammı: temininde, görevde tutulmasında veya belli yerlerde istihdam edilmesinde güçlük bulunan elemanlar için; Mali sorumluluk tazminatı: Sayıştaya hesap vermekle yükümlü saymanlara ödenen para (m.136/e)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hayat ve sağlık için tehlikeli hizmette ödenen para iş güçlüğü zammıdır\" yanlış; iş riski zammıdır"
+   ],
+   "dogrusu": [
+    "İş güçlüğü zammı · güç olan işlerde · İş riski zammı · hayat ve sağlık için tehlike · Eleman teminindeki güçlük zammı · Mali sorumluluk tazminatı · Sayıştaya hesap vermekle yükümlü saymanlara"
+   ]
+  },
+  {
+   "id": "72-6",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Aylığın belirlenme esası ve gösterge sınırları",
+   "hukum": "Subayların, astsubaylıktan subay olanların, astsubayların, uzman erbaş ve uzman jandarmaların aylıkları rütbe, rütbedeki kıdem ve kademe esasına göre saptanır; en düşük gösterge rakamı 560, en yükseği 1500'dür (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"En yüksek gösterge 1400\" gibi değiştirilmiş sayı yanlış; 560-1500"
+   ],
+   "dogrusu": [
+    "uzman erbaş ve uzman jandarmaların · rütbe, rütbedeki kıdem ve kademe · en düşük gösterge rakamı 560, en yükseği 1500"
+   ]
+  },
+  {
+   "id": "72-7",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Gösterge cetvelleri",
+   "hukum": "Subaylar Ek-VI; astsubaylıktan subay olanlar Ek-VII; astsubaylar EK-VIII/A ve EK-VIII/C; uzman jandarma çavuşlar ile uzman çavuşlar Ek-IX sayılı cetvelde (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubaylıktan subay olanların gösterge tablosu Ek-VI'dır\" yanlış; Ek-VII (Ek-VI subaylar)"
+   ],
+   "dogrusu": [
+    "Subaylar Ek-VI · astsubaylıktan subay olanlar Ek-VII · astsubaylar EK-VIII/A ve EK-VIII/C · uzman jandarma çavuşlar ile uzman çavuşlar Ek-IX"
+   ]
+  },
+  {
+   "id": "72-8",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Astsubayların yükseköğrenim intibakı: esas",
+   "hukum": "Yükseköğrenim yapmış astsubayların intibakı, 657 sayılı Kanunun Genel İdare Hizmetleri Sınıfında aynı yükseköğrenimi bitirenler için tespit edilen derece ve kademelerden hizmete başlamış kabul edilerek yapılır; intibak, fakülte-yüksekokul-meslek yüksekokulunu bitirdiğine dair resmî belgeyi ibraz edip müracaatını yaptığı tarihteki derece ve kademesine göre yapılır (m.137/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"İntibak mezuniyet tarihindeki derece-kademeye göre yapılır\" yanlış; belgeyi ibraz edip müracaat ettiği tarihteki"
+   ],
+   "dogrusu": [
+    "657 sayılı Kanunun Genel İdare Hizmetleri Sınıfında · müracaatını yaptığı tarihteki"
+   ]
+  },
+  {
+   "id": "72-9",
+   "madde": [
+    "137"
+   ],
+   "baslik": "İntibakta eklenen süreler ve sınırlar",
+   "hukum": "2 yıl süreli yükseköğrenim için 1 kademe, 3 yıl için 2 kademe, 4 yıl için 1 derece ilave edilir; 2-3 yıllık öğrenimle intibakı yapılanlar sonra lisansı tamamlarsa bir defaya mahsus tekrar intibak yapılır; birden fazla yapılan intibakların toplamı 1 dereceden fazla olamaz; 5 yıl ve üzerindeki öğrenimlerin 4 yıldan fazlası için kademe verilmez (m.137/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"4 yıllık öğrenim için 2 kademe verilir\" yanlış; 1 derece (2 kademe 3 yıllık öğrenim içindir)",
+    "4 yıllık yükseköğrenim için 2 kademe ilave edilir"
+   ],
+   "dogrusu": [
+    "1 derece (m.137)"
+   ]
+  },
+  {
+   "id": "72-10",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Mezun olup sonra astsubay olanların intibak zamanı",
+   "hukum": "Fakülte, yüksekokul veya meslek yüksekokullarını bitirdikten sonra astsubay sınıf okulunu bitirip astsubay nasbedilenlerin intibakları astsubay çavuşluğa nasıplarında yapılır; intibak yapılanların sonraki rütbe ve rütbe kademeliliklerinin ilk kademeleri, intibakla verilen derece ve kademe miktarı kadar fazladır (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"İntibak avantajı sadece ilk rütbede geçerlidir\" yanlış; sonraki rütbelerin ilk kademeleri de o kadar fazladır"
+   ],
+   "dogrusu": [
+    "astsubay çavuşluğa nasıplarında · intibakla verilen derece ve kademe miktarı kadar fazladır"
+   ]
+  },
+  {
+   "id": "72-11",
+   "madde": [
+    "137"
+   ],
+   "baslik": "AMYO ve yükseköğrenim mezunu astsubayların başlangıcı",
+   "hukum": "Astsubay meslek yüksekokulu mezunları ile kendi veya MSB nam ve hesabına fakülte-yüksekokul-meslek yüksekokulunu bitirip temel askerlik eğitiminde başarılı olarak astsubay çavuşluğa nasbedilenler, başlangıç kademelerine bir kademe ilave edilerek 9 uncu derecenin ikinci kademesinden göreve başlar; görevdeyken lisans tamamlama yapar veya en az dört yıllık fakülte-yüksekokul bitirirse müracaat tarihindeki derece-kademesine iki kademe ilave edilir; birden fazla fakülte veya yüksekokul öğrenimi dikkate alınmaz (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"9 uncu derecenin birinci kademesinden başlarlar\" yanlış; bir kademe ilaveyle 9/2"
+   ],
+   "dogrusu": [
+    "bir kademe ilave · 9 uncu derecenin ikinci kademesinden · lisans tamamlama · en az dört yıllık · iki kademe · birden fazla · dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "72-12",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Uzmandan astsubaylığa geçenlerin aylığı",
+   "hukum": "Uzman jandarma ve uzman erbaşlardan muvazzaf astsubaylığa nasbedilenlerden, astsubay çavuş aylığından fazla derece-kademe aylığı alanlar, emsal oldukları uzmanların derece-kademe aylıklarına göre almaya devam eder; astsubaylık aylıkları uzman aylığına eşit veya fazla hâle gelince astsubay aylık derece-kademelerine tâbi tutulurlar (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubay nasbedilince hemen astsubay çavuş aylığına düşer\" yanlış; fazla aylığı korunur"
+   ],
+   "dogrusu": [
+    "fazla · devam eder · eşit veya fazla hâle gelince"
+   ]
+  },
+  {
+   "id": "72-13",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Üçüncü kademedeki astsubayın derece atlaması",
+   "hukum": "Rütbe terfi veya rütbe kademeliliği sırasında bulunmadıkları hâlde yükseköğrenim intibakı yapılan astsubaylardan maaş derecelerinin üçüncü kademesinde bulunanlar, bir üst maaş derecesinin birinci kademesine yükseltilir (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dördüncü kademeye ilerler\" yanlış; bir üst derecenin birinci kademesine yükselir"
+   ],
+   "dogrusu": [
+    "üçüncü kademesinde · bir üst maaş derecesinin birinci kademesine"
+   ]
+  },
+  {
+   "id": "72-14",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Ek göstergeler",
+   "hukum": "Gösterge rakamlarına; subaylar için I sayılı (109. maddeye göre astsubaylıktan subay olanlar dâhil), astsubaylar için III sayılı, askerî hâkimler için IV sayılı ek gösterge cetvellerindeki rakamlar eklenir; askerî hâkim ve savcıların IV sayılı cetvel veya özel kanunlarla saptanan ek göstergesi I sayılı cetveldeki eşidi rütbelerinkinden farklıysa fazla olan uygulanır (m.137)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubaylıktan subay olanlar III sayılı ek gösterge cetveline tabidir\" yanlış; I sayılı (subaylar) cetvele"
+   ],
+   "dogrusu": [
+    "subaylar · I sayılı · astsubaylar · III sayılı · askerî hâkimler · IV sayılı · fazla olan"
+   ]
+  },
+  {
+   "id": "72-15",
+   "madde": [
+    "138"
+   ],
+   "baslik": "Katsayı",
+   "hukum": "Subay ve astsubay maaş tutarlarının hesabında gösterge rakamlarının çarpılacağı katsayı, Devlet memurları için tespit edilen katsayıdır; katsayı değişimi aylıklarda artış veya eksiliş sayılmaz (m.138)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askerî personel için ayrı katsayı belirlenir\" yanlış; Devlet memurları katsayısı uygulanır",
+    "Katsayı değişimi aylıklarda artış sayılır"
+   ],
+   "dogrusu": [
+    "Artış veya eksiliş sayılmaz (m.138)"
+   ]
+  },
+  {
+   "id": "72-16",
+   "madde": [
+    "139"
+   ],
+   "baslik": "Kademe aylığı",
+   "hukum": "Rütbe ve rütbe kıdemliliklerine ait gösterge tablolarındaki aylık derecelerinden, o dereceye ait hizmet yıllarına göre tespit edilmiş kademelerden her biri için tespit edilen gösterge rakamına tekabül eden aylıktır (m.139)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kademe aylığı her rütbe için tek bir tutardır\" yanlış; o tanım rütbe aylığına aittir (m.140)"
+   ],
+   "dogrusu": [
+    "kademelerden her biri için"
+   ]
+  },
+  {
+   "id": "72-17",
+   "madde": [
+    "140"
+   ],
+   "baslik": "Rütbe aylığı",
+   "hukum": "Rütbe aylığı; gösterge tablosundaki rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylıktır (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "Kademe aylığı ile rütbe aylığı tanımları yer değiştirilerek sorulur; rütbe aylığı rütbe/kıdemlilik başına, kademe aylığı kademe başınadır"
+   ],
+   "dogrusu": [
+    "rütbe ve rütbe kıdemliliklerinin her biri için"
+   ]
+  },
+  {
+   "id": "72-18",
+   "madde": [
+    "140"
+   ],
+   "baslik": "Kıdemli ve kademeli unvanlar",
+   "hukum": "Nasıbından itibaren iki yılını tamamlayan ve liyakati üst makamlarca onaylanan albaylara kıdemli albay; üç yılını tamamlayan ve bir üst dereceye yükselmek için liyakati onanan üsteğmen, yüzbaşı, binbaşılara kıdemli üsteğmen, kıdemli yüzbaşı, kıdemli binbaşı; üstçavuşlara kademeli üstçavuş, kıdemli üstçavuşlara kademeli kıdemli üstçavuş, başçavuşlara kademeli başçavuş, kıdemli başçavuşlara kademeli kıdemli başçavuş, kademeli kıdemli başçavuşlara iki kademeli kıdemli başçavuş denir (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kıdemli albaylık için üç yıl gerekir\" yanlış; albayda iki yıl",
+    "Kıdemli albay olmak için nasıptan itibaren üç yıl gerekir"
+   ],
+   "dogrusu": [
+    "İki yıl (m.140)"
+   ]
+  },
+  {
+   "id": "72-19",
+   "madde": [
+    "140"
+   ],
+   "baslik": "Onama zamanı ve sonucu",
+   "hukum": "Onama işlemleri Kanunun 33 üncü maddesinde gösterilen zamanda yapılır; onama işlemi yapılanlar yükseldikleri aylık derecesinin birinci kademesine de ilerlemiş olur (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "\"Onama işlemi yapılan, yeni derecenin son kademesine yükselir\" yanlış; birinci kademesine"
+   ],
+   "dogrusu": [
+    "33 üncü maddesinde · birinci kademesine"
+   ]
+  },
+  {
+   "id": "72-20",
+   "madde": [
+    "141",
+    "142"
+   ],
+   "baslik": "İlk ve en yüksek kademe aylığı; brüt aylık",
+   "hukum": "Her rütbe ve rütbe kıdemliliğindeki birinci aylık göstergesine tekabül eden miktar o rütbenin ilk kademe aylığını, son aylık göstergesine tekabül eden miktar en yüksek kademe aylığını gösterir (m.141); gösterge tablolarındaki rakamların katsayı ile çarpılmasından elde edilen miktar ödenecek brüt aylık tutarıdır (m.142)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gösterge x katsayı net aylığı verir\" yanlış; brüt aylığı verir"
+   ],
+   "dogrusu": [
+    "birinci aylık göstergesine · ilk kademe aylığını · son aylık göstergesine · en yüksek kademe aylığını · katsayı ile çarpılmasından · brüt aylık"
+   ]
+  },
+  {
+   "id": "72-21",
+   "madde": [
+    "143"
+   ],
+   "baslik": "Yedek subay ve yedek astsubay okulu harçlığı",
+   "hukum": "Yedek subay okulu öğrencilerine 6.528 gösterge x memur aylık katsayısı tutarının %50'si; yedek astsubay okulu öğrencilerine 2.680 gösterge x memur aylık katsayısı tutarının %80'i tutarında harçlık ödenir (m.143)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yedek subay okulu öğrencisine 6.528 göstergenin %80'i\" yanlış; %50 (%80 yedek astsubay için ve 2.680 göstergeyle)",
+    "Yedek astsubay okulu öğrencilerine 2.680 göstergenin %50'si ödenir"
+   ],
+   "dogrusu": [
+    "%80'i (%50 yedek subay okulu, 6.528 gösterge) (m.143)"
+   ]
+  },
+  {
+   "id": "72-22",
+   "madde": [
+    "143"
+   ],
+   "baslik": "Temel askerlik eğitimindeki mezunların hakları",
+   "hukum": "Kendi nam ve hesabına fakülte-yüksekokul-meslek yüksekokulunu bitirip astsubay nasbedilmek üzere temel askerlik eğitimine alınanlar, astsubay astçavuşlar için öngörülen aylık, tazminat, yan ödeme ve sosyal amaçlı yardım ve ödeneklerden tayın bedeli hariç aynen yararlanır; kendi hesabına fakülte-yüksekokul bitirip subay nasbedilmek üzere temel askerlik eğitimine alınanlar asteğmenler için öngörülen aylık ve mali haklar ile sosyal yardımlardan tayın bedeli hariç aynen yararlanır; 2629 sayılı (Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat) Kanun hükümleri saklıdır (m.143)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tayın bedeli dâhil tüm haklardan yararlanır\" yanlış; tayın bedeli hariç"
+   ],
+   "dogrusu": [
+    "astsubay · astsubay astçavuşlar · tayın bedeli hariç · subay · asteğmenler · tayın bedeli hariç · 2629 sayılı"
+   ]
+  },
+  {
+   "id": "72-23",
+   "madde": [
+    "143"
+   ],
+   "baslik": "Harçlığın yuvarlanması, vergisi, haczi",
+   "hukum": "Harçlıklar küsuratlı çıkarsa tama (1 Türk Lirasına) iblağ edilir; harçlıklardan vergi ve diğer kesintiler yapılmaz; harçlıklar haczedilemez (m.143)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harçlıklardan gelir vergisi kesilir\" veya \"harçlık borç için haczedilebilir\" yanlış",
+    "Harçlıklar haczedilebilir ve vergiye tabidir"
+   ],
+   "dogrusu": [
+    "Vergi ve kesinti yapılmaz, haczedilemez (m.143)"
+   ]
+  },
+  {
+   "id": "72-24",
+   "madde": [
+    "144"
+   ],
+   "baslik": "Yurt dışı kadrolarındaki aylık",
+   "hukum": "Yurt dışı kadrolarında görev alan subay ve astsubayların aylıkları, tespit edilen aylık tutarından vergi ve kanunlar gereğince yapılacak bütün kesintiler indirildikten sonra (OYAK kesintisi hariç) 657 sayılı Kanunun 156 ncı maddesi esasları dâhilinde tespit edilecek miktar üzerinden ödenir; staj ve öğrenim için yurt dışına gönderilen personelin aylık ödemeleri Cumhurbaşkanı kararı ile tespit olunur (m.144)",
+   "sinavda_boyle_yazarlar": [
+    "\"Staj ve öğrenim için yurt dışına gidenlerin aylığı Millî Savunma Bakanlığınca belirlenir\" yanlış; Cumhurbaşkanı kararıyla"
+   ],
+   "dogrusu": [
+    "vergi ve kanunlar gereğince yapılacak bütün kesintiler · OYAK kesintisi hariç · 657 sayılı Kanunun 156 ncı maddesi · staj ve öğrenim · Cumhurbaşkanı kararı"
+   ]
+  },
+  {
+   "id": "72-25",
+   "madde": [
+    "145"
+   ],
+   "baslik": "Aylığın peşin ödenmesi",
+   "hukum": "Subay ve astsubayların aylık ve harçlıkları her ayın başında peşin olarak ödenir; emekliye ayrılma ve ölüm hâllerinde o aya ait peşin ödenen aylık veya harçlık geri alınmaz (m.145)",
+   "sinavda_boyle_yazarlar": [
+    "\"Emeklilikte ayın kalan günlerine düşen aylık geri alınır\" yanlış; geri alınmaz",
+    "Emekliye ayrılana o ay için peşin ödenen aylığın kalan kısmı geri alınır"
+   ],
+   "dogrusu": [
+    "Geri alınmaz (m.145)"
+   ]
+  },
+  {
+   "id": "72-26",
+   "madde": [
+    "145"
+   ],
+   "baslik": "Savaşta ailelere bırakılan pay",
+   "hukum": "Savaşta subay ve astsubayların aylıklarından kendi rızası ile düzenleyecekleri formül çizelge üzerine ailelerine veya diledikleri kimselere bırakacakları miktarlar, ödenme şekli ve ilgili diğer hususlar bir yönetmelikle düzenlenir (m.145)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aileye bırakılacak miktar komutan tarafından re'sen belirlenir\" yanlış; kişinin kendi rızasıyla, formül çizelge ile"
+   ],
+   "dogrusu": [
+    "kendi rızası · formül çizelge · bir yönetmelikle"
+   ]
+  },
+  {
+   "id": "72-27",
+   "madde": [
+    "145"
+   ],
+   "baslik": "Esir, gaip, alıkonulan personelin ailesine ödeme",
+   "hukum": "Aylık almakta iken esir veya harp gaibi olanlar, enterne edilenler ile terörle mücadele görevi sırasında veya bu görevinden dolayı alıkonulan ya da kaybolanların ailelerine kanuni kesintiler dışında kalan maaşlarının tamamı ödenir; aileleri doğum-ölüm yardımı, tahsil bursu, lojman ve sağlık tesislerinden yararlanmaya devam eder; SGK tarafından hak sahiplerine aylık bağlanırsa maaş ödemesi bağlandığı tarihten itibaren kesilir, ancak bu aylığın başlangıç tarihine kadar yapılan ödemeler tahsil edilmez; Türk Medenî Kanununun gaiplere ilişkin hükümleri saklıdır (m.145)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ailelere maaşın yarısı ödenir\" veya \"SGK aylığı bağlanınca önceki ödemeler geri alınır\" yanlış",
+    "Terörle mücadelede alıkonulanların ailelerine SGK aylığı başlayana kadar yapılan ödemeler sonradan tahsil edilir"
+   ],
+   "dogrusu": [
+    "Tahsil edilmez (m.145)"
+   ]
+  },
+  {
+   "id": "72-28",
+   "madde": [
+    "146"
+   ],
+   "baslik": "İlk atanmada aylığa hak kazanma",
+   "hukum": "İlk defa göreve atanan subay ve astsubaylar, onay metninde yazılı nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır; ancak askerî okullardan mezun olup yeni görev yerlerine ataması yapılanların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir (m.146)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylığa nasıp tarihinden itibaren hak kazanılır\" yanlış; nasıp tarihini takip eden aybaşından"
+   ],
+   "dogrusu": [
+    "onay metninde yazılı nasıp tarihini takip eden aybaşından · askerî okullardan mezun · takip eden aybaşına kadar · kıst aylıkları peşin"
+   ]
+  },
+  {
+   "id": "72-29",
+   "madde": [
+    "147",
+    "148"
+   ],
+   "baslik": "Kademe ve terfide aylığa hak kazanma",
+   "hukum": "Kademe ilerlemesinde onay metnindeki tarihi takip eden aybaşından itibaren kademe maaşına müstahak olunur (m.147); rütbe terfi veya rütbe kıdemliliği onananlar yükselme tarihini takip eden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanır (m.148)",
+   "sinavda_boyle_yazarlar": [
+    "\"Terfi eden yeni rütbenin son kademe aylığına geçer\" yanlış; birinci kademe aylığına"
+   ],
+   "dogrusu": [
+    "onay metnindeki tarihi takip eden aybaşından · yükselme tarihini takip eden aybaşından · birinci kademe"
+   ]
+  },
+  {
+   "id": "72-30",
+   "madde": [
+    "148"
+   ],
+   "baslik": "30 Ağustos terfilerinde kıst fark",
+   "hukum": "Her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii veya rütbe kıdemliliği onanan subay ve astsubaylara, onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir (m.148)",
+   "sinavda_boyle_yazarlar": [
+    "\"30 Ağustos terfilerinde de fark yalnız takip eden aybaşından başlar, aradaki günler ödenmez\" yanlış; kıst olarak ödenir"
+   ],
+   "dogrusu": [
+    "30 Ağustos Zafer Bayramı · takip eden aybaşına kadar · kıst olarak"
+   ]
+  },
+  {
+   "id": "72-31",
+   "madde": [
+    "149"
+   ],
+   "baslik": "Ek görev aylığı",
+   "hukum": "7356 sayılı Kanunun ilgili maddeleri gereğince ek görev verilen subay ve astsubaylara o kanunun 11 inci maddesi gereğince ek görev aylığı verilir (m.149)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ek görev aylığı 657 sayılı Kanuna göre verilir\" yanlış; 7356 sayılı Kanunun 11 inci maddesine göre"
+   ],
+   "dogrusu": [
+    "7356 sayılı Kanunun · 11 inci maddesi"
+   ]
+  },
+  {
+   "id": "72-32",
+   "madde": [
+    "150"
+   ],
+   "baslik": "Askerî okullarda ders görevi",
+   "hukum": "Her derecedeki askerî okullarda ve Meslek Programları Yönetmeliği gereğince açılan kurslarda kadrolara öğretmen atanamaması hâlinde 5044 sayılı Kanunun esaslarına göre öğretmenler ile subay ve astsubaylara ders görevi verilebilir; ders saati başına ücret her yıl bütçe kanunlarında gösterilir (m.150)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ders saati ücreti Millî Savunma Bakanlığınca belirlenir\" yanlış; her yıl bütçe kanunlarında gösterilir"
+   ],
+   "dogrusu": [
+    "Meslek Programları Yönetmeliği · öğretmen atanamaması · 5044 sayılı Kanunun · her yıl bütçe kanunlarında"
+   ]
+  },
+  {
+   "id": "72-33",
+   "madde": [
+    "150"
+   ],
+   "baslik": "Askerî kurumlar dışında ek ders",
+   "hukum": "Askerî eğitim ve öğretim kurumları dışındaki her derecedeki eğitim kurumları, üniversite, akademi, okul, kurs vb. kuruluşlarda subay ve astsubaylara haftada yedi saati geçmemek üzere ücretle ek ders görevi verilebilir; bunlara 657 sayılı Kanunun 176 ncı maddesine göre ek ders ücreti ödenir (m.150)",
+   "sinavda_boyle_yazarlar": [
+    "\"Haftada on saate kadar\" yanlış; yedi saati geçemez"
+   ],
+   "dogrusu": [
+    "haftada yedi saati geçmemek · 657 sayılı Kanunun 176 ncı maddesine"
+   ]
+  },
+  {
+   "id": "72-34",
+   "madde": [
+    "151",
+    "152"
+   ],
+   "baslik": "Yolluk ve temsil giderleri",
+   "hukum": "Görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri özel kanun hükümlerine göre ödenir (m.151); hangi kadrolarda bulunanların temsilî mahiyette masraf yapabilecekleri ve miktarları Cumhurbaşkanınca tespit edilir; temsil giderlerinin sarfı ile ilgili usul, şart ve sarf alanları Millî Savunma ve İçişleri Bakanlıklarınca müştereken düzenlenecek yönetmelikte belirtilir (m.152)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temsil gideri yapabilecek kadrolar ortak yönetmelikle belirlenir\" yanlış; kadrolar ve miktarlar Cumhurbaşkanınca, usul ve şartlar ortak yönetmelikle"
+   ],
+   "dogrusu": [
+    "yolluk giderleri ve gündelikleri özel kanun hükümlerine · Cumhurbaşkanınca · Millî Savunma ve İçişleri Bakanlıklarınca müştereken"
+   ]
+  },
+  {
+   "id": "72-35",
+   "madde": [
+    "153"
+   ],
+   "baslik": "Aile yardımı ödeneği: kimler için",
+   "hukum": "Evli subay ve astsubaylara, her ne şekilde olursa olsun menfaat karşılığı çalışmayan veya herhangi bir sosyal güvenlik kuruluşundan aylık almayan eşi ve çocukları için Devlet memurlarına ödenen miktarda aile yardımı ödeneği ödenir; dul subay ve astsubayların çocukları için de uygulanır; boşanma veya ayrılıkta mahkeme yardımın hangi tarafa ve ne oranda verileceğini kararında belirtir; geçimini sağladığı üvey çocukları ve evlat edindiği çocuklar için de verilir (m.153)",
+   "sinavda_boyle_yazarlar": [
+    "\"Boşanmada aile yardımının kime verileceğini birlik komutanı belirler\" yanlış; mahkeme kararında belirtir"
+   ],
+   "dogrusu": [
+    "her ne şekilde olursa olsun menfaat karşılığı çalışmayan veya herhangi bir sosyal güvenlik kuruluşundan aylık almayan · Devlet memurlarına ödenen miktarda · dul · boşanma veya ayrılıkta mahkeme · üvey · evlat edindiği"
+   ]
+  },
+  {
+   "id": "72-36",
+   "madde": [
+    "154"
+   ],
+   "baslik": "Aile yardımı: ödeme şekli",
+   "hukum": "Aile yardımı ödeneği her ay aylıkla birlikte ödenir; karı ve kocanın her ikisi de memur ise ödenek yalnız kocaya verilir; ödenekler hiçbir vergi ve kesintiye tabi tutulmaksızın ödenir ve borç için haczedilemez (m.154)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eşlerin ikisi de memursa ödenek ikisine yarı yarıya verilir\" yanlış; yalnız kocaya",
+    "Karı ve koca memursa aile yardımı ödeneği eşe (kadına) verilir",
+    "Aile yardımı ödeneği vergiye tabidir ve borç için haczedilebilir"
+   ],
+   "dogrusu": [
+    "Yalnız kocaya (m.154)",
+    "Vergi ve kesintiye tabi değil, haczedilemez (m.154)"
+   ]
+  },
+  {
+   "id": "72-37",
+   "madde": [
+    "155",
+    "156"
+   ],
+   "baslik": "Aile yardımına hak kazanma ve kaybetme",
+   "hukum": "Eş için ödenen yardıma evlendikleri, çocuk için ödenen yardıma çocuğun doğduğu tarihi takip eden aybaşından itibaren hak kazanılır (m.155); eş için ödenen yardım hakkı boşanma veya eşin ölümü, çocuk için ödenen yardım hakkı çocuğun ölümü veya 157 nci maddedeki hâllerin vukuunu takip eden aybaşından itibaren kaybedilir (m.156)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çocuk yardımına doğum tarihinden itibaren hak kazanılır\" yanlış; doğumu takip eden aybaşından"
+   ],
+   "dogrusu": [
+    "evlendikleri · çocuğun doğduğu · boşanma veya eşin ölümü · çocuğun ölümü veya 157 nci maddedeki hâllerin"
+   ]
+  },
+  {
+   "id": "72-38",
+   "madde": [
+    "157"
+   ],
+   "baslik": "Çocuk için aile yardımı verilmeyen hâller",
+   "hukum": "Evlenen çocuklar; 25 yaşını dolduran çocuklar (25 yaşını bitirdiği hâlde evlenmemiş kız çocukları ile çalışamayacak derecede malullüğü resmî sağlık kurulu raporuyla tespit edilenlere süresiz devam edilir); kendi hesabına ticaret yapan veya menfaat karşılığı çalışan çocuklar (öğrenim yaparken tatilde çalışanlar hariç); burs alan veya Devletçe okutulan çocuklar (m.157)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çocuk yardımı 18 yaşında kesilir\" yanlış; 25 yaş",
+    "Burs alan çocuk için aile yardımı ödenmeye devam eder"
+   ],
+   "dogrusu": [
+    "Verilmez (m.157)"
+   ]
+  },
+  {
+   "id": "72-39",
+   "madde": [
+    "162"
+   ],
+   "baslik": "Yurt dışından yurt içine atananların aylığı",
+   "hukum": "Sürekli görevle yurt dışına gönderilip göreve başladıktan sonra yurt içinde bir göreve atananlara atanma emrinin tebliği tarihine kadar aylıkları 144 üncü maddeye göre ödenir; emirde yerlerine atananların gelişine kadar bekleyeceklerine dair sarahat bulunanların aylıkları atanma tarihinden itibaren en çok iki ay ödenmeye devam edilir (m.162)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yerine gelecek kişiyi bekleyenlerin yurt dışı aylığı süresiz devam eder\" yanlış; en çok iki ay"
+   ],
+   "dogrusu": [
+    "atanma emrinin tebliği tarihine kadar · 144 üncü maddeye · yerlerine atananların gelişine kadar bekleyeceklerine dair sarahat · en çok iki ay"
+   ]
+  },
+  {
+   "id": "72-40",
+   "madde": [
+    "163"
+   ],
+   "baslik": "Merkeze geçici çağırma",
+   "hukum": "Sürekli görevle yurt dışına gönderilen subay ve astsubaylar, geçici görevle en çok bir ay süre ile merkeze çağrılabilir; bu süre içinde aylığı katsayılı ödenir (m.163)",
+   "sinavda_boyle_yazarlar": [
+    "\"En çok üç ay merkeze çağrılabilir\" yanlış; en çok bir ay",
+    "Sürekli görevle yurt dışındaki personel merkeze en çok üç ay çağrılabilir"
+   ],
+   "dogrusu": [
+    "En çok bir ay (m.163)"
+   ]
+  },
+  {
+   "id": "72-41",
+   "madde": [
+    "164"
+   ],
+   "baslik": "Farklı katsayılı ülkeye nakil",
+   "hukum": "Yurt dışında sürekli görevde iken farklı ödeme katsayısı uygulanan başka bir memlekete naklen atananlar, 142 nci madde esasları gereğince 144 üncü maddeye göre aylık alır (m.164)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nakil hâlinde eski ülkenin katsayısıyla almaya devam eder\" yanlış; m.142 esasları gereğince m.144'e göre"
+   ],
+   "dogrusu": [
+    "farklı ödeme katsayısı · 142 nci madde · 144 üncü maddeye"
+   ]
+  },
+  {
+   "id": "72-42",
+   "madde": [
+    "165"
+   ],
+   "baslik": "Başka ülkeye geçici görev",
+   "hukum": "Yurt dışındaki görevliden geçici görevle başka memlekete gönderilenlerin, geçici görev süresi bir aya kadar (bir ay dâhil) olanların aylıkları esas görevli oldukları memleketin katsayılı aylığıdır; bu süreden sonra esas görev yerine dönene kadar: geçici görev memleketinin katsayılı aylığı fazla ise fark günlük olarak hareketten önce veya dönüşten sonra ödenir; az ise fark kendisinden alınmaz (m.165)",
+   "sinavda_boyle_yazarlar": [
+    "\"Geçici görev yerinin aylığı azsa fark kendisinden alınır\" yanlış; alınmaz"
+   ],
+   "dogrusu": [
+    "bir aya kadar (bir ay dâhil) · esas görevli oldukları memleketin · fazla · günlük olarak · ödenir · az · kendisinden alınmaz"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

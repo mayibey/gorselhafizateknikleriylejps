@@ -1,0 +1,238 @@
+{
+ "kanun_id": 32,
+ "ad": "6831 sayılı Orman Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_32.json",
+ "kartlar": [
+  {
+   "id": "32-0",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Devlet ormanlarında yasaklar",
+   "hukum": "(A) Fidan kesmek-sökmek, ekim sahasını bozmak, yaş ağaçları boğmak, yaralamak, dal kesmek, yalamuk-pedavra çıkarmak; (B) dikili yaş veya kuru ağaçları kesmek, kökünden sökmek, kabuk-çıra-katran-sakız çıkarmak, kömür yapmak; (C) palamut, ıhlamur çiçeği, orman örtüsü, mazı kozalağı, tıbbî-sınaî nebat ve orman tohumu toplayıp götürmek; (D) ormanlardaki göl, gölet, baraj ve derelerde dinamit atmak veya zehir bırakarak avlanmak; (E) ticaret amacı olmaksızın kendi ihtiyacı için toprak, kum ve çakıl çıkarmak; (F) nakil vasıtalarıyla ormana yıkıntı, inşaat atığı, hafriyat veya çöp dökmek yasaktır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"izin alarak zararlı ağaççık kökü sökmek\" yasak sayılır — izinli iş yasak değildir",
+    "İzin alarak zararlı ağaççık kökü sökmek yasaktır"
+   ],
+   "dogrusu": [
+    "İzinli iş yasak değildir (m.14-15)"
+   ]
+  },
+  {
+   "id": "32-1",
+   "madde": [
+    "15"
+   ],
+   "baslik": "İzne bağlı işler",
+   "hukum": "Ormanın gelişmesi için idarenin fennî işleri dışında; fidan sökmek ve dal kesmek, orman hasılatı elde etmek ve (C) bendindeki faydaları sağlamak orman idaresinin izin ve müsaadesine bağlıdır (m.15)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "orman idaresinin izin ve müsaadesine"
+   ]
+  },
+  {
+   "id": "32-2",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Maden izni",
+   "hukum": "Devlet ormanlarında maden aranması ve işletilmesi ile zorunlu tesislere, bedeli alınarak Tarım ve Orman Bakanlığınca izin verilir; tohum meşcereleri, gen koruma alanları, muhafaza ormanları, verimli orman alanları, orman parkları ve nadir ekosistem alanlarında maden faaliyeti Bakanlığın muvafakatine bağlıdır; genel bütçeli idarelerin dolgu amaçlı hammadde üretiminden bedel alınmaz; faaliyet sona erince alanlar rehabilite edilir (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "izin makamı Orman Genel Müdürlüğü yapılır"
+   ],
+   "dogrusu": [
+    "Tarım ve Orman Bakanlığınca · tohum meşcereleri, gen koruma alanları, muhafaza ormanları, verimli orman alanları, orman parkları ve nadir ekosistem alanlarında · muvafakatine · bedel alınmaz · rehabilite"
+   ]
+  },
+  {
+   "id": "32-3",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Ormanda yapı ve yerleşme yasağı",
+   "hukum": "Devlet ormanlarında korunma, istihsal ve imarla ilgili tesisler ve planlı otlatma için geçici çevirmeler dışında her çeşit bina, ağıl, tarla açılması ve orman içinde yerleşilmesi yasaktır. Ormanların yanmasından veya açıklıklarından faydalanılarak işgal edilen yerler ve yapılar şahıslar adına tapuya tescil olunamaz, doğrudan orman idaresince el konulur, yapılar hiçbir karar alınmasına gerek kalmaksızın OGM tarafından derhâl yıkılır. Savunma, ulaşım, enerji, haberleşme, su, baraj, sağlık-eğitim-spor tesisleri gibi kamu yararı ve zaruret bulunan işlere Bakanlıkça en çok kırk dokuz yıl izin verilebilir, uzatmayla doksan dokuz yıla kadar çıkabilir; süre sonunda tesisler eksiksiz ve bedelsiz OGM'ye geçer (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"yıkım için mahkeme kararı gerekir\" denir",
+    "Yanan ormana yapılan bina mahkeme kararıyla yıkılır"
+   ],
+   "dogrusu": [
+    "Karar gerekmeksizin OGM yıkar (m.17)"
+   ]
+  },
+  {
+   "id": "32-4",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Diğer tesis izinleri",
+   "hukum": "Arkeolojik kazı ve restorasyon, odun kömürü-terebentin-katran-sakız ocakları, orman içi su kaynaklarında balık üretim yerleri, yeraltı depolama alanı gibi işlere OGM'ce bedeli alınarak yirmi dokuz yıla kadar izin verilebilir; saha tesliminden itibaren iki yıl içinde işletmeye alınmayan tesisin izni iptal edilir; yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılan sahalarda bu faaliyetlere hiçbir surette izin verilemez (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "iki süre yer değiştirilir"
+   ],
+   "dogrusu": [
+    "OGM'ce bedeli alınarak yirmi dokuz yıla kadar · iki yıl · yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılan · hiçbir surette"
+   ]
+  },
+  {
+   "id": "32-5",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Hayvan sokma yasağı",
+   "hukum": "Ormanlara her türlü hayvan sokulması yasaktır; kamu yararına uygun olarak orman idaresince belirlenen alanlarda ve esaslar çerçevesinde otlatmaya izin verilebilir; yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılmış sahalarda hiçbir surette hayvan otlatılamaz (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"başıboş hayvanın girmesine sebep olmak\" yasak dışı gösterilir"
+   ],
+   "dogrusu": [
+    "her türlü hayvan sokulması yasaktır · otlatmaya izin verilebilir · yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılmış · hiçbir surette"
+   ]
+  },
+  {
+   "id": "32-6",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Orman emvalinin nakli",
+   "hukum": "Satışı yapılmış orman emvali; bedeli ödenmeden veya teminatı verilmeden, damgalanmadan, taşıma belgesi olmaksızın nakledilemez; belgede emvalin adedi, cinsi, ebadı, bedeli, hareket tarihi ve saati ile geçerlilik süresi gösterilir; malın başka yere taşınmasında belge yeniletilir. Belgeye uygun emvalde hacmen yüzde on ve ağırlığın yüzde on beşine kadar fazlalık, bedeli ve yüzde on fazlası alınarak serbest bırakılır; bu hadleri aşan miktar bütün fazlalığa şamil olmak üzere kaçak sayılarak müsadere edilir (m.41)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız sınırı aşan kısım müsadere edilir\" denir",
+    "Toleransı aşan emvalde yalnız aşan kısım müsadere edilir"
+   ],
+   "dogrusu": [
+    "Bütün fazlalık kaçak sayılır (m.41)"
+   ]
+  },
+  {
+   "id": "32-7",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Nakliyat yolu ve belge",
+   "hukum": "Orman içinde nakliyat orman idaresinin göstereceği yollardan yapılır; taşıma belgesi emval taşıyanların daima üzerinde bulunur ve memurlar istediğinde gösterilmesi zorunludur; şehir içindeki ticarethanelerden alınan emval fatura veya sevk irsaliyesiyle taşınabilir, belgeler araçta bulundurulur (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"fatura yeterli değildir, her hâlde taşıma belgesi gerekir\" denir — şehir içinde fatura yeter"
+   ],
+   "dogrusu": [
+    "yollardan · taşıma belgesi emval taşıyanların daima üzerinde bulunur · fatura veya sevk irsaliyesiyle"
+   ]
+  },
+  {
+   "id": "32-8",
+   "madde": [
+    "68"
+   ],
+   "baslik": "Yangın ihbarı",
+   "hukum": "Orman içinde veya yakınında ateş ve yangın belirtisi görenler bunu derhâl orman idaresine veya en yakın muhtarlığa, jandarma dairelerine veya mülkiye amirlerine haber vermeye mecburdur; ihbarda Devlete ait her türlü askerî ve mülkî haberleşme vasıtalarından derhâl ve parasız yararlanılır; yangın telgraf ve telefonlarından ücret alınmaz; orman telefon devreleri PTT santrali olmayan yerlerde jandarma santrallerine bağlanabilir (m.68)",
+   "sinavda_boyle_yazarlar": [
+    "ihbar \"yalnız orman idaresine\" yapılır denir"
+   ],
+   "dogrusu": [
+    "ateş ve yangın belirtisi görenler · derhâl orman idaresine veya en yakın muhtarlığa, jandarma dairelerine veya mülkiye amirlerine · mecburdur · derhâl ve parasız · jandarma santrallerine"
+   ]
+  },
+  {
+   "id": "32-9",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Yangınla ilgili yasaklar",
+   "hukum": "Devlet ormanlarında belirlenen konak yerlerinden başka yerde gecelemek; izin verilen ve ocak yeri olarak belirlenen yerler dışında ateş yakmak veya yakılan ateşi söndürmeden terk etmek; ormanlara sönmemiş sigara veya yangına yol açabilecek madde atmak; ormanlara dört kilometre mesafede veya orman köyleri sınırları içinde anız veya bitki örtüsü yakmak yasaktır (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "mesafe bir veya iki kilometre yapılır",
+    "Anıza ormana iki kilometre mesafede yakılabilir"
+   ],
+   "dogrusu": [
+    "Dört kilometre içinde yasak (m.76)"
+   ]
+  },
+  {
+   "id": "32-10",
+   "madde": [
+    "77"
+   ],
+   "baslik": "Orman memurunun kolluk sıfatı",
+   "hukum": "Orman memurları, bu Kanundaki suçların önlenmesi veya soruşturmadaki görevleri kapsamında kolluk görevlisi sıfatını taşır; lüzum görülenler Cumhurbaşkanınca seçilecek silahla teçhiz olunur, silahlar demirbaş olarak verilir; kolluk görevi yapan orman memurları özel kıyafetle donatılır; Devlet ormanları dışındaki ormanlarda çalışan orman bekçilerine de genel hükümlere göre silah taşıma izni verilebilir (m.77)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız jandarma kolluk sıfatı taşır\" denir"
+   ],
+   "dogrusu": [
+    "önlenmesi · kolluk görevlisi sıfatını · Cumhurbaşkanınca seçilecek silahla · demirbaş · özel kıyafetle"
+   ]
+  },
+  {
+   "id": "32-11",
+   "madde": [
+    "78"
+   ],
+   "baslik": "Orman memurunun silah kullanma hâlleri",
+   "hukum": "Silah taşımaya yetkili olanlar görevleri sırasında: (A) TCK'daki hakkın kullanılması, meşru savunma veya zorunluluk hâllerinde; (B) tecavüz veya taarruza yarayan alet ve silah taşıyanlara derhâl teslim emredildiği hâlde uyulmayıp fiilen tecavüz ve taarruzda bulunulması ve bunun başka şekilde def'ine imkân olmaması; (C) teslim edilen alet ve silahları, elkonan nakil vasıtaları ile orman emvalini veya memurun silahını almak ya da orman bölge ve muhafaza binalarına zorla girmek maksadıyla yapılan tecavüzün başka şekilde def'ine imkân bulunamaması hâllerinde silahlarını kullanabilir (m.78)",
+   "sinavda_boyle_yazarlar": [
+    "\"kaçan kaçak odun taşıyıcısına ateş edilebilir\" denir — kaçma tek başına silah kullanma sebebi değildir"
+   ],
+   "dogrusu": [
+    "hakkın kullanılması, meşru savunma veya zorunluluk · derhâl teslim emredildiği hâlde · fiilen tecavüz ve taarruzda · başka şekilde def'ine imkân olmaması · memurun silahını almak · orman bölge ve muhafaza binalarına zorla girmek"
+   ]
+  },
+  {
+   "id": "32-12",
+   "madde": [
+    "79"
+   ],
+   "baslik": "Suçların takibi ve yardım",
+   "hukum": "Orman memurları aykırılık delillerini tutanakla tespit eder; elde edilen orman malları ile suçta kullanılan nakil vasıtası ve eşyaya CMK hükümlerine göre elkonulur; Cumhuriyet savcısına ulaşılamadığı hâllerde elkoyma, orman işletme şefinin yazılı emriyle yapılır; orman muhafaza memurları CMK'ya göre şüphelileri yakalama yetkisine sahiptir. Talep vukuunda polis, jandarma, köy muhtar ve bekçileri orman memurlarına yardıma mecburdur; kanunda hüküm bulunmayan hâllerde CMK uygulanır (m.79)",
+   "sinavda_boyle_yazarlar": [
+    "yardıma mecbur olanlara \"köy ihtiyar heyeti üyeleri\" eklenir — çıkmış soruda tam bu çeldiriciydi",
+    "Orman memurlarına yardıma köy ihtiyar heyeti üyeleri de mecburdur",
+    "Savcıya ulaşılamazsa elkoyma emrini kolluk amiri verir"
+   ],
+   "dogrusu": [
+    "Liste: polis, jandarma, köy muhtar ve bekçileri (m.79)",
+    "Orman işletme şefi verir (m.79)"
+   ]
+  },
+  {
+   "id": "32-13",
+   "madde": [
+    "110",
+    "83"
+   ],
+   "baslik": "Görevli mahkeme",
+   "hukum": "Orman suçlarına ilişkin davalardan m.110/3'tekiler asliye ceza, m.110/4'tekiler ağır ceza, m.110/5'tekiler özel görevli ağır ceza mahkemesinde, diğerleri sulh ceza mahkemesinde görülür; orman davaları mahkemelerce acele işlerden sayılır (m.83)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "asliye ceza · ağır ceza · sulh ceza · acele işlerden"
+   ]
+  },
+  {
+   "id": "32-14",
+   "madde": [
+    "132",
+    "84"
+   ],
+   "baslik": "Elkonulan emvalin muhafazası",
+   "hukum": "Elkonulan ağaç, tomruk, kereste ve mahsuller orman memurlarınca orman depolarına; depo yoksa belediye sınırında belediyeye, köy sınırında köy muhtarına, yokluğunda vekiline, onun da yokluğunda ihtiyar heyeti üyelerinden birine yediemin senedi karşılığı teslim edilir; çürüyecek veya muhafazası zor olanlar CMK m.132'ye uygun olarak müsadereli mallar satış komisyonlarınca derhâl satılır; satış bedelinin tamamı OGM hesabına irat kaydedilir (m.84)",
+   "sinavda_boyle_yazarlar": [
+    "teslim sırası bozulur"
+   ],
+   "dogrusu": [
+    "orman depolarına · belediyeye · köy muhtarına, yokluğunda vekiline, onun da yokluğunda ihtiyar heyeti üyelerinden birine · çürüyecek veya muhafazası zor · derhâl satılır · OGM hesabına"
+   ]
+  },
+  {
+   "id": "32-15",
+   "madde": [
+    "119",
+    "88"
+   ],
+   "baslik": "Arama",
+   "hukum": "Bu Kanundaki suçlardan dolayı arama CMK hükümlerine göre yapılır; ancak CMK m.119/1'e göre Cumhuriyet savcısına ulaşılamadığı hâllerde arama, orman şefinin yazılı emriyle yapılır (m.88)",
+   "sinavda_boyle_yazarlar": [
+    "yetki \"orman bölge müdürü\" veya \"kolluk amiri\" yapılır"
+   ],
+   "dogrusu": [
+    "CMK hükümlerine · Cumhuriyet savcısına ulaşılamadığı hâllerde arama, orman şefinin yazılı emriyle"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

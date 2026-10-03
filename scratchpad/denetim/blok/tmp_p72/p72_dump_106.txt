@@ -1,0 +1,422 @@
+### Şehitlik Yönetmeliği (id 106) kapsam=liste branslar=['bakim', 'ikmal', 'istihkam', 'personel']
+tum_madde_nolari: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', 'Geçici 1', 'Geçici 2']
+NASIL SORULUYOR: İkmal şehitlik altyapı-ödenek işlerini izler. Çıkmış: **şehitlik altyapı standartlarını valilikler belirler**, **yurt dışı şehitlik ödeneği Ağustos sonuna kadar Dışişleri Bakanlığına**. Ezber: kimler defnedilir/edilmez (m.3), defin kararı makamları (m.4), yazılı beyan sırası (eş → en büyük reşit çocuk → ana → baba → en büyük reşit kardeş), tescil (büyükşehirde YİKOB, diğer illerde il özel idaresi), yurt içi keşif raporları Mart sonu → İçişleri.
+
+====================================================================================================
+MADDE 1  (soru_sayisi=1)
+RESMI: (1) Bu Yönetmeliğin amacı; şehitlik yerlerinin tespiti, tescili, tahsisi, yönetimi, inşası, bakımı, onarımı ve koruma işlemleri ile şehitliklere kimlerin defnedileceğine ilişkin usul ve esasları belirlemektir. Tanımlar
+
+  KART 106-0 [Amaç ve tanımlar]
+    HUKUM: Şehitlik yerlerinin tespiti, tescili, tahsisi, yönetimi, inşası, bakımı, korunması ve kimlerin defnedileceği (m.1); tahsis: Hazine/Devlet/kamu taşınmazlarının YİKOB'a veya il özel idaresine tahsisi; tescil: edinilen taşınmazların büyükşehirde YİKOB, diğer illerde il özel idaresi adına tapuya tescili (m.2)
+    YANLIS: "Şehitlikler MSB adına tescil edilir" yanlış
+    DOGRU: Şehitlik taşınmazları MSB adına değil, büyükşehirde YİKOB, diğer illerde il özel idaresi adına tapuya tescil edilir (m.2)
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, bu Yönetmeliğin amacı aşağıdakilerden hangisidir?
+       Yalnızca şehitliklere kimlerin defnedileceğini belirlemek
+       Yalnızca şehitliklerin inşası ve bakımına ilişkin teknik standartları belirlemek
+       Yalnızca şehitlik yerlerinin tapuya tescil usulünü belirlemek
+       Yalnızca şehitliklerde tutulacak kayıtların içeriğini belirlemek
+     * Şehitlik yerlerinin tespiti, tescili, tahsisi, yönetimi, inşası, bakımı, onarımı ve koruma işlemleri ile şehitliklere kimlerin defnedileceğine ilişkin usul ve esasları belirlemek
+
+====================================================================================================
+MADDE 2  (soru_sayisi=3)
+RESMI: (1) Bu Yönetmeliğin uygulanmasında; a) Kamu idaresi: 10/12/2003 tarihli ve 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanununun 3 üncü maddesinin birinci fıkrasının (a) bendinde belirtilen kamu idareleri ve kamu iktisadi teşebbüsleri ile bunların bağlı idare, ortaklık, müessese ve işletmeleri ve bu idarelerin ödenmiş sermayesinin %50’sinden fazlasına sahip oldukları ortaklık ve işletmelerden Türk Ticaret Kanununa tabi olmayanlarla özel kanunlarına göre personel çalıştıran diğer kamu kurumlarını, b) Şehitlik: Bu Yönetmelik uyarınca şehitlik olarak tescil veya tahsis edilen yerleri, c) Tahsis: Hazinenin özel mülkiyetinde bulunan taşınmazlar ve Devletin hüküm ve tasarrufu altındaki yerler ile mülkiyeti kamu idarelerine ait taşınmazlardan şehitlik olarak belirlenenlerin ilgili yatırım izleme ve koordinasyon başkanlığına veya il özel idaresine tahsisini, ç) Tescil: Şehitlik olarak belirlenen ve kamulaştırma, satın alma, bağış ve benzeri yollarla edinilen taşınmazların büyükşehir olan illerde yatırım izleme ve koordinasyon başkanlığı, diğer illerde il özel idaresi adına tapuya tescil işlemlerinin yapılmasını, ifade eder. Şehitliklere defnedilecek kişiler [1]
+
+  KARIS_ADAY: [{"madde": "1", "kac_celdiricide": 3}, {"madde": "7", "kac_celdiricide": 1}, {"madde": "10", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre 'Şehitlik' tanımı aşağıdakilerden hangisidir?
+       Yalnızca genel veya bölgesel savaşta oluşan toplu mezarlıklar
+       İl özel idarelerinin mülkiyetindeki tüm mezarlıklar
+       Yalnızca Cebeci Asri Mezarlığı içindeki Dışişleri Şehitliği
+     * Bu Yönetmelik uyarınca şehitlik olarak tescil veya tahsis edilen yerler
+       Yalnızca yurtdışında bulunan asker mezarlıkları
+  SORU 2: Şehitlik Yönetmeliği'ne göre, 'Tescil' tanımı ile ilgili aşağıdakilerden hangisi YANLIŞTIR?
+       Tescil, şehitlik olarak belirlenen taşınmazların tapuya tescilini ifade eder
+       Büyükşehir olan illerde tescil, yatırım izleme ve koordinasyon başkanlığı adına yapılır
+       Diğer illerde tescil, il özel idaresi adına yapılır
+       Tescile konu taşınmazlar kamulaştırma, satın alma, bağış ve benzeri yollarla edinilmiş olabilir
+     * Tescil işlemleri her ilde istisnasız Dışişleri Bakanlığı adına yapılır
+  SORU 3: Şehitlik Yönetmeliği'ne göre 'Tahsis' tanımı kapsamında hangi taşınmazların, şehitlik olarak belirlenmeleri hâlinde ilgili yatırım izleme ve koordinasyon başkanlığına veya il özel idaresine tahsisi düzenlenir?
+       Yalnızca vakıf taşınmazları
+       Yalnızca belediye mülkiyetindeki taşınmazlar
+     * Hazinenin özel mülkiyetindeki taşınmazlar, Devletin hüküm ve tasarrufu altındaki yerler ile mülkiyeti kamu idarelerine ait taşınmazlar
+       Yalnızca özel şahıslara ait taşınmazlar
+       Yalnızca askeri yasak bölge sınırları içindeki taşınmazlar
+
+====================================================================================================
+MADDE 3  (soru_sayisi=4)
+RESMI: Şehitliklere defnedilecek kişiler
+MADDE 3- (1) Aşağıdaki kişiler şehitliklere defnedilir. 1 inci maddesi ile bu fıkranın (a) bendine “yedek subay,” ibaresinden sonra gelmek üzere “yedek astsubay,” ibaresi eklenmiş, aynı fıkraya (d) bendinden sonra gelmek üzere bent eklenmiş, sonraki bent buna göre teselsül ettirilmiş ve mevcut (e) bendinde yer alan “ve (d)” ibaresi “, (d) ve (e)” şeklinde değiştirilmiştir.
+a) Millî Savunma Bakanlığı, Genelkurmay Başkanlığı, Kara, Deniz ve Hava Kuvvetleri Komutanlıklarında görev yapan subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman erbaş ile sözleşmeli erbaş ve erler, Jandarma Genel Komutanlığında Jandarma Hizmetleri Sınıfında ve Sahil Güvenlik Komutanlığında Sahil Güvenlik Hizmetleri Sınıfında bulunan kamu personeli ile sözleşmeli subay ve astsubaylar, uzman erbaşlar ve sözleşmeli erbaş ve erler, Emniyet Teşkilatında Emniyet Hizmetleri Sınıfında bulunan kamu personeli, Millî İstihbarat Teşkilatı mensupları ile askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erlerden;1
+1) 8/6/1949 tarihli ve 5434 sayılı Türkiye Cumhuriyeti Emekli Sandığı Kanununun mülga 45 inci ve 64 üncü maddeleri veya 56 ncı maddesi ile 31/5/2006 tarihli ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanununun 47 nci maddesinde sayılan durumlarda,
+2) 3/11/1980 tarihli ve 2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanunun 2 nci maddesinin birinci fıkrasının (a), (b), (c), (d), (e), (f), (g) ve (h) bentlerinde sayılanlardan, aynı bentlerde sayılan durumlar ile aynı Kanunun 1 inci maddesinde sayılan durumlarda,
+3) 23/4/1981 tarihli ve 2453 sayılı Yurt Dışında Görevli Personele Nakdi Tazminat Verilmesi ve Aylık Bağlanması Hakkında Kanunun 1 inci maddesinde sayılanlardan, aynı maddede sayılan durumlarda,
+4) 18/12/1981 tarihli ve 2566 sayılı Bazı Kamu Görevlilerine Nakdi Tazminat Verilmesi ve Aylık Bağlanması Hakkında Kanunun 1 inci maddesinde sayılanlardan, aynı maddede sayılan durumlarda,
+5) 28/2/1982 tarihli ve 2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanununun 1 inci maddesinde sayılanlardan, aynı Kanunun 13 üncü maddesinde sayılan durumlarda,
+6) 25/10/1983 tarihli ve 2935 sayılı Olağanüstü Hal Kanunu kapsamında görevlendirilenlerden, aynı Kanunun 28 inci maddesinde sayılan durumlarda,
+7) 1/11/1983 tarihli ve 2937 sayılı Devlet İstihbarat Hizmetleri ve Milli İstihbarat Teşkilatı Kanununun 17 nci maddesinde sayılan durumlarda,
+8) 28/2/1985 tarihli ve 3160 sayılı Emniyet Teşkilâtı Uçuş ve Dalış Hizmetleri Tazminat Kanununun 1 inci maddesinde sayılanlardan, aynı Kanunun 10 uncu maddesinde sayılan durumlarda,
+9) 10/11/1988 tarihli ve 3497 sayılı Kara Sınırlarının Korunması ve Güvenliği Hakkında Kanunun 1 inci maddesinde sayılan birliklerde görev yapanlardan, aynı Kanunun 3 üncü maddesinde sayılan durumlarda,
+10) 12/4/1991 tarihli ve 3713 sayılı Terörle Mücadele Kanununun 21 inci maddesinin birinci fıkrasının birinci cümlesi ile aynı fıkranın (h) bendinde sayılanlardan, aynı maddenin birinci fıkrasının birinci cümlesi ile ikinci fıkrasında sayılan durumlarda,
+11) 24/2/2000 tarihli ve 4536 sayılı Denizlerde ve Yurt Yüzeyinde Görülen Patlayıcı Madde ve Şüpheli Cisimlere Uygulanacak Esaslara İlişkin Kanunun 12 nci maddesinde sayılanlardan, aynı maddede sayılan durumlarda, hayatını kaybettiği değerlendirilenler.
+b) Merkezi yönetim kapsamındaki kamu idareleri ile sosyal güvenlik kurumlarında görev yapan ve (a) bendi kapsamında yer almayan kamu personelinden;
+1) 5434 sayılı Kanunun mülga 64 üncü maddesi ile 5510 sayılı Kanunun 47 nci maddesinin sekizinci fıkrasında sayılan durumlarda,
+2) 2330 sayılı Kanunun 2 nci maddesinin 1 inci fıkrasının (a), (b), (c), (d), (e), (f), (g) ve (h) bentlerinde sayılanlardan, aynı bentlerde sayılan durumlar ile aynı Kanunun 1 inci maddesinde sayılan durumlarda,
+3) 2453 sayılı Kanunun 1 inci maddesinde sayılanlardan, aynı maddede sayılan durumlarda,
+4) 2566 sayılı Kanunun 1 inci maddesinde sayılanlardan, aynı maddede sayılan durumlarda,
+5) 2935 sayılı Kanun kapsamında görevlendirilenlerden, aynı Kanunun 28 inci maddesinde sayılan durumlarda,
+6) 3713 sayılı Kanunun 21 inci maddesinin birinci fıkrasının birinci cümlesinde sayılanlardan, aynı maddenin birinci fıkrasının birinci cümlesi ile ikinci fıkrasında sayılan durumlarda,
+7) 4536 sayılı Kanunun 12 nci maddesinde sayılan kişilerden, aynı maddede sayılan durumlarda, hayatını kaybettiği değerlendirilenler.
+c) Geçici ve gönüllü köy korucularından;
+1) 18/3/1924 tarihli ve 442 sayılı Köy Kanununun 74 üncü maddesinin dördüncü fıkrasında sayılan durumlarda,
+2) 2330 sayılı Kanunun 2 nci maddesinin birinci fıkrasının (e) ve (f) bentlerinde sayılanlardan, aynı bentlerde sayılan durumlar ile aynı Kanunun 1 inci maddesinde sayılan durumlarda,
+3) 2935 sayılı Kanun kapsamında görevlendirilenlerden, yetkili makamlarca görevlendirildikleri resmen belgelenmek şartıyla, aynı Kanunun 28 inci maddesinde sayılan durumlarda,
+4) 3713 sayılı Kanunun 21 inci maddesinin birinci fıkrasının (h) bendinde sayılanlardan, aynı maddenin birinci fıkrasının birinci cümlesi ile ikinci fıkrasında sayılan durumlarda,
+5) 4536 sayılı Kanunun 12 nci maddesinde sayılan kişilerden aynı maddede sayılan durumlarda, hayatını kaybettiği değerlendirilenler.
+ç) (a), (b) ve (c) bentleri dışında kalanlardan;
+1) 2330 sayılı 2 nci maddesinin birinci fıkrasının (e) ve (f) bentlerinde sayılanlardan, aynı bentlerde sayılan durumlar ile aynı Kanunun 1 inci maddesinde sayılan durumlarda,
+2) 2935 sayılı Kanun kapsamında görevlendirilen veya çalışma yükümlülüğüne tabi tutulanlardan, yetkili makamlarca görevlendirildikleri veya çalışma yükümlülüğüne tabi tutuldukları resmen belgelenmek şartıyla, aynı Kanunun 28 inci maddesinde sayılan durumlarda,
+3) 3713 sayılı Kanunun 21 inci maddesinin birinci fıkrasının (j) bendinde sayılanlardan, aynı bentte sayılan durumlarda,
+4) 4536 sayılı Kanunun 12 nci maddesinde sayılan kişilerden, yetkili makamlarca görevlendirildikleri resmen belgelenmek şartıyla, aynı maddede sayılan durumlarda,
+5) Makina ve Kimya Endüstrisi Kurumuna ait fabrika, işletme, müessese veya bağlı ortaklıklarda görevli olanlardan, 3713 sayılı Kanunun ek 1 inci maddesinin ikinci fıkrasının (ç) bendinde sayılan durumlarda, hayatını kaybettiği değerlendirilenler.
+d) 3713 sayılı Kanunun 21 inci maddesinin birinci fıkrasının (i) bendinde sayılanlardan, aynı bentte sayılan durumlarda hayatını kaybettiği değerlendirilenler.
+e) (Ek:RG-9/7/2024-32597-CK-8726/1 md.)1 11/1/1983 tarihli ve 2780 sayılı Uçuş, Dalış ve Atlayış Eğitimine Tabi Tutulacak Askeri Öğrenciler ile Aday Öğrenciler Hakkında Kanunun 2 nci maddesinde sayılanlardan, aynı maddede sayılan durumlarda hayatını kaybettiği değerlendirilenler.
+f) (a), (b), (c), (ç) , (d) ve (e) bentlerinde sayılan durumlarda yaralananlardan daha sonra bu yaralanmanın sebep ve tesiri ile hayatını kaybettiği değerlendirilenler.
+(2) Aşağıdaki kişiler şehitliklere defnedilmez.
+a) Kasıt, disiplinsizlik veya suç teşkil ettiği değerlendirilen eylemleri sonucu hayatını kaybedenler.
+b) Bünyesel rahatsızlık veya hastalık, intihar veya intihara teşebbüs, uyuşturucu, bağımlılık yapıcı veya keyif verici madde kullanımı, kendisini askerliğe veya göreve elverişsiz hale getirme sebebiyle meydana geldiği değerlendirilen kaza ve olaylar sonucu hayatını kaybedenler.
+c) Kanuni izinler, hava değişimi veya bunlara gidiş ve dönüşler esnasında hayatını kaybedenler ile bakaya, firar, izin tecavüzü ve hava değişimi tecavüzünde iken hayatını kaybedenler.
+
+  KART 106-1 [Şehitliklere defnedilecek kişiler]
+    HUKUM: (a) MSB, Genelkurmay, Kuvvet K.lıklarında subay, sözleşmeli subay, astsubay, uzman erbaş, sözleşmeli erbaş-er; JGK Jandarma Hizmetleri Sınıfı ve SGK Sahil Güvenlik Hizmetleri Sınıfı personeli, sözleşmeli subay-astsubay, uzman erbaş, sözleşmeli erbaş-er; Emniyet Hizmetleri Sınıfı, MİT mensupları, yedek subay, yedek astsubay, erbaş-erlerden: 5434 m.45/64/56 ve 5510 m.47 hâllerinde, 2330 Nakdi Tazminat Kanunu hâllerinde, 2453 (yurt dışı görevli), 2566, 2629 (uçuş-paraşüt-dalgıç), 2935 OHAL, 2937 MİT, 3160, 3497 (kara sınırları), 3713 m.21, 4536 (patlayıcı madde) hâllerinde hayatını kaybedenler; (b) diğer kamu personeli benzer hâllerde; (c) geçici ve gönüllü köy korucuları (442 m.74/4, 2330, 2935, 3713, 4536); (ç) diğer kişiler (2330, 2935 görevlendirilenler, 3713 m.21/j, 4536, MKE personeli); (d) 3713 m.21/i kapsamındakiler; (e) 2780 sayılı Kanun kapsamındaki uçuş-dalış-atlayış eğitimindeki askerî öğrenciler; (f) bu hâllerde yaralanıp sonradan bu sebeple ölenler; defnedilmeyenler: kasıt, disiplinsizlik veya suç teşkil eden eylem sonucu ölenler; bünyesel rahatsızlık, intihar, uyuşturucu-keyif verici madde, kendini elverişsiz hâle getirme sonucu ölenler; kanuni izin, hava değişimi ve bunlara gidiş-dönüşte ölenler ile bakaya, firar, izin ve hava değişimi tecavüzünde ölenler (m.3)
+    YANLIS: "İzinde ölen asker şehitliğe defnedilir" yanlış
+  SORU 1: Şehitlik Yönetmeliği'ne göre, aşağıdaki personel gruplarından hangisi bu bent kapsamında SAYILMIŞTIR?
+       Belediyelerde çalışan sözleşmeli personel
+       Millî Eğitim Bakanlığı öğretmenleri
+     * Jandarma Genel Komutanlığında Jandarma Hizmetleri Sınıfında bulunan kamu personeli ile Millî İstihbarat Teşkilatı mensupları ve askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erler
+       Serbest çalışan avukatlar
+       Kamu iktisadi teşebbüslerinde çalışan işçiler
+  SORU 2: Şehitlik Yönetmeliği'ne göre, aşağıdakilerden hangisi şehitliklere defnedilmeme sebeplerinden biri DEĞİLDİR?
+       Kasıt, disiplinsizlik veya suç teşkil ettiği değerlendirilen eylemler sonucu hayatını kaybetme
+       İntihar veya intihara teşebbüs sonucu hayatını kaybetme
+       Kanuni izin veya hava değişimi esnasında hayatını kaybetme
+       Bakaya veya firar durumunda iken hayatını kaybetme
+     * Görev sırasında geçirilen trafik kazası sonucu hayatını kaybetme
+  SORU 3: Şehitlik Yönetmeliği'ne göre aşağıdakilerden hangisi şehitliklere defnedilmeyecek kişiler arasında yer almaz?
+     * Şehitliğe defin sebebi sayılan bir olayda yaralanıp bu yaralanmanın etkisiyle sonradan hayatını kaybeden
+       Kanuni izne gidiş esnasında hayatını kaybeden
+       İntihar sonucu hayatını kaybeden
+       Firarda iken hayatını kaybeden
+       Uyuşturucu madde kullanımı sonucu hayatını kaybeden
+  SORU 4: Şehitlik Yönetmeliği'ne göre aşağıdakilerden hangisi şehitliklere defnedilmez?
+       Terörle mücadele sırasında hayatını kaybeden geçici köy korucusu
+       Terörle mücadele görevi sırasında hayatını kaybeden uzman erbaş
+       Kara sınırlarının korunması görevinde hayatını kaybeden er
+     * Kanuni izne giderken yolda hayatını kaybeden er
+       Görevi sırasında yaralanıp bu yaralanmanın sebep ve tesiriyle sonradan hayatını kaybeden astsubay
+
+====================================================================================================
+MADDE 4  (soru_sayisi=5)
+RESMI: (1) Şehitliğe defin kararı aşağıdaki makamlarca verilir. a) Millî Savunma Bakanlığı ve Genelkurmay Başkanlığında görev yapan subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman erbaş, sözleşmeli erbaş ve erler ile askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erler hakkında bağlı bulundukları kuvvet komutanlığı; diğer kamu personeli hakkında ilgisine göre Millî Savunma Bakanlığı ve Genelkurmay Başkanlığı veya bunların yetki vereceği makamlar.2 b) Kara, Deniz ve Hava Kuvvetleri Komutanlıklarında görev yapansubay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman erbaş, sözleşmeli erbaş ve erler, askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erler ile diğer kamu personeli hakkında bağlı bulundukları komutanlık veya bunların yetki vereceği makamlar.2 c) Jandarma Genel Komutanlığında Jandarma Hizmetleri Sınıfında ve Sahil Güvenlik Komutanlığında Sahil Güvenlik Hizmetleri Sınıfında bulunan kamu personeli, sözleşmeli subay ve astsubaylar, uzman erbaşlar ve sözleşmeli erbaş ve erler ve bu komutanlıklarda askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erler ile diğer kamu personeli ve Emniyet Genel Müdürlüğü personeli ve bu kurumların 3713 sayılı Kanunun 21 inci maddesinin birinci fıkrasının (i) bendi kapsamına girenleri hakkında olayın meydana geldiği il valiliği.2 ç) Milli İstihbarat Teşkilatı mensupları hakkında Milli İstihbarat Teşkilatı Müsteşarlığı. d) Yurtdışında sürekli görev veya her türlü geçici görev sebebiyle bulunanlar hakkında bağlı bulundukları kurumlar. e) 3 üncü maddenin birinci fıkrasının (d) bendi kapsamında yer alanlardan, (c) bendinde sayılanlar dışında kalanlar hakkında bağlı bulundukları kurumlar. f) (a), (b), (ç), (d) ve (e) bentlerinde sayılanların dışında kalanlar hakkında olayın meydana geldiği il valiliği. (2) Şehitliğe defin kararı veren makamlarca 3 üncü maddedeki esaslara göre şehitliğe defin kararı verilmesi ve şehitliğe defin yapılması, hayatını kaybeden kişinin yakınlarına ilgili mevzuatına göre sağlanacak haklara ilişkin hak sahipliği sonucunu doğurmaz. Hak sahipliği, yetkili kurum ve kuruluşlarca ilgili mevzuatına göre tespit edilir. Şehitliğe defin süreci
+
+  KART 106-2 [Defin kararı makamları ve beyan]
+    HUKUM: Defin kararını MSB ve Genelkurmay personeli ile askerlik yükümlüleri için bağlı bulundukları kuvvet komutanlığı; Kara, Deniz ve Hava Kuvvetleri personeli için bağlı bulundukları komutanlık veya yetki vereceği makam; JGK Jandarma Hizmetleri Sınıfı, SGK Sahil Güvenlik Hizmetleri Sınıfı ve EGM personeli için olayın meydana geldiği il valiliği; MİT mensupları için MİT Müsteşarlığı; yurt dışında görevli olanlar için bağlı bulundukları kurumlar; bunlar dışında kalanlar için olayın meydana geldiği il valiliği verir (m.4); defin kararı veren makam sırasıyla eşinden, en büyük reşit çocuğundan, anasından, babasından, en büyük reşit kardeşinden hangi şehitliğe/mezarlığa defin istediğine dair yazılı beyan alır (yalnız bir yakınından) ve defin ili valiliğine bildirir; hazırlıklar defin yeri valiliğince yapılır; şehitlik dışı definler yerel yönetimlerle koordine edilir (m.5); gaiplik kararı alınanlar için eş, çocuk, ana, baba veya kardeş talebiyle valilikçe temsili mezar yaptırılır (m.6)
+    YANLIS: Beyan ana ve babadan birlikte alınır
+    YANLIS: Defin beyanı en büyük reşit kardeşten öncelikle alınır
+    YANLIS: Jandarma personeli hakkında şehitliğe defin kararını Jandarma Genel Komutanlığı verir
+    DOGRU: Beyan sırasıyla eşten, en büyük reşit çocuktan, anadan, babadan, en büyük reşit kardeşten ve yalnız bir yakından alınır (m.5)
+    DOGRU: Jandarma ve sahil güvenlik hizmetleri sınıfı personeli için defin kararını olayın meydana geldiği il valiliği verir (m.4/1-c)
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 1}, {"madde": "10", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, Millî Savunma Bakanlığı ve Genelkurmay Başkanlığında görev yapan subay, astsubay, uzman erbaş, sözleşmeli erbaş ve erler ile askerlik yükümlülüğünü yerine getiren yedek subay, yedek astsubay, erbaş ve erler hakkında şehitliğe defin kararını hangi makam verir?
+       Olayın meydana geldiği il valiliği
+       Millî İstihbarat Teşkilatı Müsteşarlığı
+     * Bağlı bulundukları kuvvet komutanlığı
+       İçişleri Bakanlığı
+       Dışişleri Bakanlığı
+  SORU 2: Şehitlik Yönetmeliği'ne göre, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı personeli ile Emniyet Genel Müdürlüğü personeli hakkında şehitliğe defin kararını hangi makam verir?
+       Bağlı bulundukları kuvvet komutanlığı
+       Millî İstihbarat Teşkilatı Müsteşarlığı
+       İçişleri Bakanlığı Merkez Teşkilatı
+     * Olayın meydana geldiği il valiliği
+       Emniyet Genel Müdürlüğü Disiplin Kurulu
+  SORU 3: Şehitlik Yönetmeliği'ne göre, Millî İstihbarat Teşkilatı mensupları hakkında şehitliğe defin kararını ____ verir.
+       İçişleri Bakanlığı
+       Cumhurbaşkanlığı İdari İşler Başkanlığı
+     * Millî İstihbarat Teşkilatı Müsteşarlığı
+       Millî Savunma Bakanlığı
+       Olayın meydana geldiği il valiliği
+  SORU 4: Şehitlik Yönetmeliği'ne göre, şehitliğe defin kararı verilmesi ve şehitliğe defin yapılması ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?
+       Hak sahipliğini yalnızca Sosyal Güvenlik Kurumu belirler
+       Hak sahipliği sadece defin kararını veren makam tarafından belirlenir
+       Hayatını kaybeden kişinin yakınlarına ilgili mevzuata göre sağlanacak haklara ilişkin hak sahipliği sonucunu doğurur
+     * Hak sahipliği sonucunu doğurmaz; hak sahipliği yetkili kurum ve kuruluşlarca ilgili mevzuatına göre ayrıca tespit edilir
+       Hak sahipliğini otomatik olarak kesinleştirir ve itiraz edilemez
+  SORU 5: Şehitlik Yönetmeliği'ne göre Jandarma Genel Komutanlığında Jandarma Hizmetleri Sınıfında bulunan personel hakkında şehitliğe defin kararı hangi makamca verilir?
+     * Olayın meydana geldiği il valiliği
+       Jandarma Genel Komutanlığı
+       Millî Savunma Bakanlığı
+       Personelin nüfusa kayıtlı olduğu il valiliği
+       İçişleri Bakanlığı
+
+====================================================================================================
+MADDE 5  (soru_sayisi=4)
+RESMI: (1) Şehitliğe defin kararı veren makam tarafından hayatını kaybeden kişinin sırasıyla eşinden, en büyük reşit çocuğundan, anasından, babasından, en büyük reşit kardeşinden hangi şehitliğe ya da mezarlığa defin yapılmasını talep ettiğine dair yazılı beyan alınır ve bu beyan defnin yapılacağı il valiliğine bildirilir. Söz konusu beyan belirtilen sıraya uygun olarak hayatını kaybeden kişinin yalnızca bir yakınından alınır. (2) Defin yeri valiliğince, defne ilişkin gerekli hazırlıklar yapılır. Hayatını kaybeden kişinin yakınının talebi sebebiyle şehitlikler dışındaki mezarlıklara defin işlemleri yerel yönetimler ile koordine edilir. Temsili mezar
+
+  KARIS_ADAY: [{"madde": "4", "kac_celdiricide": 7}, {"madde": "7", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, hayatını kaybeden kişinin hangi şehitliğe ya da mezarlığa defnedilmesini istediğine dair yazılı beyan, sırasıyla aşağıdaki yakınlarından hangisinden alınır?
+       En büyük reşit kardeş – ana – baba – eş – en büyük reşit çocuk
+       Ana – baba – eş – en büyük reşit kardeş – en büyük reşit çocuk
+       Baba – ana – eş – en büyük reşit çocuk – en büyük reşit kardeş
+     * Eş – en büyük reşit çocuk – ana – baba – en büyük reşit kardeş
+       En büyük reşit çocuk – eş – en büyük reşit kardeş – ana – baba
+  SORU 2: Şehitlik Yönetmeliği'ne göre, hayatını kaybeden kişinin yakınının talebi sebebiyle şehitlikler dışındaki mezarlıklara defin işlemleri kimlerle koordine edilir?
+       Dışişleri Bakanlığı
+       Sayıştay
+       Millî İstihbarat Teşkilatı
+     * Yerel yönetimler
+       Millî Savunma Bakanlığı
+  SORU 3: Şehitlik Yönetmeliği'ne göre şehit olan bir astsubayın eşi, reşit çocuğu, annesi ve babası hayattadır. Hangi şehitliğe ya da mezarlığa defin yapılacağına dair yazılı beyan kimden alınır?
+       Babasından
+       Yakınlarının tamamından ayrı ayrı
+     * Eşinden
+       Anasından
+       En büyük reşit çocuğundan
+  SORU 4: Görev sırasında şehit düşen Astsubay K.'nın eşi, reşit iki çocuğu ve anası hayattadır. Şehitlik Yönetmeliği'ne göre hangi şehitliğe ya da mezarlığa defin yapılacağına dair yazılı beyan kimden alınır?
+       En büyük reşit çocuğundan
+       En büyük reşit kardeşinden
+       Tüm yakınlarından ortak olarak
+       Anasından
+     * Eşinden
+
+====================================================================================================
+MADDE 6  (soru_sayisi=2)
+RESMI: (1) 3 üncü maddede belirtilen şartları taşıyan kişi hakkında gaiplik kararı alınması halinde gaiplik kararı alınan kişinin eşinin, eşi yoksa sırasıyla en büyük reşit çocuğunun, anasının, babasının, en büyük reşit kardeşlerinden birinin talep etmesi üzerine ilgili valilikçe şehitlikte temsili mezar yaptırılır. Şehitlik yerlerinin belirlenmesi
+
+  KARIS_ADAY: [{"madde": "10", "kac_celdiricide": 4}, {"madde": "4", "kac_celdiricide": 2}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre belirtilen şartları taşıyan bir kişi hakkında gaiplik kararı alınması hâlinde, temsili mezar hangi makam tarafından ve kimin talebi üzerine yaptırılır?
+       Dışişleri Bakanlığınca, büyükelçinin talebi üzerine
+       İçişleri Bakanlığınca, resen
+       İl özel idaresince, muhtarın talebi üzerine
+       Millî Savunma Bakanlığınca, kuvvet komutanının talebi üzerine
+     * İlgili valilikçe, eşinin, eşi yoksa sırasıyla en büyük reşit çocuğunun, anasının, babasının, en büyük reşit kardeşlerinden birinin talebi üzerine
+  SORU 2: Şehitlik Yönetmeliği'ne göre şehitliğe defin şartlarını taşıyan kişi hakkında gaiplik kararı alınması halinde, yakınının talebi üzerine aşağıdakilerden hangisi yapılır?
+       Dışişleri Bakanlığınca anıt yaptırılır.
+       Millî Savunma Bakanlığınca temsili mezar yaptırılır.
+     * İlgili valilikçe şehitlikte temsili mezar yaptırılır.
+       Şehitlik kayıt defterine kaydedilir ve başka işlem yapılmaz.
+       Belediyece şehitlik dışında mezar yeri tahsis edilir.
+
+====================================================================================================
+MADDE 7  (soru_sayisi=3)
+RESMI: (1) Yurtiçinde ve yurtdışında bulunan ve aşağıdaki şartları taşıyan yerler şehitlik olarak belirlenir. a) Genel veya bölgesel bir savaşta hayatını kaybedenlerin defnedildiği yerler ve mezarlıklar. b) Hareket halinde bulunan askeri birliklerin toplu bulunduğu yerlerde hayatını kaybedenlerin defnedildiği yerler. c) 3 üncü maddede belirtilen kişilerin defnedilmesi için ayrılan yerler. (2) Şehitlik yerlerinin belirlenmesi işlemleri yurtiçinde valiliklerce, yurtdışında Dışişleri Bakanlığı vasıtasıyla ilgili ülkelerle varılacak mutabakata göre yürütülür. (3) Yurtiçinde valilikler tarafından belirlenen şehitlik yerleri, büyükşehir olan illerde yatırım izleme ve koordinasyon başkanlıkları, diğer illerde il özel idareleri tarafından edinilerek kendi adlarına tapuya tescil ettirilir. Şehitlik yeri olarak belirlenen alan içerisinde Hazinenin özel mülkiyetinde bulunan taşınmazlar ve/veya Devletin hüküm ve tasarrufu altındaki yerler ile mülkiyeti kamu idarelerine ait taşınmazların bulunması halinde bu taşınmazlar şehitlik olarak kullanılmak üzere duruma göre Maliye Bakanlığıya da maliki kamu idaresi tarafından ilgili yatırım izleme ve koordinasyon başkanlığına veya il özel idaresine tahsis edilir. Şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemleri
+
+  KART 106-3 [Şehitlik yerleri, yönetim ve düzenleme]
+    HUKUM: Şehitlik olarak belirlenen yerler: savaşta ölenlerin defnedildiği yerler, hareket hâlindeki birliklerin toplu bulunduğu yerlerde ölenlerin defnedildiği yerler, m.3'tekiler için ayrılan yerler; belirleme yurt içinde valiliklerce, yurt dışında Dışişleri Bakanlığı vasıtasıyla ilgili ülkeyle mutabakatla; belirlenen yerler büyükşehirde YİKOB, diğer illerde il özel idaresi adına tescil; Hazine/kamu taşınmazları Maliye Bakanlığı veya maliki idarece tahsis (m.7); yönetim-inşa-bakım-onarım-koruma yurt içinde valilikler, yurt dışında büyükelçilikler (yoksa Dışişleri temsilcilikleri) (m.8); düzenleme: Ek-2 tip anıt projesi (özellikli şehitliklerde özel proje), yeterli tören alanı, çevre emniyet duvarı, bütçeye göre albüm binası ve bekçi evi, aydınlatma-sulama-teraslama-bahçe-yaya yolları standartları valiliklerce, mevcut imalatlar azami değerlendirilir, ada-parsel planı, mezarlar birden başlayarak numaralanır ve sıra numarasına göre defin (m.9)
+    YANLIS: "İçişleri Bakanlığınca" ve "YİKOB'ca" şıkları yanlış
+  SORU 1: Şehitlik Yönetmeliği'ne göre, şehitlik yerlerinin belirlenmesi işlemleri yurtiçinde ve yurtdışında hangi makamlarca yürütülür?
+       Yurtiçinde il özel idareleri, yurtdışında Millî Savunma Bakanlığı
+       Yurtiçinde belediyeler, yurtdışında konsolosluklar
+       Yurtiçinde ve yurtdışında yalnızca Dışişleri Bakanlığı
+       Yurtiçinde İçişleri Bakanlığı Merkez Teşkilatı, yurtdışında büyükelçilikler
+     * Yurtiçinde valilikler, yurtdışında Dışişleri Bakanlığı vasıtasıyla ilgili ülkelerle varılacak mutabakata göre
+  SORU 2: Şehitlik Yönetmeliği'ne göre, şehitlik yeri olarak belirlenen alan içinde Hazinenin özel mülkiyetinde bulunan taşınmazlar tespit edilirse, bu taşınmazlar şehitlik olarak kullanılmak üzere kim tarafından tahsis edilir?
+       Sayıştay tarafından
+       İl genel meclisi tarafından
+       Millî Savunma Bakanlığı tarafından
+       Cumhurbaşkanlığı tarafından
+     * Maliye Bakanlığı ya da maliki kamu idaresi tarafından
+  SORU 3: Şehitlik Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?
+I. Yurt içinde şehitlik yerlerinin belirlenmesi işlemleri valiliklerce yürütülür.
+II. Büyükşehir olan illerde valiliklerce belirlenen şehitlik yerleri yatırım izleme ve koordinasyon başkanlıkları adına tapuya tescil ettirilir.
+III. Yurt dışındaki şehitliklerin yönetim, bakım ve onarım işlemleri Millî Savunma Bakanlığınca yürütülür.
+       II ve III
+       I, II ve III
+     * I ve II
+       Yalnız III
+       Yalnız I
+
+====================================================================================================
+MADDE 8  (soru_sayisi=1)
+RESMI: (1) Yurtiçinde bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemleri valilikler, yurtdışında bulunanların ise büyükelçilikler, büyükelçilik bulunmayan yerlerde Dışişleri Bakanlığının o yerdeki temsilcilikleri tarafından yürütülür. Şehitliklerin düzenlenmesi
+
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, yurtdışında bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemleri kim tarafından yürütülür?
+     * Büyükelçilikler; büyükelçilik bulunmayan yerlerde Dışişleri Bakanlığının o yerdeki temsilcilikleri
+       Yalnızca Dışişleri Bakanlığı merkez teşkilatı
+       Yalnızca ilgili ülkenin yerel yönetimleri
+       Millî Savunma Bakanlığının ataşelikleri
+       İl özel idareleri
+
+====================================================================================================
+MADDE 9  (soru_sayisi=8)
+RESMI: (1) Yurtiçindeki şehitlikler aşağıdaki şekilde düzenlenir. a) Şehitliklerde ek-2’de yer alan tip anıt projesi uygulanır. Ancak özellik arz eden şehitliklerde özel proje uygulaması yapılabilir. b) Şehitliklerde yeterli büyüklükte tören alanı ayrılır. c) Şehitliğin emniyete alınması maksadıyla çevre emniyet duvarı inşa edilir. ç) Valiliklerce inşaat yatırım programına alınan şehitliklerde bütçe durumu gözetilerek albüm binası ve bekçi evi kurulur. d) Şehitliklerde uygulanacak aydınlatma, sulama, teraslama, bahçe ve yaya yolları gibi altyapıya ilişkin standartlar valiliklerce belirlenir. e) Şehitliklerin gelişimine yönelik hazırlanacak proje çalışmalarında mevcut imalatlar azami derecede değerlendirilir ve projelendirmede dikkate alınır. f) Mezarların ada ve parsellerini, bunlara giden yolları, çiçek tarhlarını, şehitliğin bulunduğu yerin iklimine ve arazi durumuna göre dikilecek bitkilerin cins ve yerlerini, sınırlara konulacak bordür taşlarını ve çevre duvarı gibi tesisleri kapsayan plan hazırlanır. g) Plana göre, her ada ve parselde bulunan mezarlar, birden başlamak üzere numaralandırılır. Şehitliklere bu ada ve parsele göre belirlenen sıra numarasına göre defin yapılır. Bir ada veya parsel bitmeden, diğer ada veya parsele defin yapılmaz. ğ) Şehitliklerde herkes tarafından görülebilecek uygun bir yerde, tarihçe belirtir kitabe ile ada ve parselleri gösteren vaziyet planı yer alır. h) Şehitliklerde şeref defteri ile şehitliğe defnedilenlerin fotoğrafı, kimliği ve özgeçmişini içeren albüm bulundurulur. (2) Yurtdışındaki şehitlikler Dışişleri Bakanlığı vasıtasıyla ilgili ülkelerle varılacak mutabakata göre düzenlenir. (3) Valilikler tarafından birinci fıkra kapsamında talep edilen hususlar belediyeler ve ilgili diğer kamu kurum ve kuruluşlarınca yerine getirilir. Ödenek
+
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 12}, {"madde": "10", "kac_celdiricide": 7}, {"madde": "4", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, yurtiçindeki şehitliklerde hangi kural uygulanır?
+     * Ek-2'de yer alan tip anıt projesi uygulanır; ancak özellik arz eden şehitliklerde özel proje uygulaması yapılabilir
+       Her şehitlik için ayrı bir proje zorunludur, tip proje uygulanamaz
+       Tip anıt projesi yalnızca büyükşehirlerdeki şehitliklerde uygulanır
+       Tip anıt projesi Dışişleri Bakanlığınca hazırlanır
+       Tip anıt projesinden istisna için Cumhurbaşkanı onayı gerekir
+  SORU 2: Şehitlik Yönetmeliği'ne göre, yurtiçindeki şehitliklerin düzenlenmesinde aşağıdakilerden hangisi öngörülen bir unsur DEĞİLDİR?
+       Yeterli büyüklükte tören alanı ayrılması
+       Çevre emniyet duvarı inşa edilmesi
+       Valiliklerce inşaat yatırım programına alınan şehitliklerde bütçe durumu gözetilerek albüm binası ve bekçi evi kurulması
+       Mezarların ada ve parsellerde birden başlamak üzere numaralandırılması
+     * Şehitliklere yerleşim yoğunluğuna göre öncelik sırası belirlenmesi için il genel meclisince oylama yapılması
+  SORU 3: Şehitlik Yönetmeliği'ne göre, şehitliklerde defin sırasıyla ilgili aşağıdakilerden hangisi DOĞRUDUR?
+     * Her ada ve parselde bulunan mezarlar birden başlamak üzere numaralandırılır ve bu sıra numarasına göre defin yapılır; bir ada veya parsel bitmeden diğerine defin yapılmaz
+       Defin sırası, hayatını kaybedenin rütbesine göre belirlenir
+       Defin sırası tamamen valinin takdirine bağlıdır, numaralandırma zorunlu değildir
+       Mezar numaraları yalnızca şehitliğin tamamı için tek bir seri hâlinde, ada/parsel ayrımı yapılmadan verilir
+       Ada veya parsel dolmadan da diğer ada/parsele geçilerek defin yapılabilir
+  SORU 4: Şehitlik Yönetmeliği'ne göre, şehitliklerde bulundurulması gereken albümde şehitliğe defnedilenlere ait hangi bilgiler yer alır?
+       Yalnızca fotoğraf
+     * Fotoğraf, kimlik ve özgeçmiş
+       Yalnızca kimlik bilgisi ve ölüm tarihi
+       Yalnızca özgeçmiş ve rütbe
+       Yalnızca defin kararını veren makamın yazı tarih ve numarası
+  SORU 5: Şehitlik Yönetmeliği'ne göre, valilikler tarafından kapsamında talep edilen hususlar kimlerce yerine getirilir?
+     * Belediyeler ve ilgili diğer kamu kurum ve kuruluşlarınca
+       Yalnızca Millî Savunma Bakanlığınca
+       Yalnızca il özel idaresince
+       Yalnızca Dışişleri Bakanlığınca
+       Yalnızca Maliye Bakanlığınca
+  SORU 6: Şehitlik Yönetmeliği'ne göre, albüm binası ve bekçi evi hangi şehitliklerde ve hangi koşulla kurulur?
+       Tüm şehitliklerde, koşulsuz olarak
+     * Valiliklerce inşaat yatırım programına alınan şehitliklerde, bütçe durumu gözetilerek
+       Yalnızca yurtdışındaki şehitliklerde, Dışişleri Bakanlığı bütçesinden
+       Yalnızca büyükşehirlerdeki şehitliklerde
+       Yalnızca Cebeci Asri Mezarlığındaki Dışişleri Şehitliğinde
+  SORU 7: Şehitlik Yönetmeliği'ne göre, şehitliklerde uygulanacak aydınlatma, sulama, teraslama, bahçe ve yaya yolları gibi altyapıya ilişkin standartlar kim tarafından belirlenir?
+     * Valiliklerce
+       Dışişleri Bakanlığınca
+       Millî Savunma Bakanlığınca
+       Belediye meclisince
+       Cumhurbaşkanlığınca
+  SORU 8: Şehitlik Yönetmeliği'ne göre yurt içindeki şehitliklerin düzenlenmesiyle ilgili aşağıdakilerden hangisi yanlıştır?
+       Şehitliğin emniyete alınması maksadıyla çevre emniyet duvarı inşa edilir.
+     * Şehitliklerde ayrı bir tören alanı ayrılmaz.
+       Şehitliklerde şeref defteri ile defnedilenlerin fotoğraf ve özgeçmişini içeren albüm bulundurulur.
+       Şehitliklerde ek-2'de yer alan tip anıt projesi uygulanır.
+       Bir ada veya parsel bitmeden diğer ada veya parsele defin yapılmaz.
+
+====================================================================================================
+MADDE 10  (soru_sayisi=3)
+RESMI: (1) Yurtiçinde bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemlerine ilişkin valiliklerce hazırlanan keşif raporları, ödeneğin planlanması için müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir. Söz konusu giderler İçişleri Bakanlığı bütçesinin ilgili tertibinden ödenir. (2) Şehitliğe defnedilmesi mümkün olduğu halde, 5 inci maddenin birinci fıkrasında belirtilen yakınlarının talebi üzerine şehitlik dışına defni yapılanların mezarının inşa, bakım ve onarım işlemleri için gerekli ödenek planlaması müteakip yılın Mart ayı sonuna kadar ilgili valilikçe İçişleri Bakanlığına gönderilir. Söz konusu giderler İçişleri Bakanlığı bütçesinin ilgili tertibinden ödenir. (3) Yurtdışında bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemleri için mahalli rayice göre belirlenen ödenek ihtiyacı, sorumlu büyükelçilik veya temsilcilik tarafından Ağustos ayı sonuna kadar Dışişleri Bakanlığına gönderilir. Söz konusu giderler Dışişleri Bakanlığı bütçesinin ilgili tertibinden ödenir. Mezarların inşa, bakım ve onarımı
+
+  KART 106-4 [Ödenek, mezarlar, kayıtlar]
+    HUKUM: Yurt içi şehitliklerin keşif raporları müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir, giderler İçişleri bütçesinden; yakınlarının talebiyle şehitlik dışına defnedilenlerin mezar inşa-bakım ödeneği de Mart sonuna kadar valilikçe İçişleri'ne; yurt dışı şehitliklerin ödenek ihtiyacı büyükelçilik/temsilcilikçe Ağustos ayı sonuna kadar Dışişleri Bakanlığına, giderler Dışişleri bütçesinden (m.10); mezarlar Ek-1 tip mezar projesine göre valiliklerce inşa ettirilir; şehitlik dışına defnedilenlerin mezarı yakınları talep edip uygun bulunursa valilikçe bakım-onarım (m.11); şehitliklerde kayıt defteri: kimlik, fotoğraf, ölüm ve defin tarihi, defin sebebi, karar makamının yazı tarih-numarası, ada-parsel-mezar numarası; karar makamı isterse bilgiler deftere kaydedilmez (m.12); Cebeci'deki Dışişleri Şehitliği işlemleri Dışişleri Bakanlığınca (m.13); karar makamlarınca yapılacak işlemler ilgili makamlarca belirlenir (m.14); Yönetmelik yayımından 1 ay sonra yürürlüğe girer (m.15), Cumhurbaşkanı yürütür (m.16)
+    YANLIS: "Yurt içi keşif raporları Ağustos sonuna kadar" yanlış; Mart
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, yurtiçinde bulunan şehitliklerin işlemlerine ilişkin valiliklerce hazırlanan keşif raporları, müteakip yılın ____ ayı sonuna kadar ____ Bakanlığına gönderilir ve giderler bu Bakanlığın bütçesinden ödenir.
+       Ocak / Dışişleri
+     * Mart / İçişleri
+       Ağustos / Dışişleri
+       Aralık / Hazine ve Maliye
+       Haziran / Millî Savunma
+  SORU 2: Şehitlik Yönetmeliği'ne göre, şehitliğe defnedilmesi mümkün olduğu hâlde belirtilen yakınının talebi üzerine şehitlik dışına defni yapılan kişinin mezarının inşa, bakım ve onarım işlemleri için gerekli ödenek planlaması nasıl yürütülür?
+     * İlgili valilikçe müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir, gider İçişleri Bakanlığı bütçesinden karşılanır
+       Yakınları tarafından doğrudan karşılanır, kamu bütçesinden ödenek ayrılmaz
+       Dışişleri Bakanlığınca Ağustos ayı sonuna kadar planlanır
+       Millî Savunma Bakanlığı bütçesinden karşılanır
+       Bu durumda ödenek planlaması yapılmaz, iş valiliğin insiyatifine bırakılır
+  SORU 3: Şehitlik Yönetmeliği'ne göre yurt içindeki şehitliklerin yönetim, inşa, bakım ve onarımına ilişkin keşif raporları hangi ayın sonuna kadar İçişleri Bakanlığına gönderilir?
+       Ocak
+       Eylül
+       Ağustos
+       Haziran
+     * Mart
+
+====================================================================================================
+MADDE 11  (soru_sayisi=3)
+RESMI: (1) Şehitliğe defnedilenler ile şehitliğe defnedilmesi mümkün olduğu halde 5 inci maddenin birinci fıkrasında belirtilen yakınlarının talebi üzerine şehitlik dışına defni yapılanların mezarları ek-1’de yer alan tip mezar projesine göre valilikler tarafından inşa ettirilir. (2) Şehitliğe defnedilmesi mümkün olduğu halde 5 inci maddenin birinci fıkrasında belirtilen yakınlarının talebi üzerine şehitlik dışına defni yapılanların mezarlarının bakım ve onarım işlemleri, yakınlarınca talep edilmesi ve uygun bulunması halinde valilikler tarafından yaptırılır. Şehitliklerde tutulacak kayıtlar
+
+  KARIS_ADAY: [{"madde": "7", "kac_celdiricide": 1}, {"madde": "10", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, şehitliğe defnedilenler ile şehitlik dışına defni yapılanların mezarları hangi projeye göre ve kim tarafından inşa ettirilir?
+     * Ek-1'de yer alan tip mezar projesine göre valilikler tarafından
+       Ek-2'de yer alan tip anıt projesine göre büyükelçilikler tarafından
+       Her aile kendi projesini seçerek belediyeler tarafından
+       Millî Savunma Bakanlığınca hazırlanan özel projeye göre
+       İl özel idarelerince serbestçe belirlenen projeye göre
+  SORU 2: Şehitlik Yönetmeliği'ne göre, şehitlik dışına defni yapılanların mezarlarının bakım ve onarım işlemleri hangi koşullarda valilikler tarafından yaptırılır?
+       Herhangi bir talep aranmaksızın valilikçe resen
+     * Yakınlarınca talep edilmesi ve uygun bulunması hâlinde
+       Yalnızca yılda bir kez, ocak ayında
+       Yalnızca belediye meclisi kararı ile
+       Yalnızca Dışişleri Bakanlığının onayı ile
+  SORU 3: Şehit Uzman Çavuş S., şehitliğe defnedilmesi mümkün olduğu hâlde eşinin talebi üzerine memleketindeki mezarlığa defnedilmiştir. Şehitlik Yönetmeliği'ne göre S.'nin mezarı nasıl inşa ettirilir?
+       Yatırım izleme ve koordinasyon başkanlığı tarafından tip anıt projesine göre
+     * Valilik tarafından tip mezar projesine göre
+       Belediye tarafından tip anıt projesine göre
+       Ailesi tarafından serbest projeye göre
+       Millî Savunma Bakanlığı tarafından özel projeye göre
+
+====================================================================================================
+MADDE 12  (soru_sayisi=3)
+RESMI: (1) Şehitliklerde bir kayıt defteri bulunur. Bu defterde aşağıdaki hususlara yer verilir. a) Şehitliğe defnedilenin kimlik bilgileri. b) Fotoğraf. c) Ölüm tarihi ve defin tarihi. ç) Şehitliğe defnedilme sebebi. d) Şehitliğe defin kararı veren makamın yazısının tarih ve numarası. e) Şehitlikte defnedildiği yere ait ada, parsel ve mezar numaraları. (2) Şehitliğe defin kararı veren makamın talep etmesi halinde birinci fıkrada yer alan bilgiler kayıt defterine kaydedilmez. Dışişleri Şehitliği
+
+  KARIS_ADAY: [{"madde": "10", "kac_celdiricide": 4}, {"madde": "4", "kac_celdiricide": 2}, {"madde": "7", "kac_celdiricide": 1}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, şehitliklerde tutulacak kayıt defterinde aşağıdakilerden hangisine yer VERİLMEZ?
+       Şehitliğe defnedilenin kimlik bilgileri
+       Fotoğraf
+       Ölüm tarihi ve defin tarihi
+       Defin kararı veren makamın yazısının tarih ve numarası
+     * Hayatını kaybedenin yakınlarının banka hesap bilgileri
+  SORU 2: Şehitlik Yönetmeliği'ne göre, şehitliğe defin kararı veren makamın talep etmesi hâlinde ne olur?
+     * Kayıt defterine hiçbir kayıt yapılmayabilir; birinci fıkrada yer alan bilgiler kayıt defterine kaydedilmez
+       Kayıt defterine ek olarak Cumhurbaşkanlığına da bildirim yapılır
+       Bilgiler yalnızca Sayıştaya bildirilir
+       Kayıt defteri kapatılır ve yenisi açılır
+       Bilgiler kripto yazışma ile Dışişleri Bakanlığına gönderilir
+  SORU 3: Şehitlik Yönetmeliği'ne göre şehitliklerde bulunan kayıt defterine yazılacak hususlar arasında aşağıdakilerden hangisi yer almaz?
+       Defnedildiği yere ait ada, parsel ve mezar numaraları
+       Ölüm tarihi ve defin tarihi
+     * Defin yeri beyanında bulunan yakının adres bilgileri
+       Defin kararı veren makamın yazısının tarih ve numarası
+       Şehitliğe defnedilme sebebi
+
+====================================================================================================
+MADDE 13  (soru_sayisi=1)
+RESMI: (1) Cebeci Asri Mezarlığı içinde bulunan Dışişleri Şehitliğine ilişkin iş ve işlemler Dışişleri Bakanlığı tarafından yürütülür. Karar almaya yetkili makamlarca yapılacak işlemler
+
+  SORU 1: Şehitlik Yönetmeliği'ne göre, cebeci Asri Mezarlığı içinde bulunan Dışişleri Şehitliğine ilişkin iş ve işlemler hangi kurum tarafından yürütülür?
+       Ankara Büyükşehir Belediyesi
+       İçişleri Bakanlığı
+     * Dışişleri Bakanlığı
+       Millî Savunma Bakanlığı
+       Ankara Valiliği
+
+====================================================================================================
+MADDE 14  (soru_sayisi=1)
+RESMI: (1) Defin kararı alınmasından defnin tamamlanmasına kadar geçen süreçte şehitliğe defin kararı almaya yetkili makamlarca yapılacak işlemler, bu Yönetmelik hükümleri dikkate alınarak ilgili makamlarca belirlenir. Mevcut şehitlikler GEÇİCİ MADDE 1(-1) Bu Yönetmeliğin yürürlüğe girdiği tarihten önce kamu idarelerine şehitlik olarak tahsis edilmiş alan içerisinde kalan Hazinenin özel mülkiyetinde bulunan taşınmazlar ve/veya Devletin hüküm ve tasarrufu altındaki yerler ile mülkiyeti kamu idarelerine ait taşınmazlar, şehitlik olarak kullanılmak üzere bir yıl içerisinde Maliye Bakanlığı veya maliki kamu idaresi tarafından ilgili yatırım izleme ve koordinasyon başkanlığına veya il özel idaresine tahsis edilir. (2) Mevcut şehitliklerin kullanımına tahsis edilmiş araç, gereç ve tüm taşınırlar altı ay içerisinde ilgili yatırım izleme ve koordinasyon başkanlığına veya il özel idaresine devredilir. (3) Mevcut şehitliklerde, kullanım yeri bitinceye kadar bütünlüğün bozulmaması için mevcut mezar projelerinin uygulanmasına devam edilir. 6749 sayılı Kanunun 7 nci maddesi kapsamındaki kişiler GEÇİCİ MADDE 2(-1) 18/10/2016 tarihli ve 6749 sayılı Olağanüstü Hal Kapsamında Alınan Tedbirlere İlişkin Kanun Hükmünde Kararnamenin Değiştirilerek Kabul Edilmesine Dair Kanunun 7 nci maddesinde sayılan kişilerden aynı maddede sayılan durumlarda hayatını kaybedenler ile yaralananlardan daha sonra bu yaralanmanın sebep ve tesiri ile hayatını kaybettiği değerlendirilenler bu Yönetmelik hükümlerine göre şehitliklere defnedilir. Yürürlük
+
+  KARIS_ADAY: [{"madde": "10", "kac_celdiricide": 2}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, defin kararı alınmasından defnin tamamlanmasına kadar geçen süreçte yapılacak işlemler nasıl belirlenir?
+       Cumhurbaşkanlığı tarafından tek tip bir yönerge ile
+     * Bu Yönetmelik hükümleri dikkate alınarak ilgili makamlarca
+       Yalnızca İçişleri Bakanlığınca çıkarılacak genelge ile
+       Yalnızca Dışişleri Bakanlığınca çıkarılacak genelge ile
+       Her defin için ayrı ayrı Bakanlar Kurulu kararıyla
+
+====================================================================================================
+MADDE 15  (soru_sayisi=1)
+RESMI: (1) Bu Yönetmelik yayımı tarihinden bir ay sonra yürürlüğe girer. Yürütme [3]
+
+  SORU 1: Şehitlik Yönetmeliği'ne göre, bu Yönetmelik yayımı tarihinden ____ sonra yürürlüğe girer.
+       bir hafta
+     * bir ay
+       üç ay
+       altı ay
+       bir yıl
+
+====================================================================================================
+MADDE 16  (soru_sayisi=1)
+RESMI: (1) Bu Yönetmelik hükümlerini Cumhurbaşkanı yürütür. 3/10/2016 TARİHLİ VE2016/9430 SAYILI BAKANLARKURULUKARARI İLEYÜRÜRLÜĞEKONULAN YÖNETMELİĞEEK VEDEĞİŞİKLİK GETİREN YÖNETMELİKLERİN YÜRÜRLÜĞEGİRİŞ TARİHLERİNİ GÖSTEREN TABLO Ek ve Değişiklik Getiren Yönetmeliği Yürürlüğe Koyan Cumhurbaşkanı Kararının Tarihi Numarası 2016/9430 Sayılı Bakanlar Kurulu Kararı ile Yürürlüğe Konulan Yönetmeliğin Değişen Maddeleri Yürürlüğe Giriş Tarihi 8/7/2024 8726 3, 4, 16 9/7/2024 EK-1 TİP MEZAR PROJESİ TİP ANIT PROJESİ EK-2 [1] 9/7/2024 tarihli ve 32597 sayılı Resmî Gazete’de yayımlanan 8726 sayılı Cumhurbaşkanı Kararının 1 inci maddesi ile bu fıkranın (a) bendine “yedek subay,” ibaresinden sonra gelmek üzere “yedek astsubay,” ibaresi eklenmiş, aynı fıkraya (d) bendinden sonra gelmek üzere bent eklenmiş, sonraki bent buna göre teselsül ettirilmiş ve mevcut (e) bendinde yer alan “ve (d)” ibaresi “, (d) ve (e)” şeklinde değiştirilmiştir. [2] 9/7/2024 tarihli ve 32597 sayılı Resmî Gazete’de yayımlanan 8726 sayılı Cumhurbaşkanı Kararının 2 nci maddesi ile bu fıkranın (a), (b) ve (c) bentlerine “yedek subay,” ibarelerinden sonra gelmek üzere “yedek astsubay,” ibareleri eklenmiştir. [3] 9/7/2024 tarihli ve 32597 sayılı Resmî Gazete’de yayımlanan 8726 sayılı Cumhurbaşkanı Kararının 3 üncü maddesi ile bu fıkrada yer alan “Bakanlar Kurulu” ibaresi “Cumhurbaşkanı” şeklinde değiştirilmiştir.
+
+  KARIS_ADAY: [{"madde": "10", "kac_celdiricide": 2}]
+  SORU 1: Şehitlik Yönetmeliği'ne göre, bu Yönetmelik hükümlerini kim yürütür ve bu hüküm hangi değişiklikle güncellenmiştir?
+       Bakanlar Kurulu yürütür; hüküm hiç değişmemiştir
+     * Cumhurbaşkanı yürütür; 9/7/2024-32597 sayılı R.G.'de yayımlanan 8726 sayılı Cumhurbaşkanı Kararı ile eski 'Bakanlar Kurulu' ibaresi 'Cumhurbaşkanı' olarak değiştirilmiştir
+       İçişleri Bakanı yürütür; değişiklik yoktur
+       Millî Savunma Bakanı yürütür; 2018 yılında değişmiştir
+       Dışişleri Bakanı yürütür; 2024 yılında değişmiştir

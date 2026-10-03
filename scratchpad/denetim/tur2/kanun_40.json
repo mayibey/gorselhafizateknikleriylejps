@@ -1,0 +1,114 @@
+{
+ "kanun_id": 40,
+ "ad": "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_40.json",
+ "kartlar": [
+  {
+   "id": "40-0",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Parmak izi alınacaklar",
+   "hukum": "Polis; gönüllü olanların, her çeşit silah ruhsatı, sürücü belgesi, pasaport başvurusunda bulunanların, genel veya özel kolluk görevlisi ya da özel güvenlik görevlisi olarak istihdam edilenlerin, Türk vatandaşlığına başvuranların, sığınma talebinde bulunan veya gerekli görülen yabancıların ve gözaltına alınanların parmak izini alır; gönüllüler hariç bunların ayrıca fotoğrafları alınır; parmak izinin hangi sebeple alındığı sisteme kaydedilmez; olay yerinden elde edilen ve kime ait olduğu bilinmeyen izler soruşturma dosya numarasıyla kaydedilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"sürücü belgesi başvurusunda parmak izi alınmaz\" denir"
+   ],
+   "dogrusu": [
+    "gönüllü · silah ruhsatı, sürücü belgesi, pasaport · genel veya özel kolluk görevlisi ya da özel güvenlik görevlisi · Türk vatandaşlığına · sığınma · gözaltına alınanların · fotoğrafları · hangi sebeple alındığı sisteme kaydedilmez"
+   ]
+  },
+  {
+   "id": "40-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Parmak izi sisteminin kullanımı",
+   "hukum": "Sistemdeki bilgiler kimlik tespiti, suçun önlenmesi veya soruşturma-kovuşturmada maddî gerçeğin ortaya çıkarılması amacıyla mahkeme, hâkim, Cumhuriyet savcısı ve kolluk tarafından kullanılabilir; kolluk kimlik tespiti veya olay yeri izini karşılaştırmak için sistemle doğrudan bağlantı kurabilir; kayıtlar gizlidir; parmak izi ve fotoğraflar kişinin ölümünden itibaren on yıl ve her hâlde kayıt tarihinden itibaren seksen yıl geçtikten sonra silinir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "süreler 5 ve 50 yıl yapılır"
+   ],
+   "dogrusu": [
+    "kimlik tespiti, suçun önlenmesi veya soruşturma-kovuşturmada maddî gerçeğin ortaya çıkarılması · mahkeme, hâkim, Cumhuriyet savcısı ve kolluk · doğrudan bağlantı · gizlidir · ölümünden itibaren on yıl · kayıt tarihinden itibaren seksen yıl"
+   ]
+  },
+  {
+   "id": "40-2",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Kayıp çocuk tedbirleri",
+   "hukum": "Kaybolan çocukların bulunması amacıyla polis, sulh ceza hâkiminin veya gecikmesinde sakınca bulunan hâllerde mülki idare amirinin yazılı veya sonradan yazılı hâle getirilmek üzere sözlü emriyle; kayıp çocuğa ait veya başkasına ait olmakla birlikte çocuk tarafından kullanılan banka hesap hareketlerini talep edebilir, telekomünikasyon yoluyla iletişimini denetleyebilir ve sinyal bilgilerini değerlendirebilir; tedbir kararı en çok bir ay için verilir, bir defaya mahsus bir ay uzatılabilir; mülki amirin kararı derhâl mahkeme onayına sunulur, mahkeme en geç yirmi dört saat içinde karar verir (m.13/A)",
+   "sinavda_boyle_yazarlar": [
+    "gecikmede yetki \"Cumhuriyet savcısı\"na verilir ya da \"mahkeme onayı gerekmez\" denir — çıkmış soruda doğru cevap \"mülki idare amiri\" idi",
+    "Kayıp çocukta gecikme hâlinde Cumhuriyet savcısı emir verir",
+    "Mülki amirin kayıp çocuk kararı mahkeme onayı gerektirmez"
+   ],
+   "dogrusu": [
+    "Mülki idare amiri (m.13/A)",
+    "Derhâl onaya sunulur, 24 saatte karar (m.13/A)"
+   ]
+  },
+  {
+   "id": "40-3",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Zor kullanma",
+   "hukum": "Polis görevini yaparken direnişle karşılaşırsa bu direnişi kırmak amacıyla ve kıracak ölçüde zor kullanmaya yetkilidir; direnmenin mahiyet ve derecesine göre direnenleri etkisiz hâle getirecek şekilde kademeli olarak artan nispette bedenî kuvvet, maddî güç ve kanunî şartları gerçekleştiğinde silah kullanılabilir. Bedenî kuvvet: doğrudan kullanılan bedenî güç; maddî güç: kelepçe, cop, basınçlı ve boyalı su, göz yaşartıcı gaz ve tozlar, fizikî engeller, polis köpekleri ve atları ile diğer hizmet araçları (m.16/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "kelepçe ve köpek \"bedenî kuvvet\" sayılır — maddî güçtür",
+    "Kelepçe ve cop bedenî kuvvettir"
+   ],
+   "dogrusu": [
+    "Maddî güçtür (m.16)"
+   ]
+  },
+  {
+   "id": "40-4",
+   "madde": [
+    "16"
+   ],
+   "baslik": "İhtar ve derece takdiri",
+   "hukum": "Zor kullanmadan önce ilgililere direnmeye devam ederlerse doğrudan doğruya zor kullanılacağı ihtarı yapılır; ancak direnmenin mahiyeti ve derecesi göz önünde bulundurularak ihtar yapılmadan da zor kullanılabilir. Polis kullanacağı araç-gereci ve zorun derecesini kendisi takdir ve tayin eder; toplu kuvvet olarak müdahale edilen durumlarda derece ve araçlar müdahale eden kuvvetin amiri tarafından tayin edilir. Polis kendisine veya başkasına yönelik saldırı karşısında zor kullanma koşullarına bağlı kalmaksızın TCK'nın meşru savunma hükümleri çerçevesinde savunma yapar (m.16/4-6)",
+   "sinavda_boyle_yazarlar": [
+    "\"ihtar her hâlde zorunludur\" ya da \"toplu kuvvette her görevli kendi takdir eder\" denir — çıkmış soruda yanlış şık ihtarla ilgiliydi",
+    "Zor kullanmadan önce ihtar her hâlde zorunludur",
+    "Toplu kuvvette her görevli zorun derecesini kendisi takdir eder"
+   ],
+   "dogrusu": [
+    "Direnişin mahiyetine göre ihtarsız da kullanılabilir (m.16)",
+    "Kuvvetin amiri tayin eder (m.16)"
+   ]
+  },
+  {
+   "id": "40-5",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Silah kullanma hâlleri",
+   "hukum": "Polis; (a) meşru savunma hakkının kullanılması kapsamında, (b) bedenî kuvvet ve maddî güçle etkisiz hâle getiremediği direniş karşısında bu direnişi kırmak amacıyla ve kıracak ölçüde, (c) hakkında tutuklama, gözaltına alma, zorla getirme kararı veya yakalama emri verilmiş kişilerin ya da suçüstü hâlinde şüphelinin yakalanmasını sağlamak amacıyla ve sağlayacak ölçüde, (d) kendisine veya başkalarına, işyerlerine, konutlara, kamu binalarına, okullara, yurtlara, ibadethanelere, araçlara ve kişilerin bulunduğu alanlara molotof, patlayıcı, yanıcı, yakıcı, boğucu, yaralayıcı silahlarla saldıran veya saldırıya teşebbüs edenlere karşı saldırıyı etkisiz kılmak amacıyla ve etkisiz kılacak ölçüde silah kullanmaya yetkilidir (m.16/7)",
+   "sinavda_boyle_yazarlar": [
+    "(c) bendindeki \"yakalama emri\" şartı düşürülüp \"kaçan herkese\" genişletilir"
+   ],
+   "dogrusu": [
+    "meşru savunma · direniş · tutuklama, gözaltına alma, zorla getirme kararı veya yakalama emri · suçüstü hâlinde şüphelinin · molotof, patlayıcı, yanıcı, yakıcı, boğucu, yaralayıcı"
+   ]
+  },
+  {
+   "id": "40-6",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Kaçana ateş sıralaması",
+   "hukum": "(c) bendi kapsamında silah kullanmadan önce kişiye duyabileceği şekilde \"dur\" çağrısında bulunulur; kişi çağrıya uymayıp kaçmaya devam ederse önce uyarı amacıyla silahla ateş edilebilir; buna rağmen kaçmakta ısrar etmesi dolayısıyla ele geçirilmesinin mümkün olmaması hâlinde, yakalanmasını sağlamak amacıyla ve sağlayacak ölçüde silahla ateş edilebilir (m.16/8)",
+   "sinavda_boyle_yazarlar": [
+    "\"dur çağrısından sonra doğrudan ateş edilir\" denir",
+    "Dur çağrısına uymayan kaçana doğrudan ateş edilir"
+   ],
+   "dogrusu": [
+    "Önce uyarı atışı, sonra yakalayacak ölçüde atış (m.16)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

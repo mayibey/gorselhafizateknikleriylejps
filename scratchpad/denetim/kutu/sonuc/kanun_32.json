@@ -1,0 +1,183 @@
+[
+ {"kanun_id": 32, "kart_id": "32-0", "sorun": "kirmizi_kutu",
+  "aciklama": "Kendi ihtiyacı için toprak-kum-çakıl çıkarma ve kuru ağaç kesme yasağı serbest gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devlet ormanlarında ticaret amacı olmaksızın kendi ihtiyacı için toprak, kum ve çakıl çıkarmak serbesttir.”",
+    "“Devlet ormanlarında yalnızca dikili yaş ağaçları kesmek yasaktır; kuru ağaçları kesmek serbesttir.”"
+   ],
+   "dogrusu": [
+    "Devlet ormanlarında ticaret amacı olmaksızın kendi ihtiyacı için toprak, kum ve çakıl çıkarmak da yasaktır (m.14/E)",
+    "Devlet ormanlarında dikili yaş veya kuru ağaçları kesmek ya da kökünden sökmek yasaktır (m.14/B)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; izne bağlı işler mutlak yasak gösterildi ve izin makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devlet ormanlarında orman hasılatı elde etmek için ağaç kesmek, izin alınsa dahi yapılamaz.”",
+    "“Ormanda fidan sökmek ve dal kesmek için orman idaresinden değil, köy muhtarlığından izin alınır.”"
+   ],
+   "dogrusu": [
+    "Orman hasılatı elde etmek üzere ağaç kesmek gibi fiiller, orman idaresinin izin ve müsaadesine bağlıdır (m.15)",
+    "Ormanda fidan sökmek veya dal kesmek orman idaresinin izin ve müsaadesine bağlıdır (m.15)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-2", "sorun": "kirmizi_kutu",
+  "aciklama": "İzin makamı (Tarım ve Orman Bakanlığı) ve dolgu amaçlı üretimdeki bedel muafiyeti bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devlet ormanlarında maden aranması ve işletilmesine Orman Genel Müdürlüğünce izin verilir.”",
+    "“Genel bütçeli kamu idarelerinin baraj ve yol dolgusu için yaptığı madencilik faaliyetlerinden de bedel alınır.”"
+   ],
+   "dogrusu": [
+    "Devlet ormanlarında maden aranması ve işletilmesine bedeli alınarak Tarım ve Orman Bakanlığınca izin verilir (m.16)",
+    "Genel bütçeli kamu idarelerinin baraj, gölet, liman ve yol gibi yapılarda dolgu amaçlı hammadde üretiminden bedel alınmaz (m.16)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Yıkım için karar gerekmemesi, izin süresi (kırk dokuz yıl) ve izin sonunda devredilecek tesisler bozuldu. KART_CELISKI: hüküm 'süre sonunda tesisler eksiksiz ve bedelsiz OGM'ye geçer' diyor; resmî metinde yalnız Devletçe yapılanların DIŞINDAKİ bina ve tesisler geçer (istisna düşmüştü). Ayrıca el konulan yapıların 'derhal yıkılır veya ihtiyaç görülürse ormancılık hizmetlerinde kullanılabilir' seçeneği ve sağlık-eğitim-spor tesislerinin 'Devlete ait' kaydı eksikti",
+  "duzeltme": {
+   "hukum": "Devlet ormanlarında korunma, istihsal ve imarla ilgili tesisler ve planlı otlatma için geçici çevirmeler dışında her çeşit bina, ağıl, tarla açılması ve orman içinde yerleşilmesi yasaktır. Ormanların yanmasından veya açıklıklarından faydalanılarak işgal edilen yerler ve yapılar şahıslar adına tapuya tescil olunamaz, doğrudan orman idaresince el konulur; el konulan yapılar hiçbir karar alınmasına gerek kalmaksızın OGM tarafından derhâl yıkılır veya ihtiyaç görülürse ormancılık hizmetlerinde kullanılabilir. Savunma, ulaşım, enerji, haberleşme, su, baraj, Devlete ait sağlık-eğitim-spor tesisleri gibi kamu yararı ve zaruret bulunan işlere Bakanlıkça en çok kırk dokuz yıl izin verilebilir, süre uzatmayla doksan dokuz yıla kadar çıkabilir; izin sona erince Devletçe yapılanlar dışındaki bina ve tesisler eksiksiz ve bedelsiz OGM'ye geçer (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "“Devlet ormanlarında el konulan yapılar ancak mahkeme kararıyla yıkılabilir.”",
+    "“Kamu yararı ve zaruret bulunan tesisler için Devlet ormanlarında verilen izin süresi yirmi dokuz yılı geçemez.”",
+    "“İzin süresi sona erdiğinde, Devletçe yapılanlar dâhil bütün bina ve tesisler bedelsiz olarak Orman Genel Müdürlüğüne geçer.”"
+   ],
+   "dogrusu": [
+    "El konulan yapılar, hiçbir karar alınmasına lüzum kalmaksızın Orman Genel Müdürlüğünce derhal yıkılır veya ormancılık hizmetlerinde kullanılabilir (m.17/2)",
+    "Kamu yararı ve zaruret bulunan tesisler için Devlet ormanlarında verilecek izin süresi kırk dokuz yılı geçemez (m.17/3)",
+    "İzin sona erince Devletçe yapılanlar dışındaki bina ve tesisler eksiksiz ve bedelsiz Orman Genel Müdürlüğüne geçer (m.17/3)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-4", "sorun": "kirmizi_kutu",
+  "aciklama": "İzin süresi (yirmi dokuz yıl), işletmeye alma süresi (iki yıl) ve yanmış alanlardaki mutlak yasak bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devlet ormanlarında yeraltı depolama alanı kurulması gibi işlere Orman Genel Müdürlüğünce kırk dokuz yıla kadar izin verilebilir.”",
+    "“Tesisin işletmeye alınması için izin sahibine saha tesliminden itibaren beş yıl süre tanınır.”",
+    "“Yangın görmüş orman alanlarında arkeolojik kazı ve ocak açılmasına Orman Genel Müdürlüğünce izin verilebilir.”"
+   ],
+   "dogrusu": [
+    "Bu işlere Orman Genel Müdürlüğünce bedeli alınarak yirmi dokuz yıla kadar izin verilebilir (m.18)",
+    "Saha tesliminden itibaren iki yıl içinde işletmeye alınmayan tesisin izni iptal edilir (m.18)",
+    "Yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılan sahalarda bu faaliyetlere hiçbir surette izin verilemez (m.18)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Hayvan sokma yasağının kapsamı ve yanmış alanlarda otlatma yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ormanlara yalnızca keçi sokulması yasaktır; diğer hayvanlar serbestçe sokulabilir.”",
+    "“Yangın görmüş orman alanlarında, orman idaresinin izniyle hayvan otlatılabilir.”"
+   ],
+   "dogrusu": [
+    "Ormanlara her türlü hayvan sokulması yasaktır; otlatmaya yalnız orman idaresinin belirlediği alanlarda izin verilebilir (m.19)",
+    "Yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılmış sahalarda hiçbir surette hayvan otlatılamaz (m.19)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Müsaderenin bütün fazlalığa şamil olması ve tolerans oranları bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Taşıma belgesindeki hadleri aşan orman emvalinde yalnızca hadleri aşan kısım kaçak sayılarak müsadere edilir.”",
+    "“Taşıma belgesine uyan emvalde hacmen yüzde yirmiye kadar fazlalık, bedeli alınarak serbest bırakılır.”"
+   ],
+   "dogrusu": [
+    "Hadleri aşan miktar, bütün fazlalığa şamil olmak üzere kaçak sayılarak idarece müsadere edilir (m.41)",
+    "Belgeye uyan emvalde hacmen yüzde on, ağırlığının yüzde on beşine kadar fazlalık bedeli ve yüzde on fazlası alınarak serbest bırakılır (m.41)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Şehir içinde fatura/sevk irsaliyesiyle taşıma ve nakliyat yolunu belirleme yetkisi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Şehir içindeki ticarethanelerden alınan orman emvali de ancak taşıma belgesiyle taşınabilir; fatura yeterli değildir.”",
+    "“Orman içinde nakliyat, taşıyıcının seçeceği herhangi bir yoldan yapılabilir.”"
+   ],
+   "dogrusu": [
+    "Şehir ve kasabalardaki ticarethane ve fabrikalardan alınan orman emvali şehir içinde fatura veya sevk irsaliyesiyle taşınabilir (m.42)",
+    "Orman içinde yapılacak nakliyat, orman idaresinin göstereceği yollardan yapılır (m.42)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-8", "sorun": "kirmizi_kutu",
+  "aciklama": "İhbar yapılacak makamlar daraltıldı ve haberleşme vasıtalarının parasızlığı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Orman içinde yangın belirtisi gören kişi, bunu yalnızca orman idaresine haber vermekle yükümlüdür.”",
+    "“Yangın ihbarında Devlete ait askerî haberleşme vasıtalarından ücret karşılığında yararlanılır.”"
+   ],
+   "dogrusu": [
+    "Yangın belirtisini gören; orman idaresine, en yakın muhtarlığa, jandarmaya veya mülkiye amirlerine derhal haber verir (m.68)",
+    "Yangın ihbarında Devlete ait her türlü askerî ve mülkî haberleşme vasıtalarından derhal ve parasız yararlanılır (m.68)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Anız yakma mesafesi (dört kilometre) ve konak yeri dışında geceleme yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Anız veya benzeri bitki örtüsü, ormanlara iki kilometre mesafede yakılabilir.”",
+    "“Devlet ormanlarında orman idaresince belirlenen konak yerleri dışında gecelemek serbesttir.”"
+   ],
+   "dogrusu": [
+    "Ormanlara dört kilometre mesafede anız veya benzeri bitki örtüsü yakmak yasaktır (m.76/d)",
+    "Devlet ormanlarında orman idaresince belirlenen konak yerlerinden başka yerlerde gecelemek yasaktır (m.76/a)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-10", "sorun": "kirmizi_kutu",
+  "aciklama": "Orman memurunun kolluk sıfatı ve silahı seçen makam (Cumhurbaşkanı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Orman memurları, bu Kanundaki suçların önlenmesinde kolluk görevlisi sıfatını taşımaz; bu görev yalnızca jandarmaya aittir.”",
+    "“Orman memurlarının taşıyacağı silahları Orman Genel Müdürlüğü seçer.”"
+   ],
+   "dogrusu": [
+    "Orman memurları, bu Kanundaki suçların önlenmesi ve soruşturulmasında kolluk görevlisi sıfatını taşır (m.77)",
+    "Lüzum görülen orman memurları, Cumhurbaşkanınca seçilecek silahla teçhiz olunur (m.77)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Kaçma tek başına silah kullanma sebebi gösterildi; teslim emrine uymamanın yeterli olduğu iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Orman memuru, kaçak orman emvali taşıyarak kaçan kişiye yalnızca kaçtığı için silah kullanabilir.”",
+    "“Tecavüze yarayan alet taşıyan kişi teslim emrine uymadığı anda, fiilen saldırmasa bile silah kullanılabilir.”"
+   ],
+   "dogrusu": [
+    "Orman memuru silahını hakkın kullanılması, meşru savunma, zorunluluk veya başka şekilde def'edilemeyen saldırı hâllerinde kullanabilir; kaçma tek başına sebep değildir (m.78)",
+    "Teslim emrine uyulmaması yetmez; fiilen tecavüz ve taarruzda bulunulması ve bunun başka şekilde def'ine imkân olmaması gerekir (m.78/B)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-12", "sorun": "kirmizi_kutu",
+  "aciklama": "Yardıma mecbur olanlara ihtiyar heyeti eklendi; elkoyma emri veren makam (orman işletme şefi) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Talep hâlinde polis, jandarma, köy muhtarı, bekçiler ve köy ihtiyar heyeti üyeleri orman memurlarına yardıma mecburdur.”",
+    "“Cumhuriyet savcısına ulaşılamadığı hâllerde elkoyma, kolluk amirinin yazılı emriyle yapılır.”"
+   ],
+   "dogrusu": [
+    "Talep hâlinde orman memurlarına yardıma mecbur olanlar polis, jandarma, köy muhtar ve bekçileridir (m.79)",
+    "Cumhuriyet savcısına ulaşılamadığı hâllerde elkoyma, orman işletme şefinin yazılı emriyle yapılır (m.79)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-13", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; acele iş sayılma ve m.110/4 suçlarında görevli mahkeme (ağır ceza) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Orman suçlarına ait davalar acele işlerden sayılmaz; mahkemelerce genel sıraya göre görülür.”",
+    "“Orman Kanununun 110 uncu maddesinin dördüncü fıkrasındaki suçlara ilişkin davalar asliye ceza mahkemesinde görülür.”"
+   ],
+   "dogrusu": [
+    "Orman suçlarına ait davalar mahkemelerce acele işlerden sayılır (m.83)",
+    "110 uncu maddenin dördüncü fıkrasındaki suçlara ilişkin davalar ağır ceza mahkemesinde görülür (m.83)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-14", "sorun": "kirmizi_kutu",
+  "aciklama": "Elkonulan emvalin teslim sırası (depo, belediye/muhtar, vekil, ihtiyar heyeti) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Orman deposu bulunmayan köy sınırları içinde elkonulan emval, doğrudan ihtiyar heyeti üyelerinden birine teslim edilir.”",
+    "“Elkonulan emval, orman deposu bulunsa bile önce belediyeye teslim edilir.”"
+   ],
+   "dogrusu": [
+    "Köy sınırları içinde emval köy muhtarına, yokluğunda vekiline, onun da yokluğunda ihtiyar heyeti üyelerinden birine teslim edilir (m.84)",
+    "Elkonulan emval öncelikle orman depolarına; orman deposu yoksa belediye veya köy yetkililerine teslim edilir (m.84)"
+   ]}},
+ {"kanun_id": 32, "kart_id": "32-15", "sorun": "kirmizi_kutu",
+  "aciklama": "Arama emri veren makam (orman şefi) ve aramanın CMK'ya tabi olması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Cumhuriyet savcısına ulaşılamadığı hâllerde orman suçlarında arama, orman bölge müdürünün yazılı emriyle yapılır.”",
+    "“Orman suçlarında arama, Ceza Muhakemesi Kanunundan bağımsız olarak yalnızca Orman Kanunu hükümlerine göre yapılır.”"
+   ],
+   "dogrusu": [
+    "Savcıya ulaşılamadığında orman suçlarında arama, orman şefinin yazılı emriyle yapılır (m.88)",
+    "Orman Kanunundaki suçlardan dolayı arama, Ceza Muhakemesi Kanunu hükümlerine göre yapılır (m.88)"
+   ]}}
+]

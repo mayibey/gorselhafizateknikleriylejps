@@ -1,0 +1,250 @@
+[
+ {"kanun_id": 97, "kart_id": "97-0", "sorun": "kirmizi_kutu",
+  "aciklama": "m.4 metni girdide boştu; mevzuat.gov.tr önbelleğinden (m.4/1-m, c) doğrulandı. Muhatap aboneye çevrildi; arabağlantı tanımı erişime yüklendi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Erişim, elektronik haberleşme şebekesi, altyapısı ve/veya hizmetlerinin abonelere sunulmasıdır.”",
+     "“Elektronik haberleşme şebekelerinin birbirine fiziksel ve mantıksal olarak bağlanması, Yönetmelikte erişim olarak tanımlanır.”"],
+   "dogrusu": [
+     "Erişim, Kanunda belirtilen koşullarla elektronik haberleşme şebekesi, altyapısı ve/veya hizmetlerinin diğer işletmecilere sunulmasıdır (m.4/1-m)",
+     "Şebekelerin birbirine fiziksel ve mantıksal olarak bağlanması arabağlantıdır; erişim ise şebeke, altyapı veya hizmetlerin diğer işletmecilere sunulmasıdır (m.4/1-c, m)"]}},
+ {"kanun_id": 97, "kart_id": "97-1", "sorun": "kirmizi_kutu",
+  "aciklama": "m.4 metni girdide boştu; önbellekten (m.4/1-g, ğ) doğrulandı. İki tanım yer değiştirildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Elektronik haberleşme altyapısı, her türlü işaret, sembol, ses, görüntü ve verinin iletim sistemleri vasıtasıyla iletilmesi, gönderilmesi ve alınmasıdır.”",
+     "“Elektronik haberleşme, anahtarlama ekipmanları, donanım ve yazılımlar, terminaller ve hatlar dâhil her türlü şebeke birimini ifade eder.”"],
+   "dogrusu": [
+     "İşaret, sembol, ses, görüntü ve verinin iletim sistemleriyle iletilmesi, gönderilmesi ve alınması elektronik haberleşmenin tanımıdır (m.4/1-g)",
+     "Anahtarlama ekipmanları, donanım ve yazılımlar, terminaller ve hatlar dâhil her türlü şebeke birimi elektronik haberleşme altyapısıdır (m.4/1-ğ)"]}},
+ {"kanun_id": 97, "kart_id": "97-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Süre işletmecinin takdirine bırakıldı; düzenli veri gönderimi dışlandı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, Kurumca istenen bilgi, belge ve veriyi kendi uygun gördüğü süre içinde vermekle yükümlüdür.”",
+     "“İşletmeciden yalnızca yetkilendirme başvurusu sırasında bilgi ve belge istenebilir; düzenli veri gönderimi talep edilemez.”"],
+   "dogrusu": [
+     "İşletmeci, istenen bilgi, belge ve veriyi doğru ve eksiksiz olarak Kurumca istenen süre içinde vermekle yükümlüdür (m.19/1-a)",
+     "İşletmeci, yetkilendirmesi kapsamında istenen veya düzenli olarak gönderilmesi talep edilen bilgi, belge ve veriyi vermekle yükümlüdür (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Elektronik ortam yetkisi kaldırıldı; başvuru sahipleri kapsam dışı gösterildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Kurum, işletmecilerden temin edeceği bilgi ve belgeleri elektronik ortamda temin edemez.”",
+     "“Kurum, bilgi ve belgeleri elektronik ortamda yalnızca yetkilendirilmiş işletmecilerden temin edebilir; başvuru sahiplerinden bu yolla belge isteyemez.”"],
+   "dogrusu": [
+     "Kurum, işletmecilerden ve başvuru sahiplerinden bilgi ve belgeleri belirleyeceği usul ve esaslarla elektronik ortamda da temin edebilir (m.19/1-a)",
+     "Kurum, elektronik ortamda bilgi ve belgeyi işletmecilerden olduğu gibi yetkilendirme başvurusunda bulunanlardan da temin edebilir (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Hisse eşiği yüzde yirmiye çıkarıldı; vergi bilgisi değişikliği bildirim dışı gösterildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Adli sicil belgesindeki değişiklikleri Kuruma bildirilecek ortaklar için hisse eşiği yüzde yirmidir.”",
+     "“İşletmecinin vergi dairesi ve vergi numarasındaki değişikliklerin Kuruma bildirilmesi gerekmez.”"],
+   "dogrusu": [
+     "Adli sicil değişiklikleri bildirilecek ortaklar için eşik, şirket hisselerinin en az yüzde onudur (m.19/1-a)",
+     "İşletmecinin vergi dairesi ve numarasındaki değişiklikler de bir ay içinde Kuruma bildirilir (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Süre üç aya çıkarıldı; fotokopi yeterli gösterildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Değişiklikleri tevsik eden belgeler, değişikliklerin yapılmasını müteakip üç ay içinde Kuruma bildirilir.”",
+     "“Değişiklikleri tevsik eden belgelerin fotokopilerinin Kuruma gönderilmesi yeterlidir.”"],
+   "dogrusu": [
+     "Değişiklikleri tevsik eden belgeler, değişikliklerin yapılmasını müteakip bir ay içinde Kuruma bildirilir (m.19/1-a)",
+     "Değişiklikleri tevsik eden belgelerin asılları ya da noter onaylı örnekleri Kuruma gönderilir (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Periyot her yıla, ay Ocak'a çevrildi (ayrı ayrı)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Başvuru formundaki bilgi ve belgelerden değişenler, her yıl Mayıs ayı içinde Kuruma gönderilir.”",
+     "“Beş yılda bir yapılacak güncelleme bildirimi, ilgili yılın Ocak ayı içinde Kuruma gönderilir.”"],
+   "dogrusu": [
+     "Başvuru formundaki değişen bilgi ve belgeler, 2020'den başlamak üzere her beş yılda bir Kuruma gönderilir (m.19/1-a)",
+     "Beş yılda bir yapılacak güncelleme bildirimi, ilgili yılın Mayıs ayı içinde Kuruma gönderilir (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-7", "sorun": "kirmizi_kutu",
+  "aciklama": "İmza sirküleri gereksiz gösterildi; yetki belgeleri dışlandı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Şirketi idare ve temsile yetkili kişiler değiştiğinde güncel imza sirkülerinin Kuruma iletilmesine gerek yoktur.”",
+     "“Temsile yetkili kişiler değiştiğinde yalnızca imza sirküleri Kuruma iletilir; bu kişilerin yetkilerini belirten belgeler istenmez.”"],
+   "dogrusu": [
+     "Temsile yetkili kişiler değişirse güncel imza sirküleri veya noter onaylı imza beyannameleri Kuruma iletilir (m.19/1-a)",
+     "İmza sirküleri veya beyannameleriyle birlikte yeni kişilerin yetkilerini belirten gerekli belgeler de Kuruma iletilir (m.19/1-a)"]}},
+ {"kanun_id": 97, "kart_id": "97-8", "sorun": "kirmizi_kutu",
+  "aciklama": "İzin yerine bildirim konuldu; belge düzenleme süresi üç aya çıkarıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, yetkilendirmesini Kurumdan izin almadan devredebilir; devrin Kuruma bildirilmesi yeterlidir.”",
+     "“Kurumun devir iznini müteakip üç ay içinde devralan şirket adına kullanım hakkı belgesi düzenlenir.”"],
+   "dogrusu": [
+     "Yetkilendirmenin devri için bildirim yetmez; Kurumun devri uygun bulduğuna dair yazılı izni gerekir (m.19/1-b)",
+     "Kurumun yazılı devir iznini müteakip bir ay içinde devralan şirket adına belge düzenlenir veya şirket bildirim kapsamında kayıtlanır (m.19/1-b)"]}},
+ {"kanun_id": 97, "kart_id": "97-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Esas tarih izin tarihine ve yeni tarihli işletmeciye kaydırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yetkilendirmenin devri hâlinde yetkilendirme tarihi olarak Kurumun devre izin verdiği tarih esas alınır.”",
+     "“Yetkilendirmenin devrinde, taraflardan yeni tarihli yetkilendirilmiş işletmecinin yetkilendirme tarihi esas alınır.”"],
+   "dogrusu": [
+     "Yetkilendirmenin devri hâlinde, eski tarihli yetkilendirilmiş işletmecinin yetkilendirme tarihi esas alınır (m.19/1-b)",
+     "Devirde yeni tarihli değil, eski tarihli yetkilendirilmiş işletmecinin yetkilendirme tarihi esas alınır (m.19/1-b)"]}},
+ {"kanun_id": 97, "kart_id": "97-10", "sorun": "kirmizi_kutu",
+  "aciklama": "Yüzde on ve üzeri için ön izin kaldırıldı; yüzde ona kadar bilgilendirme süresi üç aya çıkarıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yüzde on ve üzeri hisse devirleri için Kurumdan önceden izin alınmaz; işlemden sonra bir ay içinde Kurum bilgilendirilir.”",
+     "“Yüzde ona kadar olan hisse devirlerinde işletmeci, Kurumu en geç üç ay içinde bilgilendirir.”"],
+   "dogrusu": [
+     "Yüzde on ve üzeri hisse devir, edinim ve hareketlerinden önce Kurumdan izin alınması zorunludur (m.19/1-c)",
+     "Yüzde ona kadar olan hisse devri, edinimi ve hareketlerinde Kurum en geç bir ay içinde bilgilendirilir (m.19/1-c)"]}},
+ {"kanun_id": 97, "kart_id": "97-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Kontrolü değiştirmeyen üst şirket devirleri izne bağlandı; kontrol değişiminde ön izin kaldırıldı. Eski Doğrusu'ndaki 'yalnız kontrol değişiminde izin' ifadesi yüzde on izin kuralını dışladığı için kullanılmadı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmecinin ortağı olan şirketlerdeki her hisse devri, işletmecinin kontrol unsurunu değiştirmese bile Kurum iznine tabidir.”",
+     "“Kontrol unsurunun el değiştirmesine yol açan hisse devirleri için önceden izin gerekmez; işlemden sonra Kuruma bildirilmesi yeterlidir.”"],
+   "dogrusu": [
+     "İşletmecinin ortağı olan şirketlerde kontrol unsurunu değiştirmeyen hisse devirleri için Kuruma bilgi verilmesi zorunlu değildir (m.19/1-c/1)",
+     "Kontrol unsurunun el değiştirmesine yol açan her nevi hisse devrinden önce Kurumdan izin alınması zorunludur (m.19/1-c/4)"]}},
+ {"kanun_id": 97, "kart_id": "97-12", "sorun": "kirmizi_kutu",
+  "aciklama": "Kurum izni kaldırıldı; bildirim süresi üç aya çıkarıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmecinin başka bir şirketle birleşmesi Kurum iznine tabi değildir; işlemin Kuruma bildirilmesi yeterlidir.”",
+     "“Birleşme işletmeci dışındaki bir şirket bünyesinde gerçekleşmişse, birleşme tarihinden itibaren üç ay içinde Kuruma bildirilir.”"],
+   "dogrusu": [
+     "İşletmecinin başka bir şirketle birleşmesi veya başka bir şirkete devrolması Kurum iznine tabidir (m.19/1-ç)",
+     "Birleşme işletmeci dışındaki bir şirket bünyesinde gerçekleşmişse, birleşme tarihinden itibaren bir ay içinde Kuruma bildirilir (m.19/1-ç/1)"]}},
+ {"kanun_id": 97, "kart_id": "97-13", "sorun": "kirmizi_kutu",
+  "aciklama": "Koşulsuz iptal öne sürüldü; idari para cezası hakkı düşürüldü",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yönetmelikteki usullere uyulmadan yapılan birleşme ve devirlerde yetkilendirme her hâlde iptal edilir.”",
+     "“Usulsüz birleşmede devralan şirket şartları Kurumca belirlenen sürede sağlarsa Kurum idari para cezası uygulayamaz.”"],
+   "dogrusu": [
+     "Devralan şirket şartları Kurumca belirlenen sürede sağlarsa yeni şirket adına belge düzenlenir; sağlamazsa yetkilendirme iptal edilir (m.19/1-ç/2)",
+     "Şartlar sonradan sağlansa da Kurumun idari para cezası ve diğer idari müeyyide uygulama hakkı saklıdır (m.19/1-ç/2)"]}},
+ {"kanun_id": 97, "kart_id": "97-14", "sorun": "kirmizi_kutu",
+  "aciklama": "Afet hâlleri istisna gösterildi; acil çağrı erişimi kapsam dışı bırakıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmecilerin şebeke bütünlüğünü idame ettirme yükümlülüğü, afet hâllerinde uygulanmaz.”",
+     "“Acil yardım çağrı numaralarına kesintisiz ulaşılabilmesi, işletmecinin şebeke bütünlüğü yükümlülüğü kapsamında yer almaz.”"],
+   "dogrusu": [
+     "İşletmeciler, afet hâlleri dâhil elektronik haberleşme şebekelerinin bütünlüğünün idamesi için gerekli önlemleri almakla yükümlüdür (m.19/1-d)",
+     "Acil yardım çağrı numaralarına kesintisiz ulaşılabilmesi, şebeke bütünlüğü için alınacak önlemlerin başında gelir (m.19/1-d)"]}},
+ {"kanun_id": 97, "kart_id": "97-15", "sorun": "kirmizi_kutu",
+  "aciklama": "Ücretsizlik kaldırıldı; teçhizat kurma yükümlülüğü Kuruma aktarıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Acil yardım çağrı numaralarına ankesörlü telefonlardan jeton ya da ön ödemeli kart kullanılarak erişilir.”",
+     "“Acil yardım çağrı hizmetinin verilebilmesi için gereken teçhizat ve sistemleri Kurum kurar.”"],
+   "dogrusu": [
+     "Acil yardım çağrı hizmeti, para, jeton, ön ödemeli kart ve benzeri araç gerekmeksizin ücretsiz sağlanır (m.19/1-d)",
+     "Erişim zorunluluğu getirilen işletmeciler, acil çağrı hizmeti için gereken teçhizat ve sistemleri kurmakla yükümlüdür (m.19/1-d)"]}},
+ {"kanun_id": 97, "kart_id": "97-16", "sorun": "kirmizi_kutu",
+  "aciklama": "Trafik bilgisi süresi bir yıla indirildi; kullanıcı bilgisi de iki yıla bağlandı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Erişim sağlayıcı olan işletmeci, görüşmelere ait trafik bilgilerini bir yıl süreyle muhafaza eder.”",
+     "“Kullanıcı bilgileri de trafik bilgileri gibi iki yıl süreyle muhafaza edilir.”"],
+   "dogrusu": [
+     "Erişim sağlayıcı veya telefon hizmeti sunan işletmeci, görüşmelere ait trafik bilgilerini iki yıl süreyle muhafaza eder (m.19/1-f)",
+     "Kullanıcı bilgileri iki yıl değil, ilgili mevzuatta belirtilen zamanaşımı süresi boyunca muhafaza edilir (m.19/1-f)"]}},
+ {"kanun_id": 97, "kart_id": "97-17", "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim zamanı durdurma sonrasına alındı; yerinde tespit yetkisi kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, hizmeti durdurduktan sonra durdurmanın objektif nedenlerini Kuruma bildirir.”",
+     "“Hizmetin durdurulması bildiriminde Kurum yerinde tespit yapamaz; yalnızca sunulan belgeleri inceler.”"],
+   "dogrusu": [
+     "İşletmeci, hizmeti durdurmadan veya alandan geri çekmeden önce objektif nedenleri bilgi ve belgeleriyle Kuruma bildirir (m.19/1-g)",
+     "Kurum gerekli görürse ilave bilgi ve belge isteyebilir ve/veya yerinde tespit yapabilir (m.19/1-g)"]}},
+ {"kanun_id": 97, "kart_id": "97-18", "sorun": "kirmizi_kutu",
+  "aciklama": "Tahsil aracılığı kaldırıldı; işletmecinin kendi telsiz ücreti aboneye yüklendi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Aboneler, Kanun uyarınca ödemek zorunda oldukları telsiz ücretlerini doğrudan Kurumun hesaplarına yatırır.”",
+     "“İşletmecinin şebekesi için kurduğu telsiz cihaz ve sistemlerinin ücretleri abonelerden tahsil edilir.”"],
+   "dogrusu": [
+     "Abonelerin telsiz ücretlerini işletmeci Kurum adına tahsil eder ve Kurumun hesaplarına aktarır (m.19/1-ğ)",
+     "İşletmeci, hizmet, şebeke veya altyapısı için kurduğu telsiz cihaz ve sistemlerinin ücretlerini Kuruma kendisi öder (m.19/1-ğ)"]}},
+ {"kanun_id": 97, "kart_id": "97-19", "sorun": "kirmizi_kutu",
+  "aciklama": "m.4/1-n önbellekten doğrulandı. Matrah brüte, oran yüzdeye çevrildi (ayrı ayrı)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İdari ücret, işletmecinin bir önceki yıl brüt satışlarının binde beşini geçmemek üzere Kurumca belirlenir.”",
+     "“İdari ücret, işletmecinin bir önceki yıl net satışlarının yüzde beşini geçmemek üzere Kurumca belirlenir.”"],
+   "dogrusu": [
+     "İdari ücret, işletmecinin bir önceki yıl net satışlarının binde beşini geçmemek üzere Kurumca belirlenir (m.4/1-n)",
+     "İdari ücretin üst sınırı, işletmecinin bir önceki yıl net satışlarının binde beşidir (m.4/1-n)"]}},
+ {"kanun_id": 97, "kart_id": "97-20", "sorun": "kirmizi_kutu",
+  "aciklama": "Ayrı kayıt yükümlülüğü tek kayda indirildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Sabit ve mobil hizmetleri tek bir yetkilendirme altında sunan işletmeci, bu hizmetler için tek bir muhasebe kaydı tutabilir.”",
+     "“İşletmeci, farklı hizmet türlerine ilişkin tüm faaliyetlerinin muhasebe kayıtlarını tek bir hesapta birleştirerek tutar.”"],
+   "dogrusu": [
+     "Sabit ve mobil hizmetleri tek yetkilendirmeyle sunan işletmeci, bunlara ilişkin muhasebe kayıtlarını ayrı ayrı tutar (m.19/1-i)",
+     "İşletmeci, her bir hizmet türü için yetkilendirmesi kapsamındaki faaliyetlerin muhasebe kayıtlarını ayrı tutar (m.19/1-i)"]}},
+ {"kanun_id": 97, "kart_id": "97-21", "sorun": "kirmizi_kutu",
+  "aciklama": "Öteleme süresi altı aya, kayıt dönemi üç yıla çevrildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Mevzuata uymama nedeniyle iptalde Kurum, abone mağduriyetini önlemek için iptal tarihini azami altı ay öteleyebilir.”",
+     "“Yetkilendirmesi iptal edilen işletmeciden, abonelere hizmet sunulan son üç yıllık döneme ilişkin kayıtlar istenir.”"],
+   "dogrusu": [
+     "Kurum, abone mağduriyetini önlemek için iptal tarihini, iptal işleminin tesis edildiği tarihten itibaren azami üç ay öteleyebilir (m.19/1-l)",
+     "İptal edilen işletmeciden son beş yıllık döneme ait kayıtlar, abone kütük bilgileri ve hizmet donanımı istenir (m.19/1-l)"]}},
+ {"kanun_id": 97, "kart_id": "97-22", "sorun": "kirmizi_kutu",
+  "aciklama": "Yenilenmemede iptal hükümleri dışlandı; RTÜK kaynaklı iptal zorunlu gösterildi (metinde 'iptal edilebilir')",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yetkilendirmenin yenilenmemesi hâlinde iptal hükümleri uygulanmaz.”",
+     "“Radyo ve Televizyon Üst Kurulunca yayın iletim yetkisi iptal edilen işletmecinin ilgili yetkilendirmesini Kurum iptal etmek zorundadır.”"],
+   "dogrusu": [
+     "Yetkilendirmenin yenilenmemesi durumlarında da iptal hükümleri uygulanır (m.19/1-l)",
+     "Radyo ve Televizyon Üst Kurulunca yayın iletim yetkisi iptal edilen işletmecinin yetkilendirmesini Kurum iptal edebilir (m.19/1-l)"]}},
+ {"kanun_id": 97, "kart_id": "97-23", "sorun": "kirmizi_kutu",
+  "aciklama": "Yurt dışı yer istasyonuna izin verildi; her istasyon için ayrı form kuralı tek forma indirildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Kurumla irtibatlı teknik altyapı kurmakla yükümlü uydu işletmecileri, kullanıcı trafiğini yurt dışındaki uydu yer istasyonlarından da geçirebilir.”",
+     "“Uydu yer istasyonu kullanan işletmeci, kuracağı tüm istasyonlar için tek bir form doldurarak Kuruma bildirimde bulunur.”"],
+   "dogrusu": [
+     "Kurumla irtibatlı teknik altyapı kurmakla yükümlü uydu işletmecileri, kullanıcı trafiğini Türkiye Cumhuriyeti sınırları içinde kurulmuş uydu yer istasyonlarından geçirir (m.19/1-n/2)",
+     "Uydu yer istasyonu kullanan işletmeci, kurulacak her uydu yer istasyonu için ayrı ayrı doldurulmuş formu Kuruma verir (m.19/1-n)"]}},
+ {"kanun_id": 97, "kart_id": "97-24", "sorun": "kirmizi_kutu",
+  "aciklama": "Yetkili merci istisnası kaldırıldı; gizlilik yalnız iletime daraltıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, haberleşmeye ilişkin bilgilerin kanunla yetkilendirilmiş merciler dâhil hiç kimse tarafından elde edilmesine izin vermez.”",
+     "“İşletmecinin gizlilik yükümlülüğü yalnızca verilerin iletilmesi sırasında geçerlidir; saklanan veriler bu kapsamda değildir.”"],
+   "dogrusu": [
+     "İşletmeci, kanunla yetkilendirilmiş merci dışında başkasının haberleşme bilgilerini elde etmesini önlemekle yükümlüdür (m.19/1-p)",
+     "İşletmeci, haberleşmeye ilişkin bilgi, belge ve verilerin hem korunmasında hem iletilmesinde gizlilik hükümlerine uyar (m.19/1-p)"]}},
+ {"kanun_id": 97, "kart_id": "97-25", "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim süresi 30 güne çıkarıldı; savaş hâli sayılanlara eklendi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, mücbir sebebin meydana geldiği tarihi izleyen 30 gün içinde durumu Kuruma yazılı olarak bildirir.”",
+     "“Savaş hâli, Yönetmelikte sayılan mücbir sebepler arasındadır.”"],
+   "dogrusu": [
+     "İşletmeci, mücbir sebebin meydana geldiği tarihi izleyen 20 gün içinde durumu Kuruma yazılı olarak bildirir (m.19/1-t)",
+     "Mücbir sebepler doğal afetler, kanuni grev ve lokavt, genel salgın hastalık, kısmi veya genel seferberlik ilanı ve Kurumca belirlenecek benzeri hâllerdir (m.19/1-t)"]}},
+ {"kanun_id": 97, "kart_id": "97-26", "sorun": "kirmizi_kutu",
+  "aciklama": "Masraf Kuruma yüklendi; kurmayan işletmeciye hizmet sunulabileceği öne sürüldü. SAYI_ONAY: 5397 — m.19/1-u metninde geçer (girdi metni kesik). SAYI_ONAY: 5651 — m.19/1-u metninde geçer (girdi metni kesik)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmecilerin 5397 ve 5651 sayılı Kanunlar kapsamında kuracağı teknik altyapının harcamaları Kurum tarafından karşılanır.”",
+     "“Teknik altyapıyı kurmayan işletmeciye diğer işletmeciler hizmet sunmaya devam edebilir.”"],
+   "dogrusu": [
+     "İşletmeciler, 5397 ve 5651 sayılı Kanunlardaki taleplere yönelik teknik altyapıyı tüm harcamaları kendilerine ait olmak üzere kurar (m.19/1-u)",
+     "Söz konusu sistemleri kurmayan ve güncellemeyen işletmecilere diğer işletmeciler de hizmet sunamaz (m.19/1-u)"]}},
+ {"kanun_id": 97, "kart_id": "97-27", "sorun": "kirmizi_kutu",
+  "aciklama": "Listeye vergi numarası eklendi; çok ülkeli kartlarda Kurum izni kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Arama kartlarının üzerinde hizmeti sunan işletmecinin vergi numarasının belirtilmesi zorunludur.”",
+     "“Yurt içi ile birlikte birden fazla ülkede kullanılacak arama kartlarındaki bilgiler, Kurum izni aranmaksızın değiştirilebilir.”"],
+   "dogrusu": [
+     "Arama kartında unvan, müşteri hizmetleri numarası, internet adresi, son kullanma tarihi, TL-Kr tutarı, kullanım talimatı ve seri numarası belirtilir (m.19/1-ş)",
+     "Yurt içiyle birlikte birden fazla ülkede kullanılacak arama kartlarında bu bilgilerin değiştirilmesi Kurumun iznine tabidir (m.19/1-ş)"]}},
+ {"kanun_id": 97, "kart_id": "97-28", "sorun": "kirmizi_kutu",
+  "aciklama": "Yükümlülük kendi satılan cihazlara daraltıldı; teknik uygunluk şartı kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, yalnızca kendi sattığı terminal cihazlarını sistemine bağlamakla yükümlüdür.”",
+     "“İşletmeci, terminal cihazlarını teknik düzenlemelere uygun olup olmadığına bakmaksızın sistemine bağlamakla yükümlüdür.”"],
+   "dogrusu": [
+     "İşletmeci, ilgili teknik düzenlemelere uygun tüm terminal cihazlarını sistemine bağlamak veya bağlanmasına izin vermekle yükümlüdür (m.19/1-k)",
+     "Bağlama yükümlülüğü yalnızca ilgili teknik düzenlemelere uygun olan terminal cihazları için geçerlidir (m.19/1-k)"]}},
+ {"kanun_id": 97, "kart_id": "97-29", "sorun": "kirmizi_kutu",
+  "aciklama": "Tüm altyapıyı kurma zorunluluğu öne sürüldü; kullandırma hakkı kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İşletmeci, yetkilendirildiği hizmet için gereken tüm altyapıyı kendisi kurmak zorundadır.”",
+     "“İşletmeci, kurduğu altyapıyı diğer işletmecilere kullandıramaz.”"],
+   "dogrusu": [
+     "İşletmeci, hizmet kapsamındaki yazılım ve cihazları kendisi kurabilir; diğer altyapıyı başka işletmecilerden temin edebilir (m.19/1-m)",
+     "İşletmeci, altyapılarını gelişen teknolojilere göre geliştirme ve mevzuat çerçevesinde diğer işletmecilere kullandırma hakkına sahiptir (m.19/1-m)"]}},
+ {"kanun_id": 97, "kart_id": "97-30", "sorun": "kirmizi_kutu",
+  "aciklama": "Yetkilendirme diğer izinlerin yerine konuldu; izin alma Kuruma yüklendi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Kurumdan alınan yetkilendirme, faaliyet için gerekli diğer tüm izinlerin yerine geçer.”",
+     "“Faaliyet için gerekli diğer izinler, işletmeci adına Kurum tarafından ilgili kurumlardan alınır.”"],
+   "dogrusu": [
+     "Yetkilendirme diğer izinlerin yerine geçmez; işletmeci gerekli diğer izinleri ilgili kurumlardan almak zorundadır (m.19/1-e)",
+     "İşletmeci, faaliyeti için gerekli diğer izinleri ilgili kurumlardan kendisi almakla yükümlüdür (m.19/1-e)"]}}
+]

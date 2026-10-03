@@ -1,0 +1,830 @@
+{
+ "kanun_id": 67,
+ "ad": "5237 sayılı Türk Ceza Kanunu (jandarma branş kapsamı)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_67.json",
+ "kartlar": [
+  {
+   "id": "67-0",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Tanımlar (m.6)",
+   "hukum": "Vatandaş: fiili işlediği sırada Türk vatandaşı olan kişi; çocuk: henüz 18 yaşını doldurmamış kişi; kamu görevlisi: kamusal faaliyete atama, seçilme veya herhangi bir surette sürekli-süreli-geçici katılan kişi; yargı görevi yapan: yüksek mahkemeler ile adlî ve idarî mahkeme üye ve hâkimleri, Cumhuriyet savcısı ve avukatlar; gece vakti: güneşin batmasından 1 saat sonra başlayıp doğmasından 1 saat evvele kadar; silah: ateşli silahlar, patlayıcılar, saldırı-savunma için yapılmış kesici-delici-bereleyici aletler, fiilen saldırıda kullanılmaya elverişli diğer şeyler, yakıcı-zehirleyici-nükleer-kimyasal-biyolojik maddeler; basın ve yayın yolu: her türlü yazılı, görsel, işitsel, elektronik kitle iletişim aracı; itiyadi suçlu: kasıtlı suçu 1 yıl içinde ikiden fazla işleyen; suçu meslek edinen: kısmen de olsa geçimini suçtan sağlayan; örgüt mensubu suçlu: örgüt kuran, yöneten, katılan veya örgüt adına suç işleyen (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çocuk = 15 yaşını doldurmamış\" (o m.31 ayrımıdır) ve \"avukat yargı görevi yapan değildir\" şıkları yanlış",
+    "Çocuk deyimi 15 yaşını doldurmamış kişidir",
+    "Mübaşir ve uzlaştırmacı yargı görevi yapan sayılır"
+   ],
+   "dogrusu": [
+    "18 (m.6)",
+    "Sayılmaz; hâkim, savcı, avukat (m.6)"
+   ]
+  },
+  {
+   "id": "67-1",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Kanunun hükmü ve amirin emri",
+   "hukum": "Kanunun hükmünü yerine getirene ceza verilmez; yetkili merciden verilip yerine getirilmesi görev gereği zorunlu olan emri uygulayan sorumlu olmaz; konusu suç teşkil eden emir hiçbir surette yerine getirilemez, getirilirse yerine getiren ile emri veren sorumlu olur; emrin hukuka uygunluğunun denetlenmesi kanunla engellenmişse yalnız emri veren sorumlu (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suç teşkil eden emri yerine getiren ast sorumlu olmaz\" yanlış; ikisi de sorumlu",
+    "Suç teşkil eden emri yerine getiren sorumlu olmaz"
+   ],
+   "dogrusu": [
+    "İkisi de sorumlu (m.24)"
+   ]
+  },
+  {
+   "id": "67-2",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Meşru savunma ve zorunluluk hâli",
+   "hukum": "Meşru savunma: kendisine veya başkasına ait bir hakka yönelmiş, gerçekleşen, gerçekleşmesi veya tekrarı muhakkak haksız saldırıyı o anda hâl ve koşullara göre saldırı ile orantılı biçimde defetme zorunluluğuyla işlenen fiil → ceza verilmez; zorunluluk hâli: bilerek neden olmadığı ve başka türlü korunma olanağı bulunmayan ağır ve muhakkak tehlikeden kendini veya başkasını kurtarma zorunluluğuyla, tehlikenin ağırlığı ile konu ve vasıta arasında orantı bulunmak koşuluyla işlenen fiil → ceza verilmez (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"Haksız tahrik\" (m.29) ceza indirim nedenidir, kaldırmaz; meşru savunma ise cezayı tamamen kaldırır"
+   ],
+   "dogrusu": [
+    "Meşru savunma · gerçekleşen, gerçekleşmesi veya tekrarı muhakkak · o anda · orantılı · zorunluluk hâli · ağır ve muhakkak tehlikeden · orantı"
+   ]
+  },
+  {
+   "id": "67-3",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Hakkın kullanılması ve ilgilinin rızası",
+   "hukum": "Hakkını kullanan kimseye ceza verilmez; kişinin mutlak surette tasarruf edebileceği bir hakkına ilişkin olmak üzere açıkladığı rızası çerçevesinde işlenen fiilden ceza verilmez (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öldürülmeye rıza cezayı kaldırır\" yanlış; mutlak tasarruf edilemeyen hak"
+   ],
+   "dogrusu": [
+    "mutlak surette tasarruf edebileceği"
+   ]
+  },
+  {
+   "id": "67-4",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Cebir, şiddet, korkutma ve tehdit",
+   "hukum": "Karşı koyamayacağı veya kurtulamayacağı cebir-şiddet veya muhakkak ve ağır korkutma-tehdit sonucu suç işleyene ceza verilmez; cebir-tehdidi kullanan kişi suçun faili sayılır (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"Zorlanan kişi yardım eden olarak sorumludur\" yanlış; ceza verilmez"
+   ],
+   "dogrusu": [
+    "suçun faili sayılır"
+   ]
+  },
+  {
+   "id": "67-5",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Haksız tahrik",
+   "hukum": "Haksız bir fiilin meydana getirdiği hiddet veya şiddetli elemin etkisi altında suç işleyene ağırlaştırılmış müebbet yerine 18-24 yıl, müebbet yerine 12-18 yıl; diğer hâllerde ceza 1/4'ten 3/4'e kadar indirilir (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"Haksız tahrik hâlinde ceza verilmez\" yanlış; indirim",
+    "Haksız tahrik cezayı kaldırır"
+   ],
+   "dogrusu": [
+    "İndirir (1/4-3/4) (m.29)"
+   ]
+  },
+  {
+   "id": "67-6",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Yaş küçüklüğü",
+   "hukum": "Fiili işlediği sırada 12 yaşını doldurmamış çocukların ceza sorumluluğu yoktur, kovuşturma yapılamaz, yalnız çocuklara özgü güvenlik tedbiri; 12-15 yaş: fiilin hukukî anlam ve sonuçlarını algılayamıyorsa veya davranışlarını yönlendirme yeteneği gelişmemişse sorumluluk yok (güvenlik tedbiri); algılıyorsa ağırlaştırılmış müebbet yerine 12-15 yıl, müebbet yerine 9-11 yıl, diğer cezaların yarısı indirilir ve her fiil için 7 yılı geçemez; 15-18 yaş: ağırlaştırılmış müebbet yerine 18-24 yıl, müebbet yerine 12-15 yıl, diğer cezaların üçte biri indirilir, her fiil için 12 yılı geçemez (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"15 yaşını doldurmamışların ceza sorumluluğu yoktur\" yanlış; 12-15 arası algılama yeteneğine bağlı",
+    "15 yaşını doldurmamış çocuğun ceza sorumluluğu yoktur"
+   ],
+   "dogrusu": [
+    "12; 12-15 algılamaya bağlı (m.31)"
+   ]
+  },
+  {
+   "id": "67-7",
+   "madde": [
+    "32",
+    "33",
+    "34"
+   ],
+   "baslik": "Akıl hastalığı, sağır-dilsizlik, geçici nedenler",
+   "hukum": "Akıl hastalığı nedeniyle fiilin anlam ve sonuçlarını algılayamayan veya davranışlarını yönlendirme yeteneği önemli derecede azalmış kişiye ceza verilmez, güvenlik tedbiri uygulanır; daha az azalmışsa ağırlaştırılmış müebbet yerine 25 yıl, müebbet yerine 20 yıl, diğer cezalar 1/6'dan fazla olmamak üzere indirilebilir + akıl hastalarına özgü güvenlik tedbiri (m.32); sağır ve dilsizler için yaş eşikleri 3 yıl kaydırılır: 12 yaş altı hükümleri 15 yaş altına, 12-15 hükümleri 15-18'e, 15-18 hükümleri 18-21 yaş sağır-dilsizlere uygulanır (m.33); geçici bir nedenle veya irade dışı alınan alkol/uyuşturucu etkisiyle algılayamayan kişiye ceza verilmez; iradi olarak alınan alkol/uyuşturucu etkisinde suç işleyen tam sorumludur (m.34)",
+   "sinavda_boyle_yazarlar": [
+    "\"İradi sarhoşluk cezayı indirir\" yanlış; hiç etkilemez",
+    "İradi sarhoşluk cezayı indirir"
+   ],
+   "dogrusu": [
+    "Etkilemez (m.34)"
+   ]
+  },
+  {
+   "id": "67-8",
+   "madde": [
+    "73"
+   ],
+   "baslik": "Şikâyet süresi — 6 ay",
+   "hukum": "Şikâyete bağlı suçta yetkili kimse 6 ay içinde şikâyet etmezse soruşturma yapılamaz; süre, şikâyet hakkı olanın fiili ve failin kim olduğunu bildiği veya öğrendiği günden başlar (zamanaşımını geçmemek kaydıyla); hakaret suçunda şikâyet süresi her hâlde fiilin gerçekleştiği tarihten itibaren 2 yılı geçemez; birkaç kişiden birinin süreyi geçirmesi diğerlerinin hakkını düşürmez; şikâyetten vazgeçme davayı düşürür, hükmün kesinleşmesinden sonraki vazgeçme infaza engel olmaz; iştirak hâlinde sanıklardan biri hakkındaki vazgeçme diğerlerini de kapsar; vazgeçme onu kabul etmeyen sanığı etkilemez (m.73)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şikâyet süresi suçun işlendiği günden başlar\" yanlış; fiili ve faili öğrenmeden"
+   ],
+   "dogrusu": [
+    "6 ay · fiili ve failin kim olduğunu bildiği veya öğrendiği günden · hakaret suçunda · 2 yılı geçemez · vazgeçme davayı düşürür · diğerlerini de kapsar · kabul etmeyen sanığı"
+   ]
+  },
+  {
+   "id": "67-9",
+   "madde": [
+    "76",
+    "77",
+    "78"
+   ],
+   "baslik": "Soykırım ve insanlığa karşı suç",
+   "hukum": "Soykırım: bir planın icrasıyla millî, etnik, ırki veya dinî bir grubu tamamen/kısmen yok etme maksadıyla üyelerine karşı kasten öldürme, bedensel-ruhsal bütünlüğe ağır zarar, yok edici koşullarda yaşamaya zorlama, doğumları engelleme, çocukları başka gruba zorla nakletme → ağırlaştırılmış müebbet; öldürme ve yaralamada mağdur sayısınca gerçek içtima; zamanaşımı işlemez (m.76). İnsanlığa karşı suç: siyasal, felsefi, ırki veya dinî saiklerle toplumun bir kesimine karşı bir plan doğrultusunda sistemli olarak kasten öldürme, kasten yaralama, işkence-eziyet-köleleştirme, hürriyetten yoksun kılma, bilimsel deneye tabi kılma, cinsel saldırı-çocuk istismarı, zorla hamile bırakma, zorla fuhşa sevk → öldürmede ağırlaştırılmış müebbet, diğerlerinde en az 8 yıl; zamanaşımı işlemez (m.77); bu suçlar için örgüt kuran-yöneten 10-15 yıl, üye 5-10 yıl, zamanaşımı işlemez (m.78)",
+   "sinavda_boyle_yazarlar": [
+    "\"Soykırım 30 yıl sonra zamanaşımına uğrar\" yanlış; işlemez",
+    "Olası kastla öldürme insanlığa karşı suç listesindedir"
+   ],
+   "dogrusu": [
+    "Değil; kasten öldürme (m.77)"
+   ]
+  },
+  {
+   "id": "67-10",
+   "madde": [
+    "79",
+    "80"
+   ],
+   "baslik": "Göçmen kaçakçılığı ve insan ticareti",
+   "hukum": "Göçmen kaçakçılığı: maddi menfaat için yasal olmayan yollardan yabancıyı ülkeye sokan/kalmasını sağlayan veya Türk vatandaşı/yabancının yurt dışına çıkmasını sağlayan 5-8 yıl + 1.000-10.000 gün APC; teşebbüs tamamlanmış gibi cezalandırılır; mağdurun hayatı tehlikeye girerse veya onur kırıcı muameleyle işlenirse ½-2/3 artırım; birden fazla kişiyle yarıya kadar, örgütle ½-1 kat artırım (m.79). İnsan ticareti: zorla çalıştırma, hizmet ettirme, fuhuş yaptırma, esarete tabi kılma veya organ verdirme maksadıyla tehdit, baskı, cebir, nüfuzu kötüye kullanma, kandırma veya çaresizlikten yararlanarak kişileri ülkeye sokan, çıkaran, tedarik eden, kaçıran, nakleden veya barındıran 8-12 yıl + 10.000 güne kadar APC; bu amaçlarla mağdurun rızası geçersiz; 18 yaşını doldurmamışlar için araç fiiller olmasa da aynı ceza (m.80)",
+   "sinavda_boyle_yazarlar": [
+    "\"Göçmen kaçakçılığında teşebbüs indirimli cezalandırılır\" yanlış; tamamlanmış gibi",
+    "İnsan ticaretinde zamanaşımı işlemez"
+   ],
+   "dogrusu": [
+    "İşler; soykırım, insanlığa karşı suç, işkence işlemez (m.80, 94)"
+   ]
+  },
+  {
+   "id": "67-11",
+   "madde": [
+    "81",
+    "82"
+   ],
+   "baslik": "Kasten öldürme ve nitelikli hâller",
+   "hukum": "Kasten öldürme müebbet hapis (m.81); tasarlayarak, canavarca hisle veya eziyet çektirerek, yangın-su baskını-tahrip-batırma-bombalama veya NBC silahla, üstsoy-altsoy-eş-boşandığı eş-kardeşe karşı, çocuğa veya kendini savunamayacak kişiye karşı, kadına karşı, kişinin kamu görevi nedeniyle, bir suçu gizlemek-delilini yok etmek-kolaylaştırmak-yakalanmamak amacıyla, bir suçu işleyememekten duyduğu infialle, kan gütme ve töre saikiyle işlenirse ağırlaştırılmış müebbet (m.82)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kadına karşı öldürme müebbettir\" yanlış; 2022'den beri ağırlaştırılmış müebbet"
+   ],
+   "dogrusu": [
+    "müebbet hapis · tasarlayarak · üstsoy-altsoy-eş-boşandığı eş-kardeşe · çocuğa · kadına · kamu görevi nedeniyle · kan gütme · töre · ağırlaştırılmış müebbet"
+   ]
+  },
+  {
+   "id": "67-12",
+   "madde": [
+    "83",
+    "84"
+   ],
+   "baslik": "İhmali davranışla öldürme ve intihara yönlendirme",
+   "hukum": "Belli bir icrai davranışı yapmama nedeniyle ölümden sorumlu tutulmak için ihmalin icrai davranışa eşdeğer olması gerekir: kanun/sözleşmeden doğan yükümlülük ya da önceki davranışın tehlike oluşturması; ceza ağırlaştırılmış müebbet yerine 20-25 yıl, müebbet yerine 15-20 yıl, diğer hâllerde 10-15 yıl verilebilir veya indirim yapılmayabilir (m.83); intihara azmettiren, teşvik eden, kararı kuvvetlendiren veya yardım eden 2-5 yıl; intihar gerçekleşirse 4-10 yıl; alenen teşvik 3-8 yıl; algılama yeteneği olmayanı intihara sevk eden veya cebir-tehditle intihara mecbur eden kasten öldürmeden sorumlu (m.84)",
+   "sinavda_boyle_yazarlar": [
+    "\"İntihara yardım etmek suç değildir\" yanlış"
+   ],
+   "dogrusu": [
+    "icrai davranışa eşdeğer · 20-25 yıl · 15-20 yıl · 10-15 yıl · intihara azmettiren, teşvik eden, kararı kuvvetlendiren veya yardım eden 2-5 yıl · 4-10 yıl · alenen · 3-8 yıl · kasten öldürmeden"
+   ]
+  },
+  {
+   "id": "67-13",
+   "madde": [
+    "85"
+   ],
+   "baslik": "Taksirle öldürme",
+   "hukum": "Taksirle bir insanın ölümüne neden olan 2-6 yıl; fiil birden fazla insanın ölümüne ya da bir/birden fazla ölüm + bir/birden fazla yaralanmaya neden olmuşsa 2-15 yıl (m.85)",
+   "sinavda_boyle_yazarlar": [
+    "\"3-20 yıl\" ve \"5-15 yıl\" şıkları uydurma",
+    "Taksirle iki kişinin ölümüne neden olma 2-6 yıl"
+   ],
+   "dogrusu": [
+    "2-15 yıl (m.85)"
+   ]
+  },
+  {
+   "id": "67-14",
+   "madde": [
+    "86"
+   ],
+   "baslik": "Kasten yaralama",
+   "hukum": "Başkasının vücuduna acı veren, sağlığını veya algılama yeteneğini bozan 1 yıl 6 ay - 3 yıl; etkisi basit tıbbî müdahaleyle giderilebilecek kadar hafifse şikâyet üzerine 6 ay - 1 yıl 6 ay hapis veya APC (kadına karşı alt sınır 9 ay); üstsoy-altsoy-eş-boşandığı eş-kardeşe, kendini savunamayacak kişiye, kamu görevi nedeniyle, kamu görevlisinin nüfuzunu kötüye kullanarak, silahla işlenirse şikâyet aranmaksızın yarı oranında, canavarca hisle işlenirse bir kat artırılır (m.86)",
+   "sinavda_boyle_yazarlar": [
+    "\"Silahla basit yaralama da şikâyete bağlıdır\" yanlış"
+   ],
+   "dogrusu": [
+    "1 yıl 6 ay - 3 yıl · basit tıbbî müdahaleyle giderilebilecek · şikâyet üzerine 6 ay - 1 yıl 6 ay · 9 ay · üstsoy-altsoy-eş-boşandığı eş-kardeşe · kamu görevi nedeniyle · silahla · şikâyet aranmaksızın yarı oranında · canavarca hisle · bir kat"
+   ]
+  },
+  {
+   "id": "67-15",
+   "madde": [
+    "87",
+    "88"
+   ],
+   "baslik": "Neticesi sebebiyle ağırlaşmış yaralama",
+   "hukum": "Duyu/organ işlevinin sürekli zayıflaması, konuşmada sürekli zorluk, yüzde sabit iz, yaşamı tehlikeye sokan durum, gebe kadının çocuğunun vaktinden önce doğması → ceza 1 kat artırılır, en az 4 yıl (nitelikli hâlde 6 yıl); iyileşmesi olanaksız hastalık veya bitkisel hayat, duyu/organ işlevinin yitirilmesi, konuşma veya çocuk yapma yeteneğinin kaybı, yüzün sürekli değişikliği, gebe kadının çocuğunun düşmesi → 2 kat, en az 6 yıl (nitelikli hâlde 9 yıl); kemik kırılması veya çıkığı → hayat fonksiyonlarındaki etkisine göre yarısına kadar artırım; yaralama sonucu ölüm → basit hâlde 10-14 yıl, nitelikli hâlde 14-18 yıl (m.87); ihmali davranışla yaralamada ceza 2/3'üne kadar indirilebilir (m.88)",
+   "sinavda_boyle_yazarlar": [
+    "Kemik kırığı \"bir kat\" değil \"yarısına kadar\"",
+    "Kemik kırığında ceza 1 kat artırılır"
+   ],
+   "dogrusu": [
+    "Yarısına kadar (m.87)"
+   ]
+  },
+  {
+   "id": "67-16",
+   "madde": [
+    "89"
+   ],
+   "baslik": "Taksirle yaralama",
+   "hukum": "Taksirle yaralama 4 ay - 2 yıl hapis veya APC; duyu/organ zayıflaması, kemik kırılması, konuşmada zorluk, yüzde sabit iz, yaşamı tehlikeye sokma, erken doğum → yarı artırım; bitkisel hayat, organ yitirilmesi, konuşma-çocuk yapma yeteneği kaybı, yüzün sürekli değişikliği, çocuğun düşmesi → 1 kat; birden fazla kişi yaralanırsa 9 ay - 5 yıl; soruşturma şikâyete bağlı, ancak birinci fıkra hariç bilinçli taksirle işlenirse şikâyet aranmaz (m.89)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taksirle yaralama her hâlde re'sen soruşturulur\" yanlış"
+   ],
+   "dogrusu": [
+    "4 ay - 2 yıl · kemik kırılması · yarı · 1 kat · birden fazla kişi · 9 ay - 5 yıl · şikâyete bağlı · bilinçli taksirle"
+   ]
+  },
+  {
+   "id": "67-17",
+   "madde": [
+    "90"
+   ],
+   "baslik": "İnsan üzerinde deney",
+   "hukum": "İnsan üzerinde bilimsel deney yapan 1-3 yıl; rızaya dayalı deneyin suç olmaması için yetkili kurul izni, önce hayvan deneyi, insan sağlığında kalıcı zarar bırakmaması, onurla bağdaşmayan acı verilmemesi, amacın külfete ağır basması ve yazılı, menfaatsiz rıza gerekir; çocuklarda ayrıca ana-baba/vasi yazılı muvafakati ve kurulda çocuk hastalıkları uzmanı; hasta üzerinde rızasız tedavi amaçlı deneme 1 yıla kadar; yaralanma-ölümde kasten yaralama/öldürme hükümleri (m.90)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözlü rıza yeterlidir\" yanlış; yazılı"
+   ],
+   "dogrusu": [
+    "1-3 yıl · yazılı, menfaatsiz rıza · çocuklarda · rızasız tedavi amaçlı deneme · 1 yıla kadar"
+   ]
+  },
+  {
+   "id": "67-18",
+   "madde": [
+    "94",
+    "95"
+   ],
+   "baslik": "İşkence",
+   "hukum": "Bir kişiye karşı insan onuruyla bağdaşmayan, bedensel/ruhsal acı çekmesine, algılama-irade yeteneğinin etkilenmesine, aşağılanmasına yol açacak davranışları gerçekleştiren kamu görevlisi 3-12 yıl (kadına karşı alt sınır 5 yıl); çocuğa, kendini savunamayacak kişiye, gebe kadına veya avukata ya da kamu görevlisine görevi dolayısıyla → 8-15 yıl; cinsel taciz şeklinde → 10-15 yıl; iştirak eden diğer kişiler de kamu görevlisi gibi cezalandırılır; ihmali davranışla işlenmesinde indirim yapılmaz; zamanaşımı işlemez (m.94); işkence organ zayıflaması, sabit iz, yaşamsal tehlike vb. → yarı artırım; bitkisel hayat, organ kaybı, yüz değişikliği vb. → 1 kat; kemik kırılması → 8-15 yıl; ölüm → ağırlaştırılmış müebbet (m.95)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eziyet\" (m.96) şıkkı tuzak; eziyet herkes tarafından işlenebilir ve daha hafif",
+    "İşkence suçunu herkes işleyebilir"
+   ],
+   "dogrusu": [
+    "Kamu görevlisi (eziyeti herkes) (m.94)"
+   ]
+  },
+  {
+   "id": "67-19",
+   "madde": [
+    "96",
+    "97"
+   ],
+   "baslik": "Eziyet ve terk",
+   "hukum": "Bir kimsenin eziyet çekmesine yol açacak davranışları gerçekleştiren 2-5 yıl (kadına karşı alt sınır 2 yıl 6 ay); çocuğa, kendini savunamayacak kişiye, gebe kadına veya üstsoy-altsoy-babalık-analık-eş-boşandığı eşe karşı 3-8 yıl (m.96); yaşı veya hastalığı nedeniyle kendini idare edemeyen ve koruma-gözetim yükümlülüğü altındaki kişiyi kendi hâline terk eden 3 ay - 2 yıl; terk nedeniyle hastalık, yaralanma veya ölüm → neticesi sebebiyle ağırlaşmış suç hükümleri (m.97)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eziyeti yalnız kamu görevlisi işler\" yanlış; işkence öyledir"
+   ],
+   "dogrusu": [
+    "2-5 yıl · 2 yıl 6 ay · üstsoy-altsoy-babalık-analık-eş-boşandığı eşe · 3-8 yıl · kendi hâline terk eden · 3 ay - 2 yıl"
+   ]
+  },
+  {
+   "id": "67-20",
+   "madde": [
+    "99"
+   ],
+   "baslik": "Çocuk düşürtme",
+   "hukum": "Rızası olmaksızın kadının çocuğunu düşürten 5-10 yıl; tıbbî zorunluluk yokken rızayla da olsa 10 haftadan fazla gebeliği sonlandıran 2-4 yıl, rıza gösteren kadın 1 yıla kadar; rızasız düşürtme kadının sağlığına zarar verirse 6-12 yıl, ölümüne neden olursa 15-20 yıl; rızalı düşürtmede zarar 3-6 yıl, ölüm 4-8 yıl; 10 haftayı doldurmamış gebeliği yetkili olmayan kişi düşürtürse 2-4 yıl, diğer fiiller yetkisiz kişice işlenirse yarı artırım; suç sonucu gebe kalan kadının rızasıyla 20 haftaya kadar uzman hekimce hastanede sonlandırmaya ceza yok (m.99)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suç mağduru için 10 hafta\" yanlış; 20"
+   ],
+   "dogrusu": [
+    "5-10 yıl · 10 haftadan fazla · 2-4 yıl · 1 yıla kadar · 6-12 yıl · 15-20 yıl · 3-6 yıl · 4-8 yıl · yetkili olmayan kişi · 2-4 yıl · yarı artırım · suç sonucu gebe kalan · 20 haftaya kadar"
+   ]
+  },
+  {
+   "id": "67-21",
+   "madde": [
+    "102"
+   ],
+   "baslik": "Cinsel saldırı",
+   "hukum": "Cinsel davranışlarla vücut dokunulmazlığını ihlal eden, mağdurun şikâyeti üzerine 5-10 yıl; sarkıntılık düzeyinde kalırsa 2-5 yıl; vücuda organ veya sair cisim sokulması → en az 12 yıl (eşe karşı işlenmesi şikâyete bağlı); kendini savunamayacak kişiye, kamu görevi/vesayet/hizmet nüfuzuyla, 3. derece dahil kan veya kayın hısmına ya da üvey baba-ana-kardeş, evlat edinen/evlatlık tarafından, silahla veya birden fazla kişiyle, toplu yaşama zorunluluğu olan ortamların kolaylığıyla işlenirse yarı artırım; cebir-şiddet yaralamanın ağır neticelerine yol açarsa ayrıca yaralama hükümleri; bitkisel hayat veya ölüm → ağırlaştırılmış müebbet (m.102)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nitelikli cinsel saldırı eşe karşı re'sen soruşturulur\" yanlış; şikâyete bağlı"
+   ],
+   "dogrusu": [
+    "mağdurun şikâyeti üzerine · 5-10 yıl · sarkıntılık · 2-5 yıl · organ veya sair cisim sokulması · en az 12 yıl · şikâyete bağlı · 3. derece dahil · silahla veya birden fazla kişiyle · yarı · ağırlaştırılmış müebbet"
+   ]
+  },
+  {
+   "id": "67-22",
+   "madde": [
+    "103"
+   ],
+   "baslik": "Çocukların cinsel istismarı",
+   "hukum": "Çocuğu cinsel yönden istismar eden 8-15 yıl; sarkıntılık düzeyinde 3-8 yıl; mağdur 12 yaşını tamamlamamışsa istismarda en az 10 yıl, sarkıntılıkta en az 5 yıl; sarkıntılıkta fail de çocuksa soruşturma mağdur/veli/vasinin şikâyetine bağlı; cinsel istismar deyimi: 15 yaşını tamamlamamış veya tamamlamış olsa da algılama yeteneği gelişmemiş çocuklara karşı her türlü cinsel davranış; diğer (15-18 yaş) çocuklara karşı yalnız cebir, tehdit, hile veya iradeyi etkileyen nedene dayalı cinsel davranışlar; organ veya cisim sokulması → en az 16 yıl, mağdur 12 yaşını tamamlamamışsa en az 18 yıl; birden fazla kişiyle, toplu yaşam ortamı kolaylığıyla, 3. derece hısım/üvey/evlat edinen tarafından, vasi-eğitici-öğretici-bakıcı-koruyucu aile-sağlık hizmeti veren veya koruma-gözetim yükümlüsü tarafından, kamu görevi/hizmet nüfuzuyla işlenirse yarı artırım; 15 yaş altına cebir-tehditle veya 15-18 yaşa silahla işlenirse ayrıca yarı artırım; bitkisel hayat/ölüm → ağırlaştırılmış müebbet (m.103)",
+   "sinavda_boyle_yazarlar": [
+    "\"15 yaşını dolduran çocuğun rızasıyla cinsel davranış istismardır\" — cebir/tehdit/hile yoksa m.103 değil, m.104 (reşit olmayanla cinsel ilişki)"
+   ],
+   "dogrusu": [
+    "8-15 yıl · sarkıntılık · 3-8 yıl · 12 yaşını tamamlamamışsa · en az 10 yıl · en az 5 yıl · fail de çocuksa · şikâyetine bağlı · cinsel istismar · 15 yaşını tamamlamamış · her türlü · cebir, tehdit, hile veya iradeyi etkileyen nedene · organ veya cisim sokulması · en az 16 yıl · en az 18 yıl · vasi-eğitici-öğretici-bakıcı-koruyucu aile-sağlık hizmeti veren · yarı · cebir-tehditle · silahla · yarı"
+   ]
+  },
+  {
+   "id": "67-23",
+   "madde": [
+    "104",
+    "105"
+   ],
+   "baslik": "Reşit olmayanla cinsel ilişki ve cinsel taciz",
+   "hukum": "Cebir, tehdit ve hile olmaksızın 15 yaşını bitirmiş çocukla cinsel ilişkide bulunan, şikâyet üzerine 2-5 yıl; mağdurla arasında evlenme yasağı bulunan kişi tarafından işlenirse şikâyet aranmaksızın 10-15 yıl; evlat edinme öncesi bakımını üstlenen veya koruyucu aile tarafından da şikâyetsiz aynı ceza (m.104); cinsel taciz: cinsel amaçlı taciz eden, şikâyet üzerine 3 ay - 2 yıl hapis veya APC, çocuğa karşı 6 ay - 3 yıl; kamu görevi/hizmet/aile içi ilişki kolaylığıyla, vasi-eğitici-bakıcı vb. tarafından, aynı iş yerinde çalışmanın kolaylığıyla, posta veya elektronik haberleşme araçlarıyla, teşhir suretiyle işlenirse yarı artırım; mağdur işi bırakmak, okuldan veya ailesinden ayrılmak zorunda kalmışsa ceza 1 yıldan az olamaz (m.105)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sosyal medyadan taciz basit tacizdir\" yanlış; elektronik haberleşme nitelikli hâl"
+   ],
+   "dogrusu": [
+    "15 yaşını bitirmiş · şikâyet üzerine 2-5 yıl · evlenme yasağı · şikâyet aranmaksızın 10-15 yıl · cinsel taciz · şikâyet üzerine 3 ay - 2 yıl · çocuğa karşı 6 ay - 3 yıl · aynı iş yerinde · posta veya elektronik haberleşme · teşhir · yarı · 1 yıldan az olamaz"
+   ]
+  },
+  {
+   "id": "67-24",
+   "madde": [
+    "106",
+    "107",
+    "108"
+   ],
+   "baslik": "Tehdit, şantaj, cebir",
+   "hukum": "Kendisinin veya yakınının hayatına, vücut veya cinsel dokunulmazlığına saldırı gerçekleştireceğinden bahisle tehdit eden 6 ay - 2 yıl (kadına karşı alt sınır 9 ay); malvarlığına zarar veya sair kötülük tehdidi şikâyet üzerine 2-6 ay hapis veya APC; tehdidin silahla, kendini tanınmayacak hâle koyarak, imzasız mektupla veya özel işaretlerle, birden fazla kişiyle, var olan veya var sayılan suç örgütlerinin korkutucu gücünden yararlanarak işlenmesi → 2-7 yıl; tehdit amacıyla öldürme, yaralama veya mala zarar verme işlenirse ayrıca ceza (m.106); şantaj: hakkı olan veya yükümlü olduğu şeyi yapacağından/yapmayacağından bahisle kanuna aykırı veya yükümlü olmadığı şeyi yapmaya-yapmamaya ya da haksız çıkar sağlamaya zorlama ve şeref-saygınlığa zarar verecek hususları açıklama tehdidiyle yarar sağlama → 1-3 yıl + 5.000 güne kadar APC (m.107); cebir: bir şeyi yapması/yapmaması/yapmasına müsaade etmesi için cebir kullanma → kasten yaralama cezası 1/3-½ artırılarak (m.108)",
+   "sinavda_boyle_yazarlar": [
+    "\"Malvarlığına tehdit 6 ay-2 yıl\" yanlış; 2-6 ay şikâyete bağlı",
+    "Malvarlığına tehdit re'sen soruşturulur"
+   ],
+   "dogrusu": [
+    "Şikâyete bağlı 2-6 ay (m.106)"
+   ]
+  },
+  {
+   "id": "67-25",
+   "madde": [
+    "109"
+   ],
+   "baslik": "Kişiyi hürriyetinden yoksun kılma",
+   "hukum": "Hukuka aykırı olarak bir yere gitmek veya bir yerde kalmak hürriyetinden yoksun bırakan 1-5 yıl; cebir, tehdit veya hile kullanırsa 2-7 yıl; silahla, birden fazla kişiyle, kişinin kamu görevi nedeniyle, kamu görevinin nüfuzu kötüye kullanılarak, üstsoy-altsoy-eş-boşandığı eşe, çocuğa veya kendini savunamayacak kişiye karşı işlenirse ceza 1 kat artırılır; mağdurun ekonomik kaybına neden olursa ayrıca 1.000 güne kadar APC; cinsel amaçla işlenirse yarı artırım; yaralamanın ağır neticeleri gerçekleşirse ayrıca yaralama hükümleri (m.109)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cinsel amaçla alıkoyma 1 kat artırılır\" yanlış; yarı; silahla-çocuğa 1 kat"
+   ],
+   "dogrusu": [
+    "1-5 yıl · cebir, tehdit veya hile · 2-7 yıl · silahla · birden fazla kişiyle · kamu görevi nedeniyle · üstsoy-altsoy-eş-boşandığı eşe · çocuğa veya kendini savunamayacak kişiye · 1 kat · cinsel amaçla · yarı"
+   ]
+  },
+  {
+   "id": "67-26",
+   "madde": [
+    "112",
+    "117",
+    "118"
+   ],
+   "baslik": "Eğitim, iş, sendika hürriyeti",
+   "hukum": "Cebir-tehdit veya hukuka aykırı davranışla Devletçe kurulan veya izinli eğitim-öğretim faaliyetine, kişinin eğitim hakkına, öğrencilerin toplu oturdukları binalara girilmesine engel olma → 2-5 yıl (m.112); cebir-tehditle iş ve çalışma hürriyetini ihlal şikâyet üzerine 6 ay - 2 yıl hapis veya APC; çaresizliğini-kimsesizliğini sömürerek ücretsiz veya orantısız düşük ücretle çalıştıran veya insan onuruyla bağdaşmayan koşullara tabi kılan 6 ay - 3 yıl veya 100 günden az olmamak üzere APC, bu duruma düşürmek için tedarik-sevk-nakleden aynı ceza; cebir-tehditle ücret artırıp azaltmaya zorlayan veya işi durduran 6 ay - 3 yıl (m.117); sendikaya üye olmaya/olmamaya, faaliyete katılmaya/katılmamaya, görevden ayrılmaya zorlamak için cebir-tehdit 6 ay - 2 yıl; sendika faaliyetini engelleme 1-3 yıl (m.118)",
+   "sinavda_boyle_yazarlar": [
+    "\"İş hürriyeti ihlali re'sen soruşturulur\" — basit hâli şikâyete bağlı"
+   ],
+   "dogrusu": [
+    "eğitim-öğretim faaliyetine · 2-5 yıl · iş ve çalışma hürriyetini · şikâyet üzerine 6 ay - 2 yıl · ücretsiz veya orantısız düşük ücretle · 6 ay - 3 yıl · 6 ay - 3 yıl · sendikaya · 6 ay - 2 yıl · 1-3 yıl"
+   ]
+  },
+  {
+   "id": "67-27",
+   "madde": [
+    "116"
+   ],
+   "baslik": "Konut dokunulmazlığı",
+   "hukum": "Konuta veya eklentilerine rızaya aykırı giren ya da rızayla girip çıkmayan, şikâyet üzerine 6 ay - 2 yıl; açık rıza gerekmeksizin girilmesi mutat olan yerler dışındaki iş yerleri ve eklentileri için şikâyet üzerine 6 ay - 1 yıl hapis veya APC; evlilik birliğinde aile bireylerinden veya ortak kullananlardan birinin rızası varsa suç oluşmaz (rıza meşru amaca yönelik olmalı); cebir-tehditle veya gece vakti işlenirse 1-3 yıl (m.116)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eşlerden birinin rızasıyla giren de suç işler\" yanlış (rıza meşru amaçlıysa)"
+   ],
+   "dogrusu": [
+    "rızaya aykırı giren · çıkmayan · şikâyet üzerine 6 ay - 2 yıl · dışındaki iş yerleri · şikâyet üzerine 6 ay - 1 yıl · birinin rızası varsa · meşru amaca · cebir-tehditle · gece vakti · 1-3 yıl"
+   ]
+  },
+  {
+   "id": "67-28",
+   "madde": [
+    "120",
+    "121",
+    "122"
+   ],
+   "baslik": "Kamu görevlisinin hak ihlalleri ve ayrımcılık",
+   "hukum": "Hukuka aykırı olarak bir kimsenin üstünü veya eşyasını arayan kamu görevlisi 3 ay - 1 yıl (m.120); kişinin hakkını kullanmak için verdiği dilekçeyi hukuki neden olmaksızın kabul etmeyen 6 aya kadar (m.121); dil, ırk, milliyet, renk, cinsiyet, engellilik, siyasi düşünce, felsefi inanç, din veya mezhep farklılığından kaynaklanan nefret nedeniyle mal satışını-kiraya verilmesini, kamuya arz edilmiş hizmetten yararlanmayı, işe alınmayı, olağan ekonomik etkinliği engelleyen 1-3 yıl (m.122); sırf huzur ve sükûnu bozmak maksadıyla ısrarla telefon etme, gürültü yapma veya hukuka aykırı başka davranış → şikâyet üzerine 3 ay - 1 yıl (m.123)",
+   "sinavda_boyle_yazarlar": [
+    "\"Haksız arama disiplin suçudur, ceza gerektirmez\" yanlış"
+   ],
+   "dogrusu": [
+    "üstünü veya eşyasını arayan kamu görevlisi · 3 ay - 1 yıl · dilekçeyi · 6 aya kadar · nefret · 1-3 yıl · ısrarla telefon etme, gürültü · şikâyet üzerine 3 ay - 1 yıl"
+   ]
+  },
+  {
+   "id": "67-29",
+   "madde": [
+    "125",
+    "126"
+   ],
+   "baslik": "Hakaret",
+   "hukum": "Somut bir fiil veya olgu isnat ederek veya sövmek suretiyle onur, şeref ve saygınlığa saldıran 3 ay - 2 yıl hapis veya APC; gıyapta hakaret için fiilin en az 3 kişiyle ihtilat ederek işlenmesi gerekir; mağduru muhatap alan sesli, yazılı veya görüntülü iletiyle de aynı ceza; kamu görevlisine görevinden dolayı, dinî-siyasi-sosyal-felsefi inanç ve kanaatlerini açıklamasından dolayı, mensup olduğu dine göre kutsal değerlerden bahisle işlenirse alt sınır 1 yıldan az olamaz; alenen işlenmesi → 1/6 artırım; kurul hâlinde çalışan kamu görevlilerine hakaret kurul üyelerine karşı işlenmiş sayılır (zincirleme suç) (m.125); mağdurun ismi açıkça belirtilmese de şahsına yönelik olduğunda duraksama yoksa hakaret açıklanmış sayılır (m.126)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gıyapta hakaret için iki kişi yeter\" yanlış; en az üç",
+    "Gıyapta hakaret için 2 kişi yeter"
+   ],
+   "dogrusu": [
+    "En az 3 (m.125)"
+   ]
+  },
+  {
+   "id": "67-30",
+   "madde": [
+    "127",
+    "128",
+    "129"
+   ],
+   "baslik": "İsnadın ispatı, iddia-savunma dokunulmazlığı, haksız fiil tepkisi",
+   "hukum": "İsnat edilen ve suç oluşturan fiil ispat edilmişse ceza verilmez; hakaret edilen hakkında kesinleşmiş mahkûmiyet varsa isnat ispatlanmış sayılır; diğer hâllerde ispat istemi ancak kamu yararı veya şikâyetçinin rızası varsa kabul edilir; ispat edilmiş fiilinden söz ederek hakaret cezalandırılır (m.127); yargı mercileri veya idari makamlar nezdinde başvuru, iddia ve savunmalarda kişilerle ilgili somut isnat ve olumsuz değerlendirmelere ceza verilmez (gerçek ve somut vakıalara dayanmalı, uyuşmazlıkla bağlantılı olmalı) (m.128); hakaret haksız bir fiile tepki olarak işlenirse ceza 1/3'üne kadar indirilebilir veya ceza vermekten vazgeçilebilir; kasten yaralamaya tepki olarak işlenirse ceza verilmez; karşılıklı hakarette her ikisi veya biri hakkında 1/3'e kadar indirim veya vazgeçme (m.129)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karşılıklı hakarette ikisi de tam ceza alır\" yanlış"
+   ],
+   "dogrusu": [
+    "ispat edilmişse · kamu yararı · rızası · yargı mercileri veya idari makamlar · haksız bir fiile tepki · 1/3'üne kadar · ceza vermekten vazgeçilebilir · kasten yaralamaya tepki · ceza verilmez · karşılıklı"
+   ]
+  },
+  {
+   "id": "67-31",
+   "madde": [
+    "130"
+   ],
+   "baslik": "Ölünün hatırasına hakaret",
+   "hukum": "Ölünün hatırasına en az 3 kişiyle ihtilat ederek hakaret eden 3 ay - 2 yıl hapis veya APC, alenen → 1/6 artırım; ölünün ceset veya kemiklerini alan veya tahkir edici fiilde bulunan 3 ay - 2 yıl (m.130)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ölüye hakaret için ihtilat aranmaz\" yanlış; en az üç kişi"
+   ],
+   "dogrusu": [
+    "en az 3 kişiyle ihtilat · 3 ay - 2 yıl · ceset veya kemiklerini alan · 3 ay - 2 yıl"
+   ]
+  },
+  {
+   "id": "67-32",
+   "madde": [
+    "132",
+    "133"
+   ],
+   "baslik": "Haberleşmenin gizliliği, konuşmaların dinlenmesi",
+   "hukum": "Kişiler arasındaki haberleşmenin gizliliğini ihlal eden 1-3 yıl; içeriklerin kaydı suretiyle → 1 kat artırım; haberleşme içeriklerini hukuka aykırı ifşa eden 2-5 yıl; kendisiyle yapılan haberleşmenin içeriğini diğer tarafın rızası olmadan alenen ifşa eden 1-3 yıl (basın-yayınla yayımlanması da aynı) (m.132); kişiler arasındaki aleni olmayan konuşmaları rızasız bir aletle dinleyen veya kaydeden 2-5 yıl; katıldığı aleni olmayan söyleşiyi diğerlerinin rızası olmadan kaydeden 6 ay - 2 yıl hapis veya APC; bu kayıtları ifşa eden 2-5 yıl + 4.000 güne kadar APC (m.133)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kendi telefon görüşmesini kaydetmek her hâlde suçtur\" — katıldığı konuşmayı kaydetmek daha hafif suç, ifşa daha ağır"
+   ],
+   "dogrusu": [
+    "haberleşmenin gizliliğini ihlal · 1-3 yıl · kaydı · 1 kat · ifşa · 2-5 yıl · kendisiyle yapılan · 1-3 yıl · aleni olmayan konuşmaları · dinleyen veya kaydeden · 2-5 yıl · katıldığı · 6 ay - 2 yıl · 2-5 yıl"
+   ]
+  },
+  {
+   "id": "67-33",
+   "madde": [
+    "134",
+    "135"
+   ],
+   "baslik": "Özel hayat ve kişisel veriler",
+   "hukum": "Özel hayatın gizliliğini ihlal eden 1-3 yıl; görüntü veya seslerin kayda alınması suretiyle → 1 kat artırım; özel hayata ilişkin görüntü veya sesleri hukuka aykırı ifşa eden 2-5 yıl (basın-yayınla da aynı) (m.134); hukuka aykırı olarak kişisel verileri kaydeden 1-3 yıl; verinin siyasi-felsefi-dinî görüş, ırki köken, ahlaki eğilim, cinsel yaşam, sağlık durumu veya sendikal bağlantıya ilişkin olması → yarı artırım (m.135)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık verisi kaydetmek 1 kat artırılır\" yanlış; yarı"
+   ],
+   "dogrusu": [
+    "Özel hayatın gizliliğini · 1-3 yıl · kayda alınması · 1 kat · ifşa · 2-5 yıl · kişisel verileri kaydeden · 1-3 yıl · yarı"
+   ]
+  },
+  {
+   "id": "67-34",
+   "madde": [
+    "141",
+    "144"
+   ],
+   "baslik": "Hırsızlık ve daha az cezayı gerektiren hâl",
+   "hukum": "Zilyedinin rızası olmadan başkasına ait taşınır malı yarar sağlamak maksadıyla bulunduğu yerden alan 1-3 yıl (m.141); paydaş veya elbirliğiyle malik olunan mal üzerinde veya hukuki ilişkiye dayanan alacağı tahsil amacıyla işlenirse şikâyet üzerine 2 ay - 1 yıl hapis veya APC (m.144)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taşınmaz hırsızlığı olur\" yanlış; hırsızlık yalnız taşınır"
+   ],
+   "dogrusu": [
+    "taşınır malı · 1-3 yıl · paydaş veya elbirliğiyle malik · hukuki ilişkiye dayanan alacağı tahsil · şikâyet üzerine 2 ay - 1 yıl"
+   ]
+  },
+  {
+   "id": "67-35",
+   "madde": [
+    "148",
+    "149",
+    "150"
+   ],
+   "baslik": "Yağma",
+   "hukum": "Kendisinin veya yakınının hayatına, vücut veya cinsel dokunulmazlığına saldırı ya da malvarlığına büyük zarar tehdidiyle veya cebir kullanarak bir malı teslime veya alınmasına karşı koymamaya mecbur kılan 6-10 yıl; cebir-tehditle borç altına sokacak senet verdirme, senedi imha ettirme de aynı ceza; mağdurun kendini bilmeyecek ve savunamayacak hâle getirilmesi (ilaç, uyuşturma) cebir sayılır (m.148); silahla, kendini tanınmayacak hâle koyarak, birden fazla kişiyle, yol kesmek suretiyle ya da konutta-iş yerinde-eklentilerinde, kendini savunamayacak kişiye karşı, suç örgütlerinin korkutucu gücünden yararlanarak, örgüte yarar sağlamak maksadıyla, gece vaktinde işlenirse 10-15 yıl; yaralamanın ağır neticeleri gerçekleşirse ayrıca yaralama hükümleri (m.149); hukuki ilişkiye dayanan alacağı tahsil amacıyla tehdit veya cebir kullanılırsa yalnız tehdit veya yaralama hükümleri; malın değerinin azlığı nedeniyle ceza 1/3'ten yarıya kadar indirilebilir (m.150)",
+   "sinavda_boyle_yazarlar": [
+    "\"Alacağını almak için cebir kullanan yağma suçundan cezalandırılır\" yanlış; yalnız yaralama/tehdit"
+   ],
+   "dogrusu": [
+    "cebir kullanarak · 6-10 yıl · senet · cebir sayılır · silahla · birden fazla kişiyle · yol kesmek suretiyle ya da konutta-iş yerinde-eklentilerinde · gece vaktinde · 10-15 yıl · hukuki ilişkiye dayanan alacağı tahsil · değerinin azlığı · 1/3'ten yarıya kadar"
+   ]
+  },
+  {
+   "id": "67-36",
+   "madde": [
+    "151",
+    "152",
+    "153"
+   ],
+   "baslik": "Mala zarar verme",
+   "hukum": "Başkasının taşınır veya taşınmaz malını yıkan, tahrip eden, yok eden, bozan, kullanılamaz hâle getiren veya kirleten, şikâyet üzerine 4 ay - 3 yıl hapis veya APC (m.151); kamu kurumlarına ait veya kamu hizmetine tahsis edilmiş yer-bina-tesis-eşya, yangın-sel-kaza gibi felaketlere karşı korunmaya tahsis edilmiş eşya, Devlet ormanı hariç her türlü dikili ağaç-fidan-bağ çubuğu, sulama-içme suyu-afet koruma tesisleri, grev-lokavtta işveren/işçi/sendika malları, siyasi parti ve meslek kuruluşu malları, görevinden ötürü öç almak amacıyla kamu görevlisinin malı hakkında işlenirse 1-4 yıl; yakarak, yakıcı-patlayıcı madde ile, toprak kayması-çığ-sel-taşkına neden olarak, radyasyon veya NBC silahla işlenirse 1 katına kadar artırım; haberleşme, enerji, demiryolu veya havayolu kamu hizmetinin geçici de olsa aksaması → yarısından 2 katına kadar artırım (m.152); ibadethanelere, mezarlara ve mezarlık tesislerine yıkmak-bozmak-kırmak suretiyle zarar veren 1-4 yıl, kirleten 3 ay - 1 yıl; ilgili dinî inanışı benimseyen kesimi tahkir maksadıyla işlenirse 1/3 artırım (m.153)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mezarlığı kirletmek 1-4 yıl\" yanlış; 3 ay-1 yıl"
+   ],
+   "dogrusu": [
+    "kirleten · şikâyet üzerine 4 ay - 3 yıl · kamu kurumlarına ait · Devlet ormanı hariç her türlü dikili ağaç-fidan-bağ çubuğu · görevinden ötürü öç almak amacıyla kamu görevlisinin · 1-4 yıl · yakarak, yakıcı-patlayıcı madde ile · 1 katına kadar · kamu hizmetinin geçici de olsa aksaması · yarısından 2 katına kadar · ibadethanelere, mezarlara · 1-4 yıl · kirleten 3 ay - 1 yıl · tahkir · 1/3"
+   ]
+  },
+  {
+   "id": "67-37",
+   "madde": [
+    "155",
+    "156"
+   ],
+   "baslik": "Güveni kötüye kullanma ve bedelsiz senet",
+   "hukum": "Muhafaza etmek veya belirli şekilde kullanmak üzere zilyetliği devredilmiş mal üzerinde devir amacı dışında tasarrufta bulunan veya devri inkâr eden, şikâyet üzerine 6 ay - 2 yıl hapis ve APC; meslek-sanat-ticaret-hizmet ilişkisi veya başkasının mallarını idare yetkisi gereği tevdi edilen eşya hakkında işlenirse 1-7 yıl + 3.000 güne kadar APC; konusu motorlu kara, deniz veya hava taşıtı ise 1 kat artırım (m.155); bedelsiz kalmış senedi kullanan, şikâyet üzerine 6 ay - 2 yıl hapis ve APC (m.156)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nitelikli güveni kötüye kullanma şikâyete bağlıdır\" yanlış; re'sen"
+   ],
+   "dogrusu": [
+    "şikâyet üzerine 6 ay - 2 yıl · meslek-sanat-ticaret-hizmet ilişkisi · 1-7 yıl · motorlu kara, deniz veya hava taşıtı · 1 kat · bedelsiz kalmış senedi · şikâyet üzerine 6 ay - 2 yıl"
+   ]
+  },
+  {
+   "id": "67-38",
+   "madde": [
+    "157",
+    "158",
+    "159"
+   ],
+   "baslik": "Dolandırıcılık",
+   "hukum": "Hileli davranışlarla bir kimseyi aldatıp onun veya başkasının zararına kendisine/başkasına yarar sağlayan 1-5 yıl + 5.000 güne kadar APC (m.157); nitelikli dolandırıcılık: dinî inanç ve duyguların istismarı, tehlikeli durum veya zor şartlardan yararlanma, algılama zayıflığından yararlanma, kamu kurumu, meslek kuruluşu, siyasi parti, vakıf veya derneğin araç olarak kullanılması, kamu kurumlarının zararına, bilişim sistemleri, banka veya kredi kurumlarının araç olarak kullanılması, basın-yayın kolaylığıyla, tacir/şirket yöneticisinin ticari faaliyeti sırasında, serbest meslek sahibinin güveni kötüye kullanması, tahsis edilmemesi gereken kredi açtırma, sigorta bedelini almak maksadıyla, kendini kamu görevlisi veya banka-sigorta-kredi kurumu çalışanı olarak tanıtma → 3-10 yıl + 5.000 güne kadar APC; kamu zararı, bilişim-banka aracılığı, kredi, sigorta ve kamu görevlisi olarak tanıtma hâllerinde hapis alt sınırı 4 yıldan, APC menfaatin 2 katından az olamaz; kamu görevlileriyle ilişkisi olduğundan bahisle iş gördürme vaadiyle menfaat temini (nüfuz dolandırıcılığı) aynı ceza; 3 veya daha fazla kişiyle → yarı, örgütle → 1 kat artırım; iştiraki yalnız banka/kredi kartı veya hesap bilgilerini başkasına vermekle sınırlı kalanın cezası yarı indirilir (m.158); hukuki ilişkiye dayanan alacağı tahsil amacıyla dolandırıcılık şikâyet üzerine 6 ay - 1 yıl hapis veya APC (m.159)",
+   "sinavda_boyle_yazarlar": [
+    "\"Telefon dolandırıcılığı basit dolandırıcılıktır\" yanlış; kamu görevlisi taklidi veya bilişim/banka aracılığı nitelikli"
+   ],
+   "dogrusu": [
+    "1-5 yıl · nitelikli dolandırıcılık · kamu kurumu, meslek kuruluşu, siyasi parti, vakıf veya derneğin araç olarak kullanılması · kamu kurumlarının zararına · bilişim sistemleri, banka veya kredi kurumlarının araç olarak kullanılması · tahsis edilmemesi gereken kredi · sigorta bedelini · kendini kamu görevlisi veya banka-sigorta-kredi kurumu çalışanı olarak tanıtma · 3-10 yıl · 4 yıldan · menfaatin 2 katından · nüfuz dolandırıcılığı · 3 veya daha fazla kişiyle · yarı · örgütle · 1 kat · banka/kredi kartı veya hesap bilgilerini başkasına vermekle · yarı · hukuki ilişkiye dayanan alacağı tahsil · şikâyet üzerine 6 ay - 1 yıl"
+   ]
+  },
+  {
+   "id": "67-39",
+   "madde": [
+    "160",
+    "163",
+    "168"
+   ],
+   "baslik": "Kaybolmuş eşya, karşılıksız yararlanma, etkin pişmanlık",
+   "hukum": "Kaybedilmiş veya hata sonucu ele geçirilen eşya üzerinde iade etmeksizin veya yetkili mercie haber vermeksizin malik gibi tasarrufta bulunan, şikâyet üzerine 1 yıla kadar hapis veya APC (m.160); otomatlardan ödeme yapmadan yararlanan 2-6 ay; telefon hatları ve şifreli yayınlardan rızasız yararlanan 6 ay - 2 yıl; elektrik, su veya doğal gazı sayacı engelleyecek şekilde (kaçak) tüketen 1-3 yıl (m.163); etkin pişmanlık: hırsızlık, mala zarar verme, güveni kötüye kullanma, dolandırıcılık, hileli-taksirli iflâs suçları tamamlandıktan sonra kovuşturma başlamadan önce zararı aynen geri verme veya tazminle gideren failin cezası 2/3'üne kadar; kovuşturma başladıktan sonra hüküm verilmeden önce → yarısına kadar indirilir; yağmada bu oranlar yarısına ve 1/3'üne kadar; kısmen iadede mağdurun rızası aranır; karşılıksız yararlanmada zarar soruşturma tamamlanmadan tazmin edilirse kamu davası açılmaz, hükme kadar tazminde 1/3'e kadar indirim; bu hükümden 2 defadan fazla yararlanılamaz (m.168)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaçak elektrik hırsızlıktır\" yanlış (2012'den beri karşılıksız yararlanma)",
+    "Kaçak elektrik hırsızlıktır"
+   ],
+   "dogrusu": [
+    "Karşılıksız yararlanma (m.163)"
+   ]
+  },
+  {
+   "id": "67-40",
+   "madde": [
+    "170"
+   ],
+   "baslik": "Genel güvenliğin kasten tehlikeye sokulması",
+   "hukum": "Kişilerin hayatı, sağlığı veya malvarlığı bakımından tehlikeli olacak biçimde ya da korku-kaygı-panik yaratabilecek tarzda yangın çıkaran, bina çökmesi-toprak kayması-çığ-sel-taşkına neden olan, silahla ateş eden veya patlayıcı madde kullanan 1-5 yıl; ses ve gaz fişeği atabilen silahla (kurusıkı) ateş → 6 ay - 3 yıl; kişilerin toplu bulundukları yerlerde → yarı artırım; yangın, çökme, kayma, çığ, sel tehlikesine neden olan 3 ay - 1 yıl hapis veya APC (m.170)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurusıkıyla havaya ateş suç değildir\" yanlış (2025 değişikliği)",
+    "Kurusıkıyla havaya ateş suç değil"
+   ],
+   "dogrusu": [
+    "6 ay-3 yıl (m.170)"
+   ]
+  },
+  {
+   "id": "67-41",
+   "madde": [
+    "174",
+    "179"
+   ],
+   "baslik": "Tehlikeli maddeler ve trafik güvenliği",
+   "hukum": "İzinsiz patlayıcı, yakıcı, aşındırıcı, yaralayıcı, boğucu, zehirleyici, nükleer-radyoaktif-kimyasal-biyolojik maddeyi imal, ithal, ihraç, nakleden, muhafaza eden, satan, satın alan veya işleyen 4-8 yıl + 5.000 güne kadar APC; bunları imal-işleme-kullanma için gerekli malzeme ve teçhizatı ithal-ihraç-satan-bulunduran da aynı ceza; örgüt faaliyetiyle → 1 kat; önemsiz tür ve miktarda patlayıcı satın alan, kabul eden veya bulunduran kullanılış amacına göre 1 yıla kadar (m.174); ulaşımın güvenli akışı için konulmuş işaretleri değiştirerek, kaldırarak, yanlış işaret vererek, yola bir şey koyarak veya teknik sisteme müdahale ederek tehlikeye neden olan 1-6 yıl; ulaşım araçlarını hayat-sağlık-malvarlığı bakımından tehlikeli şekilde sevk ve idare eden 4 ay - 2 yıl; alkol veya uyuşturucu etkisiyle ya da başka nedenle emniyetli şekilde araç kullanamayacak hâlde olmasına rağmen araç kullanan 6 ay - 2 yıl (m.179)",
+   "sinavda_boyle_yazarlar": [
+    "\"Alkollü araç kullanma yalnız idari para cezasıdır\" yanlış; 6 ay-2 yıl hapis (m.179/3)"
+   ],
+   "dogrusu": [
+    "nükleer-radyoaktif-kimyasal-biyolojik · 4-8 yıl · örgüt · 1 kat · önemsiz tür ve miktarda · 1 yıla kadar · işaretleri · 1-6 yıl · tehlikeli şekilde sevk ve idare eden · 4 ay - 2 yıl · alkol veya uyuşturucu · emniyetli şekilde araç kullanamayacak hâlde · 6 ay - 2 yıl"
+   ]
+  },
+  {
+   "id": "67-42",
+   "madde": [
+    "188"
+   ],
+   "baslik": "Uyuşturucu madde imal ve ticareti",
+   "hukum": "Uyuşturucu veya uyarıcı maddeyi ruhsatsız imal, ithal veya ihraç eden 20-30 yıl + 2.000-20.000 gün APC; ihraç fiili diğer ülkede ithal olarak yargılanmışsa infaz edilen kısım mahsup edilir; ülke içinde satan, satışa arz eden, başkasına veren, sevk eden, nakleden, depolayan, satın alan, kabul eden, bulunduran en az 10 yıl + 1.000-20.000 gün APC; madde verilen/satılan kişi çocuksa en az 15 yıl; maddenin eroin, kokain, morfin, bazmorfin, sentetik kannabinoid, sentetik katinon, sentetik opioid, amfetamin ve türevleri olması ya da fiillerin okul, yurt, hastane, kışla veya ibadethane gibi toplu bulunulan bina ve tesislere 200 metreden yakın umumi yerlerde işlenmesi → yarı artırım; 3 veya daha fazla kişiyle → yarı, örgütle → 1 kat artırım; reçeteye bağlı ilaçlar için de uygulanır (ceza yarısına kadar indirilebilir); uyuşturucu üretiminde kullanılan izne bağlı maddeleri (ara madde) ithal, imal, satan en az 8 yıl + 1.000-20.000 gün APC; suçun tabip, diş tabibi, eczacı, kimyager, veteriner, sağlık memuru, laborant, ebe, hemşire vb. tarafından işlenmesi → yarı artırım (m.188)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ticaret amacıyla bulundurma 2-5 yıl\" yanlış; o kullanma amaçlı (m.191); ticari en az 10 yıl",
+    "Uyuşturucu ticareti 2-5 yıl"
+   ],
+   "dogrusu": [
+    "En az 10 yıl; 2-5 kullanıcı (m.188, 191)"
+   ]
+  },
+  {
+   "id": "67-43",
+   "madde": [
+    "190"
+   ],
+   "baslik": "Kullanımı kolaylaştırma ve özendirme",
+   "hukum": "Uyuşturucu kullanılmasını kolaylaştırmak için özel yer, donanım veya malzeme sağlayan, kullananların yakalanmalarını zorlaştıracak önlem alan, kullanma yöntemleri konusunda bilgi veren 5-10 yıl + 1.000-10.000 gün APC; uyuşturucu kullanılmasını alenen özendiren veya bu nitelikte yayın yapan 5-10 yıl + 1.000-10.000 gün APC; sağlık mesleği mensuplarınca işlenirse yarı artırım (m.190)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özendirme yalnız para cezası gerektirir\" yanlış"
+   ],
+   "dogrusu": [
+    "özel yer, donanım veya malzeme sağlayan · kullanma yöntemleri konusunda bilgi veren · 5-10 yıl · alenen özendiren · yayın · 5-10 yıl · yarı"
+   ]
+  },
+  {
+   "id": "67-44",
+   "madde": [
+    "191"
+   ],
+   "baslik": "Kullanmak için bulundurma ve kamu davasının ertelenmesi",
+   "hukum": "Kullanmak için uyuşturucu satın alan, kabul eden, bulunduran ya da kullanan 2-5 yıl; soruşturmada CMK 171 şartları aranmaksızın 5 yıl süreyle kamu davasının açılmasının ertelenmesine karar verilir, savcı şüpheliyi uyarır, erteleme kararı kolluk birimlerine de bildirilir; erteleme süresinde asgari 1 yıl denetimli serbestlik (denetimli serbestlik müdürlüğü teklifi veya re'sen savcı kararıyla altışar aylık sürelerle en fazla 2 yıl uzatılabilir), gerekirse tedavi; savcı yılda en az 2 defa kullanım tespiti için sevk kararı verir; yükümlülüklere uymamakta ısrar, tekrar satın alma-kabul-bulundurma veya tekrar kullanma hâlinde kamu davası açılır (tekrar kullanma ayrı soruşturma konusu yapılmaz, ihlal sayılır); kamu davası açıldıktan sonra tekrar işlenen suçta yeniden erteleme verilemez; yükümlülüklere uyarsa kovuşturmaya yer olmadığı kararı; m.188 veya 190'dan yapılan kovuşturmada suçun yalnız m.191 kapsamında kaldığı anlaşılırsa hükmün açıklanmasının geri bırakılması; okul, yurt, hastane, kışla, ibadethane gibi yerlere 200 metreden yakın umumi yerlerde işlenirse yarı artırım (m.191)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kullanıcı hakkında doğrudan kamu davası açılır\" yanlış; erteleme zorunlu (CMK 171 şartları aranmaz)",
+    "Kullanıcı hakkında doğrudan dava açılır"
+   ],
+   "dogrusu": [
+    "5 yıl erteleme (m.191)"
+   ]
+  },
+  {
+   "id": "67-45",
+   "madde": [
+    "197",
+    "204",
+    "206"
+   ],
+   "baslik": "Parada ve belgede sahtecilik",
+   "hukum": "Tedavüldeki parayı sahte olarak üreten, ülkeye sokan, nakleden, muhafaza eden veya tedavüle koyan 2-12 yıl + 10.000 güne kadar APC; sahte parayı bilerek kabul eden 1-3 yıl + APC; sahteliğini bilmeden aldığı parayı bilerek tedavüle koyan 3 ay - 1 yıl (m.197); resmî belgede sahtecilik: sahte resmî belge düzenleyen, gerçek belgeyi aldatacak şekilde değiştiren veya sahte belgeyi kullanan 2-5 yıl; kamu görevlisi görevi gereği yetkili olduğu belgeyi sahte düzenler, değiştirir, gerçeğe aykırı belge düzenler veya kullanırsa 3-8 yıl; belge sahteliği sabit oluncaya kadar geçerli nitelikteyse (ilam, noter senedi, tutanak) yarı artırım (m.204); resmî belge düzenlemeye yetkili kamu görevlisine yalan beyanda bulunan 3 ay - 2 yıl hapis veya APC (m.206); özel belgede sahtecilik: sahte özel belge düzenleyen veya değiştiren ve kullanan 1-3 yıl; sahte özel belgeyi bilerek kullanan da aynı (m.207)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özel belgede sahtecilik için düzenlemek yeter\" yanlış; kullanılması da gerekir"
+   ],
+   "dogrusu": [
+    "sahte olarak üreten, ülkeye sokan, nakleden, muhafaza eden veya tedavüle koyan · 2-12 yıl · bilerek kabul eden · 1-3 yıl · bilerek tedavüle koyan · 3 ay - 1 yıl · resmî belgede sahtecilik · 2-5 yıl · kamu görevlisi · 3-8 yıl · sahteliği sabit oluncaya kadar geçerli · yarı · yalan beyanda bulunan · 3 ay - 2 yıl · özel belgede sahtecilik · ve kullanan · 1-3 yıl"
+   ]
+  },
+  {
+   "id": "67-46",
+   "madde": [
+    "220"
+   ],
+   "baslik": "Suç işlemek amacıyla örgüt kurma",
+   "hukum": "Örgüt kuran veya yönetenler (yapı, üye sayısı, araç-gereç bakımından amaç suçları işlemeye elverişli olmalı) 5-10 yıl; örgütün varlığı için en az 3 üye; üye olanlar 2-5 yıl; örgüt silahlıysa yarı artırım; örgüt faaliyetinde işlenen suçlardan ayrıca ceza; faaliyette çocukların araç olarak kullanılması hâlinde yöneticilere yarısından 1 katına kadar artırım; yöneticiler örgüt faaliyetinde işlenen bütün suçlardan fail olarak cezalandırılır; hiyerarşiye dahil olmadan örgüte bilerek ve isteyerek yardım eden üye gibi cezalandırılır (yardımın niteliğine göre 1/3'e kadar indirim); örgütün cebir-şiddet yöntemlerini meşru gösteren, öven veya teşvik eden propaganda 1-3 yıl, basın-yayınla yarı artırım (m.220)",
+   "sinavda_boyle_yazarlar": [
+    "\"İki kişi örgüt kurabilir\" yanlış; en az üç",
+    "İki kişi suç örgütü kurabilir"
+   ],
+   "dogrusu": [
+    "En az 3 (m.220)"
+   ]
+  },
+  {
+   "id": "67-47",
+   "madde": [
+    "226",
+    "227"
+   ],
+   "baslik": "Müstehcenlik ve fuhuş",
+   "hukum": "Çocuğa müstehcen ürün veren, gösteren, okuyan; bunları çocukların görebileceği yerlerde veya alenen sergileyen; içeriği belli olacak şekilde satışa/kiraya arz eden; mahsus yerler dışında satan; bedelsiz dağıtan; reklamını yapan 6 ay - 2 yıl + APC; basın-yayınla yayınlayan 6 ay - 3 yıl + 5.000 güne kadar APC; müstehcen ürün üretiminde çocukları, temsili çocuk görüntülerini veya çocuk gibi görünenleri kullanan 5-10 yıl + APC, bu ürünleri ülkeye sokan, çoğaltan, satan, nakleden, depolayan, bulunduran 2-5 yıl + APC; şiddet, hayvan, ölü beden veya doğal olmayan yol içeren ürünleri üreten, satan, bulunduran 1-4 yıl + APC; bunları yayınlayan veya çocuklara ulaştıran 6-10 yıl + APC; bilimsel eserler ve (çocuk içerikli hariç, çocuklara ulaşması engellenmek şartıyla) sanatsal-edebî eserler kapsam dışı (m.226); çocuğu fuhşa teşvik eden, yolunu kolaylaştıran, tedarik eden, barındıran veya aracılık eden 4-10 yıl + 5.000 güne kadar APC (hazırlık hareketleri de tamamlanmış suç gibi); bir kimseyi fuhşa teşvik eden, kolaylaştıran, aracılık eden veya yer temin eden 2-4 yıl + 3.000 güne kadar APC (fuhuş kazancıyla geçinme teşvik sayılır); fuhşu kolaylaştırıcı görüntü-yazı dağıtan 1-3 yıl + 200-2.000 gün APC; cebir-tehdit, hile veya çaresizlikten yararlanarak fuhşa sevk → yarısından 2 katına kadar artırım; eş, üstsoy, kardeş, evlat edinen, vasi, eğitici, bakıcı veya kamu görevi nüfuzuyla → yarı; örgütle → yarı artırım; fuhşa sürüklenen kişi tedavi veya terapiye tabi tutulabilir (m.227)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fuhuş yapan kişi cezalandırılır\" yanlış; teşvik eden, aracılık eden, yer sağlayan cezalandırılır"
+   ],
+   "dogrusu": [
+    "6 ay - 2 yıl · 6 ay - 3 yıl · çocukları, temsili çocuk görüntülerini veya çocuk gibi görünenleri · 5-10 yıl · bulunduran · 2-5 yıl · şiddet, hayvan, ölü beden veya doğal olmayan yol · 1-4 yıl · 6-10 yıl · çocuğu fuhşa teşvik eden · 4-10 yıl · hazırlık hareketleri de tamamlanmış suç · yer temin eden · 2-4 yıl · 1-3 yıl · cebir-tehdit, hile veya çaresizlikten yararlanarak · yarısından 2 katına · yarı · yarı"
+   ]
+  },
+  {
+   "id": "67-48",
+   "madde": [
+    "267"
+   ],
+   "baslik": "İftira",
+   "hukum": "Yetkili makamlara ihbar-şikâyet veya basın-yayın yoluyla, işlemediğini bildiği hâlde soruşturma-kovuşturma başlatılması veya idari yaptırım uygulanması için bir kimseye hukuka aykırı fiil isnat eden 1-4 yıl; fiilin maddi eser ve delillerini uydurarak → yarı artırım; beraat eden veya KYOK verilen mağdur aleyhine gözaltı-tutuklama dışında koruma tedbiri uygulanmışsa → yarı artırım; mağdur gözaltına alınmış veya tutuklanmışsa iftira eden ayrıca kişiyi hürriyetinden yoksun kılmadan dolaylı fail; mağdur ağırlaştırılmış müebbet veya müebbete mahkûm olmuşsa 20-30 yıl; infaza başlanmışsa yarı artırım; dava zamanaşımı mağdurun fiili işlemediğinin sabit olduğu tarihten başlar; basın-yayınla iftirada mahkûmiyet kararı aynı organda ilan olunur (m.267)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suçun işlendiği tarihten\" şıkkı yanlış",
+    "İftirada zamanaşımı suç tarihinden başlar"
+   ],
+   "dogrusu": [
+    "Mağdurun fiili işlemediğinin sabit olduğu tarihten (m.267)"
+   ]
+  },
+  {
+   "id": "67-49",
+   "madde": [
+    "271",
+    "272"
+   ],
+   "baslik": "Suç uydurma ve yalan tanıklık",
+   "hukum": "İşlenmediğini bildiği bir suçu yetkili makamlara işlenmiş gibi ihbar eden ya da işlenmeyen suçun delil veya emarelerini uyduran 3 yıla kadar (m.271); soruşturmada tanık dinlemeye yetkili kişi veya kurul önünde gerçeğe aykırı tanıklık 4 ay - 1 yıl; mahkeme huzurunda veya yemin ettirerek dinlemeye yetkili merci önünde 1-3 yıl; 3 yıldan fazla hapis gerektiren suçun soruşturma veya kovuşturmasında 2-4 yıl; aleyhine tanıklık yapılan hakkında gözaltı-tutuklama dışında koruma tedbiri uygulanmışsa (beraat/KYOK şartıyla) yarı artırım; gözaltı veya tutuklama olmuşsa ayrıca hürriyetten yoksun kılmadan dolaylı fail; mağdur müebbet/ağırlaştırılmış müebbete mahkûm olmuşsa 20-30 yıl; hapis dışında yaptırım uygulanmışsa 3-7 yıl (m.272)",
+   "sinavda_boyle_yazarlar": [
+    "İftira ile suç uydurma karıştırılır: fail gösteriliyorsa iftira",
+    "Kimse gösterilmeden yalan ihbar iftiradır"
+   ],
+   "dogrusu": [
+    "Suç uydurma (m.271)"
+   ]
+  },
+  {
+   "id": "67-50",
+   "madde": [
+    "277",
+    "278",
+    "279"
+   ],
+   "baslik": "Yargı görevi yapanı etkileme ve suçu bildirmeme",
+   "hukum": "Görülmekte olan davada gerçeğin ortaya çıkmasını engellemek veya haksızlık oluşturmak amacıyla yargı görevi yapanı, bilirkişiyi veya tanığı hukuka aykırı etkilemeye teşebbüs eden 2-4 yıl; teşebbüs iltimas derecesini geçmezse 6 ay - 2 yıl (m.277); işlenmekte olan bir suçu yetkili makamlara bildirmeyen 1 yıla kadar; işlenmiş olup neticeleri hâlâ sınırlandırılabilir suçu bildirmeyen de aynı; mağdur 15 yaşını bitirmemiş çocuk, engelli veya hamileliği nedeniyle kendini savunamayacak kişiyse yarı artırım; tanıklıktan çekinebilecek kişiler (yakınlar) cezalandırılmaz (suçu önleme yükümlülüğü saklı) (m.278); kamu adına kovuşturmayı gerektiren suçu göreviyle bağlantılı öğrenip bildirmeyi ihmal eden veya geciktiren kamu görevlisi 6 ay - 2 yıl; suçun adli kolluk görevlisince işlenmesi → yarı artırım (m.279); görevi sırasında suç belirtisiyle karşılaşıp bildirmeyen veya geciktiren sağlık mesleği mensubu (tabip, diş tabibi, eczacı, ebe, hemşire vb.) 1 yıla kadar (m.280)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kardeşinin suçunu bildirmeyen cezalandırılır\" yanlış; tanıklıktan çekinebilecekler muaf"
+   ],
+   "dogrusu": [
+    "yargı görevi yapanı, bilirkişiyi veya tanığı · 2-4 yıl · iltimas derecesini · 6 ay - 2 yıl · işlenmekte olan · bildirmeyen · 1 yıla kadar · 15 yaşını bitirmemiş çocuk · yarı · tanıklıktan çekinebilecek · göreviyle bağlantılı · kamu görevlisi · 6 ay - 2 yıl · adli kolluk · yarı · sağlık mesleği mensubu · 1 yıla kadar"
+   ]
+  },
+  {
+   "id": "67-51",
+   "madde": [
+    "281",
+    "282",
+    "283"
+   ],
+   "baslik": "Delil karartma, kara para aklama, suçluyu kayırma",
+   "hukum": "Gerçeğin meydana çıkmasını engellemek amacıyla suçun delillerini yok eden, silen, gizleyen, değiştiren veya bozan 6 ay - 5 yıl; kendi işlediği suçla ilgili delili karartana bu maddeden ceza verilmez; kamu görevlisince göreviyle bağlantılı → yarı artırım; hüküm verilmeden önce gizlenen delilleri mahkemeye teslim edene 4/5 indirim (m.281); alt sınırı 6 ay veya daha fazla hapis gerektiren suçtan kaynaklanan malvarlığı değerlerini yurt dışına çıkaran veya gayrimeşru kaynağını gizlemek/meşru göstermek için işlemlere tabi tutan (aklama) 3-7 yıl + 20.000 güne kadar APC; iştirak etmeksizin bu değeri bilerek satın alan, kabul eden, bulunduran, kullanan 2-5 yıl; kamu görevlisi veya meslek icrasında → yarı; örgütle → 1 kat; kovuşturma başlamadan önce malvarlığının ele geçirilmesini sağlayan veya yerini haber verene ceza verilmez (m.282); suç işleyen kişiye araştırma, yakalanma, tutuklanma veya infazdan kurtulması için imkân sağlayan (kayırma) 6 ay - 5 yıl; kamu görevlisince göreviyle bağlantılı → yarı artırım; üstsoy, altsoy, eş, kardeş veya diğer suç ortağı tarafından işlenirse ceza verilmez (m.283)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suç ortağının kayırması cezalandırılır\" yanlış; muaf",
+    "Kardeşini kayıran cezalandırılır"
+   ],
+   "dogrusu": [
+    "Ceza verilmez (m.283)"
+   ]
+  },
+  {
+   "id": "67-52",
+   "madde": [
+    "289"
+   ],
+   "baslik": "Muhafaza görevini kötüye kullanma",
+   "hukum": "Muhafaza için resmen kendisine teslim edilen rehinli, hacizli veya elkonulmuş mal üzerinde teslim amacı dışında tasarrufta bulunan 3 ay - 2 yıl + 3.000 güne kadar APC; kişi malın sahibiyse ceza yarı indirilir; kovuşturma başlamadan önce eşyayı geri veren veya bedelini ödeyene 4/5 indirim; dikkat ve özen yükümlülüğüne aykırı davranarak malın kaybolmasına veya bozulmasına neden olan APC; soruşturma veya kovuşturmada elkonulan eşyayı amacı dışında kullanan 1 yıla kadar (m.289)",
+   "sinavda_boyle_yazarlar": [
+    "\"Malın sahibi olan yediemin cezasızdır\" yanlış; yarı indirim"
+   ],
+   "dogrusu": [
+    "rehinli, hacizli veya elkonulmuş mal · 3 ay - 2 yıl · sahibiyse · yarı · 4/5 · APC · elkonulan eşyayı amacı dışında kullanan · 1 yıla kadar"
+   ]
+  },
+  {
+   "id": "67-53",
+   "madde": [
+    "299",
+    "301",
+    "314"
+   ],
+   "baslik": "Cumhurbaşkanına hakaret, Devleti aşağılama, silahlı örgüt",
+   "hukum": "Cumhurbaşkanına hakaret eden 1-4 yıl, alenen → 1/6 artırım; kovuşturma Adalet Bakanının iznine bağlı (m.299); Türk Milletini, Türkiye Cumhuriyeti Devletini, TBMM'yi, Hükûmeti ve yargı organlarını alenen aşağılayan 6 ay - 2 yıl; Devletin askerî veya emniyet teşkilatını alenen aşağılayan aynı ceza; eleştiri amaçlı düşünce açıklamaları suç oluşturmaz; soruşturma Adalet Bakanının iznine bağlı (m.301); Devletin güvenliğine ve Anayasal düzene karşı suçları işlemek amacıyla silahlı örgüt kuran veya yöneten 10-15 yıl; üye olanlar 5-10 yıl; örgüt suçuna ilişkin diğer hükümler (m.220) aynen uygulanır (m.314)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cumhurbaşkanına hakaret için Cumhurbaşkanının şikâyeti gerekir\" yanlış; Adalet Bakanı izni. m.220 (adi örgüt) 5-10/2-5 ile m.314 (silahlı terör örgütü) 10-15/5-10 karıştırılır",
+    "Cumhurbaşkanına hakaret şikâyete bağlıdır"
+   ],
+   "dogrusu": [
+    "Adalet Bakanı izni (m.299)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

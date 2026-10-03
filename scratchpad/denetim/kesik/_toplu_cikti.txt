@@ -1,0 +1,237 @@
+52 m.3: TAMAM_FARKLI | kesik=9000 yeni=26547 fazla_kelime=2547 kapsama=0.9997 bas=(0, 0) dipnot=1 farklar=1 aday=2 sonda=False
+     başlık='Tanımlar' | atılan=['İKİNCİ KISIM', 'Kurullar, Kuruluşlar, Komisyonlar, Görev ve Yetkileri', 'BİRİNCİ BÖLÜM', 'Görevli Kurullar ve Kuruluşlar', 'Karayolu Güvenliği Yüksek Kurulu Ve Karayolu Trafik Güvenliği Kurulu']
+     sup: ['12)^(16)']
+     FARK {'tur': 'yenide_fazla', 'kesik': '', 'yeni': '26 ek rg 3 7 2026 33299 görüntü cihazı sürücünün izleme ve kullanma sahasında kalan ve aracın hareketi sırasında televizyon veya video yayını izlenen cihazdır 27 ek rg 3 7 2026 33299 sürücü görüş alanı sürücü koltuğu dikey ve en yüksek sürüş konumunda iken sürücünün ön cam ön yan camlar ile dış aynalar aracılığıyla yolu trafiği ve çevresini doğrudan veya dolaylı olarak görebildiği alandır'}
+     SON: 'yukarıdaki araç sınıfları kullanılacak olup, daha önce tescili yapılmış araçlar için de satış ve devir işlemleri sırasında yeni araç sınıfları esas alınacaktır.'
+52 m.97: TAMAM | kesik=9000 yeni=10394 fazla_kelime=178 kapsama=1.0 bas=(0, 65) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Alkol, uyuşturucu veya uyarıcı maddeler etkisi altında araç sürme yasağı' | atılan=['ÜÇÜNCÜ BÖLÜM', 'Araç Kullanma Sürelerine Uyma Mecburiyeti ve Denetleme Esasları', 'Araç Kullanma ve Dinlenme Sürelerine Uyma Mecburiyeti ve Denetleme Esasları']
+     SON: 'idari para cezalarının tahsil edildiğine dair bilgilerin Gelir İdaresi Başkanlığından elektronik sistemle alınabilmesi halinde belge ibrazı zorunluluğu aranmaz.'
+52 m.102: TAMAM | kesik=2200 yeni=2368 fazla_kelime=22 kapsama=0.9972 bas=(0, 29) dipnot=3 farklar=0 aday=1 sonda=False
+     başlık='Dönüşler (Doğrultu Değiştirme)' | atılan=['Geçme Kuralları']
+     sup: ['7)^(7)', '8)^(7)', '9)^(7)']
+     KESİK KUYRUK (eşleşmeyen): bird
+     SON: 'an birden fazla şeridi bulunan yollarda; en sağ veya sol şeride bitişik şerit veya şeritlerden işaretlenmek suretiyle sağa veya sola dönüşlere izin verilebilir.'
+52 m.167: TAMAM | kesik=2200 yeni=2553 fazla_kelime=34 kapsama=1.0 bas=(0, 108) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Ceza Puanı Uygulaması ve Sürücü Belgelerinin Geçici Olarak Geri Alınması (Değişik başlık: RG-02/11/2000-24218)' | atılan=['Sürücü Belgesi Alındıktan Sonra Çeşitli Suçlardan Mahkum Olanların Sürücü Belgelerinin Geri Alınması Esasları']
+     SON: 'Geri alınma süresi içinde araç kullandığı tespit edilenler hakkında 2918 sayılı Kanunun 36 ncı maddesinin üçüncü fıkrasının (b) bendine istinaden işlem yapılır.'
+68 m.3: TAMAM | kesik=6000 yeni=11987 fazla_kelime=758 kapsama=0.9802 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar ve kısaltmalar' | atılan=['İlkeler']
+     SON: 'tü hizmet tanımı kapsamına giren hizmetleri sunan gerçek veya tüzel kişiyi,\n(eee) (Ek:24/7/2026-7590/27 md.) Başkanlık: Siber Güvenlik Başkanlığını,\nifade eder.'
+71 m.4: TAMAM | kesik=9000 yeni=7084 fazla_kelime=31 kapsama=0.7611 bas=(0, 0) dipnot=10 farklar=0 aday=1 sonda=False
+     başlık='İstihdam şekilleri:' | atılan=['Dört istihdam şekli dışında personel çalıştırılamıyacağı:']
+     KESİK KUYRUK (eşleşmeyen): esas ve usul
+     SON: 'ci iş pozisyonlarında altı aydan az olmak üzere belirli süreli iş sözleşmeleriyle çalıştırılan geçici işçilerdir. Bunlar hakkında bu Kanun hükümleri uygulanmaz.'
+87 m.3: TAMAM_FARKLI | kesik=9000 yeni=10247 fazla_kelime=606 kapsama=0.6652 bas=(0, 0) dipnot=8 farklar=1 aday=1 sonda=False
+     başlık='İstisnalar' | atılan=['Tanımlar']
+     FARK {'tur': 'yenide_fazla', 'kesik': '', 'yeni': 'idarelerin bütçe içi işletmeleri hariç'}
+     KESİK KUYRUK (eşleşmeyen): ga
+     SON: 'lık hizmet alımları,\n(Ek bent: 2/7/2018-KHK-702/10 md.) (Mülga bent:5/3/2022-7381/27 md.)\nCeza ve ihalelerden yasaklama hükümleri hariç bu Kanuna tâbi değildir.'
+87 m.10: TAMAM | kesik=9000 yeni=8605 fazla_kelime=35 kapsama=0.925 bas=(0, 0) dipnot=3 farklar=0 aday=1 sonda=False
+     başlık='İhaleye katılımda yeterlik kuralları' | atılan=['İhaleye katılamayacak olanlar']
+     KESİK KUYRUK (eşleşmeyen): bel
+     SON: 'ınan durumu tevsik eden belgelerin sözleşme imzalanmadan önce verilmemesi halinde bu durumda olanlar ihale dışı bırakılarak geçici teminatları gelir kaydedilir.'
+87 m.53: TAMAM | kesik=9000 yeni=19929 fazla_kelime=1468 kapsama=0.9793 bas=(0, 0) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='Kamu İhale Kurumu' | atılan=['İKİNCİ BÖLÜM', 'İhalelere Yönelik Başvurular ve İnceleme⟦FN⟧', 'İhalelere yönelik başvurular⟦FN⟧']
+     SON: 'tçe kesin hesabı Cumhurbaşkanı Kararı ile ibra edilir.\nKurumun yıllık hesapları ile gelir ve harcamalarına ilişkin iş ve işlemleri, Sayıştay denetimine tâbidir.'
+90 m.19: DEVAM_YOK | kesik=3996 yeni=4076 fazla_kelime=0 kapsama=1.0 bas=(0, 78) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tapuda kayıtlı olmayan taşınmaz malların tescili ve zilyedin hakları' | atılan=['DÖRDÜNCÜ KISIM', 'Kamulaştırmada Boşaltma, Vazgeçme ve Geri Alma', 'BİRİNCİ BÖLÜM', 'Boşaltma', 'Taşınmaz malın boşaltılması']
+     SON: 'ından iktisap edilmemiş yerin kamulaştırmasında binaların asgarî levazım bedeli, ağaçların ise 11 inci madde çerçevesinde takdir olunan bedeli zilyedine ödenir.'
+91 m.8: TAMAM | kesik=9000 yeni=12134 fazla_kelime=499 kapsama=0.9285 bas=(60, 58) dipnot=3 farklar=0 aday=1 sonda=False
+     başlık='Planların hazırlanması ve yürürlüğe konulması:⟦FN⟧' | atılan=['İmar planlarında Bakanlığın yetkisi:']
+     KESİK KUYRUK (eşleşmeyen): teşkil
+     SON: '; ilgili meslek odasınca belirlenen mimari proje asgari hizmet bedelinin, tamamlanan yapılarda yüzde yirmisini, inşaatı süren yapılarda yüzde on beşini geçemez.'
+91 m.11: DEVAM_YOK | kesik=2201 yeni=1883 fazla_kelime=0 kapsama=0.8431 bas=(0, 35) dipnot=2 farklar=0 aday=1 sonda=False
+     başlık='Kamuya ait gayrimenkuller:' | atılan=['Cephe hattı:']
+     KESİK KUYRUK (eşleşmeyen): cephe hattı
+     SON: 'rrufu altında bulunan ve ağaçlandırılmak üzere izin verilen taşınmazlardan projesine uygun olarak ağaçlandırılanlar, imar planı kararıyla başka amaca ayrılamaz.'
+91 m.18: TAMAM | kesik=9000 yeni=10666 fazla_kelime=301 kapsama=0.9257 bas=(40, 37) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='Parselasyon planlarının hazırlanması:⟦FN⟧' | atılan=['Parselasyon planlarının hazırlanması ve tescili:']
+     KESİK KUYRUK (eşleşmeyen): sahipler
+     SON: ' bedeli üzerinden değeri ödenir.\n(Ek fıkra:4/7/2019-7181/9 md.) Bu maddenin uygulanmasına ilişkin usul ve esaslar Bakanlıkça hazırlanan yönetmelikle belirlenir.'
+91 m.42: TAMAM_FARKLI | kesik=9000 yeni=8809 fazla_kelime=60 kapsama=0.939 bas=(20, 17) dipnot=6 farklar=2 aday=1 sonda=False
+     başlık='İdari müeyyideler:⟦FN⟧' | atılan=['Yürürlükten kaldırılan hükümler:']
+     FARK {'tur': 'kesikte_fazla', 'kesik': 'maddesiyle metne işlendiği şekilde değiştirilmiştir'}
+     FARK {'tur': 'yenide_farkli', 'kesik': 'il özel idaresince ibareleri', 'yeni': 'ruhsatı iptal edilir'}
+     KESİK KUYRUK (eşleşmeyen): il özel idaresince ibareleri ve incelenerek ibaresi
+     SON: 'ak amacıyla hazır betonu piyasaya arz eden ya da piyasada bulunduran kişiler ilgili idare tarafından beşyüzbin Türk lirası idari para cezası ile cezalandırılır.'
+95 m.3: TAMAM | kesik=9000 yeni=18428 fazla_kelime=1211 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar' | atılan=['İKİNCİ KISIM', 'Hayvan Sağlığı, Hayvan Refahı ve Zootekni', 'BİRİNCİ BÖLÜM', 'Bulaşıcı Hayvan Hastalıklarının Kontrolü ve Yükümlülükler, Hayvan Hastalık', 'Tazminatı ve İnsanlar Tarafından Tüketilmesi Amaçlanmayan', 'Hayvansal Yan Ürünler', 'Bulaşıcı hayvan hastalıklarının kontrolü ve yükümlülükler']
+     KESİK KUYRUK (eşleşmeyen): hayv
+     SON: 'e teferruatını,\n84) Zootekni: Hayvanların yetiştirilmesi, ıslahı, bakımı ve beslenmesi, üreme ve çoğalması ve belgelendirme ile ilgili uygulamaları,\nifade eder.'
+96 m.Ek 13: TAMAM | kesik=9000 yeni=11901 fazla_kelime=432 kapsama=0.9668 bas=(0, 0) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=[]
+     sup: ['ir.^(1)']
+     SON: 'n yetkisinde olan bir işi yapan veya bu unvanı takınanlar bir yıldan üç yıla kadar hapis ve ikiyüz günden beşyüz güne kadar adli para cezası ile cezalandırılır.'
+97 m.19: TAMAM | kesik=6000 yeni=23490 fazla_kelime=2139 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='İşletmecilerin hak ve yükümlülükleri' | atılan=['Kullanım hakkı sahibi işletmecilerin hak ve yükümlülükleri']
+     SON: 'mluluk sağlamakla,\ni) Geçiş hakkına ilişkin düzenlemelere uymakla,\nj) İlgili mevzuat uyarınca Kurum tarafından istenen hizmetleri yerine getirmekle,\nyükümlüdür.'
+107 m.3: TAMAM | kesik=9000 yeni=9826 fazla_kelime=123 kapsama=0.9965 bas=(0, 0) dipnot=15 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar' | atılan=['Hukukî dayanak']
+     sup: ['95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)']
+     KESİK KUYRUK (eşleşmeyen): 2
+     SON: 'elikleri: Teğmen-Albay sicil belgesindeki ayırt edici nitelikler bölümünde yer alan ve beş çeşit olan her görev alanı için farklılaşan beş niteliği,\nifade eder.'
+107 m.24: TAMAM | kesik=9000 yeni=15669 fazla_kelime=907 kapsama=0.9975 bas=(0, 0) dipnot=11 farklar=0 aday=1 sonda=False
+     başlık='Sicil belgelerinin düzenlenmesi' | atılan=['Birden fazla birinci ve ikinci sicil üstü ile görev yapılması hâlinde sicil düzenlenmesi']
+     sup: ['95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)']
+     KESİK KUYRUK (eşleşmeyen): teme
+     SON: '3/2/2017-29988) (…) Personel Başkanlıklarına gönderilmesi ve gerekli eşleştirmeyi müteakip sicil belgelerinin imha edilebilmesine yönelik düzenleme yapılabilir.'
+107 m.116: TAMAM | kesik=9000 yeni=14924 fazla_kelime=775 kapsama=0.9998 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Üstün başarı nedeniyle\xa0 terfi ve lisansüstü öğrenim kıdemi' | atılan=['Fakülte Veya Yüksek Okulları Bitiren Subayların Eksik Bekletilecekleri Süreler']
+     sup: ['95)^(1)']
+     SON: 'kında da; her rütbede, o rütbenin normal bekleme süresinin 1/3’ü kadar beklemek ve bu süre kadar geçerli sicil almak koşulu ile (b) fıkrası hükümleri uygulanır.'
+108 m.3: TAMAM | kesik=9000 yeni=9636 fazla_kelime=96 kapsama=0.9962 bas=(0, 0) dipnot=15 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar' | atılan=['Hukukî dayanak']
+     sup: ['95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)', '95)^(1)']
+     KESİK KUYRUK (eşleşmeyen): 1 gerekçe
+     SON: 'nitelikleri: Astsubay sicil belgesindeki ayırt edici nitelikler bölümünde yer alan ve dört çeşit olan her görev alanı için farklılaşan beş niteliği,\nifade eder.'
+108 m.21: TAMAM | kesik=9000 yeni=14500 fazla_kelime=726 kapsama=0.9998 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Sicil belgelerinin düzenlenmesi' | atılan=['Birden fazla birinci veya ikinci sicil üstü ile görev yapılması hâlinde sicil düzenlenmesi']
+     sup: ['95)^(1)']
+     SON: 'il Güvenlik Komutanlığı Personel Başkanlıklarına gönderilmesi ve gerekli eşleştirmeyi müteakip sicil belgelerinin imha edilmesine yönelik düzenleme yapılabilir.'
+119 m.4: TAMAM | kesik=9000 yeni=19266 fazla_kelime=1404 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar' | atılan=['İKİNCİ BÖLÜM', 'Temel Hükümler', 'Yetki belgesi alma zorunluluğu']
+     KESİK KUYRUK (eşleşmeyen): edilmi
+     SON: 'ın alt miktarını,\nıııı) (Ek:RG-1/10/2025-33034) Üst sınır: Kanunun 26 ncı maddesinin birinci fıkrasında belirtilen ceza aralıklarının üst miktarını,\nifade eder.'
+119 m.14: TAMAM | kesik=9000 yeni=25988 fazla_kelime=2458 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Yetki belgesi almanın veya yenilemenin özel şartları' | atılan=['Yetki belgesi almak ve yenilemek için gerekli belgeler']
+     KESİK KUYRUK (eşleşmeyen): ku
+     SON: 'k veya tüzel kişilerden, 40 ıncı maddenin otuz dördüncü fıkrasının (b) bendinde yer alan şart aranmaz ve bunların yetki belgesi ücretinde %95 indirim uygulanır.'
+119 m.24: TAMAM | kesik=9000 yeni=13675 fazla_kelime=685 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Taşıtların yaşı, cinsi ve diğer şartlar' | atılan=['Taşıtların özmal veya sözleşmeli olarak kullanılması']
+     KESİK KUYRUK (eşleşmeyen): olar
+     SON: 'esi eki taşıt belgesine ilave edilecek otomobil cinsi taşıtların motor gücünün (Değişik ibare:RG-31/12/2021-31706 6. Mükerrer) 105kW ve üzerinde olması şarttır.'
+119 m.40: TAMAM | kesik=9000 yeni=21807 fazla_kelime=1720 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Yetki belgesi sahiplerinin ortak yükümlülükleri' | atılan=['Yolcu taşımacılığı faaliyetinde bulunanların yükümlülükleri']
+     KESİK KUYRUK (eşleşmeyen): i
+     SON: 'olarak uluslararası ve yurtiçi eşya taşımacılığı yapmak üzere yetki belgesi alan firmalar, yurtdışından getirmeleri kaydıyla taşınma eşyasını da taşıyabilirler.'
+120 m.15: DEVAM_YOK | kesik=9000 yeni=70 fazla_kelime=0 kapsama=0.0076 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Yürütme' | atılan=[]
+     sup: ['ür.^(3)']
+     KESİK KUYRUK (eşleşmeyen): 3 1 19 6 2014 tarihli ve 29035 sayılı resmi gazete de yayımlanan 3 6 2014 tarihli ve 2014 6455 sayılı bakanlar kurulu kararı eki yönetmeliğin 9 uncu maddesiyle bu maddenin başığı tereddütlerin gideril
+     SON: 'Yürütme\nMADDE 15- (1) Bu Yönetmelik hükümlerini Cumhurbaşkanı yürütür.'
+122 m.29: TAMAM | kesik=9000 yeni=11598 fazla_kelime=347 kapsama=0.9997 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Belgelerin sunuluş şekli' | atılan=['İKİNCİ BÖLÜM', 'Ortak Girişimler', 'İş ortaklığı']
+     sup: ['50)^(12)', '50)^(12)', '50)^(12)']
+     SON: 'stenen belgelerin aslı yerine belgelerin tesliminden önce idare tarafından “aslı idarece görülmüştür” veya bu anlama gelecek şerh düşülen suretleri sunulabilir.'
+125 m.31: TAMAM | kesik=9000 yeni=10955 fazla_kelime=253 kapsama=0.9997 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Belgelerin sunuluş şekli' | atılan=['İKİNCİ BÖLÜM', 'Ortak Girişimler', 'İş ortaklığı']
+     sup: ['50)^(10)', '50)^(10)', '50)^(10)']
+     KESİK KUYRUK (eşleşmeyen): şart
+     SON: 'stenen belgelerin aslı yerine belgelerin tesliminden önce idare tarafından “aslı idarece görülmüştür” veya bu anlama gelecek şerh düşülen suretleri sunulabilir.'
+125 m.46: DEVAM_YOK | kesik=3998 yeni=4038 fazla_kelime=0 kapsama=1.0 bas=(0, 38) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='İş deneyim tutarının tespiti' | atılan=['İş deneyim belgelerinin verilmesi']
+     SON: 'im Maliyetleri Hakkında Tebliğde inşaatın sınıfına ve grubuna göre belirlenen yapı birim maliyetinin çarpılması suretiyle hesaplanan bedelin % 85’i esas alınır.'
+127 m.12: TAMAM | kesik=9000 yeni=10202 fazla_kelime=149 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tahmin edilen bedel tespiti' | atılan=['Bedellerin ödenme şekli']
+     KESİK KUYRUK (eşleşmeyen): ah
+     SON: 'espiti ve takdirlerine ilişkin standart, ilke, yöntem ve teknikleri geliştirmeye ve taşınmaz değerlemelerinde izlenecek usul ve esasları belirlemeye yetkilidir.'
+127 m.53: DEVAM_YOK | kesik=2196 yeni=2206 fazla_kelime=0 kapsama=0.9921 bas=(0, 27) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Sözleşmenin devri⟦SUP:(5)⟧' | atılan=['Müşterinin ölümü']
+     sup: ['vri^(5)']
+     KESİK KUYRUK (eşleşmeyen): müşterinin ölümü
+     SON: 'vredilemez ve bu sözleşmelere ortak alınamaz. Ön izin sahibinin şirket olması halinde ön izin süresi içerisinde şirket hisseleri devredilemez ve ortak alınamaz.'
+143 m.20: TAMAM | kesik=9000 yeni=21304 fazla_kelime=1985 kapsama=0.896 bas=(40, 37) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='İdari nitelikteki cezalar:⟦FN⟧' | atılan=['Kuruluş ve işletmelere verilecek idari nitelikte cezalar:']
+     KESİK KUYRUK (eşleşmeyen): gros
+     SON: 'r artırmaya Cumhurbaşkanı yetkilidir.\nBu maddenin uygulamasında Türk Ceza Kanunu ile diğer kanunların, fiilin suç oluşturması haline ilişkin hükümleri saklıdır.'
+2 m.13/A: TAMAM | kesik=6000 yeni=13891 fazla_kelime=1041 kapsama=0.933 bas=(0, 0) dipnot=3 farklar=0 aday=1 sonda=False
+     başlık='Jandarma ve Sahil Güvenlik Akademisi' | atılan=['İKİNCİ BÖLÜM', 'Atama, Yer Değiştirme ve Disiplin İşlemleri', 'Jandarma subay, astsubay ve uzman jandarmanın atanma ve yer değiştirme esasları:']
+     KESİK KUYRUK (eşleşmeyen): aka
+     SON: 'lanlar Ölçme, Seçme ve Yerleştirme Merkezi tarafından üniversite sınavına girdikleri yıl aldıkları puanlarına uygun bir yükseköğretim kurumuna yerleştirilirler.'
+5 m.11: TAMAM | kesik=6000 yeni=14074 fazla_kelime=1126 kapsama=0.8759 bas=(20, 27) dipnot=3 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=[]
+     KESİK KUYRUK (eşleşmeyen): neden
+     SON: 'ruri ihtiyaçları karşılamak amacıyla yapılacak harcamalar, ilgisine göre Millî Savunma Bakanlığı veya İçişleri Bakanlığı bütçesine konulan ödenekten karşılanır.'
+7 m.21: TAMAM | kesik=6000 yeni=12237 fazla_kelime=933 kapsama=0.8759 bas=(20, 33) dipnot=4 farklar=0 aday=1 sonda=False
+     başlık='Yardım⟦FN⟧' | atılan=['Terörden zarar gören diğer kişilere yardım']
+     KESİK KUYRUK (eşleşmeyen): kap
+     SON: 'lanan dul ve yetimler; ilgili sosyal güvenlik kurumları mevzuatı gereği aylıklarının kesilmesi halinde, bu madde ile verilen diğer haklardan da yararlanamazlar.'
+12 m.8: TAMAM | kesik=6000 yeni=19961 fazla_kelime=2010 kapsama=0.8799 bas=(0, 42) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='Disiplin cezası verilecek fiiller' | atılan=['Devlet memurluğundan çıkarma']
+     SON: ' cezası verilmesini gerektiren hallerde brüt aylıklarının 1/3’ü ila 1/2’si,\nkesilir.\n(8) Yedinci fıkrada yer alan cezalar yetkili disiplin kurullarınca verilir.'
+12 m.14: DEVAM_YOK | kesik=2202 yeni=1873 fazla_kelime=0 kapsama=0.822 bas=(0, 61) dipnot=2 farklar=0 aday=1 sonda=False
+     başlık='Disiplin amirlerinin soruşturmaya ilişkin yetkileri' | atılan=['Disiplin amirinin disiplin cezası verme yetkisi']
+     KESİK KUYRUK (eşleşmeyen): disiplin amirinin disiplin cezası verme yetkisi
+     SON: 'irilemez.\n(5) 3/5/2016 tarihli ve 6713 sayılı Kolluk Gözetim Komisyonu Kurulması Hakkında Kanunun disiplin soruşturması işlemleri ile ilgili hükümleri saklıdır.'
+16 m.8: TAMAM | kesik=6000 yeni=6264 fazla_kelime=32 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Muvazzaf Subaylığa Geçme' | atılan=['ÜÇÜNCÜ KISIM', 'Sözleşmeli Astsubaylar', 'BİRİNCİ BÖLÜM', 'Aranacak Nitelikler, Yetiştirme', 'Aranacak Nitelikler']
+     KESİK KUYRUK (eşleşmeyen): dolay
+     SON: 'çirilemezler.\n4) Herhangi bir sebeple görevden uzaklaştırma tedbiri uygulanıyor olan veya tutuklu bulunan sözleşmeli subaylar muvazzaf subaylığa geçirilemezler.'
+16 m.11: TAMAM | kesik=6000 yeni=6107 fazla_kelime=11 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Muvazzaf Astsubaylığa Geçme' | atılan=['DÖRDÜNCÜ KISIM', 'Sözleşme Süreleri, Rütbe Bekleme Süreleri, Sözleşmenin Yenilenmesi ve Feshi', 'Sözleşme Süreleri']
+     SON: 'ezler.\n4) Herhangi bir sebeple görevden uzaklaştırma tedbiri uygulanıyor olan veya tutuklu bulunan, sözleşmeli astsubaylar muvazzaf astsubaylığa geçirilemezler.'
+20 m.10: DEVAM_YOK | kesik=3998 yeni=3933 fazla_kelime=0 kapsama=0.981 bas=(0, 9) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=['Av Bıçaklarının İmalatı, Damgalanması, Bulundurulması ve Taşınması Esasları']
+     KESİK KUYRUK (eşleşmeyen): av bıçaklarının imalatı damgalanması bulundurulması ve taşınması esasları
+     SON: '\nYivsiz tüfek ruhsatnamesi alan kişiler, sahip oldukları yivsiz av tüfeklerinin cins, marka, çap (kalibre) ve seri numaralarını belgelerine işletmek zorundadır.'
+25 m.7: TAMAM | kesik=6000 yeni=8570 fazla_kelime=354 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=[]
+     KESİK KUYRUK (eşleşmeyen): t
+     SON: ' ilişkin işlemler bekletilir. Bunların ruhsata bağlanmış silahları ise tedbir kararı kalkıncaya kadar genel kolluk kuvvetleri tarafından muhafaza altına alınır.'
+28 m.24: TAMAM | kesik=2200 yeni=2389 fazla_kelime=17 kapsama=0.9991 bas=(0, 46) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Toplantı veya gösteri yürüyüşünün dağıtılması' | atılan=['Suç işleyenlerin yakalanması']
+     KESİK KUYRUK (eşleşmeyen): kuvvetl
+     SON: 'venlik kuvvetleri amiri, topluluğa dağılmaları, aksi halde zor kullanılarak dağıtılıcakları ihtarında bulunur ve topluluk dağılmazsa zor kullanılarak dağıtılır.'
+28 m.27: DEVAM_YOK | kesik=2200 yeni=447 fazla_kelime=0 kapsama=0.2036 bas=(0, 17) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Kışkırtma yasağı' | atılan=['YEDİNCİ BÖLÜM', 'Ceza Hükümleri', 'Yasaklara aykırı hareket']
+     KESİK KUYRUK (eşleşmeyen): 1 2 7 2018 tarihli ve 700 sayılı khk nin 83 üncü maddesiyle bu bentte yer alan başbakan ibaresi cumhurbaşkanı yardımcıları şeklinde değiştirilmiş ve ve hükümet ibaresi madde metninden çıkarılmıştır 2 
+     SON: ' benzeri araç ve yollarla halkı Kanuna aykırı toplantı veya yürüyüşe özendirmek veya kışkırtmak yasaktır.\nBu hareketler güvenlik kuvvetlerince derhal menedilir.'
+30 m.36: TAMAM | kesik=9000 yeni=14810 fazla_kelime=819 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='İdari yaptırımlar:' | atılan=['BÖLÜM – IX', 'Yürürlük Hükümleri', 'Yönetmelikler:']
+     SON: 'r.\nMülkiyetin kamuya geçirilmesi kararı verilen balıkçı gemilerinin Tarım ve Orman Bakanlığınca verilen tüm izin ve ruhsat tezkereleri de iptal edilmiş sayılır.'
+32 m.16: TAMAM | kesik=2200 yeni=2348 fazla_kelime=22 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=[]
+     KESİK KUYRUK (eşleşmeyen): t
+     SON: 'erçek ve tüzel kişilere yaptırılabilir.\n(Ek fıkra: 10/6/2010-5995/19 md.) Maddenin uygulanması ile ilgili tanım, şekil, şart ve esaslar yönetmelikle düzenlenir.'
+34 m.3: TAMAM | kesik=9000 yeni=15252 fazla_kelime=830 kapsama=1.0 bas=(0, 0) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar:' | atılan=['İKİNCİ KISIM', 'Kuruluşlar, Komisyonlar, Görev ve Yetkileri⟦FN⟧', 'Görevli kurullar ve kuruluşlar:⟦FN⟧']
+     SON: ' tanım ve terimler yönetmelikte gösterilir. (Ek cümle: 12/7/2013-6495/13 md.) Bu maddedeki tanım ve terimlerle ilgili olarak vergi kanunları hükümleri saklıdır.'
+34 m.78: TAMAM | kesik=2200 yeni=2411 fazla_kelime=20 kapsama=1.0 bas=(0, 67) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Sürücülerin ve yolcuların koruyucu sistemleri kullanma zorunluluğu:' | atılan=['Park ücretinin alınması, araçların çektirilmesi ve kaldırılması ile muhafazası:⟦FN⟧']
+     KESİK KUYRUK (eşleşmeyen): kulla
+     SON: ' sistemleri kullanmadan veya usulüne uygun olarak kullanılmasını sağlamadan seyahatine izin veren araç sürücüsüne 5.000 Türk lirası idari para cezası uygulanır.'
+35 m.5: TAMAM | kesik=2200 yeni=2321 fazla_kelime=15 kapsama=1.0 bas=(0, 14) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Faaliyet izni⟦FN⟧' | atılan=['Ek önlemler']
+     SON: 'kurum ya da kuruluşa bildirir.\n(Ek fıkra: 21/4/2005 – 5335/23 md.) Alarm izleme merkezi kurma ve işletme için valilikten yeterlilik belgesi alınması zorunludur.'
+38 m.14: DEVAM_YOK | kesik=2200 yeni=2135 fazla_kelime=0 kapsama=0.9637 bas=(0, 9) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='Yasaklar⟦FN⟧' | atılan=['ÜÇÜNCÜ KISIM', 'Hayvan Koruma Yönetimi', 'BİRİNCİ BÖLÜM', 'Mahallî Hayvan Koruma Kurulları Teşkilât, Görev ve Sorumluluklar', 'İl hayvanları koruma kurulu']
+     KESİK KUYRUK (eşleşmeyen): üçüncü kısım hayvan koruma yönetimi dördüncü bölüm diğer hükü
+     SON: 'l yönetimler adına toplanan sahipsiz hayvanları bakımevi dışında bir yere terk etmek veya bakımevinde barındırılan köpekleri bakımevi dışında bir yere bırakmak.'
+39 m.20: TAMAM | kesik=9000 yeni=21304 fazla_kelime=1985 kapsama=0.896 bas=(40, 37) dipnot=5 farklar=0 aday=1 sonda=False
+     başlık='İdari nitelikteki cezalar:⟦FN⟧' | atılan=['Kuruluş ve işletmelere verilecek idari nitelikte cezalar:']
+     KESİK KUYRUK (eşleşmeyen): gros
+     SON: 'r artırmaya Cumhurbaşkanı yetkilidir.\nBu maddenin uygulamasında Türk Ceza Kanunu ile diğer kanunların, fiilin suç oluşturması haline ilişkin hükümleri saklıdır.'
+40 m.5: TAMAM | kesik=2200 yeni=2410 fazla_kelime=20 kapsama=1.0 bas=(0, 43) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Parmak izi ve fotoğrafların kayda alınması' | atılan=[]
+     KESİK KUYRUK (eşleşmeyen): saklanmas
+     SON: 'u kayıtlardan yararlanmaya ilişkin diğer esas ve usûller, İçişleri Bakanlığı tarafından Adalet Bakanlığının görüşü alınarak çıkarılacak yönetmelikle düzenlenir.'
+43 m.6: TAMAM | kesik=2200 yeni=2474 fazla_kelime=30 kapsama=1.0 bas=(0, 50) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Müsabaka, antrenman ve seyir alanlarının güvenliği⟦FN⟧' | atılan=['Müsabaka güvenliği⟦FN⟧']
+     SON: 'ir Kanunda belirtilen görev ve yetkileri haizdir. Bu Kanundan doğan görevlerinin ifası sırasında, özel güvenlik görevlilerinin ateşli silah taşımaları yasaktır.'
+43 m.12: DEVAM_YOK | kesik=2200 yeni=1533 fazla_kelime=0 kapsama=0.7003 bas=(0, 15) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Yasak maddeler⟦FN⟧' | atılan=['Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması⟦FN⟧']
+     KESİK KUYRUK (eşleşmeyen): 6 1 4 7 2019 tarihli ve 7182 sayılı kanunun 2 nci maddesiyle bu fıkralarda yer alan taraftardan sorumlu kulüp temsilcisi olan en az iki yönetici ibareleri stat güvenliğinden sorumlu yönetim kurulu üye
+     SON: 'en alet veya maddeleri spor alanında seyyar olarak satan, satışa arz eden, dağıtan veya dağıtmak için bulunduran kişileri bu alandan uzaklaştırmakla yükümlüdür.'
+44 m.20: TAMAM | kesik=2200 yeni=2307 fazla_kelime=15 kapsama=0.9991 bas=(40, 38) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık=None | atılan=[]
+     SON: 'Köyişleri Bakanlığının ilgili bağlı kuruluşlarına teslim edilir.\n3491 sayılı Toprak Mahsulleri Ofisi Kanununun 27 nci maddesinin (F) fıkrası hükümleri saklıdır.'
+49 m.8: TAMAM | kesik=9000 yeni=14704 fazla_kelime=1167 kapsama=0.7146 bas=(0, 23) dipnot=13 farklar=0 aday=1 sonda=False
+     başlık='Cezai hükümler⟦FN⟧' | atılan=['Teminat alınması']
+     SON: 'kiye Yeşilay Cemiyetine 5018 sayılı Kanunun 29 uncu maddesi hükmüne tabi olmaksızın yardım yapılmak üzere, Sağlık Bakanlığı bütçesinde gerekli ödenek öngörülür.'
+56 m.30: DEVAM_YOK | kesik=3999 yeni=3479 fazla_kelime=0 kapsama=0.8608 bas=(0, 50) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Konut, işyeri ve eklentilerinde aramanın yapılması⟦SUP:1⟧' | atılan=['Aramanın zamanı']
+     sup: ['ası^1', 'az.^1']
+     KESİK KUYRUK (eşleşmeyen): dipnot 1 danıştay onuncu dairesinin 13 3 2007 tarihli ve e 2005 6392 k 2007 948 sayılı kararı ile bu yönetmeliğin 8 inci maddesinin birinci fıkrasının a bendinde yer alan yakalanması amacıyla konutund
+     SON: 'irip çıkabileceği lokanta, bar, pavyon, gazino, meyhane gibi yerler ile kıraathane ve oyun oynatılan benzeri yerlerin aranmasında tanık bulundurulması gerekmez.'
+58 m.19: DEVAM_YOK | kesik=2200 yeni=2222 fazla_kelime=0 kapsama=0.9977 bas=(0, 29) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Çocuklarla ilgili özel hüküm' | atılan=['DÖRDÜNCÜ BÖLÜM', 'Müdafi ile İlgili Hususlar', 'Müdafi tayini']
+     KESİK KUYRUK (eşleşmeyen): dörd
+     SON: 'kaçmasını, kendisinin veya başkalarının hayat veya beden bütünlükleri bakımından doğabilecek tehlikeleri önlemek için kolluk tarafından gerekli önlemler alınır.'
+65 m.3: TAMAM | kesik=2200 yeni=2942 fazla_kelime=98 kapsama=1.0 bas=(0, 9) dipnot=0 farklar=0 aday=1 sonda=False
+     başlık='Tanımlar' | atılan=['Vatandaşlık hizmetlerinin yürütülmesi']
+     SON: 'lar kütüğü: Türkiye’de herhangi bir amaçla en az altı ay süreli Yabancılara Ait İkamet Tezkeresi verilen yabancıların kayıtlarının tutulduğu kütüğü,\nifade eder.'
+66 m.8: TAMAM | kesik=9000 yeni=11147 fazla_kelime=331 kapsama=0.9998 bas=(0, 0) dipnot=1 farklar=0 aday=1 sonda=False
+     başlık='Silah taşımalarına izin verilen kamu görevlileri⟦FN⟧' | atılan=['Taşıma ruhsatı verilebilecek diğer meslek mensupları']
+     sup: ['er;^(1)']
+     KESİK KUYRUK (eşleşmeyen): 19
+     SON: 'k fıkra: 17/7/2017 - 2017/10643 K.) Bu madde ve 9 uncu madde uyarınca taşıma ruhsatlarının verilmesinde kişinin görevinde asaleten bulunmuş olması şartı aranır.'

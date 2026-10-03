@@ -1,0 +1,871 @@
+[
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-6",
+  "baslik": "Genel hükümlerin yayılması",
+  "hukum": "Bu Kanunun genel hükümleri, özel ceza kanunları ve ceza içeren kanunlardaki suçlar hakkında da uygulanır (m.5)",
+  "sinavda_boyle_yazarlar": [
+   "\"sadece bu Kanundaki suçlar hakkında uygulanır\""
+  ],
+  "simdiki_dogrusu": "özel ceza kanunları ve ceza içeren kanunlardaki (m.5)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-11",
+  "baslik": "Kast",
+  "hukum": "Suçun oluşması kastın varlığına bağlıdır; kast, kanuni tanımdaki unsurların bilerek ve istenerek gerçekleştirilmesidir (m.21/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"bilerek\" veya \"istenerek\"ten biri düşürülür"
+  ],
+  "simdiki_dogrusu": "bilerek ve istenerek (m.21/1)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-14",
+  "baslik": "Taksir tanımı",
+  "hukum": "Dikkat ve özen yükümlülüğüne aykırılık dolayısıyla, kanuni tanımdaki neticenin öngörülmeyerek gerçekleştirilmesi (m.22/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"öngörülmesine rağmen\" denir (o olası kasttır)"
+  ],
+  "simdiki_dogrusu": "öngörülmeyerek (m.22/2)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-16",
+  "baslik": "Taksirde kusur",
+  "hukum": "Ceza failin kusuruna göre belirlenir; birden fazla kişi taksirle işlerse herkes kendi kusurundan sorumlu olur, cezalar ayrı ayrı belirlenir (m.22/4-5)",
+  "sinavda_boyle_yazarlar": [
+   "\"müteselsilen sorumlu olurlar\""
+  ],
+  "simdiki_dogrusu": "kendi kusurundan (m.22/4-5)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-18",
+  "baslik": "Netice sebebiyle ağırlaşmış suç",
+  "hukum": "Kastedilenden daha ağır veya başka bir netice doğarsa, sorumluluk için bu netice bakımından en azından taksirle hareket edilmiş olmalı (m.23)",
+  "sinavda_boyle_yazarlar": [
+   "boşluğa \"kastla\", \"bilinçli taksirle\", \"olası kastla\" konur; doğrusu taksirle"
+  ],
+  "simdiki_dogrusu": "en azından taksirle (m.23)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-19",
+  "baslik": "Teşebbüs",
+  "hukum": "Kastettiği suçu elverişli hareketlerle doğrudan doğruya icraya başlayıp elinde olmayan nedenlerle tamamlayamamak (m.35/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"hazırlık hareketleri de teşebbüstür\" ya da \"elverişli\" kelimesi atılır"
+  ],
+  "simdiki_dogrusu": "elverişli hareketlerle doğrudan doğruya icraya başlayıp (m.35/1)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-22",
+  "baslik": "Müşterek faillik",
+  "hukum": "Kanuni tanımdaki fiili birlikte gerçekleştirenlerin her biri fail olarak sorumludur (m.37/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"biri fail, diğerleri yardım eden sayılır\""
+  ],
+  "simdiki_dogrusu": "birlikte gerçekleştirenlerin her biri (m.37/1)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-31",
+  "baslik": "İştirakte teşebbüs eşiği",
+  "hukum": "İştirakten sorumluluk için suçun en azından teşebbüs aşamasına varmış olması gerekir (m.40/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"hazırlık hareketi yeterlidir\""
+  ],
+  "simdiki_dogrusu": "en azından teşebbüs aşamasına (m.40/3)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-32",
+  "baslik": "İştirakte gönüllü vazgeçme",
+  "hukum": "Yalnız gönüllü vazgeçen suç ortağı yararlanır; suç, vazgeçenin gayreti dışında başka bir sebeple işlenmemişse veya tüm gayretine rağmen işlenmişse de hükümler uygulanır (m.41)",
+  "sinavda_boyle_yazarlar": [
+   "\"vazgeçme bütün ortaklara sirayet eder\""
+  ],
+  "simdiki_dogrusu": "gönüllü vazgeçen (m.41)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-35",
+  "baslik": "\"Aynı suç\" ölçüsü",
+  "hukum": "Bir suçun temel şekli ile daha ağır veya daha az cezayı gerektiren nitelikli şekilleri aynı suç sayılır; mağduru belli bir kişi olmayan suçlarda da bu hüküm uygulanır (m.43/1)",
+  "sinavda_boyle_yazarlar": [
+   "Bir suçun temel şekli ile daha ağır veya daha az cezayı gerektiren nitelikli şekilleri aynı suç sayılmaz"
+  ],
+  "simdiki_dogrusu": "aynı suç sayılır (m.43/1)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-38",
+  "baslik": "Fikri içtima",
+  "hukum": "Bir fiille birden fazla farklı suça sebebiyet veren kişi, bunlardan en ağır cezayı gerektiren suçtan cezalandırılır (m.44)",
+  "sinavda_boyle_yazarlar": [
+   "\"her suçtan ayrı ayrı cezalandırılır\""
+  ],
+  "simdiki_dogrusu": "en ağır cezayı gerektiren (m.44)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-39",
+  "baslik": "Ceza türleri",
+  "hukum": "Suç karşılığında uygulanan yaptırım olarak cezalar hapis ve adlî para cezalarıdır (m.45)",
+  "sinavda_boyle_yazarlar": [
+   "listeye \"güvenlik tedbiri\" eklenir; güvenlik tedbiri ceza değildir"
+  ],
+  "simdiki_dogrusu": "hapis ve adlî para cezalarıdır (m.45)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-42",
+  "baslik": "Kullanma zimmeti",
+  "hukum": "Mal, geçici bir süre kullanıldıktan sonra iade edilmek üzere zimmete geçirilmişse ceza yarı oranına kadar indirilebilir (m.247/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"indirilir\" (zorunlu gibi) ya da \"ceza verilmez\""
+  ],
+  "simdiki_dogrusu": "yarı oranına kadar indirilebilir (m.247/3)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-44",
+  "baslik": "Zimmette değer azlığı",
+  "hukum": "Malın değerinin azlığı nedeniyle ceza üçte birden yarıya kadar indirilir (m.249)",
+  "sinavda_boyle_yazarlar": [
+   "\"yarıdan üçte ikisine kadar\" ya da \"indirilebilir\" (oysa indirilir)"
+  ],
+  "simdiki_dogrusu": "üçte birden yarıya kadar indirilir (m.249)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-51",
+  "baslik": "Kabul edilmeyen rüşvet",
+  "hukum": "Kamu görevlisinin talebi kişi tarafından ya da kişinin teklifi kamu görevlisi tarafından kabul edilmezse ceza yarı oranında indirilir (m.252/4)",
+  "sinavda_boyle_yazarlar": [
+   "\"teşebbüs hükümleri uygulanır\" veya \"aynı ceza verilir\""
+  ],
+  "simdiki_dogrusu": "yarı oranında indirilir (m.252/4)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-54",
+  "baslik": "Rüşvette tüzel kişi",
+  "hukum": "Rüşvetle yararına haksız menfaat sağlanan tüzel kişilere bunlara özgü güvenlik tedbirlerine hükmolunur (m.253)",
+  "sinavda_boyle_yazarlar": [
+   "\"tüzel kişiye adlî para cezası verilir\""
+  ],
+  "simdiki_dogrusu": "bunlara özgü güvenlik tedbirlerine (m.253)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-71",
+  "baslik": "Görevin araç ve gereçlerini suçta kullanma",
+  "hukum": "Görevi gereği elinde bulundurduğu araç ve gereçleri suç işlerken kullanan kamu görevlisinin cezası, ilgili suç tanımında kamu görevlisi sıfatı esasen dikkate alınmamışsa üçte biri oranında artırılır (m.266)",
+  "sinavda_boyle_yazarlar": [
+   "\"yarı oranında\" yapılır ya da şart cümlesi atılır"
+  ],
+  "simdiki_dogrusu": "üçte biri oranında artırılır (m.266)"
+ },
+ {
+  "kanun_id": 1,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+  "kart_id": "1-72",
+  "baslik": "Askerî komutanlığın gasbı",
+  "hukum": "Yetkisiz olarak bir asker kıtası, donanma, savaş gemisi, savaş hava filosu, kale, askerî üs veya tesis, liman ya da şehrin komutasını alan: müebbet hapis; terk emrine uymayan meşru komutan da aynı ceza (m.317)",
+  "sinavda_boyle_yazarlar": [
+   "\"ağırlaştırılmış müebbet\" denir"
+  ],
+  "simdiki_dogrusu": "müebbet hapis (m.317)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-0",
+  "baslik": "Tanım",
+  "hukum": "Türkiye Cumhuriyeti Jandarması; emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan ve diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getiren silahlı genel kolluk kuvvetidir (m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"askerî kolluk kuvveti\" ya da \"özel kolluk\" denir"
+  ],
+  "simdiki_dogrusu": "silahlı genel kolluk kuvvetidir (m.3)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-1",
+  "baslik": "Bağlılık",
+  "hukum": "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Millî Savunma Bakanlığına\" veya \"Cumhurbaşkanlığına\""
+  ],
+  "simdiki_dogrusu": "İçişleri Bakanlığına (m.4)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-6",
+  "baslik": "Bütçe",
+  "hukum": "Jandarma Genel Komutanlığının bütçesi, İçişleri Bakanlığının bünyesinde ve bu Bakanlığın bütçesinden ayrı olarak düzenlenir (m.18)",
+  "sinavda_boyle_yazarlar": [
+   "\"İçişleri Bakanlığı bütçesi içinde\" denir"
+  ],
+  "simdiki_dogrusu": "İçişleri Bakanlığının bünyesinde ve bu Bakanlığın bütçesinden ayrı (m.18)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-9",
+  "baslik": "Askerî görevler",
+  "hukum": "Kanunlarla ve Cumhurbaşkanlığı kararnameleriyle verilen askerî hizmetleri yerine getirmek (m.7/c)",
+  "sinavda_boyle_yazarlar": [
+   "\"Genelkurmay Başkanlığınca verilen\""
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanlığı kararnameleriyle (m.7/c)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-12",
+  "baslik": "Hizmet sınırı",
+  "hukum": "Kanun ve nizamlar ile bunlara dayalı emir ve kararların öngörmediği hiçbir görev jandarmadan istenemez (m.9)",
+  "sinavda_boyle_yazarlar": [
+   "\"mülki amirin uygun gördüğü her görev istenebilir\""
+  ],
+  "simdiki_dogrusu": "öngörmediği hiçbir görev (m.9)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-15",
+  "baslik": "Sınır değişikliğinde süre",
+  "hukum": "Büyükşehir/il/ilçe belediyesi kurulması, kaldırılması ya da kentleşme vb. sebeplerle sınırlar değişirse, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içinde sorumluluk alanları yeniden düzenlenir (m.10)",
+  "sinavda_boyle_yazarlar": [
+   "\"altı ay\" veya \"bir yıl\""
+  ],
+  "simdiki_dogrusu": "en geç üç ay (m.10)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-17",
+  "baslik": "Silah kullanma",
+  "hukum": "Jandarma, görevlerin ifası sırasında hizmet özelliğine uygun ve görevin gereği olarak kanunlarda öngörülen silah kullanma yetkisine sahiptir (m.11)",
+  "sinavda_boyle_yazarlar": [
+   "\"yönetmelikle belirlenen yetkiye sahiptir\""
+  ],
+  "simdiki_dogrusu": "kanunlarda öngörülen (m.11)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-21",
+  "baslik": "Kadrosuzluk tazminatıyla emeklilik",
+  "hukum": "Albay ve üstü rütbelerde bekleme süreleri dolmadan, kadrosuzluk tazminatı ödenmek suretiyle Cumhurbaşkanı onayı ile emekliye sevk edilebilir (m.13)",
+  "sinavda_boyle_yazarlar": [
+   "\"İçişleri Bakanı onayı\""
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanı onayı (m.13)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-27",
+  "baslik": "Denetim ve teftiş",
+  "hukum": "Jandarmanın eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir (Ek m.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnız kendi amirleri\" ya da \"Genelkurmay Başkanlığı\" eklenir"
+  ],
+  "simdiki_dogrusu": "İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-31",
+  "baslik": "Yönetmelik",
+  "hukum": "Teşkilat, görev, yetki ve sorumluluklar, komuta-kontrol ilişkileri, terfi işleri, değerlendirme, ödüllendirme, kılık-kıyafet Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir (m.24)",
+  "sinavda_boyle_yazarlar": [
+   "\"İçişleri Bakanlığınca çıkarılan yönetmelikle\""
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanınca (m.24)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-53",
+  "baslik": "Gözaltına alınanların masrafı",
+  "hukum": "Gözaltına alınanların yeme, içme ihtiyaçları ve nakillerine ait masraflar Jandarma Genel Komutanlığı bütçesine konulacak ödenekle karşılanır (Ek m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Adalet Bakanlığı bütçesinden\""
+  ],
+  "simdiki_dogrusu": "Jandarma Genel Komutanlığı bütçesine"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-58",
+  "baslik": "Uzman erbaş ve sözleşmeli er/erbaş eğitimi",
+  "hukum": "Akademinin belirlediği ilke ve standartlara göre Jandarma Eğitim Komutanlığı ile Sahil Güvenlik Eğitim Komutanlığı bünyesinde yapılır (m.13/A)",
+  "sinavda_boyle_yazarlar": [
+   "\"Akademi bünyesinde yapılır\""
+  ],
+  "simdiki_dogrusu": "Jandarma Eğitim Komutanlığı ile Sahil Güvenlik Eğitim Komutanlığı (m.13/A)"
+ },
+ {
+  "kanun_id": 2,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+  "kart_id": "2-60",
+  "baslik": "Öğrenime son verme",
+  "hukum": "Çıkmış sorularda \"öğrenime son verilme sebeplerinden biri değildir\" kalıbıyla sorulmuştur; şıklarda azami sürede tamamlayamama, 657'ye göre memur olma niteliğini kaybetme, sağlık kurulu raporu ve giriş niteliklerini taşımadığının sonradan anlaşılması gerçek sebep olarak yer alır. (İlgili fıkranın tam metni pakette yok.)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "değildir"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-2",
+  "baslik": "Kişisel veri",
+  "hukum": "Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgi (m.3/1-d)",
+  "sinavda_boyle_yazarlar": [
+   "\"tüzel kişiye ilişkin bilgiler de kişisel veridir\""
+  ],
+  "simdiki_dogrusu": "Kimliği belirli veya belirlenebilir gerçek kişiye (m.3/1-d)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-3",
+  "baslik": "İlgili kişi",
+  "hukum": "Kişisel verisi işlenen gerçek kişi (m.3/1-ç)",
+  "sinavda_boyle_yazarlar": [
+   "\"verileri işleyen kişi\""
+  ],
+  "simdiki_dogrusu": "gerçek kişi (m.3/1-ç)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-5",
+  "baslik": "Veri işleyen",
+  "hukum": "Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişi (m.3/1-ğ)",
+  "sinavda_boyle_yazarlar": [
+   "veri sorumlusunun tanımıyla yer değiştirilir"
+  ],
+  "simdiki_dogrusu": "Veri sorumlusunun verdiği yetkiye dayanarak onun adına (m.3/1-ğ)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-7",
+  "baslik": "Veri kayıt sistemi",
+  "hukum": "Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemi (m.3/1-h)",
+  "sinavda_boyle_yazarlar": [
+   "\"her türlü arşiv\" denir"
+  ],
+  "simdiki_dogrusu": "belirli kriterlere göre yapılandırılarak (m.3/1-h)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-8",
+  "baslik": "Hukuka uygun işleme",
+  "hukum": "Kişisel veriler ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir (m.4/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"yönetmelikle belirlenen usullere göre\""
+  ],
+  "simdiki_dogrusu": "ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun (m.4/1)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-9",
+  "baslik": "İlke 1",
+  "hukum": "Hukuka ve dürüstlük kurallarına uygun olma (m.4/2-a)",
+  "sinavda_boyle_yazarlar": [
+   "\"hukuka uygun olma\" ile yetinilip dürüstlük kuralı düşürülür"
+  ],
+  "simdiki_dogrusu": "Hukuka ve dürüstlük kurallarına uygun olma (m.4/2-a)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-14",
+  "baslik": "Kural: açık rıza",
+  "hukum": "Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez (m.5/1)",
+  "sinavda_boyle_yazarlar": [
+   "kural ile istisna yer değiştirilir"
+  ],
+  "simdiki_dogrusu": "ilgili kişinin açık rızası olmaksızın işlenemez (m.5/1)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-15",
+  "baslik": "Özel nitelikli veriler (listeyi ezberle)",
+  "hukum": "Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek-vakıf-sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri (m.6/1)",
+  "sinavda_boyle_yazarlar": [
+   "listeye \"adres bilgisi\", \"mali durum\", \"eğitim durumu\" eklenir; \"kılık ve kıyafet\" veya \"biyometrik veri\" çıkarılır"
+  ],
+  "simdiki_dogrusu": "ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek-vakıf-sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri (m.6/1)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-22",
+  "baslik": "İstisna — istatistik",
+  "hukum": "Verilerin resmî istatistik ile anonim hâle getirilmek suretiyle araştırma, planlama ve istatistik gibi amaçlarla işlenmesi (m.28/1-b)",
+  "sinavda_boyle_yazarlar": [
+   "\"anonim hâle getirilmek\" şartı çıkarılır"
+  ],
+  "simdiki_dogrusu": "resmî istatistik ile anonim hâle getirilmek suretiyle (m.28/1-b)"
+ },
+ {
+  "kanun_id": 3,
+  "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+  "kart_id": "3-23",
+  "baslik": "İstisna — sanat, tarih, bilim, ifade özgürlüğü",
+  "hukum": "Millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini, ekonomik güvenliği, özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla sanat, tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi (m.28/1-c)",
+  "sinavda_boyle_yazarlar": [
+   "kayıt cümlesi silinip mutlak istisna gibi gösterilir"
+  ],
+  "simdiki_dogrusu": "ihlal etmemek ya da suç teşkil etmemek kaydıyla (m.28/1-c)"
+ },
+ {
+  "kanun_id": 4,
+  "kanun": "7201 sayılı Tebligat Kanunu",
+  "kart_id": "4-2",
+  "baslik": "Ücret tarifesi",
+  "hukum": "PTT'nin bu Kanuna göre yapacağı işlerden alacağı ücretler, bu işletme tarafından ayrı bir tarife ile tespit ve tayin edilir (m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Adalet Bakanlığınca belirlenir\" ya da \"Cumhurbaşkanı kararıyla\""
+  ],
+  "simdiki_dogrusu": "bu işletme tarafından ayrı bir tarife ile (m.3)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-5",
+  "baslik": "Valinin emri dışındakiler",
+  "hukum": "Hâkim, Cumhuriyet savcısı ve yargıç sınıfındakiler ile adalet memurları, askerî birlikler, askerî fabrika ve müesseseler, askerlik daire ve şubeleri bu hükmün dışındadır (m.4/2)",
+  "sinavda_boyle_yazarlar": [
+   "listeye \"emniyet teşkilatı\" veya \"jandarma\" eklenir — onlar valinin emrindedir"
+  ],
+  "simdiki_dogrusu": "Hâkim, Cumhuriyet savcısı ve yargıç sınıfındakiler ile adalet memurları, askerî birlikler, askerî fabrika ve müesseseler, askerlik daire ve şubeleri (m.4/2)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-10",
+  "baslik": "Genel gidişten sorumluluk",
+  "hukum": "Vali, ilin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten sorumludur (m.9/E)",
+  "sinavda_boyle_yazarlar": [
+   "sorumluluk \"il idare kuruluna\" verilir"
+  ],
+  "simdiki_dogrusu": "her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten (m.9/E)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-16",
+  "baslik": "Sınır ve kıyı emniyeti",
+  "hukum": "Memleketin sınır ve kıyı emniyetini ve bununla ilgili bütün işleri yürürlükteki hükümlere göre vali sağlar ve yürütür (m.11/B)",
+  "sinavda_boyle_yazarlar": [
+   "yetki \"garnizon komutanına\" verilir"
+  ],
+  "simdiki_dogrusu": "yürürlükteki hükümlere göre (m.11/B)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-25",
+  "baslik": "Mevzuatın uygulanması",
+  "hukum": "Kaymakam, kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın neşir ve ilanını, uygulanmasını sağlar; valinin talimat ve emirlerini yürütmekle ödevlidir (m.31/A)",
+  "sinavda_boyle_yazarlar": [
+   "\"genel emir çıkarabilir\" denir — o valinin yetkisidir (m.9/Ç)"
+  ],
+  "simdiki_dogrusu": "valinin talimat ve emirlerini yürütmekle ödevlidir (m.31/A)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-34",
+  "baslik": "Kaymakamın yer değiştirme yetkisi",
+  "hukum": "Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli yerlerini değiştirebilir (m.32/D)",
+  "sinavda_boyle_yazarlar": [
+   "\"resen değiştirebilir\" — vali resen, kaymakam valinin tasvibiyle"
+  ],
+  "simdiki_dogrusu": "valinin tasvibiyle (m.32/D)"
+ },
+ {
+  "kanun_id": 5,
+  "kanun": "5442 sayılı İl İdaresi Kanunu",
+  "kart_id": "5-40",
+  "baslik": "Bucak müdürünün tören yetkisi",
+  "hukum": "Cumhuriyet Bayramlarında bucakta yapılacak törene başkanlık yapar ve ziyaretleri kabul eder (m.42/F)",
+  "sinavda_boyle_yazarlar": [
+   "yetki \"belediye başkanına\" verilir"
+  ],
+  "simdiki_dogrusu": "başkanlık yapar ve ziyaretleri kabul eder (m.42/F)"
+ },
+ {
+  "kanun_id": 6,
+  "kanun": "5326 sayılı Kabahatler Kanunu",
+  "kart_id": "6-1",
+  "baslik": "Kabahat tanımı",
+  "hukum": "Kanunun, karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık (m.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"kanunun suç saydığı hafif fiil\" denir"
+  ],
+  "simdiki_dogrusu": "karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık (m.2)"
+ },
+ {
+  "kanun_id": 6,
+  "kanun": "5326 sayılı Kabahatler Kanunu",
+  "kart_id": "6-29",
+  "baslik": "Asıl yetki",
+  "hukum": "Kabahat dolayısıyla idarî yaptırım kararı vermeye ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri yetkilidir (m.22/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"her hâlde mülki amir yetkilidir\""
+  ],
+  "simdiki_dogrusu": "ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri (m.22/1)"
+ },
+ {
+  "kanun_id": 6,
+  "kanun": "5326 sayılı Kabahatler Kanunu",
+  "kart_id": "6-35",
+  "baslik": "Mücbir sebep",
+  "hukum": "Mücbir sebeple süre kaçırılmışsa, sebebin ortadan kalktığı tarihten itibaren en geç YEDİ GÜN içinde başvurulabilir (m.27/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"on beş gün\" denir"
+  ],
+  "simdiki_dogrusu": "ortadan kalktığı tarihten itibaren en geç YEDİ GÜN (m.27/2)"
+ },
+ {
+  "kanun_id": 6,
+  "kanun": "5326 sayılı Kabahatler Kanunu",
+  "kart_id": "6-38",
+  "baslik": "Kurumun cevabı",
+  "hukum": "İlgili kamu kurum ve kuruluşu, başvuru dilekçesinin tebliği tarihinden itibaren en geç ON BEŞ GÜN içinde mahkemeye cevap verir (m.28/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"yedi gün\" veya \"otuz gün\""
+  ],
+  "simdiki_dogrusu": "en geç ON BEŞ GÜN (m.28/3)"
+ },
+ {
+  "kanun_id": 7,
+  "kanun": "3713 sayılı Terörle Mücadele Kanunu",
+  "kart_id": "7-0",
+  "baslik": "Terör tanımı — yöntem",
+  "hukum": "Terör, cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit yöntemlerinden biriyle işlenir (m.1)",
+  "sinavda_boyle_yazarlar": [
+   "yöntemlerden biri (\"sindirme\" ya da \"yıldırma\") çıkarılır veya \"propaganda\" eklenir"
+  ],
+  "simdiki_dogrusu": "cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit (m.1)"
+ },
+ {
+  "kanun_id": 7,
+  "kanun": "3713 sayılı Terörle Mücadele Kanunu",
+  "kart_id": "7-7",
+  "baslik": "Tüzel kişilerin sorumluluğu",
+  "hukum": "Bu Kanun kapsamına giren suçların bir tüzel kişinin faaliyeti çerçevesinde işlenmesi hâlinde TCK m.60'a göre tüzel kişilere özgü güvenlik tedbirlerine hükmolunur (m.8/B)",
+  "sinavda_boyle_yazarlar": [
+   "\"tüzel kişiye idarî para cezası verilir\""
+  ],
+  "simdiki_dogrusu": "TCK m.60'a göre tüzel kişilere özgü güvenlik tedbirlerine (m.8/B)"
+ },
+ {
+  "kanun_id": 7,
+  "kanun": "3713 sayılı Terörle Mücadele Kanunu",
+  "kart_id": "7-15",
+  "baslik": "Koruma tedbirlerinin içeriği",
+  "hukum": "Talep hâlinde estetik cerrahi yoluyla fizyolojik görünümün değiştirilmesi dâhil; nüfus kaydı, ehliyet, evlenme cüzdanı, diploma ve benzeri belgelerin değiştirilmesi, askerlik işleminin düzenlenmesi, menkul ve gayrimenkul mal varlıklarıyla ilgili haklar ile sosyal güvenlik ve diğer hakların korunması (m.20)",
+  "sinavda_boyle_yazarlar": [
+   "\"kimlik değişikliği yapılamaz\""
+  ],
+  "simdiki_dogrusu": "estetik cerrahi yoluyla fizyolojik görünümün değiştirilmesi dâhil (m.20)"
+ },
+ {
+  "kanun_id": 8,
+  "kanun": "2935 sayılı Olağanüstü Hal Kanunu",
+  "kart_id": "8-19",
+  "baslik": "Askerî yardım",
+  "hukum": "İl valisi, ani ve olağanüstü olaylarda veya bölge valisinin güçleri gelinceye kadar en yakın askerî komutanlıktan yardım isteyebilir; durumu ayrıca bölge valisine ve İçişleri Bakanlığına bildirir (m.22/b)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "en yakın askerî komutanlıktan"
+ },
+ {
+  "kanun_id": 8,
+  "kanun": "2935 sayılı Olağanüstü Hal Kanunu",
+  "kart_id": "8-21",
+  "baslik": "Doğruca ateş",
+  "hukum": "Şiddet OHAL'inde teslim ol emrine itaat edilmemesi, silahla mukabeleye yeltenilmesi veya meşru müdafaa durumuna düşülmesi hâlinde görevliler doğruca ve duraksamadan hedefe ateş edebilir (m.23)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "doğruca ve duraksamadan hedefe ateş edebilir"
+ },
+ {
+  "kanun_id": 8,
+  "kanun": "2935 sayılı Olağanüstü Hal Kanunu",
+  "kart_id": "8-22",
+  "baslik": "Soruşturma",
+  "hukum": "Silah kullanan personel hakkında 211 sayılı İç Hizmet Kanunu m.87/V-VI ve 1481 sayılı Kanun m.3 uygulanır; haklarındaki soruşturma işlemi tutuksuz yapılır (m.23)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "soruşturma işlemi tutuksuz"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-0",
+  "baslik": "Kimler korunur",
+  "hukum": "Şiddete uğrayan veya uğrama tehlikesi bulunan kadınlar, çocuklar, aile bireyleri ve tek taraflı ısrarlı takip mağdurları (m.1/1)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "kadınlar, çocuklar, aile bireyleri ve tek taraflı ısrarlı takip mağdurları"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-5",
+  "baslik": "ŞÖNİM",
+  "hukum": "Şiddet önleme ve izleme merkezleri yedi gün yirmi dört saat esasıyla çalışır (m.2/1-f)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "yedi gün yirmi dört saat"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-8",
+  "baslik": "Kolluk amirinin koruyucu yetkisi",
+  "hukum": "Gecikmesinde sakınca bulunan hâllerde sadece (a) barınma yeri ve (ç) geçici koruma altına alma tedbirlerini kolluk amiri de alabilir (m.3/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"geçici maddi yardım\" da kolluk amirince alınabilir denir",
+   "listeye \"aile konutu şerhi\" eklenir"
+  ],
+  "simdiki_dogrusu": "sadece (a) barınma yeri ve (ç) geçici koruma altına alma"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-11",
+  "baslik": "Alkol/madde ve tedavi",
+  "hukum": "Korunan kişilerin bulunduğu yerlerde alkol veya uyuşturucu kullanmama, bunların etkisindeyken yaklaşmama, bağımlılık varsa hastaneye yatmak dâhil muayene ve tedavi (h); sağlık kuruluşuna başvurma ve tedavi (ı) (m.5/1)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "hastaneye yatmak dâhil"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-14",
+  "baslik": "Tedbir nafakası",
+  "hukum": "Şiddet uygulayan aynı zamanda geçimi sağlayan kişi ise, Medeni Kanun'a göre nafakaya hükmedilmemiş olmak kaydıyla hâkim talep edilmese dahi tedbir nafakasına hükmedebilir (m.5/4)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "talep edilmese dahi"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-17",
+  "baslik": "Nereden talep edilir",
+  "hukum": "En çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden (m.8/1)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "En çabuk ve en kolay ulaşılabilecek"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-19",
+  "baslik": "Tebligat",
+  "hukum": "Tedbir kararı korunan kişiye ve şiddet uygulayana tefhim veya tebliğ edilir; talebin reddi kararı sadece korunan kişiye tebliğ edilir (m.8/4)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "talebin reddi kararı sadece korunan kişiye"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-20",
+  "baslik": "Zorlama hapsi ihtarı",
+  "hukum": "Tefhim ve tebliğ işleminde, aykırılık hâlinde zorlama hapsi uygulanacağı ihtarı yapılır (m.8/5)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "zorlama hapsi uygulanacağı ihtarı"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-25",
+  "baslik": "Tedbirin uygulanması",
+  "hukum": "Geçici koruma ve önleyici tedbir kararlarının yerine getirilmesinden, ilgilinin yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi görevli ve yetkilidir (m.10/3)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-26",
+  "baslik": "Tebliğ edilmemesi",
+  "hukum": "Tedbir kararının tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez (m.10/5)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "kararın uygulanmasına engel teşkil etmez"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-27",
+  "baslik": "Kolluk personeli",
+  "hukum": "Kolluk görevleri, çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış ve belirlenmiş yeteri kadar personel tarafından yerine getirilir (m.11)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış"
+ },
+ {
+  "kanun_id": 10,
+  "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlen",
+  "kart_id": "10-31",
+  "baslik": "Zorlama hapsini kim infaz eder",
+  "hukum": "Cumhuriyet başsavcılığınca yerine getirilir; kararlar Bakanlığın il/ilçe müdürlüklerine bildirilir (m.13/3)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "Cumhuriyet başsavcılığınca"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-0",
+  "baslik": "Amaç",
+  "hukum": "Kanunun amacı Türk Bayrağının şekli, yapımı ve korunması ile ilgili esas ve usulleri belirlemektir (m.1)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "şekli, yapımı ve korunması"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-2",
+  "baslik": "Özel bayraklar",
+  "hukum": "Sembolik bayrak, özel işaret, flama, flandra ve fors; standartları ve hangi kumaş/maddelerden yapılacağı yönetmelikte gösterilir (m.2)",
+  "sinavda_boyle_yazarlar": [
+   "Listeye \"arma\" veya \"sancak\" eklenir — bu beş kavram dışındakiler özel bayrak değildir"
+  ],
+  "simdiki_dogrusu": "yönetmelikte"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-6",
+  "baslik": "Tören sorumluluğu",
+  "hukum": "Bayrak törenlerinin gereken biçimde yapılmasından o mahaldeki yetkili amirler sorumludur (m.3)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "o mahaldeki yetkili amirler"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-9",
+  "baslik": "Yarıya çekme günü",
+  "hukum": "Türk Bayrağı, yas alameti olarak 10 Kasım'da yarıya çekilir (m.4)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "10 Kasım"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-13",
+  "baslik": "Diğer kullanımlar",
+  "hukum": "Millî örf ve âdetler göz önünde tutularak Bayrağın diğer kullanılma şekil ve yeri yönetmelikte gösterilir (m.6)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "yönetmelikte"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-17",
+  "baslik": "Amblem yasağı",
+  "hukum": "Hiçbir siyasi parti, teşekkül, dernek, vakıf ve yönetmelikte belirlenecek kamu kurumları dışında kalan kurum ve kuruluşun amblem, flama, sembol ve benzerlerinin ön veya arka yüzünde esas veya fon teşkil edecek şekilde kullanılamaz (m.7)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "ön veya arka yüzünde esas veya fon teşkil edecek şekilde"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-18",
+  "baslik": "Hakaret ve saygısızlık",
+  "hukum": "Türk Bayrağına sözle, yazı veya hareketle veya herhangi bir şekilde hakaret edilemez, saygısızlıkta bulunulamaz; yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz (m.7)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-19",
+  "baslik": "Önleme yükümlülüğü",
+  "hukum": "Bu Kanuna ve yönetmeliğe aykırı fiiller yetkililerce derhâl önlenir ve gerekli soruşturma yapılır (m.7)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "yetkililerce derhâl önlenir"
+ },
+ {
+  "kanun_id": 11,
+  "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+  "kart_id": "11-22",
+  "baslik": "Yürürlük",
+  "hukum": "Kanun yayımı tarihinden altı ay sonra yürürlüğe girer (m.11)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "altı ay sonra"
+ },
+ {
+  "kanun_id": 12,
+  "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın",
+  "kart_id": "12-1",
+  "baslik": "Tek fiil tek ceza",
+  "hukum": "Aynı fiil nedeniyle bu Kanunda yazılı disiplin cezalarından birden fazlası verilemez (m.4/2)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "birden fazlası verilemez"
+ },
+ {
+  "kanun_id": 12,
+  "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın",
+  "kart_id": "12-2",
+  "baslik": "Ağır ceza kuralı",
+  "hukum": "Bir fiil birden fazla disiplinsizlik teşkil ederse ağır olan disiplin cezası verilir (m.4/3)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "ağır olan"
+ },
+ {
+  "kanun_id": 12,
+  "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın",
+  "kart_id": "12-3",
+  "baslik": "İdari yaptırım engel değil",
+  "hukum": "Fiilin başka kanunlarda idari yaptırıma bağlanmış olması, aynı fiile bu Kanuna göre disiplin cezası verilmesine engel değildir (m.4/4)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "engel değildir"
+ },
+ {
+  "kanun_id": 12,
+  "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın",
+  "kart_id": "12-6",
+  "baslik": "Takdir gerekçeli",
+  "hukum": "Takdir hakkı mutlaka gerekçeli olarak kullanılır; itiraz üzerine verilen kararlar hariç hiçbir idari makam takdir hakkını kaldıracak karar veremez (m.6/2, m.6/4)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "mutlaka gerekçeli"
+ },
+ {
+  "kanun_id": 12,
+  "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın",
+  "kart_id": "12-14",
+  "baslik": "Alt-üst kademe",
+  "hukum": "Aylıktan kesme ile kısa ve uzun süreli durdurmanın üst ve alt kademeleri ağır ya da hafif ceza sayılmaz (m.7/3)",
+  "sinavda_boyle_yazarlar": [],
+  "simdiki_dogrusu": "üst ve alt kademeleri ağır ya da hafif ceza sayılmaz"
+ }
+]

@@ -1,0 +1,111 @@
+[
+ {"kanun_id": 37, "kart_id": "37-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Erişim engelleme kararını veren merci (sulh ceza hâkimliği), içeriği çıkarma süresi (yirmi dört saat) ve izinsiz faaliyetin derhal men edilmesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İnternette izinsiz yardım toplama içeriğine erişimin engellenmesine valilik karar verir.”",
+    "“İçerik veya yer sağlayıcıya, izinsiz yardım içeriğini çıkarması için tanınan süre yedi gündür.”",
+    "“İzin alınmadan girişilen yardım toplama faaliyeti ancak Cumhuriyet savcısının emriyle durdurulabilir.”"
+   ],
+   "dogrusu": [
+    "İnternetteki izinsiz yardım içeriğine erişimin engellenmesine sulh ceza hâkimliği karar verir; valilik yalnız başvurur (m.6)",
+    "İçerik en geç yirmi dört saat içinde çıkarılmazsa erişimin engellenmesi için sulh ceza hâkimliğine başvurulur (m.6)",
+    "İzin alınmadan girişilen yardım toplama faaliyetleri güvenlik kuvvetlerince derhal menedilir ve sorumlular hakkında kovuşturma yapılır (m.6)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Birden fazla ili ve birden fazla ilçeyi kapsayan faaliyette izin makamı ile işlemleri yürüten birim bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Birden fazla ili kapsayan yardım toplama faaliyeti için İçişleri Bakanlığından izin alınır.”",
+    "“Yardım toplama faaliyeti bir ilin birden fazla ilçesini kapsıyorsa her ilçenin kaymakamından ayrı ayrı izin alınır.”",
+    "“Yardım toplama faaliyetleriyle ilgili işlemler emniyet müdürlüklerince yürütülür.”"
+   ],
+   "dogrusu": [
+    "Birden fazla ili kapsayan faaliyette, girişecek kişinin yerleşim yerinin bulunduğu ilin valisinden izin alınır; Bakanlığa bilgi verilir (m.7)",
+    "Faaliyet bir ilin birden fazla ilçesini kapsıyorsa o ilin valisinden izin alınır (m.7)",
+    "Yardım toplama faaliyetleriyle ilgili işlemler dernekler birimlerince yürütülür (m.7)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Öğrenim kurumu için yazılı izin şartı ve gazete-dergide dilekçeyi verecek kişi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Öğrenim kurumları yararına yapılacak yardım toplamada kurum sorumlusunun yazılı izni aranmaz.”",
+    "“Gazete ve dergiler adına yardım toplama dilekçesini genel yayın yönetmeni verir.”"
+   ],
+   "dogrusu": [
+    "Öğrenim kurumu yararına veya kurum içinde yardım toplanacaksa dilekçeye kurum sorumlusunun yazılı izni eklenir (m.8)",
+    "Gazete ve dergiler için yardım toplama dilekçesini sorumlu yazı işleri müdürü verir (m.8)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Sonucu bildirme süresi (en geç iki ay) ve inceleme konularının kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzin vermeye yetkili makam, başvuru sonucunu en geç bir ay içinde başvurana bildirmek zorundadır.”",
+    "“İzin makamı, başvuru üzerine yalnızca faaliyete girişeceklerin yeterliğini inceler.”"
+   ],
+   "dogrusu": [
+    "İzin makamı başvuru sonucunu en geç iki ay içinde başvurana bildirir (m.9)",
+    "İzin makamı işin önemini, girişenlerin yeterliğini, kamu yararına uygunluğu ve faaliyetin başarı ihtimalini inceler (m.9)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-5", "sorun": "kirmizi_kutu",
+  "aciklama": "İptal edilen uzatma tavanı yürürlükte gösterildi; ana süre (bir yıl) ve süreyi takdir eden makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Haklı sebeple yapılan uzatma da bir yılı geçemez.”",
+    "“İlk izinde yardım toplama süresi en çok iki yıl olarak belirlenebilir.”",
+    "“Yardım toplama süresini İçişleri Bakanlığı belirler.”"
+   ],
+   "dogrusu": [
+    "Haklı sebeple uzatmadaki 'bir yılı geçmemek üzere' sınırı iptal edilmiştir; uzatmayı izin veren makam yapar (m.10)",
+    "İzin veren makamın takdir ettiği yardım toplama süresi bir yılı geçemez (m.10)",
+    "Yardım toplama süresinin takdiri izin veren makama aittir (m.10)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Sorumlu kurulun asgari üye sayısı (üç), tüzel kişilerde sorumlu kurul ve bildirim süresi (on gün) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gerçek kişilerin oluşturacağı sorumlu kurulun iki kişiden oluşması yeterlidir.”",
+    "“Tüzel kişiler, yardım toplama için yönetim organlarından ayrı bir sorumlu kurul oluşturmak zorundadır.”",
+    "“Sorumlu kurulda görev alanların ve değişikliklerin izin veren makama bildirim süresi otuz gündür.”"
+   ],
+   "dogrusu": [
+    "Gerçek kişiler yardım toplamak için en az üç kişilik sorumlu kurul oluşturmak zorundadır (m.11)",
+    "Tüzel kişilerin sorumlu kurulu, yönetim organlarıdır (m.11)",
+    "Sorumlu kurulda görev alanlar ile değişiklikler izin veren makama on gün içinde bildirilir (m.11)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; paranın bankada özel hesaba yatırılması ve bağışçı adlarının yayımı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gazete ve dergilerce toplanan para yardımları, gazetenin kendi kasasında muhafaza edilir.”",
+    "“Yardıma katılan kişilerin adları ancak yazılı onayları alınırsa yayımlanabilir.”"
+   ],
+   "dogrusu": [
+    "Gazete ve dergilerce toplanacak para yardımları bankada açılacak özel bir hesaba yatırılır (m.12)",
+    "Yardıma katılanların adları ve yardım tutarı, aksi yönde istekleri olmadıkça gazete ve dergide yayımlanır (m.12)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Güvenlik kuvvetlerinin mutlak çalışma yasağı, kamu görevlisine ücret yasağı ve izin şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenlik kuvvetleri mensupları, valinin izniyle yardım toplama faaliyetlerinde çalışabilir.”",
+    "“Vali veya kaymakam izniyle yardım toplamada çalışan kamu görevlilerine, faaliyeti yürüten kuruluşça ücret ödenir.”",
+    "“Kamu görevlileri, izin almaksızın yardım toplama faaliyetlerinde çalışabilir.”"
+   ],
+   "dogrusu": [
+    "Silahlı Kuvvetler, hâkim ve savcılar, güvenlik kuvvetleri mensupları ve özel kolluk görevlileri yardım toplama faaliyetlerinde çalışamaz (m.13)",
+    "İzinle yardım toplamada çalışan kamu görevlilerine, Türk Hava Kurumu istisnası dışında hiçbir ad altında ücret verilemez (m.13)",
+    "Kamu görevlileri vali veya kaymakamdan izin almadıkça yardım toplama faaliyetlerinde çalışamaz (m.13)"
+   ]}},
+ {"kanun_id": 37, "kart_id": "37-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Sorumluluklara olmayan öğe (hedef miktara ulaşma) eklendi; para ve eşyanın korunmasından sorumlu olanlar bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yardım toplama faaliyetine girişenler, hedeflenen yardım miktarına ulaşılmasından da sorumludur.”",
+    "“Toplanan para ve eşyanın korunmasından yardım toplayanlar değil, izin veren makam sorumludur.”"
+   ],
+   "dogrusu": [
+    "Hedeflenen yardım miktarına ulaşmak, yardım toplayanların sayılan sorumlulukları arasında yer almaz (m.14)",
+    "Toplanan para ve eşyanın korunmasından ve amaca uygun kullanılmasından yardım toplama faaliyetine girişenler sorumludur (m.14)"
+   ]}}
+]

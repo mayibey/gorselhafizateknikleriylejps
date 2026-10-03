@@ -1,0 +1,113 @@
+{
+ "kanun_id": 128,
+ "ad": "Hekimlik Meslek Etiği Kuralları",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_128.json",
+ "kartlar": [
+  {
+   "id": "128-0",
+   "madde": [
+    "1",
+    "2",
+    "59"
+   ],
+   "baslik": "Amaç, kapsam, dayanak, görev ve ilkeler",
+   "hukum": "Amaç hekimlerin uymak zorunda olduğu meslek etiği kurallarını belirlemek (m.1); Türkiye'de hekimlik yapma hakkını kazanmış ve mesleğini uygulayan tüm hekimler kapsamda (m.2); dayanak 6023 sayılı Türk Tabipleri Birliği Yasası m.59/g (m.3); Bakanlık: Sağlık Bakanlığı; hekim: tıp doktorları; hekim örgütü: Türk Tabipleri Birliği (m.4); hekimin öncelikli görevi hastalıkları önlemek ve bilimsel gerekleri yerine getirerek hastaları iyileştirmeye çalışarak insanın yaşamını ve sağlığını korumak; insan onurunu gözetmek öncelikli ödev; gelişmeleri izler (m.5); evrensel tıbbi etik ilkeleri yararlılık, zarar vermeme, adalet ve özerklik (m.6); hekim görevlerini siyasal görüş, sosyal durum, dini inanç, milliyet, etnik köken, ırk, cinsiyet, yaş, ekonomik durum farkı gözetmeksizin yerine getirir (yansızlık) (m.7); vicdani ve mesleki bilimsel kanaatine göre hareket eder (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dayanak Sağlık Bakanlığı yönetmeliği\" yanlış; TTB Yasası"
+   ],
+   "dogrusu": [
+    "tüm hekimler · 6023 sayılı Türk Tabipleri Birliği Yasası m.59/g · Bakanlık · hekim · hekim örgütü · insanın yaşamını ve sağlığını korumak · insan onurunu gözetmek · yararlılık, zarar vermeme, adalet ve özerklik · yansızlık · vicdani ve mesleki bilimsel kanaatine"
+   ]
+  },
+  {
+   "id": "128-1",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Sır, acil yardım, reklam, yöntemler, malpraktis, aracılık, endüstri",
+   "hukum": "Hekim mesleğini uygularken öğrendiği sırları açıklayamaz; hastanın ölmesi veya ilişkinin sona ermesi yükümlülüğü kaldırmaz; hastanın onamı veya sırrın saklanmasının hasta ya da başkalarının yaşamını tehlikeye sokması durumunda (kişilik hakları zedelenmemek koşuluyla) saklamakla yükümlü değil; yasal zorunlulukla rapor düzenlemek sır açıklaması sayılmaz; tanık veya bilirkişi olarak çağrıldığında meslek sırrını ileri sürerek çekilebilir (m.9); görevi ve uzmanlığı ne olursa olsun acil durumlarda ilk yardımda bulunur (m.10); reklam yapamaz, ticari reklamlara araç olamaz, yanıltıcı-paniğe düşürücü-haksız rekabete yol açıcı davranamaz; duyurularda yalnız uzmanlık alanı, çalışma gün ve saatleri; tabela biçim-boyutları yerel tabip odasınca (m.11); bilimsel ve çağdaş yöntemler, koruyucu hekimlik; bilimsel olmayan yöntem uygulayamaz, ruhsatlandırılmamış madde ilaç olarak kullanamaz (m.12); malpraktis: bilgisizlik, deneyimsizlik ya da ilgisizlik nedeniyle hastanın zarar görmesi (m.13); başka hekimlere veya kuruluşlara maddi çıkar karşılığı hasta gönderemez, hasta sağlamak için aracı kullanamaz (m.14); endüstri kuruluşlarıyla çıkar ilişkisi kuramaz; bilimsel araştırma ve eğitim ilişkileri şeffaf ve kurumsal; TTB \"Hekim ve İlaç Tanıtım İlkeleri\" geçerli (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hasta ölünce sır yükümlülüğü biter\" yanlış",
+    "Hasta ölünce hekimin sır saklama yükümlülüğü sona erer",
+    "Malpraktis yalnız bilgisizlikten kaynaklanır"
+   ],
+   "dogrusu": [
+    "Sona ermez (m.9)",
+    "Bilgisizlik, deneyimsizlik ya da ilgisizlik (m.13)"
+   ]
+  },
+  {
+   "id": "128-2",
+   "madde": [
+    "16",
+    "17",
+    "18"
+   ],
+   "baslik": "Hekimler arası ilişkiler",
+   "hukum": "Meslektaşları ve sağlık mensuplarıyla iyi ilişki, küçük düşürücü davranış yok (m.16); meslektaşlarını onur kırıcı ve haksız saldırılara karşı korur (m.17); gecikmenin hasta yaşamını tehdit edebileceği zorunlu durumlar dışında özel bilgi-beceri gerektiren girişimde bulunamaz (yetkinlik dışı faaliyet yasağı) (m.18); konsültasyon: değişik uzmanlık görüşü gerektiğinde tedaviyi yürüten hekim durumu hasta/yakınlarına bildirir; konsültasyonu tedaviyi yürüten hekim yazılı ister (hastanın özellikleri, nedenler açık); konsültan hekim de hastadan sorumlu; alanında bilgili olmalı; sonuçlar tutanakla belgelenir; hastalar bilgilendirilir; görüş farkında hasta konsültanın önerilerini kabul ederse tedaviyi yürüten hekim tedaviyi bırakabilir; konsültasyon istenen hekim davete uymak zorunda (m.19); meslek uygulamasında uzlaşmaz anlaşmazlık veya tıp etiğine aykırı davranışını kasıtlı sürdüren meslektaşı yerel tabip odasına bildirir (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Konsültasyon sözlü istenebilir\" yanlış; yazılı",
+    "Konsültasyona davet edilen hekim daveti reddedebilir"
+   ],
+   "dogrusu": [
+    "Uymak zorunda (m.19)"
+   ]
+  },
+  {
+   "id": "128-3",
+   "madde": [
+    "21",
+    "22",
+    "23"
+   ],
+   "baslik": "Hekim-hasta ilişkileri",
+   "hukum": "Hasta haklarına (bilgilenme, aydınlatılmış onam, tedaviyi kabul/ret) saygı (m.21); hasta hekimini seçmekte özgür (m.22); acil vakalar dışında hastasını bizzat muayene etmeden tedaviye başlayamaz (m.23); hasta üzerindeki etkisini tıbbi amaç dışında kullanamaz (m.24); hekim ancak tıbbi bilgisini gerektiği gibi uygulayamayacağına karar verdiğinde ve hastanın başvurabileceği başka hekim bulunduğunda tedaviyi üstlenmeyebilir veya yarım bırakabilir; durumu ve sağlığın tehlikeye düşmeyeceğini hastaya anlatır, başka olanaklar konusunda bilgilendirir; ikinci hekim bulunmadan hastasını bırakamaz; devralan meslektaşına tüm bilgileri aktarır (m.25); aydınlatılmış onam: sağlık durumu, tanı, tedavi yönteminin türü, başarı şansı ve süresi, riskler, ilaçların kullanımı ve yan etkileri, tedaviyi reddetmenin sonuçları, seçenekler; aydınlatma hastanın kültürel-toplumsal-ruhsal durumuna uygun, anlaşılabilir; bilgilendirilecek kişileri hasta belirler; her girişim özgür ve aydınlatılmış onamla; baskı-tehdit-eksik aydınlatma-kandırmayla alınan onam geçersiz; acil durumlar ile hastanın reşit olmaması, bilincinin kapalı olması veya karar verememesi hâlinde yasal temsilcinin izni; temsilcinin izin vermemesi kötü niyete dayanıyor ve yaşamı tehdit ediyorsa adli mercilere bildirilerek izin; mümkün değilse meslektaşına danışır ya da yalnızca yaşamı kurtarmaya yönelik girişim; acil müdahale hekimin takdirinde; tedavisi yasalarla zorunlu hastalıklarda onam alınmasa da tedavi; hasta onamını dilediği zaman geri alabilir (m.26); hasta bilgilendirilmek istemediğini belirtmişse bilgi vermek gerekmez (bilgilendirilmeme hakkı); ailenin haberdar edilmesi hastayla görüş birliğiyle; bilinçsiz hastanın yakınlarının bilgilendirilmesine hekim karar verir (m.27); terminal dönem hastalarına insani yardım, onurlu koşullar, acıyı azaltma (m.28); hasta ücret konusunda önceden bilgi alabilir; hekim meslek örgütünün belirlediği taban ücretin altında ücret alamaz; meslektaşları, eşleri ve bakmakla yükümlü olduklarından masraf dışında ücret almaması uygundur (m.29); kesin zorunluluk olmadıkça pahalı ilaç-yöntem öneremez, gereksiz harcama yaptıramaz, yararsız tedavi veremez (m.30); hasta dosyasındaki bilgilerin özeti ve belge örnekleri isteği hâlinde hastaya verilir; yasal zorunluluk olmadıkça başkasına verilemez; kimliği saklı tutarak araştırmada kullanabilir (m.31); bizzat muayene ve tedavi ettiği hastaya gerekli gördüğünde rapor verir (istirahat, tedavi şekli, diyet, çalışma koşulları) (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hekim her durumda tedaviyi bırakabilir\" yanlış; ikinci hekim bulunmadan bırakamaz",
+    "Acil olmayan hastaya telefonla tedavi başlanabilir"
+   ],
+   "dogrusu": [
+    "Bizzat muayene şart (m.23)"
+   ]
+  },
+  {
+   "id": "128-4",
+   "madde": [
+    "33",
+    "34",
+    "35"
+   ],
+   "baslik": "Hekim ve insan hakları",
+   "hukum": "Her hekim İnsan Hakları Evrensel Bildirgesi başta olmak üzere insan hakları belgelerine uymakla yükümlü (m.33); işkence ve benzeri uygulamalara katılamaz, yardımcı olamaz, gerçeğe aykırı rapor düzenleyemez; işkence iddiası olan olgularda bilgisini gerçeğin ortaya çıkarılması için kullanır (m.34); tutuklu ve hükümlülerin muayenesi kişilik haklarına saygılı, hekimlik sanatına elverişli koşullarda, gizlilik korunur; belge ve raporlarda hekimin adı, soyadı, diploma numarası ve imzası mutlaka; bir örneği kişiye verilir; baskı altında yazılmışsa hekim en kısa zamanda meslek örgütüne bildirir (m.35); muayene ve tedaviyi bilinçli reddeden tutuklu-hükümlüye sonuçları açıklar; zorla muayene ve tedavi yolunu deneyemez, öneremez (m.36); ölüm cezasının infazında bulunamaz, yardımcı olamaz, tıbbi hizmet veremez (m.37); olağanüstü durumlar ve savaşta evrensel etik kurallarını yansızlıkla uygular; hasta ve yaralı sayısının çokluğu nedeniyle herkese yardım verilemeyen koşullarda tedavi olasılığı yüksek olan ağır vakalara öncelik verir (m.38); savcılıklar ve mahkemeler dışındaki kişi ve kurumlardan gelen cinsel ilişki muayene istemlerini dikkate alamaz; ilgilinin (reşit değilse veli/vasisinin) aydınlatılmış onamı olmadan yapamaz (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"Başvuru sırasına göre\" ve \"askerî personele öncelik\" şıkları yanlış",
+    "Savaşta hekim başvuru sırasına göre bakar",
+    "Polis cinsel ilişki muayenesi isteyebilir"
+   ],
+   "dogrusu": [
+    "Tedavi olasılığı yüksek ağır vakalara öncelik (m.38)",
+    "Yalnız savcılık ve mahkeme (m.39)"
+   ]
+  },
+  {
+   "id": "128-5",
+   "madde": [
+    "40",
+    "41",
+    "42"
+   ],
+   "baslik": "Araştırma-yayın etiği ve son hükümler",
+   "hukum": "İnsan üzerinde klinik-deneysel-epidemiyolojik araştırmalar (ilaç veya cerrahi) yerel etik kurullardan geçmek koşuluyla; yeterli ve yetkin kişilerce; sorumluluk tümüyle araştırmacıya (m.40); her deneğe amaç, yöntem, yarar ve yan etkiler hakkında anlayabileceği dilde bilgi; çalışma başladıktan sonra vazgeçebileceği ve onamını geri alabileceği, tedavisinin aksamayacağı anlatılır; anlayıp anlamadığı değerlendirilir; bilgilendirmeden sonra yazılı onam, özgür iradeye dayalı (m.41); reşit ve/veya mümeyyiz olmayanlarda veli veya vasinin aydınlatılmış onamı (m.42); deneğin yaşamı, bütünlüğü ve sağlığı toplumsal veya bilimsel çıkarların üzerinde; özel yaşama saygı, kişisel bilgilerin gizliliği, yayınlarda kimlik gizli; ciddi tehlike şüphesinde araştırma durdurulur; giderler deneğe, yakınlarına veya sosyal güvenlik kurumuna yansıtılamaz (m.43); yayın etiği: verileri bilimsel gerçeklere uygun yansıtır; çalışmaya fiilen katılmamış kişilerin adı yayında yer alamaz; kaynak göstermeden ve izinsiz başkalarının verileri-eserleri kullanılamaz (m.44); kurallarda yer almayan durumlarda genel etik ilkeler, ulusal düzenlemeler, uluslararası bildirge ve sözleşmeler (m.45); kurallara aykırı davranan hekimler 6023 sayılı Yasaya göre tabip odaları yönetim kurullarınca onur kurullarına sevk edilir; disiplin soruşturması ayrıca hukuki-cezai takibata engel değil (m.46); kurallar TTB Büyük Kongresinde kabul edilip TTB yayın organlarından birinde yayımlandıktan bir ay sonra yürürlüğe girer; TTB Merkez Konseyi ve tabip odaları yürütür (m.47)",
+   "sinavda_boyle_yazarlar": [
+    "\"Araştırma giderleri SGK'dan karşılanır\" yanlış",
+    "Kurallar Sağlık Bakanlığınca yürütülür"
+   ],
+   "dogrusu": [
+    "TTB Merkez Konseyi ve tabip odaları (m.47)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,1149 @@
+{
+ "kanun_id": 26,
+ "ad": "5271 sayılı Ceza Muhakemesi Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_26.json",
+ "kartlar": [
+  {
+   "id": "26-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Şüpheli ile sanık farkı",
+   "hukum": "Şüpheli: soruşturma evresinde suç şüphesi altındaki kişi; sanık: kovuşturmanın başlamasından hükmün kesinleşmesine kadar suç şüphesi altındaki kişi (m.2/1-a,b)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi yer değiştirilir ya da sanıklık \"hüküm verilmesiyle\" biter denir"
+   ],
+   "dogrusu": [
+    "Şüpheli · sanık"
+   ]
+  },
+  {
+   "id": "26-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Soruşturma ile kovuşturma farkı",
+   "hukum": "Soruşturma: suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar; kovuşturma: iddianamenin kabulüyle başlayıp hükmün kesinleşmesine kadar geçen evre (m.2/1-e,f)",
+   "sinavda_boyle_yazarlar": [
+    "\"iddianamenin düzenlenmesiyle\" denir — düzenleme yetmez, mahkemenin kabulü gerekir"
+   ],
+   "dogrusu": [
+    "Soruşturma · iddianamenin kabulüne · kovuşturma · hükmün kesinleşmesine"
+   ]
+  },
+  {
+   "id": "26-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "İfade alma ile sorgu farkı",
+   "hukum": "İfade alma: şüphelinin kolluk veya Cumhuriyet savcısı tarafından dinlenmesi; sorgu: şüpheli veya sanığın hâkim veya mahkeme tarafından dinlenmesi (m.2/1-g,h)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi ters çevrilir"
+   ],
+   "dogrusu": [
+    "İfade alma · kolluk veya Cumhuriyet savcısı · sorgu · hâkim veya mahkeme"
+   ]
+  },
+  {
+   "id": "26-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Suçüstü üç hâl",
+   "hukum": "(1) İşlenmekte olan suç, (2) henüz işlenmiş fiil ile fiilin hemen ardından kolluk, zarar gören veya başkalarınca takip edilerek yakalanan kişinin suçu, (3) fiilin pek az önce işlendiğini gösteren eşya veya delille yakalanan kişinin suçu (m.2/1-j)",
+   "sinavda_boyle_yazarlar": [
+    "üç hâlden biri düşürülür"
+   ],
+   "dogrusu": [
+    "takip edilerek yakalanan · pek az önce · eşya veya delille"
+   ]
+  },
+  {
+   "id": "26-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Toplu suç",
+   "hukum": "Aralarında iştirak iradesi bulunmasa da üç veya daha fazla kişi tarafından işlenen suçtur (m.2/1-k)",
+   "sinavda_boyle_yazarlar": [
+    "\"iştirak iradesi şarttır\" denir veya sayı iki yapılır"
+   ],
+   "dogrusu": [
+    "iştirak iradesi bulunmasa da"
+   ]
+  },
+  {
+   "id": "26-5",
+   "madde": [
+    "90"
+   ],
+   "baslik": "Herkesin yakalama yetkisi",
+   "hukum": "Herkes tarafından geçici yakalama yapılabilecek iki hâl: kişiye suçu işlerken rastlanması; suçüstü bir fiilden dolayı izlenen kişinin kaçma olasılığı bulunması veya hemen kimliğini belirleme olanağı bulunmaması (m.90/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız kolluk yakalayabilir\" denir ya da üçüncü bir hâl uydurulur"
+   ],
+   "dogrusu": [
+    "Herkes · suçu işlerken rastlanması · kaçma olasılığı · hemen kimliğini belirleme olanağı"
+   ]
+  },
+  {
+   "id": "26-6",
+   "madde": [
+    "90"
+   ],
+   "baslik": "Kolluğun yakalama yetkisi",
+   "hukum": "Kolluk; tutuklama kararı veya yakalama emri düzenlenmesini gerektiren ve gecikmesinde sakınca bulunan hâllerde, Cumhuriyet savcısına veya âmirlerine derhâl başvurma olanağı yoksa yakalama yetkisine sahiptir (m.90/2)",
+   "sinavda_boyle_yazarlar": [
+    "şartlardan biri düşürülür"
+   ],
+   "dogrusu": [
+    "gecikmesinde sakınca bulunan · derhâl başvurma olanağı yoksa"
+   ]
+  },
+  {
+   "id": "26-7",
+   "madde": [
+    "90"
+   ],
+   "baslik": "Şikâyete bağlılık istisnası",
+   "hukum": "Soruşturması şikâyete bağlı olsa bile çocuklara, beden veya akıl hastalığı, malûllük veya güçsüzlüğü nedeniyle kendini idareden aciz olanlara karşı işlenen suçüstü hâllerinde yakalama şikâyete bağlı değildir (m.90/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde şikâyet şarttır\" denir"
+   ],
+   "dogrusu": [
+    "çocuklara · suçüstü"
+   ]
+  },
+  {
+   "id": "26-8",
+   "madde": [
+    "91"
+   ],
+   "baslik": "Gözaltı süresi",
+   "hukum": "Gözaltı süresi, yol süresi hariç, yakalama anından itibaren yirmi dört saati geçemez; yakalama yerine en yakın hâkim veya mahkemeye gönderilme için zorunlu süre on iki saatten fazla olamaz (m.91/1)",
+   "sinavda_boyle_yazarlar": [
+    "yol süresi 24 saatin içine sokulur ya da 12 saat 24 yapılır",
+    "Gözaltı süresi yol dâhil 24 saattir"
+   ],
+   "dogrusu": [
+    "Yol süresi hariçtir, ayrıca en çok 12 saattir (m.91/1)"
+   ]
+  },
+  {
+   "id": "26-9",
+   "madde": [
+    "91"
+   ],
+   "baslik": "Gözaltının şartı",
+   "hukum": "Gözaltı, tedbirin soruşturma yönünden zorunlu olmasına ve kişinin suç işlediği şüphesini gösteren somut delillerin varlığına bağlıdır (m.91/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"soyut şüphe yeter\" denir"
+   ],
+   "dogrusu": [
+    "soruşturma yönünden zorunlu · somut delillerin"
+   ]
+  },
+  {
+   "id": "26-10",
+   "madde": [
+    "91"
+   ],
+   "baslik": "Gözaltı uzatması",
+   "hukum": "Toplu olarak işlenen suçlarda, delillerin toplanmasındaki güçlük veya şüpheli sayısının çokluğu nedeniyle Cumhuriyet savcısı, gözaltı süresinin her defasında bir günü geçmemek üzere üç gün uzatılmasına yazılı emir verebilir; uzatma emri gözaltına alınana derhâl tebliğ edilir (m.91/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir defada üç gün\" denir ya da uzatma yetkisi hâkime verilir",
+    "Gözaltı bir defada üç gün uzatılabilir"
+   ],
+   "dogrusu": [
+    "Her defasında bir gün, toplam üç gün (m.91/3)"
+   ]
+  },
+  {
+   "id": "26-11",
+   "madde": [
+    "91"
+   ],
+   "baslik": "Kolluk amirinin gözaltı yetkisi",
+   "hukum": "Suçüstü hâlleriyle sınırlı olmak kaydıyla, sayılan suçlarda mülki amirlerce belirlenen kolluk amirleri yirmi dört saate kadar; şiddet olaylarının yaygınlaşarak kamu düzenini ciddi şekilde bozabileceği toplumsal olaylar sırasında ve toplu işlenen suçlarda kırk sekiz saate kadar gözaltı kararı verebilir; kişi en geç kırk sekiz saat, toplu suçlarda dört gün içinde hâkim önüne çıkarılır (m.91/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"her suçta\" denir — yalnız maddede sayılan suçlarda ve suçüstünde geçerlidir"
+   ],
+   "dogrusu": [
+    "Suçüstü hâlleriyle sınırlı · mülki amirlerce belirlenen kolluk amirleri · kırk sekiz saate · kırk sekiz saat · dört gün"
+   ]
+  },
+  {
+   "id": "26-12",
+   "madde": [
+    "93"
+   ],
+   "baslik": "Kelepçe şartı",
+   "hukum": "Yakalanan veya nakledilen kişilere kaçacaklarına ya da kendisi veya başkalarının hayat ve beden bütünlüğü bakımından tehlike arz ettiğine ilişkin belirtilerin varlığı hâlinde kelepçe takılabilir (m.93)",
+   "sinavda_boyle_yazarlar": [
+    "\"her yakalanana kelepçe takılır\" denir"
+   ],
+   "dogrusu": [
+    "kaçacaklarına · kendisi veya başkalarının hayat ve beden bütünlüğü bakımından tehlike arz ettiğine · belirtilerin varlığı"
+   ]
+  },
+  {
+   "id": "26-13",
+   "madde": [
+    "94"
+   ],
+   "baslik": "Yakalama emriyle yakalanan",
+   "hukum": "Hâkim veya mahkemenin yakalama emri üzerine yakalanan kişi en geç yirmi dört saat içinde yetkili hâkim veya mahkeme önüne çıkarılır; çıkarılamıyorsa aynı süre içinde sesli ve görüntülü iletişim sistemiyle sorgusu yapılır (m.94/1-2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "en geç yirmi dört saat · sesli ve görüntülü iletişim sistemiyle"
+   ]
+  },
+  {
+   "id": "26-14",
+   "madde": [
+    "95"
+   ],
+   "baslik": "Yakalananın yakınına haber",
+   "hukum": "Şüpheli veya sanık yakalandığında, gözaltına alındığında veya gözaltı uzatıldığında Cumhuriyet savcısının emriyle bir yakınına veya belirlediği kişiye gecikmeksizin haber verilir; yabancı ise yazılı olarak karşı çıkmadıkça vatandaşı olduğu devletin konsolosluğuna bildirilir (m.95)",
+   "sinavda_boyle_yazarlar": [
+    "haber verme yetkisi kolluğa verilir ya da yabancıda bildirim \"her hâlde zorunlu\" denir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet savcısının emriyle · gecikmeksizin · yazılı olarak karşı çıkmadıkça"
+   ]
+  },
+  {
+   "id": "26-15",
+   "madde": [
+    "98"
+   ],
+   "baslik": "Yakalama emri kim düzenler",
+   "hukum": "Soruşturmada çağrıya gelmeyen şüpheli için Cumhuriyet savcısının istemi üzerine sulh ceza hâkimi; kolluğun elinden kaçan şüpheli/sanık ya da kurumdan kaçan tutuklu/hükümlü için Cumhuriyet savcıları ve kolluk kuvvetleri de; kovuşturmada kaçak sanık için hâkim veya mahkeme düzenler (m.98)",
+   "sinavda_boyle_yazarlar": [
+    "kolluğun yetkisi genelleştirilir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet savcısının istemi üzerine sulh ceza hâkimi · Cumhuriyet savcıları ve kolluk kuvvetleri de · hâkim veya mahkeme"
+   ]
+  },
+  {
+   "id": "26-16",
+   "madde": [
+    "100"
+   ],
+   "baslik": "Tutuklamanın iki şartı",
+   "hukum": "Kuvvetli suç şüphesinin varlığını gösteren somut deliller ve bir tutuklama nedeni bulunmalıdır; işin önemi ile beklenen ceza ölçülü değilse tutuklama kararı verilemez (m.100/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"makul şüphe yeter\" denir — makul şüphe arama için, tutuklama için kuvvetli şüphe gerekir"
+   ],
+   "dogrusu": [
+    "Kuvvetli suç şüphesinin varlığını gösteren somut deliller · bir tutuklama nedeni · ölçülü"
+   ]
+  },
+  {
+   "id": "26-17",
+   "madde": [
+    "100"
+   ],
+   "baslik": "Tutuklama nedenleri",
+   "hukum": "(a) Kaçma, saklanma veya kaçacağı şüphesini uyandıran somut olgular; (b) delilleri yok etme/gizleme/değiştirme veya tanık, mağdur ya da başkaları üzerinde baskı girişimi konusunda kuvvetli şüphe (m.100/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"suçun ağırlığı tek başına tutuklama nedenidir\" denir"
+   ],
+   "dogrusu": [
+    "delilleri yok etme/gizleme/değiştirme · tanık, mağdur ya da başkaları üzerinde baskı"
+   ]
+  },
+  {
+   "id": "26-18",
+   "madde": [
+    "100"
+   ],
+   "baslik": "Tutuklama yasağı",
+   "hukum": "Sadece adlî para cezasını gerektiren suçlarda veya vücut dokunulmazlığına karşı kasten işlenenler hariç hapis cezasının üst sınırı iki yıldan fazla olmayan suçlarda tutuklama kararı verilemez (m.100/4)",
+   "sinavda_boyle_yazarlar": [
+    "istisna cümlesi düşürülür"
+   ],
+   "dogrusu": [
+    "adlî para cezasını · hapis cezasının üst sınırı iki yıldan fazla olmayan"
+   ]
+  },
+  {
+   "id": "26-19",
+   "madde": [
+    "101"
+   ],
+   "baslik": "Tutuklama kararını kim verir",
+   "hukum": "Soruşturmada Cumhuriyet savcısının istemi üzerine sulh ceza hâkimi; kovuşturmada savcının istemi üzerine veya re'sen mahkeme karar verir (m.101/1)",
+   "sinavda_boyle_yazarlar": [
+    "soruşturmada da \"re'sen\" denir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet savcısının istemi üzerine sulh ceza hâkimi · veya re'sen mahkeme"
+   ]
+  },
+  {
+   "id": "26-20",
+   "madde": [
+    "102"
+   ],
+   "baslik": "Tutukluluk süreleri",
+   "hukum": "Ağır ceza mahkemesinin görevine girmeyen işlerde en çok bir yıl, zorunlu hâlde altı ay uzatılabilir; görevine giren işlerde en çok iki yıl, uzatma toplam üç yılı, Devlete karşı suçlar ve terör suçlarında beş yılı geçemez (m.102/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "süreler karıştırılır ya da uzatma süreleri asıl süreyle toplanmaz"
+   ],
+   "dogrusu": [
+    "girmeyen · bir yıl · altı ay · giren · iki yıl · üç yılı · beş yılı"
+   ]
+  },
+  {
+   "id": "26-21",
+   "madde": [
+    "102"
+   ],
+   "baslik": "Çocukta tutukluluk",
+   "hukum": "Bu süreler, fiili işlediği sırada on beş yaşını doldurmamış çocuklarda yarı, on sekiz yaşını doldurmamış çocuklarda dörtte üç oranında uygulanır (m.102/5)",
+   "sinavda_boyle_yazarlar": [
+    "iki oran yer değiştirilir"
+   ],
+   "dogrusu": [
+    "on beş yaşını doldurmamış · yarı · on sekiz yaşını doldurmamış · dörtte üç"
+   ]
+  },
+  {
+   "id": "26-22",
+   "madde": [
+    "109"
+   ],
+   "baslik": "Adlî kontrol nedir",
+   "hukum": "Tutuklama sebepleri varken, tutuklama yerine şüphelinin bir veya birden fazla yükümlülüğe tâbi tutulmasıdır: yurt dışına çıkamamak, belirlenen yerlere başvurmak, taşıt kullanamamak, tedaviye tâbi olmak, güvence yatırmak, silah bulunduramamak veya taşıyamamak, konutunu terk etmemek, belirli bölgeye gitmemek gibi (m.109)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"ev hapsi yerine cezaevi\" gibi uydurma bir yükümlülük eklenir"
+   ],
+   "dogrusu": [
+    "yerine · silah bulunduramamak veya taşıyamamak"
+   ]
+  },
+  {
+   "id": "26-23",
+   "madde": [
+    "109"
+   ],
+   "baslik": "Adlî kontrolde mahsup",
+   "hukum": "Adlî kontrolde geçen süre kural olarak cezadan mahsup edilemez; ancak konutunu terk etmemek yükümlülüğünde geçen her iki gün, mahsupta bir gün sayılır (m.109/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"her gün bir gün sayılır\" denir"
+   ],
+   "dogrusu": [
+    "mahsup edilemez · konutunu terk etmemek · her iki gün · bir gün"
+   ]
+  },
+  {
+   "id": "26-24",
+   "madde": [
+    "110"
+   ],
+   "baslik": "Adlî kontrol süresi",
+   "hukum": "Ağır ceza mahkemesinin görevine girmeyen işlerde en çok iki yıl (zorunlu hâlde bir yıl uzatma); giren işlerde en çok üç yıl, uzatma toplam üç yılı, Devlete karşı suçlar ve terör suçlarında dört yılı geçemez; çocuklarda bu süreler yarı oranında uygulanır (m.110/A)",
+   "sinavda_boyle_yazarlar": [
+    "tutukluluk süreleriyle karıştırılır"
+   ],
+   "dogrusu": [
+    "girmeyen · iki yıl · bir yıl · giren · üç yıl · dört yılı · yarı"
+   ]
+  },
+  {
+   "id": "26-25",
+   "madde": [
+    "116"
+   ],
+   "baslik": "Arama şartı",
+   "hukum": "Şüpheli veya sanığın üstü, eşyası, konutu, işyeri veya ona ait diğer yerler; yakalanabileceği veya suç delillerinin elde edilebileceği hususunda makul şüphe varsa aranabilir (m.116)",
+   "sinavda_boyle_yazarlar": [
+    "\"kuvvetli şüphe\" denir",
+    "Arama için kuvvetli şüphe aranır"
+   ],
+   "dogrusu": [
+    "Arama için makul şüphe yeter; kuvvetli şüphe tutuklama şartıdır (m.116, m.100)"
+   ]
+  },
+  {
+   "id": "26-26",
+   "madde": [
+    "118"
+   ],
+   "baslik": "Gece araması yasağı",
+   "hukum": "Konutta, işyerinde veya diğer kapalı yerlerde gece vaktinde arama yapılamaz; suçüstü, gecikmesinde sakınca bulunan hâller ile yakalanmış/gözaltına alınmışken firar eden kişi veya tutuklu/hükümlünün tekrar yakalanması amacıyla yapılan aramalarda bu yasak uygulanmaz (m.118)",
+   "sinavda_boyle_yazarlar": [
+    "istisnalardan biri düşürülür veya yasak \"her hâlde\" denir",
+    "Gece vakti hiçbir şekilde arama yapılamaz"
+   ],
+   "dogrusu": [
+    "Suçüstü, gecikmede sakınca ve firar edenin yakalanmasında yapılabilir (m.118/2)"
+   ]
+  },
+  {
+   "id": "26-27",
+   "madde": [
+    "119"
+   ],
+   "baslik": "Arama kararını kim verir",
+   "hukum": "Kural: hâkim kararı; gecikmesinde sakınca varsa Cumhuriyet savcısının, savcıya ulaşılamıyorsa kolluk amirinin yazılı emri ile kolluk arama yapabilir. Ancak konutta, işyerinde ve kamuya açık olmayan kapalı alanlarda arama, hâkim kararı veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının yazılı emri ile yapılabilir — kolluk amirinin emri yetmez (m.119/1)",
+   "sinavda_boyle_yazarlar": [
+    "kolluk amirinin emri konuta da genişletilir — en sık sorulan ayrım budur",
+    "Konutta arama kolluk amirinin yazılı emriyle yapılabilir"
+   ],
+   "dogrusu": [
+    "Konutta hâkim kararı veya savcının yazılı emri şarttır (m.119/1)"
+   ]
+  },
+  {
+   "id": "26-28",
+   "madde": [
+    "119"
+   ],
+   "baslik": "Arama kararında bulunacaklar",
+   "hukum": "Aramanın nedenini oluşturan fiil, aranacak kişi/adres/eşya ve karar veya emrin geçerli olacağı zaman süresi açıkça gösterilir (m.119/2)",
+   "sinavda_boyle_yazarlar": [
+    "üç unsurdan biri düşürülür"
+   ],
+   "dogrusu": [
+    "fiil · kişi/adres/eşya · geçerli olacağı zaman süresi"
+   ]
+  },
+  {
+   "id": "26-29",
+   "madde": [
+    "119"
+   ],
+   "baslik": "Savcı yokken arama",
+   "hukum": "Cumhuriyet savcısı hazır olmaksızın konut, işyeri veya diğer kapalı yerlerde arama yapabilmek için o yer ihtiyar heyetinden veya komşulardan iki kişi bulundurulur (m.119/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir kişi\" denir ya da şart tamamen kaldırılır"
+   ],
+   "dogrusu": [
+    "ihtiyar heyetinden veya komşulardan iki kişi"
+   ]
+  },
+  {
+   "id": "26-30",
+   "madde": [
+    "119"
+   ],
+   "baslik": "Askerî mahalde arama",
+   "hukum": "Askerî mahallerde arama, Cumhuriyet savcısının nezaretinde askerî makamların katılımıyla adlî kolluk görevlilerince yapılır; gecikmesinde sakınca varsa savcının yazılı emriyle de askerî makamların katılımıyla yapılabilir (m.119/5)",
+   "sinavda_boyle_yazarlar": [
+    "askerî makamın katılımı düşürülür"
+   ],
+   "dogrusu": [
+    "Cumhuriyet savcısının nezaretinde askerî makamların katılımıyla · yazılı emriyle"
+   ]
+  },
+  {
+   "id": "26-31",
+   "madde": [
+    "122"
+   ],
+   "baslik": "Belge inceleme yetkisi",
+   "hukum": "Hakkında arama yapılan kimsenin belge veya kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime aittir (m.122/1)",
+   "sinavda_boyle_yazarlar": [
+    "yetki kolluğa verilir"
+   ],
+   "dogrusu": [
+    "belge veya kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime"
+   ]
+  },
+  {
+   "id": "26-32",
+   "madde": [
+    "127"
+   ],
+   "baslik": "Elkoyma kararı",
+   "hukum": "Kural hâkim kararı; gecikmesinde sakınca varsa Cumhuriyet savcısının, savcıya ulaşılamıyorsa kolluk amirinin yazılı emri ile elkoyma yapılabilir. Hâkim kararı olmaksızın yapılan elkoyma yirmi dört saat içinde hâkim onayına sunulur; hâkim kararını elkoymadan itibaren kırk sekiz saat içinde açıklar, aksi hâlde elkoyma kendiliğinden kalkar (m.127)",
+   "sinavda_boyle_yazarlar": [
+    "iki süre yer değiştirilir veya \"kendiliğinden kalkmaz, iade istenir\" denir",
+    "Hâkim onayına sunulmayan elkoyma geçerliliğini korur"
+   ],
+   "dogrusu": [
+    "48 saat içinde karar açıklanmazsa elkoyma kendiliğinden kalkar (m.127/3)"
+   ]
+  },
+  {
+   "id": "26-33",
+   "madde": [
+    "128"
+   ],
+   "baslik": "Hesabın askıya alınması",
+   "hukum": "Nitelikli hırsızlık, nitelikli dolandırıcılık ve banka/kredi kartının kötüye kullanılması suçlarında makul şüphe varsa, banka, ödeme veya kripto varlık hizmet sağlayıcısı hesabı kırk sekiz saate kadar askıya alabilir; işlem derhâl Cumhuriyet başsavcılığına ve hesap sahibine bildirilir, savcı itiraz üzerine yirmi dört saat içinde karar verir (m.128/A)",
+   "sinavda_boyle_yazarlar": [
+    "süre 24 saat yapılır ya da yetki savcıya verilir"
+   ],
+   "dogrusu": [
+    "makul şüphe · kırk sekiz saate kadar · yirmi dört saat"
+   ]
+  },
+  {
+   "id": "26-34",
+   "madde": [
+    "135"
+   ],
+   "baslik": "İletişimin dinlenmesi",
+   "hukum": "Somut delillere dayanan kuvvetli şüphe ve başka suretle delil elde edilememesi hâlinde, hâkim veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının kararıyla iletişim dinlenebilir, kayda alınabilir; savcı kararını derhâl hâkim onayına sunar, hâkim en geç yirmi dört saat içinde karar verir (m.135/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"makul şüphe yeterlidir\" denir ya da \"başka suretle delil elde edilememesi\" şartı düşürülür"
+   ],
+   "dogrusu": [
+    "Somut delillere dayanan kuvvetli şüphe · başka suretle delil elde edilememesi · hâkim · Cumhuriyet savcısının · derhâl · yirmi dört saat"
+   ]
+  },
+  {
+   "id": "26-35",
+   "madde": [
+    "135"
+   ],
+   "baslik": "Dinleme süresi",
+   "hukum": "Tedbir kararı en çok iki ay için verilebilir, bir ay daha uzatılabilir; örgüt faaliyeti çerçevesinde işlenen suçlarda hâkim, her defasında bir aydan fazla olmamak ve toplam üç ayı geçmemek üzere ek uzatma verebilir (m.135/4)",
+   "sinavda_boyle_yazarlar": [
+    "süreler tek bir rakama indirilir"
+   ],
+   "dogrusu": [
+    "iki ay · bir ay · toplam üç ayı"
+   ]
+  },
+  {
+   "id": "26-36",
+   "madde": [
+    "135"
+   ],
+   "baslik": "Tanıklıktan çekinecekle iletişim",
+   "hukum": "Şüpheli veya sanığın tanıklıktan çekinebilecek kişilerle arasındaki iletişim kayda alınamaz; alınmışsa kayıtlar derhâl yok edilir (m.135/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"hâkim izin verirse kaydedilir\" denir"
+   ],
+   "dogrusu": [
+    "tanıklıktan çekinebilecek kişilerle · kayda alınamaz · derhâl yok edilir"
+   ]
+  },
+  {
+   "id": "26-37",
+   "madde": [
+    "135"
+   ],
+   "baslik": "Mobil telefonun yeri",
+   "hukum": "Şüpheli veya sanığın yakalanabilmesi için mobil telefonun yeri hâkim, gecikmesinde sakınca varsa savcı kararıyla tespit edilebilir; en çok iki ay, bir ay uzatılabilir (m.135/5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yakalanabilmesi · iki ay · bir ay"
+   ]
+  },
+  {
+   "id": "26-38",
+   "madde": [
+    "137"
+   ],
+   "baslik": "Kayıtların yok edilmesi",
+   "hukum": "Kovuşturmaya yer olmadığına karar verilir ya da hâkim onayı alınamazsa, kayıtlar savcının denetiminde en geç on gün içinde yok edilir; beraat hâlinde de aynı usulle yok edilir. İlgiliye, evrenin bitiminden itibaren en geç on beş gün içinde yazılı bilgi verilir (m.137/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "süreler yer değiştirilir"
+   ],
+   "dogrusu": [
+    "on gün · on beş gün"
+   ]
+  },
+  {
+   "id": "26-39",
+   "madde": [
+    "139"
+   ],
+   "baslik": "Gizli soruşturmacı",
+   "hukum": "Somut delillere dayanan kuvvetli şüphe ve başka surette delil elde edilememesi hâlinde kamu görevlileri gizli soruşturmacı olarak görevlendirilebilir; karar hâkime aittir. Soruşturmacı suç işleyemez ve görevlendirildiği örgütün işlemekte olduğu suçlardan sorumlu tutulamaz (m.139)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cumhuriyet savcısı da görevlendirebilir\" veya \"sivil kişiler de olabilir\" denir"
+   ],
+   "dogrusu": [
+    "Somut delillere dayanan kuvvetli şüphe · kamu görevlileri · hâkime · suç işleyemez"
+   ]
+  },
+  {
+   "id": "26-40",
+   "madde": [
+    "140"
+   ],
+   "baslik": "Teknik araçlarla izleme",
+   "hukum": "Sayılan suçlarda, şüphelinin kamuya açık yerlerdeki faaliyetleri ve işyeri teknik araçlarla izlenebilir, ses veya görüntü kaydı alınabilir; karar hâkime, gecikmesinde sakınca varsa savcıya aittir; en çok üç hafta, bir hafta uzatılabilir, örgüt suçlarında ek uzatmalarla toplam dört haftayı geçemez. Bu madde hükümleri kişinin konutunda uygulanamaz (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "\"konutta da uygulanır\" denir — en sevilen bozma budur",
+    "Teknik araçlarla izleme konutta da yapılabilir"
+   ],
+   "dogrusu": [
+    "Konutta uygulanamaz (m.140/5)"
+   ]
+  },
+  {
+   "id": "26-41",
+   "madde": [
+    "141"
+   ],
+   "baslik": "Tazminat hâlleri",
+   "hukum": "Kanuna aykırı yakalanan/tutuklanan, kanunî gözaltı süresi içinde hâkim önüne çıkarılmayan, hakları hatırlatılmadan tutuklanan, beraat eden veya kovuşturmaya yer olmadığına karar verilen, araması ölçüsüz yapılan, eşyasına koşulsuz elkonulan kişiler maddî ve manevî her türlü zararını Devletten isteyebilir (m.141)",
+   "sinavda_boyle_yazarlar": [
+    "\"ilgili kolluk görevlisinden istenir\" denir"
+   ],
+   "dogrusu": [
+    "kanunî gözaltı süresi içinde hâkim önüne çıkarılmayan · ölçüsüz · maddî ve manevî her türlü zararını Devletten"
+   ]
+  },
+  {
+   "id": "26-42",
+   "madde": [
+    "145"
+   ],
+   "baslik": "Davetiye ile çağırma",
+   "hukum": "İfadesi alınacak veya sorgusu yapılacak kişi davetiye ile çağrılır; çağrılma nedeni açıkça belirtilir, gelmezse zorla getirileceği yazılır (m.145)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğrudan zorla getirilir\" denir"
+   ],
+   "dogrusu": [
+    "davetiye · gelmezse zorla getirileceği"
+   ]
+  },
+  {
+   "id": "26-43",
+   "madde": [
+    "147"
+   ],
+   "baslik": "İfade alma usulü",
+   "hukum": "Kimlik saptanır (kişi kimlik sorularını doğru cevaplamakla yükümlüdür), yüklenen suç anlatılır, müdafi hakkı bildirilir, yakınına haber verilir, susma hakkı söylenir, lehine delil toplanmasını isteyebileceği hatırlatılır, kişisel ve ekonomik durumu sorulur, teknik imkândan yararlanılır ve tutanağa bağlanır (m.147)",
+   "sinavda_boyle_yazarlar": [
+    "\"kimliğe ilişkin sorulara da susma hakkı vardır\" denir — kimlik sorusuna doğru cevap zorunludur"
+   ],
+   "dogrusu": [
+    "doğru cevaplamakla yükümlüdür · yüklenen suç anlatılır · müdafi hakkı · susma hakkı · lehine delil toplanmasını isteyebileceği · teknik imkândan yararlanılır"
+   ]
+  },
+  {
+   "id": "26-44",
+   "madde": [
+    "148"
+   ],
+   "baslik": "Yasak ifade alma usulleri",
+   "hukum": "Beyan özgür iradeye dayanmalıdır; kötü davranma, işkence, ilâç verme, yorma, aldatma, cebir veya tehdit, bazı araçları kullanma gibi bedensel/ruhsal müdahaleler yapılamaz; kanuna aykırı yarar vaat edilemez; yasak usullerle elde edilen ifadeler rıza ile verilmiş olsa da delil sayılmaz (m.148/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"rıza varsa geçerlidir\" denir",
+    "Yasak usulle alınan ifade rıza varsa delil olur"
+   ],
+   "dogrusu": [
+    "Rıza ile verilmiş olsa da delil değildir (m.148/3)"
+   ]
+  },
+  {
+   "id": "26-45",
+   "madde": [
+    "148"
+   ],
+   "baslik": "Müdafisiz kollukta alınan ifade",
+   "hukum": "Müdafi hazır bulunmaksızın kollukça alınan ifade, hâkim veya mahkeme huzurunda şüpheli/sanık tarafından doğrulanmadıkça hükme esas alınamaz (m.148/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir surette alınamaz\" denir — alınabilir, ama doğrulanmadıkça hükme esas olmaz",
+    "Müdafisiz kollukta alınan ifade hiçbir şekilde alınamaz"
+   ],
+   "dogrusu": [
+    "Alınabilir; doğrulanmadıkça hükme esas alınamaz (m.148/4)"
+   ]
+  },
+  {
+   "id": "26-46",
+   "madde": [
+    "148"
+   ],
+   "baslik": "Yeniden ifade",
+   "hukum": "Şüphelinin aynı olayla ilgili yeniden ifadesinin alınması gerekirse bu işlem ancak Cumhuriyet savcısı tarafından yapılabilir (m.148/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"kolluk tekrar alabilir\" denir"
+   ],
+   "dogrusu": [
+    "aynı olayla ilgili · ancak Cumhuriyet savcısı"
+   ]
+  },
+  {
+   "id": "26-47",
+   "madde": [
+    "149"
+   ],
+   "baslik": "Müdafi sayısı",
+   "hukum": "Soruşturma evresinde ifade almada en çok üç avukat hazır bulunabilir; örgüt faaliyeti çerçevesinde işlenen suçlarda duruşmada en çok üç avukat bulunabilir (m.149/2)",
+   "sinavda_boyle_yazarlar": [
+    "sayı beş ya da sınırsız yapılır"
+   ],
+   "dogrusu": [
+    "ifade almada en çok üç avukat · duruşmada en çok üç avukat"
+   ]
+  },
+  {
+   "id": "26-48",
+   "madde": [
+    "157"
+   ],
+   "baslik": "Soruşturmanın gizliliği",
+   "hukum": "Kanunun başka hüküm koyduğu hâller saklı kalmak ve savunma haklarına zarar vermemek koşuluyla soruşturma evresindeki usul işlemleri gizlidir (m.157)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde mutlaktır\" denir"
+   ],
+   "dogrusu": [
+    "savunma haklarına zarar vermemek · gizlidir"
+   ]
+  },
+  {
+   "id": "26-49",
+   "madde": [
+    "158"
+   ],
+   "baslik": "İhbar ve şikâyet nereye yapılır",
+   "hukum": "Cumhuriyet Başsavcılığına veya kolluk makamlarına yapılabilir; valilik/kaymakamlığa ya da mahkemeye yapılan ihbar ilgili Başsavcılığa gönderilir; yurt dışında işlenip ülkede takibi gereken suçlarda elçilik ve konsolosluklara da yapılabilir; ihbar yazılı veya tutanağa geçirilmek üzere sözlü olabilir (m.158)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız savcılığa yapılabilir\" denir"
+   ],
+   "dogrusu": [
+    "veya kolluk makamlarına · valilik/kaymakamlığa ya da mahkemeye · elçilik ve konsolosluklara · yazılı veya tutanağa geçirilmek üzere sözlü"
+   ]
+  },
+  {
+   "id": "26-50",
+   "madde": [
+    "160"
+   ],
+   "baslik": "Savcının soruşturma yükümlülüğü",
+   "hukum": "Cumhuriyet savcısı, suç işlendiği izlenimini veren hâli öğrenir öğrenmez işin gerçeğini araştırmaya başlar; şüphelinin lehine ve aleyhine delilleri toplayıp muhafaza altına almakla ve haklarını korumakla yükümlüdür (m.160)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız aleyhe delil toplar\" denir"
+   ],
+   "dogrusu": [
+    "öğrenir öğrenmez · şüphelinin lehine ve aleyhine · haklarını korumakla"
+   ]
+  },
+  {
+   "id": "26-51",
+   "madde": [
+    "161"
+   ],
+   "baslik": "Adlî kolluğun savcıya bağlılığı",
+   "hukum": "Adlî kolluk görevlileri; elkoydukları olayları, yakalanan kişileri ve uygulanan tedbirleri emrinde çalıştıkları Cumhuriyet savcısına derhâl bildirmek ve savcının adliyeye ilişkin bütün emirlerini gecikmeksizin yerine getirmekle yükümlüdür. Savcı emirlerini yazılı, acele hâllerde sözlü verir; sözlü emir en kısa sürede yazılı olarak da bildirilir (m.161/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"emir yalnız yazılı olabilir\" denir"
+   ],
+   "dogrusu": [
+    "derhâl bildirmek · bütün emirlerini gecikmeksizin yerine getirmekle · yazılı · sözlü"
+   ]
+  },
+  {
+   "id": "26-52",
+   "madde": [
+    "8",
+    "12",
+    "7"
+   ],
+   "baslik": "Adlî kolluk kimdir",
+   "hukum": "Emniyet Teşkilatı Kanunu m.8, 9, 12; 2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.7; Gümrük KHK m.8 ve 2692 sayılı Sahil Güvenlik Komutanlığı Kanunu m.4'te belirtilen soruşturma işlemlerini yapan güvenlik görevlileridir. Adlî kolluk, adlî görevlerin haricindeki hizmetlerde üstlerinin emrindedir (m.164)",
+   "sinavda_boyle_yazarlar": [
+    "\"her işte savcının emrindedir\" denir",
+    "Adlî kolluk her işte savcının emrindedir"
+   ],
+   "dogrusu": [
+    "Adlî görev dışındaki hizmetlerde üstlerinin emrindedir (m.164/3)"
+   ]
+  },
+  {
+   "id": "26-53",
+   "madde": [
+    "165"
+   ],
+   "baslik": "Diğer kolluğun adlî görevi",
+   "hukum": "Gerektiğinde veya savcının talebi hâlinde diğer kolluk birimleri de adlî kolluk görevini yerine getirmekle yükümlüdür (m.165)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "diğer kolluk birimleri de"
+   ]
+  },
+  {
+   "id": "26-54",
+   "madde": [
+    "168"
+   ],
+   "baslik": "Olay yerinde men yetkisi",
+   "hukum": "Olay yerinde işlemlere başlayan adlî kolluk görevlisi; işlemlere engel olan veya aldığı tedbirlere aykırı davranan kişileri, işlemler sonuçlanıncaya kadar ve gerektiğinde zor kullanarak bundan men eder (m.168)",
+   "sinavda_boyle_yazarlar": [
+    "\"savcı emri gerekir\" denir"
+   ],
+   "dogrusu": [
+    "engel olan · aykırı davranan · gerektiğinde zor kullanarak"
+   ]
+  },
+  {
+   "id": "26-55",
+   "madde": [
+    "170"
+   ],
+   "baslik": "İddianame ve kamu davası",
+   "hukum": "Kamu davasını açma görevi Cumhuriyet savcısına aittir; deliller suçun işlendiği hususunda yeterli şüphe oluşturuyorsa savcı iddianame düzenler. İddianamenin sonuç kısmında şüphelinin sadece aleyhine değil lehine olan hususlar da ileri sürülür (m.170)",
+   "sinavda_boyle_yazarlar": [
+    "\"kuvvetli şüphe\" denir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet savcısına · yeterli şüphe · lehine olan hususlar da"
+   ]
+  },
+  {
+   "id": "26-56",
+   "madde": [
+    "175"
+   ],
+   "baslik": "Kovuşturmanın başlangıcı",
+   "hukum": "İddianamenin kabulüyle kamu davası açılmış olur ve kovuşturma evresi başlar (m.175)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "İddianamenin kabulüyle"
+   ]
+  },
+  {
+   "id": "26-57",
+   "madde": [
+    "182"
+   ],
+   "baslik": "Duruşmanın açıklığı",
+   "hukum": "Duruşma herkese açıktır; genel ahlâkın veya kamu güvenliğinin kesin olarak gerekli kıldığı hâllerde bir kısmının veya tamamının kapalı yapılmasına mahkemece karar verilebilir; kapalılık kararı ve hüküm açık duruşmada açıklanır (m.182)",
+   "sinavda_boyle_yazarlar": [
+    "\"kapalı duruşmada hüküm de kapalı açıklanır\" denir"
+   ],
+   "dogrusu": [
+    "herkese açıktır · genel ahlâkın veya kamu güvenliğinin kesin olarak gerekli kıldığı · açık duruşmada"
+   ]
+  },
+  {
+   "id": "26-58",
+   "madde": [
+    "206"
+   ],
+   "baslik": "Delilin reddi",
+   "hukum": "Ortaya konulması istenen delil; kanuna aykırı elde edilmişse, ispat edilecek olayın karara etkisi yoksa veya istem sadece davayı uzatmak maksadıyla yapılmışsa reddolunur (m.206/2)",
+   "sinavda_boyle_yazarlar": [
+    "ret sebeplerine \"mahkemenin takdiri\" eklenir"
+   ],
+   "dogrusu": [
+    "kanuna aykırı elde edilmişse · karara etkisi yoksa · sadece davayı uzatmak"
+   ]
+  },
+  {
+   "id": "26-59",
+   "madde": [
+    "231"
+   ],
+   "baslik": "Hükmün açıklanmasının geri bırakılması (HAGB)",
+   "hukum": "Hükmolunan ceza iki yıl veya daha az süreli hapis ya da adlî para cezası ise mahkeme HAGB'ye karar verebilir; şartlar: sanığın daha önce kasıtlı bir suçtan mahkûm olmaması, yeniden suç işlemeyeceği kanaati ve zararın tamamen giderilmesi. Sanık beş yıl denetim süresine tâbi tutulur (m.231/5-8)",
+   "sinavda_boyle_yazarlar": [
+    "sınır \"üç yıl\", denetim süresi \"üç yıl\" denir"
+   ],
+   "dogrusu": [
+    "iki yıl veya daha az · daha önce kasıtlı bir suçtan mahkûm olmaması · zararın tamamen giderilmesi · beş yıl"
+   ]
+  },
+  {
+   "id": "26-60",
+   "madde": [
+    "17",
+    "231"
+   ],
+   "baslik": "HAGB'nin uygulanmayacağı suçlar",
+   "hukum": "İşkence ve eziyet suçları ile kamu görevlisinin görevi sebebiyle işlediği ve Anayasa m.17 kapsamında kötü muamele sayılabilecek suçlar hakkında HAGB uygulanmaz (m.231/14)",
+   "sinavda_boyle_yazarlar": [
+    "istisna hiç yokmuş gibi sorulur"
+   ],
+   "dogrusu": [
+    "İşkence ve eziyet · kötü muamele"
+   ]
+  },
+  {
+   "id": "26-61",
+   "madde": [
+    "234"
+   ],
+   "baslik": "Mağdurun hakları",
+   "hukum": "Soruşturmada delil toplanmasını isteme, belge örneği isteme, baro tarafından avukat görevlendirilmesini isteme, kovuşturmaya yer olmadığı kararına itiraz; kovuşturmada duruşmadan haberdar edilme, kamu davasına katılma, tanık daveti isteme, kanun yollarına başvurma (m.234)",
+   "sinavda_boyle_yazarlar": [
+    "\"istemi hâlinde anlatılır\" denir — kanun kendiliğinden anlatmayı emreder"
+   ],
+   "dogrusu": [
+    "baro tarafından avukat görevlendirilmesini isteme · kamu davasına katılma"
+   ]
+  },
+  {
+   "id": "26-62",
+   "madde": [
+    "234"
+   ],
+   "baslik": "Vekil zorunluluğu",
+   "hukum": "Mağdur on sekiz yaşını doldurmamış, sağır veya dilsiz ya da meramını ifade edemeyecek derecede malûl ise ve vekili yoksa, istemi aranmaksızın vekil görevlendirilir (m.234/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"talebi hâlinde\" denir"
+   ],
+   "dogrusu": [
+    "on sekiz yaşını doldurmamış · sağır veya dilsiz · istemi aranmaksızın"
+   ]
+  },
+  {
+   "id": "26-63",
+   "madde": [
+    "106",
+    "141",
+    "157"
+   ],
+   "baslik": "Uzlaştırma kapsamı",
+   "hukum": "Şikâyete bağlı suçlar ile şikâyete bağlı olup olmadığına bakılmaksızın kasten yaralama (üçüncü fıkra hariç), taksirle yaralama, tehdit (m.106/1), konut dokunulmazlığının ihlali, hırsızlık (m.141), güveni kötüye kullanma, dolandırıcılık (m.157), suç eşyasının satın alınması, çocuğun kaçırılması ve alıkonulması gibi suçlarda uzlaştırma girişiminde bulunulur (m.253/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Şikâyete bağlı suçlar · tehdit (m.106/1) · konut dokunulmazlığının ihlali · hırsızlık (m.141) · dolandırıcılık (m.157)"
+   ]
+  },
+  {
+   "id": "26-64",
+   "madde": [
+    "253"
+   ],
+   "baslik": "Uzlaştırma yasağı",
+   "hukum": "Şikâyete bağlı olsa bile cinsel dokunulmazlığa karşı suçlarda, ısrarlı takip suçunda ve hakaret suçunda uzlaştırma yoluna gidilemez (m.253/3)",
+   "sinavda_boyle_yazarlar": [
+    "hakaret listeden çıkarılıp \"uzlaşmaya tâbidir\" denir",
+    "Hakaret suçunda uzlaştırmaya gidilir"
+   ],
+   "dogrusu": [
+    "Gidilemez (m.253/3)"
+   ]
+  },
+  {
+   "id": "26-65",
+   "madde": [
+    "253",
+    "12"
+   ],
+   "baslik": "Uzlaşma teklifine cevap süresi",
+   "hukum": "Kendisine uzlaşma teklif edilen kişi yedi gün içinde kararını bildirmezse teklifi reddetmiş sayılır; uzlaştırmacı işlemleri belgelerin verilmesinden itibaren en geç otuz gün içinde sonuçlandırır, büro bu süreyi her defasında yirmi günü geçmemek üzere en fazla iki kez uzatabilir (m.253/4, 12)",
+   "sinavda_boyle_yazarlar": [
+    "süre 15 gün yapılır ya da sessizlik \"kabul\" sayılır",
+    "Uzlaşma teklifine cevap verilmezse kabul sayılır"
+   ],
+   "dogrusu": [
+    "Reddedilmiş sayılır (m.253/4)"
+   ]
+  },
+  {
+   "id": "26-66",
+   "madde": [
+    "253"
+   ],
+   "baslik": "Uzlaşmanın sonucu",
+   "hukum": "Edim defaten yerine getirilirse kovuşturmaya yer olmadığı kararı verilir; edim ileri tarihe bırakılır, taksite bağlanır veya süreklilik arz ederse kamu davasının açılmasının ertelenmesi kararı verilir. Uzlaştırma sonuçsuz kalırsa tekrar uzlaştırma yoluna gidilemez (m.253/18-19)",
+   "sinavda_boyle_yazarlar": [
+    "iki sonuç yer değiştirilir"
+   ],
+   "dogrusu": [
+    "defaten · kovuşturmaya yer olmadığı · kamu davasının açılmasının ertelenmesi · sonuçsuz kalırsa tekrar uzlaştırma yoluna gidilemez"
+   ]
+  },
+  {
+   "id": "26-67",
+   "madde": [
+    "268"
+   ],
+   "baslik": "İtiraz süresi ve mercii",
+   "hukum": "Hâkim veya mahkeme kararına itiraz, kanunda başka hüküm yoksa kararı öğrendiği günden itibaren iki hafta içinde kararı veren mercie yapılır; merci itirazı yerinde görürse kararını düzeltir, görmezse en çok üç gün içinde incelemeye yetkili mercie gönderir (m.268/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"yedi gün\" denir ya da itirazın doğrudan üst mercie yapıldığı söylenir",
+    "İtiraz doğrudan üst mercie yapılır"
+   ],
+   "dogrusu": [
+    "Önce kararı veren mercie yapılır (m.268/1)"
+   ]
+  },
+  {
+   "id": "26-68",
+   "madde": [
+    "268"
+   ],
+   "baslik": "Sulh ceza kararlarına itiraz",
+   "hukum": "Sulh ceza hâkimliği kararlarına itirazı, numara olarak kendisini izleyen hâkimlik; son numaralı hâkimlik için bir numaralı hâkimlik inceler. Tutuklama ve adlî kontrole ilişkin kararlara itirazı ise yargı çevresindeki asliye ceza mahkemesi hâkimi inceler (m.268/3-a,b)",
+   "sinavda_boyle_yazarlar": [
+    "tutuklama itirazı da \"bir sonraki sulh ceza\" denir"
+   ],
+   "dogrusu": [
+    "numara olarak kendisini izleyen · bir numaralı · Tutuklama ve adlî kontrole · asliye ceza mahkemesi hâkimi"
+   ]
+  },
+  {
+   "id": "26-69",
+   "madde": [
+    "272"
+   ],
+   "baslik": "İstinaf sınırı",
+   "hukum": "İlk derece mahkemesi hükümlerine karşı istinaf yoluna başvurulabilir; on beş yıl ve daha fazla hapis cezalarına ilişkin hükümler bölge adliye mahkemesince re'sen incelenir. Hapisten çevrilenler hariç on beş bin Türk Lirası dâhil adlî para cezası mahkûmiyetlerine ve üst sınırı beş yüz günü geçmeyen adlî para cezasını gerektiren suçlardan beraat hükümlerine karşı istinafa gidilemez (m.272)",
+   "sinavda_boyle_yazarlar": [
+    "\"on yıl\" denir ya da re'sen inceleme kaldırılır"
+   ],
+   "dogrusu": [
+    "on beş yıl ve daha fazla · re'sen · on beş bin Türk Lirası dâhil · beş yüz günü · beraat"
+   ]
+  },
+  {
+   "id": "26-70",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Hâkimin davaya bakamaması",
+   "hukum": "Suçtan kendisi zarar görmüşse; şüpheli, sanık veya mağdurla evlilik, vesayet, kayyımlık ilişkisi bulunmuşsa; üstsoy-altsoy hısımlığı varsa; üçüncü derece dâhil kan, ikinci derece dâhil kayın hısımlığı varsa; aynı davada savcılık, adlî kolluk görevi, müdafilik veya vekillik yapmışsa ya da tanık veya bilirkişi olarak dinlenmişse hâkimlik görevini yapamaz (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "iki derece eşitlenir"
+   ],
+   "dogrusu": [
+    "evlilik, vesayet, kayyımlık · üstsoy-altsoy · üçüncü derece dâhil kan · ikinci derece dâhil kayın · savcılık, adlî kolluk görevi, müdafilik veya vekillik · tanık veya bilirkişi"
+   ]
+  },
+  {
+   "id": "26-71",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Sürelerin hesabı",
+   "hukum": "Gün ile belirlenen süreler tebligatın yapıldığının ertesi günü işlemeye başlar; hafta/ay olarak belirlenen süre son hafta veya ayda karşılığı olan günün mesai saati bitiminde sona erer; son gün tatile rastlarsa süre tatilin ertesi günü biter (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"tebligat günü ilk gündür\" denir"
+   ],
+   "dogrusu": [
+    "tebligatın yapıldığının ertesi günü · karşılığı olan günün mesai saati bitiminde · son gün tatile rastlarsa · ertesi günü"
+   ]
+  },
+  {
+   "id": "26-72",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yetkili mahkeme",
+   "hukum": "Davaya bakma yetkisi suçun işlendiği yer mahkemesine aittir; teşebbüste son icra hareketinin yapıldığı, kesintisiz suçlarda kesintinin gerçekleştiği, zincirleme suçlarda son suçun işlendiği yer mahkemesi yetkilidir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "teşebbüste \"ilk icra hareketi\" denir"
+   ],
+   "dogrusu": [
+    "suçun işlendiği yer · son icra hareketinin · kesintinin gerçekleştiği · son suçun işlendiği"
+   ]
+  },
+  {
+   "id": "26-73",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Bağlantı",
+   "hukum": "Bir kişi birden fazla suçtan sanık olursa veya bir suçta birden fazla sanık bulunursa bağlantı var sayılır; suçtan sonra suçluyu kayırma, delilleri yok etme, gizleme veya değiştirme fiilleri de bağlantılı suç sayılır (m.8)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bağlantı var sayılır · suçluyu kayırma, delilleri yok etme, gizleme veya değiştirme"
+   ]
+  },
+  {
+   "id": "26-74",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Tanığın çağrılması",
+   "hukum": "Tanıklar çağrı kâğıdı ile çağrılır ve gelmemenin sonuçları bildirilir; çağrı telefon, telgraf, faks, elektronik posta gibi araçlarla da yapılabilir, ancak bu durumda çağrı kâğıdına bağlanan sonuçlar uygulanmaz (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"e-posta ile çağrı da aynı sonucu doğurur\" denir"
+   ],
+   "dogrusu": [
+    "çağrı kâğıdı · elektronik posta · çağrı kâğıdına bağlanan sonuçlar uygulanmaz"
+   ]
+  },
+  {
+   "id": "26-75",
+   "madde": [
+    "74"
+   ],
+   "baslik": "Gözlem altına alma",
+   "hukum": "Şüpheli veya sanığın akıl hastası olup olmadığını saptamak için, uzman hekimin önerisi üzerine, savcı ve müdafiin dinlenmesinden sonra resmî sağlık kurumunda gözlem altına alınmasına soruşturmada sulh ceza hâkimi, kovuşturmada mahkeme karar verir. Gözlem süresi üç haftayı, ek sürelerle toplam üç ayı geçemez (m.74)",
+   "sinavda_boyle_yazarlar": [
+    "süreler karıştırılır"
+   ],
+   "dogrusu": [
+    "akıl hastası olup olmadığını · uzman hekimin önerisi · sulh ceza hâkimi · mahkeme · üç haftayı · üç ayı"
+   ]
+  },
+  {
+   "id": "26-76",
+   "madde": [
+    "75"
+   ],
+   "baslik": "İç beden muayenesi",
+   "hukum": "Şüpheli/sanık üzerinde iç beden muayenesi yapılmasına veya kan, tükürük, saç, tırnak gibi örnek alınmasına savcı veya mağdurun istemiyle ya da re'sen hâkim/mahkeme, gecikmesinde sakınca varsa Cumhuriyet savcısı karar verir; savcının kararı yirmi dört saat içinde hâkim onayına sunulur. Üst sınırı iki yıldan az hapis cezasını gerektiren suçlarda iç beden muayenesi yapılamaz, örnek alınamaz. Cinsel organlar veya anüs bölgesinde yapılan muayene de iç beden muayenesi sayılır (m.75)",
+   "sinavda_boyle_yazarlar": [
+    "\"kolluk amiri de karar verebilir\" denir ya da iki yıl sınırı kaldırılır"
+   ],
+   "dogrusu": [
+    "hâkim/mahkeme · Cumhuriyet savcısı · yirmi dört saat · Üst sınırı iki yıldan az · Cinsel organlar veya anüs bölgesinde yapılan muayene de iç beden muayenesi sayılır"
+   ]
+  },
+  {
+   "id": "26-77",
+   "madde": [
+    "79"
+   ],
+   "baslik": "Moleküler genetik inceleme",
+   "hukum": "Moleküler genetik incelemelere sadece hâkim karar verebilir; incelenecek bulgu bilirkişiye adı, soyadı, adresi ve doğum tarihi bildirilmeksizin verilir (m.79)",
+   "sinavda_boyle_yazarlar": [
+    "savcıya da yetki verilir"
+   ],
+   "dogrusu": [
+    "sadece hâkim · adı, soyadı, adresi ve doğum tarihi bildirilmeksizin"
+   ]
+  },
+  {
+   "id": "26-78",
+   "madde": [
+    "83"
+   ],
+   "baslik": "Keşif",
+   "hukum": "Keşif; hâkim, mahkeme, naip hâkim, istinabe olunan hâkim/mahkeme ile gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı tarafından yapılır (m.83)",
+   "sinavda_boyle_yazarlar": [
+    "kolluğa yetki verilir"
+   ],
+   "dogrusu": [
+    "gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı"
+   ]
+  },
+  {
+   "id": "26-79",
+   "madde": [
+    "85"
+   ],
+   "baslik": "Yer gösterme",
+   "hukum": "Cumhuriyet savcısı, yüklenen suç hakkında açıklamada bulunmuş şüpheliye yer gösterme işlemi yaptırabilir; belirli ağır suçlarda adlî kolluk amiri de yaptırmaya yetkilidir. Soruşturmayı geciktirmemek kaydıyla müdafi de hazır bulunabilir (m.85)",
+   "sinavda_boyle_yazarlar": [
+    "\"her şüpheliye yaptırılabilir\" denir"
+   ],
+   "dogrusu": [
+    "açıklamada bulunmuş · adlî kolluk amiri de · müdafi de hazır bulunabilir"
+   ]
+  },
+  {
+   "id": "26-80",
+   "madde": [
+    "38"
+   ],
+   "baslik": "UYAP zorunluluğu",
+   "hukum": "Her türlü ceza muhakemesi işleminde UYAP kullanılır; elektronik imzalı belgenin elle atılan imzalı belgeyle çelişmesi hâlinde UYAP'taki güvenli elektronik imzalı belge geçerli kabul edilir; elektronik ortamda yapılan işlemlerde süre gün sonunda biter (m.38/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"ıslak imzalı belge üstündür\" denir"
+   ],
+   "dogrusu": [
+    "UYAP kullanılır · elle atılan imzalı belgeyle çelişmesi · UYAP'taki güvenli elektronik imzalı belge · süre gün sonunda"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

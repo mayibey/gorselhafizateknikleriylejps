@@ -1,0 +1,875 @@
+{
+ "kanun_id": 2,
+ "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_2.json",
+ "kartlar": [
+  {
+   "id": "2-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanım",
+   "hukum": "Türkiye Cumhuriyeti Jandarması; emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan ve diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getiren silahlı genel kolluk kuvvetidir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"askerî kolluk kuvveti\" ya da \"özel kolluk\" denir"
+   ],
+   "dogrusu": [
+    "silahlı genel kolluk kuvvetidir (m.3)"
+   ]
+  },
+  {
+   "id": "2-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bağlılık",
+   "hukum": "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Millî Savunma Bakanlığına\" veya \"Cumhurbaşkanlığına\""
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığına (m.4)"
+   ]
+  },
+  {
+   "id": "2-2",
+   "madde": [
+    "1",
+    "2"
+   ],
+   "baslik": "Kanunun konusu ve kapsamı",
+   "hukum": "Kanun, Jandarma Teşkilatının görev, yetki ve sorumluluklarını, hizmetin gerektirdiği bağlılık ve ilişkileri, teşkilat ve konuşa ait esasları düzenler; karargâh, birlik ve kurumlar ile buralarda hizmet gören personeli kapsar (m.1, m.2)",
+   "sinavda_boyle_yazarlar": [
+    "kapsama \"erbaş ve erlerin özlük hakları\" gibi ayrı kanunlara ait konular eklenir"
+   ],
+   "dogrusu": [
+    "Kanun, Jandarma Teşkilatının görev …"
+   ]
+  },
+  {
+   "id": "2-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kuruluş ve konuş",
+   "hukum": "Kuruluş, kadrolar ve konuş yerleri İçişleri Bakanlığınca düzenlenir; seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek birlikler için Genelkurmay Başkanlığının görüşü alınır; düzenlemede mülki taksimat esas alınır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genelkurmay Başkanlığınca düzenlenir\" veya \"görüşü alınmaz\""
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığınca · Genelkurmay Başkanlığının görüşü · mülki taksimat esas (m.5)"
+   ]
+  },
+  {
+   "id": "2-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Bölge teşkilatı",
+   "hukum": "Geçici olarak birden çok ili içine alan bölge teşkilatı kurulabilir; bölge komutanı, bölge teşkilatının konuşlu bulunduğu ilin valisine karşı sorumlu olarak görev yapar (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma Genel Komutanına karşı sorumludur\"",
+    "Jandarma Genel Komutanına karşı sorumludur"
+   ],
+   "dogrusu": [
+    "Bölge komutanı konuşlu olduğu ilin valisine karşı sorumlu (m.5)"
+   ]
+  },
+  {
+   "id": "2-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Jandarma Genel Komutanı",
+   "hukum": "Tüm Jandarma Teşkilatının komutanıdır; teşkilatın sevk ve idaresinden, kanun ve nizam hükümlerinin icrasını sağlamaktan sorumludur (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"bütçenin hazırlanmasından sorumludur\" gibi ekleme"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanı"
+   ]
+  },
+  {
+   "id": "2-6",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Bütçe",
+   "hukum": "Jandarma Genel Komutanlığının bütçesi, İçişleri Bakanlığının bünyesinde ve bu Bakanlığın bütçesinden ayrı olarak düzenlenir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığı bütçesi içinde\" denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığının bünyesinde ve bu Bakanlığın bütçesinden ayrı (m.18)"
+   ]
+  },
+  {
+   "id": "2-7",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Mülki görevler",
+   "hukum": "Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak; kaçakçılığı men, takip ve tahkik etmek; suç işlenmesini önleyici tedbirleri almak; ceza infaz kurumları ve tutukevlerinin dış korunmalarını yapmak (m.7/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"işlenmiş suçlarla ilgili işlemleri yapmak\" mülki görev gibi gösterilir — o adli görevdir"
+   ],
+   "dogrusu": [
+    "ceza infaz kurumları ve tutukevlerinin dış korunmalarını (m.7/a)"
+   ]
+  },
+  {
+   "id": "2-8",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Adli görevler",
+   "hukum": "İşlenmiş suçlarla ilgili kanunlarda belirtilen işlemleri yapmak ve bunlara ilişkin adli hizmetleri yerine getirmek (m.7/b)",
+   "sinavda_boyle_yazarlar": [
+    "mülki görevle karıştırılır"
+   ],
+   "dogrusu": [
+    "Adli görevler"
+   ]
+  },
+  {
+   "id": "2-9",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Askerî görevler",
+   "hukum": "Kanunlarla ve Cumhurbaşkanlığı kararnameleriyle verilen askerî hizmetleri yerine getirmek (m.7/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genelkurmay Başkanlığınca verilen\""
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanlığı kararnameleriyle (m.7/c)"
+   ]
+  },
+  {
+   "id": "2-10",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Seferberlik ve savaş",
+   "hukum": "Jandarma birlikleri, seferberlik ve savaş hâllerinde Cumhurbaşkanı kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer, kalanıyla normal görevine devam eder (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genelkurmay Başkanının kararıyla\"",
+    "Genelkurmay Başkanının kararıyla"
+   ],
+   "dogrusu": [
+    "Seferberlik/savaşta emre girecek bölüm Cumhurbaşkanı kararıyla (m.8)"
+   ]
+  },
+  {
+   "id": "2-11",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Askerî görev verilmesi",
+   "hukum": "Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının, illerde ise garnizon komutanının talebi hâlinde valinin onayıyla askerî görev yapılır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "ikili \"Cumhurbaşkanı – İçişleri Bakanı\" ya da \"MSB – JGnK\" diye değiştirilir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanının · valinin onayıyla (m.8)"
+   ]
+  },
+  {
+   "id": "2-12",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Hizmet sınırı",
+   "hukum": "Kanun ve nizamlar ile bunlara dayalı emir ve kararların öngörmediği hiçbir görev jandarmadan istenemez (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"mülki amirin uygun gördüğü her görev istenebilir\""
+   ],
+   "dogrusu": [
+    "öngörmediği hiçbir görev (m.9)"
+   ]
+  },
+  {
+   "id": "2-13",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Görev ve sorumluluk alanı",
+   "hukum": "Genel olarak polis görev sahası dışı olup, il ve ilçe belediye hudutları haricinde kalan veya polis teşkilatı bulunmayan yerlerdir; belediye sınırları içinde olmakla birlikte hizmet gerekleri bakımından uygun görülen yerler de jandarma alanı olarak tespit edilebilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"belediye sınırları içinde asla jandarma alanı belirlenemez\"",
+    "Belediye sınırları içinde asla belirlenemez"
+   ],
+   "dogrusu": [
+    "Belediye sınırları içinde de jandarma alanı tespit edilebilir (m.10)"
+   ]
+  },
+  {
+   "id": "2-14",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sınır belirleme komisyonu",
+   "hukum": "Sınırlar, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katıldığı bir komisyonca belirlenir; komisyon vali/kaymakamın çağrısıyla toplanır; kararlar İçişleri Bakanının onayıyla yürürlüğe girer; sınırlar karara eklenen harita/kroki ile gösterilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "onay makamı \"vali\" gösterilir",
+    "Jandarma Genel Komutanlığının kararıyla belirlenir"
+   ],
+   "dogrusu": [
+    "İl/ilçenin tamamını alan olarak belirleme İçişleri Bakanının (m.10)"
+   ]
+  },
+  {
+   "id": "2-15",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sınır değişikliğinde süre",
+   "hukum": "Büyükşehir/il/ilçe belediyesi kurulması, kaldırılması ya da kentleşme vb. sebeplerle sınırlar değişirse, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içinde sorumluluk alanları yeniden düzenlenir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"altı ay\" veya \"bir yıl\""
+   ],
+   "dogrusu": [
+    "en geç üç ay (m.10)"
+   ]
+  },
+  {
+   "id": "2-16",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Karşılıklı görevlendirme",
+   "hukum": "Jandarma veya Emniyet kendi sahasında yetersiz kalırsa, mahalli mülki amirler tarafından birbirlerinin sorumluluk sahalarında geçici olarak görevlendirilebilirler (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanı tarafından\" veya \"sürekli olarak\""
+   ],
+   "dogrusu": [
+    "mahalli mülki amirler · geçici olarak (m.10)"
+   ]
+  },
+  {
+   "id": "2-17",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Silah kullanma",
+   "hukum": "Jandarma, görevlerin ifası sırasında hizmet özelliğine uygun ve görevin gereği olarak kanunlarda öngörülen silah kullanma yetkisine sahiptir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"yönetmelikle belirlenen yetkiye sahiptir\""
+   ],
+   "dogrusu": [
+    "kanunlarda öngörülen (m.11)"
+   ]
+  },
+  {
+   "id": "2-18",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Kurumlar arası geçici görevlendirme",
+   "hukum": "Lüzum görülen hâllerde İçişleri Bakanı tarafından EGM, SGK ve JGnK arasında her kademedeki personel geçici görevlendirilebilir; İçişleri Bakanı bu yetkisini il valilerine devredebilir; aynı Bakanın onayıyla silah, mühimmat, taşıt ve taşınmazlar karşılıklı geçici tahsis veya bedelsiz devir edilebilir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "yetki devri \"Jandarma Genel Komutanına\" denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı · il valilerine devredebilir (m.12)"
+   ]
+  },
+  {
+   "id": "2-19",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Nasıp",
+   "hukum": "Subaylığa ve astsubaylığa nasıp işlemleri İçişleri Bakanlığının onayıyla yapılır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "Cumhurbaşkanı onayıyla",
+    "Jandarma Genel Komutanının onayıyla"
+   ],
+   "dogrusu": [
+    "Nasıp İçişleri Bakanlığı onayıyla (m.13)"
+   ]
+  },
+  {
+   "id": "2-20",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Görevde bırakma yaşı",
+   "hukum": "Rütbede bekleme süresinin dolması ya da kadrosuzluk nedeniyle emekliye sevk durumunda olup hizmetine ihtiyaç duyulan albaylar 60, generaller 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "albay için \"58\" veya \"65\" verilir"
+   ],
+   "dogrusu": [
+    "albaylar 60 · generaller 65 · İçişleri Bakanının onayıyla (m.13)"
+   ]
+  },
+  {
+   "id": "2-21",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Kadrosuzluk tazminatıyla emeklilik",
+   "hukum": "Albay ve üstü rütbelerde bekleme süreleri dolmadan, kadrosuzluk tazminatı ödenmek suretiyle Cumhurbaşkanı onayı ile emekliye sevk edilebilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanı onayı\""
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı onayı (m.13)"
+   ]
+  },
+  {
+   "id": "2-22",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Uygulanacak mevzuat",
+   "hukum": "Jandarma Hizmetleri Sınıfı personelinin özlük işlerinde, bu Kanunda hüküm yoksa 657 sayılı Kanun; nasıp-terfi, aylık ve diğer mali/sosyal haklarda statü ve rütbeye göre 926, 4678, 3466, 3269 ve 6191 sayılı Kanunlar uygulanır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "sıralama tersine çevrilir (\"her hâlde 926 uygulanır\")"
+   ],
+   "dogrusu": [
+    "657 sayılı Kanun · 926, 4678, 3466, 3269 ve 6191 sayılı Kanunlar (m.13)"
+   ]
+  },
+  {
+   "id": "2-23",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Atama yetkisi",
+   "hukum": "Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanların ataması İçişleri Bakanınca yapılır; nokta ataması yapılmayan subay, astsubay ve uzman jandarmalar valilik emrine atanır, istihdam yerleri ve il içi yer değiştirmeleri vali tarafından yapılır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "il içi yer değiştirme \"il jandarma komutanı\" denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanınca · valilik emrine · vali (m.14)"
+   ]
+  },
+  {
+   "id": "2-24",
+   "madde": [
+    "161",
+    "15"
+   ],
+   "baslik": "Disiplin ve soruşturma",
+   "hukum": "(a) Disiplin işleri özel kanun hükümlerine göre; (b) mülki görevlerden doğan suçlarda 4483 sayılı Kanun; (c) adli görevlerden doğan suçlarda CMK m.161/5; (d) askerî görevlerden doğan suçlarda emrine verildiği askerî birlik personelini muhakemeyle görevli mahkeme; (e) kişisel suçlarda genel hükümler (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "Kişisel suçlarda 4483 sayılı Kanuna göre işlem yapılır"
+   ],
+   "dogrusu": [
+    "Kişisel suçlarda genel hükümlere göre işlem yapılır (m.15/e)"
+   ]
+  },
+  {
+   "id": "2-25",
+   "madde": [
+    "15"
+   ],
+   "baslik": "İlişik kesme",
+   "hukum": "Ertelenmiş, HAGB'ye bağlanmış veya affa uğramış olsa bile; Devletin güvenliğine, anayasal düzene, milli savunmaya, Devlet sırlarına karşı suçlar ve casusluk, zimmet, irtikâp, rüşvet, iftira, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat, edimin ifasına fesat, aklama veya kaçakçılık suçlarından ya da kasten işlenen bir suçtan bir yıl veya daha fazla hapse mahkûm olan subay, astsubay ve uzman jandarmanın ilişiği İçişleri Bakanının onayı ile kesilir (m.15)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "zimmet, irtikâp, rüşvet, iftira, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat, edimin ifasına fesat, aklama veya kaçakçılık · kasten işlenen bir suçtan bir yıl veya daha fazla · İçişleri Bakanının onayı (m.15)"
+   ]
+  },
+  {
+   "id": "2-26",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Önleme aramasının sınırı",
+   "hukum": "Konutta, yerleşim yerinde ve eklentilerinde önleme araması yapılamaz (m.15/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"hâkim kararıyla konutta da yapılabilir\"",
+    "Aramayı yapacak personelin adı ve soyadı da yazılır",
+    "Hâkim kararıyla konutta da yapılabilir"
+   ],
+   "dogrusu": [
+    "Arama kararında sebep, konu-kapsam, yer, zaman ve süre bulunur (m.15/A)",
+    "Konut ve eklentilerinde önleme araması yapılamaz (m.15/A)"
+   ]
+  },
+  {
+   "id": "2-27",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Denetim ve teftiş",
+   "hukum": "Jandarmanın eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir (Ek m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız kendi amirleri\" ya da \"Genelkurmay Başkanlığı\" eklenir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri"
+   ]
+  },
+  {
+   "id": "2-28",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Değerlendirme raporu",
+   "hukum": "İl jandarma komutanı ile merkez ilçe jandarma komutanı hakkında il valisince; ilçe jandarma komutanı hakkında kaymakamın değerlendirmesi alınarak il valisi tarafından her yıl sonunda düzenlenir; raporlar terfi, ödüllendirme, atama ve yer değiştirmede dikkate alınır; içerik ve esaslar İçişleri Bakanlığı yönetmeliğiyle belirlenir (Ek m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Millî Savunma Bakanlığı yönetmeliğiyle"
+   ],
+   "dogrusu": [
+    "Değerlendirme raporu esasları İçişleri Bakanlığı yönetmeliğiyle (Ek m.2)"
+   ]
+  },
+  {
+   "id": "2-29",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yetki devri",
+   "hukum": "İçişleri Bakanı, bu Kanundaki yetkilerinden bir kısmını, sınırlarını yazılı olarak açıkça belirlemek şartıyla ilgisine göre Jandarma Genel Komutanına veya valilere devredebilir (Ek m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"sözlü olarak da devredilebilir\""
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı · yazılı olarak açıkça belirlemek şartıyla · Jandarma Genel Komutanına veya valilere"
+   ]
+  },
+  {
+   "id": "2-30",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kanunun üstünlüğü",
+   "hukum": "Diğer kanunlarda bu Kanuna aykırı hüküm bulunursa bu Kanun uygulanır; uygulamadaki tereddütleri gidermeye İçişleri Bakanlığı yetkilidir (Ek m.7)",
+   "sinavda_boyle_yazarlar": [
+    "tereddüt giderme \"Cumhurbaşkanlığı\"na verilir"
+   ],
+   "dogrusu": [
+    "bu Kanun · İçişleri Bakanlığı"
+   ]
+  },
+  {
+   "id": "2-31",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Yönetmelik",
+   "hukum": "Teşkilat, görev, yetki ve sorumluluklar, komuta-kontrol ilişkileri, terfi işleri, değerlendirme, ödüllendirme, kılık-kıyafet Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığınca çıkarılan yönetmelikle\""
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanınca (m.24)"
+   ]
+  },
+  {
+   "id": "2-32",
+   "madde": [
+    "7",
+    "5"
+   ],
+   "baslik": "Önleyici dinleme yetkisi",
+   "hukum": "Jandarma, m.7/a görevlerini yerine getirirken sadece kendi sorumluluk alanında, hâkim kararı veya gecikmesinde sakınca bulunan hâllerde Jandarma Genel Komutanı veya İstihbarat Başkanının yazılı emriyle iletişimi tespit edebilir, dinleyebilir, sinyal bilgilerini değerlendirebilir, kayda alabilir (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "yazılı emir yetkisi \"İçişleri Bakanı\"na verilir; \"tüm ülke genelinde\" denir"
+   ],
+   "dogrusu": [
+    "sadece kendi sorumluluk alanında · hâkim kararı · Jandarma Genel Komutanı veya İstihbarat Başkanının yazılı emriyle"
+   ]
+  },
+  {
+   "id": "2-33",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Onay ve karar süreleri",
+   "hukum": "Yazılı emir 24 saat içinde yetkili hâkimin onayına sunulur; hâkim kararını en geç 48 saat içinde verir; süre dolar veya hâkim aksine karar verirse tedbir derhal kaldırılır; kayıtlar en geç on gün içinde yok edilir ve tutanakla tespit olunur (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "24/48 saat rakamları yer değiştirilir"
+   ],
+   "dogrusu": [
+    "24 saat · en geç 48 saat · derhal · en geç on gün"
+   ]
+  },
+  {
+   "id": "2-34",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Yetkili hâkim ve süre",
+   "hukum": "Yetkili ve görevli hâkim Ankara ağır ceza mahkemesi üyesidir; kararlar en fazla üç ay için verilir, üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir; terör örgütünün faaliyeti çerçevesinde devam eden tehlikelerde hâkim üç ayı aşmamak üzere müteaddit defalar uzatabilir (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"en fazla iki defa\" veya \"İstanbul ağır ceza\""
+   ],
+   "dogrusu": [
+    "Ankara ağır ceza mahkemesi üyesidir · en fazla üç ay · üçer ayı geçmeyecek şekilde en fazla üç defa · müteaddit defalar"
+   ]
+  },
+  {
+   "id": "2-35",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Denetim",
+   "hukum": "Faaliyetler sıralı kurum amirleri, mülki idare amirleri, JGnK ve ilgili bakanlığın teftiş elemanlarınca yılda en az bir defa denetlenir; sonuçlar rapor hâlinde TBMM Güvenlik ve İstihbarat Komisyonuna sunulur (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki yılda bir\" ya da rapor makamı \"Cumhurbaşkanlığı\""
+   ],
+   "dogrusu": [
+    "yılda en az bir defa · TBMM Güvenlik ve İstihbarat Komisyonuna"
+   ]
+  },
+  {
+   "id": "2-36",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Hukuka aykırı dinleme",
+   "hukum": "Usule aykırı dinlemeler hukuken geçerli sayılmaz; dinleme yapanlar hakkında TCK hükümlerine göre işlem yapılır; gizlilik kuralına aykırı davrananlar hakkında, görev sırasında/görevden dolayı işlenmiş olsa bile Cumhuriyet savcılarınca doğrudan soruşturma yapılır (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"izin sistemine tabidir\" denir"
+   ],
+   "dogrusu": [
+    "hukuken geçerli sayılmaz · Cumhuriyet savcılarınca doğrudan"
+   ]
+  },
+  {
+   "id": "2-37",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Yıllık izin",
+   "hukum": "Her yıl 30 gün yıllık izin; yol dâhil değildir; ayrıca kısa süreli mazeretler için 15 güne kadar yıllık mazeret izni verilebilir (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "30 güne \"yol dâhildir\" denir ya da mazeret izni 10 güne düşürülür",
+    "Yol dâhil 30 gündür"
+   ],
+   "dogrusu": [
+    "Yıllık izin 30 gün ve yol dâhil değil (Ek m.3)"
+   ]
+  },
+  {
+   "id": "2-38",
+   "madde": [
+    "3"
+   ],
+   "baslik": "İznin planlanması ve devri",
+   "hukum": "Yıllık izinlerin verilmesi, zaman ve süresi birlik, karargâh ve kurum amirlerince düzenlenir; senesi içinde kullanılması esastır; zorunlu nedenlerle kullanılamayan izin ertesi yıl verilebilir, ancak toplam 60 günü geçemez (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"90 gün\" veya \"sınırsız devreder\"",
+    "İçişleri Bakanınca",
+    "Birlik amirlerince"
+   ],
+   "dogrusu": [
+    "İzin kısaltma/kaldırma Cumhurbaşkanına ait (Ek m.3)"
+   ]
+  },
+  {
+   "id": "2-39",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Mazeret izinleri",
+   "hukum": "Eşin doğum yapması, eşin/çocuğun/ana-baba veya kardeşin (kendisinin ya da eşinin) ölümü hâllerinin her birinde 10 güne kadar; kendisinin veya çocuğunun evlenmesinde 7 güne kadar; yangın, deprem, su baskını gibi olağanüstü mazerette bir yıl içinde 30 güne kadar (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "evlenme izni 10 gün, ölüm izni 7 gün diye ters çevrilir"
+   ],
+   "dogrusu": [
+    "10 güne kadar · 7 güne kadar · 30 güne kadar"
+   ]
+  },
+  {
+   "id": "2-40",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Özel izinler",
+   "hukum": "Radyoaktif ışınlarla çalışanlara yıllık izinden ayrı her yıl bir ay; refakat gerektiren ağır hastalıkta sağlık kurulu raporuyla 3 aya kadar (gerekirse bir katına kadar uzatılır) izin, bitiminde istek üzerine 6 aya kadar aylıksız izin; en az %70 engelli/süreğen hastalıklı çocuk için ana veya babadan yalnız biri kullanmak kaydıyla yılda 10 güne kadar (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "refakat izni \"6 ay\" gösterilir; %70 oranı %40'a çekilir"
+   ],
+   "dogrusu": [
+    "bir ay · 3 aya kadar · bir katına kadar · 6 aya kadar aylıksız izin · %70 engelli/süreğen hastalıklı çocuk · 10 güne kadar"
+   ]
+  },
+  {
+   "id": "2-41",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Doğum izni",
+   "hukum": "Doğumdan önce 8 hafta, doğumdan sonra 16 hafta, toplam 24 hafta aylıklı izin; çoğul gebelikte doğum öncesine 2 hafta eklenir; sağlık durumu uygun raporluysa doğumdan önceki 2 haftaya kadar çalışabilir, çalışılan süre doğum sonrasına eklenir (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "8/16 rakamları yer değiştirilir ya da toplam 16 hafta denir"
+   ],
+   "dogrusu": [
+    "8 hafta · 16 hafta · 24 hafta · çoğul gebelikte · 2 hafta · 2 haftaya kadar"
+   ]
+  },
+  {
+   "id": "2-42",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sıhhi izin süreleri",
+   "hukum": "Geçici hastalıklarda (teşhis-tedavi süreleri hariç) toplam ve fiilen iki yılı; kanser, kötü huylu tümör, verem, kronik böbrek yetmezliği, akıl ve ruh hastalıkları gibi uzun süreli tedavi gerektirenlerde üç yılı geçmemek üzere; iklim değiştirme raporu alanlarda sıhhi izin süresi dört yıl olarak hesaplanır (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "2/3/4 yıl kademeleri kaydırılır"
+   ],
+   "dogrusu": [
+    "iki yılı · üç yılı · dört yıl"
+   ]
+  },
+  {
+   "id": "2-43",
+   "madde": [
+    "15",
+    "14"
+   ],
+   "baslik": "Tazminat yükümlülüğü",
+   "hukum": "Mecburi hizmet süresi içinde istifa eden veya sağlık hariç her ne suretle olursa olsun ilişiği kesilenler masrafların iki katını; m.15 kapsamında ilişiği kesilenler ile 7068 sayılı Kanun kapsamında meslekten/Devlet memurluğundan çıkarılanlar masrafların dört katını, eksik kalan süreyle orantılı ve kanuni faiziyle öder; yurt dışına gidenlerden ayrıca aldıkları aylık ve masrafların dört katı alınır (Ek m.14)",
+   "sinavda_boyle_yazarlar": [
+    "iki kat/dört kat ayrımı silinir",
+    "Eğitim süresi kadar uzatılır"
+   ],
+   "dogrusu": [
+    "Pilotaj uzatması 6 yıl (Ek m.14)"
+   ]
+  },
+  {
+   "id": "2-44",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Uzman erbaş adayı",
+   "hukum": "Müracaat yapılan yılın ocak ayının ilk günü itibarıyla yirmi yedi yaşını bitirmemiş olmak gerekir; askerlik yükümlülüğüne başlamadan kabul edilenlerle beş yıllık sözleşme yapılır, askerlik işlemleri ertelenir; üç yıllık hizmetini tamamlayan askerlik hizmetini yerine getirmiş sayılır; üç yılı doldurmadan ilişiği kesilen askerlik hizmetini yapar (Ek m.13)",
+   "sinavda_boyle_yazarlar": [
+    "27 → 25/29 yaş; 3 yıl → 5 yıl"
+   ],
+   "dogrusu": [
+    "ocak ayının ilk günü · yirmi yedi yaşını bitirmemiş · beş yıllık · üç yıllık hizmetini tamamlayan askerlik hizmetini yerine getirmiş sayılır"
+   ]
+  },
+  {
+   "id": "2-45",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Astsubay kıdemli başçavuşta yaş uzatımı",
+   "hukum": "Emsalleri arasında temayüz etmiş, hizmetine ihtiyaç duyulan ve sicil notu ortalaması sicil tam notunun %90'ının (dâhil) üzerinde olan istekli astsubay kıdemli başçavuşların yaş haddi, JGnK teklifi üzerine veya resen İçişleri Bakanı tarafından 60 yaşına kadar uzatılabilir (Ek m.18)",
+   "sinavda_boyle_yazarlar": [
+    "%90 → %80; makam \"Cumhurbaşkanı\""
+   ],
+   "dogrusu": [
+    "sicil notu ortalaması sicil tam notunun %90'ının (dâhil) üzerinde · istekli · İçişleri Bakanı · 60 yaşına kadar"
+   ]
+  },
+  {
+   "id": "2-46",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Uzman jandarmalıktan astsubaylığa geçenlerin yaş hadleri",
+   "hukum": "Astsubay çavuş ve kıdemli çavuş 43; üstçavuş ve kıdemli üstçavuş 52; başçavuş 54; kıdemli başçavuş 55 (Ek m.16)",
+   "sinavda_boyle_yazarlar": [
+    "rakamlar bir kademe kaydırılır"
+   ],
+   "dogrusu": [
+    "43 · 52 · 54 · 55"
+   ]
+  },
+  {
+   "id": "2-47",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Astsubaylıktan subaylığa geçenlerin yaş hadleri",
+   "hukum": "Teğmen-Üsteğmen 49, Yüzbaşı 55, Binbaşı 56, Yarbay 57, Albay 60 (Geçici m.12)",
+   "sinavda_boyle_yazarlar": [
+    "albay 65 gösterilir"
+   ],
+   "dogrusu": [
+    "49 · 55 · 56 · 57 · 60"
+   ]
+  },
+  {
+   "id": "2-48",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Sözleşmeliden muvazzafa geçiş yaş sınırı",
+   "hukum": "Subaylar için yüzbaşılık rütbe yaş haddi, astsubaylar için astsubay kıdemli üstçavuşluk rütbe yaş haddi üst sınır olarak uygulanır; normal bekleme süresi bitiminden sonra geçenler geçmişe yönelik hak talep edemez (Ek m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"binbaşılık yaş haddi\" denir"
+   ],
+   "dogrusu": [
+    "yüzbaşılık · astsubay kıdemli üstçavuşluk · geçmişe yönelik hak talep edemez"
+   ]
+  },
+  {
+   "id": "2-49",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Nakdî ödül",
+   "hukum": "Ülkenin güvenliği ve esenliği, Devletin çıkarları, kişilerin can, ırz ve mallarını korumada yüksek hizmeti görülenlere fiilen aldıkları aylığın iki katından beş katına kadar; olağanüstü durumlarda yaşamını ortaya koyarak büyük yararlık gösterenlere aylığın altı katından yirmi dört katına kadar para ödülü verilir (Ek m.9)",
+   "sinavda_boyle_yazarlar": [
+    "2-5 ve 6-24 aralıkları yer değiştirilir"
+   ],
+   "dogrusu": [
+    "yüksek hizmeti görülenlere · iki katından beş katına kadar · olağanüstü durumlarda yaşamını ortaya koyarak büyük yararlık gösterenlere aylığın altı katından yirmi dört katına kadar"
+   ]
+  },
+  {
+   "id": "2-50",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Madalyalar",
+   "hukum": "Görevleri cesaret, feragat, kahramanlık veya üstün başarı ile yerine getirenlere İçişleri Bakanı tarafından Jandarma Üstün Cesaret ve Feragat Madalyası, Jandarma Şeref Madalyası, Jandarma Üstün Hizmet Madalyası verilebilir (Ek m.9)",
+   "sinavda_boyle_yazarlar": [
+    "listeye dördüncü bir madalya eklenir; makam \"Cumhurbaşkanı\" denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı · Jandarma Üstün Cesaret ve Feragat Madalyası · Jandarma Şeref Madalyası · Jandarma Üstün Hizmet Madalyası"
+   ]
+  },
+  {
+   "id": "2-51",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Adli yardım",
+   "hukum": "Karakol, nöbet, devriye, sevk, nakliyat muhafazası ya da emniyet-asayiş görevleri sırasında veya bu görevlerden dolayı sanık durumuna düşen personelin (karargâh personeli dâhil) vekâlet verdiği avukatın ücreti, olayın mahiyeti ve kusurun derecesine göre uygun görülürse JGnK bütçesinden karşılanır (Ek m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde karşılanır\" ya da \"mağdur olanlar için\" denir"
+   ],
+   "dogrusu": [
+    "sanık durumuna düşen · avukatın ücreti"
+   ]
+  },
+  {
+   "id": "2-52",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Er ve erbaş ihtiyacı",
+   "hukum": "JGnK'nin er, erbaş ve askerlik yükümlüsü ihtiyacı 1111 sayılı Kanun çerçevesinde Millî Savunma Bakanlığı tarafından karşılanır; Cumhurbaşkanı kararıyla süre uzatılabilir; giderleri JGnK bütçesinden karşılanır (Geçici m.5)",
+   "sinavda_boyle_yazarlar": [
+    "gider \"MSB bütçesinden\" gösterilir"
+   ],
+   "dogrusu": [
+    "1111 sayılı Kanun · Millî Savunma Bakanlığı · Cumhurbaşkanı kararıyla · JGnK bütçesinden"
+   ]
+  },
+  {
+   "id": "2-53",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Gözaltına alınanların masrafı",
+   "hukum": "Gözaltına alınanların yeme, içme ihtiyaçları ve nakillerine ait masraflar Jandarma Genel Komutanlığı bütçesine konulacak ödenekle karşılanır (Ek m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adalet Bakanlığı bütçesinden\""
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı bütçesine"
+   ]
+  },
+  {
+   "id": "2-54",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Asayiş tazminatı",
+   "hukum": "En yüksek Devlet memuru aylığının (ek gösterge dâhil) komando ve sınır birliklerinde %52, diğer karargâh, birlik ve kurumlarda %40 tutarını geçmemek üzere, İçişleri Bakanlığınca belirlenecek esaslara göre fazla çalışma karşılığı ödenir; damga vergisi hariç hiçbir vergi ve kesinti yapılmaz (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "oranlar yer değiştirilir veya \"hiçbir vergi kesilmez\" denir (damga vergisi kesilir)",
+    "Hiçbir vergi ve kesinti yapılmaz"
+   ],
+   "dogrusu": [
+    "Asayiş tazminatından damga vergisi hariç kesinti yapılmaz (m.21)"
+   ]
+  },
+  {
+   "id": "2-55",
+   "madde": [
+    "19"
+   ],
+   "baslik": "İkmal",
+   "hukum": "JGnK her türlü ihtiyacını ve silah-mühimmatını İçişleri Bakanlığınca belirlenecek standartlara uygun olarak kendi bütçesinden karşılar; Savunma Sanayii Destekleme Fonundan TSK'nın tabi olduğu usullerle yararlanır; seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek birliklerin her türlü ihtiyacı (sefer stokları dâhil) Millî Savunma Bakanlığınca sağlanır (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "sefer ihtiyacı da \"kendi bütçesinden\" denir",
+    "Her hâlde JGnK bütçesinden karşılanır"
+   ],
+   "dogrusu": [
+    "Sefer birliklerinin ihtiyacı MSB'ce sağlanır (m.19)"
+   ]
+  },
+  {
+   "id": "2-56",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Statü",
+   "hukum": "Akademi; ön lisans, lisans ve lisansüstü eğitim-öğretim, bilimsel araştırma ve yayın yapmak üzere bünyesinde fakülte, enstitü, astsubay meslek yüksekokulları, eğitim ve araştırma merkezleri ve kurslar bulunan, İçişleri Bakanlığına bağlı bir yükseköğretim kurumudur; ihtiyaçları JGnK bütçesinden karşılanır (m.13/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"Millî Savunma Bakanlığına bağlı\" ya da \"YÖK'e bağlı\"",
+    "Millî Savunma Bakanlığına bağlıdır"
+   ],
+   "dogrusu": [
+    "Akademi İçişleri Bakanlığına bağlı yükseköğretim kurumu (m.13/A)"
+   ]
+  },
+  {
+   "id": "2-57",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Akademi Başkanı",
+   "hukum": "En az yüksek lisans düzeyinde akademik kariyere sahip Jandarma veya Sahil Güvenlik Hizmetleri Sınıfından general, amiral veya albaylar ya da profesör öğretim üyeleri arasından İçişleri Bakanı tarafından atanır; en fazla dört başkan yardımcısı atanır; dekanların ataması da İçişleri Bakanınca yapılır (m.13/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"doktora\" şartı ya da \"Cumhurbaşkanı atar\"; yardımcı sayısı \"iki\" gösterilir"
+   ],
+   "dogrusu": [
+    "yüksek lisans · general, amiral veya albaylar · profesör · İçişleri Bakanı · dört başkan yardımcısı · dekanların ataması da İçişleri Bakanınca (m.13/A)"
+   ]
+  },
+  {
+   "id": "2-58",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Uzman erbaş ve sözleşmeli er/erbaş eğitimi",
+   "hukum": "Akademinin belirlediği ilke ve standartlara göre Jandarma Eğitim Komutanlığı ile Sahil Güvenlik Eğitim Komutanlığı bünyesinde yapılır (m.13/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"Akademi bünyesinde yapılır\""
+   ],
+   "dogrusu": [
+    "Jandarma Eğitim Komutanlığı ile Sahil Güvenlik Eğitim Komutanlığı (m.13/A)"
+   ]
+  },
+  {
+   "id": "2-59",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ders ücreti sınırı",
+   "hukum": "Akademide ücret karşılığı ders vermek üzere görevlendirilenlere haftada yirmi, bir takvim yılında üç yüz altmış saati aşmamak kaydıyla ders ücreti ödenir (m.13/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"haftada on\" veya \"yılda 240 saat\""
+   ],
+   "dogrusu": [
+    "haftada yirmi · üç yüz altmış saati (m.13/A)"
+   ]
+  },
+  {
+   "id": "2-60",
+   "madde": [],
+   "baslik": "Öğrenime son verme",
+   "hukum": "Çıkmış sorularda \"öğrenime son verilme sebeplerinden biri değildir\" kalıbıyla sorulmuştur; şıklarda azami sürede tamamlayamama, 657'ye göre memur olma niteliğini kaybetme, sağlık kurulu raporu ve giriş niteliklerini taşımadığının sonradan anlaşılması gerçek sebep olarak yer alır. (İlgili fıkranın tam metni pakette yok.)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "değildir"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

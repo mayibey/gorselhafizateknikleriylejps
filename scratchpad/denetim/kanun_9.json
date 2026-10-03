@@ -1,0 +1,175 @@
+{
+ "kanun_id": 9,
+ "ad": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_9.json",
+ "kartlar": [
+  {
+   "id": "9-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Hatıraya hakaret",
+   "hukum": "Atatürk'ün hatırasına alenen hakaret eden veya söven kimse bir yıldan üç yıla kadar hapis cezası ile cezalandırılır (m.1/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"altı aydan iki yıla\", \"1-5 yıl\", \"3-5 yıl\" diye verilir",
+    "6 ay-2 yıl",
+    "1-5 yıl",
+    "3-5 yıl ve adli para"
+   ],
+   "dogrusu": [
+    "Hatıraya hakaret 1-3 yıl hapis (m.1/1)"
+   ]
+  },
+  {
+   "id": "9-1",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Sembollere zarar",
+   "hukum": "Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis verilir (m.1/2)",
+   "sinavda_boyle_yazarlar": [
+    "1-3 yıl",
+    "listeye \"portre/resim\" eklenir"
+   ],
+   "dogrusu": [
+    "Sembollere zarar 1-5 yıl ağır hapis (m.1/2)",
+    "Korunan semboller: heykel, büst, abide, kabir (m.1/2)"
+   ]
+  },
+  {
+   "id": "9-2",
+   "madde": [],
+   "baslik": "Korunan sembol listesi kapalıdır",
+   "hukum": "Heykel, büst, abide, kabir",
+   "sinavda_boyle_yazarlar": [
+    "\"Atatürk portresi/resmi\" şıkka konur; m.1/2 suçu portrede oluşmaz"
+   ],
+   "dogrusu": [
+    "Korunan sembol listesi kapalıdır"
+   ]
+  },
+  {
+   "id": "9-3",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Teşvik",
+   "hukum": "Yukarıdaki fıkralarda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır (m.1/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarı oranında artırılır\" / \"iki misli\" / \"cezalandırılmaz\" denir",
+    "cezalandırılmaz",
+    "ceza yarı oranında artırılır"
+   ],
+   "dogrusu": [
+    "Teşvik eden asıl fail gibi (m.1/3)"
+   ]
+  },
+  {
+   "id": "9-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Nitelikli hâl — yarı artırım",
+   "hukum": "Birinci maddedeki suçlar iki veya daha fazla kimse tarafından toplu olarak veya umumi ya da umuma açık mahallerde yahut basın vasıtasıyla işlenirse ceza yarı nispetinde artırılır (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "bir kat",
+    "iki kat",
+    "dörtte üç"
+   ],
+   "dogrusu": [
+    "Toplu/umuma açık/basın → yarı artırım (m.2/1)"
+   ]
+  },
+  {
+   "id": "9-5",
+   "madde": [
+    "2"
+   ],
+   "baslik": "\"Toplu\" sayısı",
+   "hukum": "İki veya daha fazla kişi (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"üç veya daha fazla\" denir"
+   ],
+   "dogrusu": [
+    "\"Toplu\" sayısı"
+   ]
+  },
+  {
+   "id": "9-6",
+   "madde": [
+    "1",
+    "2"
+   ],
+   "baslik": "Zor kullanma — bir misli artırım",
+   "hukum": "m.1'in ikinci fıkrasındaki suçlar (sembollere zarar) zor kullanılarak işlenir veya bu suretle işlenmesine teşebbüs olunursa verilecek ceza bir misli artırılır (m.2/2)",
+   "sinavda_boyle_yazarlar": [
+    "Bu artırım hatıraya hakaret suçuna da uygulanıyormuş gibi gösterilir; sadece m.1/2 içindir",
+    "hakaret suçuna da bir misli uygulanır"
+   ],
+   "dogrusu": [
+    "Zor kullanma artırımı sadece m.1/2 suçuna (m.2/2)"
+   ]
+  },
+  {
+   "id": "9-7",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Teşebbüs",
+   "hukum": "m.2/2'de teşebbüs de tamamlanmış fiil gibi bir misli artırıma tabidir (m.2/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Teşebbüs"
+   ]
+  },
+  {
+   "id": "9-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yürürlük",
+   "hukum": "Kanun yayımı tarihinde yürürlüğe girer (m.4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Yürürlük"
+   ]
+  },
+  {
+   "id": "9-9",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Yürütme",
+   "hukum": "Bu kanunu Adalet Bakanı yürütür (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "İçişleri Bakanı, Millî Savunma Bakanı, Genelkurmay Başkanı, Yargıtay Cumhuriyet Başsavcılığı",
+    "İçişleri Bakanı",
+    "Millî Savunma Bakanı"
+   ],
+   "dogrusu": [
+    "Kanunu Adalet Bakanı yürütür (m.5)"
+   ]
+  },
+  {
+   "id": "9-10",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Artırımların birlikte uygulanması",
+   "hukum": "Bir olayda hem \"toplu olarak\" hem \"umuma açık mahalde\" bulunması, MEBS 2024 sorusunda ikisi de ayrı ayrı yarı artırım gerekçesi olarak gösterilmiştir (m.2/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Artırımların birlikte uygulanması"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "3",
+   "yanlis": [
+    "şikâyete bağlıdır"
+   ],
+   "dogru": "Takibat re'sen yapılır (m.3)"
+  }
+ ]
+}

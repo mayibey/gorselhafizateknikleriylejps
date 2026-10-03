@@ -1,0 +1,771 @@
+[
+ {
+  "kanun_id": 109,
+  "madde": "3",
+  "atla": "dayanak maddesi; hüküm taşımıyor"
+ },
+ {
+  "kanun_id": 109,
+  "madde": "5",
+  "baslik": "Kantinin kuruluş ve işletilmesi",
+  "oz": "Personelin dayanıklı tüketim malları dışındaki zaruri ihtiyaçlarını ucuz ve kolay karşılamak için her birlikte kantin kurulabilir; aynı birlikte JGK'ya bağlı birden fazla kantin kurulamaz, ama şube açılabilir. Kantin, birliğin bağlı olduğu en az tugay/bölge seviyesindeki komutanlığın JGK'dan izin almasıyla kurulur ve birlik tarafından işletilir. Arazide araç ya da çadırda devam edebilir.",
+  "sorulur": [
+   "Beklenen kalıp: kantin kuruluş izni için başvuran seviye (en az tugay/bölge) ve izni veren makam (JGK) sorulur; tabur, alay ya da il komutanlığı çeldirici olur.",
+   "Beklenen kalıp: 'aynı birlikte birden fazla kantin kurulabilir' ya da 'dayanıklı tüketim malı satılır' gibi yanlış ifadeler verilip doğru-yanlış sorulur."
+  ],
+  "akilda": [
+   "Bir birlik, bir kantin; ihtiyaç varsa şube.",
+   "Kuruluşta iki imza: tugay/bölge ister, JGK izin verir. Kapatmada da JGK onayı gerekir (m.13)."
+  ],
+  "karis": [
+   {
+    "madde": "13",
+    "neden": "Kuruluşa JGK izin verir; kapatmada da JGK onayı gerekir, şubeyi birlik komutanı kapatır."
+   },
+   {
+    "madde": "12",
+    "neden": "Şube açılabilecek yerler m.12'de sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.5/a-ç)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "6",
+  "baslik": "Kantin heyetinin teşkili",
+  "oz": "Kantin heyeti 1 yıllık süre için seçimle ya da birlik komutanının atamasıyla kurulur; atamayla kurulursa görev süresi en fazla 3 yıldır. Heyette bir başkan (muvazzaf ya da sözleşmeli subay), bir muhasip üye ve bir mutemet olmak üzere en az 3 kişi bulunur ve en az 1 astsubay olması şarttır. Muhasiplik ile mutemetlik aynı kişide birleşemez.",
+  "sorulur": [
+   "Beklenen kalıp: heyetin en az kaç kişi olduğu (3), başkanın kim olduğu (subay) ve en az 1 astsubay şartı sorulur.",
+   "Beklenen kalıp: seçimle 1 yıl, atamayla en fazla 3 yıl; iki süre yer değiştirilerek tuzak kurulur. Muhasip-mutemet birleşebilir denerek şık bozulur."
+  ],
+  "akilda": [
+   "Üçlü heyet: subay başkan, muhasip, mutemet; içinde mutlaka bir astsubay.",
+   "Seçim 1 yıl, atama en çok 3 yıl. Hesabı tutan (muhasip) parayı tutamaz (mutemet)."
+  ],
+  "karis": [
+   {
+    "madde": "7",
+    "neden": "Aday sayısı asil üyenin 3 katından az olamaz (m.7)."
+   },
+   {
+    "madde": "8",
+    "neden": "Seçimde her görev için bir asil, en az 2 yedek (m.8)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.6/a-d)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "7",
+  "baslik": "Kantin heyeti adaylarının belirlenmesi",
+  "oz": "Subay, astsubay, uzman jandarma, sivil memur ve uzman erbaşlar aday olabilir; adayları birlik komutanı gösterir. Aday sayısı asil üye sayısının 3 katından az olamaz. Mal saymanları, hesap sorumluları, gerçekleştirme görevlileri ve harcama yetkisi devredilenler aday olamaz. Taksirli suçlar hariç 6 aydan fazla hapis alanlar, ceza paraya çevrilse ya da ertelense bile aday olamaz. Son 3 dönem asil üye olanlar da gösterilmez.",
+  "sorulur": [
+   "Beklenen kalıp: aday sayısının asil üye sayısının kaç katı olacağı sorulur: en az 3 katı; 'iki katı' tuzaktır.",
+   "Beklenen kalıp: kimlerin aday gösterilemeyeceği sorulur; mal saymanı, hesap sorumlusu ve 6 aydan fazla hapis alanlar listededir."
+  ],
+  "akilda": [
+   "Üçler kuralı: aday 3 kat, son 3 dönem asil olan aday olmaz, meslekte 3 görev yılını doldurmayan önerilmez.",
+   "Para ve mal sorumlusu kantinde aday olmaz; çıkar çatışması."
+  ],
+  "karis": [
+   {
+    "madde": "6",
+    "neden": "Heyet en az 3 kişi (m.6); aday sayısı asilin 3 katı (m.7)."
+   },
+   {
+    "madde": "9",
+    "neden": "Adaylık şartı sonradan kaybedilirse üye değiştirilir (m.9)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.7/a-g)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "8",
+  "baslik": "Kantin heyetinin seçimi",
+  "oz": "Asil ve yedek üyeler, personel mevcudunun en az yarıdan bir fazlasının katıldığı toplantıda gizli oy, açık tasnifle seçilir; ilk toplantıda çoğunluk yoksa ikincisinde yeter sayı aranmaz. Her görev için 1 asil, en az 2 yedek belirlenir; eşitlikte kıdemli öne geçer. Sonucu en az 3 kişilik tasnif heyeti tutanağa bağlar. Seçim Kasım ayının ilk haftasında yapılır; yeni heyet Aralık'ta eskisiyle çalışır ve 1 Ocak'ta göreve başlar.",
+  "sorulur": [
+   "Beklenen kalıp: toplantı yeter sayısı (yarıdan bir fazla) ve ikinci toplantıda yeter sayı aranmadığı sorulur.",
+   "Beklenen kalıp: seçimin zamanı (Kasım ilk hafta), yeni heyetin göreve başlama tarihi (1 Ocak) ve yedek sayısı (en az 2) sorulur."
+  ],
+  "akilda": [
+   "Kasım seç, Aralık birlikte çalış, 1 Ocak'ta devral. Atamayla gelen heyet en geç 1 Kasım'da başlar.",
+   "Gizli oy, açık tasnif; 1 asil + en az 2 yedek; tasnif heyeti en az 3 kişi."
+  ],
+  "karis": [
+   {
+    "madde": "10",
+    "neden": "Boşalan yere seçim tutanağındaki sırayla yedek gelir (m.10)."
+   },
+   {
+    "madde": "6",
+    "neden": "Seçimle kurulan heyet 1 yıl görev yapar (m.6)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.8/a-f)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "9",
+  "baslik": "Kantin heyetinin değiştirilmesi",
+  "oz": "Başkan ve üyeler; görevden kesintisiz 2 aydan fazla ayrı kalırsa, kantin göreviyle ilgili görevi kötüye kullanmadan soruşturma ya da kovuşturma açılırsa, denetleme sonucu başarısız olduklarına dair rapor düzenlenirse veya adaylık şartlarını taşımadıkları sonradan anlaşılırsa birlik komutanınca değiştirilir.",
+  "sorulur": [
+   "Beklenen kalıp: değiştirme sebepleri sorulur; kesintisiz 2 aydan fazla ayrılık, görevi kötüye kullanma soruşturması, başarısızlık raporu ve adaylık şartının kaybı.",
+   "Beklenen kalıp: değiştirme yetkisi sorulur; doğrusu birlik komutanı, JGK değil."
+  ],
+  "akilda": [
+   "Dört sebep: uzak kal (2 aydan fazla), kötüye kullan, başarısız ol, şartı kaybet.",
+   "2 aydan fazla ayrılık değiştirme sebebi; 2 ay ve daha kısa ayrılıkta geçici görevlendirme yapılır (m.10)."
+  ],
+  "karis": [
+   {
+    "madde": "10",
+    "neden": "2 ay ve daha kısa ayrılıkta değiştirme değil yazılı görevlendirme."
+   },
+   {
+    "madde": "50",
+    "neden": "Başarısızlık raporu denetleme ve teftiş sonucu düzenlenir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.9/a-ç)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "10",
+  "baslik": "Yedek üyelere görev verilmesi",
+  "oz": "Boşalan üyeliklere seçim tutanağındaki sırayla yedek üyeler gelir; 2 ay içinde birlikten ayrılacağı bilinen yedek atlanır. Öncelik adayın belirlendiği görev yeridir. 2 ay ve daha kısa ayrılıkta, muhasiplik ve mutemetlik aynı kişiye verilmemek şartıyla başkanın uygun gördüğü üye birlik komutanınca yazılı görevlendirilir. Başkan ayrılırsa en kıdemli üye başkanlığı yürütür. Heyet kurulamıyorsa seçim derhal yenilenir.",
+  "sorulur": [
+   "Beklenen kalıp: yedeklerin hangi sırayla göreve geleceği (seçim tutanağındaki sıra) ve hangi yedeğin atlanacağı (2 ay içinde ayrılacak olan) sorulur.",
+   "Beklenen kalıp: başkanın kısa süreli ayrılığında yerine kimin bakacağı sorulur; doğrusu en kıdemli üye."
+  ],
+  "akilda": [
+   "Kısa ayrılıkta vekil, uzun ayrılıkta yedek: 2 ay sınır.",
+   "Başkan yoksa en kıdemli üye; muhasip ile mutemet yine birleşmez."
+  ],
+  "karis": [
+   {
+    "madde": "9",
+    "neden": "2 aydan fazla ayrılık değiştirme sebebi (m.9); kısa ayrılık vekalet (m.10)."
+   },
+   {
+    "madde": "8",
+    "neden": "Yedeklerin sırası m.8'deki seçim tutanağına göre."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.10/a-ç)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "11",
+  "baslik": "Kantinde görev ve sorumluluklar",
+  "oz": "Birlik komutanı kantini kurar, heyet seçimini sağlar, işleyişi gözetir ve gelirlerin harcama yerlerini belirler. Aylık bilanço onaylanmadan önceki sorumluluk heyete, onaydan sonraki sorumluluk heyetle birlikte birlik komutanına aittir. Heyet işletme, hesap ve belge muhafazasından sorumludur: muhasip muhasebe kayıtlarını, mutemet nakdi tutar. Satın alma, depo, şube ve satış sorumlularının da ayrı görevleri vardır.",
+  "sorulur": [
+   "Beklenen kalıp: bilanço onayından önce ve sonra sorumluluğun kime ait olduğu sorulur; onaydan önce heyet, sonra heyetle birlikte birlik komutanı.",
+   "Beklenen kalıp: görev tanımı verilip görevlinin kim olduğu sorulur; muhasip kayıt tutar, mutemet nakdi korur."
+  ],
+  "akilda": [
+   "Bilanço imzası çizgi: imzadan önce heyet, imzadan sonra heyet + komutan.",
+   "Muhasip deftere, mutemet kasaya bakar."
+  ],
+  "karis": [
+   {
+    "madde": "6",
+    "neden": "Muhasip ve mutemetlik aynı kişide birleşemez (m.6)."
+   },
+   {
+    "madde": "38",
+    "neden": "Gelirin harcanacağı yeri birlik komutanı belirler; ayrıntı m.38'de."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.11/a-b)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "12",
+  "baslik": "Kantin şubeleri nerede açılır",
+  "oz": "Bir kantine bağlı şube; aynı birliğe mensup yakın iki birlikte, geniş kışla alanında, kışla içi ve dışındaki lojman bölgelerinde, atış, tatbikat ya da eğitim için uzun süreli garnizon dışına veya yurt dışına çıkan birliklerde, il-ilçe merkezlerine uzak karakol ve üst birliklerde ve kışın yolu sık kapanan bölgelerde açılabilir. Kışla sınırı dışındaki şubeye heyete karşı sorumlu bir rütbeli görevlendirilir. Yurt dışı şube için JGK izni gerekir.",
+  "sorulur": [
+   "Beklenen kalıp: şube açılabilecek yerler listelenip listede olmayan sorulur.",
+   "Beklenen kalıp: yurt dışı şube için kimden izin alınacağı sorulur; doğrusu JGK. Kışla dışındaki şubeye heyete karşı sorumlu rütbeli görevlendirilir."
+  ],
+  "akilda": [
+   "Şube, personelin olduğu yere gider: lojman, geniş kışla, tatbikat, uzak karakol, kışın kapanan yol.",
+   "Yurt dışına şube: JGK izni; kışla dışı şube: sorumlu bir rütbeli."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Aynı birlikte tek kantin olur; ihtiyaçta şube açılır (m.5)."
+   },
+   {
+    "madde": "13",
+    "neden": "Şubeyi kantinin bağlı olduğu birlik komutanı kapatır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.12/a-f); son cümle metinde iki kez tekrarlanmış."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "13",
+  "baslik": "Kantinlerin kapatılması",
+  "oz": "Kantinler ilgili birliğin teklifi ve JGK'nın onayıyla kapatılabilir. Kapatılan kantinin nakit, mal, demirbaş ve belgeleri JGK'nın emriyle başka bir kantine devredilir. Şubeler ise ihtiyaç bitince kantinin bağlı olduğu birlik komutanının onayıyla kapatılır. Devralan kantinle satış fiyatları farklıysa fiyat düzenlemesi yapılabilir.",
+  "sorulur": [
+   "Beklenen kalıp: kantini kimin onayıyla kapatılacağı sorulur; doğrusu birliğin teklifi ve JGK onayı. 'Birlik komutanı onayıyla' tuzaktır, o yalnız şube içindir."
+  ],
+  "akilda": [
+   "Kantin JGK'ya ait, şube birlik komutanına: kantini JGK kapatır, şubeyi birlik komutanı.",
+   "Kapatılanın malı başka kantine devredilir; JGK nereye gideceğini söyler."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Kuruluş izni de JGK'dan alınır."
+   },
+   {
+    "madde": "53",
+    "neden": "Devir halinde tasfiye teftişini JGK Teftiş Kurulu yapar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.13)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "18",
+  "baslik": "Gelir kaynakları ve yan kuruluşlar",
+  "oz": "Birliklerdeki hiçbir gelir kaynağı ve yan kuruluş bağlantı dışı bırakılamaz. Sosyal tesis ve kadrolu vardiya yatakhanesi olmayan yerlerde bunlar birliğe hizmet veren kantine bağlanır ve kantin heyetince yönetilir; olan yerlerde bağlantıyı birlik komutanı belirler. JGK izniyle açılan kadrosuz vardiya yatakhaneleri dışında hiçbir konaklama tesisi kantin başkanlığına bağlı işletilemez.",
+  "sorulur": [
+   "Sosyal tesisi olmayan yerde yan kuruluşların neye bağlandığı ve konaklama tesislerinin kantine bağlanıp bağlanamayacağı birlikte sorulur; doğrusu kantine bağlanır, konaklama tesisi bağlanamaz (istisna hariç)."
+  ],
+  "akilda": [
+   "Sahipsiz gelir kaynağı olmaz: sosyal tesis yoksa kantine bağlanır.",
+   "Kantin yatak işletmez; tek istisna JGK izinli kadrosuz vardiya yatakhanesi."
+  ],
+  "karis": [
+   {
+    "madde": "35",
+    "neden": "Yan kuruluş kârları kantin gelirleri arasında sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.18)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "19",
+  "baslik": "Kantin sermayesi ve artırımı",
+  "oz": "Kuruluş sermayesini JGK belirler. Sermaye bağış, kuruluş promosyonu, zengin kantinden JGK onayıyla nakil, yan kuruluş sermayesi, müsamere-eğlence geliri ve üst komutanlık paylarından sağlanır. Sermaye her ay en az bir önceki ayın TÜFE'si kadar artırılır: TÜFE %4 ve altındaysa TÜFE kadar, %4'ü aşarsa %4. Sermaye JGK yetkisi olmadan harcanamaz. Mahkemedeki alacak sermayenin %50'sini aşarsa hesapta %50 alınır.",
+  "sorulur": [
+   "Sermaye kaynaklarından olmayan sorulur; doğrusu 'personelden alınan aidatlar'.",
+   "Aylık artırım kuralı sorulur: TÜFE %4 ve altındaysa TÜFE kadar, fazlaysa %4; oranların ters çevrildiği şık tuzaktır.",
+   "Harcama yetkisi ve mahkemedeki alacak sorulur: JGK; %50'yi geçerse %50 dikkate alınır."
+  ],
+  "akilda": [
+   "Artırımda tavan %4: TÜFE küçükse TÜFE, büyükse %4. Yani 'TÜFE ya da %4, hangisi küçükse'.",
+   "Sermaye kasası kilitli: anahtar JGK'da. Personelden aidat alınmaz."
+  ],
+  "karis": [
+   {
+    "madde": "35",
+    "neden": "Sermaye kaynakları (m.19) ile gelir kalemleri (m.35) benzer; karıştırma."
+   },
+   {
+    "madde": "20",
+    "neden": "Sermaye ve gelir borç verme amacıyla kullanılamaz (m.20)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.19)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "20",
+  "baslik": "Borç yasağı ve avans",
+  "oz": "Kantin sermayesi ve geliri borç verme amacıyla kullanılamaz. Ancak birlik komutanının yazılı izniyle ve hizmetle ilgili olmak kaydıyla kantin gelirlerinden avans verilebilir. Avans hizmet bitince evrakla, en geç verildiği takvim ayının sonuna kadar kapatılır. Birinci avans kapanmadan ikincisi verilemez.",
+  "sorulur": [
+   "Sermayenin hangi amaçla kullanılamayacağı ve avansın kimin izniyle verileceği birlikte sorulur: borç verme; birlik komutanının yazılı izni.",
+   "Avansın kapatılma süresi sorulur: verildiği takvim ayının sonu; hafta, üç ay, yıl sonu çeldiricidir."
+  ],
+  "akilda": [
+   "Borç yok, avans var: avans ay içinde açılır, ay içinde kapanır.",
+   "Bir avans kapanmadan ikincisi yok."
+  ],
+  "karis": [
+   {
+    "madde": "19",
+    "neden": "Sermayeyi harcama yetkisi JGK'da; avans izni birlik komutanında."
+   },
+   {
+    "madde": "45",
+    "neden": "Avans kredi ve mahsup fişleri m.45'te."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.20)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "21",
+  "baslik": "Kantin alacaklarının takibi",
+  "oz": "Kantin alacaklarının takip ve tahsilinden kantin başkanlıkları sorumludur. Suçla bağlantısı olmayan alacak davaları kurum avukatlarınca hukuk mahkemelerinde JGK adına açılır; tahsil edilen alacak sermayeye eklenir. Suçla bağlantılı dosyalar Cumhuriyet savcılığına sunulmak üzere bağlı olunan komutanlığa iletilir. Adli makama intikal eden davalar kurum avukatlarının sorumluluğundadır.",
+  "sorulur": [
+   "Suçla bağlantısız alacak davasının kim tarafından ve kimin adına açılacağı sorulur; doğrusu kurum avukatlarınca, JGK adına. Kantin başkanı adına ya da birlik adına şıkları tuzaktır."
+  ],
+  "akilda": [
+   "Takipten kantin başkanı sorumlu, davayı kurum avukatı açar, davacı JGK.",
+   "Suç varsa savcılığa giden yol komutanlıktan geçer."
+  ],
+  "karis": [
+   {
+    "madde": "19",
+    "neden": "Mahkemedeki alacak sermaye artırım hesabına katılmaz (m.19)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.21/a-c)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "23",
+  "baslik": "Mal alımında uyulacak esaslar",
+  "oz": "Mallar ihtiyaç listesine göre toptan ya da perakende alınır; peşin ödeme esastır, vade ve taksit de olur. Kredili alımlarda sermayenin en fazla 3 katı borçlanılabilir; gelecek yıla borç devri, kredi kartı satışlarının blokeli hesaptaki tutarını geçemez. Fiyat araştırması yapılır, en az 3 yerden teklif alınır. En düşük teklif, gerekçeli ve kışla komutanı onaylı tutanakla tercih edilmeyebilir. Müşterek alımda heyete marka ve miktar talimatı verilemez.",
+  "sorulur": [
+   "Kredili alımda borç sınırı sorulur: sermayenin en fazla 3 katı; diğer katlar çeldiricidir.",
+   "Teklif sayısı ve en ucuzun reddi sorulur: en az 3 yer; gerekçeli, kışla komutanı onaylı tutanak.",
+   "Yanlış ifade sorusunda 'müşterek alımda markaya talimat verilebilir' öncülü yanlıştır."
+  ],
+  "akilda": [
+   "Üçler: borç sermayenin 3 katı, teklif 3 yerden.",
+   "Borç gelecek yıla ancak kredi kartı blokesi kadar taşınır.",
+   "Heyete marka dayatılmaz; en ucuzu reddetmek kışla komutanının onayıyla."
+  ],
+  "karis": [
+   {
+    "madde": "20",
+    "neden": "Kantin borç veremez (m.20) ama kredili alımda borçlanabilir (m.23)."
+   },
+   {
+    "madde": "45",
+    "neden": "Karşılaştırmalı fiyat tespit tutanağı ve kredili mal takip defteri m.45'te."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.23/a-ı)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "24",
+  "baslik": "Mal iade esasları",
+  "oz": "Ayıplı ya da eksik malı iade eden tüketiciye 4077 sayılı Tüketicinin Korunması Hakkında Kanuna göre işlem yapılır: aynı cins ve miktarda mal verilir ya da bedeli ödenir. Bedel ödenirse EK-12 tutanak düzenlenip müşteriye imzalatılır. Kantinin firmaya iadesi iade faturasıyla yapılır; fatura tutarları işletme defterindeki alış-satış toplamlarından düşülür.",
+  "sorulur": [
+   "İadenin hangi kanuna göre yapıldığı ve bedel ödenince hangi tutanağın düzenlendiği sorulur; doğrusu 4077 sayılı Kanun ve EK-12 tutanağı. Borçlar Kanunu ve İhale Kanunu çeldiricidir."
+  ],
+  "akilda": [
+   "Müşteri iadesi: değişim ya da para; para verildiyse EK-12 tutanak.",
+   "Firmaya iade: iade faturası."
+  ],
+  "karis": [
+   {
+    "madde": "45",
+    "neden": "EK-12 m.45'te fatura yerine düzenlenen alım tutanağı olarak da geçer."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.24/a-c)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "35",
+  "baslik": "Kantin gelirleri",
+  "oz": "Kantin gelirleri; kantin ve yan kuruluş kârları, banka faizleri, boş ambalaj satışı, tasfiyeden devreden mal ve para, müsamere ve eğlence gelirleri, zengin kantinden sermaye nakli, firma promosyon bağışları, işletme gelirleri, yüklenicilerden alınan ceza bedelleri, sergi-fuar-reklam gelirleri ve üst komutanlık paylarından tahsis edilen tutardan oluşur.",
+  "sorulur": [
+   "Gelir kalemlerinden olmayan sorulur; doğrusu 'personelin maaşından yapılan düzenli kesintiler'. Banka faizi, sergi-reklam ve tasfiye geliri listededir."
+  ],
+  "akilda": [
+   "Kantin personelden para almaz: ne maaş kesintisi ne aidat. Gelir satıştan, faizden, promosyondan, cezadan gelir."
+  ],
+  "karis": [
+   {
+    "madde": "19",
+    "neden": "Sermaye kaynakları (m.19) ile gelirler (m.35) ortak kalemler içerir."
+   },
+   {
+    "madde": "36",
+    "neden": "Promosyon bağışlarının kaydı ve kullanımı m.36'da."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.35/a-ı)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "36",
+  "baslik": "Promosyon bağışlarının kaydı",
+  "oz": "Malzeme olarak gelen promosyon taşınır mal işlem belgesiyle irada alınır. Satılacak ürünse işletme defterine sıfır alış fiyatıyla yazılır, satış fiyatı emsal malla aynı olur. Nakitse bilançonun net kâr sütununa ayrı satır açılır ve kasa defterine girilir; aynı mali yıl içinde harcanabilir. Bu gelir öncelikle personelin göreve yönelik eğitimi, ödeneği olmayan öncelikli ihtiyaçlar ve sermayenin enflasyona karşı güçlendirilmesinde kullanılır.",
+  "sorulur": [
+   "Nakit promosyonun bilançoda nasıl gösterildiği sorulur; doğrusu net kâr sütununa ayrı satır açılarak. 'Doğrudan sermayeye eklenir' tuzaktır.",
+   "Promosyon gelirinin öncelikli kullanım yeri sorulur: eğitim, ödeneksiz öncelikli ihtiyaç, sermayeyi enflasyona karşı güçlendirme."
+  ],
+  "akilda": [
+   "Üç şekil, üç kayıt: malzeme irada, ürün sıfır maliyetle deftere, nakit net kâra.",
+   "Promosyon parası üç yere: eğitim, öncelikli ihtiyaç, sermaye."
+  ],
+  "karis": [
+   {
+    "madde": "37",
+    "neden": "Firmanın bedelsiz mal ya da nakit vermesinde Hizmet Bedeli Faturası (m.37)."
+   },
+   {
+    "madde": "35",
+    "neden": "Promosyon bağışları gelir kalemlerinden biridir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.36/a-ç)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "37",
+  "baslik": "Hizmet bedeli faturası",
+  "oz": "Piyasada ucuzlayan malın kantinde de ucuz satılabilmesi için firma aradaki fark kadar mal ya da nakit verirse veya satışı hızlandırmak için mala bedelsiz ikinci, üçüncü ürün eklerse, kantin bu firmaya verdiği mal ya da nakit tutarı karşılığında Hizmet Bedeli Faturası düzenler.",
+  "sorulur": [
+   "Boşluk doldurma kalıbında belge adı sorulur; doğrusu Hizmet Bedeli Faturası. Onay Belgesi, Avans Kredi Fişi ve Muaddel Cetveli çeldiricidir."
+  ],
+  "akilda": [
+   "Firma bedava verirse kantin fatura keser: Hizmet Bedeli Faturası."
+  ],
+  "karis": [
+   {
+    "madde": "36",
+    "neden": "Promosyon bağışında fatura yok; ucuzlama ve bedelsiz ilavede Hizmet Bedeli Faturası."
+   },
+   {
+    "madde": "45",
+    "neden": "Onay belgesi, avans fişleri ve muaddel cetveli m.45'teki belgelerdir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.37/a-b)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "38",
+  "baslik": "Kantin gelirlerinden yapılacak giderler",
+  "oz": "Kantin geliri, birlik komutanının emriyle, ödeneği olmayan ya da yetmeyen zaruri ve resmi işlere harcanır; zarureti ve ödeneği birlik komutanı belirler, bunun dışındaki harcamalara JGK Komutanı yetkilidir. Öncelik erbaş ve erlerin eğitim, barınma ve moral hizmetleridir. Ödül ve nakdi yardım toplam gelirin %10'unu geçemez. Aylık taksit, önceki yılın aylık ortalama gelirinin yarısını aşamaz. Yıllık temsil-ağırlama üst sınırı önceki yıl gelirinin %10'unu geçmez.",
+  "sorulur": [
+   "Zaruri ve resmi işlerde yetkili ile diğer işlerde yetkili sorulur: birlik komutanı ve JGK Komutanı; yer değiştirmiş şık tuzaktır.",
+   "Ödül ve nakdi yardım sınırı sorulur: gelirin %10'u.",
+   "Taksit ve temsil sınırı sorulur: önceki yılın aylık ortalama gelirinin yarısı; önceki yıl gelirinin %10'u."
+  ],
+  "akilda": [
+   "Resmi iş birlik komutanının, gerisi JGK Komutanının.",
+   "İki tane %10: ödül-yardım ve temsil-ağırlama. Taksit tavanı yarım aylık gelir.",
+   "Önce er: eğitim, barınma, moral; lüks ve israf yasak."
+  ],
+  "karis": [
+   {
+    "madde": "42",
+    "neden": "Üst komutanlık payı da gelirin %10'unu geçemez (m.42)."
+   },
+   {
+    "madde": "36",
+    "neden": "Promosyon gelirinin öncelikli kullanım yerleri m.36'da ayrıca sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.38)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "39",
+  "baslik": "Hazine payı",
+  "oz": "Birlik sınırları dışındaki kantin ve şubeler, aylık gayrisafi hasılatın %1'ini en geç takip eden ayın 20'sine kadar genel bütçeye gelir kaydedilmek üzere muhasebe birimine yatırır. Ödeme EK-20 'Aylık Gayrisafi Hasılattan Tahsil Edilen Tutara İlişkin Bildirim' ile bildirilir. Form 3 nüsha düzenlenir: ikisi muhasebe birimine, biri kantin başkanlığına.",
+  "sorulur": [
+   "Boşluk doldurmada oran ve gün sorulur: %1 ve ayın 20'si; '%1 / 10' şıkı üst komutanlık payının günüyle kurulmuş tuzaktır.",
+   "Bildirim formu ve nüsha sayısı sorulur: EK-20, 3 nüsha."
+  ],
+  "akilda": [
+   "Hazineye 1, takvimde 20: %1, ayın 20'si, EK-20.",
+   "Hazine payı yalnız birlik sınırları dışındaki kantinden alınır.",
+   "Üst komutanlık payı ayın 10'u, hazine payı ayın 20'si."
+  ],
+  "karis": [
+   {
+    "madde": "42",
+    "neden": "Üst komutanlık payı ayın 10'una kadar, hazine payı 20'sine kadar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.39)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "40",
+  "baslik": "Gider belgeleri",
+  "oz": "Gider belgeleri malın nerede kullanılacağını açıkça gösterir ve birlik komutanınca 'Kantin gelirlerinden ödenmesi uygundur.' kaydıyla onaylanır; aylık döküm listeleri de komutan onaylıdır. Kalıcı mallarda saymanlıktan alınan taşınır mal işlem belgesi faturaya bağlanır. Bakım-onarımda faturanın arkası imzalanır, cihaz onarımına teknik servis raporu eklenir. Ödül ve nakdi yardımda dekont ya da teslim tutanağı yeterlidir.",
+  "sorulur": [
+   "Gider belgesinin hangi kayıtla onaylandığı sorulur; doğrusu 'Kantin gelirlerinden ödenmesi uygundur'. 'İnceleme yapılmıştır', 'Muhasebeleştirilmiştir' çeldiricidir."
+  ],
+  "akilda": [
+   "Onay cümlesi soruyu cevaplar: 'Kantin gelirlerinden ödenmesi uygundur.'",
+   "Kalıcı mal: taşınır mal işlem belgesi; sarf malı: faturanın arkası imzalı."
+  ],
+  "karis": [
+   {
+    "madde": "41",
+    "neden": "Fire tutanağı da gider belgeleri arasında saklanır."
+   },
+   {
+    "madde": "45",
+    "neden": "Gider belgeleri ve aylık gider listesi m.45'te de tanımlanır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.40/a-c)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "41",
+  "baslik": "Fire işlemleri",
+  "oz": "Alım ve muhafaza kusuru olmadan bozulup kullanılamaz hale gelen mallar fire işlemine tabi tutulur. Hatalı alımdan ve muhafaza kusurundan doğan kayıplar fire sayılmaz. Fire; kantin heyeti ile varsa kışla tabibi ya da gıda kontrol subayının imzası ve kışla komutanının onayını taşıyan tutanakla tespit edilir. Tutanak gider belgeleri arasında saklanır, mallar kayıtlardan düşülür.",
+  "sorulur": [
+   "Fire tutanağını kimlerin imzalayıp onaylayacağı sorulur; doğrusu heyet + varsa tabip ya da gıda kontrol subayı, onay kışla komutanı.",
+   "Yanlış ifade sorusunda 'hatalı alımdan doğan kayıp fire sayılır' öncülü yanlıştır."
+  ],
+  "akilda": [
+   "Kusur yoksa fire, kusur varsa zarar: hatalı alım ve kötü saklama fire değildir.",
+   "Fire tutanağı: heyet + doktor (ya da gıda subayı) imzalar, kışla komutanı onaylar."
+  ],
+  "karis": [
+   {
+    "madde": "40",
+    "neden": "Fire tutanağı gider belgeleri arasında saklanır."
+   },
+   {
+    "madde": "45",
+    "neden": "Fire tutanağı EK-10, aynı gün düzenlenir (m.45/d)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.41)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "42",
+  "baslik": "Üst komutanlık payları",
+  "oz": "Kantinlerin ödeyeceği üst komutanlık payı oranları, gelirin %10'unu geçmemek üzere JGK Komutanınca belirlenir. Paylar, bilançonun birlik komutanınca onayından sonra her ayın en geç 10'una kadar kurumsal hesaplara yatırılır; havale masrafı kantin gideridir. Pay hesabı ile kantin hesapları arasında kaynak tahsisine JGK yetkilidir; tahsiste temsil ve tanıtım ihtiyaçlarına öncelik verilir.",
+  "sorulur": [
+   "Üst komutanlık payı sınırı sorulur: gelirin %10'u.",
+   "Payın yatırılma günü sorulur: her ayın en geç 10'u; 20'si hazine payıyla karıştırılan tuzaktır."
+  ],
+  "akilda": [
+   "Üst komutanlık: 10 ve 10. Oran en fazla %10, gün ayın 10'u.",
+   "Hazine 1 ve 20, üst komutanlık 10 ve 10."
+  ],
+  "karis": [
+   {
+    "madde": "39",
+    "neden": "Hazine payı %1 ve ayın 20'si; üst komutanlık payı %10 ve ayın 10'u."
+   },
+   {
+    "madde": "38",
+    "neden": "Ödül-yardım ve temsil sınırı da %10."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.42)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "43",
+  "baslik": "Muhasebe ve vergi muafiyetleri",
+  "oz": "Kantin hesap yılı 1 Ocak'ta başlar, 31 Aralık'ta biter; öncelik bilanço esaslı tek düzen muhasebedir. Kasa fazlası yan tesisler kâr çizelgesiyle bilançoya geçer; kredi kartı slipleri banka hesabına yazılır. Kantinler kurumlar vergisinden muaftır, ama bu muafiyet vergi kesintilerini kapsamaz. Emlak vergisinden, ödeme kâğıtları damga vergisinden istisnadır; amaca uygun teslim ve hizmetler KDV'den müstesnadır.",
+  "sorulur": [
+   "Hesap yılı sorulur: 1 Ocak-31 Aralık; mali yıl dışı tarih aralıkları çeldiricidir.",
+   "Muafiyetlerden olmayan sorulur; doğrusu motorlu taşıtlar vergisi. Yanlış ifade sorusunda 'kurumlar vergisi muafiyeti tevkifatı da kapsar' öncülü yanlıştır."
+  ],
+  "akilda": [
+   "Dört vergi avantajı: kurumlar (muaf), emlak, damga, KDV (istisna). Motorlu taşıtlar listede yok.",
+   "Muafiyet kesintiyi kapsamaz: tevkifat yine yapılır."
+  ],
+  "karis": [
+   {
+    "madde": "44",
+    "neden": "İşletme defteri usulündeki belge ve kayıtlar m.44'te sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.43)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "44",
+  "baslik": "Kantinde tutulan belge ve kayıtlar",
+  "oz": "Kantinde ambar/kiler defteri (EK-1), mal giriş-çıkış belgesi (EK-2), işletme defteri, kasa defteri, para teslim defteri, mal sayım ve tartı çizelgesi, bilanço ve gelir tablosu tutulur. Ambardan eski malın tamamı çıkmadan yeni fiyatlı mal çıkarılamaz. Mal giriş-çıkış belgesi 4 nüsha, para teslim defteri 2 nüsha (biri kasa sorumlusunda, biri satış sorumlusunda), sayım çizelgesi 3 nüsha düzenlenir.",
+  "sorulur": [
+   "Mal giriş ve çıkış belgesinin nüsha sayısı sorulur: 4 (dört).",
+   "Para teslim defterinin nüshası ve yeri sorulur: 2 nüsha; kasa sorumlusunda ve satış sorumlusunda."
+  ],
+  "akilda": [
+   "Nüsha merdiveni 4-3-2: giriş-çıkış belgesi 4, sayım çizelgesi 3, para teslim defteri 2.",
+   "Ambarda kural: eski mal bitmeden yeni fiyatlı mal çıkmaz."
+  ],
+  "karis": [
+   {
+    "madde": "45",
+    "neden": "m.44 temel defterler, m.45 dayanak ve kontrol belgeleri (fişler, tutanaklar)."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.44/a-g)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "45",
+  "baslik": "Dayanak ve kontrol belgeleri",
+  "oz": "İç denetim için alım belgeleri, gider belgeleri, kışla komutanı onaylı aylık gider listesi, karşılaştırmalı fiyat tespit tutanağı, aynı gün düzenlenen fire tutanağı (EK-10), devir teslim belgesi, avans kredi ve mahsup fişleri (3 suret), kasa girdi-çıktı fişleri, onay belgesi, kredili mal takip defteri, alacak takip defteri, muaddel cetveli ve maliyet cetveli tutulur. Muaddel cetvelini birlik komutanı, maliyet cetvelini kantin başkanı onaylar.",
+  "sorulur": [
+   "Avans kredi fişinin suret sayısı sorulur: 3 suret.",
+   "m.45'te sayılmayan belge sorulur; doğrusu Kantin İşletme Defteri (o m.44'tedir).",
+   "Erzakın cins ve miktarını gösteren cetvelin adı sorulur: muaddel cetveli; maliyet cetveli ve sayım çizelgesi tuzaktır."
+  ],
+  "akilda": [
+   "Muaddel tarif, maliyet fiyat: muaddel ne konacağını (birlik komutanı onaylar), maliyet kaça satılacağını (kantin başkanı onaylar) söyler.",
+   "Devirde satılık mal alış fiyatından devredilir; yeni heyete borç devredilmez."
+  ],
+  "karis": [
+   {
+    "madde": "44",
+    "neden": "İşletme defteri, kasa defteri ve bilanço m.44'teki temel kayıtlardır."
+   },
+   {
+    "madde": "41",
+    "neden": "Fire tutanağının kimlerce imzalandığı m.41'de."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.45/a-l)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "49",
+  "baslik": "Kantin denetim türleri",
+  "oz": "Kantinler 6 tür denetime tabidir: idari denetleme, özel denetleme, durum teftişi, hesap teftişi, iç denetim ve tasfiye teftişi.",
+  "sorulur": [
+   "Denetim türü sayısı sorulur: 6 (altı); başka sayılar çeldiricidir.",
+   "Listede olmayan sorulur; 'mali müşavirlik denetimi' gibi uydurma tür doğru cevaptır."
+  ],
+  "akilda": [
+   "İkişer ikişer altı: iki denetleme (idari, özel), üç teftiş (durum, hesap, tasfiye), bir iç denetim."
+  ],
+  "karis": [
+   {
+    "madde": "50",
+    "neden": "İdari denetleme yılda en az 2 kez, birlik komutanının heyetince."
+   },
+   {
+    "madde": "53",
+    "neden": "Hesap teftişi, iç denetim ve tasfiye teftişini yapan birimler m.53'te."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.49/a-e). SAYI_ONAY: 6 — maddede sayılan denetim türlerinin adedi (a, b, c, ç, d, e)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "50",
+  "baslik": "İdari denetleme",
+  "oz": "İdari denetleme, birlik komutanının görevlendirdiği heyetçe yılda en az 2 kez yapılır; heyette bir maliye sınıfı personel bulunur. Tertip-temizlik, malların uygunluğu ve kâr oranları, hesapların günü gününe tutulması, sermaye-borç-gider ilişkisi ve kasa-banka uyumu incelenip raporlanır. Raporun bir nüshası müfettişe gösterilmek üzere heyet dosyasında saklanır. Nöbetçi subay ve astsubaylar satış, tartı ve fiyatları sık sık kontrol edip nöbet defterine yazar.",
+  "sorulur": [
+   "İdari denetlemenin yılda kaç kez yapıldığı sorulur: en az 2; başka sayılar çeldiricidir.",
+   "Heyette bulunması gereken sınıf sorulur: maliye; personel, hukuk, sağlık çeldiricidir."
+  ],
+  "akilda": [
+   "Yılda 2 kez, içinde bir maliyeci: idari denetleme.",
+   "Günlük kontrol nöbetçide: tartı ve fiyat, nöbet defterine."
+  ],
+  "karis": [
+   {
+    "madde": "51",
+    "neden": "Özel denetleme belirli bir konunun aydınlatılması için, takvimsiz."
+   },
+   {
+    "madde": "9",
+    "neden": "Denetleme sonucu başarısızlık raporu üyenin değiştirilme sebebidir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.50)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "51",
+  "baslik": "Özel denetleme",
+  "oz": "Özel denetleme, birlik komutanı ve sıralı üst komutanlıkların öğrenmesi gereken herhangi bir konuyu aydınlatmak için başvurulan denetleme yoludur. İdari denetleme konularını kapsayabileceği gibi belirli bir ya da birkaç konuyla da sınırlı olabilir.",
+  "sorulur": [
+   "Özel denetlemenin amacı sorulur; doğrusu öğrenilmesi gereken herhangi bir konunun aydınlatılması. Yıllık rutin, tasfiye ve hesap yılını kesin sonuca bağlama çeldiricidir."
+  ],
+  "akilda": [
+   "Özel = belirli bir merak: komutan bir konuyu öğrenmek isteyince yapılır; rutin olan idari denetlemedir."
+  ],
+  "karis": [
+   {
+    "madde": "50",
+    "neden": "İdari denetleme rutin (yılda en az 2), özel denetleme ihtiyaç halinde."
+   },
+   {
+    "madde": "52",
+    "neden": "Durum teftişini JGK müfettişleri yapar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.51)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "52",
+  "baslik": "Durum teftişi",
+  "oz": "Durum teftişi, kantinin herhangi bir tarihteki durumunun yürürlükteki mevzuata göre değerlendirilmesi amacıyla, JGK müfettişleri tarafından kendi talimat ve programlarına göre yapılır.",
+  "sorulur": [
+   "Durum teftişini kimin ve hangi amaçla yaptığı sorulur; doğrusu JGK müfettişleri, herhangi bir tarihteki durumun değerlendirilmesi. Birlik komutanı, Sayıştay ve Hazine müfettişleri çeldiricidir."
+  ],
+  "akilda": [
+   "Durum teftişi bir fotoğraftır: belli bir günde kantin ne halde; çeken JGK müfettişi.",
+   "Hesap teftişi ise bütün bir yılın filmidir."
+  ],
+  "karis": [
+   {
+    "madde": "53",
+    "neden": "Hesap teftişi bir hesap yılını inceler, JGK Teftiş Kurulu müfettişlerince."
+   },
+   {
+    "madde": "51",
+    "neden": "Özel denetlemeyi birlik ve üst komutanlıklar yapar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.52)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "53",
+  "baslik": "Hesap teftişi, iç denetim, tasfiye",
+  "oz": "Hesap teftişi, kantinin bir hesap yılındaki faaliyetleri ve tüm gelir-gider belgeleri incelenerek kesin sonuca varmak için JGK Teftiş Kurulu Başkanlığına bağlı müfettişlerce yapılır. İç denetim, kaynakların ekonomik, etkili ve verimli yönetilip yönetilmediğini değerlendirmek ve rehberlik etmek için JGK İç Denetim Birimi Başkanlığınca yapılır. Tasfiye teftişi, kantin faaliyetine son verip varlığını devrettiğinde JGK Teftiş Kurulu Başkanlığınca yapılır.",
+  "sorulur": [
+   "Hesap teftişini yapan birim sorulur: JGK Teftiş Kurulu Başkanlığı; İç Denetim Birimi ve Hazine çeldiricidir.",
+   "İç denetim ile tasfiye teftişinin yapan birimleri birlikte sorulur: iç denetim İç Denetim Birimi Başkanlığı, tasfiye Teftiş Kurulu Başkanlığı."
+  ],
+  "akilda": [
+   "Teftiş Kurulu iki teftişi yapar (hesap, tasfiye); iç denetimi kendi adını taşıyan birim yapar.",
+   "İç denetim rehberlik eder: ekonomiklik, etkililik, verimlilik."
+  ],
+  "karis": [
+   {
+    "madde": "52",
+    "neden": "Durum teftişi JGK müfettişlerince, belli bir tarihteki durum için."
+   },
+   {
+    "madde": "13",
+    "neden": "Kapatılan kantinin devri tasfiye teftişine konu olur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.53)."
+ },
+ {
+  "kanun_id": 109,
+  "madde": "54",
+  "baslik": "Denetim yapanların sorumluluğu",
+  "oz": "Denetçi ve müfettişler görevlerini tam ve zamanında yapmak, denetim ve teftiş sonuçlarını ilgili makama bildirmekle yükümlüdür.",
+  "sorulur": [
+   "Boşluk doldurmada sonuçların kime bildirileceği sorulur; doğrusu 'ilgili makama'. Kantin heyeti, yalnız birlik komutanı ve JGK Komutanı çeldiricidir."
+  ],
+  "akilda": [
+   "Tam, zamanında, ilgili makama: üç kelimelik madde."
+  ],
+  "karis": [
+   {
+    "madde": "50",
+    "neden": "İdari denetleme raporunun bir nüshası heyet dosyasında saklanır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.54)."
+ }
+]

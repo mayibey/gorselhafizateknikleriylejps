@@ -1,0 +1,211 @@
+{
+ "kanun_id": 38,
+ "ad": "5199 sayılı Hayvanları Koruma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_38.json",
+ "kartlar": [
+  {
+   "id": "38-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Etoloji: bir hayvan türünün doğuştan gelen, kendine özgü davranışlarını inceleyen bilim dalı; ekosistem: canlıların kendi aralarında ve cansız çevreyle ilişkilerini yürüttüğü sistem; evcil hayvan: insan tarafından kültüre alınmış ve eğitilmiş hayvan; sahipsiz hayvan: sahipli hayvanlar dışında kalan evcil hayvan; güçten düşmüş hayvan: yaşlanma, sakatlanma, hastalanma gibi nedenlerle iş yapabilme yeteneğini kaybetmiş binek ve yük hayvanı; yabani hayvan: doğada serbest yaşayan, evcilleştirilmemiş omurgalı ve omurgasız hayvan; ev hayvanı: özel ilgi ve refakat amacıyla muhafaza edilen hayvan; sahipli hayvan: sahiplenilen, aşıları yapılan ve Bakanlık veri tabanına kaydedilen ev hayvanı; hayvan bakımevi: Bakanlıktan izinle kurulan, hayvanların sahiplendirilinceye kadar barındırıldığı ve rehabilite edildiği tesis; rehabilitasyon: sahipsiz hayvanların tedavisi, parazit mücadelesi, aşılanması, kısırlaştırılması ve dijital kimliklendirme ile işaretlenmesi; Bakanlık: Tarım ve Orman Bakanlığı (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "etoloji \"ekoloji\" ile karıştırılır"
+   ],
+   "dogrusu": [
+    "Etoloji · ekosistem · evcil hayvan · sahipsiz hayvan · güçten düşmüş hayvan · binek ve yük hayvanı · yabani hayvan · ev hayvanı · sahipli hayvan · Bakanlık veri tabanına kaydedilen · hayvan bakımevi · sahiplendirilinceye kadar · rehabilitasyon · kısırlaştırılması ve dijital kimliklendirme · Bakanlık"
+   ]
+  },
+  {
+   "id": "38-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlkeler",
+   "hukum": "Bütün hayvanlar eşit doğar ve yaşama hakkına sahiptir; nesli tehlike altındaki türler ve yaşama ortamları korunur; yabani hayvan yaşama ortamından koparılmaz, doğada serbest yaşayan hayvan yakalanıp özgürlükten yoksun bırakılmaz; hayvanlar türüne özgü şartlarda bakılır, beslenir, taşınır; yerel yönetimler gönüllü kuruluşlarla iş birliğiyle sahipsiz hayvanlar için bakımevi kurar, karar organı uygun görürse hayvan hastanesi kurar; toplu yaşanan yerlerdeki kedi ve köpeklerin sahiplerince kısırlaştırılması esastır; kedi ve köpek sahipleri hayvanlarını dijital kimliklendirme ile kayıt altına aldırmakla yükümlüdür (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "kısırlaştırma \"yasak müdahale\" listesine konur — çıkmış soruda doğru cevap kısırlaştırmanın yasak olmadığı idi",
+    "Kısırlaştırma yasak müdahaledir"
+   ],
+   "dogrusu": [
+    "Yasak değildir; kontrolsüz üremeyi önlemek için yapılır (m.4, m.7)"
+   ]
+  },
+  {
+   "id": "38-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Sahiplenenin yükümlülükleri",
+   "hukum": "Bir hayvanı sahiplenen kişi; hayvanı barındırmak, türüne ve üreme yöntemine uygun etolojik ihtiyaçlarını temin etmek, sağlığına dikkat etmek, insan, hayvan ve çevre sağlığı için gerekli tüm önlemleri almakla yükümlüdür; hayvanından kaynaklanan çevre kirliliğini ve rahatsızlıkları önleyici tedbir alır, almazsa zararı tazmin eder; ev hayvanı satan kişiler yerel yönetimlerin eğitim programına katılıp sertifika almakla yükümlüdür; ticarî amaç güdülmeden bakılan ev hayvanları sahibinin borcundan dolayı haczedilemez (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"eğitim programına katılıp sertifika almak\" sahiplenenin yükümlülüğü gibi sorulur — çıkmış soruda yanlış şık buydu",
+    "Sahiplenen kişi eğitim programına katılıp sertifika almakla yükümlüdür"
+   ],
+   "dogrusu": [
+    "Sertifika yükümlülüğü satıcının (m.5)"
+   ]
+  },
+  {
+   "id": "38-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Sahipsiz ve güçten düşmüş hayvan",
+   "hukum": "Kanunî istisnalar hariç öldürülmeleri yasaktır; güçten düşmüş hayvanlar ticarî, gösteri, binicilik ve taşımacılık amacıyla çalıştırılamaz; sahipsiz veya güçten düşmüş hayvanlar en hızlı şekilde yerel yönetimlerin hayvan bakımevlerine götürülür, önce müşahede yerinde tutulur, Bakanlık veri sistemine kaydedilir, rehabilite edilen köpekler sahiplendirilinceye kadar bakımevinde barındırılır; bakımevi ve hastane için Hazine arazileri öncelikle tahsis edilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"rehabilite edilen köpek alındığı yere bırakılır\" denir"
+   ],
+   "dogrusu": [
+    "öldürülmeleri yasaktır · çalıştırılamaz · hayvan bakımevlerine · müşahede · sahiplendirilinceye kadar bakımevinde · öncelikle tahsis"
+   ]
+  },
+  {
+   "id": "38-4",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Cerrahî müdahale",
+   "hukum": "Hayvanlara tıbbî ve cerrahî müdahaleler sadece veteriner hekimler tarafından yapılır; kontrolsüz üremenin önlenmesi için hayvanlara acı vermeden kısırlaştırma yapılır (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"hayvan sağlık teknisyeni de yapabilir\" denir"
+   ],
+   "dogrusu": [
+    "sadece veteriner hekimler · acı vermeden kısırlaştırma"
+   ]
+  },
+  {
+   "id": "38-5",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yasak müdahaleler",
+   "hukum": "Bir hayvan neslini yok edecek her türlü müdahale yasaktır; hayvanların yaşadıkları sürece tıbbî amaç dışında organ veya dokuları çıkarılıp alınamaz; ev hayvanının dış görünüşünü değiştirmeye yönelik kuyruk ve kulak kesilmesi, ses tellerinin alınması, tırnak ve dişlerinin sökülmesi yasaktır — veteriner hekimin tıbbî sebeple veya üremenin önlenmesi için gerekli görmesi hâlinde izin verilebilir; tıbbî amaç dışında türüne aykırı hormon ve ilaç vermek, doping yapmak, davranış ve fizikî özelliklerini yapay yöntemlerle değiştirmek yasaktır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "kısırlaştırma bu listeye eklenir"
+   ],
+   "dogrusu": [
+    "neslini yok edecek · organ veya dokuları · kuyruk ve kulak kesilmesi, ses tellerinin alınması, tırnak ve dişlerinin sökülmesi · hormon ve ilaç · doping"
+   ]
+  },
+  {
+   "id": "38-6",
+   "madde": [
+    "9",
+    "10"
+   ],
+   "baslik": "Hayvan deneyleri",
+   "hukum": "Hayvanlar bilimsel olmayan teşhis, tedavi ve deneylerde kullanılamaz; başka seçenek olmaması hâlinde deney hayvanı olarak kullanılabilir; deneylere kurumların etik kurulları izin verir; deney hayvanlarının ithalat ve ihracatı Bakanlık iznine tâbidir (m.9, m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"deney hayvanı ithalatı izne tâbi değildir\" denir",
+    "Deney hayvanı ithalatı izne tâbi değildir"
+   ],
+   "dogrusu": [
+    "Bakanlık iznine tâbidir (m.10)"
+   ]
+  },
+  {
+   "id": "38-7",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Hayvan ticareti",
+   "hukum": "Satılırken hayvanların sağlıklı ve barındırıldığı yerin temiz olması zorunludur; ev hayvanı satış yerlerinde kedi ve köpek bulundurulamaz, ancak Bakanlıkça izinli üretim yerlerindeki kedi ve köpeklerin satışı yapılabilir; hayvanların ticarî film çekimi ve reklamda kullanılması izne tâbidir; bir hayvan acı, ıstırap ya da zarar görecek şekilde film, gösteri ve reklam için kullanılamaz; hasta, sakat, yaşlı veya iyileşemeyecek derecede acısı olan hayvanı usulüne uygun kesmek ya da ağrısız öldürme dışında bir amaçla devretmek, satmak veya almak yasaktır (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"satış yerinde Bakanlık izni aranmaksızın kedi köpek bulundurulabilir\" denir",
+    "Ev hayvanı satış yerinde kedi ve köpek bulundurulabilir"
+   ],
+   "dogrusu": [
+    "Bulundurulamaz (m.10)"
+   ]
+  },
+  {
+   "id": "38-8",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Eğitim ve dövüştürme",
+   "hukum": "Hayvanlar doğal kapasitesini aşacak, yaralanmasına, gereksiz acı çekmesine veya kötü alışkanlıklara özendirilmesine yol açacak yöntemlerle eğitilemez; hayvanları başka bir canlı hayvanla dövüştürmek yasaktır; folklorik amaçlı, şiddet içermeyen geleneksel gösteriler Bakanlığın uygun görüşüyle il hayvanları koruma kurulundan izin alınarak düzenlenebilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "geleneksel gösteri istisnası tamamen kaldırılır"
+   ],
+   "dogrusu": [
+    "eğitilemez · başka bir canlı hayvanla dövüştürmek yasaktır · şiddet içermeyen · il hayvanları koruma kurulundan"
+   ]
+  },
+  {
+   "id": "38-9",
+   "madde": [
+    "9",
+    "12",
+    "13"
+   ],
+   "baslik": "Kesim ve ötanazi",
+   "hukum": "Kesim; dinî kuralların gerektirdiği koşullar dikkate alınarak hayvanı korkutmadan, en az acı verecek şekilde, bir anda ve ehliyetli kişilerce yapılır; kurban kesimine ilişkin hususlar Diyanet İşleri Başkanlığının bağlı olduğu Bakanlıkça çıkarılan yönetmelikle belirlenir. Bakımevine alınan köpeklerden insan ve hayvan sağlığı için tehlike teşkil eden, davranışları kontrol edilemeyen, bulaşıcı veya tedavi edilemeyen hastalığı bulunan ya da sahiplenilmesi yasak olanlara 5996 sayılı Kanun m.9/3'teki tedbir uygulanır; yavrulama, gebelik ve süt anneliği dönemlerinde hayvanlar kanunî istisnalar ve acil durumlar dışında öldürülemez; ölüsü usulüne uygun bertaraf edilir (m.12, m.13)",
+   "sinavda_boyle_yazarlar": [
+    "kurban yönetmeliği \"Tarım ve Orman Bakanlığı\"na verilir"
+   ],
+   "dogrusu": [
+    "korkutmadan, en az acı verecek şekilde, bir anda · ehliyetli kişilerce · Diyanet İşleri Başkanlığının bağlı olduğu Bakanlıkça · tehlike teşkil eden · bulaşıcı veya tedavi edilemeyen hastalığı · yavrulama, gebelik ve süt anneliği · öldürülemez · bertaraf"
+   ]
+  },
+  {
+   "id": "38-10",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Yasaklar",
+   "hukum": "Hayvanlara kasıtlı kötü davranmak, dövmek, aç ve susuz bırakmak, aşırı soğuğa-sıcağa maruz bırakmak, bakımını ihmal etmek; gücünü aşan fiillere zorlamak; hayvan bakımı eğitimi almamış kişilerce ev hayvanı satmak; ev hayvanını on altı yaşından küçüklere satmak; kesin olarak öldüğü anlaşılmadan tedavi maksatlı olmayan müdahalede bulunmak; kesim hayvanları ve izinli av hayvanları dışındakileri et ihtiyacı için kesip piyasaya sürmek; kesimlik dışındaki hayvanları ödül, ikramiye veya prim olarak dağıtmak; hayvanları hasta, gebeliğin üçte ikisini tamamlamış gebe ve yeni ana iken çalıştırmak; hayvanlara cinsel saldırıda bulunmak; zorla yem yedirmek, alkol, sigara, uyuşturucu vermek; Bakanlıkça belirlenen tehlike arz eden hayvanları üretmek, sahiplenmek, barındırmak, satmak, ülkeye sokmak, reklamını yapmak; hayvanlara işkence yapmak; ev hayvanını terk etmek; yerel yönetimler adına toplanan sahipsiz hayvanları bakımevi dışına terk etmek (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "yaş sınırı on sekiz yapılır",
+    "Ev hayvanı on sekiz yaşından küçüğe satılamaz"
+   ],
+   "dogrusu": [
+    "On altı (m.14)"
+   ]
+  },
+  {
+   "id": "38-11",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Yayın zorunluluğu",
+   "hukum": "TRT ve özel televizyonlarda ayda en az iki saat, özel radyolarda ayda en az yarım saat eğitici yayın zorunludur; yayınların %20'si izlenme oranı en yüksek saatlerde yapılır; takibi RTÜK yapar (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "süreler yer değiştirilir"
+   ],
+   "dogrusu": [
+    "ayda en az iki saat · ayda en az yarım saat · %20'si · RTÜK"
+   ]
+  },
+  {
+   "id": "38-12",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Trafik kazası",
+   "hukum": "Bir hayvana çarpan ve ona zarar veren sürücü, onu en yakın veteriner hekim ya da tedavi ünitesine götürmek veya götürülmesini sağlamak zorundadır (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"bildirmek yeterlidir\" denir",
+    "Hayvana çarpan sürücü zabıtaya bildirmekle yetinir"
+   ],
+   "dogrusu": [
+    "Veteriner hekime götürmek zorundadır (m.21)"
+   ]
+  },
+  {
+   "id": "38-13",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Hayvanat bahçeleri",
+   "hukum": "İşletme sahipleri ve belediyeler hayvanat bahçelerini doğal yaşama ortamına en uygun şekilde düzenlemekle yükümlüdür; gerçek ve tüzel kişiler hayvanların serbest dolaşımına imkân veren doğal yaşam parkları kurabilir; kuruluş ve çalışma esasları Bakanlıkça yönetmelikle belirlenir (m.22)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "doğal yaşama ortamına en uygun · doğal yaşam parkları · Bakanlıkça"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

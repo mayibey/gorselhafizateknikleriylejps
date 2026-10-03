@@ -1,0 +1,132 @@
+{
+ "kanun_id": 81,
+ "ad": "Tayın Bedeli Kanunu (2155 sayılı Bazı Kamu Personeline Tayın Bedeli Verilmesi Hakkında Kanun)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_81.json",
+ "kartlar": [
+  {
+   "id": "81-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "MSB ve TSK personeli",
+   "hukum": "Barışta ve savaşta MSB bütçesine bağlı fiili kadrolarda bulunan subay, askeri memur, astsubay, uzman çavuş, sivil memur ve yardımcı hizmetler personeline; MSB ile TSK kıt'a ve kurumlarında görevli Maliye Bakanlığına bağlı muhasebeler teşkilatındaki memur ve yardımcı hizmetler personeline tayın bedeli verilir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "MSB sayımında \"uzman erbaş\" geçmez, \"uzman çavuş\" geçer; \"uzman erbaş\" ifadesi Sahil Güvenlik sayımındadır",
+    "MİT'te görevli tüm personel tayın bedeli alır",
+    "Meteoroloji Genel Müdürlüğünün tüm personeli tayın bedeli alır"
+   ],
+   "dogrusu": [
+    "Yalnız sivil memurlar (m.1)",
+    "Yalnız MSB ve TSK kıt'a ve kurumlarında görevli olanlar (m.1)"
+   ]
+  },
+  {
+   "id": "81-1",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Sahil Güvenlik Komutanlığı",
+   "hukum": "SGK kadrolarında görevli subay, astsubay, uzman erbaş, sivil memur ve yardımcı hizmetler personeline verilir (m.1; 7148 sayılı Kanunla eklendi)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sahil Güvenlik'te askeri memur da sayılmıştır\" yanlış; SGK için askeri memur sayılmaz"
+   ],
+   "dogrusu": [
+    "subay, astsubay, uzman erbaş, sivil memur ve yardımcı hizmetler personeline"
+   ]
+  },
+  {
+   "id": "81-2",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Meteoroloji personeli (şartlı)",
+   "hukum": "MSB ile TSK kıt'a ve kurumlarında görevli Devlet Meteoroloji İşleri Genel Müdürlüğü kadrolarındaki memur ve yardımcı hizmetler personeline verilir (m.1; 5917 sayılı Kanunla eklendi)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tüm Meteoroloji Genel Müdürlüğü personeline verilir\" yanlış; MSB/TSK kıt'a ve kurumlarında görevli olma şartı var"
+   ],
+   "dogrusu": [
+    "Devlet Meteoroloji İşleri Genel Müdürlüğü"
+   ]
+  },
+  {
+   "id": "81-3",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Jandarma Genel Komutanlığı",
+   "hukum": "JGK fiili kadrolarında görevli subay, askeri memur, astsubay, uzman jandarma çavuş, sivil memur ve yardımcı hizmetler personeli ile JGK kuruluşlarında görevli Maliye Bakanlığına bağlı muhasebeler teşkilatındaki memur ve yardımcı hizmetler personeline verilir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarmada görevli Maliye Bakanlığı muhasebe personeli kapsam dışıdır\" yanlış; açıkça kapsamdadır"
+   ],
+   "dogrusu": [
+    "subay, askeri memur, astsubay, uzman jandarma çavuş, sivil memur ve yardımcı hizmetler personeli · Maliye Bakanlığına bağlı muhasebeler teşkilatındaki"
+   ]
+  },
+  {
+   "id": "81-4",
+   "madde": [
+    "1"
+   ],
+   "baslik": "EGM, MİT, Gümrük Muhafaza, Orman",
+   "hukum": "Emniyet Genel Müdürlüğü kadrolarında görevli her sınıf personele; MİT'te görevli sivil memurlara; Gümrük Muhafaza merkez ve iller kuruluşundaki muhafaza ve muamele sınıfı kadrolarına dahil memurlara ve muhafaza teşkilatında görevli gemi adamlarına; Orman Bakanlığı ve Orman Genel Müdürlüğü hizmetlerinde çalışan orman muhafaza memurlarıyla bunlara refakat eden şoförlerine verilir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Orman muhafaza memurlarına verilir, şoförleri hariçtir\" yanlış; refakat eden şoförler de kapsamda. Diyanet personeli gibi sayılmayan gruplar kapsam dışıdır",
+    "Emniyet Genel Müdürlüğünde yalnız komiser ve üstü personel tayın bedeli alır",
+    "Orman muhafaza memurlarına refakat eden şoförler kapsam dışıdır"
+   ],
+   "dogrusu": [
+    "Her sınıf personel (m.1)",
+    "Kapsamdadır (m.1)"
+   ]
+  },
+  {
+   "id": "81-5",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Tutarın ölçüsü ve üst sınırı",
+   "hukum": "Tayın bedeli olarak ayda günlük er tayın istihkakının bir aylık tutarı verilir; aylık tutar o yılın Bütçe Kanununda gösterilen miktarı aşmamak üzere, Ankara mahalli rayici üzerinden Milli Savunma, İçişleri, Maliye ve Orman Bakanlıklarınca müştereken saptanır (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her ilin kendi mahalli rayici esas alınır\" yanlış; Ankara mahalli rayici. \"Tutarı yalnız Maliye Bakanlığı belirler\" yanlış; dört bakanlık müştereken",
+    "Tayın bedeli, ayda bir günlük subay istihkakı tutarında verilir",
+    "Tayın bedeli her ilin mahalli rayici üzerinden belirlenir",
+    "Tayın bedelinin tutarı Maliye Bakanlığınca tek başına saptanır"
+   ],
+   "dogrusu": [
+    "Günlük er tayın istihkakının bir aylık tutarı (m.1)",
+    "Ankara mahalli rayici (m.1)",
+    "Milli Savunma, İçişleri, Maliye ve Orman Bakanlıklarınca müştereken (m.1)"
+   ]
+  },
+  {
+   "id": "81-6",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Ölümde geri alınmaz",
+   "hukum": "Aynen veya nakit olarak verilen er tayın istihkakları ölüm hâlinde geri alınmaz (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız nakit verilenler geri alınmaz\" yanlış; aynen veya nakit her ikisi de geri alınmaz",
+    "Er tayın istihkakları ölüm hâlinde mirasçılardan geri alınır"
+   ],
+   "dogrusu": [
+    "Geri alınmaz (m.2)"
+   ]
+  },
+  {
+   "id": "81-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kaldırılan kanun ve yönetmelik",
+   "hukum": "4367 sayılı (Ordu mensuplarıyla, Emniyet Umum Müdürlüğü ve Gümrük Muhafaza ve Muamele sınıfı kadrolarında çalışanlara birer er tayını verilmesi hakkındaki) kanun ile ek ve değişiklikleri yürürlükten kaldırılmıştır; Kanunun uygulanmasına ilişkin hususlar Milli Savunma, İçişleri, Maliye ve Orman Bakanlıklarınca çıkarılacak bir Yönetmelikle düzenlenir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yönetmeliği yalnız Milli Savunma ve İçişleri çıkarır\" yanlış; Orman ve Maliye de dahil dört bakanlık"
+   ],
+   "dogrusu": [
+    "4367 sayılı · Milli Savunma, İçişleri, Maliye ve Orman Bakanlıklarınca · Yönetmelikle"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

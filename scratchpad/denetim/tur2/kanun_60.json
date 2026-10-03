@@ -1,0 +1,242 @@
+{
+ "kanun_id": 60,
+ "ad": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_60.json",
+ "kartlar": [
+  {
+   "id": "60-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Çocuk: erken ergin olsa bile 18 yaşını doldurmamış kişi; korunma ihtiyacı olan çocuk: gelişimi/güvenliği tehlikede, ihmal-istismar edilen veya suç mağduru çocuk; suça sürüklenen çocuk: suç iddiasıyla soruşturma/kovuşturma yapılan veya güvenlik tedbirine karar verilen çocuk; çocuk hâkimi: kovuşturma başlatılmamış çocuklar hakkında tedbir kararı veren çocuk mahkemesi hâkimi; sosyal çalışma görevlisi: PDR, psikoloji, sosyal hizmet mezunu (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Evlenen çocuk kapsam dışıdır\" yanlış"
+   ],
+   "dogrusu": [
+    "Çocuk · 18 yaşını doldurmamış · korunma ihtiyacı olan çocuk · suç mağduru · suça sürüklenen çocuk · çocuk hâkimi · sosyal çalışma görevlisi"
+   ]
+  },
+  {
+   "id": "60-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Beş tedbir",
+   "hukum": "Çocuğun yararı gözetilerek öncelikle kendi aile ortamında korunması esasıyla: danışmanlık, eğitim, bakım, sağlık, barınma tedbirleri (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Denetim\" beş tedbirden biri değildir, ek olarak karar verilebilir"
+   ],
+   "dogrusu": [
+    "kendi aile ortamında · danışmanlık, eğitim, bakım, sağlık, barınma"
+   ]
+  },
+  {
+   "id": "60-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Bildirim yükümlülüğü",
+   "hukum": "Adli-idari merciler, kolluk, köy-mahalle muhtarları, belediye zabıtası, sağlık ve eğitim kuruluşları, STK'lar ve haberdar olan herkes korunma ihtiyacı olan çocuğu il/ilçe Aile ve Sosyal Hizmetler müdürlüklerine bildirmekle yükümlüdür; müdürlükler basındaki haberleri ve her türlü duyumu ihbar kabul edip resmî duyuru beklemeden araştırır; tedbir gerekiyorsa sosyal inceleme raporu ile mahkeme/çocuk hâkimine talep sunar (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bildirim savcılığa yapılır\" yanlış; Aile müdürlüğüne"
+   ],
+   "dogrusu": [
+    "kolluk · muhtarları · herkes · Aile ve Sosyal Hizmetler müdürlüklerine · ihbar kabul edip · sosyal inceleme raporu"
+   ]
+  },
+  {
+   "id": "60-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Acil korunma — 5 gün / 3 gün / 30 gün",
+   "hukum": "Derhâl korunması gereken çocuk sağlık kontrolünden sonra Kurumca bakım ve gözetime alınır; Kurum, çocuğun geldiği tarihten itibaren en geç 5 gün içinde çocuk hâkimine müracaat eder; hâkim 3 gün içinde karar verir, çocuğun bulunduğu yerin gizli tutulmasına karar verebilir; acil korunma kararı en fazla 30 gün; bu sürede sosyal inceleme yapılır; tedbir gerekmiyorsa hâkime bildirilir, aileye teslime hâkim karar verir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"3 gün\" hâkimin karar süresidir, müracaat süresi değil",
+    "Acil korunma için 3 gün içinde hâkime başvurulur",
+    "Acil korunma kararı 60 gün verilebilir"
+   ],
+   "dogrusu": [
+    "5 gün; hâkim 3 günde karar (m.7)",
+    "En fazla 30 gün (m.7)"
+   ]
+  },
+  {
+   "id": "60-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tedbir kararını kim alır",
+   "hukum": "Ana, baba, vasi, bakımından sorumlu kimse, Aile Bakanlığı ve Cumhuriyet savcısının istemi üzerine veya re'sen, çocuğun/ailesinin bulunduğu yerdeki çocuk hâkimi; çocuk mahkemesi yoksa aile mahkemesi, o da yoksa asliye hukuk; kovuşturma başlamış çocuk için kovuşturmayı yapan mahkeme; 12 yaşından küçükler ve 15 yaşını doldurmamış sağır-dilsizler için TCK 31/1 ve 33 çocuklara özgü güvenlik tedbiri; 12-15 yaş algılama yeteneği gelişmemişse TCK 31/2; 12-15 yaş çocukta algılama yeteneği için sosyal inceleme zorunlu; karar öncesi yeterli idrak gücü olan çocuğun görüşü alınır; kurumda bakım son çare; kararda tedbirin türü, uygulayacak kurum, gerekirse süre yazılır; hâkim ayrıca denetim kararı verebilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"12-15 yaş için sosyal inceleme isteğe bağlıdır\" yanlış; zorunlu"
+   ],
+   "dogrusu": [
+    "Aile Bakanlığı · Cumhuriyet savcısının · re'sen · çocuk hâkimi · aile mahkemesi · asliye hukuk · kovuşturmayı yapan mahkeme · 12 yaşından küçükler · 12-15 yaş · sosyal inceleme zorunlu · görüşü alınır · son çare · denetim"
+   ]
+  },
+  {
+   "id": "60-5",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Kararların gönderileceği yerler",
+   "hukum": "Danışmanlık ve barınma → il millî eğitim müdürlükleri, Aile Bakanlığı il/ilçe müdürlükleri veya yerel yönetimler; eğitim → il millî eğitim müdürlükleri veya Çalışma Bakanlığı bölge müdürlükleri; bakım → Aile Bakanlığı il/ilçe müdürlükleri; sağlık → il sağlık müdürlükleri; kararlar kesinleşmesi beklenmeksizin derhâl uygulanır; kararı veren mahkemenin bulunduğu yerde uygulanması esas (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karar kesinleşince uygulanır\" yanlış; derhâl",
+    "Sağlık tedbiri kararı Tarım il müdürlüğüne gönderilir",
+    "Tedbir kararı kesinleşince uygulanır"
+   ],
+   "dogrusu": [
+    "İl sağlık müdürlüğüne; Tarım il müdürlüğü hiçbir tedbirin muhatabı değil (m.9)",
+    "Derhâl (m.9)"
+   ]
+  },
+  {
+   "id": "60-6",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Tedbirin kaldırılması ve sona ermesi",
+   "hukum": "Hâkim çocuğun gelişimini göz önünde bulundurarak tedbiri kaldırabilir; acele hâlde çocuğun bulunduğu yer hâkimi de kaldırabilir (önceki hâkime bildirir); kaldırılmasını denetim görevlileri, veli/vasi, bakımını üstlenenler, uygulayan kurum ve Cumhuriyet savcısı isteyebilir; tedbir 18 yaşın doldurulmasıyla kendiliğinden sona erer; hâkim eğitimine devam için çocuğun rızasıyla bir süre daha devam ettirebilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"18 yaşında ayrıca karar gerekir\" yanlış"
+   ],
+   "dogrusu": [
+    "çocuğun bulunduğu yer hâkimi · Cumhuriyet savcısı · 18 yaşın doldurulmasıyla kendiliğinden · çocuğun rızasıyla"
+   ]
+  },
+  {
+   "id": "60-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Danışmanlık tedbiri",
+   "hukum": "Bakımdan sorumlu kimselere çocuk yetiştirme, çocuğa eğitim-gelişim sorunlarında rehberlik; anne-baba eğitimi, aile danışmanlığı; Millî Eğitim Bakanlığı, Aile Bakanlığı ve yerel yönetimler yerine getirir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Danışmanlığı Sağlık Bakanlığı yürütür\" yanlış"
+   ],
+   "dogrusu": [
+    "rehberlik · Millî Eğitim Bakanlığı, Aile Bakanlığı ve yerel yönetimler"
+   ]
+  },
+  {
+   "id": "60-8",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Eğitim tedbiri",
+   "hukum": "Çocuğun eğitim kurumuna gündüzlü/yatılı devamı, evde eğitim, özel eğitim, meslek/sanat kursu, usta yanına veya iş yerine yerleştirme; 15 yaşını doldurmuş çocuk için iş ve meslek edindirme; MEB ve Çalışma ve Sosyal Güvenlik Bakanlığı (İŞKUR) yerine getirir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"12 yaşındaki iş yerine yerleştirilir\" yanlış; 15"
+   ],
+   "dogrusu": [
+    "meslek/sanat kursu · 15 yaşını doldurmuş · MEB ve Çalışma ve Sosyal Güvenlik Bakanlığı"
+   ]
+  },
+  {
+   "id": "60-9",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Bakım tedbiri",
+   "hukum": "Bakımından sorumlu kimse görevini yerine getiremiyorsa Aile Bakanlığı il/ilçe müdürlüklerince resmî/özel bakım yurduna yerleştirme veya koruyucu aile; ihmal-istismar mağduru ve rehabilitasyon gerekenler diğer çocuklarla aynı ortamda bakılmaz; kolluk teslim ederken ilk sağlık kontrolü yapılır; bulaşıcı hastalık tedavisi ve sağlık giderleri Sağlık Bakanlığınca; yabancı çocuk için konsoloslukla irtibat (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kolluk çocuğu doğrudan yurda teslim eder\" yanlış; sağlık kontrolü sonrası"
+   ],
+   "dogrusu": [
+    "Aile Bakanlığı il/ilçe müdürlüklerince · koruyucu aile · aynı ortamda bakılmaz · ilk sağlık kontrolü · Sağlık Bakanlığınca · konsoloslukla"
+   ]
+  },
+  {
+   "id": "60-10",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Barınma tedbiri",
+   "hukum": "Yeterli barınma yeri olmayan çocuklu kimselere veya hayatı tehlikede olan hamile kadınlar ile çocuklarına barınma; talep hâlinde kimlik ve adresleri gizli; Aile Bakanlığı, MEB ve yerel yönetimler yerine getirir (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Barınma tedbiri yalnız çocuklara verilir\" yanlış",
+    "Barınma tedbiri çocuğa verilir"
+   ],
+   "dogrusu": [
+    "Çocuklu kimselere ve hamile kadınlara (m.15)"
+   ]
+  },
+  {
+   "id": "60-11",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Sağlık tedbiri",
+   "hukum": "Fiziksel-ruhsal sağlığın korunması, tedavi, rehabilitasyon ve madde bağımlılığı tedavisi; akıl hastası çocukta öncelikle sağlık tedbiri; akıl hastalığı/bağımlılıkta resmî sağlık kurulu raporu üzerine karar (açıkça belliyse rapor alınmadan da); toplum için tehlikeli akıl hastası çocuk yüksek güvenlikli sağlık kurumunda; tehlikelilik hakkında en geç üçer aylık dönemlerde hâkime bilgi; madde bağımlısı çocuğun tedavisi için rızası aranmaz; il sağlık müdürlüğü uygun kurumu belirler, gerekirse kolluktan güvenlik yardımı; Sağlık Bakanlığı yerine getirir (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bağımlılık tedavisinde çocuğun rızası şarttır\" yanlış",
+    "Madde bağımlısı çocuğun tedavisi için rızası gerekir"
+   ],
+   "dogrusu": [
+    "Aranmaz (m.16)"
+   ]
+  },
+  {
+   "id": "60-12",
+   "madde": [
+    "17",
+    "18"
+   ],
+   "baslik": "Kolluk desteği ve uygulama planı",
+   "hukum": "Bakım ve barınma tedbirlerinde ihtiyaç duyulan kolluk hizmetleri talep edilir, kolluk geciktirmeksizin yerine getirir; Aile müdürlüklerinin yardım talepleri MEB, İçişleri, Sağlık ve diğer kurumlarca geciktirilmeksizin karşılanır (m.17); uygulayan kurum uygulama planı hazırlar, çocuğun teslim tarihinden itibaren en geç 10 gün içinde hâkim onayına sunar; hâkim tedbirin uygulanmasını en geç üçer aylık sürelerle sosyal çalışma görevlilerine incelettirir; inceleme raporu 10 gün içinde hâkime verilir; ceza infaz kurumlarına görev yüklenemez (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Plan 30 gün içinde sunulur\" yanlış; 10 gün"
+   ],
+   "dogrusu": [
+    "geciktirmeksizin · uygulama planı · en geç 10 gün · en geç üçer aylık · sosyal çalışma görevlilerine · 10 gün"
+   ]
+  },
+  {
+   "id": "60-13",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İl koordinasyonu",
+   "hukum": "İllerde tedbirlerin eşgüdümü vali veya vali yardımcısı başkanlığında; Cumhuriyet başsavcısı/savcısı, il emniyet müdürü, il jandarma komutanı, il millî eğitim, il sağlık, belediye başkanları, Çalışma bölge müdürü/İŞKUR il müdürü, gençlik ve spor, Aile Bakanlığı il müdürü, il özel idaresi genel sekreteri, denetimli serbestlik şube müdürü ve baro temsilcisi marifetiyle; gündem Aile Bakanlığı il müdürlüğünce hazırlanır, 15 gün önceden bildirilir; sekretarya Aile Bakanlığı il müdürlüğü; valinin koordinasyon emirleri ve toplantı kararları ilgili kurumlarca uygulanır (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adalet Bakanlığı koordine eder\" yanlış",
+    "Koordinasyonu Adalet Bakanlığı sağlar"
+   ],
+   "dogrusu": [
+    "İlde vali, sekretarya Aile Bakanlığı il müdürlüğü (m.20)"
+   ]
+  },
+  {
+   "id": "60-14",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Kararın uygulanması ve kaçan çocuk",
+   "hukum": "Kararlar hâkim/mahkemece tedbir kararları defterine kaydedilir; uygulayan kurum karar tebliğinden itibaren çocuğu teslim alıp derhâl işlem başlatır; çocuk bulunamazsa kolluğa bildirilir, hâkim çocuğun bulunup teslimini kolluğun çocuk birimine yaptırabilir; kurumdan izinsiz ayrılan çocuk için tutanak tutulur, en seri iletişimle kolluğa bildirilir, sonra yazılı hâle getirilir, hâkime de bilgi verilir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaçan çocuk yalnız hâkime bildirilir\" yanlış; önce kolluğa"
+   ],
+   "dogrusu": [
+    "tedbir kararları defterine · derhâl · kolluğa · kolluğun çocuk birimine · izinsiz ayrılan · kolluğa"
+   ]
+  },
+  {
+   "id": "60-15",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Gizlilik",
+   "hukum": "Tedbir süreçlerinde çocuğun avukatı hariç çocuğun kimliği, adresi, fotoğrafları, yaşadığı travmalar gibi her türlü bilgi, rapor, belge ve kayıt gizli tutulur; yazışmalar gizlilik ilkesine uygun yapılır (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ana-babaya her bilgi verilir\" — gizlilik ilkesi geçerli"
+   ],
+   "dogrusu": [
+    "çocuğun avukatı hariç · gizli"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

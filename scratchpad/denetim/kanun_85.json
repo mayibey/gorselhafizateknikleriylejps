@@ -1,0 +1,215 @@
+{
+ "kanun_id": 85,
+ "ad": "6191 Sayılı Sözleşmeli Erbaş ve Er Kanunu (Mali Hükümler)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_85.json",
+ "kartlar": [
+  {
+   "id": "85-0",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sigortalılık ve prime esas kazanç",
+   "hukum": "Sözleşmeli er adayları ile sözleşmeli erbaş ve erler ön sözleşme yapılmasıyla birlikte 5510 sayılı Kanunun 4/1-(c) bendi kapsamında sigortalı sayılır; prime esas kazançta sözleşmeli er adayı, sözleşmeli er ve sözleşmeli onbaşı için uzman onbaşıların, sözleşmeli çavuş için uzman çavuşların prime esas kazanç tutarları esas alınır (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sigortalılık kesin sözleşmeyle başlar\" yanlış; ön sözleşmeyle başlar. \"4/a kapsamında sigortalıdır\" yanlış; 4/1-(c)",
+    "Sözleşmeli er adayları kesin sözleşmeyle sigortalı olur",
+    "Sözleşmeli çavuşun prime esas kazancında uzman onbaşı tutarı esas alınır"
+   ],
+   "dogrusu": [
+    "Ön sözleşme ile birlikte (m.7/1)",
+    "Uzman çavuş (m.7/1)"
+   ]
+  },
+  {
+   "id": "85-1",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sözleşmeli er adayının ücreti",
+   "hukum": "Sözleşmeli er adaylarına, sözleşmeli erlerin birinci hizmet yılı için öngörülen ücretin üçte ikisi oranında aylık ücret ödenir; ödemeler her ayın başında peşin yapılır; adaylar ön sözleşme tarihinden itibaren ücrete hak kazanır; ön sözleşme dönemindeki iaşe ve ibateleri (yemek ve barınma) Devlet tarafından karşılanır (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adaylara birinci yıl ücretinin yarısı ödenir\" yanlış; üçte ikisi. \"Ay sonunda ödenir\" yanlış; ay başında peşin",
+    "Er adaylarına birinci yıl ücretinin yarısı ay sonunda ödenir"
+   ],
+   "dogrusu": [
+    "Üçte ikisi, ay başında peşin (m.7/2)"
+   ]
+  },
+  {
+   "id": "85-2",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sözleşmeli erbaş ve erin ücreti",
+   "hukum": "Sözleşme tarihinden geçerli olarak 15.330 gösterge rakamının memur aylık katsayısıyla çarpımı sonucu bulunan tutarın, hizmet yıllarına göre (1) sayılı Cetvelde belirlenen oranla çarpımı üzerinden aylık ücret verilir (m.7/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ücret brüt asgari ücret üzerinden hesaplanır\" yanlış; eski hüküm değişti, esas 15.330 gösterge × memur aylık katsayısı"
+   ],
+   "dogrusu": [
+    "15.330 gösterge · memur aylık katsayısıyla · (1) sayılı Cetvelde"
+   ]
+  },
+  {
+   "id": "85-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Görev yerine göre artırım",
+   "hukum": "(1) sayılı Cetveldeki oran komando birliklerinde yüzde sekiz, Amfibi Deniz Piyade Tugay Komutanlığında yüzde beş, sınır birliklerinde, gemide ve yüzer birliklerde fiilen görevli olanlara yüzde üç artırımlı uygulanır (m.7/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Amfibi Deniz Piyade Tugayında %8, komandoda %5\" yanlış; komando %8, amfibi %5. Sınır-gemi-yüzer birlikte \"fiilen\" görevli olma şartı var",
+    "Komando birliklerinde cetvel oranı %5 artırımlı uygulanır"
+   ],
+   "dogrusu": [
+    "%8 (Amfibi %5, sınır-gemi-yüzer %3) (m.7/3)"
+   ]
+  },
+  {
+   "id": "85-4",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Vergi",
+   "hukum": "Sözleşmeli erbaş ve erlere ödenecek ücretten damga vergisi dışında herhangi bir vergi kesilmez (m.7/3); ayrılma ödemesinden de damga vergisi hariç vergi kesilmez (m.7/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ücretten gelir vergisi ve damga vergisi kesilir\" yanlış; yalnız damga vergisi",
+    "Sözleşmeli erbaş ve erlerin ücretinden gelir vergisi kesilir"
+   ],
+   "dogrusu": [
+    "Damga vergisi dışında vergi kesilmez (m.7/3)"
+   ]
+  },
+  {
+   "id": "85-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Uçuş, paraşüt, dalış tazminatı",
+   "hukum": "Sözleşmeli er adayları ile sözleşmeli erbaş ve erlerden uçuş, paraşüt, denizaltı, dalgıç ve kurbağa adam hizmetlerinde görevlendirilenlere, aynı hizmette ve aynı hizmet süresindeki astsubaylara 2629 sayılı Kanuna göre ödenen tazminatların yüzde yirmibeşi tutarında aylık tazminat ilaveten ödenir; bunlar hakkında 2629 sayılı Kanunun şehitlik ve sakatlık tazminatı hükümleri de uygulanır (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Subaylara ödenen tazminatın %25'i\" yanlış; kıyas astsubaylar; oran da %40 değil %25"
+   ],
+   "dogrusu": [
+    "uçuş, paraşüt, denizaltı, dalgıç ve kurbağa adam · astsubaylara 2629 sayılı Kanuna göre · yüzde yirmibeşi · şehitlik ve sakatlık tazminatı"
+   ]
+  },
+  {
+   "id": "85-6",
+   "madde": [
+    "7"
+   ],
+   "baslik": "JGK ve SGK ek ödemesi",
+   "hukum": "Jandarma Genel Komutanlığı kadrolarındaki sözleşmeli erbaş ve erlere 2803 sayılı Kanunun 21. maddesinde, Sahil Güvenlik Komutanlığı kadrolarındakilere 2692 sayılı Kanunun 7. maddesinde öngörülen ödeme tutarının yüzde kırkı aynı usul ve esaslarla ödenir (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu ödeme %25 oranındadır\" yanlış; %25 uçuş-dalış tazminatıdır, JGK/SGK ödemesi %40. Jandarma için dayanak 2803 m.21, SGK için 2692 m.7",
+    "JGK'daki sözleşmeli erlere 2803 m.21'deki tutarın %25'i ödenir"
+   ],
+   "dogrusu": [
+    "%40 (m.7/4)"
+   ]
+  },
+  {
+   "id": "85-7",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Tutuklu, firari, izin tecavüzü",
+   "hukum": "Tutuklanan, firar eden veya izin tecavüzünde bulunan ve cezası infaz edilmekte olan sözleşmeli erbaş ve erlerin ücret ve diğer ödemeleri hakkında 926 sayılı TSK Personel Kanununun 65. maddesi uygulanır (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"657 sayılı DMK hükümleri uygulanır\" yanlış; 926 sayılı Kanun m.65"
+   ],
+   "dogrusu": [
+    "Tutuklanan, firar eden veya izin tecavüzünde bulunan · cezası infaz edilmekte olan · 926 sayılı TSK Personel Kanununun 65. maddesi"
+   ]
+  },
+  {
+   "id": "85-8",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Ayrılma ödemesi",
+   "hukum": "Kendi kusuru olmaksızın veya ilk sözleşmesini yahut müteakip sözleşme süresini bitirmesinden dolayı TSK, JGK ve SGK'dan ayrılanlara, ayrıldıkları tarihteki 15.330 gösterge × memur aylık katsayısı tutarının, (2) sayılı Cetvelde hizmet yıllarına göre belirlenen oranla çarpımı tutarında ödeme yapılır; bu ödemeden damga vergisi hariç vergi kesilmez (m.7/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ayrılma ödemesinde sözleşme tarihindeki katsayı esas alınır\" yanlış; ayrıldıkları tarihteki. Ücret (1) sayılı, ayrılma ödemesi (2) sayılı Cetvel"
+   ],
+   "dogrusu": [
+    "Kendi kusuru olmaksızın · ilk sözleşmesini yahut müteakip sözleşme süresini bitirmesinden · ayrıldıkları tarihteki · (2) sayılı Cetvelde · damga vergisi hariç"
+   ]
+  },
+  {
+   "id": "85-9",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Ayrılma ödemesi yapılmayan ve kısmi yapılan hâller",
+   "hukum": "Türk vatandaşlığını kaybedenlere yahut disiplinsizlik, ahlaki durum veya diğer nedenlerle kalması uygun görülmeyip sözleşmesi feshedilenlere ayrılma ödemesi yapılmaz; sağlık yahut kadronun kaldırılması sebebiyle sözleşme yılını tamamlayamadan ayrılanlara, görev yaptığı yılların ödeme tutarına, tamamlayamadığı sözleşme yılına ait ödeme tutarının on iki aya eşit bölünmesiyle hizmet ettiği her aya isabet eden miktar ilave edilerek ödenir (m.7/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık nedeniyle ayrılana ayrılma ödemesi yapılmaz\" yanlış; kıst (ay hesabıyla) ilaveli yapılır",
+    "Disiplinsizlik nedeniyle sözleşmesi feshedilene ayrılma ödemesi yapılır"
+   ],
+   "dogrusu": [
+    "Yapılmaz (m.7/6)"
+   ]
+  },
+  {
+   "id": "85-10",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sürelerin başka tazminatta sayılmaması",
+   "hukum": "Ayrıldıktan sonra kamu kurumlarında istihdam edilen veya iş kanunlarına tabi çalışanlar emekli olduğunda; emekli ikramiyesi, iş sonu tazminatı ve kıdem tazminatının hesabında, m.7/5 ve 7/6'ya göre yapılan ödemede esas alınan hizmet süreleri dikkate alınmaz (m.7/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu süreler emekli ikramiyesinde de dikkate alınır\" yanlış; alınmaz"
+   ],
+   "dogrusu": [
+    "emekli ikramiyesi, iş sonu tazminatı ve kıdem tazminatının · esas alınan hizmet süreleri dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "85-11",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yargılama, ölüm ve SGK aylığı",
+   "hukum": "Görevdeyken işledikleri kasıtlı suçlardan dava açılan ve yargılama sırasında sözleşme süresi bittiği için kendi isteğiyle ayrılanlara, yargılama kesinleşinceye kadar ayrılma ödemesi yapılmaz; beraat edene yapılır, mahkûm olana yapılmaz (m.7/8); vefat edenlerin kanuni mirasçılarına m.7/5 ve 7/6'daki ödeme aynen yapılır (m.7/9); SGK tarafından kendilerine veya hak sahiplerine aylık bağlananlara bu ödemeler yapılmaz (m.7/10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kasıtlı suçtan yargılanan ayrılma ödemesini hemen alır, mahkûm olursa geri öder\" yanlış; ödeme kesinleşmeye kadar yapılmaz",
+    "SGK'ca aylık bağlananlara da ayrılma ödemesi yapılır"
+   ],
+   "dogrusu": [
+    "Yapılmaz (m.7/10)"
+   ]
+  },
+  {
+   "id": "85-12",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Peşin aylığın geri alınmaması; esir ve kayıplar",
+   "hukum": "Vefat eden ve SGK'ca emekliye ayrılan sözleşmeli erbaş ve erlerden o aya ait peşin ödenen aylık geri alınmaz (m.7/11); esir düşen, harp gaibi olan, enterne edilen ile terörle mücadele görevi sırasında veya bu görevden dolayı alıkonulan ya da kaybolan sözleşmeli erbaş ve erler hakkında 926 sayılı Kanun hükümleri uygulanır (m.7/12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ölüm hâlinde peşin aylığın kalan günlere isabet eden kısmı geri alınır\" yanlış; geri alınmaz",
+    "Vefat edenin o aya ait peşin aylığının kalan kısmı mirasçılardan geri alınır"
+   ],
+   "dogrusu": [
+    "Geri alınmaz (m.7/11)"
+   ]
+  },
+  {
+   "id": "85-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Hastalık izni kesintisi",
+   "hukum": "Bir takvim yılı içinde kullandığı hastalık izin süreleri toplamı on beş günü aşan sözleşmeli er adayları ile sözleşmeli erbaş ve erlere, aşan günlere isabet eden aylık ücretleri yüzde on eksik ödenir; hariç tutulanlar: resmi sağlık kurumlarınca düzenlenen sağlık kurulu raporu üzerine verilen izinler, kanser, verem ve akıl hastalıkları gibi uzun tedavi gerektiren hastalık izinleri, resmi yataklı tedavi kurumlarında yatarak tedavi süreleri ve terörle mücadele veya hudut birliklerindeki görevleri nedeniyle yaralanan personel (m.7/13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tüm izin süresinin ücreti %10 eksik ödenir\" yanlış; yalnız 15 günü aşan günler",
+    "Hastalık izni 10 günü aşarsa ücret %10 eksik ödenir"
+   ],
+   "dogrusu": [
+    "15 günü aşan günler için (m.7/13)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

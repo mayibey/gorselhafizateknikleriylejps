@@ -1,0 +1,548 @@
+52-0 | Y: “Araçların bir mülke girip çıkması için yapılan yolun karayoluna bağlanan kısmı bağlantı yoludur.”
+      D: Araçların mülke girip çıkması için yapılan yolun karayoluna bağlanan kısmı geçiş yoludur; bağlantı yolu kavşak yakınında taşıt yollarını bağlar (m.3)
+52-0 | Y: “Trafik yoğunluğu bakımından bağlandığı yoldan daha az önemde olan yol bağlantı yoludur.”
+      D: Trafik yoğunluğu bakımından bağlandığı yoldan daha az önemde olan yol tali yoldur (m.3)
+52-1 | Y: “Kırmızı ışıkta veya yetkililerin dur işareti üzerine aracın durdurulması duraklamadır.”
+      D: Kırmızı ışık veya dur işareti gibi trafik zorunluluğuyla aracın durdurulması duraklama değil, durmadır (m.3)
+52-1 | Y: “Bekleme amacıyla yapılan duraklamanın süresi en çok 15 dakikadır.”
+      D: Bekleme amacıyla yapılan duraklama en çok 5 dakika sürer; bu süre aşılırsa parketme sayılır (m.112)
+52-2 | Y: “Hususi otomobilini karayolunda süren kişi şofördür.”
+      D: Şoför, ticari olarak tescilli motorlu taşıtı sürendir; hususi aracını süren kişi sürücüdür (m.3)
+52-2 | Y: “Araçta çalışan hizmetliler de yolcu sayılır.”
+      D: Yolcu, aracı kullanan sürücü ile hizmetliler dışında araçta bulunan kişidir; hizmetliler yolcu sayılmaz (m.3)
+52-3 | Y: “Karayolu Güvenliği Yüksek Kurulu ayda bir kez olağan olarak toplanır.”
+      D: Karayolu Güvenliği Yüksek Kurulu yılda iki defa olağan toplanır; ayda bir toplanan Karayolu Trafik Güvenliği Kuruludur (m.4)
+52-3 | Y: “Karayolu Trafik Güvenliği Kurulu, Jandarma Genel Komutanının başkanlığında toplanır.”
+      D: Karayolu Trafik Güvenliği Kurulu, Emniyet Genel Müdürlüğü Trafik Hizmetleri Başkanının başkanlığında toplanır (m.4)
+52-4 | Y: “Tüm karayollarındaki işaretleme standartlarını tespit etmek İçişleri Bakanlığının görevidir.”
+      D: Tüm karayollarındaki işaretleme standartlarını tespit etmek, yayınlamak ve kontrol etmek Karayolları Genel Müdürlüğünün görevidir (m.11)
+52-4 | Y: “Karayolları Genel Müdürlüğü, sorumlu olduğu karayollarında hız sınırlarını İçişleri Bakanlığının görüşü alınmaksızın belirleyebilir.”
+      D: Karayolları Genel Müdürlüğü, sorumlu olduğu yollarda farklı hız sınırlarını İçişleri Bakanlığının uygun görüşünü alarak belirler (m.11)
+52-5 | Y: “Belediye trafik birimleri, kendi yollarında kural ihlali yapan sürücüler hakkında trafik ceza tutanağı düzenleyebilir.”
+      D: Belediyeler trafiği denetleyemez ve hiçbir hâlde trafik suç ve ceza tutanağı düzenleyemez (m.16)
+52-5 | Y: “Tescile bağlı araçların muayenelerini yapmak veya yaptırmak belediyelerin görevidir.”
+      D: Tescile bağlı araçların muayenelerini yapmak veya yaptırmak Ulaştırma Bakanlığının ilgili birimlerinin görevidir (m.13)
+52-7 | Y: “İlçe trafik komisyonu kararları kaymakamın onayıyla yürürlüğe girer.”
+      D: İlçe trafik komisyonu kararları il trafik komisyonunca incelenip vali onayıyla yürürlüğe girer (m.17)
+52-7 | Y: “Komisyondaki üniversite, vakıf ve kamuya yararlı dernek temsilcilerinin toplam sayısı 5'e kadar çıkabilir.”
+      D: Üniversite, vakıf ve kamuya yararlı dernek veya kuruluş temsilcilerinin toplam sayısı 3'ü geçemez (m.17)
+52-8 | Y: “Akaryakıt istasyonu gibi tesisler için izin zorunluluğu, karayolu sınır çizgisine 100 metre mesafeye kadar uygulanır.”
+      D: İzin zorunluluğu, karayolu sınır çizgisine her iki taraftan 50 metre mesafe içindeki tesisler için uygulanır (m.26)
+52-8 | Y: “İzinsiz yapılan tesisin bağlantı yolu, giderleri yolun ilgili kuruluşuna ait olmak üzere kaldırılır.”
+      D: İzinsiz tesisin bağlantı yolu, her türlü gideri sorumlulara ait olmak üzere yolun ilgili kuruluşunca kaldırılır (m.26)
+52-9 | Y: “D1 sınıfı sürücü belgesi otobüs kullanacaklara verilir.”
+      D: D1 sınıfı belge minibüs, D sınıfı belge minibüs ve otobüs kullanacaklara verilir (m.75)
+52-9 | Y: “A1 sınıfı belgeyle silindir hacmi 250 santimetreküpe kadar olan motosikletler kullanılabilir.”
+      D: A1 sınıfı belge, silindir hacmi 125 santimetreküpü ve gücü 11 kilovatı geçmeyen iki tekerlekli motosikletler içindir (m.75)
+52-10 | Y: “B sınıfı sürücü belgesi alacakların 17 yaşını bitirmiş olması yeterlidir.”
+      D: B sınıfı sürücü belgesi alacakların 18 yaşını bitirmiş olması gerekir (m.76/a)
+52-10 | Y: “D sınıfı sürücü belgesi alacakların 21 yaşını bitirmiş olması yeterlidir.”
+      D: D ve DE sınıfı belge için 24 yaş gerekir; 21 yaş C, CE, D1 ve D1E sınıfları içindir (m.76/a)
+52-11 | Y: “Sürücü adaylarının en az ortaokul düzeyinde eğitim almış olmaları gerekir.”
+      D: Sürücü adaylarının öğrenim durumu itibarıyla en az ilkokul düzeyinde eğitim almış olmaları yeterlidir (m.76/c)
+52-11 | Y: “A sınıfı belge alacak adaylarda iki yıllık A2 deneyimi, 20 yaşını dolduranlarda aranmaz.”
+      D: A sınıfı belge alacak adaylarda iki yıllık A2 deneyimi, 24 yaşını doldurmuş olanlarda aranmaz (m.76)
+52-12 | Y: “Adli sicilinde herhangi bir suçtan hüküm kaydı bulunan kişi sürücü belgesi alamaz.”
+      D: Her suçtan hüküm engel değildir; yalnız TCK 188, 190, 191 gibi sayılan suçlardan hüküm sürücü belgesine engeldir (m.76/e)
+52-12 | Y: “Sayılan suçlardan hüküm giyen sürücünün belgesi beş yıl süreyle geri alınır.”
+      D: Sayılan suçlardan hüküm giyenin belgesi, bu kayıtlar adli sicilden silininceye kadar geri alınır (m.168)
+52-13 | Y: “Subay ve astsubay sınıf okulunda eğitim görenler için A, C, D ve D1 sınıfı belgelerde yaş şartı 18 uygulanır.”
+      D: Bu okullarda eğitim görenler veya mezunları için A, C, D ve D1 sınıfı belgelerde yaş şartı 20 uygulanır (m.76)
+52-13 | Y: “Polis eğitim kurumu mezunlarına A, C, D ve D1 sınıfı belgelerde yaş şartı 20 uygulanır; deneyim şartı ise aynen aranır.”
+      D: EGM eğitim kurumları ve askerî okul mezunlarında A, C, D ve D1 için yaş 20 uygulanır ve deneyim şartı aranmaz (m.76)
+52-16 | Y: “Zırhlı taşıt kullanabilmek için personelin en az C sınıfı sürücü belgesine sahip olması gerekir.”
+      D: Zırhlı taşıt için en az B sınıfı sürücü belgesi yeterlidir; ayrıca Zırhlı Taşıt Sürücü Eğitimi tamamlanmalıdır (m.76)
+52-16 | Y: “En az B sınıfı belgesi olan jandarma personeli, ayrıca eğitim almadan zırhlı araç kullanabilir.”
+      D: B sınıfı belgeli personel, Zırhlı Taşıt Sürücü Eğitimini başarıyla tamamlayıp yeterlilik belgesi alırsa zırhlı araç kullanabilir (m.76)
+52-17 | Y: “Psiko-teknik değerlendirme raporu alan kişinin psikiyatri uzmanına başvuru süresi 30 gündür.”
+      D: Kişi psiko-teknik değerlendirme raporuyla birlikte 45 gün içinde psikiyatri uzmanına başvurur (m.79)
+52-17 | Y: “Psiko-teknik değerlendirme raporuna il sağlık müdürlüğüne itiraz süresi 45 gündür.”
+      D: Kişi, adına düzenlenen rapora 30 gün içinde il sağlık müdürlüğüne itiraz edebilir (m.79)
+52-17 | Y: “Süresinde psikiyatri muayenesine başvurmayan kişi iki yıl boyunca tekrar teste kabul edilmez.”
+      D: Süresinde psikiyatri muayenesine başvurmayan kişi altı ay boyunca tekrar teste kabul edilmez (m.79)
+52-18 | Y: “B sınıfı sürücü belgesiyle F sınıfı belgeyle kullanılan lastik tekerlekli traktör sürülemez.”
+      D: B sınıfı belgeyle M, B1 ve F sınıfı belgelerle kullanılan araçlar da sürülebilir (m.85)
+52-18 | Y: “En az 1 yıllık B sınıfı belgesi olan sürücü, diğer şartları da taşıyorsa A1 sınıfı motosiklet kullanabilir.”
+      D: B sınıfı belgeyle A1 motosiklet kullanabilmek için en az 2 yıllık geçerli B sınıfı belge gerekir; ticari motosikletler hariçtir (m.85)
+52-19 | Y: “C sınıfı sürücü belgesi 10 yıl geçerlidir.”
+      D: C1, C1E, C, CE, D1, D1E, D ve DE sınıfı belgeler 5 yıl, diğer sınıflar 10 yıl geçerlidir (m.87)
+52-19 | Y: “Yenileme müracaatını tamamlayana 30 gün geçerli geçici belge verilebilir.”
+      D: Yenileme müracaatını tamamlayana, belgesi teslim edilinceye kadar 15 gün geçerli geçici belge verilebilir (m.87)
+52-20 | Y: “Işıklı ve sesli trafik işaretlerine uyma önceliği, trafik görevlilerinin uyarı ve işaretlerinden önce gelir.”
+      D: Uymada öncelik önce trafik görevlilerinin uyarı ve işaretlerine, sonra ışıklı ve sesli trafik işaretlerine aittir (m.95)
+52-20 | Y: “Trafik işaret levhalarına, ışıklı ve sesli trafik işaretlerinden önce uyulur.”
+      D: Işıklı ve sesli trafik işaretlerine, trafik işaret levhaları ve yer işaretlemelerinden önce uyulur (m.95)
+52-21 | Y: “Görevlinin uzun sesli düdük çalması uyarma, kısa sesli düdük çalması DUR emridir.”
+      D: Görevlinin kısa sesli düdüğü uyarma, uzun sesli düdüğü ise DUR emridir (m.96)
+52-21 | Y: “Görevlinin kollarını yatay olarak yana uzatması, kol doğrultusundan gelenler için DUR emridir.”
+      D: Kolların yatay uzatılması kol doğrultusunu kesen yönlerden gelenler için DUR emridir; kol doğrultusundan gelenler ilerleyebilir (m.96)
+52-23 | Y: “Uyuşturucu kullandığı tespit edilen sürücünün belgesi ilk seferde 6 ay süreyle geri alınır.”
+      D: Uyuşturucu veya uyarıcı madde kullandığı tespit edilen sürücünün belgesi 5 yıl süreyle geri alınır (m.97)
+52-23 | Y: “Uyuşturucu tespitinde aranacak eşik değerlerini yalnız Sağlık Bakanlığı belirler.”
+      D: Eşik değerleri, Adalet ve Sağlık Bakanlığının görüşü alınarak EGM ve Jandarma Genel Komutanlığınca müştereken belirlenir (m.97)
+52-23 | Y: “Uyuşturucu tespiti için teknik cihaz kullanılmasını kabul etmeyen sürücünün belgesi 6 ay süreyle geri alınır.”
+      D: Teknik cihaz kullanılmasını kabul etmeyen sürücünün belgesi 2 yıl geri alınır ve tespit yaptırılmak üzere mahallî zabıtaya teslim edilir (m.97)
+52-24 | Y: “Sağlık kuruluşunda yapılan tespite, iki tespit arasındaki her bir saat için 0,10 promil eklenerek alkol oranı belirlenir.”
+      D: İki tespit arasındaki her bir saat için 0,15 promil eklenerek sürücünün alkol oranı belirlenir (m.97)
+52-24 | Y: “Yaralanmalı kazada teknik cihazla ölçüme izin vermeyen sürücünün belgesi 6 ay süreyle geri alınır.”
+      D: Yaralanmalı veya ölümlü kazada ölçüme izin vermeyen sürücünün belgesi iki yıl süreyle geri alınır (m.97)
+52-25 | Y: “Bu şoförler 24 saatlik süre içinde toplam 11 saate kadar araç sürebilir.”
+      D: Bu şoförler 24 saatte toplam 9 saatten, devamlı olarak 4,5 saatten fazla araç süremez (m.98)
+52-25 | Y: “Sürekli 4,5 saatlik araç kullanma sonunda verilmesi gereken asgari mola süresi 30 dakikadır.”
+      D: Sürekli 4,5 saatlik araç kullanma sonunda, istirahata çekilmiyorsa en az 45 dakika mola zorunludur (m.98)
+52-26 | Y: “Otoyollarda otomobiller için azami hız sınırı saatte 130 kilometredir.”
+      D: Otoyollarda otomobiller için azami hız sınırı saatte 120 kilometredir (m.100)
+52-26 | Y: “Römorklu araçlarda azami hız, aynı cins römorksuz araçların sınırından saatte 20 km düşüktür.”
+      D: Römorklu veya yarı römorklu araçlarda azami hız, aynı cins römorksuz araçların sınırından saatte 10 km düşüktür (m.100)
+52-26 | Y: “Otoyollarda motorlu araçlar için asgari hız sınırı saatte 15 kilometredir.”
+      D: Asgari hız, şehirlerarası karayollarında 15 km/s, otoyollarda 40 km/s'tir (m.100)
+52-27 | Y: “Sola dönüşlerde dar bir kavisle dönülür.”
+      D: Sola dönüşte geniş kavis, sağa dönüşte dar kavis çizilir (m.102)
+52-27 | Y: “Dönel kavşakta sola dönecek sürücü kavşağa en sağ şeritten girer.”
+      D: Dönel kavşakta sola veya geriye dönecek sürücü kavşağa orta adaya bitişik şeritten girer (m.102)
+52-28 | Y: “Işıklı işaret veya levha bulunmayan kavşaklarda, sağdan gelen araç her durumda ilk geçiş hakkına sahiptir.”
+      D: İşaretsiz kavşakta tali yoldan gelen ana yoldakine yol verir; sağdan gelene yol verme, yoğunluk farkı işaretlenmemişse uygulanır (m.109)
+52-28 | Y: “Işıklı trafik işareti izin veriyorsa, sürücü kavşak içinde durmak zorunda kalacak olsa da kavşağa girebilir.”
+      D: Işıklı işaret izin verse bile trafik akımı sürücüyü kavşak içinde durmaya zorlayacaksa kavşağa girmek yasaktır (m.109)
+52-29 | Y: “Kamu hizmeti yapan yolcu taşıtlarının durak levhalarına parketme yasağı, her iki yönden 5 metrelik mesafeyle sınırlıdır.”
+      D: Durak levhalarına her iki yönden 15 metre mesafe içinde parketmek yasaktır; 5 metre yangın musluğu ve giriş-çıkış kapıları içindir (m.115)
+52-29 | Y: “Kavşak, tünel ve köprülerde duraklama yasağı yerleşim birimleri içinde 100 metre, dışında 5 metredir.”
+      D: Kavşak, tünel, köprü ve bağlantı yollarına duraklama yasağı yerleşim içinde 5 metre, dışında 100 metredir (m.113)
+52-30 | Y: “Kavşakta iken geçiş üstünlüğü olan aracın işaretini alan sürücü, bulunduğu yerde durup aracın geçmesini bekler.”
+      D: Geçiş üstünlüğü olan aracın işaretini kavşakta alan sürücü olduğu yerde durmaz, kavşağı derhal boşaltır (m.142)
+52-30 | Y: “Geçiş üstünlüğü olan aracın işaretini alan sürücü yalnızca hızını azaltmakla yükümlüdür; durması gerekmez.”
+      D: İşareti alan sürücü yol açar, gerekiyorsa durur ve bu araç tamamen geçinceye kadar bekler (m.142)
+52-31 | Y: “135 cm'den uzun çocuklar, çocuk bağlama sistemi yerine ön koltukta emniyet kemeri kullanabilir.”
+      D: 135 cm'den uzun çocuklar, ön koltukta oturmamak şartıyla diğer koltuklarda emniyet kemeri kullanabilir (m.150)
+52-31 | Y: “Bisikletliler koruma başlığının yanında koruma gözlüğü de takmak zorundadır.”
+      D: Bisikletliler koruma başlığı takar; bisikletlilerde koruma gözlüğü aranmaz (m.150)
+52-32 | Y: “Kazaya karışan sürücü, yaralıya ilk yardım yaptırmak için bile görevliler gelmeden kaza yerinden ayrılamaz.”
+      D: Kazaya karışan, görevliler gelinceye kadar kaza yerinden ayrılamaz; yaralıya ilk yardım ve acil müdahale yaptırmak için ayrılabilir (m.152)
+52-32 | Y: “Başında sahibi bulunmayan araca zarar veren sürücü, araca yazılı bilgi bırakırsa ayrıca yetkililere haber vermek zorunda değildir.”
+      D: Sahibi bulunmayan araca zarar veren, ilgilisini bulamazsa yazılı bilgi bırakır ve en kısa sürede yetkililere de haber verir (m.152)
+52-33 | Y: “Kamu kurumlarına ait tüm araçların, Sağlık Bakanlığı ambulansları dâhil, karıştığı maddi hasarlı kazalarda tutanağı trafik zabıtası düzenler.”
+      D: Kamu kurumuna ait araç karışan maddi hasarlı kazada tutanağı kolluk düzenler; Sağlık Bakanlığı ambulans ve acil sağlık araçları hariçtir (m.152)
+52-33 | Y: “Kendi aralarında tutanak düzenleyip olay yerinden ayrılan taraflar, sonradan yetkililerden kaza tespit tutanağı düzenlenmesini isteyebilir.”
+      D: Anlaşarak olay yerinden ayrılan taraflar, sonradan yetkililerden kaza tespit tutanağı düzenlenmesini isteyemez (m.152)
+52-34 | Y: “Ölümlü kazada yol trafiğe kapanmışsa, Cumhuriyet savcısı olay yerine gelmeden yol hiçbir şekilde trafiğe açılamaz.”
+      D: Başka geçit verilemiyor ve savcının gecikeceği anlaşılıyorsa, işaretleme ve tespitler tutanağa bağlanınca yol trafiğe açılır (m.154)
+52-34 | Y: “Trafik kazalarına adli yönden trafik zabıtası, kaza tespit tutanağı için mahallî genel zabıta el koyar.”
+      D: Kazaya adli yönden mahallî genel zabıta, kaza tespit tutanağı için trafik zabıtası (polis veya jandarma) el koyar (m.154)
+52-35 | Y: “Kazaya el koyan görevli, sahibinin izni veya tutanak aranmaksızın kazaya karışan aracın içini arayabilir.”
+      D: Sahiplerinin izni olmadan, zorunlu hâllerde tutanak düzenlenmeden kazaya karışan araçlar kurcalanmaz ve içleri aranmaz (m.155)
+52-35 | Y: “Araç sahibi ölmüş veya ağır yaralıysa, araçtaki eşya ve yükler tutanak düzenlenmeden yakınlarına teslim edilir.”
+      D: Sahibi ölmüş veya ağır yaralıysa araç, eşya ve yük tutanakla belgelenerek yerinde ya da başka yerde muhafaza altına alınır (m.155)
+52-36 | Y: “Hız sınırlarını aşmak, Yönetmelikte sayılan aslî kusur hâllerinden biridir.”
+      D: Hız sınırını aşmak, Yönetmelikte sayılan aslî kusur hâlleri arasında yer almaz (m.157)
+52-36 | Y: “Park için ayrılmış yerde kurallara uygun parkedilmiş araca çarpmak aslî kusur sayılmaz.”
+      D: Park yerinde veya taşıt yolu dışında kurallara uygun parkedilmiş araca çarpmak aslî kusur sayılır (m.157)
+52-36 | Y: “Başka sürücünün kural dışı hareketi yüzünden kazayı önlemek için kural ihlaline mecbur kalan sürücü de aslî kusurlu sayılır.”
+      D: Başkasının kural dışı hareketi nedeniyle kazayı önlemek için kural ihlaline mecbur kalan, tüm tedbirlere rağmen kazaya yol açsa da aslî kusurlu sayılmaz (m.157)
+52-37 | Y: “Sürücü belgelerinin geri alınmasına ve iptaline, kanunda yetkilendirilen hâller dışında vali karar verir.”
+      D: Kanunda yetkilendirilen hâller dışında sürücü belgesinin geri alınmasına ve iptaline sulh ceza hâkimlikleri karar verir (m.160)
+52-37 | Y: “Trafik idari yaptırımlarına itirazlarda Ceza Muhakemesi Kanunu hükümleri uygulanır.”
+      D: Trafik idari yaptırımlarına itirazlarda 5326 sayılı Kabahatler Kanunu hükümleri uygulanır (m.160)
+52-38 | Y: “Jandarma bölgesinde trafik tutanağını, trafik eğitimi alıp almadığına bakılmaksızın her jandarma personeli düzenleyebilir.”
+      D: Jandarma bölgesinde tutanağı trafik eğitimi almış subay, astsubay ve uzman jandarmalar düzenler (m.166)
+52-38 | Y: “Polisin görev alanında trafik zabıtası yetersiz kalırsa trafik tutanağını jandarma düzenler.”
+      D: Trafik zabıtasının bulunmadığı veya yetersiz olduğu yerlerde polis, polisin ve trafik teşkilatının görev alanı dışında jandarma yetkilidir (m.166)
+52-39 | Y: “Bir yıl içinde 100 ceza puanını ilk kez aşan sürücünün belgesi 4 ay süreyle geri alınır.”
+      D: 100 ceza puanını ilk kez aşanın belgesi 2 ay, ikinci kez aşanın belgesi 4 ay süreyle geri alınır (m.167)
+52-39 | Y: “Ölümlü kazaya aslî kusurlu olarak sebep olan sürücünün belgesi mahkemece 2 yıl süreyle geri alınır.”
+      D: Ölümlü kazaya aslî kusurlu sebep olan sürücünün belgesi ilgili mahkemece 1 yıl süreyle geri alınır (m.167)
+52-39 | Y: “100 ceza puanını üçüncü kez aşan sürücünün belgesi 6 ay süreyle geri alınır.”
+      D: 100 ceza puanını üçüncü kez aşan sürücü düzenlenen tutanakla sulh ceza hâkimliğine sevk edilir (m.167)
+52-40 | Y: “Mahkemenin sürücü belgesini geri alma kararı, hürriyeti bağlayıcı cezanın infazıyla eş zamanlı uygulanır.”
+      D: Mahkemenin belge geri alma kararı, varsa hürriyeti bağlayıcı cezanın infazından sonra uygulanır (m.168)
+52-40 | Y: “Belge geri alma işlemleri, kararın trafik kuruluşuna ulaştığı tarihten itibaren başlar.”
+      D: Geri alma işlemleri durumun ilgiliye tebliğinden itibaren başlar; karar trafik kuruluşuna ulaşınca kayıtlara şerh düşülür (m.168)
+52-41 | Y: “Olağanüstü hâl ve savaşta askerî trafik için kullanılacak karayollarını İçişleri Bakanlığı belirler.”
+      D: Olağanüstü hâl ve savaşta askerî trafik için kullanılacak karayollarını Genelkurmay Başkanlığı belirler (m.173)
+52-41 | Y: “Askerî yönetimdeki karayolunda sivil kişiler yalnızca trafik zabıtasının talimatlarına uyar.”
+      D: Askerî yönetimdeki yolda siviller asker görevlilerin, sivil yönetimdeki yolda askerler trafik görevlilerinin talimatlarına uyar (m.173)
+52-42 | Y: “Trafikten men edilen araçların bilgilerinin Defterdarlık veya Mal Müdürlüğüne gönderilme süresi, men tarihinden itibaren 6 aydır.”
+      D: Trafikten men edilen araçların bilgileri men tarihinden itibaren 4 ay içinde Defterdarlık veya Mal Müdürlüğüne gönderilir (m.174)
+52-42 | Y: “Uzun süre park edilmiş veya terk edilmiş araçları kaldırıp trafikten men etmeye belediye zabıtası yetkilidir.”
+      D: Uzun süre park edilmiş, terk edilmiş veya hasarlı araçları tutanakla kaldırıp trafikten men etmeye trafik zabıtası yetkilidir (m.174)
+52-43 | Y: “İlk ve orta dereceli okullarda 10 yaşını doldurmuş öğrenciler okul geçidi görevlisi olabilir.”
+      D: Okul geçidi görevlisi olabilecek öğrencilerin 12 yaşını doldurmuş olması gerekir (m.178)
+52-43 | Y: “Okul geçidi görevlisinin, talimatına uymayan sürücü için düzenlediği tutanağı trafik kuruluşuna teslim süresi 10 iş günüdür.”
+      D: Okul geçidi görevlisi, uymayan sürücü için düzenlediği tutanağı en geç 3 iş günü içinde trafik kuruluşuna teslim eder (m.178)
+52-44 | Y: “Belediye sistemiyle tespit edilen ihlallerde idari para cezasının %50'si belediyeye ödenir.”
+      D: Belediye sistemiyle tespit edilen ihlallerde idari para cezasının %30'u belediyeye hizmet bedeli olarak ödenir (Ek m.2)
+52-44 | Y: “Belediyeye ödenecek hizmet bedeli, Emniyet Genel Müdürlüğü bütçesinden yıl sonunda toplu olarak ödenir.”
+      D: Hizmet bedeli, izleyen ayın sonuna kadar Emniyet Genel Müdürlüğü bütçesinden ilgili belediyeye ödenir (Ek m.2)
+52-45 | Y: “Aday sürücünün belgesinin iptali için toplam 100 ceza puanının aşılması gerekir.”
+      D: Aday sürücüde sınır 75 ceza puanıdır; aşılırsa belge trafik görevlilerince iptal edilir (Ek m.3)
+52-45 | Y: “İlk defa sürücü belgesi alanlar, belgenin alındığı tarihten itibaren bir yıl süreyle aday sürücü kabul edilir.”
+      D: İlk defa sürücü belgesi alanlar, belgenin alındığı tarihten itibaren iki yıl süreyle aday sürücü sayılır (Ek m.3)
+52-45 | Y: “Aday sürücülerde belge iptaline yol açan alkol sınırı 0,50 promildir.”
+      D: Aday sürücünün belgesi, araç cinsine bakılmaksızın 0,20 promilin üzerinde alkollü araç kullanması hâlinde iptal edilir (Ek m.3)
+53-0 | Y: “Taşınır kültür varlığını kendi mülkünde bulan kişiye, takdir edilen bedelin %80'i ikramiye olarak ödenir.”
+      D: Varlık bulanın kendi mülkünde ise değeri ödenerek müzelerce satın alınır; ayrıca ikramiye verilmez (m.3/a)
+53-0 | Y: “Taşınır kültür varlığı bulunduğunu bilenlerin bunu müzeye haber verme süresi on beş gündür.”
+      D: Varlık en geç 3 gün içinde en yakın müzeye, köyde muhtara, diğer yerlerde mülki idare amirine haber verilir (m.3)
+53-1 | Y: “Varlık başkasının mülkünde bulunmuşsa takdir edilen bedelin %80'inin tamamı bulana ödenir.”
+      D: Varlık başkasının mülkünde bulunursa takdir edilen bedelin %80'i bulan ile mülk sahibi arasında yarı yarıya paylaştırılır (m.3/b)
+53-1 | Y: “Başkasının mülkünde bulunan varlık için bulan ile mülk sahibi arasında paylaştırılacak ikramiye, bedelin %40'ıdır.”
+      D: Başkasının mülkünde bulunan varlıkta paylaştırılan ikramiye bedelin %80'idir; %40 oranı Devlet arazisinde bulana ödenir (m.3/b)
+53-2 | Y: “Varlık Devlete ait arazide bulunmuşsa takdir edilen bedelin %80'i bulana ikramiye olarak ödenir.”
+      D: Varlık Devlete ait arazide bulunmuşsa takdir edilen bedelin %40'ı bulana ikramiye olarak ödenir (m.3/c)
+53-2 | Y: “Devlete ait arazide bulunan varlığın ikramiyesi, bulan ile Hazine arasında eşit olarak paylaştırılır.”
+      D: Devlet arazisinde bulunan varlıkta bedelin %40'ı bulana ödenir; eşit paylaşım başkasının mülkünde bulunan varlık içindir (m.3/c)
+53-3 | Y: “Belgeyle sahibine iade edilen varlık üzerinde sahibi satış gibi tasarruflarda bulunamaz.”
+      D: Belgeyle iade edilen varlık üzerinde sahibi her türlü tasarrufta bulunabilir (m.3/d)
+53-3 | Y: “Korunması gerekli olmayan varlıkların sahiplerince müzeden alınması için tanınan süre iki yıldır.”
+      D: Sahiplerince bir yıl içinde alınmayan varlıklar müzelerde saklanabilir veya usulüne uygun olarak Devletçe satılabilir (m.3/d)
+53-4 | Y: “Gizlenmiş sayılan varlıkların değerinin 100.000 liradan yukarı olan kısmı için %9 oranında ikramiye ödenir.”
+      D: Değerin 100.000 liradan yukarı olan kısmı için %7,5 oranında ikramiye ödenir (m.4)
+53-4 | Y: “Gizlenmiş varlığı haber veren ile yakalayan kamu görevlisi, hesaplanan ikramiyeyi aralarında bölüşür.”
+      D: İkramiye haber veren ve yakalayana ayrı ayrı ödenir; aynı sıfattaki birden fazla kişi ise kendi aralarında eşit paylaşır (m.4)
+53-4 | Y: “Gizlenmiş varlığın değerinin 5.000 liraya kadar olan kısmı için %25 oranında ikramiye ödenir.”
+      D: Değerin 5.000 liraya kadar olan kısmı için %30 oranında ikramiye ödenir (m.4)
+53-5 | Y: “Taşınmaz kültür ve tabiat varlıklarını ihbar edenlere de ihbar ikramiyesi ödenir.”
+      D: Taşınmaz kültür ve tabiat varlıkları için ihbar ikramiyesi ödenmez (m.5)
+53-5 | Y: “Varlığı Bakanlıkça önceden bilinen taşınır kültür varlıklarını haber verenlere ihbar ikramiyesi ödenir.”
+      D: Varlığı Bakanlıkça önceden bilinen taşınır kültür ve tabiat varlıkları için de ihbar ikramiyesi ödenmez (m.5)
+54-0 | Y: “Özel güvenlik komisyonuna il valisi bizzat başkanlık eder.”
+      D: Özel güvenlik komisyonuna valinin görevlendireceği bir vali yardımcısı başkanlık eder (m.5)
+54-0 | Y: “Özel güvenlik komisyonu toplantılarında üyeler çekimser oy kullanabilir.”
+      D: Komisyonda oyların eşitliği hâlinde başkanın bulunduğu taraf çoğunluk sayılır ve çekimser oy kullanılamaz (m.5)
+54-0 | Y: “Özel güvenlik komisyonunda belediye başkanlığının da bir temsilcisi bulunur.”
+      D: Komisyon il emniyet, il jandarma, ticaret odası ve sanayi odası temsilcilerinden oluşur; belediye temsilcisi bulunmaz (m.5)
+54-1 | Y: “Özel güvenlik görevlilerine çalışma izni vermek, özel güvenlik komisyonunun görevleri arasındadır.”
+      D: Çalışma izni vermek, özel güvenlik komisyonunun görevleri arasında sayılmaz (m.6)
+54-1 | Y: “Özel güvenlik hizmetinin yerine getirileceği alanı, zorunlu hâllerde dahi komisyon genişletemez.”
+      D: Komisyon, hizmetin yerine getirileceği alanı belirler ve zorunlu hâllerde görev alanını genişletebilir (m.6)
+54-3 | Y: “Koruma ve güvenlik planının hazırlanma süresi, hizmetin başladığı tarihten itibaren 15 gündür.”
+      D: Koruma ve güvenlik planı, hizmetin başladığı tarihten itibaren en geç 30 gün içinde hazırlanır (m.12)
+54-3 | Y: “Hazırlanan koruma ve güvenlik planı, onaylanmak üzere valiliğe gönderilir.”
+      D: Plan valiliğe gönderilmez; güncel örneği valilik talebinde veya denetimlerde ibraz edilmek üzere hazır bulundurulur (m.12)
+54-4 | Y: “Genel kolluk kuvvetlerinde en az 3 yıl fiilen çalışıp kendi isteğiyle ayrılanlarda temel eğitim şartı aranmaz.”
+      D: Genel kolluk veya MİT'te en az 5 yıl fiilen çalışıp kendi isteğiyle ayrılanlarda temel eğitim şartı aranmaz (m.17)
+54-4 | Y: “Özel güvenlik görevlileri hakkındaki güvenlik soruşturması ve arşiv araştırması her 10 yılda bir yenilenir.”
+      D: Güvenlik soruşturması ve arşiv araştırması her 5 yılda bir yenilenir (m.17)
+54-4 | Y: “Güvenlikle ilgili meslek yüksekokulu mezunlarında silah eğitimi dâhil temel eğitim şartı aranmaz.”
+      D: Güvenlikle ilgili fakülte ve meslek yüksekokulu mezunlarında silah eğitimi dışında temel eğitim şartı aranmaz (m.17)
+54-6 | Y: “Özel güvenlik şirketlerinin kullanacağı üniforma ve teçhizat Komisyonca onaylanır.”
+      D: Şirketlerin üniforma ve teçhizatını Bakanlık, özel güvenlik birimlerininkini Komisyon onaylar (m.22)
+54-6 | Y: “Özel güvenlik görevlileri, ÖZEL GÜVENLİK ibareli reflektif yeleği yalnızca gece görevinde giyer.”
+      D: Reflektif ÖZEL GÜVENLİK yeleği gece görevinde, spor müsabakalarında, konser ve sahne gösterilerinde giyilir (m.22)
+54-7 | Y: “Özel güvenlik görevlilerinin silah bulundurmasına ve taşımasına valilik karar verir.”
+      D: Silah bulundurulmasına ve taşınmasına Komisyon karar verir; silahların sayısı ve niteliği kararda belirtilir (m.24)
+54-7 | Y: “Özel güvenlikte öncelik ateşli silahlara verilir; fiziki önlemlere ancak silah yetersiz kalırsa başvurulur.”
+      D: Öncelik fiziki önlemlere ve güvenlik cihazlarına verilir; bunlar yetersiz kalırsa silaha Komisyonca karar verilir (m.24)
+54-8 | Y: “Bulundurulmasına izin verilen her silah için 50 adet fişek alınmasına izin verilir.”
+      D: İzin verilen her silah için 25 adet fişek alınmasına izin verilir (m.29)
+54-8 | Y: “Fişek miktarı, Komisyon kararı aranmaksızın yalnızca valinin onayıyla artırılabilir.”
+      D: Fişek miktarı, Komisyonun kararı ve valinin onayıyla görev yeri ve niteliğine göre artırılabilir (m.29)
+54-8 | Y: “Ateşli silah eğitiminde kullanılacak fişekler de silah başına fişek sınırlamasına tabidir.”
+      D: Ateşli silah eğitiminde kullanılacak fişekler bu sınırlamaya tabi değildir (m.29)
+54-9 | Y: “Özel güvenlik izni iptal edilenlere silah ve fişeklerini devretmeleri için tanınan süre 1 yıldır.”
+      D: Devir 6 ay içinde yapılmazsa takip eden 2 ay içinde 6136 sayılı Kanuna göre ruhsat başvurusu zorunludur (m.30)
+54-9 | Y: “Süresinde ruhsatlandırılmayan silahlar imha edilmek üzere doğrudan Makine Kimya Endüstrisi Kurumuna verilir.”
+      D: Süresinde ruhsatlandırılmayan silahlar müsadere edilmek üzere adli makamlara intikal ettirilir (m.30)
+54-10 | Y: “Kursiyerlerin atış eğitiminde başarılı sayılması için 25 fişekten en az 20'sinin hedefe isabet etmesi gerekir.”
+      D: Atış eğitiminde başarılı sayılmak için 25 fişeğin en az 15'inin hedefe isabet etmesi gerekir (m.33)
+54-10 | Y: “Ateşli silah taşımayacak özel güvenlik görevlilerinin temel eğitimi de en az 120 saattir.”
+      D: Silah taşımayacak görevlilerin silah eğitimi zorunlu değildir; temel eğitimleri 100 saatten az olamaz (m.33)
+54-10 | Y: “Özel güvenlik temel eğitimi günde 10 saate kadar yapılabilir.”
+      D: Temel eğitim günde 8, haftada 48 saatten fazla olamaz (m.33)
+54-11 | Y: “Özel güvenlik görevlileri kimlik kartlarını yenilemek için 3 yılda bir yenileme eğitimi alır.”
+      D: Görevliler ve yöneticiler kimlik kartlarının yenilenmesi için 5 yılda bir yenileme eğitimi alır (m.34)
+54-11 | Y: “Özel güvenlik şirketinden hizmet alan kuruluşlar da yenileme eğitimini kendi iş yerlerinde yaptırabilir.”
+      D: Yerinde yenileme eğitimi en az 20 görevli istihdam eden birimlerde yapılabilir; şirketten hizmet alanlar yerinde yaptıramaz (m.34)
+54-11 | Y: “Özel güvenlik yenileme eğitimi en az 120 ders saatinden oluşur.”
+      D: Yenileme eğitimi en az 60 ders saatidir; bunun 8 saati silah bilgisi ve atışa ayrılır (m.34)
+54-12 | Y: “Özel güvenlik yazılı sınavının soruları valiliklerce hazırlanır.”
+      D: Yazılı sınav soruları Merkezi Sınav Komisyonunca hazırlanır; sınav illerde yapılır (m.37)
+54-12 | Y: “Temel eğitim yazılı sınavı, 40 soruluk birinci kısım ile 20 soruluk silah bilgisi kısmından oluşur.”
+      D: Temel eğitim yazılı sınavı 80 soruluk birinci kısım ile 20 soruluk silah bilgisi kısmından oluşur; 40 soruluk kısım yenileme sınavına aittir (m.37)
+54-13 | Y: “Uygulamalı sınavda adayların atış becerisi 25 adet fişek üzerinden yapılan atışla ölçülür.”
+      D: Uygulamalı sınavda atış becerisi, Bakanlıkça belirlenen mesafeden 5 adet fişek üzerinden yapılan atışla ölçülür (m.38)
+54-13 | Y: “Uygulamalı sınav, yazılı sınavdan bir hafta sonra yapılır.”
+      D: Uygulamalı sınav yazılı sınavdan hemen sonra yapılır; aynı gün bitmezse sonraki günlerde tamamlanabilir (m.38)
+54-14 | Y: “Bakanlık adına özel güvenlik denetimlerini yalnız Emniyet Genel Müdürlüğü yapar.”
+      D: Bakanlık adına denetimler, sorumluluk bölgesine göre Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü birimlerince yapılır (m.43)
+54-14 | Y: “Valilikler özel güvenlik şirketlerini yalnızca yılda bir kez denetleyebilir.”
+      D: Bakanlık ve valilikler şirketleri, alarm izleme merkezlerini, birimleri ve eğitim kurumlarını her zaman denetleyebilir (m.43)
+54-15 | Y: “Denetimde tespit edilen eksikliklerin giderilmesi için verilecek süre asgari 30 gündür.”
+      D: Tespit edilen eksikliklerin giderilmesi için eksikliğin niteliğine göre asgari 7 gün süre verilir (m.45)
+54-15 | Y: “Amacı dışında faaliyet gösteren özel güvenlik şirketinin faaliyet izni valilikçe iptal edilir.”
+      D: Amacı dışında faaliyet gösteren şirketin faaliyet izni Bakanlıkça, alarm izleme merkezinin yeterlilik belgesi valilikçe iptal edilir (m.45)
+55-0 | Y: “Adli kolluk sorumlusunu Cumhuriyet başsavcısı görevlendirir.”
+      D: Adli kolluk sorumlusunu mahallin en büyük mülki idare amiri görevlendirir (m.3)
+55-0 | Y: “Jandarma Genel Komutanlığında en üst dereceli kolluk amiri bölge jandarma komutanıdır.”
+      D: JGK'da en üst dereceli kolluk amiri il jandarma komutanı ile ilçe ve merkez ilçe jandarma komutanıdır (m.3)
+55-1 | Y: “Kovuşturma evresi iddianamenin düzenlenmesiyle başlar.”
+      D: Kovuşturma iddianamenin kabulüyle başlar ve hükmün kesinleşmesine kadar sürer (m.3)
+55-1 | Y: “Soruşturma evresi, suç şüphesinin öğrenilmesinden hükmün kesinleşmesine kadar sürer.”
+      D: Soruşturma, suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar geçen evredir (m.3)
+55-1 | Y: “Gecikmesinde sakınca bulunan hâl, yalnızca şüphelinin kaçma ihtimalini ifade eder.”
+      D: Gecikmesinde sakınca, derhâl işlem yapılmazsa delillerin kaybolması, şüphelinin kaçması veya kimliğinin saptanamaması ihtimalidir (m.3)
+55-2 | Y: “Asgari tam teşekküllü bir polis karakolu bulunan yerlerde adli kolluk personelini Jandarma Genel Komutanlığı görevlendirir.”
+      D: Asgari tam teşekküllü polis karakolu bulunan yerlerde adli kolluk personelini Emniyet Genel Müdürlüğü görevlendirir (m.4)
+55-2 | Y: “Sahil Güvenlik Komutanlığı, asgari sahil güvenlik grup komutanlığı bulunan yerlerde adli kolluk personeli görevlendirir.”
+      D: Sahil Güvenlik Komutanlığı, asgari sahil güvenlik bot komutanlıklarının bulunduğu yerlerde adli kolluk personeli görevlendirir (m.4)
+55-3 | Y: “Adli görevi bulunmayan üstler de yürütülen soruşturmayla ilgili adli kolluk görevlilerine emir ve talimat verebilir.”
+      D: Adli görevi bulunmayan üstler, yürütülen soruşturmayla ilgili adli kolluk görevlilerine emir ve talimat veremez (m.5)
+55-3 | Y: “Adli kolluk görevlilerinin özlük hakları Cumhuriyet başsavcılığınca yürütülür.”
+      D: Adli kolluk görevlilerinin özlük hakları bağlı oldukları teşkilat tarafından yürütülür (m.5)
+55-5 | Y: “Soruşturma işlemlerini yalnızca adli kolluk olarak görevlendirilmiş personel yapabilir; diğer kolluk birimleri bu görevi üstlenemez.”
+      D: Gerektiğinde veya Cumhuriyet savcısının talebiyle diğer kolluk birimleri de adli kolluk görevini yerine getirmekle yükümlüdür (m.7)
+55-5 | Y: “Adli kolluk görevi yapan diğer kolluk görevlileri hakkında, adli görevleri dolayısıyla Polis Vazife ve Salahiyet Kanunu hükümleri uygulanır.”
+      D: Bu durumda kolluk görevlileri hakkında, adli görevleri dolayısıyla Ceza Muhakemesi Kanunu hükümleri uygulanır (m.7)
+55-6 | Y: “Adli kolluk sorumluları hakkındaki değerlendirme raporunu mülki idare amiri düzenleyerek Cumhuriyet başsavcılığına gönderir.”
+      D: Değerlendirme raporunu Cumhuriyet başsavcısı düzenler ve mülki idare amirine gönderir (m.11)
+55-6 | Y: “Adli kolluk sorumluları hakkındaki değerlendirme raporları her üç ayda bir düzenlenir.”
+      D: Değerlendirme raporları Cumhuriyet başsavcılarınca her yılın sonunda düzenlenir (m.11)
+55-6 | Y: “Değerlendirme raporları, ilgilinin sicilinin düzenlenmesinde dikkate alınmaz.”
+      D: Değerlendirme raporları ilgilinin sicilinin düzenlenmesinde dikkate alınır (m.11)
+55-7 | Y: “Adli kolluk görevlilerine verilecek eğitim, İçişleri Bakanlığı ve Adalet Bakanlığınca müştereken verilir.”
+      D: Eğitim, kolluğun bağlı olduğu Bakanlığın talebi üzerine Adalet Bakanlığınca görevlendirilecek eğitici personel tarafından verilir (m.9)
+55-7 | Y: “Adli kolluk eğitimi Adalet Bakanlığınca talep edilir, eğitici personeli İçişleri Bakanlığı görevlendirir.”
+      D: Eğitimi kolluğun bağlı olduğu Bakanlık talep eder; eğitici personeli Adalet Bakanlığı görevlendirir (m.9)
+56-0 | Y: “Adli ve Önleme Aramaları Yönetmeliğine göre kolluk, yalnızca jandarma ve polis görevlilerini ifade eder.”
+      D: Kolluk; jandarma, polis, sahil güvenlik ve gümrük muhafaza görevlilerini ifade eder (m.4)
+56-0 | Y: “Gece vakti, güneşin batmasından iki saat sonra başlayıp doğmasından iki saat evvele kadar süren zamandır.”
+      D: Gece vakti, güneşin batmasından bir saat sonra başlayıp doğmasından bir saat evvele kadar süren zamandır (m.4)
+56-0 | Y: “İllerde mülkî âmir yalnızca validir; vali bu yetkiyi yardımcısına bırakamaz.”
+      D: Mülkî âmir, illerde vali veya bu konuda yetkilendirdiği yardımcısı, ilçelerde kaymakamdır (m.4)
+56-1 | Y: “Adli arama, henüz işlenmemiş bir suçun işlenmesini önlemek amacıyla yapılan araştırmadır.”
+      D: Adli arama, makul şüphe altındaki kişinin yakalanması ve suç delillerinin elde edilmesi için yapılır; suçu önlemeye yönelik olan önleme aramasıdır (m.5, m.19)
+56-1 | Y: “Adli arama yalnızca konutta yapılabilir; kişinin üstünde, eşyasında ve aracında adli arama yapılamaz.”
+      D: Adli arama konut, iş yeri, kişinin üstü, özel kâğıtları, eşyası ve aracında yapılabilir (m.5)
+56-3 | Y: “Adli aramaya karar verme yetkisi Cumhuriyet savcısına aittir.”
+      D: Adli aramaya karar verme yetkisi hâkimindir; savcı yalnız gecikmesinde sakınca bulunan hâllerde yazılı emir verebilir (m.7)
+56-3 | Y: “Cumhuriyet savcısına ulaşılamayan hâllerde kolluk amiri, iş yerinde aramaya yazılı emir verebilir.”
+      D: Kolluk amiri konutta, iş yerinde ve kamuya açık olmayan kapalı alanlarda arama emri veremez (m.7)
+56-3 | Y: “Kolluk amirinin yazılı emriyle yapılan arama ve sonuçları sulh ceza hâkimliğine bildirilir.”
+      D: Kolluk amirinin yazılı emriyle yapılan arama ve sonuçları Cumhuriyet başsavcılığına derhâl bildirilir (m.7)
+56-5 | Y: “Hakkında yakalama emri bulunan kişinin yakalanması için konutunda karar veya emir olmaksızın arama yapılabilir.”
+      D: Yakalama emri veya tutuklama kararı olan kişi yakalandığında karar aranmaksızın yalnız üstü aranır; konut araması ibaresi Danıştay'ca iptal edilmiştir (m.8/a)
+56-5 | Y: “Gözaltına alınan kişinin nezarethaneye konmadan önceki üst araması için Cumhuriyet savcısının yazılı emri gerekir.”
+      D: Gözaltına alınan kişinin nezarethaneye konmadan önce yapılan üst araması için ayrıca arama emri veya kararı aranmaz (m.8)
+56-6 | Y: “Olay yeri incelemesi, suçun işlendiği her yerde emir veya karar aranmaksızın yapılır.”
+      D: Yalnız herkesin girip çıkabileceği kamuya açık alanlarda olay yeri incelemesi için emir veya karar gerekmez (m.9)
+56-6 | Y: “Savcıya ulaşılamazsa konutta olay yeri incelemesi kolluk amirinin yazılı emriyle yapılabilir.”
+      D: Savcıya ulaşılamazsa kolluk amirinin yazılı emri, yalnız konut, iş yeri ve kamuya açık olmayan kapalı alanlar dışında yeterlidir (m.9)
+56-7 | Y: “Aramada tesadüfen bulunan ve başka bir suçun şüphesini uyandıran delile kolluk doğrudan el koyar.”
+      D: Tesadüfen bulunan delil koruma altına alınır; durum başsavcılığa derhâl bildirilir ve el koyma için yeni yazılı emir istenir (m.10)
+56-7 | Y: “Hâkim kararı olmadan yapılan el koymanın hâkim onayına sunulma süresi 48 saattir.”
+      D: Hâkim kararı olmaksızın yapılan el koyma 24 saat içinde hâkim onayına sunulur; hâkim kararını 48 saat içinde açıklar (m.10)
+56-8 | Y: “Adli arama tutanağının sureti ilgiliye verilmez; yalnızca Cumhuriyet başsavcılığına gönderilir.”
+      D: Arama tutanağını katılanlar ve hazır bulunanlar imzalar; tutanağın bir sureti ilgiliye verilir (m.11)
+56-8 | Y: “Arama tutanağına, arama sonucunda yaralanma veya maddi zarar meydana gelip gelmediği yazılmaz.”
+      D: Tutanakta, arama sonucunda yaralanma veya maddi bir zarar meydana gelip gelmediği de yer alır (m.11)
+56-9 | Y: “Avukat bürosunda arama, gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının yazılı emriyle yapılabilir.”
+      D: Avukat büroları ancak mahkeme kararıyla, kararda belirtilen olayla ilgili ve Cumhuriyet savcısının denetiminde aranabilir (m.13)
+56-9 | Y: “Avukat bürosunda yapılan aramada baro başkanı veya temsilcisinin bulunması gerekmez.”
+      D: Avukat bürosundaki aramada baro başkanı veya onu temsil eden bir avukat hazır bulundurulur (m.13)
+56-9 | Y: “Mesleki ilişki itirazı üzerine hâkimin karar verme süresi 48 saattir.”
+      D: Mesleki ilişki itirazına ilişkin kararlar 24 saat içinde verilir (m.13)
+56-10 | Y: “Evsafı belirlenen eşyayı teslimden kaçınan şüpheli hakkında disiplin hapsi için başsavcılığa bildirim yapılır.”
+      D: Disiplin hapsi bildirimi, şüpheli veya sanık ile tanıklıktan çekinebilecekler dışındaki zilyet hakkında yapılır (m.15)
+56-10 | Y: “Savcıya ulaşılamayan hâllerde kolluk görevlisi, amirinin emri olmaksızın kendiliğinden el koyabilir.”
+      D: Savcıya ulaşılamayan hâllerde el koyma, kolluk amirinin yazılı emriyle gerçekleştirilebilir (m.15)
+56-11 | Y: “Kolluk, arama sırasında ele geçen belge ve kâğıtları içeriklerini okuyarak inceleyebilir.”
+      D: Belgeleri inceleme yetkisi savcı ve hâkimindir; kolluk yalnız incelemeksizin bakar, şüphelenirse ambalajlayıp mühürler (m.16)
+56-11 | Y: “Şüpheli ile tanıklıktan çekinebilecek kişiler arasındaki mektuplara, bu kişilerin nezdinde bulunsa bile el konulabilir.”
+      D: Şüpheli veya sanık ile tanıklıktan çekinebilecekler arasındaki mektup ve belgelere, bu kişilerin nezdinde bulundukça el konulamaz (m.16)
+56-12 | Y: “Kolluk, kahvehane ve otel gibi umuma açık yerleri ancak mülkî âmirin yazılı emriyle denetleyebilir.”
+      D: Kahvehane, otel, bar gibi umuma açık istirahat ve eğlence yerlerini kolluk genel güvenlik ve asayiş yönünden kendiliğinden denetleyebilir (m.18/a)
+56-12 | Y: “Dedektör köpekleri aracılığıyla yapılan tarama şeklindeki denetim ancak hâkim kararıyla yapılabilir.”
+      D: Elektromanyetik aygıtlar ve dedektör köpekleriyle yapılan tarama şeklindeki denetimleri kolluk kendiliğinden yapabilir (m.18)
+56-13 | Y: “Kolluk, üniversite binalarında rektörün yardım talebi olmaksızın kendiliğinden önleme araması yapabilir.”
+      D: Üniversitede önleme araması, rektör, acele hâllerde dekan kolluktan yardım isterse yapılabilir (m.19)
+56-13 | Y: “Gecikmesinde sakınca bulunan hâllerde konutlarda da önleme araması yapılabilir.”
+      D: Konutta, yerleşim yerinde ve kamuya açık olmayan özel iş yerlerinde önleme araması yapılamaz (m.19)
+56-13 | Y: “Önleme araması, gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının yazılı emriyle yapılır.”
+      D: Önleme araması hâkim kararıyla, gecikmesinde sakınca bulunan hâllerde mülkî âmirin yazılı emriyle yapılır (m.19)
+56-14 | Y: “Önleme araması için gecikmesinde sakınca bulunan hâllerde yazılı emri kolluk amiri verir.”
+      D: Gecikmesinde sakınca bulunan hâllerde yazılı arama emrini mülkî âmir verir; diğer hâllerde hâkimden karar istenir (m.20)
+56-14 | Y: “Önleme aramasına ilişkin hâkim kararına karşı mülkî âmir kanun yoluna başvuramaz.”
+      D: Hâkimin önleme araması kararlarına karşı mülkî âmir kanun yollarına başvurabilir (m.20)
+56-14 | Y: “Usulüne uygun önleme araması kararı üzerine amirin verdiği sözlü emrin yazılı olarak verilmesi istenebilir.”
+      D: Usulüne uygun karar veya emir üzerine amirin sözlü emirleri derhâl yerine getirilir; yazılı verilmesi istenemez (m.20)
+56-15 | Y: “Özel güvenlik görevlisi, koruduğu alana girmek isteyenlerin üstlerini dedektör yerine elle arayarak kontrol eder.”
+      D: Özel güvenlik görevlisi girenleri duyarlı kapıdan geçirir, üstlerini dedektörle kontrol eder, eşyalarını X-ray cihazından geçirir (m.21)
+56-15 | Y: “Özel güvenlik görevlisi, yangın ve deprem gibi afetlerde bile görev alanındaki konutlara giremez.”
+      D: Özel güvenlik görevlisi yangın, deprem gibi afetlerde ve imdat istenmesi hâlinde görev alanındaki iş yeri ve konutlara girebilir (m.21)
+56-16 | Y: “Alışveriş merkezi girişindeki kontrolü kabul etmeyen kişinin üstü kolluk tarafından zorla aranır.”
+      D: Özel işletme girişindeki kontrol rızaya bağlıdır; kontrolü kabul etmeyen zorla aranmaz, o yere giremez (m.25)
+56-16 | Y: “Sivil hava meydanlarında görevli kamu ve özel kuruluş personeli, X-ray ve üst aramasından muaftır.”
+      D: Sivil hava meydanı, liman ve sınır kapılarında görevli kamu ve özel kuruluş personelinin üstü, aracı ve eşyası da aranır (m.25)
+56-16 | Y: “Olağanüstü hâlde kişilerin üstlerinin aranması için her durumda hâkim kararı gerekir.”
+      D: 2935 sayılı Kanun kapsamında Olağanüstü Hâl Valisinin emriyle yapılan aramada ayrıca arama kararı gerekmez (m.25)
+56-17 | Y: “Durdurulan kişi, kolluğun sorduğu tüm sorulara cevap vermekle yükümlüdür.”
+      D: Durdurulan kişi, kimliğine ilişkin olanlar hariç sorulara cevap vermekle yükümlü değildir (m.27)
+56-17 | Y: “Yoklama suretiyle kontrol kapsamında kolluk, aracın bagajının açılmasını isteyebilir.”
+      D: Aracın içi görünmeyen bölümlerinin açılması istenemez; bunların aranması için mülkî âmirin görevlendirdiği kolluk amirinin yazılı, acele hâlde sözlü emri gerekir (m.27)
+56-17 | Y: “Kolluk amirinin arama emrinin görevli hâkimin onayına sunulma süresi 48 saattir.”
+      D: Kolluk amirinin kararı 24 saat içinde görevli hâkimin onayına sunulur (m.27)
+56-18 | Y: “Üst araması, kişi en yakın karakola götürülerek yapılır.”
+      D: Üst araması ilk durdurulan yerde veya yakınında yapılır; kişi başka yere götürülemez, kolluk aracı veya yakın kapalı yer kullanılabilir (m.28)
+56-18 | Y: “Giysiler çıkartılarak yapılan aramada üst ve alt giysiler aynı anda çıkarttırılır.”
+      D: Önce üst kısımdaki giysiler çıkarttırılır; alt kısımdaki giysiler, üsttekiler giyildikten sonra çıkarttırılır (m.28)
+56-18 | Y: “Üst araması sırasında rastlanan açık zarflardaki yazılı bilgiler okunabilir.”
+      D: Özel kâğıt ve zarflar müsadereye tabi eşya ihtimali dışında açılmaz; açık olsa dahi yazılı bilgiler okunamaz (m.28)
+56-20 | Y: “Konut aramasında köy veya mahalle muhtarının hazır bulunması zorunludur.”
+      D: Aramada yer sahibi bulunabilir; yoksa temsilcisi, ayırt etme gücüne sahip hısmı, birlikte oturan biri veya komşusu hazır bulundurulur (m.30)
+56-20 | Y: “Geceleyin herkesin girip çıkabileceği bar ve kıraathane gibi yerlerin aranmasında tanık bulundurulması zorunludur.”
+      D: Geceleyin herkesin girip çıkabileceği lokanta, bar, kıraathane gibi yerlerin aranmasında tanık bulundurulması gerekmez (m.30)
+56-20 | Y: “Kişinin avukatının aramada hazır bulunması, aramanın güvenliği gerekçesiyle engellenebilir.”
+      D: Kişinin avukatının aramada hazır bulunmasına engel olunamaz (m.30)
+56-21 | Y: “Bir arama kararı, aksine hüküm içermese de birden fazla arama yapma yetkisi verir.”
+      D: Her arama kararı, aksine hüküm içermiyorsa yalnızca bir kez arama yapma yetkisi verir (m.31)
+56-21 | Y: “Konutta gece adli arama, suçüstü hâlinde dahi yapılamaz.”
+      D: Konutta gece adli arama yapılamaz; ancak suçüstü, gecikmesinde sakınca ve firar edenin tekrar yakalanması hâllerinde yapılabilir (m.31)
+56-21 | Y: “Önleme aramaları gece vakti yapılamaz.”
+      D: Önleme aramaları, denetimler ve kontroller her zaman yapılabilir (m.31)
+57-1 | Y: “Suç eşyası ile ilgili işlemler, kolluk birimleri bünyesindeki emanet bürosunca yürütülür.”
+      D: Suç eşyası işlemleri, Cumhuriyet başsavcılığının sürekli gözetim ve denetimi altında, başsavcılık nezdindeki emanet bürosunca yürütülür (m.4)
+57-1 | Y: “Devlet sırrı niteliğindeki bilgileri içeren CD ve harici bellekler diğer suç eşyasıyla birlikte depoda saklanır.”
+      D: Devlet sırrı niteliğindeki bilgileri içeren belge, CD, DVD ve harici bellek gibi aygıtlar yüksek güvenlikli kasada saklanır (m.4)
+57-1 | Y: “Ağır ceza mahkemesi Cumhuriyet başsavcılıklarında emanet bürosu işlerine bakmak üzere ayrıca müdür görevlendirilmez.”
+      D: Ağır ceza mahkemesi Cumhuriyet başsavcılıklarında emanet bürosu işlerine bakmak üzere ayrıca müdür görevlendirilir (m.4)
+57-2 | Y: “Hâkim kararı olmaksızın yapılan elkoymanın görevli hâkimin onayına sunulma süresi 48 saattir.”
+      D: Hâkim kararı olmaksızın yapılan elkoyma 24 saat içinde hâkim onayına sunulur; hâkim kararını 48 saat içinde açıklar (m.5)
+57-2 | Y: “Hâkim, elkoymaya ilişkin kararını süresinde açıklamazsa elkoyma kendiliğinden kesinleşir.”
+      D: Hâkim kararını elkoymadan itibaren 48 saat içinde açıklamazsa elkoyma kendiliğinden kalkar (m.5)
+57-2 | Y: “Zilyetliğindeki eşyaya elkonulan kişi, elkoymanın kaldırılmasını ancak kovuşturma evresinde isteyebilir.”
+      D: Eşyasına elkonulan kimse, hâkimden her zaman elkoymanın kaldırılmasına karar verilmesini isteyebilir (m.5)
+57-3 | Y: “Emanet memuru, acil hâllerde usulüne göre mühürlenmemiş suç eşyasını da teslim alabilir.”
+      D: Emanet memuru, usulüne göre ambalajlanmamış veya mühürlenmemiş suç eşyasını teslim alamaz (m.7)
+57-3 | Y: “Emanet memuru, ambalajlanmamış suç eşyasını teslim alıp ambalajlama işlemini kendisi yapar.”
+      D: Emanet memuru ambalajsız eşyayı teslim alamaz; eşya m.5 usulüne göre ambalajlanıp mühürlendikten sonra teslim edilir (m.7)
+57-4 | Y: “Bilgisayar ve ses-görüntü kayıt aygıtları gibi elektronik suç eşyası diğer eşyayla aynı depo bölümünde saklanır.”
+      D: Elektronik eşya; nem, ısı, manyetik alan ve darbeden korunan müstakil uygun alanlarda saklanır (m.8)
+57-4 | Y: “Emanet bürosundaki suç eşyası, sahiplerinin adlarına göre alfabetik olarak tasnif edilir.”
+      D: Suç eşyası nitelik ve yıllarına göre tasnif edilerek muhafaza edilir (m.8)
+57-5 | Y: “İncelemeye verilip iade edilmeyen suç eşyasının iade edilmeme sebebi ilgili merciden her ay sorulur.”
+      D: İade edilmeyen suç eşyasının iade edilmeme sebebi ilgili merciden üçer aylık fasılalarla sorulur (m.9)
+57-5 | Y: “İnceleme sırasında mührü sökülen eşya için tek nüsha tutanak tutulması yeterlidir.”
+      D: İnceleme sırasında mühür sökülürse eşya yeniden ambalajlanıp mühürlenir ve en az iki nüsha tutanak tutulur (m.9)
+57-6 | Y: “Kıymetli eşyanın saklandığı kasa emanet memuru tarafından tek başına açılıp kapatılır.”
+      D: Kıymetli eşyanın saklandığı kasa en az iki kişi tarafından açılıp kapanır (m.10)
+57-6 | Y: “Bankada kasa kiralanması gerektiğinde Cumhuriyet başsavcılığı Adalet Bakanlığına bildirmeden kasa kiralar.”
+      D: Bankada kasa kiralama zorunluluğu doğarsa durum derhâl Adalet Bakanlığına bildirilir ve talimata göre hareket edilir (m.10)
+57-6 | Y: “Bozulacak eşyanın satışına soruşturma evresinde Cumhuriyet savcısı karar verir.”
+      D: Bozulacak eşya için soruşturmada hâkimden, kovuşturmada yargılamayı yapan mahkemeden satış veya teslim kararı istenir (m.10)
+57-7 | Y: “Emanet memurunca teslim alınan suç eşyası, hâkim kararıyla başka bir yere nakledilir.”
+      D: Emanet memurunca teslim alınan suç eşyasının başka yere nakli, Cumhuriyet savcısının yazılı emriyle mümkündür (m.11)
+57-7 | Y: “Elkonulan ateşli silahlar, mahkeme kararına kadar emanet bürosunun kasasında saklanır.”
+      D: Elkonulan ateşli silahlar mahkeme kararına kadar başsavcılığın yazılı emriyle mahallî jandarma birlik depolarında muhafaza edilir (m.11)
+57-7 | Y: “Jandarma birliğine teslim edilen silahlar için iki nüsha tutanak düzenlenir.”
+      D: Jandarma birliğine teslimde üç nüsha tutanak düzenlenir; biri teslim alana verilir, diğerleri emanet bürosu ve başsavcılıkta saklanır (m.11)
+57-8 | Y: “Elkonulan kara, deniz ve hava araçları jandarma birlik depolarında muhafaza edilir.”
+      D: Elkonulan taşıtlar emanet kaydından sonra mahallin en büyük mal memurluğuna üç nüsha tutanakla teslim edilir (m.12)
+57-8 | Y: “Mal memurluğuna teslim edilen taşıtın depodan alınması için emanet memurunun tek başına imzaladığı yazı yeterlidir.”
+      D: Mal memurluğundaki taşıtın alınması ve iadesi, emanet memuru ile Cumhuriyet savcısının imzalarını taşıyan yazıyla yapılır (m.12)
+57-9 | Y: “Emanet eşyasının iadesine ilişkin kararların emanet makbuzuyla başsavcılığa tevdi süresi 5 gündür.”
+      D: İade ve elden çıkarma kararları emanet makbuzuyla birlikte en geç 2 gün içinde başsavcılığa tevdi edilir (m.16)
+57-9 | Y: “Teminat karşılığı verilen iade kararlarında, teminatın yatırıldığına dair makbuz aranmaz.”
+      D: Teminat veya rayiç değer karşılığı iade kararında, bedelin mal memurluğuna yatırıldığına dair makbuz evraka eklenir (m.16)
+57-10 | Y: “Suç eşyasının sahibine iadesi, Cumhuriyet savcısı bulunmaksızın emanet memurunca tek başına yapılır.”
+      D: Eşyanın sahibine iadesi Cumhuriyet savcısının huzurunda yapılır; tutanağa savcı ve emanet memuru imza atar (m.18)
+57-10 | Y: “Müsaderesine karar verilen ateşli silahlar mahallin en büyük mal memurluğuna gönderilir.”
+      D: Müsadere edilen ateşli silah, mermi ve patlayıcılar Millî Savunma Bakanlığına teslime ilişkin Yönetmeliğe göre işleme tabi tutulur (m.18)
+57-10 | Y: “Yabancı uyruklu kişiye ait suç eşyası yalnızca Dışişleri Bakanlığı aracılığıyla iade edilir.”
+      D: Yabancıya ait eşya, müracaatı hâlinde kendisine veya ülkesinin sefaret ya da konsolosluğuna gönderilir (m.18)
+57-11 | Y: “Depo mevcudu ile kayıtların sayım ve kontrolü altı ayda bir yapılır.”
+      D: Depo mevcudu ile kayıtların sayım ve kontrolü her yıl sonunda yapılır ve tutanağa bağlanır (m.20)
+57-11 | Y: “Emanet memuru, hakkında karar verilmeyen eşyayı ancak teslimden itibaren iki yıl geçince başsavcılığa bildirir.”
+      D: Teslimden itibaren bir yıl içinde hakkında karar verilmemiş eşya ve paralar başsavcılığa bildirilir (m.20)
+57-11 | Y: “Yazı işleri müdürlerinin, eşyanın ilgili olduğu davanın durumunu emanet bürosuna bildirme süresi 30 gündür.”
+      D: Yazı işleri müdürleri durumu en geç 15 gün içinde emanet bürosuna bildirir (m.20)
+57-12 | Y: “İadesine karar verilen eşyanın satılabilmesi için tebligata rağmen üç ay içinde alınmamış olması gerekir.”
+      D: Tebligata rağmen bir ay içinde alınmayan veya sahibine tebligat yapılamayan eşya en geç iki ay içinde satılır (m.21)
+57-12 | Y: “Sahiplerince alınmayan suç eşyasının satışına Cumhuriyet savcısı karar verir.”
+      D: Satışa karar verecek merci, suç eşyasının bulunduğu yer sulh ceza hâkimidir (m.21)
+57-12 | Y: “Alınmayan eşyanın satış bedeli emanet bürosunun kasasında nakit olarak saklanır.”
+      D: Satış bedeli millî bankalardan birinde ilgilisi adına açılacak vadeli hesaba yatırılır (m.21)
+57-13 | Y: “Sahibi ölmüş kişiye ait olup iadesine karar verilen eşya, yetkili sulh ceza hâkimine tevdi olunur.”
+      D: İadesine karar verilen eşyanın sahibi ölmüşse eşya yetkili sulh hukuk hâkimine tevdi olunur (m.23)
+57-13 | Y: “Hakkında gaiplik kararı alınmış kişiye ait eşya mahallin en büyük mal memurluğuna gönderilir.”
+      D: Hakkında gaiplik kararı alınmış kişiye ait eşya da yetkili sulh hukuk hâkimine tevdi olunur (m.23)
+57-14 | Y: “Ekonomik değeri bulunmayan ve süresinde alınmayan eşyanın imhasına sulh ceza hâkimi karar verir.”
+      D: İmhaya Cumhuriyet savcısı başkanlığında emanet memuru ve bir zabıt kâtibinden oluşan komisyon karar verir (m.24)
+57-14 | Y: “İmha komisyonuna katılacak zabıt kâtibini Cumhuriyet başsavcısı belirler.”
+      D: İmha komisyonuna katılacak zabıt kâtibini adalet komisyonu, bulunmayan yerlerde kıdemli hâkim belirler (m.24)
+58-0 | Y: “Şüphelinin hâkim tarafından soruşturma konusu suçla ilgili olarak dinlenmesi ifade almadır.”
+      D: Şüphelinin hâkim veya mahkemece dinlenmesi sorgu, kolluk veya Cumhuriyet savcısınca dinlenmesi ifade almadır (m.4)
+58-0 | Y: “Toplu suç, iki veya daha fazla kişi tarafından işlenen suçtur.”
+      D: Toplu suç, aralarında iştirak iradesi bulunmasa da üç veya daha fazla kişi tarafından işlenen suçtur (m.4)
+58-0 | Y: “Müşteki ve suçtan zarar görenin dinlenmesi ifade alma işlemidir.”
+      D: Müşteki, suçtan zarar gören ve şüpheli olmayan kişilerin dinlenmesi bilgi almadır (m.4)
+58-1 | Y: “Kimliğini ispat edemeyen kişi, gerçek kimliği ortaya çıkıncaya kadar 48 saate kadar muhafaza altında tutulabilir.”
+      D: Kimliğini ispat edemeyen kişi, gerçek kimliği ortaya çıkıncaya kadar 24 saati geçmemek üzere yakalanıp muhafaza altına alınabilir (m.5)
+58-1 | Y: “Suçüstü hâlinde dahi yakalama yetkisi yalnızca kolluğa aittir; vatandaşlar kimseyi yakalayamaz.”
+      D: Suçu işlerken rastlanan veya suçüstü izlenip kaçma ihtimali olan kişiyi herkes geçici olarak yakalayabilir (m.5)
+58-1 | Y: “Kendini idareden aciz kişiye karşı işlenen şikâyete bağlı suçta, suçüstü hâlinde de yakalama şikâyete bağlıdır.”
+      D: Kendini idareden aciz kişilere karşı işlenen suçüstü hâllerinde yakalama şikâyete bağlı değildir (m.5)
+58-2 | Y: “Hafif suçlardan yakalanan kişiye yakalama sebebi ve hakları bildirilmez.”
+      D: Yakalanana suç ayrımı gözetilmeksizin yakalama sebebi ve hakları derhâl yazılı, mümkün değilse sözlü bildirilir (m.6)
+58-2 | Y: “Kolluk görevlisi, Cumhuriyet savcısının sözlü emrini ancak yazılı hâle getirildikten sonra yerine getirir.”
+      D: Savcının sözlü emri yazılıya dönüştürülür; ancak kolluk, yazılı hâle getirilmesini beklemeden sözlü emrin gereğini yerine getirir (m.6)
+58-2 | Y: “Yakalama tutanağının bir sureti yakalanan kişiye verilmez.”
+      D: Yakalama tutanağa bağlanır ve tutanağın bir sureti yakalanan kişiye verilir (m.6)
+58-3 | Y: “Yakalanan her kişiye, herhangi bir belirti aranmaksızın kelepçe takılır.”
+      D: Kelepçe, kaçma ya da hayat ve beden bütünlüğü bakımından tehlike belirtisi varsa takılabilir (m.7)
+58-3 | Y: “Tutuklanarak bir yerden diğerine nakledilen kişilere hiçbir durumda kelepçe takılamaz.”
+      D: Tutuklanarak nakledilen kişilere de kaçma veya tehlike belirtisi varsa kelepçe takılabilir (m.7)
+58-4 | Y: “Yakalanan yabancının durumu, karşı çıksa bile her hâlde ülkesinin konsolosluğuna bildirilir.”
+      D: Yakalanan yabancı ise, yazılı olarak karşı çıkmadıkça durumu büyükelçilik veya konsolosluğuna bildirilir (m.8)
+58-4 | Y: “Yakalanan kişinin yakınına haber verme, kolluk amirinin emriyle yapılır.”
+      D: Yakalama ve gözaltı, Cumhuriyet savcısının emriyle gecikmeksizin bir yakına veya kişinin belirlediği kişiye bildirilir (m.8)
+58-5 | Y: “Gözaltına alınan kişinin ifadesini alan kolluk görevlisi, kişiyi tıbbi muayeneye de götürür.”
+      D: İfadeyi alan görevli ile muayeneye götüren görevli farklı olmalıdır; personel yetersizliğinde bu durum belgelenir (m.9)
+58-5 | Y: “Gözaltına alınan kişi için hekim raporu iki nüsha hâlinde düzenlenir.”
+      D: Hekim raporu 3 nüsha hâlinde düzenlenir (m.9)
+58-5 | Y: “Hekim, muayene sırasında işkence bulgusuna rastlarsa durumu kolluk amirine bildirir.”
+      D: Hekim muayenede işkence veya eziyet bulgusuna rastlarsa durumu derhâl Cumhuriyet savcısına bildirir (m.9)
+58-6 | Y: “Nezarethaneye konulacak kadının üst araması, kadın görevli bulunmazsa erkek görevlice yapılabilir.”
+      D: Kadının üst veya vücut araması bir kadın görevli veya bu amaçla görevlendirilen başka bir kadın tarafından yapılır (m.10)
+58-6 | Y: “Nezarethaneye konan kişinin üzerinden çıkan para için tutanak düzenlenmesi gerekmez.”
+      D: Üzerinden çıkan eşya ve para tutanakla muhafaza altına alınır; tutanağın bir sureti kişiye verilir (m.10)
+58-7 | Y: “Nezarethanede zaruri hâller dışında 10 kişiye kadar bir arada bulundurulabilir.”
+      D: Nezarethanede zaruri hâller dışında 5'ten fazla kişi bir arada bulundurulmaz (m.11)
+58-7 | Y: “Gözaltındaki kişinin beslenme ve tedavi giderleri kendisinden karşılanır.”
+      D: Gözaltındaki kişinin beslenme, nakil ve tedavi giderleri ilgili birimin bağlı olduğu Bakanlığın bütçesinden karşılanır (m.11)
+58-7 | Y: “Saldırgan tutum sergileyen gözaltındaki kişiye derhâl kuvvet kullanılır.”
+      D: Saldırgan kişi önce sözle kontrol altına alınmaya çalışılır; olmazsa hareketini giderecek derecede kuvvet kullanılabilir (m.11)
+58-8 | Y: “Yakalanan kişinin en yakın hâkime gönderilmesi için zorunlu yol süresi 24 saate kadar çıkabilir.”
+      D: En yakın hâkime gönderilme için zorunlu süre 12 saatten fazla olamaz (m.13)
+58-8 | Y: “Gözaltı süresi, en yakın hâkime gönderilme süresi dâhil, yakalama anından itibaren 24 saati geçemez.”
+      D: Gözaltı süresi, en yakın hâkime gönderilme için zorunlu süre hariç, yakalama anından itibaren 24 saati geçemez (m.13)
+58-9 | Y: “Toplu suçlarda Cumhuriyet savcısı gözaltı süresinin her defasında bir günü geçmemek üzere beş gün uzatılmasına emir verebilir.”
+      D: Toplu suçlarda savcı gözaltı süresinin her defasında bir günü geçmemek üzere üç gün uzatılmasına yazılı emir verebilir (m.14)
+58-9 | Y: “Toplu suçlarda gözaltı süresinin uzatılmasına sulh ceza hâkimi karar verir.”
+      D: Toplu suçlarda gözaltı süresinin uzatılmasına Cumhuriyet savcısı yazılı olarak emir verir (m.14)
+58-9 | Y: “Olağanüstü hâl bölgesinde dört günlük gözaltı süresi, savcının yazılı emriyle yedi güne kadar uzatılabilir.”
+      D: OHAL bölgesinde dört günlük süre, savcının talebi ve hâkim kararıyla yedi güne kadar uzatılabilir (m.14)
+58-10 | Y: “Gözaltı işlemine karşı yakalananın üçüncü derece kan hısımı da sulh ceza hâkimine başvurabilir.”
+      D: Gözaltına karşı sulh ceza hâkimine yakalanan, müdafi, kanuni temsilci, eşi ve birinci veya ikinci derece kan hısmı başvurabilir (m.15)
+58-10 | Y: “Gözaltı süresi dolduğu için serbest bırakılan kişi, yeni delil olmasa da savcının kararıyla aynı nedenle yeniden yakalanabilir.”
+      D: Serbest bırakılan kişi, yeni ve yeterli delil elde edilmedikçe ve savcının kararı olmadıkça aynı nedenle yeniden yakalanamaz (m.18)
+58-11 | Y: “12-18 yaş arasındaki şüpheli çocuğa, kendisi talep etmedikçe müdafi görevlendirilmez.”
+      D: 12-18 yaş şüpheli çocuk, kendi talebi olmasa bile müdafiden yararlandırılır (m.19)
+58-11 | Y: “Fiili işlediği sırada 12 yaşını doldurmamış çocuk, suç nedeniyle yakalanıp gözaltına alınabilir.”
+      D: Fiili işlediği sırada 12 yaşını doldurmamış çocuk suç nedeniyle yakalanamaz; yalnız kimlik ve suç tespiti için yakalanıp hemen bırakılır (m.19)
+58-11 | Y: “Zorunlu hâllerde suça sürüklenen çocuklara kelepçe takılabilir.”
+      D: Çocuklara kelepçe ve benzeri aletler takılamaz; zorunlu hâllerde kolluk kaçmayı ve tehlikeyi önleyecek gerekli önlemleri alır (m.19)
+58-12 | Y: “Soruşturma evresinde ifade alınırken hazır bulunabilecek müdafi sayısı en çok ikidir.”
+      D: Soruşturma evresinde ifade alınırken en çok 3 müdafi hazır bulunabilir (m.20)
+58-12 | Y: “Üst sınırı en az beş yıl hapis gerektiren suçlarda müdafi ancak şüphelinin talebi üzerine görevlendirilir.”
+      D: Üst sınırı en az 5 yıl hapis gerektiren suçlarda şüpheliye talebi aranmaksızın müdafi görevlendirilir (m.20)
+58-12 | Y: “Müdafi, kollukta bulunan soruşturma dosyasını savcının yazılı emri olmadan inceleyebilir.”
+      D: Müdafinin kollukta bulunan soruşturma dosyasını incelemesi için yetkili Cumhuriyet savcısının yazılı emri gerekir (m.22)
+58-15 | Y: “Nezarethaneler en az 10 metrekare genişliğinde düzenlenir.”
+      D: Nezarethane en az 7 metrekare genişlikte ve 2,5 metre yükseklikte olur; duvarlar arası en az 2 metredir (m.25)
+58-15 | Y: “Nezarethaneleri ve gözaltı kayıtlarını denetleme yetkisi yalnızca mülkî amire aittir.”
+      D: Cumhuriyet başsavcıları veya görevlendirecekleri savcılar nezarethaneleri, ifade odalarını ve gözaltı kayıtlarını denetler (m.26)
+58-16 | Y: “Kolluk amiri, her suçta açıklamada bulunan şüpheliye yer gösterme işlemi yaptırabilir.”
+      D: Yer göstermeyi Cumhuriyet savcısı yaptırır; adli kolluk amiri yalnız CMK 250 kapsamındaki suçlarda yaptırabilir (m.28)
+58-16 | Y: “Gözaltındaki şüphelinin görüntüsü, kamuoyunu bilgilendirmek amacıyla basına verilebilir.”
+      D: Gözaltındaki kişinin görüntüsünün alınmasına ve teşhirine sebebiyet verilmez; soruşturma evrakı hiçbir şekilde yayımlanamaz (m.27)
+58-16 | Y: “Yer gösterme işlemi sırasında müdafinin hazır bulunmasına izin verilmez.”
+      D: Soruşturmayı geciktirmemek kaydıyla müdafi de yer gösterme işleminde hazır bulunabilir (m.28)

@@ -1,0 +1,166 @@
+AD: Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği
+GRUP: branş
+BRANSLAR: ['jandarma']
+KAPSAM: liste
+TUM: ['3', '4', '5']
+NOT: Kısa yönetmelik; iki soru tipi var ve ikisi de çıkmış: **ikramiye esasları** (kendi mülkü → satın alınır, ikramiye yok; başkasının mülkü → %80 yarı yarıya; Devlet arazisi → %40) ve **gizlenmiş varlıkları haber verene/yakalayana kademeli oranlar** (%30-25-15-10-7,5).
+DIGER KISA:
+
+====================================================================================================
+MADDE 3  (soru_sayisi=3)  karis_aday=[]
+---------------------------------------- RESMI METIN (1399 kr)
+İkramiye Esasları:
+Madde 3 — Türkiye Cumhuriyeti şuurları içinde yerüstünde, yeraltında ve sualtında taşınır kültür ve tabiat varlığı bulunduğunu bilenler veya varlığından yeni haberdar olan malik veya zilyetlerden; bunu en geç üç gun içinde en yakın müzeye, köyde muhtara veya diğer yerlerde mülki idare amirlerine haber verenlere;
+a) Varlık, bulanın mülkü içinde ise; «Korunması Gerekli Taşınır Kültür ve Tabiat Varlıklarının Tasnifi, Tescili ve Müzelere Alınmaları Hakkında Yönetmelik» gereğince tesbit edilecek değeri usulüne gore ödenerek muzelerce satın alınır. Ayıca ikramiye verilmez.
+b) Varlık başkasının mülkü içinde ise ilgili Yönetmeliğine göre takdir edilecek bedelin % 80'i ikramiye olarak bulan ile mülk sahibi arasında eşit olarak paylaştırılır.
+c) Varlık Devlete ait arazide bulunmuş ise, ilgili Yönetmeliğine göre takdir olunacak bedelin % 40ı bulana ikramiye olarak ödenir.
+d) Nerede bulunursa bulunsun haber verilen varlık, korunması gerekli nitelikte kültür ve tabiat varlığı olmadığı takdirde sahiplerine, muzelerce verilecek bir belge ile iade olunur. Bu belge iade olunan varlık ile sahibini açıkça tanımlıyabilecek nitelikte düzenlenir. Belge ile iade olunan varlıklar üzerinde sahipleri her türlü tasarrufta bulunabilirler. Bir yıl içinde sahiplerince alınmayan varlıklar müzelerde saklanabilir veya usulüne uygun olarak Devletçe satılabilirler. Gizlenmiş Sayüan Varlıklar:
+---------------------------------------- KARTLAR
+{
+ "id": "53-0",
+ "baslik": "Bulanın mülkünde: satın alınır, ikramiye yok",
+ "hukum": "Taşınır kültür-tabiat varlığı bulunduğunu bilen malik/zilyet 3 gün içinde müzeye, köyde muhtara, diğer yerlerde mülkî amire haber verir; varlık bulanın mülkü içinde ise değeri ödenerek müzelerce satın alınır, ayrıca ikramiye verilmez (m.3/a)",
+ "sinavda_boyle_yazarlar": [
+  "\"Bulanın mülkünde ise %80 ikramiye\" yanlış; satın alınır"
+ ],
+ "dogrusu": []
+}
+{
+ "id": "53-1",
+ "baslik": "Başkasının mülkünde: %80 yarı yarıya",
+ "hukum": "Varlık başkasının mülkü içinde bulunmuşsa takdir edilen bedelin %80'i, bulan ile mülk sahibi arasında eşit paylaştırılır (m.3/b)",
+ "sinavda_boyle_yazarlar": [
+  "\"Tamamı bulana\" yanlış; yarı yarıya"
+ ],
+ "dogrusu": [
+  "Varlık başkasının mülkünde bulunursa takdir edilen bedelin %80'i bulan ile mülk sahibi arasında yarı yarıya paylaştırılır (m.3/b)"
+ ]
+}
+{
+ "id": "53-2",
+ "baslik": "Devlet arazisinde: %40 bulana",
+ "hukum": "Varlık Devlete ait arazide bulunmuşsa bedelin %40'ı bulana ikramiye olarak ödenir (m.3/c)",
+ "sinavda_boyle_yazarlar": [
+  "%80 / %40 rakamları ters verilir"
+ ],
+ "dogrusu": []
+}
+{
+ "id": "53-3",
+ "baslik": "Korunması gerekli değilse iade",
+ "hukum": "Haber verilen varlık korunması gerekli nitelikte değilse müzece verilecek belge ile sahibine iade edilir; belge varlık ve sahibini açıkça tanımlar; 1 yıl içinde alınmayan varlıklar müzede saklanabilir veya Devletçe satılabilir (m.3/d)",
+ "sinavda_boyle_yazarlar": [
+  "\"İade edilen varlık satılamaz\" yanlış; belgeyle her türlü tasarruf serbest"
+ ],
+ "dogrusu": [
+  "Korunması gerekmeyen varlık müzenin vereceği belgeyle sahibine iade edilir; 1 yıl içinde alınmazsa müzede saklanabilir veya Devletçe satılabilir (m.3/d)"
+ ]
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik'e göre, taşınır kültür veya tabiat varlığı bulunduğunu bilenlerin bunu ilgili mercilere haber vermesi için öngörülen azami süre kaç gündür?",
+ "siklar": [
+  "7 gün",
+  "15 gün",
+  "30 gün",
+  "3 gün",
+  "60 gün"
+ ],
+ "dogru": "3 gün"
+}
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik'e göre, taşınır kültür veya tabiat varlığı bulunduğunu bilen veya varlıktan yeni haberdar olan ve haber verme hükmü kapsamında sayılan kişiler kimlerdir?",
+ "siklar": [
+  "Yalnızca köy muhtarları",
+  "Yalnızca mülki idare amirleri",
+  "Yalnızca müze görevlileri",
+  "Malik veya zilyetler",
+  "Yalnızca kamu görevlileri"
+ ],
+ "dogru": "Malik veya zilyetler"
+}
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği'ne göre varlık başkasının mülkü içinde bulunmuşsa, takdir edilecek bedelin yüzde kaçı ikramiye olarak bulan ile mülk sahibi arasında eşit olarak paylaştırılır?",
+ "siklar": [
+  "%40",
+  "%100",
+  "%50",
+  "%80",
+  "%60"
+ ],
+ "dogru": "%80"
+}
+
+====================================================================================================
+MADDE 4  (soru_sayisi=2)  karis_aday=[{'madde': '3', 'kac_celdiricide': 3}]
+---------------------------------------- RESMI METIN (945 kr)
+Varlıklar:
+Madde 4 — Nerede olursa olsun yeni bulunup da süresi içinde haber verilmediğinden gizlenmiş sayılan varlıkları haber verenler ile, bunları yakalayan kamu görevlilerine usulüne göre tesbit edilen değerin, 1905 Sayılı «Menkul ve Gayrimenkul Emval ile Bunların İntifa Haklarının ve Daimi Vergilerin Mektumlarmı Haber Verenlere Verilecek İkramiyelere Dair Kanun» da belirlenen şekilde:
+a) 5.000 liraya kadar % 30,
+b) 25.000 liraya kadar (5.000 liradan yukarı olan kısmı için) % 25,
+c) 50.000 liraya kadar (25.000 liradan yukarı olan kısmı için) % 15,
+d) 100.000 liraya kadar (50.000 liradan yukarı kısmı için) % 10,
+e) 100.000 liradan yukarı olan kısmı için- % 7,5 Oranlarındaki miktarı, haber veren ve yakalayan şahıslara ayrı ayrı ikramiye olarak ödenir. Gerek haber verenler ve gerekse yakalayan kamu görevlilerinin birden fazla olmaları halinde hesap edilen ikramiye aralarında eşit olarak paylaştırılır. İkramiye ödenmeyecek Haller :
+---------------------------------------- KARTLAR
+{
+ "id": "53-4",
+ "baslik": "Gizlenmiş varlıklar — kademeli ikramiye",
+ "hukum": "Süresinde haber verilmediği için gizlenmiş sayılan varlıkları haber verenlere ve yakalayan kamu görevlilerine tespit edilen değerin: 5.000 liraya kadar %30, 25.000'e kadar (5.000 üstü kısım) %25, 50.000'e kadar (25.000 üstü) %15, 100.000'e kadar (50.000 üstü) %10, 100.000 üstü %7,5 oranında ikramiye ayrı ayrı ödenir; birden fazla haber veren/yakalayan varsa eşit paylaşılır (m.4)",
+ "sinavda_boyle_yazarlar": [
+  "Haber veren ve yakalayan ayrı ayrı alır; \"aralarında bölüşür\" yanlış (aynı sıfattakiler bölüşür)"
+ ],
+ "dogrusu": []
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği'ne göre, gizlenmiş sayılan varlığın tespit edilen değerinin 5.000 liraya kadar olan kısmı için ödenecek ikramiye oranı nedir?",
+ "siklar": [
+  "%25",
+  "%15",
+  "%30",
+  "%10",
+  "%7,5"
+ ],
+ "dogru": "%30"
+}
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği'ne göre, gizlenmiş sayılan varlıkları haber verenler ile yakalayan kamu görevlilerine ikramiye nasıl ödenir?",
+ "siklar": [
+  "Haber veren ile yakalayan arasında yarı yarıya bölüştürülür",
+  "Tamamı ilk haber veren kişiye ödenir",
+  "Yakalayan kamu görevlileri arasında rütbe sırasına göre paylaştırılır",
+  "Haber veren ve yakalayana ayrı ayrı ödenir; aynı sıfatta birden fazla kişi varsa aralarında eşit paylaştırılır",
+  "Birden fazla haber veren varsa ikramiye ödenmez"
+ ],
+ "dogru": "Haber veren ve yakalayana ayrı ayrı ödenir; aynı sıfatta birden fazla kişi varsa aralarında eşit paylaştırılır"
+}
+
+====================================================================================================
+MADDE 5  (soru_sayisi=1)  karis_aday=[]
+---------------------------------------- RESMI METIN (184 kr)
+Madde 5 — Taşınmaz kültür ve tabiat varlıkları ile, nerede bulunursa bulunsun varlığı Bakanlıkça daha önceden bilinen taşınır kültür ve tabiat varlıkları için ihbar ikramiyesi ödenmez.
+---------------------------------------- KARTLAR
+{
+ "id": "53-5",
+ "baslik": "İkramiye ödenmeyecek hâller",
+ "hukum": "Taşınmaz kültür ve tabiat varlıkları ile varlığı Bakanlıkça önceden bilinen taşınır varlıklar için ihbar ikramiyesi ödenmez (m.5)",
+ "sinavda_boyle_yazarlar": [
+  "\"Taşınmaz varlık ihbarına da ikramiye verilir\" yanlış"
+ ],
+ "dogrusu": []
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği'ne göre, aşağıdakilerden hangileri için ihbar ikramiyesi ödenmez?\nI. Taşınmaz kültür ve tabiat varlıkları\nII. Varlığı Bakanlıkça daha önceden bilinen taşınır kültür ve tabiat varlıkları\nIII. Süresi içinde haber verilmediği için gizlenmiş sayılan yeni bulunmuş taşınır varlıklar",
+ "siklar": [
+  "Yalnız I",
+  "I ve II",
+  "I ve III",
+  "II ve III",
+  "I, II ve III"
+ ],
+ "dogru": "I ve II"
+}

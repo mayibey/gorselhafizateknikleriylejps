@@ -1,0 +1,169 @@
+{
+ "kanun_id": 48,
+ "ad": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_48.json",
+ "kartlar": [
+  {
+   "id": "48-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Yasak yerler — kapalı alanlar",
+   "hukum": "Kamu hizmet binalarının kapalı alanları; koridorları dahil özel hukuk kişilerine ait iş yerlerinin, lokanta, kahvehane, kafeterya, birahane, nargile içilen yerlerin kapalı alanları; taksi hizmeti verenler dahil karayolu, demiryolu, denizyolu, havayolu toplu taşıma araçları; hususi araçların sürücü koltuğunda tütün ürünü tüketilemez (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hususi araçta yolcu koltuğunda içmek yasaktır\" yanlış; sürücü koltuğu",
+    "Hususi araçta yolcu koltuğunda içmek yasaktır"
+   ],
+   "dogrusu": [
+    "Sürücü koltuğunda (m.2)"
+   ]
+  },
+  {
+   "id": "48-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Yasak yerler — açık alanlar dahil",
+   "hukum": "Okul öncesi, ilk ve orta öğretim kurumları, kültür ve sosyal hizmet binaları ile özel eğitim kurumlarının kapalı ve açık alanlarında tütün ürünü tüketilemez; sağlık, spor, eğitim binalarının kapalı ve açık alanlarında da yasaktır (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Okul bahçesinde içilebilir\" yanlış; okullarda açık alan da yasak",
+    "Okul bahçesinde içilebilir"
+   ],
+   "dogrusu": [
+    "Okullarda açık alan da yasak (m.2)"
+   ]
+  },
+  {
+   "id": "48-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Açık hava etkinlikleri",
+   "hukum": "Açık havada yapılan sportif, kültürel, sosyal etkinliklerde seyir alanlarında tütün tüketilemez; ancak bu alanlarda tütün ürünü tüketilebilecek ayrı yer oluşturulabilir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Stad tribününde serbesttir\" yanlış",
+    "Cezaevinde tütün tamamen yasaktır"
+   ],
+   "dogrusu": [
+    "Alan oluşturulabilir (m.2)"
+   ]
+  },
+  {
+   "id": "48-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "İstisna alanları",
+   "hukum": "Yaşlı bakım evleri, ruh ve sinir hastalıkları hastaneleri, cezaevleri ile şehirlerarası ve uluslararası deniz araçlarının güvertelerinde tütün ürünü tüketilebilecek alan oluşturulabilir (18 yaşını doldurmamışlar bu alanlara giremez); otel odaları (konaklama yerleri) için de tütün tüketilebilecek oda tahsis edilebilir (m.2/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta \"hastanelerin tümü\" veya \"askerî kışlalar\" istisna diye verilirse yanlış"
+   ],
+   "dogrusu": [
+    "Yaşlı bakım evleri, ruh ve sinir hastalıkları hastaneleri, cezaevleri · şehirlerarası ve uluslararası deniz araçlarının güvertelerinde · 18 yaşını doldurmamışlar bu alanlara giremez · otel odaları"
+   ]
+  },
+  {
+   "id": "48-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Taklit ürün de tütün ürünü sayılır",
+   "hukum": "Tütün içermese bile tütün ürünü gibi kullanılan, nargile gibi taklit ürünler bu kanun bakımından tütün ürünü sayılır; elektronik sigara da kapsama alınmıştır (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bitkisel nargile yasak değildir\" yanlış",
+    "Bitkisel nargile kapsam dışıdır"
+   ],
+   "dogrusu": [
+    "Tütün ürünü sayılır (m.2)"
+   ]
+  },
+  {
+   "id": "48-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Reklam ve sponsorluk yasağı",
+   "hukum": "Tütün ürünlerinin ve markalarının her türlü reklam ve tanıtımı, sponsorluğu, ürünlerin logo-amblemlerinin başka ürünlerde kullanılması yasaktır; tütün ürünleri görünür şekilde teşhir edilemez (m.3/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bayide rafta görünür satış serbesttir\" yanlış; teşhir yasağı"
+   ],
+   "dogrusu": [
+    "reklam ve tanıtımı · görünür şekilde teşhir edilemez"
+   ]
+  },
+  {
+   "id": "48-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "18 yaş altı",
+   "hukum": "Tütün ürünleri 18 yaşını doldurmamış kişilere satılamaz, tüketimine imkân verilemez; 18 yaş altı kişiler tütün ürünü satışında istihdam edilemez; bu kişilere yönelik (çocuk oyunları, şeker, giysi vb.) ürünlerde tütün şekli kullanılamaz (m.3/8-9)",
+   "sinavda_boyle_yazarlar": [
+    "\"16 yaş\" şıkkı yanlış",
+    "16 yaşından küçüğe satılamaz"
+   ],
+   "dogrusu": [
+    "18 (m.3)"
+   ]
+  },
+  {
+   "id": "48-7",
+   "madde": [
+    "3",
+    "12"
+   ],
+   "baslik": "Satış şekli yasakları",
+   "hukum": "Tütün ürünleri paketi açılarak adet (tek) satış yapılamaz; otomatik satış makinesi, internet ve mesafeli satış, kargo/posta ile satış ve teslim yasaktır; sağlık, eğitim, kültür, spor kurumlarında satılamaz (m.3/4-7, 12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Alkol satan büfeler adet sigara satabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "adet (tek) satış · otomatik satış makinesi · internet ve mesafeli satış · kargo/posta"
+   ]
+  },
+  {
+   "id": "48-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Uyarı yazıları ve ölçüleri",
+   "hukum": "Tütün tüketiminin yasak olduğu yerlerde \"Sigara içilmez\" uyarısı ve tüketilebilecek alanlarda \"Sağlığa zararlıdır\" uyarısı, yasal uyarı yazıları en az 10 cm büyüklüğünde ve okunaklı, cezai hükmün belirtildiği yazı en az 3 cm punto ile asılır; tütün satış yerlerinde yaş sınırı uyarısı bulunur (m.4/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "10 cm / 3 cm rakamları çapraz sorulur"
+   ],
+   "dogrusu": [
+    "10 cm · 3 cm"
+   ]
+  },
+  {
+   "id": "48-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Paket uyarıları",
+   "hukum": "Tütün ürünü paketlerinde sağlık uyarıları paketin %85'ini kaplar; marka ismi paketin %5'inden fazla alan kaplayamaz; düz ve standart paket uygulanır; paket üzerinde \"hafif, light\" gibi yanıltıcı ibare bulunamaz (m.4/3-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"%65\" veya \"%50\" uyarı oranı şıkları yanlış; %85",
+    "Paket uyarısı %65"
+   ],
+   "dogrusu": [
+    "%85 (m.4)"
+   ]
+  },
+  {
+   "id": "48-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yayın süresi",
+   "hukum": "TRT ve diğer ulusal yayın kuruluşları tütün ürünlerinin zararlarına ilişkin ayda en az 90 dakika eğitici program yayınlar; bunun 30 dakikası 17:00-22:00 arasında olmalıdır (m.4/7)",
+   "sinavda_boyle_yazarlar": [
+    "90 dk / 30 dk / 17-22 üçlüsü"
+   ],
+   "dogrusu": [
+    "ayda en az 90 dakika · 30 dakikası 17:00-22:00"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

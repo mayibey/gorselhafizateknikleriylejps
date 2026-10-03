@@ -1,0 +1,254 @@
+{
+ "kanun_id": 46,
+ "ad": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_46.json",
+ "kartlar": [
+  {
+   "id": "46-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Kültür varlığı: tarih öncesi ve tarihi devirlere ait, bilim-kültür-din-güzel sanatlarla ilgili yer üstünde, yer altında veya su altındaki taşınır-taşınmaz varlıklar; tabiat varlığı: jeolojik devirlerle tarih öncesi/tarihi devirlere ait, ender bulunan yer üstünde-altında-su altındaki değerler; sit: tarih öncesinden günümüze kadar gelen çeşitli medeniyetlerin ürünü olup yaşadıkları devirlerin sosyal, ekonomik, mimari özelliklerini yansıtan kent ve kent kalıntıları; ören yeri: tarih öncesinden günümüze kadar gelen medeniyetlerin ürünü olan, topoğrafik olarak tanımlanabilecek derecede yeterince belirgin ve mütecanis özelliklere sahip, aynı zamanda tarihsel, arkeolojik, sanatsal, bilimsel, sosyal veya teknik bakımlardan dikkate değer bir bütünlük gösteren yer (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklar tanımları çapraz eşleştirir; \"kent kalıntıları\" = sit"
+   ],
+   "dogrusu": [
+    "Kültür varlığı · tabiat varlığı · sit · ören yeri"
+   ]
+  },
+  {
+   "id": "46-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Korunma alanı ve doğal sit",
+   "hukum": "Korunma alanı: taşınmaz kültür ve tabiat varlıklarının muhafazaları veya tarihî çevre içinde korunmalarında etkinlik taşıyan, korunması zorunlu alan; doğal (tabii) sit: jeolojik devirlere ait, ender bulunmaları nedeniyle olağanüstü özelliklere sahip, korunması gerekli alanlar; etkileşim-geçiş sahası: korunması gerekli kültür varlıklarını ve sit alanlarını doğrudan etkileyen, sit bölgeleriyle bütünlük gösteren alanlar (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Korunma alanı\" ile \"sit\" karıştırılır; korunma alanı varlığın çevresidir"
+   ],
+   "dogrusu": [
+    "Korunma alanı · doğal (tabii) sit · etkileşim-geçiş sahası"
+   ]
+  },
+  {
+   "id": "46-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bulan/haberi olan kişinin bildirim yükümü",
+   "hukum": "Taşınır ve taşınmaz kültür varlığı bulanlar, malik oldukları yerde bulanlar veya herhangi bir şekilde haber alanlar en geç 3 gün içinde en yakın müze müdürlüğüne, köyde muhtara, diğer yerlerde mülkî amire bildirmek zorundadır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"7 gün\" ve \"kolluğa bildirir\" şıkları yanlış",
+    "Bulunan kültür varlığı 7 gün içinde kolluğa bildirilir"
+   ],
+   "dogrusu": [
+    "3 gün içinde müze/muhtar/mülkî amire (m.4)"
+   ]
+  },
+  {
+   "id": "46-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Muhtar ve mülkî amirin süresi",
+   "hukum": "Muhtar, aldığı tedbirlerle birlikte durumu aynı gün en yakın mülkî amire; mülkî amir ve diğer makamlar ise on gün içinde yazıyla Kültür ve Turizm Bakanlığına ve en yakın müze müdürlüğüne bildirir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "Bildirim zinciri: kişi 3 gün → muhtar aynı gün → mülkî amir 10 gün"
+   ],
+   "dogrusu": [
+    "aynı gün · 10 gün"
+   ]
+  },
+  {
+   "id": "46-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Askerî bölgede bulunan varlık",
+   "hukum": "Kültür ve tabiat varlıkları askerî garnizonlar ve yasak bölgeler içinde bulunursa, usulüne uygun olarak üst komutanlıklara bildirilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askerî bölgede de muhtara bildirilir\" yanlış"
+   ],
+   "dogrusu": [
+    "üst komutanlığa"
+   ]
+  },
+  {
+   "id": "46-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Korunması gerekli taşınmaz kültür varlıkları",
+   "hukum": "Korunması gerekli taşınmaz kültür ve tabiat varlıkları: 19. yüzyıl sonuna kadar yapılmış taşınmazlar; bu tarihten sonra yapılmış olup önem ve özellikleri bakımından korunmasına gerek görülenler; sit alanlarındaki taşınmazlar; Millî Mücadele ve Türkiye Cumhuriyeti'nin kuruluşunda büyük tarihi olaylara sahne olmuş binalar ve Atatürk tarafından kullanılmış evler; kaya mezarlıkları, höyükler, tümülüsler, kaleler, camiler, hanlar, kervansaraylar vb. (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"20. yüzyıl başına kadar\" değil, \"19. yüzyıl sonuna kadar\"",
+    "Atatürk'ün kullandığı evler yaşı yetmediği için korunmaz"
+   ],
+   "dogrusu": [
+    "Korunur (m.6)"
+   ]
+  },
+  {
+   "id": "46-6",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Ruhsatsız inşaat yasağı",
+   "hukum": "Korunması gerekli taşınmaz kültür ve tabiat varlıkları ile bunların korunma alanlarında ruhsatsız inşaat yapmak yasaktır; ruhsatsız yapılar ile koruma amaçlı imar planına veya sit şartlarına aykırı yapılar hakkında imar mevzuatına göre işlem yapılır (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sit alanında belediye ruhsatı yeterlidir\" yanlış; koruma kurulu kararı gerekir"
+   ],
+   "dogrusu": [
+    "ruhsatsız"
+   ]
+  },
+  {
+   "id": "46-7",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Taşınır kültür varlıkları",
+   "hukum": "Korunması gerekli taşınır kültür varlıkları: jeolojik, tarih öncesi ve tarihi devirlere ait her çeşit heykel, sikke, yazma, mühür, silah, giysi ve benzeri ile Millî Mücadele ve Atatürk'e ait eşya ve belgeler (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Atatürk'e ait eşyalar kapsam dışıdır\" yanlış"
+   ],
+   "dogrusu": [
+    "Millî Mücadele ve Atatürk'e ait"
+   ]
+  },
+  {
+   "id": "46-8",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Koleksiyonculuk ve askerî müzeler",
+   "hukum": "Koleksiyon Kültür ve Turizm Bakanlığının izin belgesine bağlıdır; koleksiyoncular varlıkları envanter defterine kaydeder, eserleri ilgili müzeye tescil ettirip on beş gün önce Bakanlığa haber vermek şartıyla kendi aralarında değiştirebilir veya satabilir, satın almada öncelik Bakanlığındır; askerî müzelerin kurulması Genelkurmay Başkanlığına aittir (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askerî müzeler Kültür Bakanlığına bağlıdır\" yanlış; Genelkurmay",
+    "Askerî müzeler Kültür Bakanlığına bağlıdır"
+   ],
+   "dogrusu": [
+    "Genelkurmay (m.26)"
+   ]
+  },
+  {
+   "id": "46-9",
+   "madde": [
+    "64"
+   ],
+   "baslik": "İkramiye",
+   "hukum": "Taşınır kültür varlığını süresinde haber verene: varlık kendi mülkündeyse ayrıca ikramiye verilmez; başkasının mülkündeyse takdir edilen bedelin %80'i bulan ile mülk sahibi arasında yarı yarıya paylaştırılır; Devlete ait arazide bulunmuşsa bedelin %40'ı bulana verilir (m.64)",
+   "sinavda_boyle_yazarlar": [
+    "%80 (kendi arazisi) / %40 (Devlet arazisi) rakamları ters verilir",
+    "Devlet arazisinde bulana %80 ikramiye"
+   ],
+   "dogrusu": [
+    "%40 (m.64)"
+   ]
+  },
+  {
+   "id": "46-10",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Tahrip ve izinsiz tadilat",
+   "hukum": "Tescilli taşınmaz varlıkların zarar görmesine kasten sebep olan veya izin almadan inşaî ve fizikî müdahale yapan/yaptıran ile Kanuna aykırı yıkma veya imar izni veren 2 yıldan 5 yıla kadar hapis ve 5.000 güne kadar adlî para cezası alır; fiil yurt dışına kaçırmak amacıyla işlenmişse ceza bir kat artırılır; ruhsata tabi olmayan tadilat ve tamiratı izinsiz yapan 6 aydan 3 yıla kadar hapis veya adlî para cezası alır (m.65)",
+   "sinavda_boyle_yazarlar": [
+    "\"İzinsiz tadilat 2-5 yıl\" yanlış; 6 ay-3 yıl"
+   ],
+   "dogrusu": [
+    "yıkan, bozan, tahrip eden · 2 yıldan 5 yıla kadar · yurt dışına çıkarmak amacıyla · bir kat · izinsiz tadilat/inşaat · 6 aydan 3 yıla kadar"
+   ]
+  },
+  {
+   "id": "46-11",
+   "madde": [
+    "66"
+   ],
+   "baslik": "Belge ve ilan yükümlülüğü",
+   "hukum": "m.16 yasaklarına aykırı olarak belge verenler, fiil daha ağır bir suç oluşturmuyorsa 1 yıldan 3 yıla kadar hapis ve adlî para cezası; m.7'deki ilan veya tebligatı bilerek süresinde usulüne uygun yapmayanlar 3 aydan 1 yıla kadar hapis ve adlî para cezası ile cezalandırılır (m.66)",
+   "sinavda_boyle_yazarlar": [
+    "Belge / ilan cezaları çapraz konur"
+   ],
+   "dogrusu": [
+    "belgesiz · 1 yıldan 3 yıla · ilanı · 3 aydan 1 yıla"
+   ]
+  },
+  {
+   "id": "46-12",
+   "madde": [
+    "67"
+   ],
+   "baslik": "Bildirmeme ve bildirimsiz ticaret",
+   "hukum": "Bildirim yükümlülüğüne mazeretsiz ve bilerek aykırı davranan 6 aydan 3 yıla kadar hapis; bildirimi yapılmamış kültür varlığını satışa arz eden, satan, veren, satın alan veya kabul eden 2 yıldan 5 yıla kadar hapis ve 5.000 güne kadar adlî para cezası; ticareti yasak olmayan taşınır kültür varlığının izinsiz ticaretini yapan 6 aydan 3 yıla kadar hapis (m.67)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bildirmeme sadece idari para cezasıdır\" yanlış"
+   ],
+   "dogrusu": [
+    "bildirmeyen · 6 aydan 3 yıla kadar · alan-satan-ticaretini yapan · 2 yıldan 5 yıla kadar"
+   ]
+  },
+  {
+   "id": "46-13",
+   "madde": [
+    "68"
+   ],
+   "baslik": "Yurt dışına çıkarma",
+   "hukum": "Kültür ve tabiat varlıklarını bu Kanuna aykırı olarak yurt dışına çıkaran kişi 5 yıldan 12 yıla kadar hapis ve 5.000 güne kadar adlî para cezası ile cezalandırılır (m.68)",
+   "sinavda_boyle_yazarlar": [
+    "Teşebbüs de aynı ceza; \"teşebbüs indirimi\" şıkkı yanlış",
+    "Yurt dışına çıkarmaya teşebbüs indirimli cezalandırılır"
+   ],
+   "dogrusu": [
+    "Aynı ceza, 5-12 yıl (m.68)"
+   ]
+  },
+  {
+   "id": "46-14",
+   "madde": [
+    "72"
+   ],
+   "baslik": "Görevli personel işlemlerinde öncelik",
+   "hukum": "Bu Kanunun uygulanmasında görevli kamu personeli hakkında yapılacak iş ve işlemler, alınacak kararlar ve bu kararlara karşı yapılacak itirazlar öncelikle incelenir ve sonuçlandırılır (m.72)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bilirkişi ancak mahkemenin seçtiği herhangi bir uzman\" yanlış; Bakanlık/müze uzmanı"
+   ],
+   "dogrusu": [
+    "bilirkişi"
+   ]
+  },
+  {
+   "id": "46-15",
+   "madde": [
+    "74"
+   ],
+   "baslik": "İzinsiz kazı, sondaj ve define arama",
+   "hukum": "Kültür varlığı bulmak için izinsiz kazı veya sondaj yapan 2 yıldan 5 yıla kadar hapis; yer sit alanı veya korunması gerekli bir yer değilse ceza üçte bir indirilir; izinsiz define arayan 3 aydan 2 yıla kadar hapis; fiil yurt dışına kaçırma amacıyla veya korumada görevli kişilerce işlenirse ceza iki katına kadar artırılır; bulduğu varlığı soruşturma başlamadan önce mahallî mülkî amire teslim edene mahkeme üçte ikisine kadar indirim yapabilir (m.74)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kazıda bulunanı teslim edene ceza verilmez\" yanlış; 2/3 indirim",
+    "Define arama 2-5 yıl",
+    "Kazıda bulunanı mülkî amire teslim edene ceza verilmez"
+   ],
+   "dogrusu": [
+    "3 ay-2 yıl; kazı 2-5 yıl (m.74)",
+    "2/3 indirim (m.74)"
+   ]
+  },
+  {
+   "id": "46-16",
+   "madde": [
+    "75"
+   ],
+   "baslik": "Müzeye teslim",
+   "hukum": "Bu Kanun kapsamındaki suçlar nedeniyle el konulan taşınır kültür ve tabiat varlıkları müzeye teslim edilir (m.75)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bulan kişiye iade edilir\" yanlış"
+   ],
+   "dogrusu": [
+    "Devlet müzesine"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

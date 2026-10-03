@@ -1,0 +1,214 @@
+{
+ "kanun_id": 66,
+ "ad": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_66.json",
+ "kartlar": [
+  {
+   "id": "66-0",
+   "madde": [
+    "6",
+    "7",
+    "3"
+   ],
+   "baslik": "Ruhsat süresi — 5 yıl + 6 ay",
+   "hukum": "Taşıma ve bulundurma ruhsatları onay tarihinden itibaren 5 yıl geçerli, şartlar varsa her 5 yılda bir yenilenir; ruhsat verilirken süre ve süre bitiminden itibaren en geç 6 ay içinde yenilenmesi gerektiği tebliğ edilir; 5 yılı müteakip 6 ay içinde yenilenmezse ruhsat başka işleme gerek kalmaksızın iptal edilip silahın devri sağlanır; iptal edilen silah ancak Kanun m.6 idari para cezası ödenerek aynı kişi adına yeniden ruhsatlanabilir; yeni ruhsat süresi eski sürenin bittiği tarihten işler; süresi biten taşıma ruhsatı, yenisi verilinceye kadar bulundurma ruhsatı yerine geçer; Cumhurbaşkanı, Cumhurbaşkanı Yardımcıları, Bakanlar, Genelkurmay Başkanı, TBMM üyeleri, Kuvvet Komutanları, EGM, JGK ve SGK Komutanı gibi görevlerde bulunmuş olanların ruhsatında süre kaydı aranmaz; kamu görevlilerinin taşıma ruhsatı görevin devamı süresince geçerli, durumları 5 yılda bir araştırılır; emekli kamu görevlilerinin ruhsatları süreye tabi değil ama 5 yılda bir araştırılır; Kanun m.7/1-4 kapsamındakilerin ruhsat ve belgeleri harca tabi değil; ruhsatlı silaha ait mermiler için ayrıca ruhsat aranmaz (yabancı menşeli merminin kanuni yoldan temini istenebilir) (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mermi için ayrı ruhsat gerekir\" yanlış; \"süresi biten taşıma ruhsatı geçersizdir\" yanlış, bulundurma yerine geçer",
+    "Ruhsat 5 yıl sonra 3 ay içinde yenilenmezse iptal edilir",
+    "Süresi biten taşıma ruhsatı hiçbir işe yaramaz"
+   ],
+   "dogrusu": [
+    "6 ay (m.3)",
+    "Yenisi verilinceye kadar bulundurma ruhsatı yerine geçer (m.3)"
+   ]
+  },
+  {
+   "id": "66-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bulundurma ruhsatı — 21 yaş",
+   "hukum": "Ruhsat engeli bulunmayan, 21 yaşını doldurmuş her Türk vatandaşı bulundurmak amacıyla silah satın alabilir; meskende bulunduracak yerleşim yerindeki, iş yerinde bulunduracak iş yeri adresindeki mercie başvurur; bulundurma ruhsatı meskende veya iş yerinde olmak üzere iki şekilde; bulundurma ruhsatlı silahın (poligon dahil) nakli mahallin en büyük mülkî amirinin vereceği Silah Nakil Belgesi ile, belgedeki gün ve güzergâh dışında çıkarılamaz; taşıt araçları iş yeri veya mesken sayılmaz; adres değişince mülkî amirliğe bildirip nakil belgesi alınır, başka mülkî sınıra taşınırsa dosya nakledilir ve harçsız yeni ruhsat düzenlenir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"18 yaşını dolduran bulundurma ruhsatı alabilir\" yanlış; 21",
+    "18 yaşını dolduran bulundurma ruhsatı alabilir",
+    "Bulundurma ruhsatlı silah araçta taşınabilir"
+   ],
+   "dogrusu": [
+    "21 (m.4)",
+    "Taşıt mesken/iş yeri sayılmaz; nakil belgesi gerekir (m.4)"
+   ]
+  },
+  {
+   "id": "66-2",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Can güvenliği nedeniyle taşıma — İçişleri Bakanı",
+   "hukum": "İçişleri Bakanı: (a) iş, sosyal, ekonomik, kültürel, mesleki faaliyetleri ya da yer-zaman itibarıyla can güvenliği ciddi ve harici tehdide maruz kalacağı kuvvetle muhtemel Türk vatandaşları ile karşılıklılık esasına göre çalışma-ikamet izinli yabancılara, (b) şehit kamu görevlileri, korucular, TSK mensupları ile er-erbaşların eş ve çocukları ile anne ve babalarına, (c) Topluma Kazandırma Kanunu uyarınca teslim olan veya güvenlik kuvvetlerine yardımcı olduğu için koruma altına alınanlara, (ç) güvenlik korucuları ve emekli güvenlik korucularına talepleri hâlinde taşıma ruhsatı verebilir; veriliş sebebi kalkınca süreye bakılmaksızın geri alınabilir; Bakan bu yetkisini yazılı olarak Bakan Yardımcıları veya il valilerine tamamen/kısmen devredebilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Valiler kendiliğinden verir\" yanlış; Bakan (devrederse vali)",
+    "Şehit yakınına taşıma ruhsatını vali verir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı (devretmedikçe) (m.7)"
+   ]
+  },
+  {
+   "id": "66-3",
+   "madde": [
+    "7",
+    "8"
+   ],
+   "baslik": "Taşıma izinli kamu görevlileri",
+   "hukum": "Kanun m.7/1-(1),(2),(3),(6) uyarınca: Cumhurbaşkanı, Cumhurbaşkanı Yardımcıları, Bakanlar, yasama organı üyeleri, bakan yardımcıları ve bu görevlerde bulunmuş olanlar; valiler ve mülkî idare amirliği hizmetleri sınıfı; hâkim, Cumhuriyet başsavcısı, savcı ve bu meslekten sayılanlar; özel kanunlarına göre silah taşıma yetkisi olanlar; zabıta yetkisi olanlardan köy ve mahalle muhtarları (demirbaş/zati silah) ve açık deniz gemi kaptanları; kamu kurumlarında koruma-bakım-onarımda çalışanlardan özel güvenliği olmayan kurumların bekçileri (görev yerinde demirbaş), yüksek gerilim hattı, telekomünikasyon tesisi, TRT verici istasyonu, DHMİ seyrüsefer istasyonu teknik personeli (meskûn yer dışında demirbaş), ceza infaz kurumu müdür ve kontrolörleri, infaz ve koruma memurları (cezaevi dışında), Doğu-Güneydoğu tren makinistleri; paraya vazıülyed olanlardan icra müdürleri, veznedar, tahsildar (demirbaş, görevde); özellik arz eden görevlilerden Cumhurbaşkanlığı İdari İşler Başkanı, TBMM Genel Sekreteri, Sayıştay Başkan-üyeleri, müsteşar, teftiş-denetim kurul başkanları, genel müdürler, Cumhurbaşkanlığı danışman ve daire başkanları, teftiş-denetim kadrolu görevliler ve Sayıştay denetçileri, Dışişleri kadrosundaki eski büyükelçi-konsoloslar, KİT yönetim kurulu ve genel müdürleri, Karayolları bölge müdürleri, düzenleyici kurul (RTÜK, SPK, BDDK, EPDK, KVKK vb.) başkan-üyeleri, belediye başkanları, il genel meclisi ve büyükşehir belediye meclisi üyeleri, EGM'de emniyet sınıfı dışındaki personel, İçişleri merkez genel müdür yardımcıları-daire başkanları, defterdar ve mal müdürleri (demirbaş), MSB ANT Başkanlığı yöneticileri (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "Muhtar demirbaş/zati silahını taşıyabilir; veznedar yalnız görev mahallinde",
+    "Hukuk fakültesi akademisyeni taşıma iznine sahiptir"
+   ],
+   "dogrusu": [
+    "Değildir; hâkim ve yasama üyesi listededir (m.8)"
+   ]
+  },
+  {
+   "id": "66-4",
+   "madde": [
+    "7",
+    "9"
+   ],
+   "baslik": "Valinin taşıma ruhsatı verebileceği meslekler",
+   "hukum": "Kanun m.7/1-(5) uyarınca valiler: basın kartı sahibi gazeteciler; kuyumcu ve sarraflar (şirketse en fazla 2 ortak); patlayıcı madde satış ruhsatlı iş yeri sahipleri, silah imalathanesi sahipleri, ruhsatlı silah tamirhanesi sahipleri; banka genel müdür, yardımcıları, bölge ve şube müdürleri; para taşıyan hava yolu pilotları; Bakanlıkça belirlenen ciro/vergi tutarına ulaşan tacirler, A.Ş. yönetim kurulu, Ltd. müdürleri, tarım kredi kooperatifleri yöneticileri; büyük tarım işletmesi sahibi (meskûn yerden uzak, bizzat işleten) ve büyük sürü sahibi (yayla-otlak arası gidip gelen); belirlenen bedeli aşan müteahhitler (en fazla 2 ortak); akaryakıt istasyonu sahipleri (en fazla 2 ortak) ve satış yapanlar (demirbaş, iş başında); en az 50 sigortalı işçi çalıştıran iş sahipleri ve veznedar-mutemetleri; atış poligonu sahipleri ve bekçileri; tescilli eski eser bekçileri; meskûn yer dışında en az 100 arılı kovanla gezginci arıcılar; patlayıcı depo bekçileri; kendi isteğiyle ayrılmış eski vali-MİA, hâkim-savcı, emniyet ve MİT mensupları; döviz bürosu sorumlu ortakları (en fazla 2); barolara kayıtlı avukatlar ve noterler; meslek kuruluşları (TOBB, odalar, borsalar) yönetim kurulu ve meclis üyeleri; esnaf odaları ve kefalet kooperatifleri yöneticileri (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"50 kovanlı arıcı\" yanlış; 100. \"20 işçi çalıştıran\" yanlış; 50"
+   ],
+   "dogrusu": [
+    "valiler · kuyumcu ve sarraflar · ruhsatlı silah tamirhanesi sahipleri · şube müdürleri · hava yolu pilotları · büyük tarım işletmesi · büyük sürü sahibi · müteahhitler · akaryakıt istasyonu sahipleri · en az 50 sigortalı işçi · en az 100 arılı kovanla · barolara kayıtlı avukatlar ve noterler"
+   ]
+  },
+  {
+   "id": "66-5",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Emekli kamu görevlileri",
+   "hukum": "Emekli vali, vali yardımcısı, kaymakam, mülkiye müfettişi ve MİA sınıfı; hâkim-savcılar, Sayıştay başkan-üye-denetçileri; büyükelçi-konsolos gibi dış görevliler; emniyet hizmetleri sınıfı ve MİT mensupları; demirbaş silah taşımış orman muhafaza memurları ve bölge şefleri; Gümrük Muhafaza yöneticileri ve memurları; DDK başkan-üyeleri, bakan yardımcıları, müsteşarlar, teftiş kurulu başkanları; ilişiği kesilen güvenlik korucuları (en fazla 1 silah); Cumhurbaşkanlığı üst yöneticileri; ceza infaz kurumu müdür-kontrolörleri ve infaz-koruma memurları; OHAL İşlemleri İnceleme Komisyonu; (görevine son verilenler ve terör irtibatlılar hariç) en az bir dönem köy/mahalle muhtarlığı, belediye başkanlığı ve il genel meclisi üyeliği yapmış olanlara (seçilmiş olma şartıyla) ikamet ettikleri yer valiliğine müracaatla zati silahları için taşıma ruhsatı verilir; durumlarını belirtir kurum yazısı istenir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Emekli öğretmen\" listede yok"
+   ],
+   "dogrusu": [
+    "vali, vali yardımcısı, kaymakam, mülkiye müfettişi · hâkim-savcılar, Sayıştay başkan-üye-denetçileri · emniyet hizmetleri sınıfı ve MİT · orman muhafaza memurları ve bölge şefleri · güvenlik korucuları · infaz-koruma memurları · en az bir dönem köy/mahalle muhtarlığı, belediye başkanlığı ve il genel meclisi üyeliği · taşıma ruhsatı · kurum yazısı"
+   ]
+  },
+  {
+   "id": "66-6",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Emekli asker, jandarma ve sahil güvenlik personeli",
+   "hukum": "Mahkeme kararı veya mahkûmiyet sonucu tard veya ihraç edilenler, rütbesi geri alınanlar, disiplinsizlik veya ahlaki durum nedeniyle ayırma işlemine tabi tutulanlar hariç; emekli TSK, JGK ve SGK mensupları ile mecburi hizmetini tamamlayıp istifa eden muvazzaf subay, astsubay ve uzman jandarmalar; 9. fiilî hizmet yılını doldurduktan sonra ayrılan sözleşmeli subay-astsubaylar; en az 10 yıl görev yapıp sözleşmesi uzatılmayan veya kendi isteğiyle ayrılan uzman erbaşlara silah taşıma ve bulundurma izni ilgisine göre bağlı bulundukları kuvvet komutanlıkları, JGK ve SGK tarafından verilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"5 yıl çalışıp ayrılan uzman erbaş taşıma izni alır\" yanlış; en az 10 yıl",
+    "5 yıl çalışıp ayrılan uzman erbaşa taşıma izni verilir"
+   ],
+   "dogrusu": [
+    "En az 10 yıl (m.11)"
+   ]
+  },
+  {
+   "id": "66-7",
+   "madde": [
+    "4",
+    "16"
+   ],
+   "baslik": "Ruhsat verilmesini engelleyen hâller",
+   "hukum": "(a) ateşli silahla işlenen suçlardan mahkûm olanlar; (b) ruhsatlı silahıyla suç işleyen veya muhafazadaki ihmal-kusuru nedeniyle başkasının suç işlemesine, intihar veya intihara teşebbüse neden olanlar; (c) taksirli suçlar hariç 1 yıldan fazla hapis cezasına mahkûm olanlar; (d) zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, bilişim suçları, ihaleye fesat, yağma, uyuşturucu, kara para aklama, suç örgütü kurma-yönetme-üyelik, insan ticareti, organ ticareti, tehlikeli biçimde silahla ateş etme, fuhuş, sistemi bozma, kasten öldürme, silahla kasten yaralama, çocukların cinsel istismarı suçlarından mahkûm olanlar; (e) TCK İkinci Kitap Dördüncü Kısım 4-7. bölümlerdeki (Devlete karşı) suçlar ile 3713 sayılı Kanun kapsamındaki suçlardan mahkûm olanlar; (g) ruhsatlı silahını geçici de olsa başkasına verdiği için mahkûm olanlar; (h) Kanun m.4'teki silahlarla (bıçak vb.) suç işleyip mahkûm olanlar; (ı) ruhsatın veriliş nedeni ortadan kalktığı hâlde 6 ay içinde bildirmeyenler; (i) spor federasyonu demirbaş silahını amacı dışında kullananlar; (j) TSK'dan çıkarılanlar, rütbesi geri alınanlar, disiplinsizlik-ahlak nedeniyle ayırma işlemine tabi tutulanlar, meslekten/memurluktan çıkarılanlar, terör irtibatıyla kamu görevinden çıkarılanlar; (k) kısıtlılar ve kamu hizmetinden yasaklılar; (l) psikolojik, nörolojik ve fiziki rahatsızlığı olanlar; (m) 21 yaşını bitirmemiş olanlar; (n) 6284 sayılı Kanun kapsamında tedbir kararı verilenlere tedbir süresince; (e) bendindekilere affa uğrasalar bile ruhsat verilmez; (a),(b),(c),(d),(g),(h),(i) bentleri için yasaklanmış hakların geri verilmesi kararı + infazın tamamlanmasından itibaren 5 yıl geçince ruhsat işlemi yapılabilir; (ı) bendi için idari para cezası ödenince tekrar verilebilir; silahla girilmesi yasak yerlere silahla girenlerin ruhsatı bulundurmaya çevrilir, adli para cezasının infazından itibaren 5 yıl taşıma ruhsatı verilmez; (a),(b),(d),(e),(h) suçlarından kovuşturma yapılana kovuşturma sonuçlanıncaya kadar, terör irtibatıyla görevden uzaklaştırılana göreve iadeye kadar işlemler bekletilir ve silah emanete alınır; 6284 tedbirlilerin silahı tedbir kalkıncaya kadar emanette; mahkûmiyet kesinleşmiş mahkûmiyettir; hapis cezası adli para cezasına çevrilmiş olsa da hapis esas alınır (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adli para cezasına çevrilen hapis engel sayılmaz\" yanlış; hapis esas alınır. Kaçakçılık ibaresi ve (f) bendi (ikiden fazla suç) Danıştay'ca iptal",
+    "Taksirli suçtan 6 ay hapis ruhsata engeldir",
+    "Taksirli suçlar hariç 2 yıldan fazla hapis engeldir",
+    "Adli para cezasına çevrilen hapis engel sayılmaz"
+   ],
+   "dogrusu": [
+    "Engel değil; taksirli hariç 1 yıldan fazla (m.16)",
+    "1 yıl (m.16)",
+    "Hapis esas alınır (m.16)"
+   ]
+  },
+  {
+   "id": "66-8",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Yivli spor ve av tüfekleri",
+   "hukum": "Yivli spor tüfek ve tabancası olarak kayıtlı silahlara bulundurma ruhsatı verilir; poligon ve müsabakalarda ruhsat + geçerli amatör sporcu lisansı ile kullanılır; Gençlik ve Spor'dan her antrenman-müsabaka için izin belgesi; bu silahlar boş, paketlenmiş, torpido veya bagajda nakledilir, üstte taşınmaz; avcılık belgesi olanlara yivli av tüfeği taşıma ruhsatı, diğerlerine bulundurma; taşıma ruhsatlı yivli av tüfeği meskûn mahalde içi boş, muhafazası içinde, atışa hazır olmayacak şekilde nakledilir (m.47)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yivli av tüfeği taşıma ruhsatı herkese verilir\" yanlış; avcılık belgesi şart"
+   ],
+   "dogrusu": [
+    "bulundurma ruhsatı · amatör sporcu lisansı · izin belgesi · boş, paketlenmiş · üstte taşınmaz · avcılık belgesi · yivli av tüfeği taşıma ruhsatı · içi boş, muhafazası içinde, atışa hazır olmayacak"
+   ]
+  },
+  {
+   "id": "66-9",
+   "madde": [
+    "15",
+    "54"
+   ],
+   "baslik": "Bıçak ve diğer aletlerin nakli",
+   "hukum": "Bıçak, diğer aletler ve benzerleri her ne sebeple olursa olsun üstte taşınamaz; nakil: bavul-valiz-takım/el çantasında, çuval-bez torba-ambalajında, araçların bagaj ve torpido gözünde, ani olaylarda kullanılmayı engelleyecek tarzda kâğıt veya bezle sarılıp paketlenmiş şekilde üstte; aykırı taşıyanlar kullanım belgeleri olsa dahi Kanun m.15'e göre işlem görür (m.54)",
+   "sinavda_boyle_yazarlar": [
+    "\"Meslek gereği kullanım belgesi olan bıçağını üstünde taşıyabilir\" yanlış",
+    "Kullanım belgeli bıçak üstte taşınabilir"
+   ],
+   "dogrusu": [
+    "Taşınamaz; paketli nakil (m.54)"
+   ]
+  },
+  {
+   "id": "66-10",
+   "madde": [
+    "16",
+    "60"
+   ],
+   "baslik": "Atış poligonu ön izni",
+   "hukum": "Kapalı tabanca, açık/yarı açık atış poligonu ve trap-skeet atış alanı kurmak isteyenler ortak ve yöneticilerinin TC kimlik numaralarını içeren başvuruyla Bakanlıktan ön izin belgesi alır; ön izin, isteyenin m.16 engellerine girmemesi ve yerin genel güvenlik bakımından uygunluğu Bakanlıkça belirlenince verilir (m.60)",
+   "sinavda_boyle_yazarlar": [
+    "\"Poligon ön iznini valilik verir\" yanlış; Bakanlık"
+   ],
+   "dogrusu": [
+    "Bakanlıktan ön izin belgesi"
+   ]
+  },
+  {
+   "id": "66-11",
+   "madde": [
+    "70"
+   ],
+   "baslik": "Silah tamiri",
+   "hukum": "Ruhsatlı tabanca ve tüfeklerde basit tamirat, boyama, işleme, dürbün montajı izne tabi değil; tabanca ve yivli tüfeklerin balistik önemi haiz ana parçaları (namlu, sürgü, çerçeve, çıkarıcı, tırnak, ateşleme iğnesi, mekanizma başı) üzerindeki tamir-tadilat için ruhsatlı tamircinin raporuyla valiliğe başvurulur, valilik silahı Kriminal Polis/Jandarma Laboratuvarına gönderir, rapora göre izin verir; ana parçaların yurt dışından temini Bakanlık iznine tabi; seri numaralı ana parça değişikliğinde seri numarası yeni parçaya laboratuvarda işlenir (m.70)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dürbün montajı için izin gerekir\" yanlış",
+    "Dürbün montajı için valilik izni gerekir"
+   ],
+   "dogrusu": [
+    "Gerekmez; ana parça tadilatı için gerekir (m.70)"
+   ]
+  },
+  {
+   "id": "66-12",
+   "madde": [
+    "16",
+    "71"
+   ],
+   "baslik": "Silah tamirhanesi açma",
+   "hukum": "Tamir yeri ve şube açma izni, mahallî kolluk tahkikatından sonra valilikçe verilir; şartlar: m.16 engellerine girmemek ve Bakanlıkça oluşturulan uzman komisyonun mesleki yeterlilik sınavını kazanmak, meskûn mahal içinde güvenlik bakımından uygun yer, işçilerin sigortalı ve engelsiz olması; Silah Tamir Yeri Açma Ruhsatı 5 yıl geçerli, 5 yılda bir valilikçe yenilenir; süresi bitip tebligata rağmen 3 ay içinde başvurmayan valilikçe faaliyetten men edilir; denetim valilikçe; eksiklik giderilmezse re'sen geçici/sürekli kapatma; irtibat bürosu açılabilir (çelik kasa şart, yalnız geçici muhafaza); nakil işinde çalışanlara en fazla 5 yıl geçerli Silah Nakil Belgesi (m.71)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tamirhane iznini Bakanlık verir\" yanlış; valilik (sınav Bakanlık komisyonu)"
+   ],
+   "dogrusu": [
+    "valilikçe · Bakanlıkça oluşturulan uzman komisyonun mesleki yeterlilik sınavını · Silah Tamir Yeri Açma Ruhsatı 5 yıl · 3 ay · irtibat bürosu · en fazla 5 yıl · Silah Nakil Belgesi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

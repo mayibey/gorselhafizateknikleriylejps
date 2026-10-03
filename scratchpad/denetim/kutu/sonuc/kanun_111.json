@@ -1,0 +1,17 @@
+[
+{"kanun_id": 111, "kart_id": "111-0", "sorun": "kirmizi_kutu", "aciklama": "kuruluş izni ve JGK tesislerinin kapatılması",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Orduevi ve askerî gazinolar ilgili Kuvvet Komutanının izniyle kurulur.”", "“Jandarma Genel Komutanlığı bünyesindeki orduevleri Millî Savunma Bakanının onayıyla kapatılır.”"],
+ "dogrusu": ["Orduevi, askerî gazino, kışla gazinosu ve vardiya yatakhanesi Millî Savunma Bakanlığının izniyle kurulur (m.6)", "JGK bünyesindeki tesisler Jandarma Genel Komutanının onayıyla kapatılır (m.6)"]}},
+{"kanun_id": 111, "kart_id": "111-1", "sorun": "kirmizi_kutu", "aciklama": "yönetim kurulu üye sayısı ve toplanma sıklığı",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Tesis yönetim kurulu beş asil üyeden oluşur.”", "“Tesis yönetim kurulları en az ayda bir defa toplanır.”"],
+ "dogrusu": ["Yönetim kurulu üç asil ve iki yedek üyeden oluşur; üyelerin kıdemlisi başkandır (m.7)", "Yönetim kurulları en az üç ayda bir defa salt çoğunlukla toplanır (m.7)"]}},
+{"kanun_id": 111, "kart_id": "111-2", "sorun": "kirmizi_kutu", "aciklama": "yabancı askerler ve üye dışı yararlanma",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Yabancı ülke silahlı kuvvetler mensupları orduevlerinden yararlanamaz.”", "“Üyeler dışında kimlerin hangi tesisten yararlanacağını tesis yönetim kurulu belirler.”"],
+ "dogrusu": ["Yabancı silahlı kuvvetler mensupları orduevlerinden MSB'nin belirlediği esaslara göre yararlanabilir (m.10)", "Üyeler dışında kimlerin hangi tesisten yararlanacağı ve kart ücreti Millî Savunma Bakanlığınca belirlenir (m.10)"]}},
+{"kanun_id": 111, "kart_id": "111-3", "sorun": "kirmizi_kutu", "aciklama": "JGK için tugay seviyesi ve idari denetleme sıklığı",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Jandarma Genel Komutanlığına bağlı tesislerde özel denetlemeye asgari kolordu seviyesindeki komutanlık başvurur.”", "“İdari denetleme yılda en az bir defa yapılır.”"],
+ "dogrusu": ["Özel denetlemeye JGK ve SGK için asgari tugay seviyesindeki komutanlık başvurur (m.16)", "İdari denetleme kurulunun faaliyeti süreklidir; idari denetleme yılda en az iki defa icra edilir (m.15)"]}},
+{"kanun_id": 111, "kart_id": "111-4", "sorun": "kirmizi_kutu", "aciklama": "aidat alt sınırı ve kaynak tahsis makamı",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Orduevi üye aidatı oranı brüt maaşın binde beşinden az olamaz.”", "“Toplanan aidat ve kart ücretlerinin tesislere tahsisini ilgili tesisin yönetim kurulu yapar.”"],
+ "dogrusu": ["Üye aidatı oranı binde birden az olamaz (m.22)", "Aidat ve kart ücretlerinin tahsisini İhtiyaç Değerlendirme ve Kaynak Tahsis Komisyonu yürütür (m.22)"]}}
+]

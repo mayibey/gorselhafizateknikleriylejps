@@ -1,0 +1,393 @@
+{
+ "kanun_id": 3,
+ "ad": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_3.json",
+ "kartlar": [
+  {
+   "id": "3-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Anonim hâle getirme",
+   "hukum": "Kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesi (m.3/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "Kimlik bilgilerinin silinmesidir"
+   ],
+   "dogrusu": [
+    "Anonim hâle getirme, başka verilerle eşleştirilerek dahi ilişkilendirilememektir (3/1-b)"
+   ]
+  },
+  {
+   "id": "3-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Açık rıza",
+   "hukum": "Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rıza (m.3/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "üç unsurdan biri düşürülür; \"genel nitelikli rıza\" da geçerli sayılır"
+   ],
+   "dogrusu": [
+    "Belirli bir konuya ilişkin · bilgilendirilmeye dayanan · özgür iradeyle (m.3/1-a)"
+   ]
+  },
+  {
+   "id": "3-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kişisel veri",
+   "hukum": "Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgi (m.3/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüzel kişiye ilişkin bilgiler de kişisel veridir\""
+   ],
+   "dogrusu": [
+    "Kimliği belirli veya belirlenebilir gerçek kişiye (m.3/1-d)"
+   ]
+  },
+  {
+   "id": "3-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "İlgili kişi",
+   "hukum": "Kişisel verisi işlenen gerçek kişi (m.3/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"verileri işleyen kişi\""
+   ],
+   "dogrusu": [
+    "gerçek kişi (m.3/1-ç)"
+   ]
+  },
+  {
+   "id": "3-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kişisel verilerin işlenmesi",
+   "hukum": "Tamamen veya kısmen otomatik ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla elde edilmesi, kaydedilmesi, depolanması, muhafazası, değiştirilmesi, yeniden düzenlenmesi, açıklanması, aktarılması, devralınması, elde edilebilir hâle getirilmesi, sınıflandırılması ya da kullanılmasının engellenmesi gibi her türlü işlem (m.3/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca otomatik yollarla yapılan işlemler\" denir ya da \"kullanılmasının engellenmesi\" işleme sayılmaz denir"
+   ],
+   "dogrusu": [
+    "otomatik · veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan · kullanılmasının engellenmesi (m.3/1-e)"
+   ]
+  },
+  {
+   "id": "3-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Veri işleyen",
+   "hukum": "Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişi (m.3/1-ğ)",
+   "sinavda_boyle_yazarlar": [
+    "veri sorumlusunun tanımıyla yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Veri sorumlusunun verdiği yetkiye dayanarak onun adına (m.3/1-ğ)"
+   ]
+  },
+  {
+   "id": "3-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Veri sorumlusu",
+   "hukum": "Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu gerçek veya tüzel kişi (m.3/1-ı)",
+   "sinavda_boyle_yazarlar": [
+    "\"verileri fiilen işleyen kişi\""
+   ],
+   "dogrusu": [
+    "işleme amaçlarını ve vasıtalarını belirleyen · veri kayıt sisteminin kurulmasından ve yönetilmesinden (m.3/1-ı)"
+   ]
+  },
+  {
+   "id": "3-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Veri kayıt sistemi",
+   "hukum": "Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemi (m.3/1-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"her türlü arşiv\" denir"
+   ],
+   "dogrusu": [
+    "belirli kriterlere göre yapılandırılarak (m.3/1-h)"
+   ]
+  },
+  {
+   "id": "3-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Hukuka uygun işleme",
+   "hukum": "Kişisel veriler ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yönetmelikle belirlenen usullere göre\""
+   ],
+   "dogrusu": [
+    "ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun (m.4/1)"
+   ]
+  },
+  {
+   "id": "3-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke 1",
+   "hukum": "Hukuka ve dürüstlük kurallarına uygun olma (m.4/2-a)",
+   "sinavda_boyle_yazarlar": [
+    "\"hukuka uygun olma\" ile yetinilip dürüstlük kuralı düşürülür"
+   ],
+   "dogrusu": [
+    "Hukuka ve dürüstlük kurallarına uygun olma (m.4/2-a)"
+   ]
+  },
+  {
+   "id": "3-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke 2",
+   "hukum": "Doğru ve gerektiğinde güncel olma (m.4/2-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"her zaman güncel olma\" denir"
+   ],
+   "dogrusu": [
+    "Doğru ve gerektiğinde güncel olma (m.4/2-b)"
+   ]
+  },
+  {
+   "id": "3-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke 3",
+   "hukum": "Belirli, açık ve meşru amaçlar için işlenme (m.4/2-c)",
+   "sinavda_boyle_yazarlar": [
+    "\"veri sorumlusunun amaçlarına uygun olma\" diye çarpıtılır",
+    "Veri işleyen organizasyonun amaçlarına uygun olma"
+   ],
+   "dogrusu": [
+    "İlkelerden biri belirli, açık ve meşru amaçlar için işlenmedir (4/2-c)"
+   ]
+  },
+  {
+   "id": "3-12",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke 4",
+   "hukum": "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma (m.4/2-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"amaçla bağlantılı olmak kaydıyla sınırsız işlenebilme\"",
+    "Her hâlde ilgili kişinin açık rızasını alma\" ilke sayılır (MEBS 2024'ün doğru cevabı)"
+   ],
+   "dogrusu": [
+    "m.4'teki ilkeler beş tanedir ve açık rıza bir ilke değildir"
+   ]
+  },
+  {
+   "id": "3-13",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke 5",
+   "hukum": "İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme (m.4/2-d)",
+   "sinavda_boyle_yazarlar": [
+    "Başka işlemlerde kullanılmak üzere sürekli muhafaza edilme"
+   ],
+   "dogrusu": [
+    "Veriler amaç için gerekli süre kadar muhafaza edilir (4/2-d)"
+   ]
+  },
+  {
+   "id": "3-14",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kural: açık rıza",
+   "hukum": "Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "kural ile istisna yer değiştirilir"
+   ],
+   "dogrusu": [
+    "ilgili kişinin açık rızası olmaksızın işlenemez (m.5/1)"
+   ]
+  },
+  {
+   "id": "3-15",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel nitelikli veriler (listeyi ezberle)",
+   "hukum": "Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek-vakıf-sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"adres bilgisi\", \"mali durum\", \"eğitim durumu\" eklenir; \"kılık ve kıyafet\" veya \"biyometrik veri\" çıkarılır"
+   ],
+   "dogrusu": [
+    "ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek-vakıf-sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri (m.6/1)"
+   ]
+  },
+  {
+   "id": "3-16",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kural: yasak",
+   "hukum": "Özel nitelikli kişisel verilerin işlenmesi yasaktır (m.6/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"açık rıza olmadıkça işlenemez\" diye yumuşatılır; doğrusu kural olarak yasaktır ve yedi istisnadan biri gerekir",
+    "Açık rıza varsa serbest, yoksa yasaktır\" (istisnaların yedisi gizlenir)"
+   ],
+   "dogrusu": [
+    "Özel nitelikli verilerin işlenmesi kural olarak yasaktır (6/3)"
+   ]
+  },
+  {
+   "id": "3-17",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel nitelikli verinin işlenebildiği hâller",
+   "hukum": "(a) açık rıza, (b) kanunlarda açıkça öngörülme, (c) fiili imkânsızlık hâlinde hayat/beden bütünlüğünün korunması, (ç) ilgili kişinin alenileştirdiği verilere ilişkin ve alenileştirme iradesine uygun olma, (d) bir hakkın tesisi, kullanılması veya korunması için zorunluluk, (e) sır saklama yükümlülüğü altındaki kişiler veya yetkili kurumlarca kamu sağlığı, koruyucu hekimlik, teşhis-tedavi-bakım ile sağlık hizmetlerinin planlanması, yönetimi ve finansmanı, (f) istihdam, iş sağlığı ve güvenliği, sosyal güvenlik, sosyal hizmet ve yardım alanındaki hukuki yükümlülükler, (g) siyasi, felsefi, dini veya sendikal amaçlı vakıf, dernek ve kâr amacı gütmeyen kuruluşların mevzuatına ve amacına uygun, faaliyet alanıyla sınırlı, üçüncü kişilere açıklanmamak kaydıyla üyelerine yönelik olması (m.6/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"alenileştirme iradesine uygun olma\" şartı düşürülür; (g) bendinde \"üçüncü kişilere açıklanmamak\" kaydı silinir"
+   ],
+   "dogrusu": [
+    "açık rıza · kanunlarda açıkça öngörülme · fiili imkânsızlık · alenileştirdiği · alenileştirme iradesine uygun · tesisi, kullanılması veya korunması · sır saklama yükümlülüğü · istihdam, iş sağlığı ve güvenliği, sosyal güvenlik, sosyal hizmet ve yardım · vakıf, dernek ve kâr amacı gütmeyen kuruluşların · üçüncü kişilere açıklanmamak (m.6/3)"
+   ]
+  },
+  {
+   "id": "3-18",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Ek güvenlik şartı",
+   "hukum": "Özel nitelikli verilerin işlenmesinde ayrıca Kurul tarafından belirlenen yeterli önlemlerin alınması şarttır (m.6/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurum\" denir (doğrusu Kurul) ya da şart hiç yokmuş gibi gösterilir"
+   ],
+   "dogrusu": [
+    "Kurul tarafından belirlenen yeterli önlemlerin (m.6/4)"
+   ]
+  },
+  {
+   "id": "3-19",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Silme / yok etme / anonim hâle getirme",
+   "hukum": "Kanuna uygun işlenmiş olsa bile işlenmesini gerektiren sebepler ortadan kalkarsa, veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca ilgili kişinin talebi üzerine\" ya da \"Kurul kararıyla\" denir",
+    "Yalnızca ilgili kişinin talebi üzerine yapılır"
+   ],
+   "dogrusu": [
+    "Silme/yok etme resen veya talep üzerine veri sorumlusunca yapılır (7/1)"
+   ]
+  },
+  {
+   "id": "3-20",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Saklı hükümler ve usul",
+   "hukum": "Silme, yok etme ve anonimleştirmeye ilişkin diğer kanunlardaki hükümler saklıdır; usul ve esaslar yönetmelikle düzenlenir (m.7/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tebliğle\" veya \"Kurul kararıyla düzenlenir\""
+   ],
+   "dogrusu": [
+    "diğer kanunlardaki hükümler saklıdır · yönetmelikle (m.7/2-3)"
+   ]
+  },
+  {
+   "id": "3-21",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Kanunun hiç uygulanmadığı hâller — aile içi",
+   "hukum": "Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla, gerçek kişilerce tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi (m.28/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "iki kayıttan biri (\"üçüncü kişilere verilmemek\" / \"veri güvenliği\") düşürülür",
+    "Kayıtsız, mutlak istisna gibi gösterilir"
+   ],
+   "dogrusu": [
+    "Aile içi işleme istisnası üçüncü kişilere verilmemek ve veri güvenliğine uyulmak kaydıyladır (28/1-a)"
+   ]
+  },
+  {
+   "id": "3-22",
+   "madde": [
+    "28"
+   ],
+   "baslik": "İstisna — istatistik",
+   "hukum": "Verilerin resmî istatistik ile anonim hâle getirilmek suretiyle araştırma, planlama ve istatistik gibi amaçlarla işlenmesi (m.28/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"anonim hâle getirilmek\" şartı çıkarılır"
+   ],
+   "dogrusu": [
+    "resmî istatistik ile anonim hâle getirilmek suretiyle (m.28/1-b)"
+   ]
+  },
+  {
+   "id": "3-23",
+   "madde": [
+    "28"
+   ],
+   "baslik": "İstisna — sanat, tarih, bilim, ifade özgürlüğü",
+   "hukum": "Millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini, ekonomik güvenliği, özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla sanat, tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi (m.28/1-c)",
+   "sinavda_boyle_yazarlar": [
+    "kayıt cümlesi silinip mutlak istisna gibi gösterilir"
+   ],
+   "dogrusu": [
+    "ihlal etmemek ya da suç teşkil etmemek kaydıyla (m.28/1-c)"
+   ]
+  },
+  {
+   "id": "3-24",
+   "madde": [
+    "28"
+   ],
+   "baslik": "İstisna — önleyici/koruyucu/istihbari faaliyet (jandarma için kritik)",
+   "hukum": "Millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşlarınca yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi (m.28/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"her kamu kurumu\" denir (kanunla görev verilmiş olmalı) ya da bu bent \"adli faaliyet\" diye gösterilir",
+    "Tüm kamu kurumları için geçerlidir"
+   ],
+   "dogrusu": [
+    "İstihbari faaliyet istisnası kanunla görev verilmiş kurumlar içindir (28/1-ç)"
+   ]
+  },
+  {
+   "id": "3-25",
+   "madde": [
+    "28"
+   ],
+   "baslik": "İstisna — yargı",
+   "hukum": "Verilerin soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin olarak yargı makamları veya infaz mercilerince işlenmesi (m.28/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"kolluk tarafından\" denir"
+   ],
+   "dogrusu": [
+    "soruşturma, kovuşturma, yargılama veya infaz · yargı makamları veya infaz mercilerince (m.28/1-d)"
+   ]
+  },
+  {
+   "id": "3-26",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Kısmi istisna (m.28/2)",
+   "hukum": "Amaç ve temel ilkelere uygun ve orantılı olmak kaydıyla; aydınlatma yükümlülüğü (m.10), zararın giderilmesini talep etme hakkı hariç ilgili kişinin hakları (m.11) ve Veri Sorumluları Siciline kayıt (m.16) şu hâllerde uygulanmaz: (a) suç işlenmesinin önlenmesi veya suç soruşturması için gereklilik, (b) ilgili kişinin kendisi tarafından alenileştirilmiş verilerin işlenmesi, (c) kanunun verdiği yetkiye dayanılarak denetleme/düzenleme görevleri ile disiplin soruşturma veya kovuşturması için gereklilik, (ç) bütçe, vergi ve mali konularda Devletin ekonomik ve mali çıkarlarının korunması için gereklilik",
+   "sinavda_boyle_yazarlar": [
+    "\"zararın giderilmesini talep etme hakkı da uygulanmaz\" denir — bu hak hariç tutulmuştur, yani korunur",
+    "İlgili kişinin bütün hakları uygulanmaz"
+   ],
+   "dogrusu": [
+    "m.28/2'de zararın giderilmesini talep hakkı hariç tutulmuştur"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

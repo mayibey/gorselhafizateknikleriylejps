@@ -1,0 +1,98 @@
+{
+ "kanun_id": 53,
+ "ad": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_53.json",
+ "kartlar": [
+  {
+   "id": "53-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Bulanın mülkünde: satın alınır, ikramiye yok",
+   "hukum": "Taşınır kültür-tabiat varlığı bulunduğunu bilen malik/zilyet 3 gün içinde müzeye, köyde muhtara, diğer yerlerde mülkî amire haber verir; varlık bulanın mülkü içinde ise değeri ödenerek müzelerce satın alınır, ayrıca ikramiye verilmez (m.3/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bulanın mülkünde ise %80 ikramiye\" yanlış; satın alınır",
+    "Kendi mülkünde bulana %80 ikramiye"
+   ],
+   "dogrusu": [
+    "Satın alınır, ikramiye yok (m.3/a)"
+   ]
+  },
+  {
+   "id": "53-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Başkasının mülkünde: %80 yarı yarıya",
+   "hukum": "Varlık başkasının mülkü içinde bulunmuşsa takdir edilen bedelin %80'i, bulan ile mülk sahibi arasında eşit paylaştırılır (m.3/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tamamı bulana\" yanlış; yarı yarıya"
+   ],
+   "dogrusu": [
+    "başkasının mülkü · %80'i · bulan ile mülk sahibi arasında eşit"
+   ]
+  },
+  {
+   "id": "53-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Devlet arazisinde: %40 bulana",
+   "hukum": "Varlık Devlete ait arazide bulunmuşsa bedelin %40'ı bulana ikramiye olarak ödenir (m.3/c)",
+   "sinavda_boyle_yazarlar": [
+    "%80 / %40 rakamları ters verilir",
+    "Devlet arazisinde bulana %80"
+   ],
+   "dogrusu": [
+    "%40 (m.3/c)"
+   ]
+  },
+  {
+   "id": "53-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Korunması gerekli değilse iade",
+   "hukum": "Haber verilen varlık korunması gerekli nitelikte değilse müzece verilecek belge ile sahibine iade edilir; belge varlık ve sahibini açıkça tanımlar; 1 yıl içinde alınmayan varlıklar müzede saklanabilir veya Devletçe satılabilir (m.3/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"İade edilen varlık satılamaz\" yanlış; belgeyle her türlü tasarruf serbest"
+   ],
+   "dogrusu": [
+    "belge ile sahibine iade · 1 yıl"
+   ]
+  },
+  {
+   "id": "53-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Gizlenmiş varlıklar — kademeli ikramiye",
+   "hukum": "Süresinde haber verilmediği için gizlenmiş sayılan varlıkları haber verenlere ve yakalayan kamu görevlilerine tespit edilen değerin: 5.000 liraya kadar %30, 25.000'e kadar (5.000 üstü kısım) %25, 50.000'e kadar (25.000 üstü) %15, 100.000'e kadar (50.000 üstü) %10, 100.000 üstü %7,5 oranında ikramiye ayrı ayrı ödenir; birden fazla haber veren/yakalayan varsa eşit paylaşılır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "Haber veren ve yakalayan ayrı ayrı alır; \"aralarında bölüşür\" yanlış (aynı sıfattakiler bölüşür)",
+    "100.000 lira üstü kısım için %9",
+    "Haber veren ve yakalayan ikramiyeyi bölüşür"
+   ],
+   "dogrusu": [
+    "%7,5 (m.4)",
+    "Ayrı ayrı alır (m.4)"
+   ]
+  },
+  {
+   "id": "53-5",
+   "madde": [
+    "5"
+   ],
+   "baslik": "İkramiye ödenmeyecek hâller",
+   "hukum": "Taşınmaz kültür ve tabiat varlıkları ile varlığı Bakanlıkça önceden bilinen taşınır varlıklar için ihbar ikramiyesi ödenmez (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taşınmaz varlık ihbarına da ikramiye verilir\" yanlış",
+    "Taşınmaz varlık ihbarına ikramiye ödenir"
+   ],
+   "dogrusu": [
+    "Ödenmez (m.5)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

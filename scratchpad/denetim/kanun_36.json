@@ -1,0 +1,329 @@
+{
+ "kanun_id": 36,
+ "ad": "5395 sayılı Çocuk Koruma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_36.json",
+ "kartlar": [
+  {
+   "id": "36-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Çocuk ve iki türü",
+   "hukum": "Çocuk: daha erken yaşta ergin olsa bile on sekiz yaşını doldurmamış kişi. Korunma ihtiyacı olan çocuk: bedensel, zihinsel, ahlakî, sosyal ve duygusal gelişimi ile kişisel güvenliği tehlikede olan, ihmal veya istismar edilen ya da suç mağduru çocuk. Suça sürüklenen çocuk: suç sayılan bir fiili işlediği iddiasıyla hakkında soruşturma veya kovuşturma yapılan ya da güvenlik tedbirine karar verilen çocuk (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"erken ergin olan çocuk sayılmaz\" denir"
+   ],
+   "dogrusu": [
+    "Çocuk · on sekiz yaşını doldurmamış · Korunma ihtiyacı olan çocuk · ihmal veya istismar edilen ya da suç mağduru · Suça sürüklenen çocuk"
+   ]
+  },
+  {
+   "id": "36-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Çocuk hâkimi ve sosyal çalışma görevlisi",
+   "hukum": "Çocuk hâkimi: kovuşturması başlamış olanlar hariç, suça sürüklenen ve korunma ihtiyacı olan çocuklar hakkında tedbir kararlarını veren çocuk mahkemesi hâkimi; sosyal çalışma görevlisi: psikolojik danışmanlık ve rehberlik, psikoloji, sosyoloji, çocuk gelişimi, öğretmenlik, aile ve tüketici bilimleri ve sosyal hizmet mezunları (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "sosyal çalışma görevlisi \"yalnız sosyal hizmet uzmanı\" denir"
+   ],
+   "dogrusu": [
+    "Çocuk hâkimi · tedbir kararlarını veren · sosyal çalışma görevlisi"
+   ]
+  },
+  {
+   "id": "36-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Koruyucu ve destekleyici tedbirler",
+   "hukum": "Çocuğun öncelikle kendi aile ortamında korunmasını amaçlayan beş tedbir: danışmanlık (bakımından sorumlu kişilere ve çocuğa yol gösterme), eğitim (eğitim kurumuna devam, meslek kursu veya usta yanına yerleştirme), bakım (bakımından sorumlu kişi görevini yapamıyorsa bakım yurdu veya koruyucu aile), sağlık (geçici veya sürekli tıbbî bakım ve bağımlılık tedavisi), barınma (barınma yeri olmayan çocuklu kimselere veya hayatı tehlikede olan hamile kadınlara barınma yeri). Barınma tedbiri uygulananların talebi hâlinde kimlik ve adresleri gizli tutulur; tehlike, veli desteklenerek giderilebilecekse çocuk bu kişilere teslim edilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "barınma tedbirinin hamile kadını kapsamadığı söylenir"
+   ],
+   "dogrusu": [
+    "öncelikle kendi aile ortamında · danışmanlık · eğitim · bakım · koruyucu aile · sağlık · bağımlılık tedavisi · barınma · hayatı tehlikede olan hamile kadınlara · kimlik ve adresleri gizli · bu kişilere teslim edilir"
+   ]
+  },
+  {
+   "id": "36-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Bildirim yükümlülüğü",
+   "hukum": "Adlî ve idarî merciler, kolluk görevlileri, sağlık ve eğitim kuruluşları ve sivil toplum kuruluşları, korunma ihtiyacı olan çocuğu Sosyal Hizmetler ve Çocuk Esirgeme Kurumuna bildirmekle yükümlüdür; çocuk ve bakımından sorumlu kimseler de başvurabilir; Kurum bildirilen olayları derhâl araştırır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız kolluk bildirir\" denir"
+   ],
+   "dogrusu": [
+    "Adlî ve idarî merciler, kolluk görevlileri · Sosyal Hizmetler ve Çocuk Esirgeme Kurumuna · derhâl"
+   ]
+  },
+  {
+   "id": "36-4",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Tedbir kararını kim verir",
+   "hukum": "Koruyucu ve destekleyici tedbir kararı; çocuğun anası, babası, vasisi, bakım ve gözetiminden sorumlu kimse, SHÇEK ve Cumhuriyet savcısının istemi üzerine veya re'sen çocuk hâkimi tarafından alınır; karardan önce sosyal inceleme yaptırılabilir; bir veya birden fazla tedbire karar verilebilir; hâkim çocuğun denetim altına alınmasına da karar verebilir; tedbir on sekiz yaşın doldurulmasıyla kendiliğinden sona erer, ancak eğitimine devam edebilmesi için rızası alınarak belli süre uzatılabilir; mahkeme velayet, vesayet, kayyım, nafaka ve kişisel ilişki konularında da karar vermeye yetkilidir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cumhuriyet savcısı tedbir kararı alabilir\" denir — çıkmış soruda doğru cevap çocuk hâkimiydi",
+    "Cumhuriyet savcısı koruyucu tedbir kararı alabilir"
+   ],
+   "dogrusu": [
+    "İster; kararı çocuk hâkimi verir (m.7)"
+   ]
+  },
+  {
+   "id": "36-5",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tedbirde yetki ve inceleme",
+   "hukum": "Korunma ihtiyacı olan çocuk hakkındaki tedbirler, çocuğun menfaati bakımından kendisinin, ana-babasının, vasisinin veya birlikte yaşadığı kimselerin bulunduğu yerdeki çocuk hâkimince alınır; tedbir kararlarının uygulanması kararı veren hâkim veya mahkemece en geç üçer aylık sürelerle incelettirilir; hâkim tedbiri kaldırabilir, uzatabilir veya değiştirebilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "inceleme \"altı ayda bir\" denir"
+   ],
+   "dogrusu": [
+    "kendisinin, ana-babasının, vasisinin veya birlikte yaşadığı kimselerin bulunduğu yerdeki · en geç üçer aylık · kaldırabilir, uzatabilir veya değiştirebilir"
+   ]
+  },
+  {
+   "id": "36-6",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Acil korunma kararı",
+   "hukum": "Derhâl korunma gerektiren durumda çocuk SHÇEK tarafından bakım ve gözetim altına alındıktan sonra, Kurum çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine başvurur; hâkim üç gün içinde karar verir; hâkim çocuğun bulunduğu yerin gizli tutulmasına karar verebilir; acil korunma kararı en fazla otuz gün için verilir; bu sürede Kurum sosyal inceleme yapar, tedbir gerekmiyorsa görüşünü hâkime bildirir, çocuğun ailesine teslimine veya başka tedbire hâkim karar verir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "30 gün yerine 15, 45, 60 verilir — çıkmış soruda tam bu soruldu",
+    "Acil korunma kararı en fazla 15 gün verilebilir"
+   ],
+   "dogrusu": [
+    "30 gün (m.9)"
+   ]
+  },
+  {
+   "id": "36-7",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Soruşturmayı kim yapar",
+   "hukum": "Suça sürüklenen çocuk hakkındaki soruşturma çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır; çocuğun ifadesi alınırken yanında sosyal çalışma görevlisi bulundurulabilir; savcı gerekirse çocuk hâkiminden koruyucu tedbir isteyebilir (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"kolluk ifadesini alabilir\" denir"
+   ],
+   "dogrusu": [
+    "çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat · sosyal çalışma görevlisi"
+   ]
+  },
+  {
+   "id": "36-8",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Gözaltındaki çocuk",
+   "hukum": "Gözaltına alınan çocuklar kolluğun çocuk biriminde tutulur; çocuk biriminin bulunmadığı yerlerde çocuklar, gözaltına alınan yetişkinlerden ayrı bir yerde tutulur (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"yetişkinlerle birlikte tutulabilir\" denir",
+    "Çocuk birimi yoksa çocuk yetişkinlerle birlikte tutulabilir"
+   ],
+   "dogrusu": [
+    "Ayrı yerde tutulur (m.16)"
+   ]
+  },
+  {
+   "id": "36-9",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Yetişkinle birlikte işlenen suç",
+   "hukum": "Çocukların yetişkinlerle birlikte suç işlemesi hâlinde soruşturma ve kovuşturma ayrı yürütülür; mahkeme lüzum görürse çocuk hakkındaki yargılamayı genel mahkemedeki davanın sonucuna kadar bekletebilir; davaların birlikte yürütülmesi zorunlu görülürse genel mahkemelerde birleştirme kararı verilebilir (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde birlikte görülür\" denir"
+   ],
+   "dogrusu": [
+    "ayrı · bekletebilir · genel mahkemelerde"
+   ]
+  },
+  {
+   "id": "36-10",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Kelepçe yasağı",
+   "hukum": "Çocuklara zincir, kelepçe ve benzeri aletler takılamaz; ancak zorunlu hâllerde çocuğun kaçmasını, kendisinin veya başkalarının hayat ve beden bütünlüğü bakımından tehlikeleri önlemek için kolluk gerekli önlemi alabilir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"kaçma şüphesinde kelepçe takılabilir\" denir",
+    "Kaçma şüphesi olan çocuğa kelepçe takılabilir"
+   ],
+   "dogrusu": [
+    "Kelepçe takılamaz; gerekli önlem alınır (m.18)"
+   ]
+  },
+  {
+   "id": "36-11",
+   "madde": [
+    "171",
+    "19",
+    "23"
+   ],
+   "baslik": "Erteleme ve HAGB'de üç yıl",
+   "hukum": "Çocuğa yüklenen suçtan dolayı CMK'daki koşullar varsa kamu davasının açılmasının ertelenmesi kararı verilebilir; çocuklar için erteleme süresi üç yıldır; on beş yaşını doldurmamış çocuklarda CMK m.171'deki hapis cezası üst sınırı beş yıl olarak uygulanır. Yargılama sonunda HAGB kararı verilebilir; çocuklar için denetim süresi üç yıldır (m.19, m.23)",
+   "sinavda_boyle_yazarlar": [
+    "çocukta da \"beş yıl\" denir",
+    "Çocukta HAGB denetim süresi beş yıldır"
+   ],
+   "dogrusu": [
+    "Üç yıl (m.23)"
+   ]
+  },
+  {
+   "id": "36-12",
+   "madde": [
+    "109",
+    "20"
+   ],
+   "baslik": "Çocuğa özgü adlî kontrol",
+   "hukum": "Suça sürüklenen çocuklar hakkında CMK m.109'dakilere ek olarak belirlenen çevre sınırları dışına çıkmamak, belirlenen yerlere gidememek veya ancak bazı yerlere gidebilmek, belirlenen kişi ve kuruluşlarla ilişki kurmamak tedbirlerine karar verilebilir; bu tedbirlerden sonuç alınamaması veya uyulmaması hâlinde tutuklama kararı verilebilir; denetimli serbestlik müdürlüğü çocuğa rehberlik edecek bir uzman görevlendirir (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "çocuğa özgü üç tedbir CMK'daki listeden sanılır"
+   ],
+   "dogrusu": [
+    "belirlenen çevre sınırları dışına çıkmamak · kişi ve kuruluşlarla ilişki kurmamak · sonuç alınamaması · uzman"
+   ]
+  },
+  {
+   "id": "36-13",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Çocukta tutuklama yasağı",
+   "hukum": "On beş yaşını doldurmamış çocuklar hakkında üst sınırı beş yılı aşmayan hapis cezasını gerektiren fiillerinden dolayı tutuklama kararı verilemez (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"on sekiz yaşını doldurmamış\" ya da \"iki yıl\" denir"
+   ],
+   "dogrusu": [
+    "On beş yaşını doldurmamış · üst sınırı beş yılı aşmayan · tutuklama kararı verilemez"
+   ]
+  },
+  {
+   "id": "36-14",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Çocuk mahkemeleri",
+   "hukum": "Çocuk mahkemesi tek hâkimden oluşur, her il merkezinde kurulur, belirlenen ilçelerde HSK'nın olumlu görüşüyle kurulabilir; çocuk mahkemesi duruşmalarında Cumhuriyet savcısı bulunmaz, ancak o yerdeki savcılar kararlara karşı kanun yoluna başvurabilir. Çocuk ağır ceza mahkemesi bir başkan ve iki üye ile toplanır, HSK'nın olumlu görüşüyle belirlenen yerlerde kurulur (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"çocuk mahkemesi bir başkan ve iki üyeden oluşur\" ya da \"ağır ceza bir başkan ve en az bir üyeyle toplanır\" denir — iki çıkmış soru tam buradan",
+    "Çocuk mahkemesi bir başkan ve iki üyeden oluşur",
+    "Çocuk mahkemesinde savcı bulunur"
+   ],
+   "dogrusu": [
+    "Tek hâkim (m.25)",
+    "Bulunmaz (m.25)"
+   ]
+  },
+  {
+   "id": "36-15",
+   "madde": [
+    "17",
+    "26"
+   ],
+   "baslik": "Görev",
+   "hukum": "Çocuk mahkemesi asliye ceza ve sulh ceza mahkemesinin görev alanına giren suçlarda; çocuk ağır ceza mahkemesi ağır ceza mahkemesinin görev alanına giren suçlarda suça sürüklenen çocukların davalarına bakar; çocuklar hakkındaki kamu davaları m.17 saklı kalmak üzere bu mahkemelerde görülür (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "çocuk mahkemesine ağır ceza suçları da verilir"
+   ],
+   "dogrusu": [
+    "asliye ceza ve sulh ceza · ağır ceza · bu mahkemelerde"
+   ]
+  },
+  {
+   "id": "36-16",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Çocuk bürosu",
+   "hukum": "Cumhuriyet başsavcılığında kurulan çocuk bürosu; suça sürüklenen çocukların soruşturmasını yürütür, tedbir gereken durumlarda gecikmeksizin tedbir alınmasını sağlar, korunma ihtiyacı olan ve suç mağduru çocuklara destek hizmeti için kurumlarla iş birliği yapar; gecikmesinde sakınca bulunan hâllerde bu görevler büroda görevli olmayan savcılarca da yerine getirilebilir (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız büro savcıları\" denir"
+   ],
+   "dogrusu": [
+    "soruşturmasını yürütür · gecikmeksizin · gecikmesinde sakınca bulunan hâllerde"
+   ]
+  },
+  {
+   "id": "36-17",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Kolluğun çocuk birimi",
+   "hukum": "Çocuklarla ilgili kolluk görevi öncelikle kolluğun çocuk birimlerince yerine getirilir; birim, çocuk hakkında işleme başlandığında durumu veli veya vasiye, çocuğun bakımını üstlenen kimseye, baroya ve SHÇEK'e, çocuk resmî kurumda kalıyorsa kurum temsilcisine bildirir; ancak çocuğu suça azmettirdiğinden veya istismar ettiğinden şüphelenilen yakınlarına bilgi verilmez; çocuk kollukta iken yanında yakınlarından birinin bulunmasına imkân sağlanır; çocuk birimi personeline kendi kurumları tarafından çocuk hukuku, çocuk suçluluğunun önlenmesi, çocuk psikolojisi ve sosyal hizmet eğitimi verilir; acil korunma kararı için beklemenin çocuğun yararına aykırı olacağı hâllerde çocuk birimi gerekli önlemleri alarak güvenliğini sağlar ve en kısa sürede SHÇEK'e teslim eder (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"eğitimi Adalet Bakanlığı verir\" denir — 2026'da yanlış şık buydu",
+    "Çocuk birimi personelinin eğitimini Adalet Bakanlığı verir"
+   ],
+   "dogrusu": [
+    "Kendi kurumu verir (m.31)"
+   ]
+  },
+  {
+   "id": "36-18",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Denetim görevlisi",
+   "hukum": "Denetim altına alınan çocuk için denetimli serbestlik müdürlüğü bir denetim görevlisi görevlendirir; ancak korunma ihtiyacı olan çocuklar, suç tarihinde on iki yaşını bitirmemiş suça sürüklenen çocuklar ve aileye teslim kararı verilen çocuklarda denetim görevi SHÇEK tarafından yerine getirilir (m.37)",
+   "sinavda_boyle_yazarlar": [
+    "yaş eşiği on beş yapılır"
+   ],
+   "dogrusu": [
+    "denetimli serbestlik müdürlüğü · korunma ihtiyacı olan · on iki yaşını bitirmemiş · aileye teslim · SHÇEK"
+   ]
+  },
+  {
+   "id": "36-19",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Çocuk teslimi ve kişisel ilişki",
+   "hukum": "Aile mahkemelerinin çocuk teslimi ve kişisel ilişki kararları Adalet Bakanlığının adli destek ve mağdur hizmetleri müdürlüklerince yerine getirilir; müdürlük olmayan yerde hukuk mahkemeleri yazı işleri müdürlüğü; yetki çocuğun yerleşim yeri müdürlüğünde; kararlar psikolog, pedagog, sosyal çalışmacı gibi uzmanlar, uzman yoksa öğretmen marifetiyle yerine getirilir. Yükümlü çocuğu rızasıyla teslim etmezse müdürlük irtibata geçer, olmazsa teslim emri gönderir; emre uyulmazsa çocuk nerede bulunursa bulunsun müdürlükçe alınıp hak sahibine teslim edilir; bu hâlde kolluktan yardım istenebilir ve kolluk zor kullanma dâhil talepleri derhâl yerine getirir. Kişisel ilişkide hak sahibi teslim saatinden en az kırk sekiz saat önce geleceğini bildirmek zorundadır (m.41/A-C)",
+   "sinavda_boyle_yazarlar": [
+    "\"icra müdürlüğü yerine getirir\" denir"
+   ],
+   "dogrusu": [
+    "Adalet Bakanlığının adli destek ve mağdur hizmetleri müdürlüklerince · çocuğun yerleşim yeri · uzmanlar, uzman yoksa öğretmen · teslim emri · kolluktan yardım istenebilir · zor kullanma dâhil · derhâl · en az kırk sekiz saat önce"
+   ]
+  },
+  {
+   "id": "36-20",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Şikâyet ve disiplin hapsi",
+   "hukum": "Müdürlüğün işlem ve kararlarına karşı öğrenme veya tebliğden itibaren bir hafta içinde aile mahkemesine şikâyet, şikâyet kararına tebliğden itibaren iki hafta içinde itiraz edilebilir, itiraz kararı kesindir. Çocuk teslim emrine aykırı davranan veya engelleyenler, bir ay içinde yapılacak şikâyet üzerine fiil suç teşkil etse dahi üç aya kadar disiplin hapsi; kişisel ilişki teslim emrine aykırı davrananlar üç günden on güne kadar disiplin hapsiyle cezalandırılır (m.41/E-F)",
+   "sinavda_boyle_yazarlar": [
+    "iki disiplin hapsi süresi yer değiştirilir"
+   ],
+   "dogrusu": [
+    "bir hafta · şikâyet · iki hafta · itiraz · kesindir · bir ay · üç aya kadar disiplin hapsi · üç günden on güne kadar"
+   ]
+  },
+  {
+   "id": "36-21",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Tedbirleri kim yerine getirir",
+   "hukum": "Danışmanlık ve barınma tedbirleri MEB, SHÇEK ve yerel yönetimler; eğitim tedbiri MEB ve Çalışma Bakanlığı; bakım tedbiri SHÇEK; sağlık tedbiri Sağlık Bakanlığı tarafından yerine getirilir; bakım ve barınma tedbirlerinde ihtiyaç duyulan kolluk hizmetleri ve diğer destek talepleri MEB, İçişleri, Sağlık ve diğer bakanlıklarca geciktirilmeksizin yerine getirilir; koordinasyonu Adalet Bakanlığı sağlar (m.45)",
+   "sinavda_boyle_yazarlar": [
+    "koordinasyon \"İçişleri Bakanlığı\"na verilir"
+   ],
+   "dogrusu": [
+    "Danışmanlık ve barınma · yerel yönetimler · eğitim · bakım · sağlık · kolluk hizmetleri · İçişleri · geciktirilmeksizin · Adalet Bakanlığı"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

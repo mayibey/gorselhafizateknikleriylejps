@@ -1,0 +1,400 @@
+{
+ "kanun_id": 7,
+ "ad": "3713 sayılı Terörle Mücadele Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_7.json",
+ "kartlar": [
+  {
+   "id": "7-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Terör tanımı — yöntem",
+   "hukum": "Terör, cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit yöntemlerinden biriyle işlenir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "yöntemlerden biri (\"sindirme\" ya da \"yıldırma\") çıkarılır veya \"propaganda\" eklenir"
+   ],
+   "dogrusu": [
+    "cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit (m.1)"
+   ]
+  },
+  {
+   "id": "7-1",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Terör tanımı — amaç",
+   "hukum": "Anayasada belirtilen Cumhuriyetin niteliklerini, siyasî, hukukî, sosyal, laik, ekonomik düzeni değiştirmek; Devletin ülkesi ve milletiyle bölünmez bütünlüğünü bozmak; Türk Devletinin ve Cumhuriyetin varlığını tehlikeye düşürmek; Devlet otoritesini zaafa uğratmak, yıkmak veya ele geçirmek; temel hak ve hürriyetleri yok etmek; Devletin iç ve dış güvenliğini, kamu düzenini veya genel sağlığı bozmak amacıyla (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"genel sağlığı bozmak\" veya \"temel hak ve hürriyetleri yok etmek\" listeden düşürülür"
+   ],
+   "dogrusu": [
+    "Cumhuriyetin niteliklerini, siyasî, hukukî, sosyal, laik, ekonomik düzeni değiştirmek · ülkesi ve milletiyle bölünmez bütünlüğünü bozmak · varlığını tehlikeye düşürmek · Devlet otoritesini zaafa uğratmak, yıkmak veya ele geçirmek · temel hak ve hürriyetleri yok etmek · iç ve dış güvenliğini, kamu düzenini veya genel sağlığı bozmak (m.1)"
+   ]
+  },
+  {
+   "id": "7-2",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Terör tanımı — fail",
+   "hukum": "Bu amaçlarla bir örgüte mensup kişi veya kişiler tarafından girişilecek her türlü suç teşkil eden eylemlerdir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tek kişi tarafından işlenen eylemler de terördür\" denir (tanım örgüte mensubiyet arar)"
+   ],
+   "dogrusu": [
+    "bir örgüte mensup kişi veya kişiler tarafından · her türlü suç teşkil eden eylemlerdir (m.1)"
+   ]
+  },
+  {
+   "id": "7-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Terör suçlusu",
+   "hukum": "(1) 1. maddedeki amaçlara ulaşmak için kurulmuş örgütlerin mensubu olup bu amaçlar doğrultusunda diğerleriyle beraber veya tek başına suç işleyen; (2) amaçlanan suçu işlemese dahi örgütlerin mensubu olan; (3) örgüte mensup olmasa dahi örgüt adına suç işleyen kişi terör suçlusudur (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"örgüte mensup olup suç işlemeyen terör suçlusu değildir\" ya da \"örgüt mensubu olmayan hiçbir hâlde terör suçlusu sayılmaz\"",
+    "Suç işlemedikçe terör suçlusu olmaz",
+    "Mensup değilse terör suçlusu sayılmaz",
+    "Yere yat",
+    "Ellerini kaldır",
+    "Dur"
+   ],
+   "dogrusu": [
+    "Örgüt mensubu, suç işlemese dahi terör suçlusudur (2)",
+    "Örgüte mensup olmasa da örgüt adına suç işleyen terör suçlusudur (2)",
+    "Emir \"teslim ol\"dur (Ek m.2)"
+   ]
+  },
+  {
+   "id": "7-4",
+   "madde": [],
+   "baslik": "Terör suçları (m.3 — ezberle)",
+   "hukum": "TCK'nın 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar terör suçlarıdır",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "302, 307, 309, 311, 312, 313, 314, 315 ve 320 · 310 uncu maddesinin birinci fıkrasında · terör suçlarıdır"
+   ]
+  },
+  {
+   "id": "7-5",
+   "madde": [
+    "110",
+    "120",
+    "68"
+   ],
+   "baslik": "Terör amacıyla işlenen suçlar (m.4)",
+   "hukum": "Sayılan suçlar, 1. maddedeki amaçlar doğrultusunda suç işlemek üzere kurulmuş bir terör örgütünün faaliyeti çerçevesinde işlendiği takdirde terör suçu sayılır. Kapsam: (a) TCK'nın 79, 80, 81, 82, 84, 86, 87, 96, 106, 107, 108, 109, 112, 113, 114, 115, 116, 117, 118, 142, 148, 149, 151, 152, 170, 172, 173, 174, 185, 188, 199, 200, 202, 204, 210, 213, 214, 215, 223, 224, 243, 244, 265, 294, 300, 316, 317, 318, 319 uncu maddeleri ile 310/2; (b) 6136 sayılı Kanunda tanımlanan suçlar; (c) 6831 sayılı Orman Kanunu m.110/4-5 kasten orman yakma; (ç) 4926 sayılı Kaçakçılıkla Mücadele Kanununda tanımlanan ve hapis cezasını gerektiren suçlar; (d) Anayasa m.120 gereğince olağanüstü hâl ilan edilen bölgelerde, ilana neden olan olaylara ilişkin suçlar; (e) 2863 sayılı Kanun m.68'de tanımlanan suç",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "suç işlemek üzere kurulmuş bir terör örgütünün faaliyeti çerçevesinde işlendiği takdirde · 6136 sayılı Kanunda · 6831 sayılı Orman Kanunu m.110/4-5 · 4926 sayılı Kaçakçılıkla Mücadele Kanununda · hapis cezasını gerektiren · Anayasa m.120 · ilana neden olan olaylara ilişkin suçlar · 2863 sayılı Kanun m.68"
+   ]
+  },
+  {
+   "id": "7-6",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Nüfuzun kötüye kullanılması",
+   "hukum": "Bu Kanun kapsamına giren suçların kamu görevinin sağladığı nüfuz kötüye kullanılmak suretiyle işlenmesi hâlinde verilecek ceza YARI oranında artırılır (m.8/A)",
+   "sinavda_boyle_yazarlar": [
+    "Üçte bir / dörtte bir oranında artar"
+   ],
+   "dogrusu": [
+    "Nüfuzun kötüye kullanılmasında ceza yarı oranında artar (8/A)"
+   ]
+  },
+  {
+   "id": "7-7",
+   "madde": [
+    "60",
+    "8"
+   ],
+   "baslik": "Tüzel kişilerin sorumluluğu",
+   "hukum": "Bu Kanun kapsamına giren suçların bir tüzel kişinin faaliyeti çerçevesinde işlenmesi hâlinde TCK m.60'a göre tüzel kişilere özgü güvenlik tedbirlerine hükmolunur (m.8/B)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüzel kişiye idarî para cezası verilir\""
+   ],
+   "dogrusu": [
+    "TCK m.60'a göre tüzel kişilere özgü güvenlik tedbirlerine (m.8/B)"
+   ]
+  },
+  {
+   "id": "7-8",
+   "madde": [
+    "314",
+    "7"
+   ],
+   "baslik": "Örgüt kurma, yönetme, üye olma",
+   "hukum": "Cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit yöntemleriyle, 1. maddedeki amaçlara yönelik suç işlemek üzere terör örgütü kuranlar, yönetenler ve üye olanlar TCK m.314'e göre cezalandırılır; örgütün faaliyetini düzenleyenler de yönetici olarak cezalandırılır (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"faaliyetini düzenleyenler üye sayılır\""
+   ],
+   "dogrusu": [
+    "terör örgütü kuranlar, yönetenler ve üye olanlar TCK m.314'e göre · örgütün faaliyetini düzenleyenler de yönetici olarak (m.7/1)"
+   ]
+  },
+  {
+   "id": "7-9",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İfade özgürlüğü sınırı",
+   "hukum": "Haber verme sınırlarını aşmayan veya eleştiri amacıyla yapılan düşünce açıklamaları suç oluşturmaz (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "şiddeti öven bir yazı bu istisnaya sokulmaya çalışılır — övme ve teşvik varsa istisna uygulanmaz",
+    "İştirak etmemiş yayın sorumlularına yaptırım uygulanmaz"
+   ],
+   "dogrusu": [
+    "Yayın sorumlularına 1.000-5.000 gün adlî para cezası verilir (7/2)"
+   ]
+  },
+  {
+   "id": "7-10",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Propaganda sayılan davranışlar",
+   "hukum": "Toplantı ve gösteri yürüyüşü sırasında gerçekleşmese dahi, örgütün üyesi veya destekçisi olduğunu belli edecek şekilde: örgüte ait amblem, resim veya işaretlerin asılması ya da taşınması; slogan atılması; ses cihazlarıyla yayın yapılması; örgüte ait amblem, resim veya işaretin bulunduğu üniformanın giyilmesi (m.7/2-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız toplantı sırasında işlenirse suçtur\""
+   ],
+   "dogrusu": [
+    "gerçekleşmese dahi · amblem, resim veya işaretlerin asılması ya da taşınması · slogan atılması · ses cihazlarıyla yayın yapılması · üniformanın giyilmesi (m.7/2-b)"
+   ]
+  },
+  {
+   "id": "7-11",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yüz kapatma",
+   "hukum": "Terör örgütünün propagandasına dönüştürülen toplantı ve gösteri yürüyüşlerinde kimliğini gizlemek amacıyla yüzünü tamamen veya kısmen kapatanlar 3 yıldan 5 yıla kadar hapis; bu suçu işleyenler cebir ve şiddete başvurur ya da silah, molotof ve benzeri patlayıcı, yakıcı veya yaralayıcı madde bulundurur/kullanırsa verilecek cezanın alt sınırı dört yıldan az olamaz (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"3-5 yıl\" ile \"alt sınır 4 yıl\" karıştırılır"
+   ],
+   "dogrusu": [
+    "kimliğini gizlemek amacıyla yüzünü tamamen veya kısmen kapatanlar 3 yıldan 5 yıla kadar hapis · cebir ve şiddete başvurur ya da silah, molotof ve benzeri patlayıcı, yakıcı veya yaralayıcı madde bulundurur/kullanırsa · alt sınırı dört yıldan az olamaz (m.7)"
+   ]
+  },
+  {
+   "id": "7-12",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yer bakımından ağırlaştırma",
+   "hukum": "Propaganda suçlarının dernek, vakıf, siyasî parti, işçi ve meslek kuruluşlarına veya yan kuruluşlarına ait bina, lokal, büro veya eklentilerinde ya da öğretim kurumlarında, öğrenci yurtlarında ve eklentilerinde işlenmesi hâlinde ceza İKİ KATI hükmolunur (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarı oranında artırılır\""
+   ],
+   "dogrusu": [
+    "dernek, vakıf, siyasî parti, işçi ve meslek kuruluşlarına · öğretim kurumlarında, öğrenci yurtlarında ve eklentilerinde · İKİ KATI (m.7)"
+   ]
+  },
+  {
+   "id": "7-13",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Avukat ücreti yönetmeliği",
+   "hukum": "Esas ve usuller Millî Savunma ve İçişleri bakanlıklarınca müştereken çıkarılacak yönetmelikle düzenlenir (m.15/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adalet Bakanlığınca\"",
+    "Bir avukat",
+    "ücreti kendisi öder"
+   ],
+   "dogrusu": [
+    "En fazla üç avukatın ücreti ödenir (15/1)"
+   ]
+  },
+  {
+   "id": "7-14",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Koruma tedbirlerinden yararlananlar",
+   "hukum": "Terörle mücadelede görev veren veya bu görevi ifa eden adlî, istihbarî, idarî ve askerî görevliler, kolluk görevlileri, Ceza ve Tevkifevleri Genel Müdürü ve yardımcıları, terör suçlularının bulunduğu ceza ve tutukevlerinin savcı ve müdürleri, DGM'lerde görev yapmış hâkim ve savcılar, yetkili ağır ceza mahkemelerinde görev yapan hâkim ve savcılar ile bu görevlerinden ayrılmış olanlar, terör örgütlerinin açık hedefi hâline gelen veya getirilenler ve suçların aydınlatılmasında yardımcı olanlar hakkında gerekli koruma tedbirleri Devlet tarafından alınır (m.20/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"görevden ayrılanlar kapsam dışıdır\""
+   ],
+   "dogrusu": [
+    "adlî, istihbarî, idarî ve askerî görevliler, kolluk görevlileri · bu görevlerinden ayrılmış olanlar · terör örgütlerinin açık hedefi hâline gelen veya getirilenler · suçların aydınlatılmasında yardımcı olanlar · Devlet tarafından (m.20/1)"
+   ]
+  },
+  {
+   "id": "7-15",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Koruma tedbirlerinin içeriği",
+   "hukum": "Talep hâlinde estetik cerrahi yoluyla fizyolojik görünümün değiştirilmesi dâhil; nüfus kaydı, ehliyet, evlenme cüzdanı, diploma ve benzeri belgelerin değiştirilmesi, askerlik işleminin düzenlenmesi, menkul ve gayrimenkul mal varlıklarıyla ilgili haklar ile sosyal güvenlik ve diğer hakların korunması (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"kimlik değişikliği yapılamaz\""
+   ],
+   "dogrusu": [
+    "estetik cerrahi yoluyla fizyolojik görünümün değiştirilmesi dâhil (m.20)"
+   ]
+  },
+  {
+   "id": "7-16",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Koruma araç-gereçleri ve yönetmelik",
+   "hukum": "Koruma için ihtiyaç duyulan araç ve gereçler Adalet ve İçişleri bakanlıklarınca temin edilir; esas ve usuller Cumhurbaşkanınca çıkarılacak yönetmelikle belirlenir; İçişleri Bakanlığı ve ilgili kurumlar gizlilik kurallarına uymak zorundadır (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "yönetmelik makamı \"İçişleri Bakanlığı\" gösterilir"
+   ],
+   "dogrusu": [
+    "Adalet ve İçişleri bakanlıklarınca · Cumhurbaşkanınca · gizlilik kurallarına uymak zorundadır (m.20)"
+   ]
+  },
+  {
+   "id": "7-17",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Kamu görevlilerinin silah kullanma yetkisi",
+   "hukum": "Maddede sayılan kamu görevlileri, görevlerinden ayrılmış olsalar dahi, terör suçluları tarafından kendilerine veya eş ve çocuklarının canına vuku bulan bir taarruzu savmak için silah kullanmaya yetkilidir (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız görevdeyken\" ya da \"yalnız kendi canına yönelik taarruzda\"",
+    "Yalnız görevdeyken yetkilidir"
+   ],
+   "dogrusu": [
+    "Kamu görevlileri görevden ayrılmış olsa dahi silah kullanabilir (20)"
+   ]
+  },
+  {
+   "id": "7-18",
+   "madde": [],
+   "baslik": "\"Teslim ol\" emri (Ek m.2 — kapsam dışı numaralı madde, çıkmış soru)",
+   "hukum": "Terör örgütlerine karşı icra edilecek operasyonlarda \"teslim ol\" emrine itaat edilmemesi veya silah kullanmaya teşebbüs edilmesi hâlinde kolluk görevlileri, tehlikeyi etkisiz kılabilecek ölçü ve orantıda, doğrudan ve duraksamadan hedefe karşı silah kullanmaya yetkilidir",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "\"teslim ol\" emrine itaat edilmemesi veya silah kullanmaya teşebbüs edilmesi · tehlikeyi etkisiz kılabilecek ölçü ve orantıda, doğrudan ve duraksamadan hedefe karşı"
+   ]
+  },
+  {
+   "id": "7-19",
+   "madde": [],
+   "baslik": "Gözaltı süresi (Geçici m.19 — kapsam dışı madde, çıkmış soru)",
+   "hukum": "Geçici m.19 ile yürürlüğe girdiği tarihten itibaren dört yıl süreyle: TCK İkinci Kitap Dördüncü Kısım Dördüncü-Yedinci Bölüm suçları, bu Kanun kapsamındaki suçlar ve örgüt faaliyeti çerçevesinde işlenen suçlarda gözaltı süresi, en yakın hâkime gönderme için zorunlu süre hariç, yakalama anından itibaren kırk sekiz saati, toplu suçlarda dört günü geçemez; bu sürelerle bağlı kalmak kaydıyla en fazla iki defa uzatılabilir; uzatma kararını Cumhuriyet savcısının istemi üzerine yakalanan kişi dinlenerek hâkim verir (Geçici m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"24 saat\" verilir ya da uzatma kararı \"savcıya\" ait gösterilir"
+   ],
+   "dogrusu": [
+    "48 saati, toplu olarak işlenen suçlarda dört günü · en fazla iki defa · Cumhuriyet savcısının istemi üzerine yakalanan kişi dinlenilmek suretiyle HÂKİM"
+   ]
+  },
+  {
+   "id": "7-20",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Nakdî tazminat ve aylık",
+   "hukum": "Kamu görevlilerinden yurt içinde ve yurt dışında görevlerini ifa ederlerken veya sıfatları kalkmış olsa bile bu görevlerini yapmalarından dolayı terör eylemlerine muhatap olarak yaralanan, engelli hâle gelen, ölen veya öldürülenler hakkında 2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun hükümleri uygulanır (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"sıfatı kalkmışsa uygulanmaz\""
+   ],
+   "dogrusu": [
+    "görevlerini ifa ederlerken veya sıfatları kalkmış olsa bile bu görevlerini yapmalarından dolayı · yaralanan, engelli hâle gelen, ölen veya öldürülenler · 2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun (m.21/1)"
+   ]
+  },
+  {
+   "id": "7-21",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Aylığın asgarisi ve emekli ikramiyesi",
+   "hukum": "Malul olanlarla ölenlerin dul ve yetimlerine bağlanacak aylığın toplamı, görevde olan emsallerinin almakta oldukları aylıklardan az olamaz; yaşamak için gereken hareketleri yapamayacak ve başkasının yardımına muhtaç derecede malul olanlar ile ölenlerin dul ve yetimlerine en yüksek Devlet memuru aylığı üzerinden, diğerlerine mevcut aylıkları üzerinden 30 yıl hizmet yapmış gibi emekli ikramiyesi ödenir (m.21/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"25 yıl\" denir"
+   ],
+   "dogrusu": [
+    "görevde olan emsallerinin almakta oldukları aylıklardan az olamaz · başkasının yardımına muhtaç · en yüksek Devlet memuru aylığı · 30 yıl hizmet yapmış gibi emekli ikramiyesi (m.21/a)"
+   ]
+  },
+  {
+   "id": "7-22",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Kamu konutu ve kira yardımı",
+   "hukum": "Kamu konutundan yararlanmakta iken malul olanların kendileri ve ölenlerin dul ve yetimleri (özel tahsisli konutlarda oturanlar hariç), herhangi bir kira bedeli alınmaksızın ON YIL süreyle kamu konutlarından yararlanmaya devam edebilir; konuttan çıkacaklar ve yararlanmayanların ikametgâh olarak kullanacakları yurt içindeki taşınmazın kira bedeli on yıl süreyle Devletçe karşılanır; kamu konutundan kirasız yararlanılan süre kira yardımı süresinden düşülür; yurt dışındaki özel tahsisli konutlarda oturanların kira bedelleri istekleri hâlinde bir yıl süreyle Devletçe karşılanır (m.21/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"beş yıl\" denir ya da mahsup kuralı silinir",
+    "5 yıl"
+   ],
+   "dogrusu": [
+    "Kamu konutundan 10 yıl kirasız yararlanılır (21/b)"
+   ]
+  },
+  {
+   "id": "7-23",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Sağlık hakkı",
+   "hukum": "Malul olanlar ile ölenlerin dul ve yetimleri, kendilerine verilen tanıtım kartlarını ibraz etmeleri durumunda kamu kurum ve kuruluşlarına ait bütün hastanelerde muayene ve tedavi edilir (m.21/e)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız askerî hastanelerde\""
+   ],
+   "dogrusu": [
+    "tanıtım kartlarını ibraz etmeleri · kamu kurum ve kuruluşlarına ait bütün hastanelerde (m.21/e)"
+   ]
+  },
+  {
+   "id": "7-24",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yaralananların tedavisi ve yardım",
+   "hukum": "Terör eylemlerinden dolayı yaralananların tedavileri Devlet tarafından yapılır; zarar gören, can ve mal kaybına uğrayan vatandaşlara Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonundan öncelikle yardım yapılır; bu fondan ilk ve orta öğrenim çağındaki şehit çocuklarının öğrenim masrafları karşılanır; yardımın kapsam ve ölçüsü, Fonun mahalli yetkililerince belirlenecek miktarı aşmamak kaydıyla Fon Kurulunca tespit edilir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"yükseköğrenim masrafları da karşılanır\" (metin ilk ve orta öğrenim der); fon \"SGK\" gösterilir",
+    "Yükseköğrenim masrafları da karşılanır"
+   ],
+   "dogrusu": [
+    "Fondan ilk ve orta öğrenim çağındaki şehit çocuklarının masrafı karşılanır (22)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "19",
+   "yanlis": [
+    "Adalet Bakanlığı / MSB / Cumhurbaşkanı / TBMM çıkarır"
+   ],
+   "dogru": "Ödül yönetmeliğini İçişleri Bakanlığı çıkarır (19)"
+  },
+  {
+   "madde": "3",
+   "yanlis": [
+    "TCK 304 Devlete karşı savaşa tahrik terör suçudur"
+   ],
+   "dogru": "m.3'teki terör suçları arasında TCK 304 yoktur"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Örgüt yöneticisine de uygulanır denir"
+   ],
+   "dogru": "Ayrıca ceza verilmez\" kuralı üye olmayıp örgüt adına suç işleyenler içindir (7 son)"
+  },
+  {
+   "madde": "15",
+   "yanlis": [
+    "Her hâlde Bakan onayı gerekir"
+   ],
+   "dogru": "Bakan onayı yalnız davacı konumundaki personel içindir (15/1)"
+  },
+  {
+   "madde": "19",
+   "yanlis": [
+    "24 saat",
+    "Toplu suçta 7 gün"
+   ],
+   "dogru": "Gözaltı 48 saat, toplu suçta 4 gün (Geçici m.19)"
+  }
+ ]
+}

@@ -1,0 +1,2097 @@
+[
+ {
+  "kanun_id": 9,
+  "kart_id": "9-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlığı tekrar ediyor, yanlışın düzeltilmiş hâli yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Toplu işleme için iki veya daha fazla kişi yeterlidir (m.2/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 9,
+  "kart_id": "9-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık ('Teşebbüs'); bilgi içermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sembollere zarar suçunun zor kullanılarak işlenmesine teşebbüs de cezayı bir misli artırır (m.2/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 9,
+  "kart_id": "9-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık ('Yürürlük'); bilgi içermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kanun yayımı tarihinde yürürlüğe girer (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 9,
+  "kart_id": "9-10",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm resmî metinde olmayan bir 'MEBS 2024 sorusu' yorumuna dayanıyor; m.2/1 yalnız bu hâllerden birinde cezanın yarı nispetinde artırılacağını söyler, Doğrusu da yalnız başlık.",
+  "duzeltme": {
+   "hukum": "Suçun toplu olarak, umumi veya umuma açık mahalde ya da basın yoluyla işlenmesi hâllerinden biri artırım için yeterlidir; ceza yarı nispetinde artırılır (m.2/1)",
+   "dogrusu": [
+    "Toplu / umuma açık mahal / basın: hâllerden biri yeterli, ceza yarı nispetinde artar (m.2/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 10,
+  "kart_id": "10-3",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart 'şiddet mağduru' tanımı (m.2/1-e) iken Doğrusu 'şiddet uygulayan' tanımını (m.2/1-g) veriyor; kırmızı kutu da uygulayana göre yazılmış.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "fiilen şiddete maruz kalmadıkça şiddet mağduru sayılmaz"
+   ],
+   "dogrusu": [
+    "Şiddet mağduru; doğrudan ya da dolaylı maruz kalanı, maruz kalma tehlikesi bulunanı ve şiddetten etkilenenleri de kapsar (m.2/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 10,
+  "kart_id": "10-8",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kırmızı kutudaki ifade tırnak hatasıyla iki parçaya bölünmüş, anlamsız maddeler oluşmuş.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "\"geçici maddi yardım\" da kolluk amirince alınabilir denir",
+    "listeye \"aile konutu şerhi\" eklenir"
+   ]
+  }
+ },
+ {
+  "kanun_id": 10,
+  "kart_id": "10-12",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart kolluk amirinin önleyici tedbir yetkisi ve 24 saatlik onay süresi (m.5/2) iken Doğrusu ve iki yanlış müşterek konut tahsisine (m.5/1-b) ait.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "hâkim onayı için süre 48 saat yazılır",
+    "kolluk amiri (a)-(d) dışındaki önleyici tedbirleri de alabilir denir"
+   ],
+   "dogrusu": [
+    "Kolluk amiri yalnız (a), (b), (c), (d) bentlerini alabilir; hâkim 24 saat içinde onaylamazsa tedbir kendiliğinden kalkar (m.5/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 10,
+  "kart_id": "10-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu '…' ile yarım bırakılmış.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kimlik ve adres bilgileri tüm resmî kayıtlarda gizli tutulur; tebligat için ayrı adres tespit edilir (m.8/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 10,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (mülkî amir 48 saat m.3/2, hâkim 24 saat m.5/2); kırmızı kutusu boş olan mülkî amir onayı kartına bağlanmalı.",
+  "duzeltme": {
+   "karta_bagla": "10-9"
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığını tekrar ediyor, kırmızı kutudaki yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yönetmeliğin amacı; jandarmanın teşkilat, görev, yetki ve sorumluluklarını, diğer makamlarla ilişkilerini ve komuta-kontrol ilişkilerini düzenlemektir; personelin özlük hakları amaçta sayılmaz (m.1/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık (Dayanak); yanlışın düzeltilmiş hali değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yönetmelik, 2803 sayılı Kanunun 24 üncü maddesine dayanılarak hazırlanmıştır (m.2/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mülki amir: illerde vali, ilçelerde kaymakamdır (m.3/1-l)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Genel kolluk; Bakanlığa bağlı jandarma, sahil güvenlik ve polistir (m.3/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kamu düzeni; emniyet ve asayiş, huzur ve sükûn, genel sağlık ve genel ahlak unsurlarından oluşur; ekonomik istikrar unsur değildir (m.3/1-i)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kapalı yer; konut, işyeri ve eklentileri ile zilyedin rızası olmadan girilmemesi gerektiğini belirtir şekilde etrafı çit, parmaklık, duvar vb. engellerle çevrili yerlerdir; çevrili olmayan açık arazi kapalı yer değildir (m.3/1-j)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma hizmet merkezi, ihtiyaç üzerine mülki amirin onayı ile geçici olarak teşkil edilir (m.3/1-ğ)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır; Genel Komutan Bakana karşı sorumludur (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma bölge, il ve ilçe komutanlıkları taşra teşkilatıdır (m.5/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Her düzeydeki jandarma birlikleri Bakan onayı ile kurulabilir; konuşların düzenlenmesinde mülki taksimat esas alınır (m.6/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bölge komutanı, bölge teşkilatının konuşlu olduğu ilin valisine karşı sorumludur (m.6/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarım kalmış ilk kelimeleri; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Karakoldaki personel sayısı ölçüt değildir; ölçütler emniyet ve asayiş durumu, suç analizleri, coğrafi ve ekonomik durum, yerleşim alanları, nüfus yoğunluğu, ulaşım ve sosyal-kültürel gelişimdir (m.6/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Karakolun sorumluluk bölgesi il jandarma komutanının önerisiyle valinin onayı, konuş yeri ise Bakan onayı ile belirlenir (m.6/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarım kalmış başı; yanlışı (yetkili makam) düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bir il veya ilçenin tamamı Bakanın kararıyla polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarmanın görevleri üç türdür: mülki, adli ve askeri görevler (m.8/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mevzuatta ve yetkili makamların emir ve kararlarında öngörülmeyen hiçbir görev jandarmadan istenemez (m.8/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarım kalmış başı; yanlışı (kendiliğinden elkoyma) düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bu hâllerde jandarmanın görevlendirilmesi ya da kendiliğinden olaya elkoyması mümkündür; görev yaptığı yer jandarmanın görev alanı sayılır (m.9/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (Sınırlar …); yanlışı (onay makamı) düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Komisyon kararları İçişleri Bakanının onayıyla yürürlüğe girer (m.10/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sorumluluk alanı sınırlarında kolluk birimleri arasındaki anlaşmazlıkları mülki amir kesin olarak çözümler (m.10/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma ceza infaz kurumlarının dış korumasını sağlar; kurumların iç işlerinde kullanılamaz (m.11/1-g, m.24/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Esas olan genel ve koruyucu önlemdir; kişisel koruma ancak mevzuatta özel hüküm varsa veya özel nitelikli durumlarda yetkili mülki amirin emriyle yapılır (m.13/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (Yangın …); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tutanağın bir örneği mülki amire, bir diğer örneği Cumhuriyet savcılığına verilir (m.14/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün ilk cümlesi; kırmızı kutudaki sevk sorumluluğu yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Polis teşkilatı olmayan yerlerde jandarma akıl hastasının sevkinden sorumlu olmaz, yalnız saldırıya engel olur; il veya ilçenin tamamında jandarma görevliyse sevk görevi de jandarmaya aittir (m.15/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Özel hayatın ve aile hayatının gizliliğini korumak, konut dokunulmazlığına ilişkin görevler arasındadır (m.16/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarım kalmış başı; süre yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ruhsatı jandarmanın görüşü alınarak belediye ve mücavir alan içinde belediyeler, dışında il özel idareleri verir; jandarma görüşünü yedi gün içinde verir (m.19/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; saat yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Gürültü yasağı saat yirmi dörtten sonrası içindir (m.21/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; süre ve makam yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İlgililer kırk sekiz saat önce mülki amire bildirimde bulunmak zorundadır (m.21/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma hiçbir şekilde ceza infaz kurumlarının iç işlerinde ve infaz koruma memurluğu görevlerinde kullanılamaz (m.24/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma, kurum müdürü veya vekili ya da infaz koruma memurlarının başvurusu üzerine müdahale eder (m.24/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-29",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sevkte esas ceza infaz kurumu araçlarıdır; yoksa önce kamuya ait kitle ulaşım araçları kullanılır; jandarmaya ait hizmet araçları sevklerde kullanılmaz (m.27/1, m.27/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün aynısı (kesik); yanlıştaki istisna kaldırmayı açıkça düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İştirak hâlinde suç işleyenler ile kanunen önemli ilişki sayılacak yakınlığı olanlar kadın-erkek birlikte sevk edilebilir; diğerleri birlikte sevk edilemez (m.29/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Önce devriye komutanınca silah kullanılacağı ihtar edilir; ihtara uymayıp firara teşebbüs edilir ve firar başka şekilde önlenemezse silah kullanılır (m.32/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı (her işte savcıya bağlılık) düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Adli kolluk, adli görevler dışındaki hizmetlerde üstlerinin emrindedir (m.38/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-33",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu seferberlik kısmını tekrarlıyor; yanlış olan il onay makamını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İllerde askeri görevi garnizon komutanı talep eder, onay valinindir (m.41/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma mülki ve adli görevlerinde 2803, 2559 ve 5271 sayılı Kanunlara göre hareket eder ve polisin sahip olduğu yetki ve sorumluluklara sahiptir (m.42/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; suç teşkil eden emir yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Konusu suç teşkil eden emir yazılı tekrarlansa da hiçbir suretle yerine getirilmez; yerine getiren sorumluluktan kurtulamaz (m.42/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-36",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sayılan hâllerde sözlü emir derhal yerine getirilir, yazılı verilmesi istenemez; sorumluluk emri verene aittir (m.42/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (Bar …); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Veli veya vasisi yanında olsa bile on sekiz yaşını doldurmamış küçüklerin bu yerlere girmesi engellenir (m.45/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Durdurma ancak m.46/1'de sayılan amaçlarla ve makul bir sebep bulunduğunda yapılabilir (m.46/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-39",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; süre yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Durdurma süresi, durdurma sebebine esas işlemin gerçekleştirilmesi için zorunlu olan süreden fazla olamaz (m.46/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; süre ve onay makamı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kolluk amirinin kararı yirmi dört saat içinde görevli hâkimin onayına sunulur (m.46/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-41",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kimliği belirlenemeyen kişi tutulur ve durumdan derhal Cumhuriyet savcısı haberdar edilir (m.46/9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Önleme araması sulh ceza hâkiminin kararıyla, gecikmesinde sakınca bulunan hâllerde mülki amirin yazılı emriyle yapılır (m.47/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-43",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kararda veya emirde sebebi, konusu ve kapsamı, yapılacağı yer, yapılacağı zaman ve geçerli olacağı süre belirtilir; personelin adı yer almaz (m.47/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-44",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; konut/işyeri yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Konutta, yerleşim yerinde ve kamuya açık olmayan işyerlerinde ve eklentilerinde önleme araması yapılamaz (m.47/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-45",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Spor karşılaşması, miting, konser, festival, toplantı ve gösteri yürüyüşünde veya aniden topluluk oluştuğunda gecikmesinde sakınca bulunan hâl var sayılır; mülki amirin yazılı emriyle arama yapılabilir (m.47/1, m.47/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-46",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarmanın güvenliğini sağladığı bina ve tesislere gelenler herhangi bir emir veya karar olmaksızın aranabilir (m.47/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-47",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (İmdat …); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İmdat istenmesi, yangın, su baskını, boğulma gibi büyük tehlikelerde ve suçun işlenmesine veya devamına engel olmak için jandarma doğrudan konut, işyeri ve eklentilerine girebilir (m.48/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-48",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma Genel Komutanı Bakana karşı sorumludur (m.52/3, m.58/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-49",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bu görevler jandarma bölge komutanına aittir; operasyon planlama ve iller arası kuvvet kaydırması konuşlu olduğu ilin valisinin onayıyla yapılır (m.54/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-50",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; lojistik destek yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Lojistik ve teknik destek faaliyetlerini planlamak il ve ilçe jandarma komutanlarının görevidir; karakol komutanının görevleri arasında yoktur (m.55/2-g, m.56/2-ğ, m.57/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-51",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; il jandarma komutanının bağlılığı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İl ve ilçe jandarma komutanları mülki amirlere bağlı ve sorumlu olarak görev yapar (m.58/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-52",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarmaya doğrudan emir verme yetkisi mülki amirler ile adli makamlarındır; diğer makamlar kanuni dayanağı belirterek mülki amire başvurur (m.58/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-53",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Görevde kullanılacak araç ve gerecin seçimi jandarma birimlerinin kendi komutanlarına aittir (m.58/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-54",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (Suçlar …); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Olaylar vakit geçirmeksizin mülki amire sözlü ya da yazılı bildirilir; suçla ilgili olanlar ayrıca Cumhuriyet savcılığına bildirilir (m.59/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-55",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Merkez ve taşra teşkilatı arasındaki yazışmalar Bakanlık ve mülki amirler aracılığıyla yapılır; mahalli vaka bilgisi, teknik, muhasebe, lojistik ve özlük konuları dışında resen yazışılamaz (m.60/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-56",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; imza yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Jandarma alanındaki olaylara ait asayiş raporları il jandarma komutanlığınca hazırlanır ve vali imzasıyla gönderilir (m.60/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-57",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; soruşturma yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Polis veya sahil güvenlik, jandarma gelinceye kadar olay yerinde soruşturma yapamaz, delillerin kaybolmaması için önlem alır (m.65/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-58",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Müşterek operasyonda komuta, sevk ve idarenin hangi kolluğa ait olduğunu mülki amir belirler (m.65/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-59",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yanlışı açıkça düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bakan her kademedeki jandarma birimini denetler (Bakan adına Mülkiye Teftiş Kurulu Başkanlığı); bu denetim illerde vali, ilçelerde kaymakamlar tarafından yapılır (m.67/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-60",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; izin makamı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Değişik kılık ve kıyafetle görev için izni mülki amir veya il jandarma komutanı verir (m.70/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-61",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime (Jandarma …); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Geçici görevlendirmeler mülki amirin onayı ile yapılır (m.71/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-62",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; yetki sınırı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Görevlendirilen ekiplerin kolluk yetkisi jandarma sorumluluk alanı ile sınırlı değildir (m.72/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-63",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Geçici tahsis ve bedelsiz devir Bakanın onayı ile yapılır (m.73/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-64",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün aynısı (kesik); serbest bırakma kısmı eksik.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yükümlüler en geç yirmi dört saat içinde en yakın askerlik şubesine getirilir; şubece teslim alınamayanlar tutanağa istinaden derhal serbest bırakılır (m.74/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-65",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik başı; onay makamı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Emniyet ve asayiş planları mülki amirin onayı ile yürürlüğe konulur (m.75/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-66",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Stratejik hedef planı beş yıllık dönemi kapsar ve Bakan onayı ile yürürlüğe konulur (m.76/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-67",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez (m.77/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 17,
+  "kart_id": "17-68",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki parantez yanlış: 2019 öncesinde yürütücü İçişleri Bakanı değil Bakanlar Kuruluydu (1721 s. CBK dipnotu); doğrusu da yalnız başlık.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yönetmelik hükümlerini İçişleri Bakanı yürütür denir"
+   ],
+   "dogrusu": [
+    "Yönetmelik hükümlerini Cumhurbaşkanı yürütür; 2019 değişikliğinden önce yürütücü Bakanlar Kuruluydu (m.82/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlığı tekrar ediyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Karşılıklılık ülkelerini Dışişleri Bakanlığı Resmî Gazetede ilan eder (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Herkes bilgi edinme hakkına sahiptir; yaş veya sıfat şartı yoktur (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Türkiye'de ikamet eden yabancı, bilgi kendisiyle ilgiliyse ve karşılıklılık varsa yararlanır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Türkiye'de faaliyette bulunan yabancı tüzel kişi de, bilgi faaliyet alanıyla ilgiliyse ve karşılıklılık varsa yararlanır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yabancıda ilgi şartı ve karşılıklılık birlikte aranır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yabancıların başvuruları Türkçe yapılır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Taraf olunan uluslararası sözleşmelerden doğan hak ve yükümlülükler saklıdır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mahalli idarelerden yalnız köyler kapsam dışıdır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Merkezi idare ile bağlı, ilgili veya ilişkili kuruluşları kapsamdadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mahalli idarelerin bağlı ve ilgili kuruluşları ile birlik veya şirketleri kapsamdadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "T.C. Merkez Bankası ve üniversiteler de kapsamdadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sayılanlar: enstitü, teşebbüs, teşekkül, fon ve sair adlarla kurulmuş kamu tüzel kişileri (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kamu kurumu niteliğindeki meslek kuruluşları da kapsamdadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "\", İMKB\" ibaresi 864 sayılı Cumhurbaşkanı Kararı ile metinden çıkarılmıştır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Dayanak: 4982 sayılı Bilgi Edinme Hakkı Kanunu m.31 (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bilgi: kurum kayıtlarında yer alan, Kanun kapsamındaki her türlü veri (m.4/c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu '…' ile yarım; içerik yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Film, fotoğraf, teyp ve video kaseti, harita ve elektronik kayıtlar da belgedir (m.4/d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu '…' ile yarım; içerik yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Erişimde önce kopya verilir; kopya mümkün değilse aslı incelenip not alınır, görülür veya işitilir (m.4/e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Erişim tanımında Kuruldan izin alma adımı yoktur (m.4/e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Başvuru sahibi gerçek ve tüzel kişilerdir (m.4/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 19,
+  "kart_id": "19-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yedi tanım: kurum ve kuruluş, başvuru sahibi, bilgi, belge, erişim, Kurul, Kanun; 'veri sorumlusu' yoktur (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-0",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "m.4/1'e göre kurula 'vali veya görevlendireceği vali yardımcısı' başkanlık eder; 'vali başkanlık eder' yanlış sayılamaz. Üye listesi de metinle uyuşmuyor (ev sahibi kulüp yok; millî eğitim, hukukçu, konfederasyon eksik; ilçe kurulu 'oluşturulabilir' değil 'oluşur').",
+  "duzeltme": {
+   "hukum": "İl spor güvenlik kurulu vali veya görevlendireceği vali yardımcısının başkanlığında; belediye başkanlığı, il jandarma komutanlığı, il emniyet müdürlüğü, gençlik ve spor, il sağlık ve il millî eğitim müdürlükleri, ilgili federasyon ve amatör spor kulüpleri konfederasyonu temsilcileri, valinin belirleyeceği bir hukukçu ve stat güvenliğinden sorumlu yönetim kurulu üyelerinden oluşur; ilçe kurulu kaymakam başkanlığında oluşur (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "Kurula yalnız vali yardımcısı başkanlık eder, vali başkanlık edemez",
+    "Jandarma kurulun üyesi değildir"
+   ],
+   "dogrusu": [
+    "Kurula vali veya görevlendireceği vali yardımcısı başkanlık eder (m.4/1)",
+    "İl jandarma komutanlığı kurulun üyesidir (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.4 yalnız kurulun oluşumunu düzenler; 'güvenlik planlarını onaylar, riskli müsabakaları tespit eder' gibi görevler pakette yok. Metinde geçen kurul görevi m.7/4'tür (özel güvenlik sayısı ve görev yerleri); kartın maddesi 7 olmalı.",
+  "duzeltme": {
+   "madde": [
+    "7"
+   ],
+   "hukum": "İl veya ilçe spor güvenlik kurulları, müsabaka ve seyir alanında spor kulüplerinin bulundurmakla yükümlü olduğu özel güvenlik görevlilerinin sayısını ve görev alacakları yerleri belirlemekle yetkilidir (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "Özel güvenlik görevlisi sayısını ve görev yerlerini kulüp kendisi belirler"
+   ],
+   "dogrusu": [
+    "Özel güvenlik görevlisi sayısını ve görev yerlerini il/ilçe spor güvenlik kurulu belirler (m.7/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Güvenliği özel güvenlik sağlar, yetersiz kalırsa genel kolluk müdahale eder' ifadesi metinde yok; m.6/1 kulüpler genel kolluk ile birlikte görev yapacak özel güvenlik bulundurur, m.7/3 ikisi müsabaka güvenlik amirinin emir ve denetiminde birlikte görev yapar.",
+  "duzeltme": {
+   "hukum": "Kulüpler, genel kolluk ile birlikte görev yapmak üzere yeterli sayıda özel güvenlik görevlisi bulundurur (m.6/1); genel kolluk ve özel güvenlik görevlileri müsabaka güvenlik amiri ve yardımcısının emir ve denetiminde birlikte görev yapar, güvenlik amiri tribünlerdeki genel kolluk sayısının artırılmasına her zaman karar verebilir (m.7/3)",
+   "sinavda_boyle_yazarlar": [
+    "Özel güvenlik tek başına görev yapar, genel kolluk tribünde bulunmaz"
+   ],
+   "dogrusu": [
+    "Genel kolluk ve özel güvenlik, müsabaka güvenlik amiri ve yardımcısının emir ve denetiminde birlikte görev yapar (m.7/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "Giriş araması m.6'da değil m.12/2'dedir; aramayı yalnız özel güvenlik değil, genel kolluk ile onun gözetiminde özel güvenlik yapar.",
+  "duzeltme": {
+   "madde": [
+    "12"
+   ],
+   "hukum": "Genel kolluk görevlileri ile bunların gözetiminde özel güvenlik görevlileri, mülkî amirin yazılı emrine istinaden spor alanına girişte izleyicilerin üstünü ve eşyasını teknik cihazlarla ve gerektiğinde el ile kontrol edip arayabilir (m.12/2)",
+   "dogrusu": [
+    "Giriş araması mülkî amirin yazılı emriyle yapılır (m.12/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-5",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Her müsabakaya güvenlik amirini kolluk görevlendirir', 'gözlemci rapor tutar' metinde yok; m.7/2'ye göre gözlemciyi spor güvenlik birimi amiri futbolda en üst lig ve bir altı için her kulübe görevlendirir. Kırmızı kutudaki 'federasyon atar' iddiası metinden doğrulanamıyor.",
+  "duzeltme": {
+   "hukum": "Müsabaka güvenlik amiri veya yardımcısı güvenlik önlemlerinin yürütülmesi ve denetlenmesinde ilgili kişi ve kuruluşlarla koordinasyonu sağlar (m.7/1); her spor güvenlik birimi amiri, futbolda en üst lig ve bir altındaki lig için her kulüple ilgili bir kolluk görevlisini gözlemci olarak görevlendirir; gözlemci deplasman dâhil kulübün bütün maçlarında görev alır (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "Gözlemci kolluk görevlisi yalnız iç saha maçlarında görevlendirilir",
+    "Gözlemci bütün liglerde görevlendirilir"
+   ],
+   "dogrusu": [
+    "Gözlemci: futbolda en üst lig ve bir altı, her kulübe bir kolluk görevlisi, deplasman dâhil bütün maçlar (m.7/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-6",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.12/1 listesinde 'meşale, sis bombası, şişe' ve 'şüpheli kişiler alana alınmaz' yok; alkol de doğrudan yasaklanmamış, usul ve esasları federasyonlar belirler.",
+  "duzeltme": {
+   "hukum": "Müsabaka, seyir ve antrenman alanları ile taraftarların toplu seyahat ettiği araçlara ruhsatlı dahi olsa ateşli silahlar, kesici, ezici, bereleyici veya delici aletler ile patlayıcı, parlayıcı, yanıcı veya yakıcı maddeler ve uyuşturucu veya uyarıcı maddeler sokulamaz; alkollü içecek sokulması, kullanılması ve satılmasının usul ve esaslarını federasyonlar belirler (m.12/1)",
+   "dogrusu": [
+    "Ruhsatlı dahi olsa ateşli silah sokulamaz (m.12/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-7",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "m.12/5'e göre seyyar satıcıları genel kolluk VE belediye zabıtası uzaklaştırır; 'zabıta uzaklaştırır' yanlış değildir. 'Alkol satışı yasaktır' da metinde yok (usulü federasyon belirler).",
+  "duzeltme": {
+   "hukum": "Genel kolluk görevlileri ve belediye zabıtası, kesici-delici aletler, patlayıcı-yanıcı maddeler ile uyuşturucu-uyarıcı maddeleri spor alanında seyyar olarak satan, satışa arz eden, dağıtan veya dağıtmak için bulunduranları bu alandan uzaklaştırmakla yükümlüdür (m.12/5)",
+   "sinavda_boyle_yazarlar": [
+    "Seyyar satıcıları yalnız genel kolluk uzaklaştırır, belediye zabıtasının görevi yoktur"
+   ],
+   "dogrusu": [
+    "Seyyar satıcıları genel kolluk ve belediye zabıtası uzaklaştırır (m.12/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi; kırmızı kutudaki 'çalışma izni' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Çalışma izni vermek Komisyonun görevleri arasında sayılmaz (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun anahtar kelime dizisi; 3 yıl yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Genel kolluk veya MİT'te en az 5 yıl fiilen çalışıp kendi isteğiyle ayrılanlarda temel eğitim şartı aranmaz (m.17)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi; harç yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kimlik kartı 5 yılda bir ruhsat harcı alınmaksızın yeniden düzenlenir (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi; onay makamı yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Şirketlerin üniforma ve teçhizatını Bakanlık, özel güvenlik birimlerininkini Komisyon onaylar (m.22)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Silah bulundurma ve taşımaya Komisyon karar verir; sayı ve nitelik kararda yazılır (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Her silah için 25 fişek; miktar Komisyon kararı ve vali onayıyla artırılabilir (m.29)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Devir 6 ay içinde yapılmazsa takip eden 2 ay içinde 6136'ya göre ruhsat başvurusu zorunludur (m.30)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yazılı sınav sorularını Merkezi Sınav Komisyonu hazırlar (m.37)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Eksikliklerin giderilmesi için asgari 7 gün süre verilir (m.45)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 61,
+  "kart_id": "61-0",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutuda yanlış değil doğru bilgi yazıyor ('32 ve 47').",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Dayanak olarak 5395 sayılı Kanunun 32 ve 47 dışındaki maddeleri gösterilir"
+   ],
+   "dogrusu": [
+    "Dayanak: 5395 sayılı Çocuk Koruma Kanunu m.32 ve 47 (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'PVSK'; yanlışı anlaşılır biçimde düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yönetmelik yalnız Belediye Kanununa değil; 1593, 1608, 2559 (PVSK), 3572, 4562, 4737, 5216, 5302 sayılı Kanunlara ve İmar Kanunu ek 11'e de dayanır (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu çok uzun anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mesken olarak kayıtlı bağımsız bölümde bu işyerleri için kat maliklerinin oy birliği gerekir (m.5/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi; encümen yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ruhsatı yetkili idarenin en üst amiri veya görevlendirdiği yetkili imzalar; ayrıca meclis veya encümen kararı alınmaz (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Umuma açık yer ruhsatının bir örneği en geç 7 gün içinde kolluğa gönderilir (m.7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yenileme/intibak için başvuru süresi 3 ay, mirasçılar için 6 aydır (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu belirsiz ('Mesafeler çapraz verilir'), Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Okul ve anaokuluna mesafe 200 metre, karayolu sınır çizgisine 100 metre yazılır"
+   ],
+   "dogrusu": [
+    "Karayolu sınır çizgisine 200 metreden, okul, öğrenci yurdu ve anaokuluna 100 metreden yakın yerde içkili yer bölgesi tespit edilemez (m.30)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Açılış-kapanış saatlerini belediye sınırında belediye encümeni, dışında il encümeni belirler (m.33)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Çalışanın ayrılışı 24 saat içinde kolluğa bildirilir (m.43)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-0",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Doğrusu yarım kalmış 'Amaç' cümlesi; kırmızı kutudaki 'tüzel kişiliği olmayanlar kapsam dışı' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tüzel kişiliği olmayan diğer kurum ve kuruluşlar da Kanunun kapsamındadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-4",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Doğrusu yalnız '(a) · (b) · (c)' harflerinden ibaret; muhtarların 4/b'li olduğunu söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Köy ve mahalle muhtarları 4/b kapsamında sigortalıdır (m.4/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda iki yanlış var, doğrusu yalnız JSGA'yı karşılıyor ve neye 4/c uygulandığını söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "4/c'lilere bu kapsamda oldukları sürece kısa vadeli sigorta kolları uygulanmaz (m.4)",
+    "JSGA ile JGK-SGK nam ve hesabına okuyanlara 4/c hükümleri uygulanır (m.4/4-f)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükümden kopuk anahtar kelime zinciri (alakasız 'aylıkları kesilmez' dahil); hükümlü yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ceza infaz kurumu atölyelerinde çalıştırılan hükümlü ve tutuklulara iş kazası-meslek hastalığı ile analık sigortası uygulanır (m.5/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız ikinci yanlışı (1 ay) karşılıyor; naklen tayin yanlışının doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Aynı kamu idaresinin farklı birimleri arasındaki naklen tayin ve görevlendirmelerde bildirim yapılmaz (m.8)",
+    "Sigortalılar çalışmaya başladıklarını en geç 1 ay içinde Kuruma bildirir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; '10 gün' düzeltmesi net bir cümle değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sigortalılığın sona ermesi en geç 10 gün içinde Kuruma bildirilir (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün tamamını tekrarlayan uzun zincir; 2048 yanlışının kısa düzeltmesi değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "1/1/2048'den itibaren yaş şartı kadın ve erkek için 65'tir (m.28)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun anahtar kelime zinciri; cenaze ödeneği sırası yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Cenaze ödeneği sırasıyla eşe, yoksa çocuklara, yoksa ana-babaya, yoksa kardeşlere verilir (m.37)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu bağlamsız sayı zinciri ('60 · 90 · 90 …'); kırmızı kutudaki '(yeraltında 180)' notu jandarma için yanıltıcı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma personeline her 360 gün için 60 gün fiilî hizmet süresi zammı eklenir\" yanlış; 90 gün"
+   ],
+   "dogrusu": [
+    "TSK, JGK ve SGK'daki subay, astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erlere her 360 gün için 90 gün eklenir (m.40)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan uzun zincir; 8 yıl/5 yıl düzeltmesi net değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "Fiilî hizmet süresi zammı 13. ve 14. sıradakiler (TSK-JGK-SGK, emniyet-MİT) için en çok 8 yıl, diğerleri için 5 yıl eklenir (m.40)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; gecikme cezasını kimin ödediğini net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yargı kararıyla göreve iade edilenin primlerine ait gecikme cezası ve zamları kurumunca ödenir (m.45)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan çok uzun zincir; %25 fazla zam onay makamı yanlışının kısa düzeltmesi değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "%25 fazla harp malullüğü zammı Genelkurmay Başkanlığının uygun görmesi ve İçişleri veya Millî Savunma Bakanının onayıyla verilir (m.47)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; yaş haddinde onay makamını net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yaş haddi, istek, malullük ve vazife malullüğünde onay kamu idaresinin en yüksek amirinindir; atamaya yetkili makam yalnız re'sen emeklilikte onay verir (m.48)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-24",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kırmızı kutu 'soruşturma yeterli' yanlışı; doğrusu ise kayıp sebeplerini sayıyor, kesinleşmiş yargı kararı şartını söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Hak sahibine gelir/aylık ödenmemesi için kesinleşmiş yargı kararı gerekir (m.56)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 1 Eylül'ü veriyor; 1 Temmuz yanlışının doğrusu eksik, 1 Eylül kuralı da yarım.",
+  "duzeltme": {
+   "dogrusu": [
+    "Doğum ay ve günü yazılı olmayanlar 1 Temmuz'da doğmuş sayılır (m.57)",
+    "TSK-JGK-SGK mensuplarının yaş haddi emekliliği doğum günü 1 Eylül'den önceyse o yıl 1 Eylül'de, 1 Eylül veya sonrasıysa ertesi yılın 1 Eylül'ünde yapılır (m.57)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; gelir testi sınırını net cümleyle vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Gelir testinde aile içi kişi başı aylık gelir asgari ücretin üçte birinden az olmalıdır (m.60/1-c-1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan uzun zincir; er-erbaş primini kimin ödediğini net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Er ve erbaşların GSS primi ilgili kamu idaresince karşılanır (m.60)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu bağlamsız süre zinciri ('1 ay · 1 yılı geçtikten …'); yabancı yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Oturma izinli yabancılar Türkiye'deki yerleşim süresi 1 yılı geçtikten sonra talep ederse, talebi takip eden günden itibaren GSS'li olur (m.61)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; refakatçi sayısını net cümleyle vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ayakta tedavide sevkte yalnız bir kişiyle sınırlı refakatçinin yol gideri ve gündeliği karşılanır (m.65)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan uzun zincir; geçici görevde yalnız acil hâl kuralını net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Geçici görevle yurt dışına gönderilenlere sağlık hizmeti yalnız acil hâllerde yurt dışında sağlanır (m.66/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan uzun zincir; terhis sonrası süreyi net cümleyle vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "60/12 kapsamındaki GSS'si sona eren er ve erbaşlar terhisten itibaren 30 gün GSS'den yararlanır (m.67)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; görev yolluklarının prime tabi olmadığını net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Görev yollukları prime esas kazanca tabi tutulmaz (m.80/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız GSS yanlışını karşılıyor; kısa vadeli prim yanlışının doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kısa vadeli sigorta kolları priminin (%2,25) tamamını işveren öder (m.81/c)",
+    "GSS primi %12,5'tir: %5 sigortalı, %7,5 işveren hissesi (m.81/f)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; muhtarların primini kimin ödediğini net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Muhtarların primini il özel idareleri veya yatırım izleme ve koordinasyon başkanlıkları öder (m.87/h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan çok uzun zincir; kartın madde alanı ['1','51','106'] de yanlış (6183'e yapılan atıflardan türemiş), hüküm m.88'dir — madde alanı 88 yapılmalı.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kuruma fiilen ödenmeyen prim tutarları gelir ve kurumlar vergisinde gider yazılamaz (m.88)"
+   ],
+   "madde": [
+    "88"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-39",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; iade süresini net cümleyle vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yanlış veya yersiz alınan primler alındıkları tarihten 10 yıl geçmemişse kanuni faiziyle geri verilir (m.89)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; bildirim süresini net cümleyle vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İhale işlerini üstlenenler ve adresleri 15 gün içinde Kuruma bildirilir (m.90)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-41",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; ertelenen borca gecikme zammı uygulanmadığını tek başına net vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ertelenen borca gecikme cezası ve gecikme zammı uygulanmaz, erteleme süresinde zamanaşımı işlemez (m.91)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 30'dan fazla parçalı bağlamsız sayı zinciri; bildirge cezası yanlışının kısa düzeltmesi değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "İşe giriş bildirgesini süresinde vermeyene sigortalı başına asgari ücret; verilmediği denetim veya mahkemeyle anlaşılırsa 2 katı, 1 yıl içinde tekrarında 5 katı idari para cezası (m.102/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 75,
+  "kart_id": "75-43",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime zinciri; Emekli Sandığı atıflarının nereye yapılmış sayıldığını net söylemiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Diğer kanunlarda T.C. Emekli Sandığı, SSK ve Bağ-Kur'a yapılan atıflar Kuruma (SGK) yapılmış sayılır (m.104)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 91,
+  "kart_id": "91-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmü tekrarlayan çok uzun dizi; askerî yapı yanlışının kısa düzeltmesi değil.",
+  "duzeltme": {
+   "dogrusu": [
+    "Askerî harekât, eğitim ve savunma yapılarında hangi hükmün nasıl uygulanacağını MSB, İçişleri ve Çevre ve Şehircilik Bakanlıkları müştereken belirler (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 91,
+  "kart_id": "91-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda iki yanlış var, Doğrusu yalnız nüfus yanlışını karşılıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Nüfusu 10.000'i aşan yerleşmelerde imar planı zorunludur (m.7/b)",
+    "Kesinleşen imar ve parselasyon planlarına karşı kesinleşmeden itibaren her hâlde 5 yıl içinde dava açılabilir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 91,
+  "kart_id": "91-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda iki yanlış var, Doğrusu yıkım kararı yanlışını karşılamıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yıkım belediye encümeni veya il idare kurulu kararını müteakip belediye veya valilikçe yapılır (m.32)",
+    "Ruhsatsız yapıda ceza %180 artırılır (m.42)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 97,
+  "kart_id": "97-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlığı tekrar ediyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Temsile yetkili kişiler değişirse güncel imza sirküleri veya noter onaylı imza beyannamesi ve yetki belgeleri Kuruma iletilir (m.19/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru; elektronik ortam kartının kopyası.",
+  "duzeltme": {
+   "karta_bagla": "97-3"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Altyapı/elektronik haberleşme tanım karışıklığı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-1"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 2,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Erişim tanımı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-0"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 3,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Trafik bilgisi saklama süresi kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-16"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 4,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.19/1-c); hisse devri %10 eşiği kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-10"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 5,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.19/1-a); beş yılda bir güncelleme kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-6"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 6,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Acil çağrı ücretsizliği kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-15"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 7,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "İdari ücret kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-19"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 8,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Mücbir sebep bildirim süresi kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-25"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 9,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.19/1-b); devirde yetkilendirme tarihi kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-9"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 10,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "5397/5651 teknik altyapı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-26"
+  }
+ },
+ {
+  "kanun_id": 97,
+  "tuzak_index": 11,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Uydu trafiği kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "97-23"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.2/1); 'Kimi kapsar' kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-2"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.2/1); TSK kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-4"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 2,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.2/1); kapsam dışı altı kurum kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-0"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 3,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.4/1-d,e); kripto anahtarı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-7"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 4,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.4/1-ç,ğ); kodlu haberleşme kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-10"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 5,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.4/1-g); kriptolu haberleşme cihazı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-9"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 6,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.4/1-h); millî kripto cihazı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-11"
+  }
+ },
+ {
+  "kanun_id": 100,
+  "tuzak_index": 7,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru (m.2/2); frekans tahsisi gerektirmeyen cihazlar kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "100-3"
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Yurt dışı kantin gelirleri temsil-tanıtımda' metinde yok; m.5/ç'ye göre yurt dışı kantinler bu Yönetmelik esaslarına göre yürütülür, alım ve harcama usullerini JGK belirler. Ayrıca: Doğrusu anahtar kelime dizisi.",
+  "duzeltme": {
+   "hukum": "2803 sayılı Kanun m.19 ve ek m.8 (m.3); personelin dayanıklı tüketim malları hariç zaruri ihtiyaçlarını ucuz ve kolay sağlamak için her birlikte kantin kurulabilir; aynı birlik içinde JGK'ya bağlı birden fazla kantin kurulamaz, ihtiyaçta şube açılabilir; kantinler en az Tugay/Bölge veya eşiti komutanlıkça JGK'dan izin alındıktan sonra kurulur ve ilgili birlik/karargâh/kurumca işletilir; kapalı ve emniyetli yerlerde kurulur, arazide araç veya çadırda devam edebilir; yurt dışı kantinler bu Yönetmelik esaslarına göre yürütülür, alım ve harcama usullerini JGK belirler (m.5)",
+   "dogrusu": [
+    "Kantinde dayanıklı tüketim malları hariç zaruri ihtiyaçlar karşılanır (m.5/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.7/e'ye göre aday olamayanlar 'taksirli suçlar hariç altı aydan fazla hapis cezası' alanlardır; kart 'her mahkûmiyet' gibi yazıyor.",
+  "duzeltme": {
+   "hukum": "Heyet bir yıllık süre için seçimle veya birlik komutanınca atama ile teşkil edilir; atamayla teşkilde görev süresi en fazla üç yıl; heyette bir başkan (muvazzaf/sözleşmeli subay), bir muhasip üye ve bir mutemet olmak üzere en az üç kişi; en az bir astsubay bulunması şart; muhasip ile mutemetlik aynı kişide birleşemez (m.6); adaylar subay, astsubay, uzman jandarma, sivil memur ve uzman erbaşlar; aday sayısı asil üye sayısının üç katından az olamaz; mal saymanları, mal ve hesap sorumluları, gerçekleştirme görevlileri ve harcama yetkisi devredilenler aday gösterilemez; taksirli suçlar hariç altı aydan fazla hapis cezası alanlar (paraya çevrilmiş veya ertelenmiş olsa bile) aday gösterilemez (m.7); seçim, mevcudun en az yarıdan bir fazlasının katıldığı toplantıda gizli oy açık tasnifle yapılır; ilk toplantıda çoğunluk yoksa sonrakinde yeter sayı aranmaz; her görev için bir asil, en az iki yedek (m.8)"
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda iki yanlış var, Doğrusu sermaye artış oranı yanlışını karşılamıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sermaye her ay en az TÜFE kadar artırılır; TÜFE %4'ten fazlaysa artış %4'tür (m.19)",
+    "Kantin sermayesi ve geliri borç verme amacıyla kullanılamaz (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-4",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kart alım ve iade (m.23-24) iken kırmızı kutu ve hükmün sonu muaddel cetveline (m.45/k) ait; Doğrusu da kırmızı kutuyu düzeltmeyen anahtar kelime yığını.",
+  "duzeltme": {
+   "hukum": "Mallar ihtiyaç listesine göre toptan veya perakende alınır; bedelin peşin ödenmesi esastır, vadeli veya taksitli de ödenebilir; kredili alımlarda sermayenin en fazla üç katı borçlanılabilir, gelecek yıla borç devri kredi kartı satışlarının blokeli hesaptaki tutarını geçemez; yakın merkezde bulunmayan mallar kışla komutanının izniyle diğer merkezlerden sağlanır; en az üç yerden teklif alınır (m.23); ayıplı malı iade eden tüketiciye 4077 sayılı Kanuna göre aynı mal verilir veya bedeli ödenir, bedel ödenirse EK-12 tutanak düzenlenir; firmaya iade iade faturası ile yapılır (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "Kredili alımlarda sermayenin iki katına kadar borçlanılabilir",
+    "Ayıplı malı iade eden müşteriye bedel ödenmez, yalnız mal değiştirilir"
+   ],
+   "dogrusu": [
+    "Kredili alımda borçlanma sermayenin en fazla üç katıdır (m.23/b)",
+    "Ayıplı malda birebir değişim yapılır veya bedel ödenir; bedel ödenirse EK-12 tutanak düzenlenir (m.24/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu belirsiz ('İki tarih çapraz sorulur'), Doğrusu ise yanlışı düzeltmeyen uzun bir anahtar kelime yığını.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Üst komutanlık payı ayın 20'sine, hazine payı ayın 10'una kadar yatırılır"
+   ],
+   "dogrusu": [
+    "Üst komutanlık payı bilanço onayından sonra her ayın en geç 10'una kadar yatırılır (m.42); hazine payı takip eden ayın 20'sine kadar yatırılır (m.39)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 109,
+  "kart_id": "109-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kırmızı kutudaki yanlışı (hesap teftişini kim yapar) düzeltmeyen uzun anahtar kelime yığını; 109-4'ten çıkarılan muaddel cetveli tuzağı m.45/k'ye ait olduğu için buraya taşındı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hesap teftişini birlik komutanı yapar",
+    "Erzakın cins ve miktarını gösteren cetvel \"maliyet cetveli\" ya da \"mal sayım ve tartı çizelgesi\" diye sorulur"
+   ],
+   "dogrusu": [
+    "Hesap teftişini JGK Teftiş Kurulu Başkanlığına bağlı müfettişler yapar (m.53)",
+    "Erzakın cins ve miktarını gösteren cetvel muaddel cetvelidir, birlik komutanına onaylatılır (m.45/k)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 118,
+  "kart_id": "118-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda iki yanlış var, Doğrusu kasıt yanlışını karşılamıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kamu zararı kamu görevlilerinin kasıt, kusur veya ihmalinden doğabilir (m.4)",
+    "Düzenleyici ve denetleyici kurumlar kapsam dışıdır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 118,
+  "kart_id": "118-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki aylık kesinti yanlışının doğrusu eksik.",
+  "duzeltme": {
+   "dogrusu": [
+    "Aylıktan kesinti bir aylık net ödemenin 1/4'ünden az, 1/3'ünden çok olamaz (m.13)",
+    "Takas için her iki alacağın da vadesi gelmiş olmalı (m.14)",
+    "Taksitlendirme azami 5 yıl (m.16)",
+    "Zamanaşımı zararın oluştuğu tarihi takip eden malî yılın başında işler (m.19)",
+    "Kayıttan çıkarmaya üst yöneticiler yetkilidir (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 132,
+  "kart_id": "132-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tanımları tekrarlayan uzun anahtar kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kapsamda erbaş-erlerle birlikte iaşe edilen JSGA öğrencileri, Bakan onaylı birliklerdeki diğer personel ve JGK'dan iaşe desteği alan TSK ile Askeralma erbaş-erleri de vardır (m.2)"
+   ]
+  }
+ }
+]

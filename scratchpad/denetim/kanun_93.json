@@ -1,0 +1,128 @@
+{
+ "kanun_id": 93,
+ "ad": "2565 sayılı Askeri Yasak Bölgeler ve Güvenlik Bölgeleri Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\istihkam\\pack_93.json",
+ "kartlar": [
+  {
+   "id": "93-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, bölge türleri, kurma yetkisi, sınır",
+   "hukum": "Yurt savunması bakımından hayati askeri tesis-bölgeler ile sınırların güvenlik ve gizliliği için çevre-kıyı-havalarında kara, deniz ve hava askeri yasak bölgeleri; yurt savunması/ekonomisine katkısı olan diğer askeri tesisler ile kamu-özel kuruluşların yer ve tesislerinin etrafında güvenlik bölgeleri kurulması, kaldırılması, genişletilmesi (m.1); askeri yasak bölgeler Cumhurbaşkanı kararıyla kurulur/kaldırılır; 1. ve 2. derece olmak üzere ikiye ayrılır; yakın tesisler için müşterek bölge (m.2); askeri güvenlik bölgeleri Genelkurmay Başkanlığınca, kamu ve özel kuruluşların çevresindeki özel güvenlik bölgeleri Cumhurbaşkanınca; JGK ve SGK birliklerinin konuşlu bulunduğu hizmet binaları, karakollar ve benzeri yerler için kendiliğinden özel güvenlik bölgesi oluşmuş sayılır (yeni konuşlananlar da konuşlanma tarihinden itibaren); bu bölgelerin sınırlarını İçişleri Bakanlığı belirler, lüzum görülmeyen yerler için İçişleri ayrıca karar alır; usul İçişleri yönetmeliğiyle (m.3); sınırlar Cumhurbaşkanı/Genelkurmay kararına ekli haritalar ve koordinat listelerinde (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askeri güvenlik bölgesini Cumhurbaşkanı kurar\" yanlış; Genelkurmay (yasak bölgeyi ve özel güvenlik bölgesini Cumhurbaşkanı)",
+    "Askeri yasak bölgeleri Genelkurmay Başkanlığı kurar",
+    "JGK karakollarının özel güvenlik bölgesi sınırlarını Genelkurmay belirler"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı; Genelkurmay askeri güvenlik bölgesini (m.2-3)",
+    "İçişleri Bakanlığı (m.3)"
+   ]
+  },
+  {
+   "id": "93-1",
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "baslik": "Birinci derece kara askeri yasak bölgeleri",
+   "hukum": "Hayati askeri tesis-bölgelerin duvar/tel örgüyle belirlenen dış sınırlarının en az 100, en fazla 400 metre uzağındaki noktaların birleştirilmesiyle; kara sınır hattı boyunca ve lüzum görülen kıyılarda 30 ila 600 metre derinlikte; savunma ihtiyacı 400 m'yi aşan kara parçalarını gerektiriyorsa veya kamu hizmeti-halkın faydalanması için 100 m asgari haddin altına inilmesine Cumhurbaşkanınca karar; kara hudutlarındaki bölgeler kamu yararıyla eğitim-kültür-turizm-spor için Cumhurbaşkanınca daraltılabilir/kaldırılabilir (m.5); 1. derece kara askeri yasak bölgeleri ilan edilmez, sınırları işaretlerle belirlenir ve işaretler ilan edilir (m.6); esaslar: bölge içindeki taşınmazlar kamulaştırılır; buradaki görevliler ve yetkili komutanlığın izin verdiği T.C. uyruklu görevlilerden başkası giremez-oturamaz (görevlilerin aile fertleri, su kaynaklarından faydalanma, tespit edilen yollardan geçiş → yetkili komutanlık izniyle); yabancıların geçici girişi Genelkurmay Başkanlığının iznine bağlı; eski eser ve doğal kaynak araştırması Genelkurmayın olumlu mütalaasıyla; fotoğraf-film-harita-kroki-not alma ve güvenlik tedbirlerini açıklayan cihaz kullanımı görevliler ve Genelkurmayca izin verilenler dışında yasak; kara sınır hattı ve kıyılardaki 1. derece bölgelerde kamulaştırma zorunlu değil, yerli halkın yararlanma esasları yönetmelikte (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"1. derece bölge Resmî Gazetede ilan edilir\" yanlış; ilan edilmez, işaretleri ilan edilir",
+    "1. derece kara askeri yasak bölgesi 1 km'ye kadar uzanır"
+   ],
+   "dogrusu": [
+    "100-400 m (m.5)"
+   ]
+  },
+  {
+   "id": "93-2",
+   "madde": [
+    "8",
+    "9"
+   ],
+   "baslik": "İkinci derece kara askeri yasak bölgeleri",
+   "hukum": "1. derece bölgeler çevresinde veya gerekli görülen diğer bölgelerde; 1. derece sınırından başlayarak 5 kilometreye kadar uzaktan seçilen noktalardan geçirilen hat (gözetlemeye karşı gizleyen sırtların en yüksek noktalarından), zorunlu hâllerde 10 kilometreye kadar; diğer bölgelerde sınırlar Cumhurbaşkanı kararında; sınırları Resmî Gazetede yayımlanır (m.8); esaslar: Türk vatandaşlarının oturması, seyahati, zirai-mesleki faaliyeti serbest (gerekli görülen bölgelerde bölgede oturanlar dışındakiler için Cumhurbaşkanı kararıyla sınırlandırılabilir); yabancı gerçek ve tüzel kişiler taşınmaz mal edinemez, tasfiyeye Cumhurbaşkanı yetkili; yabancılar izinsiz geçici dahi olsa giremez-oturamaz-çalışamaz-kiralayamaz; görevli yabancı sivillere izin garnizon komutanlığı görüşüyle valiliklerce, görevli yabancı askerlere Genelkurmayca (yetki komutanlıklara devredilebilir, valiliklere bilgi); yasak bölge tesisinden itibaren gerektiğinde 6 ay içinde taşınmazların durumu hava fotoğraflarıyla ve mülkiyet-zilyetlik mülki idarelerce tespit edilip yetkili komutanlığa bildirilir; inşaat, hafriyat, tadilat, orman yetiştirme-kesme, bataklık ihdas-kurutma için ilgili mercilerce izin verilmeden önce yetkili komutanlığın izni zorunlu (ret gerekçeli yazılı, itiraz Genelkurmayca sonuçlandırılır; izne tabi olmayan işlerde de aynı); izinsiz/şartlara aykırı inşaat durdurulur, sahiplerince yıktırılır, yıkılmazsa yetkili komutanlığın istemiyle mahalli mülki idare amirliğince yıktırılır, masrafı sahibinden; askeri tesislerin ve 1. derece bölgelerin dürbünle gözetlenmesi, fotoğraf-film-harita yasak; eski eser-doğal kaynak Genelkurmay mütalaasıyla (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görevli yabancı sivile izni Genelkurmay verir\" yanlış; valilik (garnizon komutanlığı görüşüyle); askere Genelkurmay",
+    "2. derece bölgede yabancılar taşınmaz edinebilir"
+   ],
+   "dogrusu": [
+    "Edinemez (m.9)"
+   ]
+  },
+  {
+   "id": "93-3",
+   "madde": [
+    "10",
+    "11",
+    "12"
+   ],
+   "baslik": "Deniz askeri yasak bölgeleri",
+   "hukum": "1. derece deniz: 1. derece kara bölgesinin sahilde bittiği noktadan deniz yönünde ve denizdeki tesislerin çepeçevre en az 100 metre, en çok 1 deniz mili uzaklıktaki noktaların birleştirilmesiyle; Cumhurbaşkanı kararıyla kısaltılır/uzatılır; ilan edilmez, işaretler denizcilere duyurulur ve deniz haritalarına işlenir (Deniz Kuvvetleri Seyir, Hidrografi ve Oşinografi Daire Başkanlığınca) (m.10); esaslar: 1. derece kara hükümleri uygulanır; Türk ve yabancı deniz araçları yalnız fena hava veya teknik arıza nedeniyle uluslararası işaretleri göstererek sığınabilir, sorumluları derhal yetkili komutanlığa veya mülki idare amirliğine bildirir; kalmasına izin verilmezse komutanlık mülki amirle işbirliğiyle en kısa sürede terk ettirir, gerekirse bölge dışındaki en yakın barınma yerine çektirir; masraf ve zararlar genel hukuka göre tazmin (m.11); 2. derece deniz: 2. derece kara bölgesinin sahilde bittiği noktadan deniz yönünde ve 1. derece deniz bölgesi sınırlarından her yönde 2 deniz miline kadar; 1. derece kurulması zorunlu görülmeyen yerlerde de; diğer yerlerde en az 1, en fazla 2 deniz mili; Cumhurbaşkanı kararıyla değiştirilebilir; dış sınırları Resmî Gazetede ilan edilir, deniz haritalarına işlenir, SHOD duyurur (m.12); esaslar: daimi tesis gerektirmeyen balıkçılık, süngercilik, deniz dibi doğal kaynak arama Türk vatandaşlarına serbest (tesislere zarar verebilecek araç sokulması engellenebilir); sabit tesis, ilmi araştırma, batık çıkarma Genelkurmay olumlu mütalaasıyla; gemi sökümü tesisi hiçbir şekilde kurulamaz; liman-koy-körfeze Türk deniz araçları serbestçe girer, içindeki yabancıların karaya çıkarılmasına m.9/d'ye göre izin; yabancı harp ve yardımcı gemileri Genelkurmay iznine tabi; diğer yabancı bandıralı gemilere komutanlık mütalaasıyla valilerce izin; sığınma fena hava/arızada, derhal bildirim; turistik yerler yönetmelikte; dürbünle gözetleme yasağı (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"2. derece deniz bölgesinde balıkçılık yasaktır\" yanlış; Türk vatandaşına serbest",
+    "1. derece deniz bölgesi Resmî Gazetede ilan edilir"
+   ],
+   "dogrusu": [
+    "İlan edilmez; 2. derece ilan edilir (m.10, 12)"
+   ]
+  },
+  {
+   "id": "93-4",
+   "madde": [
+    "14",
+    "15",
+    "16"
+   ],
+   "baslik": "Hava askeri yasak bölgeleri",
+   "hukum": "1. derece hava: 1. derece kara ve deniz bölgeleri üzerinde ve dış sınırlarından yatay her yönde en az 25 kilometre hava sahası; milli hudutlar dışına çıkamaz; dikey olarak limitsiz; Cumhurbaşkanınca tespit, Türkiye Havacılık Neşriyatında yayımlanır (m.14); Türk askeri hava araçları hariç Türk veya yabancı her türlü hava aracının Genelkurmay müsaadesi olmadıkça uçması/inmesi yasak; kontrollü-tavsiyeli hava sahaları ve yolları hariç, yeni ihdası Genelkurmay iznine bağlı (m.15); 2. derece hava: 1. derece kara-deniz bölgeleri dışında kalan stratejik askeri veya kamu-özel tesisler üzerinde ve dış sınırlarından en az 25 km; milli hudutlar dışına çıkamaz; dikey limitsiz; Cumhurbaşkanınca tespit, Resmî Gazetede ve Havacılık Neşriyatında (m.16); yabancı uyruklu kişilerin kullandığı hava araçları Genelkurmay müsaadesi olmadıkça uçamaz/inemez; havadan fotoğraf-film çekimi Genelkurmayın olumlu mütalaasına bağlı (m.17); acil hâller: yabancı hava araçları olağanüstü hava şartları, arıza, yakıt kritiği gibi inişe zorlayan hâllerde izinsiz 1. ve 2. derece bölgelerde uçabilir/inebilir; Türk hava araçları için 1. derece bakımından aynı; sorumlular durumu en yakın askeri veya mülki makamlara haber verir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"2. derece hava bölgesinde Türk sivil uçakları izne tabidir\" yanlış; yalnız yabancı uyrukluların kullandığı araçlar",
+    "Hava askeri yasak bölgesi 10 km yükseklikle sınırlıdır"
+   ],
+   "dogrusu": [
+    "Dikey limitsiz (m.14)"
+   ]
+  },
+  {
+   "id": "93-5",
+   "madde": [
+    "19",
+    "20",
+    "21"
+   ],
+   "baslik": "Güvenlik bölgeleri",
+   "hukum": "Özel güvenlik bölgeleri ve askeri güvenlik bölgeleri (m.19); kamu veya özel kuruluşların stratejik değerli yer ve tesislerinin çevresinde özel güvenlik bölgesi; 1. derece bölge ilan edilmeyen kışla, kıta, karargâh, kurum, ordugâh, tesisler, su altı-su üstü tesisleri, patlayıcı-yanıcı-akaryakıt-gizlilik dereceli madde depo ve cephanelikleri, dolduran-boşaltan tesisler ve atış poligonlarının çevresinde dış sınırlarından en fazla 400 metreye kadar askeri güvenlik bölgeleri Genelkurmayca tesis edilebilir; işaretleme yönetmelikte (m.20); esaslar: bölge içindeki mallar kamulaştırılabilir; dış sınırlardan en çok 200 metreye kadar sahada yangın ve patlama tehlikesi gösteren maddelerin imali, depolanması ve satış yeri açılması yasaklanabilir (sınırı özel güvenlik bölgesinde mahalli mülki amirler, askeri güvenlik bölgesinde garnizon komutanı ve mülki amirler birlikte); kamulaştırma yapılan güvenlik bölgelerine ve deniz sahasına görevliler ile askeri bölgede yetkili komutanlığın, kamu-özel tesislerde yetkili makamın izin verdikleri dışında girilemez-oturulamaz; yönetmelik; 2495 sayılı Kanun hükümleri saklı; askeri güvenlik bölgesi olan kışla-kıta-karargâhların fotoğraf-film-harita-kroki-not alma faaliyeti ilgili birlik komutanlığının izin verdikleri dışındakilere yasak; 200 metreye kadar bölgede hangi zirai ürünün yetiştirileceğine mahalli mülki amirler karar verebilir (m.21); olağanüstü hâl ve savaşta Cumhurbaşkanı kararıyla 2. derece ve deniz bölgelerinin sınırları uzatılabilir (m.22); bölgelerin bağlanacağı yetkili komutanlık, ilgili kuvvet komutanlığı veya JGK/SGK'nın teklifi üzerine Genelkurmayca tespit (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askeri güvenlik bölgesi en fazla 1 km'dir\" yanlış; 400 m",
+    "Askeri güvenlik bölgesi 800 m'ye kadar tesis edilir"
+   ],
+   "dogrusu": [
+    "En fazla 400 m (m.20)"
+   ]
+  },
+  {
+   "id": "93-6",
+   "madde": [
+    "24",
+    "7",
+    "25"
+   ],
+   "baslik": "Cezalar ve çeşitli hükümler",
+   "hukum": "1. derece bölgelerin işaret, tel örgü, duvar, hendeklerini yıkan-bozan-yerini değiştirenlere 2 yıldan 7 yıla kadar hapis + ağır para cezası; aynı fiil 2. derece ve güvenlik bölgelerinde 1 yıldan 7 yıla; zarar tazmini (m.24); 1. derece kara ve deniz bölgelerinde m.7/1-e yasaklarına (fotoğraf-film-harita) aykırılık 6 aydan 5 yıla hapis + para cezası; tespit edilen yolların dışına çıkanlara 3 aydan 6 aya hapis (m.25); m.9, 13, 17, 18, 21 ve 11/b yasak-tahditlerine uymayanlar ve gerekli bildirimi yapmayanlar 3 aydan 6 aya hapis + para cezası; izinleri savunma güvenliğine zarar verecek şekilde kullananlar 1 yıldan 7 yıla (m.26); stratejik tesisler (demiryolu, karayolu, köprü, akaryakıt boru hattı, liman, hava meydanı, telsiz-telefon-radyolink merkezi, baraj, santral, rafineri, maden fabrikası) ile ikinci derecede stratejik sulama kanalı-gölet-küçük barajların coğrafi konum ve yerleri tespit edilirken Genelkurmayın askeri gerekler yönünden olumlu görüşü zorunlu; alınmadan inşaat başlatılamaz, başlanmışsa durdurulur; olağanüstü yönetimde tahrip hazırlıkları yönetmelikte (m.27); askeri yasak bölge ve güvenlik bölgelerindeki TSK/SGK'ya tahsisli araziler, harekât-savunma tesisleri (konut-sosyal tesis hariç), özel güvenlik bölgesi tesisleri, rafineri-petrokimya ve nükleer santral projelerinde 3621 Kıyı Kanununun kıyı-sahil şeridi-dolgu yapılaşma sınırlamaları ile nükleerde 3573 Zeytincilik Kanunu sınırlamaları uygulanmaz (m.27/A); askeri yasak bölgelere yakınlık veya stratejik nedenle tespit edilecek bölgelerde yabancıların taşınmaz edinemeyeceğine ve izinsiz kiralayamayacağına Cumhurbaşkanınca karar (m.28), tasfiyeye Cumhurbaşkanı yetkili (m.29); kaçakçılığın men ve takibine ilişkin kanun hükümleri saklı (m.30); Cumhurbaşkanınca kararlaştırılan sınır bölgelerinde fiziki güvenlik sistemi, kurulması-idamesinden MSB ve İçişleri Bakanlığı sorumlu (m.31); Genelkurmay, girilmesi sakıncalı atış alanları ve tatbikat bölgelerini atış-tatbikat süresince kara-deniz-hava askeri güvenlik bölgesi ilan etmeye yetkili; sınırlar, kapsam, başlangıç-bitiş duyurulur (m.32); terörle mücadele operasyonlarında meskûn mahal dışında can-mal güvenliği için operasyon süresiyle sınırlı Cumhurbaşkanı kararıyla askeri veya özel güvenlik bölgesi; gecikmesinde sakınca varsa vali kararıyla 15 güne kadar özel güvenlik bölgesi; ilgili makamların izni olmadıkça girilemez (m.32/A); yönetmelik Cumhurbaşkanınca (m.33); 1110 sayılı Askeri Memnu Mıntıkalar Kanunu kaldırıldı (m.34); yayımından 6 ay sonra yürürlük (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"Terör operasyonunda vali 30 güne kadar güvenlik bölgesi ilan eder\" yanlış; 15 gün",
+    "Terör operasyonunda vali 30 gün güvenlik bölgesi ilan eder"
+   ],
+   "dogrusu": [
+    "15 gün (m.32/A)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

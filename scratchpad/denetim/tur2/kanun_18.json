@@ -1,0 +1,204 @@
+{
+ "kanun_id": 18,
+ "ad": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_18.json",
+ "kartlar": [
+  {
+   "id": "18-0",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Silmenin tanımı",
+   "hukum": "Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "tanıma \"geri getirilemez\" unsuru eklenir; o unsur yok etmeye aittir"
+   ],
+   "dogrusu": [
+    "Silmenin tanımı"
+   ]
+  },
+  {
+   "id": "18-1",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Silmede erişimin muhatabı",
+   "hukum": "Erişimsizlik ölçütü \"ilgili kullanıcılar\"dır (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiç kimse\", \"yalnızca ilgili kişi\", \"yalnızca veri sorumlusu\" diye değiştirilir"
+   ],
+   "dogrusu": [
+    "Silmede erişimin muhatabı"
+   ]
+  },
+  {
+   "id": "18-2",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Silmede tedbir yükümlüsü",
+   "hukum": "Veri sorumlusu, silinen verilerin ilgili kullanıcılar için erişilemez ve tekrar kullanılamaz olması için gerekli her türlü teknik ve idari tedbiri almakla yükümlüdür (m.8/2)",
+   "sinavda_boyle_yazarlar": [
+    "yükümlü olarak Kurul veya mülki amir gösterilir"
+   ],
+   "dogrusu": [
+    "Veri sorumlusu …"
+   ]
+  },
+  {
+   "id": "18-3",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Yok etmenin tanımı",
+   "hukum": "Kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir (m.9/1)",
+   "sinavda_boyle_yazarlar": [
+    "üç unsurdan biri düşürülür; üçü birlikte aranır"
+   ],
+   "dogrusu": [
+    "Yok etmenin tanımı"
+   ]
+  },
+  {
+   "id": "18-4",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Yok etmeyi silmeden ayıran unsur",
+   "hukum": "\"Hiç kimse tarafından\" + \"geri getirilemez\" ibareleri yalnız yok etmede vardır (m.9/1)",
+   "sinavda_boyle_yazarlar": [
+    "bu ibareler silme tanımının içine yerleştirilir"
+   ],
+   "dogrusu": [
+    "Yok etmeyi silmeden ayıran unsur"
+   ]
+  },
+  {
+   "id": "18-5",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Yok etmede tedbir yükümlüsü",
+   "hukum": "Veri sorumlusu, yok etmeyle ilgili her türlü teknik ve idari tedbiri almakla yükümlüdür (m.9/2)",
+   "sinavda_boyle_yazarlar": [
+    "yükümlülük \"ilgili kişiye\" ya da Kurula devredilmiş gösterilir"
+   ],
+   "dogrusu": [
+    "Yok etmede tedbir yükümlüsü"
+   ]
+  },
+  {
+   "id": "18-6",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Anonim hale getirmenin tanımı",
+   "hukum": "Kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca ad ve soyadı bilinmeyecek şekilde\" gibi daraltılmış ifadeler konur"
+   ],
+   "dogrusu": [
+    "Kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale …"
+   ]
+  },
+  {
+   "id": "18-7",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Anonimde veri yok olmaz",
+   "hukum": "Veri varlığını sürdürür, yalnız kişiyle bağı kopar (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"veri tamamen yok edilir, hiçbir kayıt kalmaz\" denir; bu yok etmedir"
+   ],
+   "dogrusu": [
+    "Anonimde veri yok olmaz"
+   ]
+  },
+  {
+   "id": "18-8",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Anonim sayılmanın ölçütü",
+   "hukum": "Veri sorumlusu, alıcı veya alıcı grupları tarafından geri döndürme ve başka verilerle eşleştirme gibi uygun tekniklerin kullanılması yoluyla dahi kişiyle ilişkilendirilemez olması gerekir (m.10/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"sonradan eşleştirmeyle yeniden ilişkilendirilebilir\" denir; o zaman anonim değildir"
+   ],
+   "dogrusu": [
+    "dahi (m.10/2)"
+   ]
+  },
+  {
+   "id": "18-9",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Anonimde tedbir yükümlüsü",
+   "hukum": "Veri sorumlusu, anonim hale getirmeyle ilgili her türlü teknik ve idari tedbiri almakla yükümlüdür (m.10/3)",
+   "sinavda_boyle_yazarlar": [
+    "öncül sorularında bu cümle \"yükümlü değildir\" diye olumsuzlanır — yanlış öncül budur"
+   ],
+   "dogrusu": [
+    "Anonimde tedbir yükümlüsü"
+   ]
+  },
+  {
+   "id": "18-10",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Politikası olan veri sorumlusu",
+   "hukum": "Yükümlülüğün doğduğu tarihi takip eden ilk periyodik imha işleminde siler, yok eder veya anonim hale getirir (m.11/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ilk periyodik\" yerine \"resen/yıllık\" konur ya da 3 ay süresi buraya taşınır"
+   ],
+   "dogrusu": [
+    "ilk periyodik imha işleminde (m.11/1)"
+   ]
+  },
+  {
+   "id": "18-11",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Periyodik imha aralığı",
+   "hukum": "Aralığı veri sorumlusu kendi saklama ve imha politikasında belirler; bu süre her halde altı ayı geçemez (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "aralığı Kurulun belirlediği söylenir veya sınır 3 ay/1 yıl gösterilir"
+   ],
+   "dogrusu": [
+    "altı ayı (m.11/2)"
+   ]
+  },
+  {
+   "id": "18-12",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Politikası olmayan veri sorumlusu",
+   "hukum": "Yükümlülüğün doğduğu tarihi takip eden üç ay içinde siler, yok eder veya anonim hale getirir (m.11/3)",
+   "sinavda_boyle_yazarlar": [
+    "şıkka 30 gün, 15 gün veya 6 ay konur"
+   ],
+   "dogrusu": [
+    "üç ay (m.11/3)"
+   ]
+  },
+  {
+   "id": "18-13",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kurulun süre kısaltma yetkisi",
+   "hukum": "Kurul, telafisi güç veya imkânsız zararların doğması ve açıkça hukuka aykırılık olması hâlinde bu maddedeki süreleri kısaltabilir (m.11/4)",
+   "sinavda_boyle_yazarlar": [
+    "Kurulun süreleri \"uzatabileceği\" ya da tek şartla (sadece hukuka aykırılık) kısaltabileceği söylenir; iki şart birliktedir"
+   ],
+   "dogrusu": [
+    "Kurulun süre kısaltma yetkisi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

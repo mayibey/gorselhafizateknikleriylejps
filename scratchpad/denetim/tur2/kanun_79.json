@@ -1,0 +1,238 @@
+{
+ "kanun_id": 79,
+ "ad": "257 Sayılı Er ve Erbaş Harçlıkları Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_79.json",
+ "kartlar": [
+  {
+   "id": "79-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kapsam",
+   "hukum": "Milli Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı kuruluşlarına dahil er ve erbaşlara ödenecek harçlıklar bu Kanuna tabidir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız MSB kuruluşlarındaki er ve erbaşlar kapsamdadır\" yanlış; JGK ve SGK da kapsamda"
+   ],
+   "dogrusu": [
+    "Milli Savunma Bakanlığı · Jandarma Genel Komutanlığı · Sahil Güvenlik Komutanlığı"
+   ]
+  },
+  {
+   "id": "79-1",
+   "madde": [
+    "154",
+    "5",
+    "2"
+   ],
+   "baslik": "Harçlık hesabı ve göstergeler",
+   "hukum": "Er ve erbaşlara tabloda gösterilen gösterge rakamlarının, 657 sayılı DMK m.154'e göre tespit olunan aylık katsayı ile çarpımı sonucu bulunan miktarda aylık harçlık ödenir; göstergeler: çavuş 1.172, onbaşı 1.040, er 910; Askeralma Kanunu m.5/3 kapsamında askerlik hizmetine devam edenler için 17.500, 16.500, 15.500 (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Onbaşının göstergesi çavuştan yüksektir\" yanlış; sıralama çavuş > onbaşı > er"
+   ],
+   "dogrusu": [
+    "gösterge rakamlarının · 657 sayılı DMK m.154'e göre tespit olunan aylık katsayı · aylık harçlık · çavuş 1.172, onbaşı 1.040, er 910 · 17.500, 16.500, 15.500"
+   ]
+  },
+  {
+   "id": "79-2",
+   "madde": [
+    "5",
+    "2"
+   ],
+   "baslik": "Net asgari ücrete tamamlama",
+   "hukum": "Askeralma Kanunu m.5/3 kapsamında askerlik hizmetine devam edenler için belirlenen harçlık net asgari ücretin altında kalırsa ödenecek tutar net asgari ücrete tamamlanır (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tamamlama brüt asgari ücrete yapılır\" yanlış; net asgari ücret"
+   ],
+   "dogrusu": [
+    "net asgari ücretin altında · net asgari ücrete tamamlanır"
+   ]
+  },
+  {
+   "id": "79-3",
+   "madde": [
+    "5",
+    "2"
+   ],
+   "baslik": "Hudut birliklerinde ilave harçlık",
+   "hukum": "Askeralma m.5/3 kapsamındakilerden Hatay, Kilis, Gaziantep, Şanlıurfa, Mardin, Şırnak, Hakkâri, Van, Ağrı ve Iğdır illerindeki hudut birliklerinde görev yapanlara 7600 gösterge rakamının memur aylık katsayısıyla çarpımını geçmemek üzere, Hazine ve Maliye Bakanlığı ile Milli Savunma Bakanlığınca birlikte belirlenen tutarda ilave harçlık ayrıca ödenir; hizmetin fiilen görülmediği zamanlar için ilave harçlık ödenmez (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"İlave harçlığı yalnız Milli Savunma Bakanlığı belirler\" yanlış; HMB ile MSB birlikte",
+    "Edirne'deki hudut birliklerinde görev yapanlara ilave harçlık ödenir",
+    "Hudut birliklerinde ilave harçlık Askeralma m.5/3 kapsamı dışındakilere de ödenir"
+   ],
+   "dogrusu": [
+    "Edirne listede yok; iller Hatay, Kilis, Gaziantep, Şanlıurfa, Mardin, Şırnak, Hakkâri, Van, Ağrı, Iğdır (m.2)",
+    "Yalnız m.5/3 kapsamındakilere (m.2)"
+   ]
+  },
+  {
+   "id": "79-4",
+   "madde": [
+    "5",
+    "2"
+   ],
+   "baslik": "Kalkınmada öncelikli yörelerde iki kat",
+   "hukum": "Askeralma m.5/3 kapsamındakiler hariç, birinci ve ikinci derecede kalkınmada öncelikli yörelerde ilgisine göre İçişleri Bakanlığı veya Genelkurmay Başkanlığınca tespit edilen birliklerde görevli erbaş ve erlere, hesaplanan harçlığın iki katı tutarında aylık harçlık verilir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askeralma m.5/3 kapsamındakiler de iki kat alır\" yanlış; bunlar hariç tutulmuştur",
+    "Kalkınmada öncelikli yörelerde harçlık %50 artırılır"
+   ],
+   "dogrusu": [
+    "İki katı (m.2)"
+   ]
+  },
+  {
+   "id": "79-5",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Küsurat",
+   "hukum": "Harçlıklar küsuratlı çıkarsa ödemelerde küsuratlar tama (1 Türk Lirasına) iblağ edilir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Küsuratlar atılır (aşağı yuvarlanır)\" yanlış; 1 TL'ye tamamlanır"
+   ],
+   "dogrusu": [
+    "tama (1 Türk Lirasına) iblağ edilir"
+   ]
+  },
+  {
+   "id": "79-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Harçlığa hak kazanma",
+   "hukum": "Erler askerlik hizmetine girdikleri tarihten, erbaşlar ise terfi tarihlerini takip eden ay başından itibaren harçlığa müstahak olur (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Erbaşlar terfi tarihinden itibaren harçlık alır\" yanlış; terfiyi takip eden ay başından",
+    "Erbaşlar terfi ettikleri tarihten itibaren yeni harçlığa hak kazanır"
+   ],
+   "dogrusu": [
+    "Terfi tarihini takip eden ay başından (m.3)"
+   ]
+  },
+  {
+   "id": "79-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Harçlığın verildiği ve kesildiği günler",
+   "hukum": "Askerlik Kanununa göre askerlik hizmetinden sayılan günler için harçlık verilir; terhisleri izinleri bitiminde yapılmak üzere izinli bırakılanların harçlıkları kıtalarından ayrıldıkları tarihi takip eden aybaşından itibaren kesilir; maden ocaklarında çalıştırılmak üzere (6794 sayılı Kanun) birliklerinden ayrılanlara ayrıldıkları tarihi takip eden aybaşından itibaren harçlık ödenmez (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Terhis izniyle ayrılanın harçlığı ayrıldığı gün kesilir\" yanlış; takip eden aybaşından kesilir"
+   ],
+   "dogrusu": [
+    "askerlik hizmetinden sayılan günler · izinleri bitiminde · kıtalarından ayrıldıkları tarihi takip eden aybaşından · maden ocaklarında çalıştırılmak · harçlık ödenmez"
+   ]
+  },
+  {
+   "id": "79-8",
+   "madde": [
+    "8",
+    "5"
+   ],
+   "baslik": "Munzam harçlık: ehliyete göre bir misline kadar",
+   "hukum": "Gizlilik veya amele yokluğu gibi özel hâllerde sürekli tahkimat işlerinde ve arazide bilfiil harita alma hizmetlerinde çalıştırılanlar (A); MSB, JGK ve SGK kadrolarındaki askeri sanatkâr, memur, sanatkâr astsubay ve sivil sanatkâr kadrolarında çalıştırılıp ehliyetleri tasvip olunanlar (B); MSB'ye ait anatamir, ağırbakım, ordudonatım tamir bölükleri kadrolarındaki harb sanayii ve ordu donatım er-erbaşlarından ehliyet gösterenler (C); bunlar dışında m.8'deki talimatnamede tayin edilecek sanatkâr ve meslek gruplarından olanlar (D); bu er ve erbaşların harçlıkları yaptıkları fazla iş, sağladıkları menfaat veya gösterdikleri ehliyet nispetinde bir misline kadar artırılabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Munzam harçlıkla harçlık iki misline kadar artırılabilir\" yanlış; bir misline kadar (yani en çok kendisi kadar eklenir)",
+    "Munzam harçlıkla harçlık iki misline kadar artırılabilir"
+   ],
+   "dogrusu": [
+    "Bir misline kadar (m.5)"
+   ]
+  },
+  {
+   "id": "79-9",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Munzam harçlık: sabit tavanlar",
+   "hukum": "Ücretli sivil şoför ve operatörler yerinde kullanılan şoför ve iş makineleri operatörü er-erbaşlara ayda 90 lirayı geçmemek üzere (a); staj, kurs veya geçici görevle yabancı ülkelere gönderilenlere, yiyecek-yatacak-giyecek-tedavi-nakil masrafları karşılandıktan başka günde 30 lirayı geçmemek üzere (b); inzibat birliklerinde bilfiil askeri polis görevinde, MSB'ce gerekli görülen kadrolu yerlerde görev yapanlara her ay 20 lira (c); tank sınıfı (zırhlı otomobil dahil) er-erbaşlara sınıfta görev yaptıkları süre içinde harçlıklarının azami bir misli nispetinde munzam harçlık ödenebilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışına gönderilen ere ayda 30 lira\" yanlış; günde 30 lira. \"Şoföre günde 90 lira\" yanlış; ayda 90",
+    "Yabancı ülkeye gönderilen er ve erbaşa ayda 30 lira munzam harçlık verilir"
+   ],
+   "dogrusu": [
+    "Günde 30 lirayı geçmemek üzere (m.6)"
+   ]
+  },
+  {
+   "id": "79-10",
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "baslik": "Munzam harçlık ödenmeyen hâller",
+   "hukum": "Hizmetin fiilen görülmediği zamanlar için ve Askeralma m.5/3 kapsamında askerlik hizmetine devam edenlere munzam harçlık ödenmez; ancak yurt dışına gönderilenlere (m.6/b) ödenen munzam harçlık bu kuraldan müstesnadır (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışına gönderilen erin munzam harçlığı fiilen hizmet görmediği günlerde kesilir\" yanlış; m.6/b istisnadır",
+    "Askeralma m.5/3 kapsamındakilere de munzam harçlık ödenir"
+   ],
+   "dogrusu": [
+    "Ödenmez (m.7)"
+   ]
+  },
+  {
+   "id": "79-11",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Talimatname",
+   "hukum": "İstihkakların tevzi şekilleri, takdire bağlı miktarların ve ehliyetlerin tayin ve tespiti ve uygulamaya ilişkin diğer hususlar İçişleri, Maliye ve Milli Savunma Bakanlıklarınca müştereken hazırlanacak bir talimatnamede gösterilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Talimatnameyi Genelkurmay Başkanlığı tek başına hazırlar\" yanlış; üç bakanlık müştereken",
+    "Talimatname yalnız Milli Savunma Bakanlığınca hazırlanır"
+   ],
+   "dogrusu": [
+    "İçişleri, Maliye ve Milli Savunma müştereken (m.8)"
+   ]
+  },
+  {
+   "id": "79-12",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Ödeme zamanı ve yolu",
+   "hukum": "Er ve erbaş harçlıkları maaş tertiplerinden ve ay sonunda ödenir; ödeme bankacılık sistemi aracılığıyla da yapılabilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harçlıklar ay başında peşin ödenir\" yanlış; ay sonunda",
+    "Harçlıklar ay başında ödenir"
+   ],
+   "dogrusu": [
+    "Ay sonunda (m.9)"
+   ]
+  },
+  {
+   "id": "79-13",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Kesinti ve haciz yasağı",
+   "hukum": "Bu Kanuna göre ödenecek harçlıklar yardım veya herhangi bir hizmet karşılığı olarak veya sair suretlerle hiçbir kesintiye tabi tutulamaz ve borç için haczedilemez (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nafaka borcu hariç haczedilebilir\" türü istisna metinde yok; borç için haczedilemez",
+    "Harçlık borç için haczedilebilir"
+   ],
+   "dogrusu": [
+    "Haczedilemez, hiçbir kesintiye de tabi tutulamaz (m.10)"
+   ]
+  },
+  {
+   "id": "79-14",
+   "madde": [
+    "11",
+    "14"
+   ],
+   "baslik": "Harçlık hükümleri yalnız ek kanunla; yürürlük",
+   "hukum": "Er ve erbaş harçlıklarıyla ilgili hükümler ancak bu Kanuna ek olarak çıkarılacak kanunlarda yer alır (m.11); Kanun 1 Mart 1961 tarihinde yürürlüğe girer (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harçlık hükümleri yönetmelikle değiştirilebilir\" yanlış; ek kanunla"
+   ],
+   "dogrusu": [
+    "ancak bu Kanuna ek olarak çıkarılacak kanunlarda · 1 Mart 1961"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,92 @@
+{
+ "kanun_id": 110,
+ "ad": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_110.json",
+ "kartlar": [
+  {
+   "id": "110-0",
+   "madde": [
+    "24",
+    "55",
+    "3"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "2803 m.24 ve JGK-SGK Personel Yönetmeliği m.55 (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "İki dayanak maddesi çapraz sorulabilir"
+   ],
+   "dogrusu": [
+    "Personel Yönetmeliği m.55"
+   ]
+  },
+  {
+   "id": "110-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Genel esaslar (kılık)",
+   "hukum": "Kılık duruş ve dış görünüş, kıyafet giyim-kuşam; el-yüz-saç bakımında sadelik; erkek personel sakal, bıyık ve favori bırakamaz, her gün tıraş olur, favori alt çizgisi kulak iç kıvrım kıkırdağının üst sınırı hizasında, saç kulak üzerine düşmez, şapkadan taşmaz; kadın saçı kısa (ensede ceket yakasını geçmez) veya uzun (yan topuz, aksesuarsız toka/file), bukle-süs yok; başörtüsü: şapka/kep/bere altına yüzü kapatmayan, üniforma rengi desensiz kumaş; talep hâlinde uzun kollu gömlek, etek yerine pantolon; üniforma içine/üzerine sivil giysi-aksesuar giyilemez; tırnak uzatılmaz; söz, nişan, evlilik, devre yüzüğü dışında takı takılmaz; vazife malulü olup göreve devam eden personel isterse kendi temin ederek sivil kıyafet giyebilir (m.5/1-9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bıyık bırakılabilir\" yanlış; sakal-bıyık-favori üçü de yasak",
+    "Erkek personel bıyık bırakabilir"
+   ],
+   "dogrusu": [
+    "Sakal, bıyık, favori yasak (m.5)"
+   ]
+  },
+  {
+   "id": "110-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Genel esaslar (giyim)",
+   "hukum": "Başlıklar kaşla arasında en az 1, en fazla 1,5 parmak mesafe, kaşlara paralel; bina-müştemilat ve araç dışında başlık zorunlu, birlik içinde amirin izin verdiği alanlarda başlıksız dolaşılabilir; araç içinde şapka çıkarılabilir (birlik ve beraberlik esas); atkı pardösü-montla, yakadan 2 parmaktan fazla taşmaz, başa-yüze sarılmaz; ceket-pardösü-mont-parka düğme/fermuarı ilikli, yaka kaldırılmaz, kuşak cebe sokulmaz; metal düğmeler sarı ve parlak; karargâh gömleği üst düğmesi ilikli, kravat yakayı ortalar, gömlek cepleri boş; dışarıdan görünen atlet giyilmez; kravat ucu kemer tokasının üst hizası, kravat iğnesi gömlek ceplerinin alt hizası; pantolon belirlenen modelde (düşük bel, dar, kısa, dökümlü paça yok), arka cepler kapaklı; kemer/palaskaya telefon-gözlük-çakı takılmaz, ceplerde sigara-cüzdan taşınmaz; ayakkabılar temiz ve boyalı; erkek siyah, kadın ten rengi şeffaf çorap (kışlıkta kadın siyah çorap da giyebilir); hak sahibi olunmayan şerit rozet ve bröve takılmaz; yumuşak fermatür aksesuarla birebir ölçüde; sökük-yırtık-solmuş kıyafet kullanılmaz, eskimiş kıyafet saymanlığa teslim; rütbe sökülerek resmî kıyafet sivile dönüştürülemez, resmî pantolon sivil gömlek-kazakla giyilemez; zati/demirbaş tabanca üzerinde boya-kaplama-gravür değişikliği yapılamaz; hizmet dışında sivil elbiseyle tabanca göze görünmeyecek şekilde taşınabilir; eğitim-asayiş kıyafetinde soğukta örgü başlık; resmî kıyafetle umuma açık yerde alkol içilmez, gizlenemeyecek derecede sarhoş görünmek disiplin cezası; sakız çiğnenmez, poşet taşınmaz, şapka çıkarılmaz, kol kola girilmez, el ele tutuşulmaz, ağızda sigara-eller cepte dolaşılmaz; üniforma rengi veya koyu renk evrak çantası hariç çanta yok, çanta sol elle taşınır, sırta-omuza asılmaz; nöbetçi kıyafeti ve kolluğu JGK'ca belirlenir; yüz, baş, boyun, dirsek dâhil kollar (kısa kollu gömlekle görünen) ve dizden itibaren (etekle görünen) bölgelere dövme yaptırılamaz (2025) (m.5/10-34)",
+   "sinavda_boyle_yazarlar": [
+    "Çıkmış (Hizmet Esasları Yön.) soruda \"araç içinde şapka çıkarılmaz\" yanlış şık; Kıyafet Yön. m.5/12'ye göre de araçta çıkarılabilir. \"Pardösü yakası kaldırılır, kuşak cebe sokulur\" yanlış",
+    "Araç içinde resmî kıyafetle şapka çıkarılmaz",
+    "Çanta sağ elle taşınır"
+   ],
+   "dogrusu": [
+    "Çıkarılabilir (m.5/12)",
+    "Sol el; sırta asılmaz (m.5/32)"
+   ]
+  },
+  {
+   "id": "110-3",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Tasarım, istihkak, işaretler, teçhizat",
+   "hukum": "Kıyafet tasarımı Lojistik Komutanlığınca; rütbe-arma-sembol-işaretler JGK Personel Başkanlığınca belirlenir; giyim-kuşam planlama-temin-tahsis Lojistik Komutanlığı (m.9); giyim eşyalarının cins, miktar ve kullanım ömrü istihkak ve tahsis listelerinde; erbaş-erlerin giyim eşyası ve işaretleri Lojistik Komutanlığınca tertip edilir, ücret istenemez; kıyafet topluca değişince eskiler kullanım ömrü boyunca yenilerle birlikte giyilebilir (m.10); üniforma üzerindeki işaret ve semboller erbaş-er hariç personelin kendisi tarafından temin edilir, rütbeler istihkak olarak verilebilir (m.11); teçhizatın renk-şekil-kullanım esasları Asayiş Başkanlığıyla koordineli Lojistik Komutanlığınca (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Rütbe işaretlerini Lojistik Komutanlığı belirler\" yanlış; Personel Başkanlığı",
+    "Rütbe işaretlerini Lojistik Komutanlığı belirler",
+    "İşaret ve sembolleri erbaş-erler kendileri temin eder"
+   ],
+   "dogrusu": [
+    "Personel Başkanlığı (m.9)",
+    "Erbaş-er hariç personel kendisi (m.11)"
+   ]
+  },
+  {
+   "id": "110-4",
+   "madde": [
+    "13",
+    "14",
+    "15"
+   ],
+   "baslik": "Sivil kıyafet, benzer kıyafet, giyilme zamanı, geri alma",
+   "hukum": "Diğer mevzuattaki istisnalar hariç görev sırasında resmî kıyafet zorunlu (m.13); resmî kıyafet ve işaretler diğer kurum-kuruluş-kişilerce kullanılamaz (m.14); yazlık-kışlık giyilme zamanları bölge iklimine göre Ankara'da JGK'ca, diğer illerde il jandarma komutanlıklarının teklifi üzerine valiliklerce (m.15); kamu görevinden çıkarılan personelden tüm üniforma, aksesuar ve teçhizat geri alınır (m.16); JSGA öğretim elemanı kıyafetleri ve öğrenci işaretleri Ek-1; öğrenci üniformaları JGK/SGK subay-astsubay istihkakının aynı; SGK adına okuyanlar eğitim içeriğine göre jandarma veya sahil güvenlik eğitim kıyafeti; kıt'a kaynaklı öğrenciler en son nasbedildikleri rütbeyi kullanır; SGK'lı öğretim elemanlarına akademik kıyafet hariç SGK Kıyafet Yönetmeliği (m.17); JGK'daki Devlet memurları için 657 ve Kamu Personeli Kılık Kıyafet Yönetmeliği (m.18); özel birlik kıyafetleri Kıyafet Yönergesinde, birlik armaları Birlik Armaları Yönergesinde; yedek astsubay kıyafeti Yönergede (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığınca\" şıkkı yanlış",
+    "Yazlık-kışlık zamanını İçişleri Bakanlığı belirler"
+   ],
+   "dogrusu": [
+    "JGK (Ankara) / valilik (m.15)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

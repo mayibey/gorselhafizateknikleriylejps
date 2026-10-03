@@ -1,0 +1,178 @@
+[
+ {
+  "kanun_id": 51,
+  "kart_id": "51-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bilgi sistemi İçişleri Bakanlığına bağlandı (çıkmış soruda I. öncül); merkezi kayıt sistemi Sanayi ve Teknoloji Bakanlığına kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silahlara ilişkin bilgi sistemi, İçişleri Bakanlığı tarafından oluşturulan yazılım altyapısıdır.”",
+    "“Ses ve gaz fişeği atabilen silahların üretim, satış ve nakil bilgilerini içeren merkezi kayıt sistemi Sanayi ve Teknoloji Bakanlığı bünyesinde kurulur.”"
+   ],
+   "dogrusu": [
+    "Bilgi sistemi Sanayi ve Teknoloji Bakanlığınca oluşturulur; İçişleri Bakanlığı bünyesinde kurulan veri tabanı merkezi kayıt sistemidir (m.4/1)",
+    "Üretim, satış, nakil ve bildirim bilgilerini içeren merkezi kayıt sistemi İçişleri Bakanlığı bünyesinde kurulan veri tabanıdır (m.4/1-l)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kolluk birimi tanımı yalnız emniyet birimlerine daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve Gaz Fişeği Atabilen Silahlar Yönetmeliğinde kolluk birimi, yalnızca il ve ilçe emniyet müdürlüklerini ifade eder.”"
+   ],
+   "dogrusu": [
+    "Kolluk birimi, illerde il emniyet müdürlüğü ve il jandarma komutanlığı, ilçelerde ise bunların ilçe birimleridir (m.4/1-j)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Şekil tanımı sınıf tanımıyla karıştırıldı (çıkmış soru öncülü); tip tanımı boyut tanımıyla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silahta şekil, silahın çalışma prensibine göre yapılan sınıflandırmadır.”",
+    "“Ses ve gaz fişeği atabilen silahta tip, silahın uzunluk, genişlik ve derinliğini ifade eder.”"
+   ],
+   "dogrusu": [
+    "Çalışma prensibine göre yapılan sınıflandırma sınıftır; şekil ise fişek beslemesine göre yapılan sınıflandırmadır (m.4/3)",
+    "Tip, namlu borusunun kapalı, pimli, pimsiz gibi iç yapısıdır; uzunluk, genişlik ve derinlik boyutu ifade eder (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kurusıkı silah 6136'ya tabi gösterildi; saçmalı fişek atabileceği iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kurusıkı silah olarak da adlandırılan ses ve gaz fişeği atabilen silahlar, 6136 sayılı Kanun hükümlerine tabi silah vasfındadır.”",
+    "“Ses ve gaz fişeği atabilen silahlar, saçma ihtiva eden fişekleri atabilecek şekilde imal edilebilir.”"
+   ],
+   "dogrusu": [
+    "Kurusıkı da denen ses ve gaz fişeği atabilen silahlar 6136 sayılı Kanuna tabi silah vasfında değildir (m.4)",
+    "Ses ve gaz fişeği atabilen silahlar mermi çekirdeği, saçma veya katı cisim içeren fişekleri atamayacak şekilde imal edilir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ruhsat şartı kaldırıldı; satış listesinin bildirim süresi bir aydan üç aya çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silahlar, ruhsat aranmaksızın her türlü işyerince satılabilir.”",
+    "“Ses ve gaz fişeği atabilen silahları satan yerlerin satış listelerini kolluk birimlerine bildirme süresi üç aydır.”"
+   ],
+   "dogrusu": [
+    "Ses ve gaz fişeği atabilen silahları yalnız mermi, av malzemesi veya yivsiz tüfek satışı için ruhsatlandırılmış yerler satabilir (m.13/1)",
+    "Satış yapan yerler cins, çap, seri numarası ve alıcı bilgilerini içeren listeleri bir ay içinde kolluk birimlerine bildirir (m.13/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bir yetki belgesiyle alınabilecek silah sayısı ikiye çıkarıldı; geçerlilik 6 aydan bir yıla çıkarıldı; ikamet eden yabancılara satış serbest gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Alınan her yetki belgesi ile iki adet ses ve gaz fişeği atabilen silah alınabilir.”",
+    "“Ses ve gaz fişeği atabilen silah satın almak için verilen yetki belgesinin geçerlilik süresi bir yıldır.”",
+    "“Ülkemizde ikamet izniyle bulunan yabancılara yetki belgesiyle ses ve gaz fişeği atabilen silah satılabilir.”"
+   ],
+   "dogrusu": [
+    "Alınan her yetki belgesi ile yalnızca bir adet ses ve gaz fişeği atabilen silah alınabilir (m.14/3)",
+    "Yetki belgesinin geçerlilik süresi 6 aydır (m.14/2)",
+    "Ülkemizde ikamet eden yabancılara, turistlere, mültecilere ve geçici koruma sağlananlara ses ve gaz fişeği atabilen silah satılamaz (m.14/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İptal süresi 5 yıldan bir yıla indirildi; bayilik belgesini veren makam İçişlerinden Sanayi ve Teknolojiye kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Şartları taşımayan kişilere ses ve gaz fişeği atabilen silah satan dağıtıcının bayilik belgesi bir yıl süreyle iptal edilir.”",
+    "“Ses ve gaz fişeği atabilen silah satan dağıtıcıların bayilik belgesi Sanayi ve Teknoloji Bakanlığınca verilir.”"
+   ],
+   "dogrusu": [
+    "Şartları taşımayana veya yetki belgesi olmayana satış yapan dağıtıcının İçişleri Bakanlığınca verilen bayilik belgesi 5 yıl iptal edilir (m.14/4)",
+    "Dağıtıcının bayilik belgesi İçişleri Bakanlığınca verilir; şartsız satışta bu belge 5 yıl süreyle iptal edilir (m.14/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim kartı satın almadan önce dağıtıcıya götürülen belge gibi gösterildi; kolluğa müracaat süresi bir aydan üç aya çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silah satın almak isteyen kişi, önce kolluktan aldığı bildirim kartı ile dağıtıcıya başvurur.”",
+    "“Ses ve gaz fişeği atabilen silahı satın alan kişinin kolluk birimine müracaat süresi, fatura tarihinden itibaren üç aydır.”"
+   ],
+   "dogrusu": [
+    "Silah yetki belgesiyle dağıtıcıdan alınır; bildirim kartını satın almadan sonra müracaat edilen kolluk birimi düzenler (m.15)",
+    "Satın alan kişi fatura tarihinden itibaren bir ay içinde fatura ve silahla birlikte kolluk birimine müracaat eder (m.15/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Etkinlik silahlarına bildirim kartı düzenlendiği iddia edildi; süre sonunda silahların sahibinde kaldığı gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Film ve tiyatro gibi etkinlikler için satın alınan ses ve gaz fişeği atabilen silahlara da kolluk birimince bildirim kartı düzenlenir.”",
+    "“Tören ve şenliklerde kullanılan ses ve gaz fişeği atabilen silahlar, izin süresi bitince sahibine bırakılır.”"
+   ],
+   "dogrusu": [
+    "Film, tiyatro ve tören silahlarında izni Emniyet Genel Müdürlüğü verir ve bildirim kartı düzenlenmez (m.15/3)",
+    "Süre sonunda bu silahlar Makine ve Kimya Endüstrisi A.Ş.'de imha edilmek üzere EGM'ye teslim edilir veya ihraç edilir (m.15/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Posta/kargo ile nakil yasak gösterildi; dolu silahın kutuda götürülmesi nakil sayıldı (taşımadır)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silahlar posta veya kargo yoluyla nakledilemez.”",
+    "“Ses ve gaz fişeği atabilen silahın fişekleri boşaltılmadan bir kutu içinde ve bildirim kartıyla götürülmesi nakil olarak kabul edilir.”"
+   ],
+   "dogrusu": [
+    "Ses ve gaz fişeği atabilen silahlar, nakil usulüne uygun olarak posta veya kargo yoluyla da nakledilebilir (m.17/4)",
+    "Nakil için fişekler boşaltılmalı, silah kullanıma ve erişime imkân vermeyecek şekilde kutuda ve bildirim kartıyla bulunmalıdır; aksi taşımadır (m.17/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 51,
+  "kart_id": "51-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kuruluş izni makamı Sanayi ve Teknolojiden İçişlerine kaydırıldı; prototip müracaat süresi 2 yıldan 5 yıla çıkarıldı. Girdide m.6 metni yok; 2 yıl kuralı JSPS Fabrika kaynak metninde (Y_34039, m.6/4-a) doğrulandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ses ve gaz fişeği atabilen silah üretecek kuruluşlar kuruluş iznini İçişleri Bakanlığından alır.”",
+    "“Kuruluş izni alan firmanın prototip üretim izni için müracaat süresi, kuruluş izninden itibaren beş yıldır.”"
+   ],
+   "dogrusu": [
+    "Ses ve gaz fişeği atabilen silah üretecek kuruluşlar kuruluş iznini Sanayi ve Teknoloji Bakanlığından alır (m.4/1-k; m.6/1)",
+    "Kuruluş izninin alınmasını müteakip 2 yıl içinde prototip üretim izni için müracaat edilmezse kuruluş izni geçerliliğini yitirir (m.6/4-a)"
+   ]
+  }
+ }
+]

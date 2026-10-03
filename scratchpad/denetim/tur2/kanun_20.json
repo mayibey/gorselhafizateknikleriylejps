@@ -1,0 +1,417 @@
+{
+ "kanun_id": 20,
+ "ad": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_20.json",
+ "kartlar": [
+  {
+   "id": "20-0",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Satıcılık belgesi süresi",
+   "hukum": "Başvuru evrakıyla müracaat edene 3 yıl süreli satıcılık (bayilik) belgesi verilir (m.10/a)",
+   "sinavda_boyle_yazarlar": [
+    "5 yıl denir; ruhsatnamenin süresiyle takas edilir"
+   ],
+   "dogrusu": [
+    "Satıcılık belgesi süresi"
+   ]
+  },
+  {
+   "id": "20-1",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Satıcılık belgesini kim verir",
+   "hukum": "Bu belge illerde münhasıran valilerce verilir (m.10/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"ilçelerde kaymakamlarca da verilir\" denir"
+   ],
+   "dogrusu": [
+    "Satıcılık belgesini kim verir"
+   ]
+  },
+  {
+   "id": "20-2",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Satıcılık başvuru evrakı",
+   "hukum": "İşyeri mülkiyet/kira belgesi, sağlık raporu, sabıka kaydına ilişkin yazılı beyan, taahhütname, T.C. Kimlik Numarası beyanı, iki adet fotoğraf (m.10/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"adli sicil belgesi\" istenir denir; metinde yazılı beyan yeter"
+   ],
+   "dogrusu": [
+    "Satıcılık başvuru evrakı"
+   ]
+  },
+  {
+   "id": "20-3",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Satıcılık sağlık raporu içeriği",
+   "hukum": "Silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan sakınca olmadığına dair rapor (m.10/a)",
+   "sinavda_boyle_yazarlar": [
+    "sadece \"bedeni\" ya da sadece \"ruhi\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "Satıcılık sağlık raporu içeriği"
+   ]
+  },
+  {
+   "id": "20-4",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Yivsiz tüfek ruhsatnamesi süresi",
+   "hukum": "Harç ödenmiş olmak kaydıyla, verildiği tarihten geçerli olmak üzere 5 yıl süreli düzenlenir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "3 yıl denir ya da \"harcın yatırıldığı tarihten geçerli\" denir"
+   ],
+   "dogrusu": [
+    "Yivsiz tüfek ruhsatnamesi süresi"
+   ]
+  },
+  {
+   "id": "20-5",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ruhsatnameyi kim verir",
+   "hukum": "İllerin merkez ilçelerinde valiler, ilçelerde kaymakamlarca verilir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"münhasıran valilerce\" denir (o kural satıcılık belgesine aittir)"
+   ],
+   "dogrusu": [
+    "Ruhsatnameyi kim verir"
+   ]
+  },
+  {
+   "id": "20-6",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ruhsatnamenin sağladığı yetki",
+   "hukum": "Tüfek sahibine bulundurma ve meskun mahaller dışında kırsal alanda taşıma yetkisi verir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"her yerde taşıma\" ya da \"sadece bulundurma\" denir"
+   ],
+   "dogrusu": [
+    "Ruhsatnamenin sağladığı yetki"
+   ]
+  },
+  {
+   "id": "20-7",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Şehir içinde nakil şekli",
+   "hukum": "Köy, kasaba veya şehir içinde boş olarak torba veya kılıf içerisinde ya da araçların bagajında taşınıp nakledilmesi zorunludur (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"dolu olarak bagajda taşınabilir\" denir"
+   ],
+   "dogrusu": [
+    "Şehir içinde nakil şekli"
+   ]
+  },
+  {
+   "id": "20-8",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Yenileme evrakı",
+   "hukum": "5 yıllık harcın ödendiğine ilişkin belge ile kimlik beyanı, sabıka beyanı, sağlık raporu ve iki fotoğraf istenir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"yenilemede sadece harç yeter\" denir; bu yalnız taşıma yetkisi olanlar için geçerlidir"
+   ],
+   "dogrusu": [
+    "Yenileme evrakı"
+   ]
+  },
+  {
+   "id": "20-9",
+   "madde": [
+    "7",
+    "10"
+   ],
+   "baslik": "Taşıma yetkisi olanlara muafiyet",
+   "hukum": "6136 m.7/1'in (1), (2) ve (4) numaralı bentlerine göre taşıma yetkisi olanlardan kimlik beyanı, sabıka beyanı ve sağlık raporu istenmez; harç makbuzuyla verilir veya yenilenir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "fotoğrafın da istenmediği söylenir; muafiyet ilk üç belgeyle sınırlıdır"
+   ],
+   "dogrusu": [
+    "6136 m.7/1'in (1), (2) ve (4) numaralı bentlerine göre taşıma yetkisi olanlardan kimlik beyanı …"
+   ]
+  },
+  {
+   "id": "20-10",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Yabancılara ruhsatname",
+   "hukum": "Yabancı elçilik/konsoloslukta görevliler ile en az iki yıl süreli ikamet tezkeresi alan yabancılara, karşılıklılık ilkesi gözetilerek Dışişleri Bakanlığının önerisi ve İçişleri Bakanlığının uygun görmesi üzerine valilerce verilir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "süre 4 yıl yazılır; \"kaymakamlarca da verilir\" denir"
+   ],
+   "dogrusu": [
+    "Yabancı elçilik/konsoloslukta görevliler ile en az iki yıl süreli ikamet tezkeresi alan yabancılara …"
+   ]
+  },
+  {
+   "id": "20-11",
+   "madde": [
+    "10"
+   ],
+   "baslik": "18 yaş altı atıcılar",
+   "hukum": "Atıcılık lisansı olanlar; veli adına belgelenmiş ya da Gençlik ve Spor Genel Müdürlüğü veya Türkiye Atıcılık ve Avcılık Federasyonu demirbaşındaki silahları, veli/yönetici/idareci sorumluluğunda Federasyonun özel izniyle poligon ve sportif alanlarda taşıyıp kullanabilir (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde kullanamaz\" ya da \"izin valilikçe verilir\" denir"
+   ],
+   "dogrusu": [
+    "Atıcılık lisansı olanlar …"
+   ]
+  },
+  {
+   "id": "20-12",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Tüfeğin belgeye işlenmesi",
+   "hukum": "Ruhsatname sahibi, tüfeğin cins, marka, çap (kalibre) ve seri numarasını belgesine işletmek zorundadır (m.10/b)",
+   "sinavda_boyle_yazarlar": [
+    "sadece seri numarası ya da sadece marka sayılır"
+   ],
+   "dogrusu": [
+    "Tüfeğin belgeye işlenmesi"
+   ]
+  },
+  {
+   "id": "20-13",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ruhsatname örneği",
+   "hukum": "Yivsiz tüfek ruhsatnamesinin şekli Örnek 3'te, satıcılık belgesi Örnek 7'de gösterilmiştir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "örnek numaraları ters çevrilir"
+   ],
+   "dogrusu": [
+    "Ruhsatname örneği"
+   ]
+  },
+  {
+   "id": "20-14",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ruhsatnameyi düzenleyen makam",
+   "hukum": "Taşıma ve bulundurmada engeli bulunmayanlara mahalli mülki amirliklerce yivsiz tüfek ruhsatnamesi düzenlenir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "il jandarma komutanlığı veya emniyet müdürlüğü düzenler denir"
+   ],
+   "dogrusu": [
+    "Ruhsatnameyi düzenleyen makam"
+   ]
+  },
+  {
+   "id": "20-15",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Satın alma usulü",
+   "hukum": "Bu silahlar, imal eden ya da satan kişi ve kuruluşlardan yivsiz tüfek satın alma belgesi ile satın alınabilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"ruhsatnameyle doğrudan satın alınır\" denir"
+   ],
+   "dogrusu": [
+    "Satın alma usulü"
+   ]
+  },
+  {
+   "id": "20-16",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Bir ay kuralı",
+   "hukum": "Satın alınan av tüfeğinin en geç bir ay içinde belgenin alındığı makama müracaatla cins, marka, çap ve seri numarası kaydettirilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "15 gün / 3 ay denir; makam \"en yakın karakol\" diye değiştirilir"
+   ],
+   "dogrusu": [
+    "Bir ay kuralı"
+   ]
+  },
+  {
+   "id": "20-17",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Kayıtta fiziki tespit",
+   "hukum": "Ruhsatname üzerine tüfeklerin kaydedilmesi sırasında tüfeklerin görülerek tespiti esastır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"sahibin beyanı yeterlidir\" denir"
+   ],
+   "dogrusu": [
+    "Kayıtta fiziki tespit"
+   ]
+  },
+  {
+   "id": "20-18",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Yaş engeli",
+   "hukum": "18 yaşını bitirmemiş olanlara izin ve belge verilmez (m.14/j)",
+   "sinavda_boyle_yazarlar": [
+    "21 yaş yazılır"
+   ],
+   "dogrusu": [
+    "Yaş engeli"
+   ]
+  },
+  {
+   "id": "20-19",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Sağlık engeli",
+   "hukum": "Akıl hastası veya psikolojik ve nörolojik rahatsızlıkları olanlara verilmez (m.14/i)",
+   "sinavda_boyle_yazarlar": [
+    "\"tedavi görüp iyileşenlere verilir\" gibi ek şart uydurulur"
+   ],
+   "dogrusu": [
+    "Sağlık engeli"
+   ]
+  },
+  {
+   "id": "20-20",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İki yıl kuralı",
+   "hukum": "Ateşli silahla işlenenler ile taksirli suçlar hariç, iki yıldan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara verilmez (m.14/e)",
+   "sinavda_boyle_yazarlar": [
+    "süre 1 yıla indirilir; \"taksirli suçlar dahil\" denir"
+   ],
+   "dogrusu": [
+    "İki yıl kuralı"
+   ]
+  },
+  {
+   "id": "20-21",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Mükerrer suç kuralı",
+   "hukum": "Ateşli silahla işlenenler ile taksirli suçlar hariç, değişik zamanlarda işlediği aynı veya farklı türden ikiden fazla suçtan mahkûm olanlara verilmez (m.14/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"ikiden fazla\" yerine \"iki\" yazılır"
+   ],
+   "dogrusu": [
+    "Mükerrer suç kuralı"
+   ]
+  },
+  {
+   "id": "20-22",
+   "madde": [
+    "4",
+    "14"
+   ],
+   "baslik": "6136 bağlantısı",
+   "hukum": "6136'nın 12, 13, 14 ve 15 inci maddelerindeki suçlardan 6 aydan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara ve 6136 m.4'teki yasak aletlerden birini kullanarak suç işleyip mahkûm olanlara verilmez (m.14/g)",
+   "sinavda_boyle_yazarlar": [
+    "6 ay yerine 1 yıl denir"
+   ],
+   "dogrusu": [
+    "6136'nın 12, 13, 14 ve 15 inci maddelerindeki suçlardan 6 aydan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara ve 6136 m.4'teki yasak aletlerden bir …"
+   ]
+  },
+  {
+   "id": "20-23",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Meskun mahalde silah atma",
+   "hukum": "Kamu davası açılmamış olsa bile, zorunlu olmadığı halde meskun mahalde veya civarında ya da umuma mahsus yol üzerinde veya bu yola doğru silah atanlara verilmez (m.14/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"mahkûmiyet şarttır\" denir; metin dava açılmamış olsa bile diyor"
+   ],
+   "dogrusu": [
+    "Meskun mahalde silah atma"
+   ]
+  },
+  {
+   "id": "20-24",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Ruhsatlı silahın ihmali",
+   "hukum": "Ruhsatlı silahıyla suç işleyenler ile silahın muhafazasındaki ihmal/kusuru nedeniyle başkasının suç işlemesine, intihara veya teşebbüsüne neden olmaktan mahkûm olanlara verilmez (m.14/b)",
+   "sinavda_boyle_yazarlar": [
+    "sadece bizzat suç işleyenlerle sınırlandırılır"
+   ],
+   "dogrusu": [
+    "Ruhsatlı silahıyla suç işleyenler ile silahın muhafazasındaki ihmal/kusuru nedeniyle başkasının suç işlemesine …"
+   ]
+  },
+  {
+   "id": "20-25",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Uyuşturucu suçları",
+   "hukum": "Uyuşturucu ve psikotrop maddelerle ilgili imal, ithal, ihraç, satma, bulundurma, devir, nakil, tedarikine vasıta olma suçlarından mahkûm olanlara verilmez (m.14/h)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece ticaret suçları\" diye daraltılır; kullanma dışındaki fiiller geniş sayılmıştır"
+   ],
+   "dogrusu": [
+    "Uyuşturucu suçları"
+   ]
+  },
+  {
+   "id": "20-26",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Kısıtlılık ve kamu hizmetinden yasaklılık",
+   "hukum": "Kısıtlı olanlar ile kamu hizmetinden yasaklılara verilmez (m.14/ı)",
+   "sinavda_boyle_yazarlar": [
+    "\"kısıtlılık engel değildir\" denir"
+   ],
+   "dogrusu": [
+    "Kısıtlılık ve kamu hizmetinden yasaklılık"
+   ]
+  },
+  {
+   "id": "20-27",
+   "madde": [
+    "7",
+    "14"
+   ],
+   "baslik": "Af ve sicil silinmesi kurtarmaz",
+   "hukum": "(a)–(h) bentleri kapsamına girenlere, affa uğrasalar, mahkûmiyet bütün neticeleriyle ortadan kalksa ya da adli sicilden silinmiş olsa bile belge/izin verilmez; istisna, TCK m.7 gereği suç olmaktan çıkan fiilden hüküm giyenlerdir (m.14/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"adli sicilden silinince engel kalkar\" denir"
+   ],
+   "dogrusu": [
+    "(a)–(h) bentleri kapsamına girenlere …"
+   ]
+  },
+  {
+   "id": "20-28",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Mahkûmiyetin niteliği",
+   "hukum": "Bu maddedeki mahkûmiyet kesinleşmiş mahkûmiyettir; hürriyeti bağlayıcı cezalar paraya çevrilmiş olsa dahi hürriyeti bağlayıcı ceza esas alınır (m.14/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"para cezasına çevrilince engel kalkar\" ya da \"kesinleşmesi aranmaz\" denir"
+   ],
+   "dogrusu": [
+    "Mahkûmiyetin niteliği"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,145 @@
+{
+ "kanun_id": 109,
+ "ad": "Jandarma Kantin Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_109.json",
+ "kartlar": [
+  {
+   "id": "109-0",
+   "madde": [
+    "19",
+    "8",
+    "3"
+   ],
+   "baslik": "Dayanak ve kuruluş",
+   "hukum": "2803 sayılı Kanun m.19 ve ek m.8 (m.3); personelin dayanıklı tüketim malları hariç zaruri ihtiyaçlarını ucuz ve kolay sağlamak için her birlikte kantin kurulabilir; aynı birlik içinde JGK'ya bağlı birden fazla kantin kurulamaz, ihtiyaçta şube açılabilir; kantinler en az Tugay/Bölge veya eşiti komutanlıkça JGK'dan izin alındıktan sonra kurulur ve ilgili birlik/karargâh/kurumca işletilir; kapalı ve emniyetli yerlerde kurulur, arazide araç veya çadırda devam edebilir; yurt dışı kantinler bu Yönetmelik esaslarına göre yürütülür, alım ve harcama usullerini JGK belirler (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Buzdolabı gibi dayanıklı mallar kantinde satılır\" yanlış; dayanıklı tüketim hariç"
+   ],
+   "dogrusu": [
+    "m.19 ve ek m.8 · dayanıklı tüketim malları hariç · her birlikte kantin kurulabilir · birden fazla kantin kurulamaz · en az Tugay/Bölge veya eşiti komutanlıkça JGK'dan izin alındıktan · araç veya çadırda"
+   ]
+  },
+  {
+   "id": "109-1",
+   "madde": [
+    "6",
+    "7",
+    "8"
+   ],
+   "baslik": "Kantin heyeti",
+   "hukum": "Heyet bir yıllık süre için seçimle veya birlik komutanınca atama ile teşkil edilir; atamayla teşkilde görev süresi en fazla üç yıl; heyette bir başkan (muvazzaf/sözleşmeli subay), bir muhasip üye ve bir mutemet olmak üzere en az üç kişi; en az bir astsubay bulunması şart; muhasip ile mutemetlik aynı kişide birleşemez (m.6); adaylar subay, astsubay, uzman jandarma, sivil memur ve uzman erbaşlar; aday sayısı asil üye sayısının üç katından az olamaz; mal saymanları, mal ve hesap sorumluları, gerçekleştirme görevlileri ve harcama yetkisi devredilenler aday gösterilemez; taksirli suçlar hariç altı aydan fazla hapis cezası alanlar (paraya çevrilmiş veya ertelenmiş olsa bile) aday gösterilemez (m.7); seçim, mevcudun en az yarıdan bir fazlasının katıldığı toplantıda gizli oy açık tasnifle yapılır; ilk toplantıda çoğunluk yoksa sonrakinde yeter sayı aranmaz; her görev için bir asil, en az iki yedek (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aday sayısı asil üyenin iki katı\" yanlış; üç katı",
+    "Kantin heyetinde en az iki astsubay bulunur",
+    "Muhasip ile mutemetlik aynı kişide birleşebilir",
+    "Atama ile teşkil edilen heyet 1 yıl görev yapar",
+    "Mal saymanları kantin heyetine aday gösterilebilir"
+   ],
+   "dogrusu": [
+    "En az bir (m.6)",
+    "Birleşemez (m.6)",
+    "En fazla 3 yıl; seçimle 1 yıl (m.6)",
+    "Gösterilemez (m.7)"
+   ]
+  },
+  {
+   "id": "109-2",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Heyet değişikliği, yedekler, görev-sorumluluk, şube, kapatma",
+   "hukum": "Başkan ve üyeler; görevden kesintisiz iki aydan fazla ayrı kalma, görevi kötüye kullanmadan soruşturma-kovuşturma, denetleme sonucu başarısızlık raporu, adaylık şartlarının kaybı hâllerinde birlik komutanınca değiştirilir (m.9); boşalan üyeliklere seçim tutanağı sırasıyla yedekler; iki ay ve daha kısa sürede ayrılacağı bilinen yedek atlanır; iki ay ve kısa süreli ayrılmalarda muhasip-mutemet aynı üyeye verilmemek şartıyla başkanın uygun gördüğü üye birlik komutanınca yazılı görevlendirilir (m.10); birlik komutanı: kantini kurmak, seçimi sağlamak, faaliyeti gözetmek, gelirlerin sarf yerlerini tespit etmek; aylık bilanço onayından önceki sorumluluk heyete, onaydan sonraki heyetle birlikte birlik komutanına; kantin heyeti: işletme, hesap tutma, belge muhafazası, teftiş verme (m.11); şube açılabilecek yerler: yakın iki birlik, geniş kışla, lojman bölgeleri, uzun süreli arazi/yurt dışı intikal, ulaşımı güç karakol ve üst birlikler (m.12); kantinler ilgili birliğin teklifi ve JGK onayıyla kapatılır, nakit-mal-demirbaşı JGK emriyle başka kantine devredilir; şubeler bağlı olunan birlik komutanının onayıyla kapatılır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kantin birlik komutanı onayıyla kapatılır\" yanlış; JGK",
+    "Kantin birlik komutanı onayıyla kapatılır"
+   ],
+   "dogrusu": [
+    "JGK onayı; şube birlik komutanı (m.13)"
+   ]
+  },
+  {
+   "id": "109-3",
+   "madde": [
+    "18",
+    "19",
+    "20"
+   ],
+   "baslik": "Yan kuruluşlar, sermaye, avans, alacak",
+   "hukum": "Birliklerdeki hiçbir gelir kaynağı ve yan kuruluş bağlantı dışı bırakılamaz; sosyal tesis/kadrolu vardiya yatakhanesi olmayan yerlerde kantine bağlanır; JGK izniyle açılan kadrosuz vardiya yatakhaneleri hariç konaklama tesisi kantine bağlı işletilemez (m.18); kuruluş sermayesi JGK'ca belirlenir; kaynakları: genel bağışlar, kuruluş promosyonları, sermayesi fazla kantinlerden JGK onayıyla mal-para, yan kuruluş sermayelerinden nakil, müsamere ve eğlence gelirleri, üst komutanlık paylarından tahsis; sermaye her ay en az TÜFE oranı kadar artırılır (TÜFE %4 ve az ise TÜFE kadar, fazlaysa %4) (m.19); sermaye ve gelir borç verme amacıyla kullanılamaz; birlik komutanının yazılı izniyle hizmetle ilgili avans verilebilir, en geç verildiği takvim ayının sonuna kadar kapatılır, ilki kapatılmadan ikincisi verilmez (m.20); alacak takibinden kantin başkanlıkları sorumlu; suçla bağlantısız davalar kurum avukatlarınca JGK adına hukuk mahkemelerinde; suçla bağlantılı dosyalar Cumhuriyet savcılığına sunulmak üzere komutanlığa (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sermaye artışı en az %4\" yanlış; en fazla %4 (TÜFE düşükse TÜFE)",
+    "Kantin sermayesi borç verme amacıyla kullanılabilir"
+   ],
+   "dogrusu": [
+    "Kullanılamaz (m.20)"
+   ]
+  },
+  {
+   "id": "109-4",
+   "madde": [
+    "23",
+    "24"
+   ],
+   "baslik": "Alım ve iade",
+   "hukum": "Mallar ihtiyaç listesine göre toptan veya perakende alınır; bedelin peşin ödenmesi esastır, vadeli veya taksitli de ödenebilir; kredili alımlarda sermayenin en fazla üç katı borçlanılabilir, gelecek yıla borç devri kredi kartı satışlarının blokeli hesaptaki tutarını geçemez; yakın merkezde bulunmayan mallar kışla komutanının izniyle diğer merkezlerden sağlanır; en az üç yerden teklif alınır (m.23); ayıplı malı iade eden tüketiciye 4077 sayılı Kanuna göre aynı mal verilir veya bedeli ödenir, bedel ödenirse EK-12 tutanak düzenlenir; firmaya iade iade faturası ile yapılır (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Maliyet cetveli\" ve \"mal sayım ve tartı çizelgesi\" şıkları tuzak"
+   ],
+   "dogrusu": [
+    "peşin · kredili alımlarda sermayenin en fazla üç katı borçlanılabilir · kışla komutanının izniyle · iade · tutanak EK-12 · muaddel cetveli"
+   ]
+  },
+  {
+   "id": "109-5",
+   "madde": [
+    "35",
+    "36",
+    "37"
+   ],
+   "baslik": "Gelirler, promosyon, giderler, hazine payı",
+   "hukum": "Gelirler: kantin ve yan kuruluş kârları, banka faizi, boş ambalaj satışı, tasfiyeden devreden mal-para, müsamere-eğlence, sermaye nakli, promosyon bağışları, işletme gelirleri, yüklenici ceza bedelleri, sergi-fuar-reklam, üst komutanlık paylarından tahsis (m.35); promosyon: malzeme ise taşınır mal işlem belgesiyle irada, satılacak ürünse sıfır alış fiyatıyla işletme defterine (satış fiyatı emsalinin aynı), nakitse bilançonun net kâr sütununa ve kasa defterine; nakit promosyon aynı mali yılda harcanır; gelir öncelikle eğitim ihtiyaçları, ödeneksiz öncelikli ihtiyaçlar ve sermayenin enflasyona karşı güçlendirilmesinde (m.36); piyasa ucuzlaması veya bedelsiz ilave üründe firmaya Hizmet Bedeli Faturası (m.37); giderler: birlik komutanının emriyle personel ve birlik ihtiyaçlarına yönelik ödeneği olmayan veya yetmeyen zaruri ve resmî işlere (Analitik Bütçe 4. düzey gider kodları); zaruret ve ödenek yeterliliğini birlik komutanı belirler; bunlar dışındaki sarfa Jandarma Genel Komutanı yetkili; piyasa araştırmasız harcama üst sınırı JGK'ca; öncelik erbaş-erlerin eğitim, barınma ve moral hizmetleri (m.38); birlik sınırları dışındaki kantin/şubelerin aylık gayrisafi hasılatının %1'i en geç takip eden ayın 20'sine kadar genel bütçeye (EK-20 bildirim, 3 nüsha) (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hazine payı tüm kantinlerden\" yanlış; birlik sınırları dışındakilerden",
+    "Hazine payı %10'dur"
+   ],
+   "dogrusu": [
+    "%1 (birlik dışı); üst komutanlık payı ≤%10 (m.39, 42)"
+   ]
+  },
+  {
+   "id": "109-6",
+   "madde": [
+    "40",
+    "41",
+    "42"
+   ],
+   "baslik": "Gider belgeleri, fire, üst komutanlık payı",
+   "hukum": "Gider belgeleri kullanım yerini açıkça gösterir ve birlik komutanınca \"Kantin gelirlerinden ödenmesi uygundur.\" kaydıyla onaylanır; aylık döküm listeleri de komutan onaylı; kalıcı mallarda saymanlıktan taşınır mal işlem belgesi faturaya bağlanır; sarf mallarında faturanın arkası imzalanır (m.40); alım ve muhafaza kusuru olmaksızın evsafını kaybeden mallar fire; hatalı alım ve muhafaza kusurundan doğan kayıp fire sayılmaz; fire tutanağı heyet + varsa kışla tabibi veya gıda kontrol subayı imzası + kışla komutanı onayı (m.41); üst komutanlık payları: kantin geliri toplamının %10'unu geçmeyecek oranlar ve sarf esasları Jandarma Genel Komutanınca tespit edilir; bilanço onayını müteakip her ayın en geç 10'una kadar kurumsal hesaplara yatırılır; havale masrafı kantin gideri; hesaplar arası kaynak tahsisine JGK yetkili, öncelik temsil ve tanıtım (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "İki tarih çapraz sorulur"
+   ],
+   "dogrusu": [
+    "\"Kantin gelirlerinden ödenmesi uygundur.\" · taşınır mal işlem belgesi · fire · kışla tabibi veya gıda kontrol subayı · kışla komutanı onayı · üst komutanlık payları · %10'unu geçmeyecek · Jandarma Genel Komutanınca · her ayın en geç 10'una kadar · temsil ve tanıtım"
+   ]
+  },
+  {
+   "id": "109-7",
+   "madde": [
+    "43",
+    "44",
+    "45"
+   ],
+   "baslik": "Muhasebe, belgeler, denetim",
+   "hukum": "Hesap yılı 1 Ocak-31 Aralık; öncelikle bilanço esaslı tek düzen muhasebe; limit JGK'ca; tek düzen kantinler Kamu Sosyal Tesisleri Muhasebe Esaslarına, işletme defteri kantinler bu Yönetmelikteki belgelere göre; kasa fazlası yan tesisler kâr çizelgesiyle bilançoya; kredi kartı slipleri banka hesabında (m.43); belge ve kayıtlar: Kantin Ambar/Kiler Defteri (EK-1; eski malın tamamı çıkmadan yeni fiyatlı mal çıkarılmaz), Mal Giriş-Çıkış/İç Dağıtım Belgesi vb. (m.44); dayanak-kontrol belgeleri: alım belgeleri (fatura + EK-12 tutanak), gider belgeleri (fatura, yazar kasa fişi, tutanak), aylık gider listesi (kışla komutanı onaylı), karşılaştırmalı fiyat tespit tutanağı, fire tutanağı (EK-10, aynı gün), devir teslim belgesi (EK-11; satışa tabi mal alış fiyatı üzerinden devredilir), avans belgesi (m.45); kantinler idari denetleme, özel denetleme, durum teftişi, hesap teftişi, iç denetim, tasfiye teftişine tabi (m.49); idari denetleme birlik komutanının görevlendirdiği heyetçe yılda en az iki defa, heyette maliye sınıfı personel; tertip-temizlik, mal uygunluğu ve kâr nispetleri, hesapların günü gününe tutulması, sermaye-borç-gider ilişkisi, kasa-banka uyumu incelenir; rapor müfettişe ibraz için heyet dosyasında; nöbetçi subay/astsubayları satış, tartı ve fiyatları kontrol eder (m.50); özel denetleme birlik komutanı ve sıralı üst komutanlıklarca (m.51); durum teftişi JGK müfettişlerince (m.52); hesap teftişi JGK Teftiş Kurulu Başkanlığı müfettişlerince Teftiş Yönetmeliğine göre; iç denetim JGK İç Denetim Birimi Başkanlığınca; tasfiye teftişi kantin faaliyetine son verilmesi/devri hâlinde (m.53); denetçi ve müfettişler sonuçları ilgili makama bildirmekle yükümlü (m.54)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hesap teftişini birlik komutanı yapar\" yanlış; JGK Teftiş Kurulu müfettişleri"
+   ],
+   "dogrusu": [
+    "1 Ocak-31 Aralık · bilanço esaslı tek düzen muhasebe · Kantin Ambar/Kiler Defteri · alım belgeleri · gider belgeleri · aylık gider listesi · karşılaştırmalı fiyat tespit tutanağı · fire tutanağı · devir teslim belgesi · alış fiyatı · idari denetleme, özel denetleme, durum teftişi, hesap teftişi, iç denetim, tasfiye teftişi · idari denetleme · yılda en az iki defa · maliye sınıfı · kâr nispetleri · nöbetçi subay/astsubayları · özel denetleme · durum teftişi JGK müfettişlerince · hesap teftişi JGK Teftiş Kurulu Başkanlığı müfettişlerince · iç denetim JGK İç Denetim Birimi Başkanlığınca · tasfiye teftişi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,884 @@
+{
+ "kanun_id": 12,
+ "ad": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_12.json",
+ "kartlar": [
+  {
+   "id": "12-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kast ve taksir",
+   "hukum": "Disiplinsizlik kasten veya taksirle oluşabilir (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece kasten oluşabilir\" — en klasik yanlış şık",
+    "sadece kasten oluşabilir"
+   ],
+   "dogrusu": [
+    "Disiplinsizlik kasten veya taksirle oluşur (m.4/1)"
+   ]
+  },
+  {
+   "id": "12-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tek fiil tek ceza",
+   "hukum": "Aynı fiil nedeniyle bu Kanunda yazılı disiplin cezalarından birden fazlası verilemez (m.4/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "birden fazlası verilemez"
+   ]
+  },
+  {
+   "id": "12-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Ağır ceza kuralı",
+   "hukum": "Bir fiil birden fazla disiplinsizlik teşkil ederse ağır olan disiplin cezası verilir (m.4/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "ağır olan"
+   ]
+  },
+  {
+   "id": "12-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İdari yaptırım engel değil",
+   "hukum": "Fiilin başka kanunlarda idari yaptırıma bağlanmış olması, aynı fiile bu Kanuna göre disiplin cezası verilmesine engel değildir (m.4/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "engel değildir"
+   ]
+  },
+  {
+   "id": "12-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Adli süreçten bağımsızlık",
+   "hukum": "Adli soruşturma veya kovuşturma; disiplin soruşturması yapılmasını, ceza verilmesini ve cezanın yerine getirilmesini engellemez (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "adli süreç bitmeden ceza uygulanamaz"
+   ],
+   "dogrusu": [
+    "Adli soruşturma disiplin cezasının infazını engellemez (m.5)"
+   ]
+  },
+  {
+   "id": "12-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Takdir hakkı ölçütleri",
+   "hukum": "İşleniş biçimi; işlendiği zaman ve yer; hizmete olumsuz etkisinin ağırlığı; zarar veya tehlikenin ağırlığı; kast veya taksire dayalı kusurun ağırlığı; daha önceki disiplin durumu; samimi ikrar ve pişmanlık (m.6/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece taksire dayalı kusur göz önüne alınır\"",
+    "sadece taksire dayalı kusur"
+   ],
+   "dogrusu": [
+    "Takdirde kast veya taksire dayalı kusur dikkate alınır (m.6/3)"
+   ]
+  },
+  {
+   "id": "12-6",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Takdir gerekçeli",
+   "hukum": "Takdir hakkı mutlaka gerekçeli olarak kullanılır; itiraz üzerine verilen kararlar hariç hiçbir idari makam takdir hakkını kaldıracak karar veremez (m.6/2, m.6/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "mutlaka gerekçeli"
+   ]
+  },
+  {
+   "id": "12-7",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Ceza listesi kapalıdır",
+   "hukum": "Uyarma, kınama, aylıktan kesme, kısa süreli durdurma, uzun süreli durdurma, meslekten çıkarma, Devlet memurluğundan çıkarma (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "Listeye \"oda hapsi\" veya \"görev yeri değiştirme\" sokulur — ikisi de bu Kanunun cezası değildir",
+    "listeye \"oda hapsi",
+    "görev yeri değiştirme\" eklenir"
+   ],
+   "dogrusu": [
+    "Ceza türleri listesi kapalıdır (m.7/1)"
+   ]
+  },
+  {
+   "id": "12-8",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Uyarma / kınama farkı",
+   "hukum": "Uyarma: daha dikkatli olması gerektiğinin yazı ile bildirilmesi; kınama: kusurlu olduğunun yazı ile bildirilmesi (m.7/1-a,b)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "daha dikkatli olması gerektiğinin · kusurlu olduğunun"
+   ]
+  },
+  {
+   "id": "12-9",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Aylıktan kesme",
+   "hukum": "Zam ve tazminatlar hariç brüt aylıktan on beş günlüğe kadar kesinti; aylığı tahakkuk ettiren birimce kesilir; tam Türk Lirası üzerinden yapılır, kuruşlar dikkate alınmaz (m.7/1-c)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "brüt aylıktan on beş günlüğe kadar · tam Türk Lirası · kuruşlar dikkate alınmaz"
+   ]
+  },
+  {
+   "id": "12-10",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kısa süreli durdurma",
+   "hukum": "Bulunduğu kademede ilerlemenin dört, altı veya on ay durdurulması (m.7/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir, üç, beş ay\" / \"iki, dört, yedi ay\"",
+    "1-3-5 ay",
+    "2-4-7 ay",
+    "3-5-8 ay"
+   ],
+   "dogrusu": [
+    "Kısa süreli durdurma 4, 6, 10 ay (m.7/1-ç)"
+   ]
+  },
+  {
+   "id": "12-11",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Uzun süreli durdurma",
+   "hukum": "Kademede ilerlemenin on iki, on altı, yirmi veya yirmi dört ay durdurulması (m.7/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "6-12-18 ay"
+   ],
+   "dogrusu": [
+    "Uzun süreli durdurma 12, 16, 20, 24 ay (m.7/1-d)"
+   ]
+  },
+  {
+   "id": "12-12",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Meslekten / memurluktan çıkarma farkı",
+   "hukum": "Meslekten çıkarma: emniyet, jandarma ve sahil güvenlik teşkilatlarında bir daha çalıştırılmamak üzere; Devlet memurluğundan çıkarma: bir daha Devlet memurluğuna atanmamak üzere (m.7/1-e,f)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "emniyet, jandarma ve sahil güvenlik teşkilatlarında · Devlet memurluğuna atanmamak"
+   ]
+  },
+  {
+   "id": "12-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Bir derece hafifletme",
+   "hukum": "Geçmiş hizmetleri olumlu bulunan ve iyi veya çok iyi değerlendirme puanı alan personele bir derece hafif ceza uygulanabilir (m.7/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "iyi veya çok iyi · bir derece hafif"
+   ]
+  },
+  {
+   "id": "12-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Alt-üst kademe",
+   "hukum": "Aylıktan kesme ile kısa ve uzun süreli durdurmanın üst ve alt kademeleri ağır ya da hafif ceza sayılmaz (m.7/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "üst ve alt kademeleri ağır ya da hafif ceza sayılmaz"
+   ]
+  },
+  {
+   "id": "12-15",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sicilden silme",
+   "hukum": "Memurluktan/meslekten çıkarma dışındaki ceza alanlar, uyarma ve kınamada beş yıl, diğer cezalarda on yıl geçtikten sonra atamaya yetkili amire başvurarak cezanın özlük dosyasından silinmesini isteyebilir; davranışları haklı kılarsa silinir (m.7/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"üç yıl-beş yıl\", \"beş yıl-yedi yıl\", \"yedi yıl-on yıl\"",
+    "3-5 yıl",
+    "5-7 yıl",
+    "7-10 yıl"
+   ],
+   "dogrusu": [
+    "Sicilden silme 5 yıl / 10 yıl (m.7/5)"
+   ]
+  },
+  {
+   "id": "12-16",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Uyarma fiillerinden örnekler",
+   "hukum": "Silah, araç-gereç ve kıyafeti temiz tutmamak; tasarruf tedbirlerine riayet etmemek; belirli zamanda yapılacak faaliyetlere geç kalmak; mesaiye geç gelmek/erken ayrılmak; nezaket kurallarına aykırı davranmak; emrin icrası veya toplantılarla ilgili amire bilgi vermemek; usulüne uygun verilen emir üzerine amiri alenen eleştirmek veya amire karşı itirazda bulunmak (m.8/1). Amir karar verene kadar astın fikrini savunması veya emrin kanunsuz olduğu kanaatini belirtmesi disiplinsizlik değildir",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "tasarruf tedbirlerine riayet etmemek · mesaiye geç gelmek/erken ayrılmak · nezaket kurallarına aykırı · amiri alenen eleştirmek veya amire karşı itirazda bulunmak"
+   ]
+  },
+  {
+   "id": "12-17",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Kınama fiillerinden örnekler",
+   "hukum": "Görev sırasında mevzuat veya talimatla yasaklanan davranışta bulunmak; usul ve kurallara riayet etmeden müracaat veya şikâyette bulunmak; nöbeti teslimden sonra görev yerine özürsüz geç dönmek; bildirimleri süresinde ulaştırmamak; mesleğin ciddiyetiyle bağdaşmayan takı takmak; aynı rütbedekilere veya mesai arkadaşlarına saygısız davranmak; sorumluluğu üstlenmekten imtina ettiğini gösterecek tavırda bulunmak; gıyapta kötüleyici sözler söylemek; demirbaş tabancada orijinalliği bozan değişiklik yapmak; mevzuata aykırı hitapta bulunmak (m.8/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "usul ve kurallara riayet etmeden müracaat veya şikâyette bulunmak · nöbeti teslimden sonra görev yerine özürsüz geç dönmek · aynı rütbedekilere veya mesai arkadaşlarına saygısız davranmak · sorumluluğu üstlenmekten imtina ettiğini gösterecek tavırda bulunmak"
+   ]
+  },
+  {
+   "id": "12-18",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Üç güne kadar aylıktan kesme fiilleri",
+   "hukum": "Eksik kuşam ve teçhizatla göreve çıkmak; amir/üst uyarılarına uymamak; kişisel menfaat için aracı koyup öncelik talep etmek; yirmi dört saate kadar göreve gelmemek; görev dışında amir veya üste saygısız davranmak; nöbete gelmemek veya nöbet kurallarına aykırı hareket etmek; resmî kıyafetle kahvehane vb. yerlerde oturmak; amirden izinsiz görevli olduğu il sınırları dışına çıkmak; Devletin araçlarını özel işte kullanmak; personel kimlik kartını kaybetmek; hastalığı abartmayı alışkanlık hâline getirmek; soranlara cevap vermemek; görevi savsaklamak; haklı neden olmadan kişileri bekletmek; selamlama kurallarına riayet etmemek; protokol kurallarına aykırı davranmak; görevle ilgisiz işlerle uğraşmak; kılık-kıyafet kurallarına uymamak (m.8/3-a)",
+   "sinavda_boyle_yazarlar": [
+    "Bu listeye \"resmî belge veya göreve ilişkin evrakı kaybetmek\" sokulur — o bu bentte yer almaz"
+   ],
+   "dogrusu": [
+    "yirmi dört saate kadar göreve gelmemek · görev dışında · amirden izinsiz görevli olduğu il sınırları dışına çıkmak · personel kimlik kartını kaybetmek · haklı neden olmadan kişileri bekletmek · selamlama kurallarına riayet etmemek"
+   ]
+  },
+  {
+   "id": "12-19",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Dört ila on günlüğe kadar aylıktan kesme",
+   "hukum": "Aynı rütbedekilere, astlarına veya mesai arkadaşlarına onur kırıcı söz söylemek/davranışta bulunmak; yirmi dört saatten fazla ve iki güne kadar (ikinci gün dâhil) göreve gelmemek (m.8/3-b)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "onur kırıcı söz söylemek/davranışta bulunmak · yirmi dört saatten fazla ve iki güne kadar (ikinci gün dâhil) göreve gelmemek"
+   ]
+  },
+  {
+   "id": "12-20",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Askerî kanunlara tabi personelde durdurma yerine kesinti",
+   "hukum": "Terfileri 926, 3466, 3269 ve 6191 sayılı Kanunlara tabi personelde kısa süreli durdurma yerine brüt aylıktan 1/5 ila 1/4, uzun süreli durdurma yerine 1/3 ila 1/2 oranında kesinti yapılır; bu cezaları yetkili disiplin kurulları verir (m.8/7-8; pakette madde metni kesik, bilgi paketin soru bankasından)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "1/5 ila 1/4 · 1/3 ila 1/2 · yetkili disiplin kurulları"
+   ]
+  },
+  {
+   "id": "12-21",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Devlet memurluğundan çıkarma — 7068'e özgü iki fiil",
+   "hukum": "(a) Ülkenin bağımsızlığını zedelemeye, bütünlüğünü bozmaya ve millî güvenliği tehlikeye düşürmeye yönelik faaliyette bulunmak veya böyle bir harekete/gruplaşmaya/vakıf-derneğe katılmak, yardım etmek veya bu yapılarla ilişki içinde olmak; (b) İşkence yapmak. Diğer hâllerde 657 sayılı Kanun uygulanır (m.9/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Ülkenin bağımsızlığını zedelemeye, bütünlüğünü bozmaya ve millî güvenliği tehlikeye düşürmeye · İşkence yapmak"
+   ]
+  },
+  {
+   "id": "12-22",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ağırlaştırıcı nedenler",
+   "hukum": "Amirin emrinin yapılmaması, görev yerinden ayrılmak, evrak üzerinde yasak fiiller, nöbete gelmemek, meskûn yerde silah atmak, görevde uyumak gibi fiiller zarara veya hizmetin aksamasına yol açmışsa meslekten çıkarma uygulanabilir (m.10)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "zarara veya hizmetin aksamasına · meslekten çıkarma"
+   ]
+  },
+  {
+   "id": "12-23",
+   "madde": [
+    "10",
+    "11"
+   ],
+   "baslik": "Silahla ölüm/yaralama",
+   "hukum": "Silahla ölüme sebebiyet, silahla kasten yaralamaya sebebiyet ve silahla dikkatsizlik/tedbirsizlik/ihmalle yaralamaya sebebiyet fiillerinde işleniş şekli ve zararın derecesine göre meslekten çıkarma verilebilir (m.10/5, 6, 11)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kasten · meslekten çıkarma"
+   ]
+  },
+  {
+   "id": "12-24",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Denetleme ve soruşturmayı savsaklamak",
+   "hukum": "Hizmetin aksamasına veya zarara yol açmışsa dört ay kısa süreli durdurma uygulanabilir (m.10/12)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "dört ay kısa süreli durdurma"
+   ]
+  },
+  {
+   "id": "12-25",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sahil güvenlikte yurt dışı ağırlaştırması",
+   "hukum": "Fiil yurt dışı liman ziyaretinde veya Türk karasuları dışında işlenirse; uyarma-kınamalık fiillerde aylıktan kesme, kısa veya uzun süreli durdurma; aylıktan kesme/durdurmalık fiillerde meslekten çıkarma verilebilir (m.10/13)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Türk karasuları dışında · meslekten çıkarma"
+   ]
+  },
+  {
+   "id": "12-26",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Geçici kontrol altına alma",
+   "hukum": "Jandarmanın terörle mücadele operasyonlarında ve Sahil Güvenliğin seyir hâlindeki gemi ve botlarında komutanlar; kendisine/başkalarına/hizmet eşyasına zarar vereceği açık olanları, ciddi şekilde bozulan disiplini yeniden tesis için ve sarhoşluk süresince kontrol altına alabilir (m.11/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "seyir hâlindeki · ciddi şekilde bozulan disiplini yeniden tesis · sarhoşluk süresince"
+   ]
+  },
+  {
+   "id": "12-27",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kontrol süresi",
+   "hukum": "Yirmi dört saati geçmeyecek şekilde uygulanır; on iki saati geçerse personelin yakınlarına ve tedbiri uygulayan komutanın üstüne en kısa sürede bilgi verilir (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "İki süre yer değiştirilir",
+    "süreler yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Kontrol altına alma 24 saat, bilgi verme eşiği 12 saat (m.11/2)"
+   ]
+  },
+  {
+   "id": "12-28",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kontrol altına alınana ceza",
+   "hukum": "Haklarında disiplin cezası uygulanırken, eyleminin karşılığı ceza üst sınırdaysa veya üst sınırı yoksa bir üst ceza uygulanır (m.11/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bir üst ceza"
+   ]
+  },
+  {
+   "id": "12-29",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Disiplinsizliği alışkanlık hâline getirme (1 yıl)",
+   "hukum": "Son cezanın kesinleştiği tarihten geriye doğru bir yıl içinde yirmi ceza puanı veya en az iki farklı disiplin amirinden toplam on iki defa ve fazlası ceza almak → meslekten çıkarma, yetkili disiplin kurullarınca (m.12/1-a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bir yıl içinde yirmi ceza puanı · en az iki farklı disiplin amirinden toplam on iki defa · meslekten çıkarma"
+   ]
+  },
+  {
+   "id": "12-30",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Disiplinsizliği alışkanlık hâline getirme (5 yıl)",
+   "hukum": "Geriye doğru beş yıl içinde kırk ceza puanı veya en az iki farklı disiplin amirinden toplam yirmi beş defa ve fazlası ceza almak (m.12/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"son on yıl içinde otuz puan\" gibi olmayan kombinasyon verilir"
+   ],
+   "dogrusu": [
+    "beş yıl içinde kırk ceza puanı · en az iki farklı disiplin amirinden toplam yirmi beş defa"
+   ]
+  },
+  {
+   "id": "12-31",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Aynı dosyada çok ceza",
+   "hukum": "Aynı disiplin dosyası kapsamında birden fazla ceza verilirse en yüksek olanın puanı esas alınır (m.12/2). Puan çizelgeleri: EGM için (1) sayılı, Jandarma ve Sahil Güvenlik için (2) sayılı çizelge (m.12/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "en yüksek olanın puanı · (1) sayılı · (2) sayılı"
+   ]
+  },
+  {
+   "id": "12-32",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Disiplin amiri şartı",
+   "hukum": "Disiplin amirinin, ceza verilecek personelden makam, rütbe veya kıdemce büyük olması ve amir konumunda bulunması gerekir (m.13/1). Jandarma ve Sahil Güvenlik için yetkiler (4) sayılı çizelgede, EGM için (3) sayılı çizelgede (m.13/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "makam, rütbe veya kıdemce büyük · amir konumunda · (4) sayılı çizelgede · (3) sayılı çizelgede"
+   ]
+  },
+  {
+   "id": "12-33",
+   "madde": [
+    "13"
+   ],
+   "baslik": "En üst disiplin amirleri",
+   "hukum": "Kaymakam ilçede, vali il teşkilatında en üst disiplin amiridir; vali kaymakama, Bakan ise EGM Müdürü, Jandarma Genel Komutanı, Sahil Güvenlik Komutanı ve valilere göre bir üst disiplin amiridir (m.13/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Kaymakam · vali · vali · Bakan"
+   ]
+  },
+  {
+   "id": "12-34",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Üst amirin yetkisi",
+   "hukum": "Disiplin soruşturması yapma ve ceza verme yetkisi üst disiplin amirleri tarafından da kullanılabilir (m.13/5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "üst disiplin amirleri tarafından da"
+   ]
+  },
+  {
+   "id": "12-35",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Soruşturmacı kim olabilir",
+   "hukum": "Hakkında soruşturma yapılacak kişinin üstü konumunda bir veya birden fazla kişi ya da Bakanlık/EGM/J.Gn.K./S.G.K. müfettişi; gerekirse heyet başkanı hariç astı konumunda heyet üyesi görevlendirilebilir (m.14/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "üstü · müfettişi · heyet başkanı hariç"
+   ]
+  },
+  {
+   "id": "12-36",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Soruşturmacı yetkileri",
+   "hukum": "Bilgi-belge toplama, ifade alma, tanık dinleme, bilirkişi görevlendirme, keşif yapma, hâkim veya savcı kararı gerektirmeyen hâllerde kriminal inceleme yaptırma ve yazışma (m.14/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "hâkim veya savcı kararı gerektirmeyen"
+   ]
+  },
+  {
+   "id": "12-37",
+   "madde": [
+    "14",
+    "15"
+   ],
+   "baslik": "Hısımlık yasağı",
+   "hukum": "Boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları hakkında soruşturmacı görevlendirilemez (m.14/4); disiplin amirleri de bu kişiler hakkında yetkilerini kullanamaz, yetki üst disiplin amirine geçer (m.15/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "eşleri veya ikinci dereceye kadar kan ve kayın hısımları · üst disiplin amirine"
+   ]
+  },
+  {
+   "id": "12-38",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Yetki devredilemez",
+   "hukum": "Disiplin amirliği yetkisi devredilemez (m.15/4). Vekâleten, ikinci görevle veya geçici görevle yürütenler bu görevi yürüttükleri sürece yetkileri kullanır (m.15/2)",
+   "sinavda_boyle_yazarlar": [
+    "yazılı olarak devredilebilir"
+   ],
+   "dogrusu": [
+    "Disiplin amirliği yetkisi devredilemez (m.15/4)"
+   ]
+  },
+  {
+   "id": "12-39",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Jandarma Merkez Disiplin Kurulu",
+   "hukum": "Jandarma Genel Komutanının görevlendireceği en az tuğgeneral rütbesinde bir subayın başkanlığında; Tayin Daire Başkanı, görevlendirilecek bir daire başkanı, Hukuk Hizmetleri Başkanınca görevlendirilecek bir şube müdürü ve Teftiş Kurulu Başkanınca görevlendirilecek bir başmüfettiş (m.19/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "kurul üyeleri arasına \"vali\" konur"
+   ],
+   "dogrusu": [
+    "İl jandarma disiplin kurulu başkanı vali yardımcısıdır (m.19/1-a)"
+   ]
+  },
+  {
+   "id": "12-40",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Jandarma Yüksek Disiplin Kurulu",
+   "hukum": "Jandarma Genel Komutanı veya görevlendireceği genel komutan yardımcısının başkanlığında; Personel Başkanı, Teftiş Kurulu Başkanı, Hukuk Hizmetleri Başkanı ve görevlendirilecek bir başkan (m.19/1-d)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Jandarma Genel Komutanı veya görevlendireceği genel komutan yardımcısının başkanlığında …"
+   ]
+  },
+  {
+   "id": "12-41",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Astsubay üyesi",
+   "hukum": "Astsubayların disiplin işlerinde, Bakanlık ve Jandarma Yüksek Disiplin Kurulları hariç, diğer kurullarda hakkında soruşturma yapılandan daha kıdemli bir astsubay üyeye de yer verilir; yoksa kendisinden sonra en kıdemli astsubay görevlendirilir (m.19/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Bakanlık ve Jandarma Yüksek Disiplin Kurulları hariç · daha kıdemli bir astsubay üyeye"
+   ]
+  },
+  {
+   "id": "12-42",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İl jandarma disiplin kurulunun sınırı",
+   "hukum": "Yüzbaşı ve altı rütbelerdeki personele meslekten çıkarma ve Devlet memurluğundan çıkarma dışındaki cezaları; uzman erbaş, sözleşmeli erbaş ve erlere Devlet memurluğundan çıkarma dışındaki cezaları verebilir (m.20/1-a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "meslekten çıkarma ve Devlet memurluğundan çıkarma dışındaki · Devlet memurluğundan çıkarma dışındaki"
+   ]
+  },
+  {
+   "id": "12-43",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Meslekten çıkarmayı kim verir",
+   "hukum": "Yüzbaşı ve altı rütbeler için Jandarma Genel Komutanlığı Merkez Disiplin Kurulu; binbaşı ve yarbaylar için Jandarma Yüksek Disiplin Kurulu; albaylar için Bakanlık Yüksek Disiplin Kurulu (m.20/1-ç-3, d-1, m.20/2-a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı Merkez Disiplin Kurulu · Jandarma Yüksek Disiplin Kurulu · albaylar için Bakanlık Yüksek Disiplin Kurulu"
+   ]
+  },
+  {
+   "id": "12-44",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Generaller",
+   "hukum": "Generaller hakkında tüm disiplin cezalarını vermeye Bakanlık Yüksek Disiplin Kurulu yetkilidir (m.20/2-b)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "tüm disiplin cezalarını · Bakanlık Yüksek Disiplin Kurulu"
+   ]
+  },
+  {
+   "id": "12-45",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Kesinleşme — il kurulu",
+   "hukum": "İl jandarma disiplin kurulunun meslekten çıkarma dışındaki kararları valinin onayıyla; meslekten çıkarma kararları valinin önerisi + Jandarma Yüksek Disiplin Kurulunun uygun görüşü + Bakanın onayıyla kesinleşir (m.21/1-a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "valinin onayıyla · valinin önerisi + Jandarma Yüksek Disiplin Kurulunun uygun görüşü + Bakanın onayıyla"
+   ]
+  },
+  {
+   "id": "12-46",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Kesinleşme — merkez/eğitim kurulları",
+   "hukum": "Meslekten çıkarma dışındaki kararlar Jandarma Genel Komutanının onayıyla; meslekten çıkarma kararları Jandarma Yüksek Disiplin Kurulunun uygun görüşü + Bakanın onayıyla kesinleşir (m.21/1-b). Yüksek Disiplin Kurulu kararları Bakanın onayıyla kesinleşir (m.21/1-c)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Jandarma Genel Komutanının onayıyla · Jandarma Yüksek Disiplin Kurulunun uygun görüşü + Bakanın onayıyla · Bakanın onayıyla"
+   ]
+  },
+  {
+   "id": "12-47",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Uygun görülmeyen dosyalar",
+   "hukum": "Bakan onayına sunulup uygun görülmeyenler ile uygun görüş verilmeyen dosyalar Bakanlık Yüksek Disiplin Kurulunca kesin karara bağlanır (m.21/2, m.21/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Bakanlık Yüksek Disiplin Kurulunca kesin karara"
+   ]
+  },
+  {
+   "id": "12-48",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Kurul kararı seçenekleri",
+   "hukum": "Disiplin kurulu; ceza verilmesine yer olmadığına, karar verilmesine yer olmadığına, ceza verilmesine yahut kurulun yetkisizliğine karar verebilir (m.27/1). Kararlar gerekçeli yazılır, başkan ve üyelerce imzalanır (m.27/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "karar verilmesine yer olmadığına · kurulun yetkisizliğine · gerekçeli"
+   ]
+  },
+  {
+   "id": "12-49",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Görevden uzaklaştırma",
+   "hukum": "657 sayılı Kanun hükümleri uygulanır; meslekten/memurluktan çıkarma cezası verilenlerden görevi başında kalması sakıncalı görülenler, kararın onaylanarak uygulanmasına kadar uzaklaştırılabilir; ceza daha hafife indirilerek onaylanırsa tedbir derhâl kaldırılır (m.28)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kararın onaylanarak uygulanmasına kadar · derhâl kaldırılır"
+   ]
+  },
+  {
+   "id": "12-50",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Soruşturmaya başlama zamanaşımı",
+   "hukum": "Fiilin disiplin amirince öğrenildiği tarihten itibaren; uyarma, kınama, aylıktan kesme, kısa ve uzun süreli durdurmada bir ay; meslekten çıkarma ve Devlet memurluğundan çıkarmada altı ay içinde soruşturmaya başlanmazsa ceza verme yetkisi düşer (m.29/1)",
+   "sinavda_boyle_yazarlar": [
+    "1 yıl",
+    "3 yıl",
+    "5 yıl",
+    "süreler ceza verme süresiyle karıştırılır"
+   ],
+   "dogrusu": [
+    "Ceza verme zamanaşımı 2 yıl (m.29/2)",
+    "Soruşturmaya başlama 1 ay / 6 ay (m.29/1)"
+   ]
+  },
+  {
+   "id": "12-51",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Zamanaşımının başlangıcı",
+   "hukum": "Tamamlanmış suçlarda işlendiği, kesintisiz suçlarda kesintinin gerçekleştiği, zincirleme suçlarda son suçun işlendiği tarih (m.29/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "işlendiği · kesintinin gerçekleştiği · son suçun işlendiği"
+   ]
+  },
+  {
+   "id": "12-52",
+   "madde": [
+    "29"
+   ],
+   "baslik": "İptalden sonra yeniden değerlendirme",
+   "hukum": "Ceza, fiilin hatalı vasıflandırılması veya düzeltilebilir şekil noksanlığı gerekçesiyle mahkemece iptal edilirse, yetkili kurul/amir kararın tebliğinden itibaren altı ay içinde yeniden değerlendirme yapar (m.29/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "altı ay"
+   ]
+  },
+  {
+   "id": "12-53",
+   "madde": [
+    "30"
+   ],
+   "baslik": "İtiraz süresi",
+   "hukum": "Disiplin amirlerince verilen cezalara karşı tebliğden itibaren on gün içinde, bir üst disiplin amirine yazılı olarak itiraz edilir (m.30/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"7 gün\", \"14 gün\", \"30 gün\"",
+    "7 gün",
+    "14 gün",
+    "30 gün"
+   ],
+   "dogrusu": [
+    "İtiraz 10 gün içinde, bir üst disiplin amirine (m.30/1)"
+   ]
+  },
+  {
+   "id": "12-54",
+   "madde": [
+    "30"
+   ],
+   "baslik": "İtirazın özel mercileri",
+   "hukum": "Vali, Emniyet Genel Müdürü, Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının doğrudan verdiği cezalara karşı Bakanlık Yüksek Disiplin Kuruluna itiraz edilir; Kurulun kararı kesindir. Kaymakamın doğrudan verdiği cezalara karşı valiye itiraz edilir (m.30/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Vali, Emniyet Genel Müdürü, Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının doğrudan verdiği · Bakanlık Yüksek Disiplin Kuruluna · kesindir · Kaymakamın · valiye"
+   ]
+  },
+  {
+   "id": "12-55",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Süresinde itiraz edilmezse",
+   "hukum": "Cezalar kesinleşir (m.30/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kesinleşir"
+   ]
+  },
+  {
+   "id": "12-56",
+   "madde": [
+    "30"
+   ],
+   "baslik": "İtirazın karara bağlanması",
+   "hukum": "Otuz gün içinde karara bağlanır (m.30/2)",
+   "sinavda_boyle_yazarlar": [
+    "15 gün",
+    "60 gün"
+   ],
+   "dogrusu": [
+    "İtiraz 30 gün içinde karara bağlanır (m.30/2)"
+   ]
+  },
+  {
+   "id": "12-57",
+   "madde": [
+    "30"
+   ],
+   "baslik": "İtirazın sonucu",
+   "hukum": "Haklı görülürse merci cezayı hafifletebilir veya tamamen kaldırabilir; haklı görülmezse reddedilir (m.30/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"haklı görülürse cezayı kaldırır\" denip \"hafifletebilir\" seçeneği yok sayılır — metin ikisini de sayar",
+    "sadece kaldırır",
+    "ağırlaştırabilir"
+   ],
+   "dogrusu": [
+    "İtirazı inceleyen merci cezayı hafifletebilir veya kaldırabilir (m.30/3)"
+   ]
+  },
+  {
+   "id": "12-58",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Aleyhe değiştirme yasağı",
+   "hukum": "İtiraz üzerine önceki cezadan daha ağır ceza verilemez (m.30/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "önceki cezadan daha ağır ceza verilemez"
+   ]
+  },
+  {
+   "id": "12-59",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Yargı yolu",
+   "hukum": "Bakan ile disiplin kurullarının verdiği cezalara karşı ancak idari yargı yoluna başvurulabilir (m.30/5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Bakan ile disiplin kurullarının · ancak idari yargı"
+   ]
+  },
+  {
+   "id": "12-60",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Savunmasız ceza olmaz",
+   "hukum": "Disiplin amirleri veya kurulları tarafından savunma alınmadan disiplin cezası verilemez (m.31/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "savunma alınmadan disiplin cezası verilemez"
+   ]
+  },
+  {
+   "id": "12-61",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Savunma süresi",
+   "hukum": "Savunma için verilen süre yedi günden az olamaz; süresinde savunma yapmayan savunma hakkından vazgeçmiş sayılır (m.31/2)",
+   "sinavda_boyle_yazarlar": [
+    "3 gün",
+    "en çok 7 gün"
+   ],
+   "dogrusu": [
+    "Savunma süresi 7 günden az olamaz (m.31/2)"
+   ]
+  },
+  {
+   "id": "12-62",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Evrak inceleme",
+   "hukum": "Personel, savunma istenmesinden itibaren soruşturma evrakını inceleme hakkına sahiptir (m.31/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "savunma istenmesinden itibaren"
+   ]
+  },
+  {
+   "id": "12-63",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Vekille savunma",
+   "hukum": "Meslekten çıkarma veya Devlet memurluğundan çıkarma cezası istenen personel; evrak inceleme, tanık dinletme, kurulda sözlü veya yazılı olarak kendisi veya vekili vasıtasıyla savunma hakkına sahiptir (m.31/4)",
+   "sinavda_boyle_yazarlar": [
+    "kınama cezasında da vekil tutulabilir"
+   ],
+   "dogrusu": [
+    "Vekille savunma meslekten/memurluktan çıkarmada (m.31/4)"
+   ]
+  },
+  {
+   "id": "12-64",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Dava açma süresinin başlangıcı",
+   "hukum": "Kesinleşen cezanın tebliğinden başlar; Sahil Güvenliğin seyir hâlindeki gemi ve botlarında verilen cezalarda geminin bağlı olduğu üsse veya limana dönmesiyle başlar (m.32/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "tebliğinden · seyir hâlindeki · geminin bağlı olduğu üsse veya limana dönmesiyle"
+   ]
+  },
+  {
+   "id": "12-65",
+   "madde": [
+    "33"
+   ],
+   "baslik": "İnfaz zamanı",
+   "hukum": "Cezalar kesinleşmesini müteakip yerine getirilir; aylıktan kesme, kesinleşme tarihini takip eden ay başında uygulanır (m.33/1-2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kesinleşmesini müteakip · aylıktan kesme · ay başında"
+   ]
+  },
+  {
+   "id": "12-66",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Bildirim",
+   "hukum": "Verilen cezalar üst disiplin amirine; meslekten çıkarma ve Devlet memurluğundan çıkarma ayrıca Devlet Personel Başkanlığına bildirilir (m.33/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "üst disiplin amirine · Devlet Personel Başkanlığına"
+   ]
+  },
+  {
+   "id": "12-67",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Boşluk doldurma",
+   "hukum": "Bu Kanunda hüküm bulunmayan hâllerde 657 sayılı Kanunun disipline ilişkin hükümleri uygulanır; 657'deki kademe ilerlemesinin durdurulması, bu Kanundaki uzun süreli durdurma gibi telakki edilir (m.34/1-2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "657 sayılı Kanunun disipline ilişkin hükümleri · kademe ilerlemesinin durdurulması · uzun süreli durdurma"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

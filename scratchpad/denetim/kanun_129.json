@@ -1,0 +1,77 @@
+{
+ "kanun_id": 129,
+ "ad": "TSK, JGK ve SGK Besleme Kanunu Uygulama Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_129.json",
+ "kartlar": [
+  {
+   "id": "129-0",
+   "madde": [
+    "1",
+    "2",
+    "11"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar",
+   "hukum": "5668'in uygulanma usul ve esasları (m.1); Genelkurmay, Kara-Deniz-Hava, JGK ve SGK'yı kapsar (m.2); dayanak 5668 m.11 (m.3); tanımlar: ara öğün; askerî personel (sözleşmeli erbaş-er dâhil); birleştirilmiş günlük besleme bildirim çizelgesi (birliklerin çizelgelerinin personel birimince birleştirilip mal saymanlığına/beslenme birimine gönderilen, günlük yemek çizelgesine esas belge); günlük besleme bildirim çizelgesi (personel birimine gönderilen); hayvan besleme çizelgeleri; günlük yem bedeli (Hayvanların Beslenmesine Dair Yönetmelikteki üst miktar); güçlendirilmiş yemek bedeli %25; günlük yemek bedeli; günlük yemek çizelgesi (denetime bağlı tüketim belgesi); günlük yemek çizelge özeti; kazandan besleme; özel günler için günlük yemek bedeli: %50 fazlasına kadar; tayın bedeli; TSK (Kara, Deniz, Hava); bedelen besleme (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Günlük yemek çizelgesi bildirim belgesidir\" yanlış; denetime bağlı tüketim belgesi"
+   ],
+   "dogrusu": [
+    "ara öğün · birleştirilmiş günlük besleme bildirim çizelgesi · günlük besleme bildirim çizelgesi · günlük yem bedeli · güçlendirilmiş yemek bedeli %25 · günlük yemek çizelgesi · günlük yemek çizelge özeti · özel günler için günlük yemek bedeli: %50 fazlasına kadar · bedelen besleme"
+   ]
+  },
+  {
+   "id": "129-1",
+   "madde": [
+    "7",
+    "5",
+    "6"
+   ],
+   "baslik": "Beslemeye dâhil edilecekler, kesinti istisnaları, kesinti",
+   "hukum": "Kazandan beslenenler 5668 m.7 listesiyle aynı (askerî öğrenciler, erbaş-erler, tutuklu-hükümlü-gözaltındakiler, disiplin cezalılar, harp esirleri-mülteci yabancı askerler, anlaşma/MSB (JGK-SGK için İçişleri) onaylı yabancı öğrenciler, Komutan onayıyla kadro dışı görev yapanlar, HHO aday öğrencileri ve sınav adayları, toplu beslenmesi uygun görülenler, nöbetçiler, yurt dışı birlikler, ön sözleşmeli subay-astsubaylar, sözleşmeli erbaş-erler, doğal afet görevlileri) (m.5); kesinti yapılmayanlar: nöbetçiler; savaş, iç güvenlik harekâtı, sınır ötesi harekât, yüzer birlik personeli; 500 sayılı Kanuna tabi (Kıbrıs) birlik personeli; harcırahsız Özel Kuvvetler personeli; komando-dağ-paraşüt-SAT-SAS-derin su dalgıcı eğitim ve kursu eğitici-kursiyerleri; meskûn mahal dışında 24 saatten uzun ayrılamayan EK-1 listesindeki birlik personeli (hava radar kıta komutanlıkları, HAWK batarya komutanlıkları, deniz/sahil gözetleme karakol komutanlıkları, hudut birlik komutanlıkları); EK-1 listesine ekleme-çıkarmaya ilgisine göre MSB veya İçişleri Bakanı yetkili, değişiklikler 1 ay içinde Hazine ve Maliye Bakanlığına bildirilir (m.6); tayın bedeli/yemek yardımı karşılığı beslenenler: tutuklu-gözaltı, disiplin cezalı, toplu beslenmesi uygun görülen birlik personeli, yurt dışı birlik personeli; toplu beslenmesi uygun görülen personel Kuvvet/JGK/SGK Komutanı veya yetkilendirdiği makamın onayıyla beslemeye dâhil (m.7); kesintilerde Beslenme Bedellerinin Uygulanmasına Dair Yönetmelik (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"EK-1 listesine ekleme HMB'ce\" yanlış; MSB/İçişleri Bakanı, HMB'ye bildirilir",
+    "EK-1 listesini HMB değiştirir"
+   ],
+   "dogrusu": [
+    "MSB/İçişleri Bakanı; HMB'ye bildirim (m.6)"
+   ]
+  },
+  {
+   "id": "129-2",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Günlük yemek/yem bedeli ve uygulama esasları",
+   "hukum": "Günlük yemek bedeli ölçüt tablosu fiyatlandırması + %5 tatlandırıcı; MSB/İçişleri'nce tespit edilen görev koşullarında hazır yemek, kumanya veya yalnız kıt'a yükü demirbaş erzak yedirilen günlerde bedel farkı dikkate alınmaz; kıt'a yükü konserveler istihkakı aşmamak koşuluyla değişim hükümleriyle (m.9); günlük yem bedeli hayvan yönetmeliğine göre yem maddelerinin fiyatlandırılmasıyla (m.10); uygulama esasları: birim fiyatlarda birliğe mal oluş fiyatları esas; kuru baklagil-yaş sebze-taze meyve çeşitleri müşterek yönergede; ilgili ay fiyatı belirlenemezse son bir yıl içindeki en son tedarik fiyatı, o da yoksa MSB'nin aylık birim fiyatları; yurt dışında satın alma fiyatı, belirlenemezse piyasa araştırması tutanağı; günlük yemek bedeli tespitinde sabah için bildirilen mevcut × günlük tutarın 1/5'i, öğle ve akşam için 2/5'i ayrı ayrı hesaplanır; sarf edilirken öğün bazı dikkate alınmaz, toplam tutarı aşmamak üzere; artan değer sonraki güne aktarılmaz; yem bedelinde birliğe mal oluş, fiyatı belirlenemeyen yemlerde MSB tahmini fiyatları; aynı tür hayvanın farklı beslenme sınıfları çizelgede gösterilir, toplam tutar sınıflara bakılmaksızın harcanabilir; güçlendirilmiş yemekle beslenecekler (savaş-harekât, doğal afet arama-kurtarma, terörle yoğun mücadele iç güvenlik harekâtı ve eğitimleri, yoğun beden hareketi görev-eğitimleri, spor takımı kampları) — Kuvvetler için Genelkurmay önerisiyle MSB, JGK-SGK için İçişleri Bakanı onayı; hem normal hem güçlendirilmiş beslenen varsa her bedel için ayrı çizelge; bayramlar: 23 Nisan, 19 Mayıs, 30 Ağustos, 29 Ekim, Ramazan ve Kurban Bayramlarının her günü ve yılbaşında özel günler bedeliyle çizelge; toplu sıcak yemek yapılamazsa kumanya; birden fazla mutfakta günlük yemek çizelge özeti; gelenler için ek günlük besleme bildirim çizelgesi ve ek günlük yemek çizelgesi, gidenlerin işlenmemiş gıdası kiler fazlalığı; içme suyunun bulunmaması, sağlığı tehdit etmesi, iç güvenlik harekâtı, bayram tören ve provaları, doğal afet gibi zorunlu nedenlerle Komutan onayıyla kişi başı günlük 3 litreye kadar ambalajlı su (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bayramda güçlendirilmiş yemek bedeli uygulanır\" yanlış; özel günler bedeli (%50 fazlası)",
+    "Günlük yemek bedelinde öğünler eşit hesaplanır",
+    "Fiyat belirlenemezse doğrudan MSB fiyatı kullanılır"
+   ],
+   "dogrusu": [
+    "1/5, 2/5, 2/5 (m.11)",
+    "Önce son bir yıl en son tedarik fiyatı (m.11)"
+   ]
+  },
+  {
+   "id": "129-3",
+   "madde": [
+    "12",
+    "13",
+    "14"
+   ],
+   "baslik": "Bedelen besleme, satın alma, temizlik, demirbaş erzak, düzenleme",
+   "hukum": "Bedelen beslenen birliklerde erbaş-erlerin dengeli beslenmesi için bedelen besleme heyeti kurulur; heyet başkan, muhasip, mutemet ve ihtiyaç duyulan diğer üyelerden (m.12); tayın bedelinin kullanılmayan kısmı ay sonunda hak sahibine iade (m.13); yemek hizmeti satın almada TSK'da Satın Alınacak Yemek Hizmeti Uygulamalarına Dair Yönetmelik (m.14); temizlik maddeleri için Temizlik Maddeleri Kullanım Esasları Yönetmeliği (m.15); kıt'a yükü demirbaş erzak ve barış stok seviyesi için Savaş Şartları ile Olağanüstü Durumlarda Besleme Desteği Yönetmeliği (m.16); Kuvvetler, JGK ve SGK yönerge hazırlar; askerlik şubeleri, jandarma karakolları ve ayrı bölgedeki birlik personeli en yakın askerî birlikçe beslenir, destek veren birlik güçlendirilmiş yemekle besleniyorsa alan birlik de aynı esasla; gıda kalitesi ve hijyen kontrolü için laboratuvar ve hijyen denetim desteği TSK/JGK/SGK gıda kontrol teşkillerince; uygulamadaki tereddütleri MSB ve İçişleri Bakanlığı giderir (m.17, 17/A); 1/1/2008'den geçerli (m.18); MSB ve İçişleri Bakanı birlikte yürütür (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hijyen denetimi Sağlık Bakanlığınca\" yanlış; kuvvetlerin gıda kontrol teşkilleri",
+    "Artan tayın bedeli ertesi aya devreder"
+   ],
+   "dogrusu": [
+    "Ay sonunda iade (m.13)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

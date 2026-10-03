@@ -1,0 +1,120 @@
+AD: Adli ve Önleme Aramaları Yönetmeliği
+====================================================================================================
+#0 id=56-0 madde=['4'] baslik=Tanımlar
+HUKUM: Gece vakti: güneşin batmasından 1 saat sonra başlayıp doğmasından 1 saat evvele kadar; kolluk: jandarma, polis, sahil güvenlik ve gümrük muhafaza görevlileri; mülkî amir: illerde vali veya yetkilendirdiği yardımcısı, ilçelerde kaymakam; hâkim: yetkili sulh ceza hâkimi; el koyma: rızası olmamasına rağmen zilyedin tasarruf yetkisinin kaldırılması; koruma altına alma: eşyayı zilyedin kendiliğinden vermesi veya el konulana kadar geçici alıkoyma; suçüstü: işlenmekte olan suç, hemen sonra takip edilerek yakalananın suçu, pek az önce işlendiğini gösteren eşya/delille yakalananın suçu (m.4)
+TUZAK_SATIRI: "Kolluk = yalnız polis ve jandarma" yanlış; sahil güvenlik ve gümrük muhafaza da
+MEVCUT_DOGRUSU: ['Kolluk: jandarma, polis, sahil güvenlik ve gümrük muhafaza görevlileridir (m.4)']
+====================================================================================================
+#1 id=56-1 madde=['5'] baslik=Adli arama tanımı ve makul şüphe
+HUKUM: Adli arama: suç işlemek/iştirak/yataklık makul şüphesi altındaki kimsenin, saklananın, şüphelinin, sanığın veya hükümlünün yakalanması ve delil elde edilmesi için konut, iş yeri, üst, özel kâğıt, eşya ve araçta CMK'ya göre yapılan araştırma (m.5)
+TUZAK_SATIRI: "Adli arama suç işlenmesini önlemek için yapılır" yanlış; o önleme araması
+MEVCUT_DOGRUSU: ['Adli arama, makul şüphe altındaki kişinin yakalanması ve suç delillerinin elde edilmesi için yapılır; suçu önlemeye yönelik olan önleme aramasıdır (m.5, m.19)']
+====================================================================================================
+#2 id=56-3 madde=['7'] baslik=Adli aramada karar ve emir yetkisi
+HUKUM: Karar yetkisi hâkimindir; kolluk makul şüphe sebeplerini belirten gerekçeli rapor hazırlayıp savcıya başvurur; hâkim kararı veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının, savcıya ulaşılamayan hâllerde kolluk amirinin yazılı emriyle arama yapılabilir; kolluk amiri emriyle aramada neden savcıya ulaşılamadığını gösteren ayrıntılı tutanak düzenlenir; kolluk amirleri konutta, iş yerinde ve kamuya açık olmayan kapalı alanlarda arama kararı veremez — buralarda ancak hâkim kararı veya gecikmesinde sakınca hâlinde savcının yazılı emri; kolluk amirinin yazılı emriyle yapılan arama ve sonuçları Cumhuriyet başsavcılığına derhâl bildirilir; başsavcılıklar arama kararları için 24 saat nöbetçi savcı görevlendirir (m.7)
+TUZAK_SATIRI: "Adli aramaya karar verme yetkisi savcı ve kolluk amirindedir" yanlış; hâkimindir, diğerleri istisnaî emir
+MEVCUT_DOGRUSU: []
+  TZ-Y: Kolluk amiri savcıya ulaşamazsa iş yerinde yazılı emirle arama yapabilir
+  TZ-D: Yapamaz; konut, iş yeri, kapalı alan hâkim/savcı (m.7)
+  TZ-Y: Kolluk amirinin emriyle yapılan arama sulh ceza hâkimliğine bildirilir
+  TZ-D: Cumhuriyet başsavcılığına (m.7)
+====================================================================================================
+#3 id=56-5 madde=['9', '8'] baslik=Karar/emir gerektirmeyen adli aramalar
+HUKUM: (a) tutuklama kararı, yakalama emri, zorla getirme kararı olan kişi yakalandığında üstünde (konut/iş yeri kısmı Danıştay'ca iptal); (b) yakalanan kişinin kendine/başkasına/kolluğa zarar vermesini önlemek için kaba üst araması; (c) gözaltına alınanın nezarethaneye konmadan önce üst araması; (d) yakalandıktan sonra kaçan veya suçüstü failinin takibi sırasında girdiği araç, bina ve eklentilerinde yakalanması için arama; (e) gümrük salonu ve kapılarında ve yasak gümrük bölgesinde 5607 m.9 kapsamında gümrük görevlilerince arama; (f) TCK 24-26 hukuka uygunluk sebepleri ve suçüstü hâlinde, hayati tehlikeyi ortadan kaldırmak veya kapalı yerden gelen yardım çağrısı üzerine konut, iş yeri ve eklentilerine girme (m.8)
+TUZAK_SATIRI: "Yakalama emri olan kişinin konutu karar olmadan aranır" ibaresi Danıştay'ca iptal; üstü aranır
+MEVCUT_DOGRUSU: ["Yakalama emri veya tutuklama kararı olan kişi yakalandığında karar aranmaksızın yalnız üstü aranır; konut, iş yeri ve araçta arama ibaresi Danıştay'ca iptal edilmiştir (m.8/a)"]
+====================================================================================================
+#4 id=56-6 madde=['7', '9'] baslik=Olay yeri incelemesi
+HUKUM: Herkesin girip çıkabileceği kamuya açık alanlarda olay yeri inceleme için emir veya karar gerekmez; diğer yerlerde m.7'ye göre hâkim, gecikmesinde sakınca hâlinde savcı, savcıya ulaşılamazsa (konut, iş yeri ve kapalı alan dışında) kolluk amirinin yazılı emri (m.9)
+TUZAK_SATIRI: "Olay yeri incelemesi her yerde kararsız yapılır" yanlış
+MEVCUT_DOGRUSU: ['Yalnız kamuya açık alanlarda olay yeri incelemesine karar gerekmez; diğer yerlerde hâkim, savcı veya kolluk amirinin emri gerekir (m.9)']
+  TZ-Y: Kolluk amiri savcıya ulaşamazsa iş yerinde yazılı emirle arama yapabilir
+  TZ-D: Yapamaz; konut, iş yeri, kapalı alan hâkim/savcı (m.7)
+  TZ-Y: Kolluk amirinin emriyle yapılan arama sulh ceza hâkimliğine bildirilir
+  TZ-D: Cumhuriyet başsavcılığına (m.7)
+====================================================================================================
+#5 id=56-7 madde=['10'] baslik=Aramada tesadüfen elde edilen delil
+HUKUM: Kararda konu edilmeyen ama soruşturmayla ilgili ya da başka bir suçun şüphesini uyandıran delil bulunursa koruma altına alınır, durum başsavcılığa derhâl bildirilip yeni yazılı emir istenir; savcıya ulaşılamazsa kolluk amirinin yazılı emriyle el konur; hâkim kararı olmayan el koyma 24 saat içinde hâkim onayına sunulur, hâkim 48 saat içinde açıklar, yoksa el koyma kendiliğinden kalkar; aramada haklarında yakalama/tutuklama kararı olan kişiler evrakıyla başsavcılığa sevk edilir (m.10)
+TUZAK_SATIRI: "Tesadüfen bulunan delile doğrudan el konur" yanlış; koruma altına alınır, yeni emir
+MEVCUT_DOGRUSU: ['Aramada tesadüfen bulunan delile doğrudan el konmaz; koruma altına alınır, başsavcılığa derhal bildirilip yeni yazılı emir istenir (m.10)']
+====================================================================================================
+#6 id=56-8 madde=['11', '20'] baslik=Arama tutanağı
+HUKUM: Karar/emrin tarih-sayısı ve emri veren merci, yer-tarih-saat, konu, aranan kişinin kimliği (söylemezse eşkâl), araç plakası/konut adresi/deniz aracı bilgileri, sonuçlar ve el konulan eşya, yakalananlar, yaralanma veya maddî zarar olup olmadığı, arama yapanların ad-soyad-sicil-unvanı yazılır; katılanlar ve hazır bulunanlar imzalar; bir sureti ilgiliye verilir; kaçakçılık tutanakları 5607 m.11 ve 20'ye göre (m.11)
+TUZAK_SATIRI: "Tutanak sureti yalnız savcılığa verilir" yanlış
+MEVCUT_DOGRUSU: ['Arama tutanağını katılanlar ve hazır bulunanlar imzalar; tutanağın bir sureti ilgiliye verilir (m.11)']
+====================================================================================================
+#7 id=56-9 madde=['13'] baslik=Avukat bürosunda arama
+HUKUM: Cumhuriyet savcısı hazır olmaksızın avukat bürosunda arama yapılamaz; ancak mahkeme kararı ile, kararda belirtilen olayla ilgili ve savcının denetiminde aranır; baro başkanı veya temsilcisi hazır bulundurulur; el konulmasına karar verilen şeyin avukat-müvekkil ilişkisine ait olduğu öne sürülürse ayrı zarf/pakete konup mühürlenir, karar için soruşturmada sulh ceza hâkiminden, kovuşturmada mahkemeden istenir; hâkim mesleki ilişkiye ait bulursa derhâl iade edilir, tutanaklar ortadan kaldırılır; bu kararlar 24 saat içinde verilir (m.13)
+TUZAK_SATIRI: "Savcı avukat bürosu arama emri verebilir" yanlış
+MEVCUT_DOGRUSU: []
+  TZ-Y: Avukat bürosunda kesinlikle arama yapılamaz
+  TZ-D: Mahkeme kararıyla, savcı hazır, baro temsilcisi ile yapılır (m.13)
+====================================================================================================
+#8 id=56-10 madde=['60', '15'] baslik=El koyma yetkisi
+HUKUM: Hâkim kararı, gecikmesinde sakınca hâlinde savcının, savcıya ulaşılamazsa kolluk amirinin yazılı emri ile el konabilir; ispat aracı veya müsadere konusu değerler koruma altına alınır; rızayla teslim edilmezse el konur; yanında bulunduran talep üzerine göstermek ve teslim etmekle yükümlü; eşya bulunamaz ve zilyet teslimden kaçınırsa (şüpheli/sanık/tanıklıktan çekinebilecekler hariç) CMK m.60 disiplin hapsi için başsavcılığa bildirilir (m.15)
+TUZAK_SATIRI: "Şüpheliye de disiplin hapsi uygulanır" yanlış
+MEVCUT_DOGRUSU: ['Disiplin hapsi için başsavcılığa bildirim, şüpheli veya sanık ile tanıklıktan çekinebilecekler dışındaki zilyet hakkında yapılır (m.15)']
+====================================================================================================
+#9 id=56-11 madde=['16'] baslik=Belge ve kâğıtları inceleme
+HUKUM: Hakkında arama yapılan kimsenin belge ve kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime aittir; kolluk suçla ilgisi olup olmadığını anlamak için incelemeksizin bakabilir; şüphelenirse ambalajlayıp mühürler, zilyet ya da temsilcisi kendi mührünü koyabilir veya imzasını atabilir; mühür kaldırma ve incelemede zilyet, temsilci, müdafi veya vekil hazır bulunmak üzere çağrılır; suçla ilgisiz belgeler ilgilisine geri verilir; şüpheli veya sanık ile CMK m.45 ve 46'ya göre tanıklıktan çekinebilecek kimseler arasındaki mektup ve belgelere, bu kimselerin nezdinde bulundukça el konulamaz (m.16)
+TUZAK_SATIRI: "Kolluk arama sırasında bulduğu belgeleri inceler" yanlış
+MEVCUT_DOGRUSU: ['Belgeleri inceleme yetkisi savcı ve hâkimindir; kolluk yalnız incelemeksizin bakar, şüphelenirse ambalajlayıp mühürler (m.16)']
+====================================================================================================
+#10 id=56-12 madde=['18'] baslik=Kolluğun kendiliğinden yapabileceği denetimler
+HUKUM: Umuma açık istirahat ve eğlence yerleri (otel, pansiyon, gazino, bar, kahvehane, internet kafe, elektronik oyun yerleri, taşıtlardaki bu tür yerler) genel güvenlik ve asayiş yönünden; kumar oynanan yerler, uyuşturucu imal/satış yerleri, mevzuata aykırı genelev ve fuhuş yerleri, bölünmez bütünlüğe/genel ahlâka zararlı gösteri yerleri, ihtara rağmen umuma açık hâle gelen dernek-sendika lokalleri; müstehcen eser üreten-satan yerler; 18 yaşından küçük çalıştıran veya giren içkili yer ve oyun yerleri; suç önlemek için kimlik sorma; 1774 sayılı Kanun yerlerinin denetimi; trafik belgeleri ve araçta bulunması gerekli eşya; su üstü ve deniz araçları belgeleri; elektromanyetik aygıt ve dedektör köpeği ile tarama; TCK 183 gürültü yapanların men'i; hudut kapılarında pasaport denetimi (m.18)
+TUZAK_SATIRI: "Kahvehane denetimi için mülkî amir emri gerekir" yanlış; kolluk kendiliğinden
+MEVCUT_DOGRUSU: ['Kahvehane, otel, bar gibi umuma açık istirahat ve eğlence yerlerini kolluk genel güvenlik ve asayiş yönünden kendiliğinden denetleyebilir (m.18/a)']
+====================================================================================================
+#11 id=56-13 madde=['19'] baslik=Önleme araması — amaç ve yerler
+HUKUM: Millî güvenlik, kamu düzeni, genel sağlık ve genel ahlâk, başkalarının hak ve hürriyetlerinin korunması; suç işlenmesinin önlenmesi; yasak silah, patlayıcı ve eşyanın tespiti amacıyla hâkim kararı veya gecikmesinde sakınca hâlinde mülkî amirin yazılı emriyle yapılır; yerler: 2911 kapsamındaki toplantı ve gösteri yürüyüşü yeri ve yakın çevresi; özel hukuk tüzel kişileri, meslek kuruluşları ve sendikaların genel kurul toplantı yerinin yakın çevresi; halkın topluca bulunduğu veya toplanabileceği yerler; rektör (acele hâlde dekan) kolluktan yardım isterse üniversite ve eğitim kurumları ile çevresi; umumî ve umuma açık yerler ile öğrenci yurtları; yerleşim yerlerinin giriş ve çıkışları; her türlü toplu taşıma veya seyreden taşıt; kaçakçılığı önlemek için ticarethane, iş yeri, eğlence yerleri; 6222 kapsamında spor müsabakası öncesi-esnası-sonrası spor alanı çevresi ve güzergâh; 5253 kapsamında derneklerde; konutta, yerleşim yerinde ve kamuya açık olmayan özel iş yerlerinde önleme araması yapılamaz (m.19)
+TUZAK_SATIRI: "Üniversitede kolluk kendiliğinden önleme araması yapar" yanlış; rektör/dekan yardım isteyince
+MEVCUT_DOGRUSU: []
+  TZ-Y: Konutta önleme araması yapılabilir
+  TZ-D: Yapılamaz (m.19)
+====================================================================================================
+#12 id=56-14 madde=['20'] baslik=Önleme araması usulü
+HUKUM: Kolluk makul sebeplerin oluştuğunu ve tehlikeyi gösteren belirlemeleri önceden tespit edip önerilen yer ve zamanla birlikte mülkî amire gerekçeli ve yazılı iletir; mülkî amir uygun bulursa hâkimden karar ister, gecikmesinde sakınca varsa yazılı emir verir; talep, emir ve kararlarda sebep, konu ve kapsam, yer, geçerli olacağı süre yazılır; hâkim kararına karşı mülkî amir kanun yollarına başvurabilir; usulüne uygun karar/emir üzerine yetkili amirin kolluk memurlarına vereceği sözlü emirler derhâl yerine getirilir, yazılı istenemez, sorumluluk emri verene aittir (m.20)
+TUZAK_SATIRI: "Önleme araması emrini kolluk amiri verir" yanlış; mülkî amir (veya hâkim)
+MEVCUT_DOGRUSU: []
+  TZ-Y: Önleme araması emrini kolluk amiri verir
+  TZ-D: Mülkî amir veya hâkim (m.20)
+====================================================================================================
+#13 id=56-15 madde=['21'] baslik=Özel güvenlik görevlilerinin yetkileri
+HUKUM: Koruduğu alana girmek isteyenleri duyarlı kapıdan geçirme, üstlerini dedektörle kontrol, eşyayı X-ray'den geçirme; toplantı, konser, spor müsabakası, sahne gösterisi, cenaze ve düğün törenlerinde kimlik sorma + duyarlı kapı + dedektör + X-ray; yangın, deprem gibi afetlerde ve imdat istenmesi hâlinde görev alanındaki iş yeri ve konutlara girme; hava meydanı, liman, gar, istasyon ve terminallerde kimlik sorma, duyarlı kapı, dedektör, X-ray (m.21)
+TUZAK_SATIRI: "Özel güvenlik görevlisi elle üst araması yapabilir" yanlış
+MEVCUT_DOGRUSU: ['Özel güvenlik görevlisi duyarlı kapıdan geçirme, dedektörle üst kontrolü ve X-ray ile eşya kontrolü yapabilir; yetkileri bunlarla sayılıdır (m.21)']
+====================================================================================================
+#14 id=56-16 madde=['Ek 1', '79', '25'] baslik=Karar/emir gerektirmeyen önleme aramaları
+HUKUM: Kamu hizmetine özgülenmiş bina ve tesislere girişin kurala bağlandığı hâllerde girenlerin üst-eşya-araç araması; 5442 sayılı Kanun ek 1 kapsamında sivil hava meydanları, limanlar ve sınır kapılarında X-ray ve gerektiğinde üst-eşya araması (personel dahil); OHAL Valisinin emriyle 2935 kapsamında; sıkıyönetim komutanının emriyle 1402 kapsamında; muhafaza altına alınabilen kişilerin üst-eşya araması; 298 sayılı Kanun m.79 seçim günü silah taşıma yasağı kapsamında şüphelenilen kişilerin araması; umuma açık veya açık olmayan özel işletmelerin girişindeki kontroller girmek isteyenin rızasına bağlıdır, kabul etmeyen giremez; kontrol esasta özel güvenlik tarafından, gerekirse kolluk da yapabilir (m.25)
+TUZAK_SATIRI: "AVM girişinde kontrolü reddeden kişi zorla aranır" yanlış; içeri alınmaz
+MEVCUT_DOGRUSU: ['Özel işletme girişindeki kontrol rızaya bağlıdır; kontrolü kabul etmeyen zorla aranmaz, içeri giremez (m.25)']
+====================================================================================================
+#15 id=56-17 madde=['27'] baslik=Durdurma ve yoklama (kaba üst kontrolü)
+HUKUM: Kolluk kişi ve araçları suç/kabahat önlemek, kaçan faili yakalamak ve kimlik tespit etmek, yakalama emri/zorla getirme kararı olanları tespit etmek, hayat-vücut-malvarlığı veya topluma yönelik tehlikeyi önlemek amacıyla durdurabilir; bunun için "umma" derecesinde makul şüphe gerekir; somut emare olmadan süreklilik ve keyfilik oluşturacak durdurma yapılamaz; kolluk kimliğini gösterip durdurma sebebini bildirir, soru sorabilir, kimlik ve belge isteyebilir; kişi kimliğe ilişkin olanlar hariç soruları cevaplamak zorunda değil; şüphe kalkınca gitmesine izin verilir; durdurma süresi işlem için zorunlu süreyi aşamaz; durdurulan kişi üzerinde giysi çıkarılmaksızın yoklama biçiminde kontrol yapılır; silah şüphesi doğarsa memur kendiliğinden silah ve suç eşyası araması yapabilir; yoklama aynı cinsiyetten görevlice, ilk durdurulan yerde veya yakınında, başkalarının göremeyeceği tarzda; başka yere götürülerek yapılamaz; talep üzerine tutanak düzenlenir; elbisenin çıkarılması veya aracın içi görünmeyen bölümlerinin açılması istenemez — bunların aranması ancak mülkî amirin görevlendireceği kolluk amirinin yazılı (acele hâlde sözlü, sonradan yazılı teyit) emriyle yapılabilir; emirde sebep, konu-kapsam, yer-tarih-süre, kişinin kimliği ve aracın plaka-marka-modeli yazılır; kolluk amirinin kararı 24 saat içinde hâkim onayına sunulur; araç aramasında kişiye gerekçeli belge verilir; gece de yapılabilir (m.27)
+TUZAK_SATIRI: "Durdurulan kişi tüm soruları cevaplamak zorundadır" yanlış; yalnız kimlik
+MEVCUT_DOGRUSU: []
+  TZ-Y: Durdurulan kişi tüm sorulara cevap vermek zorundadır
+  TZ-D: Yalnız kimliğe ilişkin olanlara (m.27)
+  TZ-Y: Bagajın açılması yoklama kapsamındadır
+  TZ-D: Kolluk amirinin yazılı emri gerekir (m.27)
+====================================================================================================
+#16 id=56-18 madde=['28'] baslik=Üst ve eşya araması usulü
+HUKUM: Önce kaçma ve saldırıyı engelleyecek güvenlik tedbiri; kolluk kimliğini gösterir; üst araması aynı cinsiyetten görevlice; aramanın konusu ve sebebi ilgiliye açıklanır; eşya mümkünse elektromanyetik cihazla, değilse beş duyu ile aranır; direnirse orantılı güç; ilk durdurulan yerde veya yakınında, başkalarının göremeyeceği tarzda, başka yere götürülemez (kolluk aracı/yakın kapalı yer kullanılabilir); özel kâğıt ve zarflar müsadereye tabi eşya ihtimali dışında açılmaz, açıksa okunamaz; giysiler çıkarılarak arama ancak makul şüphe ve başka yolla amaca ulaşılamaması hâlinde: en üst kolluk amiri gerekçeyi bildirir, aynı cinsiyet, kimsenin görmeyeceği tedbir, önce üst giysiler, üst giyildikten sonra alt giysiler çıkarttırılır, bedene dokunulmaz, en kısa sürede; delil bulunursa kişi yakalanır; gece de yapılabilir (m.28)
+TUZAK_SATIRI: "Üst araması için kişi karakola götürülür" yanlış; yerinde
+MEVCUT_DOGRUSU: ['Üst araması ilk durdurulan yerde veya yakınında yapılır; kişi başka yere götürülemez, kolluk aracı veya yakın kapalı yer kullanılabilir (m.28)']
+====================================================================================================
+#17 id=56-20 madde=['30'] baslik=Konut ve kapalı yerde arama usulü
+HUKUM: Yakalama emri/tutuklama/zorla getirme kararı olan kişinin yakalanması için ayrıca arama kararı gerekmediğine dair birinci fıkra Danıştay'ca iptal edilmiştir; kolluk güvenlik önlemi alıp kapıyı çalar, izin vermeye yetkili kişiyle iletişim kurmaya çalışır; yerin konut olarak kullanılmadığı biliniyorsa, kimsenin olmadığı anlaşılıyorsa veya bilgilendirme delil karartmasına ya da tehlikeye yol açacaksa iletişim kurmadan girilir; kapı açılmazsa güç kullanılacağı ihtar edilir, açılmazsa zorla girilir, güç kademeli artar; kasa kollukça veya masrafı kollukça karşılanan meslek erbabınca açtırılır; hazır bulunacaklar: yer sahibi/zilyet, yoksa temsilcisi, ayırt etme gücüne sahip hısmı, birlikte oturan biri veya komşusu; avukatın hazır bulunması engellenemez; geceleyin herkesin girebileceği lokanta, bar, kahvehane gibi yerlerin aranmasında tanık gerekmez (m.30)
+TUZAK_SATIRI: "Konut aramasında mutlaka muhtar bulunur" yanlış; sahip/temsilci/hısım/birlikte oturan/komşu
+MEVCUT_DOGRUSU: []
+  TZ-Y: Kahvehane gece aramasında tanık şarttır
+  TZ-D: Umuma açık yerlerde tanık gerekmez (m.30)
+====================================================================================================
+#18 id=56-21 madde=['7', '31'] baslik=Aramanın zamanı — gece araması
+HUKUM: Arama karar veya emirdeki süre içinde yapılır; her karar aksine hüküm yoksa yalnız bir kez arama yetkisi verir; acil durum yoksa adli arama gündüz yapılır; konutta, iş yerinde ve diğer kapalı yerlerde adli arama gece yapılamaz ve buralarda kolluk amirinin yazılı emriyle de yapılamaz; istisnalar: (a) suçüstü, (b) gecikmesinde sakınca bulunan hâl, (c) firar eden kişi veya tutuklu/hükümlünün tekrar yakalanması, (d) geceleyin herkesin girip çıkabileceği PVSK m.7'deki umuma açık istirahat ve eğlence yerleri; önleme aramaları, denetimler ve kontroller her zaman yapılabilir (m.31)
+TUZAK_SATIRI: "Bir arama kararıyla birden fazla arama yapılır" yanlış; aksine hüküm yoksa bir kez
+MEVCUT_DOGRUSU: []
+  TZ-Y: Kolluk amiri savcıya ulaşamazsa iş yerinde yazılı emirle arama yapabilir
+  TZ-D: Yapamaz; konut, iş yeri, kapalı alan hâkim/savcı (m.7)
+  TZ-Y: Kolluk amirinin emriyle yapılan arama sulh ceza hâkimliğine bildirilir
+  TZ-D: Cumhuriyet başsavcılığına (m.7)

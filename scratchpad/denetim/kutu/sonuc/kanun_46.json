@@ -1,0 +1,83 @@
+[
+ {
+  "kanun_id": 46,
+  "kart_id": "46-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "KART_CELISKI: hüküm bildirim yükümlülerini 'herhangi bir şekilde haber alanlar' diye herkese genişletiyor; resmî metinde yükümlüler bulanlar, arazisinde varlık bulunduğunu bilen malik/kullananlar ve yeni haberdar olan malik ve zilyetlerdir. Kutu: süre 3 günden 7 güne çıkarıldı; köyde bildirim makamı muhtardan jandarmaya kaydırıldı",
+  "duzeltme": {
+   "hukum": "Taşınır ve taşınmaz kültür ve tabiat varlıklarını bulanlar, malik oldukları veya kullandıkları arazide böyle bir varlık bulunduğunu bilenler ya da yeni haberdar olan malik ve zilyetler, bunu en geç 3 gün içinde en yakın müze müdürlüğüne, köyde muhtara, diğer yerlerde mülkî idare amirine bildirmek zorundadır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "“Kültür ve tabiat varlığı bulan kişinin bunu en yakın müze müdürlüğüne bildirme süresi yedi gündür.”",
+    "“Köyde kültür varlığı bulan kişi, bildirimini en yakın jandarma karakoluna yapmakla yükümlüdür.”"
+   ],
+   "dogrusu": [
+    "Kültür ve tabiat varlığı bulan kişi, bunu en geç üç gün içinde en yakın müze müdürlüğüne, muhtara veya mülkî amire bildirir (m.4/1)",
+    "Köyde kültür varlığı bulan kişi, bildirimini muhtara veya en yakın müze müdürlüğüne yapar (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 46,
+  "kart_id": "46-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Atatürk'e ait eşya kapsam dışı gösterildi; belirli padişah dönemi sikkelerinin tescilsiz alım satım istisnası tersine çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Mustafa Kemal Atatürk'e ait zati eşya ve evrak, korunması gerekli taşınır kültür varlıkları kapsamında değildir.”",
+    "“Abdülmecit'ten Vahidettin'e kadar Osmanlı padişahları dönemine ait sikkeler, ancak tescil ettirilerek yurt içinde alınıp satılabilir.”"
+   ],
+   "dogrusu": [
+    "Millî Mücadele ve Atatürk'e ait eşya ve belgeler de korunması gerekli taşınır kültür varlığıdır (m.23/b)",
+    "Abdülmecit, Abdülaziz, V. Murat, II. Abdülhamit, V. Mehmet Reşat ve Vahidettin dönemi ile aynı çağdaki sikkeler tescilsiz yurt içinde alınıp satılabilir (m.23/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 46,
+  "kart_id": "46-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Askerî müzelerin kurulması Genelkurmaydan Kültür ve Turizm Bakanlığına kaydırıldı; koleksiyoncular arası satışta 15 gün önceden haber şartı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devlet müzeleri içindeki askerî müzelerin kurulması ve yaşatılması Kültür ve Turizm Bakanlığına aittir.”",
+    "“Koleksiyoncular, koleksiyonlarındaki eserleri Bakanlığa haber vermeksizin kendi aralarında serbestçe satabilir.”"
+   ],
+   "dogrusu": [
+    "Askerî müzelerin kurulması, yaşatılması, malzeme ve uğraş konularının tespiti Genelkurmay Başkanlığına aittir (m.26)",
+    "Koleksiyoncular eserleri müzeye tescil ettirip on beş gün önce Bakanlığa haber vermek şartıyla kendi aralarında değiştirebilir veya satabilir (m.26)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 46,
+  "kart_id": "46-12",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirmeme suçu idarî para cezasına indirildi; bildirilmemiş varlığı satana bildirmeme suçundan ayrıca ceza verildiği iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kültür varlığıyla ilgili bildirim yükümlülüğüne bilerek aykırı davranan kişiye yalnızca idarî para cezası verilir.”",
+    "“Bildirimi yapılmamış kültür varlığını satan kişi, ayrıca bildirim yükümlülüğüne aykırılık suçundan da cezalandırılır.”"
+   ],
+   "dogrusu": [
+    "Bildirim yükümlülüğüne mazeretsiz ve bilerek aykırı davranan kişi altı aydan üç yıla kadar hapis cezası alır (m.67)",
+    "Bildirilmemiş varlığı satan kişi iki yıldan beş yıla kadar hapis ve adlî para cezası alır; bildirmeme suçundan ayrıca ceza verilmez (m.67)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 46,
+  "kart_id": "46-15",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Define aramaya kazı/sondajın cezası (2-5 yıl) verildi; teslimdeki üçte ikiye kadar indirim cezasızlığa çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzinsiz olarak define araştıran kişi iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.”",
+    "“İzinsiz kazıda bulduğu kültür varlığını soruşturma başlamadan mülkî amire teslim eden kişiye ceza verilmez.”"
+   ],
+   "dogrusu": [
+    "İzinsiz define araştıran üç aydan iki yıla kadar, izinsiz kazı veya sondaj yapan iki yıldan beş yıla kadar hapis alır (m.74)",
+    "Bulduğu varlığı soruşturma başlamadan önce mahallî mülkî amire teslim edene mahkeme cezada üçte ikisine kadar indirim yapabilir (m.74)"
+   ]
+  }
+ }
+]

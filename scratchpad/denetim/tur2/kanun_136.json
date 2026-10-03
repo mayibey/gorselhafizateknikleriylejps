@@ -1,0 +1,262 @@
+{
+ "kanun_id": 136,
+ "ad": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_136.json",
+ "kartlar": [
+  {
+   "id": "136-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Rütbe: ilk subaylık/astsubaylıkta ve bekleme süreleri sonunda kazanılan askerî unvan; nasıp: yeni rütbenin normal bekleme süresinin başlama tarihi; kıdem: nasıp tarihinden itibaren rütbede hizmet süresi veya aynı nasıplılar arasında yeterlik üstünlük sırası; normal bekleme süresi: terfiye hak kazanmak için her rütbede beklenecek süre; en az bekleme süresi: normal süreden noksan beklenecek süre; en çok bekleme süresi: rütbede en çok kalınabilecek süre; terfi yılı: 30 Ağustos'tan ertesi 30 Ağustos'a; kademe bekleme süresi: en az bir terfi yılı; kademe ilerlemesi: kademe bekleme sonundaki maaş artışı; yeterlik: ahlaki, askerî, mesleki, fiziki, zihni kifayet ve üst rütbeye liyakat; yeterlik derecesi: sicil notu ortalamasına göre aynı sınıf-rütbedekilerin sıralanması; yıllık kontenjan: her rütbedeki general-amiral sayısının bekleme süresine bölümü (YAŞ değiştirebilir); sicil notu: sicil üstü notları ortalaması + (general-amiral hariç) fiziki yeterlik testi notu; sicil notu ortalaması: teğmende bulunulan rütbe notlarının ortalaması; üsteğmende teğmenlikten itibaren; yüzbaşıda yüzbaşı %100 + üsteğmen %70; binbaşıda %100/%90/%70; yarbayda %100/%90/%85/%70; albayda %100/%95/%90/%85/%70 (astsubaylarda çavuş-kıdemli çavuş-üstçavuş-kıdemli üstçavuş-başçavuş-kıdemli başçavuş için aynı kalıp); değerlendirme notu: YAŞ üyelerinin notlarının ortalaması; yeterlik notu: general-amiralde bulunulan rütbe sicil ortalaması + değerlendirme notu, albayda sicil notu ortalaması + değerlendirme notu; sicil tam notu 100; lisansüstü öğrenim: MSÜ enstitüleri, yüksek lisans, doktora, tıpta/dişte/veterinerlikte/eczacılıkta uzmanlık, doçentlik; kadro: barışta rütbe-sınıf-branşa göre tespit edilen personel miktarı; itibari rütbe: yurt dışı sürekli/geçici görevlere atanan subay-astsubaya özellik arz eden durumlarda görev süresince bir üst rütbe (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Terfi yılı 1 Ocak-31 Aralık\" yanlış; 30 Ağustos",
+    "Normal süreden noksan beklenecek süre = en çok bekleme süresi"
+   ],
+   "dogrusu": [
+    "En az bekleme süresi (m.3)"
+   ]
+  },
+  {
+   "id": "136-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Görev ve sorumluluk",
+   "hukum": "Subay ve astsubayların görev ve sorumlulukları İç Hizmet Kanunu ve Yönetmeliği, diğer mevzuat ve hizmet kadrolarının açıklamalarında gösterilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görevler 926'da sayılır\" yanlış"
+   ],
+   "dogrusu": [
+    "İç Hizmet Kanunu ve Yönetmeliği · hizmet kadrolarının açıklamalarında"
+   ]
+  },
+  {
+   "id": "136-2",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Subayların en az bekleme süreleri",
+   "hukum": "Fakülte ve yüksekokul bitiren subayların Harp Okulu süresinden yıl olarak fazla okudukları süre bekleme sürelerinden düşülür (emsaliyle nasıpları birleşinceye kadar, yönetmelikle); savaşta veya milletlerarası taahhütler icabı savaşlara katılanlar için Cumhurbaşkanı kararı ile barış normal bekleme süreleri yarısına kadar indirilebilir, bir yıldan artan miktarlar tam yıla çıkarılır; üstün başarı kıdemi alan üsteğmen, yüzbaşı ve binbaşıların normal bekleme süreleri 1 yıl eksik (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"MSB kararı – üçte ikisine\" şıkları yanlış",
+    "Savaşta bekleme süresini MSB üçte ikisine indirir"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı, yarısına (m.31)"
+   ]
+  },
+  {
+   "id": "136-3",
+   "madde": [
+    "109",
+    "32"
+   ],
+   "baslik": "En çok bekleme süreleri",
+   "hukum": "4 yıldan az yüksekokul mezunu subayların teğmenlik bekleme süresi harp okulu emsalleri yetişinceye kadar; normal bekleme dışında rütbede en çok kalınabilecek süre: teğmen ve üsteğmenlikte rütbenin yaş haddine kadar, yüzbaşı subaylıktaki 21., binbaşı 22., yarbay 25. fiilî hizmet yılını dolduruncaya kadar; m.109'a göre subay olup yüzbaşılığa yükselenlerin en çok bekleme süresi rütbenin yaş haddine kadar (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "Yıllar çapraz sorulur"
+   ],
+   "dogrusu": [
+    "teğmen ve üsteğmenlikte rütbenin yaş haddine kadar · yüzbaşı subaylıktaki 21., binbaşı 22., yarbay 25. fiilî hizmet yılını"
+   ]
+  },
+  {
+   "id": "136-4",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Terfi zamanı ve engel hâller",
+   "hukum": "Kıdem alanlar, nasıpları lehe düzeltilenler ile açığa alınma, tutuklanma, firar veya izin tecavüzü (kısa süreli kaçma ve izin süresini geçirme hariç) nedeniyle terfi edemeyen ve rütbe kıdemliliği onanmayanlardan; KYOK, kamu davasının ertelenmesi/düşmesi, (firar-izin tecavüzü hariç) HAGB, beraat, kısa süreli hapsin seçenek yaptırıma çevrilmesi veya erteleme kararı verilenlerin terfileri emsalleri terfi etmişse kararın kesinleşme tarihinden geçerli yapılıp emsalleri tarihine götürülür, maaş farkı ödenmez; sicil mecburiyetini 30 Ağustos'a kadar tamamlayacaklar (albaylar hariç) hakkında ilk fıkra uygulanmaz (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nasıp düzeltmesinde maaş farkı ödenir\" yanlış"
+   ],
+   "dogrusu": [
+    "açığa alınma, tutuklanma, firar veya izin tecavüzü · HAGB · emsalleri terfi etmişse · emsalleri tarihine götürülür · maaş farkı ödenmez"
+   ]
+  },
+  {
+   "id": "136-5",
+   "madde": [
+    "34",
+    "35"
+   ],
+   "baslik": "Subaylığa nasıp",
+   "hukum": "Subaylığa nasıp Millî Savunma Bakanının onayı ile (m.34); harp okulunu bitirenler o yılın 30 Ağustos'unda teğmen; teğmen nasbedilmeden önce açığa alınmayı gerektiren suçtan kamu davası açılan/tutuklanan/gözaltına alınanların nasıpları yapılmaz, aklananlar nasbedilip emsal tarihine götürülür; kazai/idari/sıhhi zorunlulukla 30 Ağustos'tan sonra bitirenler bitirdikleri ayın sonundan geçerli teğmen (emsale götürülür); yedek subay okulunu bitirenler bitirdikleri tarihten asteğmen; MSB adına fakültede okuyan askerî öğrencilerin nasıp tarihi mezuniyet tarihi; kendi hesabına fakülte bitirip muvazzaf subay olanlar nasıp onayı tarihinden geçerli subay, kademe/terfi için onay yılının 30 Ağustos'u esas, maaş farkı ödenmez; askerlik sırasında/sonrasında muvazzaf subaylığa geçenlerin askerlik süreleri nasıp tarihine eklenir (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "\"Subaylığa nasıp Cumhurbaşkanı onayıyla\" yanlış; MSB"
+   ],
+   "dogrusu": [
+    "Millî Savunma Bakanının onayı · 30 Ağustos · asteğmen · mezuniyet tarihi · nasıp onayı tarihinden · maaş farkı ödenmez"
+   ]
+  },
+  {
+   "id": "136-6",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Nasıp düzeltilmesi ve lisansüstü kıdemi",
+   "hukum": "Cezası ertelenen/seçenek yaptırıma çevrilenler hariç; hürriyeti bağlayıcı cezada infazdan fazla olmamak üzere gözaltı-tutukluluk-hükümlülük süreleri, açığı gerektiren suçta açıkta geçen süreler, HAGB verilse dahi mahkeme kararıyla sabit firar/izin tecavüzü süreleri kıdemden düşülür; öğrenim-kurs-staj'ı süresinde bitiremeyenlerin bekleme süreleri kaldıkları süre kadar uzar (Harp Enstitüleri, tıpta uzmanlık, sıhhi devamsızlık, özel nitelikli kurslar ve 3 ay dahil daha kısa kurslar hariç); kıdem verilenler: Harp Enstitülerinde karargâh subaylığı eğitimini tamamlayana 1 yıl, komuta ve kurmay eğitimini tamamlayana +1 yıl, müşterek komuta ve kurmay eğitimine +1 yıl; ihtiyaç duyulan bilim dallarında kontenjana giren yüksek lisans yapana 1 yıl, bunlardan doktora yapana +1, doğrudan doktora yapana 2, doçent olana +1 (toplam 3); tıpta uzmanlık, diş, veteriner, eczacılık uzmanlığı veya doktora yapanlara 2 yıl, bunlardan doçent olanlara +1 yıl (toplam 3); TSK'ya girmeden önce kendi hesabına yapmış olanlara da uygulanır; verilen kıdemlerin toplamı hiçbir şekilde 3 yılı aşamaz; lisansüstü kıdemi için müracaatta sicil notu ortalaması %90 ve üstü, kendi hesabına yapanlar için olumlu \"Lisansüstü Öğrenim Kıdemi Nitelik Belgesi\", yüz kızartıcı suçlardan/firar-itaatsizlik-AsCK 148'den mahkûm olmamak, taksirli hariç diğer suçlardan toplam 21 gün ve fazla hapis/oda hapsi/hizmet yerini terk etmeme cezası almamış olmak (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"Doktora yapana 3 yıl kıdem\" yanlış; 2 (doçentle 3)",
+    "Lisansüstü kıdemleri toplamı 5 yıla kadar",
+    "Doktora yapana 3 yıl kıdem"
+   ],
+   "dogrusu": [
+    "3 yıl (m.36)",
+    "2 yıl; doçentle 3 (m.36)"
+   ]
+  },
+  {
+   "id": "136-7",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Kıdem ve kıdem sırası",
+   "hukum": "Rütbelerde kıdem terfi onayı metnindeki tarihten başlar; aynı gün subay olanlar arasında okul not ortalamasına göre; aynı rütbe ve nasıplılar arasında her yıl tespit edilen yeterlik derecesine göre; değişik kaynaklardan yetişip yeterlik derecesi kıyaslanamayanlar arasında öncelik sırası: (1) harp okulu mezunları, (2) Silahlı Kuvvetler adına fakülte-yüksekokulda yetiştirilenler, (3) askerlik hizmeti sırasında veya müteakiben muvazzaf subay nasbedilenler, (4) sözleşmeli subaylıktan muvazzafa geçenler, (5) astsubaylıktan muvazzaf subaylığa geçenler, (6) sivil kaynaktan muvazzaf subaylığa geçenler, (7) sözleşmeli subaylar, (8) yedek subaylar; farklı sınıflarda aynı rütbe-nasıp: yeterlik derecesi → hizmet süresi → önceki rütbe yeterlik derecesi; sınıfı değiştirilenler yeni sınıf aynı nasıplılarının sonunda; kuvvetleri ayrı olanlarda kıdem almadan yükselen önce, sonra bir önceki rütbeye yükselme tarihi önce olan, eşitlikte kara, deniz, hava sırası (m.37)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubaylıktan subay olanlar sözleşmeliden önce gelir\" yanlış",
+    "Yedek subaylar sözleşmeli subaylardan kıdemlidir"
+   ],
+   "dogrusu": [
+    "Sonda (m.37)"
+   ]
+  },
+  {
+   "id": "136-8",
+   "madde": [
+    "49",
+    "38"
+   ],
+   "baslik": "Subay rütbe terfi şartları",
+   "hukum": "Rütbeye mahsus bekleme süresini tamamlamak; normal bekleme süresinin binbaşılarda 3, albaylarda 2 yıllık, diğer rütbelerde üçte ikisi oranında (kıdem alanlarda fiilî bekleme süresinin binbaşıda 2 yıllık, diğerlerinde üçte ikisi) yıllık sicili bulunmak; Subay Meslek Programları Yönetmeliğindeki kıt'a hizmetlerini yapmış olmak; üst rütbe kadrosunda açık bulunmak; general-amiralliğe yükselecek albaylar için m.49 oranlarında açık; terfi esasları: yükselme sırasındaki teğmen-yarbaylar sınıfları içinde yeterlik derecesine göre sıralanır, teğmen-binbaşılar için sicil notu ortalaması %60 ve üstü, yarbaylar için %70 ve üstü olanlardan kadro açığı kadarı en üstün dereceden başlanarak terfi eder, kadro açığı yoksa derece ilerlemesi; albaylar: %60 ve üstü tespit edilir, %70 ve üstü olanların dosyaları YAŞ'a gönderilir; üstün başarılı yüzbaşı ve binbaşılar: bekleme süresinin bitiminden 1 yıl önce her yılki sicil notu ve ortalaması %95 ve üstü olanlar sıralanır, sınıf mevcudunun muharip sınıflarda %8'i, yardımcı sınıflarda %4'üne kadarı MSB/İçişleri Bakanınca bir üst rütbeye yükseltilebilir; görevde yaralanıp uzun tedavi görenlerin terfileri ortalamaya göre şartsız (m.38)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yarbaylar için %60\" yanlış; %70",
+    "Yarbayların terfisi için %60 yeter"
+   ],
+   "dogrusu": [
+    "%70 (m.38)"
+   ]
+  },
+  {
+   "id": "136-9",
+   "madde": [
+    "79",
+    "80",
+    "33"
+   ],
+   "baslik": "Astsubayların bekleme süreleri ve nasıp",
+   "hukum": "Savaşa katılanlar için Cumhurbaşkanı kararı ile normal bekleme yarısına kadar indirilebilir; üstün başarı kıdemi alan üstçavuş, kıdemli üstçavuş ve başçavuşların normal bekleme süreleri 1 yıl eksik; kendi hesabına fakülte/yüksekokul/MYO bitirip muvazzaf astsubay olanların astsubay MYO'dan fazla öğrenim süreleri kıdemden sayılır (m.79); astsubayların normal bekleme dışında her rütbede kalabilecekleri süre o rütbenin yaş haddine kadar (m.80); terfi zamanı m.33 gibi (m.81); astsubaylığa nasıp MSB onayı, rütbe terfileri İçişleri Bakanı (JGK/SGK) veya MSB onayı ile; fakülte/MYO mezunu olup temel askerlik eğitiminde başarılı olanlar nasıp onayı tarihinden astsubay çavuş (kademe/terfi için onay yılının 30 Ağustos'u, maaş farkı yok); astsubay MYO'yu bitirenler o yılın 30 Ağustos'unda astsubay çavuş; nasıp öncesi kamu davası/tutuklama/gözaltı olanların nasıpları yapılmaz, aklananlar emsal tarihine götürülür; muvazzaf askerlikte geçen süreler kıdemden sayılır; yedek astsubay okulunu bitirenler astsubay astçavuş (m.82)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubay terfileri JGK onayıyla\" yanlış; İçişleri Bakanı"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı kararı · üstün başarı kıdemi · üstçavuş, kıdemli üstçavuş ve başçavuşların · 1 yıl eksik · o rütbenin yaş haddine kadar · astsubaylığa nasıp MSB onayı · rütbe terfileri İçişleri Bakanı (JGK/SGK) veya MSB onayı · nasıp onayı tarihinden · 30 Ağustos · astsubay astçavuş"
+   ]
+  },
+  {
+   "id": "136-10",
+   "madde": [
+    "36",
+    "83"
+   ],
+   "baslik": "Astsubay nasıp düzeltilmesi ve kıdem",
+   "hukum": "Kazai-idari kararlarla nasıp düzeltmesi m.36 (a,b,c)'ye göre; sıhhi devamsızlık, özel nitelikli kurslar ve 3 ay (dahil) kısa kurslar için m.36/b uygulanmaz; kendi hesabına yüksek lisans yapan astsubaylara m.36/d esaslarıyla kıdem; Astsubay Üst Karargâh Hizmetleri eğitimini (iki yarıyıl) bitirenlere 1 yıl kıdem (m.83)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubaya yüksek lisans kıdemi verilmez\" yanlış"
+   ],
+   "dogrusu": [
+    "3 ay (dahil) kısa kurslar · yüksek lisans · Astsubay Üst Karargâh Hizmetleri · 1 yıl"
+   ]
+  },
+  {
+   "id": "136-11",
+   "madde": [
+    "85"
+   ],
+   "baslik": "Astsubay terfi şartları",
+   "hukum": "Bekleme süresini tamamlamak; bekleme süresinin üçte ikisi oranında (kıdem alan astsubay çavuş, kıdemli çavuş, üstçavuş ve kıdemli üstçavuş (3 yıllık bekleme süresine tabi olanlar) rütbelerinde en az 1 yıllık, diğerlerinde fiilî beklemenin üçte ikisi) yıllık sicil; üst rütbe kadrosunda açık; terfi esasları: yeterlik derecesine göre sıralama, %60 ve üstü olanlardan kadro açığı kadarı terfi, açık yoksa derece ilerlemesi; üstün başarılı kıdemli üstçavuş ve başçavuşlar: bekleme bitiminden 1 yıl önce her yıl ve ortalama %95 ve üstü, sınıf mevcudunun %8 / %4'ü MSB/İçişleri Bakanınca bir üst rütbeye; yaralananlar şartsız (m.85)",
+   "sinavda_boyle_yazarlar": [
+    "Subayda üstün başarı yüzbaşı-binbaşı; astsubayda kıdemli üstçavuş-başçavuş"
+   ],
+   "dogrusu": [
+    "üçte ikisi · astsubay çavuş, kıdemli çavuş, üstçavuş ve kıdemli üstçavuş · en az 1 yıllık · üst rütbe kadrosunda açık · %60 ve üstü · üstün başarılı kıdemli üstçavuş ve başçavuşlar · %95 ve üstü · %8 / %4"
+   ]
+  },
+  {
+   "id": "136-12",
+   "madde": [
+    "93"
+   ],
+   "baslik": "Astsubay kademe ilerlemesi",
+   "hukum": "Şartlar: bulunduğu kademede bir terfi yılı doldurmak, ilerleyebileceği kademe bulunmak, sicil notu %60 ve üstü; kademe ilerlemesiyle üst rütbe maaşını almak terfii gerektirmez; onay makamları Astsubay Sicil Yönetmeliğinde; terfi eden astsubay yeni rütbenin 1. kademesine ilerlemiş olur, yeni aylık eskisinden azsa fark kapanana kadar eski aylık; kadrosuzluktan terfi edemeyenler kademe ilerlemesi yapar; görevde yaralanıp sicil notu olmayanlarda sicil şartı aranmaz (m.93)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kademe ilerlemesi için %70\" yanlış; %60"
+   ],
+   "dogrusu": [
+    "bir terfi yılı · sicil notu %60 ve üstü · terfii gerektirmez · 1. kademesine"
+   ]
+  },
+  {
+   "id": "136-13",
+   "madde": [
+    "109"
+   ],
+   "baslik": "Astsubaylıktan subaylığa geçiş",
+   "hukum": "Her yıl tespit edilen kontenjan nispetinde emsali arasında temayüz etmiş en az 4 yıllık fakülte/yüksekokul bitiren astsubaylar, bağlı olduğu Kuvvet/JGK/SGK teklifiyle teğmen nasbedilir: (a) sınava müracaatta en az kıdemli çavuş rütbesinde ve astsubay olarak 4. hizmet yılını tamamlamış, 7. hizmet yılını bitirmemiş olmak; (b) sicil notu ortalaması %90 ve üstü; (c) sıralı sicil üstlerince subaylığa lâyık bulunmak; (d) seçme sınavı ve subaylık nosyonu kazandırma eğitiminde başarılı olmak; sıralama sınav notu + madalya-ödül-ceza dikkate alınarak; nosyon eğitimini bitirenler bitirdikleri tarihten teğmen (kademe/terfi için 30 Ağustos; geriye maaş yok); teğmen aylığından fazla alanlar emsal astsubay aylıklarını almaya devam eder; bunlara muvazzaf subay hükümleri uygulanır ama yaş hadleri: teğmen-üsteğmen 49, yüzbaşı 55, binbaşı 56, yarbay 57, albay 60; harekât görevi nedeniyle başvuramayanların hakları sınava giremedikleri süre kadar uzar; engel hâller: yüz kızartıcı suçlar, kaçakçılık, ihaleye fesat; firar, amire taarruz, itaatsizlikte ısrar, üste hakaret, mukavemet, fesat ve AsCK 148 suçları; taksirli hariç diğer suç ve disiplinsizliklerden toplam 21 gün ve fazla hapis/oda hapsi/hizmet yerini terk etmeme cezası; açığa alınmayı gerektiren suçtan tutuklu/davalı olanlar durum devam ettikçe sınava alınmaz (m.109)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kıdemli üstçavuş – beşinci – sekizinci\" şıkkı yanlış",
+    "Astsubaylıktan subaylık için kıdemli üstçavuş ve 5.-8. yıl"
+   ],
+   "dogrusu": [
+    "Kıdemli çavuş, 4.-7. yıl (m.109)"
+   ]
+  },
+  {
+   "id": "136-14",
+   "madde": [
+    "112"
+   ],
+   "baslik": "İstifa — 15 yıl",
+   "hukum": "Muvazzaf subay ve astsubaylar nasbedildikleri tarihten itibaren fiilen 15 yıl hizmet etmedikçe istifa edemez; astsubaylıktan subay olanlarda süre astsubay çavuşluğa nasıp tarihinden hesaplanır; istifa etmiş sayılma: MSB'ce uygun görülmeyen yabancı uyrukluyla evlenenler, Türk vatandaşlığını kaybedenler; yurt dışına öğrenim-staj-kursa gidenlerden bu durumlara uyanlardan orada aldıkları aylık ve Devlet masraflarının 4 katı tazminat; mecburi hizmeti tamamlamadan ayrılan/ilişiği kesilen subay-astsubaylar (sağlık raporlu ve vazife malulleri hariç) öğrenim-eğitim-yetiştirme masraflarının 2 katını eksik süreyle orantılı ve kanuni faiziyle öder; dış kaynaktan muvazzaf tabipler Devlet hizmet yükümlülüğüne tabi değil (ancak 2 yıl görev yapmadan ayrılanlar hariç) (m.112)",
+   "sinavda_boyle_yazarlar": [
+    "\"10 yıl\" yanlış; uzman jandarma 15, uzman erbaştan astsubay olan 15, subay-astsubay 15",
+    "Subay 10 yıl sonra istifa edebilir"
+   ],
+   "dogrusu": [
+    "15 yıl (m.112)"
+   ]
+  },
+  {
+   "id": "136-15",
+   "madde": [
+    "133"
+   ],
+   "baslik": "Yabancı ordularda hizmet izni",
+   "hukum": "Yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara (jandarma ve sahil güvenlik subayları dâhil) Millî Savunma Bakanlığınca dört yıla kadar aylıklı izin verilebilir (m.133; personel kitapçığında sorulmuş)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığınca\" ve \"JGK'ca\" şıkları yanlış",
+    "Yabancı orduda hizmet iznini JGK verir"
+   ],
+   "dogrusu": [
+    "MSB (m.133)"
+   ]
+  },
+  {
+   "id": "136-16",
+   "madde": [
+    "201"
+   ],
+   "baslik": "İstiklal Madalyası",
+   "hukum": "İstiklal Madalyası Kanunu ile ek ve değişikliklerindeki İstiklal Madalyasına ait hükümler saklıdır (m.201)",
+   "sinavda_boyle_yazarlar": [
+    "\"926 İstiklal Madalyası hükümlerini kaldırdı\" yanlış"
+   ],
+   "dogrusu": [
+    "saklıdır"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

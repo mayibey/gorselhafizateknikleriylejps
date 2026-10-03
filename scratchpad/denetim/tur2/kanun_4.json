@@ -1,0 +1,186 @@
+{
+ "kanun_id": 4,
+ "ad": "7201 sayılı Tebligat Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_4.json",
+ "kartlar": [
+  {
+   "id": "4-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Memur veya zabıta eliyle tebligat",
+   "hukum": "Diğer kanunlarda özel hüküm bulunması hâlinde, tehirinde zarar umulan işlerde veya aynı yerde bulunan daire ve müesseseler arasında yahut bunlarda bulunan şahıslara yapılacak tebligat, kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla yaptırılır (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde PTT eliyle yapılır\" ya da emir makamı \"Cumhuriyet savcısı\" gösterilir"
+   ],
+   "dogrusu": [
+    "özel hüküm · tehirinde zarar umulan · aynı yerde bulunan · kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla (m.2/1)"
+   ]
+  },
+  {
+   "id": "4-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Saklı hükümler",
+   "hukum": "Zor kullanmayı gerektiren veya hazırlık tahkikatına ilişkin görevlerin zabıtaca yapılacağına dair hükümler ile Kanunun ikinci babındaki hususi hükümler saklıdır (m.2/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"bu Kanun bütün özel hükümleri yürürlükten kaldırmıştır\""
+   ],
+   "dogrusu": [
+    "hazırlık tahkikatına ilişkin · saklıdır (m.2/2)"
+   ]
+  },
+  {
+   "id": "4-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ücret tarifesi",
+   "hukum": "PTT'nin bu Kanuna göre yapacağı işlerden alacağı ücretler, bu işletme tarafından ayrı bir tarife ile tespit ve tayin edilir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adalet Bakanlığınca belirlenir\" ya da \"Cumhurbaşkanı kararıyla\""
+   ],
+   "dogrusu": [
+    "bu işletme tarafından ayrı bir tarife ile (m.3)"
+   ]
+  },
+  {
+   "id": "4-3",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Tebliğ imkânsızlığı ve tebellüğden imtina",
+   "hukum": "Muhatap ya da onun yerine tebliğ yapılabilecek kimselerden hiçbiri adreste bulunmaz veya tebellüğden imtina ederse, tebliğ memuru evrakı o yerin muhtarına veya ihtiyar heyeti azasından birine yahut zabıta amir veya memurlarına imza karşılığında teslim eder (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"evrak en yakın PTT şubesine bırakılır\" ya da \"gönderen kuruma iade edilir\"",
+    "En yakın PTT şubesine bırakılır",
+    "Gönderen kuruma iade edilir"
+   ],
+   "dogrusu": [
+    "İmtina hâlinde evrak muhtara/ihtiyar heyetine/zabıtaya teslim edilir (21/1)"
+   ]
+  },
+  {
+   "id": "4-4",
+   "madde": [
+    "21"
+   ],
+   "baslik": "İhbarname ve tebliğ tarihi",
+   "hukum": "Tesellüm edenin adresini içeren ihbarname, gösterilen adresteki binanın kapısına yapıştırılır; ayrıca mümkün oldukça en yakın komşulardan birine, varsa yönetici veya kapıcıya haber verilir; ihbarnamenin kapıya yapıştırıldığı tarih, tebliğ tarihi sayılır (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "Muhtara teslim edildiği tarih",
+    "Muhatabın evrakı aldığı tarih"
+   ],
+   "dogrusu": [
+    "Tebliğ tarihi = ihbarnamenin kapıya yapıştırıldığı tarih (21/1)"
+   ]
+  },
+  {
+   "id": "4-5",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Adres kayıt sistemindeki adres",
+   "hukum": "Gösterilen adres muhatabın adres kayıt sistemindeki adresi ise, muhatap o adreste hiç oturmamış veya adresten sürekli ayrılmış olsa dahi evrak muhtara/ihtiyar heyeti azasına/zabıtaya teslim edilir ve ihbarname kapıya yapıştırılır; yapıştırma tarihi tebliğ tarihidir (m.21/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiç oturmamışsa tebligat yapılamaz, iade edilir\"",
+    "Oturmadığı anlaşılırsa evrak iade edilir"
+   ],
+   "dogrusu": [
+    "Adres kayıt sistemindeki adreste hiç oturmamış olsa dahi tebliğ yapılır (21/2)"
+   ]
+  },
+  {
+   "id": "4-6",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Kabul zorunluluğu",
+   "hukum": "Muhtar, ihtiyar heyeti azaları, zabıta amir ve memurları kendilerine teslim edilen evrakı kabule mecburdurlar (m.21/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"kabul etmeme hakları vardır\"",
+    "Kabul etmeyebilirler"
+   ],
+   "dogrusu": [
+    "Muhtar ve zabıta evrakı kabule mecburdur (21/3)"
+   ]
+  },
+  {
+   "id": "4-7",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yaş ve ehliyet şartı",
+   "hukum": "Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran onsekiz yaşından aşağı olmaması ve bariz surette ehliyetsiz bulunmaması lazımdır (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "15 / 17 / 21 / 25 yaş verilir"
+   ],
+   "dogrusu": [
+    "Muhatap yerine tebliğ alacak kişi 18 yaşından aşağı olmamalı (22)"
+   ]
+  },
+  {
+   "id": "4-8",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Parmak sırası",
+   "hukum": "Sol elin baş parmağı yoksa aynı elin diğer bir parmağı; sol el yoksa sağ elin baş parmağı; o da yoksa diğer parmaklarından biri bastırılır (m.24/2)",
+   "sinavda_boyle_yazarlar": [
+    "sıralama \"sağ el baş parmak → sol el\" diye ters çevrilir",
+    "Kardeşlerinden biri huzurunda",
+    "Sağ el baş parmağı",
+    "Sol el işaret parmağı"
+   ],
+   "dogrusu": [
+    "İmza atamayana komşulardan biri huzurunda sol el baş parmağı (24/1)"
+   ]
+  },
+  {
+   "id": "4-9",
+   "madde": [
+    "24"
+   ],
+   "baslik": "İki eli olmayan",
+   "hukum": "Tebliğ yapılacak kimsenin iki eli de yoksa tebliğ evrakı kendisine verilir (m.24/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tebligat yapılamaz\" ya da \"muhtara bırakılır\"",
+    "Tebligat yapılamaz"
+   ],
+   "dogrusu": [
+    "İki eli de yoksa evrak kendisine verilir (24/3)"
+   ]
+  },
+  {
+   "id": "4-10",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Tutanağa geçirme",
+   "hukum": "Bu hâllerde keyfiyet tebliğ mazbatasında tasrih edilir ve hazır bulunan şahsa da imza ettirilir (m.24/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"tutanağa yazılması gerekmez\""
+   ],
+   "dogrusu": [
+    "tebliğ mazbatasında tasrih edilir · hazır bulunan şahsa da imza ettirilir (m.24/4)"
+   ]
+  },
+  {
+   "id": "4-11",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Okuryazar komşu bulunmazsa",
+   "hukum": "Okuryazar bir komşu bulunmaz veya bulunan komşu imzadan imtina ederse, tebliğ memuru o mahalle veya köyün muhtarını, ihtiyar heyeti azasından birini yahut bir zabıta memurunu hazır bulunmak üzere davet eder ve tebligat bunların huzurunda yapılır (m.24/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"tebligat ertelenir\" ya da listeye \"belediye görevlisi\" eklenir",
+    "Tebligat başka güne ertelenir"
+   ],
+   "dogrusu": [
+    "Okuryazar komşu yoksa muhtar/ihtiyar heyeti azası/zabıta memuru huzurunda (24/5)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

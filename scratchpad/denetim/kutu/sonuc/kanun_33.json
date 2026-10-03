@@ -1,0 +1,124 @@
+[
+ {"kanun_id": 33, "kart_id": "33-0", "sorun": "kirmizi_kutu",
+  "aciklama": "Çayır-mera ve yaylak-kışlak tanımları yer değiştirildi; büyükbaş hayvan birimi ağırlığı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Taban suyu yüksek veya sulanabilen, biçilmeye elverişli ve genellikle kuru ot üretimi için kullanılan yer meradır.”",
+    "“Yaylak, hayvanların kış mevsiminde barındırılması için tahsis edilen yerdir.”",
+    "“Bir büyükbaş hayvan birimi, 1000 kg canlı ağırlık olarak kabul edilir.”"
+   ],
+   "dogrusu": [
+    "Taban suyu yüksek veya sulanabilen, biçilmeye elverişli ve genellikle kuru ot üretimi için kullanılan yer çayırdır (m.3)",
+    "Hayvanların kış mevsiminde barındırıldığı yer kışlaktır; yaylak, çiftçilerin hayvanlarıyla yaz mevsimini geçirdiği yerdir (m.3)",
+    "Bir büyükbaş hayvan birimi 500 kg canlı ağırlıktır (m.3)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Tespit-tahdit-tahsis kavramları yer değiştirildi; harita ölçeği (1/5000) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bir yerin mera arazisi olup olmadığının resmî evrak ve bilirkişi ifadeleriyle belgelendirilmesi tahdittir.”",
+    "“Mera, yaylak ve kışlakların bir veya birkaç köy ya da belediyeye bırakılması tespittir.”",
+    "“Tahdit, mera sınırlarının 1/25000 ölçekli haritalar üzerinde belirtilmesidir.”"
+   ],
+   "dogrusu": [
+    "Bir yerin mera arazisi olup olmadığının resmî evrak ve bilirkişi ifadeleriyle belgelendirilmesi tespittir (m.3)",
+    "Mera, yaylak ve kışlakların bir veya birkaç köy ya da belediyeye bırakılması tahsistir (m.3)",
+    "Tahdit, sınırların ülke nirengi sistemine dayalı 1/5000 ölçekli haritalarda belirtilip arazide kalıcı işaretlerle işaretlenmesidir (m.3)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Kullanım hakkının kiralanabilmesi, zamanaşımı yasağı ve Devletin hüküm ve tasarrufu bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Mera, yaylak ve kışlakların kullanım hakkı kiralanamaz.”",
+    "“Mera, yaylak ve kışlaklar zamanaşımı yoluyla özel mülkiyete geçirilebilir.”",
+    "“Mera, yaylak ve kışlaklar, kullanma hakkı kendisine ait olan köy tüzel kişiliğinin mülkiyetindedir.”"
+   ],
+   "dogrusu": [
+    "Mera, yaylak ve kışlaklar özel mülkiyete geçirilemez; ancak kullanım hakkı kiralanabilir (m.4)",
+    "Mera, yaylak ve kışlaklara zamanaşımı uygulanamaz ve bu yerler özel mülkiyete geçirilemez (m.4)",
+    "Mera, yaylak ve kışlaklar Devletin hüküm ve tasarrufu altındadır; kullanma hakkı köy veya belediyeye aittir (m.4)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Komisyonun üye sayısı (on bir), kolluk temsilcisi ve başkanı (vali yardımcısı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Mera komisyonu, vali yardımcısı başkanlığında on kişiden oluşur.”",
+    "“Mera komisyonunda genel kolluk birimini temsil eden bir üye bulunmaz.”",
+    "“Mera komisyonuna ilçenin kaymakamı başkanlık eder.”"
+   ],
+   "dogrusu": [
+    "Mera komisyonu, vali yardımcısı başkanlığında on bir kişiden oluşur (m.6)",
+    "Mera komisyonunda ilgisine göre genel kolluk biriminde görevli bir temsilci de yer alır (m.6)",
+    "Mera komisyonuna valinin görevlendireceği bir vali yardımcısı başkanlık eder (m.6)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim zinciri atlanarak muhtara tahliye yetkisi verildi; muhtarın koruma sorumluluğu kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Meraya tecavüz hâlinde muhtar, tecavüzü bizzat tahliye ederek meranın eski hâline getirilmesini sağlar.”",
+    "“Mera ve sınır işaretlerinin korunmasından yalnızca Bakanlık il müdürlüğü sorumludur; muhtarların bu konuda sorumluluğu yoktur.”"
+   ],
+   "dogrusu": [
+    "Muhtar tecavüzü derhal Bakanlık il veya ilçe müdürlüğüne bildirir; valilik veya kaymakamlık 3091 sayılı Kanuna göre işlem yapar (m.19)",
+    "Muhtarlar ve belediye başkanları mera, yaylak, kışlak ve sınır işaretlerinin korunmasından sorumludur (m.19)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Ev-ahır yasağı ve mandıra-suluk gibi yapılarda izin makamı (valilik) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yaylak ve kışlaklarda valilik izniyle kalıcı ev ve ahır yapılabilir.”",
+    "“Yaylak ve kışlaklarda mandıra, suluk ve sundurma gibi yapılar için kaymakamlıktan izin alınır.”"
+   ],
+   "dogrusu": [
+    "Yaylak ve kışlaklarda sayılan istisnalar dışında ev, ahır ve benzeri inşaat yapılamaz (m.20)",
+    "Yaylak ve kışlaklarda mandıra, suluk ve sundurma gibi yapılar valiliklerden izin alınarak imar mevzuatına göre yapılır (m.20)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-6", "sorun": "kirmizi_kutu",
+  "aciklama": "İkamet süresi (altı ay) ve naklen yerleştirilenlere muafiyet bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Çiftçi ailelerinin meradan yararlanabilmesi için tahsis tarihinde en az bir yıldan beri o köyde ikamet etmesi gerekir.”",
+    "“Devletçe naklen yerleştirilenler de ikamet şartını taşımadıkça meradan yararlanamaz.”"
+   ],
+   "dogrusu": [
+    "Meradan yararlanmak için tahsis tarihinde en az altı aydan beri köy veya belediye sınırları içinde ikamet şarttır (m.22)",
+    "Devletçe naklen yerleştirilenler için altı aylık ikamet şartı aranmaz (m.22)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; hayvan sayısı sınırı ve kapasite artışında yeniden tespit imkânı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Meraya, tahsis kararında belirtilen miktarın iki katına kadar hayvan sokulabilir.”",
+    "“Bakım ve ıslah sonucu otlatma kapasitesi artsa bile otlatılacak hayvan miktarı artırılamaz.”"
+   ],
+   "dogrusu": [
+    "Meraya komisyonun tahsis kararında belirtilen miktardan fazla hayvan sokulamaz (m.23)",
+    "Bakım ve ıslah sonucu kapasite artarsa, komisyonca yeniden tespit yapılarak otlatılacak hayvan miktarı artırılabilir (m.23)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Fazla hayvan ücreti (üç katı), tahsilde uygulanacak kanun (6183) ve gelirin kaydı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Otlatma hakkından fazla hayvan otlatanlardan ücret, fazla her hayvan için iki katı olarak tahsil edilir.”",
+    "“Mera ücretinin takip ve tahsilinde İcra ve İflas Kanunu hükümleri uygulanır.”",
+    "“Muhtarlıkça tahsil edilen mera ücretleri genel bütçeye gelir kaydedilir.”"
+   ],
+   "dogrusu": [
+    "Otlatma hakkından fazla hayvan otlatanlardan ücret, fazla her hayvan için üç katı olarak tahsil edilir (m.26)",
+    "Komisyonca tespit edilen ücret ve para cezalarının takip ve tahsilinde 6183 sayılı Kanun uygulanır (m.26)",
+    "Tahsilat köy sandığına veya belediye bütçesinde ayrı bir hesaba gelir kaydedilir ve amacı dışında kullanılamaz (m.26)"
+   ]}},
+ {"kanun_id": 33, "kart_id": "33-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Geçici iptal süresi (en az 7, en çok 30 gün), tekrarda iptal süresi ve onay makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yükümlülüklerini yerine getirmeyenlerin yararlanma hakları en az 7, en çok 60 gün süreyle geçici olarak iptal edilir.”",
+    "“Aynı fiilin tekrarı hâlinde yararlanma hakkı süresiz olarak iptal edilir.”",
+    "“Yararlanma hakkının geçici iptaline kaymakamın onayıyla karar verilir.”"
+   ],
+   "dogrusu": [
+    "Yükümlülüğünü yerine getirmeyenin yararlanma hakkı en az 7 gün, en çok 30 gün süreyle geçici olarak iptal edilir (m.27)",
+    "Aynı fiilin tekrarı hâlinde yararlanma hakkı bir otlatma dönemi için iptal edilir (m.27)",
+    "Geçici iptal, Bakanlık taşra teşkilatının teklifi ve valilik onayıyla yapılır (m.27)"
+   ]}}
+]

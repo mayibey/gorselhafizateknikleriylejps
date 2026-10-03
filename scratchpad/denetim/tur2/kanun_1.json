@@ -1,0 +1,1156 @@
+{
+ "kanun_id": 1,
+ "ad": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_1.json",
+ "kartlar": [
+  {
+   "id": "1-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kanunilik – suç ve tedbir",
+   "hukum": "Kanunun açıkça suç saymadığı fiile ceza da güvenlik tedbiri de verilemez; kanunda yazılı olandan başka ceza veya güvenlik tedbirine hükmolunamaz (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"güvenlik tedbiri uygulanabilir\" denir ya da cümle sadece \"ceza verilemez\" diye kısaltılır"
+   ],
+   "dogrusu": [
+    "Kanunilik – suç ve tedbir"
+   ]
+  },
+  {
+   "id": "1-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kanunilik – idare",
+   "hukum": "İdarenin düzenleyici işlemleriyle suç ve ceza konulamaz (m.2/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"idarenin düzenleyici işlemleriyle sadece ceza konulamaz\" (suç konulabilirmiş gibi)",
+    "İdarenin düzenleyici işlemleriyle sadece ceza konulamaz"
+   ],
+   "dogrusu": [
+    "İdarenin düzenleyici işlemiyle suç ve ceza konulamaz (2/2)"
+   ]
+  },
+  {
+   "id": "1-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kanunilik – kıyas",
+   "hukum": "Suç ve ceza içeren hükümlerin uygulanmasında kıyas yapılamaz; bu hükümler kıyasa yol açacak biçimde geniş yorumlanamaz (m.2/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"kıyas mümkündür\" ya da \"dar yorumlanamaz\"",
+    "Kıyas mümkündür"
+   ],
+   "dogrusu": [
+    "Kıyas yapılamaz (2/3)"
+   ]
+  },
+  {
+   "id": "1-3",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Amaç",
+   "hukum": "Kişi hak ve özgürlükleri, kamu düzen ve güvenliği, hukuk devleti, kamu sağlığı ve çevre, toplum barışını korumak; suç işlenmesini önlemek (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"ekonomik düzeni korumak\" eklenir (o, Kabahatler Kanununun amacıdır)"
+   ],
+   "dogrusu": [
+    "Amaç"
+   ]
+  },
+  {
+   "id": "1-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Orantılılık ve eşitlik",
+   "hukum": "Fiilin ağırlığıyla orantılı ceza; ırk, dil, din, mezhep, milliyet, renk, cinsiyet, siyasal/felsefi görüş, köken, doğum, ekonomik konum yönünden ayrım yapılamaz ve hiçbir kimseye ayrıcalık tanınamaz (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"ayrıcalık tanınamaz\" kısmı düşürülür"
+   ],
+   "dogrusu": [
+    "Fiilin ağırlığıyla orantılı ceza …"
+   ]
+  },
+  {
+   "id": "1-5",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bilmemek mazeret değil",
+   "hukum": "Ceza kanunlarını bilmemek mazeret sayılmaz (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"haklı bir sebep varsa mazerettir\""
+   ],
+   "dogrusu": [
+    "Bilmemek mazeret değil"
+   ]
+  },
+  {
+   "id": "1-6",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Genel hükümlerin yayılması",
+   "hukum": "Bu Kanunun genel hükümleri, özel ceza kanunları ve ceza içeren kanunlardaki suçlar hakkında da uygulanır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece bu Kanundaki suçlar hakkında uygulanır\""
+   ],
+   "dogrusu": [
+    "özel ceza kanunları ve ceza içeren kanunlardaki (m.5)"
+   ]
+  },
+  {
+   "id": "1-7",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yer bakımından uygulama",
+   "hukum": "Türkiye'de işlenen suçlara Türk kanunları uygulanır; fiilin kısmen veya tamamen Türkiye'de işlenmesi veya neticenin Türkiye'de gerçekleşmesi yeterlidir (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"fiilin tamamen Türkiye'de işlenmesi şarttır\""
+   ],
+   "dogrusu": [
+    "kısmen veya tamamen · veya neticenin (m.8/1)"
+   ]
+  },
+  {
+   "id": "1-8",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Türkiye'de işlenmiş sayılan yerler",
+   "hukum": "Türk kara ve hava sahası ile karasuları; açık denizde ve üzerindeki hava sahasında Türk deniz/hava araçları; Türk deniz/hava savaş araçları; kıta sahanlığı veya münhasır ekonomik bölgedeki sabit platformlar (m.8/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"münhasır ekonomik bölge\" çıkarılır veya listeye \"yabancı bayraklı gemi\" eklenir"
+   ],
+   "dogrusu": [
+    "savaş · sabit platformlar (m.8/2)"
+   ]
+  },
+  {
+   "id": "1-9",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Şahsilik",
+   "hukum": "Ceza sorumluluğu şahsidir; kimse başkasının fiilinden dolayı sorumlu tutulamaz (m.20/1)",
+   "sinavda_boyle_yazarlar": [
+    "cümleye \"ancak\" ile istisna eklenir"
+   ],
+   "dogrusu": [
+    "Şahsilik"
+   ]
+  },
+  {
+   "id": "1-10",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Tüzel kişi",
+   "hukum": "Tüzel kişiler hakkında ceza yaptırımı uygulanamaz; yalnız suç dolayısıyla kanunda öngörülen güvenlik tedbiri niteliğindeki yaptırımlar saklıdır (m.20/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüzel kişiler hakkında da ceza yaptırımı uygulanır\" — çıkmışta bu şık doğru cevap olmuştur",
+    "Tüzel kişiler hakkında da ceza yaptırımı uygulanır"
+   ],
+   "dogrusu": [
+    "Tüzel kişilere ceza yaptırımı uygulanamaz (20/2)"
+   ]
+  },
+  {
+   "id": "1-11",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Kast",
+   "hukum": "Suçun oluşması kastın varlığına bağlıdır; kast, kanuni tanımdaki unsurların bilerek ve istenerek gerçekleştirilmesidir (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"bilerek\" veya \"istenerek\"ten biri düşürülür"
+   ],
+   "dogrusu": [
+    "bilerek ve istenerek (m.21/1)"
+   ]
+  },
+  {
+   "id": "1-12",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Olası kast",
+   "hukum": "Unsurların gerçekleşebileceğini öngörmesine rağmen fiili işlemek. Ağırlaştırılmış müebbet yerine müebbet, müebbet yerine 20-25 yıl; diğer suçlarda temel ceza üçte birden yarısına kadar indirilir (m.21/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"indirilir\" → \"artırılır\" ya da 20-25 yıl → 15-20 yıl"
+   ],
+   "dogrusu": [
+    "öngörmesine rağmen · 20-25 yıl · üçte birden yarısına kadar indirilir (m.21/2)"
+   ]
+  },
+  {
+   "id": "1-13",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Taksirin istisnailiği",
+   "hukum": "Taksirle işlenen fiiller ancak kanunun açıkça belirttiği hâllerde cezalandırılır (m.22/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"taksirle işlenen fiiller her hâlde cezalandırılır\"",
+    "Taksirle işlenen fiiller her hâlde cezalandırılır"
+   ],
+   "dogrusu": [
+    "Taksirli fiiller ancak kanunun açıkça belirttiği hâllerde cezalandırılır (22/1)"
+   ]
+  },
+  {
+   "id": "1-14",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Taksir tanımı",
+   "hukum": "Dikkat ve özen yükümlülüğüne aykırılık dolayısıyla, kanuni tanımdaki neticenin öngörülmeyerek gerçekleştirilmesi (m.22/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"öngörülmesine rağmen\" denir (o olası kasttır)"
+   ],
+   "dogrusu": [
+    "öngörülmeyerek (m.22/2)"
+   ]
+  },
+  {
+   "id": "1-15",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Bilinçli taksir",
+   "hukum": "Öngördüğü neticeyi istememesine karşın neticenin meydana gelmesi; ceza üçte birden yarısına kadar artırılır (m.22/3)",
+   "sinavda_boyle_yazarlar": [
+    "oran \"yarıdan bir katına\" yapılır ya da \"indirilir\" denir"
+   ],
+   "dogrusu": [
+    "istememesine karşın · üçte birden yarısına kadar artırılır (m.22/3)"
+   ]
+  },
+  {
+   "id": "1-16",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Taksirde kusur",
+   "hukum": "Ceza failin kusuruna göre belirlenir; birden fazla kişi taksirle işlerse herkes kendi kusurundan sorumlu olur, cezalar ayrı ayrı belirlenir (m.22/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"müteselsilen sorumlu olurlar\""
+   ],
+   "dogrusu": [
+    "kendi kusurundan (m.22/4-5)"
+   ]
+  },
+  {
+   "id": "1-17",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Taksirde kişisel cezasızlık",
+   "hukum": "Netice, failin kişisel ve ailevi durumu bakımından cezayı gereksiz kılacak derecede mağduriyetine yol açmışsa ceza verilmez; bilinçli taksirde ceza yarıdan altıda bire kadar indirilebilir (m.22/6)",
+   "sinavda_boyle_yazarlar": [
+    "bilinçli taksirde de \"ceza verilmez\" denir"
+   ],
+   "dogrusu": [
+    "ceza verilmez · yarıdan altıda bire kadar indirilebilir (m.22/6)"
+   ]
+  },
+  {
+   "id": "1-18",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Netice sebebiyle ağırlaşmış suç",
+   "hukum": "Kastedilenden daha ağır veya başka bir netice doğarsa, sorumluluk için bu netice bakımından en azından taksirle hareket edilmiş olmalı (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "boşluğa \"kastla\", \"bilinçli taksirle\", \"olası kastla\" konur; doğrusu taksirle"
+   ],
+   "dogrusu": [
+    "en azından taksirle (m.23)"
+   ]
+  },
+  {
+   "id": "1-19",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Teşebbüs",
+   "hukum": "Kastettiği suçu elverişli hareketlerle doğrudan doğruya icraya başlayıp elinde olmayan nedenlerle tamamlayamamak (m.35/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"hazırlık hareketleri de teşebbüstür\" ya da \"elverişli\" kelimesi atılır"
+   ],
+   "dogrusu": [
+    "elverişli hareketlerle doğrudan doğruya icraya başlayıp (m.35/1)"
+   ]
+  },
+  {
+   "id": "1-20",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Teşebbüste ceza",
+   "hukum": "Ağırlaştırılmış müebbet yerine 14-21 yıl, müebbet yerine 10-18 yıl; diğer hâllerde ceza dörtte birinden dörtte üçüne kadar indirilir (m.35/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"üçte birinden üçte ikisine kadar\""
+   ],
+   "dogrusu": [
+    "14-21 yıl · 10-18 yıl · dörtte birinden dörtte üçüne kadar indirilir (m.35/2)"
+   ]
+  },
+  {
+   "id": "1-21",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Gönüllü vazgeçme",
+   "hukum": "İcra hareketlerinden gönüllü vazgeçen veya kendi çabasıyla neticeyi önleyen teşebbüsten cezalandırılmaz; tamam olan kısım suç oluşturuyorsa yalnız o suçun cezasını alır (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"gönüllü vazgeçmede de cezada indirime gidilir\" — hayır, teşebbüsten hiç ceza verilmez",
+    "Gönüllü vazgeçmede de cezada indirime gidilir"
+   ],
+   "dogrusu": [
+    "Gönüllü vazgeçende teşebbüsten ceza verilmez (36)"
+   ]
+  },
+  {
+   "id": "1-22",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Müşterek faillik",
+   "hukum": "Kanuni tanımdaki fiili birlikte gerçekleştirenlerin her biri fail olarak sorumludur (m.37/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"biri fail, diğerleri yardım eden sayılır\""
+   ],
+   "dogrusu": [
+    "birlikte gerçekleştirenlerin her biri (m.37/1)"
+   ]
+  },
+  {
+   "id": "1-23",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Dolaylı faillik",
+   "hukum": "Suçun işlenmesinde başkasını araç olarak kullanan da fail sayılır; kusur yeteneği olmayanları araç kullananın cezası üçte birden yarısına kadar artırılır (m.37/2)",
+   "sinavda_boyle_yazarlar": [
+    "artırım \"yarıdan bir katına\" yapılır ya da \"azmettiren sayılır\" denir"
+   ],
+   "dogrusu": [
+    "araç olarak kullanan · kusur yeteneği olmayanları · üçte birden yarısına kadar artırılır (m.37/2)"
+   ]
+  },
+  {
+   "id": "1-24",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Azmettirme",
+   "hukum": "Başkasını suç işlemeye azmettiren, işlenen suçun cezası ile cezalandırılır (m.38/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"işlenen suçun cezasının en az yarısı kadar cezalandırılır\" — çıkmışta bu yanlış şıktı",
+    "İşlenen suçun cezasının en az yarısı kadar cezalandırılır"
+   ],
+   "dogrusu": [
+    "Azmettiren işlenen suçun cezasıyla cezalandırılır (38/1)"
+   ]
+  },
+  {
+   "id": "1-25",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Nitelikli azmettirme",
+   "hukum": "Üstsoy-altsoy ilişkisinden doğan nüfuzla azmettirmede ceza üçte birden yarısına kadar artırılır; çocukların azmettirilmesinde artırım için üstsoy-altsoy ilişkisi aranmaz (m.38/2)",
+   "sinavda_boyle_yazarlar": [
+    "çocuklarda da akrabalık aranır denir"
+   ],
+   "dogrusu": [
+    "üçte birden yarısına kadar artırılır · çocukların · aranmaz (m.38/2)"
+   ]
+  },
+  {
+   "id": "1-26",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Azmettireni açığa çıkarma",
+   "hukum": "Azmettiren belli değilse, kim olduğunu ortaya çıkaran fail veya suç ortağına ağırlaştırılmış müebbet yerine 20-25 yıl, müebbet yerine 15-20 yıl hükmolunabilir; diğer hâllerde cezada üçte bir indirim yapılabilir (m.38/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"hükmolunur / indirim yapılır\" diye zorunlu gösterilir; oysa takdiridir"
+   ],
+   "dogrusu": [
+    "20-25 yıl · 15-20 yıl · abilir · üçte bir · abilir (m.38/3)"
+   ]
+  },
+  {
+   "id": "1-27",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Yardım edenin cezası",
+   "hukum": "Ağırlaştırılmış müebbeti gerektiren suçta 15-20 yıl, müebbette 10-15 yıl; diğer hâllerde cezanın yarısı indirilir, ancak verilecek ceza sekiz yılı geçemez (m.39/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"sekiz yıl\" → \"beş yıl\" veya üst sınır hiç yokmuş gibi gösterilir"
+   ],
+   "dogrusu": [
+    "15-20 yıl · 10-15 yıl · yarısı indirilir · sekiz yılı geçemez (m.39/1)"
+   ]
+  },
+  {
+   "id": "1-28",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Yardım eden sayılan hâller",
+   "hukum": "(a) Teşvik etmek, suç işleme kararını kuvvetlendirmek veya fiilden sonra yardım vaat etmek; (b) suçun nasıl işleneceği hususunda yol göstermek veya araç sağlamak; (c) suçtan önce/sırasında yardımla icrayı kolaylaştırmak (m.39/2)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"fiili birlikte gerçekleştirmek\" eklenir (o müşterek failliktir)"
+   ],
+   "dogrusu": [
+    "(a) Teşvik etmek …"
+   ]
+  },
+  {
+   "id": "1-29",
+   "madde": [
+    "40"
+   ],
+   "baslik": "İştirakin şartı",
+   "hukum": "İştirak için kasten ve hukuka aykırı işlenmiş bir fiilin varlığı yeterlidir; her kişi, diğerinin cezalandırılmasını önleyen kişisel nedenlere bakılmaksızın kendi kusurlu fiiline göre cezalandırılır (m.40/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"failin cezalandırılabilir olması şarttır\""
+   ],
+   "dogrusu": [
+    "kasten ve hukuka aykırı · kendi kusurlu fiiline göre (m.40/1)"
+   ]
+  },
+  {
+   "id": "1-30",
+   "madde": [
+    "40"
+   ],
+   "baslik": "Özgü suçta iştirak",
+   "hukum": "Özgü suçlarda ancak özel faillik niteliğini taşıyan kişi fail olabilir; işlenişine katılan diğerleri azmettiren veya yardım eden olarak sorumlu tutulur (m.40/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"diğerleri de müşterek fail olur\""
+   ],
+   "dogrusu": [
+    "ancak özel faillik niteliğini taşıyan kişi fail · azmettiren veya yardım eden (m.40/2)"
+   ]
+  },
+  {
+   "id": "1-31",
+   "madde": [
+    "40"
+   ],
+   "baslik": "İştirakte teşebbüs eşiği",
+   "hukum": "İştirakten sorumluluk için suçun en azından teşebbüs aşamasına varmış olması gerekir (m.40/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"hazırlık hareketi yeterlidir\""
+   ],
+   "dogrusu": [
+    "en azından teşebbüs aşamasına (m.40/3)"
+   ]
+  },
+  {
+   "id": "1-32",
+   "madde": [
+    "41"
+   ],
+   "baslik": "İştirakte gönüllü vazgeçme",
+   "hukum": "Yalnız gönüllü vazgeçen suç ortağı yararlanır; suç, vazgeçenin gayreti dışında başka bir sebeple işlenmemişse veya tüm gayretine rağmen işlenmişse de hükümler uygulanır (m.41)",
+   "sinavda_boyle_yazarlar": [
+    "\"vazgeçme bütün ortaklara sirayet eder\""
+   ],
+   "dogrusu": [
+    "gönüllü vazgeçen (m.41)"
+   ]
+  },
+  {
+   "id": "1-33",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Bileşik suç",
+   "hukum": "Biri diğerinin unsurunu veya ağırlaştırıcı nedenini oluşturduğu için tek fiil sayılan suç; bu tür suçlarda içtima hükümleri uygulanmaz (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"bileşik suçlarda içtima hükümleri uygulanır\"",
+    "Bileşik suçlarda içtima hükümleri uygulanır"
+   ],
+   "dogrusu": [
+    "Bileşik suçta içtima hükümleri uygulanmaz (42)"
+   ]
+  },
+  {
+   "id": "1-34",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Zincirleme suç",
+   "hukum": "Bir suç işleme kararının icrası kapsamında, değişik zamanlarda bir kişiye karşı aynı suçun birden fazla işlenmesinde tek cezaya hükmedilir; ceza dörtte birinden dörtte üçüne kadar artırılır (m.43/1)",
+   "sinavda_boyle_yazarlar": [
+    "oran \"üçte birinden üçte ikisine\" yapılır"
+   ],
+   "dogrusu": [
+    "değişik zamanlarda bir kişiye karşı · tek cezaya · dörtte birinden dörtte üçüne kadar artırılır (m.43/1)"
+   ]
+  },
+  {
+   "id": "1-35",
+   "madde": [
+    "43"
+   ],
+   "baslik": "\"Aynı suç\" ölçüsü",
+   "hukum": "Bir suçun temel şekli ile daha ağır veya daha az cezayı gerektiren nitelikli şekilleri aynı suç sayılır; mağduru belli bir kişi olmayan suçlarda da bu hüküm uygulanır (m.43/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"nitelikli şekilleri aynı suç sayılmaz\" — MEBS 2024'ün doğru cevabı tam buydu",
+    "Aynı suç sayılmaz\" — MEBS 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "Temel şekil ile nitelikli şekiller aynı suç sayılır (43/1)"
+   ]
+  },
+  {
+   "id": "1-36",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Tek fiille birden fazla mağdur",
+   "hukum": "Aynı suçun birden fazla kişiye karşı tek bir fiille işlenmesinde de zincirleme suç hükmü uygulanır (m.43/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"her mağdur için ayrı ceza verilir\"",
+    "Her mağdur için ayrı ceza verilir"
+   ],
+   "dogrusu": [
+    "Tek fiille birden fazla kişiye işlemede de zincirleme uygulanır (43/2)"
+   ]
+  },
+  {
+   "id": "1-37",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Zincirlemenin istisnası",
+   "hukum": "Kasten öldürme, kasten yaralama, işkence ve yağma suçlarında m.43 uygulanmaz (m.43/3)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"hırsızlık\" konur ya da \"yağma\" çıkarılır"
+   ],
+   "dogrusu": [
+    "yağma (m.43/3)"
+   ]
+  },
+  {
+   "id": "1-38",
+   "madde": [
+    "44"
+   ],
+   "baslik": "Fikri içtima",
+   "hukum": "Bir fiille birden fazla farklı suça sebebiyet veren kişi, bunlardan en ağır cezayı gerektiren suçtan cezalandırılır (m.44)",
+   "sinavda_boyle_yazarlar": [
+    "\"her suçtan ayrı ayrı cezalandırılır\""
+   ],
+   "dogrusu": [
+    "en ağır cezayı gerektiren (m.44)"
+   ]
+  },
+  {
+   "id": "1-39",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Ceza türleri",
+   "hukum": "Suç karşılığında uygulanan yaptırım olarak cezalar hapis ve adlî para cezalarıdır (m.45)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"güvenlik tedbiri\" eklenir; güvenlik tedbiri ceza değildir"
+   ],
+   "dogrusu": [
+    "hapis ve adlî para cezalarıdır (m.45)"
+   ]
+  },
+  {
+   "id": "1-40",
+   "madde": [
+    "247"
+   ],
+   "baslik": "Zimmet",
+   "hukum": "Görevi nedeniyle zilyetliği kendisine devredilmiş veya koruma-gözetimiyle yükümlü olduğu malı kendisinin veya başkasının zimmetine geçiren kamu görevlisi: 5 yıldan 12 yıla kadar hapis (m.247/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"5-10 yıl\" yapılır ya da \"başkasının zimmetine geçirme\" hâli düşürülür"
+   ],
+   "dogrusu": [
+    "kendisinin veya başkasının · 5 yıldan 12 yıla kadar hapis (m.247/1)"
+   ]
+  },
+  {
+   "id": "1-41",
+   "madde": [
+    "247"
+   ],
+   "baslik": "Nitelikli zimmet",
+   "hukum": "Zimmetin açığa çıkmamasını sağlamaya yönelik hileli davranışlarla işlenirse ceza yarı oranında artırılır (m.247/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"üçte bir oranında artırılır\""
+   ],
+   "dogrusu": [
+    "hileli davranışlarla · yarı oranında artırılır (m.247/2)"
+   ]
+  },
+  {
+   "id": "1-42",
+   "madde": [
+    "247"
+   ],
+   "baslik": "Kullanma zimmeti",
+   "hukum": "Mal, geçici bir süre kullanıldıktan sonra iade edilmek üzere zimmete geçirilmişse ceza yarı oranına kadar indirilebilir (m.247/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"indirilir\" (zorunlu gibi) ya da \"ceza verilmez\""
+   ],
+   "dogrusu": [
+    "yarı oranına kadar indirilebilir (m.247/3)"
+   ]
+  },
+  {
+   "id": "1-43",
+   "madde": [
+    "248"
+   ],
+   "baslik": "Zimmette etkin pişmanlık",
+   "hukum": "Soruşturma başlamadan önce aynen iade veya tam tazmin: üçte iki indirim; kovuşturma başlamadan önce gönüllü iade/tazmin: yarı indirim; hükümden önce: üçte bir indirim (m.248)",
+   "sinavda_boyle_yazarlar": [
+    "üç kademe birbirine kaydırılır — en sevilen tuzak budur"
+   ],
+   "dogrusu": [
+    "Soruşturma başlamadan · üçte iki · kovuşturma başlamadan · yarı · hükümden önce · üçte bir (m.248)"
+   ]
+  },
+  {
+   "id": "1-44",
+   "madde": [
+    "249"
+   ],
+   "baslik": "Zimmette değer azlığı",
+   "hukum": "Malın değerinin azlığı nedeniyle ceza üçte birden yarıya kadar indirilir (m.249)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarıdan üçte ikisine kadar\" ya da \"indirilebilir\" (oysa indirilir)"
+   ],
+   "dogrusu": [
+    "üçte birden yarıya kadar indirilir (m.249)"
+   ]
+  },
+  {
+   "id": "1-45",
+   "madde": [
+    "250"
+   ],
+   "baslik": "İcbar suretiyle irtikâp",
+   "hukum": "Görevin sağladığı nüfuzu kötüye kullanarak kendisine veya başkasına yarar sağlanmasına bir kimseyi icbar eden kamu görevlisi: 5 yıldan 10 yıla kadar hapis (m.250/1)",
+   "sinavda_boyle_yazarlar": [
+    "suçun adı \"zimmet/rüşvet/nüfuz ticareti\" gösterilir (MEBS 2024'te tam bu soruldu) veya süre 5-12 yıl yapılır"
+   ],
+   "dogrusu": [
+    "nüfuzu kötüye kullanarak · icbar · 5 yıldan 10 yıla kadar hapis (m.250/1)"
+   ]
+  },
+  {
+   "id": "1-46",
+   "madde": [
+    "250"
+   ],
+   "baslik": "İkna suretiyle irtikâp",
+   "hukum": "Görevin sağladığı güveni kötüye kullanarak hileli davranışlarla ikna eden kamu görevlisi: 3 yıldan 5 yıla kadar hapis (m.250/2)",
+   "sinavda_boyle_yazarlar": [
+    "icbar ile ikna cezaları yer değiştirilir"
+   ],
+   "dogrusu": [
+    "güveni kötüye kullanarak hileli davranışlarla ikna · 3 yıldan 5 yıla kadar hapis (m.250/2)"
+   ]
+  },
+  {
+   "id": "1-47",
+   "madde": [
+    "250"
+   ],
+   "baslik": "Hatadan yararlanma",
+   "hukum": "İkna suretiyle irtikâbın kişinin hatasından yararlanarak işlenmesi: 1 yıldan 3 yıla kadar hapis; irtikâp edilen menfaatin değeri ve mağdurun ekonomik durumuna göre ceza yarısına kadar indirilebilir (m.250/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "indirim \"üçte bir\" yapılır"
+   ],
+   "dogrusu": [
+    "hatasından yararlanarak · 1 yıldan 3 yıla kadar hapis · yarısına kadar indirilebilir (m.250/3-4)"
+   ]
+  },
+  {
+   "id": "1-48",
+   "madde": [
+    "251"
+   ],
+   "baslik": "Denetim görevinin ihmali",
+   "hukum": "Zimmet veya irtikâbın işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi müşterek fail olarak sorumludur; denetimi ihmal ederek imkân sağlayan: 3 aydan 3 yıla kadar hapis (m.251)",
+   "sinavda_boyle_yazarlar": [
+    "\"kasten göz yumana da 3 ay-3 yıl verilir\""
+   ],
+   "dogrusu": [
+    "kasten göz yuman · müşterek fail · ihmal ederek · 3 aydan 3 yıla kadar hapis (m.251)"
+   ]
+  },
+  {
+   "id": "1-49",
+   "madde": [
+    "252"
+   ],
+   "baslik": "Rüşvet",
+   "hukum": "Görevin ifasıyla ilgili bir işi yapması veya yapmaması için doğrudan ya da aracıyla menfaat sağlayan kişi ve menfaat sağlayan kamu görevlisi aynı ceza: 4 yıldan 12 yıla kadar hapis (m.252/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"rüşvet verenin kamu görevlisi olması ağırlaştırıcı nedendir\" — böyle bir hüküm yoktur (MEBS 2024'te bu şık yanlıştı)",
+    "Verenin kamu görevlisi olması ağırlaştırıcı nedendir"
+   ],
+   "dogrusu": [
+    "Rüşvet veren ile alan aynı cezayı alır (252/1-2)"
+   ]
+  },
+  {
+   "id": "1-50",
+   "madde": [
+    "252"
+   ],
+   "baslik": "Rüşvette anlaşma",
+   "hukum": "Rüşvet konusunda anlaşmaya varılması hâlinde suç tamamlanmış gibi cezaya hükmolunur (m.252/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"teşebbüs hükümleri uygulanır\"",
+    "Teşebbüs hükümleri uygulanır"
+   ],
+   "dogrusu": [
+    "Rüşvette anlaşma = tamamlanmış suç (252/3)"
+   ]
+  },
+  {
+   "id": "1-51",
+   "madde": [
+    "252"
+   ],
+   "baslik": "Kabul edilmeyen rüşvet",
+   "hukum": "Kamu görevlisinin talebi kişi tarafından ya da kişinin teklifi kamu görevlisi tarafından kabul edilmezse ceza yarı oranında indirilir (m.252/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"teşebbüs hükümleri uygulanır\" veya \"aynı ceza verilir\""
+   ],
+   "dogrusu": [
+    "yarı oranında indirilir (m.252/4)"
+   ]
+  },
+  {
+   "id": "1-52",
+   "madde": [
+    "252"
+   ],
+   "baslik": "Rüşvete aracılık ve üçüncü kişi",
+   "hukum": "Aracılık eden, kamu görevlisi sıfatını taşıyıp taşımadığına bakılmaksızın müşterek fail; dolaylı menfaat sağlanan üçüncü kişinin/tüzel kişinin menfaati kabul eden yetkilisi de müşterek fail (m.252/5-6)",
+   "sinavda_boyle_yazarlar": [
+    "\"yardım eden olarak sorumlu tutulur\" ya da \"kamu görevlisi olması şartıyla\"",
+    "Yardım eden olarak sorumlu tutulur"
+   ],
+   "dogrusu": [
+    "Rüşvete/nüfuz ticaretine aracı müşterek fail (252/5, 255/4)"
+   ]
+  },
+  {
+   "id": "1-53",
+   "madde": [
+    "252"
+   ],
+   "baslik": "Rüşvette nitelikli fail",
+   "hukum": "Rüşvet alan, talep eden veya anlaşan kişi yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir ise ceza üçte birden yarısına kadar artırılır (m.252/7)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"avukat\" eklenir veya oran \"yarıdan bir katına\" yapılır"
+   ],
+   "dogrusu": [
+    "yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir · üçte birden yarısına kadar artırılır (m.252/7)"
+   ]
+  },
+  {
+   "id": "1-54",
+   "madde": [
+    "253"
+   ],
+   "baslik": "Rüşvette tüzel kişi",
+   "hukum": "Rüşvetle yararına haksız menfaat sağlanan tüzel kişilere bunlara özgü güvenlik tedbirlerine hükmolunur (m.253)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüzel kişiye adlî para cezası verilir\""
+   ],
+   "dogrusu": [
+    "bunlara özgü güvenlik tedbirlerine (m.253)"
+   ]
+  },
+  {
+   "id": "1-55",
+   "madde": [
+    "254"
+   ],
+   "baslik": "Rüşvette etkin pişmanlık",
+   "hukum": "Durum resmî makamlarca öğrenilmeden önce: alan rüşvet konusunu yetkili makamlara aynen teslim ederse, veren veya anlaşan pişmanlık duyup haber verirse, iştirak eden haber verirse cezaya hükmolunmaz; bu madde yabancı kamu görevlisine rüşvet verene uygulanmaz (m.254)",
+   "sinavda_boyle_yazarlar": [
+    "\"cezada indirim yapılır\" denir ya da yabancı istisnası gizlenir"
+   ],
+   "dogrusu": [
+    "resmî makamlarca öğrenilmeden önce · cezaya hükmolunmaz · yabancı kamu görevlisine rüşvet verene uygulanmaz (m.254)"
+   ]
+  },
+  {
+   "id": "1-56",
+   "madde": [
+    "255"
+   ],
+   "baslik": "Nüfuz ticareti",
+   "hukum": "Kamu görevlisi üzerinde nüfuz sahibi olduğundan bahisle haksız işin gördürülmesi için girişimde bulunmak üzere menfaat temin eden: 2 yıldan 5 yıla kadar hapis ve beşbin güne kadar adlî para cezası; fail kamu görevlisi ise hapis cezası yarı oranında artırılır; işini gördüren veya gördürüleceği beklentisiyle menfaat sağlayan: 1 yıldan 3 yıla kadar hapis (m.255/1)",
+   "sinavda_boyle_yazarlar": [
+    "artırım hapis yerine para cezasına uygulanır gibi gösterilir; \"5.000 gün\" düşürülür"
+   ],
+   "dogrusu": [
+    "üzerinde nüfuz sahibi olduğundan bahisle · 2 yıldan 5 yıla kadar hapis ve beşbin güne kadar adlî para cezası · kamu görevlisi ise hapis cezası yarı oranında artırılır · 1 yıldan 3 yıla kadar hapis (m.255/1)"
+   ]
+  },
+  {
+   "id": "1-57",
+   "madde": [
+    "255"
+   ],
+   "baslik": "Nüfuz ticaretinde anlaşma ve ret",
+   "hukum": "Menfaat temini konusunda anlaşmaya varılması hâlinde dahi suç tamamlanmış gibi cezaya hükmolunur (m.255/2); talep veya teklif kabul edilmezse birinci fıkraya göre verilecek ceza yarı oranında indirilir (m.255/3)",
+   "sinavda_boyle_yazarlar": [
+    "Menfaat temin edilmiş gibi aynı cezaya hükmolunur"
+   ],
+   "dogrusu": [
+    "Nüfuz ticaretinde talep reddedilirse yarı indirim (255/3)"
+   ]
+  },
+  {
+   "id": "1-58",
+   "madde": [
+    "255"
+   ],
+   "baslik": "Nüfuz ticaretinde aracı ve üçüncü kişi",
+   "hukum": "Aracılık eden ve dolaylı menfaat sağlanan üçüncü kişinin menfaati kabul eden yetkilileri müşterek fail olarak cezalandırılır (m.255/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"yardım eden\" denir veya bunlara pişmanlıkla cezasızlık tanınır — bu maddede etkin pişmanlık yoktur"
+   ],
+   "dogrusu": [
+    "müşterek fail (m.255/4-5)"
+   ]
+  },
+  {
+   "id": "1-59",
+   "madde": [
+    "256"
+   ],
+   "baslik": "Zor kullanma yetkisinde sınırın aşılması",
+   "hukum": "Zor kullanma yetkisine sahip kamu görevlisinin, görevini yaptığı sırada kişilere karşı görevin gerektirdiği ölçünün dışında kuvvet kullanması hâlinde kasten yaralama hükümleri uygulanır (m.256)",
+   "sinavda_boyle_yazarlar": [
+    "\"işkence hükümleri\" ya da \"görevi kötüye kullanma hükümleri\" denir"
+   ],
+   "dogrusu": [
+    "görevin gerektirdiği ölçünün dışında · kasten yaralama (m.256)"
+   ]
+  },
+  {
+   "id": "1-60",
+   "madde": [
+    "257"
+   ],
+   "baslik": "Görevi kötüye kullanma (icrai)",
+   "hukum": "Kanunda ayrıca suç sayılan hâller dışında, görevin gereklerine aykırı hareketle kişilerin mağduriyetine, kamu zararına veya haksız menfaate neden olan kamu görevlisi: 6 aydan 2 yıla kadar hapis (m.257/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"1-3 yıl\" yapılır"
+   ],
+   "dogrusu": [
+    "aykırı hareketle · 6 aydan 2 yıla kadar hapis (m.257/1)"
+   ]
+  },
+  {
+   "id": "1-61",
+   "madde": [
+    "257"
+   ],
+   "baslik": "Görevi ihmal",
+   "hukum": "Görevin gereklerini yapmakta ihmal veya gecikme göstererek aynı sonuçlara yol açan kamu görevlisi: 3 aydan 1 yıla kadar hapis (m.257/2)",
+   "sinavda_boyle_yazarlar": [
+    "icrai hâl ile ihmal hâlinin cezaları yer değiştirilir"
+   ],
+   "dogrusu": [
+    "ihmal veya gecikme · 3 aydan 1 yıla kadar hapis (m.257/2)"
+   ]
+  },
+  {
+   "id": "1-62",
+   "madde": [
+    "258"
+   ],
+   "baslik": "Göreve ilişkin sırrın açıklanması",
+   "hukum": "Gizli kalması gereken belge, karar, emir ve tebligatı açıklayan, yayınlayan veya başkalarının bilgi edinmesini kolaylaştıran kamu görevlisi: 1 yıldan 4 yıla kadar hapis; kamu görevlisi sıfatı sona erdikten sonra aynı fiili işleyene de aynı ceza (m.258)",
+   "sinavda_boyle_yazarlar": [
+    "\"sıfatı sona erenler cezalandırılmaz\""
+   ],
+   "dogrusu": [
+    "1 yıldan 4 yıla kadar hapis · kamu görevlisi sıfatı sona erdikten sonra (m.258)"
+   ]
+  },
+  {
+   "id": "1-63",
+   "madde": [
+    "259"
+   ],
+   "baslik": "Kamu görevlisinin ticareti",
+   "hukum": "Yürüttüğü görevin sağladığı nüfuzdan yararlanarak başkasına mal veya hizmet satmaya çalışan kamu görevlisi: 6 aya kadar hapis veya adlî para cezası (m.259)",
+   "sinavda_boyle_yazarlar": [
+    "\"satmış olması\" şart gibi gösterilir; oysa satmaya çalışmak yeterlidir. Bu suç kamu görevlisine özgüdür"
+   ],
+   "dogrusu": [
+    "satmaya çalışan · 6 aya kadar hapis veya adlî para cezası (m.259)"
+   ]
+  },
+  {
+   "id": "1-64",
+   "madde": [
+    "260"
+   ],
+   "baslik": "Kamu görevinin terki",
+   "hukum": "Hukuka aykırı ve toplu biçimde görevini terk eden, göreve gelmeyen, görevini kısmen/tamamen yapmayan veya yavaşlatan kamu görevlilerinin her biri: 3 aydan 1 yıla kadar hapis; kamu görevlisi sayısı üçten fazla değilse cezaya hükmolunmaz (m.260/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"üç kişi de yeterlidir\" ya da \"ikiden fazla\"",
+    "Üç kişi de cezalandırılır"
+   ],
+   "dogrusu": [
+    "Görevin toplu terkinde fail sayısı üçten fazla değilse ceza yok (260/1)"
+   ]
+  },
+  {
+   "id": "1-65",
+   "madde": [
+    "260"
+   ],
+   "baslik": "Mesleki haklar istisnası",
+   "hukum": "Mesleki ve sosyal haklarla ilgili olarak, hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakma veya yavaşlatmada cezada indirim yapılabileceği gibi ceza da verilmeyebilir (m.260/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiç ceza verilmez\" (kesinlik) denir"
+   ],
+   "dogrusu": [
+    "hizmeti aksatmayacak biçimde geçici ve kısa süreli · ceza da verilmeyebilir (m.260/2)"
+   ]
+  },
+  {
+   "id": "1-66",
+   "madde": [
+    "261"
+   ],
+   "baslik": "Kişilerin malları üzerinde usulsüz tasarruf",
+   "hukum": "İlgili kanunlardaki koşullara aykırı olduğunu bilerek, karşılık ödenmek suretiyle de olsa kişilerin malları üzerinde zorla tasarrufta bulunan kamu görevlisi: daha ağır suç oluşmuyorsa 6 aydan 2 yıla kadar hapis (m.261)",
+   "sinavda_boyle_yazarlar": [
+    "\"bedeli ödendiyse suç oluşmaz\""
+   ],
+   "dogrusu": [
+    "karşılık ödenmek suretiyle de olsa · 6 aydan 2 yıla kadar hapis (m.261)"
+   ]
+  },
+  {
+   "id": "1-67",
+   "madde": [
+    "262"
+   ],
+   "baslik": "Kamu görevinin usulsüz üstlenilmesi",
+   "hukum": "Kamu görevini kanun ve nizamlara aykırı olarak yerine getirmeye teşebbüs eden veya terk emri bildirildiği hâlde görevi sürdüren: 3 aydan 2 yıla kadar hapis (m.262)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca göreve fiilen başlayan cezalandırılır\""
+   ],
+   "dogrusu": [
+    "teşebbüs eden · terk emri bildirildiği hâlde görevi sürdüren · 3 aydan 2 yıla kadar hapis (m.262)"
+   ]
+  },
+  {
+   "id": "1-68",
+   "madde": [
+    "264"
+   ],
+   "baslik": "Resmî elbise ve nişanların yetkisiz kullanımı",
+   "hukum": "Bir rütbe, kamu görevi veya mesleğin resmî elbisesini yetkisiz, alenen ve başkalarını yanıltacak şekilde giyen ya da hakkı olmayan nişan/madalya takan: 3 aydan 1 yıla kadar hapis; elbisenin sağladığı kolaylıkla suç işlenirse ceza üçte biri oranında artırılır (m.264)",
+   "sinavda_boyle_yazarlar": [
+    "\"alenen\" veya \"yanıltacak şekilde\" unsuru düşürülür"
+   ],
+   "dogrusu": [
+    "alenen ve başkalarını yanıltacak şekilde · 3 aydan 1 yıla kadar hapis · üçte biri oranında artırılır (m.264)"
+   ]
+  },
+  {
+   "id": "1-69",
+   "madde": [
+    "265"
+   ],
+   "baslik": "Görevi yaptırmamak için direnme",
+   "hukum": "Kamu görevlisine görevini yapmasını engellemek amacıyla cebir veya tehdit kullanan kişi: 6 aydan 3 yıla kadar hapis (m.265/1)",
+   "sinavda_boyle_yazarlar": [
+    "fiile \"hakaret\" de eklenir"
+   ],
+   "dogrusu": [
+    "cebir veya tehdit · 6 aydan 3 yıla kadar hapis (m.265/1)"
+   ]
+  },
+  {
+   "id": "1-70",
+   "madde": [
+    "265"
+   ],
+   "baslik": "Direnmede ağırlaştırıcılar",
+   "hukum": "Yargı görevi yapanlara karşı: 2 yıldan 4 yıla kadar hapis; kendini tanınmayacak hâle koyma veya birden fazla kişiyle birlikte: üçte bir artırım; silahla ya da var olan veya var sayılan suç örgütlerinin korkutucu gücünden yararlanarak: yarı oranında artırım; kasten yaralamanın neticesi sebebiyle ağırlaşmış hâlleri ayrıca uygulanır (m.265/2-5)",
+   "sinavda_boyle_yazarlar": [
+    "Suç örgütüne yarar sağlamak maksadıyla işlenmesi\" (maddede yok)"
+   ],
+   "dogrusu": [
+    "m.265 ağırlaştırıcıları: yargı görevi yapan, tanınmaz hâle koyma/birden fazla kişi, silah/örgütün korkutucu gücü"
+   ]
+  },
+  {
+   "id": "1-71",
+   "madde": [
+    "266"
+   ],
+   "baslik": "Görevin araç ve gereçlerini suçta kullanma",
+   "hukum": "Görevi gereği elinde bulundurduğu araç ve gereçleri suç işlerken kullanan kamu görevlisinin cezası, ilgili suç tanımında kamu görevlisi sıfatı esasen dikkate alınmamışsa üçte biri oranında artırılır (m.266)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarı oranında\" yapılır ya da şart cümlesi atılır"
+   ],
+   "dogrusu": [
+    "üçte biri oranında artırılır (m.266)"
+   ]
+  },
+  {
+   "id": "1-72",
+   "madde": [
+    "317"
+   ],
+   "baslik": "Askerî komutanlığın gasbı",
+   "hukum": "Yetkisiz olarak bir asker kıtası, donanma, savaş gemisi, savaş hava filosu, kale, askerî üs veya tesis, liman ya da şehrin komutasını alan: müebbet hapis; terk emrine uymayan meşru komutan da aynı ceza (m.317)",
+   "sinavda_boyle_yazarlar": [
+    "\"ağırlaştırılmış müebbet\" denir"
+   ],
+   "dogrusu": [
+    "müebbet hapis (m.317)"
+   ]
+  },
+  {
+   "id": "1-73",
+   "madde": [
+    "318"
+   ],
+   "baslik": "Halkı askerlikten soğutma",
+   "hukum": "Askerlik hizmetini yapanları firara sevk edecek veya hizmete katılacakları vazgeçirecek şekilde teşvik/telkinde bulunan: 6 aydan 2 yıla kadar hapis; fiil basın ve yayın yoluyla işlenirse ceza yarısı oranında artırılır (m.318)",
+   "sinavda_boyle_yazarlar": [
+    "artırım \"bir katı\" yapılır"
+   ],
+   "dogrusu": [
+    "6 aydan 2 yıla kadar hapis · basın ve yayın yoluyla · yarısı oranında artırılır (m.318)"
+   ]
+  },
+  {
+   "id": "1-74",
+   "madde": [
+    "319"
+   ],
+   "baslik": "Askerleri itaatsizliğe teşvik",
+   "hukum": "1 yıldan 3 yıla kadar hapis; fiil aleni işlenirse 2 yıldan 5 yıla kadar; savaş zamanında işlenirse ceza bir katı oranında artırılır (m.319)",
+   "sinavda_boyle_yazarlar": [
+    "alenilik ve savaş kademeleri karıştırılır"
+   ],
+   "dogrusu": [
+    "1 yıldan 3 yıla kadar hapis · aleni · 2 yıldan 5 yıla kadar · savaş zamanında · bir katı oranında (m.319)"
+   ]
+  },
+  {
+   "id": "1-75",
+   "madde": [
+    "320"
+   ],
+   "baslik": "Yabancı hizmetine asker yazma",
+   "hukum": "Hükûmetin izni olmaksızın yabancı veya yabancı devlet hizmetinde ülke içinde vatandaşlardan asker yazan ya da vatandaşları silahlandıran: 3 yıldan 6 yıla kadar hapis; yazılanlar arasında asker veya askerlik çağında olanlar varsa üçte bir artırım; hizmeti kabul eden: 1 yıldan 3 yıla kadar hapis (m.320)",
+   "sinavda_boyle_yazarlar": [
+    "kabul edenin cezası asker yazanla eşitlenir"
+   ],
+   "dogrusu": [
+    "3 yıldan 6 yıla kadar hapis · üçte bir artırım · hizmeti kabul eden · 1 yıldan 3 yıla kadar hapis (m.320)"
+   ]
+  },
+  {
+   "id": "1-76",
+   "madde": [
+    "321"
+   ],
+   "baslik": "Savaşta emirlere aykırı davranış",
+   "hukum": "Savaş zamanında Devletin yetkili makam ve mercilerinin emir veya kararlarına bilerek aykırı hareket eden: 1 yıldan 6 yıla kadar hapis (m.321)",
+   "sinavda_boyle_yazarlar": [
+    "\"taksirle de işlenebilir\" denir"
+   ],
+   "dogrusu": [
+    "bilerek · 1 yıldan 6 yıla kadar hapis (m.321)"
+   ]
+  },
+  {
+   "id": "1-77",
+   "madde": [
+    "322"
+   ],
+   "baslik": "Savaşta yükümlülüklere uymama",
+   "hukum": "Savaş zamanında Devlet veya kamu kuruluşuyla yapılan sözleşmedeki yükümlülüğü kısmen/tamamen yerine getirmeyen: 3 yıldan 10 yıla kadar hapis ve onbin güne kadar adlî para cezası; yerine getirmeme taksirden ileri gelmişse cezanın dörtte üçüne kadarı indirilebilir; aracılar ve temsilciler de aynı cezayı alır; yükümlülüğün yerine getirilmesinde hile yapana 10 yıldan 15 yıla kadar hapis ve onbin güne kadar adlî para cezası (m.322)",
+   "sinavda_boyle_yazarlar": [
+    "hile hâli 3-10 yıl gösterilir"
+   ],
+   "dogrusu": [
+    "3 yıldan 10 yıla kadar hapis ve onbin güne kadar adlî para cezası · taksirden · dörtte üçüne kadarı indirilebilir · hile · 10 yıldan 15 yıla kadar hapis ve onbin güne kadar adlî para cezası (m.322)"
+   ]
+  },
+  {
+   "id": "1-78",
+   "madde": [
+    "323"
+   ],
+   "baslik": "Savaşta para değerini düşürme",
+   "hukum": "Milletin direncini tehlikeye düşürecek şekilde yabancı paraların değerini düşürmeye veya itibarı amme kâğıtlarının değerine etki etmeye yönelik hareket: 5 yıldan 10 yıla kadar hapis ve üçbin güne kadar adlî para; yabancıyla anlaşma sonucuysa yarı, düşmanla anlaşma sonucuysa bir katı artırım (m.323/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "iki artırım oranı yer değiştirilir",
+    "Halkı kin ve düşmanlığa yöneltmek amacıyla\" (maddede yok)"
+   ],
+   "dogrusu": [
+    "m.323 ağırlaştırıcıları: propaganda, askerlere yönelik, yabancıyla/düşmanla anlaşma"
+   ]
+  },
+  {
+   "id": "1-79",
+   "madde": [
+    "324"
+   ],
+   "baslik": "Seferberlikle ilgili görevin ihmali",
+   "hukum": "Sulh (barış) zamanında seferberlikle ilgili görevlerini ihmal eden veya geciktiren kamu görevlisi: 6 aydan 3 yıla kadar hapis (m.324)",
+   "sinavda_boyle_yazarlar": [
+    "Savaş zamanında seferberlik görevini ihmal"
+   ],
+   "dogrusu": [
+    "m.324 suçu sulh zamanında işlenir"
+   ]
+  },
+  {
+   "id": "1-80",
+   "madde": [
+    "325"
+   ],
+   "baslik": "Düşman devletten unvan kabulü",
+   "hukum": "Türkiye ile savaş hâlinde bulunan bir devletten akademik derece, şeref, unvan, nişan, fahri rütbe ya da bunlara ait maaş veya yarar kabul eden vatandaş: 1 yıldan 3 yıla kadar hapis (m.325)",
+   "sinavda_boyle_yazarlar": [
+    "\"herhangi bir yabancı devletten\" denir (savaş hâli şartı düşürülür)"
+   ],
+   "dogrusu": [
+    "savaş hâlinde · vatandaş · 1 yıldan 3 yıla kadar hapis (m.325)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

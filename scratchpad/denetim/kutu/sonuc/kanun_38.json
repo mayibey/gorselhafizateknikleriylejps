@@ -1,0 +1,148 @@
+[
+ {"kanun_id": 38, "kart_id": "38-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Kısırlaştırma yasak gösterildi; dijital kimliklendirme yükümlülüğü ve hayvan hastanesinin karar organı onayına bağlılığı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Toplu yaşanan yerlerde beslenen kedi ve köpeklerin kısırlaştırılması yasaktır.”",
+    "“Kedi ve köpek sahipleri, hayvanlarını dijital kimliklendirme yöntemleriyle kayıt altına aldırmakla yükümlü değildir.”",
+    "“Yerel yönetimlerin hayvan hastanesi kurması, karar organının uygun görmesi aranmaksızın zorunludur.”"
+   ],
+   "dogrusu": [
+    "Kontrolsüz üremeyi önlemek için toplu yaşanan yerlerdeki kedi ve köpeklerin sahiplerince kısırlaştırılması esastır (m.4/k)",
+    "Kedi ve köpek sahipleri hayvanlarını dijital kimliklendirme yöntemleriyle kayıt altına aldırmakla yükümlüdür (m.4/k)",
+    "Yerel yönetimler, ilgili karar organının uygun görmesi hâlinde hayvan hastanesi kurar (m.4/j)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Sertifika yükümlüsü (ev hayvanı satan) sahiplenene kaydırıldı; haciz yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bir hayvanı sahiplenen kişi, yerel yönetimlerin düzenlediği eğitim programına katılarak sertifika almakla yükümlüdür.”",
+    "“Ticari amaç güdülmeden bakılan ev hayvanları, sahibinin borcundan dolayı haczedilebilir.”"
+   ],
+   "dogrusu": [
+    "Eğitim programına katılıp sertifika alma yükümlülüğü sahiplenenin değil, ev hayvanı satan kişilerindir (m.5)",
+    "Ticari amaç güdülmeden bakılan ev hayvanları sahiplerinin borcundan dolayı haczedilemez (m.5)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Rehabilite edilen köpeklerin bakımevinde barındırılması, güçten düşmüş hayvanı çalıştırma yasağı ve öncelikli arazi tahsisi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Rehabilite edilen sahipsiz köpekler, alındıkları yere geri bırakılır.”",
+    "“Güçten düşmüş hayvanlar, gösteri amaçlı olmamak kaydıyla taşımacılıkta çalıştırılabilir.”",
+    "“Hayvan bakımevi kurulması için öncelikle belediyeye ait araziler tahsis edilir.”"
+   ],
+   "dogrusu": [
+    "Rehabilite edilen köpekler sahiplendirilinceye kadar hayvan bakımevlerinde barındırılır (m.6)",
+    "Güçten düşmüş hayvanlar ticari, gösteri, binicilik ve taşımacılık amacıyla çalıştırılamaz (m.6)",
+    "Hayvan bakımevleri ve hastanelerin kurulması için Hazineye ait araziler öncelikle tahsis edilir (m.6)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Müdahale yetkisi teknisyenlere genişletildi; kısırlaştırma yasak gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hayvanlara tıbbi ve cerrahi müdahaleyi veteriner hekimlerin yanı sıra veteriner sağlık teknisyenleri de yapabilir.”",
+    "“Kontrolsüz üremeyi önlemeye yönelik kısırlaştırma müdahalesi Kanunla yasaklanmıştır.”"
+   ],
+   "dogrusu": [
+    "Hayvanlara tıbbi ve cerrahi müdahaleler yalnızca veteriner hekimler tarafından yapılır (m.7)",
+    "Kontrolsüz üremenin önlenmesi için hayvanlara acı vermeden kısırlaştırma müdahaleleri yapılır (m.7)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Kısırlaştırma yasak listesine eklendi; veteriner hekim istisnası kaldırıldı; doping yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kısırlaştırma, Kanunda hayvanlara yapılması yasak müdahaleler arasında sayılmıştır.”",
+    "“Kuyruk ve kulak kesilmesi yasağına, veteriner hekim tıbbi sebeple gerekli görse dahi hiçbir durumda izin verilmez.”",
+    "“Hayvanlara tıbbi amaç dışında doping yapılması, veteriner hekim gözetiminde serbesttir.”"
+   ],
+   "dogrusu": [
+    "Kısırlaştırma yasak müdahalelerden değildir; üremenin önlenmesi durumunda bu yasaklara da izin verilebilir (m.8)",
+    "Kuyruk-kulak kesme gibi müdahalelere veteriner hekimin tıbbi sebeple veya hayvanın yararına gerekli görmesi ya da üremeyi önleme hâlinde izin verilebilir (m.8)",
+    "Hayvanlara tıbbi amaçlar dışında doping yapmak ve türüne aykırı hormon veya ilaç vermek yasaktır (m.8)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Deney hayvanı ithalatının izne tabi olması, deney iznini veren merci (etik kurul) ve başka seçenek olmaması şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Deney hayvanlarının ithalat ve ihracatı herhangi bir izne tabi değildir.”",
+    "“Hayvan deneylerine Sağlık Bakanlığı izin verir.”",
+    "“Başka bir seçenek bulunsa bile hayvanlar bilimsel çalışmalarda deney hayvanı olarak serbestçe kullanılabilir.”"
+   ],
+   "dogrusu": [
+    "Deney hayvanlarının ithalat ve ihracatı izne tabidir; bu izni Bakanlık verir (m.10)",
+    "Hayvan deneyi yapan kurumlarda deneylere kendi bünyelerinde kurulan etik kurullar yoluyla izin verilir (m.9)",
+    "Hayvanlar ancak başkaca bir seçenek olmaması hâlinde bilimsel çalışmalarda deney hayvanı olarak kullanılabilir (m.9)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Satış yerinde kedi-köpek yasağı, film-reklamda izin şartı ve acı çeken hayvanın devri yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ev hayvanı satış yerlerinde kedi ve köpek bulundurulabilir.”",
+    "“Hayvanların ticari amaçla film çekimi ve reklamda kullanılması izne tabi değildir.”",
+    "“İyileşemeyecek derecede acısı olan hasta bir hayvan, bakılması için başkasına satılabilir.”"
+   ],
+   "dogrusu": [
+    "Ev hayvanı satış yerlerinde kedi ve köpek bulundurulamaz; yalnız Bakanlıkça izinli üretim yerlerindekilerin satışı yapılabilir (m.10)",
+    "Hayvanların ticari amaçla film çekimi ve reklam için kullanılması izne tabidir (m.10)",
+    "İyileşemeyecek derecede acısı olan hayvanı kesim veya ağrısız öldürme dışında bir amaçla devretmek ya da satmak yasaktır (m.10)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Folklorik gösteri istisnası kaldırıldı; dövüştürme yasağı gösteriler için gevşetildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Folklorik amaçlı ve şiddet içermeyen geleneksel hayvan gösterileri de kesinlikle yasaktır.”",
+    "“Folklorik amaçlı geleneksel gösterilerde hayvanların birbiriyle dövüştürülmesine izin verilebilir.”"
+   ],
+   "dogrusu": [
+    "Şiddet içermeyen folklorik geleneksel gösteriler, Bakanlığın uygun görüşüyle il hayvanları koruma kurulu izniyle düzenlenebilir (m.11)",
+    "Hayvanları başka bir canlı hayvanla dövüştürmek yasaktır; izin verilebilen gösteriler şiddet içermeyenlerdir (m.11)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-10", "sorun": "kirmizi_kutu",
+  "aciklama": "Ev hayvanı satışında yaş sınırı (on altı), gebe hayvanı çalıştırma eşiği (2/3) ve terk yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ev hayvanlarını on sekiz yaşından küçüklere satmak yasaktır.”",
+    "“Hayvanların gebelik süresinin yarısını tamamlamış gebe iken çalıştırılması yasaktır.”",
+    "“Ev hayvanını terk etmek Kanunda yasaklar arasında sayılmamıştır.”"
+   ],
+   "dogrusu": [
+    "Ev hayvanlarını on altı yaşından küçüklere satmak yasaktır (m.14/d)",
+    "Hayvanları hasta, gebelik süresinin 2/3'ünü tamamlamış gebe ve yeni ana iken çalıştırmak yasaktır (m.14/ı)",
+    "Ev hayvanını terk etmek yasaktır (m.14/n)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Televizyon (iki saat) ve radyo (yarım saat) yayın süreleri yer değiştirildi; takip makamı (RTÜK) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel radyo kanallarında hayvanların korunmasına ilişkin ayda en az iki saat eğitici yayın yapılması zorunludur.”",
+    "“Televizyon kanallarında hayvanların korunmasına ilişkin ayda yarım saat eğitici yayın yapılması yeterlidir.”",
+    "“Bu eğitici yayınların takibi Tarım ve Orman Bakanlığının görevidir.”"
+   ],
+   "dogrusu": [
+    "Özel radyo kanallarında ayda en az yarım saat, televizyonlarda ayda en az iki saat eğitici yayın zorunludur (m.20)",
+    "TRT ve özel televizyon kanallarında ayda en az iki saat eğitici yayın yapılması zorunludur (m.20)",
+    "Eğitici yayın zorunluluğunun takibiyle Radyo ve Televizyon Üst Kurulu yükümlüdür (m.20)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-12", "sorun": "kirmizi_kutu",
+  "aciklama": "Sürücünün hayvanı veterinere götürme yükümlülüğü bildirimle sınırlandı; götürülmesini sağlama seçeneği kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bir hayvana çarpıp zarar veren sürücünün yalnızca durumu zabıtaya bildirmesi yeterlidir.”",
+    "“Hayvana çarpan sürücü hayvanı bizzat veteriner hekime götürmek zorundadır; götürülmesini sağlaması yeterli değildir.”"
+   ],
+   "dogrusu": [
+    "Hayvana çarpıp zarar veren sürücü, onu en yakın veteriner hekime ya da tedavi ünitesine götürmek veya götürülmesini sağlamak zorundadır (m.21)",
+    "Sürücü hayvanı veteriner hekime bizzat götürebileceği gibi götürülmesini de sağlayabilir (m.21)"
+   ]}},
+ {"kanun_id": 38, "kart_id": "38-13", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; düzenleme yükümlüleri (işletme sahipleri ve belediyeler) ve doğal yaşam parkı kurabilecekler bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hayvanat bahçelerini doğal yaşama ortamına uygun şekilde düzenleme yükümlülüğü yalnızca Bakanlığa aittir.”",
+    "“Doğal yaşam parklarını yalnızca kamu kurumları kurabilir.”"
+   ],
+   "dogrusu": [
+    "İşletme sahipleri ve belediyeler hayvanat bahçelerini doğal yaşama ortamına en uygun şekilde düzenlemekle yükümlüdür (m.22)",
+    "Gerçek veya tüzel kişiler, hayvanların serbest dolaşımına imkân veren doğal yaşam parkları kurabilir (m.22)"
+   ]}}
+]

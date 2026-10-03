@@ -1,0 +1,954 @@
+[
+ {
+  "kanun_id": 12,
+  "kart_id": "12-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda kırpık/tekrarlı parçalar var; doğrusu yanlışı düzeltmiyor, kanundaki ceza listesini vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Disiplin cezaları arasında \"oda hapsi\" ve \"görev yeri değiştirme\" de vardır"
+   ],
+   "dogrusu": [
+    "Cezalar yalnız şunlardır: uyarma, kınama, aylıktan kesme, kısa süreli durdurma, uzun süreli durdurma, meslekten çıkarma, Devlet memurluğundan çıkarma (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 12,
+  "kart_id": "12-39",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart Merkez Disiplin Kurulu hakkında; doğrusu il jandarma disiplin kurulunun başkanını anlatıyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Jandarma Genel Komutanlığı Merkez Disiplin Kurulunun üyeleri arasında vali de bulunur"
+   ],
+   "dogrusu": [
+    "Merkez Disiplin Kurulunda vali yoktur; en az tuğgeneral rütbesindeki bir subayın başkanlığında Tayin Daire Başkanı, bir daire başkanı, bir şube müdürü ve bir başmüfettişten oluşur (m.19/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığını tekrar ediyor; düzeltme bilgisi yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Satıcılık (bayilik) belgesi 5 yıl süreli verilir"
+   ],
+   "dogrusu": [
+    "Satıcılık (bayilik) belgesi 3 yıl süreli verilir (m.10/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Satıcılık belgesi ilçelerde kaymakamlarca da verilir"
+   ],
+   "dogrusu": [
+    "Satıcılık belgesi illerde münhasıran valilerce verilir (m.10/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Satıcılık başvurusunda adli sicil belgesi istenir"
+   ],
+   "dogrusu": [
+    "Satıcılık başvurusunda sabıka kaydına ilişkin yazılı beyan yeterlidir (m.10/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Satıcının sağlık raporu yalnız bedeni bakımdan sakınca olmadığını gösterir"
+   ],
+   "dogrusu": [
+    "Rapor, silah bulundurma ve satmada bedeni ve ruhi bakımdan sakınca olmadığını gösterir (m.10/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfek ruhsatnamesi 3 yıl süreli düzenlenir",
+    "Ruhsatname harcın yatırıldığı tarihten geçerlidir"
+   ],
+   "dogrusu": [
+    "Yivsiz tüfek ruhsatnamesi verildiği tarihten geçerli olmak üzere 5 yıl süreli düzenlenir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfek ruhsatnamesini münhasıran valiler verir"
+   ],
+   "dogrusu": [
+    "Ruhsatnameyi illerin merkez ilçelerinde valiler, ilçelerde kaymakamlar verir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfek ruhsatnamesi her yerde taşıma yetkisi verir",
+    "Yivsiz tüfek ruhsatnamesi yalnız bulundurma yetkisi verir"
+   ],
+   "dogrusu": [
+    "Ruhsatname bulundurma ve meskûn mahaller dışında kırsal alanda taşıma yetkisi verir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tüfek şehir içinde dolu olarak araç bagajında taşınabilir"
+   ],
+   "dogrusu": [
+    "Köy, kasaba veya şehir içinde boş olarak torba/kılıf içinde ya da araç bagajında taşınır (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatname yenilemede herkes için yalnız harç belgesi yeterlidir"
+   ],
+   "dogrusu": [
+    "Yenilemede harç belgesiyle birlikte kimlik numarası beyanı, sabıka beyanı, sağlık raporu ve iki fotoğraf istenir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Silah taşıma yetkisi olanlardan fotoğraf da istenmez"
+   ],
+   "dogrusu": [
+    "Taşıma yetkisi olanlardan yalnız kimlik numarası beyanı, sabıka beyanı ve sağlık raporu istenmez (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yabancının en az dört yıl süreli ikamet tezkeresi olmalıdır",
+    "Yabancılara kaymakamlar da ruhsatname verir"
+   ],
+   "dogrusu": [
+    "En az iki yıl süreli ikamet tezkeresi alan yabancılara valilerce verilir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu iki kelimelik kırpık parça.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "18 yaşını bitirmemiş atıcılar silahı hiçbir şekilde kullanamaz",
+    "18 yaş altı atıcıya özel izni valilik verir"
+   ],
+   "dogrusu": [
+    "Atıcılık lisanslı 18 yaş altılar, Türkiye Atıcılık ve Avcılık Federasyonunun özel izniyle poligon ve sportif alanlarda kullanabilir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatnameye tüfeğin yalnız seri numarası işlenir"
+   ],
+   "dogrusu": [
+    "Tüfeğin cins, marka, çap (kalibre) ve seri numarası belgeye işletilir (m.10/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfek ruhsatnamesi Örnek 7'de, satıcılık belgesi Örnek 3'te gösterilmiştir"
+   ],
+   "dogrusu": [
+    "Ruhsatname Örnek 3'te, satıcılık (bayilik) belgesi Örnek 7'de gösterilmiştir (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfek ruhsatnamesini il jandarma komutanlığı veya emniyet müdürlüğü düzenler"
+   ],
+   "dogrusu": [
+    "Yivsiz tüfek ruhsatnamesini mahalli mülki amirlikler düzenler (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Av tüfeği ruhsatnameyle doğrudan satın alınır"
+   ],
+   "dogrusu": [
+    "Bu silahlar imalatçı veya satıcılardan yivsiz tüfek satın alma belgesiyle alınır (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Satın alınan tüfek 15 gün içinde kaydettirilir",
+    "Kayıt için en yakın karakola başvurulur"
+   ],
+   "dogrusu": [
+    "Tüfek en geç bir ay içinde belgenin alındığı makama kaydettirilir (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tüfek kaydında sahibinin beyanı yeterlidir"
+   ],
+   "dogrusu": [
+    "Kayıt sırasında tüfeklerin görülerek tespiti esastır (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "21 yaşını bitirmemiş olanlara izin ve belge verilmez"
+   ],
+   "dogrusu": [
+    "18 yaşını bitirmemiş olanlara izin ve belge verilmez (m.14/j)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı; kırmızı kutudaki 'iyileşene verilir' metinde düzenlenmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Psikolojik ve nörolojik rahatsızlıklar belge verilmesine engel değildir"
+   ],
+   "dogrusu": [
+    "Akıl hastası veya psikolojik ve nörolojik rahatsızlıkları olanlara belge verilmez (m.14/i)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir yıldan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara belge verilmez",
+    "Bu kurala taksirli suçlar da dahildir"
+   ],
+   "dogrusu": [
+    "Ateşli silahla işlenenler ve taksirli suçlar hariç, iki yıldan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara verilmez (m.14/e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Değişik zamanlarda iki suçtan mahkûm olanlara belge verilmez"
+   ],
+   "dogrusu": [
+    "Değişik zamanlarda ikiden fazla suçtan mahkûm olanlara verilmez (m.14/d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kırpık kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "6136 m.12-15 suçlarından bir yıldan fazla cezaya mahkûm olanlara belge verilmez"
+   ],
+   "dogrusu": [
+    "6136 m.12, 13, 14, 15 suçlarından 6 aydan fazla hürriyeti bağlayıcı cezaya mahkûm olanlara verilmez (m.14/g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Meskûn mahalde silah atma engeli için mahkûmiyet şarttır"
+   ],
+   "dogrusu": [
+    "Kamu davası açılmamış olsa bile meskûn mahalde zorunsuz silah atana belge verilmez (m.14/c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kırpık kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yalnız ruhsatlı silahıyla bizzat suç işleyenlere belge verilmez"
+   ],
+   "dogrusu": [
+    "Silahın muhafazasındaki ihmal yüzünden başkasının suç işlemesine veya intihara neden olmaktan mahkûm olanlara da verilmez (m.14/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yalnız uyuşturucu ticareti suçundan mahkûm olanlara belge verilmez"
+   ],
+   "dogrusu": [
+    "Uyuşturucu satın alma, bulundurma, devir, nakil ve tedarikine vasıta olma suçlarından mahkûm olanlara da verilmez (m.14/h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kısıtlılık belge verilmesine engel değildir"
+   ],
+   "dogrusu": [
+    "Kısıtlılar ile kamu hizmetinden yasaklılara belge verilmez (m.14/ı)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kırpık kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mahkûmiyet adli sicilden silinince belge verme engeli kalkar"
+   ],
+   "dogrusu": [
+    "(a)-(h) bentlerindekilere af veya adli sicilden silinme hâlinde de belge verilmez; istisna TCK m.7 ile suç olmaktan çıkan fiillerdir (m.14/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 20,
+  "kart_id": "20-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hapis cezası paraya çevrilince engel kalkar",
+    "Engel için mahkûmiyetin kesinleşmesi aranmaz"
+   ],
+   "dogrusu": [
+    "Kesinleşmiş mahkûmiyet aranır; ceza paraya çevrilse de hürriyeti bağlayıcı ceza esas alınır (m.14/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün iki kelimelik kırpık başı ('Ateşli silahlar …'); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Silahın namlu, sürgü gibi parçaları Kanun kapsamı dışındadır"
+   ],
+   "dogrusu": [
+    "Namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak ve ateşleme iğnesi gibi ana/balistik parçalar da Kanuna tabidir (m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime ('Kama …'); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Av tüfeği ve mutfak bıçağı da yapımı yasak aletler arasındadır"
+   ],
+   "dogrusu": [
+    "Yapımı yasak olanlar kama, hançer, saldırma, şişli baston, sustalı çakı, pala, kılıç, kasatura, süngü, sivri uçlu ve oluklu bıçak, topuz, topuzlu kamçı, boğma teli/zinciri ve muştadır; ev gereçleri Kanuna tabi değildir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Meslek için zorunlu yasak aletlerin yapım iznini valilik veya Millî Savunma Bakanlığı verir"
+   ],
+   "dogrusu": [
+    "İzin, İçişleri Bakanlığının çıkardığı yönetmelikteki kurallara göre verilir (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivsiz tüfekler 6136 sayılı Kanuna tabidir"
+   ],
+   "dogrusu": [
+    "Yivsiz tüfekler ve mermileri ile yalnız sporda kullanılan yivli ateşsiz silahlar bu Kanuna tabi değildir (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Avda kullanılan yivli silah için ruhsat gerekmez"
+   ],
+   "dogrusu": [
+    "Avda veya sporda kullanılan her nevi ateşli yivli silah m.7'ye göre ruhsata tabidir (m.4/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "m.4'teki yasak bıçakların yalnız taşınması yasaktır"
+   ],
+   "dogrusu": [
+    "Bu bıçak ve aletlerin satılması, satın alınması, taşınması ve bulundurulması yasaktır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-6",
+  "sorun": "hukum_hatali",
+  "aciklama": "Tek silah sınırı yalnız diplomatlar ve dış temsilcilik görevlileri içindir; resmî görevde armağan edilen silahlarda (m.2/B) sayı sınırı yoktur, hüküm bunu da tek silaha bağlıyor.",
+  "duzeltme": {
+   "hukum": "Ateşli silah, mermi ve saldırı-savunma aletlerinin ülkeye sokulması yasaktır; diplomatik ayrıcalıklı kişiler ile dış temsilciliklerimizdeki elçi, konsolos, subay ve güvenlik memurlarına tek bir silah ve mermisi için, resmî görevle yurt dışına gidip kendisine silah armağan edilenlere ise armağanın belgelenmesi koşuluyla izin verilir; yurt dışına kıta ile gönderilen subay ve astsubayların kimlik kartlarında kayıtlı silahları için yurda girişte izin aranmaz (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Diplomatlar bu istisnadan sınırsız sayıda silah için yararlanır"
+   ],
+   "dogrusu": [
+    "Diplomatlar ve dış temsilcilik görevlileri için izin tek bir silah ve mermisine mahsustur (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kırpık kopyası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Herkesin silah ruhsatı beş yıllıktır; istisnası yoktur"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı, bakanlar, TBMM üyeleri gibi görevlerde bulunanlar ile gaziler ve şehit/gazi yakınlarının ruhsatlarında süre kaydı aranmaz (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız kart başlığı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatlı silahın mermisi için ayrıca ruhsat gerekir"
+   ],
+   "dogrusu": [
+    "Ruhsatlı silahın yerli ve yabancı menşeli mermileri için ayrıca ruhsat aranmaz (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime ('dışında'); anlamsız.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatlı silah her yere sokulabilir"
+   ],
+   "dogrusu": [
+    "Taşıma ruhsatı, Ek 1. maddede sayılan yerler dışında geçerlidir (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime ('Cumhurbaşkanı …'); yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tart, ihraç veya ayırma işlemine tabi tutulan emekli personel de silah taşıyabilir"
+   ],
+   "dogrusu": [
+    "Tart/ihraç edilenler, rütbesi geri alınanlar, ayırma işlemine tabi tutulanlar ve meslekten çıkarılanlar bu haktan yararlanamaz (m.7/1-4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kırpık parça ('geçici de olsa').",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatlı silah kısa süreliğine başkasına emanet verilebilir"
+   ],
+   "dogrusu": [
+    "Taşıma izni olan, silahını ruhsatı olmayana satamaz, geçici de olsa başkasına veremez (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kırpık parça ('bir daha').",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ruhsatlı silahıyla suç işleyene beş yıl sonra yeniden izin verilir"
+   ],
+   "dogrusu": [
+    "Silahıyla suç işleyenin vesikası geri alınır ve bir daha bulundurma/taşıma izni verilmez (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yanlıştaki 'yarı oranında artırım' iddiasını düzeltmiyor, ceza sınırını vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Silah kaçakçılığını iki veya daha çok kişinin birlikte işlemesinde ceza yarı oranında artırılır"
+   ],
+   "dogrusu": [
+    "Birlikte işlemede ceza sekiz yıldan on beş yıla kadar hapis ve bin günden on bin güne kadar adlî para cezasıdır (m.12/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün yarıda kesilmiş kopyası; kırmızı kutu da somut bir yanlış içermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Nitelikli silahı bulundurmanın cezası beş yıldan on iki yıla kadar hapistir"
+   ],
+   "dogrusu": [
+    "Nitelikli veya vahim miktarda bulundurmada ceza beş yıldan sekiz yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezasıdır (m.13/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-29",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kırpık parça; 'ceza verilmez' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Evde tek ruhsatsız silah bulundurana ceza verilmez"
+   ],
+   "dogrusu": [
+    "Ev veya işyerinde tek silah bulundurmanın cezası bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır (m.13/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kırpık başı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mahkeme salonuna ve spor karşılaşmasına ruhsatlı silahla girilebilir"
+   ],
+   "dogrusu": [
+    "Duruşma ve mahkeme salonları, eğitim kurumları, toplantı ve gösteri yürüyüşleri, spor karşılaşmaları gibi sayılan yerlerde ruhsatlı olsa da ateşli silah taşınamaz (Ek m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu iki kelimelik parça; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bulundurma ruhsatı hem meskeni hem işyerini birlikte kapsar"
+   ],
+   "dogrusu": [
+    "Bulundurma ruhsatı mesken için ya da işyeri için olmak üzere iki ayrı şekilde verilir (Ek m.7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tekrar eden anahtar kelime yığını; 'bir gün aşan' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Vize süresini bir gün aşan yabancı hakkında sınır dışı kararı alınır"
+   ],
+   "dogrusu": [
+    "Vize veya vize muafiyeti süresini on günden fazla aşanlar hakkında sınır dışı kararı alınır (m.54/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-10",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart yakalama ve 48 saatlik karar süresi hakkında; ikinci yanlış ve doğrusu ('6 + 6 ay') idari gözetim süresine (31-11'in konusu) ait.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yakalanan yabancı hakkında sınır dışı kararını kolluk alır",
+    "Değerlendirme ve karar süresi yirmi dört saattir"
+   ],
+   "dogrusu": [
+    "Sınır dışı kararını valilik alır; değerlendirme ve karar süresi kırk sekiz saati geçemez (m.57/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki 'iki merci yer değiştirilir' somut bir ifade değil; doğrusu da bunu düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İdari gözetim kararına karşı idare mahkemesine başvurulur",
+    "İdari gözetime başvuru gözetimi durdurur"
+   ],
+   "dogrusu": [
+    "İdari gözetime karşı sulh ceza hâkimine başvurulur; başvuru gözetimi durdurmaz, hâkim beş gün içinde kesin karar verir (m.57/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız başlık; Avrupa dışı olaylardan kaçana 'mülteci' denmesi yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Suriye'den zulüm korkusuyla gelen kişiye mülteci statüsü verilir"
+   ],
+   "dogrusu": [
+    "Avrupa ülkeleri dışındaki olaylar nedeniyle gelene şartlı mülteci statüsü verilir; üçüncü ülkeye yerleştirilinceye kadar Türkiye'de kalabilir (m.62)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız ikinci yanlışı karşılıyor; tekrarda artırım oranı ve ceza veren makam yanlışı düzeltilmemiş.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir takvim yılı içinde tekrarda idarî para cezası iki katına çıkar",
+    "Kaçak göçmene ev kiralayan cezalandırılmaz"
+   ],
+   "dogrusu": [
+    "Gerçek kişilerin bir takvim yılı içinde tekrarında cezalar yarı oranında artırılır (m.102/3)",
+    "Belgesiz yabancıya ev kiralayana her bir yabancı için ayrı idarî para cezası verilir (m.102/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-2",
+  "sorun": "hukum_hatali",
+  "aciklama": "İmha heyeti m.21'de düzenlenir (m.20 değil); heyet valinin görevlendirdiği bir yetkilinin başkanlığında ve il savcısı/yardımcısının nezaretinde toplanır.",
+  "duzeltme": {
+   "hukum": "Müsaderesine karar verilen uyuşturucu, valinin görevlendireceği bir yetkilinin başkanlığındaki ve il savcısı veya yardımcısının nezaretçi olarak katıldığı heyet huzurunda imha edilir (m.21)",
+   "dogrusu": [
+    "İmha, valinin görevlendirdiği yetkili başkanlığındaki heyet huzurunda, savcı nezaretinde yapılır (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "Kenevir yetiştirme izni m.23'te düzenlenir; m.21 imha heyeti maddesidir.",
+  "duzeltme": {
+   "hukum": "Lif, tohum, sap ve tıbbi ürün gibi amaçlarla kenevir yetiştiriciliği Tarım ve Orman Bakanlığının iznine tabidir; her ne maksatla olursa olsun izinsiz kenevir yetiştirmek yasaktır (m.23)",
+   "dogrusu": [
+    "Kenevir, Tarım ve Orman Bakanlığının izniyle yetiştirilebilir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "İzinsiz kenevirin imhası ve masrafı m.23'te düzenlenir (m.21 değil).",
+  "duzeltme": {
+   "hukum": "İzinsiz yetiştirilen kenevir, ziraat mühendisinin (yoksa ziraat teknisyeninin) raporu üzerine mahallin en büyük mülkî amirinin emriyle zabıtaca imha edilir; imhada kullanılan araç-gereç Jandarma Genel Komutanlığı bütçesinden sağlanır; masraf izinsiz ekim yapandan 6183 sayılı Kanuna göre tahsil edilir (m.23)",
+   "dogrusu": [
+    "İmha masrafı izinsiz ekim yapandan 6183'e göre tahsil edilir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-5",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutudaki cümle yanlış değil, doğru bir açıklama; ayrıca başlıktaki 'idari' nitelendirmesine rağmen ceza adlî para cezasıdır.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İzinsiz kenevir ekimi idarî para cezası gerektirir"
+   ],
+   "dogrusu": [
+    "İzinsiz, izin alanından fazla veya kayıtlı yer dışında ekim elli günden az olmamak üzere adlî para cezası gerektirir (m.23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 66,
+  "kart_id": "66-3",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutudaki 'Muhtar demirbaş/zati silahını taşıyabilir; veznedar yalnız görev mahallinde' ifadesi m.8/b-1 ve d-2'ye göre doğrudur.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hukuk fakültesi akademisyeni taşıma iznine sahiptir"
+   ],
+   "dogrusu": [
+    "Değildir; hâkim, savcı ve yasama organı üyeleri listededir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 66,
+  "kart_id": "66-7",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutunun ilk maddesine doğru bilgi karışmış ('kaçakçılık ibaresi ve (f) bendi Danıştay'ca iptal'); bu yanlış değil, doğru bir not.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taksirli suçtan 6 ay hapis ruhsata engeldir",
+    "Taksirli suçlar hariç 2 yıldan fazla hapis engeldir",
+    "Adli para cezasına çevrilen hapis engel sayılmaz"
+   ],
+   "dogrusu": [
+    "Engel değil; taksirli suçlar hariç (m.16/c)",
+    "Taksirli suçlar hariç 1 yıldan fazla hapis engeldir (m.16/c)",
+    "Paraya çevrilse de hapis cezası esas alınır (m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 79,
+  "kart_id": "79-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlış (tutarı yalnız MSB belirler) için doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "İlave harçlık tutarını Hazine ve Maliye Bakanlığı ile Milli Savunma Bakanlığı birlikte belirler (m.2)",
+    "Edirne listede yok; iller Hatay, Kilis, Gaziantep, Şanlıurfa, Mardin, Şırnak, Hakkâri, Van, Ağrı, Iğdır (m.2)",
+    "Yalnız m.5/3 kapsamındakilere (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlış (%25 fazlalığı kurum kendisi karşılar) için doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "%25 fazlalık kurumlarca ödenir ve faturası karşılığında Hazineden tahsil edilir (m.8)",
+    "MİT mensupları 644 sayılı Kanundaki tazminatlardan ayrıca yararlanamaz (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 92,
+  "kart_id": "92-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "Bilirkişilik engelinde metin 'kardeşinin çocuklarına' der; hüküm 'kardeşine ve çocuklarına' diye yanlış aktarıyor (m.3).",
+  "duzeltme": {
+   "hukum": "Amaç ülke koordinat sistemine göre kadastral/topoğrafik kadastral haritaya dayalı olarak taşınmazların sınırlarını arazi ve harita üzerinde belirleyip hukuki durumlarını tespit ederek TMK'nın öngördüğü tapu sicilini kurmak, mekânsal bilgi sisteminin altyapısını oluşturmak (m.1); her ilin merkez ilçesi ile diğer ilçelerinin idari sınırları kadastro bölgelerini teşkil eder; kadastrosu yapılacak bölgeler Tapu ve Kadastro Genel Müdürlüğünün teklifi ve bağlı Bakanın onayıyla; başlanacak bölgeler en az 1 ay önceden Resmî Gazete, radyo veya televizyonda, bölge merkezi ve ilde bir yerel gazete ve internet haber sitesinde ilan (m.2); kadastro ekibi: en az 2 kadastro teknisyeni + mahalle/köy muhtarı + 3 bilirkişi (fennî işler ihaleyle yaptırılırsa 1 teknisyen olabilir; teknisyen yerine kontrol memuru); muhtar yoksa kanuni vekili; belediyesi olan yerde belediye meclisi, köylerde köy derneği en geç 15 gün içinde 6 bilirkişi seçer (birden çok ekipte her ekip için ayrıca 3); bilirkişiler 40 yaşını bitirmiş, kısıtlı olmayan ve yüz kızartıcı suçtan kesinleşmiş mahkûmiyeti bulunmayan; seçilemezse mülki amir aynı sayıda belirler; bilirkişi kendisine, eşine, usul-füruuna, kardeşine, kardeşinin çocuklarına, eşinin usul-füruuna ait tespitlerde ve davalı olduğu kişilerin tespitlerinde dinlenemez (teknisyen, muhtar ve diğer görevliler için de); kadastro komisyonu: kadastro müdürü veya yardımcısının başkanlığında bir kadastro üyesi ve itirazın mahiyetine göre kontrol mühendisi veya tasarruf kontrol memuru (kontrol mühendisi yoksa fen kontrol memuru) (m.3); kadastro bölgesindeki her köy ve belediye sınırları içindeki her mahalle kadastro çalışma alanı; kadastro müdürü başlanacak köy/mahalleyi en az 15 gün önce bölge merkezi, çalışma alanı ve komşu köylerde duyurur (sınır tespitine başlanacak gün-saat belirtilir); çalışma alanında orman varsa ve orman kadastrosu başlanmamışsa orman kadastrosu ve ormanlarla müşterek sınırlar kadastro ekibince yapılır, ekibe OGM'den en az bir orman mühendisi ve tarım müdürlüğünden bir ziraat mühendisi 7 gün içinde katılır; muhtar-bilirkişi katılmasa da resen devam; ormanla ilgili itirazlarda komisyona da orman ve ziraat mühendisi; ormanlar 30 günlük kısmi ilana alınır, orman kadastrosu yapılmış sayılır; kesinleşmiş orman kadastrosu sınırlarına aynen uyulur; çalışma alanı sınırı belediye ve köy sınırlarına göre (idari sınır sayılmaz); tespit edilen sınıra 7 gün içinde kadastro müdürlüğüne itiraz, müdür 7 gün içinde karar, karara 7 gün içinde kadastro mahkemesine itiraz, duruşmasız 15 gün içinde kesin karar; kesinleşmiş mahkeme kararı varsa itiraz yok; ilk parsel tutanağından sonra idari değişiklik kadastroyu durdurmaz; kesinleşmiş orman haritalarındaki tutanak-pafta-zemin uyumsuzluğu orman ve kadastro mühendisli ekipçe zemine aplike edilerek düzeltilir, m.11 askı ilanıyla kesinleşir; TKGM teknik işleri Bakan onayıyla ihale ile yaptırabilir (m.4); kadastro müdürü işe başlamadan önce mahalli hukuk mahkemesinden kadastroyla ilgili görülmekte olan ve kesinleşmemiş dava listesini alır, tapu-vergi-harita belgeleriyle teknisyenliğe verir; sonradan açılan davalar derhal müdüre bildirilir; davalı taşınmazların tutanakları tespit sonrası bir hafta içinde kadastro mahkemesine (m.5)"
+  }
+ },
+ {
+  "kanun_id": 120,
+  "kart_id": "120-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlış (Bakanlık = Hazine ve Maliye) için doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bakanlık: Çevre ve Şehircilik Bakanlığıdır (m.4/a)",
+    "Orta malları iz bedeliyle kaydedilir (m.5/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 120,
+  "kart_id": "120-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlış (icmal cetvelini kayıt birimi hazırlar) için doğrusu yok; doğrular yanlışlarla eşleşmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "İcmal cetvellerini mali hizmetler birimi formları konsolide ederek oluşturur (m.7/2)",
+    "Taşınmaz Sayım Formu kayıt formlarından biri değildir (m.7)",
+    "Tahsisle kullanılan taşınmaz Ek-6 formunda izlenir (m.7/1-d)",
+    "Formlar en geç 7 gün içinde gönderilir (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 120,
+  "kart_id": "120-2",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Süreleri iki katına çıkarabilir' ifadesi yanlış değil; 'bir katına kadar artırma' zaten iki katına çıkarmak demektir (m.13).",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bakanlık zorunlu hâllerde süreleri üçte birine kadar indirebilir",
+    "Değer artırıcı harcamalar gider yazılır"
+   ],
+   "dogrusu": [
+    "Bakanlık süreleri yarısına kadar indirebilir veya bir katına kadar artırabilir (m.13)",
+    "Değer artırıcı harcamalar taşınmazın değerine eklenir (m.11/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 127,
+  "kart_id": "127-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlış (oturma hakkı kurulabilir) için doğrusu yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Hazine taşınmazı üzerinde oturma hakkı kurulamaz (m.76/1)",
+    "İrtifak hakkı en fazla 49 yıla kadar kurulur (m.76/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-24",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutunun ilk maddesi yanlış bir ifade değil, çalışma notu (8 saat/24 saat açıklaması).",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yatış kararından sonra 8 saatten uzun yatan hastası olan kliniğe elektif yatış engellenir"
+   ],
+   "dogrusu": [
+    "Gözlemde 8 saatten, yatış kararından sonra 4 saatten uzun yatan hastası olan kliniğe elektif yatış HBS'ce engellenir (m.14/3)"
+   ]
+  }
+ }
+]

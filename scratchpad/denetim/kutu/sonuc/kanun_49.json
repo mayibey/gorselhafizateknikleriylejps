@@ -1,0 +1,83 @@
+[
+ {
+  "kanun_id": 49,
+  "kart_id": "49-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İzinsiz tesis kurma suçu idarî para cezasına indirildi; makaron ve yaprak sigara kâğıdı izin kapsamı dışında gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bakanlıktan izin almadan alkollü içki üretmek üzere imalathane kuran ve işletenlere yalnızca idarî para cezası verilir.”",
+    "“Makaron ve yaprak sigara kâğıdı üretmek için tesis kurma ve faaliyet izni alınması gerekmez.”"
+   ],
+   "dogrusu": [
+    "İzinsiz alkollü içki üretmek üzere imalathane kuran ve işleten kişi bir yıldan üç yıla kadar hapis ve adlî para cezası alır (m.8/1)",
+    "Makaron, yaprak sigara kâğıdı ve sigara filtresi üretmek üzere tesis kurmak da Bakanlık iznine tabidir; izinsiz kuran cezalandırılır (m.8/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 49,
+  "kart_id": "49-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Şahsi tüketim sınırları 50 kg yerine 100 kg, 350 litre yerine 500 litre yapıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ticari amaç olmaksızın şahsi tüketimi için yüz kilogramı aşmayan sarmalık kıyılmış tütün elde eden kişi cezalandırılmaz.”",
+    "“Şahsi tüketimi için beş yüz litreyi aşmayan fermente alkollü içki imal eden kişi izin almak zorunda değildir.”"
+   ],
+   "dogrusu": [
+    "Şahsi tüketim istisnası, ticari amaç olmaksızın elli kilogramı aşmayan sarmalık kıyılmış tütün için geçerlidir (m.8/1)",
+    "Ticari amaç olmaksızın şahsi tüketimi için üç yüz elli litreyi aşmayan fermente alkollü içki imal eden ceza kapsamı dışındadır (m.8/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 49,
+  "kart_id": "49-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Belgesiz satışa hapis gösterildi (idarî para cezasıdır; kaçak/bandrolsüz değilse); internetten satışta erişim engeli kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“4733 sayılı Kanuna göre satış belgesi almadan tütün mamullerinin perakende satışını yapan kişi hapis cezası ile cezalandırılır.”",
+    "“Tütün mamullerinin internet üzerinden satışı hâlinde idarî para cezası verilir; ancak erişimin engellenmesine karar verilemez.”"
+   ],
+   "dogrusu": [
+    "Satış belgesi almadan tütün mamullerinin toptan veya perakende satışını yapana idarî para cezası verilir (m.8/5-g)",
+    "Tütün mamullerinin internette satılması hâlinde idarî para cezasının yanında 5651 sayılı Kanuna göre erişimin engellenmesine karar verilir (m.8/5-k)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 49,
+  "kart_id": "49-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Davanın yürütmeyi durdurduğu iddia edildi; dava süresi 15 günden 30 güne çıkarıldı. Girdideki resmî metin kesik; hüküm JSPS Fabrika mehaz tam metni ve kart-madde-metinleri.ts ile doğrulandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tütün ve alkol piyasasına ilişkin idarî yaptırım kararına karşı idare mahkemesinde iptal davası açılması, kararın yerine getirilmesini durdurur.”",
+    "“İdarî yaptırım kararlarına karşı idare mahkemesinde dava açma süresi, işlemin tebliği tarihinden itibaren otuz gündür.”"
+   ],
+   "dogrusu": [
+    "İdarî yaptırım kararına karşı idare mahkemesinde iptal davası açılmış olması, kararın yerine getirilmesini durdurmaz (m.8)",
+    "İdarî yaptırım kararlarına karşı idare mahkemesinde dava, işlemin tebliği tarihinden itibaren on beş gün içinde açılır (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 49,
+  "kart_id": "49-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "KART_CELISKI: hükümdeki 'izinsiz üretilen ürünler ile makine ve araçlar müsadere edilir; ele geçirilen alkollü içki ve tütün mamulleri tasfiyeye tabidir' kuralı 4733 m.8'in resmî metninde yok (girdideki metin 9000 karakterde kesik; tam metin JSPS Fabrika mehaz dosyası ve kart-madde-metinleri.ts'den okundu). m.8'de yalnız (n) bendinde otomatik satış makineleri için mülkiyetin kamuya geçirilmesi ve mülkî amirin eşyanın mülkiyetini kamuya geçirme yetkisi var; hüküm ve kutular buna göre kuruldu",
+  "duzeltme": {
+   "hukum": "Tütün mamullerini otomatik satış makinesiyle satana idarî para cezası verilir; eyleme konu makineler hakkında müsadere kararı verilmemişse ayrıca mülkiyetin kamuya geçirilmesine karar verilir. Beşinci fıkranın (f), (g), (h), (ı), (j), (n), (o), (p), (r) ve (s) bentlerindeki fiillerin konusunu oluşturan her türlü eşyanın mülkiyetinin kamuya geçirilmesine mahallî mülkî amirler karar verir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "“Tütün mamullerini otomatik satış makinesiyle satana idarî para cezası verilir; eyleme konu makineler ise sahibine iade edilir.”",
+    "“Satış belgesi almadan yapılan satışta ele geçirilen eşyanın mülkiyetinin kamuya geçirilmesine Tarım ve Orman Bakanlığı karar verir.”"
+   ],
+   "dogrusu": [
+    "Otomatik satış makineleri hakkında müsadere kararı verilmemişse ayrıca mülkiyetlerinin kamuya geçirilmesine karar verilir (m.8/5-n)",
+    "Belgesiz satış gibi fiillerin konusunu oluşturan eşyanın mülkiyetinin kamuya geçirilmesine mahallî mülkî amir karar verir (m.8)"
+   ]
+  }
+ }
+]

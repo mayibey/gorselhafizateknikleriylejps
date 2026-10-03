@@ -1,0 +1,273 @@
+[
+ {
+  "kanun_id": 14,
+  "kart_id": "14-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; kapsamın alanı (her alan) ve hizmet sağlayıcı faaliyetleri bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Elektronik İmza Kanunu, elektronik imzanın yalnızca kamu kurumlarındaki kullanımına ilişkin işlemleri kapsar.”",
+    "“Elektronik sertifika hizmet sağlayıcılarının faaliyetleri Elektronik İmza Kanununun kapsamı dışındadır.”"
+   ],
+   "dogrusu": [
+    "Kanun, elektronik imzanın kamu kurumlarıyla sınırlı olmaksızın her alanda kullanımına ilişkin işlemleri kapsar (m.2)",
+    "Elektronik sertifika hizmet sağlayıcılarının faaliyetleri de Kanunun kapsamındadır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; üretim yolu (optik/benzeri) ve kaydın türü (taşınan/saklanan) daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Elektronik veri, yalnızca elektronik yollarla üretilen kayıtlardır; optik yollarla üretilen kayıtlar bu tanıma girmez.”",
+    "“Elektronik veri tanımı yalnızca üretilen kayıtları kapsar; taşınan veya saklanan kayıtlar bu tanıma girmez.”"
+   ],
+   "dogrusu": [
+    "Elektronik veri; elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtlardır (m.3/a)",
+    "Elektronik veri tanımı, üretilen kayıtların yanında taşınan veya saklanan kayıtları da kapsar (m.3/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tanım zaman damgasına bağlandı; elektronik imzanın amacı (kimlik doğrulama) zaman tespitine çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Başka bir elektronik veriye eklenen ve kimlik doğrulama amacıyla kullanılan elektronik veri, zaman damgasıdır.”",
+    "“Elektronik imza, bir elektronik verinin gönderildiği zamanın tespit edilmesi amacıyla kullanılan elektronik veridir.”"
+   ],
+   "dogrusu": [
+    "Elektronik imza, başka bir elektronik veriye eklenen veya onunla bağlantılı olup kimlik doğrulamada kullanılan elektronik veridir; zaman damgası veya sertifika değildir (m.3/b)",
+    "Elektronik imza kimlik doğrulama amacıyla kullanılır; zamanın tespiti zaman damgasının işlevidir (m.3/b, h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kişi türü (yalnız gerçek kişi) ve kullanılan araç (oluşturma aracı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İmza sahibi, elektronik imza oluşturmak amacıyla imza oluşturma aracını kullanan gerçek veya tüzel kişidir.”",
+    "“İmza sahibi, elektronik imzayı doğrulamak amacıyla imza doğrulama aracını kullanan gerçek kişidir.”"
+   ],
+   "dogrusu": [
+    "İmza sahibi, imza oluşturma aracını kullanan gerçek kişidir; tanımda tüzel kişi yer almaz (m.3/c)",
+    "İmza sahibi, elektronik imza oluşturmak amacıyla imza oluşturma aracını kullanan gerçek kişidir (m.3/c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; gizli anahtar açık anahtarla değiştirildi, veri araçla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İmza oluşturma verisi, imza sahibi tarafından kullanılan şifreler, kriptografik açık anahtarlar gibi verilerdir.”",
+    "“İmza oluşturma verisi, elektronik imza oluşturmak üzere kullanılan yazılım veya donanım aracıdır.”"
+   ],
+   "dogrusu": [
+    "İmza oluşturma verisi, şifreler ve kriptografik gizli anahtarlar gibi verilerdir; açık anahtar imza doğrulama verisidir (m.3/d, f)",
+    "İmza oluşturma verisi şifre ve gizli anahtar gibi verilerdir; yazılım veya donanım aracı, imza oluşturma aracıdır (m.3/d, e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Açık anahtar gizli anahtarla değiştirildi; veri araçla karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İmza doğrulama verisi, elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik gizli anahtarlar gibi verilerdir.”",
+    "“İmza doğrulama verisi, elektronik imzayı doğrulamak amacıyla kullanılan yazılım veya donanım aracıdır.”"
+   ],
+   "dogrusu": [
+    "İmza doğrulama verisi, elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verilerdir (m.3/f)",
+    "İmza doğrulama verisi şifre ve açık anahtar gibi verilerdir; doğrulamada kullanılan yazılım veya donanım, imza doğrulama aracıdır (m.3/f, g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; kullanılan veri (doğrulama verisi) ve aracın türü (yazılım veya donanım) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İmza doğrulama aracı, elektronik imzayı doğrulamak amacıyla imza oluşturma verisini kullanan yazılım veya donanım aracıdır.”",
+    "“İmza doğrulama aracı yalnızca donanım araçlarını kapsar; yazılımlar bu tanıma girmez.”"
+   ],
+   "dogrusu": [
+    "İmza doğrulama aracı, elektronik imzayı doğrulamak için imza doğrulama verisini kullanan yazılım veya donanım aracıdır (m.3/g)",
+    "İmza doğrulama aracı, imza doğrulama verisini kullanan yazılım veya donanım aracıdır; yazılımlar da tanıma girer (m.3/g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; doğrulayan makam (ESHS) ve kaydın amacı (zaman tespiti) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Zaman damgası, elektronik verinin zamanının tespiti amacıyla Telekomünikasyon Kurumu tarafından elektronik imzayla doğrulanan kayıttır.”",
+    "“Zaman damgası, imza sahibinin kimliğinin tespit edilmesi amacıyla kullanılan elektronik kayıttır.”"
+   ],
+   "dogrusu": [
+    "Zaman damgası, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayıttır (m.3/h)",
+    "Zaman damgası, elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespiti amacıyla doğrulanan kayıttır (m.3/h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tanım imza doğrulama verisine bağlandı; doğrulama verisi oluşturma verisiyle değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıt, imza doğrulama verisidir.”",
+    "“Elektronik sertifika, imza sahibinin imza oluşturma verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır.”"
+   ],
+   "dogrusu": [
+    "İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıt, elektronik sertifikadır (m.3/ı)",
+    "Elektronik sertifika, imza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır (m.3/ı)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; 'Kurum' ibaresinin karşılığı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Elektronik İmza Kanununda geçen ‘Kurum’ ibaresi, elektronik sertifika hizmet sağlayıcısını ifade eder.”"
+   ],
+   "dogrusu": [
+    "Elektronik İmza Kanununda geçen ‘Kurum’ ibaresi Telekomünikasyon Kurumunu ifade eder (m.3/j)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; 'münhasıran imza sahibine bağlı' unsuru genişletildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenli elektronik imza, imza sahibine veya onun yetkilendirdiği kişiye bağlı olan elektronik imzadır.”"
+   ],
+   "dogrusu": [
+    "Güvenli elektronik imza, münhasıran imza sahibine bağlı olan elektronik imzadır (m.4/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; aracın kimin tasarrufunda olduğu ve aracın türü (oluşturma aracı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenli elektronik imza, elektronik sertifika hizmet sağlayıcısının tasarrufunda bulunan imza oluşturma aracı ile oluşturulur.”",
+    "“Güvenli elektronik imza, imza sahibinin tasarrufunda bulunan güvenli elektronik imza doğrulama aracı ile oluşturulur.”"
+   ],
+   "dogrusu": [
+    "Güvenli elektronik imza, sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulur (m.4/b)",
+    "Güvenli elektronik imza, imza sahibinin tasarrufundaki güvenli elektronik imza oluşturma aracı ile oluşturulur (m.4/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-12",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "'Nitelikli' sertifika şartı düşürüldü; dayanak zaman damgasına çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenli elektronik imza, herhangi bir elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlar.”",
+    "“Güvenli elektronik imza, zaman damgasına dayanarak imza sahibinin kimliğinin tespitini sağlar.”"
+   ],
+   "dogrusu": [
+    "Güvenli elektronik imza, nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlar (m.4/c)",
+    "İmza sahibinin kimliğinin tespiti zaman damgasına değil, nitelikli elektronik sertifikaya dayanır (m.4/c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-13",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; değişikliğin 'tespiti' unsuru 'engellenmesi'ne çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenli elektronik imza, imzalanmış elektronik veride sonradan değişiklik yapılmasını tamamen engeller.”"
+   ],
+   "dogrusu": [
+    "Güvenli elektronik imza, imzalanmış veride sonradan değişiklik yapılıp yapılmadığının tespitini sağlar (m.4/d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-14",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Hukuki sonuç eşitliği bozuldu; eşitlik her elektronik imzaya genişletildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Güvenli elektronik imza, elle atılan imzadan farklı hukuki sonuç doğurur.”",
+    "“Her elektronik imza, elle atılan imza ile aynı hukuki sonucu doğurur.”"
+   ],
+   "dogrusu": [
+    "Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur (m.5)",
+    "Elle atılan imza ile aynı hukukî sonucu doğuran, güvenli elektronik imzadır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-15",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; yasak serbest gösterildi, özel merasime tabi işlemler yasaktan çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kanunların resmî şekle tabi tuttuğu hukuki işlemler güvenli elektronik imza ile gerçekleştirilebilir.”",
+    "“Güvenli elektronik imza ile yalnızca resmî şekle tabi işlemler yapılamaz; özel merasime tabi işlemler bu imzayla yapılabilir.”"
+   ],
+   "dogrusu": [
+    "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler güvenli elektronik imza ile gerçekleştirilemez (m.5)",
+    "Kanunların özel bir merasime tabi tuttuğu hukukî işlemler de güvenli elektronik imza ile gerçekleştirilemez (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-16",
+  "atla": "Hüküm resmî metne aykırı (m.5: banka teminat mektupları yasağın DIŞINDA); kart çelişki düzeltmesiyle yeniden yazılacak"
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-17",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "'Dışındaki' kelimesi düşürülerek kefalet senedi yasak gösterildi; yasak tüm teminat sözleşmeleri için kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye'de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri güvenli elektronik imza ile gerçekleştirilemez.”",
+    "“Sigorta şirketlerinin kefalet senetleri dahil tüm teminat sözleşmeleri güvenli elektronik imza ile gerçekleştirilebilir.”"
+   ],
+   "dogrusu": [
+    "Türkiye'de yerleşik sigorta şirketlerince düzenlenen kefalet senetleri istisna dışındadır; güvenli elektronik imza ile gerçekleştirilebilir (m.5)",
+    "Türkiye'de yerleşik sigorta şirketlerinin kefalet senetleri dışındaki teminat sözleşmeleri güvenli elektronik imza ile gerçekleştirilemez (m.5)"
+   ]
+  }
+ }
+]

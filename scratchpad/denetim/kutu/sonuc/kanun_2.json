@@ -1,0 +1,918 @@
+[
+ {
+  "kanun_id": 2,
+  "kart_id": "2-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kolluk türü (genel yerine özel) ve görev kaynağı (Cumhurbaşkanlığı kararnameleri) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye Cumhuriyeti Jandarması, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan silahlı özel kolluk kuvvetidir.”",
+    "“Jandarma yalnızca kanunların verdiği görevleri yerine getirir; Cumhurbaşkanlığı kararnameleriyle Jandarmaya görev verilemez.”"
+   ],
+   "dogrusu": [
+    "Jandarma, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan silahlı genel kolluk kuvvetidir (m.3)",
+    "Jandarma, diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getirir (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bağlı olunan makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığı Millî Savunma Bakanlığına bağlıdır.”",
+    "“Jandarma Genel Komutanlığı doğrudan Cumhurbaşkanlığına bağlıdır.”"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı Millî Savunma Bakanlığına değil, İçişleri Bakanlığına bağlıdır (m.4)",
+    "Jandarma Genel Komutanlığı Cumhurbaşkanlığına değil, İçişleri Bakanlığına bağlıdır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Düzenleyen makam, Genelkurmay görüşü ve mülki taksimat esası bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığının kuruluş ve kadrolarıyla konuş yerleri Genelkurmay Başkanlığınca düzenlenir.”",
+    "“Seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek jandarma birliklerinin konuş yerleri düzenlenirken Genelkurmay Başkanlığının görüşü alınmaz.”",
+    "“Jandarma birliklerinin kuruluş ve konuşlarının düzenlenmesinde askerî harekât bölgeleri esas alınır.”"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığının kuruluş ve kadrolarıyla konuş yerleri İçişleri Bakanlığınca düzenlenir (m.5)",
+    "Seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek birliklerin kuruluş ve konuşunda Genelkurmay Başkanlığının görüşü alınır (m.5)",
+    "Jandarma birliklerinin kuruluş ve konuşlarının düzenlenmesinde mülki taksimat esas alınır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bölge komutanının sorumlu olduğu makam bozuldu; geçici bölge teşkilatı imkânı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bölge komutanı, Jandarma Genel Komutanına karşı sorumlu olarak görev yapar.”",
+    "“Jandarmada birden çok ili içine alan bölge teşkilatı kurulamaz; kuruluşta yalnız mülki taksimat esas alınır.”"
+   ],
+   "dogrusu": [
+    "Bölge komutanı, bölge teşkilatının konuşlu bulunduğu ilin valisine karşı sorumlu olarak görev yapar (m.5)",
+    "Mülki taksimat esas alınmakla birlikte geçici olarak birden çok ili içine alan bölge teşkilatı da kurulabilir (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bütçenin İçişleri Bakanlığı bütçesinden ayrı düzenlenmesi öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığının bütçesi, İçişleri Bakanlığının bütçesi içinde düzenlenir.”",
+    "“Jandarma Genel Komutanlığının bütçesi, Millî Savunma Bakanlığı bütçesi içinde düzenlenir.”"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığının bütçesi İçişleri Bakanlığı bünyesinde, ancak bu Bakanlığın bütçesinden ayrı olarak düzenlenir (m.18)",
+    "Jandarma Genel Komutanlığının bütçesi Millî Savunma Bakanlığı değil, İçişleri Bakanlığı bünyesinde ayrı olarak düzenlenir (m.18)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Askerî hizmetin kaynağı (Genelkurmay) ve görev sınıflandırması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmanın askerî görevi, Genelkurmay Başkanlığınca verilen askerî hizmetleri yerine getirmektir.”",
+    "“İşlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak, Jandarmanın askerî görevleri arasındadır.”"
+   ],
+   "dogrusu": [
+    "Jandarmanın askerî görevi, kanunlarla ve Cumhurbaşkanlığı kararnameleriyle verilen askerî hizmetleri yerine getirmektir (m.7/c)",
+    "İşlenmiş suçlarla ilgili kanunlarda belirtilen işlemleri yapmak Jandarmanın adli görevidir (m.7/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Karar makamı (Cumhurbaşkanı) ve emre girecek kısım bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma birlikleri, seferberlik ve savaş hâllerinde Genelkurmay Başkanının kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer.”",
+    "“Seferberlik ve savaş hâllerinde Jandarma birliklerinin tamamı Kuvvet Komutanlıkları emrine girer.”"
+   ],
+   "dogrusu": [
+    "Seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek jandarma bölümleri Cumhurbaşkanı kararıyla belirlenir (m.8)",
+    "Seferberlik ve savaşta belirlenen bölümler Kuvvet Komutanlıkları emrine girer, kalan bölüm normal görevlerine devam eder (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Onay makamları (İçişleri Bakanı / vali) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma birlikleri, Genelkurmay Başkanlığının talebi üzerine Millî Savunma Bakanının onayıyla kendilerine verilen askerî görevleri de yaparlar.”",
+    "“İllerde garnizon komutanının talep etmesi hâlinde jandarma birliklerine askerî görev, Jandarma Genel Komutanının onayıyla verilir.”"
+   ],
+   "dogrusu": [
+    "Jandarma birlikleri, Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının onayıyla verilen askerî görevleri de yapar (m.8)",
+    "İllerde garnizon komutanının talebi hâlinde jandarmaya askerî görev valinin onayıyla verilir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-12",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Hizmet sınırı kaldırıldı: mülki amirin istediği her görev istenebilir gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kanun ve nizamlarda öngörülmese bile mülki amirin uygun gördüğü her görev jandarmadan istenebilir.”"
+   ],
+   "dogrusu": [
+    "Kanun ve nizamlar ile bunlara dayalı emir ve kararların öngörmediği hiçbir görev jandarmadan istenemez (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-13",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Genel görev alanı, belediye sınırı içindeki istisna ve il/ilçenin tamamını belirleyen makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmanın genel görev ve sorumluluk alanı, il ve ilçe belediye hudutları içinde kalan yerlerdir.”",
+    "“Belediye sınırları içinde kalan yerler, hizmet gerekleri bakımından uygun görülse bile jandarmanın görev ve sorumluluk alanı olarak tespit edilemez.”",
+    "“Bir il veya ilçenin tamamının jandarma görev ve sorumluluk alanı olarak belirlenmesi Jandarma Genel Komutanlığının kararıyla olur.”"
+   ],
+   "dogrusu": [
+    "Jandarmanın genel görev alanı, il ve ilçe belediye hudutları dışında kalan veya polis teşkilatı bulunmayan yerlerdir (m.10)",
+    "Belediye sınırları içinde olmakla birlikte hizmet gerekleri bakımından uygun görülen yerler jandarma alanı olarak tespit edilebilir (m.10)",
+    "İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma sorumluluk alanı olarak belirlenebilir (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-14",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Onay makamı (İçişleri Bakanı), komisyon başkanı ve toplantıya çağıran makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma ve polis sorumluluk alanlarının sınırlarını belirleyen komisyonun kararları valinin onayıyla yürürlüğe girer.”",
+    "“İllerde jandarma ve polis sorumluluk alanlarının sınırlarını belirleyen komisyona il jandarma komutanı başkanlık eder.”",
+    "“Sorumluluk alanı sınırlarını belirleyen komisyon, İçişleri Bakanının çağrısı üzerine toplanır.”"
+   ],
+   "dogrusu": [
+    "Sorumluluk alanı sınırlarını belirleyen komisyonun kararları İçişleri Bakanının onayıyla yürürlüğe girer (m.10)",
+    "İllerde sınır belirleme komisyonuna vali veya görevlendireceği vali yardımcısı, ilçelerde kaymakam başkanlık eder (m.10)",
+    "Sınır belirleme komisyonu vali veya kaymakamın çağrısı üzerine toplanır (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-15",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yeniden düzenleme süresi ve sürenin başlangıcı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Belediye kurulması veya kaldırılması sebebiyle sınırlarda değişiklik olması hâlinde sorumluluk alanları en geç altı ay içinde yeniden düzenlenir.”",
+    "“Sınır değişikliğinde sorumluluk alanlarını yeniden düzenleme süresi, değişikliğin Resmî Gazetede yayımlandığı tarihten başlar.”"
+   ],
+   "dogrusu": [
+    "Sınır değişikliğinde sorumluluk alanları değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içinde yeniden düzenlenir (m.10)",
+    "Yeniden düzenleme süresi, sınır değişikliğinin yürürlüğe girdiği tarihten itibaren işler (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-16",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Görevlendiren makam (mahalli mülki amir) ve görevlendirmenin geçiciliği bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma veya Emniyet Teşkilatı kendi sorumluluk sahasında yetersiz kalırsa, İçişleri Bakanı tarafından birbirlerinin sahasında görevlendirilebilir.”",
+    "“Yetersiz kalan Jandarma veya Emniyet Teşkilatı, mahalli mülki amirlerce birbirlerinin sorumluluk sahalarında sürekli olarak görevlendirilebilir.”"
+   ],
+   "dogrusu": [
+    "Jandarma veya Emniyet kendi sahasında yetersiz kalırsa mahalli mülki amirlerce birbirlerinin sahasında görevlendirilebilir (m.10)",
+    "Jandarma ve Emniyet, mahalli mülki amirlerce birbirlerinin sorumluluk sahalarında ancak geçici olarak görevlendirilebilir (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-17",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Silah kullanma yetkisinin kaynağı kanundan yönetmeliğe çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma, görevlerin ifası sırasında yönetmelikle belirlenen silah kullanma yetkisine sahiptir.”"
+   ],
+   "dogrusu": [
+    "Jandarma, görevin gereği olarak yönetmelikle değil, kanunlarda öngörülen silah kullanma yetkisine sahiptir (m.11)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-18",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yetki devredilecek makam, görevlendirme makamı ve bedelsiz devir öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İçişleri Bakanı, Emniyet, Sahil Güvenlik ve Jandarma arasında geçici personel görevlendirme yetkisini Jandarma Genel Komutanına devredebilir.”",
+    "“Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında personel, Cumhurbaşkanı tarafından geçici olarak görevlendirilir.”",
+    "“Jandarma Genel Komutanlığı ile Emniyet Genel Müdürlüğü, taşıt ve silahlarını birbirlerine yalnızca bedel karşılığında devredebilir.”"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı, kurumlar arası geçici personel görevlendirme yetkisini il valilerine devredebilir (m.12)",
+    "Bu kurumlar arasında her kademedeki personel, lüzum görüldüğünde İçişleri Bakanı tarafından geçici olarak görevlendirilebilir (m.12)",
+    "İçişleri Bakanının onayıyla bu kurumlar silah, taşıt ve taşınmazlarını birbirine geçici tahsis edebilir veya bedelsiz devredebilir (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-19",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; nasıp onay makamı ve uzman personelin nasıp-terfi makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmada subaylığa ve astsubaylığa nasıp işlemleri Cumhurbaşkanının onayıyla yapılır.”",
+    "“Uzman jandarma ve uzman erbaşların nasıp ve terfileri İçişleri Bakanlığının onayıyla yapılır.”"
+   ],
+   "dogrusu": [
+    "Jandarmada subaylığa ve astsubaylığa nasıp işlemleri İçişleri Bakanlığının onayıyla yapılır (m.13)",
+    "Uzman jandarma ve uzman erbaşların nasıp ve terfileri Jandarma Genel Komutanlığınca özel kanunlarına göre yapılır (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-20",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Albayların yaş sınırı ve onay makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Rütbede bekleme süresi dolan ancak hizmetine ihtiyaç duyulan albaylar 65 yaşına kadar görevde bırakılabilir.”",
+    "“Hizmetine ihtiyaç duyulan albay ve generallerin görevde bırakılması Jandarma Genel Komutanının onayıyla olur.”"
+   ],
+   "dogrusu": [
+    "Hizmetine ihtiyaç duyulan albaylar 60, generaller 65 yaşına kadar görevde bırakılabilir (m.13)",
+    "Hizmetine ihtiyaç duyulan albay ve generaller İçişleri Bakanının onayıyla görevde bırakılabilir (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-21",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Onay makamı (Cumhurbaşkanı) ve rütbe eşiği bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Albay ve üstü rütbedekiler, bekleme süreleri dolmadan kadrosuzluk tazminatı ödenerek İçişleri Bakanının onayıyla emekliye sevk edilebilir.”",
+    "“Bekleme süreleri dolmadan kadrosuzluk tazminatıyla emekliye sevk, yarbay ve üstü rütbelerde uygulanabilir.”"
+   ],
+   "dogrusu": [
+    "Albay ve üstü rütbeler, bekleme süreleri dolmadan kadrosuzluk tazminatı ödenerek Cumhurbaşkanı onayıyla emekliye sevk edilebilir (m.13)",
+    "Bekleme süresi dolmadan kadrosuzluk tazminatıyla emekliye sevk yalnız albay ve üstü rütbelerde uygulanabilir (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-22",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "657 ile 926 ve diğer kanunların uygulama alanları yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Hizmetleri Sınıfı personelinin her türlü özlük işlerinde, bu Kanunda hüküm bulunmayan hâllerde 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu uygulanır.”",
+    "“Jandarma personelinin nasıp ve terfi, aylık ve diğer mali haklarında 657 sayılı Devlet Memurları Kanunu uygulanır.”"
+   ],
+   "dogrusu": [
+    "Özlük işlerinde bu Kanunda hüküm yoksa 657 sayılı Devlet Memurları Kanunu uygulanır (m.13)",
+    "Nasıp-terfi, aylık ve diğer mali ve sosyal haklarda statü ve rütbeye göre 926, 4678, 3466, 3269 ve 6191 sayılı Kanunlar uygulanır (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-23",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İl içi yer değiştirme makamı (vali) ve İçişleri Bakanının atama kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Nokta ataması yapılmayan subay, astsubay ve uzman jandarmaların il içi yer değiştirmeleri il jandarma komutanı tarafından yapılır.”",
+    "“Bölge ve il jandarma komutanlarının ataması İçişleri Bakanınca yapılır.”"
+   ],
+   "dogrusu": [
+    "Valilik emrine atanan subay, astsubay ve uzman jandarmaların istihdam yerini ve il içi yer değiştirmesini vali yapar (m.14)",
+    "İçişleri Bakanı; Jandarma Genel Komutanı, yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanları atar (m.14)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-24",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; mülki, kişisel ve askerî görev suçlarında uygulanacak usul birbirine karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma personelinin mülki görevlerinden doğan suçlarında 5271 sayılı Ceza Muhakemesi Kanununun 161 inci maddesinin beşinci fıkrası uygulanır.”",
+    "“Jandarma personelinin kişisel suçlarında 4483 sayılı Kanun hükümlerine göre soruşturma izni aranır.”",
+    "“Jandarma personeline verilen askerî görevlerden doğan suçların muhakemesi, genel hükümlere göre asliye ceza mahkemesinde görülür.”"
+   ],
+   "dogrusu": [
+    "Mülki görevlerden doğan suçlarda, özel kanun hükümleri saklı kalmak şartıyla 4483 sayılı Kanun hükümlerine göre işlem yapılır (m.15/b)",
+    "Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır (m.15/e)",
+    "Askerî görevlerden doğan suçların muhakemesi, emrine verildiği askerî birlik personelini muhakemeyle görevli mahkemede görülür (m.15/d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-25",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; ertelemenin etkisi ve ilişik kesme onay makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kasten işlenen bir suçtan dolayı bir yıl veya daha fazla hapis cezasına mahkûm olan subayın ilişiği, cezası ertelenmişse kesilmez.”",
+    "“Sayılan suçlardan mahkûm olan subay, astsubay ve uzman jandarmaların Komutanlıkla ilişikleri Jandarma Genel Komutanının onayı ile kesilir.”"
+   ],
+   "dogrusu": [
+    "Kasten işlenen suçtan bir yıl veya daha fazla hapse mahkûm olanın ilişiği, ceza ertelenmiş olsa bile kesilir (m.15)",
+    "Bu hâllerde subay, astsubay ve uzman jandarmaların Komutanlıkla ilişikleri İçişleri Bakanının onayı ile kesilir (m.15)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-26",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Konutta önleme araması hâkim kararıyla mümkün gösterildi; yasak eklentileri kapsamıyor gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sulh ceza hâkiminin kararı bulunması hâlinde konutta ve eklentilerinde de önleme araması yapılabilir.”",
+    "“Önleme araması konutta yapılamaz; ancak konutun eklentilerinde yapılabilir.”"
+   ],
+   "dogrusu": [
+    "Konutta, yerleşim yerinde ve eklentilerinde önleme araması yapılamaz (m.15/A)",
+    "Önleme araması konutta olduğu gibi yerleşim yerinde ve eklentilerinde de yapılamaz (m.15/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-27",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Denetim makamları daraltıldı ve listeye Genelkurmay eklendi (girdide resmî metin boştu; Ek m.1 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmanın eylem ve işlemleri yalnızca kendi amirleri tarafından denetlenir ve teftiş edilir.”",
+    "“Jandarmanın eylem ve işlemlerini Genelkurmay Başkanlığı ve İçişleri Bakanlığı birlikte denetler ve teftiş eder.”"
+   ],
+   "dogrusu": [
+    "Jandarmanın eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir (Ek m.1)",
+    "Jandarmayı Genelkurmay Başkanlığı değil; İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri denetler ve teftiş eder (Ek m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-28",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; raporu düzenleyen makam, yönetmeliği çıkaran bakanlık ve raporun kullanım alanı bozuldu (girdide resmî metin boştu; Ek m.2 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlçe jandarma komutanı hakkındaki değerlendirme raporu, il valisinin görüşü alınarak kaymakam tarafından düzenlenir.”",
+    "“Jandarma komutanlarına ilişkin değerlendirme raporlarının içeriği ve düzenlenme esasları Millî Savunma Bakanlığı yönetmeliğiyle belirlenir.”",
+    "“Değerlendirme raporları personelin terfisinde dikkate alınır; atama ve yer değiştirmede dikkate alınmaz.”"
+   ],
+   "dogrusu": [
+    "İlçe jandarma komutanı hakkındaki değerlendirme raporu, kaymakamın değerlendirmesi alınarak il valisi tarafından düzenlenir (Ek m.2)",
+    "Değerlendirme raporlarının içeriği ve düzenlenme esasları İçişleri Bakanlığınca çıkarılan yönetmelikle düzenlenir (Ek m.2)",
+    "Değerlendirme raporları personelin terfi, ödüllendirme, atama ve yer değiştirmesinde dikkate alınır (Ek m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-29",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yazılılık şartı ve yetki devredilebilecek makamlar bozuldu (girdide resmî metin boştu; Ek m.6 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İçişleri Bakanı, bu Kanundaki yetkilerinden bir kısmını sözlü talimatla da Jandarma Genel Komutanına devredebilir.”",
+    "“İçişleri Bakanı, bu Kanundaki yetkilerinden bir kısmını kaymakamlara devredebilir.”"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı yetkilerinin bir kısmını ancak sınırlarını yazılı olarak açıkça belirleyerek devredebilir (Ek m.6)",
+    "İçişleri Bakanı yetkilerinin bir kısmını ilgisine göre Jandarma Genel Komutanına veya valilere devredebilir (Ek m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-30",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tereddüt giderme makamı ve kanunlar arası çatışma kuralı bozuldu (girdide resmî metin boştu; Ek m.7 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Kanununun uygulanmasıyla ilgili tereddütleri gidermeye Cumhurbaşkanlığı yetkilidir.”",
+    "“Diğer kanunlarda Jandarma Kanununa aykırı hükümler bulunması hâlinde, sonraki tarihli kanun hükümleri uygulanır.”"
+   ],
+   "dogrusu": [
+    "Bu Kanunun uygulanmasıyla ilgili tereddütleri gidermeye İçişleri Bakanlığı yetkilidir (Ek m.7)",
+    "Diğer kanunlarda bu Kanuna aykırı hükümler bulunması hâlinde bu Kanun hükümleri uygulanır (Ek m.7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-31",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yönetmeliği yürürlüğe koyan makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarmanın teşkilat, görev, yetki ve sorumlulukları İçişleri Bakanlığınca çıkarılan yönetmelikle düzenlenir.”",
+    "“Jandarma personelinin kılık ve kıyafeti Jandarma Genel Komutanlığınca çıkarılan yönergeyle düzenlenir.”"
+   ],
+   "dogrusu": [
+    "Jandarmanın teşkilat, görev, yetki ve sorumlulukları Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir (m.24)",
+    "Jandarma personelinin kılık ve kıyafeti de Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-32",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yazılı emir makamı ve yetkinin coğrafi sınırı bozuldu (girdide Ek m.5 metni boştu; kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gecikmesinde sakınca bulunan hâllerde önleyici dinleme, İçişleri Bakanının yazılı emriyle yapılabilir.”",
+    "“Jandarma, önleyici dinleme yetkisini kendi sorumluluk alanıyla sınırlı olmaksızın tüm ülke genelinde kullanabilir.”"
+   ],
+   "dogrusu": [
+    "Gecikmesinde sakınca bulunan hâllerde yazılı emir Jandarma Genel Komutanı veya istihbarat başkanınca verilir (Ek m.5)",
+    "Jandarma önleyici dinleme yetkisini sadece kendi sorumluluk alanında kullanabilir (Ek m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-33",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "24/48 saat süreleri yer değiştirildi; kayıtların yok edilme süresi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gecikmesinde sakınca bulunan hâllerde verilen yazılı emir, kırk sekiz saat içinde yetkili ve görevli hâkimin onayına sunulur.”",
+    "“Hâkim, yazılı emre ilişkin kararını en geç yirmi dört saat içinde verir.”",
+    "“Hâkimin aksine karar vermesi hâlinde dinlemenin içeriğine ilişkin kayıtlar en geç otuz gün içinde yok edilir.”"
+   ],
+   "dogrusu": [
+    "Gecikmesinde sakınca bulunan hâllerde verilen yazılı emir 24 saat içinde hâkim onayına sunulur (Ek m.5)",
+    "Hâkim, yazılı emre ilişkin kararını en geç 48 saat içinde verir (Ek m.5)",
+    "Tedbir kaldırılınca dinlemenin içeriğine ilişkin kayıtlar en geç on gün içinde yok edilir ve tutanakla tespit olunur (Ek m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-34",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yetkili mahkemenin yeri, uzatma sayısı ve terör istisnası bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Önleyici dinlemede yetkili ve görevli hâkim, İstanbul ağır ceza mahkemesi üyesidir.”",
+    "“Önleyici dinleme kararları en fazla üç ay için verilir ve bu süre en fazla iki defa uzatılabilir.”",
+    "“Terör örgütünün faaliyeti çerçevesinde devam eden tehlikelerde de dinleme süresi en fazla üç defa uzatılabilir.”"
+   ],
+   "dogrusu": [
+    "Önleyici dinlemede yetkili ve görevli hâkim Ankara ağır ceza mahkemesi üyesidir (Ek m.5)",
+    "Kararlar en fazla üç ay için verilir; süre üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir (Ek m.5)",
+    "Terör örgütü faaliyeti kapsamındaki tehlikelerde hâkim, üç ayı aşmamak üzere süreyi müteaddit defalar uzatabilir (Ek m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-35",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Denetim sıklığı ve raporun sunulacağı makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Önleyici dinleme faaliyetleri iki yılda en az bir defa denetlenir.”",
+    "“Önleyici dinleme faaliyetlerine ilişkin denetim sonuçları rapor hâlinde Cumhurbaşkanlığına sunulur.”"
+   ],
+   "dogrusu": [
+    "Önleyici dinleme faaliyetleri yılda en az bir defa denetlenir (Ek m.5)",
+    "Denetim sonuçları rapor hâlinde TBMM Güvenlik ve İstihbarat Komisyonuna sunulur (Ek m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-36",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Gizliliği ihlalde doğrudan soruşturma izin sistemine bağlandı; usulsüz dinlemede ceza yolu disipline çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Önleyici dinlemede gizlilik kuralına aykırı davranan jandarma personeli hakkında soruşturma, 4483 sayılı Kanuna göre izin alınarak yapılır.”",
+    "“Usule aykırı dinleme yapanlar hakkında yalnızca disiplin hükümlerine göre işlem yapılır.”"
+   ],
+   "dogrusu": [
+    "Gizliliğe aykırı davrananlar hakkında, suç görev sırasında işlense bile Cumhuriyet savcılarınca doğrudan soruşturma yapılır (Ek m.5)",
+    "Usule aykırı dinleme yapanlar hakkında Türk Ceza Kanunu hükümlerine göre işlem yapılır (Ek m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-37",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yol süresinin dâhil olmaması ve yıllık mazeret izni süresi bozuldu (girdide Ek m.3 metni boştu; kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma personelinin her yıl yol dâhil otuz gün yıllık izin hakkı vardır.”",
+    "“Kısa süreli mazeretlerde kullanılmak üzere personele on güne kadar yıllık mazeret izni verilebilir.”"
+   ],
+   "dogrusu": [
+    "Personelin her yıl 30 gün yıllık izin hakkı vardır ve bu süreye yol dâhil değildir (Ek m.3)",
+    "Kısa süreli mazeretlerde kullanılmak üzere 15 güne kadar yıllık mazeret izni verilebilir (Ek m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-39",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Evlenme, doğum ve olağanüstü mazeret izin süreleri birbirine karıştırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Personele kendisinin veya çocuğunun evlenmesi hâlinde on güne kadar mazeret izni verilebilir.”",
+    "“Personelin eşinin doğum yapması hâlinde yedi güne kadar mazeret izni verilebilir.”",
+    "“Yangın, deprem veya su baskını gibi olağanüstü bir mazeret dolayısıyla bir yıl içinde on beş güne kadar mazeret izni verilebilir.”"
+   ],
+   "dogrusu": [
+    "Kendisinin veya çocuğunun evlenmesi hâlinde personele 7 güne kadar mazeret izni verilebilir (Ek m.3)",
+    "Eşin doğum yapması ve sayılan yakınların ölümü hâllerinin her birinde 10 güne kadar mazeret izni verilebilir (Ek m.3)",
+    "Yangın, deprem, su baskını gibi olağanüstü mazerette bir yıl içinde 30 güne kadar mazeret izni verilebilir (Ek m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-40",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Refakat izni süresi, engellilik oranı ve iznin ana-babadan yalnız biri tarafından kullanılması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Refakat gerektiren ağır hastalık hâlinde sağlık kurulu raporuyla altı aya kadar aylıklı izin verilebilir.”",
+    "“En az yüzde 40 oranında engelli çocuğu hastalanan personele yılda on güne kadar mazeret izni verilir.”",
+    "“Engelli çocuğu hastalanan personelin mazeret izni, ana ve babanın her biri tarafından ayrı ayrı kullanılabilir.”"
+   ],
+   "dogrusu": [
+    "Refakat gerektiren hâllerde sağlık kurulu raporuyla 3 aya kadar aylıklı izin verilebilir; gerekirse bir katına kadar uzatılır (Ek m.3)",
+    "Engelli çocuk izni, en az %70 oranında engelli ya da süreğen hastalığı olan çocuğun hastalanması hâlinde verilir (Ek m.3)",
+    "Engelli çocuk için mazeret izni ana veya babadan sadece biri tarafından kullanılabilir (Ek m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-41",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Doğum öncesi/sonrası haftalar yer değiştirildi; çoğul gebelik eki bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kadın personele doğumdan önce on altı, doğumdan sonra sekiz hafta olmak üzere aylıklı izin verilir.”",
+    "“Çoğul gebelik hâlinde doğum sonrası on altı haftalık izin süresine dört hafta eklenir.”"
+   ],
+   "dogrusu": [
+    "Kadın personele doğumdan önce 8, doğumdan sonra 16 hafta olmak üzere toplam 24 hafta aylıklı izin verilir (Ek m.3)",
+    "Çoğul gebelik hâlinde doğum öncesi sekiz haftalık izin süresine 2 hafta eklenir (Ek m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-42",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İki, üç ve dört yıllık sıhhi izin kademeleri kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Geçici hastalığı olan personel, hastanede geçen teşhis ve tedavi süreleri hariç fiilen üç yılı geçmemek üzere sıhhi izne tabi tutulur.”",
+    "“Kanser veya verem gibi uzun süreli tedavi gerektiren hastalıklarda sıhhi izin süresi toplam dört yılı geçemez.”",
+    "“İklim değiştirme raporu alan personelin sıhhi izin süresi iki yıl olarak hesaplanır.”"
+   ],
+   "dogrusu": [
+    "Geçici hastalıklarda sıhhi izin, teşhis ve tedavi süreleri hariç toplam ve fiilen iki yılı geçemez (Ek m.3)",
+    "Kanser, verem gibi uzun süreli tedavi gerektiren hastalıklarda sıhhi izin toplam ve fiilen üç yılı geçemez (Ek m.3)",
+    "İklim değiştirme raporu alanların sıhhi izin süreleri dört yıl olarak hesaplanır (Ek m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-44",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yaş sınırı ve askerlikten sayılma süresi bozuldu; ilişiği kesilenin askerlik yükümlülüğü kaldırıldı (girdide resmî metin boştu; Ek m.13 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığında uzman erbaş adaylarının müracaat yılının ocak ayının ilk günü itibarıyla yirmi beş yaşını bitirmemiş olması gerekir.”",
+    "“Askerlik yükümlülüğüne başlamadan uzman erbaşlığa kabul edilenler, beş yıllık hizmet süresini tamamlarsa askerlik hizmetini yerine getirmiş sayılır.”",
+    "“Üç yıllık süreyi tamamlamadan ilişiği kesilen uzman erbaş, askerlik hizmetinden muaf tutulur.”"
+   ],
+   "dogrusu": [
+    "Uzman erbaş adayının müracaat yılının ocak ayının ilk günü itibarıyla yirmi yedi yaşını bitirmemiş olması gerekir (Ek m.13)",
+    "Bu kapsamdakilerden üç yıllık hizmet süresini tamamlayanlar askerlik hizmetini yerine getirmiş sayılır (Ek m.13)",
+    "Üç yıllık süreyi tamamlamadan hangi nedenle olursa olsun ilişiği kesilen personel askerlik hizmetini yerine getirir (Ek m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-45",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sicil oranı, yetkili makam ve uzatılabilecek yaş bozuldu (girdide resmî metin boştu; Ek m.18 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sicil notu ortalaması sicil tam notunun yüzde 80'inin üzerinde olan astsubay kıdemli başçavuşların yaş haddi 60 yaşına kadar uzatılabilir.”",
+    "“Astsubay kıdemli başçavuşların yaş haddi, Jandarma Genel Komutanlığının teklifi üzerine Cumhurbaşkanı tarafından uzatılabilir.”",
+    "“İstekli astsubay kıdemli başçavuşların yaş haddi 65 yaşına kadar uzatılabilir.”"
+   ],
+   "dogrusu": [
+    "Yaş haddi uzatımı için sicil notu ortalamasının, sicil tam notunun %90'ı veya daha üzerinde olması gerekir (Ek m.18)",
+    "Kıdemli başçavuşların yaş haddi JGnK teklifi üzerine veya resen İçişleri Bakanı tarafından uzatılabilir (Ek m.18)",
+    "İstekli astsubay kıdemli başçavuşların yaş haddi 60 yaşına kadar uzatılabilir (Ek m.18)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-46",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Rütbe yaş hadleri bir kademe kaydırıldı (girdide resmî metin boştu; Ek m.16 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Uzman jandarmalıktan astsubaylığa geçenlerden astsubay başçavuşun rütbe yaş haddi 55'tir.”",
+    "“Uzman jandarmalıktan astsubaylığa geçenlerden astsubay çavuş ve kıdemli çavuşun rütbe yaş haddi 45'tir.”",
+    "“Uzman jandarmalıktan astsubaylığa geçenlerden astsubay üstçavuşun rütbe yaş haddi 54'tür.”"
+   ],
+   "dogrusu": [
+    "Uzman jandarmalıktan astsubaylığa geçenlerde astsubay başçavuşun yaş haddi 54, kıdemli başçavuşun 55'tir (Ek m.16)",
+    "Uzman jandarmalıktan geçen astsubay çavuş ve kıdemli çavuşun rütbe yaş haddi 43'tür (Ek m.16)",
+    "Uzman jandarmalıktan geçen astsubay üstçavuş ve kıdemli üstçavuşun rütbe yaş haddi 52'dir (Ek m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-47",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Rütbe yaş hadleri bozuldu (girdide resmî metin boştu; Geçici m.12 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Astsubaylıktan subaylığa geçenlerden albayın rütbe yaş haddi 65'tir.”",
+    "“Astsubaylıktan subaylığa geçenlerden yüzbaşının rütbe yaş haddi 56'dır.”",
+    "“Astsubaylıktan subaylığa geçen teğmen ve üsteğmenlerin rütbe yaş haddi 45'tir.”"
+   ],
+   "dogrusu": [
+    "Astsubaylıktan subaylığa geçenlerde albayın rütbe yaş haddi 60'tır (Geçici m.12)",
+    "Astsubaylıktan subaylığa geçenlerde yüzbaşının yaş haddi 55, binbaşının 56'dır (Geçici m.12)",
+    "Astsubaylıktan subaylığa geçen teğmen ve üsteğmenlerin rütbe yaş haddi 49'dur (Geçici m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-48",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Muvazzafa geçişte üst yaş sınırları ve geçmişe yönelik hak yasağı bozuldu (girdide resmî metin boştu; Ek m.12 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sözleşmeli subayların muvazzaf subaylığa geçişinde üst sınır olarak binbaşılık rütbe yaş haddi uygulanır.”",
+    "“Sözleşmeli astsubayların muvazzaf astsubaylığa geçişinde üst sınır olarak astsubay başçavuşluk rütbe yaş haddi uygulanır.”",
+    "“Normal bekleme süresinin bitiminden sonra muvazzaf olanlar, geçmişe yönelik özlük haklarını talep edebilir.”"
+   ],
+   "dogrusu": [
+    "Sözleşmeli subayların muvazzaf subaylığa geçişinde üst sınır olarak yüzbaşılık rütbe yaş haddi uygulanır (Ek m.12)",
+    "Sözleşmeli astsubayların muvazzafa geçişinde üst sınır astsubay kıdemli üstçavuşluk rütbe yaş haddidir (Ek m.12)",
+    "Normal bekleme süresinin bitiminden sonra muvazzaf subay veya astsubay olanlar geçmişe yönelik hak talep edemez (Ek m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-49",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İki-beş kat ile altı-yirmi dört kat ödül aralıkları yer değiştirildi (girdide resmî metin boştu; Ek m.9 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Olağanüstü durumlarda yaşamını ortaya koyarak büyük yararlık gösteren personel, aylığının iki katından beş katına kadar para ödülüyle ödüllendirilir.”",
+    "“Kişilerin can ve mallarını korumada yüksek hizmeti görülen personele aylığının altı katından yirmi dört katına kadar para ödülü verilir.”"
+   ],
+   "dogrusu": [
+    "Yaşamını ortaya koyarak büyük yararlık gösterenlere aylığın altı katından yirmi dört katına kadar para ödülü verilir (Ek m.9)",
+    "Yüksek hizmeti görülenlere fiilen aldıkları aylığın iki katından beş katına kadar para ödülü verilir (Ek m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-50",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Madalya veren makam bozuldu; listeye maddede olmayan madalya eklendi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Görevini cesaret, feragat veya kahramanlıkla yerine getiren jandarma personeline madalyalar Cumhurbaşkanı tarafından verilir.”",
+    "“Jandarma personeline verilebilecek madalyalar arasında Jandarma Övünç Madalyası da yer alır.”"
+   ],
+   "dogrusu": [
+    "Görevini cesaret, feragat, kahramanlık veya üstün başarıyla yerine getirenlere madalyaları İçişleri Bakanı verebilir (Ek m.9)",
+    "Madalyalar Jandarma Üstün Cesaret ve Feragat, Jandarma Şeref ve Jandarma Üstün Hizmet Madalyasıdır (Ek m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-51",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Takdire bağlı karşılama zorunlu gösterildi; karargâh personeli dışlandı; kapsam mağdurlara genişletildi (girdide resmî metin boştu; Ek m.11 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Karakol veya devriye görevi sırasında sanık durumuna düşen jandarma personelinin avukatlık ücreti, olayın mahiyetine bakılmaksızın her hâlde Jandarma Genel Komutanlığı bütçesinden karşılanır.”",
+    "“Görev sırasında sanık durumuna düşen jandarma personeline sağlanan adli yardımdan karargâh personeli yararlanamaz.”",
+    "“Görevleri sırasında suç mağduru olan jandarma personelinin avukatlık ücreti Jandarma Genel Komutanlığı bütçesinden karşılanır.”"
+   ],
+   "dogrusu": [
+    "Avukatlık ücreti, olayın mahiyeti ve kusurun derecesine göre durumu uygun görülürse JGnK bütçesinden karşılanır (Ek m.11)",
+    "Bu görevlerden dolayı sanık durumuna düşen karargâh personeli de adli yardımdan yararlanabilir (Ek m.11)",
+    "Avukatlık ücreti desteği, görev sırasında veya görevden dolayı sanık durumuna düşen personel içindir (Ek m.11)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-52",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Giderlerin karşılanacağı bütçe ve süre uzatma makamı bozuldu (girdide resmî metin boştu; Geçici m.5 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığı emrine verilen er ve erbaşların giderleri Millî Savunma Bakanlığı bütçesinden karşılanır.”",
+    "“Jandarmanın er ve erbaş ihtiyacının Millî Savunma Bakanlığınca karşılanma süresi, İçişleri Bakanı kararıyla uzatılabilir.”"
+   ],
+   "dogrusu": [
+    "Jandarma emrine verilen er ve erbaşların giderleri Jandarma Genel Komutanlığı bütçesinden karşılanır (Geçici m.5)",
+    "Er ve erbaş ihtiyacının Millî Savunma Bakanlığınca karşılanma süresi Cumhurbaşkanı kararıyla uzatılabilir (Geçici m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-53",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Masrafın karşılanacağı bütçe bozuldu (girdide resmî metin boştu; Ek m.4 metni kart madde metinlerinden doğrulandı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gözaltına alınanların yeme, içme ve nakil masrafları Adalet Bakanlığı bütçesinden karşılanır.”"
+   ],
+   "dogrusu": [
+    "Gözaltına alınanların yeme, içme ve nakil masrafları Jandarma Genel Komutanlığı bütçesine konulan ödenekle karşılanır (Ek m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-54",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yüzde 52/40 oranları yer değiştirildi; damga vergisi istisnası ve usul-esası belirleyen makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Asayiş tazminatı, komando ve sınır birliklerinde en yüksek Devlet memuru aylığının yüzde 40'ını, diğer birliklerde yüzde 52'sini geçmemek üzere ödenir.”",
+    "“Asayiş tazminatından hiçbir vergi ve kesinti yapılmaz.”",
+    "“Asayiş tazminatının usul ve esasları Cumhurbaşkanınca belirlenir.”"
+   ],
+   "dogrusu": [
+    "Asayiş tazminatı komando ve sınır birliklerinde %52, diğer karargâh, birlik ve kurumlarda %40 tutarını geçemez (m.21)",
+    "Asayiş tazminatından damga vergisi hariç herhangi bir vergi ve kesinti yapılmaz (m.21)",
+    "Asayiş tazminatı İçişleri Bakanlığınca belirlenecek usul ve esaslara göre ödenir (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-55",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sefer ihtiyacını karşılayan bakanlık, standart belirleyen makam ve fondan yararlanma öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek jandarma birliklerinin sefer stokları dâhil her türlü ihtiyacı Jandarma Genel Komutanlığı bütçesinden karşılanır.”",
+    "“Jandarma Genel Komutanlığı silah ve mühimmatını Millî Savunma Bakanlığınca belirlenecek standartlara uygun olarak karşılar.”",
+    "“Jandarma Genel Komutanlığı, Savunma Sanayii Destekleme Fonundan yararlanamaz.”"
+   ],
+   "dogrusu": [
+    "Kuvvet Komutanlıkları emrine girecek jandarma birliklerinin sefer stokları dâhil ihtiyaçları Millî Savunma Bakanlığınca sağlanır (m.19)",
+    "Jandarma silah ve mühimmatını İçişleri Bakanlığınca belirlenecek standartlara uygun olarak kendi bütçesinden karşılar (m.19)",
+    "Jandarma Genel Komutanlığı, Savunma Sanayii Destekleme Fonundan TSK'nın tabi olduğu usul ve esaslarla yararlanır (m.19)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-56",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bağlı olunan bakanlık, bütçe ve yönetmeliği çıkaran makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma ve Sahil Güvenlik Akademisi, Millî Savunma Bakanlığına bağlı bir yükseköğretim kurumudur.”",
+    "“Jandarma ve Sahil Güvenlik Akademisinin ihtiyaçları Sahil Güvenlik Komutanlığı bütçesinden karşılanır.”",
+    "“Akademinin kuruluş, görev ve çalışma usulleri Yükseköğretim Kurulunca çıkarılan yönetmelikle belirlenir.”"
+   ],
+   "dogrusu": [
+    "Jandarma ve Sahil Güvenlik Akademisi İçişleri Bakanlığına bağlı bir yükseköğretim kurumudur (m.13/A)",
+    "Akademinin ihtiyaçları Jandarma Genel Komutanlığı bütçesinden karşılanır (m.13/A)",
+    "Akademinin kuruluş, görev ve çalışma usulleri YÖK'ün görüşü alınarak İçişleri Bakanlığınca çıkarılan yönetmelikle belirlenir (m.13/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-57",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Akademik kariyer şartı, atama makamı ve başkan yardımcısı sayısı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Akademi Başkanı, en az doktora düzeyinde akademik kariyere sahip general, amiral, albay veya profesörler arasından atanır.”",
+    "“Jandarma ve Sahil Güvenlik Akademisi Başkanı Cumhurbaşkanı tarafından atanır.”",
+    "“Akademi Başkanına yardımcı olmak üzere en fazla iki başkan yardımcısı atanır.”"
+   ],
+   "dogrusu": [
+    "Akademi Başkanı, en az yüksek lisans düzeyinde akademik kariyere sahip adaylar arasından atanır (m.13/A)",
+    "Akademi Başkanı İçişleri Bakanı tarafından atanır (m.13/A)",
+    "Akademi Başkanına yardımcı olmak üzere İçişleri Bakanınca en fazla dört başkan yardımcısı atanır (m.13/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-58",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Eğitimin yapılacağı yer ve ilke-standart belirleyen makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Uzman erbaşlar ile sözleşmeli er ve erbaşların eğitimi Jandarma ve Sahil Güvenlik Akademisi bünyesinde yapılır.”",
+    "“Uzman erbaş ve sözleşmeli er-erbaş eğitiminin ilke ve standartlarını Jandarma Eğitim Komutanlığı belirler.”"
+   ],
+   "dogrusu": [
+    "Uzman erbaş ve sözleşmeli er/erbaş eğitimi, Akademinin ilkelerine göre Jandarma Eğitim ve Sahil Güvenlik Eğitim komutanlıkları bünyesinde yapılır (m.13/A)",
+    "Bu eğitimin ilke ve standartlarını Akademi belirler; eğitim, eğitim komutanlıkları bünyesinde yapılır (m.13/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-59",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Haftalık ve yıllık ders saati sınırları bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Akademide ücret karşılığı ders verenlere haftada on saati aşmamak kaydıyla ders ücreti ödenir.”",
+    "“Akademide ücret karşılığı ders verenlere bir takvim yılında 240 saati aşmamak kaydıyla ders ücreti ödenir.”"
+   ],
+   "dogrusu": [
+    "Akademide ücret karşılığı ders verenlere haftada yirmi saati aşmamak kaydıyla ders ücreti ödenir (m.13/A)",
+    "Bir takvim yılında üç yüz altmış saati aşmamak kaydıyla ders ücreti ödenir (m.13/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-60",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Girdide madde ve resmî metin yoktu; öğrenime son verme sebepleri m.13/A metninden (kart madde metinleri) doğrulandı; gerçek sebepler 'son verilmez' diye ters çevrildi. Not: kartın hüküm alanı bir kural değil, soru kalıbı açıklaması (elle bakılmalı)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Giriş ile ilgili nitelikleri taşımadığı öğrenim sırasında anlaşılan Akademi öğrencisinin öğrenimine son verilmez.”",
+    "“657 sayılı Kanuna göre memur olma niteliğini kaybetmek, Akademi öğrencisinin öğrenimine son verme sebepleri arasında sayılmamıştır.”"
+   ],
+   "dogrusu": [
+    "Giriş ile ilgili nitelikleri taşımadıkları öğrenim sırasında anlaşılan öğrencilerin öğrenimine son verilir (m.13/A)",
+    "657 sayılı Kanuna göre memur olma niteliğini kaybeden Akademi öğrencilerinin öğrenimine son verilir (m.13/A)"
+   ]
+  }
+ }
+]

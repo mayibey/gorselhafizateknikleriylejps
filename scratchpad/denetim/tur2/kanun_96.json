@@ -1,0 +1,715 @@
+{
+ "kanun_id": 96,
+ "ad": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\eczaci\\pack_96.json",
+ "kartlar": [
+  {
+   "id": "96-0",
+   "madde": [
+    "1",
+    "2"
+   ],
+   "baslik": "Hekimlik için tek şart: tıp fakültesi diploması",
+   "hukum": "Türkiye'de tababet icra ve her ne surette olursa olsun hasta tedavi edebilmek için tıp fakültesinden diploma sahibi olmak şarttır (m.1); diplomanın geçerli olması için 369 sayılı Kanuna göre mecburi hizmetin tamamlanmış ve diplomanın Sağlık Bakanlığınca tasdik ve tescil edilmiş olması gerekir; askerî tabipler de diplomalarını tescil ettirir; mecburi hizmet süresince diploması alıkonulan tabipler bu süre içinde de icra edebilir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hasta tedavi edebilmek için uzmanlık belgesi şarttır\" yanlış; şart tıp fakültesi diploması. \"Askerî tabipler tescilden muaftır\" yanlış; onlar da tescil ettirir",
+    "Hasta tedavi edebilmek için uzmanlık belgesi şarttır"
+   ],
+   "dogrusu": [
+    "Tıp fakültesi diploması şarttır (m.1)"
+   ]
+  },
+  {
+   "id": "96-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ameliyat kimin işi, sünneti kim yapar",
+   "hukum": "Tabip diplomasına ve cerrahi/dallarında ihtisas belgesine sahip olmayan hiç kimse cerrahi ameliyat yapamaz; küçük cerrahi (cerrahii sağire) ameliyatlarını ve sünneti her tabip yapabilir; olağanüstü ve istisnai hâllerde Sağlık Bakanlığınca düzenlenen eğitimi alan kimselerin hekim gözetiminde sünnet yapmasına Bakanlıkça izin verilebilir; Bakanlık okullarından mezun küçük sıhhiye memurları talimatnamelerinde yazılı küçük ameliyeleri yapabilir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sünneti yalnız genel cerrahi uzmanı yapabilir\" yanlış; her tabip. \"Eğitim alan herkes sünnet yapabilir\" yanlış; yalnız olağanüstü hâlde, hekim gözetiminde ve Bakanlık izniyle",
+    "Sünneti yalnız cerrahi uzmanı yapabilir"
+   ],
+   "dogrusu": [
+    "Her tabip yapabilir (küçük cerrahi ile birlikte) (m.3)"
+   ]
+  },
+  {
+   "id": "96-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Acil tıp teknikerleri ve sağlık astsubayları",
+   "hukum": "Acil tıbbi yardım ve bakımla sınırlı kalmak ve Sağlık Bakanlığı yönetmeliğinde belirtilmek kaydıyla acil tıp teknikerleri ile gerekli eğitimleri başarıyla tamamlayan TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli sağlık astsubayları hastaya müdahale edebilir; hastane öncesi acil yardım personeli özel tip kıyafet giyer (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık astsubayları her türlü tedaviyi yapabilir\" yanlış; acil yardımla sınırlı. Emniyet sağlık astsubayı diye bir grup sayılmaz; üçlü: TSK-JGK-SGK",
+    "Sağlık astsubayları her türlü tedaviyi yapabilir"
+   ],
+   "dogrusu": [
+    "Acil tıbbi yardım ve bakımla sınırlı (m.3)"
+   ]
+  },
+  {
+   "id": "96-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sıhhiye sınıfı erbaş ve erler",
+   "hukum": "TSK'ca yetiştirilen ve TSK, JGK veya SGK'ya tertiplenen sıhhiye sınıfı erbaş ve erler, birliklerinde görev yaptıkları süre ve görevle sınırlı olmak üzere küçük sıhhi işlemleri yapmaya yetkilidir; usul ve esaslar Cumhurbaşkanınca yürürlüğe konulacak yönetmelikte (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sıhhiye erleri terhis sonrası da yetkilidir\" yanlış; görev süresi ve göreviyle sınırlı. Yönetmelik Sağlık Bakanlığı değil Cumhurbaşkanı"
+   ],
+   "dogrusu": [
+    "TSK, JGK veya SGK'ya tertiplenen sıhhiye sınıfı erbaş ve erler · birliklerinde görev yaptıkları süre ve görevle sınırlı · küçük sıhhi işlemleri · Cumhurbaşkanınca"
+   ]
+  },
+  {
+   "id": "96-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Muharip/operasyonel unsurlar ve EGM Özel Harekat",
+   "hukum": "TSK muharip unsurlarından, JGK ve SGK operasyonel unsurlarından ve EGM Özel Harekat Dairesi Başkanlığı merkez-taşra personelinden görevlendirilip ilgili eğitimi başarıyla tamamlayanlar, görev süresi ve görevle sınırlı olmak üzere, sağlık personeli yokluğunda, sağlık hizmetine ulaşıncaya kadar acil tıbbi müdahale yapmaya yetkilidir; yetki-sorumluluk ve usul İçişleri, Millî Savunma ve Sağlık Bakanlıklarınca müştereken hazırlanan yönetmelikle (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "Yönetmelik tek bakanlığın değil; üç bakanlık müştereken. Şıkta \"İl Sağlık Müdürlüğü personeli\" gibi sayılmayan bir grup verilir"
+   ],
+   "dogrusu": [
+    "muharip unsurlarından · operasyonel unsurlarından · EGM Özel Harekat Dairesi Başkanlığı · ilgili eğitimi başarıyla tamamlayanlar · sağlık personeli yokluğunda, sağlık hizmetine ulaşıncaya kadar acil tıbbi müdahale · İçişleri, Millî Savunma ve Sağlık Bakanlıklarınca müştereken"
+   ]
+  },
+  {
+   "id": "96-5",
+   "madde": [
+    "4",
+    "31"
+   ],
+   "baslik": "Yabancı diplomalı hekimler",
+   "hukum": "Yabancı tıp fakültesi diplomalı hekimlerin Türkiye'de çalışabilmesi için Sağlık Bakanlığından ve Üniversite Tıp Fakültesi Profesörler Meclisinden seçilmiş bir jüri kimliğe bakıp diplomanın Türkiye Tıp Fakültesi programı ve süresine aynı veya benzer bir fakülteden alınıp alınmadığını araştırır; uygunsa Bakanlıkça onaylanıp kütüğe geçirilir; uygun değilse teori ve pratik sınav (Bakanlık görevlisi de hazır); sınav şekli Sağlık ve Kültür Bakanlıklarınca birlikte; eksik okuyanlar Tıp Fakültesinde okuyup staj gördükten sonra sınava girer (m.4); yabancı diplomalı Türk diş hekimleri için jüriye Diş Hekimi Mektebi profesörleri de katılır, aynı usul (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yabancı diploma doğrudan tescil edilir\" yanlış; jüri incelemesi şart. Sınav şeklini Sağlık Bakanlığı tek başına değil Kültür Bakanlığıyla belirler"
+   ],
+   "dogrusu": [
+    "Sağlık Bakanlığından ve Üniversite Tıp Fakültesi Profesörler Meclisinden seçilmiş bir jüri · aynı veya benzer · Bakanlıkça onaylanıp kütüğe geçirilir · teori ve pratik sınav · Sağlık ve Kültür Bakanlıklarınca · staj gördükten sonra · Türk diş hekimleri · Diş Hekimi Mektebi profesörleri"
+   ]
+  },
+  {
+   "id": "96-6",
+   "madde": [
+    "5",
+    "6",
+    "36"
+   ],
+   "baslik": "Muayenehane bildirimi: bir hafta / 24 saat",
+   "hukum": "Özel muayenehane açan veya evinde muayenehane kuran her tabip hasta kabulüne başladığından itibaren en çok bir hafta içinde kimliğini, diploma tarih-numarasını, muayenehane yerini ve varsa ihtisas belgelerini mahallin en büyük sıhhiye memuruna kaydettirir; nakilde en az yirmi dört saat önce ihbar eder (m.5); kayıtlı tabip o yeri terk eder veya muayenehanesini kapatırsa yine en az yirmi dört saat önce kaydedildiği sıhhiye dairesine başvurup kaydına işaret ettirir (m.6); diş tabibi ve dişçi (m.36), ebe (m.50) ve hastabakıcı (m.65) için de aynı: azami bir hafta içinde ihbarname, nakilde en az 24 saat önce ihbar",
+   "sinavda_boyle_yazarlar": [
+    "\"Bildirim 15 gün içinde\" veya \"nakil 48 saat önce\" yanlış; bir hafta / 24 saat. Bildirim mülkî amire değil sıhhiye memuruna",
+    "Muayenehane açan tabip 15 gün içinde bildirir, nakilde 48 saat önce haber verir"
+   ],
+   "dogrusu": [
+    "Bir hafta / 24 saat (m.5)"
+   ]
+  },
+  {
+   "id": "96-7",
+   "madde": [
+    "1",
+    "2",
+    "77"
+   ],
+   "baslik": "Kurumlarda tabip istihdamı",
+   "hukum": "Tamamen veya kısmen Türk memur ve müstahdem kullanan genel-özel müesseseler ile Türk hastaları da tedavi eden hayır ve sağlık müesseselerinde istihdam edilecek tabiplerin m.1-2 vasıflarını taşıması şarttır; m.77'deki (müktesep haklı) ecnebi tabipler bu hükümden müstesnadır (m.7); Türkiye'de kanunla kazanılmış hakları tanınmış ecnebi tabip, diş tabibi, dişçi ve ebeler sanatlarını bu kanun çerçevesinde icra edebilir (m.77)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özel kurumlarda diploma tescili aranmaz\" yanlış; aranır"
+   ],
+   "dogrusu": [
+    "Türk memur ve müstahdem · Türk hastaları da tedavi eden · m.1-2 vasıflarını · m.77'deki (müktesep haklı) ecnebi tabipler · kazanılmış hakları tanınmış ecnebi tabip, diş tabibi, dişçi ve ebeler"
+   ]
+  },
+  {
+   "id": "96-8",
+   "madde": [
+    "8",
+    "10"
+   ],
+   "baslik": "Genel tedavi hakkı ve uzman unvanı",
+   "hukum": "Bu kanundaki vasıfları taşıyanlar genel olarak hastalıkları tedavi hakkına sahiptir; ancak bir dalda sürekli uzman olmak ve o unvanı ilan edebilmek için Türkiye Tıp Fakültesinden veya Sağlık Bakanlığınca kabul ve ilan edilen müesseselerden verilmiş ya da yabancı ülkelerin tanınmış hastane/laboratuvarından verilip Türkiye Tıp Fakültesince tasdik edilmiş bir ihtisas vesikası gerekir (m.8); usulüne göre müderris, muallim gibi sıfatları kazanmamış veya m.8 belgelerini almamış tabibin öğretim ve uzmanlık unvanlarını kullanması ve gerçeğe uymayan sıfatları ilan etmesi yasaktır (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman unvanı için 5 yıl tecrübe yeter\" yanlış; ihtisas vesikası gerekir. Yabancı hastane belgesi doğrudan geçmez, Tıp Fakültesi tasdiki gerekir"
+   ],
+   "dogrusu": [
+    "genel olarak hastalıkları tedavi hakkına · sürekli uzman olmak ve o unvanı ilan · Türkiye Tıp Fakültesinden veya Sağlık Bakanlığınca kabul ve ilan edilen müesseselerden · ya da yabancı ülkelerin tanınmış hastane/laboratuvarından verilip Türkiye Tıp Fakültesince tasdik edilmiş · ihtisas vesikası · müderris, muallim · öğretim ve uzmanlık unvanlarını kullanması · ilan etmesi yasaktır"
+   ]
+  },
+  {
+   "id": "96-9",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Mahkeme bilirkişisi tabipler",
+   "hukum": "Mahkemelerce ihtibar (bilirkişilik) için başvurulacak tabipler yalnız bu kanunla Türkiye'de icra yetkisi olanlardır; bilirkişilere başvuru usulü ve ücret-tazminat miktarları Sağlık ve Adalet Bakanlıklarınca müşterek talimatname ile belirlenir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "Talimatname yalnız Sağlık Bakanlığı değil, Sağlık + Adalet müşterek"
+   ],
+   "dogrusu": [
+    "ihtibar (bilirkişilik) için · ücret-tazminat · Sağlık ve Adalet Bakanlıklarınca müşterek talimatname"
+   ]
+  },
+  {
+   "id": "96-10",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Tabibin ticaret yasağı",
+   "hukum": "Bir mahalde kayıtlı tabibin bizzat dükkan ve mağaza açmak suretiyle her türlü ticaret yapması memnudur (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık Bakanlığı izniyle ticaret yapabilir\" yanlış; izinli-izinsiz yasak"
+   ],
+   "dogrusu": [
+    "bizzat dükkan ve mağaza açmak suretiyle her türlü ticaret yapması memnudur"
+   ]
+  },
+  {
+   "id": "96-11",
+   "madde": [
+    "28",
+    "926",
+    "27"
+   ],
+   "baslik": "Nerede ve kaç yerde çalışır",
+   "hukum": "Tabipler, diş tabipleri ve tıpta uzmanlar (657 m.28, 926 ek m.27, 2547 m.36, 2955 m.32 saklı) şu üç grupta çalışabilir: (a) kamu kurum ve kuruluşları; (b) SGK ve kamu kurumlarıyla sözleşmeli özel sağlık kuruluşları ve vakıf üniversiteleri; (c) sözleşmesi bulunmayan özel kuruluşlar, vakıf üniversiteleri ve serbest meslek icrası; Sağlık Bakanlığı istihdam planlaması çerçevesinde ve aynı bendin kapsamında kalmak kaydıyla en fazla iki sağlık kurum ve kuruluşunda çalışabilir; özel kuruluş ve vakıf üniversitelerinde 5510 m.4/1-a kapsamında sigortalı çalışır; SGK'nın branş bazında sözleşme yaptığı kuruluşlar yalnız o branşlarda (b) sayılır; serbest çalışan, bedel hastaca ödenip SGK'dan istenmemek kaydıyla (b) kuruluşlarında da hastasının teşhis-tedavisini yapabilir (m.12); özel/vakıfta çalışanlar eski çalışma izinleri için 1/6/2026'ya kadar yeni başvuru yapar, yapmayanın izni iptal (Geçici m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"İstediği kadar kurumda çalışabilir\" veya \"kamu + özel aynı anda serbest\" yanlış; aynı bent içinde en fazla iki. Eski metindeki \"birden fazla\" ibaresi 2025'te \"en fazla iki\" oldu",
+    "Tabip aynı anda istediği kadar sağlık kuruluşunda çalışabilir"
+   ],
+   "dogrusu": [
+    "Aynı bent içinde en fazla iki (m.12)"
+   ]
+  },
+  {
+   "id": "96-12",
+   "madde": [
+    "12"
+   ],
+   "baslik": "İşyeri hekimliği: aylık 30 saat",
+   "hukum": "Kamuda çalışan ve yöneticilik görevi bulunmayan tabipler ile aile hekimleri, çalışma saatleri dışında ve kurumlarının izniyle aylık otuz saati geçmemek üzere işyeri hekimliği yapabilir; döner sermayeli sağlık kuruluşları kurumsal olarak işyeri hekimliği hizmeti verebilir; tabipler, işyeri hekimliği eğitimi ve belgesi aranmaksızın 10'dan az işçi çalıştıran az tehlikeli işyerlerinin işyeri hekimliğini yapabilir; esaslar Sağlık Bakanlığınca (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylık 40 saat\" yanlış; 30 saat. \"Yönetici hekimler de yapabilir\" yanlış; yöneticilik görevi bulunmayanlar. Belgesiz işyeri hekimliği yalnız 10'dan az işçili az tehlikeli yerde"
+   ],
+   "dogrusu": [
+    "yöneticilik görevi bulunmayan · aile hekimleri · kurumlarının izniyle aylık otuz saati geçmemek · döner sermayeli · işyeri hekimliği eğitimi ve belgesi aranmaksızın 10'dan az işçi çalıştıran az tehlikeli"
+   ]
+  },
+  {
+   "id": "96-13",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Uluslararası sağlık turizmi işbirliği: hekime en çok %50",
+   "hukum": "Sağlık Bakanlığı, üniversite ve özel sektöre ait uluslararası sağlık turizmi yetkili kuruluşlar arasında, bütçeleri ayrı olmak şartıyla işbirliği yapılabilir; protokolleri ilgili yetkili makamlar imzalar; çalışacaklar ilgilinin muvafakatiyle ve asıl görevini aksatmamak koşuluyla protokol eki liste ile belirlenir; Bakanlık veya Devlet üniversitesi personeli özel sektör ve vakıf üniversitesi kuruluşlarında bu fıkraya göre hizmet sunamaz; hizmet ücretinin %50'sini geçmemek üzere belirlenen kısım hizmeti alan kuruluşça hekime ödenir; usul YÖK görüşü alınarak Sağlık Bakanlığınca (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Devlet hastanesi hekimi özel hastanede sağlık turizmi hizmeti verebilir\" yanlış; kamu personeli özele gidemez. \"%70\" yanlış; %50'yi geçemez"
+   ],
+   "dogrusu": [
+    "uluslararası sağlık turizmi yetkili · bütçeleri ayrı olmak · ilgilinin muvafakatiyle · protokol eki liste · Bakanlık veya Devlet üniversitesi personeli özel sektör ve vakıf üniversitesi kuruluşlarında bu fıkraya göre hizmet sunamaz · %50'sini geçmemek · YÖK görüşü alınarak Sağlık Bakanlığınca"
+   ]
+  },
+  {
+   "id": "96-14",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Beden ve akıl raporu yalnız yetkili tabipten",
+   "hukum": "Bir kişinin bedenî ve aklî durumu hakkında rapor düzenlemeye yalnız bu kanunla icra yetkisi olan tabipler yetkilidir; yetkisi olmayan tabiplerin raporları geçersizdir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adli rapor yalnız adli tabiplerce\" yanlış; kanun icra yetkili her tabibi yetkili sayar"
+   ],
+   "dogrusu": [
+    "bedenî ve aklî durumu hakkında rapor · yetkisi olmayan tabiplerin raporları geçersizdir"
+   ]
+  },
+  {
+   "id": "96-15",
+   "madde": [
+    "14",
+    "74",
+    "59"
+   ],
+   "baslik": "Etıbba (tabip) odaları",
+   "hukum": "Sınırları ve merkezi Sağlık Bakanlığınca belirlenen bölgelerde birer etıbba odası kurulur; odalar meslek onur ve menfaat meselelerini görür, divanı haysiyet eliyle meslek adabına uymayan tabip, diş tabibi ve dişçilere inzibati ceza verir, tabipler arası meslekî uyuşmazlıkları çözer (m.14); ücret tarifeleri bölgesi oda bölgesiyle sınırlanır (m.74). Not: dipnota göre bu kanunun etıbba odaları hükümleri 6643 sayılı Kanun m.59 ile yürürlükten kaldırılmıştır",
+   "sinavda_boyle_yazarlar": [
+    "Oda bölgelerini belirleyen Sağlık Bakanlığı; ceza veren organ divanı haysiyet"
+   ],
+   "dogrusu": [
+    "birer etıbba odası · divanı haysiyet · tabip, diş tabibi ve dişçilere · 6643 sayılı Kanun m.59"
+   ]
+  },
+  {
+   "id": "96-16",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Büyük ameliyat = uzman + bir tabip",
+   "hukum": "Genel veya lokal anestezi (iptali his) ile yapılan büyük ameliyatlar mutlaka ihtisas vesikalı bir mütehassıs ile beraber diğer bir tabip tarafından yapılır; uzman bulunmayan veya getirilemeyen yerlerde zorunlu ameliyatlar ile acil ve olağanüstü hâller bu hükümden müstesnadır (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az üç uzman\" veya \"tek uzman yeter\" yanlış; bir uzman + bir tabip. İstisna yalnız uzman yokluğu ve acil hâl",
+    "Büyük ameliyat tek uzman tarafından yapılabilir"
+   ],
+   "dogrusu": [
+    "Uzman + diğer bir tabip (m.23)"
+   ]
+  },
+  {
+   "id": "96-17",
+   "madde": [
+    "24",
+    "40",
+    "39"
+   ],
+   "baslik": "İlan ve reklam sınırı",
+   "hukum": "Tabipler yalnız hasta kabul ettikleri yer, muayene saatleri ve ihtisaslarını bildiren ilan verebilir; başka türlü ilan, reklam vb. memnudur (m.24); diş tabipleri ve dişçiler yalnız yer ve muayene saatleri ilan edebilir, diğer reklam yasak (m.40); usulüne göre kazanılmamış öğretim unvanı veya gerçeğe aykırı sıfat ilan edemez (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "Tabip ilanında ihtisas var (m.24), diş tabibi ilanında metin yalnız yer + saat sayar (m.40)"
+   ],
+   "dogrusu": [
+    "hasta kabul ettikleri yer, muayene saatleri ve ihtisaslarını · ilan, reklam vb. memnudur · yer ve muayene saatleri · öğretim unvanı veya gerçeğe aykırı sıfat"
+   ]
+  },
+  {
+   "id": "96-18",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Diplomasız hekimlik: 2-5 yıl hapis",
+   "hukum": "Diploması olmadığı hâlde, menfaat amacı olmasa bile, hasta tedavi eden veya tabip unvanını takınan kişi iki yıldan beş yıla kadar hapis ve bin güne kadar adlî para cezası ile cezalandırılır (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"Menfaat temin etmediyse ceza verilmez\" yanlış. Diplomasız dişçilik 3-5 yıl (m.41), hekimlik 2-5 yıl; karıştırma",
+    "Menfaat sağlamayan diplomasız kişi hasta tedavi ederse ceza almaz"
+   ],
+   "dogrusu": [
+    "2-5 yıl hapis + bin güne kadar adlî para (m.25)"
+   ]
+  },
+  {
+   "id": "96-19",
+   "madde": [
+    "26",
+    "5",
+    "24"
+   ],
+   "baslik": "Yetkisiz veya men edilmiş tabibin icrası: 500-5000 TL",
+   "hukum": "Bu kanuna göre icra yetkisi olmayan veya her ne suretle olursa olsun icradan men edilmiş bir tabip sanatını icra ederse beşyüz TL'den beşbin TL'ye kadar idarî para cezası (m.26); m.5, 6, 10, 12, 15, 23 ve 24'e uymayan tabiplere yüz TL'den bin TL'ye kadar idarî para cezası (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "m.26 idarî para cezasıdır, hapis değil (hapis diplomasız için m.25). Muayenehaneyi bildirmemek 500-5000 değil 100-1000 TL (m.27)"
+   ],
+   "dogrusu": [
+    "icra yetkisi olmayan veya her ne suretle olursa olsun icradan men edilmiş · beşyüz TL'den beşbin TL'ye kadar idarî para cezası · m.5, 6, 10, 12, 15, 23 ve 24 · yüz TL'den bin TL'ye kadar idarî para cezası"
+   ]
+  },
+  {
+   "id": "96-20",
+   "madde": [
+    "53",
+    "28",
+    "45"
+   ],
+   "baslik": "Hekimliğe engel mahkûmiyet ve akıl hastalığı",
+   "hukum": "Hekimlik için, TCK m.53 süreleri geçmiş olsa bile, kasten işlenen bir suçtan beş yıl veya daha fazla hapis ya da devletin güvenliğine karşı suçlar, Anayasal düzene karşı suçlar, zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat, edimin ifasına fesat, suçtan kaynaklanan malvarlığı değerlerini aklama, kaçakçılık suçlarından hapis cezasına mahkûm olmamak gerekir; icraya engel ve iyileşmez akıl hastalığı muayeneyle anlaşılan tabipler Sağlık Bakanlığının teklifi ve Sağlık Bakanlığı Yüksek Disiplin Kurulu kararıyla icradan men edilir ve diplomaları geri alınır (m.28); diş tabibi ve dişçiler için aynı katalog ve aynı usul, diploma veya ruhsatname geri alınır (m.45); ebeler için aynı usul, şahadetname veya vesika geri alınır (m.57)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kasten suçtan 3 yıl hapis engeldir\" yanlış; 5 yıl veya daha fazla. \"Men kararını vali/mahkeme verir\" yanlış; SB teklifi + SB Yüksek Disiplin Kurulu"
+   ],
+   "dogrusu": [
+    "TCK m.53 süreleri geçmiş olsa bile · kasten işlenen bir suçtan beş yıl veya daha fazla hapis · zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat, edimin ifasına fesat, suçtan kaynaklanan malvarlığı değerlerini aklama, kaçakçılık · mahkûm olmamak · iyileşmez akıl hastalığı · Sağlık Bakanlığının teklifi ve Sağlık Bakanlığı Yüksek Disiplin Kurulu kararıyla · diplomaları geri alınır · diploma veya ruhsatname · şahadetname veya vesika"
+   ]
+  },
+  {
+   "id": "96-21",
+   "madde": [
+    "28",
+    "2026",
+    "45"
+   ],
+   "baslik": "Devlet hesabına okuyan tabip subayların icra yasağı",
+   "hukum": "MSB veya İçişleri Bakanlığı nam ve hesabına tıp fakültesinde okutularak subaylığa nasbedilen tabiplerden yükümlülük süresini tamamlamadan mahkeme veya disiplin kurulu kararıyla ilişiği kesilenler ile istifa edenler, devlet hesabına öğrenim gördüğü sürenin yükümlülük süresine oranı × kalan yükümlülük süresi kadar hekimlik yapamaz; hesaplar gün üzerinden (m.28, 2026 yeniden düzenleme); diş hekimi subaylar için aynı kural (m.45)",
+   "sinavda_boyle_yazarlar": [
+    "Yasak \"kalan yükümlülük süresi kadar\" değil, oranla çarpılmış süre kadar; hesap ay/yıl değil gün"
+   ],
+   "dogrusu": [
+    "MSB veya İçişleri Bakanlığı nam ve hesabına · yükümlülük süresini tamamlamadan mahkeme veya disiplin kurulu kararıyla ilişiği kesilenler ile istifa edenler · öğrenim gördüğü sürenin yükümlülük süresine oranı × kalan yükümlülük süresi · gün"
+   ]
+  },
+  {
+   "id": "96-22",
+   "madde": [
+    "29",
+    "30"
+   ],
+   "baslik": "Diş tabibinin yetki alanı ve uzmanlığı",
+   "hukum": "Diş tabibi, dişlerin, diş etlerinin ve bunlarla doğrudan bağlantılı ağız ve çene dokularının sağlığının korunması, hastalık ve düzensizliklerinin teşhis, tedavi ve rehabilitasyonu ile ilgili her türlü meslekî faaliyete yetkilidir; diş tabipliğinde münhasıran uzman olmak ve unvanı ilan için diş hekimliği fakültelerinden veya Sağlık Bakanlığına bağlı eğitim kurumlarından uzmanlık belgesi şarttır (m.29); dişçilik ve diş tabibi unvanı için Türk olmak ve Dişçi Mektebi diploması (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "\"Diş tabibi genel dahiliye hastalıklarını da tedavi eder\" yanlış; yetki ağız-çene ile sınırlı. m.29 sınırını aşan diş tabibine 100-1000 TL (m.44)"
+   ],
+   "dogrusu": [
+    "dişlerin, diş etlerinin ve bunlarla doğrudan bağlantılı ağız ve çene dokularının · teşhis, tedavi ve rehabilitasyonu · münhasıran uzman olmak ve unvanı ilan · diş hekimliği fakültelerinden veya Sağlık Bakanlığına bağlı eğitim kurumlarından · Türk olmak · Dişçi Mektebi diploması"
+   ]
+  },
+  {
+   "id": "96-23",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Tabip dişçilik yapabilir mi",
+   "hukum": "Tabipler diş çekmeye, dişlere iptidai tedavi uygulamaya ve diş eti hastalıklarını tedaviye yetkilidir; ama doğrudan doğruya dişçilik yapmak isteyen ve bunu ilan eden tabip Dişçi Mektebince verilmiş ruhsatname taşımalıdır; ruhsatname bir sene Dişçi Mektebine devam edip tatbikat gördükten sonra imtihanla verilir (m.34)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tabip diş çekemez\" yanlış; çekebilir. Ruhsat için süre 1 sene, 2-3 değil"
+   ],
+   "dogrusu": [
+    "diş çekmeye, dişlere iptidai tedavi uygulamaya ve diş eti hastalıklarını tedaviye · doğrudan doğruya dişçilik yapmak isteyen ve bunu ilan eden · Dişçi Mektebince verilmiş ruhsatname · bir sene Dişçi Mektebine devam edip tatbikat gördükten sonra imtihanla"
+   ]
+  },
+  {
+   "id": "96-24",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Diş tabibinin reçete sınırı",
+   "hukum": "Diş tabipleri ve dişçiler Eczaneler Kanununa bağlı talimatnamede gösterilen maddeleri reçeteyle eczaneden alabilir; reçeteyle alınması zorunlu olup talimatnamede yer almayan maddeleri içeren reçete yazamazlar (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "\"Diş tabibi her ilacı reçete edebilir\" yanlış; talimatname listesi ile sınırlı; aykırılık 100-1000 TL (m.44)"
+   ],
+   "dogrusu": [
+    "Eczaneler Kanununa bağlı talimatnamede gösterilen maddeleri · reçete yazamazlar"
+   ]
+  },
+  {
+   "id": "96-25",
+   "madde": [
+    "41",
+    "7"
+   ],
+   "baslik": "Diplomasız dişçilik: 3-5 yıl hapis + icra durdurma",
+   "hukum": "Kişisel çıkar amacı olmasa bile diplomasız olarak diş hekimliğine ilişkin muayene veya müdahale yapan ya da diş hekimliği klinik hizmeti işyeri açanların meslek icraları durdurulur; ayrıca üç yıldan beş yıla kadar hapis ve bin güne kadar adlî para (m.41); Ek 7'ye aykırı davranan diş protez teknikerleri de m.41'e göre cezalandırılır (Ek m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız meslek icrası durdurulur, başka yaptırım yok\" yanlış; hapis + adli para da var. Alt sınır 3 yıl (hekimlikte 2 yıl)"
+   ],
+   "dogrusu": [
+    "Kişisel çıkar amacı olmasa bile · muayene veya müdahale · işyeri açanların meslek icraları durdurulur · üç yıldan beş yıla kadar hapis ve bin güne kadar adlî para · diş protez teknikerleri"
+   ]
+  },
+  {
+   "id": "96-26",
+   "madde": [
+    "42",
+    "29",
+    "33"
+   ],
+   "baslik": "Yetkisiz dişçilik ve şekil aykırılıkları",
+   "hukum": "İcra yetkisi olmayan veya men edilmiş tabip, diş tabibi veya dişçi dişçilik yaparsa 500-5000 TL idarî para (m.42); m.29 sınırını aşan veya m.33, 35, 36, 37, 39, 40'a uymayan diş tabibi ve dişçilere 100-1000 TL idarî para (m.44); muayenehanesinde dişçilik yetkisi olmayan kişilere tedavi yaptıran veya müdahaleye izin veren diş tabibi ve dişçilere de m.44 uygulanır (m.46)",
+   "sinavda_boyle_yazarlar": [
+    "Yardımcı personelin diş tedavisi yapması \"hekim sorumluluğunda serbest\" değil; yasak ve hekime m.44 cezası"
+   ],
+   "dogrusu": [
+    "tabip, diş tabibi veya dişçi · 500-5000 TL idarî para · m.29 sınırını aşan · m.33, 35, 36, 37, 39, 40 · 100-1000 TL idarî para · dişçilik yetkisi olmayan kişilere · m.44"
+   ]
+  },
+  {
+   "id": "96-27",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Diş tabibi: tek muayenehane, en çok bir istihdam",
+   "hukum": "Bir diş tabibinin birden çok yerde muayenehane açarak icra etmesi memnudur; serbest çalışan diş tabipleri ağız ve diş sağlığı muayenehanelerinde diş tabibi istihdam edebilir, sayısı birden fazla olamaz; usul Sağlık Bakanlığınca (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"İl içinde ikinci muayenehane açabilir\" yanlış; yasak. \"En fazla iki diş tabibi istihdam\" yanlış; en fazla bir",
+    "Diş tabibi birden çok muayenehane açabilir; birden fazla diş tabibi çalıştırabilir"
+   ],
+   "dogrusu": [
+    "Tek muayenehane; en fazla bir diş tabibi (m.43)"
+   ]
+  },
+  {
+   "id": "96-28",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Ebe unvanı, uzman ebe, yetki belgesi",
+   "hukum": "Üniversitelerin ebelik lisans eğitimi veren fakülte ve yüksekokullarından mezun olup diplomaları Sağlık Bakanlığınca tescil edilenlere ve yurt dışında ebelik okulu bitirip denkliği onaylanan ve diploması tescil edilenlere ebe unvanı verilir; lisans mezunu ebeler lisansüstü eğitimle uzmanlaşıp diplomaları tescil edildikten sonra uzman ebe olarak çalışır; özellik arz eden birim ve alanlarda yetki belgesi alırlar; program, belgelendirme, iptal ve görev-yetki-sorumluluklar Sağlık Bakanlığı yönetmeliğiyle (m.47)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık meslek lisesi ebelik mezunu ebe unvanı alır\" yanlış; lisans. \"10 yıl tecrübe ile uzman ebe\" yanlış; lisansüstü eğitim + tescil"
+   ],
+   "dogrusu": [
+    "lisans · Sağlık Bakanlığınca tescil · denkliği onaylanan ve diploması tescil edilenlere · lisansüstü eğitimle uzmanlaşıp diplomaları tescil edildikten sonra uzman ebe · yetki belgesi · Sağlık Bakanlığı yönetmeliğiyle"
+   ]
+  },
+  {
+   "id": "96-29",
+   "madde": [
+    "51"
+   ],
+   "baslik": "Ebenin görevleri: normal doğumu yapar",
+   "hukum": "Ebeler gebelik, doğum ve doğum sonrası dönemde destek verir, yenidoğana ve bebeğe bakım sağlar; normal doğum ve riskli durumlarda tıbbi bakıma erişimin sağlanmasında, kadın sağlığı, üreme sağlığı ve çocuk bakımı danışmanlık-eğitim hizmetlerinde görev alır; gebeliğin tespitini, gebe izlemini ve bunun için gerekli muayene-değerlendirmeyi yapar; normal doğum eylemini gerçekleştirir; normal doğum sırasında gereken küçük tıbbi müdahaleleri yapar, bunların kapsam ve sınırları Bakanlıkça belirlenir (m.51)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ebe doğumu yaptıramaz, yalnız yardımcı olur\" yanlış; normal doğumu gerçekleştirir. Küçük müdahalenin sınırını ebe değil Bakanlık çizer",
+    "Ebe normal doğumu yaptıramaz; uzman ebe reçete yazabilir"
+   ],
+   "dogrusu": [
+    "Normal doğumu gerçekleştirir; reçete yazması yasak (m.51, 52)"
+   ]
+  },
+  {
+   "id": "96-30",
+   "madde": [
+    "52"
+   ],
+   "baslik": "Ebe reçete yazamaz",
+   "hukum": "Ebelerin reçete yazmaları memnudur; icraları için reçeteyle alınması zorunlu maddeleri resmî tabiplerin reçetesiyle eczaneden temin eder; resmî tabipler bu başvuruları süratle ve kolaylıkla karşılamaya mecburdur (m.52)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman ebe reçete yazabilir\" veya \"acil hâlde yazabilir\" yanlış; istisnasız yasak"
+   ],
+   "dogrusu": [
+    "Ebelerin reçete yazmaları memnudur · resmî tabiplerin reçetesiyle · süratle ve kolaylıkla"
+   ]
+  },
+  {
+   "id": "96-31",
+   "madde": [
+    "54",
+    "47",
+    "53"
+   ],
+   "baslik": "Ebe cezaları: 250 TL ve 100 TL",
+   "hukum": "Diploma veya belgesi olmadan ebeliği meslek edinenlere, fiilleri suç oluşturmuyorsa, ikiyüzelli TL idarî para (m.54); m.47, 49, 50 ve 53 şartlarını yerine getirmeyen veya geçici olarak men edildiği hâlde icra eden ebelere yüz TL (m.55); m.51 sınırını aşan veya m.51-52'ye uymayan ebelere yüz TL (m.56)",
+   "sinavda_boyle_yazarlar": [
+    "Diplomasız ebelik için hapis yok (250 TL idari); hekimlik ve dişçilikte hapis var. Reçete yazan ebe 100 TL (m.56)"
+   ],
+   "dogrusu": [
+    "ebeliği meslek edinenlere · ikiyüzelli TL idarî para · m.47, 49, 50 ve 53 · geçici olarak men edildiği hâlde · yüz TL · m.51 sınırını aşan · m.51-52 · yüz TL"
+   ]
+  },
+  {
+   "id": "96-32",
+   "madde": [
+    "63",
+    "65",
+    "66"
+   ],
+   "baslik": "Hastabakıcılar",
+   "hukum": "Sağlık Bakanlığınca onaylı hastabakıcı mektebi mezunu olmayan veya resmî hastanelerden verilmiş vesikası bulunmayan ve Türk olmayan kadınlar hastabakıcılık yapamaz; vesikalar Bakanlıkça tasdik ve tescil edilmiş olmalı (m.63); bildirim en çok bir hafta, nakil 24 saat önce (m.65); meslekî onur ve dayanışma için Bakanlık nezaret ve murakabesi altında tüzel kişilikli yurtlar kurabilirler (m.66); yetkisiz hastabakıcılık eden veya unvanı takınana yüz TL (m.67); m.64 sınırını aşan veya m.65'e uymayana yüz TL (m.68)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta \"en az lise mezunu olmak\" gibi metinde olmayan şart verilir; kanun mektep/vesika + Türk olmak + tescil arar"
+   ],
+   "dogrusu": [
+    "hastabakıcı mektebi mezunu · resmî hastanelerden verilmiş vesikası · Türk olmayan · Bakanlıkça tasdik ve tescil · en çok bir hafta · 24 saat önce · nezaret ve murakabesi · yurt · unvanı takınana yüz TL · m.65 · yüz TL"
+   ]
+  },
+  {
+   "id": "96-33",
+   "madde": [
+    "69"
+   ],
+   "baslik": "Diğer mevzuattaki görevler",
+   "hukum": "Tabipler, diş tabipleri, dişçiler ve ebeler bu kanunda yazmayan ve diğer kanun ve tüzüklerle kendilerine verilen bütün görevleri yerine getirmekle yükümlüdür (m.69)",
+   "sinavda_boyle_yazarlar": [
+    "m.69 sayımında hastabakıcı geçmez; dörtlü: tabip, diş tabibi, dişçi, ebe"
+   ],
+   "dogrusu": [
+    "diğer kanun ve tüzüklerle · bütün görevleri"
+   ]
+  },
+  {
+   "id": "96-34",
+   "madde": [
+    "70"
+   ],
+   "baslik": "Hastanın rızası (muvafakat): büyük ameliyatta yazılı, elektronik olur",
+   "hukum": "Tabip, diş tabibi ve dişçiler her türlü ameliye için hastanın, hasta küçük veya kısıtlı (hacir altında) ise veli veya vasisinin önceden muvafakatini alır; büyük cerrahi ameliyatlar için muvafakat yazılı olmalıdır; muvafakat elektronik ortamda da alınabilir: bilişim/elektronik haberleşme cihazı üzerinden, kimlik doğrulama kabiliyetli kimlik belgeleri, biyometrik yöntemler veya elektronik kimlik doğrulama ile; veli-vasi yoksa/bulunamıyorsa veya kişi ifadeye muktedir değilse muvafakat şart değildir; aykırı davranana ikiyüzelli TL idarî para; bu kanundaki idarî para cezalarını mahallî mülkî amir verir; e-muvafakat usulü BTK'nın uygun görüşü alınarak Sağlık Bakanlığınca (m.70)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözlü rıza büyük ameliyatta yeter\" yanlış; yazılı. \"Rıza yalnız ıslak imzayla\" yanlış; elektronik de olur. İdari para cezasını Sağlık Müdürü değil mahallî mülkî amir verir",
+    "Büyük ameliyatta sözlü rıza yeterlidir; e-rıza geçersizdir",
+    "Bu kanundaki idarî para cezalarını il sağlık müdürü verir"
+   ],
+   "dogrusu": [
+    "Yazılı; elektronik ortamda da alınabilir (m.70)",
+    "Mahallî mülkî amir (m.70)"
+   ]
+  },
+  {
+   "id": "96-35",
+   "madde": [
+    "71",
+    "74"
+   ],
+   "baslik": "Tedavi ücreti davası: sulh mahkemesi, 2 yıl",
+   "hukum": "Tabip, diş tabibi, dişçi ve ebeler ile hastalar arasında tedavi ücretinden (ücreti müdavat) doğan uyuşmazlıkların mercii, miktar ne olursa olsun sulh mahkemeleridir; bu hak iki sene geçince düşer (m.71); Bakanlık gerekli gördüğü bölgelerde mahkemelerce dikkate alınmak üzere asgari ve azami ücret tarifeleri düzenleyebilir, bölgeler etıbba odası bölgeleriyle sınırlanır (m.74)",
+   "sinavda_boyle_yazarlar": [
+    "\"Miktara göre asliye/sulh ayrımı\" yanlış; her miktarda sulh. Süre 5 yıl değil 2 yıl"
+   ],
+   "dogrusu": [
+    "tedavi ücretinden (ücreti müdavat) · miktar ne olursa olsun sulh mahkemeleri · iki sene · asgari ve azami ücret tarifeleri · etıbba odası bölgeleriyle"
+   ]
+  },
+  {
+   "id": "96-36",
+   "madde": [
+    "72",
+    "73"
+   ],
+   "baslik": "Protokol defteri ve tahrifat",
+   "hukum": "İcra eden tabip, diş tabibi, dişçi ve ebeler Bakanlıkça tertip edilen örneğe göre, mahallî sıhhiye memurunca onaylı, hastaların isim ve hüviyetlerini kaydeden bir protokol defteri tutmaya mecburdur; defter kayıtları ücret davalarında sahibi lehine delil sayılabilir; ancak kaydın aksi belge veya geçerli başka delillerle ispat edilebilir (m.72); defterde tahrifat yapan veya gerçeğe aykırı bilgi yazdığı sabit olanlar TCK belgede sahtecilik hükümlerine göre cezalandırılır (m.73)",
+   "sinavda_boyle_yazarlar": [
+    "\"Protokol defteri isteğe bağlı\" veya \"kesin delildir\" yanlış; zorunlu ve aksi ispatlanabilir. Tahrifat idari para değil TCK sahtecilik"
+   ],
+   "dogrusu": [
+    "Bakanlıkça tertip edilen örneğe göre, mahallî sıhhiye memurunca onaylı · isim ve hüviyetlerini · protokol defteri · ücret davalarında sahibi lehine delil · belge veya geçerli başka delillerle ispat edilebilir · tahrifat yapan veya gerçeğe aykırı bilgi yazdığı sabit olanlar TCK belgede sahtecilik"
+   ]
+  },
+  {
+   "id": "96-37",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Vefat eden sağlıkçının diploması",
+   "hukum": "Vefat eden tabip, diş tabibi, eczacı, dişçi, ebe, küçük sıhhiye memuru ve hastabakıcıların diploma/şahadetname/ruhsatnameleri alınarak Bakanlıkça seçilmiş bir heyet huzurunda iptal edildikten sonra ailelerine iade olunur (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aileye verilmez, arşive kalkar\" veya \"imha edilir\" yanlış; iptal edilip aileye iade"
+   ],
+   "dogrusu": [
+    "tabip, diş tabibi, eczacı, dişçi, ebe, küçük sıhhiye memuru ve hastabakıcıların · Bakanlıkça seçilmiş bir heyet huzurunda iptal edildikten sonra ailelerine iade"
+   ]
+  },
+  {
+   "id": "96-38",
+   "madde": [
+    "1",
+    "3",
+    "2"
+   ],
+   "baslik": "Ecnebi (yabancı) uzman getirme",
+   "hukum": "Ankara Nümune Hastanesinde çalışmak, dışarıda hekimlik etmemek ve hizmet süresi beş yılı geçmemek şartıyla beş (Ek m.1) ve daha üç (Ek m.3) yabancı mütehassıs tabip; İstanbul Üniversitesi Tıp Fakültesinde ders vermek, hastanede tedavi-poliklinik yapmak, dışarıda serbest doktorluk ve özel hastanede çalışmamak şartıyla altı ecnebi müderris tabip, süre beş seneyi geçmez (Ek m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Sayılar karıştırılır: Nümune 5 + 3, İstanbul Tıp 6; hepsinde süre 5 yıl"
+   ],
+   "dogrusu": [
+    "Ankara Nümune Hastanesinde · dışarıda hekimlik etmemek · beş yılı geçmemek · beş · daha üç · İstanbul Üniversitesi Tıp Fakültesinde · dışarıda serbest doktorluk ve özel hastanede çalışmamak · altı ecnebi müderris tabip · beş seneyi geçmez"
+   ]
+  },
+  {
+   "id": "96-39",
+   "madde": [
+    "41",
+    "7",
+    "10"
+   ],
+   "baslik": "Diş protez teknikerleri ve laboratuvarları",
+   "hukum": "Diş protez teknikerleri diploma/belgelerinin hak kazandırdığı unvandan başkasını kullanamaz, hastalarla doğrudan meslekî ilişkiye giremez, laboratuvarlarında münhasıran diş hekimliğinde kullanılan araç-gereç bulunduramaz, sınır dışında çalışma yapamaz, tavsiyede bulunamaz; aykırılık m.41'e göre cezalandırılır (Ek m.7); diş protez teknikeri veya diş hekimi laboratuvar açmak için mahallin en büyük mülkî amirine başvurur ve şartlarına uyar; laboratuvar şartları ve asgari araç-gereç Sağlık Bakanlığı yönetmeliğiyle; denetim il sağlık müdürlüklerince (Ek m.10); 31/12/2011-23/11/2015 arası SB-MEB protokolüyle eğitim alanlar sahip ve mesul müdür olmamak üzere yardımcı personel olarak çalışabilir (Geçici m.14)",
+   "sinavda_boyle_yazarlar": [
+    "Başvuru mercii Türk Diş Hekimleri Birliği veya belediye değil en büyük mülkî amir; denetleyen il sağlık müdürlüğü"
+   ],
+   "dogrusu": [
+    "unvandan başkasını kullanamaz · hastalarla doğrudan meslekî ilişkiye giremez · münhasıran diş hekimliğinde kullanılan araç-gereç bulunduramaz · tavsiyede bulunamaz · m.41'e göre · laboratuvar açmak · mahallin en büyük mülkî amirine · Sağlık Bakanlığı yönetmeliğiyle · il sağlık müdürlüklerince · sahip ve mesul müdür olmamak"
+   ]
+  },
+  {
+   "id": "96-40",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Zorunlu meslekî sorumluluk sigortası: prim yarı yarıya, cezası 5000 TL",
+   "hukum": "Kamu sağlık kuruluşlarında çalışan tabip, diş tabibi ve uzmanlar, tıbbi kötü uygulama nedeniyle kendilerinden talep edilebilecek zararlar ve kurumlarının rücularına karşı sigorta yaptırmak zorundadır; primin yarısı kendileri, diğer yarısı döner sermayeden, döner sermayesi yoksa kurum bütçesinden; özel kuruluşta çalışan veya serbest çalışanlar meslekî malî sorumluluk sigortası yaptırmak zorundadır; serbest çalışan kendisi, özelde çalışanınkini kuruluş yaptırır ve prim yarısı çalışan, yarısı istihdam eden; işverence ödenen prim hiçbir ad altında maaştan kesilemez, aksine sözleşme yapılamaz; teminat tutarları ve usul Sağlık Bakanlığı görüşü alınarak Hazine Müsteşarlığınca; yaptırmayanlara mülkî idare amirince sigortası yaptırılmayan her kişi için beşbin TL idarî para (Ek m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Primin tamamı kurumca\" veya \"tamamı hekimce\" yanlış; yarı yarıya. Ceza kişi başına, toplu tek ceza değil",
+    "Zorunlu sigorta priminin tamamı kurumca ödenir"
+   ],
+   "dogrusu": [
+    "Yarısı hekim, yarısı kurum/döner sermaye/işveren (Ek m.12)"
+   ]
+  },
+  {
+   "id": "96-41",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ek 13: lisans düzeyi sağlık meslekleri",
+   "hukum": "Klinik psikolog (psikoloji/PDR lisansı + klinik psikoloji yüksek lisansı veya diğer lisans + psikoloji/klinik psikoloji YL + klinik psikoloji doktorası): hastalık sayılmayan ve Bakanlığın uygun bulduğu durumlarda psikoterapi, hastalıkta ancak uzman tabibin teşhis ve yönlendirmesiyle; fizyoterapist (lisans): hastalık dışında ölçüm-testle kanıta dayalı koruyucu-geliştirici protokolleri belirler-uygular, hastalıkta FTR uzmanı (veya FTR rotasyonu/eğitimi almış uzman) teşhis ve yönlendirmesine bağlı çalışır, uzmana bilgi verir; odyolog: işitme-denge kontrolleri, uzman yönlendirmesiyle işitme-denge bozukluğu tespit-rehabilitasyon ve cihaz belirleme; diyetisyen: sağlıklıya beslenme programı, hastaya tabibin yönlendirmesi üzerine, toplu beslenme yerlerinde program ve besin güvenliği; dil ve konuşma terapisti: uzman tabipçe teşhis konmuş yutkunma, dil ve konuşma bozukluklarının rehabilitasyonu; sağlık fizikçisi (fizik/fizik müh./nükleer enerji müh. + radyoterapi/diagnostik radyoloji/nükleer tıp fiziği YL): radyasyonla teşhis-tedavide radyoizotop ve iyonize ışın kaynaklarından sorumlu; perfüzyonist (lisans veya YL): kalp-büyük damar müdahalelerinde uzman gözetiminde kalp akciğer makinesiyle beden dışı dolaşımı yönetir; iş ve uğraşı terapisti (ergoterapist) (lisans) (Ek m.13)",
+   "sinavda_boyle_yazarlar": [
+    "Soru tanımı verir, unvanı sorar: \"fiziksel aktivite düzenleyen, hareket kabiliyeti artıran\" = fizyoterapist; \"kalp akciğer makinesi\" = perfüzyonist; \"yutkunma-konuşma\" = dil ve konuşma terapisti"
+   ],
+   "dogrusu": [
+    "Klinik psikolog · psikoterapi · ancak uzman tabibin teşhis ve yönlendirmesiyle · fizyoterapist · kanıta dayalı koruyucu-geliştirici protokolleri · FTR uzmanı · odyolog · diyetisyen · tabibin yönlendirmesi üzerine · dil ve konuşma terapisti · yutkunma, dil ve konuşma · sağlık fizikçisi · radyoizotop ve iyonize ışın · perfüzyonist · kalp akciğer makinesiyle beden dışı dolaşımı · iş ve uğraşı terapisti (ergoterapist)"
+   ]
+  },
+  {
+   "id": "96-42",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ek 13: teknisyen/tekniker düzeyi sağlık meslekleri",
+   "hukum": "Podolog (ön lisans): ayak sağlığı bakımı, uzman yönlendirmesiyle ayak tedavisi; anestezi teknisyeni/teknikeri: anesteziyoloji-reanimasyon uzmanı sorumluluğunda anestezinin başlatılıp sürdürülmesi-sonlandırılması; tıbbi laboratuvar ve patoloji teknikeri / tıbbi laboratuvar teknisyeni: numune testleri ve kan merkezi çalışmaları; tıbbi görüntüleme teknisyeni/teknikeri; ağız ve diş sağlığı teknikeri (ön lisans): muayenede diş tabibine yardım, malzeme hazırlığı; diş protez teknisyeni/teknikeri: diş tabibinin aldığı ölçü üzerine çene-yüz protezi ve ortodontik cihaz yapım-onarımı; tıbbi protez ve ortez teknisyeni/teknikeri: yapay organ ve yardımcı cihaz tasarım-onarım, uzman tabip denetiminde uygulama; ameliyathane teknikeri; adli tıp teknikeri: adli muayene, örnek alma, otopsi ve adli rapor yazımında tabibe yardım; odyometri teknikeri; diyaliz teknikeri: tabibin yönlendirmesiyle diyaliz; fizyoterapi teknikeri: FTR uzmanı veya fizyoterapist gözetiminde yardım; radyoterapi teknikeri: tabibin hazırladığı ışın programını uygular; eczane teknikeri (ön lisans eczane hizmetleri): reçetedeki ilaçları eczacı gözetiminde hazırlar (Ek m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Podolog lisans mezunudur\" yanlış; ön lisans, sağlık teknikeri. \"Eczane teknikeri reçeteyi kendi hazırlar\" yanlış; eczacı gözetiminde"
+   ],
+   "dogrusu": [
+    "Podolog · anestezi teknisyeni/teknikeri · tıbbi laboratuvar ve patoloji teknikeri / tıbbi laboratuvar teknisyeni · tıbbi görüntüleme teknisyeni/teknikeri · ağız ve diş sağlığı teknikeri · diş protez teknisyeni/teknikeri · tıbbi protez ve ortez teknisyeni/teknikeri · uzman tabip denetiminde · ameliyathane teknikeri · adli tıp teknikeri · otopsi · odyometri teknikeri · diyaliz teknikeri · fizyoterapi teknikeri · fizyoterapist gözetiminde · radyoterapi teknikeri · eczane teknikeri · eczacı gözetiminde"
+   ]
+  },
+  {
+   "id": "96-43",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ek 13 ortak sınır: tabip dışı meslek teşhis koyamaz, reçete yazamaz",
+   "hukum": "Tabipler ve diş tabipleri dışındaki sağlık meslek mensupları hastalıklarla ilgili doğrudan teşhiste bulunarak tedavi planlayamaz ve reçete yazamaz; diploması veya meslek belgesi olmadan bu maddedeki meslek mensuplarının yetkisindeki bir işi yapan veya unvanı takınanlar bir yıldan üç yıla kadar hapis ve ikiyüz günden beşyüz güne kadar adlî para; sağlık bakım teknisyeni: sağlık meslek lisesi sağlık bakım teknisyenliği mezunu, en az tekniker düzeyindeki meslek mensuplarının nezaretinde yardımcı; hastaların günlük yaşam aktiviteleri, beslenme programı, kişisel bakım-temizlik ve sağlık hizmetine ulaşımda yardım ve refakat (Ek m.13, madde sonu)",
+   "sinavda_boyle_yazarlar": [
+    "Diplomasız Ek 13 mesleği icrası hekimlikten (2-5) ve dişçilikten (3-5) farklı: 1-3 yıl hapis + 200-500 gün. \"Fizyoterapist teşhis koyup reçete yazabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "hastalıklarla ilgili doğrudan teşhiste bulunarak tedavi planlayamaz ve reçete yazamaz · unvanı takınanlar bir yıldan üç yıla kadar hapis ve ikiyüz günden beşyüz güne kadar adlî para · sağlık bakım teknisyeni · en az tekniker düzeyindeki"
+   ]
+  },
+  {
+   "id": "96-44",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Uzmanlık eğitimi: çizelgeler, 1/3 artırım, merkezî sınav",
+   "hukum": "Tıpta uzmanlık ana dalları ve süreleri EK-1, diş tabipliğinde EK-2, tıpta yan dallar EK-3 çizelgesinde; süreler Sağlık Bakanlığınca, Tıpta Uzmanlık Kurulu kararı üzerine üçte bir oranına kadar artırılabilir; artırım gerekçesi çekirdek müfredat yan dalla örtüşüyorsa ilgili yan dalın süresi TUK'ça üçte birine kadar azaltılır; ana dal eğitimine merkezî tıpta ve diş tabipliğinde uzmanlık sınavlarıyla, yan dal ve EK-1 3. sütundaki ikinci uzmanlık eğitimlerine merkezî yan dal uzmanlık sınavıyla girilir; müfredat ve dalların görev-yetki çerçevesi TUK; yabancı uyruklu kontenjanında ve dost-müttefik ülkelerle askerî anlaşma-protokol kapsamında uzmanlık yapan yabancılara döner sermaye/kurum bütçesi/vakıf bütçesinden 13.000 gösterge × memur aylık katsayısı ödeme, damga vergisi dışında kesinti yok (Ek m.14); EK-1 çizelgesine göre Aile Hekimliği 3 yıl, Acil Tıp 4 yıl (İç Hastalıkları ve Genel Cerrahi uzmanları için 2 yıl)",
+   "sinavda_boyle_yazarlar": [
+    "\"Süre yarısına kadar artırılabilir\" yanlış; üçte bir. Artıran Bakanlık (TUK kararı üzerine), yan dalı azaltan TUK. Gösterge 10.000 değil 13.000"
+   ],
+   "dogrusu": [
+    "EK-1 · EK-2 · EK-3 · Sağlık Bakanlığınca, Tıpta Uzmanlık Kurulu kararı üzerine üçte bir oranına kadar artırılabilir · yan dalın süresi TUK'ça üçte birine kadar azaltılır · merkezî tıpta ve diş tabipliğinde uzmanlık sınavlarıyla · merkezî yan dal uzmanlık sınavıyla · TUK · dost-müttefik ülkelerle askerî anlaşma-protokol · 13.000 gösterge × memur aylık katsayısı · damga vergisi dışında kesinti yok · Aile Hekimliği 3 yıl · Acil Tıp 4 yıl"
+   ]
+  },
+  {
+   "id": "96-45",
+   "madde": [
+    "3",
+    "9"
+   ],
+   "baslik": "Sözleşmeli aile hekimlerinin uzmanlık yolu (2035'e kadar)",
+   "hukum": "1/1/2035'e kadar 5258 sayılı Kanuna göre sözleşmeli aile hekimi olarak çalışanlar, TUS sonuçlarına göre merkezî yerleştirmeye tabi olmaksızın, TUK esaslarıyla aile hekimliği uzmanlık eğitimi yapabilir; eğitim uzaktan ve/veya kısmî zamanlı olabilir ve en az altı yılda, eğitime başlamadan önce en az beş yıl sözleşmeli aile hekimliği yapanlar için en az dört yılda tamamlanır; rotasyon sürelerinde döner sermaye ek ödemesinden (motivasyon ödemesi hariç) yararlanır; eğitim süresince aile hekimliği sözleşmesi devam eder; eğitime başladığı aile hekimliği birimini en az üç yıl değiştirmemek şartıyla tamamlayanlar 3359 ek m.3 Devlet hizmeti yükümlülüğünü ifa etmiş sayılır (Geçici m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az 4 yılda; 3 yılda\" yanlış; 6 yıl / 4 yıl. Devlet hizmetinden sayılma şartı birimini en az 3 yıl değiştirmemek"
+   ],
+   "dogrusu": [
+    "1/1/2035 · sözleşmeli aile hekimi · merkezî yerleştirmeye tabi olmaksızın · aile hekimliği uzmanlık eğitimi · uzaktan ve/veya kısmî zamanlı · en az altı yılda · en az beş yıl · en az dört yılda · aile hekimliği sözleşmesi devam eder · aile hekimliği birimini en az üç yıl değiştirmemek · 3359 ek m.3 Devlet hizmeti yükümlülüğünü ifa etmiş sayılır"
+   ]
+  },
+  {
+   "id": "96-46",
+   "madde": [
+    "3",
+    "11",
+    "15"
+   ],
+   "baslik": "Sağlık meslek liseleri ve unvan geçişleri",
+   "hukum": "2014'ten itibaren sağlık meslek liselerinin hemşire yardımcılığı, ebe yardımcılığı ve sağlık bakım teknisyenliği dışındaki programlarına ve 6283 sayılı Hemşirelik Kanunu geçici m.3 kapsamındaki hemşirelik programına öğrenci kaydedilmez; kayıtlılar programlarını bitirip unvanlarını kullanır (Geçici m.11); 2025'ten itibaren yalnız diş protez teknisyenliği ve sağlık bakım teknisyenliği programlarına kayıt yapılır; hemşire yardımcılığı ve ebe yardımcılığına kayıtlı olanlar ile bu programlardan mezun olanlar sağlık bakım teknisyeni unvanını kullanır (Geçici m.15); eski uzmanlık hakları saklı, oral patoloji doktoralı diş hekimlerine uzmanlık belgesi, tıbbi patoloji doktoralı ve en az iki yılı eğitim kurumunda üç yıl oral patoloji çalışmış diş hekimleri üç ay içinde başvurur, TUK altı ay içinde değerlendirir (Geçici m.13); yoğun bakım yan dalı için en az üç yılı eğitim kurumunda beş yıl çalışmış uzmanlar bir yıl içinde başvurur, sınavla belge, Devlet hizmeti yükümlülüğüne tabi (Geçici m.12)",
+   "sinavda_boyle_yazarlar": [
+    "2014 listesi üçlü (hemşire yrd., ebe yrd., sağlık bakım tekn.), 2025 listesi ikili (diş protez tekn., sağlık bakım tekn.); karıştırma"
+   ],
+   "dogrusu": [
+    "hemşire yardımcılığı, ebe yardımcılığı ve sağlık bakım teknisyenliği · hemşirelik programına · diş protez teknisyenliği ve sağlık bakım teknisyenliği · sağlık bakım teknisyeni · oral patoloji · üç ay içinde · altı ay · beş yıl · bir yıl içinde · Devlet hizmeti yükümlülüğüne tabi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

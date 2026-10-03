@@ -1,0 +1,630 @@
+{
+ "kanun_id": 5,
+ "ad": "5442 sayılı İl İdaresi Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_5.json",
+ "kartlar": [
+  {
+   "id": "5-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Bölünüş",
+   "hukum": "Türkiye, merkezi idare kuruluşu bakımından coğrafya durumuna, iktisadi şartlara ve kamu hizmetlerinin gereklerine göre illere; iller ilçelere, ilçeler de bucaklara bölünmüştür (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"mahalli idare kuruluşu bakımından\" denir ya da sıralamaya \"köy\" eklenir"
+   ],
+   "dogrusu": [
+    "merkezi idare kuruluşu · coğrafya durumuna, iktisadi şartlara ve kamu hizmetlerinin gereklerine · illere; iller ilçelere, ilçeler de bucaklara (m.1)"
+   ]
+  },
+  {
+   "id": "5-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Bucak ve sınır işleri",
+   "hukum": "Bucak kurulması, kaldırılması, merkezinin belirtilmesi; il, ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi; bir köyün, kasabanın veya bucağın başka bir il ve ilçeye bağlanması; mühim mevki ve tabii arazi adlarının değiştirilmesi → Cumhurbaşkanı onayı (m.2/B)",
+   "sinavda_boyle_yazarlar": [
+    "\"kanunla\" denir veya bucak da il/ilçe gibi kanuna bağlanır",
+    "Cumhurbaşkanlığı kararnamesiyle / Cumhurbaşkanı kararıyla kurulur"
+   ],
+   "dogrusu": [
+    "İl ve ilçe kanunla kurulur (2/A)"
+   ]
+  },
+  {
+   "id": "5-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Köy işleri",
+   "hukum": "Yeniden köy kurulması veya yerinin değiştirilmesi, Bayındırlık ile Sağlık ve Sosyal Yardım Bakanlıklarının mütalaası alınmak suretiyle yapılır (m.2/C); köy ve kasabaların aynı ilçe içinde bir bucaktan başka bucağa bağlanması, köy adlarının değiştirilmesi, köylerin birleştirilmesi ve ayrılması, bir köy/mahalle/semtin başka köyle birleştirilmesi → İçişleri Bakanlığının tasvibiyle (m.2/Ç)",
+   "sinavda_boyle_yazarlar": [
+    "köy adı değiştirme \"Cumhurbaşkanı onayına\" bağlanır"
+   ],
+   "dogrusu": [
+    "Yeniden köy kurulması veya yerinin değiştirilmesi · mütalaası alınmak suretiyle · köy ve kasabaların aynı ilçe içinde bir bucaktan başka bucağa bağlanması, köy adlarının değiştirilmesi, köylerin birleştirilmesi ve ayrılması, bir köy/mahalle/semtin başka köyle birleştirilmesi · İçişleri Bakanlığının tasvibiyle (m.2/Ç)"
+   ]
+  },
+  {
+   "id": "5-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Ad verme",
+   "hukum": "İl, ilçe ve bucaklara merkez yapılan şehir, kasaba veya köyün adı verilir; bunların coğrafi veya tarihi bir sanı varsa o da isim olarak verilebilir (m.2/E)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde merkezin adı verilir\" (coğrafi/tarihi sanı seçeneği silinir)"
+   ],
+   "dogrusu": [
+    "merkez yapılan şehir, kasaba veya köyün adı · coğrafi veya tarihi bir sanı (m.2/E)"
+   ]
+  },
+  {
+   "id": "5-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İl genel idaresinin başı",
+   "hukum": "İl genel idaresinin başı ve mercii validir; bakanlıkların il teşkilatının başında bulunanlar il idare şube başkanları, emirlerinde çalışanlar ilin ikinci derecede memurlarıdır; bu teşkilat valinin emri altındadır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"il idare şube başkanları doğrudan bakanlıklarına bağlıdır\""
+   ],
+   "dogrusu": [
+    "başı ve mercii validir · il idare şube başkanları · ilin ikinci derecede memurları · valinin emri altındadır (m.4)"
+   ]
+  },
+  {
+   "id": "5-5",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Valinin emri dışındakiler",
+   "hukum": "Hâkim, Cumhuriyet savcısı ve yargıç sınıfındakiler ile adalet memurları, askerî birlikler, askerî fabrika ve müesseseler, askerlik daire ve şubeleri bu hükmün dışındadır (m.4/2)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"emniyet teşkilatı\" veya \"jandarma\" eklenir — onlar valinin emrindedir"
+   ],
+   "dogrusu": [
+    "Hâkim, Cumhuriyet savcısı ve yargıç sınıfındakiler ile adalet memurları, askerî birlikler, askerî fabrika ve müesseseler, askerlik daire ve şubeleri (m.4/2)"
+   ]
+  },
+  {
+   "id": "5-6",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Valinin sıfatı",
+   "hukum": "Vali, ilde Cumhurbaşkanının temsilcisi ve idari yürütme vasıtasıdır; ilin genel idaresinden Cumhurbaşkanına karşı sorumludur; Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işler için valilere resen emir ve talimat verirler (m.9, m.9/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanına karşı sorumludur\" ya da \"bakanlar ancak İçişleri Bakanlığı kanalıyla emir verir\""
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanının temsilcisi ve idari yürütme vasıtasıdır · genel idaresinden Cumhurbaşkanına karşı sorumludur · resen emir ve talimat verirler (m.9, m.9/A)"
+   ]
+  },
+  {
+   "id": "5-7",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Yazışma usulü",
+   "hukum": "Bakanlıklar ve tüzel kişiliği haiz genel müdürlükler il genel idaresine ait işleri doğrudan doğruya valiliklere yazar; valilikler de doğrudan muhabere eder; vali, hesabata ve teknik hususlara ait işlerde idare şube başkanlarına vali adına imza yetkisi verebilir (m.9/B)",
+   "sinavda_boyle_yazarlar": [
+    "\"vali hiçbir konuda imza yetkisi devredemez\""
+   ],
+   "dogrusu": [
+    "doğrudan doğruya valiliklere · hesabata ve teknik hususlara · vali adına imza yetkisi (m.9/B)"
+   ]
+  },
+  {
+   "id": "5-8",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Genel emir çıkarma",
+   "hukum": "Vali, kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği yetkiyi kullanmak ve ödevleri yerine getirmek için genel emirler çıkarabilir ve bunları ilan eder (m.9/Ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"genel emir yetkisi yalnız İçişleri Bakanınındır\"",
+    "Kaymakam genel emir çıkarabilir"
+   ],
+   "dogrusu": [
+    "Genel emir çıkarma yetkisi valinindir (9/Ç)"
+   ]
+  },
+  {
+   "id": "5-9",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Valinin denetim ve teftişi",
+   "hukum": "Vali, adli ve askerî teşkilat dışında kalan bütün Devlet daire, müessese ve işletmelerini, özel işyerlerini, özel idare, belediye ve köy idarelerini ve bunlara bağlı müesseseleri denetler, teftiş eder; bunu bakanlık/genel müdürlük müfettişleriyle veya bu dairelerin amir ve memurlarıyla da yaptırabilir (m.9/D)",
+   "sinavda_boyle_yazarlar": [
+    "\"adli ve askerî teşkilatı da denetler\" ya da \"bizzat yapmak zorundadır\"",
+    "Adli ve askerî teşkilatı da denetler"
+   ],
+   "dogrusu": [
+    "Vali adli ve askerî teşkilat dışındakileri denetler (9/D)"
+   ]
+  },
+  {
+   "id": "5-10",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Genel gidişten sorumluluk",
+   "hukum": "Vali, ilin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten sorumludur (m.9/E)",
+   "sinavda_boyle_yazarlar": [
+    "sorumluluk \"il idare kuruluna\" verilir"
+   ],
+   "dogrusu": [
+    "her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten (m.9/E)"
+   ]
+  },
+  {
+   "id": "5-11",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Teşkilatı olmayan işler",
+   "hukum": "Vali, ilde teşkilatı veya görevli memuru bulunmayan işlerin yürütülmesini, o işle yakın ilgisi bulunan bir idare şubesi veya daire başkanından isteyebilir; verilen işlerin yapılması mecburidir (m.9/F)",
+   "sinavda_boyle_yazarlar": [
+    "\"isteyemez\" ya da \"yapılması ihtiyaridir\""
+   ],
+   "dogrusu": [
+    "isteyebilir · mecburidir (m.9/F)"
+   ]
+  },
+  {
+   "id": "5-12",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Uzman personelden yararlanma",
+   "hukum": "Vali, ildeki uzman/fen kollarına dâhil memurlardan, asli vazifelerine halel getirmemek şartıyla ilin genel ve mahalli hizmetlerine ilişkin işlerin görülmesini isteyebilir; ilgili Bakanlığa ve genel müdürlüğe bilgi verir (m.9/G)",
+   "sinavda_boyle_yazarlar": [
+    "bilgi verme yükümlülüğü silinir"
+   ],
+   "dogrusu": [
+    "asli vazifelerine halel getirmemek şartıyla · ilgili Bakanlığa ve genel müdürlüğe bilgi verir (m.9/G)"
+   ]
+  },
+  {
+   "id": "5-13",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Törenler",
+   "hukum": "Vali, Cumhuriyet Bayramında ilde yapılacak resmî törenlere başkanlık yapar ve tebrikleri kabul eder (m.9/K)",
+   "sinavda_boyle_yazarlar": [
+    "\"bütün resmî bayramlarda\" denir; yetki \"belediye başkanına\" verilir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet Bayramında · başkanlık yapar ve tebrikleri kabul eder (m.9/K)"
+   ]
+  },
+  {
+   "id": "5-14",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Sicil amirliği",
+   "hukum": "Vali; vali muavini, kaymakamlar, il idare şube başkanları, il ve bölge muhakemat müdürleri ile genel ve özel kolluk amirlerinin BİRİNCİ derece, diğer memurların İKİNCİ derece sicil amiridir (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "dereceler ters çevrilir; kolluk amirleri ikinci dereceye kaydırılır"
+   ],
+   "dogrusu": [
+    "vali muavini, kaymakamlar, il idare şube başkanları, il ve bölge muhakemat müdürleri ile genel ve özel kolluk amirlerinin BİRİNCİ derece · diğer memurların İKİNCİ derece (m.18)"
+   ]
+  },
+  {
+   "id": "5-15",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kolluk amirliği",
+   "hukum": "Vali, il sınırları içindeki genel ve özel bütün kolluk kuvvet ve teşkilatının amiridir; suç işlenmesini önlemek ve kamu düzen ve güvenini korumak için gereken tedbirleri alır; bu teşkilatın amir ve memurları valinin emirlerini derhal yerine getirmekle yükümlüdür (m.11/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız genel kolluğun amiridir\"; \"derhal\" yerine \"en kısa sürede\" konur"
+   ],
+   "dogrusu": [
+    "genel ve özel bütün kolluk kuvvet ve teşkilatının amiridir · derhal (m.11/A)"
+   ]
+  },
+  {
+   "id": "5-16",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Sınır ve kıyı emniyeti",
+   "hukum": "Memleketin sınır ve kıyı emniyetini ve bununla ilgili bütün işleri yürürlükteki hükümlere göre vali sağlar ve yürütür (m.11/B)",
+   "sinavda_boyle_yazarlar": [
+    "yetki \"garnizon komutanına\" verilir"
+   ],
+   "dogrusu": [
+    "yürürlükteki hükümlere göre (m.11/B)"
+   ]
+  },
+  {
+   "id": "5-17",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Önleyici kolluk",
+   "hukum": "İl sınırları içinde huzur ve güvenliğin, kişi dokunulmazlığının, tasarrufa müteallik emniyetin, kamu esenliğinin sağlanması ve önleyici kolluk yetkisi valinin ödev ve görevlerindendir; bunları sağlamak için gereken karar ve tedbirleri alır (m.11/C)",
+   "sinavda_boyle_yazarlar": [
+    "önleyici kolluk yetkisi \"adli kolluk\" olarak gösterilir"
+   ],
+   "dogrusu": [
+    "huzur ve güvenliğin, kişi dokunulmazlığının, tasarrufa müteallik emniyetin, kamu esenliğinin · önleyici kolluk yetkisi (m.11/C)"
+   ]
+  },
+  {
+   "id": "5-18",
+   "madde": [
+    "11"
+   ],
+   "baslik": "15 günlük olağanüstü tedbirler",
+   "hukum": "Kamu düzeni veya güvenliğinin olağan hayatı durduracak/kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde vali, on beş günü geçmemek üzere: ildeki belirli yerlere giriş ve çıkışı (kamu düzenini bozabileceği şüphesi bulunan kişiler için) sınırlayabilir; belli yer veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyrini düzenleyebilir veya kısıtlayabilir; ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir (m.11/C)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"otuz gün\" yapılır; \"ruhsatlı silahlar hariç\" denir",
+    "Kaymakam da 15 günlük yasak koyabilir"
+   ],
+   "dogrusu": [
+    "15 günlük kısıtlama yetkisi valiye aittir (11/C)"
+   ]
+  },
+  {
+   "id": "5-19",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kolluk personelinin yerinin değiştirilmesi",
+   "hukum": "Jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin, il içine münhasır olmak üzere geçici veya sürekli yerleri vali tarafından değiştirilebilir; durumdan hemen İçişleri ile Gümrük ve Tekel Bakanlıklarına bilgi verilir (m.11/Ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanının onayıyla\" denir ya da \"il dışına da atayabilir\"",
+    "İkisi de resen yapabilir denir"
+   ],
+   "dogrusu": [
+    "Vali kolluk personelinin yerini resen, kaymakam valinin tasvibiyle değiştirir (11/Ç, 32/D)"
+   ]
+  },
+  {
+   "id": "5-20",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Yardım isteme",
+   "hukum": "Vali, olayların emrindeki kuvvetlerle önlenemeyeceği kanısına varırsa, diğer illerin kolluk kuvvetlerinden ve bu iş için tahsis edilen kuvvetlerden yararlanmak üzere İçişleri Bakanlığından ve gerekirse en yakın kara, deniz ve hava birlik komutanlığından (Kara Kuvvetleri sınır birlikleri dâhil) yardım ister; hangisinden isteneceğini vali takdir eder; istem geciktirilmeksizin yerine getirilir; acil durumlarda sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir (m.11/D)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız İçişleri Bakanlığından isteyebilir\"; \"sözlü talep geçersizdir\""
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığından · en yakın kara, deniz ve hava birlik komutanlığından · vali takdir eder · geciktirilmeksizin · sonradan yazılı şekle dönüştürülmek kaydıyla sözlü (m.11/D)"
+   ]
+  },
+  {
+   "id": "5-21",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Askerî kuvvetin çapı ve süresi",
+   "hukum": "İstenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından; görevde kalış süresi, askerî birlik komutanı ile koordine edilerek vali tarafından belirlenir (m.11/D)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi yer değiştirilir — en sevilen tuzaklardan",
+    "İkisi yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Askerî kuvvetin çapını komutan, süresini vali belirler (11/D)"
+   ]
+  },
+  {
+   "id": "5-22",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Müstakil ve müşterek görev",
+   "hukum": "Askerî kuvvet müstakilen görevlendirilirse görev, kendi komutanının sorumluluğu altında ve onun emir ve talimatına göre yapılır; belirli görevlerin jandarma ya da polisle birlikte yapılması hâlinde komuta, sevk ve idare askerî birliklerin en kıdemli komutanı tarafından üstlenilir (m.11/D)",
+   "sinavda_boyle_yazarlar": [
+    "müşterek görevde komuta \"valiye\" verilir",
+    "Komuta validedir"
+   ],
+   "dogrusu": [
+    "Jandarma/polisle birlikte görevde komuta en kıdemli askerî komutanda (11/D)"
+   ]
+  },
+  {
+   "id": "5-23",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Sınır ötesi harekât",
+   "hukum": "Eylemciler komşu ülke topraklarına sığınmışsa, valinin talebi üzerine ilgili komutan, her defasında Genelkurmay Başkanlığı kanalıyla Cumhurbaşkanının müsaadesi ile ve komşu ülkelerin mutabakatı alınarak mahdut hedefli sınır ötesi harekât planlayıp icra edebilir (m.11/D)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanının onayıyla\" ya da \"valinin kararıyla\""
+   ],
+   "dogrusu": [
+    "valinin talebi üzerine · Genelkurmay Başkanlığı kanalıyla Cumhurbaşkanının müsaadesi · mahdut hedefli sınır ötesi harekât (m.11/D)"
+   ]
+  },
+  {
+   "id": "5-24",
+   "madde": [
+    "27"
+   ],
+   "baslik": "İlçe genel idaresinin başı",
+   "hukum": "İlçe genel idaresinin başı ve mercii kaymakamdır; kaymakam ilçede Cumhurbaşkanının idari yürütme vasıtasıdır; ilçenin genel idaresinden sorumludur; ilçedeki teşkilat (adli ve askerî teşkilat hariç) kaymakamın emri altındadır (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cumhurbaşkanının temsilcisidir\" denir — temsilci validir, kaymakam yalnız idari yürütme vasıtasıdır. En kritik ayrım budur"
+   ],
+   "dogrusu": [
+    "başı ve mercii kaymakamdır · Cumhurbaşkanının idari yürütme vasıtasıdır · adli ve askerî teşkilat hariç · kaymakamın emri altındadır (m.27)"
+   ]
+  },
+  {
+   "id": "5-25",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Mevzuatın uygulanması",
+   "hukum": "Kaymakam, kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın neşir ve ilanını, uygulanmasını sağlar; valinin talimat ve emirlerini yürütmekle ödevlidir (m.31/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"genel emir çıkarabilir\" denir — o valinin yetkisidir (m.9/Ç)"
+   ],
+   "dogrusu": [
+    "valinin talimat ve emirlerini yürütmekle ödevlidir (m.31/A)"
+   ]
+  },
+  {
+   "id": "5-26",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Yazışma",
+   "hukum": "Valiler ilçeye ait bütün işleri doğrudan doğruya kaymakama yazar; kaymakamlar bağlı bulundukları valilerle muhabere eder; ancak olağanüstü hâllerde kaymakamlar İçişleri Bakanlığı ve diğer Bakanlıklarla doğrudan muhabere edebilir ve valiye bilgi verirler (m.31/B)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir hâlde doğrudan bakanlıkla yazışamaz\"",
+    "Hiçbir hâlde doğrudan yazışamaz"
+   ],
+   "dogrusu": [
+    "Olağanüstü hâlde kaymakam doğrudan bakanlıklarla muhabere edebilir (31/B)"
+   ]
+  },
+  {
+   "id": "5-27",
+   "madde": [
+    "31"
+   ],
+   "baslik": "İşten el çektirme",
+   "hukum": "Kaymakam, denetlemesi sırasında iş başında kalmalarında mahzur gördüğü ilçe idare şube başkanlarını valinin muvafakatiyle, diğer memur ve müstahdemleri resen ve sorumluluğu altında işten el çektirebilir (m.31/D)",
+   "sinavda_boyle_yazarlar": [
+    "şube başkanları için de \"resen\" denir"
+   ],
+   "dogrusu": [
+    "ilçe idare şube başkanlarını valinin muvafakatiyle · diğer memur ve müstahdemleri resen (m.31/D)"
+   ]
+  },
+  {
+   "id": "5-28",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Denetim ve teftiş",
+   "hukum": "Kaymakam, adli ve askerî daireler dışında kalan bütün Devlet daire, müessese ve işletmelerini, özel işyerlerini, özel idare, belediye ve köy idarelerini bizzat veya idare şube başkanları ya da validen talep edeceği müfettişler vasıtasıyla denetler ve teftiş eder; ortaokul veya bu dereceli öğretim müesseselerini de bizzat veya ilgili müfettişlerle denetler (m.31/Ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"müfettişi doğrudan bakanlıktan ister\" (validen talep eder)"
+   ],
+   "dogrusu": [
+    "bizzat veya idare şube başkanları ya da validen talep edeceği müfettişler · ortaokul veya bu dereceli öğretim müesseselerini (m.31/Ç)"
+   ]
+  },
+  {
+   "id": "5-29",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Kaymakamın disiplin yetkisi",
+   "hukum": "Kaymakam; ilçenin idare şube başkanları, ikinci derecedeki memurlar ve genel ve özel kolluk amir ve memurlarına, savunmasını aldıktan sonra uyarma ve kınama cezaları verir ve uygular; daha ağır cezalar için teklif ve talepte bulunabilir; resen verdiği cezalar kesindir ve tebliğ tarihinden itibaren sicile geçer; takdirname de verebilir (m.31/I)",
+   "sinavda_boyle_yazarlar": [
+    "kaymakama \"aylıktan kesme\" yetkisi verilir — yoktur; verdiği cezalar \"itiraza tabidir\" denir",
+    "Kaymakam aylıktan kesme cezası da verebilir"
+   ],
+   "dogrusu": [
+    "Kaymakam yalnız uyarma ve kınama verebilir (31/I)"
+   ]
+  },
+  {
+   "id": "5-30",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Kaymakamın izin yetkisi",
+   "hukum": "İlçe idare şube başkanlarına acele hâllerde 8 güne kadar; tayini kendisine ait memurlara, yıllık izin süresine mahsup edilmek üzere bir aya kadar izin verebilir; tayini kendisine ait olmayanlara izin verilmeden önce kaymakamın mütalaası alınır (m.31/J)",
+   "sinavda_boyle_yazarlar": [
+    "\"8 gün\" ile \"bir ay\" yer değiştirilir",
+    "Süreler yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Kaymakam şube başkanlarına 8 güne kadar, kendi tayin ettiği memurlara 1 aya kadar izin verir (31/J)"
+   ]
+  },
+  {
+   "id": "5-31",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Askerlik işleri ve tören",
+   "hukum": "Kaymakamlar halkın askerlik muameleleri hakkındaki müracaat ve şikâyetlerini kabul eder, askerlik şubelerine yazar, cevabı kâfi görmezse valiye bildirir; Cumhuriyet Bayramında ilçedeki resmî törenlere başkanlık yapar ve tebrikleri kabul eder (m.31/K, L)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğrudan Millî Savunma Bakanlığına bildirir\""
+   ],
+   "dogrusu": [
+    "askerlik muameleleri · valiye bildirir · Cumhuriyet Bayramında (m.31/K, L)"
+   ]
+  },
+  {
+   "id": "5-32",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Kaymakamın kolluk amirliği",
+   "hukum": "Kaymakam, ilçe sınırları içindeki genel ve özel kolluk kuvvet ve teşkilatının amiridir; suç işlenmesini önlemek ve kamu düzen ve güvenini korumak için tedbir alır, kolluğu istihdam eder ve emir verir; amir ve memurlar bu emirleri derhal yerine getirmekle ödevlidir (m.32/A-B)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız genel kolluğun amiridir\""
+   ],
+   "dogrusu": [
+    "ilçe sınırları içindeki genel ve özel kolluk kuvvet ve teşkilatının amiridir · derhal (m.32/A-B)"
+   ]
+  },
+  {
+   "id": "5-33",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Kaymakamda sınır-kıyı ve önleyici kolluk",
+   "hukum": "Sınır ve kıyı emniyetiyle ilgili işleri yürürlükteki hükümlere göre sağlar ve yürütür; ilçe sınırları içinde huzur ve güvenlik, kişi dokunulmazlığı, tasarrufa müteallik emniyet, kamu esenliğinin sağlanması ve önleyici kolluk yetkisi kaymakamın ödevidir; alınan karar ve tedbirlere uymayanlara 66 ncı madde uygulanır (m.32/C-Ç)",
+   "sinavda_boyle_yazarlar": [
+    "kaymakama valinin 15 günlük özel kısıtlama yetkisi de varmış gibi gösterilir — o yetki valiye özgüdür"
+   ],
+   "dogrusu": [
+    "önleyici kolluk yetkisi · 66 ncı madde (m.32/C-Ç)"
+   ]
+  },
+  {
+   "id": "5-34",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Kaymakamın yer değiştirme yetkisi",
+   "hukum": "Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli yerlerini değiştirebilir (m.32/D)",
+   "sinavda_boyle_yazarlar": [
+    "\"resen değiştirebilir\" — vali resen, kaymakam valinin tasvibiyle"
+   ],
+   "dogrusu": [
+    "valinin tasvibiyle (m.32/D)"
+   ]
+  },
+  {
+   "id": "5-35",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Kaymakamın yardım istemesi",
+   "hukum": "İlçe içindeki kolluk kuvvetleriyle önlenemeyecek olağanüstü ve ani olaylarda hemen valiye bilgi vererek yardım ister ve en yakın askerî (kara, deniz, hava) komutanlara da haber verir; yardıma gelen askerî kuvvet 11/D uyarınca verilecek görevi yerine getirir (m.32/E)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğrudan askerî birlikten yardım ister\" (haber verir, yardımı validen ister)"
+   ],
+   "dogrusu": [
+    "hemen valiye bilgi vererek yardım ister · en yakın askerî (kara, deniz, hava) komutanlara da haber verir · 11/D (m.32/E)"
+   ]
+  },
+  {
+   "id": "5-36",
+   "madde": [
+    "32"
+   ],
+   "baslik": "İşyerlerinin gözetimi",
+   "hukum": "Devlete, özel idareye, belediye ve köylere ait ya da bunların gözetimindeki daire ve müesseseler ile gerçek/tüzel kişilerce işletilen mali, ticari, sınai ve iktisadi müesseseler, işletmeler, ambar ve depolar, Devlet ve memleket emniyet ve asayişi ve iş hayatının düzenlenmesi bakımından kaymakamın gözetim ve denetimi altındadır; buralarda bulunan/çalışanların kimlik ve nitelikleri hakkında kaymakam bilgi isteyebilir, istenilen bilgiler hemen verilir (m.32/F)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız kamu kurumları denetlenebilir\""
+   ],
+   "dogrusu": [
+    "Devlet ve memleket emniyet ve asayişi ve iş hayatının düzenlenmesi bakımından kaymakamın gözetim ve denetimi altındadır · istenilen bilgiler hemen verilir (m.32/F)"
+   ]
+  },
+  {
+   "id": "5-37",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Bucak müdürü",
+   "hukum": "Bucakta en büyük Hükümet memuru ve temsilcisidir; bucağın genel idaresinden sorumludur; kaymakamlar bucağa ait işleri doğrudan doğruya bucak müdürüne yazar; adli ve askerî teşkilat dışındaki bucak teşkilatı, belediye ve köy idareleri bucak müdürünün gözetim ve teftişi altındadır (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"ilçenin temsilcisidir\" denir"
+   ],
+   "dogrusu": [
+    "en büyük Hükümet memuru ve temsilcisidir · doğrudan doğruya bucak müdürüne · bucak müdürünün gözetim ve teftişi (m.42)"
+   ]
+  },
+  {
+   "id": "5-38",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Bucak müdürünün disiplin yetkisi",
+   "hukum": "Savunmalarını aldıktan sonra yalnızca uyarma cezası verir ve uygular; bu ceza kesindir ve tebliğ tarihinden itibaren sicile geçer; daha ağır cezalar ile takdirname verilmesini gerektiren hâllerde vali ve kaymakama tekliflerde bulunur (m.42/E)",
+   "sinavda_boyle_yazarlar": [
+    "bucak müdürüne \"kınama\" yetkisi de verilir — yoktur",
+    "Uyarma ve kınama verebilir"
+   ],
+   "dogrusu": [
+    "Bucak müdürü yalnız uyarma verebilir (42/E)"
+   ]
+  },
+  {
+   "id": "5-39",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Bucakta güvenlik",
+   "hukum": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur; suç işlenmesini önlemek için gereken tedbirleri alır ve uygular; genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır ve aldıkları emri yerine getirmeye mecburdurlar (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"bucakta kolluk yalnız kaymakamın emrindedir\""
+   ],
+   "dogrusu": [
+    "bucak müdürü sorumludur · genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır (m.43)"
+   ]
+  },
+  {
+   "id": "5-40",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Bucak müdürünün tören yetkisi",
+   "hukum": "Cumhuriyet Bayramlarında bucakta yapılacak törene başkanlık yapar ve ziyaretleri kabul eder (m.42/F)",
+   "sinavda_boyle_yazarlar": [
+    "yetki \"belediye başkanına\" verilir"
+   ],
+   "dogrusu": [
+    "başkanlık yapar ve ziyaretleri kabul eder (m.42/F)"
+   ]
+  },
+  {
+   "id": "5-41",
+   "madde": [
+    "57"
+   ],
+   "baslik": "İl idare kurulu",
+   "hukum": "Valinin başkanlığı altında hukuk işleri müdürü, defterdar, millî eğitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül eder; vali, kurula başkanlık etmek üzere vali muavinini görevlendirebilir (m.57)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"emniyet müdürü\" veya \"il jandarma komutanı\" eklenir; vali muavininin görevlendirilemeyeceği söylenir",
+    "Listeye kolluk amiri eklenir"
+   ],
+   "dogrusu": [
+    "İl idare kurulunda emniyet müdürü ve jandarma komutanı yoktur (57)"
+   ]
+  },
+  {
+   "id": "5-42",
+   "madde": [
+    "58"
+   ],
+   "baslik": "İlçe idare kurulu",
+   "hukum": "Kaymakamın başkanlığı altında tahrirat kâtibi, malmüdürü, Hükümet hekimi, millî eğitim memuru, tarım memuru ve veterinerden teşekkül eder (m.58)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"ilçe jandarma komutanı\" veya \"belediye başkanı\" eklenir"
+   ],
+   "dogrusu": [
+    "Kaymakamın başkanlığı · tahrirat kâtibi, malmüdürü, Hükümet hekimi, millî eğitim memuru, tarım memuru ve veterinerden (m.58)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Kaymakam ilçede Cumhurbaşkanının temsilcisidir"
+   ],
+   "dogru": "Vali, ilde Cumhurbaşkanının temsilcisi; kaymakam yalnız idari yürütme vasıtası (9, 27)"
+  }
+ ]
+}

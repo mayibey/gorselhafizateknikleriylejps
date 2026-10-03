@@ -1,0 +1,1019 @@
+[
+ {
+  "kanun_id": 71,
+  "kanun": "657 sayılı Devlet Memurları Kanunu (personel kapsamı)",
+  "kart_id": "71-10",
+  "madde": [
+   "122"
+  ],
+  "baslik": "Ödül",
+  "hukum": "Olağanüstü gayretle emsallerine göre başarılı memurlara merkezde bakan, illerde vali, ilçelerde kaymakam başarı belgesi verebilir; TSK'daki memurlar için MSB yetkiyi devredebilir; 3 başarı belgesi → üstün başarı belgesi; üstün başarı belgesi alanlara bakan/vali uygun görürse en yüksek Devlet memuru aylığının (ek gösterge dâhil) %200'üne kadar ödül; bir mali yılda ödüllendirilecek sayı kurumun yılbaşındaki dolu kadrosunun binde onundan, Gümrük, MEB, EGM, JGK ve SGK için binde yirmisinden fazla olamaz (m.122)",
+  "tuzak": "\"Binde onundan\" genel kurum tavanıdır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_71.json"
+ },
+ {
+  "kanun_id": 72,
+  "kanun": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+  "kart_id": "72-12",
+  "madde": [
+   "137"
+  ],
+  "baslik": "Uzmandan astsubaylığa geçenlerin aylığı",
+  "hukum": "Uzman jandarma ve uzman erbaşlardan muvazzaf astsubaylığa nasbedilenlerden, astsubay çavuş aylığından fazla derece-kademe aylığı alanlar, emsal oldukları uzmanların derece-kademe aylıklarına göre almaya devam eder; astsubaylık aylıkları uzman aylığına eşit veya fazla hâle gelince astsubay aylık derece-kademelerine tâbi tutulurlar (m.137)",
+  "tuzak": "\"Astsubay nasbedilince hemen astsubay çavuş aylığına düşer\" yanlış; fazla aylığı korunur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_72.json"
+ },
+ {
+  "kanun_id": 72,
+  "kanun": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+  "kart_id": "72-13",
+  "madde": [
+   "137"
+  ],
+  "baslik": "Üçüncü kademedeki astsubayın derece atlaması",
+  "hukum": "Rütbe terfi veya rütbe kademeliliği sırasında bulunmadıkları hâlde yükseköğrenim intibakı yapılan astsubaylardan maaş derecelerinin üçüncü kademesinde bulunanlar, bir üst maaş derecesinin birinci kademesine yükseltilir (m.137)",
+  "tuzak": "\"Dördüncü kademeye ilerler\" yanlış; bir üst derecenin birinci kademesine yükselir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_72.json"
+ },
+ {
+  "kanun_id": 72,
+  "kanun": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+  "kart_id": "72-22",
+  "madde": [
+   "143"
+  ],
+  "baslik": "Temel askerlik eğitimindeki mezunların hakları",
+  "hukum": "Kendi nam ve hesabına fakülte-yüksekokul-meslek yüksekokulunu bitirip astsubay nasbedilmek üzere temel askerlik eğitimine alınanlar, astsubay astçavuşlar için öngörülen aylık, tazminat, yan ödeme ve sosyal amaçlı yardım ve ödeneklerden tayın bedeli hariç aynen yararlanır; kendi hesabına fakülte-yüksekokul bitirip subay nasbedilmek üzere temel askerlik eğitimine alınanlar asteğmenler için öngörülen aylık ve mali haklar ile sosyal yardımlardan tayın bedeli hariç aynen yararlanır; 2629 sayılı (Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat) Kanun hükümleri saklıdır (m.143)",
+  "tuzak": "\"Tayın bedeli dâhil tüm haklardan yararlanır\" yanlış; tayın bedeli hariç",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_72.json"
+ },
+ {
+  "kanun_id": 72,
+  "kanun": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+  "kart_id": "72-26",
+  "madde": [
+   "145"
+  ],
+  "baslik": "Savaşta ailelere bırakılan pay",
+  "hukum": "Savaşta subay ve astsubayların aylıklarından kendi rızası ile düzenleyecekleri formül çizelge üzerine ailelerine veya diledikleri kimselere bırakacakları miktarlar, ödenme şekli ve ilgili diğer hususlar bir yönetmelikle düzenlenir (m.145)",
+  "tuzak": "\"Aileye bırakılacak miktar komutan tarafından re'sen belirlenir\" yanlış; kişinin kendi rızasıyla, formül çizelge ile",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_72.json"
+ },
+ {
+  "kanun_id": 72,
+  "kanun": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler)",
+  "kart_id": "72-41",
+  "madde": [
+   "164"
+  ],
+  "baslik": "Farklı katsayılı ülkeye nakil",
+  "hukum": "Yurt dışında sürekli görevde iken farklı ödeme katsayısı uygulanan başka bir memlekete naklen atananlar, 142 nci madde esasları gereğince 144 üncü maddeye göre aylık alır (m.164)",
+  "tuzak": "\"Nakil hâlinde eski ülkenin katsayısıyla almaya devam eder\" yanlış; m.142 esasları gereğince m.144'e göre",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_72.json"
+ },
+ {
+  "kanun_id": 75,
+  "kanun": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+  "kart_id": "75-0",
+  "madde": [
+   "1",
+   "2"
+  ],
+  "baslik": "Amaç ve kapsam",
+  "hukum": "Amaç: sosyal sigortalar ile genel sağlık sigortası (GSS) bakımından kişileri güvence altına almak; yararlanacak kişileri, hakları, şartları, finansman ve işleyişi düzenlemek (m.1). Kapsam: yararlanacak kişiler, işverenler, sağlık hizmeti sunucuları, gerçek kişiler, her türlü kamu ve özel hukuk tüzel kişileri ve tüzel kişiliği olmayan kurum-kuruluşlar (m.2)",
+  "tuzak": "\"Tüzel kişiliği olmayan kuruluşlar kapsam dışıdır\" yanlış; onlar da kapsamda",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_75.json"
+ },
+ {
+  "kanun_id": 75,
+  "kanun": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+  "kart_id": "75-9",
+  "madde": [
+   "7"
+  ],
+  "baslik": "Sigortalılığın başlangıcı",
+  "hukum": "4/a: çalışmaya, meslekî eğitime, staja veya bursiyer olarak göreve başladığı tarih; 4/b: vergi mükellefiyetinin başladığı, ticaret siciline tescil, yönetim kuruluna seçilme, esnaf siciline kayıt, muhtarlarda seçildikleri tarih; tarımda 1 yıl içinde bildirilirse kayıt tarihi; 4/c: göreve başladıkları veya (d)-(e)-(f) okullarında öğrenime başladıkları tarih (m.7)",
+  "tuzak": "\"4/c'de sigortalılık kadroya atanma onayı tarihinden başlar\" yanlış; göreve/öğrenime başlama tarihinden",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_75.json"
+ },
+ {
+  "kanun_id": 75,
+  "kanun": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+  "kart_id": "75-11",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Sigortalılığın sona ermesi",
+  "hukum": "4/a: hizmet akdinin sona erdiği tarih; 4/b: faaliyetin sona ermesi, sicil kaydının silinmesi, muhtarlık görevinin bitmesi vb.; 4/c: ölüm veya aylık bağlanmasını gerektiren hâllerde görev aylığının kesildiği tarihi, yaş haddi-sıhhi izin sürelerinde hadlerin dolduğu tarihi takip eden aybaşı, diğer hâllerde görevden ayrılış tarihi; hastalık ve analık yönünden sigortalılık bu tarihleri takip eden onuncu günden başlanarak yitirilmiş sayılır; sona erme 4/a-c-d'de işverence, 4/b'de kendilerince en geç 10 gün içinde; yurt dışı temsilcilik (6/l) ve 8/1-c bildirimi olanlarda 3 ay içinde bildirilir (m.9)",
+  "tuzak": "\"Sona erme bildirimi 15 gün içinde yapılır\" yanlış; 10 gün",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_75.json"
+ },
+ {
+  "kanun_id": 75,
+  "kanun": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+  "kart_id": "75-12",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Yurt dışına gönderilme",
+  "hukum": "4/a sigortalısının işverence geçici görevle yurt dışına gönderilmesi, 4/c'nin mevzuata uygun gönderilmesi veya 4/b'nin sigortalılığa esas çalışması nedeniyle yurt dışında bulunması hâlinde, bu görevler sürdükçe sigortalı ve işverenin hak ve yükümlülükleri devam eder (m.10)",
+  "tuzak": "\"Yurt dışı görev süresince sigortalılık askıya alınır\" yanlış; devam eder",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_75.json"
+ },
+ {
+  "kanun_id": 75,
+  "kanun": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+  "kart_id": "75-37",
+  "madde": [
+   "87"
+  ],
+  "baslik": "Prim ödeme yükümlüsü",
+  "hukum": "4/a, 4/c ve 5/a (hükümlü) için işverenleri; 4/b (muhtarlar hariç), isteğe bağlı sigortalılar ve 60/1-d, g kapsamındakiler kendileri; 60/1-c ile 60/12-13-14 fıkralarındakiler (gelir testli, er-erbaş, askerî öğrenci adayları vb.) için primi merkezî yönetim bütçesinden karşılanmak üzere ilgili kamu idareleri; işsizlik ödeneği alanlar ve İŞKUR kursiyerleri için Türkiye İş Kurumu; çırak ve stajyerler için MEB veya okullar, yükseköğrenimde yükseköğretim kurumu; bursiyerler için proje yürüten kurum; muhtarlar için il özel idareleri veya yatırım izleme ve koordinasyon başkanlıkları (m.87)",
+  "tuzak": "\"Muhtarlar primlerini kendileri öder\" yanlış; il özel idareleri/YİKOB",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_75.json"
+ },
+ {
+  "kanun_id": 77,
+  "kanun": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu",
+  "kart_id": "77-8",
+  "madde": [
+   "36",
+   "37"
+  ],
+  "baslik": "Gelirler, bağışlar",
+  "hukum": "Gelir ilkeleri: gelir politikası ilkeleri her malî yıl başında kamuoyuna, mükelleflere kolaylık, vergiye uyum teşviki, bilgilendirme (m.36); vergi, resim, harç ve benzeri malî yükümlülükler kanunla konulur, değiştirilir, kaldırılır; gelirlerin kanuni dayanakları bütçede; genel bütçe gelirlerinin tarh-tahakkuk-tahsili HMB veya yetkili idareler; toplanan gelirlerden diğer idarelere verilecek paylar toplayan idare bütçesindeki ödenekten, pay ödenek tutarını aşarsa ödenek eklemesi genel bütçede HMB Bakanı, diğerlerinde üst yönetici; zamanaşımına uğrayan gelirlerin silinmesi HMB'ce (m.37); tarh-tahakkuk-tahsille görevliler işlemlerin zamanında ve eksiksiz yapılmasından sorumlu (m.38); özel gelirler karşılığı özel ödenekler bütçede; kullanılabilecek özel ödenek tahsil edilen özel geliri geçemez, aşan gelire ödenek eklenemez; tarifeler HMB görüşüyle idarelerce (m.39); kamu hizmeti karşılığı veya kamu hizmetleriyle ilişkilendirilerek bağış-yardım toplanamaz; bağış ve yardımlar gelir kaydedilir; nakdi olmayanlar değerlemeyle kayda; şartlı bağış ve yardımlar üst yöneticinin uygun görmesiyle bütçede açılacak tertibe gelir ve şart kılındığı amaca ödenek kaydedilir, amaç dışı aktarılamaz, harcanmayan tutar amaç gerçekleşinceye kadar ertesi yıla devreder; amacı gerçekleşmiş kalanlar, yetersiz olanlar ve iki yıl devrettiği hâlde harcanmayanlar genel bütçede Cumhurbaşkanı, diğerlerinde üst yönetici tarafından iptal; geri istenen bağış gider kaydıyla iade; zamanında kullanmama zararı ve amaç dışı harcama sorumlulara ödettirilir (m.40)",
+  "tuzak": "\"Şartlı bağış artığı yıl sonunda iptal edilir\" yanlış; amaç gerçekleşinceye kadar devreder (2 yıl harcanmazsa iptal edilebilir)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/bakim/pack_77.json"
+ },
+ {
+  "kanun_id": 77,
+  "kanun": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu",
+  "kart_id": "77-11",
+  "madde": [
+   "49",
+   "51"
+  ],
+  "baslik": "Muhasebe sistemi, kayıt zamanı, malî hizmetler birimi",
+  "hukum": "Muhasebe sistemi karar-kontrol-hesap verme süreçlerine ve kesin hesaba temel olacak şekilde; kamu hesapları gelir-gider-varlıklar ve malî sonuç doğuran işlemler ile garanti ve yükümlülüklerin kaydı için; muhasebe ve raporlama standartları HMB bünyesinde Devlet Muhasebesi Standartları Kurulunca (Sayıştay, HMB ve ilgili kuruluş temsilcileri), RG'de; çerçeve hesap planı ve raporlar Cumhurbaşkanı yönetmeliğiyle; detaylı hesap planları HMB'ce (m.49); gelir ve giderler tahakkuk ettirildikleri malî yılın hesaplarında; giderler ekonomik sınıflandırmanın 4. düzeyine kadar; bütçe gelirleri tahsil edildiği, bütçe giderleri ödendiği yılda muhasebeleştirilir; hesaplar malî yıl esasına göre; yıl sonuna kadar fiilen yapılmış ödemelerden mahsup edilememiş olanların mahsubu yılın bitimini izleyen 1 ay içinde (HMB bütçe giderleri için 1 ay, diğer işlemlerde 2 ay uzatabilir) (m.51); malî hizmetler birimi görevleri: stratejik plan ve performans programını koordine etmek, izleyen iki yılın tahminlerini içeren idare bütçesini hazırlamak, ayrıntılı harcama programı hazırlamak ve ödeneğin birimlere gönderilmesini sağlamak, bütçe kayıtları ve kesin hesap ile malî istatistikler, gelirlerin tahakkuku ve takibi, genel bütçe dışındaki idarelerde muhasebe hizmetleri, idare faaliyet raporu, taşınır-taşınmaz icmal cetvelleri, yatırım programı koordinasyonu ve yıllık yatırım değerlendirme raporu, diğer idareler nezdindeki malî işler, üst yöneticiye ve harcama yetkililerine danışmanlık, ön malî kontrol, iç kontrol sistemi; idarenin tamamını ilgilendiren alım-satım-yapım-kiralama-bakım işlemleri destek hizmetleri birimince, yalnız harcama birimini ilgilendirenler harcama birimlerince (üst yönetici onayıyla destek birimine yaptırılabilir); harcama yetkilisi ile muhasebe yetkilisi görevi aynı kişide birleşemez; ön malî kontrol görevini yürütenler malî işlem sürecinde görev alamaz; malî hizmetler uzmanı-uzman yardımcısı (4 yıllık ilgili fakülte, özel yarışma sınavı, 30 yaşını doldurmamış; en az 3 yıl sonra yeterlik sınavı; 3 yıl sonra başka idareye geçebilir) (m.60)",
+  "tuzak": "\"Bütçe gelirleri tahakkuk ettiği yılda muhasebeleştirilir\" yanlış; tahsil edildiği yılda (tahakkuk esası kamu hesapları içindir)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/bakim/pack_77.json"
+ },
+ {
+  "kanun_id": 79,
+  "kanun": "257 Sayılı Er ve Erbaş Harçlıkları Kanunu",
+  "kart_id": "79-2",
+  "madde": [
+   "5",
+   "2"
+  ],
+  "baslik": "Net asgari ücrete tamamlama",
+  "hukum": "Askeralma Kanunu m.5/3 kapsamında askerlik hizmetine devam edenler için belirlenen harçlık net asgari ücretin altında kalırsa ödenecek tutar net asgari ücrete tamamlanır (m.2)",
+  "tuzak": "\"Tamamlama brüt asgari ücrete yapılır\" yanlış; net asgari ücret",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_79.json"
+ },
+ {
+  "kanun_id": 79,
+  "kanun": "257 Sayılı Er ve Erbaş Harçlıkları Kanunu",
+  "kart_id": "79-9",
+  "madde": [
+   "6"
+  ],
+  "baslik": "Munzam harçlık: sabit tavanlar",
+  "hukum": "Ücretli sivil şoför ve operatörler yerinde kullanılan şoför ve iş makineleri operatörü er-erbaşlara ayda 90 lirayı geçmemek üzere (a); staj, kurs veya geçici görevle yabancı ülkelere gönderilenlere, yiyecek-yatacak-giyecek-tedavi-nakil masrafları karşılandıktan başka günde 30 lirayı geçmemek üzere (b); inzibat birliklerinde bilfiil askeri polis görevinde, MSB'ce gerekli görülen kadrolu yerlerde görev yapanlara her ay 20 lira (c); tank sınıfı (zırhlı otomobil dahil) er-erbaşlara sınıfta görev yaptıkları süre içinde harçlıklarının azami bir misli nispetinde munzam harçlık ödenebilir (m.6)",
+  "tuzak": "\"Yurt dışına gönderilen ere ayda 30 lira\" yanlış; günde 30 lira. \"Şoföre günde 90 lira\" yanlış; ayda 90",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_79.json"
+ },
+ {
+  "kanun_id": 82,
+  "kanun": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun (2330 sayılı)",
+  "kart_id": "82-17",
+  "madde": [
+   "11"
+  ],
+  "baslik": "Kaldırılan hükümler",
+  "hukum": "1475 sayılı Nakdi Tazminat Kanunu ve ekleri; 1918 sayılı Kaçakçılığın Men ve Takibine Dair Kanuna 6846 sayılı Kanunla eklenen ek madde; 2298 sayılı 1980 Yılı Bütçe Kanununun 49. maddesi; 3201 sayılı Emniyet Teşkilatı Kanununun 86. maddesinin (C) bendi yürürlükten kaldırılmıştır (m.11)",
+  "tuzak": "\"1475 sayılı Nakdi Tazminat Kanunu hâlen yürürlüktedir\" yanlış; kaldırıldı",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_82.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-12",
+  "madde": [
+   "45",
+   "46"
+  ],
+  "baslik": "Vefatta aile harcırahı",
+  "hukum": "Yurt içinde daimi tayinle giderken yolda veya işe başlamadan vefat eden memurun ailesi birlikteyse ölüm yerinden, değilse ailenin bulunduğu yerden itibaren m.45 esaslarına göre; yabancı memlekete daimi tayinli olup yolda, işe başlamadan veya başladıktan sonra vefat edenin beraberindeki ailesine ölüm yerinden itibaren m.46 esaslarına göre harcırah (m.13)",
+  "tuzak": "\"Yurt dışında görevine başladıktan sonra vefat edenin ailesine harcırah verilmez\" yanlış; verilir (m.46 esasları)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-21",
+  "madde": [
+   "21"
+  ],
+  "baslik": "Yatacak yeri olmayan görev yeri",
+  "hukum": "Şehir ve kasaba dışında yatacak yeri bulunmayan ve yatacak yer olan yere taşıtla gidip gelmek zorunlu olan yerlere geçici görevle gönderilenlere, her gün için en yakın köy, kasaba veya şehre kadar gidiş-geliş mutat taşıt ücreti ödenir (m.21)",
+  "tuzak": "\"Bu durumda yalnız bir defaya mahsus gidiş-dönüş ödenir\" yanlış; her gün için",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-23",
+  "madde": [
+   "23",
+   "33"
+  ],
+  "baslik": "Spor temasları, müfettişlerin ailesi",
+  "hukum": "Yurt içi ve dışı millî ve resmî spor temaslarında sporcu ve idarecilerin yol masrafı ve yevmiyesi Cumhurbaşkanınca tespit edilen esaslara göre (m.23); m.33/b kapsamındaki denetim elemanlarının vazife seyahatlerinde aile fertlerine harcırah verilmez, ancak mıntıkaları değiştirilenlere yeni mıntıka merkezine kadar aile ve yer değiştirme masrafı verilir (m.24)",
+  "tuzak": "\"Müfettişlerin her teftiş seyahatinde aile fertlerine harcırah verilir\" yanlış; verilmez",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-24",
+  "madde": [
+   "25"
+  ],
+  "baslik": "Başka yerde bırakılan aile",
+  "hukum": "Tayin yerine götürülmeyip ikamet için topluca başka yere gönderilen aileye, yeni memuriyet yerine kadar hesaplanacak tutarı aşmamak ve sonra tayin yerine getirilirken bir şey verilmemek şartıyla bu yere kadar; sonraki tayinlerde de memurun bulunduğu yerden yeni görev yerine kadarki tutarı aşmamak üzere ailenin bulunduğu yerden harcırah verilir (m.25)",
+  "tuzak": "\"Aile başka yere gönderilirse gerçek mesafe ne olursa olsun tam ödenir\" yanlış; yeni memuriyet yerine kadarki tutarı aşamaz",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-29",
+  "madde": [
+   "30",
+   "31"
+  ],
+  "baslik": "Yemekli bilet, parasız ve indirimli seyahat",
+  "hukum": "Bileti yemeksiz alınamayan taşıtta bilete dahil yemek bedeli yol masrafı sayılır (m.30); kurumlara ait veya kurumlarca kiralanmış taşıtlarda paso, permi veya herhangi bir şekilde parasız seyahat edenlere yol masrafı verilmez; tarifede indirim yapılmışsa yol masrafı fiilen ödenen ücrete göre (m.31)",
+  "tuzak": "\"İndirimli bilet alan tam tarife üzerinden yol masrafı alır\" yanlış; fiilen ödediği ücret",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-30",
+  "madde": [
+   "32"
+  ],
+  "baslik": "Özel görevli emniyet mensupları",
+  "hukum": "Merkezden aldıkları hususi vazifenin gerektirdiği her türlü taşıttan yararlanır, yol masrafları kullanılan taşıta göre yapılan masraf üzerinden ödenir (m.32)",
+  "tuzak": "\"Özel görevli emniyet mensupları yalnız mutat taşıt ücretini alabilir\" yanlış; her türlü taşıt masrafı",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-35",
+  "madde": [
+   "36",
+   "37"
+  ],
+  "baslik": "Sevk görevli erbaş-erler, kurslar",
+  "hukum": "Hükümlü, tutuklu veya gözetim altındakilerin sevkinde görevlendirilen veya refakatle il sınırları dışına çıkan erbaş ve erlerin gündeliği Millî Savunma, İçişleri ve Maliye Bakanlıklarınca birlikte tespit edilir (m.36); meslekî bilgiyi artırmak için memuriyet mahalli dışındaki kurs veya okullara gönderilenlere geçici görev gündeliği; yurt dışında yabancı taraf ödeme yaparsa indirilir; burs veya aylığı transfer edilerek staj-öğrenim için yurt dışına gönderilenlere bu madde uygulanmaz, kendi kanunları uygulanır (m.37)",
+  "tuzak": "\"Tutuklu sevk eden erbaş-erin gündeliğini yalnız İçişleri Bakanlığı belirler\" yanlış; MSB, İçişleri ve Maliye birlikte",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 86,
+  "kanun": "6245 Sayılı Harcırah Kanunu",
+  "kart_id": "86-48",
+  "madde": [
+   "51"
+  ],
+  "baslik": "Misafirlere refakat",
+  "hukum": "Devletin misafiri veya ziyaretçisi yabancılara refakatle görevlendirilen memurlara, görev emrindeki refakat şekline göre müfredatlı hesap pusulası ile yol, ikamet, yemek, içmek vb. yaptıkları masraf ödenir, başkaca harcırah verilmez; misafirleri karşılamak için başka yere gidenler ve ayrıldıktan sonra dönenlere gidiş-dönüş yol masrafı ve gündelik (m.51)",
+  "tuzak": "\"Refakat eden memura masraflarına ek olarak tam gündelik de ödenir\" yanlış; başkaca harcırah verilmez",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/maliye/pack_86.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-5",
+  "madde": [
+   "4",
+   "31"
+  ],
+  "baslik": "Yabancı diplomalı hekimler",
+  "hukum": "Yabancı tıp fakültesi diplomalı hekimlerin Türkiye'de çalışabilmesi için Sağlık Bakanlığından ve Üniversite Tıp Fakültesi Profesörler Meclisinden seçilmiş bir jüri kimliğe bakıp diplomanın Türkiye Tıp Fakültesi programı ve süresine aynı veya benzer bir fakülteden alınıp alınmadığını araştırır; uygunsa Bakanlıkça onaylanıp kütüğe geçirilir; uygun değilse teori ve pratik sınav (Bakanlık görevlisi de hazır); sınav şekli Sağlık ve Kültür Bakanlıklarınca birlikte; eksik okuyanlar Tıp Fakültesinde okuyup staj gördükten sonra sınava girer (m.4); yabancı diplomalı Türk diş hekimleri için jüriye Diş Hekimi Mektebi profesörleri de katılır, aynı usul (m.31)",
+  "tuzak": "\"Yabancı diploma doğrudan tescil edilir\" yanlış; jüri incelemesi şart. Sınav şeklini Sağlık Bakanlığı tek başına değil Kültür Bakanlığıyla belirler",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-9",
+  "madde": [
+   "11"
+  ],
+  "baslik": "Mahkeme bilirkişisi tabipler",
+  "hukum": "Mahkemelerce ihtibar (bilirkişilik) için başvurulacak tabipler yalnız bu kanunla Türkiye'de icra yetkisi olanlardır; bilirkişilere başvuru usulü ve ücret-tazminat miktarları Sağlık ve Adalet Bakanlıklarınca müşterek talimatname ile belirlenir (m.11)",
+  "tuzak": "Talimatname yalnız Sağlık Bakanlığı değil, Sağlık + Adalet müşterek",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-15",
+  "madde": [
+   "14",
+   "74"
+  ],
+  "baslik": "Etıbba (tabip) odaları",
+  "hukum": "Sınırları ve merkezi Sağlık Bakanlığınca belirlenen bölgelerde birer etıbba odası kurulur; odalar meslek onur ve menfaat meselelerini görür, divanı haysiyet eliyle meslek adabına uymayan tabip, diş tabibi ve dişçilere inzibati ceza verir, tabipler arası meslekî uyuşmazlıkları çözer (m.14); ücret tarifeleri bölgesi oda bölgesiyle sınırlanır (m.74). Not: dipnota göre bu kanunun etıbba odaları hükümleri 6643 sayılı Kanun m.59 ile yürürlükten kaldırılmıştır",
+  "tuzak": "Oda bölgelerini belirleyen Sağlık Bakanlığı; ceza veren organ divanı haysiyet",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-24",
+  "madde": [
+   "35"
+  ],
+  "baslik": "Diş tabibinin reçete sınırı",
+  "hukum": "Diş tabipleri ve dişçiler Eczaneler Kanununa bağlı talimatnamede gösterilen maddeleri reçeteyle eczaneden alabilir; reçeteyle alınması zorunlu olup talimatnamede yer almayan maddeleri içeren reçete yazamazlar (m.35)",
+  "tuzak": "\"Diş tabibi her ilacı reçete edebilir\" yanlış; talimatname listesi ile sınırlı; aykırılık 100-1000 TL (m.44)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-33",
+  "madde": [
+   "69"
+  ],
+  "baslik": "Diğer mevzuattaki görevler",
+  "hukum": "Tabipler, diş tabipleri, dişçiler ve ebeler bu kanunda yazmayan ve diğer kanun ve tüzüklerle kendilerine verilen bütün görevleri yerine getirmekle yükümlüdür (m.69)",
+  "tuzak": "m.69 sayımında hastabakıcı geçmez; dörtlü: tabip, diş tabibi, dişçi, ebe",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 96,
+  "kanun": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  "kart_id": "96-38",
+  "madde": [
+   "1",
+   "3"
+  ],
+  "baslik": "Ecnebi (yabancı) uzman getirme",
+  "hukum": "Ankara Nümune Hastanesinde çalışmak, dışarıda hekimlik etmemek ve hizmet süresi beş yılı geçmemek şartıyla beş (Ek m.1) ve daha üç (Ek m.3) yabancı mütehassıs tabip; İstanbul Üniversitesi Tıp Fakültesinde ders vermek, hastanede tedavi-poliklinik yapmak, dışarıda serbest doktorluk ve özel hastanede çalışmamak şartıyla altı ecnebi müderris tabip, süre beş seneyi geçmez (Ek m.2)",
+  "tuzak": "Sayılar karıştırılır: Nümune 5 + 3, İstanbul Tıp 6; hepsinde süre 5 yıl",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_96.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-20",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Muhasebe ayrımı",
+  "hukum": "İşletmeci her hizmet türü için muhasebe kayıtlarını ayrı tutar; sabit ve mobil hizmetleri tek yetkilendirmeyle sunan işletmeci bunları ayrı ayrı tutar (m.19/1-i)",
+  "tuzak": "\"tek kayıt yeterlidir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-22",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Yenilenmeme",
+  "hukum": "Yetkilendirmenin yenilenmemesi durumunda da iptal hükümleri uygulanır; RTÜK yayın iletim yetkisini iptal ederse Kurum ilgili yetkilendirmeyi iptal edebilir (m.19/1-l)",
+  "tuzak": "\"yenilenmeme iptal sayılmaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-26",
+  "madde": [
+   "19"
+  ],
+  "baslik": "5397/5651 teknik altyapısı",
+  "hukum": "İşletmeciler bu kanunlar kapsamındaki talepleri karşılayacak teknik altyapıyı, sistemi hizmete sunmadan önce, tüm harcamaları kendilerine ait olmak üzere kurar ve günceller; kurmayanlar abonelere ve diğer işletmecilere hizmet sunamaz, onlara da hizmet sunulamaz (m.19/1-u)",
+  "tuzak": "\"masrafı Kurum karşılar\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-27",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Arama kartları",
+  "hukum": "Kart üzerinde ticaret unvanı, müşteri hizmetleri numarası, internet adresi, son kullanma tarihi, TL-Kr tutarı, kullanım talimatı ve seri numarası açık ve anlaşılır olmalıdır (m.19/1-ş)",
+  "tuzak": "bir kalem listeden çıkarılır veya \"vergi numarası\" eklenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-28",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Terminal cihazı",
+  "hukum": "İşletmeci, ilgili teknik düzenlemelere uygun terminal cihazlarını sistemine bağlamak veya bağlanmasına izin vermekle yükümlüdür (m.19/1-k)",
+  "tuzak": "\"yalnızca kendi sattığı cihazlar bağlanır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 97,
+  "kanun": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
+  "kart_id": "97-29",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Altyapı kurma hakkı",
+  "hukum": "İşletmeci yetkilendirildiği hizmet kapsamındaki yazılım ve cihazları kendisi kurabilir; bunun dışındaki altyapıyı diğer işletmecilerden temin edebilir veya ilgili yetkilendirmeyi alıp kendi altyapısını kurabilir (m.19/1-m)",
+  "tuzak": "\"tüm altyapıyı kendisi kurmak zorundadır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_97.json"
+ },
+ {
+  "kanun_id": 98,
+  "kanun": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği",
+  "kart_id": "98-1",
+  "madde": [
+   "25"
+  ],
+  "baslik": "HEK kapsamına girenler",
+  "hukum": "Taşınır malın yanı sıra, başka yerde kullanma imkânı bulunmayan her türlü idame veya işletme malzemesi, yedek parça ve diğer muhteviyat da HEK'e ayrılır (m.25/1)",
+  "tuzak": "\"yedek parçalar kapsam dışıdır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_98.json"
+ },
+ {
+  "kanun_id": 98,
+  "kanun": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği",
+  "kart_id": "98-21",
+  "madde": [
+   "32"
+  ],
+  "baslik": "\"Birinci sınıf\" kaydı",
+  "hukum": "Muafiyet tüm askerî müzelere değil, birinci sınıf askerî müze koleksiyonlarına tanınmıştır (m.32/3)",
+  "tuzak": "\"tüm askerî müzeler\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_98.json"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi",
+  "kart_id": "102-4",
+  "madde": [],
+  "baslik": "Yerli hizmet sağlayıcı",
+  "hukum": "Genelgede tanımı yoktur; ölçü şirketin Türkiye'de kurulu ve Türk hukukuna tabi olmasıdır, ortakların uyruğu değil",
+  "tuzak": "\"ortakları Türk olan yurt dışı şirket yerlidir\" denir — 2024'ün doğru cevabı bunun yanlış olduğuydu",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_102.json"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi",
+  "kart_id": "102-25",
+  "madde": [],
+  "baslik": "Kapanış: denetim",
+  "hukum": "Denetim mekanizmaları oluşturulacak ve yılda en az bir defa uygulanacaktır",
+  "tuzak": "\"iki yılda bir\" denir ya da metinde olmayan yaptırımlar (faaliyetten men) eklenir — 2024'ün doğru cevabı buydu",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_102.json"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi",
+  "kart_id": "102-26",
+  "madde": [],
+  "baslik": "Genelgede olmayanlar",
+  "hukum": "Genelge faaliyetten men, para cezası, kapatma gibi bir yaptırım öngörmez; yalnız denetim mekanizması kurar",
+  "tuzak": "\"denetim sonucu kamu kurumu faaliyetten men edilebilir\" denir. ★ 2024",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_102.json"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi",
+  "kart_id": "102-27",
+  "madde": [],
+  "baslik": "İdari sözleşme mantığı",
+  "hukum": "Taahhütname sözleşme şartı olarak konur; idare, kamu yararı gereği idari sözleşmelerde üstün ve ayrıcalıklı yetkilere sahiptir, şartları tek taraflı belirleyebilir",
+  "tuzak": "\"idare karşı tarafın kabul etmediği hususları dayatamaz\" denir — 2024'ün doğru cevabı",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_102.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-3",
+  "madde": [],
+  "baslik": "Hedef sayısı",
+  "hukum": "Rehber'in uygulanması sonucu beklenenler somutlaştırılarak 12 hedef tanımlanmıştır (Şekil 1)",
+  "tuzak": "10 veya 15 denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-4",
+  "madde": [],
+  "baslik": "Hedef 1",
+  "hukum": "Yerli ve millî ürün kullanımının teşvik edilmesi",
+  "tuzak": "\"yabancı ürün yasağı\" diye sertleştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-5",
+  "madde": [],
+  "baslik": "Hedef 2",
+  "hukum": "Rehber'i uygulayacak kurumlarda mükerrer çalışma ve yatırımların önüne geçilmesi",
+  "tuzak": "\"her kurumun kendi rehberini hazırlaması\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-8",
+  "madde": [],
+  "baslik": "Hedef 6-7",
+  "hukum": "Tedbirlerin uygulanıp uygulanmadığının denetlenebilmesi; tedbirlerin birbirinden bağımsız uygulanabilirliğini sağlayacak şekilde gruplandırılması ve Rehber'in modülerliği",
+  "tuzak": "\"tedbirler ancak toptan uygulanır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-10",
+  "madde": [],
+  "baslik": "Hedef 10",
+  "hukum": "Rehber'in format ve içeriğinin özgün olması",
+  "tuzak": "\"hedefler arasında değildir\" denir; listede 10 numaradadır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-11",
+  "madde": [],
+  "baslik": "Hedef 11",
+  "hukum": "Rehber'in hem tedbirleri uygulayacak personele hem de bunların uygulanıp uygulanmadığını denetleyecek denetçilere hitap etmesi",
+  "tuzak": "\"yalnız teknik personele hitap eder\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-24",
+  "madde": [],
+  "baslik": "Denetim yöntemleri",
+  "hukum": "Mülakat, gözden geçirme, güvenlik denetimi, sızma testi, kaynak kod analizi (Giriş 1.4). Beş yöntemdir",
+  "tuzak": "\"anket\" veya \"gözlem\" altıncı yöntem olarak eklenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-25",
+  "madde": [],
+  "baslik": "Mülakat / gözden geçirme",
+  "hukum": "Mülakat: çalışmaların nasıl yapıldığının ilgili personelle yüz yüze görüşülerek öğrenilmesi. Gözden geçirme: güvenlik gereksinimleri göz önünde bulundurularak detaylı ve sistematik inceleme",
+  "tuzak": "ikisi yer değiştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-26",
+  "madde": [],
+  "baslik": "Sızma testi",
+  "hukum": "Güvenlik açıklarının tespitini sağlayan, yetkin kişilerce ve yasalara uygun olarak gerçekleştirilen güvenlik testleri",
+  "tuzak": "\"yasal izin gerekmez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-53",
+  "madde": [],
+  "baslik": "Güncellenebilirlik",
+  "hukum": "Rehber yaşayan bir dokümandır; ihtiyaçlar, gelişen teknoloji ve değişen şartlar göz önünde bulundurularak sürekli güncellenir, eski ve güncel sürümlerine cbddo.gov.tr üzerinden erişilir",
+  "tuzak": "\"değiştirilemez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_103.json"
+ },
+ {
+  "kanun_id": 105,
+  "kanun": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği",
+  "kart_id": "105-0",
+  "madde": [
+   "24",
+   "2692"
+  ],
+  "baslik": "Dayanak",
+  "hukum": "2803 sayılı Kanun m.24, 2692 sayılı Sahil Güvenlik Komutanlığı Kanunu m.23 ve JGK-SGK Personel Yönetmeliği m.61 (m.3)",
+  "tuzak": "\"Kıyafet Yönetmeliği m.55\" dayanağı Kıyafet Yönetmeliğinindir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_105.json"
+ },
+ {
+  "kanun_id": 110,
+  "kanun": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği",
+  "kart_id": "110-0",
+  "madde": [
+   "24",
+   "55"
+  ],
+  "baslik": "Dayanak",
+  "hukum": "2803 m.24 ve JGK-SGK Personel Yönetmeliği m.55 (m.3)",
+  "tuzak": "İki dayanak maddesi çapraz sorulabilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_110.json"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-5",
+  "madde": [
+   "5"
+  ],
+  "baslik": "Merkez açma yetkisi",
+  "hukum": "Şartları taşıyan kamu kurum ve kuruluşları, gerçek kişiler ve özel hukuk tüzel kişileri ilkyardımcı ve eğitmen yetiştirmek için merkez açabilir; merkezler bağımsız veya başka bir özel/kamu eğitim kurumunda program ilavesi olarak açılabilir; Genel Müdürlük ve müdürlükler ilkyardım eğitimi ve eğitici eğitimi düzenleyebilir; müdürlükler eğitici eğitimini Genel Müdürlüğün onayı ile; eğitici eğitmeni eğitimi yalnız Genel Müdürlükçe düzenlenir (m.5)",
+  "tuzak": "\"Müdürlükler eğitici eğitimini serbestçe düzenler\" yanlış; GM onayı şart",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_134.json"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-8",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Merkez kapatma başvurusu",
+  "hukum": "Merkez sahibi veya mesul müdür kapanma dilekçesiyle birlikte müdürlükçe düzenlenmiş tüm belgeleri müdürlüğe teslim eder; müdürlük belgeleri iptal edip kapatmayı yapar ve Genel Müdürlüğe yazılı bildirir; eğitici eğitimi yetki belgesinin iptali için belge aslı müdürlük aracılığıyla Genel Müdürlüğe gönderilir, iptal Genel Müdürlükçe; sınav kâğıtları, denetim formları ve tüm eğitim dokümanları müdürlüğe teslim edilir (m.9)",
+  "tuzak": "\"Eğitici eğitimi yetki belgesini müdürlük iptal eder\" yanlış; Genel Müdürlük",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_134.json"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygulama Usul ve Esasları Hakkında Tebliğ",
+  "kart_id": "135-14",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Hasta kabulü esastır; yoğunluk yönetimi",
+  "hukum": "Acil servise başvuran hastanın kabul edilmesi esastır; başvuru artışı acil servis imkânlarıyla yönetilemez hale gelirse hastanedeki personel ve diğer birimlerin imkânlarından yararlanılır; yoğunluğu azaltmak için acil servis sorumlu tabibinin öngördüğü önlemler baştabip onayıyla uygulanır, yazılı protokoller oluşturulabilir, gerekirse hastane afet ve acil durum planları aktive edilebilir (m.8/7)",
+  "tuzak": "\"Yoğunluk önlemlerini baştabip öngörür, sorumlu tabip onaylar\" ters; sorumlu tabip öngörür, baştabip onaylar (m.8/7)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/tabip/pack_135.json"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-4",
+  "madde": [
+   "33"
+  ],
+  "baslik": "Terfi zamanı ve engel hâller",
+  "hukum": "Kıdem alanlar, nasıpları lehe düzeltilenler ile açığa alınma, tutuklanma, firar veya izin tecavüzü (kısa süreli kaçma ve izin süresini geçirme hariç) nedeniyle terfi edemeyen ve rütbe kıdemliliği onanmayanlardan; KYOK, kamu davasının ertelenmesi/düşmesi, (firar-izin tecavüzü hariç) HAGB, beraat, kısa süreli hapsin seçenek yaptırıma çevrilmesi veya erteleme kararı verilenlerin terfileri emsalleri terfi etmişse kararın kesinleşme tarihinden geçerli yapılıp emsalleri tarihine götürülür, maaş farkı ödenmez; sicil mecburiyetini 30 Ağustos'a kadar tamamlayacaklar (albaylar hariç) hakkında ilk fıkra uygulanmaz (m.33)",
+  "tuzak": "\"Nasıp düzeltmesinde maaş farkı ödenir\" yanlış",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_136.json"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-15",
+  "madde": [
+   "133"
+  ],
+  "baslik": "Yabancı ordularda hizmet izni",
+  "hukum": "Yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara (jandarma ve sahil güvenlik subayları dâhil) Millî Savunma Bakanlığınca dört yıla kadar aylıklı izin verilebilir (m.133; personel kitapçığında sorulmuş)",
+  "tuzak": "\"İçişleri Bakanlığınca\" ve \"JGK'ca\" şıkları yanlış",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_136.json"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-16",
+  "madde": [
+   "201"
+  ],
+  "baslik": "İstiklal Madalyası",
+  "hukum": "İstiklal Madalyası Kanunu ile ek ve değişikliklerindeki İstiklal Madalyasına ait hükümler saklıdır (m.201)",
+  "tuzak": "\"926 İstiklal Madalyası hükümlerini kaldırdı\" yanlış",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_136.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-1",
+  "madde": [
+   "21"
+  ],
+  "baslik": "Ödemelerin dayanağı",
+  "hukum": "Silahlı Kuvvetler tazminatı, aile yardımı, doğum yardımı, ölüm yardımı ödeneği ve yakacak yardımı 926 sayılı Kanun, tayın bedeli 2155 sayılı Kanun, emniyet ve asayiş hizmeti muhtelif ücret ödemesi 2803 sayılı Kanun esaslarına göre ödenir; durumları uyanlar 2629 sayılı Kanun hükümlerinden faydalanır (m.21/1)",
+  "tuzak": "\"Tayın bedeli 926 sayılı Kanuna göre ödenir\" veya \"emniyet ve asayiş ücreti 926'ya göre ödenir\" yanlış; 2155 ve 2803",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-2",
+  "madde": [
+   "21"
+  ],
+  "baslik": "30 Ağustos terfi farkı",
+  "hukum": "Her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii onanan uzman jandarmalara, terfinin onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir (m.21/son)",
+  "tuzak": "\"Terfi farkı bir sonraki yılın başından itibaren ödenir\" veya \"tam aylık fark olarak ödenir\" yanlış; takip eden aybaşına kadar kıst",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-3",
+  "madde": [
+   "22"
+  ],
+  "baslik": "İlk atanmada aylığa hak kazanma",
+  "hukum": "İlk defa göreve atanan uzman jandarmalar, uzman jandarma çavuşluğa nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır; ancak uzman jandarma okullarından mezun olup yeni görev yerlerine ataması yapılanların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir (m.22)",
+  "tuzak": "\"Aylığa göreve başlama tarihinden itibaren hak kazanılır\" yanlış; nasıp tarihini takip eden aybaşından",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-4",
+  "madde": [
+   "23"
+  ],
+  "baslik": "Adaylara harçlık",
+  "hukum": "Uzman jandarma adaylarına okuldaki eğitim ve öğrenim süresince uzman jandarma çavuş rütbesinin birinci kademe brüt aylığının net tutarında harçlık ödenir; bu harçlıklar hiçbir kesintiye ve vergiye tabi değildir ve borç için haczedilemez (m.23)",
+  "tuzak": "\"Harçlık uzman jandarma çavuş aylığının brüt tutarı kadardır\" veya \"damga vergisi kesilir\" veya \"nafaka borcu için haczedilebilir\" yanlış; brüt aylığın net tutarı, hiçbir kesinti-vergi yok, haczedilemez",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-5",
+  "madde": [
+   "24"
+  ],
+  "baslik": "Yolluk ve gündelikler",
+  "hukum": "Uzman jandarma çavuşlarından görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir (m.24)",
+  "tuzak": "\"Yalnız sürekli görevle ayrılanlara yolluk ödenir\" yanlış; sürekli veya geçici",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-6",
+  "madde": [
+   "25"
+  ],
+  "baslik": "Mal bildirimi",
+  "hukum": "Uzman jandarmalar kendileri ile eşlerine ve velayet altındaki çocuklarına ait taşınır ve taşınmaz mallar, alacak ve borçları hakkında özel kanundaki hükümler uyarınca mal bildiriminde bulunur (m.25)",
+  "tuzak": "\"Yalnız taşınmaz mallar bildirilir\" veya \"anne-babanın malları da bildirilir\" yanlış; taşınır-taşınmaz, alacak-borç; kendisi, eşi, velayet altındaki çocukları",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-7",
+  "madde": [
+   "26"
+  ],
+  "baslik": "Emekli Sandığı, fiili hizmet zammı, OYAK",
+  "hukum": "Uzman jandarmalar 5434 sayılı Emekli Sandığı Kanunu ile ilgilendirilir ve bu Kanunun 32'nci maddesinin (a) fıkrasındaki fiili hizmet süresi zammından yararlanır; 205 sayılı Kanunla kurulan Ordu Yardımlaşma Kurumunun daimi üyesidirler (m.26/a-b)",
+  "tuzak": "\"OYAK'a isteğe bağlı üyedirler\" yanlış; daimi üyedirler",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-8",
+  "madde": [
+   "26"
+  ],
+  "baslik": "Emeklilik ayları",
+  "hukum": "Emeklilik hakkını kazananlar emekliliklerini Ocak, Şubat, Temmuz veya Ağustos ayları içinde isteyebilir; bu aylar dışındaki istemler ancak Jandarma Genel Komutanının hizmet gerekleri itibarıyla uygun görmesi hâlinde kabul edilebilir (m.26/c)",
+  "tuzak": "\"Bu aylar dışındaki istemler İçişleri Bakanının onayıyla kabul edilir\" yanlış; Jandarma Genel Komutanının uygun görmesi",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/personel/pack_138.json"
+ },
+ {
+  "kanun_id": 139,
+  "kanun": "5237 sayılı Türk Ceza Kanunu (sağlık branşı: m.240)",
+  "kart_id": "139-5",
+  "madde": [
+   "240"
+  ],
+  "baslik": "Maddede OLMAYAN unsurlar",
+  "hukum": "m.240 metninde fiyatın yüksek belirlenmesi, failin tekerrürü (daha önce mahkûm olması), mağdurun kamu görevlisi olması veya failin tacir olması gibi hiçbir ek şart yer almaz (m.240/1)",
+  "tuzak": "\"Malın fiyatının piyasa değerinin üzerinde belirlenmiş olması şarttır\" → yanlış; madde fiyat konusunu hiç düzenlemez, yalnız satmaktan kaçınmayı cezalandırır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/tabip/pack_139.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-14",
+  "madde": [],
+  "baslik": "Giriş: yaptırım",
+  "hukum": "Tedbirlerin uygulanması hassasiyetle takip edilecek, denetlenecek, raporlanacak ve aykırı hareket edenler hakkında gerekli yaptırımlar uygulanacaktır",
+  "tuzak": "\"yaptırım öngörülmemiştir\" denir. 2019/12'den farkı budur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-15",
+  "madde": [],
+  "baslik": "Genel ilke: bütçe sınırı",
+  "hukum": "Hizmetler ve yatırım projeleri bütçe sınırları içinde kalınarak, ayrılan kaynakların üzerinde harcamaya yol açmadan yürütülür; ilave yük oluşturacak faaliyet genişlemesine ve iş artışına gidilmez",
+  "tuzak": "\"ek ödenekle genişletilebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-16",
+  "madde": [],
+  "baslik": "Faaliyet alanı dışı harcama",
+  "hukum": "Kurumlar, kuruluş mevzuatındaki faaliyet alanlarıyla doğrudan ilgili olmayan harcama veya taahhütte bulunamaz; ihale şartname ve sözleşmelerine alım/yapım konusuyla ilgisiz araç, makine, ekipman temini dâhil edilemez",
+  "tuzak": "\"idarenin takdirindedir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-17",
+  "madde": [],
+  "baslik": "Hizmet binası yasağı",
+  "hukum": "3 yıl süreyle yurt içinde ve yurt dışında yeni hizmet binası alınmaz, kiralanmaz, yapılmaz; bu amaçla arsa/arazi satın alınmaz ve kamulaştırılmaz",
+  "tuzak": "süre 1 yıl veya 5 yıl yapılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-18",
+  "madde": [],
+  "baslik": "Hizmet binası istisnası",
+  "hukum": "Deprem riski nedeniyle yıkım kararı verilmişse, o hizmet için tahsis edilebilecek Hazine taşınmazının bulunmadığı tevsik edildikten sonra mevcut/tahsisli yerlere yeni inşaat yapılabilir",
+  "tuzak": "\"hiçbir istisna yoktur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-19",
+  "madde": [],
+  "baslik": "Taşıt yasağı",
+  "hukum": "3 yıl süreyle her ne şekilde olursa olsun yeni taşıt edinilmez; savunma ve güvenlik hizmetleri için ihtiyaç duyulan taşıtlar ile ambulans ve itfaiye araçları acil ve zorunlu hâllerde edinilebilir",
+  "tuzak": "savunma-güvenlik istisnası silinir. JGK/SGK için kritik istisnadır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-20",
+  "madde": [],
+  "baslik": "Elektrikli taşıt",
+  "hukum": "Kamu taşıtlarının yerli ve elektrikli taşıtlara dönüştürülmesi amacıyla, kullanımdaki taşıtların tasfiye edilmesi kaydıyla, kamu alım garantisi kapsamında elektrikli taşıt satın alınabilir",
+  "tuzak": "tasfiye şartı düşürülür",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-21",
+  "madde": [],
+  "baslik": "Demirbaş yasağı",
+  "hukum": "Zorunlu hâller hariç 3 yıl süreyle büro malzemesi, makine-teçhizat, tefrişat, bilgisayar ve donanımı ile benzeri demirbaş alımı yapılmaz; bu varlıklar ekonomik ömrü tamamlanmadan elden çıkarılmaz",
+  "tuzak": "bilgisayar donanımı istisna gibi gösterilir — MEBS için kritik",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-22",
+  "madde": [],
+  "baslik": "Bilgi işlem sistemleri",
+  "hukum": "Bilgi işlem sistemlerinin yenilenmesi ve genişletilmesinde hizmet ihtiyacının gerektirdiği özellikler ve kapasite dikkate alınır; yakın makam ve birimlerde fotokopi, faks vb. büro malzemeleri ortaklaşa kullanılır",
+  "tuzak": "\"en yüksek kapasite tercih edilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-23",
+  "madde": [],
+  "baslik": "Basın-yayın",
+  "hukum": "İdareyi tanıtmaya yönelik rapor, kitap, dergi, bülten vb. hiçbir şekilde basılmaz, elektronik ortamda hazırlanıp paylaşılır; hiçbir şekilde günlük gazete alımı yapılmaz, görev alanıyla ilgisiz yayına abone olunmaz",
+  "tuzak": "\"sınırlı sayıda basılabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-24",
+  "madde": [],
+  "baslik": "Personel görevlendirmeleri",
+  "hukum": "Hizmet içi eğitim, konferans, seminer, çalıştay, toplantı vb. faaliyetlerin uzaktan erişim yöntemleriyle yapılması esastır; yüz yüze zorunluysa kamu tesisleri kullanılır, görev süresi ve görevli sayısı asgari tutulur",
+  "tuzak": "\"yüz yüze esastır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-25",
+  "madde": [],
+  "baslik": "Temsil ve ağırlama",
+  "hukum": "Temsil ve ağırlama ödenekleri zorunlu hâller dışında kullanılmaz; uluslararası toplantılar ile millî bayramlar hariç açılış, konferans, yıl dönümü vb. için gezi, kokteyl, yemek, davet düzenlenmez, hediye verilmez; tebrik ve kutlama mesajları elektronik ortamda gönderilir; ajanda, takvim, plaket, hatıra, hediye, eşantiyon alınmaz, bastırılmaz, dağıtılmaz",
+  "tuzak": "millî bayram istisnası silinir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-26",
+  "madde": [],
+  "baslik": "Personel servisi",
+  "hukum": "Savunma ve güvenlik hizmetleri hariç; toplu taşıma olan yerlerde personel servisi sonlandırılır, hizmet alımıyla sağlanan servis sözleşme süresi bitimine kadar devam edebilir",
+  "tuzak": "savunma-güvenlik istisnası silinir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-27",
+  "madde": [],
+  "baslik": "Servis doluluk kuralı",
+  "hukum": "Servisten fiilen yararlanan kişi sayısı araç kapasitesinin %70'inin altına düşerse ilgili düzenleme uygulanır; yakın yerleşkelerdeki kurumların servisi birlikte ihale etmesi esastır",
+  "tuzak": "oran %50 veya %80 yapılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-28",
+  "madde": [],
+  "baslik": "Enerji ve su",
+  "hukum": "Kamu Binalarında Tasarruf Hedefi ve Uygulama Rehberindeki önlemlere uyulur; genel aydınlatmada LED dönüşümü ivedilikle uygulanır; alımlarda enerji verimliliği yüksek projeler ve enerji kullanımı düşük ürünler tercih edilir",
+  "tuzak": "rehberin adı değiştirilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-29",
+  "madde": [],
+  "baslik": "Uçuş milleri",
+  "hukum": "Satın alınan mal veya hizmet karşılığı tahakkuk eden her türlü aynî veya nakdî menfaatin (uçuş milleri vb.) şahıslarca tasarrufu önlenir, kurum tarafından kullanılması sağlanır",
+  "tuzak": "\"personele ait olur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-30",
+  "madde": [],
+  "baslik": "Üyelikler",
+  "hukum": "Mevzuattan kaynaklanan zorunluluklar dışında mesleki kuruluş veya derneklere üye olunmaz; uluslararası kuruluşlardaki mevcut üyelikler gözden geçirilip katkı sağlamayanlar sonlandırılır",
+  "tuzak": "\"üyelik serbesttir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haberleşme Giderleri)",
+  "kart_id": "142-31",
+  "madde": [],
+  "baslik": "Fatura ödemeleri",
+  "hukum": "Kurumlar ek mali yüklerle karşılaşmamak için fatura karşılığı ödemelerini ve diğer yükümlülüklerini zamanında yerine getirir",
+  "tuzak": "\"ödemeler ertelenerek tasarruf sağlanır\" denir; Genelge tam tersini söyler",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/mebs/pack_142.json"
+ },
+ {
+  "kanun_id": 143,
+  "kanun": "2872 sayılı Çevre Kanunu",
+  "kart_id": "143-4",
+  "madde": [
+   "20"
+  ],
+  "baslik": "İdarî cezaların yapısı",
+  "hukum": "Egzoz emisyon ölçümü yaptırmayan araç sahibine, katalitik konvertörsüz araç kullanana, izinsiz emisyon ölçümü yapan ve belgede tahrifat yapanlara; hava kirliliği yönünden izne tâbi tesisi izinsiz kuran ve işletene, emisyon sınırını aşana; ısıtma kaynaklı kirlilikte toplu ısıtılan konutlarda yöneticiye, ferdî ısıtılanlarda konutu kullanana; hava kirliliğinin ciddi boyuta ulaştığı yerlerde önlem almayana bir kat artırılmış ceza; ÇED sürecini tamamlamadan inşaata başlayana proje bedelinin yüzde ikisi; ÇED taahhüdüne aykırı davranana her ihlal için ceza ve alanı eski hâle getirme yükümlülüğü; atık arıtma tesisi kurmayan veya çalıştırmayana ağır ceza (Marmara havzasında iki kat); gürültü ve titreşimde konut, ulaşım aracı, işyeri ve fabrika-şantiye-eğlence yeri için kademeli ceza; denize petrol, kirli balast, evsel atık su ve katı atık boşaltan tanker ve gemilere groston başına ceza verilir (m.20)",
+  "tuzak": "toplu ısıtılan konutta ceza \"konutu kullanana\" verilir denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_143.json"
+ },
+ {
+  "kanun_id": 143,
+  "kanun": "2872 sayılı Çevre Kanunu",
+  "kart_id": "143-6",
+  "madde": [
+   "27"
+  ],
+  "baslik": "Diğer kanunlardaki cezalar",
+  "hukum": "Bu Kanundaki fiiller için verilecek idarî cezalar, aynı fiiller için diğer kanunlarda yazılı cezaların uygulanmasına engel olmaz (m.27)",
+  "tuzak": "",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/eczaci/pack_143.json"
+ }
+]

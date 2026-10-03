@@ -1,0 +1,20 @@
+[
+ {
+  "kanun_id": 48,
+  "kart_id": "48-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Adet satış yasağına büfe istisnası eklendi; elektronik ortamda satış yasağı kaldırıldı; eğitim yerleşkelerindeki satış yasağı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tütün ürünleri, satış belgesi bulunan büfelerde paket açılarak adet şeklinde satılabilir.”",
+    "“Tütün ürünleri, satış belgesi olan işletmelerce internet üzerinden satılabilir.”",
+    "“Üniversite yerleşkelerindeki büfelerde tütün ürünleri satışı yapılabilir.”"
+   ],
+   "dogrusu": [
+    "Tütün ürünleri hiçbir satış yerinde paket açılarak adet şeklinde veya küçük paketlere bölünerek satılamaz (m.3/10)",
+    "Tütün ürünleri otomatik makinelerle, telefon, televizyon ve internet gibi elektronik ortamlarla satılamaz (m.3/11)",
+    "Sağlık, eğitim-öğretim, kültür ve spor hizmeti verilen yerlerde ve bunların yerleşkelerinde tütün ürünü satılamaz (m.3/7)"
+   ]
+  }
+ }
+]

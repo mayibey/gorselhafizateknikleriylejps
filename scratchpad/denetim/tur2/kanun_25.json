@@ -1,0 +1,635 @@
+{
+ "kanun_id": 25,
+ "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_25.json",
+ "kartlar": [
+  {
+   "id": "25-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kanunun kapsamı",
+   "hukum": "Ateşli silahlar, mermileri, silahın ana veya balistik önemi haiz parçaları (namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesi) ve salt saldırı-savunma için yapılmış bıçak/aletlerin ülkeye sokulması, yapılması, satılması, satın alınması, taşınması veya bulundurulması bu Kanuna tabidir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "sadece silah ve mermi sayılıp \"parçalar kapsam dışıdır\" denir; parçalar da kapsamdadır"
+   ],
+   "dogrusu": [
+    "Ateşli silahlar …"
+   ]
+  },
+  {
+   "id": "25-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yapımı yasak aletler",
+   "hukum": "Kama, hançer, saldırma, şişli baston, sustalı çakı, pala, kılıç, kasatura, süngü, sivri uçlu ve oluklu bıçaklar, topuz, topuzlu kamçı, boğma teli veya zinciri, muşta ile salt saldırı-savunmada kullanılan benzeri aletlerin ülke içinde yapımı yasaktır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"av tüfeği\" veya \"mutfak bıçağı\" eklenir; onlar bu listede yok"
+   ],
+   "dogrusu": [
+    "Kama …"
+   ]
+  },
+  {
+   "id": "25-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yasak alete izin",
+   "hukum": "Bunlardan bir sanat veya mesleğin icrası için kullanılması zorunlu olanların yapımına, İçişleri Bakanlığınca çıkarılacak yönetmelikteki kurallara göre izin verilir (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "izni valilik veya Millî Savunma Bakanlığı verir denir"
+   ],
+   "dogrusu": [
+    "Bunlardan bir sanat veya mesleğin icrası için kullanılması zorunlu olanların yapımına, İçişleri Bakanlığınca çıkarılacak yönetmelikteki kurallara göre …"
+   ]
+  },
+  {
+   "id": "25-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kanuna tabi olmayanlar",
+   "hukum": "Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri, yivsiz tüfekler ve mermileri, ev gereçleri ile tababet, sanayi, tarım, spor aletleri ve bir meslek/sanat icrası için gerekli bıçak, şiş, raspa ve benzerleri bu Kanuna tabi değildir (m.4/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yivsiz tüfek de 6136'ya tabidir\" denir; tabi değildir"
+   ],
+   "dogrusu": [
+    "Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri …"
+   ]
+  },
+  {
+   "id": "25-4",
+   "madde": [
+    "7",
+    "4"
+   ],
+   "baslik": "Avda/sporda yivli silah",
+   "hukum": "Avda veya sporda kullanılan her nevi ateşli yivli silahlar m.7'ye göre ruhsata tabidir (m.4/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"av silahı olduğu için ruhsat gerekmez\" denir; yivli olan ruhsata tabidir"
+   ],
+   "dogrusu": [
+    "Avda/sporda yivli silah"
+   ]
+  },
+  {
+   "id": "25-5",
+   "madde": [
+    "4",
+    "5"
+   ],
+   "baslik": "Yasak bıçaklarda dört fiil",
+   "hukum": "Yurda sokulması ve yapımı yasaklanan, m.4/1 kapsamındaki bıçak ve aletlerin satılması, satın alınması, taşınması ve bulundurulması yasaktır; sanat/meslek için izin verilenler bu yasağın dışındadır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece taşınması yasaktır\" denerek fiil sayısı daraltılır"
+   ],
+   "dogrusu": [
+    "Yurda sokulması ve yapımı yasaklanan …"
+   ]
+  },
+  {
+   "id": "25-6",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Yurda sokma yasağı ve istisnası",
+   "hukum": "Ateşli silah, mermi ve saldırı-savunma aletlerinin ülkeye sokulması yasaktır; diplomatik ayrıcalıklı kişiler ile dış temsilciliklerimizdeki elçi, konsolos, subay ve güvenlik memurlarına tek bir silah ve mermisi için, resmî görevle yurt dışına gidip kendisine silah armağan edilenlere ise armağanın belgelenmesi koşuluyla izin verilir; yurt dışına kıta ile gönderilen subay ve astsubayların kimlik kartlarında kayıtlı silahları için yurda girişte izin aranmaz (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "istisna \"sınırsız sayıda silah\" gibi gösterilir; tek silahla sınırlıdır"
+   ],
+   "dogrusu": [
+    "tek bir silaha ve mermisine (m.2)"
+   ]
+  },
+  {
+   "id": "25-7",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Ruhsat süresi",
+   "hukum": "Taşıma ve bulundurma ruhsatları, yenileme harcı alınmak şartıyla beş yıl için geçerlidir (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "üç yıl veya on yıl denir"
+   ],
+   "dogrusu": [
+    "beş yıl (m.6/1)"
+   ]
+  },
+  {
+   "id": "25-8",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Sebebin ortadan kalkması",
+   "hukum": "Ruhsatın veriliş sebebi ortadan kalkarsa ruhsat sahibi durumu ruhsatı veren makama altı ay içinde bildirmekle yükümlüdür; bildirmeyenler ile süresi dolduğu hâlde altı ay içinde yenilemeyenlerin ruhsatı iptal edilir (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre bir ay/bir yıl yapılır ya da \"kendiliğinden geçerli kalır\" denir"
+   ],
+   "dogrusu": [
+    "altı ay içinde (m.6/1)"
+   ]
+  },
+  {
+   "id": "25-9",
+   "madde": [
+    "6"
+   ],
+   "baslik": "İptalden sonra yeniden ruhsat",
+   "hukum": "Gerekli şartları taşıyanlara üçbin Türk Lirası idari para cezası ödemeleri kaydıyla tekrar ruhsat verilebilir; bu idari para cezasını vermeye mülki amir yetkilidir (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "cezayı mahkeme veya Cumhuriyet savcısı verir denir"
+   ],
+   "dogrusu": [
+    "üçbin Türk Lirası · mülki amir (m.6/1)"
+   ]
+  },
+  {
+   "id": "25-10",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Süre kaydı aranmayanlar",
+   "hukum": "Cumhurbaşkanı, Cumhurbaşkanı yardımcıları, bakanlar, TBMM üyeleri, Genelkurmay Başkanı, Kuvvet Komutanları, Jandarma Genel Komutanı, Sahil Güvenlik Komutanı, Emniyet Genel Müdürü gibi görevlerde bulunanlar ile gazilerin ve şehit/gazi yakınlarının ruhsatlarında süre kaydı aranmaz (m.6/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"herkesin ruhsatı beş yıllıktır\" denerek istisna silinir"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı, Cumhurbaşkanı yardımcıları …"
+   ]
+  },
+  {
+   "id": "25-11",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Mermi ruhsatı",
+   "hukum": "Ruhsata bağlanmış silahlara ait yerli ve yabancı menşeli mermiler için ayrıca ruhsat aranmaz; silah ruhsatı mermiler için de geçerlidir (m.6/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"mermi için ayrı ruhsat gerekir\" denir"
+   ],
+   "dogrusu": [
+    "Mermi ruhsatı"
+   ]
+  },
+  {
+   "id": "25-12",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Taşıma ruhsatının geçerli olmadığı yer",
+   "hukum": "Silah taşıma ruhsatları nereden verilmiş olursa olsun Ek 1 inci maddede sayılan yerler dışında geçerlidir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"ruhsatlı silah her yere sokulabilir\" denir"
+   ],
+   "dogrusu": [
+    "dışında (m.6)"
+   ]
+  },
+  {
+   "id": "25-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kimler taşıyabilir/bulundurabilir",
+   "hukum": "Cumhurbaşkanı, bakanlar, yasama organı üyeleri ve bu görevlerde bulunmuş olanlar; özel kanununa göre yetkili olanlar; Cumhurbaşkanı kararıyla belirlenen kamu görevlileri; sayılan emekli asker/mülki/adli/emniyet personeli; valilerce verilen izin vesikasını alanlar; güvenlik korucuları; en az bir dönem muhtarlık veya belediye başkanlığı yapmış olanlar (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "tart, ihraç, meslekten çıkarma veya ayırma işlemine tabi tutulanların da yararlandığı söylenir; onlar açıkça hariç tutulmuştur"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı …"
+   ]
+  },
+  {
+   "id": "25-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Emekli uzman erbaş şartı",
+   "hukum": "Uzman erbaşların bu haktan yararlanması için en az on yıl görev yapıp sözleşmesinin uzatılmaması veya kendi isteğiyle ayrılmış olması gerekir; Emniyet hizmetleri sınıfı personeli için de istifa/kurum değiştirmede en az on yıl şartı vardır (m.7/1-4/A)",
+   "sinavda_boyle_yazarlar": [
+    "süre beş yıl gösterilir"
+   ],
+   "dogrusu": [
+    "on yıl (m.7/1-4/A)"
+   ]
+  },
+  {
+   "id": "25-15",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Bölgesel izin ve toplu arama",
+   "hukum": "Lüzum görülen mıntıkalarda Cumhurbaşkanı kararıyla valiler tarafından halka silah bulundurma ve taşıma müsaadesi verilebileceği gibi toplu silah araması da yapılabilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "yetki doğrudan valiye ya da İçişleri Bakanlığına verilmiş gösterilir; Cumhurbaşkanı kararı şarttır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı kararıyla valiler (m.8)"
+   ]
+  },
+  {
+   "id": "25-16",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Devir yasağı",
+   "hukum": "Taşıma müsaadesi olanlar silahlarını resmî ruhsatı olmayan kimseye satamaz, geçici de olsa başkasına veremez (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"kısa süreli emanet serbesttir\" denir"
+   ],
+   "dogrusu": [
+    "geçici de olsa (m.9)"
+   ]
+  },
+  {
+   "id": "25-17",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Vesikanın geri alınması",
+   "hukum": "Ruhsat sahibinin silahıyla suç işlemesi veya muhafazadaki ihmal/kusuru sonucu başkasınca suç işlenmesi ya da intihar veya teşebbüs edilmesi hâlinde silah vesikası geri alınır ve bir daha bulundurma/taşıma izni verilmez (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"beş yıl sonra yeniden verilir\" denir; bu hâlde süresiz yasaktır"
+   ],
+   "dogrusu": [
+    "bir daha (m.9)"
+   ]
+  },
+  {
+   "id": "25-18",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İkinci kayıp/çalıntı",
+   "hukum": "İkinci kez silahı çalınan veya ikinci kez kaybedenlere yeni müracaatında tek bir silah için izin verilebilir; üçüncü kez çalınan veya kaybedilende vesika geri alınır ve fiil tarihinden itibaren beş yıl geçmeden izin verilmez (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"ikinci kayıpta izin hiç verilmez\" denir"
+   ],
+   "dogrusu": [
+    "tek bir silah · üçüncü · beş yıl (m.9)"
+   ]
+  },
+  {
+   "id": "25-19",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Zoralım silahları",
+   "hukum": "Mahkemelerce zoralımına karar verilen veya güvenlik kuvvetlerince ele geçirilen ateşli silah, mermi ve bıçaklar bir tutanak karşılığı Millî Savunma Bakanlığı emrine verilir; bu silahlardan MSB, Jandarma Genel Komutanlığı, Emniyet Genel Müdürlüğü, MİT ve Gümrükler Muhafazanın ihtiyaçları öncelikle karşılanır (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "İçişleri Bakanlığı, Emniyet Genel Müdürlüğü veya valilik denir"
+   ],
+   "dogrusu": [
+    "tutanak karşılığı Millî Savunma Bakanlığı emrine (m.10)"
+   ]
+  },
+  {
+   "id": "25-20",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Hatıra ve antika silah",
+   "hukum": "Hatıra teşkil eden veya antika olan ateşli silahlarla bıçakların bulundurulmasına izin verilmesi zorunludur (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"bunlar için bulundurma izni verilmez\" denir; tersi doğrudur"
+   ],
+   "dogrusu": [
+    "bulundurulmasına izin verilmesi zorunludur (m.11)"
+   ]
+  },
+  {
+   "id": "25-21",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Antika silahın taşınması",
+   "hukum": "Antika silah/bıçak için verilen izin, yalnız sahibine bırakılmasına veya nakline müsaadeyi kapsar; üstte taşımaya cevaz vermez; izin vesikasıyla birlikte satışı serbesttir; antika silah, eskiden kalma, değerli belli bir özelliği olan, benzerine az rastlanan ve artık imal edilmeyen silahtır (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"antika silah her zaman taşınabilir\" denir"
+   ],
+   "dogrusu": [
+    "üstte taşımaya cevaz vermez (m.11)"
+   ]
+  },
+  {
+   "id": "25-22",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Silah kaçakçılığı (temel ceza)",
+   "hukum": "Ateşli silahı, mermilerini veya ana/balistik parçalarını ülkeye sokan, sokmaya kalkışan, aracılık eden, ülkede yapan, bir yerden bir yere taşıyan/yollayan, satan, satmaya aracılık eden veya bu amaçla bulunduran: beş yıldan oniki yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezası (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "alt sınır üç yıl ya da adlî para \"beşyüz güne kadar\" gösterilir"
+   ],
+   "dogrusu": [
+    "beş yıldan oniki yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezası (m.12/1)"
+   ]
+  },
+  {
+   "id": "25-23",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Birlikte işleme",
+   "hukum": "m.12/1'deki suçları (örgüt hâli dışında) iki veya daha çok kişinin birlikte işlemesi hâlinde: sekiz yıldan onbeş yıla kadar hapis ve bin günden onbin güne kadar adlî para cezası (m.12/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"cezası yarı oranında artırılır\" denir; burada ayrı ve ağır bir ceza sınırı vardır"
+   ],
+   "dogrusu": [
+    "iki veya daha çok kişinin birlikte (m.12/2)"
+   ]
+  },
+  {
+   "id": "25-24",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Örgüt faaliyeti",
+   "hukum": "m.12/1'deki fiillerin suç işlemek amacıyla kurulmuş bir örgütün faaliyeti çerçevesinde işlenmesi hâlinde cezalar bir kat artırılır (m.12/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yarı oranında artırılır\" denir"
+   ],
+   "dogrusu": [
+    "bir kat (m.12/3)"
+   ]
+  },
+  {
+   "id": "25-25",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Nitelikli silah / vahim miktar",
+   "hukum": "Silahın tüfek olması ya da seri ateşli, kısa sürede çok sayıda ve etkili biçimde mermi atabilen tam otomatik, dürbünlü, susturuculu veya hedef noktalayıcı aparat takılı tabanca veya benzeri olması, yahut bu nitelikte olmayan silah/mermi/parçaların miktar bakımından vahim olması hâlinde cezalar yarı oranında; bu nitelikli silahlar ayrıca miktar bakımından vahim ise bir kat artırılır (m.12/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "listede olmayan \"dürbünsüz tabanca\" nitelikli hâl gibi gösterilir"
+   ],
+   "dogrusu": [
+    "tam otomatik, dürbünlü, susturuculu veya hedef noktalayıcı aparat takılı tabanca · yarı oranında · bir kat (m.12/4-5)"
+   ]
+  },
+  {
+   "id": "25-26",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Kurusıkı silahın dönüştürülmesi",
+   "hukum": "Ses veya gaz fişeği atabilen silahı teknik özelliklerini değiştirerek bu Kanuna tabi silah hâline getirmek üretim sayılır ve m.12'ye göre cezalandırılır; dönüştürülen silah sayı ve nitelik bakımından vahim değilse ceza üçte birinden yarısına kadar indirilir (m.12 son)",
+   "sinavda_boyle_yazarlar": [
+    "\"kurusıkı silah her hâlde Kanun kapsamı dışıdır\" denir"
+   ],
+   "dogrusu": [
+    "üretim · üçte birinden yarısına kadar (m.12 son)"
+   ]
+  },
+  {
+   "id": "25-27",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Satın alma, taşıma, bulundurma",
+   "hukum": "Ateşli silahı, mermilerini, ana/balistik parçalarını veya dönüştürülmüş silahı satın alan, taşıyan ya da bulunduran: iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezası (m.13/1)",
+   "sinavda_boyle_yazarlar": [
+    "eski metindeki \"bir yıldan üç yıla kadar hapis, otuz günden yüz güne kadar adlî para\" değerleri verilir; bunlar değişmiştir"
+   ],
+   "dogrusu": [
+    "iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezası (m.13/1)"
+   ]
+  },
+  {
+   "id": "25-28",
+   "madde": [
+    "12",
+    "13"
+   ],
+   "baslik": "Nitelikli/vahim hâlde bulundurma",
+   "hukum": "Silah m.12/4'te sayılanlardan ise veya silah/mermi/parçalar sayı ya da nitelik bakımından vahim ise: beş yıldan sekiz yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezası (m.13/2)",
+   "sinavda_boyle_yazarlar": [
+    "m.12/1 cezasıyla karıştırılır"
+   ],
+   "dogrusu": [
+    "Silah m.12/4'te sayılanlardan ise veya silah/mermi/parçalar sayı ya da nitelik bakımından vahim ise: beş yıldan sekiz yıla kadar hapis ve beşyüz günde …"
+   ]
+  },
+  {
+   "id": "25-29",
+   "madde": [
+    "12",
+    "13"
+   ],
+   "baslik": "Evde/işyerinde tek silah",
+   "hukum": "m.12/4 dışındaki silahın bir adet olması ve mutat sayıdaki mermilerinin/parçalarının ev veya işyerinde bulundurulması hâlinde: bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezası (m.13/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tek silah olunca ceza verilmez\" denir"
+   ],
+   "dogrusu": [
+    "bir adet · ev veya işyerinde (m.13/3)"
+   ]
+  },
+  {
+   "id": "25-30",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Pek az sayıda mermi",
+   "hukum": "Mermilerin veya parçaların pek az sayıda bulundurulması/taşınması mahkemece vahim görülmezse: altı aya kadar hapis ve otuz günden beşyüz güne kadar adlî para cezası (m.13/4)",
+   "sinavda_boyle_yazarlar": [
+    "vahim olup olmadığını kolluğun takdir ettiği söylenir; takdir mahkemenindir"
+   ],
+   "dogrusu": [
+    "altı aya kadar hapis ve otuz günden beşyüz güne kadar (m.13/4)"
+   ]
+  },
+  {
+   "id": "25-31",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ruhsat işlemlerinde aykırılık",
+   "hukum": "Vefat, sağlık durumu, mahkûmiyet, müsadere, satın alma veya devir nedeniyle yapılan ruhsatlandırma ya da yenileme işlemlerinde yükümlülüklere aykırı davranılarak bulundurma/taşıma: onbin TL'den yirmibeşbin TL'ye kadar idari para cezası; nakil izin belgesi almadan silahını mesken/işyeri değişikliğiyle nakledene de aynı ceza verilir ve bu cezayı vermeye mülki idare amiri yetkilidir (m.13/5-7)",
+   "sinavda_boyle_yazarlar": [
+    "hapis cezası verildiği ya da cezayı mahkemenin verdiği söylenir; bu hâl mülki idare amirinin verdiği idari para cezasıdır"
+   ],
+   "dogrusu": [
+    "onbin TL'den yirmibeşbin TL'ye kadar idari para cezası · mülki idare amiri (m.13/5-7)"
+   ]
+  },
+  {
+   "id": "25-32",
+   "madde": [
+    "4",
+    "14"
+   ],
+   "baslik": "Bıçak kaçakçılığı",
+   "hukum": "m.4'teki bıçak veya aletleri ülkeye sokan, sokmaya kalkışan, aracılık eden, ülkede yapan, bir yerden bir yere taşıyan veya yollayan: iki yıldan beş yıla kadar hapis ve ikiyüz günden az olmamak üzere adlî para cezası; niteliği veya sayıca azlığı hâlinde ceza yarısına kadar indirilir; teşekkül kuran, yöneten veya mensubu olanlar için ceza beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasıdır (m.14/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "indirim \"üçte bir\" gösterilir"
+   ],
+   "dogrusu": [
+    "iki yıldan beş yıla kadar hapis ve ikiyüz günden az olmamak üzere · yarısına kadar (m.14/1-2)"
+   ]
+  },
+  {
+   "id": "25-33",
+   "madde": [
+    "4",
+    "15"
+   ],
+   "baslik": "Yasak bıçağı bulundurma",
+   "hukum": "m.4'teki bıçak veya diğer aletleri satan, satmaya aracılık eden, satın alan, taşıyan veya bulunduran: altı aydan bir yıla kadar hapis ve yirmibeş günden az olmamak üzere adlî para cezası; sayı veya nitelik vahimse ceza yarıdan bir katına kadar artırılır; izin verilen bıçakları kullanma amacı dışında satan, taşıyan veya bulunduranlara da aynı cezalar verilir (m.15/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "bıçak cezası ateşli silah cezasıyla eşitlenir"
+   ],
+   "dogrusu": [
+    "altı aydan bir yıla kadar hapis ve yirmibeş günden az olmamak üzere · yarıdan bir katına kadar (m.15/1-3)"
+   ]
+  },
+  {
+   "id": "25-34",
+   "madde": [
+    "4",
+    "15"
+   ],
+   "baslik": "Sırf saldırı amacıyla taşıma",
+   "hukum": "m.4/3'teki yivli ve yivsiz silahlarla bıçak ve diğer aletleri, hâl ve şartlara göre sırf saldırıda kullanmak amacıyla taşıyanlar: üç aya kadar hapis veya adlî para cezası (m.15/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"hapis ve adlî para birlikte\" denir; burada seçimlik cezadır"
+   ],
+   "dogrusu": [
+    "üç aya kadar hapis veya adlî para cezası (m.15/4)"
+   ]
+  },
+  {
+   "id": "25-35",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Silah taşınamayacak yerler",
+   "hukum": "Duruşmalarda ve mahkeme salonlarında, hastanelerin psikiyatri bölümlerinde, akıl hastanelerinde, ceza ve tutukevleri ile ıslah/infaz kurumları ve eklentilerinde; öğrenci yurtlarında, eğitim-öğretim kurumlarında, siyasi parti toplantılarında, izinli/izinsiz toplantı ve gösteri yürüyüşlerinde, sendika ve derneklerde, spor karşılaşmalarında, grev-lokavt yapılan işyerlerinde; TBMM ana binaları ile Meclis Başkanlığınca belirlenen yerlerde ateşli silah taşınamaz (Ek m.1/A-B-C)",
+   "sinavda_boyle_yazarlar": [
+    "bu yerlerde \"ruhsatlı silah taşınabilir\" denir ya da listeye ibadethane/kamu binası gibi sayılmayan yer eklenir"
+   ],
+   "dogrusu": [
+    "Duruşmalarda ve mahkeme salonlarında …"
+   ]
+  },
+  {
+   "id": "25-36",
+   "madde": [
+    "4",
+    "174",
+    "1"
+   ],
+   "baslik": "Yasak yerde silah — iki kat",
+   "hukum": "Bu yerlerde Kanuna aykırı olarak ateşli silah, mermi, m.4'teki bıçak/aletleri veya TCK m.174'te yazılı olanları taşıyan ya da bulunduranlar hakkında ilgili kanunlardaki cezaların iki katı hükmolunur (Ek m.1)",
+   "sinavda_boyle_yazarlar": [
+    "artırım \"yarı oranında\" gösterilir"
+   ],
+   "dogrusu": [
+    "iki katı"
+   ]
+  },
+  {
+   "id": "25-37",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Yasak yerde ruhsatlı silah",
+   "hukum": "Bu yerlere silahla giren veya buralarda silah taşıyanlar, fiil daha ağır cezayı gerektiren başka bir suç oluşturmazsa elli günden az olmamak üzere adlî para cezası ile cezalandırılır; ayrıca ruhsatları bulundurmaya çevrilir ve adlî para cezasının infazından ya da düşmesinden itibaren beş yıl geçmeden taşıma ruhsatı verilmez (Ek m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ruhsat tamamen iptal edilir\" ya da süre üç yıl denir"
+   ],
+   "dogrusu": [
+    "elli günden az olmamak üzere adlî para cezası · bulundurmaya · beş yıl"
+   ]
+  },
+  {
+   "id": "25-38",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Turist avcı ve yarışmacı yabancılar",
+   "hukum": "Kara Avcılığı Kanununa göre izin alıp turist olarak avlanmak ya da Gençlik ve Spor Bakanlığınca düzenlenen atıcılık yarışmalarına katılmak için gelen yabancılar, miktarı yönetmelikte belirtilen yivli/yivsiz tüfek ile nişan tüfek ve tabancalarını gümrük makamlarına beyan etmek ve giriş kapısı emniyet makamlarından izin almak koşuluyla geçici olarak yurda sokabilir; antlaşmayla görevli gelenler ile bilimsel araştırma için gelenler ise İçişleri Bakanlığı Emniyet Genel Müdürlüğünden izin alır; silahlar pasaporta kaydolunur ve bu kayıt taşıma izin vesikası yerine geçer (Ek m.4)",
+   "sinavda_boyle_yazarlar": [
+    "iznin İçişleri Bakanlığından alındığı söylenir; turist avcıda izin giriş kapısı emniyet makamınındır"
+   ],
+   "dogrusu": [
+    "gümrük makamlarına beyan etmek ve giriş kapısı emniyet makamlarından izin almak"
+   ]
+  },
+  {
+   "id": "25-39",
+   "madde": [
+    "12",
+    "13",
+    "5"
+   ],
+   "baslik": "Askerî savaş silahları",
+   "hukum": "m.12 ve m.13'e aykırı eylemler top, havan, roketatar, uçaksavar, tanksavar, ağır ve hafif makinalı tüfek ve benzeri askerî amaçlı savaş silahlarına veya mermilerine ilişkinse cezalar bir kat artırılır (Ek m.5)",
+   "sinavda_boyle_yazarlar": [
+    "artırım yarı oranında gösterilir"
+   ],
+   "dogrusu": [
+    "bir kat"
+   ]
+  },
+  {
+   "id": "25-40",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Bulundurma ruhsatı iki türlüdür",
+   "hukum": "Silah ruhsatı almasına mani hâli olmayan her Türk vatandaşı bulundurmak maksadıyla silah satın alabilir; bulundurma ruhsatı mesken ya da işyeri için olmak üzere iki şekilde verilir (Ek m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"bulundurma ruhsatı hem mesken hem işyerini birlikte kapsar\" denir"
+   ],
+   "dogrusu": [
+    "mesken · işyeri"
+   ]
+  },
+  {
+   "id": "25-41",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Nakil belgesi",
+   "hukum": "Bulundurma ruhsatlı silahın bir yerden başka yere nakli için mahallin en büyük mülki amirinin vereceği nakil belgesi gerekir; bu belge atış poligonuna gidiş-dönüş için de geçerlidir ve silah belgede yazılı gün ve güzergâh dışında dışarı çıkarılamaz (Ek m.7)",
+   "sinavda_boyle_yazarlar": [
+    "belgeyi kolluk birimi verir denir ya da \"poligon için ayrı izin gerekir\" denir"
+   ],
+   "dogrusu": [
+    "mahallin en büyük mülki amirinin"
+   ]
+  },
+  {
+   "id": "25-42",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Zati demirbaş silah",
+   "hukum": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığınca temin edilen tabanca ve mermiler, kendi bünyelerindeki subay, astsubay, uzman jandarma ve uzman erbaşlara görevlerinde kullanmak üzere bedeli mukabili zati demirbaş silah olarak satılır (Ek m.8)",
+   "sinavda_boyle_yazarlar": [
+    "silahın bedelsiz verildiği ya da erbaş/erleri de kapsadığı söylenir"
+   ],
+   "dogrusu": [
+    "subay, astsubay, uzman jandarma ve uzman erbaşlara"
+   ]
+  },
+  {
+   "id": "25-43",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Poligon açma izni",
+   "hukum": "Kamu kuruluşlarının poligonları dışında, özel şahısların trap-skeet, atış alanı ile tabanca ve tüfek atış poligonu açması İçişleri Bakanlığının iznine tabidir (Ek m.11)",
+   "sinavda_boyle_yazarlar": [
+    "izni valilik veya Gençlik ve Spor Bakanlığı verir denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığının"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

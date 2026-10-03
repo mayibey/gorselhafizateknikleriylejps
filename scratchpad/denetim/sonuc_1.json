@@ -1,0 +1,976 @@
+[
+ {
+  "kanun_id": 1,
+  "kart_id": "1-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız kart başlığı var, yanlışın düzeltilmiş hali yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kanunun suç saymadığı fiil için ceza verilemez ama güvenlik tedbiri uygulanabilir"
+   ],
+   "dogrusu": [
+    "Kanunun açıkça suç saymadığı fiil için ne ceza verilir ne de güvenlik tedbiri uygulanır (m.2/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız 'Amaç' yazıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "TCK'nın amacı: kişi hak ve özgürlükleri, kamu düzen ve güvenliği, hukuk devleti, kamu sağlığı ve çevre, toplum barışını korumak ve suç işlenmesini önlemektir; 'ekonomik düzen' sayılmaz (m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…'); yanlıştaki 'ayrıcalık tanınamaz' kısmını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kişiler arasında ayrım yapılamaz ve hiçbir kimseye ayrıcalık tanınamaz (m.3/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ceza kanunlarını bilmemek mazeret sayılmaz; haklı sebep istisnası yoktur (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-8",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Yanlış münhasır ekonomik bölge/yabancı bayraklı gemi hakkında; doğrusu 'savaş · sabit platformlar' bunu düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kıta sahanlığında veya münhasır ekonomik bölgede kurulu sabit platformlarda işlenen suç da Türkiye'de işlenmiş sayılır; açık denizde yalnız Türk deniz ve hava araçları sayılır, yabancı bayraklı gemi sayılmaz (m.8/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız 'Şahsilik' yazıyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ceza sorumluluğu şahsidir; ancak kanunda belirtilen hâllerde kişi başkasının fiilinden de sorumlu tutulabilir"
+   ],
+   "dogrusu": [
+    "Ceza sorumluluğu şahsidir; kimse başkasının fiilinden dolayı sorumlu tutulamaz (m.20/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu bozuk parçalardan oluşuyor ('abilir · üçte bir · abilir').",
+  "duzeltme": {
+   "dogrusu": [
+    "Azmettireni ortaya çıkarana ağırlaştırılmış müebbet yerine 20-25 yıl, müebbet yerine 15-20 yıl hükmolunabilir; diğer hâllerde üçte bir indirim yapılabilir — zorunlu değil, takdiridir (m.38/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('(a) Teşvik etmek …'); yanlıştaki müşterek faillik karışıklığını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yardım eden: teşvik eden/kararı kuvvetlendiren/sonradan yardım vaat eden, yol gösteren/araç sağlayan, icrayı kolaylaştıran (m.39/2); fiili birlikte gerçekleştiren ise yardım eden değil, faildir (m.37/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İkinci yanlış cümlesi kırpılmış ve bozuk ('Aynı suç sayılmaz\" — MEBS 2024'ün doğru cevabı').",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir suçun temel şekli ile daha ağır veya daha az cezayı gerektiren nitelikli şekilleri aynı suç sayılmaz"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu tek kelime ('yağma'); istisna listesini vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Zincirleme suç hükmü yalnız kasten öldürme, kasten yaralama, işkence ve yağmada uygulanmaz; hırsızlık bu listede yoktur (m.43/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-57",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Menfaat temin edilmiş gibi aynı cezaya hükmolunur' anlaşma hâli için resmî metne göre doğrudur (m.255/2); yanlışın kabul edilmeyen talep/teklife ait olduğu belirtilmemiş.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Nüfuz ticaretinde menfaat talebi veya teklifi kabul edilmese de aynı ceza verilir, indirim yapılmaz"
+   ],
+   "dogrusu": [
+    "Anlaşmaya varılırsa suç tamamlanmış gibi ceza verilir (m.255/2); talep veya teklif kabul edilmezse ceza yarı oranında indirilir (m.255/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 1,
+  "kart_id": "1-78",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart para değerini düşürme (m.323/4-5) hakkında; doğrusu haber yayma suçunun ağırlaştırıcılarını (m.323/2) veriyor, artırım oranlarını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Para değerini düşürme yabancıyla anlaşma sonucu işlenirse ceza yarısı, düşmanla anlaşma sonucu işlenirse bir katı oranında artırılır (m.323/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 11,
+  "kart_id": "11-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "'Bayrağın onarılması yasak değildir' resmî metinde yok; m.7 yamalı bayrağın kullanılmasını yasaklıyor, doğrusu yanıltıcı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yamalı veya soluk bayrak, yırtık olmadığı sürece kullanılabilir"
+   ],
+   "dogrusu": [
+    "Bayrak yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk veya manevi değerini zedeleyecek şekilde kullanılamaz (m.7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Şiddet veya şiddet tehlikesini herkes yazılı, sözlü veya başka bir suretle ihbar edebilir (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşları şiddeti derhâl şikâyet mercilerine bildirmek zorundadır (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Şikâyet mercileri yalnız kolluk, mülki amir, Cumhuriyet başsavcılığı, hâkim (aile mahkemesi hâkimi) ve Bakanlığın ilgili birimleridir (m.3/1-r, e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Müdürlük veya ŞÖNİM'e gelen ihbar; kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime gecikmeksizin bildirilir (m.4/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yazılı başvuru şartı yoktur; sözlü şikâyet ve ihbar derhâl tutanağa geçirilir (m.4/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mülki amirin koruyucu tedbirleri: barınma yeri, geçici maddi yardım, rehberlik-danışmanlık, geçici koruma, kreş (m.6/1); işyeri değiştirme, aile konutu şerhi, kimlik değiştirme hâkimin tedbiridir (m.12/1), silah teslimi önleyici tedbirdir (m.17/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Koruyucu tedbir kararı için şiddetin uygulandığına dair delil veya belge aranmaz (m.6/1; m.30/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('İşyerinin değiştirilmesi …').",
+  "duzeltme": {
+   "dogrusu": [
+    "İşyeri değiştirme, ayrı yerleşim yeri belirleme, aile konutu şerhi ve kimlik değiştirme hâkimin koruyucu tedbirleridir; önleyici tedbir değildir (m.12/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('Tehdit/hakaret etmeme …').",
+  "duzeltme": {
+   "dogrusu": [
+    "m.17'deki önleyici tedbirlerin hepsi şiddet uygulayana yöneliktir (tehdit etmeme, uzaklaştırma, yaklaşmama, silah teslimi vb.); korunan kişiye yönelik tedbirler koruyucu tedbirdir (m.17/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Silah taşıması zorunlu kamu görevlisi de muaf değildir; zimmetindeki silahı kurumuna, diğer izinli silahları kolluğa teslim eder (m.17/1-g, ğ; m.25; m.26/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('Kurum amiri …').",
+  "duzeltme": {
+   "dogrusu": [
+    "Kurum amiri, süre dolmadıkça veya yeni karar verilmedikçe silahı hiçbir şekilde iade etmez (m.26/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Hâkim, talep edilmese dahi tedbir nafakasına hükmedebilir (m.17/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kolluk amiri yalnız barınma yeri sağlama ve geçici koruma tedbirlerini alabilir; geçici maddi yardım ve kreş yetkisi yoktur (m.29/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…'); silah teslimi/alkol yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kolluk amiri yalnız m.18, 19, 20 ve 22'deki önleyici tedbirleri alabilir; silah teslimi ve alkol yasağı bunların arasında yoktur (m.29/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tatil günleri süreye dâhildir; süre tatile rastlarsa takip eden ilk iş günü biter (m.29/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Tedbir kararı en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülki amirden ya da kolluktan istenebilir (m.30/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tedbir talebinin reddi kararı sadece korunan kişiye tebliğ edilir (m.31/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "İhtar şarttır: zorlama hapsi ihtarını içeren tedbir kararı tefhim veya tebliğ edilmemişse zorlama hapsine karar verilemez (m.31/5; m.38/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Korunan kişiye yapılacak tebligatlarda ŞÖNİM'in adresi kullanılır (m.32/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "İtiraz iki hafta içinde aile mahkemesine yapılır; karar bir hafta içinde duruşmasız verilir ve kesindir (m.33; m.34)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tedbir kararının alınması ve yerine getirilmesinde uzlaşma ya da arabuluculuk önerilemez (m.35/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tedbir kararının tefhim veya tebliğ edilmemesi uygulanmasına engel değildir (m.35/8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Teknik araçlarla ses ve görüntü kaydı alınamaz, kişiler dinlenemez ve izlenemez (m.37/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…'); adli sicil yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Zorlama hapsi kararı duruşmasız verilir; tekerrüre esas olmaz, koşullu salıverilme uygulanmaz, adli sicile işlenmez (m.38/4, 7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "İhlali aile mahkemesi kendisi tespit ederse başka işleme gerek kalmadan resen zorlama hapsine karar verebilir; savcılık talebi şart değildir (m.38/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "ŞÖNİM tedbire hükmetmez; koruyucu tedbire mülki amir veya hâkim, önleyici tedbire hâkim karar verir (m.6/1; m.12/1; m.17/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-33",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Barınma yerine getirilen şiddet mağduru başka bir karar veya onay aranmaksızın derhâl kabul edilir (m.7/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Kreş desteği çalışmayana dört ay, çalışana iki aydır; ödeme müdürlükçe doğrudan kreşe yapılır (m.11/1, 3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-35",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Ödenen tutar Bakanlık bütçesinden karşılanır' ifadesi m.42'de yok.",
+  "duzeltme": {
+   "hukum": "Geçici maddi yardım tutarının tebliğden itibaren bir ay içinde ödenmesi şiddet uygulayana tebliğ edilir; süresinde ödenmezse 6183 sayılı Kanuna göre vergi dairesince takip ve tahsil edilir (m.42/1)"
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Prim borcu yüzünden GSS'den yararlanamayan korunan kişi, gelir testi yapılmadan genel sağlık sigortalısı sayılır (m.44/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yalnız harç değil; yargılama gideri, harç, posta gideri ve benzeri hiçbir ad altında masraf alınmaz (m.45/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-39",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kolluk: polis, jandarma ve sahil güvenlik birimleri; hâkim: aile mahkemesi hâkimi (m.3/1-h, e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "Şiddet mağduru, mütekabiliyet ilkesi çerçevesinde uyruğuna bakılmaksızın korunur (m.3/1-n)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-41",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım kalmış ('…').",
+  "duzeltme": {
+   "dogrusu": [
+    "Tek taraflı ısrarlı takipte aile bağı veya ilişki şartı aranmaz (m.3/1-ş)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kutusunda yalnız başlık var.",
+  "duzeltme": {
+   "dogrusu": [
+    "ŞÖNİM yedi gün yirmi dört saat esasına göre çalışır (m.3/1-o; m.39/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm m.2'de; 'ekimi yapacak kişileri Cumhurbaşkanı belirler' metinde yok (kişiler ilgili kuruluştan izin belgesi alır).",
+  "duzeltme": {
+   "hukum": "Haşhaş ekilecek, afyon ve kapsül üretilecek yerler her yıl Cumhurbaşkanınca tespit edilir; karar en geç 1 Temmuz'a kadar yayımlanır (m.2)",
+   "dogrusu": [
+    "Haşhaş ekim yerlerini her yıl Cumhurbaşkanı tespit eder (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "Toprak Mahsulleri Ofisi ve 'ürünü TMO'ya teslim zorunluluğu' resmî metinde geçmiyor; m.2 yalnız 'ilgili kuruluştan izin belgesi' der. Başlık da 'İzin belgesi' olmalı.",
+  "duzeltme": {
+   "baslik": "İzin belgesi",
+   "hukum": "Tespit ve ilan edilen yerlerde haşhaş ekecekler ilgili kuruluştan izin belgesi almak zorundadır; belge bir üretim yılı için geçerlidir ve başkasına devredilemez (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Haşhaş ekim izin belgesi başkasına devredilebilir"
+   ],
+   "dogrusu": [
+    "İzin belgesi bir üretim yılı için geçerlidir ve başkasına devredilemez (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-2",
+  "sorun": "hukum_hatali",
+  "aciklama": "Ekim tanımı m.2'de değil m.4'te.",
+  "duzeltme": {
+   "hukum": "Ekim yapma, tohumun toprağa ekilmesinden ürünün hasadına kadarki süreci kapsar (m.4)",
+   "dogrusu": [
+    "Ekim, tohumun toprağa ekilmesinden hasada kadarki süreçtir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "'İzin verilen yerler dışında eken' ifadesi yanlış: izinli kişinin başka yerde ekimi 6 ay-3 yıldır; 1-5 yıl izinsiz ekime aittir, adli para cezası da eksik.",
+  "duzeltme": {
+   "hukum": "İzinsiz olarak haşhaş ekimi yapan kişi 1 yıldan 5 yıla kadar hapis ve adli para cezası ile cezalandırılır (m.4)"
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-5",
+  "sorun": "hukum_hatali",
+  "aciklama": "TMO ve 'teslim etmeyen' metinde yok; ceza eksik miktarın teslim anındaki baş alım fiyatının iki mislidir ve fiil suç oluşturmuyorsa verilir.",
+  "duzeltme": {
+   "hukum": "İzin belgesindeki miktardan az ham afyon veya kapsül teslim eden üreticiye, fiil suç oluşturmuyorsa, mahalli mülki amir eksik miktarın teslim anındaki baş alım fiyatının iki misli idari para cezası verir (m.4)",
+   "dogrusu": [
+    "Eksik teslime hapis değil, mülki amirce baş alım fiyatının iki misli idari para cezası verilir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm 'fon' tanımına 'malvarlığı' tanımının (gelir, dönüşümden hasıl menfaat) unsurlarını karıştırmış; doğrusu da yarım ('…').",
+  "duzeltme": {
+   "hukum": "Fon: para veya değeri para ile temsil edilebilen taşınır veya taşınmaz, maddi veya gayri maddi her türlü mal, hak, alacak ile bunları temsil eden her türlü belgedir (m.2/1-c)",
+   "dogrusu": [
+    "Fon yalnız para değildir; para ile temsil edilebilen her türlü mal, hak, alacak ve bunları temsil eden belgedir (m.2/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-7",
+  "sorun": "hukum_hatali",
+  "aciklama": "Madde numarası yanlış: RG'de yayımla hüküm doğurma ve tebliğ sayılma m.11/1 ve m.12/1'de, m.8-9'da değil.",
+  "duzeltme": {
+   "hukum": "Malvarlığının dondurulması kararı Resmî Gazete'de yayımlanır, yayımı ile hukuki sonuç doğurur ve ilgiliye tebliğ edilmiş sayılır (m.11/1; m.12/1)",
+   "dogrusu": [
+    "Karar tebliğle değil, Resmî Gazete'de yayımıyla hüküm doğurur (m.11/1; m.12/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-8",
+  "sorun": "hukum_hatali",
+  "aciklama": "7 günlük süre 'tespit ettiklerinde' değil talep tarihinden başlar; ikisi de m.12'dedir.",
+  "duzeltme": {
+   "hukum": "Malvarlığı dondurulanlar ile onlardan alacaklı/borçlu olanlar RG yayımından itibaren en geç 30 gün içinde (m.12/3); dondurma talebi yapılan kişi ve kurumlar, nezdinde malvarlığı varsa talep tarihinden itibaren 7 gün içinde Başkanlığa bildirir (m.12/5)",
+   "dogrusu": [
+    "Malvarlığı sahibi 30 gün (m.12/3) · talep edilen kurum 7 gün (m.12/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-10",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm ters: izinsiz yapılabilen, dondurulan malvarlığından kamuya yapılan zorunlu ödemelerdir (vergi, harç, prim); kişiye yapılacak ödemeler ise yalnız banka hesabına yapılır. Madde de m.14 değil m.13.",
+  "duzeltme": {
+   "baslik": "Kamuya zorunlu ödemeler ve banka hesabı",
+   "hukum": "Dondurulan malvarlığından vergi, resim, harç, sosyal güvenlik primi gibi kamuya yapılacak zorunlu ödemeler izin alınmadan yapılabilir (Başkanlık izne bağlayabilir) (m.13/3); malvarlığı dondurulan kişiye yapılacak her ödeme ancak onun banka hesabına yapılır (m.13/5)",
+   "sinavda_boyle_yazarlar": [
+    "Malvarlığı dondurulan kişiye ödeme elden yapılabilir"
+   ],
+   "dogrusu": [
+    "Malvarlığı dondurulan kişiye yapılacak her türlü ödeme ancak kendisine ait banka hesabına yapılır (m.13/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-12",
+  "sorun": "hukum_hatali",
+  "aciklama": "Komisyon m.9'da düzenli (m.3/16 değil); 'MASAK Başkanının başkanlığında' ibaresi mevcut metinde yok (üyelik cümlesi mülga), bu yüzden İçişleri Bakanı yanlışı doğrulanamaz.",
+  "duzeltme": {
+   "hukum": "Değerlendirme Komisyonu üyeleri veya vekilleriyle toplanır, katılanların en az beşinin oyuyla karar verir; sekretarya hizmetlerini Başkanlık (MASAK) yürütür (m.9/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "Komisyon kararları oy çokluğuyla (3 oy) alınır"
+   ],
+   "dogrusu": [
+    "Komisyon katılanların en az beşinin oyuyla karar verir (m.9/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-13",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.18 yalnız 3713 m.8'i yürürlükten kaldırır; gizlilik hükmü m.8/4'tedir ve 'görevliler açıklayamaz' metinde yok; doğrusu da başlıktan ibaret.",
+  "duzeltme": {
+   "baslik": "Araştırmada gizlilik",
+   "hukum": "Malvarlığının dondurulmasına ilişkin araştırma işlemleri gizlilik esaslarına uygun olarak yerine getirilir (m.8/4)",
+   "sinavda_boyle_yazarlar": [
+    "Malvarlığı dondurma araştırmaları kamuya açık yürütülür"
+   ],
+   "dogrusu": [
+    "Dondurma araştırmaları gizlilik esaslarına uygun yürütülür (m.8/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 58,
+  "kart_id": "58-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Üç yanlış var, doğrusu yalnız ikisini karşılıyor; müdafi yanlışının doğrusu eksik.",
+  "duzeltme": {
+   "dogrusu": [
+    "12-18 yaş şüpheli çocuk, kendi talebi olmasa bile müdafiden yararlandırılır (m.19/b-2)",
+    "Çocuk yetişkinlerden ayrı yerlerde tutulur (m.19/b-5)",
+    "Çocuklara kelepçe ve benzeri aletler takılamaz (m.19/b-10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 58,
+  "kart_id": "58-13",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kırmızı kutudaki 'Yanıltıcı öncüller genelde bu ikisi' bir ifade değil, açıklama notu; doğrular da tek kelime.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Müdafi şüpheliye sorulan soruya cevap verebilir",
+    "İfadede ekonomik durum sorulmaz"
+   ],
+   "dogrusu": [
+    "Müdafi şüpheliye sorulan soruya doğrudan cevap veremez, yalnız hukuki yardımda bulunur (m.23/d)",
+    "İfade verenin kişisel ve ekonomik durumu hakkında bilgi alınır (m.23/h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 58,
+  "kart_id": "58-14",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Yorma ve aldatma da yasak yöntemdir' resmî metne göre doğrudur (m.24), kırmızı kutuda olmamalı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Rızayla verilen ifade yasak usulle alınsa da delildir",
+    "Kolluk aynı olayla ilgili yeniden ifade alabilir"
+   ],
+   "dogrusu": [
+    "Yasak usullerle alınan ifade rızayla verilmiş olsa da delil olarak değerlendirilemez (m.24)",
+    "Aynı olayla ilgili yeniden ifade ancak Cumhuriyet savcısı tarafından alınabilir (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 65,
+  "kart_id": "65-1",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutunun ilk satırı doğru olan ifadeleri anlatan bir not; yanlış ifade değil.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Türk vatandaşlığı ancak doğumla kazanılır"
+   ],
+   "dogrusu": [
+    "Türk vatandaşlığı doğumla veya sonradan olmak üzere iki yolla kazanılır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 65,
+  "kart_id": "65-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "Şartlar Yönetmeliğin 11. maddesinde (Kanunun değil); kart m.32'ye de bağlanmış ama resmî metin m.12.",
+  "duzeltme": {
+   "hukum": "Yönetmeliğin 11. maddesindeki şartları taşıdığı tespit edilen çocuk doğumundan itibaren Türk vatandaşlığını kazanır ve yerleşim yerinin bulunduğu idari birimin son hanesinden sonraki haneye tescil edilir; şartları taşımayanların talebi reddedilir; Türkiye'de bulunmuş çocuk Nüfus Hizmetleri Yönetmeliği m.32'ye göre tescil edilir (m.12)",
+   "dogrusu": [
+    "Şartları taşıyan çocuk doğumundan itibaren Türk vatandaşlığını kazanır (m.12/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 80,
+  "kart_id": "80-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İki yanlış var; doğrusu yalnız ikincisini karşılıyor, müteselsil sorumluluk düzeltmesi eksik.",
+  "duzeltme": {
+   "dogrusu": [
+    "Birden fazla kişinin imzaladığı kâğıtta imza edenler vergi ve cezanın tamamından müteselsilen sorumludur (m.24)",
+    "İmza edenler arasında vergiden müstesna olanın bulunması verginin noksan ödenmesini gerektirmez (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 71,
+  "kart_id": "71-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 'Uzman erbaş 657'ye tabidir' yanlışının hemen altında '657'ye tabidir' diyerek yanlışı onaylıyormuş gibi okunuyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Uzman erbaş özel kanununa tabidir, 657'ye değil (m.1)",
+    "Belediye personeli 657'ye tabidir (m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 71,
+  "kart_id": "71-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu bozuk cümle ('O liyakat; kariyer ilerleme imkânı').",
+  "duzeltme": {
+   "dogrusu": [
+    "Yeterlik sistemine dayanmak liyakat ilkesidir; kariyer, sınıfı içinde en yüksek derecelere kadar ilerleme imkânıdır (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 71,
+  "kart_id": "71-2",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutu 'geçici personel'i tuzak gösteriyor; oysa m.4 kamu hizmetlerinin geçici personel eliyle de gördürüleceğini sayar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "657'ye tabi kurumlar m.4'teki dört istihdam şekli dışında da personel çalıştırabilir"
+   ],
+   "dogrusu": [
+    "Kurumlar memur, sözleşmeli personel, geçici personel ve işçi dışında personel çalıştıramaz (m.4; m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 71,
+  "kart_id": "71-13",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "Kırmızı kutudaki 'HAGB listede yok' doğru bir bilgi notu, yanlış ifade değil; doğrusu da belirsiz.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "HAGB verilen memurun uzaklaştırması zorunlu olarak kaldırılır"
+   ],
+   "dogrusu": [
+    "HAGB, tedbirin zorunlu kaldırıldığı m.143 hâlleri arasında sayılmaz (m.143)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 90,
+  "kart_id": "90-2",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Tebliğden 45 gün içinde tutanak düzenlenir' metinde yok; 45 gün tutanak tarihinden itibaren bedelin hazırlanıp resen tescil için verilen süredir, bedel tescilden sonra ödenir.",
+  "duzeltme": {
+   "hukum": "İdare taşınmazın sınırını, yüzölçümünü ve cinsini gösteren ölçekli plan yapar, malikleri (tapu yoksa zilyetleri) tapu, vergi ve nüfus kayıtlarıyla tespit eder; vergi dairesi beyan değerini en geç 1 ay içinde verir; kamulaştırma kararı tapuya şerh edilir, şerhten itibaren 6 ay içinde m.10'a göre dava açıldığı belgelenmezse şerh resen silinir (m.7); tapuda kayıtlı taşınmazda önce satın alma usulü uygulanır; idare kendi bünyesinden en az 3 kişilik kıymet takdir komisyonu ve en az 3 kişilik uzlaşma komisyonu görevlendirir; satın alma/trampa isteği tahmini bedel belirtilmeden resmî taahhütlü yazıyla malike bildirilir; malik tebliğden itibaren 15 gün içinde başvurursa pazarlık yapılır, tahmini bedeli geçmemek üzere anlaşılırsa tutanak düzenlenir; tutanaktan itibaren en geç 45 gün içinde bedel hazır edilerek taşınmaz idare adına resen tescil edilir, bedel tescilden sonra ödenir; bu yolla alınan taşınmaz için itiraz davası açılamaz, anlaşma olmazsa m.10'a göre işlem yapılır (m.8); kadastrosu yapılmamış yerlerde mülki amirden 2 asıl 2 yedek 4 bilirkişi istenir, mülki amir 8 gün içinde seçtirip sulh hukuk mahkemesinde yemin ettirir; tespitte muhtar, iki ihtiyar kurulu üyesi ve iki bilirkişi görev yapar (m.9)",
+   "dogrusu": [
+    "Kıymet takdir ve uzlaşma komisyonları en az üç kişiden oluşur (m.8)",
+    "Tapuda kayıtlı taşınmazda önce satın alma usulü uygulanır (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 90,
+  "kart_id": "90-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Bilirkişi raporuna 10 gün içinde itiraz' metinde yok (itirazlar duruşmada dinlenir); bedel için 'Yargıtay denetimi' değil istinaf/temyiz hakkı saklıdır.",
+  "duzeltme": {
+   "hukum": "Satın alma olmazsa idare taşınmazın bulunduğu yer asliye hukuk mahkemesine başvurup bedel tespiti ve idare adına tescil ister; mahkeme en geç 30 gün sonrası için duruşma günü belirler, malike meşruhatlı davetiye (adres bulunamazsa ilan) gönderir; savunma ve deliller tebliğden itibaren 10 gün içinde bildirilir; hâkim tarafları anlaşmaya davet eder; anlaşılmazsa en geç 10 gün içinde keşif yapılır, bilirkişi raporu 15 gün içinde verilir ve duruşma beklenmeden taraflara tebliğ edilir, itirazlar duruşmada dinlenir; hâkim adil bedeli tespit eder, idareye bedeli yatırması için 15 gün verilir, makbuz ibrazıyla tescile karar verilir; tescil hükmü kesindir, bedele ilişkin istinaf veya temyiz hakkı saklıdır ('Tescil hükmü kesin olup' ibaresi AYM'nin 12/2/2026 kararıyla iptal edilmiş, 21/2/2027'de yürürlüğe girer) (m.10); bilirkişi kurulu cins-nevi, yüzölçümü, değer unsurları, vergi beyanı, resmî kıymet takdirleri, arazide net gelir, arsada emsal satışlar, yapıda resmî birim fiyat ve yıpranma payını esas alarak SPK standartlarına uygun gerekçeli rapor düzenler; kamulaştırmanın sebep olacağı değer artışı dikkate alınmaz (m.11); kısmen kamulaştırmada kalan kısımdaki değer artışı nedeniyle yapılacak indirim bedelin %50'sinden fazla olamaz; kalan kısım yararlanmaya elverişli değilse malik kamulaştırma kararının tebliğinden itibaren 30 gün içinde yazılı başvuruyla onun da kamulaştırılmasını isteyebilir (m.12); malik tebligattan (veya ilandan) itibaren 30 gün içinde idari yargıda iptal, adli yargıda düzeltim davası açabilir, paydaşlar tek başına dava açabilir; idare de belgelerin mahkemeye verilmesinden itibaren 30 gün içinde düzeltim davası açabilir (m.14); bilirkişiler bölge kurulu listelerinden seçilir, kurul en az 3 kişidir ve biri taşınmaz geliştirme uzmanı veya SPK lisanslı gayrimenkul değerleme uzmanı olmalıdır; rapor 15 gün içinde verilir (m.15)",
+   "dogrusu": [
+    "Kısmi kamulaştırmada değer artışı indirimi bedelin %50'sinden fazla olamaz (m.12)",
+    "Bilirkişi kurulu en az üç kişiden oluşur (m.15)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 90,
+  "kart_id": "90-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.19 kısmında 'sağlamıyorsa Hazineye irat kaydedilir' ve 'zilyet 3 ay içinde...' (yarım cümle) resmî metinde yok; itiraz hâlinde bedel ileride hak sahibine ödenmek üzere vadeli hesaba yatırılır.",
+  "duzeltme": {
+   "hukum": "Mülkiyeti mahkemede ihtilaflı veya kadastro mahkemesinde davalı taşınmazda idare bedel tespiti ve ileride belli olacak hak sahibine ödenmek üzere tescil ister; bedel bankada üçer aylık vadeli hesapta bekler (m.18); tapuda kayıtlı olmayan taşınmazda idare önce Kadastro Kanunu m.16'daki kamu mallarından olup olmadığını sorar; zilyetlikle iktisap iddiası varsa m.9 bilirkişileriyle tahkikat yapıp tutanak düzenler; mahkeme zilyetlikle iktisabı yeterli görürse durumu ilan eder; son ilandan itibaren 30 gün içinde Hazine veya üçüncü kişi itiraz etmezse bedel zilyede ödenir, itiraz edilirse bedel ileride hak sahipliğini ispat edecek kişiye ödenmek üzere vadeli hesaba yatırılarak tescile karar verilir (m.19); idare adına tescil edilen taşınmazın boşaltılması icra memurundan istenir; icra memuru 15 gün içinde boşaltılmasını tebliğ eder, boşaltılmazsa icraca boşaltılır; itiraz ve şikâyet boşaltmayı durdurmaz, ihtiyati tedbir verilemez; boşaltma sebebiyle tazminat sorumluluğu yoktur; ekili arazi hasat sonuna bırakılır, beklenemezse ekin bedeli tazmin edilerek boşaltılır (m.20)",
+   "dogrusu": [
+    "İtiraz ve şikâyet boşaltmayı durdurmaz, mahkemece ihtiyati tedbir kararı verilemez (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 142,
+  "kart_id": "142-27",
+  "sorun": "hukum_hatali",
+  "aciklama": "'İlgili düzenleme uygulanır' belirsiz; Genelge doluluk %70'in altındaysa o hatta servis sunumu yapılmayacağını söyler.",
+  "duzeltme": {
+   "hukum": "Personel servisinden fiilen yararlanan kişi sayısı araç kapasitesinin %70'inin altındaysa ilgili hatta servis sunumu yapılmaz; yakın yerleşkelerdeki kurumların servisi birlikte ihale etmesi esastır (Personel servisi giderleri)",
+   "dogrusu": [
+    "Doluluk araç kapasitesinin %70'inin altındaysa o hatta servis sunumu yapılmaz"
+   ]
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak (haberleşme giderlerinde yetkili harcama yetkilileri); haberleşme yetkilisi kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "142-0"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; EBYS yazışmalarının ayrıca postayla gönderilmemesi.",
+  "duzeltme": {
+   "karta_bagla": "142-11"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 2,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; e-tebligat zorunluluğu olmayanların sisteme dâhil edilmesi teşvik edilir.",
+  "duzeltme": {
+   "karta_bagla": "142-9"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 3,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; limit göstergesi 1800.",
+  "duzeltme": {
+   "karta_bagla": "142-6"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 4,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; mevzuatta istisna tutulan durumlar hariç e-tebligat.",
+  "duzeltme": {
+   "karta_bagla": "142-8"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 5,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; taşıt yasağının istisnaları (savunma-güvenlik, ambulans, itfaiye).",
+  "duzeltme": {
+   "karta_bagla": "142-19"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 6,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; bilgisayar ve donanımı demirbaş yasağında açıkça sayılır.",
+  "duzeltme": {
+   "karta_bagla": "142-21"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 7,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; belediyeler için liste Çevre, Şehircilik ve İklim Değişikliği Bakanlığına gider.",
+  "duzeltme": {
+   "karta_bagla": "142-5"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 8,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; servis doluluk eşiği %70.",
+  "duzeltme": {
+   "karta_bagla": "142-27"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 9,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; uçuş milleri gibi menfaatleri kurum kullanır.",
+  "duzeltme": {
+   "karta_bagla": "142-29"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 10,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; fatura ödemeleri zamanında yapılır.",
+  "duzeltme": {
+   "karta_bagla": "142-31"
+  }
+ },
+ {
+  "kanun_id": 142,
+  "tuzak_index": 11,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru tuzak; giriş bölümü aykırılığa yaptırım öngörür.",
+  "duzeltme": {
+   "karta_bagla": "142-14"
+  }
+ }
+]

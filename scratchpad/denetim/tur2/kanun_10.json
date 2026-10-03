@@ -1,0 +1,450 @@
+{
+ "kanun_id": 10,
+ "ad": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_10.json",
+ "kartlar": [
+  {
+   "id": "10-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kimler korunur",
+   "hukum": "Şiddete uğrayan veya uğrama tehlikesi bulunan kadınlar, çocuklar, aile bireyleri ve tek taraflı ısrarlı takip mağdurları (m.1/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kadınlar, çocuklar, aile bireyleri ve tek taraflı ısrarlı takip mağdurları"
+   ]
+  },
+  {
+   "id": "10-1",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Temel ilkeler",
+   "hukum": "Anayasa ve taraf olunan uluslararası sözleşmeler (özellikle İstanbul Sözleşmesi adıyla anılan Avrupa Konseyi Sözleşmesi) esas alınır; hizmet temel insan haklarına dayalı, kadın erkek eşitliğine duyarlı, sosyal devlet ilkesine uygun, adil, etkili ve süratli bir usulle sunulur (m.1/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"kadın erkek eşitliği göz önüne alınmaz\" veya \"sadece Anayasa esas alınır\" denir",
+    "kadın erkek eşitliği göz önüne alınmaz"
+   ],
+   "dogrusu": [
+    "Hizmet sunumunda kadın erkek eşitliğine duyarlı usul (m.1/2-b)"
+   ]
+  },
+  {
+   "id": "10-2",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Özel tedbir ayrımcılık değildir",
+   "hukum": "Kadınlara yönelik cinsiyete dayalı şiddeti önleyen özel tedbirler ayrımcılık olarak yorumlanamaz (m.1/2-ç)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Özel tedbir ayrımcılık değildir"
+   ]
+  },
+  {
+   "id": "10-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Şiddet mağduru",
+   "hukum": "Bu davranışlara doğrudan ya da dolaylı maruz kalan veya kalma tehlikesi bulunan ve şiddetten etkilenen kişiler (m.2/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "fiilen uygulamadıkça sayılmaz"
+   ],
+   "dogrusu": [
+    "Şiddet uygulayan, uygulama tehlikesi bulunanı da kapsar (m.2/1-g)"
+   ]
+  },
+  {
+   "id": "10-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Hâkim = aile mahkemesi hâkimi",
+   "hukum": "Kanunda geçen \"hâkim\" aile mahkemesi hâkimidir (m.2/1-c)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Hâkim = aile mahkemesi hâkimi"
+   ]
+  },
+  {
+   "id": "10-5",
+   "madde": [
+    "2"
+   ],
+   "baslik": "ŞÖNİM",
+   "hukum": "Şiddet önleme ve izleme merkezleri yedi gün yirmi dört saat esasıyla çalışır (m.2/1-f)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yedi gün yirmi dört saat"
+   ]
+  },
+  {
+   "id": "10-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Mülkî amirin koruyucu tedbirleri",
+   "hukum": "(a) uygun barınma yeri sağlanması, (b) geçici maddi yardım, (c) psikolojik, meslekî, hukukî ve sosyal rehberlik ve danışmanlık, (ç) hayatî tehlike hâlinde talep üzerine veya resen geçici koruma altına alma, (d) kreş imkânı (m.3/1)",
+   "sinavda_boyle_yazarlar": [
+    "Bu listeye \"işyerinin değiştirilmesi\" veya \"aile konutu şerhi\" sokulur — bunlar hâkimin işidir"
+   ],
+   "dogrusu": [
+    "barınma yeri · geçici maddi yardım · rehberlik ve danışmanlık · resen geçici koruma altına alma · kreş imkânı"
+   ]
+  },
+  {
+   "id": "10-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kreş şartları",
+   "hukum": "Korunan kişinin çocukları varsa dört ay, kişi çalışıyorsa iki ay ile sınırlı; on altı yaşından büyükler için belirlenen aylık net asgari ücretin yarısını geçmemek ve belgelendirmek kaydıyla, Bakanlık bütçesinden (m.3/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"on beş yaş / dörtte biri\" gibi kombinasyonlar verilir"
+   ],
+   "dogrusu": [
+    "dört ay · iki ay · on altı yaşından büyükler · net asgari ücretin yarısını"
+   ]
+  },
+  {
+   "id": "10-8",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kolluk amirinin koruyucu yetkisi",
+   "hukum": "Gecikmesinde sakınca bulunan hâllerde sadece (a) barınma yeri ve (ç) geçici koruma altına alma tedbirlerini kolluk amiri de alabilir (m.3/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"geçici maddi yardım\" da kolluğa verilir — yanlış",
+    "listeye \"geçici maddi yardım",
+    "aile konutu şerhi\" eklenir"
+   ],
+   "dogrusu": [
+    "Kolluk amiri koruyucu tedbirlerden sadece barınma ve geçici korumayı alabilir (m.3/2)"
+   ]
+  },
+  {
+   "id": "10-9",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Mülkî amir onayı 48 saat",
+   "hukum": "Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk iş günü içinde mülkî amirin onayına sunar; kırk sekiz saat içinde onaylanmayan tedbir kendiliğinden kalkar (m.3/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "ilk iş günü · kırk sekiz saat · kendiliğinden kalkar"
+   ]
+  },
+  {
+   "id": "10-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Hâkimin koruyucu tedbirleri",
+   "hukum": "(a) işyerinin değiştirilmesi, (b) evli ise müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi, (c) talep üzerine tapu kütüğüne aile konutu şerhi, (ç) hayatî tehlikede aydınlatılmış rızaya dayalı olarak 5726 sayılı Tanık Koruma Kanunu'na göre kimlik değişikliği (m.4/1). Bunlar korunan kişi hakkındadır",
+   "sinavda_boyle_yazarlar": [
+    "mülkî amir karar verir"
+   ],
+   "dogrusu": [
+    "Ayrı yerleşim yeri belirleme hâkimin koruyucu tedbiri (m.4/1-b)"
+   ]
+  },
+  {
+   "id": "10-11",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Alkol/madde ve tedavi",
+   "hukum": "Korunan kişilerin bulunduğu yerlerde alkol veya uyuşturucu kullanmama, bunların etkisindeyken yaklaşmama, bağımlılık varsa hastaneye yatmak dâhil muayene ve tedavi (h); sağlık kuruluşuna başvurma ve tedavi (ı) (m.5/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "hastaneye yatmak dâhil"
+   ]
+  },
+  {
+   "id": "10-12",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kolluk amirinin önleyici yetkisi",
+   "hukum": "Gecikmesinde sakınca bulunan hâllerde (a), (b), (c) ve (d) bentleri kolluk amirince de alınabilir; evrak ilk iş günü hâkimin onayına sunulur, yirmi dört saat içinde onaylanmazsa tedbir kendiliğinden kalkar (m.5/2)",
+   "sinavda_boyle_yazarlar": [
+    "24 saat ile 48 saat yer değiştirilir",
+    "hâkim buna karar veremez",
+    "mülkî amirin koruyucu tedbiridir"
+   ],
+   "dogrusu": [
+    "Müşterek konutun korunan kişiye tahsisi hâkimin önleyici tedbiri (m.5/1-b)"
+   ]
+  },
+  {
+   "id": "10-13",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Hâkimin ek yetkileri",
+   "hukum": "Çocuk Koruma Kanunu'ndaki koruyucu-destekleyici tedbirler ile velayet, kayyım, nafaka ve kişisel ilişki hususlarında da karar verebilir (m.5/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "velayet, kayyım, nafaka ve kişisel ilişki"
+   ]
+  },
+  {
+   "id": "10-14",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Tedbir nafakası",
+   "hukum": "Şiddet uygulayan aynı zamanda geçimi sağlayan kişi ise, Medeni Kanun'a göre nafakaya hükmedilmemiş olmak kaydıyla hâkim talep edilmese dahi tedbir nafakasına hükmedebilir (m.5/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "talep edilmese dahi"
+   ]
+  },
+  {
+   "id": "10-15",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İhbar",
+   "hukum": "Şiddet veya tehlikenin varlığında herkes ihbar edebilir; ihbarı alan kamu görevlileri görevlerini gecikmeksizin yerine getirmekle yükümlüdür (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "herkes · gecikmeksizin"
+   ]
+  },
+  {
+   "id": "10-16",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Kim talep edebilir",
+   "hukum": "İlgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkka \"sivil toplum örgütleri\" konur — listede yoktur",
+    "listeye \"sivil toplum örgütleri\" eklenir"
+   ],
+   "dogrusu": [
+    "Talep edebilecekler: ilgili, Bakanlık, kolluk, C. savcısı (m.8/1)"
+   ]
+  },
+  {
+   "id": "10-17",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Nereden talep edilir",
+   "hukum": "En çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden (m.8/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "En çabuk ve en kolay ulaşılabilecek"
+   ]
+  },
+  {
+   "id": "10-18",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Delil aranmaz",
+   "hukum": "Koruyucu tedbir kararı için şiddetin uygulandığı hususunda delil veya belge aranmaz; önleyici tedbir kararı geciktirilmeksizin verilir (m.8/3)",
+   "sinavda_boyle_yazarlar": [
+    "delil veya belge sunulması zorunludur"
+   ],
+   "dogrusu": [
+    "Koruyucu tedbirde delil aranmaz (m.8/3)"
+   ]
+  },
+  {
+   "id": "10-19",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tebligat",
+   "hukum": "Tedbir kararı korunan kişiye ve şiddet uygulayana tefhim veya tebliğ edilir; talebin reddi kararı sadece korunan kişiye tebliğ edilir (m.8/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "talebin reddi kararı sadece korunan kişiye"
+   ]
+  },
+  {
+   "id": "10-20",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Zorlama hapsi ihtarı",
+   "hukum": "Tefhim ve tebliğ işleminde, aykırılık hâlinde zorlama hapsi uygulanacağı ihtarı yapılır (m.8/5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "zorlama hapsi uygulanacağı ihtarı"
+   ]
+  },
+  {
+   "id": "10-21",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Gizlilik",
+   "hukum": "Kimlik ve adres bilgileri tüm resmî kayıtlarda gizli tutulur, tebligat için ayrı adres tespit edilir; bu bilgileri hukuka aykırı olarak ifşa eden hakkında TCK hükümleri uygulanır (m.8/6)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Kimlik ve adres bilgileri tüm resmî kayıtlarda gizli tutulur …"
+   ]
+  },
+  {
+   "id": "10-22",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İtiraz süresi ve mercii",
+   "hukum": "Kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde aile mahkemesine itiraz edilebilir (m.9/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir ay\", \"altmış gün\"; \"asliye ceza\", \"sulh ceza hâkimliği\", \"ağır ceza\"",
+    "1 ay içinde",
+    "60 gün içinde",
+    "sulh ceza hâkimliğine",
+    "asliye ceza mahkemesine"
+   ],
+   "dogrusu": [
+    "İtiraz 2 hafta içinde aile mahkemesine (m.9/1)"
+   ]
+  },
+  {
+   "id": "10-23",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İtiraz dosyasının gideceği yer",
+   "hukum": "Aynı yerde birden fazla aile mahkemesi dairesi varsa numara olarak kendisini izleyen daireye, son numaralı daire için birinci daireye; tek daire varsa asliye hukuk mahkemesine; hâkim aynı kişi ise en yakın asliye hukuk mahkemesine (m.9/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "numara olarak kendisini izleyen daireye · birinci daireye · asliye hukuk mahkemesine · en yakın asliye hukuk mahkemesine"
+   ]
+  },
+  {
+   "id": "10-24",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İtirazın sonucu",
+   "hukum": "İtiraz mercii kararını bir hafta içinde verir; itiraz üzerine verilen kararlar kesindir (m.9/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bir hafta · kesindir"
+   ]
+  },
+  {
+   "id": "10-25",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Tedbirin uygulanması",
+   "hukum": "Geçici koruma ve önleyici tedbir kararlarının yerine getirilmesinden, ilgilinin yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi görevli ve yetkilidir (m.10/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi"
+   ]
+  },
+  {
+   "id": "10-26",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Tebliğ edilmemesi",
+   "hukum": "Tedbir kararının tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez (m.10/5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kararın uygulanmasına engel teşkil etmez"
+   ]
+  },
+  {
+   "id": "10-27",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kolluk personeli",
+   "hukum": "Kolluk görevleri, çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış ve belirlenmiş yeteri kadar personel tarafından yerine getirilir (m.11)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış"
+   ]
+  },
+  {
+   "id": "10-28",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Teknik takip",
+   "hukum": "Tedbir kararlarının uygulanmasında hâkim kararı ile teknik araç ve yöntemler kullanılabilir; ancak bu suretle kişilerin ses ve görüntüleri dinlenemez, izlenemez, kayda alınamaz (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "hâkim kararıyla dinleme ve kayıt yapılabilir"
+   ],
+   "dogrusu": [
+    "Teknik takipte ses ve görüntü kayda alınamaz (m.12/1)"
+   ]
+  },
+  {
+   "id": "10-29",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Zorlama hapsi (ilk ihlal)",
+   "hukum": "Tedbire aykırı hareket eden şiddet uygulayan, fiili bir suç oluştursa bile, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim kararıyla üç günden on güne kadar zorlama hapsine tabi tutulur (m.13/1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "fiili bir suç oluştursa bile · hâkim kararıyla üç günden on güne kadar"
+   ]
+  },
+  {
+   "id": "10-30",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Zorlama hapsi (tekrar)",
+   "hukum": "Her tekrarında on beş günden otuz güne kadar; toplam süre altı ayı geçemez (m.13/2)",
+   "sinavda_boyle_yazarlar": [
+    "10-30 gün",
+    "toplam 1 yıl"
+   ],
+   "dogrusu": [
+    "Zorlama hapsi ilk ihlalde 3-10 gün, tekrarda 15-30 gün, toplam 6 ay (m.13)"
+   ]
+  },
+  {
+   "id": "10-31",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Zorlama hapsini kim infaz eder",
+   "hukum": "Cumhuriyet başsavcılığınca yerine getirilir; kararlar Bakanlığın il/ilçe müdürlüklerine bildirilir (m.13/3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Cumhuriyet başsavcılığınca"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "8",
+   "yanlis": [
+    "en çok 1 yıl",
+    "en fazla 3 ay"
+   ],
+   "dogru": "Tedbir ilk defasında en çok 6 ay (m.8/2)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "süreler yer değiştirilir"
+   ],
+   "dogru": "Kolluk kararı 48 saat (mülkî amir) / 24 saat (hâkim) içinde onaylanmazsa düşer"
+  },
+  {
+   "madde": "2",
+   "yanlis": [
+    "aynı hanede yaşamak şarttır"
+   ],
+   "dogru": "Ev içi şiddet aynı haneyi paylaşmasa da olur (m.2/1-b)"
+  }
+ ]
+}

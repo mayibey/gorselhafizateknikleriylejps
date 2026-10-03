@@ -1,0 +1,421 @@
+AD: Adli Kolluk Yönetmeliği
+GRUP: branş
+BRANSLAR: ['jandarma']
+KAPSAM: liste
+TUM: ['3', '4', '5', '6', '7', '11', '13']
+NOT: Kısa ama sınavın vazgeçilmezi. Çıkmış sorular: **görev ve yetkiler listesi** ("sadece aleyhe delil toplar" yanlış), **özlük hakları** (bağlı teşkilat, savcılık değil), **denetim** (savcı nezarethaneyi denetler ama ev hapsine karar veremez), **değerlendirme raporu** (başsavcı düzenler, mülkî amire gönderir, sicilde dikkate alınır), **hangi kurum nerede adli kolluk görevlendirir** (tam teşekküllü polis karakolu → EGM). Eğitim sorusu da çıkmış (Adalet + İçişleri müştereken).
+DIGER KISA:
+
+====================================================================================================
+MADDE 3  (soru_sayisi=5)  karis_aday=[{'madde': '7', 'kac_celdiricide': 6}, {'madde': '5', 'kac_celdiricide': 2}, {'madde': '11', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (1796 kr)
+Tanımlar
+Madde 3 - Bu Yönetmelikte geçen deyimlerden; Adlî kolluk görevlileri: 5271 sayılı Ceza Muhakemesi Kanunu, 4/6/1937 tarihli ve 3201 sayılı Emniyet Teşkilâtı Kanununun 8, 9 ve 12 nci maddeleri, 10/3/1983 tarihli ve 2803 sayılı Jandarma Teşkilât, Görev ve Yetkileri Kanununun 7 nci maddesi, 2/7/1993 tarihli ve 485 sayılı Gümrük Müsteşarlığının Teşkilât ve Görevleri Hakkında Kanun Hükmünde Kararnamenin 8 inci maddesi, 9/7/1982 tarihli ve 2692 sayılı Sahil Güvenlik Komutanlığı Kanununun 4 üncü maddesi ve 3/11/1983 tarihli ve 83/7362 sayılı Bakanlar Kurulu Kararıyla yürürlüğe konulan Jandarma Teşkilâtı Görev ve Yetkileri Yönetmeliğinde belirtilen soruşturma işlemlerini yapmak üzere, tâbi oldukları atama usulüne göre görevlendirilen komutan, âmir, memur ve diğer görevlileri, (Değişik fıkra:RG-21/12/2013-28858) Adlî kolluk sorumlusu: Mahallin en büyük mülki idare amiri tarafından görevlendirilen adlî kolluğun komutanını, amirini veya sorumlusunu, (Ek fıkra:RG-21/12/2013-28858) 1 En üst dereceli kolluk amiri: Emniyet Genel Müdürlüğünde; il emniyet müdürünü, ilçe emniyet müdürünü veya amirini, Jandarma Genel Komutanlığında il jandarma komutanını, ilçe ve merkez ilçe jandarma komutanını, Sahil Güvenlik Komutanlığında; birlik komutanını, Gümrük ve Ticaret Bakanlığında; gümrük muhafaza kaçakçılık ve istihbarat müdürünü, Cumhuriyet savcısı: Yetkili Cumhuriyet başsavcıları ile Cumhuriyet savcılarını, Kovuşturma: İddianamenin kabulü ile başlayıp hükmün kesinleşmesine kadar geçen evreyi, Soruşturma: Kanuna göre yetkili mercilerce suç şüphesinin öğrenilmesinden, iddianamenin kabulüne kadar geçen evreyi, Gecikmesinde sakınca bulunan hâl: Derhâl işlem yapılmadığı takdirde suçun delillerinin kaybolması veya şüphelinin kaçması veya kimliğinin saptanamaması ihtimalini, ifade eder.
+---------------------------------------- KARTLAR
+{
+ "id": "55-1",
+ "baslik": "Tanımlar — evreler ve gecikmesinde sakınca",
+ "hukum": "Soruşturma: suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar; kovuşturma: iddianamenin kabulünden hükmün kesinleşmesine kadar; gecikmesinde sakınca bulunan hâl: derhâl işlem yapılmazsa delillerin kaybolması, şüphelinin kaçması veya kimliğinin saptanamaması ihtimali (m.3)",
+ "sinavda_boyle_yazarlar": [
+  "\"Kovuşturma iddianamenin düzenlenmesiyle başlar\" yanlış; kabulüyle"
+ ],
+ "dogrusu": [
+  "Kovuşturma iddianamenin düzenlenmesiyle değil, kabulüyle başlar ve hükmün kesinleşmesine kadar sürer (m.3)"
+ ]
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre 'soruşturma' evresi hangi ifadeyle tanımlanmıştır?",
+ "siklar": [
+  "Kanuna göre yetkili mercilerce suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar geçen evre",
+  "İddianamenin kabulü ile başlayıp hükmün kesinleşmesine kadar geçen evre",
+  "Suçun işlenmesinden failin yakalanmasına kadar geçen evre",
+  "İhbarın alınmasından fezlekenin düzenlenmesine kadar geçen evre",
+  "Yakalamadan iddianamenin düzenlenmesine kadar geçen evre"
+ ],
+ "dogru": "Kanuna göre yetkili mercilerce suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar geçen evre"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre 'kovuşturma' evresi hangi ifadeyle tanımlanmıştır?",
+ "siklar": [
+  "Suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar geçen evre",
+  "İddianamenin kabulü ile başlayıp hükmün kesinleşmesine kadar geçen evre",
+  "Yakalamadan hükmün kesinleşmesine kadar geçen evre",
+  "Fezlekenin düzenlenmesinden hükmün kesinleşmesine kadar geçen evre",
+  "İddianamenin düzenlenmesinden kabulüne kadar geçen evre"
+ ],
+ "dogru": "İddianamenin kabulü ile başlayıp hükmün kesinleşmesine kadar geçen evre"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre adlî kolluk sorumlusu kim tarafından görevlendirilir?",
+ "siklar": [
+  "İlgili Cumhuriyet başsavcısı tarafından",
+  "En üst dereceli kolluk amiri tarafından",
+  "İçişleri Bakanlığı tarafından",
+  "Mahallin en büyük mülki idare amiri tarafından",
+  "Adalet Bakanlığı tarafından"
+ ],
+ "dogru": "Mahallin en büyük mülki idare amiri tarafından"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre Jandarma Genel Komutanlığında 'en üst dereceli kolluk amiri' tanımına kimler girer?",
+ "siklar": [
+  "Yalnızca Jandarma Genel Komutanı",
+  "İl jandarma komutanı, ilçe ve merkez ilçe jandarma komutanı",
+  "Mahallin en büyük mülki idare amirinin görevlendirdiği komutan",
+  "İl emniyet müdürü",
+  "Sahil güvenlik birlik komutanı"
+ ],
+ "dogru": "İl jandarma komutanı, ilçe ve merkez ilçe jandarma komutanı"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre Cumhuriyet savcısı, en üst dereceli kolluk amiri ve mülki idare amirinin yetkileri arasındaki eşleştirmelerden hangisi YANLIŞTIR?",
+ "siklar": [
+  "Cumhuriyet savcısı - adlî görevlere ilişkin emir ve talimat verme",
+  "En üst dereceli kolluk amiri - adlî kolluk sorumlusunu görevlendirme",
+  "Mahallin en büyük mülki idare amiri - adlî kolluk sorumlusunu görevlendirme",
+  "Cumhuriyet başsavcısı - yıl sonu değerlendirme raporunu mülki idare amirine gönderme",
+  "En üst dereceli kolluk amiri - adlî olayı derhal mülki idare amirine bildirme"
+ ],
+ "dogru": "En üst dereceli kolluk amiri - adlî kolluk sorumlusunu görevlendirme"
+}
+
+====================================================================================================
+MADDE 4  (soru_sayisi=2)  karis_aday=[{'madde': '7', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (549 kr)
+Soruşturma yapmak üzere; a) Emniyet Genel Müdürlüğünce, asgarî tam teşekküllü bir polis karakolu bulunan yerlerde, b) Jandarma Genel Komutanlığınca, asgarî tam teşekküllü bir jandarma karakolu bulunan yerlerde, c) Sahil Güvenlik Komutanlığınca, asgarî sahil güvenlik bot komutanlıklarının bulunduğu yerlerde, d) Gümrük Muhafaza Genel Müdürlüğünce, gümrük muhafaza kaçakçılık ve istihbarat müdürlüğü, gümrük müdürlüğü ile müstakil bölge ve kısım âmirlikleri bulunan yerlerde, mevcut imkanlar ölçüsünde yeterince adlî kolluk personeli görevlendirilir.
+---------------------------------------- KARTLAR
+{
+ "id": "55-2",
+ "baslik": "Nerede adli kolluk görevlendirilir",
+ "hukum": "Soruşturma yapmak üzere: EGM asgari tam teşekküllü polis karakolu bulunan yerlerde; JGK asgari tam teşekküllü jandarma karakolu bulunan yerlerde; SGK asgari sahil güvenlik bot komutanlıklarının bulunduğu yerlerde; Gümrük Muhafaza kaçakçılık-istihbarat müdürlüğü, gümrük müdürlüğü, müstakil bölge ve kısım amirlikleri bulunan yerlerde mevcut imkânlar ölçüsünde yeterince adli kolluk personeli görevlendirir (m.4)",
+ "sinavda_boyle_yazarlar": [
+  "MİT şıkta verilir; adli kolluk değildir"
+ ],
+ "dogrusu": []
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, aşağıdaki teşkilat - asgarî görevlendirme koşulu eşleştirmelerinden hangisi 4 üncü maddede SAYILMAMIŞTIR?",
+ "siklar": [
+  "Emniyet Genel Müdürlüğü - asgarî tam teşekküllü bir polis karakolu bulunan yerler",
+  "Jandarma Genel Komutanlığı - asgarî tam teşekküllü bir jandarma karakolu bulunan yerler",
+  "Sahil Güvenlik Komutanlığı - asgarî sahil güvenlik bot komutanlıklarının bulunduğu yerler",
+  "Gümrük Muhafaza Genel Müdürlüğü - gümrük muhafaza kaçakçılık ve istihbarat müdürlüğü, gümrük müdürlüğü ile müstakil bölge ve kısım âmirlikleri bulunan yerler",
+  "Millî İstihbarat Teşkilatı - il başkanlığı bulunan yerler"
+ ],
+ "dogru": "Millî İstihbarat Teşkilatı - il başkanlığı bulunan yerler"
+}
+{
+ "kok": "Adli Kolluk Yönetmeliği'ne göre Jandarma Genel Komutanlığınca soruşturma yapmak üzere adli kolluk personeli, en az aşağıdakilerden hangisinin bulunduğu yerlerde görevlendirilir?",
+ "siklar": [
+  "Jandarma asayiş komando bölüğü",
+  "İl jandarma komutanlığı",
+  "İlçe jandarma komutanlığı",
+  "Jandarma bölge komutanlığı",
+  "Tam teşekküllü bir jandarma karakolu"
+ ],
+ "dogru": "Tam teşekküllü bir jandarma karakolu"
+}
+
+====================================================================================================
+MADDE 5  (soru_sayisi=3)  karis_aday=[{'madde': '7', 'kac_celdiricide': 5}, {'madde': '6', 'kac_celdiricide': 2}]
+---------------------------------------- RESMI METIN (1383 kr)
+esaslar
+Madde 5 - Adlî kollukla ilgili düzenleme ve uygulamalarda aşağıdaki genel esaslara uyulur:
+a) Cumhuriyet (Değişik ibare:RG-21/12/2013-28858) başsavcılığ ı , adlî görevlere ilişkin emir ve talimatlarını öncelikle adlî kolluk sorumlularına veya adlî kolluk görevi ifa eden diğer birim âmirlerine verir. Adlî kolluk, bağlı bulunduğu kolluk teşkilâtının bir parçası olup, öncelikli görevi, karşılaştığı suçun işlenmesini önlemektir. (Değişik:RG-1/3/2014-28928) Cumhuriyet savcılarınca, adlî görevler ile ilgili emir ve talimatlar, kolluk birimlerinin aralarındaki işbölümü ile kolluk teşkilâtlarının görev ve yetki alanlarına göre verilir. Adlî kolluk, adlî görevlerin haricindeki hizmetlerde üstlerinin emrindedir. Adlî kolluk görevlilerine, adlî görevi bulunmayan üstleri tarafından, yürütülen soruşturma ile ilgili emir ve talimat verilemez. Yönetmeliğin 7 nci maddesi hükümleri saklıdır. Adlî kolluk görevlileri, kadrolarında yer aldıkları birimlere mevzuatla verilmiş ve adlî görev kapsamı dışında kalan diğer görev ve hizmetleri de yerine getirirler.
+b) Adlî kolluk görevlilerinin özlük hakları, bağlı oldukları teşkilât tarafından yürütülür.
+c) (Ek:RG-21/12/2013-28858) En üst dereceli kolluk amiri adlî olayları, suç işlenmesini önlemek, kamu düzen ve güvenini korumakla ve bu konuda gerekli tedbirleri almakla görevli ve yetkili olan mülki idare amirine derhal bildirir.
+---------------------------------------- KARTLAR
+{
+ "id": "55-3",
+ "baslik": "Genel esaslar — emir zinciri ve özlük",
+ "hukum": "Cumhuriyet başsavcılığı adli emirleri öncelikle adli kolluk sorumlularına verir; adli kolluk bağlı olduğu kolluk teşkilatının parçasıdır, öncelikli görevi karşılaştığı suçun işlenmesini önlemektir; adli görevler dışındaki hizmetlerde üstlerinin emrindedir; adli görevi bulunmayan üstleri, yürütülen soruşturmayla ilgili emir veremez; adli kolluk görevlileri kadrolarındaki birimin diğer görevlerini de yapar; özlük hakları bağlı oldukları teşkilat tarafından yürütülür; en üst dereceli kolluk amiri adli olayları mülkî idare amirine derhal bildirir (m.5)",
+ "sinavda_boyle_yazarlar": [
+  "\"Adli görevi olmayan üst soruşturmaya talimat verebilir\" yanlış"
+ ],
+ "dogrusu": []
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre adlî görevlere ilişkin emir ve talimatları öncelikle adlî kolluk sorumlularına veya ilgili birim âmirlerine kim verir?",
+ "siklar": [
+  "Cumhuriyet başsavcılığı",
+  "İçişleri Bakanlığı",
+  "En üst dereceli kolluk amiri",
+  "Mahallin en büyük mülki idare amiri",
+  "Adalet Bakanlığı"
+ ],
+ "dogru": "Cumhuriyet başsavcılığı"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, aşağıdakilerden hangisi YANLIŞTIR?",
+ "siklar": [
+  "En üst dereceli kolluk amiri adlî olayları, mülki idare amirine derhal bildirir",
+  "Adlî kolluk, adlî görevlerin haricindeki hizmetlerde üstlerinin emrindedir",
+  "Adlî kolluk görevlilerinin özlük hakları Cumhuriyet başsavcılığı tarafından yürütülür",
+  "Adlî kolluğun öncelikli görevi, karşılaştığı suçun işlenmesini önlemektir",
+  "Adlî kolluk görevlilerinin özlük hakları bağlı oldukları teşkilât tarafından yürütülür"
+ ],
+ "dogru": "Adlî kolluk görevlilerinin özlük hakları Cumhuriyet başsavcılığı tarafından yürütülür"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, adlî kolluk görevlileri ile kadrolarında yer aldıkları birimlere mevzuatla verilmiş, adlî görev kapsamı dışında kalan diğer görev ve hizmetler arasındaki ilişki aşağıdakilerden hangisidir?",
+ "siklar": [
+  "Adlî kolluk görevlileri bu tür görevlerden muaftır",
+  "Bu görevler yalnızca en üst dereceli kolluk amirinin onayıyla yerine getirilir",
+  "Adlî kolluk görevlileri bu görev ve hizmetleri de yerine getirirler",
+  "Bu görevler Cumhuriyet savcısının iznine tâbidir",
+  "Bu görevler yalnızca adlî kolluk sorumlusu tarafından yerine getirilir"
+ ],
+ "dogru": "Adlî kolluk görevlileri bu görev ve hizmetleri de yerine getirirler"
+}
+
+====================================================================================================
+MADDE 6  (soru_sayisi=10)  karis_aday=[{'madde': '7', 'kac_celdiricide': 6}, {'madde': '5', 'kac_celdiricide': 4}, {'madde': '3', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (3200 kr)
+Görev ve yetkiler
+Madde 6 - Soruşturma işlemleri, Cumhuriyet savcısının emir ve talimatları doğrultusunda öncelikle adlî kolluğa yaptırılır. Adlî kolluk görevlileri Cumhuriyet savcısının adlî görevlere ilişkin emirlerini gecikmeksizin yerine getirir. (Değişik:RG-21/12/2013-28858) Adlî kolluk görevlileri, kendilerine yapılan bir suça ilişkin ihbar veya şikâyetleri; el koydukları olayları, yakalanan kişiler ile uygulanan tedbirleri derhâl Cumhuriyet başsavcılığına ve en üst dereceli kolluk amirine bildirir ve ilgili Cumhuriyet savcısının emri doğrultusunda işin aydınlatılması için gerekli soruşturma işlemlerine başlar. (Ek fıkra:RG-21/12/2013-28858) 1 Ceza Muhakemesi Kanununun 135 inci maddesinin altıncı fıkrasında sayılan suçlar nedeniyle yapılan soruşturmaların aşamaları hakkında Cumhuriyet savcısı tarafından doğrudan veya varsa ilgili Cumhuriyet başsavcı vekili aracılığıyla Cumhuriyet başsavcısına yazılı olarak bilgi verilmesi zorunludur. Bu bildirim yazıları görüldü şerhinden sonra soruşturma dosyasında muhafaza edilir. (Ek fıkra:RG-21/12/2013-28858) En üst dereceli kolluk amiri, adlî kolluk hizmetlerinin etkin ve verimli bir şekilde yürütülmesi amacıyla adlî kolluk görevlileri üzerinde gözetim, denetim, planlama ve gerektiğinde diğer idari tedbirleri almaya ve iş bölümünü yapmaya yetkilidir. Bir ölümün doğal nedenlerden meydana gelmediği kuşkusunu doğuracak bir durumun varlığı veya ölünün kimliğinin belirlenememesi hâlinde; kolluk görevlisi, durumu derhâl Cumhuriyet başsavcılığına bildirmek ve Cumhuriyet savcısının emri doğrultusunda soruşturma işlemlerine başlamak zorundadır. Cumhuriyet savcısı, adlî kolluk görevlilerine emirleri yazılı; acele hâllerde, sözlü olarak verir. Sözlü emir, en kısa sürede yazılı hâle dönüştürülerek mümkün olması hâlinde en seri iletişim vasıtasıyla ilgili kolluğa bildirir; aksi hâlde ilgili kolluk görevlilerince alınmasına hazır edilir. Ancak, kolluk görevlisi emrin yazılı hâle getirilmesini beklemeden sözlü emrin gereğini yerine getirir. Suçüstü hâli ile gecikmesinde sakınca bulunan hâllerde, Cumhuriyet savcısına erişilemiyorsa veya olay genişliği itibarıyla Cumhuriyet savcısının iş gücünü aşıyorsa, sulh ceza hâkimi de bütün soruşturma işlemlerini yapabilir. Bu durumda adlî kolluk görevlileri, sulh ceza hâkimi tarafından emredilen tedbirleri alır ve araştırmaları yerine getirir. Adlî kolluk görevlileri, maddî gerçeğin araştırılması ve adil bir yargılamanın yapılabilmesi için, Cumhuriyet savcısının emirleri doğrultusunda şüphelinin lehine veya aleyhine olan tüm delilleri, kanunda ön görülen koşullara uyarak toplamak, muhafaza altına almak ve bunları bir fezleke ile Cumhuriyet savcısına sunmakla yükümlüdür. Hukuka aykırı delil elde edildiğinin tespiti hâlinde, fezlekede bu hususa da yer verilir. Adlî kolluk görevlileri diğer soruşturma işlemlerini de aynı titizlikle yerine getirir. Olay yerinde görevine ait işlemlere başlayan adlî kolluk görevlisi, bunların yapılmasına engel olan veya yetkisi içinde aldığı tedbirlere aykırı davranan kişileri, işlemler sonuçlanıncaya kadar önce sözlü olarak ikâz eder; uyulmaması hâlinde zor kullanarak olay yerinden uzaklaştırır. İlgilinin ısrarı hâlinde yakalama işlemi uygulanır.
+---------------------------------------- KARTLAR
+{
+ "id": "55-4",
+ "baslik": "Görev ve yetkiler",
+ "hukum": "Soruşturma işlemleri savcının emir ve talimatıyla öncelikle adli kolluğa yaptırılır; adli kolluk savcının emirlerini gecikmeksizin yerine getirir; ihbar-şikâyetleri, el koyduğu olayları, yakalananları ve tedbirleri derhâl Cumhuriyet başsavcılığına ve en üst dereceli kolluk amirine bildirir; CMK 135/6'daki suçlarda soruşturma aşamaları savcı tarafından başsavcıya yazılı bildirilir; en üst dereceli kolluk amiri adli kolluk üzerinde gözetim, denetim, planlama ve iş bölümü yapmaya yetkilidir; doğal olmayan ölüm veya kimliği belirsiz ölü → derhâl başsavcılığa bildirim; savcı emirleri yazılı, acele hâlde sözlü verir, sözlü emir en kısa sürede yazılıya dönüştürülür ama kolluk yazılıyı beklemeden yerine getirir; suçüstü ve gecikmesinde sakınca olan hâlde savcıya ulaşılamıyorsa veya olay savcının iş gücünü aşıyorsa sulh ceza hâkimi de soruşturma işlemlerini yapabilir; şüphelinin lehine ve aleyhine tüm delilleri toplayıp fezleke ile savcıya sunar, hukuka aykırı delil tespitine fezlekede yer verir; olay yerinde işleme engel olanları önce sözlü ikaz, uymazsa zor kullanarak uzaklaştırma, ısrarda yakalama (m.6)",
+ "sinavda_boyle_yazarlar": [
+  "Kolluk, savcının sözlü emrinin yazılı hâle gelmesini bekler",
+  "Adli kolluk yalnız şüphelinin aleyhine olan delilleri toplar"
+ ],
+ "dogrusu": [
+  "Kolluk görevlisi emrin yazılı hâle getirilmesini beklemeden sözlü emrin gereğini yerine getirir (m.6)",
+  "Adli kolluk şüphelinin lehine veya aleyhine olan tüm delilleri toplar ve fezleke ile savcıya sunar (m.6)"
+ ]
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre soruşturma işlemleri öncelikle kime yaptırılır ve buna ilişkin emirler adlî kolluk görevlilerince nasıl yerine getirilir?",
+ "siklar": [
+  "İçişleri Bakanlığının emriyle; en kısa sürede yerine getirilir",
+  "Mülki idare amirinin emriyle; derhal yerine getirilir",
+  "Cumhuriyet savcısının emir ve talimatları doğrultusunda öncelikle adlî kolluğa yaptırılır; emirler gecikmeksizin yerine getirilir",
+  "En üst dereceli kolluk amirinin emriyle; ivedilikle yerine getirilir",
+  "Sulh ceza hâkiminin emriyle; makul sürede yerine getirilir"
+ ],
+ "dogru": "Cumhuriyet savcısının emir ve talimatları doğrultusunda öncelikle adlî kolluğa yaptırılır; emirler gecikmeksizin yerine getirilir"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre adlî kolluk görevlileri; kendilerine yapılan ihbar/şikâyetleri, el koydukları olayları, yakalanan kişiler ile uygulanan tedbirleri ....(1).... Cumhuriyet ....(2).... ve en üst dereceli kolluk amirine bildirir. Boşluklara sırasıyla gelmesi gereken ifadeler hangisidir?",
+ "siklar": [
+  "en kısa sürede - savcısına",
+  "yirmidört saat içinde - başsavcılığına",
+  "gecikmeksizin - savcısına",
+  "derhâl - başsavcılığına",
+  "bir hafta içinde - başsavcılığına"
+ ],
+ "dogru": "derhâl - başsavcılığına"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre sulh ceza hâkiminin de bütün soruşturma işlemlerini yapabilmesi için birlikte aranan şartlar aşağıdakilerden hangisinde doğru verilmiştir?",
+ "siklar": [
+  "Kovuşturma aşamasında olma ve Cumhuriyet savcısının izni",
+  "Gecikmesinde sakınca bulunma ve mülki idare amirinin talebi",
+  "Suçüstü hâli ve Cumhuriyet savcısının yazılı onayı",
+  "Adlî kolluk sorumlusunun talebi ve olayın basit nitelikte olması",
+  "Suçüstü hâli ile gecikmesinde sakınca bulunan hâllerde, savcıya erişilememesi veya olayın savcının iş gücünü aşması"
+ ],
+ "dogru": "Suçüstü hâli ile gecikmesinde sakınca bulunan hâllerde, savcıya erişilememesi veya olayın savcının iş gücünü aşması"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre adlî kolluk görevlileri, şüphelinin lehine veya aleyhine olan tüm delilleri topladıktan sonra bunları nasıl ve kime sunmakla yükümlüdür?",
+ "siklar": [
+  "Tutanakla mahalli mülki amire",
+  "Rapor hâlinde en üst dereceli kolluk amirine",
+  "Bir fezleke ile Cumhuriyet savcısına",
+  "Yazılı beyanla sulh ceza hâkimine",
+  "İhbarname ile Cumhuriyet başsavcılığına"
+ ],
+ "dogru": "Bir fezleke ile Cumhuriyet savcısına"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre bir ölümün doğal nedenlerden meydana gelmediği kuşkusu varsa veya ölünün kimliği belirlenemiyorsa, kolluk görevlisi durumu derhâl kime bildirmek zorundadır?",
+ "siklar": [
+  "Mahalli mülki idare amirine",
+  "En üst dereceli kolluk amirine",
+  "Sulh ceza hâkimine",
+  "Cumhuriyet başsavcılığına",
+  "Adalet Bakanlığına"
+ ],
+ "dogru": "Cumhuriyet başsavcılığına"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre olay yerinde işlemlere engel olan veya alınan tedbirlere aykırı davranan kişiye karşı adlî kolluk görevlisinin izleyeceği doğru kademe aşağıdakilerden hangisidir?",
+ "siklar": [
+  "Doğrudan yakalama, ardından sözlü ikaz",
+  "Zor kullanarak uzaklaştırma, ardından sözlü ikaz",
+  "Yakalama, ardından zor kullanma",
+  "Sözlü ikaz, ardından doğrudan yakalama",
+  "Sözlü ikaz, uyulmazsa zor kullanarak uzaklaştırma, ısrar hâlinde yakalama"
+ ],
+ "dogru": "Sözlü ikaz, uyulmazsa zor kullanarak uzaklaştırma, ısrar hâlinde yakalama"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre Ceza Muhakemesi Kanunu altıncı fıkrasında sayılan suçlar nedeniyle yapılan soruşturmaların aşamaları hakkında Cumhuriyet başsavcısına bilgi verilmesi nasıl gerçekleştirilir?",
+ "siklar": [
+  "Cumhuriyet savcısı tarafından doğrudan veya varsa ilgili Cumhuriyet başsavcı vekili aracılığıyla yazılı olarak",
+  "Adlî kolluk sorumlusu tarafından sözlü olarak",
+  "En üst dereceli kolluk amiri tarafından aylık rapor hâlinde",
+  "Mülki idare amiri tarafından yıl sonunda",
+  "Sulh ceza hâkimi tarafından resen"
+ ],
+ "dogru": "Cumhuriyet savcısı tarafından doğrudan veya varsa ilgili Cumhuriyet başsavcı vekili aracılığıyla yazılı olarak"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, en üst dereceli kolluk amirinin, adlî kolluk hizmetlerinin etkin ve verimli yürütülmesi amacıyla sahip olduğu yetkiler arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+ "siklar": [
+  "Gözetim",
+  "Denetim",
+  "Planlama",
+  "İş bölümü yapma",
+  "Adlî kolluk sorumlusunu görevlendirme"
+ ],
+ "dogru": "Adlî kolluk sorumlusunu görevlendirme"
+}
+
+====================================================================================================
+MADDE 7  (soru_sayisi=1)  karis_aday=[{'madde': '5', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (244 kr)
+Gerektiğinde veya Cumhuriyet savcısının talebi hâlinde, diğer kolluk birimleri de adlî kolluk görevini yerine getirmekle yükümlüdür. Bu durumda, kolluk görevlileri hakkında, adlî görevleri dolayısıyla Ceza Muhakemesi Kanunu hükümleri uygulanır.
+---------------------------------------- KARTLAR
+{
+ "id": "55-0",
+ "baslik": "Tanımlar — adli kolluk görevlisi ve sorumlusu",
+ "hukum": "Adli kolluk görevlileri: CMK, 3201 (EGM), 2803 (JGK m.7), 2692 (SGK), Gümrük mevzuatı ve Jandarma Yönetmeliğindeki soruşturma işlemlerini yapmak üzere görevlendirilen komutan, amir, memur ve görevliler; adli kolluk sorumlusu: mahallin en büyük mülkî idare amiri tarafından görevlendirilen adli kolluğun komutanı/amiri; en üst dereceli kolluk amiri: EGM'de il/ilçe emniyet müdürü, JGK'da il jandarma komutanı, ilçe ve merkez ilçe jandarma komutanı, SGK'da birlik komutanı, gümrükte kaçakçılık ve istihbarat müdürü (m.3)",
+ "sinavda_boyle_yazarlar": [
+  "\"Adli kolluk sorumlusunu Cumhuriyet başsavcısı görevlendirir\" yanlış; mülkî idare amiri"
+ ],
+ "dogrusu": [
+  "Adli kolluk sorumlusunu Cumhuriyet başsavcısı değil, mahallin en büyük mülkî idare amiri görevlendirir (m.3)"
+ ]
+}
+{
+ "id": "55-5",
+ "baslik": "Diğer kolluk birimlerinin adli görevi",
+ "hukum": "Gerektiğinde veya savcının talebi hâlinde diğer kolluk birimleri de adli kolluk görevini yapmakla yükümlüdür; bu durumda haklarında adli görevleri dolayısıyla CMK hükümleri uygulanır (m.7)",
+ "sinavda_boyle_yazarlar": [
+  "\"Yalnız görevlendirilmiş adli kolluk soruşturma yapabilir\" yanlış"
+ ],
+ "dogrusu": [
+  "Gerektiğinde veya savcının talebiyle diğer kolluk birimleri de adli kolluk görevi yapmakla yükümlüdür (m.7)"
+ ]
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre diğer kolluk birimleri hangi hâlde adlî kolluk görevini yerine getirmekle yükümlüdür ve bu durumda haklarında hangi kanun hükümleri uygulanır?",
+ "siklar": [
+  "Yalnızca mülki idare amirinin talebiyle; 2559 sayılı PVSK hükümleri",
+  "Yalnızca olağanüstü hâl ilanında; 2803 sayılı Kanun hükümleri",
+  "Gerektiğinde veya Cumhuriyet savcısının talebi hâlinde; Ceza Muhakemesi Kanunu hükümleri",
+  "Yalnızca en üst dereceli kolluk amirinin emriyle; kendi teşkilat mevzuatı",
+  "Yalnızca suçüstü hâlinde; sulh ceza hâkiminin belirlediği usul"
+ ],
+ "dogru": "Gerektiğinde veya Cumhuriyet savcısının talebi hâlinde; Ceza Muhakemesi Kanunu hükümleri"
+}
+
+====================================================================================================
+MADDE 11  (soru_sayisi=3)  karis_aday=[{'madde': '7', 'kac_celdiricide': 4}, {'madde': '5', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (825 kr)
+raporları
+Madde 11 – (Değişik fıkra:RG-21/12/2013-28858) Cumhuriyet başsavcıları her yılın sonunda, bu Yönetmeliğin 3 üncü maddesine göre belirlenmiş adlî kolluk sorumluları hakkında değerlendirme raporu düzenleyerek, mülki idare amirlerine gönderir. Değerlendirme raporlarında, adlî kolluk görevlilerinin soruşturma ve kovuşturma işlemlerindeki ehliyetiyle bu işlemlerde gösterdikleri çalışkanlık, iş disiplini ve başarı durumlarına yer verilir. Bu değerlendirme raporları ilgilinin sicilinin düzenlenmesinde dikkate alınır. Birden fazla Cumhuriyet başsavcılığının yetki çevresinde faaliyet gösteren adlî kolluk sorumluları hakkında, değerlendirme raporları her yıl sonunda diğer yer Cumhuriyet başsavcılıklarının görüşü de alınarak adlî kolluk biriminin merkezinin bulunduğu yer Cumhuriyet başsavcısı tarafından düzenlenir.
+---------------------------------------- KARTLAR
+{
+ "id": "55-6",
+ "baslik": "Değerlendirme raporu",
+ "hukum": "Cumhuriyet başsavcıları her yılın sonunda adli kolluk sorumluları hakkında değerlendirme raporu düzenleyip mülkî idare amirlerine gönderir; raporda ehliyet, çalışkanlık, iş disiplini ve başarı durumu yer alır; raporlar ilgilinin sicilinin düzenlenmesinde dikkate alınır; birden fazla başsavcılık çevresinde faaliyet gösteren sorumlular için diğer başsavcılıkların görüşü alınarak merkezin bulunduğu yer başsavcısı düzenler (m.11)",
+ "sinavda_boyle_yazarlar": [
+  "Düzenleyen ile gönderilen makam ters verilir"
+ ],
+ "dogrusu": []
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre adlî kolluk sorumluları hakkındaki değerlendirme raporu ne zaman düzenlenir ve kime gönderilir?",
+ "siklar": [
+  "Altı ayda bir; en üst dereceli kolluk amirine",
+  "Her ayın sonunda; Cumhuriyet savcısına",
+  "Göreve başlarken bir kez; Adalet Bakanlığına",
+  "Her yılın sonunda; mülki idare amirlerine",
+  "Her yılın başında; İçişleri Bakanlığına"
+ ],
+ "dogru": "Her yılın sonunda; mülki idare amirlerine"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, birden fazla Cumhuriyet başsavcılığının yetki çevresinde faaliyet gösteren adlî kolluk sorumluları hakkındaki değerlendirme raporu kim tarafından düzenlenir?",
+ "siklar": [
+  "İçişleri Bakanlığınca",
+  "Her yetki çevresindeki başsavcı tarafından ayrı ayrı",
+  "En üst dereceli kolluk amiri tarafından",
+  "Mülki idare amirinin belirlediği başsavcı tarafından",
+  "Adlî kolluk biriminin merkezinin bulunduğu yer Cumhuriyet başsavcısı tarafından, diğer yer başsavcılıklarının görüşü alınarak"
+ ],
+ "dogru": "Adlî kolluk biriminin merkezinin bulunduğu yer Cumhuriyet başsavcısı tarafından, diğer yer başsavcılıklarının görüşü alınarak"
+}
+{
+ "kok": "Adli Kolluk Yönetmeliği'ne göre her yılın sonunda adli kolluk sorumluları hakkında değerlendirme raporunu kim düzenler?",
+ "siklar": [
+  "Adalet komisyonu başkanı",
+  "Sulh ceza hâkimi",
+  "İl jandarma komutanı",
+  "Cumhuriyet başsavcısı",
+  "Mahallin en büyük mülki amiri"
+ ],
+ "dogru": "Cumhuriyet başsavcısı"
+}
+
+====================================================================================================
+MADDE 13  (soru_sayisi=2)  karis_aday=[{'madde': '7', 'kac_celdiricide': 1}, {'madde': '4', 'kac_celdiricide': 1}, {'madde': '6', 'kac_celdiricide': 1}]
+---------------------------------------- RESMI METIN (868 kr)
+hizmetinin denetimi
+Madde 13 - Cumhuriyet başsavcıları ve Cumhuriyet savcıları;
+a) Adlî kolluk hizmetlerinin etkin ve verimli yürütülebilmesi amacıyla, adlî kolluk görevlilerince ifa edilen adlî işlemleri her zaman denetler.
+b) Yürütülen soruşturma evrakını gerektiğinde ilgili adlî kolluk biriminde inceleyerek, soruşturmaya ilişkin eksik gördüğü hususların ikmalini emredebileceği gibi, soruşturma evrakı ve taraflarının bulunduğu hâl üzere Cumhuriyet başsavcılığına intikal ettirilmesi talimatını da verebilir. Cumhuriyet başsavcıları veya Cumhuriyet savcıları adlî görevlerinin gereği olarak, gözaltına alınan kişilerin bulundurulacakları nezarethaneleri, varsa ifade alma odalarını, bu kişilerin durumlarını, gözaltına alınma sürelerini, gözaltına alma ile ilgili tüm kayıt ve işlemlerini denetler, sonucunu nezarethaneye alınanların kaydına ait deftere kaydeder.
+---------------------------------------- KARTLAR
+{
+ "id": "55-8",
+ "baslik": "Denetim",
+ "hukum": "Cumhuriyet başsavcıları ve savcıları adli kolluğun adli işlemlerini her zaman denetler; soruşturma evrakını ilgili adli kolluk biriminde inceleyip eksiklerin ikmalini emredebilir veya evrakın bulunduğu hâl üzere başsavcılığa intikalini isteyebilir; gözaltına alınanların nezarethanelerini, ifade alma odalarını, durumlarını, gözaltı sürelerini ve tüm kayıt-işlemleri denetler, sonucunu nezarethane defterine kaydeder (m.13)",
+ "sinavda_boyle_yazarlar": [
+  "Savcı nezarethaneleri ancak şikâyet üzerine denetler"
+ ],
+ "dogrusu": [
+  "Cumhuriyet başsavcıları ve savcıları adli işlemleri her zaman denetler; nezarethaneleri, ifade alma odalarını ve gözaltı sürelerini denetleyip sonucunu nezarethane defterine kaydeder (m.13)"
+ ]
+}
+---------------------------------------- TABLO
+---------------------------------------- ORNEK SORULAR
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre Cumhuriyet başsavcıları ve Cumhuriyet savcıları, adlî kolluk görevlilerince ifa edilen adlî işlemleri hangi sıklıkla denetler?",
+ "siklar": [
+  "Yılda bir kez",
+  "Ayda bir kez",
+  "Mülki idare amirinin talebi üzerine",
+  "Her zaman",
+  "Yalnızca şikâyet üzerine"
+ ],
+ "dogru": "Her zaman"
+}
+{
+ "kok": "Adlî Kolluk Yönetmeliği'ne göre, Cumhuriyet başsavcıları veya savcılarının yürütülen soruşturma evrakı üzerindeki yetkileri arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+ "siklar": [
+  "Gerektiğinde ilgili adlî kolluk biriminde soruşturma evrakını inceleme",
+  "Soruşturmayı resen kapatıp kovuşturmaya geçirme",
+  "Soruşturmaya ilişkin eksik görülen hususların ikmalini emretme",
+  "Soruşturma evrakı ve taraflarının bulunduğu hâl üzere Cumhuriyet başsavcılığına intikalini talimatlandırma",
+  "Adlî kolluk hizmetlerinin etkin yürütülmesi amacıyla adlî işlemleri her zaman denetleme"
+ ],
+ "dogru": "Soruşturmayı resen kapatıp kovuşturmaya geçirme"
+}

@@ -1,0 +1,231 @@
+{
+ "kanun_id": 115,
+ "ad": "Fazla veya Yersiz Ödemelerin Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_115.json",
+ "kartlar": [
+  {
+   "id": "115-0",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kasıtlı ve kusurlu davranış sayılan hâller",
+   "hukum": "Kuruma verilen belgelerle gerçeğe aykırı bildirim; Kurumca hazırlanan belgelerle bildirilmesi taahhüt edilen durum değişikliklerinin bir ay içinde bildirilmemesi; şartlar yerine gelmediği hâlde sahte bilgi ve belgelerle ya da sahte hizmet kazandırılarak sağlık hizmetleri ve diğer haklardan yararlanılması, gelir veya aylık bağlatılması; boşanma nedeniyle gelir veya aylık bağlandıktan sonra boşandığı eşle fiilen birlikte yaşanması; gelir-aylığın kesilmesi gerektiği hâlde durumun gizlenmesi veya bildirilmemesi; hak sahipliği sona erdiği hâlde herhangi bir kişi tarafından tahsilat yapılması (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Durum değişikliğini bildirme süresi üç aydır\" yanlış; bir ay",
+    "Durum değişikliklerinin üç ay içinde bildirilmemesi kusurlu davranıştır"
+   ],
+   "dogrusu": [
+    "Bir ay (m.5/1)"
+   ]
+  },
+  {
+   "id": "115-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kusurlu sayılmama istisnası",
+   "hukum": "Sigortalılıkların (b) bendindeki süre içinde bildirim yükümlüleri tarafından Kuruma bildirilmesi hâlinde ya da Kurumca yeni bir gelir veya aylık bağlanması durumunda ilgililer (b) ve (e) bentleri kapsamında kasıtlı veya kusurlu sayılmaz (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"İstisna yönetmelikteki bütün bentlere uygulanır\" yanlış; yalnız (b) ve (e) bentleri için"
+   ],
+   "dogrusu": [
+    "bildirim yükümlüleri tarafından Kuruma bildirilmesi · yeni bir gelir veya aylık bağlanması · (b) ve (e) bentleri"
+   ]
+  },
+  {
+   "id": "115-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kişi kusurunda geri alma süresi ve faiz",
+   "hukum": "Kasıtlı ve kusurlu davranışların tespit edildiği tarihten geriye doğru en fazla on yıllık süre içinde yapılan fazla veya yersiz ödemeler, her bir ödemenin yapıldığı tarihten itibaren hesaplanacak kanunî faizi ile birlikte tahsil edilir (m.5/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kişi kusurunda geriye doğru beş yıl\" yanlış; on yıl (beş yıl Kurum hatasında)",
+    "Kişinin kasıtlı ve kusurlu davranışında geriye doğru en fazla beş yıllık ödemeler geri alınır"
+   ],
+   "dogrusu": [
+    "On yıl (m.5/2); beş yıl Kurum hatasında (m.6/2)"
+   ]
+  },
+  {
+   "id": "115-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Suç duyurusu",
+   "hukum": "(b) ve (d) bentlerindeki durumlar ile (f) bendi kapsamında bir aylık döneme ilişkin gelir-aylığın herhangi bir kişi tarafından tahsil edilmesi hariç olmak üzere, Kurumun yanlış işlem ve ödeme yapmasına sebebiyet veren ve adına borç tahakkuk ettirilen veya ettirilmesine neden olan kişiler hakkında ayrıca Cumhuriyet Savcılığına suç duyurusunda bulunulur (m.5/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Durum değişikliğini bir ay içinde bildirmeyen hakkında da suç duyurusunda bulunulur\" yanlış; (b) bendi suç duyurusunun dışındadır"
+   ],
+   "dogrusu": [
+    "bir aylık döneme · hariç · Cumhuriyet Savcılığına suç duyurusunda"
+   ]
+  },
+  {
+   "id": "115-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kurumun hatalı işlemi ve geri alma",
+   "hukum": "İlgililerin kusuru dışında kalan, Kurum çalışanlarının kasıtlı veya kusurlu davranışı, ihmali, dikkatsizliği ve bilgisizliği gibi sebeplerden kaynaklanan yersiz ödemeler Kurumun hatalı işlemidir; tespit tarihinden geriye doğru en fazla beş yıllık ödemeler, borç tebliğinden itibaren yirmi dört ay içinde ödenirse faizsiz; 24 aylık süreden sonraki ödemeler, sürenin dolduğu tarihten itibaren kanunî faizi ile tahsil edilir (m.6/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurum hatasında tebliğden itibaren 12 ay faizsiz\" yanlış; yirmi dört ay",
+    "Kurum hatasından doğan borç tebliğden itibaren on iki ay içinde ödenirse faizsizdir"
+   ],
+   "dogrusu": [
+    "Yirmi dört ay (m.6/2)"
+   ]
+  },
+  {
+   "id": "115-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kurum hatasında hemen takip",
+   "hukum": "Kurum hatasından doğan borç, tebliğden itibaren 1 ay içinde def'aten ödenmez veya taksitlendirilmişse taksitler plana uygun ve vadesinde düzenli ödenmezse, 24 aylık süre beklenilmeksizin alacak takip dosyası hukuk birimine intikal ettirilir (m.6/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"24 aylık süre dolmadan takip başlatılamaz\" yanlış; 1 ayda ödenmez veya taksit aksarsa süre beklenmez"
+   ],
+   "dogrusu": [
+    "1 ay içinde def'aten ödenmez · beklenilmeksizin · hukuk birimine"
+   ]
+  },
+  {
+   "id": "115-6",
+   "madde": [
+    "7",
+    "8"
+   ],
+   "baslik": "Tespit ve değerlendirme",
+   "hukum": "Fazla veya yersiz ödeme; kontrol, denetim, inceleme, Sayıştayca kesin hükme bağlama veya yargılama sonucunda tespit edilir (m.7); 5 ve 6 ncı maddelerin değerlendirmesi daire başkanlıklarında daire başkanınca belirlenen şube müdürleri, il müdürlüklerinde il müdürünce belirlenecek il müdür yardımcısı, şube müdürü veya merkez müdürü tarafından yapılır; değerlendirmede Değerlendirme Onayı (Ek-1) kullanılır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"İl müdürlüklerinde değerlendirmeyi doğrudan il müdürü yapar\" yanlış; il müdürünce belirlenen il müdür yardımcısı, şube müdürü veya merkez müdürü yapar"
+   ],
+   "dogrusu": [
+    "kontrol, denetim, inceleme, Sayıştayca kesin hükme bağlama veya yargılama · daire başkanlıklarında daire başkanınca belirlenen şube müdürleri · il müdürlüklerinde il müdürünce belirlenecek il müdür yardımcısı, şube müdürü veya merkez müdürü · Değerlendirme Onayı (Ek-1)"
+   ]
+  },
+  {
+   "id": "115-7",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Alacak takip dosyası ve tablolar",
+   "hukum": "Her türlü fazla veya yersiz ödeme için Borç Tablosu (Ek-2) ve Alacak Takip Tablosu (Ek-3) düzenlenir; Kurum hatasından doğan ödemeler çok sayıda kişiyi ilgilendiriyorsa Borçlular Tablosu (Ek-4); yargı kararları ve Sayıştay ilamlarıyla tespit edilen alacaklar için alacak takip dosyası merkezde Strateji Geliştirme Başkanlığınca, taşrada Sosyal Güvenlik İl Müdürlüğü veya Merkez Müdürlüğünce oluşturulur; Sayıştay denetçilerinin sorguları ihbar kabul edilerek Kurumca denetim veya inceleme başlatılabilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sayıştay sorguları ancak kesinleşince işleme konur\" yanlış; ihbar kabul edilerek denetim başlatılabilir"
+   ],
+   "dogrusu": [
+    "Borç Tablosu (Ek-2) · Alacak Takip Tablosu (Ek-3) · çok sayıda kişiyi · Borçlular Tablosu (Ek-4) · yargı kararları ve Sayıştay ilamlarıyla · merkezde Strateji Geliştirme Başkanlığınca · taşrada Sosyal Güvenlik İl Müdürlüğü veya Merkez Müdürlüğünce · Sayıştay denetçilerinin sorguları ihbar"
+   ]
+  },
+  {
+   "id": "115-8",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Borcun tahakkuku ve faiz başlangıcı",
+   "hukum": "Kişi kusurunda borç tablosunda her ödeme için ödeme tarihinden hatalı işlemin tespit tarihine kadar kanunî faiz hesaplanır, ödemeler ve faiz toplamı borç kaydedilir; sonraki faizler için başlangıç borcun tespit edildiği tarihtir; Kurum hatasında tahakkuk sırasında hiçbir faiz hesaplanmaz, faiz başlangıcı borcun tebliğini takip eden yirmi dördüncü ayın bittiği tarihtir; tespit edilen ödemeler muhasebe birimine bildirilir ve ilgili hesaba kaydedilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurum hatasında da tahakkuk sırasında ödeme tarihinden itibaren faiz hesaplanır\" yanlış; faiz hesaplanmaz",
+    "Kurum hatasında borç tahakkuk ettirilirken ödeme tarihinden itibaren faiz hesaplanır"
+   ],
+   "dogrusu": [
+    "Hiçbir faiz hesaplanmaz; faiz tebliği takip eden 24. ayın bitiminden başlar (m.10/2)"
+   ]
+  },
+  {
+   "id": "115-9",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Tebliğ ve itiraz",
+   "hukum": "Alacaklar merkezde ilgili birimlerce, taşrada sosyal güvenlik kurumu il müdürlüklerince düzenlenen Borç Bildirim Belgesi (Ek-5) ile 7201 sayılı Tebligat Kanununa göre tebliğ edilir; yargılama sonucunda hükme bağlanıp tebliğ edilen alacaklarda kararın kesinleşmesi beklenmeksizin takibe başlanır, tazmin kararları temsile yetkili hukuk birimlerine intikal ettirilir; itiraz, başvuru tarihinden itibaren on iş günü içinde değerlendirme onayını veren merciin amiri tarafından karara bağlanır; itiraz ve itirazı değerlendirme süresi ödeme süresini değiştirmez (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"İtiraz edilmesi ödeme süresini durdurur\" yanlış; ödeme süresini değiştirmez",
+    "İtiraz ödeme süresini durdurur",
+    "Yargılama sonucu hükme bağlanan alacakta takip için kararın kesinleşmesi beklenir"
+   ],
+   "dogrusu": [
+    "Ödeme süresini değiştirmez (m.11/3)",
+    "Kesinleşmesi beklenmeksizin takibe başlanır (m.11/2)"
+   ]
+  },
+  {
+   "id": "115-10",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Uygulanacak faiz",
+   "hukum": "Fazla veya yersiz ödemelerin geri alınmasında 3095 sayılı Kanunî Faiz ve Temerrüt Faizine İlişkin Kanun hükümleri uygulanır (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"6183 sayılı Kanundaki gecikme zammı uygulanır\" yanlış; 3095 sayılı Kanun hükümleri uygulanır",
+    "Faiz hesabında 6183 sayılı Kanun uygulanır"
+   ],
+   "dogrusu": [
+    "3095 sayılı Kanun (m.12)"
+   ]
+  },
+  {
+   "id": "115-11",
+   "madde": [
+    "13",
+    "4"
+   ],
+   "baslik": "Tahsil şekli: önce mahsup, sonra %25 kesinti",
+   "hukum": "Yersiz ödemeler ilgililerin Kurumdan alacaklarından mahsup edilmek, gelir ve aylıklarından kesinti yapılmak suretiyle tahsil edilir; Kurumdan alacağı yoksa genel hükümlere göre tahsil edilir; öncelikle ve her durumda kişinin birikmiş aylık, gelir ve diğer alacaklarının tamamından mahsup edilir, kesintiler önce borç aslına mahsup edilir; alacağı yoksa veya mahsuptan sonra borç kalmışsa ve aylık almaya devam ediyorsa borç, gelir ve aylıklardan %25 oranında kesilerek tahsil edilir (m.13/1-2, 4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kesintiler önce faize mahsup edilir\" yanlış; öncelikle borç aslına",
+    "Gelir ve aylıklardan %50 oranında kesinti yapılır"
+   ],
+   "dogrusu": [
+    "%25 (m.13/4)"
+   ]
+  },
+  {
+   "id": "115-12",
+   "madde": [
+    "13",
+    "5"
+   ],
+   "baslik": "Hak sahipleri arasında mahsup ve icra",
+   "hukum": "Mahsup kuralı, ilgiliye hayatta iken yapılan yersiz ödemelerin hak sahiplerinin alacaklarından mahsubunda ve hak sahiplerinin muvafakat etmesi kaydıyla aynı dosyadan diğer bir hak sahibine yapılan yersiz ödemelerin mahsubunda da uygulanır; sonradan veya yeniden aylığa hak kazananların birikmiş istihkaklarından, aynı dosyadan aylık alan diğer hak sahiplerine çıkarılan borç muvafakat alınmak kaydıyla mahsup edilir; kesintiyle geri alma süresinin beş yılı aşacağı anlaşılırsa, Kurumun hatalı işlemlerinden doğanlar hariç, ayrıca icrai takibata geçilir (m.13/2-3, 5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurum hatasından doğan borçta da kesinti süresi beş yılı aşarsa icraya geçilir\" yanlış; Kurum hatası hariç tutulmuştur",
+    "Kurum hatasından doğan alacakta kesinti süresi beş yılı aşarsa icraya geçilir"
+   ],
+   "dogrusu": [
+    "Kurum hatası hariç (m.13/5)"
+   ]
+  },
+  {
+   "id": "115-13",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Ölenin hesabından yersiz çekim",
+   "hukum": "Kurumdan gelir veya aylık almakta iken ölenler adına hesaplarına gönderilip ilgililerce tahsil edilen tutarlar hak sahiplerine yapılacak ödemelerden mahsup edilir; mahsup edilemezse ödeme tarihi itibarıyla kanunî faiziyle hesaplanan borç hak sahiplerinin gelir veya aylıklarından %25 oranında kesilir; parayı çekenin hak sahipleri dışında başka bir kişi olduğu tespit edilirse yersiz ödeme genel hükümlere göre bu kişilerden tahsil edilir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Parayı hak sahibi olmayan biri çekse de borç hak sahiplerinin aylığından kesilir\" yanlış; genel hükümlere göre o kişiden tahsil edilir"
+   ],
+   "dogrusu": [
+    "ölenler adına · hak sahiplerine yapılacak ödemelerden mahsup · kanunî faiziyle · %25 · hak sahipleri dışında başka bir kişi · genel hükümlere göre bu kişilerden"
+   ]
+  },
+  {
+   "id": "115-14",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Taksitlendirme",
+   "hukum": "Kurumdan alacağı bulunmayan borçlu, borçlunun kanunî varisleri ile borcu kabul eden şahıslar borcu def'aten ödeyebilir veya taksitle ödeme talebinde bulunabilir; talepler borcu tebliğ eden birimlere yapılır; taksitlendirme 2006/11058 sayılı Bakanlar Kurulu Kararıyla yürürlüğe konulan Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik hükümlerine göre yürütülür (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taksitlendirme talebi Strateji Geliştirme Başkanlığına yapılır\" yanlış; borcu tebliğ eden birimlere"
+   ],
+   "dogrusu": [
+    "Kurumdan alacağı bulunmayan · kanunî varisleri · borcu kabul eden şahıslar · def'aten · taksitle ödeme · borcu tebliğ eden birimlere · 2006/11058 sayılı Bakanlar Kurulu Kararıyla · Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

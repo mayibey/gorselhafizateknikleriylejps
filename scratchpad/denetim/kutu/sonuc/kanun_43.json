@@ -1,0 +1,50 @@
+[
+ {
+  "kanun_id": 43,
+  "kart_id": "43-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim süresi 48 saatten 24 saate indirildi; bildirim yapılacak yer kolluktan federasyona kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Müsabakada görevlendirilecek özel güvenlik görevlilerinin kimlik bilgilerinin, müsabakanın başlangıç saatinden yirmi dört saat önceye kadar kolluğa bildirilmesi yeterlidir.”",
+    "“Özel güvenlik görevlilerinin kimlik bilgileri müsabakadan önce ilgili spor federasyonuna bildirilir.”"
+   ],
+   "dogrusu": [
+    "Özel güvenlik görevlilerinin kimlik bilgileri müsabakanın başlangıç saatinden en geç kırk sekiz saat önce ilgili kolluk birimine bildirilir (m.6/3)",
+    "Özel güvenlik görevlilerinin kimlik bilgileri federasyona değil, ilgili kolluk birimine bildirilir (m.6/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Giriş araması hâkim kararına bağlandı; özel güvenliğin kolluk gözetiminde çalışma şartı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Spor alanına girişte izleyicilerin üstü ve eşyası ancak hâkim kararıyla aranabilir.”",
+    "“Özel güvenlik görevlileri, genel kolluğun gözetimi olmaksızın spor alanına girişte izleyicilerin üstünü arayabilir.”"
+   ],
+   "dogrusu": [
+    "Spor alanına girişte üst ve eşya araması mülkî amirin yazılı emrine istinaden yapılır (m.12/2)",
+    "Özel güvenlik görevlileri giriş aramasını genel kolluk görevlilerinin gözetiminde yapabilir (m.12/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 43,
+  "kart_id": "43-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ruhsatlı silaha izin verildi; alkol usulünü belirleyen makam federasyondan mülkî amire kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ruhsatlı ateşli silahlar müsabaka ve seyir alanlarına sokulabilir.”",
+    "“Spor alanlarında alkollü içecek sokulması, kullanılması ve satılmasına ilişkin usul ve esaslar mülkî amir tarafından belirlenir.”"
+   ],
+   "dogrusu": [
+    "Ruhsatlı dahi olsa ateşli silahların müsabaka, seyir ve antrenman alanlarına sokulması yasaktır (m.12/1-a)",
+    "Alkollü içecek sokulması, kullanılması ve satılmasına ilişkin usul ve esasları ilgili federasyonlar belirler (m.12/1)"
+   ]
+  }
+ }
+]

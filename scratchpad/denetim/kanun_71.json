@@ -1,0 +1,236 @@
+{
+ "kanun_id": 71,
+ "ad": "657 sayılı Devlet Memurları Kanunu (personel kapsamı)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_71.json",
+ "kartlar": [
+  {
+   "id": "71-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kapsam ve özel kanuna tabi olanlar",
+   "hukum": "Kanun genel ve katma bütçeli kurumlar, il özel idareleri, belediyeler ve birlikleri, döner sermayeli kuruluşlar, kanunla kurulan fonlar, kefalet sandıklarındaki memurlar hakkında uygulanır; sözleşmeli ve geçici personele özel hükümleri; özel kanunlarına tabi olanlar: Anayasa Mahkemesi üye ve raportörleri, hâkim-savcılar, Danıştay-Sayıştay meslek mensupları ve Sayıştay savcı ve yardımcıları, üniversite öğretim üyeleri, Cumhurbaşkanlığı Senfoni Orkestrası üyeleri, Mehteran sanatkârları, Devlet tiyatro-opera-bale sanatçıları, Spor-Toto personeli, subay, astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erler ile Emniyet mensupları (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaş 657'ye tabidir\" yanlış",
+    "Büyükşehir belediye personeli özel kanuna tabidir"
+   ],
+   "dogrusu": [
+    "657'ye tabidir (m.1)"
+   ]
+  },
+  {
+   "id": "71-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Temel ilkeler",
+   "hukum": "Kanunun temel ilkeleri sınıflandırma, kariyer ve liyakat: kariyer, memurlara yaptıkları hizmetler için lüzumlu bilgilere ve yetişme şartlarına uygun şekilde sınıfları içinde en yüksek derecelere kadar ilerleme imkânı sağlamak; liyakat, kamu hizmetine girme, sınıf içinde ilerleme-yükselme ve görevin sona erdirilmesini yeterlik sistemine dayandırmak; sınıflandırma, memurları görevlerin gerektirdiği niteliklere ve mesleklere göre sınıflara ayırmak (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Liyakat\" şıkkı tuzak; liyakat yeterlik sistemidir",
+    "Kariyer ilkesi yeterlik sistemidir"
+   ],
+   "dogrusu": [
+    "O liyakat; kariyer ilerleme imkânı (m.3)"
+   ]
+  },
+  {
+   "id": "71-2",
+   "madde": [
+    "4",
+    "5"
+   ],
+   "baslik": "İstihdam şekilleri",
+   "hukum": "Kamu hizmetleri memurlar, sözleşmeli personel, geçici personel ve işçiler eliyle gördürülür; memur: Devlet ve kamu tüzel kişilerince genel idare esaslarına göre yürütülen asli ve sürekli kamu hizmetlerini görenler (ve diğer kurumlarda politika, planlama, yönetim, denetim işlerinde görevli olanlar); sözleşmeli personel: kalkınma planı ve programlardaki önemli projeler için zaruri ve istisnai hâllere münhasır, özel meslek bilgisi gerektiren geçici işlerde, Cumhurbaşkanınca belirlenen esaslarla ihdas edilen pozisyonlarda mali yılla sınırlı sözleşmeyle çalıştırılan, işçi sayılmayan kamu hizmeti görevlileri; aynı kurumda 3 yıl tamamlayan sözleşmeliler 30 gün içinde talep ederse aynı unvanlı memur kadrosuna atanır, 3 yıl başka yere atanamaz, memur olunca 1 yıl daha aynı yerde; sözleşmeyi tek taraflı fesheden 1 yıl sözleşmeli olamaz; sözleşmelinin disiplini Devlet memurları hükümlerine göre; işçiler: sürekli işçi kadrolarında belirsiz süreli iş sözleşmesiyle çalışanlar ve mevsimlik işçiler (m.4); kurumlar bu dört istihdam şekli dışında personel çalıştıramaz (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Geçici personel\" ve \"kadro karşılığı sözleşmeli\" şıkları tuzak"
+   ],
+   "dogrusu": [
+    "memurlar, sözleşmeli personel, geçici personel ve işçiler · memur · asli ve sürekli · sözleşmeli personel · zaruri ve istisnai · geçici işlerde · mali yılla sınırlı · işçi sayılmayan · 3 yıl · 30 gün · 3 yıl · 1 yıl · 1 yıl · işçiler · dört"
+   ]
+  },
+  {
+   "id": "71-3",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Öğrenim şartı",
+   "hukum": "Genel olarak ortaokulu bitirenler memur olabilir; istekli yoksa ilkokul mezunları da alınabilir; belli görevler için daha yüksek öğrenim, belirli fakülte/okul, meslek içi eğitim veya yabancı dil şartı konulabilir (m.41)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az lise\" yanlış"
+   ],
+   "dogrusu": [
+    "ortaokulu bitirenler"
+   ]
+  },
+  {
+   "id": "71-4",
+   "madde": [
+    "59"
+   ],
+   "baslik": "Istisnai memurluklar",
+   "hukum": "Cumhurbaşkanlığı ile TBMM memurlukları, Bakan Yardımcılıkları, Savunma Sanayii üst kadroları, TOKİ üst kadroları, Özelleştirme İdaresi üst kadroları, Bakanlık Müşavirlikleri ve Basın ve Halkla İlişkiler Müşavirlikleri, TÜİK basın müşavirliği vb. atamalarda bu Kanunun sınav, kademe ilerlemesi ve derece yükselmesi hükümleri uygulanmaz (m.59)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaymakamlık istisnai memurluktur\" yanlış",
+    "Kaymakamlık istisnai memurluktur"
+   ],
+   "dogrusu": [
+    "Değildir; TBMM memurluğu vb. (m.59)"
+   ]
+  },
+  {
+   "id": "71-5",
+   "madde": [
+    "99",
+    "100",
+    "101"
+   ],
+   "baslik": "Çalışma saatleri ve gece nöbeti yasağı",
+   "hukum": "Haftalık çalışma süresi genel olarak 40 saat, Cumartesi-Pazar tatil; kurum özelliklerine göre farklı süreler tespit edilebilir; Cumhurbaşkanı yurt dışı kuruluşlarda hafta tatilini başka günler yapabilir (m.99); günlük başlama-bitiş saatleri ve öğle dinlenmesi merkezde Cumhurbaşkanınca, illerde valilerce; engelliler için merkezde üst yönetici, taşrada mülki amir farklı belirleyebilir; hizmetin özelliğine göre görev yerine bağlı olmaksızın çalışma mümkün (m.100); 24 saat devamlılık gösteren hizmetlerde çalışma saat ve şekilleri kurumca; kadın memura tabip raporuyla hamileliğin 24. haftasından önce ve her hâlde 24. haftadan itibaren ve doğumdan sonraki 2 yıl süreyle gece nöbeti ve gece vardiyası verilemez; engelli memura isteği dışında gece nöbeti verilemez (m.101)",
+   "sinavda_boyle_yazarlar": [
+    "\"onsekizinci\" ve \"bir yıl\" şıkları yanlış",
+    "Hamile memura 18. haftadan sonra gece nöbeti verilmez"
+   ],
+   "dogrusu": [
+    "24. hafta (m.101)"
+   ]
+  },
+  {
+   "id": "71-6",
+   "madde": [
+    "102",
+    "103"
+   ],
+   "baslik": "Yıllık izin",
+   "hukum": "Hizmeti 1 yıldan 10 yıla kadar (10 dahil) olanlara 20 gün, 10 yıldan fazla olanlara 30 gün; zorunlu hâllerde gidiş-dönüş için en çok ikişer gün eklenebilir (m.102); izinler amirin uygun bulacağı zamanlarda toptan veya kısım kısım; birbirini izleyen iki yılın izni bir arada verilebilir; cari yıl ile bir önceki yıl hariç önceki yılların izni düşer; öğretmenler yaz ve dinlenme tatilinde izinli sayılır, ayrıca yıllık izin verilmez; radyoaktif ışınla çalışanlara yıllık izne ilaveten 1 aylık sağlık izni (m.103)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kullanılmayan izinler tamamen düşer\" yanlış; bir önceki yıl korunur"
+   ],
+   "dogrusu": [
+    "1 yıldan 10 yıla kadar (10 dahil) · 20 gün · 10 yıldan fazla · 30 gün · en çok ikişer gün · iki yılın izni bir arada · cari yıl ile bir önceki yıl hariç · 1 aylık sağlık izni"
+   ]
+  },
+  {
+   "id": "71-7",
+   "madde": [
+    "104"
+   ],
+   "baslik": "Mazeret izinleri",
+   "hukum": "Analık izni: doğumdan önce 8, sonra 16 hafta olmak üzere toplam 24 hafta; çoğul gebelikte doğum öncesine 2 hafta eklenir; sağlık uygunsa doğumdan önceki 2 haftaya kadar çalışıp kalan süre doğum sonrasına eklenir; erken doğumda kullanılamayan kısım sonrasına eklenir; annenin ölümünde memur babaya anne için öngörülen süre; 3 yaşını doldurmamış çocuğu evlat edinen memura teslimden itibaren 8 hafta; koruyucu aile olan memura 10 gün; babalık izni 10 gün; kendisinin veya çocuğunun evlenmesi, eşinin-çocuğunun-kendisinin veya eşinin ana-baba-kardeşinin ölümünde 7 gün; bunlar dışında merkezde atamaya yetkili amir, ilde vali, ilçede kaymakam, yurt dışında misyon şefi tarafından birim amirinin muvafakatiyle yılda 10 gün mazeret izni, zaruret hâlinde (öğretmenler hariç) 10 gün daha (ikincisi yıllık izinden düşülür); süt izni: analık izni bitiminden itibaren ilk 6 ayda günde 3 saat, ikinci 6 ayda günde 1,5 saat, saatleri kadın memur seçer; %70 engelli/süreğen hastalıklı çocuğun hastalığında yılda 10 güne kadar mazeret izni; analık izni sonrası kadın memur isteğiyle (süt izni verilmeksizin) 1. doğumda 2 ay, 2. doğumda 4 ay, sonrakilerde 6 ay günlük çalışma süresinin yarısı kadar çalışabilir (çoğul doğumda +1 ay, engelli çocukta 12 ay); izinlerde fiili çalışmaya bağlı ödemeler hariç mali haklar korunur (m.104)",
+   "sinavda_boyle_yazarlar": [
+    "\"Babalık izni 7 gün\" yanlış; 10",
+    "Babalık izni 7 gündür"
+   ],
+   "dogrusu": [
+    "10 (m.104)"
+   ]
+  },
+  {
+   "id": "71-8",
+   "madde": [
+    "105"
+   ],
+   "baslik": "Hastalık ve refakat izni",
+   "hukum": "Aylık ve özlük hakları korunarak, raporda gösterilen lüzum üzerine kanser, verem ve akıl hastalığı gibi uzun süreli tedavi gerektiren hastalıkta 18 aya kadar, diğer hastalıklarda 12 aya kadar izin; yatarak tedavi süreleri hesaba katılır; izin sonunda işe başlamak için iyileştiğine dair rapor şart; hastalık devam ediyorsa resmî sağlık kurulu raporuyla aynı süreler kadar uzatılır, sonunda iyileşemeyen için emeklilik; sağlığını yeniden kazanan ve emeklilik hakkı olmayanlar öncelikle atanır; görevi sırasında/görevinden dolayı kaza-saldırıya uğrayan veya meslek hastalığına tutulan memur iyileşinceye kadar izinli; refakat izni: bakmakla yükümlü olduğu veya refakat etmezse hayatı tehlikeye girecek ana-baba-eş-çocuk-kardeşin ağır kazası/uzun hastalığında sağlık kurulu raporuyla 3 aya kadar aylıklı izin, gerekirse bir katına uzatılır (m.105)",
+   "sinavda_boyle_yazarlar": [
+    "\"Diğer hastalıklarda 18 ay\" yanlış; 12",
+    "Kanser hastalığında 12 aya kadar izin"
+   ],
+   "dogrusu": [
+    "18 ay (m.105)"
+   ]
+  },
+  {
+   "id": "71-9",
+   "madde": [
+    "108"
+   ],
+   "baslik": "Aylıksız izin",
+   "hukum": "(A) refakat izni bitiminden itibaren sağlık kurulu raporuyla 18 aya kadar; (B) doğum yapan memura analık izni (veya yarım gün çalışma) bitiminden, eşi doğum yapan memura doğum tarihinden itibaren 24 aya kadar; (C) 3 yaşını doldurmamış çocuğu evlat edinene 8 haftalık izin bitiminden 24 aya kadar (her iki eş memursa birbirini izleyen iki bölüm); (D) yurt dışına burslu/görevli gönderilen veya en az 6 ay yurt dışında görevlendirilen memurların ve yurt dışına gönderilen öğrencilerin memur eşlerine görev/öğrenim süresince; uluslararası kuruluşlarda çalışanların eşlerine 10 yılı aşmamak üzere; (E) 5 hizmet yılını tamamlayan memura memuriyeti boyunca en fazla iki defada toplam 1 yıla kadar (OHAL/afet bölgesine zorunlu atananlar hariç); (F) mazeret sona erince 10 gün içinde göreve dönmek zorunlu; izin bitiminde veya mazeretin kalkmasını izleyen 10 gün içinde dönmeyen memuriyetten çekilmiş sayılır; (G) muvazzaf askerliğe ayrılan memur askerlik süresince görev yeri saklı aylıksız izinli (m.108)",
+   "sinavda_boyle_yazarlar": [
+    "\"5 yıl dolduran 2 yıl aylıksız izin alır\" yanlış; 1 yıl",
+    "Aylıksız izinden 15 gün içinde dönülür"
+   ],
+   "dogrusu": [
+    "10 gün (m.108)"
+   ]
+  },
+  {
+   "id": "71-10",
+   "madde": [
+    "122"
+   ],
+   "baslik": "Ödül",
+   "hukum": "Olağanüstü gayretle emsallerine göre başarılı memurlara merkezde bakan, illerde vali, ilçelerde kaymakam başarı belgesi verebilir; TSK'daki memurlar için MSB yetkiyi devredebilir; 3 başarı belgesi → üstün başarı belgesi; üstün başarı belgesi alanlara bakan/vali uygun görürse en yüksek Devlet memuru aylığının (ek gösterge dâhil) %200'üne kadar ödül; bir mali yılda ödüllendirilecek sayı kurumun yılbaşındaki dolu kadrosunun binde onundan, Gümrük, MEB, EGM, JGK ve SGK için binde yirmisinden fazla olamaz (m.122)",
+   "sinavda_boyle_yazarlar": [
+    "\"Binde onundan\" genel kurum tavanıdır",
+    "JGK'da ödül tavanı binde 10"
+   ],
+   "dogrusu": [
+    "Binde 20 (m.122)"
+   ]
+  },
+  {
+   "id": "71-11",
+   "madde": [
+    "137",
+    "138",
+    "139"
+   ],
+   "baslik": "Görevden uzaklaştırma — tanım ve yetkililer",
+   "hukum": "Kamu hizmetinin gerektirdiği hâllerde görevi başında kalması sakıncalı memur hakkında ihtiyati tedbir; soruşturmanın herhangi bir safhasında alınabilir (m.137); yetkililer: atamaya yetkili amirler, bakanlık ve genel müdürlük müfettişleri, illerde valiler, ilçelerde kaymakamlar (ilçe idare şube başkanları için valinin muvafakati şart); vali-kaymakamın tedbiri memurun kurumuna derhal bildirilir (m.138); uzaklaştırmayı izleyen 10 iş günü içinde soruşturmaya başlanması şart; keyfi, garaz veya kin ile uzaklaştıran amir hukuki, mali ve cezai sorumluluğa tabi (m.139); mahkemede cezai kovuşturma yapılanlar da uzaklaştırılabilir (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "\"Soruşturmaya 30 gün içinde başlanır\" yanlış; 10 iş günü"
+   ],
+   "dogrusu": [
+    "ihtiyati tedbir · atamaya yetkili amirler, bakanlık ve genel müdürlük müfettişleri, illerde valiler, ilçelerde kaymakamlar · 10 iş günü"
+   ]
+  },
+  {
+   "id": "71-12",
+   "madde": [
+    "143",
+    "141"
+   ],
+   "baslik": "Uzaklaştırılanın hakları",
+   "hukum": "Görevden uzaklaştırılan veya herhangi bir suçtan tutuklanan/gözaltına alınan memura bu süre içinde aylığının üçte ikisi ödenir, sosyal hak ve yardımlar devam eder; m.143'teki durumlar gerçekleşirse kesilen üçte bir ödenir ve uzakta geçen süre kademe ilerlemesinde ve derece yükselmesinde değerlendirilir (m.141)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yarısı ödenir\" yanlış; üçte ikisi"
+   ],
+   "dogrusu": [
+    "üçte ikisi · üçte bir"
+   ]
+  },
+  {
+   "id": "71-13",
+   "madde": [
+    "139",
+    "142",
+    "143"
+   ],
+   "baslik": "Tedbirin kaldırılması",
+   "hukum": "Soruşturma sonunda memurluktan çıkarma veya cezai işlem gerekmeyen memur için tedbir yetkililerce (müfettişlerin uzaklaştırdıkları için atamaya yetkili amirce) derhal kaldırılır; kaldırmayan hakkında m.139 sorumluluğu (m.142); soruşturma/yargılama sonunda (a) memurluktan çıkarmadan başka bir disiplin cezası verilenler, (b) yargılamanın men'ine veya beraatine karar verilenler, (c) hükümden evvel kovuşturması genel afla kaldırılanlar, (ç) memurluğa engel olmayacak bir cezayla hükümlü olup cezası ertelenenler — kararların kesinleşmesiyle tedbir kaldırılır (m.143); m.140 ve 142'dekilerle 143 (a,b,c)'dekilerin tedbiri, fiilleri hizmete engel değilse her zaman kaldırılabilir (m.144)",
+   "sinavda_boyle_yazarlar": [
+    "HAGB listede yok",
+    "HAGB verilen memurun uzaklaştırması zorunlu olarak kaldırılır"
+   ],
+   "dogrusu": [
+    "Listede yok (m.143)"
+   ]
+  },
+  {
+   "id": "71-14",
+   "madde": [
+    "145"
+   ],
+   "baslik": "Süre sınırı",
+   "hukum": "Disiplin kovuşturması icabından uzaklaştırma en çok 3 ay; süre sonunda karar verilmemişse memur göreve başlatılır; ceza kovuşturması icabından uzaklaştırmada yetkili amir (müfettişlerin uzaklaştırdıkları için atamaya yetkili amir) durumu her 2 ayda bir inceleyip göreve dönüp dönmeyeceğine karar verir ve ilgiliye yazıyla tebliğ eder (m.145)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ceza kovuşturmasında da 3 ay tavan\" yanlış; 2 ayda bir inceleme"
+   ],
+   "dogrusu": [
+    "en çok 3 ay · her 2 ayda bir"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

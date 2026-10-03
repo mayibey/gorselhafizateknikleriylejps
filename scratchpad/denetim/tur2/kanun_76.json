@@ -1,0 +1,146 @@
+{
+ "kanun_id": 76,
+ "ad": "7179 sayılı Askeralma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_76.json",
+ "kartlar": [
+  {
+   "id": "76-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Askerlik çağı: her erkeğin 20 yaşına girdiği yılın ocak ayının 1'inden 41 yaşına girdiği yılın ocak ayının 1'ine kadar; bakaya: sevke tabi olduğu hâlde sevkini yaptırmayan veya sevk edildiği birliğe katılmayan; geç iltihak bakayası: sevkini yaptırıp yol süresi dışında katılan; yoklama kaçağı: yoklama yılı içinde yoklamasını yaptırmayan; saklı: 20 yaşına girdiği hâlde nüfusa kaydolmamış; firar: kıtasından izinsiz 6 günden fazla uzaklaşma; hava değişimi/izin tecavüzü: dönmeye mecbur olduğu günden itibaren 6 gün içinde özürsüz gelmeme; erbaş: onbaşı ve çavuş; er: rütbesiz; yedek subay aday adayı: 4+ yıllık yükseköğretim mezunu; yedek astsubay aday adayı: 2-3 yıllık yükseköğretim mezunu (ve 4+ yıllık isteyen); yoklama dönemi: askerlik çağı başından muvazzaflık başına kadar; yedeklik dönemi: muvazzaflık bitiminden askerlik çağı sonuna kadar (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askerlik çağı 18'de başlar\" yanlış; 20",
+    "Askerlik çağı 18-41 yaştır"
+   ],
+   "dogrusu": [
+    "20-41 (m.3)"
+   ]
+  },
+  {
+   "id": "76-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Askerlik çağı ve hizmet süresi",
+   "hukum": "Çağ yoklama, muvazzaflık, yedeklik olmak üzere üç dönem; hizmet süresi erbaş-erler 6 ay, yedek subay/astsubay 12 ay; Cumhurbaşkanı süreyi bir katına kadar artırabilir, yarısına kadar azaltabilir, ancak 6 aydan az olamaz; istekli erbaş-erler sıralı disiplin amirlerinin olumlu değerlendirmesiyle terhis hakkından itibaren 6 ay daha (bir kez, vazgeçilemez) askerlik hizmetine devam edebilir (ayrı terhis belgesi); devam için şartlar: kamu haklarından yoksun olmamak, ertelense/HAGB olsa bile Devletin güvenliğine karşı suçlar, halkı askerlikten soğutma, Devleti aşağılama, zimmet-irtikâp-rüşvet-hırsızlık-dolandırıcılık-sahtecilik, cinsel suçlar, fuhuş, kaçakçılık, ihaleye fesat, Devlet sırrı, firar, amire taarruz, emre itaatsizlikte ısrar, üste hakaret, mukavemet, fesat, isyan ve AsCK m.148 suçlarından mahkûm olmamak; taksirli hariç 1 ay ve fazla hapis almamak; terör irtibatı olmamak; arşiv araştırması olumlu; Birlik Komutanlığınca olumlu nitelik belgesi; devam edenlerden disiplinsiz/başarısız/elverişsiz raporlu/istirahat-hava değişimi toplamı 20 günü geçenler/10 günden fazla tutuklu kalanlar asgari tabur komutanınca terhis edilir; devam edenlere net asgari ücretten az olmamak üzere harçlık; askerlik sevk belgesindeki sevk tarihinde başlar; fazla hizmet askerlik çağı sonundan 2 kat düşülür; askerlik çağı Cumhurbaşkanınca 5 yıla kadar uzatılıp kısaltılabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az lise mezunu olması\" ve \"JGK sınavı\" şıkları yanlış",
+    "Hizmet süresi 6 ayın altına indirilebilir",
+    "Devam eden erde lise mezuniyeti aranır"
+   ],
+   "dogrusu": [
+    "6 aydan az olamaz (m.5)",
+    "Aranmaz; olumlu nitelik belgesi aranır (m.5)"
+   ]
+  },
+  {
+   "id": "76-2",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Jandarma/Sahil Güvenlik personeli ve öğrencileri",
+   "hukum": "JSGA'da veya JGK/SGK adına üniversite-MYO'da okuyanlar ve giriş sınavını kazananların askerlik işlemleri ertelenir; JGK/SGK kadrolarındaki subay, astsubay, uzman erbaş, sözleşmeli erbaş-erlerin hizmet sürelerinin ayrıldıktan sonra askerlikten sayılmasında m.48; görevden ayrılan uzman jandarmaların hizmette geçirdikleri sürenin tamamı askerlikten sayılır, süreyi karşılamayanlar erbaş-er olarak tamamlar; JSGA'dan ilişiği kesilenlerin okul süreleri m.46'ya göre (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "İkisi çapraz sorulur"
+   ],
+   "dogrusu": [
+    "ertelenir · m.48 · uzman jandarmaların hizmette geçirdikleri sürenin tamamı · m.46"
+   ]
+  },
+  {
+   "id": "76-3",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Erbaş ve er izinleri",
+   "hukum": "Muvazzaflığın her ayı için 1 gün izin; hizmete devam edenlere her ay için ilave 1 gün; üstün başarı gösteren cezasız erbaş-erlere azami 3 gün ilave; radyoaktif ışınla çalışanlara her ay için 2 gün ilave; eşi doğum yapan veya eşi/2. derece dâhil kan-kayın hısmı vefat edenlere talep üzerine 10 gün ilave; yedek subay/astsubay izinleri 926'ya göre oranlanır; bu izinler hizmetten sayılır; aylık izinlerde bir defa, ölüm-doğum izinlerinde her defasında yol ve iaşe bedeli birlikçe ödenir; afet ve acil durumlarda izin vermeye Cumhurbaşkanı yetkili (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"Doğum-ölüm izni 7 gün\" yanlış; 10"
+   ],
+   "dogrusu": [
+    "her ayı için 1 gün · ilave 1 gün · azami 3 gün · radyoaktif ışınla · 2 gün · 10 gün · bir defa · her defasında · Cumhurbaşkanı"
+   ]
+  },
+  {
+   "id": "76-4",
+   "madde": [
+    "29",
+    "30",
+    "31"
+   ],
+   "baslik": "Sağlık izinleri, firar, hizmetten sayılan süreler",
+   "hukum": "Erbaş-erlerin hava değişimi ve istirahatte geçen sürelerinin, hizmet süresinin her ayı için 1 günlük kısmı hizmetten sayılır; yedek subay/astsubaylar muvazzaf emsalleri gibi sıhhi izne tabi, aynı 1 gün/ay kuralı; yedek subay/astsubay adayının sınıf okulundan ayrı geçirdiği süre okul süresinin üçte birinden fazla ise geçici terhis (m.29); firar ve izin tecavüzü dosyaları soruşturma izni verilirse Cumhuriyet savcılığına; yakalama kararı olanlar kolluk kuvvetlerince aranır, yakalananlar en yakın adli makama; yakalama kararı olmayanlar askerlik şubelerince serbest olarak birliklerine sevk edilir, yol-iaşe ödenmez (m.30); hizmetten sayılan: sağlık kuruluşlarında tanı-tedavide geçen süreler, beraat edenlerin gözaltı-tutukluluk süreleri, terörle mücadelede alıkonulan/kaybolup kusursuz bulunanların ayrı geçirdiği süreler (m.31); sayılmayan: firar, izin tecavüzü, kısa süreli kaçma ve izin süresini geçirme; hapis cezası infazı; 6413'te sayılmayacağı belirtilen disiplin cezaları; kendini askerliğe elverişsiz hâle getirme teşebbüsünden doğan rahatsızlıklar ve uyuşturucu tedavisi süreleri (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tutuklulukta geçen süre hiçbir hâlde sayılmaz\" yanlış; beraatte sayılır",
+    "Beraat edenin tutuklulukta geçen süresi askerlikten sayılmaz"
+   ],
+   "dogrusu": [
+    "Sayılır (m.31)"
+   ]
+  },
+  {
+   "id": "76-5",
+   "madde": [
+    "34",
+    "35",
+    "36"
+   ],
+   "baslik": "Terhis, noksan hizmet, tutuklu-hükümlü",
+   "hukum": "Sevk edilenlerin katılışları Bakanlığa bildirilir; terhis belgesi birlikçe düzenlenip yükümlüye verilir, kıta dosyasıyla askerlik şubesine gönderilir; askerlikte iken yedek subay/astsubay hakkı veren okuldan mezun olanların statü değişikliği talebi dikkate alınmaz (m.34); noksan hizmetliye Tebligat Kanununa göre tebligat, 2 ay içinde şubeye başvurmayana bakaya hükümleri ve yakalanmak üzere İçişleri Bakanlığına bildirim; yakalananlar mesai içinde en yakın askerlik şubesine, mesai dışında tutanakla serbest bırakılır (m.35); 1 yıl ve daha az hapis veya TCK 50 tedbirleri/adli para cezası alan yükümlülerin cezası askerlik sonuna bırakılır, terhiste Cumhuriyet savcılığına teslim edilir; 1 yıldan fazla hapse hükmedilenler kıtalarınca savcılığa teslim edilir, tahliyede 15 gün içinde şubeye müracaat tebliğ edilir, gelmeyene bakaya; infazı geri bırakılan mahkûmiyette zamanaşımı işlemez (m.36); diploma, sertifika, ehliyet sahibi erbaş-erler komutanlık onayıyla belgelerinin verdiği yetki kapsamında çalıştırılabilir (m.37)",
+   "sinavda_boyle_yazarlar": [
+    "\"2 yıl ve altı hapis askerlik sonuna bırakılır\" yanlış; 1 yıl",
+    "2 yıl hapis cezası askerlik sonuna bırakılır"
+   ],
+   "dogrusu": [
+    "1 yıl ve altı (m.36)"
+   ]
+  },
+  {
+   "id": "76-6",
+   "madde": [
+    "40"
+   ],
+   "baslik": "Erbaş-erlere sağlanan haklar",
+   "hukum": "Muhtaç asker ailelerine yardım (miktar Cumhurbaşkanınca); askerî öğrenci, dış kaynak subay/astsubay, sözleşmeli subay/astsubay, uzman erbaş, sözleşmeli er temininde ilk 6 ayı tamamlayıp terhis olanlara sınav tam notunun %5'ine, devam edip terhis olanlara %15'ine kadar; MYO veya meslekî-teknik lise mezunlarında %10 / %20 ilave puan; TOKİ konut tahsisinde öncelik; hizmette kamu toplu taşıma ve müze-ören yeri ücretsiz; devam edenler için muhtaç aile yardımı uygulanmaz; devam edenlerin 5510 m.41 borçlanmasında prime esas kazanç alt sınırının %45'i Bakanlıkça ödenir; teknik MYO/meslek lisesi mezunları ile tarım-turizm çalışanlarının mesleklerine uygun sınıflandırma ve istedikleri celp döneminde alınma esasları Bakanlıkça (m.40)",
+   "sinavda_boyle_yazarlar": [
+    "%5/%15 (genel) ile %10/%20 (meslek lisesi-MYO) karıştırılır"
+   ],
+   "dogrusu": [
+    "ilk 6 ayı tamamlayıp terhis olanlara sınav tam notunun %5'ine · %15'ine · %10 / %20 · TOKİ · kamu toplu taşıma ve müze-ören yeri ücretsiz · %45'i"
+   ]
+  },
+  {
+   "id": "76-7",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Muafiyet — şehit ve malul kardeşi",
+   "hukum": "Askerlik sırasında ölen, gaip, maluliyet aylığı bağlanacak şekilde malul olan veya askerliğin sebep ve tesiriyle öldüğü mahkemece sabit olanların kardeşlerinden biri (ana-babanın müşterek talebiyle; anlaşamazlarsa silahaltındaki istekliyse terhis, yoksa sırası gelen ilk kardeş) istekli olmadıkça silahaltına alınmaz; 3713 kapsamında hayatını kaybeden yükümlü ve sivillerin çocukları ile aynı ana-babadan kardeşlerinin tamamı; 15 Temmuz'da görevi olmadığı hâlde mukavemet ederken şehit olanların erkek çocukları ile kardeşlerinin tamamı; güvenlik korucuları dâhil kamu görevlilerinin çocuklarının tamamı ile kardeşlerinden biri istekli olmadıkça silahaltına alınmaz; seferberlik ve savaşta uygulanmaz (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şehit kamu görevlisinin tüm kardeşleri muaf\" yanlış; biri (çocukları tamamı)"
+   ],
+   "dogrusu": [
+    "kardeşlerinden biri · 3713 kapsamında · çocukları ile aynı ana-babadan kardeşlerinin tamamı · erkek çocukları ile kardeşlerinin tamamı · kamu görevlilerinin · kardeşlerinden biri · seferberlik ve savaşta uygulanmaz"
+   ]
+  },
+  {
+   "id": "76-8",
+   "madde": [
+    "46",
+    "48"
+   ],
+   "baslik": "Askerî öğrencilikten ve TSK'dan ayrılanların süreleri",
+   "hukum": "Askerî öğrenci olarak okuduğu MSÜ/üniversite/MYO'dan ilişiği kesilenlerin okudukları sürenin üçte biri muvazzaflıktan sayılır; erbaş-er süresini karşılıyorsa askerlik yapılmış sayılır; yedek subay/astsubay adayı olma hakkı olanlar istekleri hâlinde önceki süreler dikkate alınmaksızın yedek subay süresine tabi (m.46); TSK'dan ayrılanlar: TSK adına okuduğu okul sürelerinin üçte biri + muvazzaf subay/astsubaylıkta geçen sürenin tamamı; dış kaynak subay/astsubay: deneme süresine kadar ayrılanların üçte biri, deneme sonrası tamamı; sözleşmeli subay/astsubay: ön sözleşme + sözleşme toplamının üçte biri; uzman erbaş: sözleşme döneminin üçte biri; sözleşmeli erbaş-er: üçte biri; silahaltında temin edilen statülerde silahaltı sürelerinin tamamı; sözleşmesi feshedilen uzman erbaş ve sözleşmeli erlerin kalan askerliği ilişiği kesilmeden Bakanlıkça belirlenen birliklerde tamamlattırılır; özel kanunlardaki aykırı hükümler uygulanmaz (m.48)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaşın sözleşme süresinin tamamı askerlikten sayılır\" yanlış; uzman jandarmanın tamamı (m.12/3)",
+    "Uzman erbaşın sözleşme süresinin tamamı askerlikten sayılır"
+   ],
+   "dogrusu": [
+    "Üçte biri (m.48); uzman jandarmanın tamamı (m.12)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

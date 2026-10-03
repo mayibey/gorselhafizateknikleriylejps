@@ -1,0 +1,277 @@
+{
+ "kanun_id": 82,
+ "ad": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun (2330 sayılı)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\eczaci\\pack_82.json",
+ "kartlar": [
+  {
+   "id": "82-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Amaç",
+   "hukum": "Barışta güven ve asayişi korumak, kaçakçılığı men-takip-tahkik, trafik ve yol güvenliği veya tutuklu ve hükümlülerin sevk ve nakilleriyle görevli olanlar; TSK, JGK, SGK ve Emniyette patlayıcı maddelerin incelenmesi, muhafazası, nakli, imhası ve zararsız hâle getirilmesinde görevlendirilenler; orman yangınlarını söndürmede fiilen görevli olanlar ile bu kapsamda görev verilen kamu görevlileri ve gönüllüler; görevden dolayı ya da görev sona ermiş olsa bile yaptıkları hizmet nedeniyle ölmeleri, engelli hâle gelmeleri veya yaralanmaları hâlinde ödenecek nakdi tazminat ve bağlanacak aylığın esaslarını düzenler (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görev sona erdikten sonraki olaylar kapsam dışıdır\" yanlış; yapılan hizmet nedeniyle görev bitmiş olsa bile kapsamdadır"
+   ],
+   "dogrusu": [
+    "tutuklu ve hükümlülerin sevk ve nakilleriyle · patlayıcı maddelerin · orman yangınlarını söndürmede fiilen görevli olanlar · gönüllüler · görev sona ermiş olsa bile"
+   ]
+  },
+  {
+   "id": "82-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam: güvenlik görevlileri",
+   "hukum": "İç güvenlik-asayiş, kaçakçılık veya trafik-yol güvenliği konularında görevlendirilen JGK, EGM ve SGK personeli, Silahlı Kuvvetler mensupları, MİT mensupları, çarşı, mahalle ve kır bekçileri, orman memurları ve personeli ile Gümrük Muhafaza memurları (m.2/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bekçiler kapsam dışıdır\" yanlış; çarşı, mahalle ve kır bekçileri açıkça sayılmıştır"
+   ],
+   "dogrusu": [
+    "JGK, EGM ve SGK personeli · Silahlı Kuvvetler mensupları · MİT mensupları · çarşı, mahalle ve kır bekçileri · orman memurları ve personeli ile Gümrük Muhafaza memurları"
+   ]
+  },
+  {
+   "id": "82-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam: yargı, mülki amir, cezaevi, siviller",
+   "hukum": "Güven-asayiş ve kaçakçılık olaylarının soruşturma-kovuşturmasını yürüten adli ve askeri hakimler, Cumhuriyet savcı ve yardımcıları, askeri savcı ve yardımcıları (b); bu eylemlerin önlenmesine yönelik görev yapan mülki idare amirleri (c); tutuklu-hükümlü sevk ve nakilleri ile ceza ve tutukevlerinin iç ve dış güvenliğini sağlayan personel (d); hizmetinden yararlanılması zorunlu olup yetkililerce görev verilen kamu görevlileri ve siviller (e); güvenlik kuvvetlerine kendiliğinden yardımcı olmuş ve faydalı oldukları yetkililerce tevsik edilmiş (belgelenmiş) şahıslar (f); Devlet güçlerini sindirme amaçlı saldırılara maruz kalan kamu görevlileri (g) (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kendiliğinden yardım eden şahıs her durumda kapsamdadır\" yanlış; faydalı olduğunun yetkililerce tevsiki gerekir"
+   ],
+   "dogrusu": [
+    "adli ve askeri hakimler, Cumhuriyet savcı ve yardımcıları, askeri savcı ve yardımcıları · mülki idare amirleri · ceza ve tutukevlerinin iç ve dış güvenliğini · kamu görevlileri ve siviller · kendiliğinden yardımcı olmuş · tevsik edilmiş · Devlet güçlerini sindirme amaçlı saldırılara"
+   ]
+  },
+  {
+   "id": "82-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam: patlayıcı, orman yangını, yakınlar",
+   "hukum": "TSK, JGK, SGK ve Emniyette 4536 sayılı Kanunda tanımlanan patlayıcı maddelerin incelenmesi, muhafazası, nakli, imhası ve zararsız hâle getirilmesinde görevlendirilenler (h); orman yangınlarını söndürmede Orman Genel Müdürlüğü tarafından fiilen görevlendirilen personel ve gönüllüler ile diğer kamu görevlileri (ı); sayılanların görev veya yardımları sebebiyle saldırıya maruz kalan eş, füru (çocuk-torun), ana, baba ve kardeşleri (i) (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görevlinin yakınlarından yalnız eş ve çocuklar kapsamdadır\" yanlış; ana, baba ve kardeşler de sayılır"
+   ],
+   "dogrusu": [
+    "4536 sayılı Kanunda tanımlanan patlayıcı maddelerin · Orman Genel Müdürlüğü tarafından fiilen görevlendirilen · gönüllüler · saldırıya maruz kalan eş, füru (çocuk-torun), ana, baba ve kardeşleri"
+   ]
+  },
+  {
+   "id": "82-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Nakdi tazminat tutarları",
+   "hukum": "Ölenlerin kanuni mirasçılarına en yüksek Devlet memuru brüt aylığının (ek gösterge dahil) 100 katı; yaşamak için gerekli hareketleri yapmaktan aciz, hayatını başkasının yardımıyla sürdürebilecek şekilde malul olanlara 200 katı; diğer engelli hâle gelenlere (a) bendindeki tutarın %25'inden %75'ine kadar; yaralananlara %20'sini geçmemek üzere engellilik ve yaralanma derecesine göre ödenir (m.3/a-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"En yüksek tazminat ölüm hâlindedir\" yanlış; ağır malullük (200 kat) ölümden (100 kat) fazladır",
+    "Ölüm hâlinde ödenen nakdi tazminat, ağır malullük tazminatından fazladır",
+    "Yaralananlara ölüm tazminatının %25'i ödenir"
+   ],
+   "dogrusu": [
+    "Ölüm 100 kat, ağır malullük 200 kat (m.3)",
+    "%20'sini geçmemek üzere (m.3)"
+   ]
+  },
+  {
+   "id": "82-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Esas alınacak aylık",
+   "hukum": "Nakdi tazminatın tespitine esas aylık, tazminat verilmesine dair karar tarihindeki en yüksek Devlet memuru aylığının (ek gösterge dahil) brüt tutarıdır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Olay tarihindeki aylık esas alınır\" veya \"net aylık esas alınır\" yanlış; karar tarihindeki brüt aylık",
+    "Nakdi tazminata esas aylık, olay tarihindeki net aylıktır"
+   ],
+   "dogrusu": [
+    "Karar tarihindeki en yüksek Devlet memuru brüt aylığı (ek gösterge dahil) (m.3)"
+   ]
+  },
+  {
+   "id": "82-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Mirasçılar arasında paylaştırma",
+   "hukum": "Ölüm tazminatının mirasçılara intikalinde; ölenin eş ve füruu veya yalnızca füruu ile birlikte bulunan (içtima eden) ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı %15 verilir, kalan diğer mirasçılara ödenir; diğer hâllerde miras hükümleri uygulanır; ancak ana veya babaya verilen tazminat çocukların her birine ödenenden fazla olamaz (m.3/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ana ve babaya birlikte %15 verilir\" yanlış; her birine ayrı ayrı %15",
+    "Ana ve babaya birlikte %15 pay verilir"
+   ],
+   "dogrusu": [
+    "Her birine ayrı ayrı %15; ayrıca çocuk payından fazla olamaz (m.3)"
+   ]
+  },
+  {
+   "id": "82-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Avans ve olağanüstü hal",
+   "hukum": "Kesin raporun alınmasının uzayacağı anlaşılırsa, olay tarihi itibarıyla (b) bendine göre hesaplanacak miktarın asgari oranı üzerinden avans ödenir; olağanüstü hal süresince nakdi tazminat miktarlarını yarıya kadar indirmeye veya nakdi tazminat hükümlerini uygulamamaya Cumhurbaşkanı yetkilidir (m.3/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"OHAL'de indirim yetkisi Bakanlar Kurulundadır\" yanlış; artık Cumhurbaşkanı; indirim de \"yarıya kadar\"",
+    "OHAL'de tazminatı indirme yetkisi İçişleri Bakanlığındadır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı (m.3)"
+   ]
+  },
+  {
+   "id": "82-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Görev malullüğü aylığı ve %25 artırım",
+   "hukum": "Engelli hâle gelip emekliye sevk edilenlere görev malullüğü aylığı bağlanır; emekli aylığı alırken engelli hâle gelenlerin aylığı görev malullüğü aylığına dönüştürülür; ölenlerin aylığı dul ve yetimlerine intikal eder; sosyal güvenlik kurumlarınca bağlanan bu aylıklar %25 artırılarak ödenir (m.4/a-c)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu aylıklar %50 artırılarak ödenir\" yanlış; %25",
+    "Bağlanan aylıklar %50 artırılarak ödenir"
+   ],
+   "dogrusu": [
+    "%25 (m.4)"
+   ]
+  },
+  {
+   "id": "82-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Sosyal güvencesi olmayanlar",
+   "hukum": "Hiçbir sosyal güvenlik kurumuna tabi olmayanlar engelli hâle gelirse, öğrenim durumlarına göre 657 sayılı Kanunun 36. maddesine göre belirlenecek giriş derece-kademesi üzerinden (öğrenimi olmayanlar ilkokul mezunu gibi) kendilerine, ölümlerinde dul ve yetimlerine 5434 sayılı Kanuna göre T.C. Emekli Sandığınca görev malullüğü aylığı %25 artırılarak bağlanır (m.4/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öğrenimi bulunmayanlara aylık bağlanmaz\" yanlış; ilkokul mezunu gibi işlem görürler"
+   ],
+   "dogrusu": [
+    "657 sayılı Kanunun 36. maddesine · öğrenimi olmayanlar ilkokul mezunu gibi · 5434 sayılı Kanuna göre T.C. Emekli Sandığınca · %25 artırılarak"
+   ]
+  },
+  {
+   "id": "82-10",
+   "madde": [
+    "36",
+    "4"
+   ],
+   "baslik": "Asgari aylık güvencesi ve sürelerin birleşmemesi",
+   "hukum": "(a) ve (b) bentlerine göre aylık bağlananlara ödenen gelir/aylıklar toplamı, 657 m.36'ya göre giriş derece-kademesi ve 30 yıl fiili hizmet süresi esas alınarak 5434 sayılı Kanuna göre hesaplanacak vazife malullüğü aylığının %25 artırımlı tutarından az olamaz; malullük aylığı bağlanmadan önceki sigortalılık ve hizmet süreleri, sonradan geçecek çalışma süreleriyle hiçbir sebeple birleştirilemez; sonradan 5510 yürürlüğünden sonra çalışmaya başlayanlara 5510 geçici 4. madde uygulanamaz (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Önceki ve sonraki hizmet süreleri birleştirilerek yeni aylık bağlanır\" yanlış; birleştirilemez"
+   ],
+   "dogrusu": [
+    "30 yıl fiili hizmet süresi · %25 artırımlı tutarından az olamaz · hiçbir sebeple birleştirilemez · geçici 4. madde"
+   ]
+  },
+  {
+   "id": "82-11",
+   "madde": [
+    "2",
+    "3",
+    "4"
+   ],
+   "baslik": "Görevi bittikten sonraki olaylar",
+   "hukum": "m.2'de sayılanlardan görevleri veya yardımları sona erenlerin bilahare kendilerinin veya eş, füru, ana, baba ve kardeşlerinin yaralanma, engelli hâle gelme veya ölümlerinin evvelce ifa ettikleri görev veya yardımdan meydana geldiği tevsik edilirse m.3 ve m.4 uygulanır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görev sona erince kanun hiçbir şekilde uygulanmaz\" yanlış; bağlantı tevsik edilirse uygulanır"
+   ],
+   "dogrusu": [
+    "bilahare · evvelce ifa ettikleri görev veya yardımdan meydana geldiği tevsik edilirse"
+   ]
+  },
+  {
+   "id": "82-12",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Tazminatın niteliği",
+   "hukum": "Bu Kanuna göre ödenen nakdi tazminat ile bağlanan emekli aylığı uğranılan maddi zararların karşılığıdır; yargı mercilerinde maddi zararlar için kurumların ödeyeceği tazminat hesabında bu ödemeler göz önünde tutulur (m.6; \"ve manevi\" ibaresi AYM'nin 24/9/2024 tarihli kararıyla iptal)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nakdi tazminat maddi ve manevi zararların karşılığıdır\" artık yanlış; \"ve manevi\" ibaresi iptal edildi, yalnız maddi",
+    "Nakdi tazminat maddi ve manevi zararın karşılığıdır"
+   ],
+   "dogrusu": [
+    "Maddi zararın karşılığıdır; \"ve manevi\" iptal edildi (m.6)"
+   ]
+  },
+  {
+   "id": "82-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Öğrenim hakkı",
+   "hukum": "Bu Kanunda yazılı hâllerde ölenlerin veya çalışamayacak derecede engelli hâle gelenlerin çocukları Devlete ait yatılı okul ve eğitim kurumlarında ücretsiz okutulur; yüksek öğrenimdekiler Devlete ait yurtlar ve yüksek öğrenim kredilerinden öncelikle yararlanır; her öğrenim dönemi içinde iki defa sınıfta kalanlar bu hakları kaybeder (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bir defa sınıfta kalan hakkını kaybeder\" yanlış; iki defa",
+    "Bir defa sınıfta kalan öğrenci ücretsiz okuma hakkını kaybeder"
+   ],
+   "dogrusu": [
+    "İki defa (m.7)"
+   ]
+  },
+  {
+   "id": "82-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sağlık hakkı ve askerlik şubesi sevki",
+   "hukum": "Tedavi giderleri kamu kurumlarınca karşılanamayanların tedavisi Devlet, üniversite, SSK hastaneleri ile askeri hastanelerde ücretsiz; askerlik yükümlülüğü sona ermiş, henüz vazife malullüğü maaşı bağlanmamış, tedavisi süren yedek subay, yedek astsubay, erbaş ve erlerin sağlık kuruluşlarına sevki ikametgâhındaki veya en yakın askerlik şubesince sağlanır; resmi tabip raporuyla refakatçi gerekiyorsa hasta ve refakatçiye gidiş-dönüş yol ücreti ve gündelik sevk eden askerlik şubesince peşin veya avans ödenir; yol ücretinde şehirlerarası karayolu toplu taşım ücreti, gündelikte en düşük dereceli Devlet memuru gündeliği, ambulans-özel vasıtada yerel rayiçler esas alınır; giderler MSB bütçesinden karşılanır (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gündelikte en yüksek dereceli memur gündeliği esas alınır\" yanlış; en düşük dereceli. \"Giderler İçişleri bütçesinden karşılanır\" yanlış; MSB"
+   ],
+   "dogrusu": [
+    "Devlet, üniversite, SSK hastaneleri ile askeri hastanelerde ücretsiz · yedek subay, yedek astsubay, erbaş ve erlerin · ikametgâhındaki veya en yakın askerlik şubesince · yol ücreti ve gündelik · peşin veya avans · şehirlerarası karayolu toplu taşım ücreti · en düşük dereceli Devlet memuru gündeliği · yerel rayiçler · MSB bütçesinden"
+   ]
+  },
+  {
+   "id": "82-15",
+   "madde": [
+    "4",
+    "5",
+    "8"
+   ],
+   "baslik": "Hazineden tahsil ve MİT çift ödeme yasağı",
+   "hukum": "m.4 ve m.5 gereğince %25 fazlası ile bağlanan aylıklardaki bu fazlalık ile m.4/d'ye göre bağlanan aylıkların tamamı ilgili sosyal güvenlik kurumlarınca ödenir ve faturası karşılığında Hazineden tahsil edilir (m.8); bu Kanundan yararlanan MİT mensupları, 644 sayılı Kanunun 22. maddesindeki yaralanma, engelli hâle gelme ve ölüm tazminatlarından ayrıca yararlanamaz (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sosyal güvenlik kurumu %25 fazlalığı kendi kaynağından karşılar\" yanlış; Hazineden tahsil edilir",
+    "Kanundan yararlanan MİT mensupları 644 sayılı Kanundaki tazminatları da alır"
+   ],
+   "dogrusu": [
+    "Ayrıca yararlanamaz (m.9)"
+   ]
+  },
+  {
+   "id": "82-16",
+   "madde": [
+    "3",
+    "10"
+   ],
+   "baslik": "Yönetmelik ve ödeme güvencesi",
+   "hukum": "Nakdi tazminatların ödenme şekli, m.3/b uyarınca ödenecek tutarlar ve diğer hususlar Cumhurbaşkanınca hazırlanacak yönetmelikle düzenlenir; ödeme işlemleri ilgili Bakan veya yetkili kılınan kişilerce onaylandıktan sonra, olayın kapsama girmediği gerekçesiyle saymanlıklarca ödeme geciktirilemez; engellilik tazminatı, 1053 sayılı Vazife Malullüklerinin Nevileri ile Dereceleri Hakkındaki Nizamnamedeki 6 derece üzerinden ve her derece için %10 indirim yapılarak düzenlenir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Saymanlık, olay kapsam dışı ise onaylanmış ödemeyi durdurabilir\" yanlış; geciktiremez",
+    "Bakan onayından sonra saymanlık, olay kapsam dışı gerekçesiyle ödemeyi geciktirebilir"
+   ],
+   "dogrusu": [
+    "Geciktiremez (m.10)"
+   ]
+  },
+  {
+   "id": "82-17",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kaldırılan hükümler",
+   "hukum": "1475 sayılı Nakdi Tazminat Kanunu ve ekleri; 1918 sayılı Kaçakçılığın Men ve Takibine Dair Kanuna 6846 sayılı Kanunla eklenen ek madde; 2298 sayılı 1980 Yılı Bütçe Kanununun 49. maddesi; 3201 sayılı Emniyet Teşkilatı Kanununun 86. maddesinin (C) bendi yürürlükten kaldırılmıştır (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"1475 sayılı Nakdi Tazminat Kanunu hâlen yürürlüktedir\" yanlış; kaldırıldı"
+   ],
+   "dogrusu": [
+    "1475 sayılı Nakdi Tazminat Kanunu · 2298 sayılı 1980 Yılı Bütçe Kanununun 49. maddesi · 3201 sayılı Emniyet Teşkilatı Kanununun 86. maddesinin (C) bendi"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

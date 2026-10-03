@@ -1,0 +1,96 @@
+{
+ "kanun_id": 42,
+ "ad": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_42.json",
+ "kartlar": [
+  {
+   "id": "42-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Haşhaş ekimi Cumhurbaşkanı kararıyla",
+   "hukum": "Haşhaş ekilecek yerler ve ekimi yapacak kişiler Cumhurbaşkanınca belirlenir; bu karar her yıl 1 Temmuz'a kadar ilân edilir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tarım ve Orman Bakanlığı belirler\" şıkkı yanlış; Cumhurbaşkanı",
+    "Haşhaş ekim yerlerini Tarım Bakanlığı belirler"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı (m.1)"
+   ]
+  },
+  {
+   "id": "42-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "İzin ve kontrol Toprak Mahsulleri Ofisi",
+   "hukum": "Ekim izni ve haşhaş kapsülü ile ham afyonun alımı-kontrolü Toprak Mahsulleri Ofisi (TMO) eliyle yürütülür; üretici ürününü TMO'ya teslim etmek zorundadır (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Üretici ham afyonu serbestçe satar\" yanlış"
+   ],
+   "dogrusu": [
+    "Toprak Mahsulleri Ofisi (TMO)"
+   ]
+  },
+  {
+   "id": "42-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Ekim tanımı",
+   "hukum": "\"Ekim\", tohumun toprağa atılmasından hasada kadar geçen bütün aşamaları kapsar (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sadece tohum atma anı\" diyen şık yanlış",
+    "Ekim sadece tohum atma anıdır"
+   ],
+   "dogrusu": [
+    "Tohumdan hasada kadar (m.2)"
+   ]
+  },
+  {
+   "id": "42-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İzinsiz haşhaş ekimi",
+   "hukum": "İzin verilen yerler dışında veya izin almadan haşhaş eken 1 yıldan 5 yıla kadar hapis (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"6 ay-3 yıl\" izin sınırını aşana verilir, izinsiz ekene 1-5 yıl",
+    "İzinsiz ekim 6 ay-3 yıl"
+   ],
+   "dogrusu": [
+    "1-5 yıl; izni aşan 6 ay-3 yıl (m.4)"
+   ]
+  },
+  {
+   "id": "42-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İzin sınırını aşan ekim",
+   "hukum": "İzin belgesinde belirtilen alandan fazla veya başka yerde ekim yapan 6 aydan 3 yıla kadar hapis (m.4/2)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklarda bu ikisi çapraz konur; \"izinsiz\" kelimesine dikkat"
+   ],
+   "dogrusu": [
+    "fazla · başka yerde · 6 aydan 3 yıla kadar"
+   ]
+  },
+  {
+   "id": "42-5",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Eksik teslim → idari para cezası",
+   "hukum": "Ürettiği haşhaş kapsülü/ham afyonu TMO'ya eksik teslim eden veya teslim etmeyen üreticiye mülkî amir tarafından eksik ürünün değerinin iki misli idarî para cezası verilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eksik teslim hapis cezası gerektirir\" yanlış; idari para cezası, mülki amir",
+    "Eksik teslim edene hapis verilir"
+   ],
+   "dogrusu": [
+    "İdari para cezası (2 misli, mülkî amir) (m.4)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

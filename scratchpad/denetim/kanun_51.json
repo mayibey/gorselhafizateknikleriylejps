@@ -1,0 +1,184 @@
+{
+ "kanun_id": 51,
+ "ad": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_51.json",
+ "kartlar": [
+  {
+   "id": "51-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar — Bakanlık ve bilgi sistemi",
+   "hukum": "Bu yönetmelikte \"Bakanlık\" Sanayi ve Teknoloji Bakanlığı; \"bilgi sistemi\" Bakanlık (Sanayi) tarafından oluşturulan yazılım altyapısı; \"merkezi kayıt sistemi\" ise İçişleri Bakanlığı bünyesinde kurulan veri tabanıdır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bilgi sistemi İçişleri Bakanlığı bünyesindedir\" ifadesi yanlış (çıkmış soruda I. öncül); merkezi kayıt sistemi İçişleri'nde",
+    "Bilgi sistemi İçişleri Bakanlığı bünyesindedir"
+   ],
+   "dogrusu": [
+    "Sanayi ve Teknoloji Bakanlığı; merkezi kayıt sistemi İçişleri (m.4)"
+   ]
+  },
+  {
+   "id": "51-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar — kolluk birimi",
+   "hukum": "\"Kolluk birimi\": illerde il emniyet müdürlükleri ve il jandarma komutanlıkları, ilçelerde ilçe emniyet müdürlüğü/amirliği ve ilçe jandarma komutanlıkları (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız emniyet müdürlükleri\" yanlış"
+   ],
+   "dogrusu": [
+    "il emniyet müdürlükleri ve il jandarma komutanlıkları · ilçe emniyet müdürlüğü/amirliği ve ilçe jandarma komutanlıkları"
+   ]
+  },
+  {
+   "id": "51-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar — sınıf / şekil / tip",
+   "hukum": "Sınıf: silahın çalışma prensibine göre (tek tek atım, yarı otomatik, tam otomatik); şekil: fişek beslemesine göre (şarjörlü, toplu, kırma); tip: namlu borusunun iç yapısı (kapalı, pimli vb.) (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "Çıkmış soruda \"Şekil: çalışma prensibine göre sınıflandırma\" öncülü yanlış; o tanım \"sınıf\"tır",
+    "Şekil, çalışma prensibine göre sınıflandırmadır"
+   ],
+   "dogrusu": [
+    "O sınıftır; şekil fişek beslemesine göre (m.4)"
+   ]
+  },
+  {
+   "id": "51-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Ses ve gaz fişeği atabilen silah tanımı",
+   "hukum": "6136 sayılı Kanuna tabi silah vasfında olmayan; mermi çekirdeği, saçma veya katı cisim ihtiva eden fişekleri atamayacak şekilde imal edilmiş, kurusıkı olarak da anılan silahlar (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurusıkı silah 6136'ya tabidir\" yanlış"
+   ],
+   "dogrusu": [
+    "atamayacak şekilde · kurusıkı"
+   ]
+  },
+  {
+   "id": "51-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Aksam tanımı",
+   "hukum": "Gövde (çerçeve), namlu, kapak (sürgü), toplu tabanca fişek haznesi, ateşleme tertibatı veya bunların yerine konabilen unsurlar \"aksam\"dır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şarjör aksamdır\" listede yok"
+   ],
+   "dogrusu": [
+    "Aksam tanımı"
+   ]
+  },
+  {
+   "id": "51-5",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Satış yalnız ruhsatlı bayilerce, 1 ayda liste",
+   "hukum": "Ses ve gaz fişeği atabilen silahlar, mermi/av malzemesi ya da yivsiz tüfek satışı için ruhsatlandırılmış yerlerce (dağıtıcı) satılır; satan yerler sattıkları mamullerin cins, çap, seri numarası ve alıcı bilgilerini bir ay içinde kolluk birimlerine bildirir; merkezi kayıt sistemi devreye girince bildirim anlık yapılır; ambalajda yasal uyarı ve kullanım kılavuzu bulunur (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"İnternetten serbestçe satılır\" yanlış"
+   ],
+   "dogrusu": [
+    "ruhsatlandırılmış yerlerce · bir ay · anlık"
+   ]
+  },
+  {
+   "id": "51-6",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Yetki belgesi — 6 ay, bir silah",
+   "hukum": "Satın almak isteyen, Kanunun 3. maddesindeki şartları taşıyorsa (18 yaş, kasten suçtan 1 yıl+ hapis almamış vb.) yetki belgesi alır; belge 6 ay geçerlidir; her yetki belgesiyle bir adet silah alınır; yabancılara, turistlere, mültecilere, geçici koruma altındakilere satılamaz (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bir yetki belgesiyle iki silah alınabilir\" yanlış",
+    "Satın almak isteyen bildirim kartı ile kolluğa başvurur",
+    "Yetki belgesi 1 yıl geçerlidir"
+   ],
+   "dogrusu": [
+    "Yetki belgesi ile dağıtıcıya; bildirim kartı sonra kolluktan (m.14-15)",
+    "6 ay (m.14)"
+   ]
+  },
+  {
+   "id": "51-7",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Şartsız satan bayinin belgesi 5 yıl iptal",
+   "hukum": "Dağıtıcının şartları sağlamayan veya yetki belgesi olmayan kişilere satış yapması hâlinde İçişleri Bakanlığınca verilen bayilik belgesi 5 yıl süreyle iptal edilir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"1 yıl\" / \"süresiz\" şıkları yanlış; 5 yıl"
+   ],
+   "dogrusu": [
+    "bayilik belgesi 5 yıl"
+   ]
+  },
+  {
+   "id": "51-8",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Satın alma → kolluğa bildirim kartı",
+   "hukum": "Silah sadece dağıtıcılardan, yetki belgesi ile alınır; satın alan kişi fatura tarihinden itibaren bir ay içinde fatura ve silahla birlikte kolluk birimine müracaat eder; kolluk her silah için Ses ve Gaz Fişeği Atabilen Silah Bildirim Kartı (Ek-3) düzenler (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bildirim kartı ile dağıtıcıya\" yanlış; bildirim kartı kolluğun sonradan verdiği belgedir"
+   ],
+   "dogrusu": [
+    "sadece dağıtıcılardan · yetki belgesi ile · fatura tarihinden itibaren bir ay · kolluk birimine · Ses ve Gaz Fişeği Atabilen Silah Bildirim Kartı (Ek-3)"
+   ]
+  },
+  {
+   "id": "51-9",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Film, tiyatro, tören silahları",
+   "hukum": "Film, tiyatro, şenlik, kutlama ve tören gibi etkinlikler için kullanılacak silahlarda yetkilendirme ve izin Emniyet Genel Müdürlüğü tarafından yapılır; genel satın alma şartları aranmaz, bildirim kartı düzenlenmez, süre sonunda MKE'de imha için EGM'ye teslim edilir veya ihraç edilir (m.15/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tören silahları için de bildirim kartı düzenlenir\" yanlış"
+   ],
+   "dogrusu": [
+    "Emniyet Genel Müdürlüğü · MKE'de imha"
+   ]
+  },
+  {
+   "id": "51-10",
+   "madde": [
+    "4",
+    "17"
+   ],
+   "baslik": "Nakil şartları",
+   "hukum": "Silahlar fişekleri boşaltılarak, her an kullanıma ve erişime imkân vermeyecek şekilde ve bir kutu içinde, bildirim kartı ile nakledilebilir; bu şartların dışında nakil taşıma sayılır (Kanun m.4'e göre işlem); satın almadan sonraki 1 aylık sürede fatura ile nakledilebilir; posta/kargo ile de nakledilebilir (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurusıkı kargo ile gönderilemez\" yanlış; usulüne uygun gönderilebilir",
+    "Kutusuz, dolu taşınan kurusıkı nakil sayılır"
+   ],
+   "dogrusu": [
+    "Taşıma sayılır (m.17)"
+   ]
+  },
+  {
+   "id": "51-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kuruluş izni ve prototip süresi",
+   "hukum": "Ses ve gaz fişeği atabilen silah üretecek işletmelere kuruluş izni Sanayi ve Teknoloji Bakanlığı verir; kuruluş izni alındıktan sonra prototip üretim izni için 1 yıl içinde başvurulmazsa kuruluş izni geçerliliğini yitirir (m.4 tanımlar + üretim bölümü)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kuruluş iznini İçişleri Bakanlığı verir\" yanlış",
+    "Kuruluş iznini İçişleri Bakanlığı verir"
+   ],
+   "dogrusu": [
+    "Sanayi ve Teknoloji Bakanlığı (m.4)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

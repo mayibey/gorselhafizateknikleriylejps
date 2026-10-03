@@ -1,0 +1,486 @@
+[
+{"i": "EK-17-17-19-1", "kanun_id": 17, "kart_id": "17-19",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, aşağıdakilerden hangisi jandarmanın mülki görevlerinin esasları arasında sayılan görevlerden biri DEĞİLDİR?",
+ "s": ["Halkın can, ırz ve malını korumak", "Her türlü kaçakçılığa engel olmak", "Ceza infaz kurumlarının iç güvenliğini sağlamak", "Trafik hizmetlerini yürütmek", "Yardım isteyenlere ve kimsesizlere yardım etmek"], "d": 2,
+ "a": "m.11/1-g'ye göre jandarma ceza infaz kurumlarının iç güvenliğini değil, dış korumalarını sağlayıcı önlemleri alır. Diğer seçenekler m.11/1'de sayılmıştır.", "y": "JTGY m.11", "z": "orta"},
+
+{"i": "EK-17-17-20-1", "kanun_id": 17, "kart_id": "17-20",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, mevzuatta özel hüküm bulunması veya özel nitelik taşıyan durumlarda kişisel koruma ve kollama kimin emriyle yerine getirilir?",
+ "s": ["Yetkili mülki amirin", "Cumhuriyet savcısının", "İl jandarma komutanının", "Sulh ceza hâkiminin", "İçişleri Bakanının"], "d": 0,
+ "a": "m.13/1'e göre esas olan genel ve koruyucu önlemlerdir; kişisel koruma ve kollama ancak özel hüküm varsa veya özel nitelikli durumlarda yetkili mülki amirin emriyle yapılır.", "y": "JTGY m.13", "z": "kolay"},
+
+{"i": "EK-17-17-21-1", "kanun_id": 17, "kart_id": "17-21",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, yangın, sel, deprem gibi olaylarla ilgili olarak jandarmanın düzenlediği tutanağın örnekleri hangi makamlara verilir?",
+ "s": ["Yalnızca mülki amire", "Yalnızca Cumhuriyet savcılığına", "Valiliğe ve il afet müdürlüğüne", "Mülki amire ve Cumhuriyet savcılığına", "Belediye başkanlığına ve mülki amire"], "d": 3,
+ "a": "m.14/1'e göre olayla ilgili düzenlenen tutanağın bir örneği mülki amire, bir diğer örneği Cumhuriyet savcılığına verilir.", "y": "JTGY m.14", "z": "orta"},
+
+{"i": "EK-17-17-22-1", "kanun_id": 17, "kart_id": "17-22",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, aşağıdakilerden hangileri doğrudur?\nI. Jandarma, görev alanındaki kuduz hayvanları ve bunların ısırdığı kimseleri ilgili sağlık kuruluşlarına ivedilikle bildirir.\nII. Polis teşkilatı olmayan yerlerde başkalarına saldırma ihtimali bulunan akıl hastalarının sevki, yalnızca saldırıya engel olmak amacıyla jandarmaca yerine getirilir.\nIII. Polis teşkilatı olmayan yerlerde jandarma, akıl hastasının sevkinden her durumda sorumludur.",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.15/2'ye göre kuduz vakaları ivedilikle bildirilir; m.15/3'e göre jandarma bu sevki sevkten sorumlu olmamak ve yalnızca saldırıya engel olmak amacıyla yapar. Bu nedenle III yanlıştır.", "y": "JTGY m.15", "z": "orta"},
+
+{"i": "EK-17-17-23-1", "kanun_id": 17, "kart_id": "17-23",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, özel hayatın ve aile hayatının gizliliğini korumak yükümlülüğü hangi görevler başlığı altında düzenlenmiştir?",
+ "s": ["Hak ve hürriyetlerin korunmasına ilişkin görevler", "Adli görevler", "Askerî görevler", "Kamu düzeninin sağlanmasına ilişkin görevler", "Konut dokunulmazlığına ilişkin görevler"], "d": 4,
+ "a": "m.16/1-c'ye göre özel hayatın ve aile hayatının gizliliğini korumak, konut dokunulmazlığına ilişkin görevler arasında sayılmıştır.", "y": "JTGY m.16", "z": "orta"},
+
+{"i": "EK-17-17-30-1", "kanun_id": 17, "kart_id": "17-30",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, erkek ve kadın tutuklu ya da hükümlülerin birlikte sevkine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Hiçbir durumda birlikte sevk edilemezler", "İştirak hâlinde suç işlemiş olanlar birlikte sevk edilebilir", "Cumhuriyet savcısının izniyle her zaman birlikte sevk edilebilirler", "Sevk mesafesi kısa ise birlikte sevk edilebilirler", "Yalnızca hükümlüler birlikte sevk edilebilir"], "d": 1,
+ "a": "m.29/1'e göre iştirak hâlinde suç işlemiş olanlar ile kanunen önemli ilişki sayılacak derecede yakınlığı olanlar dışında erkek ve kadın tutuklu ya da hükümlüler birlikte sevk edilemez.", "y": "JTGY m.29", "z": "orta"},
+
+{"i": "EK-17-17-30-2", "kanun_id": 17, "kart_id": "17-30",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, sevk edilen tutuklu veya hükümlünün kadın olması durumunda aşağıdakilerden hangisi verilir?",
+ "s": ["Kadın jandarma astsubayı", "Kadın sağlık personeli", "Bir yakını refakatçi olarak", "Kadın kolluk amiri", "Kadın ceza infaz koruma görevlisi"], "d": 4,
+ "a": "m.29/2'ye göre sevk edilen tutuklu ve hükümlünün kadın olması durumunda kadın ceza infaz koruma görevlisi verilir.", "y": "JTGY m.29", "z": "kolay"},
+
+{"i": "EK-17-17-31-1", "kanun_id": 17, "kart_id": "17-31",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, sevk ve nakil sırasında tutuklu veya hükümlülerin firar hazırlığı içinde olduklarından kuşkulanıldığında silah kullanılmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Önce ihtar edilir; ihtara uyulmaz ve firar başka şekilde önlenemezse silah kullanılır", "Kuşku hâlinde ihtara gerek olmaksızın doğrudan silah kullanılır", "İhtar yapıldıktan sonra firara teşebbüs beklenmeden derhâl silah kullanılır", "Silah kullanma kararını yalnızca Cumhuriyet savcısı verebilir", "Sevk ve nakil sırasında hiçbir durumda silah kullanılamaz"], "d": 0,
+ "a": "m.32/1'e göre devriye komutanı silah kullanılacağını ihtar eder; ihtara uymayarak firara teşebbüs edilir ve firar başka şekilde önlenemezse silah kullanılır.", "y": "JTGY m.32", "z": "orta"},
+
+{"i": "EK-17-17-32-1", "kanun_id": 17, "kart_id": "17-32",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, adli kolluk, adli görevlerin haricindeki hizmetlerde kimin emrindedir?",
+ "s": ["Cumhuriyet savcısının", "Sulh ceza hâkiminin", "Üstlerinin", "Ağır ceza mahkemesi başkanının", "Cumhuriyet başsavcısının"], "d": 2,
+ "a": "m.38/2'ye göre soruşturma işlemleri Cumhuriyet savcısının emir ve talimatıyla adli kolluğa yaptırılır; adli kolluk, adli görevlerin haricindeki hizmetlerde üstlerinin emrindedir.", "y": "JTGY m.38", "z": "orta"},
+
+{"i": "EK-17-17-41-1", "kanun_id": 17, "kart_id": "17-41",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, kimliğini ispatlayan belgesi bulunmayan veya sair surette kimliği belirlenemeyen kişi hakkında ne yapılır?",
+ "s": ["Kişi serbest bırakılır, durum mülki amire bildirilir", "Kişi tutularak durum mülki amire yazılı olarak bildirilir", "Kişi doğrudan nüfus müdürlüğüne teslim edilir", "Kişi tutularak durumdan derhâl Cumhuriyet savcısı haberdar edilir", "Kişi kırk sekiz saat süreyle gözaltına alınır"], "d": 3,
+ "a": "m.46/9'a göre kimliği belirlenemeyen kişi tutularak durumdan derhâl Cumhuriyet savcısı haberdar edilir.", "y": "JTGY m.46", "z": "kolay"},
+
+{"i": "EK-17-17-43-1", "kanun_id": 17, "kart_id": "17-43",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, önleme aramasına ilişkin karar veya emirde aşağıdakilerden hangileri belirtilir?\nI. Aramanın sebebi\nII. Aramanın yapılacağı yer\nIII. Aramayı yapacak personelin adı ve soyadı",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 2,
+ "a": "m.47/3'e göre kararda veya emirde sebebi, konusu ve kapsamı, yapılacağı yer ile yapılacağı zaman ve geçerli olacağı süre belirtilir; aramayı yapacak personelin kimliği sayılmamıştır.", "y": "JTGY m.47", "z": "orta"},
+
+{"i": "EK-17-17-46-1", "kanun_id": 17, "kart_id": "17-46",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarmanın güvenliğini sağladığı bina ve tesislere gelenlerin üstü, aracı ve eşyası nasıl kontrol edilir ve aranır?",
+ "s": ["Herhangi bir emir veya karar olmaksızın teknik cihazlarla, gerektiğinde el ile", "Ancak mülki amirin yazılı emriyle", "Ancak sulh ceza hâkiminin kararıyla", "Cumhuriyet savcısının sözlü talimatıyla", "Yalnızca kişinin rızası alınarak"], "d": 0,
+ "a": "m.47/7'ye göre jandarma, güvenliğini sağladığı bina ve tesislere gelenlerin üstünü, aracını ve eşyasını herhangi bir emir veya karar olmasına bakılmaksızın teknik cihazlarla, gerektiğinde el ile kontrol etmeye ve aramaya yetkilidir.", "y": "JTGY m.47", "z": "orta"},
+
+{"i": "EK-17-17-46-2", "kanun_id": 17, "kart_id": "17-46",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarmanın güvenliğini sağladığı bina ve tesislere girmek isteyenlerin kimlik ibrazına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Kimliklerini ancak sorulduğunda gösterirler", "Kimlik ibrazı isteğe bağlıdır", "Yalnızca yabancılar kimlik göstermek zorundadır", "Kimlik yalnızca mülki amir emri varsa istenir", "Kimliklerini sorulmaksızın ibraz etmek zorundadırlar"], "d": 4,
+ "a": "m.47/7'ye göre bu yerlere girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır.", "y": "JTGY m.47", "z": "kolay"},
+
+{"i": "EK-17-17-49-1", "kanun_id": 17, "kart_id": "17-49",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma bölge komutanları terörle mücadele kapsamında operasyonları planlamak, sevk ve idare etmek ve iller arasında kuvvet kaydırması yapmak görevlerini kimin onayıyla yerine getirir?",
+ "s": ["İçişleri Bakanının", "Bölge komutanlığının konuşlu olduğu ilin valisinin", "Jandarma Genel Komutanının", "Operasyon yapılacak ilin il jandarma komutanının", "Cumhurbaşkanının"], "d": 1,
+ "a": "m.54/1'e göre bölge komutanları bu görevleri bölge komutanlığının konuşlu olduğu ilin valisinin onayıyla yerine getirir.", "y": "JTGY m.54", "z": "orta"},
+
+{"i": "EK-17-17-50-1", "kanun_id": 17, "kart_id": "17-50",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, aşağıdakilerden hangileri jandarma karakol komutanlarının görev, yetki ve sorumlulukları arasında sayılmıştır?\nI. İhtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak\nII. Adli görevleri ifa etmek\nIII. Disiplini sağlamak",
+ "s": ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"], "d": 3,
+ "a": "m.57/2'de karakol komutanının görevleri arasında adli görevleri ifa etmek ve disiplini sağlamak sayılmıştır; lojistik ve teknik destek faaliyetlerini planlamak karakol komutanının görevleri arasında yer almaz.", "y": "JTGY m.57", "z": "zor"},
+
+{"i": "EK-17-17-54-1", "kanun_id": 17, "kart_id": "17-54",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma bölgesindeki suçları, asayişi bozan olayları ve afetleri kime ve nasıl bildirir?",
+ "s": ["Yalnızca Cumhuriyet savcılığına yazılı olarak", "Yalnızca il jandarma komutanlığına sözlü olarak", "Vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak", "Yirmi dört saat içinde valiliğe yalnızca yazılı olarak", "Haftalık raporla İçişleri Bakanlığına"], "d": 2,
+ "a": "m.59/1'e göre bu olaylar vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak bildirilir; suçla ilgili görülen olaylar ayrıca Cumhuriyet savcılığına da bildirilir.", "y": "JTGY m.59", "z": "orta"},
+
+{"i": "EK-17-17-55-1", "kanun_id": 17, "kart_id": "17-55",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, hak ve yükümlülük doğuran ve Bakanlık ya da Jandarma Genel Komutanlığı adına irade beyanı niteliği taşıyan yazışmalar her hâlükârda hangi kanalla yapılır?",
+ "s": ["Doğrudan Jandarma Genel Komutanlığı ile", "Bölge komutanlıkları aracılığıyla", "Kaymakamlıklar aracılığıyla", "Valilikler aracılığıyla", "İl jandarma komutanlıkları aracılığıyla"], "d": 3,
+ "a": "m.60/1'e göre bu nitelikteki yazışmalar her hâlükârda valilikler aracılığıyla yapılır; merkez ve taşra teşkilatı sayılan istisnalar dışında resen yazışma yapamaz.", "y": "JTGY m.60", "z": "orta"},
+
+{"i": "EK-17-17-56-1", "kanun_id": 17, "kart_id": "17-56",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, aşağıdakilerden hangileri doğrudur?\nI. Jandarmanın sorumluluk alanındaki olaylara ait asayiş raporları il jandarma komutanlığınca hazırlanır ve vali imzasıyla gönderilir.\nII. Emniyet ve asayiş görevlerine ait aylık ve yıllık istatistikler emniyet müdürlüğünce beş örnek olarak birleştirilir.\nIII. İstatistiklerin üç örneği il jandarma komutanı imzasıyla Bakanlığa sunulur.",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.60/4'e göre asayiş raporları il jandarma komutanlığınca hazırlanıp vali imzasıyla gönderilir; m.60/5'e göre istatistikler beş örnek olarak birleştirilir ve iki örneği vali imzasıyla Bakanlığa sunulur. Bu nedenle III yanlıştır.", "y": "JTGY m.60", "z": "zor"},
+
+{"i": "EK-17-17-58-1", "kanun_id": 17, "kart_id": "17-58",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma, sahil güvenlik ve polisin birlikte çalışmasına gerek duyulan durumlarda operasyona katılan birimlerin komuta, sevk ve idaresinin hangi kolluk kuvvetine ait olduğunu kim belirler?",
+ "s": ["Mülki amir", "Operasyona katılan en kıdemli komutan", "Cumhuriyet başsavcısı", "İçişleri Bakanı", "Olay yerine ilk ulaşan birimin amiri"], "d": 0,
+ "a": "m.65/6'ya göre birlikte çalışılan operasyonlarda komuta, sevk ve idarenin hangi kolluk kuvvetine ait olduğu mülki amir tarafından belirlenir.", "y": "JTGY m.65", "z": "kolay"},
+
+{"i": "EK-17-17-60-1", "kanun_id": 17, "kart_id": "17-60",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, suç ve suçluların gizli olarak takibi, istihbarat, kaçakçılık ve terörle mücadele hizmetlerinde değişik kılık ve kıyafetle hizmet yürütülmesine kimin izniyle karar verilebilir?",
+ "s": ["Yalnızca mülki amirin", "Yalnızca Jandarma Genel Komutanlığının", "Cumhuriyet savcısının", "İçişleri Bakanının", "Mülki amirin veya il jandarma komutanının"], "d": 4,
+ "a": "m.70/1'e göre resmi kıyafetle görev yapmak esastır; bu hizmetler için gerek görüldüğünde mülki amirin veya il jandarma komutanının izniyle değişik kılık ve kıyafetle hizmet yürütülebilir.", "y": "JTGY m.70", "z": "orta"},
+
+{"i": "EK-17-17-61-1", "kanun_id": 17, "kart_id": "17-61",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma, sahil güvenlik ve emniyet teşkilatının kendi sorumluluk alanında yetersiz kalması hâlinde birbirlerinin sorumluluk alanlarında görevlendirilmesine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Görevlendirme kurum amirlerince yapılır ve süreklilik taşıyabilir", "Görevlendirme İçişleri Bakanının onayıyla yapılır", "Görevlendirme mülki amirin onayıyla yapılır ve süreklilik taşımaz", "Görevlendirme Cumhuriyet başsavcısının talebiyle yapılır", "Görevlendirme en az bir yıl süreyle yapılır"], "d": 2,
+ "a": "m.71/1'e göre bu görev hiçbir zaman süreklilik taşımaz ve istenen sonuç alındığında yardıma gelen kuvvet geri döner; m.71/2'ye göre görevlendirmeler mülki amirin onayıyla yapılır.", "y": "JTGY m.71", "z": "orta"},
+
+{"i": "EK-17-17-62-1", "kanun_id": 17, "kart_id": "17-62",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, önemli olayları takip etmek üzere Bakanlıkça veya valiliklerce görevlendirilen ekiplerin kolluk yetkilerini kullanmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Yalnızca jandarma sorumluluk alanıyla sınırlıdır", "Jandarma sorumluluk alanıyla sınırlı değildir", "Yalnızca görevlendiren ilin sınırlarıyla sınırlıdır", "Yalnızca polis sorumluluk alanında kullanılabilir", "Ancak Cumhuriyet savcısının izniyle kullanılabilir"], "d": 1,
+ "a": "m.72/2'ye göre görevlendirilen ekiplerin kolluk yetkilerini kullanması jandarma sorumluluk alanı ile sınırlı değildir.", "y": "JTGY m.72", "z": "orta"},
+
+{"i": "EK-17-17-62-2", "kanun_id": 17, "kart_id": "17-62",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, merkezden veya iller arasında görevlendirilen ekipler görev yaptıkları mahalde kime bilgi vermek zorundadır?",
+ "s": ["İl jandarma komutanına", "Cumhuriyet başsavcısına", "İçişleri Bakanına", "Mahallin mülki amirine", "Bölge jandarma komutanına"], "d": 3,
+ "a": "m.72/2'ye göre bu ekipler görev yaptıkları mahallin mülki amirine bilgi vermek zorundadır ve görevin ifası sırasında ona karşı da sorumludur.", "y": "JTGY m.72", "z": "kolay"},
+
+{"i": "EK-17-17-63-1", "kanun_id": 17, "kart_id": "17-63",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ve Emniyet Genel Müdürlüğünün silah, mühimmat, taşıt ve taşınmazlarını birbirlerine geçici olarak tahsis etmesi veya bedelsiz devretmesi kimin onayıyla olur?",
+ "s": ["Jandarma Genel Komutanının", "Valinin", "Cumhurbaşkanının", "Hazine ve Maliye Bakanının", "İçişleri Bakanının"], "d": 4,
+ "a": "m.73/1'e göre bu tahsis ve bedelsiz devir işlemleri Bakanın (İçişleri Bakanı) onayı ile yapılır.", "y": "JTGY m.73", "z": "orta"},
+
+{"i": "EK-17-17-65-1", "kanun_id": 17, "kart_id": "17-65",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma birimlerinin emniyet ve asayiş ile kamu düzeninin korunması amacıyla hazırladığı planlar arasında aşağıdakilerden hangileri sayılmıştır?\nI. Suçları önleme ve suçlara müdahale planı\nII. Doğal afet ve yardım planı\nIII. Koruma ve müdahale harekât planı",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 4,
+ "a": "m.75/1'e göre jandarma birimleri suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekât planı hazırlar.", "y": "JTGY m.75", "z": "kolay"},
+
+{"i": "EK-17-17-65-2", "kanun_id": 17, "kart_id": "17-65",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, jandarma birimlerince hazırlanan emniyet ve asayiş planları kimin onayıyla yürürlüğe konulur?",
+ "s": ["Mülki amirin", "İçişleri Bakanının", "Jandarma Genel Komutanının", "İl jandarma komutanının", "Cumhuriyet başsavcısının"], "d": 0,
+ "a": "m.75/3'e göre planlar mülki amirin onayı ile yürürlüğe konulur; birer örneği ayrıca Jandarma Genel Komutanlığına gönderilir.", "y": "JTGY m.75", "z": "orta"},
+
+{"i": "EK-17-17-67-1", "kanun_id": 17, "kart_id": "17-67",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, tebligat işlemlerine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Mülki amirin uygun gördüğü her tebligat jandarmaca yapılır", "Tebligat 5271 sayılı Kanun hükümlerine göre yapılır", "Mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez", "Jandarma yalnızca idari tebligatları yapabilir", "Tebligat işlemleri yalnızca karakol komutanınca yapılır"], "d": 2,
+ "a": "m.77/1'e göre tebligat 7201 sayılı Tebligat Kanunu hükümlerine göre yapılır ve mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez.", "y": "JTGY m.77", "z": "orta"},
+
+{"i": "EK-17-17-68-1", "kanun_id": 17, "kart_id": "17-68",
+ "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre, Yönetmelik hükümlerini kim yürütür?",
+ "s": ["İçişleri Bakanı", "Cumhurbaşkanı", "Jandarma Genel Komutanı", "Bakanlar Kurulu", "Adalet Bakanı"], "d": 1,
+ "a": "m.82/1'e göre Yönetmelik hükümlerini Cumhurbaşkanı yürütür; “Bakanlar Kurulu” ibaresi 2019'da 1721 sayılı Cumhurbaşkanı Kararı ile “Cumhurbaşkanı” olarak değiştirilmiştir.", "y": "JTGY m.82", "z": "kolay"},
+
+{"i": "EK-18-18-5-1", "kanun_id": 18, "kart_id": "18-5",
+ "k": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbiri almakla kim yükümlüdür?",
+ "s": ["İlgili kişi", "Kişisel Verileri Koruma Kurulu", "Veri işleyen", "Veri sorumlusu", "Alıcı grubu"], "d": 3,
+ "a": "m.9/2'ye göre veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbiri almakla yükümlüdür.", "y": "Veri Silme Yön. m.9", "z": "kolay"},
+
+{"i": "EK-18-18-9-1", "kanun_id": 18, "kart_id": "18-9",
+ "k": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, kişisel verilerin anonim hale getirilmesine ilişkin aşağıdakilerden hangileri doğrudur?\nI. Veri sorumlusu, anonim hale getirmeyle ilgili gerekli her türlü teknik ve idari tedbiri almakla yükümlüdür.\nII. Anonim hale getirilen veriler, başka verilerle eşleştirildiğinde kişiyle ilişkilendirilebilir olarak kalabilir.\nIII. Anonim hale getirmeye ilişkin tedbir alma yükümlülüğü Kişisel Verileri Koruma Kuruluna aittir.",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 0,
+ "a": "m.10/3'e göre tedbir yükümlüsü veri sorumlusudur; m.10/1'e göre anonim hale getirilen veri başka verilerle eşleştirilse dahi hiçbir surette kişiyle ilişkilendirilemez. Bu nedenle II ve III yanlıştır.", "y": "Veri Silme Yön. m.10", "z": "orta"},
+
+{"i": "EK-19-19-13-1", "kanun_id": 19, "kart_id": "19-13",
+ "k": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre, Yönetmeliğin kapsam maddesinde yer alan “İMKB” ibaresine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["İMKB, kapsamdaki kuruluşlar arasında ismen sayılmaya devam etmektedir", "İbare, 6698 sayılı Kanunla madde metninden çıkarılmıştır", "İbarenin yerine “Borsa İstanbul” ibaresi getirilmiştir", "İbare, 4982 sayılı Kanunun yürürlüğe girmesiyle çıkarılmıştır", "İbare, 864 sayılı Cumhurbaşkanı Kararı ile madde metninden çıkarılmıştır"], "d": 4,
+ "a": "m.2 dipnotuna göre “, İMKB” ibaresi 9/4/2019 tarihli ve 864 sayılı Cumhurbaşkanı Kararı ile madde metninden çıkarılmıştır.", "y": "BEHK Uyg. Yön. m.2", "z": "zor"},
+
+{"i": "EK-19-19-14-1", "kanun_id": 19, "kart_id": "19-14",
+ "k": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik hangi Kanunun hangi maddesi uyarınca hazırlanmıştır?",
+ "s": ["6698 sayılı Kanunun 13 üncü maddesi", "4982 sayılı Kanunun 31 inci maddesi", "3071 sayılı Kanunun 5 inci maddesi", "4982 sayılı Kanunun 5 inci maddesi", "657 sayılı Kanunun 31 inci maddesi"], "d": 1,
+ "a": "m.3'e göre Yönetmelik, 9/10/2003 tarihli ve 4982 sayılı Bilgi Edinme Hakkı Kanununun 31 inci maddesi uyarınca hazırlanmıştır.", "y": "BEHK Uyg. Yön. m.3", "z": "orta"},
+
+{"i": "EK-20-20-3-1", "kanun_id": 20, "kart_id": "20-3",
+ "k": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre, satıcılık (bayilik) belgesi almak için valiliğe başvuranlardan istenen sağlık raporu neyi göstermelidir?",
+ "s": ["Silah taşımasında yalnızca bedeni bakımdan sakınca olmadığını", "Silah satmasında yalnızca ruhi bakımdan sakınca olmadığını", "Silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan sakınca olmadığını", "Göz ve kulak muayenesinin normal olduğunu", "Uyuşturucu madde bağımlılığı bulunmadığını"], "d": 2,
+ "a": "m.10/a-2'ye göre satıcılık belgesi için silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan bir sakınca olmadığına dair sağlık raporu istenir.", "y": "2521 Uyg. Yön. m.10", "z": "orta"},
+
+{"i": "EK-20-20-8-1", "kanun_id": 20, "kart_id": "20-8",
+ "k": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre, silah taşıma yetkisi bulunmayan bir kişinin yivsiz tüfek ruhsatnamesini yenilemesi için aşağıdakilerden hangileri istenir?\nI. 5 yıllık yivsiz tüfek ruhsatnamesi harcının ödendiğine ilişkin belge\nII. Sabıka kaydına ilişkin yazılı beyan\nIII. Silah taşımasına engel hâlinin bulunup bulunmadığını gösteren sağlık raporu",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 4,
+ "a": "m.10/b'ye göre yenileme için 5 yıllık harcın ödendiğine ilişkin belge ile kimlik numarası beyanı, sabıka beyanı, sağlık raporu ve iki fotoğraf istenir. Yalnızca harç makbuzu yeterli olması, silah taşıma yetkisi bulunanlar için geçerlidir.", "y": "2521 Uyg. Yön. m.10", "z": "zor"},
+
+{"i": "EK-20-20-12-1", "kanun_id": 20, "kart_id": "20-12",
+ "k": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre, yivsiz tüfek ruhsatnamesi alan kişilerin sahip oldukları yivsiz av tüfeklerine ait aşağıdaki bilgilerden hangilerini belgelerine işletmeleri zorunludur?\nI. Satın alındığı tarih\nII. Marka\nIII. Seri numarası",
+ "s": ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"], "d": 3,
+ "a": "m.10/b'ye göre ruhsatname sahipleri tüfeklerinin cins, marka, çap (kalibre) ve seri numaralarını belgelerine işletmek zorundadır; satın alma tarihi sayılmamıştır.", "y": "2521 Uyg. Yön. m.10", "z": "orta"},
+
+{"i": "EK-20-20-23-1", "kanun_id": 20, "kart_id": "20-23",
+ "k": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre, zorunlu olmadığı hâlde meskûn mahalde veya civarında ya da umuma mahsus yol üzerinde silah atanlara ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Haklarında kamu davası açılmamış olsa bile izin ve belge verilmez", "Ancak mahkûm olmaları hâlinde izin ve belge verilmez", "Haklarında kamu davası açılmadıkça izin ve belge verilir", "Yalnızca hapis cezası alanlara izin ve belge verilmez", "Olayın üzerinden bir yıl geçtikten sonra belge verilir"], "d": 0,
+ "a": "m.14/1-c'ye göre haklarında kamu davası açılmamış olsa bile zorunlu olmadığı hâlde meskûn mahalde veya civarında silah atanlara izin ve belge verilmez.", "y": "2521 Uyg. Yön. m.14", "z": "orta"},
+
+{"i": "EK-21-21-0-1", "kanun_id": 21, "kart_id": "21-0",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, kişinin şiddete uğraması veya şiddete uğrama tehlikesi altında bulunması hâlinde durumu kim ihbar edebilir?",
+ "s": ["Yalnızca şiddet mağduru", "Herkes", "Yalnızca mağdurun yakınları", "Yalnızca görgü tanıkları", "Yalnızca kamu görevlileri"], "d": 1,
+ "a": "m.4/1'e göre bu durumda herkes durumu yazılı, sözlü veya başka bir suretle ilgili makam ve mercilere ihbar edebilir.", "y": "6284 Uyg. Yön. m.4", "z": "kolay"},
+
+{"i": "EK-21-21-1-1", "kanun_id": 21, "kart_id": "21-1",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, şiddet veya şiddete uğrama tehlikesinden haberdar olan kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarının yükümlülüğüne ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Durumu bildirip bildirmemekte serbesttirler", "Yalnızca mağdurun talebi hâlinde bildirirler", "Durumu yedi gün içinde Bakanlığa bildirirler", "Yalnızca yazılı başvuru üzerine işlem yaparlar", "Durumu derhâl şikâyet mercilerine bildirmek zorundadırlar"], "d": 4,
+ "a": "m.4/1'e göre kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşları durumu derhâl şikâyet mercilerine bildirmek zorundadır.", "y": "6284 Uyg. Yön. m.4", "z": "orta"},
+
+{"i": "EK-21-21-3-1", "kanun_id": 21, "kart_id": "21-3",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, Müdürlük veya ŞÖNİM'e yapılan şikâyet ve ihbarların olayın özelliğine göre gecikmeksizin bildirileceği makam ve mercilerden biri DEĞİLDİR?",
+ "s": ["Kolluk", "Mülki amir", "Cumhuriyet başsavcılığı", "Cumhurbaşkanlığı", "Hâkim"], "d": 3,
+ "a": "m.4/4'e göre Müdürlük veya ŞÖNİM'e yapılan şikâyet ve ihbarlar kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime gecikmeksizin bildirilir; Cumhurbaşkanlığı sayılmamıştır.", "y": "6284 Uyg. Yön. m.4", "z": "kolay"},
+
+{"i": "EK-21-21-8-1", "kanun_id": 21, "kart_id": "21-8",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, kimlik ve diğer bilgi ve belgelerin değiştirilmesi tedbirine ilişkin aşağıdakilerden hangileri doğrudur?\nI. Korunan kişinin hayati tehlikesinin bulunması gerekir.\nII. İlgilinin aydınlatılmış rızasına dayanılır.\nIII. Kararın gereği Adalet Bakanlığınca yerine getirilir.",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 2,
+ "a": "m.16/1'e göre tedbir; hayati tehlike bulunması, diğer tedbirlerin yetersiz kalması ve aydınlatılmış rıza ile hâkimce verilir; m.16/2'ye göre kararın gereğini İçişleri Bakanlığı yerine getirir. Bu nedenle III yanlıştır.", "y": "6284 Uyg. Yön. m.16", "z": "orta"},
+
+{"i": "EK-21-21-8-2", "kanun_id": 21, "kart_id": "21-8",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, hâkim tarafından verilen kimlik ve diğer bilgi ve belgelerin değiştirilmesi kararı Cumhuriyet başsavcılığına gönderildikten sonra kararın gereğini hangi makam yerine getirir?",
+ "s": ["İçişleri Bakanlığı", "Adalet Bakanlığı", "Aile ve sosyal hizmetler il müdürlüğü", "İl nüfus müdürlüğü", "Mülki amir"], "d": 0,
+ "a": "m.16/2-3'e göre karar, İçişleri Bakanlığınca gereği yerine getirilmek üzere Cumhuriyet başsavcılığına gönderilir ve başsavcılıkça İçişleri Bakanlığına ivedilikle iletilir.", "y": "6284 Uyg. Yön. m.16", "z": "orta"},
+
+{"i": "EK-21-21-11-1", "kanun_id": 21, "kart_id": "21-11",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, hâkim kararıyla şiddet uygulayanın görevi nedeniyle zimmetinde bulunan silahı teslim alan kurum amirine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Silahı kendi takdiriyle iade edebilir", "Süre dolmadıkça veya yeni karar olmadıkça silahı hiçbir şekilde iade etmez", "Silahı görev saatlerinde personele geri verebilir", "Silahı otuz gün sonra kendiliğinden iade eder", "Silahı Cumhuriyet savcısının sözlü talimatıyla iade eder"], "d": 1,
+ "a": "m.26/2'ye göre kurum amiri, karar süresinin sonuna veya tedbirin değiştirildiğine ya da kaldırıldığına dair yeni bir karar verilmedikçe silahı hiçbir şekilde iade etmez.", "y": "6284 Uyg. Yön. m.26", "z": "orta"},
+
+{"i": "EK-21-21-11-2", "kanun_id": 21, "kart_id": "21-11",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, şiddet uygulayanın zimmetindeki silahın teslim alınması ve iadesi işlemleri hangi kişiler arasında imzalanan tutanakla yerine getirilir?",
+ "s": ["Kurum amiri ve şiddet uygulayan", "Kolluk amiri, mağdur ve şiddet uygulayan", "Hâkim, kurum amiri ve şiddet uygulayan", "Kurum amiri, şiddet uygulayan ve bir tanık", "Kurum amiri ve iki tanık"], "d": 3,
+ "a": "m.26/3'e göre silahın teslim alınması ve iadesi işlemleri kurum amiri, şiddet uygulayan ve bir tanık arasında imzalanan tutanak ile yerine getirilir.", "y": "6284 Uyg. Yön. m.26", "z": "orta"},
+
+{"i": "EK-21-21-12-1", "kanun_id": 21, "kart_id": "21-12",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, şiddet uygulayanın aynı zamanda ailenin geçimini sağlayan kişi olması hâlinde tedbir nafakasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Hâkim ancak mağdurun talebi üzerine tedbir nafakasına hükmedebilir", "Tedbir nafakasına mülki amir karar verir", "Nafakaya hükmedilmemiş olması kaydıyla hâkim, talep edilmese dahi tedbir nafakasına hükmedebilir", "Tedbir nafakası yalnızca çocuklar için verilebilir", "Daha önce nafakaya hükmedilmiş olsa bile ayrıca tedbir nafakası verilir"], "d": 2,
+ "a": "m.17/3'e göre hâkim, Türk Medeni Kanunu hükümlerine göre nafakaya hükmedilmemiş olması kaydıyla, mağdurun yaşam düzeyini gözeterek talep edilmese dahi tedbir nafakasına hükmedebilir.", "y": "6284 Uyg. Yön. m.17", "z": "orta"},
+
+{"i": "EK-21-21-16-1", "kanun_id": 21, "kart_id": "21-16",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, gecikmesinde sakınca bulunan hâllerde kolluk amirince alınan tedbirlerin onay sürelerinin hesabına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Tatil günleri sürenin hesabına katılmaz", "Süre yalnızca iş günleri üzerinden hesaplanır", "Süre hafta sonuna rastlarsa bir önceki iş günü sona erer", "Tatil günleri süreye yarım gün olarak eklenir", "Tatil günleri dâhildir; süre tatile rastlarsa takip eden ilk iş günü sona erer"], "d": 4,
+ "a": "m.29/3'e göre tatil günleri sürenin hesabına dâhildir; sürenin bitimi resmî tatil veya hafta sonuna rastlarsa süre takip eden ilk iş günü sona erer.", "y": "6284 Uyg. Yön. m.29", "z": "orta"},
+
+{"i": "EK-21-21-19-1", "kanun_id": 21, "kart_id": "21-19",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, tedbir talebinin reddine ilişkin karar kime tebliğ edilir?",
+ "s": ["Sadece korunan kişiye", "Korunan kişiye ve şiddet uygulayana", "Sadece şiddet uygulayana", "Korunan kişiye ve kolluğa", "Sadece Cumhuriyet başsavcılığına"], "d": 0,
+ "a": "m.31/2'ye göre tedbir talebinin reddine ilişkin karar sadece korunan kişiye tebliğ edilir; tedbir kararı ise m.31/1'e göre hem korunan kişiye hem şiddet uygulayana tefhim veya tebliğ edilir.", "y": "6284 Uyg. Yön. m.31", "z": "orta"},
+
+{"i": "EK-21-21-27-1", "kanun_id": 21, "kart_id": "21-27",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, geçici koruma altındaki kişi, acil durumlar dışında gideceği yere ilişkin olarak görevli ve yetkili kolluğa ne zaman bilgi verir?",
+ "s": ["Kırk sekiz saat öncesinden", "Gittiği yere vardıktan sonra yirmi dört saat içinde", "Bir hafta öncesinden", "Yirmi dört saat öncesinden", "Bilgi vermesine gerek yoktur; koruma sona erer"], "d": 3,
+ "a": "m.10/2'ye göre korunan kişi acil durumlarda hemen, diğer hâllerde yirmi dört saat öncesinden gideceği yere ilişkin olarak kolluğa bilgi verir; gideceği yerdeki kolluk gecikmeksizin haberdar edilir ve tedbir uygulanmaya devam eder.", "y": "6284 Uyg. Yön. m.10", "z": "orta"},
+
+{"i": "EK-21-21-34-1", "kanun_id": 21, "kart_id": "21-34",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, kreş imkânı sağlanması tedbirine ilişkin aşağıdakilerden hangileri doğrudur?\nI. Korunan kişi çalışmıyorsa dört ay, çalışıyorsa iki ay süreyle sağlanır.\nII. Tutar, on altı yaşından büyükler için belirlenen aylık net asgari ücretin yarısını geçemez.\nIII. Kreş ödemeleri Müdürlük tarafından korunan kişiye yapılır.",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.11/1'e göre kreş imkânı, kişi çalışmıyorsa dört ay, çalışıyorsa iki ay süreyle ve net asgari ücretin yarısını geçmemek üzere sağlanır; m.11/3'e göre ödemeler Müdürlük tarafından kreşe yapılır. Bu nedenle III yanlıştır.", "y": "6284 Uyg. Yön. m.11", "z": "zor"},
+
+{"i": "EK-21-21-36-1", "kanun_id": 21, "kart_id": "21-36",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, nafaka ödemekle yükümlü kılınan kişinin Sosyal Güvenlik Kurumu ile bağlantısı olması durumunda nafaka nasıl tahsil edilir?",
+ "s": ["Korunan kişinin başvurusu üzerine SGK tarafından", "Kolluk tarafından elden tahsil edilerek", "Başvuru aranmaksızın icra müdürlüğünce aylık, maaş ya da ücretinden", "Yalnızca korunan kişinin icra takibi başlatmasıyla", "Mülki amirin kararıyla Bakanlık bütçesinden"], "d": 2,
+ "a": "m.43/3'e göre bu durumda korunan kişinin başvurusu aranmaksızın nafaka, ilgilinin aylık, maaş ya da ücretinden icra müdürlüğü tarafından tahsil edilir.", "y": "6284 Uyg. Yön. m.43", "z": "orta"},
+
+{"i": "EK-21-21-37-1", "kanun_id": 21, "kart_id": "21-37",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, hakkında koruyucu tedbir kararı verilen ve genel sağlık sigortası prim borcu sebebiyle fiilen GSS'den yararlanamayan kişiye ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Prim borcunu ödemedikçe sağlık hizmetinden yararlanamaz", "Sağlık giderleri yalnızca belediyece karşılanır", "Gelir testine tabi tutularak sigortalı sayılabilir", "Yalnızca acil sağlık hizmetlerinden yararlanabilir", "Bu hâlin devamı süresince gelir testine tabi tutulmaksızın GSS'li sayılır"], "d": 4,
+ "a": "m.44/1'e göre bu kişiler, bu hâllerin devamı süresince gelir testine tabi tutulmaksızın genel sağlık sigortalısı sayılır.", "y": "6284 Uyg. Yön. m.44", "z": "orta"},
+
+{"i": "EK-21-21-38-1", "kanun_id": 21, "kart_id": "21-38",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, Kanun kapsamındaki başvurular ile verilen kararların icra ve infazı için yapılan işlemlerde masraf alınmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Yargılama gideri, harç, posta gideri ve benzeri hiçbir ad altında masraf alınmaz", "Yalnızca harçtan muafiyet vardır", "Yalnızca posta giderleri alınmaz", "Masraflar şiddet uygulayandan peşin olarak alınır", "Yargılama giderleri korunan kişiden alınır"], "d": 0,
+ "a": "m.45/1'e göre bu işlemlerden yargılama giderleri, harç, posta gideri ve benzeri hiçbir ad altında masraf alınmaz.", "y": "6284 Uyg. Yön. m.45", "z": "kolay"},
+
+{"i": "EK-21-21-42-1", "kanun_id": 21, "kart_id": "21-42",
+ "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre, Şiddet Önleme ve İzleme Merkezlerine (ŞÖNİM) ilişkin aşağıdakilerden hangileri doğrudur?\nI. ŞÖNİM'i Bakanlık kurar.\nII. Çalışmalar yedi gün yirmi dört saat esasına göre yürütülür.\nIII. Yalnızca kadın personel istihdam edilir.",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.39/1'e göre ŞÖNİM'i Bakanlık kurar ve çalışmalar yedi gün yirmi dört saat esasına göre yürütülür; kadın personel yalnızca “tercihen” istihdam edilir. Bu nedenle III yanlıştır.", "y": "6284 Uyg. Yön. m.39", "z": "orta"},
+
+{"i": "EK-22-22-3-1", "kanun_id": 22, "kart_id": "22-3",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, lüzum görülen hâllerde Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında her kademedeki personelin geçici görevlendirilmesine kim yetkilidir ve bu yetki kime devredilebilir?",
+ "s": ["Cumhurbaşkanı; İçişleri Bakanına", "Millî Savunma Bakanı; kuvvet komutanlarına", "Jandarma Genel Komutanı; bölge komutanlarına", "İçişleri Bakanı; il valilerine", "İçişleri Bakanı; kaymakamlara"], "d": 3,
+ "a": "m.16/1'e göre bu geçici görevlendirmeye Bakan (İçişleri Bakanı) yetkilidir ve Bakan bu yetkisini il valilerine devredebilir.", "y": "JGK-SGK Personel Yön. m.16", "z": "orta"},
+
+{"i": "EK-22-22-4-1", "kanun_id": 22, "kart_id": "22-4",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, genel kolluk kuvvetleri arasında geçici görevlendirilen personele ilişkin aşağıdakilerden hangileri doğrudur?\nI. Aylık ve diğer mali hakları kendi kurumunun bütçesinden karşılanır.\nII. Değerlendirme ve diğer özlük işleri kendi kurumu tarafından yürütülür.\nIII. Disiplin soruşturması mensubu olduğu kurumda yapılır.",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 2,
+ "a": "m.16/2'ye göre mali haklar ve özlük işleri kendi kurumunca yürütülür; disiplin soruşturması ise fiilen görevli olduğu kurum bünyesinde yapılır ve dosya mensubu olduğu kurumun disiplin amirine gönderilir. Bu nedenle III yanlıştır.", "y": "JGK-SGK Personel Yön. m.16", "z": "zor"},
+
+{"i": "EK-22-22-7-1", "kanun_id": 22, "kart_id": "22-7",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, görevlerini eksiksiz yerine getiren personele, moralini yükseltmek ve emsallerine örnek olması maksadıyla amirleri tarafından verilen belge hangisidir?",
+ "s": ["Takdir belgesi", "Başarı belgesi", "Üstün başarı belgesi", "Şerit rozet", "Bröve"], "d": 0,
+ "a": "m.47/1'e göre görevlerini eksiksiz yerine getiren personel amirleri tarafından takdir belgesi ile ödüllendirilir; başarı belgesi ise m.47/2'ye göre Bakan, vali ve kaymakamlarca verilir.", "y": "JGK-SGK Personel Yön. m.47", "z": "orta"},
+
+{"i": "EK-22-22-8-1", "kanun_id": 22, "kart_id": "22-8",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, başarı belgesini kimler verebilir?",
+ "s": ["Yalnızca personelin birinci amiri", "Merkezde Jandarma Genel Komutanı, illerde il jandarma komutanları", "Merkezde Bakan, illerde il jandarma komutanları", "Merkezde Bakan, illerde valiler, ilçelerde kaymakamlar", "Yalnızca İçişleri Bakanı"], "d": 3,
+ "a": "m.47/2'ye göre başarı belgesi merkezde Bakan, illerde valiler, ilçelerde kaymakamlar tarafından verilebilir.", "y": "JGK-SGK Personel Yön. m.47", "z": "orta"},
+
+{"i": "EK-22-22-10-1", "kanun_id": 22, "kart_id": "22-10",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, ödül sistemine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Disiplin cezası almış personel ödüllendirilemez", "Ödül, verilmiş disiplin cezasını kendiliğinden ortadan kaldırır", "Ödül sistemi disiplinle ilgili yaptırım ve cezalardan bağımsız çalışır", "Ödüllendirmede personelin tüm sicili birlikte değerlendirilir", "Ödüllendirilecek personel sayısı amirin takdirine bırakılmaz"], "d": 2,
+ "a": "m.46/3'e göre ödül sistemi disiplinle ilgili yaptırım ve cezalardan bağımsız çalışır; personel sadece ödüllendirmeye gerekçe olan durum içinde değerlendirilir.", "y": "JGK-SGK Personel Yön. m.46", "z": "orta"},
+
+{"i": "EK-22-22-13-1", "kanun_id": 22, "kart_id": "22-13",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, nöbet sırası gelen rütbe sahibinin mazereti kurum amirince uygun görülüp nöbeti sonraki personele tevdi edildiğinde, mazeret kalktığında ne yapılır?",
+ "s": ["Geçmiş nöbetlerinin tamamı tutturulur", "Nöbet borcu tamamen silinir", "Geçmiş nöbetlerinden iki tanesi tutturulur", "Nöbeti devralan personele izin verilir", "Geçmiş nöbetlerinden bir tanesi tutturulur"], "d": 4,
+ "a": "m.42/3'e göre mazeret kalktığında geçmiş nöbetlerinden bir tanesi tutturulur.", "y": "JGK-SGK Personel Yön. m.42", "z": "orta"},
+
+{"i": "EK-22-22-14-1", "kanun_id": 22, "kart_id": "22-14",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, görevlendirilen nöbetin özelliğine göre nöbetçiye ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Amirin sözlü izniyle nöbet yerinden ayrılabilir", "Nöbet yerinden ayrılmaz, her zaman göreve hazır bulunur", "İhtiyaç molalarında nöbet yerini terk edebilir", "Gece saatlerinde nöbet yerinden ayrılabilir", "Yerine vekil bırakarak nöbet yerinden ayrılabilir"], "d": 1,
+ "a": "m.42/7'ye göre nöbetçi, görevlendirilen nöbetin özelliğine göre nöbet yerinden ayrılmaz ve her zaman göreve hazır bulunur.", "y": "JGK-SGK Personel Yön. m.42", "z": "kolay"},
+
+{"i": "EK-22-22-16-1", "kanun_id": 22, "kart_id": "22-16",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, değerlendirme sonuçları aşağıdakilerden hangilerinde dikkate alınır?\nI. Terfi\nII. Emeklilik\nIII. Ödüllendirme",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 3,
+ "a": "m.45/3'e göre değerlendirme sonuçları görevlere seçim, atama ve yer değiştirme, mesleki gelişim, statüler arası geçiş, terfi, rütbe kademeliği ve kıdemlilik, kıdem sırası ve ödüllendirmede dikkate alınır; emeklilik sayılmamıştır.", "y": "JGK-SGK Personel Yön. m.45", "z": "orta"},
+
+{"i": "EK-22-22-17-1", "kanun_id": 22, "kart_id": "22-17",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, değerlendirme sistemine ilişkin hususlar nasıl belirlenir?",
+ "s": ["Bakanlıkça yürürlüğe konulan yönetmelikle", "Jandarma Genel Komutanlığınca çıkarılan yönergeyle", "Cumhurbaşkanı kararıyla", "Her birlik komutanlığınca ayrı ayrı", "Valiliklerce çıkarılan genelgeyle"], "d": 0,
+ "a": "m.45/5'e göre değerlendirme sistemine ilişkin hususlar Bakanlıkça yürürlüğe konulan yönetmelik ile belirlenir.", "y": "JGK-SGK Personel Yön. m.45", "z": "orta"},
+
+{"i": "EK-22-22-18-1", "kanun_id": 22, "kart_id": "22-18",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin atamalarında aşağıdakilerden hangileri dikkate alınacak kriterler arasında sayılmıştır?\nI. Kadro ihtiyaçları\nII. Varsa puanlama sistemi\nIII. Eşinin çalışma durumu",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.12/1'de kadro ihtiyaçları ve varsa puanlama sistemi atama kriterleri arasında sayılmıştır; eşin çalışma durumu kriterler arasında yer almaz.", "y": "JGK-SGK Personel Yön. m.12", "z": "orta"},
+
+{"i": "EK-22-22-19-1", "kanun_id": 22, "kart_id": "22-19",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin kendisinin ve eşinin evlenmeden önceki nüfusa kayıtlı olduğu ilçelere atanmaması kuralının Yönetmelikte belirtilen istisnası hangisidir?",
+ "s": ["Belediye sınırları içindeki nüfusu 500.000'i aşan ilçeler", "Büyükşehir belediyesi bulunan tüm ilçeler", "İl merkezi olan ilçeler", "Belediye sınırları içindeki nüfusu 1.000.000'u aşan ilçeler", "Bu kuralın hiçbir istisnası yoktur"], "d": 3,
+ "a": "m.12/2'ye göre personel, belediye sınırları içindeki nüfusu 1.000.000'u aşan ilçeler hariç, kendisinin ve eşinin evlenmeden önceki nüfusa kayıtlı olduğu ilçelere atanmaz.", "y": "JGK-SGK Personel Yön. m.12", "z": "orta"},
+
+{"i": "EK-22-22-20-1", "kanun_id": 22, "kart_id": "22-20",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, hizmet bölgelerinin dereceleri belirlenirken aşağıdakilerden hangileri dikkate alınır?\nI. Sağlık imkânları\nII. Nüfus yoğunluğu\nIII. Özlük haklarındaki farklılıklar",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 2,
+ "a": "m.13/1'de sağlık imkânları ve özlük haklarındaki farklılıklar derecelendirme kriterleri arasında sayılmıştır; nüfus yoğunluğu sayılmamıştır.", "y": "JGK-SGK Personel Yön. m.13", "z": "zor"},
+
+{"i": "EK-22-22-22-1", "kanun_id": 22, "kart_id": "22-22",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, ihtiyaç hâlinde liyakat esas alınarak subay kadrolarına atanan astsubaylara ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Astları hakkında değerlendirme yapabilmek için en az kıdemli başçavuş olmaları gerekir", "Astları hakkında değerlendirme işlemi yapamazlar", "Atanabilmeleri için subaylığa geçiş sınavını kazanmaları gerekir", "Yalnızca kritik ve kilit kadrolara atanabilirler", "Astları hakkında değerlendirme yapabilmek için rütbe şartı aranmaz"], "d": 4,
+ "a": "m.10/7'ye göre emsalleri arasında temayüz etmiş astsubaylar subay kadrolarına atanabilir ve bunlar için astları hakkında değerlendirme işlemi yapabilmek için rütbe şartı aranmaz.", "y": "JGK-SGK Personel Yön. m.10", "z": "orta"},
+
+{"i": "EK-22-22-23-1", "kanun_id": 22, "kart_id": "22-23",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, öğrenimini, temel kurslarını ve/veya stajlarını başarıyla bitiren personelin ilk görev yerine ataması nasıl yapılır?",
+ "s": ["Branş ve ihtisasına göre kura ile", "Başarı sıralamasına göre", "Personelin tercih sırasına göre", "Nüfusa kayıtlı olduğu ile en yakın birliğe", "Kıdem sırasına göre"], "d": 0,
+ "a": "m.11/1'e göre bu personelin ilk görev yerlerine atanmaları branş ve ihtisasına göre kura ile yapılır.", "y": "JGK-SGK Personel Yön. m.11", "z": "kolay"},
+
+{"i": "EK-22-22-26-1", "kanun_id": 22, "kart_id": "22-26",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, hesaplarını yerlerine gelenlere devir zorunda bulunan sayman, mal sorumlusu ve mutemetler için yeni göreve katılma süresi devrin sona ermesiyle başlar. Bu devir süresi hiçbir şekilde ne kadarı geçemez?",
+ "s": ["On beş günü", "Yirmi günü", "Bir ayı", "İki ayı", "Üç ayı"], "d": 2,
+ "a": "m.15/2-b'ye göre devir zorunluluğu bulunanlar için süre devrin sona ermesiyle başlar ve bu süre hiçbir şekilde bir ayı geçemez.", "y": "JGK-SGK Personel Yön. m.15", "z": "orta"},
+
+{"i": "EK-22-22-28-1", "kanun_id": 22, "kart_id": "22-28",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, atamaya tabi tutulan personele atama emrinin tebliğine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Tutuklu personele tebligat yapılamaz", "İzinli, raporlu veya tutuklu olmak tebligata engel olmaz", "İzinli personele tebligat ancak izin bitiminde yapılır", "Hastanede yatan personele tebligat yapılamaz", "Görevden uzaklaştırılan personele tebligat yapılmaz"], "d": 1,
+ "a": "m.15/5'e göre personelin izinli, raporlu, tutuklu, görevden uzaklaştırılmış, göreve gelmemiş olması veya hastanede yatması tebligata engel olmaz.", "y": "JGK-SGK Personel Yön. m.15", "z": "orta"},
+
+{"i": "EK-22-22-30-1", "kanun_id": 22, "kart_id": "22-30",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, Devlet dairelerine tevdi edilen para ve para hükmündeki değerli kâğıtların ilgili personel tarafından zimmete geçirilmesi hâlinde zimmete geçirilen miktar nasıl ödenir?",
+ "s": ["Ceza davası kesinleştikten sonra Hazinece ödenir", "Personelin maaşından kesilerek hak sahibine ödenir", "Hak sahibinin personele dava açmasıyla ödenir", "Cezai takibat sonucu beklenmeden Hazinece hak sahibine ödenir", "Kurum amirinin şahsi sorumluluğuyla ödenir"], "d": 3,
+ "a": "m.24/1'e göre zimmete geçirilen miktar cezai takibat sonucu beklenmeden Hazine tarafından hak sahibine ödenir; kurumun sorumlu personele rücu hakkı saklıdır.", "y": "JGK-SGK Personel Yön. m.24", "z": "orta"},
+
+{"i": "EK-22-22-31-1", "kanun_id": 22, "kart_id": "22-31",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, işkence ya da zalimane, gayri insani veya haysiyet kırıcı muamele suçları nedeniyle Avrupa İnsan Hakları Mahkemesi kararları sonucunda Devletçe ödenen tazminatlara ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Sorumlu personele genel hükümlere göre rücu edilir", "Sorumlu personele rücu edilemez", "Tazminat personelin maaşından resen kesilir", "Tazminatı doğrudan sorumlu personel öder", "Rücu yalnızca Cumhurbaşkanı onayıyla yapılır"], "d": 0,
+ "a": "m.24/2'ye göre bu tazminatlardan dolayı sorumlu personele rücu edilmesi hakkında da birinci fıkra hükmü uygulanır; yani kurumun genel hükümlere göre rücu hakkı vardır.", "y": "JGK-SGK Personel Yön. m.24", "z": "zor"},
+
+{"i": "EK-22-22-32-1", "kanun_id": 22, "kart_id": "22-32",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, aşağıdakilerden hangileri personel için yasaktır?\nI. Greve karar vermek\nII. Grev lehine propaganda yapmak\nIII. Grevi teşvik etmek",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 4,
+ "a": "m.36'ya göre personelin greve karar vermesi, grev tertiplemesi, ilan etmesi ve propaganda yapması yasaktır; personel greve katılamaz, grevi destekleyemez veya teşvik edemez.", "y": "JGK-SGK Personel Yön. m.36", "z": "kolay"},
+
+{"i": "EK-22-22-33-1", "kanun_id": 22, "kart_id": "22-33",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, toplu eylem ve hareketlerde bulunma yasağına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Sendikal amaçla yapılan birlikte görevden çekilme serbesttir", "Yalnızca göreve gelmemek yasaktır; işleri yavaşlatmak serbesttir", "Kamu hizmetlerini aksatacak şekilde kasıtlı olarak birlikte görevden çekilmek yasaktır", "Amirin izni alınarak toplu eylem yapılabilir", "Yasak yalnızca mesai saatleri içinde uygulanır"], "d": 2,
+ "a": "m.35/1'e göre kamu hizmetlerini aksatacak şekilde kasıtlı olarak birlikte görevden çekilmek, göreve gelmemek veya hizmetleri yavaşlatma ya da aksatma sonucunu doğuracak eylemlerde bulunmak yasaktır.", "y": "JGK-SGK Personel Yön. m.35", "z": "kolay"},
+
+{"i": "EK-22-22-39-1", "kanun_id": 22, "kart_id": "22-39",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, ikinci görev yasağına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Ücretsiz olmak şartıyla 657'ye tabi kurumlarda ikinci görev verilebilir", "Sermayesinin yarısından fazlası Devlete ait bankalarda ikinci görev verilemez", "Sermayesinin tamamı Devletçe verilen iktisadi kurumlarda ikinci görev verilebilir", "Bu kurumlardan ödül adı altında ödeme yapılabilir", "Yasak yalnızca subaylar için geçerlidir"], "d": 1,
+ "a": "m.40/1-b'ye göre sermayesinin yarısından fazlası Devlete ait bankalarda personele ikinci görev verilemez ve bu kurumlardan her ne ad ile olursa olsun ödeme yapılamaz.", "y": "JGK-SGK Personel Yön. m.40", "z": "orta"},
+
+{"i": "EK-22-22-40-1", "kanun_id": 22, "kart_id": "22-40",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin denetimi altında bulunan bir teşebbüsten menfaat sağlamasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Aracı eliyle sağlanan menfaat yasak kapsamı dışındadır", "Yalnızca nakdi menfaat sağlanması yasaktır", "Amirin izniyle menfaat sağlanabilir", "Doğrudan veya aracı eliyle, her ne ad altında olursa olsun menfaat sağlaması yasaktır", "Yalnızca görev süresi içinde sağlanan menfaat yasaktır"], "d": 3,
+ "a": "m.39/1'e göre personelin denetimi altındaki veya görevi ya da kurumu ile ilgisi olan bir teşebbüsten doğrudan doğruya veya aracı eliyle her ne ad altında olursa olsun menfaat sağlaması yasaktır.", "y": "JGK-SGK Personel Yön. m.39", "z": "kolay"},
+
+{"i": "EK-22-22-41-1", "kanun_id": 22, "kart_id": "22-41",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, müracaat ve şikâyetlere ilişkin aşağıdakilerden hangileri doğrudur?\nI. Müracaat ve şikâyetler söz veya yazı ile yapılabilir.\nII. Şikâyetler en yakın amirden başlayarak silsile yoluyla, şikâyet edilen amirler atlanarak yapılır.\nIII. Müracaat ve şikâyetler doğrudan Bakanlığa yapılır.",
+ "s": ["Yalnız I", "I ve II", "I ve III", "II ve III", "I, II ve III"], "d": 1,
+ "a": "m.32/2'ye göre müracaat ve şikâyetler söz veya yazı ile en yakın amirden başlayarak silsile yoluyla, şikâyet edilen amirler atlanarak yapılır; doğrudan Bakanlığa başvuru öngörülmemiştir.", "y": "JGK-SGK Personel Yön. m.32", "z": "orta"},
+
+{"i": "EK-22-22-43-1", "kanun_id": 22, "kart_id": "22-43",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin emeklilik taleplerine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Talepler yalnızca Mart ve Eylül aylarında iletilebilir", "Belirtilen aylar dışındaki talepler hiçbir şekilde kabul edilmez", "Talebin kabulü üç aya kadar geciktirilebilir", "Talepler Haziran ve Aralık aylarında iletilebilir", "Talepler Ocak-Şubat ile Temmuz-Ağustos aylarında iletilebilir"], "d": 4,
+ "a": "m.30/2'ye göre emeklilik talepleri Ocak ve Şubat ile Temmuz ve Ağustos aylarında iletilebilir; bu aylar dışındaki talepler hizmet gerekleri uygun görülürse kabul edilebilir.", "y": "JGK-SGK Personel Yön. m.30", "z": "orta"},
+
+{"i": "EK-22-22-43-2", "kanun_id": 22, "kart_id": "22-43",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin çekilme talebinin kabulü müracaat tarihinden itibaren en fazla ne kadar geciktirilebilir?",
+ "s": ["Bir ay", "İki ay", "Üç ay", "Altı ay", "Bir yıl"], "d": 0,
+ "a": "m.31/3'e göre çekilme talebinin kabulü müracaat tarihinden itibaren bir aydan fazla geciktirilemez.", "y": "JGK-SGK Personel Yön. m.31", "z": "orta"},
+
+{"i": "EK-22-22-45-1", "kanun_id": 22, "kart_id": "22-45",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin görev sırasında resmi üniforma giymesine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["İstisnasız zorunludur", "Amirin takdirine bağlıdır", "Mevzuattaki istisnalar saklı kalmak kaydıyla zorunludur", "Yalnızca tören ve resmî günlerde zorunludur", "Yalnızca subaylar için zorunludur"], "d": 2,
+ "a": "m.54/1'e göre personelin görev sırasında, bu Yönetmelikte veya diğer mevzuatta belirtilen istisnalar saklı kalmak kaydıyla resmi üniforma giymesi zorunludur.", "y": "JGK-SGK Personel Yön. m.54", "z": "kolay"},
+
+{"i": "EK-22-22-49-1", "kanun_id": 22, "kart_id": "22-49",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, branş belirleme kurullarına ilişkin aşağıdakilerden hangileri doğrudur?\nI. Üye tam sayısı ile toplanır.\nII. Çekimser oy kullanılabilir.\nIII. Oyların eşitliği durumunda başkanın bulunduğu taraf çoğunluk sayılır.",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 3,
+ "a": "m.9/2'ye göre branş belirleme kurulları üye tam sayısı ile toplanır, oyçokluğu ile karar alır, çekimser oy kullanılamaz ve oyların eşitliğinde başkanın bulunduğu taraf çoğunluk sayılır. Bu nedenle II yanlıştır.", "y": "JGK-SGK Personel Yön. m.9", "z": "orta"},
+
+{"i": "EK-22-22-50-1", "kanun_id": 22, "kart_id": "22-50",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, branş değişikliğine ilişkin branş belirleme kurullarının kararları kimin onayı ile kesinleşir?",
+ "s": ["İlgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının", "İçişleri Bakanının", "Jandarma ve Sahil Güvenlik Akademisi Başkanının", "Kurul başkanının", "Millî Savunma Bakanının"], "d": 0,
+ "a": "m.9/2'ye göre ilk branş belirleme ve branş değişikliğine ilişkin kurul kararları ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayı ile kesinleşir; Akademide oluşturulan ilk branş belirleme kurullarının kararları ise Akademi Başkanının onayıyla kesinleşir.", "y": "JGK-SGK Personel Yön. m.9", "z": "zor"},
+
+{"i": "EK-22-22-55-1", "kanun_id": 22, "kart_id": "22-55",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, görev ve hizmet ihtiyacının gerektirdiği durumlarda personeli izinden geri çağırmaya kim yetkilidir?",
+ "s": ["Personelin birinci amiri", "Yıllık izin planlamasını onaylayan makam", "Jandarma Genel Komutanı", "Vali", "En yakın disiplin amiri"], "d": 1,
+ "a": "m.43/2'ye göre görev ve hizmet ihtiyacının gerektirdiği durumlarda yıllık izin planlamasını onaylayan makam tarafından personel izinden geriye çağrılabilir.", "y": "JGK-SGK Personel Yön. m.43", "z": "orta"},
+
+{"i": "EK-22-22-55-2", "kanun_id": 22, "kart_id": "22-55",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, zorunlu nedenlerle yıllık planlı iznini kısmen veya tamamen kullanamayan personelin izni ne zaman verilebilir?",
+ "s": ["Hiçbir şekilde sonraki yıla aktarılamaz", "İzleyen iki yıl içinde herhangi bir zamanda", "Emeklilik sırasında toplu olarak", "Amirin onayıyla üç yıl içinde", "İzleyen yıl içinde"], "d": 4,
+ "a": "m.43/1'e göre yıllık izinlerin senesi içinde kullanılması esastır; zorunlu nedenlerle kullanılamayan izinler izleyen yıl içinde verilebilir.", "y": "JGK-SGK Personel Yön. m.43", "z": "kolay"},
+
+{"i": "EK-22-22-56-1", "kanun_id": 22, "kart_id": "22-56",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, tarafsızlık ve Devlete bağlılık kapsamında aşağıdakilerden hangisi doğrudur?",
+ "s": ["Personel izinli olduğu sürede siyasi partiye üye olabilir", "Personel yalnızca görev saatlerinde siyasi beyanda bulunamaz", "Personel siyasi partiye üye olamaz, siyasi ve ideolojik amaçlı beyanda bulunamaz", "Personel, parti üyesi olmamak şartıyla ideolojik eylemlere katılabilir", "Personel derneklere hiçbir şekilde üye olamaz"], "d": 2,
+ "a": "m.19/1'e göre personel siyasi partiye üye olamaz ve hiçbir şekilde siyasi ve ideolojik amaçlı beyanda ve eylemde bulunamaz; derneklere üyelikte ise m.19/3'e göre özel kanun hükümleri saklıdır.", "y": "JGK-SGK Personel Yön. m.19", "z": "kolay"},
+
+{"i": "EK-22-22-58-1", "kanun_id": 22, "kart_id": "22-58",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, görevle ilgili resmi belge, araç ve gereçlere ilişkin aşağıdakilerden hangileri doğrudur?\nI. Personel bunları yetki verilen mahaller dışına çıkarabilir.\nII. Personel bunları hususi işlerinde kullanamaz.\nIII. Görev sona erdiğinde iade zorunluluğu personelin mirasçılarına da şamildir.",
+ "s": ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"], "d": 3,
+ "a": "m.26/1'e göre resmi belge, araç ve gereçler yetki verilen mahaller dışına çıkarılamaz ve hususi işlerde kullanılamaz; m.26/2'ye göre iade zorunluluğu mirasçılara da şamildir. Bu nedenle I yanlıştır.", "y": "JGK-SGK Personel Yön. m.26", "z": "orta"},
+
+{"i": "EK-22-22-59-1", "kanun_id": 22, "kart_id": "22-59",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, amirin maiyetindeki personele karşı tutumuna ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Maiyetine kanunlara aykırı emir veremez, maiyetinden borç alamaz", "Yazılı olmak kaydıyla kanunlara aykırı emir verebilir", "Maiyetinden değeri az olan hediyeleri kabul edebilir", "Astından borç alabilir, ancak hediye kabul edemez", "Maiyetinden hususi menfaat talebinde bulunabilir"], "d": 0,
+ "a": "m.21/3'e göre amir maiyetine kanunlara aykırı emir veremez; maiyetindeki personel ile astından hususi menfaat temin edecek talepte bulunamaz, hediyesini kabul edemez ve borç alamaz.", "y": "JGK-SGK Personel Yön. m.21", "z": "kolay"},
+
+{"i": "EK-22-22-60-1", "kanun_id": 22, "kart_id": "22-60",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, personelin görevine son verilmesine ve haklarının elinden alınmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Amirin takdiriyle görevine son verilebilir", "Disiplin amirinin kararıyla aylığı kesilebilir", "Valinin onayıyla görevine son verilebilir", "Yönergeyle belirlenen her durumda görevine son verilebilir", "Kanunlarda yazılı hâller dışında görevine son verilmez, hakları elinden alınamaz"], "d": 4,
+ "a": "m.29/1'e göre kanunlarda yazılı hâller dışında personelin görevine son verilmez, aylık ve başka hakları elinden alınamaz.", "y": "JGK-SGK Personel Yön. m.29", "z": "kolay"},
+
+{"i": "EK-22-22-61-1", "kanun_id": 22, "kart_id": "22-61",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, Asayiş Tazminatından kimler yararlanır?",
+ "s": ["Yalnızca il ve ilçe jandarma komutanlıklarındaki personel", "JGK ve SGK kadrolarına atanmış personel", "Yalnızca terörle mücadelede görevli personel", "Yalnızca subay ve astsubaylar", "Yalnızca sahil güvenlik bot personeli"], "d": 1,
+ "a": "m.56/2'ye göre Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı kadrolarına atanmış personel ayrıca Asayiş Tazminatından yararlanır.", "y": "JGK-SGK Personel Yön. m.56", "z": "kolay"},
+
+{"i": "EK-22-22-62-1", "kanun_id": 22, "kart_id": "22-62",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre, Yönetmelik kapsamındaki personelin nasıp ve terfi, aylık ve diğer mali ve sosyal hakları hangi hükümlere göre yürütülür?",
+ "s": ["Bu Yönetmelik hükümlerine göre", "Yalnızca 657 sayılı Devlet Memurları Kanununa göre", "Jandarma Genel Komutanlığı yönergelerine göre", "İlgisine göre 926, 4678, 3466, 3269, 6191 ve 657 sayılı Kanunlara göre", "Yalnızca 2803 sayılı Kanuna göre"], "d": 3,
+ "a": "m.2/2'ye göre nasıp ve terfi, aylık ve diğer mali ve sosyal haklar ilgisine göre 926, 4678, 3466, 3269, 6191 ve 657 sayılı Kanun hükümlerine göre yürütülür; bu konular Yönetmelikle düzenlenmez.", "y": "JGK-SGK Personel Yön. m.2", "z": "orta"},
+
+{"i": "EK-22-22-63-1", "kanun_id": 22, "kart_id": "22-63",
+ "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği hangi kanun hükümlerine dayanılarak hazırlanmıştır?",
+ "s": ["2803 sayılı Kanunun 24 üncü ve 2692 sayılı Kanunun 23 üncü maddeleri", "657 sayılı Kanunun 4 üncü maddesi", "926 sayılı Kanunun 24 üncü maddesi", "2803 sayılı Kanunun 23 üncü ve 2692 sayılı Kanunun 24 üncü maddeleri", "3201 sayılı Kanunun 24 üncü maddesi"], "d": 0,
+ "a": "m.3'e göre Yönetmelik, 2803 sayılı Kanunun 24 üncü maddesi ve 2692 sayılı Kanunun 23 üncü maddesi hükümlerine dayanılarak hazırlanmıştır.", "y": "JGK-SGK Personel Yön. m.3", "z": "zor"},
+
+{"i": "EK-23-23-5-1", "kanun_id": 23, "kart_id": "23-5",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, astın âmirin emirlerine itaatine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Her emri doğruluğunu veya yasaya uygunluğunu sorgulamadan yerine getirir", "Emri yerine getirmeden önce âmirine mütalaada bulunur", "Âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla yapar", "Yalnızca yazılı olarak verilen emirleri yerine getirir", "Resmî kıyafetli olmayan âmirin emrini yerine getirmek zorunda değildir"], "d": 2,
+ "a": "m.8/2'ye göre ast, âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla, bütün tahammül kuvvetini sarf ederek yapar. Emrin mevzuata uygun olması şarttır.", "y": "Hizmet Esasları Yön. m.8", "z": "orta"},
+
+{"i": "EK-23-23-7-1", "kanun_id": 23, "kart_id": "23-7",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, âmirin ödül veya ceza konusundaki tutumuna ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Gerekçe göstermeksizin takdir hakkını kullanabilir", "Ödül vermeyip yalnızca ceza takdir eder", "Takdir hakkını üst âmirine devretmek zorundadır", "Ceza verirken maiyetin görüşünü almak zorundadır", "Gerekçesiz takdir hakkı kullanmaz; ölçülü ve hakkaniyetli davranır"], "d": 4,
+ "a": "m.9/11'e göre âmir, ödül veya ceza ile ilgili olarak gerekçesiz takdir hakkı kullanmaz; her konuyu etraflıca değerlendirir, ölçülü, adaletli ve hakkaniyetli davranır.", "y": "Hizmet Esasları Yön. m.9", "z": "orta"},
+
+{"i": "EK-23-23-8-1", "kanun_id": 23, "kart_id": "23-8",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, âmirin maiyetine görevini icra ettiği sırada müdahalesine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Görevin her aşamasında müdahale eder", "Mecbur kalmadıkça müdahalede bulunmaz", "Hiçbir şekilde müdahale edemez", "Yalnızca maiyetin yazılı talebi üzerine müdahale eder", "Yalnızca üst âmirin talimatıyla müdahale eder"], "d": 1,
+ "a": "m.9/8'e göre âmir, maiyetine görevini icra esnasında mecbur kalmadıkça müdahalede bulunmaz.", "y": "Hizmet Esasları Yön. m.9", "z": "kolay"},
+
+{"i": "EK-23-23-9-1", "kanun_id": 23, "kart_id": "23-9",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, âmirin maiyeti ile münasebetlerine ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["Görev esnasında ve dışında daima resmî ve mesafelidir", "Görev esnasında samimi ve candan, görev dışında ciddidir", "Görev dışında maiyetiyle görüşmesi yasaktır", "Görev esnasında daima ciddi, görev dışında samimi ve candandır", "Her durumda samimi ve candandır"], "d": 3,
+ "a": "m.9/3'e göre âmirin maiyeti ile münasebetleri görev esnasında daima ciddi, görev dışında ise samimi ve candandır; bununla beraber itaat ve itimat hislerini bozacak davranışta bulunmaz.", "y": "Hizmet Esasları Yön. m.9", "z": "orta"},
+
+{"i": "EK-23-23-10-1", "kanun_id": 23, "kart_id": "23-10",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, âmir maiyetindeki personelin aşağıdaki özelliklerinden hangilerini ayrıntılarıyla bilir?\nI. İsimleri\nII. Hususi vasıfları\nIII. Mizaçları",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 4,
+ "a": "m.9/6'ya göre âmir, maiyetindeki personelin isimlerini, hususi vasıflarını, kişiliklerini oluşturan özelliklerini ve mizaçlarını ayrıntılarıyla bilir.", "y": "Hizmet Esasları Yön. m.9", "z": "kolay"},
+
+{"i": "EK-23-23-15-1", "kanun_id": 23, "kart_id": "23-15",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, müracaat ve şikâyetler konusunda Yönetmeliğin ilgili maddesinde hüküm bulunmayan hâllerde hangi düzenleme uygulanır?",
+ "s": ["Devlet Memurlarının Şikâyet ve Müracaatları Hakkında Yönetmelik", "TSK İç Hizmet Yönetmeliği", "Askerî Ceza Kanunu", "Jandarma Genel Komutanlığı Disiplin Yönergesi", "Jandarma ve Sahil Güvenlik İç Hizmet Yönergesi"], "d": 0,
+ "a": "m.11/5'e göre bu maddede hüküm bulunmayan hâllerde 8/5743 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Devlet Memurlarının Şikâyet ve Müracaatları Hakkında Yönetmelik hükümleri uygulanır.", "y": "Hizmet Esasları Yön. m.11", "z": "orta"},
+
+{"i": "EK-23-23-16-1", "kanun_id": 23, "kart_id": "23-16",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, izinlerin planlanmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+ "s": ["İzinler yalnızca göreve göre planlanır, personelin talebi dikkate alınmaz", "İzinler önceden planlanmaz, talep edildiğinde kullandırılır", "Göreve ve mümkün olduğunca personelin talep edeceği aylara göre önceden planlanır", "Plandaki gün ve süreler âmirce her zaman değiştirilebilir", "İzin dönemleri her yıl kura ile belirlenir"], "d": 2,
+ "a": "m.14/2'ye göre izinler göreve ve mümkün olduğunca personelin talep edeceği aylara göre önceden planlanır; olağandışı gelişmeler dışında plandaki gün ve sürelere sadık kalınır.", "y": "Hizmet Esasları Yön. m.14", "z": "kolay"},
+
+{"i": "EK-23-23-18-1", "kanun_id": 23, "kart_id": "23-18",
+ "k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre, izinlerin kullandırılmasına ilişkin aşağıdakilerden hangileri doğrudur?\nI. İzinler yetkili âmir tarafından kullandırılır.\nII. Daha büyük âmirler izin tasarrufunu kendi inisiyatiflerine alabilir.\nIII. Âmir, açıkça olmasa da personelin izin hakkından feragat etmesine yönelik imada bulunmamalıdır.",
+ "s": ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"], "d": 3,
+ "a": "m.14/4'e göre izinler yetkili âmir tarafından kullandırılır ve bu tasarruf daha büyük âmirlerce kendi inisiyatiflerine alınmamalıdır; m.14/3'e göre âmir izinden feragate yönelik tavır ve imada bulunmamalıdır. Bu nedenle II yanlıştır.", "y": "Hizmet Esasları Yön. m.14", "z": "orta"}
+]

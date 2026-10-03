@@ -1,0 +1,261 @@
+{
+ "kanun_id": 28,
+ "ad": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_28.json",
+ "kartlar": [
+  {
+   "id": "28-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Toplantı ve gösteri yürüyüşü tanımı",
+   "hukum": "Her ikisi de belirli konular üzerinde halkı aydınlatmak ve kamuoyu yaratmak suretiyle o konuyu benimsetmek için gerçek ve tüzel kişilerce düzenlenir; toplantı açık ve kapalı yer toplantısıdır, gösteri yürüyüşü ise yürüyüştür (m.2/a,b)",
+   "sinavda_boyle_yazarlar": [
+    "toplantının yalnız açık yerde olduğu söylenir"
+   ],
+   "dogrusu": [
+    "halkı aydınlatmak ve kamuoyu yaratmak · açık ve kapalı yer"
+   ]
+  },
+  {
+   "id": "28-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Mülki amir ve güvenlik amirleri",
+   "hukum": "Mahallin en büyük mülki amiri: illerde vali, ilçelerde kaymakam. Mahallin güvenlik amirleri: illerde il emniyet müdürü ve il jandarma komutanı; ilçelerde ilçe emniyet amiri veya komiseri ve ilçe jandarma komutanı; Sahil Güvenlik için bölge, grup, karakol ve gemi/bot komutanları. Bir ile bağlı ilçelerin, o ilin belediye sınırları içindeki kısımlarında mülki amir ilin valisidir (m.2/c,d)",
+   "sinavda_boyle_yazarlar": [
+    "\"her ilçede kaymakam\" denir — 2026'da doğru cevap tam bu istisnaydı"
+   ],
+   "dogrusu": [
+    "vali · kaymakam · il emniyet müdürü ve il jandarma komutanı · ilçe jandarma komutanı · Bir ile bağlı ilçelerin, o ilin belediye sınırları içindeki kısımlarında mülki amir ilin valisidir"
+   ]
+  },
+  {
+   "id": "28-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Hak ve yabancılar",
+   "hukum": "Herkes önceden izin almaksızın, silahsız ve saldırısız, kanunların suç saymadığı amaçlarla toplantı ve gösteri düzenleme hakkına sahiptir. Yabancıların toplantı düzenlemesi İçişleri Bakanlığının iznine bağlıdır; yabancıların topluluğa hitap etmesi, afiş-pankart-flama taşıması ise mülki amirliğe en az kırk sekiz saat önce bildirimle mümkündür (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"vatandaş da izin alır\" ya da \"yabancı hiç düzenleyemez\" denir",
+    "Toplantı düzenlemek için önceden izin alınır"
+   ],
+   "dogrusu": [
+    "İzin değil bildirim; yalnız yabancılar için izin (m.3)"
+   ]
+  },
+  {
+   "id": "28-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kanuna tâbi olmayan toplantılar",
+   "hukum": "Siyasi partiler, meslek kuruluşları, sendikalar, vakıflar, dernekler ve tüzel kişilerin kendi tüzüklerine göre yapacakları kapalı yer toplantıları; kanun veya gelenek-göreneğe göre yapılan tören, şenlik, karşılama ve uğurlamalar; spor, bilimsel, ticarî ve ekonomik amaçlı toplantılar; Cumhurbaşkanı, yardımcıları ve bakanların Devlet işleri hakkındaki toplantıları ile milletvekillerinin halkla sohbet niteliğindeki görüşmeleri (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "derneklerin açık yer toplantısı da istisna sayılır — istisna yalnız kapalı yerdir"
+   ],
+   "dogrusu": [
+    "kapalı yer · spor, bilimsel, ticarî ve ekonomik"
+   ]
+  },
+  {
+   "id": "28-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Seçim zamanı",
+   "hukum": "Seçim zamanlarında yapılacak propaganda toplantıları hakkında ilgili kanun hükümleri saklıdır (m.5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "ilgili kanun hükümleri saklıdır"
+   ]
+  },
+  {
+   "id": "28-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yer ve güzergâhı kim belirler",
+   "hukum": "Toplantı ve gösteri yürüyüşü yer ve güzergâhı; TBMM'de grubu bulunan partilerin il-ilçe temsilcileri, güzergâhın geçeceği belediye başkanları, en çok üyeli üç sendika ve meslek kuruluşlarının temsilcilerinin görüşleri alınarak mahallin en büyük mülki amirince belirlenir; yerel gazeteler, internet haber siteleri ve valilik-kaymakamlık sitelerinde ilan edilir; sonradan yapılan değişiklikler duyurudan on beş gün sonra geçerli olur (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"belediye belirler\" denir — 2026'nın çeldiricisi buydu",
+    "Yer ve güzergâhı belediye belirler"
+   ],
+   "dogrusu": [
+    "Mülki amir belirler (m.6)"
+   ]
+  },
+  {
+   "id": "28-6",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Zaman",
+   "hukum": "Toplantı ve yürüyüşlere güneş doğmadan başlanamaz (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"güneş batmadan bitirilir\" hükmü hâlâ yürürlükteymiş gibi sorulur"
+   ],
+   "dogrusu": [
+    "güneş doğmadan başlanamaz"
+   ]
+  },
+  {
+   "id": "28-7",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Umuma açık yer",
+   "hukum": "Toplantının yapıldığı yer, toplantı süresince umuma açık yer sayılır (m.8)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "toplantı süresince umuma açık yer"
+   ]
+  },
+  {
+   "id": "28-8",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Düzenleme kurulunun toplantıdaki yükümlülüğü",
+   "hukum": "Kurul, kendi üyelerinden başkan dâhil en az yedi kişiyi toplantı yerinde bulundurmakla yükümlüdür; buna dair tutanak yetkili kolluk amirine teslim edilir. Kolluk, katılımcı ve konuşmacıların ses ve görüntülerini yapıldığı belli olacak şekilde kaydedebilir; kayıtlar şüphelilerin ve suç delillerinin tespiti dışında kullanılamaz (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"beş kişi\" denir ya da gizli kayıt yapılabileceği söylenir"
+   ],
+   "dogrusu": [
+    "başkan dâhil en az yedi kişiyi · yetkili kolluk amirine · yapıldığı belli olacak şekilde · şüphelilerin ve suç delillerinin tespiti dışında"
+   ]
+  },
+  {
+   "id": "28-9",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Düzenleme kurulunun sorumluluğu",
+   "hukum": "Kurul; toplantının sükûn ve düzenini ve bildirimdeki amaç dışına çıkılmamasını sağlamakla yükümlüdür, gerektiğinde güvenlik kuvvetlerinin yardımını ister. Toplantı amaç dışına çıkarsa kurul, toplanamazsa kurul başkanı dağılma kararı alır ve derhâl yetkili kolluk amirine bildirir. Sorumluluk, topluluk toplantı yerinden tamamen dağılıncaya kadar sürer (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"sorumluluk toplantının sona ermesiyle biter\" denir",
+    "Kurulun sorumluluğu toplantı bitince sona erer"
+   ],
+   "dogrusu": [
+    "Topluluk tamamen dağılıncaya kadar sürer (m.12)"
+   ]
+  },
+  {
+   "id": "28-10",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yasak yerler",
+   "hukum": "Parklarda, mabetlerde, kamu hizmeti görülen bina ve tesislerde ve eklentilerinde, TBMM'ye bir kilometre uzaklıktaki alan içinde toplantı yapılamaz; genel meydanlardaki toplantılarda halkın ve araçların geçişi için valilik ve kaymakamlıkça yapılan düzenlemelere uyulması zorunludur (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "mesafe 500 metre veya 2 km yapılır",
+    "TBMM'ye 500 metre içinde toplantı yapılamaz"
+   ],
+   "dogrusu": [
+    "Bir kilometre (m.22)"
+   ]
+  },
+  {
+   "id": "28-11",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Kanuna aykırı sayılan toplantılar",
+   "hukum": "Bildirim verilmeden ya da belirtilen gün-saat dışında; ateşli silah, havai fişek, molotof, patlayıcı, kesici-delici alet, taş, sopa, demir bilye, sapan, zincir, yakıcı-aşındırıcı eczalar, sis-gaz maddeleri ile; yasadışı örgüt amblemi taşıyarak veya üniformayı andırır giysi giyerek; kimliği gizlemek için yüzü kısmen veya tamamen örterek; belirlenen yerler dışında; bildirimdeki amaç dışına çıkılarak; yasaklama veya erteleme süresi bitmeden; dağılma kararı verildiği hâlde yapılan toplantılar kanuna aykırıdır (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "yüzü örtme listeden çıkarılır"
+   ],
+   "dogrusu": [
+    "ateşli silah, havai fişek, molotof, patlayıcı, kesici-delici alet, taş, sopa, demir bilye, sapan, zincir · yasadışı örgüt amblemi · üniformayı andırır giysi · kimliği gizlemek için yüzü kısmen veya tamamen örterek · bildirimdeki amaç dışına çıkılarak"
+   ]
+  },
+  {
+   "id": "28-12",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Sonradan aykırı hâle gelen toplantının dağıtılması",
+   "hukum": "Kanuna uygun başlayıp sonradan aykırı hâle dönüşen toplantıda: (a) düzenleme kurulu veya başkanı sona erdiğini ilan eder ve kolluk amirine bildirir; (b) kurul bunu yapmazsa durum yetkili kolluk amiri tarafından mülki amire bildirilir ve sona erdirilip erdirilmeyeceğine mülki amir karar verir; (c) mülki amir yazılı veya sonradan yazıyla teyit edilmek kaydıyla sözlü emirle güvenlik amirlerini olay yerine gönderir; bu amir topluluğa dağılmalarını, dağılmazlarsa zor kullanılacağını ihtar eder; dağılmazsa zor kullanılır (m.24/1)",
+   "sinavda_boyle_yazarlar": [
+    "kolluk amirine doğrudan sona erdirme yetkisi verilir — 2026'da tam bu çeldiriciydi",
+    "Sonradan aykırı hâle gelen toplantıyı kolluk amiri doğrudan sona erdirir"
+   ],
+   "dogrusu": [
+    "Mülki amir karar verir (m.24)"
+   ]
+  },
+  {
+   "id": "28-13",
+   "madde": [
+    "24"
+   ],
+   "baslik": "İhtarsız zor kullanma",
+   "hukum": "Güvenlik kuvvetlerine karşı fiilî saldırı veya mukavemet ya da korudukları yer ve kişilere karşı fiilî saldırı varsa ihtara gerek olmaksızın zor kullanılır. Silah, alet veya sloganla katılanlar güvenlik kuvvetlerince uzaklaştırılarak toplantıya devam edilir; sayı ve davranışları dağıtmayı gerektirecek derecedeyse dağıtma usulü uygulanır. Bu kişilerin tanınması ve uzaklaştırılmasında düzenleme kurulu yardımla yükümlüdür (m.24/2-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"silahlı bir kişi görülünce toplantı derhâl dağıtılır\" denir"
+   ],
+   "dogrusu": [
+    "fiilî saldırı veya mukavemet · ihtara gerek olmaksızın · uzaklaştırılarak toplantıya devam edilir · düzenleme kurulu yardımla yükümlüdür"
+   ]
+  },
+  {
+   "id": "28-14",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Kanuna aykırı başlayan toplantı",
+   "hukum": "Toplantı kanuna aykırı başlamışsa; güvenlik kuvvetleri olayı en seri şekilde mülki amire haber vermekle beraber mevcut imkânlarla gerekli tedbirleri alır (m.24 son)",
+   "sinavda_boyle_yazarlar": [
+    "iki durum birbirine karıştırılır"
+   ],
+   "dogrusu": [
+    "başlamışsa · mevcut imkânlarla gerekli tedbirleri alır"
+   ]
+  },
+  {
+   "id": "28-15",
+   "madde": [
+    "24",
+    "25"
+   ],
+   "baslik": "Suç işleyenlerin yakalanması",
+   "hukum": "Topluluk içinde suç işleyenleri ve suçluları yakalamak için m.24'teki emir ve ihtarların yapılmasına gerek yoktur (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"suçluyu yakalamak için de ihtar şart\" denir",
+    "Suçluyu yakalamak için de ihtar gerekir"
+   ],
+   "dogrusu": [
+    "Gerekmez (m.25)"
+   ]
+  },
+  {
+   "id": "28-16",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Çağrı ve propaganda araçları",
+   "hukum": "Davetiye, levha ve ilanlarda düzenleme kurulu başkanı ile en az altı üyesinin ad, soyad ve imzası bulunur; asılacaklar valilik veya kaymakamlıkça önceden tespit edilmiş yerlere asılır; halkı suç işlemeye özendiren yazı-resim yasaktır. Ses yükselten araçla çağrı, toplantıdan bir önceki günden başlayacağı saate kadar ve yalnız güneşin doğuşundan batışına kadar yapılabilir; kapalı yer toplantılarında dışarıya ses yayını yapılamaz (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"gece de hoparlörle çağrı yapılabilir\" denir"
+   ],
+   "dogrusu": [
+    "başkanı ile en az altı üyesinin · önceden tespit edilmiş yerlere · bir önceki günden · güneşin doğuşundan batışına"
+   ]
+  },
+  {
+   "id": "28-17",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Kışkırtma yasağı",
+   "hukum": "Halkı, söz, ses aracı, afiş yapıştırma veya dağıtma yoluyla kanuna aykırı toplantı veya yürüyüşe özendirmek veya kışkırtmak yasaktır; bu hareketler güvenlik kuvvetlerince derhâl men edilir (m.27)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kanuna aykırı toplantı veya yürüyüşe özendirmek veya kışkırtmak · derhâl men edilir"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

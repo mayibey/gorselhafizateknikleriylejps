@@ -1,0 +1,889 @@
+### 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler) (id 72) kapsam=liste branslar=['maliye', 'personel']
+tum_madde_nolari: ['10', '16', '17', '18', '30', '32', '33', '98', '133', '135', '136', '137', '138', '139', '140', '141', '142', '143', '144', '145', '146', '147', '148', '149', '150', '151', '152', '153', '154', '155', '156', '157', '162', '163', '164', '165', 'Ek 1', 'Ek 10', 'Ek 11', 'Ek 12', 'Ek 13', 'Ek 14', 'Ek 15', 'Ek 16', 'Ek 17', 'Ek 18', 'Ek 19', 'Ek 2', 'Ek 20', 'Ek 21', 'Ek 22', 'Ek 23', 'Ek 24', 'Ek 25', 'Ek 26', 'Ek 27', 'Ek 28', 'Ek 29', 'Ek 3', 'Ek 30', 'Ek 31', 'Ek 32', 'Ek 33', 'Ek 34', 'Ek 35', 'Ek 36', 'Ek 37', 'Ek 38', 'Ek 39', 'Ek 4', 'Ek 40', 'Ek 5', 'Ek 6', 'Ek 7', 'Ek 8', 'Ek 9', 'Ek Geçici 1', 'Ek Geçici 10', 'Ek Geçici 11', 'Ek Geçici 12', 'Ek Geçici 13', 'Ek Geçici 14', 'Ek Geçici 15', 'Ek Geçici 16', 'Ek Geçici 17', 'Ek Geçici 18', 'Ek Geçici 19', 'Ek Geçici 2', 'Ek Geçici 20', 'Ek Geçici 21', 'Ek Geçici 22', 'Ek Geçici 23', 'Ek Geçici 24', 'Ek Geçici 25', 'Ek Geçici 26', 'Ek Geçici 27', 'Ek Geçici 28', 'Ek Geçici 29', 'Ek Geçici 3', 'Ek Geçici 30', 'Ek Geçici 31', 'Ek Geçici 32', 'Ek Geçici 33', 'Ek Geçici 34', 'Ek Geçici 35', 'Ek Geçici 36', 'Ek Geçici 37', 'Ek Geçici 38', 'Ek Geçici 39', 'Ek Geçici 4', 'Ek Geçici 40', 'Ek Geçici 41', 'Ek Geçici 42', 'Ek Geçici 43', 'Ek Geçici 44', 'Ek Geçici 45', 'Ek Geçici 46', 'Ek Geçici 47', 'Ek Geçici 48', 'Ek Geçici 49', 'Ek Geçici 5', 'Ek Geçici 50', 'Ek Geçici 51', 'Ek Geçici 52', 'Ek Geçici 53', 'Ek Geçici 54', 'Ek Geçici 55', 'Ek Geçici 56', 'Ek Geçici 57', 'Ek Geçici 58', 'Ek Geçici 59', 'Ek Geçici 6', 'Ek Geçici 60', 'Ek Geçici 61', 'Ek Geçici 62', 'Ek Geçici 63', 'Ek Geçici 64', 'Ek Geçici 65', 'Ek Geçici 66', 'Ek Geçici 67', 'Ek Geçici 68', 'Ek Geçici 69', 'Ek Geçici 7', 'Ek Geçici 70', 'Ek Geçici 71', 'Ek Geçici 72', 'Ek Geçici 73', 'Ek Geçici 74', 'Ek Geçici 75', 'Ek Geçici 76', 'Ek Geçici 77', 'Ek Geçici 78', 'Ek Geçici 79', 'Ek Geçici 8', 'Ek Geçici 80', 'Ek Geçici 81', 'Ek Geçici 82', 'Ek Geçici 83', 'Ek Geçici 84', 'Ek Geçici 85', 'Ek Geçici 86', 'Ek Geçici 87', 'Ek Geçici 88', 'Ek Geçici 89', 'Ek Geçici 9', 'Ek Geçici 90', 'Ek Geçici 91', 'Ek Geçici 92', 'Ek Geçici 93', 'Ek Geçici 94', 'Ek Geçici 95', 'Ek Geçici 96', 'Ek Geçici 97', 'Ek Geçici 98', 'Ek Geçici 99', 'Geçici 1', 'Geçici 10', 'Geçici 11', 'Geçici 12', 'Geçici 13', 'Geçici 14', 'Geçici 15', 'Geçici 16', 'Geçici 17', 'Geçici 18', 'Geçici 19', 'Geçici 2', 'Geçici 20', 'Geçici 21', 'Geçici 22', 'Geçici 23', 'Geçici 24', 'Geçici 25', 'Geçici 26', 'Geçici 27', 'Geçici 28', 'Geçici 29', 'Geçici 3', 'Geçici 30', 'Geçici 31', 'Geçici 32', 'Geçici 33', 'Geçici 34', 'Geçici 35', 'Geçici 36', 'Geçici 37', 'Geçici 38', 'Geçici 39', 'Geçici 4', 'Geçici 40', 'Geçici 41', 'Geçici 42', 'Geçici 43', 'Geçici 44', 'Geçici 45', 'Geçici 46', 'Geçici 47', 'Geçici 48', 'Geçici 49', 'Geçici 5', 'Geçici 50', 'Geçici 51', 'Geçici 52', 'Geçici 53', 'Geçici 54', 'Geçici 55', 'Geçici 56', 'Geçici 57', 'Geçici 58', 'Geçici 59', 'Geçici 6', 'Geçici 60', 'Geçici 61', 'Geçici 62', 'Geçici 63', 'Geçici 64', 'Geçici 65', 'Geçici 66', 'Geçici 67', 'Geçici 68', 'Geçici 69', 'Geçici 7', 'Geçici 70', 'Geçici 71', 'Geçici 72', 'Geçici 73', 'Geçici 74', 'Geçici 75', 'Geçici 76', 'Geçici 77', 'Geçici 78', 'Geçici 79', 'Geçici 8', 'Geçici 80', 'Geçici 81', 'Geçici 82', 'Geçici 83', 'Geçici 84', 'Geçici 85', 'Geçici 86', 'Geçici 87', 'Geçici 88', 'Geçici 89', 'Geçici 9', 'Geçici 90', 'Geçici 91', 'Geçici 92', 'Geçici 93', 'Geçici 94', 'Geçici 95', 'Geçici 96', 'Geçici 97', 'Geçici 98', 'Geçici 99']
+NASIL SORULUYOR: Çıkmış: **yabancı ordularda hizmet için Jandarma ve Sahil Güvenlik subaylarına dört yıla kadar aylıklı izni İçişleri Bakanlığının vermesi** (m.133; subaylar için Millî Savunma Bakanlığı). 926'dan çıkan diğer soruların (kıdem, nasıp, terfi, istifa, astsubaylıktan subaylığa geçiş) hepsi mali hükümler dışındaki maddelerden geldi; bu bölümün kapsamında değildir. Beklenen kalıplar: tanımlar (aylık, temsil gideri, ödül, iş güçlüğü-iş riski-eleman temininde güçlük zammı, mali sorumluluk tazminatı), gösterge 560-1500 ve cetvel numaraları, yükseköğrenim intibakı (2 yıl 1 kademe, 3 yıl 2 kademe, 4 yıl 1 derece; toplam en çok 1 derece), kıdemli unvan süreleri (albay 2 yıl, diğerleri 3 yıl), yedek subay-astsubay okulu harçlıkları (6.528 x %50; 2.680 x %80), aylığın ayın başında peşin ödenmesi, "takip eden aybaşı" kuralları (ilk atanma, kademe, terfi, aile yardımı), 30 Ağustos terfilerinde kıst fark, ek ders haftada 7 saat, aile yardımında karı-koca memursa yalnız kocaya ve 25 yaş sınırı, yurt dışı görevlilerde 1 ay ve 2 ay süreleri.
+
+====================================================================================================
+MADDE 10  (soru_sayisi=0)
+RESMI: Madde 10 – Subayların ve astsubayların sıhhi izin sürelerini ve diğer izinleri hakkında bu kanun hükümleri uygulanır. “Subaylar, astsubaylar ve askeri öğrenciler” ibaresi “Subaylar ve astsubaylar” şeklinde değiştirilmiş olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 23 üncü maddesiyle aynen kabul edilerek kanunlaşmıştır. çıkan tüzük ve” ibaresi “, Cumhurbaşkanlığı kararnamesi ve bunlara dayanılarak çıkarılan” şeklinde değiştirilmiştir. metninden çıkarılmıştır. askeri öğrenciliğe” ibaresi “subaylığa ve astsubaylığa” şeklinde değiştirilmiş olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 24 üncü maddesiyle aynen kabul edilerek kanunlaşmıştır. askeri öğrencilerin” ibaresi “Subayların ve astsubayların” şeklinde değiştirilmiş olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 25 inci maddesiyle aynen kabul edilerek kanunlaşmıştır. İKİNCİ KISIM Subaylar BİRİNCİ BÖLÜM Kaynak ve Yetiştirme I – Kaynak:
+
+
+====================================================================================================
+MADDE 16  (soru_sayisi=0)
+RESMI: (Mülga: 25/7/2016-KHK-669/32 md.; Aynen kabul: 9/11/2016-6756/32 md.)
+
+
+====================================================================================================
+MADDE 17  (soru_sayisi=0)
+RESMI: (Mülga: 25/7/2016-KHK-669/32 md.; Aynen kabul: 9/11/2016-6756/32 md.)
+
+
+====================================================================================================
+MADDE 18  (soru_sayisi=0)
+RESMI: 1 – 31/7/1970 tarihli ve 1323 sayılı Kanunun 18 inci maddesi:
+Madde 18 – 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununun mali hükümlerinin yürürlüğe girmesi;
+a) 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununun aylık ödemeleri ile ilgili hükümleri “14/7/1965 gün ve 657 sayılı Devlet Memurları Kanununun bazı maddelerinin değiştirilmesi ve bu kanuna bazı maddeler eklenmesine ve bu kanunun kapsamı dışında kalan kamu personelinin aylık ve ücretlerinin dair Kanun’un aylık ödemelerinin yürürlüğü ile ilgili hükümleri ile birlikte ve aynı usul ve esaslara göre uygulanır.
+b) Mahrumiyet yeri ödeneği, öğrenim yurtları ve bursları, aile yardımı ödeneği, doğum yardımı ödeneği, ölüm yardımı ödeneği, temsil giderleri ve yakacak yardımına ait hükümleri 657 sayılı Devlet Memurları Kanununun bu konuları düzenleyen hükümleri ile birlikte uygulanır.
+c) Öğrenci harçlıkları ile ilgili hükümleri bu maddenin (a) fıkrası esaslarına göre uygulanır.
+d) 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununun 153, 158, 176 ve 181 inci maddeleri 1970 mali yılında uygulanamaz.2005 sayılı Kanunun pansiyon ücret indirimi hakkındaki 2 nci maddesi hükmü ile çocuk zammı ödenmesine ilişkin 5049 ve doğum yardımı ödenmesine ilişkin 5504 sayılı Kanun hükümlerinin uygulanmasına 1970 mali yılında da devam olunur.
+e) Bu kanunun ders ücretleri ile ilgili hükümleri yayımı tarihinde Ek 2, Ek 5 ve Ek 6 ncı maddelerinin hükümleri 657 sayılı Devlet Memurları Kanunu hükümlerine göre çıkarılacak Genel Kadro Kanununun yürürlüğe girdiği tarihi takibeden aybaşından itibaren uygulanır.
+f) Bu maddenin (a) ve (c) fıkrası hükümleri uygulanıncaya kadar bu konuları düzenleyen eski kanunların uygulanmasına devam olunur.
+2) 27/6/1989 tarihli ve 375 sayılı Kanun Hükmünde Kararnamenin Hükmü.
+
+
+====================================================================================================
+MADDE 30  (soru_sayisi=0)
+RESMI: Madde 30 – (Değişik: 6/5/1993 - 3909/1 md.) Subayların normal bekleme süreleri aşağıda gösterilmiştir. (Ek cümle: 2/7/2018 - KHK/703/127 md.) (İptal ikinci cümle: Anayasa Mahkemesinin 7/12/2023 Tarihli ve E: 2018/117, K: 2023/212 Sayılı Kararı ile.) (Yeniden Düzenlenen cümle:18/6/2025-7551/3 md.) Bu süreler, Cumhurbaşkanı kararıyla uzatılabilir veya kısaltılabilir. Rütbeler Normal Bekleme Süreleri Asteğmen 8 Ay19 Teğmen 3 Yıl Üsteğmen 6 Yıl Yüzbaşı 6 Yıl Binbaşı 5 Yıl Yarbay 3 Yıl Albay 5 Yıl Tuğgeneral – Tuğamiral 4 Yıl Tümgeneral – Tümamiral 4 Yıl , daha sonra 3/7/2003 tarih ve 4917 sayılı Kanunun 2 nci maddesi ile (8) ay olarak değiştirilmiştir. Korgeneral – Koramiral 4 Yıl Orgeneral - Oramiral 4 Yıl
+b) En az bekleme süreleri:
+
+
+====================================================================================================
+MADDE 32  (soru_sayisi=0)
+RESMI: Subayların en çok bekleme süreleri aşağıda gösterilmiştir:
+a) Öğrenim süreleri dört yıldan az olan yüksek okul mezunu subayların teğmenlik bekleme süreleri, harp okulu mezunu emsalleri kendilerine yetişinceye kadar devam eder.
+b) (Değişik: 9/8/1993 – KHK – 499/4 md.) Subayların 30 uncu maddede gösterilen normal bekleme sürelerinin dışında rütbelerinde en çok kalabilecekleri süre; teğmen ve üsteğmenlikte o rütbenin yaş haddine kadar, diğer rütbelerde ise yüzbaşılar için subaylıktaki 21 inci, binbaşılar için subaylıktaki 22 nci ve yarbaylar için subaylıktaki 25 inci fiili hizmet yılını dolduruncaya kadar olan süredir. 109 uncu madde hükümlerine göre subay olan ve yüzbaşılığa yükselenlerin en çok bekleme süresi bu rütbenin yaş haddine kadardır.
+
+
+====================================================================================================
+MADDE 33  (soru_sayisi=0)
+RESMI: (Mülga: 2/7/2018 – KHK/703/127 md.)
+(Ek : 21/7/2000 – KHK – 607/2 md.; Değiştirilerek kabul : 10/5/2006-5497/2 md.; Değişik: 22/1/2015 – 6586/41 md.) Kıdem alanlar, kazaî veya idari kararlarla nasıpları lehe düzeltilenler ile açığa alınmaları, tutuklanmaları, kısa süreli kaçma ve izin süresini geçirme hariç firar veya izin tecavüzünde bulunmaları nedeniyle terfi edemeyen ve rütbe kıdemliliği onanmayanlardan, haklarında kovuşturmaya yer olmadığına, kamu davasının açılmasının ertelenmesine veya düşmesine yahut ortadan kaldırılmasına, firar veya izin tecavüzü suçlarından verilecekler hariç olmak üzere hükmün açıklanmasının geri bırakılmasına,
+beraatine, kısa süreli hapis cezasının seçenek yaptırımlara çevrilmesine veya cezanın ertelenmesine karar verilenler hakkında, emsalleri terfi etmiş veya rütbe kıdemliliği onanmış olmak şartıyla, yukarıdaki fıkra hükmü uygulanmaz. Ancak, bu durumda olanların rütbe terfi ve rütbe kıdemlilikleri, hükmün veya kararın kesinleşme tarihinden geçerli olarak yapılıp emsalleri tarihine götürülür. Bu şekilde yapılan terfi ve rütbe kıdemliliklerinde maaş farkı ödenmez.
+(Ek fıkra: 21/7/2000-KHK-607/2 md.; Aynen kabul: 10/5/2006-5497/2 md.) Terfi sırasında olup da belirli oranda sicil mecburiyetini, sicil belgelerinin düzenlenmesinden sonra, 30 Ağustos tarihine kadar tamamlayacak olanlar (albaylar hariç) hakkında birinci fıkra hükmü uygulanmaz.
+
+
+====================================================================================================
+MADDE 98  (soru_sayisi=0)
+RESMI: (Mülga: 7/7/1971 – 1424/34 md.)
+
+
+====================================================================================================
+MADDE 133  (soru_sayisi=3)
+RESMI: (Değişik: 18/6/2003 – 4902/28 md.)
+Yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara, Millî Savunma Bakanlığınca; Jandarma ve Sahil Güvenlik subaylarına, İçişleri Bakanlığınca dört yıla kadar aylıklı izin verilebilir. Bu şekilde görevlendirilenlerin aylıkları Millî Savunma, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı bütçelerinden ödenir. Bunların yabancı memleketlerde geçen hizmet süreleri, fiilî hizmetlerinden ve kıdemlerinden sayılır.
+
+  KART 72-0 [Yabancı ordularda hizmet için aylıklı izin]
+    HUKUM: Yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara Millî Savunma Bakanlığınca; Jandarma ve Sahil Güvenlik subaylarına İçişleri Bakanlığınca dört yıla kadar aylıklı izin verilebilir (m.133)
+    YANLIS: Jandarma ve Sahil Güvenlik subaylarına yabancı ordularda hizmet için aylıklı izni Jandarma Genel Komutanlığı veya Millî Savunma Bakanlığı verir
+    DOGRU: Jandarma ve Sahil Güvenlik subaylarına yabancı ordularda hizmet için dört yıla kadar aylıklı izni İçişleri Bakanlığı verir (m.133)
+  KART 72-1 [Yabancı orduda geçen sürenin aylığı ve kıdemi]
+    HUKUM: Bu şekilde görevlendirilenlerin aylıkları Millî Savunma, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı bütçelerinden ödenir; yabancı memleketlerde geçen hizmet süreleri fiilî hizmetlerinden ve kıdemlerinden sayılır (m.133)
+    YANLIS: Yabancı orduda geçen hizmet süresi kıdemden sayılmaz
+    DOGRU: Yabancı memleketlerde geçen hizmet süreleri hem fiilî hizmetten hem kıdemden sayılır (m.133)
+  TABLO:
+    ["Yabancı ordularda hizmet için aylıklı izin", "Dört yıla kadar (m.133)", "133"]
+    ["Subaylara yabancı ordularda hizmet için aylıklı izin", "Millî Savunma Bakanlığı (m.133)", "133"]
+    ["Jandarma ve Sahil Güvenlik subaylarına aylıklı izin", "İçişleri Bakanlığı (m.133)", "133"]
+    ["Yabancı orduda görevlinin aylığı", "MSB, JGK veya SGK bütçeleri (m.133)", "133"]
+  SORU 1: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununa göre, yabancı memleket ordularında hizmet yapmak üzere gönderilecek subaylara Millî Savunma Bakanlığınca en çok kaç yıla kadar aylıklı izin verilebilir?
+     * 4 yıl
+       2 yıl
+       3 yıl
+       5 yıl
+       6 yıl
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yabancı memleket ordularında hizmet yapmak üzere gönderilen Jandarma ve Sahil Güvenlik subaylarına aylıklı izni hangi makam verir?
+       Millî Savunma Bakanlığı
+     * İçişleri Bakanlığı
+       Cumhurbaşkanlığı
+       Jandarma Genel Komutanlığı
+       Sahil Güvenlik Komutanlığı
+  SORU 3: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yabancı memleket ordularında hizmet yapmak üzere aylıklı izinle gönderilen subayların yabancı memleketlerde geçen hizmet süreleri hakkında aşağıdakilerden hangisi doğrudur?
+     * Hem fiilî hizmetlerinden hem kıdemlerinden sayılır
+       Fiilî hizmetlerinden sayılır, kıdemlerinden sayılmaz
+       Kıdemlerinden sayılır, fiilî hizmetlerinden sayılmaz
+       Yalnız iki yılı aşmayan kısmı kıdemlerinden sayılır
+       Ne fiilî hizmetlerinden ne kıdemlerinden sayılır
+
+====================================================================================================
+MADDE 135  (soru_sayisi=1)
+RESMI: Madde 135 – Subay ve astsubayların aylık ve ödenekleri ile hizmetle ilgili her çeşit ödemeler (…)109,özel kanun hükümleri saklı kalmak şartı ile bu kanunda yazılı esaslar dahilinde yürütülür. II – Tarifler: Milli Savunma Bakanı ile Başbakanın imzalıyacakları ortak kararnameyle” ibaresi “Cumhurbaşkanınca” şeklinde değiştirilmiştir. müştereken tanzim edilecek” ibaresi “tarafından çıkarılan” şeklinde değiştirilmiş; daha sonra bu hüküm 1/2/2018 tarihli ve 7073 sayılı Kanunun 40 ıncı maddesiyle aynen kabul edilerek kanunlaşmıştır. harçlıkları” ibaresi yürürlükten kaldırılmış olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 32 nci maddesiyle aynen kabul edilerek kanunlaşmıştır.
+
+  KART 72-2 [Mali hükümlerin uygulanma esası]
+    HUKUM: Subay ve astsubayların aylık ve ödenekleri ile hizmetle ilgili her çeşit ödemeler, özel kanun hükümleri saklı kalmak şartı ile bu Kanunda yazılı esaslar dâhilinde yürütülür (m.135)
+    YANLIS: Subay ve astsubayların ödemelerinde özel kanunlar uygulanmaz, yalnız 926 sayılı Kanun uygulanır
+    DOGRU: Subay ve astsubayların her çeşit ödemesi, özel kanun hükümleri saklı kalmak şartıyla bu Kanuna göre yürütülür (m.135)
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubayların aylık ve ödenekleri ile hizmetle ilgili her çeşit ödemesi hangi esasa göre yürütülür?
+       Yalnız Cumhurbaşkanlığı kararnamesine göre
+       Sadece 657 sayılı Devlet Memurları Kanununa göre
+     * Özel kanun hükümleri saklı kalmak şartıyla bu Kanunda yazılı esaslara göre
+       Genelkurmay Başkanlığı yönergesine göre
+       Sayıştay kararına göre
+
+====================================================================================================
+MADDE 136  (soru_sayisi=5)
+RESMI: Bu kanunda geçen:
+a) (Değişik: 31/7/1970 – 1323/3 md.) Aylık; Silahlı Kuvvetlere mensup subay ve astsubayların fiili kadrolarına, rütbe, kıdem ve kademe yıllarına göre kendilerine ay itibariyle ödenen parayı,
+b) (Mülga: 25/7/2016-KHK-669/32 md.; Aynen kabul: 9/11/2016-6756/32 md.)
+c) Temsil giderleri; belirli makamları işgal edenlere görevleri icabı gerçek giderleri karşılamak üzere bütçeye konulan ödenekten özel yönetmeliği hükümlerine göre ödenen parayı,
+d) (Değişik: 9/8/1991 – KHK – 445/5 md.; Aynen kabul 23/1/1992 – 3768/5 md.) Ödül; bu Kanunun ilgili bölümlerinde belirtilen hallerden dolayı verilen nakdi ve ayni armağanı,
+e) (Ek: 31/7/1970 – 1323/3 md.; Değişik: 20/1/1976 – 1933/1 md.)
+(1) İş güçlüğü zammı: Niteliği ve çalışma şartları bakımından güç olan işlerde çalışanlara ödenen parayı,
+(2) İş riski zammı: Hayat ve sağlık için tehlike arz eden hizmetlerde çalışanlara ödenen parayı,
+(3) Eleman teminindeki güçlük zammı: Temininde, görevde tutulmasında veya belli yerlerde istihdam edilmesinde güçlük bulunan elemanlar için ödenen parayı,
+(4) Mali sorumluluk tazminatı: Sayıştaya hesap vermekle yükümlü saymanlara ödenen parayı,
+İfade eder.
+
+  KART 72-3 [Aylık tanımı]
+    HUKUM: Aylık; Silahlı Kuvvetlere mensup subay ve astsubayların fiilî kadrolarına, rütbe, kıdem ve kademe yıllarına göre kendilerine ay itibarıyla ödenen paradır (m.136/a)
+    YANLIS: Aylık, göreve bakılmaksızın yalnız hizmet yılına göre ödenen paradır
+    DOGRU: Aylık; fiilî kadroya, rütbe, kıdem ve kademe yıllarına göre ay itibarıyla ödenen paradır (m.136/a)
+  KART 72-4 [Temsil giderleri ve ödül tanımı]
+    HUKUM: Temsil giderleri: belirli makamları işgal edenlere görevleri icabı gerçek giderleri karşılamak üzere bütçeye konulan ödenekten özel yönetmeliği hükümlerine göre ödenen para (m.136/c); Ödül: bu Kanunun ilgili bölümlerinde belirtilen hâllerden dolayı verilen nakdî ve aynî armağan (m.136/d)
+    YANLIS: Ödül yalnız nakdî armağandır
+    DOGRU: Ödül; Kanunda belirtilen hâllerden dolayı verilen nakdî ve aynî armağandır (m.136/d)
+  KART 72-5 [Zamlar ve mali sorumluluk tazminatı]
+    HUKUM: İş güçlüğü zammı: niteliği ve çalışma şartları bakımından güç olan işlerde çalışanlara; İş riski zammı: hayat ve sağlık için tehlike arz eden hizmetlerde çalışanlara; Eleman teminindeki güçlük zammı: temininde, görevde tutulmasında veya belli yerlerde istihdam edilmesinde güçlük bulunan elemanlar için; Mali sorumluluk tazminatı: Sayıştaya hesap vermekle yükümlü saymanlara ödenen para (m.136/e)
+    YANLIS: Hayat ve sağlık için tehlikeli hizmetlerde çalışanlara ödenen para iş güçlüğü zammıdır
+    DOGRU: Hayat ve sağlık için tehlikeli hizmetlerde ödenen para iş riski zammıdır; iş güçlüğü zammı güç işlerde çalışanlara ödenir (m.136/e)
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 2}, {"madde": "143", "kac_celdiricide": 1}, {"madde": "151", "kac_celdiricide": 1}, {"madde": "149", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 926 sayılı Kanunun tarifler hükmüne göre, 'belirli makamları işgal edenlere görevleri icabı gerçek giderleri karşılamak üzere bütçeye konulan ödenekten özel yönetmeliği hükümlerine göre ödenen para' aşağıdakilerden hangisidir?
+       Aylık
+       Ödül
+       Harçlık
+     * Temsil giderleri
+       Makam tazminatı
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 926 sayılı Kanunun tarifler hükmüne göre aşağıdakilerden hangisi 136 ncı maddede sayılan zam ve tazminat türlerinden biri DEĞİLDİR?
+       İş güçlüğü zammı
+       İş riski zammı
+       Eleman teminindeki güçlük zammı
+       Mali sorumluluk tazminatı
+     * Makam tazminatı
+  SORU 3: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 'aylık', 'harçlık' ve 'ödenek' kavramları arasında aşağıdaki eşleştirmelerden hangisi doğrudur?
+       Aylık - yedek subay okulu öğrencisine ödenen düşük tutar
+     * Ödenek - belirli bir amaca bağlı olarak verilen ek ödeme (örneğin aile yardımı ödeneği)
+       Harçlık - subay ve astsubaya rütbe/kıdem/kademeye göre her ay ödenen düzenli para
+       Aylık - yalnızca ilk atamada bir defaya mahsus ödenen para
+       Hepsi aynı kavramın farklı adlarıdır
+  SORU 4: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'nda yer alan tanımlarla ilgili aşağıdakilerden hangisi yanlıştır?
+       Temsil giderleri, belirli makamları işgal edenlere görevleri icabı gerçek giderleri karşılamak üzere ödenen paradır.
+       İş güçlüğü zammı, niteliği ve çalışma şartları bakımından güç olan işlerde çalışanlara ödenen paradır.
+     * Mali sorumluluk tazminatı, hayat ve sağlık için tehlike arz eden hizmetlerde çalışanlara ödenen paradır.
+       Eleman teminindeki güçlük zammı, temininde veya belli yerlerde istihdam edilmesinde güçlük bulunan elemanlar için ödenen paradır.
+       Ödül, Kanunun ilgili bölümlerinde belirtilen hallerden dolayı verilen nakdi ve ayni armağandır.
+  SORU 5: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, Silahlı Kuvvetlere mensup subay ve astsubayların fiilî kadrolarına, rütbe, kıdem ve kademe yıllarına göre kendilerine ay itibarıyla ödenen para aşağıdakilerden hangisidir?
+       Harçlık
+       Temsil gideri
+     * Aylık
+       İş güçlüğü zammı
+       Ödül
+
+====================================================================================================
+MADDE 137  (soru_sayisi=13)
+RESMI: (Değişik: 3/7/1975 – 1923/37 md.)
+Silahlı Kuvvetlerdeki subayların, astsubaylıktan subay olanların, astsubayların, uzman erbaş ve uzman jandarmaların aylıkları, rütbe, rütbedeki kıdem ve kademe esasına göre saptanır.
+(Değişik: 12/2/1982 – 2596/1 md.) En düşük gösterge rakamı 560, en yükseği 1500’dür.
+(Değişik: 12/2/1982 – 2596/1 md.; Mülga: 22/5/2012-6318/53 md.)
+Rütbe rütbe kıdemliliği ve kademelere göre,
+a) Subayların gösterge tablosu Ek -VI sayılı cetvelde.
+b) Astsubaylıktan subay olanların gösterge tablosu Ek – VII sayılı cetvelde,
+c) (Değişik : 28/6/2001 – 4699/20 md.) Astsubaylar hakkındaki gösterge tabloları EKVIII/A ve EK-VIII/C sayılı cetvellerde gösterilmiştir. Yükseköğrenim yapmış olan astsubayların intibakları; 657 sayılı Devlet Memurları Kanununun Genel İdare Hizmetleri Sınıfında aynı yüksek öğrenimi bitirenler için tespit edilen derece ve kademelerden hizmete
+başlamış kabul edilerek yapılır.Bu intibaklar personelin fakülte, yüksekokul veya meslek yüksekokulunu bitirdiğine dair resmi belgeyi ibraz edip müracaatını yaptığı tarihteki derece ve kademelerine, 2 yıl süreli yüksek öğrenim için 1 kademe, 3 yıl süreli yüksek öğrenim için 2 kademe, 4 yıl süreli yüksek öğrenim için 1 derece ilave edilerek yapılır. 2 ve 3 yıl süreli yüksek öğrenimini tamamlayarak intibakları yapılmış olanların, daha sonra lisans öğrenimini tamamlamaları halinde intibak işlemleri bir defaya mahsus olmak üzere tekrar yapılır. Yüksek öğrenimden dolayı bir defadan fazla yapılan intibak işlemleri toplamı 1 dereceden fazla olamaz, 5 yıl ve üzerindeki öğrenimlerin 4 yıldan fazlası için kademe verilmez.
+(Değişik: 9/8/1983-KHK-499/20 md.) Fakülte, yüksekokul veya meslek yüksekokullarını bitirdikten sonra astsubay sınıf okulunu bitirip astsubay nasbedilenlerin yüksek öğrenim intibakları astsubay çavuşluğa nasıplarında yapılır.Yüksek öğrenim intibakı yapılan astsubayların sonraki rütbelerinin ve rütbe kademeliliklerinin ilk kademeleri,intibak yoluyla verilen derece ve kademe miktarı kadar fazladır.
+(Ek: 28/5/2003-4861/9 md.) (Değişik üçüncü paragraf:30/6/2022-7415/6 md.) Astsubay meslek yüksek okulu mezunları ve kendi veya Milli Savunma Bakanlığı nam ve hesabına fakülte, yüksek okul veya meslek yüksek okulunu bitirerek temel askerlik eğitiminde başarılı olup astsubay çavuşluğa nasbedilenler, EK-VIII/A ve EK-VIII/C sayılı cetvellere göre başlangıç kademelerine bir kademe ilave edilerek 9 uncu derecenin ikinci kademesinden göreve başlarlar. Bunlar görevde oldukları süre içerisinde lisans tamamlama eğitimi yaptıkları veya en az dört yıl ve daha fazla süreli bir fakülte veya yüksek okulu bitirdikleri takdirde, mezun olduklarına dair resmî belgeyi ibraz edip müracaatını yaptığı tarihteki derece ve kademelerine iki kademe ilâve edilerek intibakları yapılır. Birden fazla fakülte veya yüksek okul öğrenimi dikkate alınmaz. Bu şekilde intibakı yapılan astsubayların sonraki rütbelerinin ve rütbe kademeliliklerinin ilk kademeleri intibak yolu ile verilen kademe miktarı kadar fazladır.
+(Ek: 28/5/2003-4861/9 md.) Uzman jandarma ve uzman erbaşlardan muvazzaf astsubaylığa nasbedilenlerden, nasbedildikleri astsubay çavuş rütbesinin aylığından fazla derece ve kademe aylığı alanlar; daha önce emsal oldukları uzman jandarma veya uzman erbaşların derece, kademe ve yükselecekleri yeni derece ve kademe aylıklarına göre aylık almaya devam ederler. Ancak, yükselecekleri astsubaylık rütbe ve rütbe kıdemliliğindeki derece ve kademe aylıkları, daha önce emsal oldukları uzman jandarma veya uzman erbaşların derece ve kademe aylıklarına eşit veya fazla hâle gelince, emsali astsubaylar hakkındaki aylık derece ve kademelerine tâbi tutulurlar.
+(Ek beşinci paragraf:30/6/2022-7415/6 md.) Rütbe terfi veya rütbe kademeliliği sırasında bulunmadıkları hâlde yükseköğrenim intibakı yapılan astsubaylardan maaş
+derecelerinin üçüncü kademesinde bulunanlar, bir üst maaş derecesinin birinci kademesine yükseltilirler.
+d) Uzman jandarma çavuşlar ile uzman çavuşların gösterge tablosu Ek – IX sayılı cetvelde gösterilmiştir.
+(Değişik: 9/8/1993 – KHK – 499/20 md.) Ancak yukarıdaki gösterge rakamlarına;
+a) Subaylar için I sayılı ek gösterge cetvelinde, (109 uncu maddeye göre astsubaylıktan subay olanlar dahil)
+b) Astsubaylar için III sayılı ek gösterge cetvelinde,
+c) Askeri hakimler için IV sayılı ek gösterge cetvelinde,
+rütbe ve derecelere göre belirlenen ek gösterge rakamları eklenir.
+Ancak, Askeri hakim ve savcılar için IV sayılı ek gösterge cetvelinde veya özel kanunlar gereğince saptanan ek gösterge rakamları I sayılı cetvelde eşidi rütbeleri itibariyle saptanan ek gösterge rakamlarından farklı ise, kendilerine fazla olan ek gösterge rakamları uygulanır.
+
+  KART 72-6 [Aylığın belirlenme esası ve gösterge sınırları]
+    HUKUM: Subayların, astsubaylıktan subay olanların, astsubayların, uzman erbaş ve uzman jandarmaların aylıkları rütbe, rütbedeki kıdem ve kademe esasına göre saptanır; en düşük gösterge rakamı 560, en yükseği 1500'dür (m.137)
+    YANLIS: En yüksek gösterge rakamı 1400'dür
+    DOGRU: En düşük gösterge rakamı 560, en yükseği 1500'dür (m.137)
+  KART 72-7 [Gösterge cetvelleri]
+    HUKUM: Subaylar Ek-VI; astsubaylıktan subay olanlar Ek-VII; astsubaylar EK-VIII/A ve EK-VIII/C; uzman jandarma çavuşlar ile uzman çavuşlar Ek-IX sayılı cetvelde (m.137)
+    YANLIS: Astsubaylıktan subay olanların gösterge tablosu Ek-VI sayılı cetveldedir
+    DOGRU: Astsubaylıktan subay olanların gösterge tablosu Ek-VII sayılı cetveldedir; Ek-VI subaylarındır (m.137)
+  KART 72-8 [Astsubayların yükseköğrenim intibakı: esas]
+    HUKUM: Yükseköğrenim yapmış astsubayların intibakı, 657 sayılı Kanunun Genel İdare Hizmetleri Sınıfında aynı yükseköğrenimi bitirenler için tespit edilen derece ve kademelerden hizmete başlamış kabul edilerek yapılır; intibak, fakülte-yüksekokul-meslek yüksekokulunu bitirdiğine dair resmî belgeyi ibraz edip müracaatını yaptığı tarihteki derece ve kademesine göre yapılır (m.137/c)
+    YANLIS: Yükseköğrenim intibakı mezuniyet tarihindeki derece ve kademeye göre yapılır
+    DOGRU: İntibak, mezuniyet belgesini ibraz edip müracaat ettiği tarihteki derece ve kademeye göre yapılır (m.137/c)
+  KART 72-9 [İntibakta eklenen süreler ve sınırlar]
+    HUKUM: 2 yıl süreli yükseköğrenim için 1 kademe, 3 yıl için 2 kademe, 4 yıl için 1 derece ilave edilir; 2-3 yıllık öğrenimle intibakı yapılanlar sonra lisansı tamamlarsa bir defaya mahsus tekrar intibak yapılır; birden fazla yapılan intibakların toplamı 1 dereceden fazla olamaz; 5 yıl ve üzerindeki öğrenimlerin 4 yıldan fazlası için kademe verilmez (m.137/c)
+    YANLIS: 4 yıllık yükseköğrenim için 2 kademe ilave edilir
+    DOGRU: 4 yıllık yükseköğrenim için 1 derece ilave edilir; 2 kademe 3 yıllık öğrenim içindir (m.137/c)
+  KART 72-10 [Mezun olup sonra astsubay olanların intibak zamanı]
+    HUKUM: Fakülte, yüksekokul veya meslek yüksekokullarını bitirdikten sonra astsubay sınıf okulunu bitirip astsubay nasbedilenlerin intibakları astsubay çavuşluğa nasıplarında yapılır; intibak yapılanların sonraki rütbe ve rütbe kademeliliklerinin ilk kademeleri, intibakla verilen derece ve kademe miktarı kadar fazladır (m.137)
+    YANLIS: Yükseköğrenim intibakının avantajı yalnız ilk rütbede geçerlidir
+    DOGRU: İntibak yapılanların sonraki rütbe ve kademeliliklerinin ilk kademeleri de intibakla verilen miktar kadar fazladır (m.137)
+  KART 72-11 [AMYO ve yükseköğrenim mezunu astsubayların başlangıcı]
+    HUKUM: Astsubay meslek yüksekokulu mezunları ile kendi veya MSB nam ve hesabına fakülte-yüksekokul-meslek yüksekokulunu bitirip temel askerlik eğitiminde başarılı olarak astsubay çavuşluğa nasbedilenler, başlangıç kademelerine bir kademe ilave edilerek 9 uncu derecenin ikinci kademesinden göreve başlar; görevdeyken lisans tamamlama yapar veya en az dört yıllık fakülte-yüksekokul bitirirse müracaat tarihindeki derece-kademesine iki kademe ilave edilir; birden fazla fakülte veya yüksekokul öğrenimi dikkate alınmaz (m.137)
+    YANLIS: Astsubay meslek yüksekokulu mezunları 9 uncu derecenin birinci kademesinden göreve başlar
+    DOGRU: Bunlar başlangıç kademelerine bir kademe ilave edilerek 9 uncu derecenin ikinci kademesinden göreve başlar (m.137)
+  KART 72-12 [Uzmandan astsubaylığa geçenlerin aylığı]
+    HUKUM: Uzman jandarma ve uzman erbaşlardan muvazzaf astsubaylığa nasbedilenlerden, astsubay çavuş aylığından fazla derece-kademe aylığı alanlar, emsal oldukları uzmanların derece-kademe aylıklarına göre almaya devam eder; astsubaylık aylıkları uzman aylığına eşit veya fazla hâle gelince astsubay aylık derece-kademelerine tâbi tutulurlar (m.137)
+    YANLIS: Astsubaylığa nasbedilen uzman, hemen astsubay çavuş aylığına geçer
+    DOGRU: Astsubay çavuş aylığından fazla alan uzman, astsubay aylığı eşit veya fazla hâle gelene kadar emsali uzmanların aylığını almaya devam eder (m.137)
+  KART 72-13 [Üçüncü kademedeki astsubayın derece atlaması]
+    HUKUM: Rütbe terfi veya rütbe kademeliliği sırasında bulunmadıkları hâlde yükseköğrenim intibakı yapılan astsubaylardan maaş derecelerinin üçüncü kademesinde bulunanlar, bir üst maaş derecesinin birinci kademesine yükseltilir (m.137)
+    YANLIS: Üçüncü kademedeki astsubay intibakla aynı derecenin dördüncü kademesine ilerler
+    DOGRU: Maaş derecesinin üçüncü kademesindeki astsubay, bir üst maaş derecesinin birinci kademesine yükseltilir (m.137)
+  KART 72-14 [Ek göstergeler]
+    HUKUM: Gösterge rakamlarına; subaylar için I sayılı (109. maddeye göre astsubaylıktan subay olanlar dâhil), astsubaylar için III sayılı, askerî hâkimler için IV sayılı ek gösterge cetvellerindeki rakamlar eklenir; askerî hâkim ve savcıların IV sayılı cetvel veya özel kanunlarla saptanan ek göstergesi I sayılı cetveldeki eşidi rütbelerinkinden farklıysa fazla olan uygulanır (m.137)
+    YANLIS: Astsubaylıktan subay olanlar III sayılı ek gösterge cetveline tabidir
+    DOGRU: Astsubaylıktan subay olanlar subaylar gibi I sayılı ek gösterge cetveline tabidir; III sayılı cetvel astsubaylarındır (m.137)
+  TABLO:
+    ["Gösterge rakamı", "En düşük 560, en yüksek 1500 (m.137)", "137"]
+    ["Yükseköğrenim intibakı", "2 yıl 1 kademe; 3 yıl 2 kademe; 4 yıl 1 derece; toplam en çok 1 derece; 5 yıl ve üzeri öğrenimde 4 yıldan fazlasına kademe yok (m.137)", "137"]
+    ["AMYO ve yükseköğrenim mezunu astsubay çavuş başlangıcı", "9 uncu derecenin ikinci kademesi (bir kademe ilave) (m.137)", "137"]
+    ["Görevde lisans tamamlayan astsubay", "İki kademe ilave (m.137)", "137"]
+  KARIS_ADAY: [{"madde": "140", "kac_celdiricide": 3}, {"madde": "145", "kac_celdiricide": 2}, {"madde": "141", "kac_celdiricide": 1}, {"madde": "148", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubayların aylıklarının hesabında esas alınan gösterge tablosunda en düşük ve en yüksek gösterge rakamları aşağıdakilerden hangisidir?
+     * 560-1500
+       500-1400
+       600-1600
+       560-1600
+       500-1500
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, astsubaylıktan subay olanların gösterge tablosu hangi cetvelde gösterilmiştir?
+       Ek-VI
+     * Ek-VII
+       Ek-VIII/A
+       Ek-VIII/C
+       V sayılı cetvel
+  SORU 3: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 4 yıl süreli yüksek öğrenimi bitirerek intibak yaptırılan personele kaç derece/kademe ilave edilir?
+       1 kademe
+       2 kademe
+     * 1 derece
+       2 derece
+       Hem 1 derece hem 1 kademe
+  SORU 4: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 3 yıl süreli yüksek öğrenimi bitirerek intibak yaptırılan personele kademe/derece olarak ne ilave edilir?
+       1 kademe
+       1 derece
+       3 kademe
+     * 2 kademe
+       2 derece
+  SORU 5: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yüksek öğrenimden dolayı birden fazla yapılan intibak işlemlerinin toplamı hakkında aşağıdakilerden hangisi doğrudur?
+       Toplamda sınır yoktur
+       Toplamı en fazla 3 kademe olabilir
+       Toplamı en fazla 2 derece olabilir
+       Toplamı yalnızca 5 yıllık öğrenim için geçerlidir
+     * Toplamı 1 dereceden fazla olamaz
+  SORU 6: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 5 yıl ve üzerindeki yüksek öğrenimlerde kaç yıldan fazlası için kademe verilmez?
+     * 4 yıl
+       3 yıl
+       2 yıl
+       5 yıl
+       6 yıl
+  SORU 7: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, AMYO mezunu ve kendi imkânıyla okuyup temel askerlik eğitiminde başarılı olarak astsubay çavuşluğa nasbedilenler, EK-VIII/A ve EK-VIII/C cetvellerine göre başlangıç kademesine bir kademe ilave edilerek hangi derece ve kademeden göreve başlar?
+       8. derece 1. kademe
+     * 9. derece 2. kademe
+       10. derece 1. kademe
+       9. derece 1. kademe
+       9. derece 3. kademe
+  SORU 8: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre subay ve astsubayların aylıklarının saptanmasında kullanılan en düşük gösterge rakamı kaçtır?
+       620
+       480
+       1500
+     * 560
+       700
+
+====================================================================================================
+MADDE 138  (soru_sayisi=2)
+RESMI: Subay ve astsubay maaş tutarlarının hesabı için gösterge tablolarındaki gösterge rakamlarının çarpılacağı katsayı, Devlet memurları için tespit edilen katsayıdır.
+(Ek: 12/2/1982 – 2596/2 md.) Katsayı değişimi, aylıklarda artış veya eksiliş sayılmaz.
+
+  KART 72-15 [Katsayı]
+    HUKUM: Subay ve astsubay maaş tutarlarının hesabında gösterge rakamlarının çarpılacağı katsayı, Devlet memurları için tespit edilen katsayıdır; katsayı değişimi aylıklarda artış veya eksiliş sayılmaz (m.138)
+    YANLIS: Askerî personel için ayrı katsayı belirlenir
+    YANLIS: Katsayı değişimi aylıklarda artış sayılır
+    DOGRU: Devlet memurları için tespit edilen katsayı uygulanır; katsayı değişimi aylıklarda artış veya eksiliş sayılmaz (m.138)
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 2}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubay maaş tutarlarının hesabında gösterge rakamlarının çarpılacağı katsayı nasıl belirlenir?
+       Cumhurbaşkanınca her yıl ayrıca belirlenir
+       Millî Savunma Bakanlığı tarafından belirlenir
+       Sayıştay tarafından onaylanır
+     * Devlet memurları için tespit edilen katsayıdır
+       TSK Personel Kanununda sabit olarak yazılıdır
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, brüt aylık hesabı hakkında aşağıdakilerden hangisi doğrudur?
+       Gösterge rakamı ile hizmet yılının toplamıdır
+       Rütbe aylığından harçlığın çıkarılmasıyla bulunur
+       Kademe aylığı ile ek görev aylığının ortalamasıdır
+       Yalnızca Cumhurbaşkanı kararnamesiyle yıllık belirlenir
+     * Gösterge tablosundaki rakamın, Devlet memurları için tespit edilen katsayı ile çarpılmasıyla hesaplanır
+
+====================================================================================================
+MADDE 139  (soru_sayisi=2)
+RESMI: (Değişik: 31/7/1970 – 1323/5 md.)
+Subay ve astsubayların rütbe ve rütbe kıdemliliklerine ait gösterge tablolarındaki aylık derecelerinden, bu dereceye ait hizmet yıllarına, bu kanunun ilgili bölümündeki esaslara göre tespit edilmiş kademelerden her biri için tespit edilen gösterge rakamına tekabül eden aylıktır.
+
+  KART 72-16 [Kademe aylığı]
+    HUKUM: Rütbe ve rütbe kıdemliliklerine ait gösterge tablolarındaki aylık derecelerinden, o dereceye ait hizmet yıllarına göre tespit edilmiş kademelerden her biri için tespit edilen gösterge rakamına tekabül eden aylıktır (m.139)
+    YANLIS: Kademe aylığı her rütbe için saptanan tek bir aylıktır
+    DOGRU: Kademe aylığı, derecedeki kademelerin her biri için tespit edilen gösterge rakamına karşılık gelen aylıktır (m.139)
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 2}, {"madde": "141", "kac_celdiricide": 2}, {"madde": "140", "kac_celdiricide": 1}, {"madde": "143", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 'kademe aylığı' tanımı aşağıdakilerden hangisidir?
+       Rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylık
+       Gösterge rakamı ile katsayının çarpımından bulunan brüt aylık
+       Aylık ve harçlıklar dışındaki her türlü ödeme
+       Yalnız yüksek öğrenim intibakından doğan aylık farkı
+     * Rütbe ve rütbe kıdemliliklerine ait gösterge tablolarındaki dereceye, hizmet yıllarına göre tespit edilmiş kademe için belirlenen gösterge rakamına karşılık gelen aylık
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 'kademe aylığı' ile 'rütbe aylığı' arasındaki temel fark nedir?
+       Kademe aylığı yalnızca astsubaylara, rütbe aylığı yalnızca subaylara özgüdür
+       İkisi de tamamen aynı göstergeye dayanır, aralarında fark yoktur
+     * Kademe aylığı, bir dereceye ait hizmet yılına göre tespit edilen kademenin göstergesine karşılık gelirken; rütbe aylığı doğrudan rütbe ve rütbe kıdemliliğinin kendisine göre saptanır
+       Rütbe aylığı yalnızca terfi yılında bir defaya mahsus ödenir
+       Kademe aylığı harçlık ile eş anlamlıdır
+
+====================================================================================================
+MADDE 140  (soru_sayisi=4)
+RESMI: (Değişik: 26/3/1982 – 2642/20 md.)
+Rütbe aylığı; subay ve astsubayların gösterge tablosundaki rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylıktır.
+(Değişik ikinci fıkra: 5/2/2009-5837/22 md.) Nasıplarından itibaren iki yılını tamamlayan ve liyakatleri üst makamlarca onaylanan albaylara kıdemli albay, nasıplarından itibaren üç yılını tamamlayan ve gösterge tablosunun bir üst derecesine yükselmek için liyakatları üst makamlarca onanan üsteğmenlere kıdemli üsteğmen, yüzbaşılara kıdemli yüzbaşı, binbaşılara kıdemli binbaşı, üstçavuşlara kademeli üstçavuş, kıdemli üstçavuşlara
+kademeli kıdemli üstçavuş, başçavuşlara kademeli başçavuş, kıdemli başçavuşlara kademeli kıdemli başçavuş, kademeli kıdemli başçavuşlara iki kademeli kıdemli başçavuş denir.
+Onama işlemleri bu Kanunun 33 üncü maddesinde gösterilen zamanda yapılır.
+Onama işlemleri yapılanlar yükseldikleri aylık derecesinin birinci kademesine de ilerlemiş olurlar.
+
+  KART 72-17 [Rütbe aylığı]
+    HUKUM: Rütbe aylığı; gösterge tablosundaki rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylıktır (m.140)
+    YANLIS: Rütbe aylığı, derecedeki kademelerin her biri için saptanan aylıktır
+    DOGRU: Rütbe aylığı, gösterge tablosundaki rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylıktır (m.140)
+  KART 72-18 [Kıdemli ve kademeli unvanlar]
+    HUKUM: Nasıbından itibaren iki yılını tamamlayan ve liyakati üst makamlarca onaylanan albaylara kıdemli albay; üç yılını tamamlayan ve bir üst dereceye yükselmek için liyakati onanan üsteğmen, yüzbaşı, binbaşılara kıdemli üsteğmen, kıdemli yüzbaşı, kıdemli binbaşı; üstçavuşlara kademeli üstçavuş, kıdemli üstçavuşlara kademeli kıdemli üstçavuş, başçavuşlara kademeli başçavuş, kıdemli başçavuşlara kademeli kıdemli başçavuş, kademeli kıdemli başçavuşlara iki kademeli kıdemli başçavuş denir (m.140)
+    YANLIS: Kıdemli albay olmak için nasıptan itibaren üç yıl gerekir
+    DOGRU: Kıdemli albaylık için nasıptan itibaren iki yıl gerekir; üç yıl kıdemli üsteğmen, yüzbaşı ve binbaşı içindir (m.140)
+  KART 72-19 [Onama zamanı ve sonucu]
+    HUKUM: Onama işlemleri Kanunun 33 üncü maddesinde gösterilen zamanda yapılır; onama işlemi yapılanlar yükseldikleri aylık derecesinin birinci kademesine de ilerlemiş olur (m.140)
+    YANLIS: Onama işlemi yapılan, yükseldiği aylık derecesinin son kademesine ilerler
+    DOGRU: Onama işlemi yapılanlar yükseldikleri aylık derecesinin birinci kademesine de ilerlemiş olur (m.140)
+  TABLO:
+    ["Kıdemli albay", "Nasıptan itibaren iki yıl (m.140)", "140"]
+    ["Kıdemli üsteğmen-yüzbaşı-binbaşı ve kademeli astsubay unvanları", "Nasıptan itibaren üç yıl (m.140)", "140"]
+    ["Kıdemli/kademeli unvan liyakati", "Üst makamlar onayı (m.140)", "140"]
+  KARIS_ADAY: [{"madde": "139", "kac_celdiricide": 1}, {"madde": "136", "kac_celdiricide": 1}, {"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, 'rütbe aylığı' aşağıdakilerden hangisi olarak tanımlanmıştır?
+     * Subay ve astsubayların gösterge tablosundaki rütbe ve rütbe kıdemliliklerinin her biri için saptanan aylık
+       Kademe için belirlenen gösterge rakamına karşılık gelen aylık
+       Brüt aylık tutarı
+       Yurt dışında ödenen aylık
+       İlk kademe aylığı
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, nasıplarından itibaren kaç yılını tamamlayan ve liyakatleri onaylanan albaylara 'kıdemli albay' unvanı verilir?
+       1 yıl
+     * 2 yıl
+       3 yıl
+       4 yıl
+       5 yıl
+  SORU 3: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, nasıplarından itibaren üç yılını tamamlayan ve gösterge tablosunun bir üst derecesine yükselmek için liyakatleri onanan üsteğmen, yüzbaşı, binbaşı ve üstçavuşlara verilen unvan aşağıdakilerden hangisidir?
+       Kıdemli albay
+       İki kademeli kıdemli başçavuş
+     * Kıdemli üsteğmen/yüzbaşı/binbaşı, kademeli üstçavuş
+       Kademeli kıdemli başçavuş
+       Kıdemli astsubay
+  SORU 4: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, kıdemli unvan onama işlemi yapılan subay ve astsubaylar hakkında aşağıdakilerden hangisi doğrudur?
+       Yalnızca unvanları değişir, aylık kademeleri etkilenmez
+       Aylık dereceleri bir alt kademeye düşer
+       Herhangi bir kademe değişikliği olmaz
+     * Yükseldikleri aylık derecesinin birinci kademesine de ilerlemiş olurlar
+       Yalnızca terfi sınavını kazananlar bu haktan yararlanır
+
+====================================================================================================
+MADDE 141  (soru_sayisi=1)
+RESMI: (Değişik: 31/7/1970 – 1323/7 md.)
+Kanunda gösterilen gösterge tablolarında yer alan rütbe ve rütbe kıdemliliklerinden her birindeki birinci aylık göstergesine tekabül eden miktar, o rütbe ve rütbe kıdemliliğinin ilk kademe aylığını, son aylık göstergesine tekabül eden miktar en yüksek kademe aylığını gösterir.
+(İkinci fıkra mülga: 17/4/1975-1875/8 md.)
+
+  KART 72-20 [İlk ve en yüksek kademe aylığı; brüt aylık]
+    HUKUM: Her rütbe ve rütbe kıdemliliğindeki birinci aylık göstergesine tekabül eden miktar o rütbenin ilk kademe aylığını, son aylık göstergesine tekabül eden miktar en yüksek kademe aylığını gösterir (m.141); gösterge tablolarındaki rakamların katsayı ile çarpılmasından elde edilen miktar ödenecek brüt aylık tutarıdır (m.142)
+    YANLIS: Gösterge rakamının katsayı ile çarpımı net aylığı verir
+    DOGRU: Gösterge rakamlarının katsayı ile çarpılmasından elde edilen miktar brüt aylık tutarıdır (m.142)
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, bir rütbe ve rütbe kıdemliliğindeki son aylık göstergesine tekabül eden miktar neyi gösterir?
+       İlk kademe aylığını
+       Brüt aylık tutarını
+     * En yüksek kademe aylığını
+       Kademe aylığını
+       Rütbe aylığını
+
+====================================================================================================
+MADDE 142  (soru_sayisi=1)
+RESMI: (Değişik: 31/7/1970 – 1323/8 md.)
+Kanunda yer alan her rütbe ve rütbe kıdemliliğine ait gösterge tablolarındaki rakamların katsayı ile çarpılmasından elde edilecek miktar ödenecek brüt aylık tutarını gösterir.
+
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, ödenecek brüt aylık tutarı, gösterge tablosundaki rakamların ______ ile çarpılmasından elde edilir.
+       Enflasyon oranı
+       Hizmet yılı
+       Rütbe kıdemi
+     * Katsayı
+       Kademe sayısı
+
+====================================================================================================
+MADDE 143  (soru_sayisi=6)
+RESMI: Madde 143 – (Mülga: 25/7/2016-KHK-669/32 md.; Yeniden düzenleme: 15/8/2016-KHK-671/5 md.; Değiştirilerek kabul: 9/11/2016-6757/5 md.) Yedek subay okulu öğrencilerine 6.528 gösterge rakamının memur aylık katsayısıyla çarpımı sonucu bulunacak tutarın %50’si , yedek astsubay okulu öğrencilerine ise 2.680 gösterge rakamının memur aylık katsayısı ile çarpımı sonucu bulunacak tutarın %80’i tutarında harçlık ödenir.115 (Değişik birinci cümle: 15/8/2017-KHK-694/34 md.; Aynen kabul: 1/2/2018- 7078/33 md.) Kendi nam ve hesabına fakülte, yüksekokul veya meslek yüksekokullarını bitirenlerden astsubay nasbedilmek üzere temel askerlik eğitimine alınanlar, astsubay astçavuşlar için ilgili mevzuatında öngörülen aylık, tazminat, yan ödeme ve sosyal amaçlı diğer yardım ve ödeneklerden, tayın bedeli hariç aynen yararlandırılırlar. 28/2/1982 tarihli ve 2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu hükümleri saklıdır.116 gelmek üzere “, yedek astsubay okulu öğrencilerine ise 2.680 gösterge rakamının memur aylık katsayısı ile çarpımı sonucu bulunacak tutarın %80’i” ibaresi eklenmiştir. sayılı Uzman Erbaş Kanununa tabi uzman onbaşılar” ibaresi “astsubay astçavuşlar” şeklinde değiştirilmiştir. Kendi nam ve hesabına fakülte veya yüksekokulları bitirenlerden subay nasbedilmek üzere temel askerlik eğitimine alınanlar, asteğmenler için ilgili mevzuatında öngörülen aylık ve mali haklar ile sosyal yardımlardan (tayın bedeli hariç) aynen yararlandırılırlar. 2629 sayılı Kanun hükümleri saklıdır. Harçlıkların küsuratlı çıkması durumunda, ödemelerde küsuratlı değerler tama (1 Türk Lirasına) iblağ edilir. Harçlıklardan vergi ve diğer kesintiler yapılmaz. Harçlıklar haczedilemez. X – Yurt dışı aylıkları:
+
+  KART 72-21 [Yedek subay ve yedek astsubay okulu harçlığı]
+    HUKUM: Yedek subay okulu öğrencilerine 6.528 gösterge x memur aylık katsayısı tutarının %50'si; yedek astsubay okulu öğrencilerine 2.680 gösterge x memur aylık katsayısı tutarının %80'i tutarında harçlık ödenir (m.143)
+    YANLIS: Yedek subay okulu öğrencilerine 6.528 gösterge tutarının %80'i harçlık ödenir
+    YANLIS: Yedek astsubay okulu öğrencilerine 2.680 gösterge tutarının %50'si harçlık ödenir
+    DOGRU: Yedek subay okulu öğrencisine 6.528 göstergenin %50'si, yedek astsubay okulu öğrencisine 2.680 göstergenin %80'i harçlık ödenir (m.143)
+  KART 72-22 [Temel askerlik eğitimindeki mezunların hakları]
+    HUKUM: Kendi nam ve hesabına fakülte-yüksekokul-meslek yüksekokulunu bitirip astsubay nasbedilmek üzere temel askerlik eğitimine alınanlar, astsubay astçavuşlar için öngörülen aylık, tazminat, yan ödeme ve sosyal amaçlı yardım ve ödeneklerden tayın bedeli hariç aynen yararlanır; kendi hesabına fakülte-yüksekokul bitirip subay nasbedilmek üzere temel askerlik eğitimine alınanlar asteğmenler için öngörülen aylık ve mali haklar ile sosyal yardımlardan tayın bedeli hariç aynen yararlanır; 2629 sayılı (Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat) Kanun hükümleri saklıdır (m.143)
+    YANLIS: Temel askerlik eğitimine alınan fakülte mezunları tayın bedeli dâhil tüm haklardan yararlanır
+    DOGRU: Astsubay adayları astsubay astçavuş, subay adayları asteğmen haklarından tayın bedeli hariç aynen yararlanır (m.143)
+  KART 72-23 [Harçlığın yuvarlanması, vergisi, haczi]
+    HUKUM: Harçlıklar küsuratlı çıkarsa tama (1 Türk Lirasına) iblağ edilir; harçlıklardan vergi ve diğer kesintiler yapılmaz; harçlıklar haczedilemez (m.143)
+    YANLIS: Harçlıklardan gelir vergisi kesilir
+    YANLIS: Harçlıklar borç için haczedilebilir
+    DOGRU: Harçlıklardan vergi ve diğer kesintiler yapılmaz, harçlıklar haczedilemez (m.143)
+  TABLO:
+    ["Yedek subay okulu harçlığı", "6.528 gösterge x memur katsayısı x %50 (m.143)", "143"]
+    ["Yedek astsubay okulu harçlığı", "2.680 gösterge x memur katsayısı x %80 (m.143)", "143"]
+    ["Harçlık küsuratı", "1 Türk Lirasına tamamlanır (m.143)", "143"]
+  KARIS_ADAY: [{"madde": "145", "kac_celdiricide": 1}, {"madde": "153", "kac_celdiricide": 1}, {"madde": "144", "kac_celdiricide": 1}, {"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yedek subay okulu öğrencilerine 6.528 gösterge rakamının katsayı ile çarpımı sonucu bulunacak tutarın yüzde kaçı harçlık olarak ödenir?
+       %30
+       %70
+       %80
+       %100
+     * %50
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yedek astsubay okulu öğrencilerinin harçlığı hangi gösterge rakamı esas alınarak hesaplanır?
+     * 2.680
+       6.528
+       1.500
+       560
+       4.902
+  SORU 3: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yedek subay ve yedek astsubay okulu öğrencilerine ödenen harçlıklar hakkında aşağıdakilerden hangisi doğrudur?
+       Harçlıklardan vergi kesilir ancak haczedilemez
+     * Harçlıklardan vergi ve diğer kesintiler yapılmaz, harçlıklar haczedilemez
+       Harçlıklar haczedilebilir ancak vergiden muaftır
+       Harçlıklar yalnızca icra yoluyla kesintiye tabidir
+       Harçlıklardan sadece damga vergisi kesilir
+  SORU 4: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre yedek subay ve yedek astsubay okulu öğrencilerine ödenen harçlıklarla ilgili aşağıdakilerden hangileri doğrudur?
+I. Harçlıklardan vergi ve diğer kesintiler yapılmaz.
+II. Harçlıklar haczedilemez.
+III. Harçlıkların küsuratlı çıkması durumunda küsuratlar dikkate alınmaz.
+     * I ve II
+       II ve III
+       I ve III
+       I, II ve III
+       Yalnız I
+  SORU 5: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, kendi nam ve hesabına fakülte veya yüksekokul bitirip subay nasbedilmek üzere temel askerlik eğitimine alınanlar hangi mali haklardan yararlanır?
+       Asteğmenler için öngörülen aylık, mali haklar ve sosyal yardımlardan, tayın bedeli dâhil
+       Teğmenler için öngörülen aylık, mali haklar ve sosyal yardımlardan, tayın bedeli hariç
+     * Asteğmenler için öngörülen aylık, mali haklar ve sosyal yardımlardan, tayın bedeli hariç
+       Astsubay astçavuşlar için öngörülen aylık ve mali haklardan, tayın bedeli hariç
+       Yedek subay okulu öğrencilerine ödenen harçlıktan, tayın bedeli dâhil
+  SORU 6: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, kendi nam ve hesabına fakülte, yüksekokul veya meslek yüksekokulunu bitirip astsubay nasbedilmek üzere temel askerlik eğitimine alınanlarla ilgili aşağıdaki ifadelerden hangileri doğrudur?
+I. Astsubay astçavuşlar için öngörülen aylık, tazminat ve yan ödemelerden yararlanırlar.
+II. Tayın bedelinden yararlanamazlar.
+III. 2629 sayılı Kanun hükümleri bunlar hakkında uygulanmaz.
+       Yalnız I
+       Yalnız II
+       Yalnız III
+     * I ve II
+       I, II ve III
+
+====================================================================================================
+MADDE 144  (soru_sayisi=1)
+RESMI: (Değişik birinci fıkra: 23/12/1988 – KHK 351/7 md.) Silahlı Kuvvetlerin yurt dışı kadrolarında görev alan subay ve astsubayların aylıkları, nci maddeye göre tesbit edilen aylık tutarından, alınacak vergi ve kanunlar gereğince yapılacak bütün kesintiler indirildikten sonra (OYAK kesintisi hariç) 657 sayılı Devlet Memurları Kanununun 156 ncı maddesindeki esaslar dahilinde tespit edilecek miktar üzerinden ödenir.
+(Mülga ikinci fıkra: 23/12/1988 – KHK 351/7 md.)
+(Ek: 26/3/1982 – 2642/21 md.) Staj ve öğrenim için yurt dışına gönderilen personele bu amaçla yapılacak aylık ödemeler Cumhurbaşkanı kararı ile tespit olunur.
+
+  KART 72-24 [Yurt dışı kadrolarındaki aylık]
+    HUKUM: Yurt dışı kadrolarında görev alan subay ve astsubayların aylıkları, tespit edilen aylık tutarından vergi ve kanunlar gereğince yapılacak bütün kesintiler indirildikten sonra (OYAK kesintisi hariç) 657 sayılı Kanunun 156 ncı maddesi esasları dâhilinde tespit edilecek miktar üzerinden ödenir; staj ve öğrenim için yurt dışına gönderilen personelin aylık ödemeleri Cumhurbaşkanı kararı ile tespit olunur (m.144)
+    YANLIS: Staj ve öğrenim için yurt dışına gidenlerin aylığı Millî Savunma Bakanlığınca belirlenir
+    DOGRU: Staj ve öğrenim için yurt dışına gönderilenlerin aylık ödemeleri Cumhurbaşkanı kararıyla tespit olunur (m.144)
+  TABLO:
+    ["Staj ve öğrenim için yurt dışına gidenlerin aylık ödemesi", "Cumhurbaşkanı kararı (m.144)", "144"]
+  KARIS_ADAY: [{"madde": "153", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yurt dışı kadrolarında görev alan subay ve astsubayların aylığından yapılacak kesintilerde hangisi istisna tutulmuştur?
+       Gelir vergisi
+       Damga vergisi
+     * OYAK kesintisi
+       Sosyal güvenlik primi
+       İcra kesintisi
+
+====================================================================================================
+MADDE 145  (soru_sayisi=4)
+RESMI: Madde 145 – Subay ve astsubayların aylık ve harçlıkları, her ayın başında peşin olarak ödenir.118 Emekliye ayrılma ve ölüm hallerinde, o aya ait peşin ödenen aylık veya harçlık geri alınmaz. Savaşta, subay ve astsubayların, aylıklarından kendi rızası ile düzenliyeceği formül çizelge üzerine ailelerine veya diledikleri kimselere bırakacakları miktarlar ile bunun ödenme şekli ve ilgili diğer hususlar bir yönetmelikle düzenlenir. (Ek: 3/7/1975 – 1923/40 md.; Değişik: 13/7/2013-6496/21 md.) Bu Kanun hükümlerine göre aylık almakta iken; esir veya harp gaibi olanlar yahut enterne edilenler ile terörle mücadele görevi sırasında veya bu görevinden dolayı alıkonulan ya da kaybolanların ailelerine kanuni kesintiler dışında kalan maaşlarının tamamı ödenir. Bunların aileleri doğum- ölüm yardımı, tahsil bursu, lojman ve sağlık tesislerinden yararlanmaya devam ederler. Yapılan maaş ödemeleri, Sosyal Güvenlik Kurumu tarafından hak sahiplerine aylık bağlanması hâlinde, bu aylığın bağlandığı tarihten itibaren kesilir. Ancak bu aylığın başlangıç tarihine kadar yapılan ödemeler ilgililerden tahsil edilmez. Türk Medenî Kanununun gaipler hakkındaki hükümleri saklıdır. “Cumhurbaşkanı” şeklinde değiştirilmiştir. öğrencilerin” ibaresi “Subay ve astsubayların” şeklinde değiştirilmiş olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 29 uncu maddesiyle aynen kabul edilerek kanunlaşmıştır. XII – İlk atanmada aylığa hak kazanma:
+
+  KART 72-25 [Aylığın peşin ödenmesi]
+    HUKUM: Subay ve astsubayların aylık ve harçlıkları her ayın başında peşin olarak ödenir; emekliye ayrılma ve ölüm hâllerinde o aya ait peşin ödenen aylık veya harçlık geri alınmaz (m.145)
+    YANLIS: Emekliye ayrılana o ay için peşin ödenen aylığın kalan kısmı geri alınır
+    DOGRU: Emeklilik ve ölüm hâllerinde o aya ait peşin ödenen aylık veya harçlık geri alınmaz (m.145)
+  KART 72-26 [Savaşta ailelere bırakılan pay]
+    HUKUM: Savaşta subay ve astsubayların aylıklarından kendi rızası ile düzenleyecekleri formül çizelge üzerine ailelerine veya diledikleri kimselere bırakacakları miktarlar, ödenme şekli ve ilgili diğer hususlar bir yönetmelikle düzenlenir (m.145)
+    YANLIS: Savaşta aileye bırakılacak miktarı komutan re'sen belirler
+    DOGRU: Savaşta aileye bırakılacak miktarı personel kendi rızasıyla formül çizelge üzerinde belirler; esaslar yönetmelikle düzenlenir (m.145)
+  KART 72-27 [Esir, gaip, alıkonulan personelin ailesine ödeme]
+    HUKUM: Aylık almakta iken esir veya harp gaibi olanlar, enterne edilenler ile terörle mücadele görevi sırasında veya bu görevinden dolayı alıkonulan ya da kaybolanların ailelerine kanuni kesintiler dışında kalan maaşlarının tamamı ödenir; aileleri doğum-ölüm yardımı, tahsil bursu, lojman ve sağlık tesislerinden yararlanmaya devam eder; SGK tarafından hak sahiplerine aylık bağlanırsa maaş ödemesi bağlandığı tarihten itibaren kesilir, ancak bu aylığın başlangıç tarihine kadar yapılan ödemeler tahsil edilmez; Türk Medenî Kanununun gaiplere ilişkin hükümleri saklıdır (m.145)
+    YANLIS: Esir veya harp gaibi olanların ailelerine maaşın yarısı ödenir
+    YANLIS: Terörle mücadelede alıkonulanların ailelerine SGK aylığı başlayana kadar yapılan ödemeler sonradan tahsil edilir
+    DOGRU: Ailelere kanuni kesintiler dışındaki maaşın tamamı ödenir; SGK aylığı başlayana kadar yapılan ödemeler tahsil edilmez (m.145)
+  TABLO:
+    ["Aylık ve harçlık ödeme zamanı", "Her ayın başında peşin (m.145)", "145"]
+    ["Savaşta ailelere bırakılan miktarlar", "Yönetmelik (m.145)", "145"]
+  KARIS_ADAY: [{"madde": "153", "kac_celdiricide": 1}, {"madde": "133", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubayların aylık ve harçlıkları hangi zamanda ödenir?
+       Ayın sonunda
+       Üç ayda bir
+       Yıl sonunda toplu olarak
+     * Ayın başında peşin
+       Her hafta
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, terörle mücadele görevi sırasında veya bu görevinden dolayı alıkonulan ya da kaybolan personelin ailesine maaşları nasıl ödenir?
+       Maaşın yarısı ödenir
+       Maaş ödemesi durdurulur
+       Maaşın üçte biri ödenir
+       Yalnızca aile yardımı ödeneği ödenir
+     * Kanuni kesintiler dışında kalan maaşlarının tamamı ödenir
+  SORU 3: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre subay ve astsubayların aylıklarıyla ilgili aşağıdakilerden hangileri doğrudur?
+I. Aylıklar her ayın başında peşin olarak ödenir.
+II. Ölüm halinde o aya ait peşin ödenen aylık geri alınmaz.
+III. İlk defa göreve atananlar, onay metninde yazılı nasıp tarihinden itibaren aylığa hak kazanır.
+       I ve III
+       II ve III
+       I, II ve III
+       Yalnız I
+     * I ve II
+  SORU 4: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, savaşta subay ve astsubayların aylıklarından ailelerine veya diledikleri kimselere bırakacakları miktarlarla ilgili aşağıdakilerden hangisi doğrudur?
+       Birlik komutanınca re'sen belirlenir; ayrıntılar komutanlık yönergesiyle düzenlenir
+     * Kendi rızalarıyla düzenleyecekleri formül çizelge üzerine belirlenir; ayrıntılar yönetmelikle düzenlenir
+       Aylığın yarısı kanun gereği kendiliğinden aileye bırakılır; ayrıca işlem yapılmaz
+       Millî Savunma Bakanlığınca belirlenen sabit oranda kesilerek aileye ödenir
+       Yalnız eş ve çocuklara bırakılabilir; miktarı Cumhurbaşkanınca belirlenir
+
+====================================================================================================
+MADDE 146  (soru_sayisi=1)
+RESMI: İlk defa göreve atanan subay ve astsubaylar, onay metninde yazılı nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanırlar.
+(Ek: 9/4/1990 – KHK – 418/18 md;Değişik: 5/7/1991 – KHK – 433/8 md.; İptal: Anayasa Mahkemesinin 5/5/1992 tarihli ve E. 1991/33, K. 1992/32 sayılı Kararı ile.; Yeniden düzenleme: 18/5/1994 – KHK – 527/13 md.) Ancak, Askeri okullardan mezun olanlardan yeni görev yerlerine ataması yapılan subay ve astsubayların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir.
+
+  KART 72-28 [İlk atanmada aylığa hak kazanma]
+    HUKUM: İlk defa göreve atanan subay ve astsubaylar, onay metninde yazılı nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır; ancak askerî okullardan mezun olup yeni görev yerlerine ataması yapılanların takip eden aybaşına kadar olan döneme ait kıst aylıkları peşin ödenir (m.146)
+    YANLIS: İlk atanan subay ve astsubay nasıp tarihinden itibaren aylığa hak kazanır
+    DOGRU: İlk atananlar onay metnindeki nasıp tarihini takip eden aybaşından itibaren aylığa hak kazanır (m.146)
+  TABLO:
+    ["Aylığa, kademeye, terfiye, aile yardımına hak kazanma", "Takip eden aybaşı (m.146-148, 155)", "146"]
+  KARIS_ADAY: [{"madde": "162", "kac_celdiricide": 1}, {"madde": "145", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, ilk defa göreve atanan subay ve astsubaylar aylığa ne zaman hak kazanır?
+     * Nasıp tarihini takip eden aybaşından itibaren
+       Nasıp tarihinden itibaren derhal
+       Göreve fiilen başladığı gün
+       Atama onayının imzalandığı tarihten itibaren
+       Yemin töreninden sonra
+
+====================================================================================================
+MADDE 147  (soru_sayisi=1)
+RESMI: Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.
+
+  KART 72-29 [Kademe ve terfide aylığa hak kazanma]
+    HUKUM: Kademe ilerlemesinde onay metnindeki tarihi takip eden aybaşından itibaren kademe maaşına müstahak olunur (m.147); rütbe terfi veya rütbe kıdemliliği onananlar yükselme tarihini takip eden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanır (m.148)
+    YANLIS: Terfi eden, yeni rütbenin son kademe aylığına geçer
+    DOGRU: Terfi edenler yükselme tarihini takip eden aybaşından itibaren yeni rütbenin birinci kademe aylığına hak kazanır (m.148)
+  KARIS_ADAY: [{"madde": "162", "kac_celdiricide": 2}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubaylar kademe ilerlemesinde kademe maaşına ne zaman müstahak olurlar?
+       Onay tarihinden itibaren derhal
+     * Onay metninde yazılı tarihi takip eden aybaşından itibaren
+       Onay tarihinden bir yıl sonra
+       Kademe ilerlemesi talebinin yapıldığı tarihte
+       Yıl sonunda toplu olarak
+
+====================================================================================================
+MADDE 148  (soru_sayisi=3)
+RESMI: (Değişik: 31/7/1970 – 1323/10 md.)
+Rütbe terfi veya rütbe kıdemliliği onanan subay ve astsubaylar (…) onay metninde yazılı yükselme tarihini takibeden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.
+(Ek fıkra: 24/7/2008-5793/2 md.) Ancak, her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii veya rütbe kıdemliliği onanan subay ve astsubaylara rütbe terfii veya rütbe kıdemliliğinin onaylandığı tarihten itibaren, takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir.
+
+  KART 72-30 [30 Ağustos terfilerinde kıst fark]
+    HUKUM: Her yıl 30 Ağustos Zafer Bayramı günü rütbe terfii veya rütbe kıdemliliği onanan subay ve astsubaylara, onaylandığı tarihten takip eden aybaşına kadar olan döneme ait aylık farkları kıst olarak ödenir (m.148)
+    YANLIS: 30 Ağustos terfilerinde onay tarihi ile aybaşı arasındaki günlerin aylık farkı ödenmez
+    DOGRU: 30 Ağustos'ta terfi edenlere, onay tarihinden takip eden aybaşına kadarki aylık farkları kıst olarak ödenir (m.148)
+  KARIS_ADAY: [{"madde": "146", "kac_celdiricide": 1}, {"madde": "145", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, rütbe terfii veya rütbe kıdemliliği onanan subay ve astsubaylar yeni rütbenin birinci kademe aylığına ne zaman hak kazanır?
+       Onay tarihinde derhal
+       Terfi töreninden sonra
+     * Yükselme tarihini takip eden aybaşından itibaren
+       Bir sonraki yıl başında
+       Emeklilik işlemleriyle birlikte
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, her yıl hangi tarihte rütbe terfii veya rütbe kıdemliliği onanan subay ve astsubaylara, onay tarihinden aybaşına kadar olan aylık farkları kıst olarak ödenir?
+       29 Ekim
+       23 Nisan
+       19 Mayıs
+     * 30 Ağustos
+       1 Ocak
+  SORU 3: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre rütbe terfisi 30 Ağustos Zafer Bayramı günü onanan Yüzbaşı Kaan'a, onay tarihinden takip eden aybaşına kadar olan döneme ait aylık farkları nasıl ödenir?
+       Takip eden ayın aylığıyla birlikte iki katı ödenir.
+       Yarısı ödenir.
+       Hiç ödenmez.
+       Ertesi yılın ocak ayında toplu olarak ödenir.
+     * Kıst olarak ödenir.
+
+====================================================================================================
+MADDE 149  (soru_sayisi=1)
+RESMI: 7356 sayılı Kanunun ilgili maddeleri gereğince ek görev verilen subay ve astsubaylara mezkür kanunun 11 inci maddesi gereğince ek görev aylığı verilir.
+
+  KART 72-31 [Ek görev aylığı]
+    HUKUM: 7356 sayılı Kanunun ilgili maddeleri gereğince ek görev verilen subay ve astsubaylara o kanunun 11 inci maddesi gereğince ek görev aylığı verilir (m.149)
+    YANLIS: Ek görev aylığı 657 sayılı Kanuna göre verilir
+    DOGRU: Ek görev verilen subay ve astsubaylara ek görev aylığı 7356 sayılı Kanunun 11 inci maddesine göre verilir (m.149)
+  KARIS_ADAY: [{"madde": "143", "kac_celdiricide": 3}, {"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, ek görev verilen subay ve astsubaylara ek görev aylığı hangi kanuna göre verilir?
+       657 sayılı Kanun
+       211 sayılı Kanun
+       3713 sayılı Kanun
+       5434 sayılı Kanun
+     * 7356 sayılı Kanun
+
+====================================================================================================
+MADDE 150  (soru_sayisi=3)
+RESMI: Madde 150 – (Değişik: 31/7/1970 – 1323/11 md.) Her derecedeki askeri okullarda ve Meslek Programları Yönetmeliği gereğince açılan kurslarda hizmetin gerektirdiği kadrolara öğretmen atanamaması halinde 5044 sayılı Kanunun esaslarına göre öğretmenler ile subay ve astsubaylara ders görevi verilebilir. ibaresi “onay” şeklinde değiştirilmiştir. bağlı” ibaresi “Askeri” şeklinde değiştirilmiş olup, daha sonra bu hüküm 9/11/2016 tarihli ve 6756 sayılı Kanunun 31 inci maddesiyle aynen kabul edilerek kanunlaşmıştır. ibaresi madde metninden çıkarılmıştır. Birinci fıkra gereğince kendilerine ders görevi verilenlere ders saati başına ödenecek ücret her yıl bütçe kanunlarında gösterilir. (Ek: 3/7/1975 – 1923/41 md.; Değişik üçüncü fıkra: 24/4/2008-5758/7 md.) Askeri eğitim ve öğretim kurumları dışında her derecedeki eğitim ve öğretim kurumları ile üniversite, akademi, okul, kurs veya benzeri kuruluşlarda da subay ve astsubaylara haftada yedi saati geçmemek üzere ücretle ek ders görevi verilebilir. (Mülga ikinci cümle: 2/1/2017- KHK-681/41md.; Aynen kabul: 1/2/2018-7073/41 md.) (…) Bu fıkra hükmü uyarınca ek ders görevi verilenlere, 657 sayılı Devlet Memurları Kanununun 176 ncı maddesine göre ek ders ücreti ödenir. XVII – Yolluk giderleri ve gündelikleri:
+
+  KART 72-32 [Askerî okullarda ders görevi]
+    HUKUM: Her derecedeki askerî okullarda ve Meslek Programları Yönetmeliği gereğince açılan kurslarda kadrolara öğretmen atanamaması hâlinde 5044 sayılı Kanunun esaslarına göre öğretmenler ile subay ve astsubaylara ders görevi verilebilir; ders saati başına ücret her yıl bütçe kanunlarında gösterilir (m.150)
+    YANLIS: Askerî okullarda ders saati ücreti Millî Savunma Bakanlığınca belirlenir
+    DOGRU: Askerî okullarda ders görevi verilenlerin ders saati ücreti her yıl bütçe kanunlarında gösterilir (m.150)
+  KART 72-33 [Askerî kurumlar dışında ek ders]
+    HUKUM: Askerî eğitim ve öğretim kurumları dışındaki her derecedeki eğitim kurumları, üniversite, akademi, okul, kurs vb. kuruluşlarda subay ve astsubaylara haftada yedi saati geçmemek üzere ücretle ek ders görevi verilebilir; bunlara 657 sayılı Kanunun 176 ncı maddesine göre ek ders ücreti ödenir (m.150)
+    YANLIS: Askerî kurumlar dışında haftada on saate kadar ek ders görevi verilebilir
+    DOGRU: Askerî kurumlar dışında haftada yedi saati geçmemek üzere ücretli ek ders görevi verilebilir (m.150)
+  TABLO:
+    ["Askerî okul dışı ek ders", "Haftada en çok yedi saat (m.150)", "150"]
+    ["Ders saati ücreti", "Her yıl bütçe kanunları (m.150)", "150"]
+  KARIS_ADAY: [{"madde": "133", "kac_celdiricide": 1}, {"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, subay ve astsubaylara askeri eğitim kurumları dışındaki eğitim kurumlarında haftada en çok kaç saat ücretle ek ders görevi verilebilir?
+     * 7 saat
+       5 saat
+       6 saat
+       8 saat
+       10 saat
+  SORU 2: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre askeri eğitim ve öğretim kurumları dışındaki eğitim kurumlarında subay ve astsubaylara haftada en fazla kaç saat ücretle ek ders görevi verilebilir?
+       12
+       10
+       5
+     * 7
+       4
+  SORU 3: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, askerî okullarda kadrolara öğretmen atanamaması hâlinde ders görevi verilen öğretmen, subay ve astsubaylara ders saati başına ödenecek ücret nerede gösterilir?
+     * Her yıl çıkarılan bütçe kanunlarında
+       Millî Savunma Bakanlığınca çıkarılan yönetmelikte
+       Her yıl Cumhurbaşkanı kararında
+       657 sayılı Kanunun 176 ncı maddesinde
+       Meslek Programları Yönetmeliğinde
+
+====================================================================================================
+MADDE 151  (soru_sayisi=1)
+RESMI: Subay ve astsubaylardan, görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri özel kanun hükümlerine göre ödenir.
+
+  KART 72-34 [Yolluk ve temsil giderleri]
+    HUKUM: Görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri özel kanun hükümlerine göre ödenir (m.151); hangi kadrolarda bulunanların temsilî mahiyette masraf yapabilecekleri ve miktarları Cumhurbaşkanınca tespit edilir; temsil giderlerinin sarfı ile ilgili usul, şart ve sarf alanları Millî Savunma ve İçişleri Bakanlıklarınca müştereken düzenlenecek yönetmelikte belirtilir (m.152)
+    YANLIS: Temsil gideri yapabilecek kadrolar ve miktarları ortak yönetmelikle belirlenir
+    DOGRU: Temsil gideri yapabilecek kadrolar ve miktarlar Cumhurbaşkanınca, harcama usul ve şartları Millî Savunma ve İçişleri Bakanlıklarının ortak yönetmeliğiyle belirlenir (m.152)
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, sürekli veya geçici olarak görev yerinden ayrılan subay ve astsubayların yolluk giderleri ve gündelikleri neye göre ödenir?
+       Cumhurbaşkanı kararına göre
+     * Özel kanun hükümlerine göre
+       Millî Savunma Bakanlığı genelgesine göre
+       657 sayılı Kanuna göre
+       Sayıştay kararına göre
+
+====================================================================================================
+MADDE 152  (soru_sayisi=1)
+RESMI: Silahlı Kuvvetlerin hangi kadrolarında bulunanların görevleri icabı temsili mahiyette masraf yapabilecekleri ve bunun miktarları Cumhurbaşkanınca tespit edilir.
+Temsil giderlerinin sarfı ile ilgili usul ve şartlar ve bunların sarf alanları Milli Savunma ve İçişleri Bakanlıklarınca müştereken tanzim edilecek bir yönetmelikte belirtilir.
+
+  TABLO:
+    ["Temsil gideri yapabilecek kadrolar ve miktarı", "Cumhurbaşkanı (m.152)", "152"]
+    ["Temsil gideri usul ve şartları", "MSB ve İçişleri Bakanlığı müşterek yönetmeliği (m.152)", "152"]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, silahlı Kuvvetlerin hangi kadrolarında bulunanların temsil gideri yapabileceğini ve miktarını kim tespit eder?
+       Millî Savunma Bakanı
+       Genelkurmay Başkanı
+     * Cumhurbaşkanı
+       İçişleri Bakanı
+       Sayıştay Başkanı
+
+====================================================================================================
+MADDE 153  (soru_sayisi=2)
+RESMI: (Değişik birinci fıkra: 29/7/1998 – 4376/ 4 md.) Evli bulunan subaylara ve astsubaylara her ne şekilde olursa olsun menfaat karşılığı çalışmayan veya herhangi bir sosyal güvenlik kuruluşundan aylık almayan eşi ve çocukları için devlet memurlarına ödenen miktarda aile yardımı ödeneği ödenir.
+Dul subay ve astsubayların çocukları için yukarıki fıkralar hükmü uygulanır.
+Boşanma veya ayrılık vukuunda mahkeme, bu yardımın hangi tarafa ve ne oranda verileceğini de kararında belirtir.
+Subay ve astsubayın geçimini sağladığı üvey çocukları ve evlat edindikleri çocukları için de bu ödenek verilir.
+
+  KART 72-35 [Aile yardımı ödeneği: kimler için]
+    HUKUM: Evli subay ve astsubaylara, her ne şekilde olursa olsun menfaat karşılığı çalışmayan veya herhangi bir sosyal güvenlik kuruluşundan aylık almayan eşi ve çocukları için Devlet memurlarına ödenen miktarda aile yardımı ödeneği ödenir; dul subay ve astsubayların çocukları için de uygulanır; boşanma veya ayrılıkta mahkeme yardımın hangi tarafa ve ne oranda verileceğini kararında belirtir; geçimini sağladığı üvey çocukları ve evlat edindiği çocuklar için de verilir (m.153)
+    YANLIS: Boşanmada aile yardımının kime verileceğini birlik komutanı belirler
+    DOGRU: Boşanma veya ayrılıkta aile yardımının hangi tarafa ve ne oranda verileceğini mahkeme kararında belirtir (m.153)
+  TABLO:
+    ["Boşanmada aile yardımının paylaşımı", "Mahkeme (m.153)", "153"]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, evli subay ve astsubaylara aile yardımı ödeneği ödenebilmesi için eşin durumu ile ilgili hangi şart aranır?
+       Eşin en az lise mezunu olması
+       Eşin 25 yaşından küçük olması
+       Eşin aynı garnizonda ikamet etmesi
+     * Eşin menfaat karşılığı çalışmaması veya sosyal güvenlik kuruluşundan aylık almaması
+       Eşin askeri aile kartına kayıtlı olması
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, boşanma veya ayrılık durumunda aile yardımı ödeneğinin hangi tarafa ve ne oranda verileceğini kim belirler?
+       Millî Savunma Bakanlığı
+       Emekli Sandığı
+       İlgili komutanlık
+       Aile ve Sosyal Hizmetler Bakanlığı
+     * Mahkeme, kararında belirtir
+
+====================================================================================================
+MADDE 154  (soru_sayisi=2)
+RESMI: Aile yardımı ödeneği subay ve astsubayların her ay aylıkları ile birlikte ödenir.
+Karı ve kocanın her ikisi de memur iseler bu ödenek yalnız kocaya verilir.
+Aile yardım ödenekleri hiçbir vergi ve kesintiye tabi tutulmaksızın ödenir ve borç için haczedilemez.
+
+  KART 72-36 [Aile yardımı: ödeme şekli]
+    HUKUM: Aile yardımı ödeneği her ay aylıkla birlikte ödenir; karı ve kocanın her ikisi de memur ise ödenek yalnız kocaya verilir; ödenekler hiçbir vergi ve kesintiye tabi tutulmaksızın ödenir ve borç için haczedilemez (m.154)
+    YANLIS: Eşlerin ikisi de memursa aile yardımı ödeneği ikisine yarı yarıya verilir
+    YANLIS: Karı ve koca memursa aile yardımı ödeneği eşe (kadına) verilir
+    YANLIS: Aile yardımı ödeneği vergiye tabidir ve borç için haczedilebilir
+    DOGRU: Karı ve kocanın ikisi de memursa aile yardımı ödeneği yalnız kocaya verilir (m.154)
+    DOGRU: Aile yardımı ödeneği hiçbir vergi ve kesintiye tabi tutulmaz, borç için haczedilemez (m.154)
+  KARIS_ADAY: [{"madde": "153", "kac_celdiricide": 3}, {"madde": "157", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, karı ve kocanın her ikisinin de memur olması halinde aile yardımı ödeneği kime verilir?
+     * Yalnız kocaya
+       Eşlerden yaşça büyük olana
+       Yalnız kadına
+       Eşit olarak ikisine paylaştırılır
+       Ödenek hiç verilmez
+  SORU 2: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre subay ve astsubaylara ödenen aile yardımı ödeneği ile ilgili aşağıdakilerden hangisi yanlıştır?
+     * Karı ve kocanın her ikisi de memur ise ödenek her ikisine ayrı ayrı verilir.
+       Burs alan veya Devletçe okutulan çocuklar için ödenek verilmez.
+       Aile yardımı ödeneği aylıklarla birlikte her ay ödenir.
+       Aile yardımı ödeneği borç için haczedilemez.
+       Evlat edinilen çocuklar için de ödenek verilir.
+
+====================================================================================================
+MADDE 155  (soru_sayisi=1)
+RESMI: Subay ve astsubaylar, eş için ödenen aile yardımı ödeneğine evlendikleri; çocukları için ödenen yardıma da çocuklarının doğduğu tarihi takip eden aybaşından itibaren hak kazanırlar.
+
+  KART 72-37 [Aile yardımına hak kazanma ve kaybetme]
+    HUKUM: Eş için ödenen yardıma evlendikleri, çocuk için ödenen yardıma çocuğun doğduğu tarihi takip eden aybaşından itibaren hak kazanılır (m.155); eş için ödenen yardım hakkı boşanma veya eşin ölümü, çocuk için ödenen yardım hakkı çocuğun ölümü veya 157 nci maddedeki hâllerin vukuunu takip eden aybaşından itibaren kaybedilir (m.156)
+    YANLIS: Çocuk için aile yardımına doğum tarihinden itibaren hak kazanılır
+    DOGRU: Çocuk için aile yardımına, çocuğun doğduğu tarihi takip eden aybaşından itibaren hak kazanılır (m.155)
+  KARIS_ADAY: [{"madde": "145", "kac_celdiricide": 1}, {"madde": "162", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, çocuk için ödenen aile yardımı ödeneğine ne zaman hak kazanılır?
+       Doğum anında derhal
+     * Çocuğun doğduğu tarihi takip eden aybaşından itibaren
+       Çocuğun okula başladığı tarihten itibaren
+       Çocuğun 1 yaşını doldurmasıyla
+       Nüfusa kayıt tarihinden itibaren
+
+====================================================================================================
+MADDE 156  (soru_sayisi=1)
+RESMI: Subay ve astsubaylar, eş için ödenen aile yardımı ödeneği hakkını boşanma veya eşinin ölümü, çocuk için ödenen yardım ödeneği hakkını da çocuğun ölümü veya 157 nci maddedeki hallerin vukuunu takip eden aybaşından itibaren kaybederler.
+
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, eş için ödenen aile yardımı ödeneği hakkı hangi durumda ve ne zaman kaybedilir?
+       Boşanma halinde derhal
+       Eşin işe girmesiyle birlikte
+     * Boşanma veya eşin ölümü halinde, olayı takip eden aybaşından itibaren
+       Yıl sonunda otomatik olarak
+       Eşin 65 yaşını doldurmasıyla
+
+====================================================================================================
+MADDE 157  (soru_sayisi=3)
+RESMI: (Değişik: 1/3/2007-5589/2 md.)
+Aşağıdaki hallerde çocuklar için aile yardımı ödeneği verilmez:
+a) Evlenen çocuklar.
+b) 25 yaşını dolduran çocuklar (25 yaşını bitirdiği halde evlenmemiş kız çocukları ile çalışamayacak derecede malûllükleri resmi sağlık kurulu raporuyla tespit edilenler için süresiz olarak ödeneğin verilmesine devam olunur.).
+c) Kendileri hesabına ticaret yapan veya gerçek veya tüzel kişiler yanında her ne şekilde olursa olsun menfaat karşılığı çalışan çocuklar (öğrenim yapmakta iken tatil devresinde çalışanlar hariç).
+Ç) Burs alan veya Devletçe okutulan çocuklar.
+
+  KART 72-38 [Çocuk için aile yardımı verilmeyen hâller]
+    HUKUM: Evlenen çocuklar; 25 yaşını dolduran çocuklar (25 yaşını bitirdiği hâlde evlenmemiş kız çocukları ile çalışamayacak derecede malullüğü resmî sağlık kurulu raporuyla tespit edilenlere süresiz devam edilir); kendi hesabına ticaret yapan veya menfaat karşılığı çalışan çocuklar (öğrenim yaparken tatilde çalışanlar hariç); burs alan veya Devletçe okutulan çocuklar (m.157)
+    YANLIS: Çocuk için aile yardımı 18 yaşında kesilir
+    YANLIS: Burs alan çocuk için aile yardımı ödenmeye devam eder
+    DOGRU: Aile yardımı 25 yaşını dolduran çocuklara verilmez; burs alan veya Devletçe okutulan çocuklara da verilmez (m.157)
+  TABLO:
+    ["Çocuk için aile yardımı yaş sınırı", "25 yaş (evlenmemiş kız ve raporlu malulde süresiz) (m.157)", "157"]
+    ["Çocuğun malullüğü", "Resmî sağlık kurulu raporu (m.157)", "157"]
+  KARIS_ADAY: [{"madde": "137", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, çocuklar için aile yardımı ödeneği kural olarak kaç yaşını dolduran çocuklara verilmez?
+       18
+       20
+       22
+     * 25
+       30
+  SORU 2: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, aşağıdakilerden hangisi çocuk için aile yardımı ödeneğinin verilmeyeceği hallerden biri DEĞİLDİR?
+       Evlenen çocuklar
+       25 yaşını dolduran çocuklar
+       Kendi hesabına ticaret yapan çocuklar
+       Burs alan veya Devletçe okutulan çocuklar
+     * Öğrenim gördüğü okulda başarılı olan çocuklar
+  SORU 3: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, evli olmayan ve malul olmayan erkek çocuk için aile yardımı ödeneği kaç yaşını doldurunca verilmez?
+     * 25
+       30
+       18
+       24
+       21
+
+====================================================================================================
+MADDE 162  (soru_sayisi=1)
+RESMI: Sürekli görevle yurt dışına gönderilen subay ve astsubaylardan, bu görevlerine başladıktan sonra yurt içinde bir göreve atananlara atanma emrinin kendilerine tebliği tarihine kadar olan aylıkları 144 üncü maddeye göre ödenir.
+Ancak, bu subay ve astsubayların yurt içinde bir göreve atanmalarında yerlerine atananların gelişine kadar bekliyeceklerine dair emirde sarahat bulunanların aylıkları, atanma tarihinden itibaren en çok iki ay ödenmeye devam edilir.
+
+  KART 72-39 [Yurt dışından yurt içine atananların aylığı]
+    HUKUM: Sürekli görevle yurt dışına gönderilip göreve başladıktan sonra yurt içinde bir göreve atananlara atanma emrinin tebliği tarihine kadar aylıkları 144 üncü maddeye göre ödenir; emirde yerlerine atananların gelişine kadar bekleyeceklerine dair sarahat bulunanların aylıkları atanma tarihinden itibaren en çok iki ay ödenmeye devam edilir (m.162)
+    YANLIS: Yerine atananı beklemesi emredilenlerin yurt dışı aylığı süresiz devam eder
+    DOGRU: Yerine atananın gelişini beklemesi emirde belirtilenlerin aylığı, atanma tarihinden itibaren en çok iki ay ödenmeye devam eder (m.162)
+  TABLO:
+    ["Yurt içine atanıp yerine geleni bekleyen", "Atanma tarihinden itibaren en çok iki ay (m.162)", "162"]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yurt dışına sürekli görevle gönderilip yurt içinde bir göreve atanan ve yerine atananın gelişini bekleyeceğine dair emrinde sarahat bulunan subay/astsubayın aylığı, atanma tarihinden itibaren en çok ne kadar süre ödenmeye devam eder?
+     * 2 ay
+       1 ay
+       3 ay
+       6 ay
+       1 yıl
+
+====================================================================================================
+MADDE 163  (soru_sayisi=2)
+RESMI: Sürekli görevle yurt dışına gönderilen subay ve astsubaylar, geçici görevle en çok bir ay süre ile merkeze çağrılabilirler. Bu süre içinde aylığı katsayılı ödenir.
+XXX – Yurt dışında görevli bulunanlardan farklı katsayılı başka bir memlekete atananların aylıkları:
+
+  KART 72-40 [Merkeze geçici çağırma]
+    HUKUM: Sürekli görevle yurt dışına gönderilen subay ve astsubaylar, geçici görevle en çok bir ay süre ile merkeze çağrılabilir; bu süre içinde aylığı katsayılı ödenir (m.163)
+    YANLIS: Sürekli görevle yurt dışındaki personel merkeze en çok üç ay çağrılabilir
+    DOGRU: Sürekli görevle yurt dışındakiler geçici görevle en çok bir ay merkeze çağrılabilir; bu sürede aylık katsayılı ödenir (m.163)
+  TABLO:
+    ["Merkeze geçici çağırma", "En çok bir ay (m.163)", "163"]
+  KARIS_ADAY: [{"madde": "165", "kac_celdiricide": 2}, {"madde": "144", "kac_celdiricide": 1}, {"madde": "162", "kac_celdiricide": 1}]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yurt dışına sürekli görevle gönderilen subay ve astsubaylar geçici görevle en çok ne kadar süreyle merkeze çağrılabilir?
+       15 gün
+     * 1 ay
+       2 ay
+       3 ay
+       6 ay
+  SORU 2: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre yurt dışında görevli subay ve astsubayların aylıklarıyla ilgili aşağıdakilerden hangisi yanlıştır?
+       Geçici görevde bulunulan memleketin katsayılı aylığı kendi katsayılı aylığından azsa aradaki fark kendisinden alınmaz.
+       Geçici görevle bir aya kadar başka bir memlekete gönderilenlerin aylıkları, esas görevli oldukları memlekete ait katsayılı aylıklarıdır.
+     * Sürekli görevle yurt dışına gönderilenler, geçici görevle en çok üç ay süreyle merkeze çağrılabilir.
+       Staj ve öğrenim için yurt dışına gönderilen personele yapılacak aylık ödemeler Cumhurbaşkanı kararı ile tespit olunur.
+       Yurt içine atanıp yerlerine atananların gelişine kadar bekleyeceklerine dair emirde açıklık bulunanların aylıkları, atanma tarihinden itibaren en çok iki ay ödenmeye devam edilir.
+
+====================================================================================================
+MADDE 164  (soru_sayisi=1)
+RESMI: Yurt dışında sürekli bir görevde bulunan subay ve astsubaylardan farklı ödeme katsayısı uygulanan başka bir memlekete naklen atananlar, (142) nci madde esasları gereğince (144) üncü maddeye göre aylık alırlar.
+XXXI – Yurt dışında görevli bulunanlardan bir başka memlekete geçici olarak gönderilenlerin aylıkları:
+
+  KART 72-41 [Farklı katsayılı ülkeye nakil]
+    HUKUM: Yurt dışında sürekli görevde iken farklı ödeme katsayısı uygulanan başka bir memlekete naklen atananlar, 142 nci madde esasları gereğince 144 üncü maddeye göre aylık alır (m.164)
+    YANLIS: Farklı katsayılı ülkeye naklen atanan, eski ülkenin katsayısıyla aylık almaya devam eder
+    DOGRU: Farklı ödeme katsayılı başka ülkeye naklen atananlar, 142 nci madde esasları gereğince 144 üncü maddeye göre aylık alır (m.164)
+  KARIS_ADAY: [{"madde": "141", "kac_celdiricide": 1}]
+  SORU 1: 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, yurt dışında sürekli görevde bulunan bir subayın farklı ödeme katsayısı uygulanan başka bir memlekete naklen atanması hâlinde aylığı nasıl ödenir?
+     * 142 nci madde esasları gereğince 144 üncü maddeye göre
+       Eski görev yerindeki ödeme katsayısı korunarak
+       İki memleketin ödeme katsayılarının ortalaması alınarak
+       Katsayı uygulanmaksızın yurt içi aylığı esas alınarak
+       Yeni memlekette bir yıl doluncaya kadar eski katsayıyla
+
+====================================================================================================
+MADDE 165  (soru_sayisi=1)
+RESMI: Yurt dışında görevli bulunan subay ve astsubaylardan, geçici görevle bir başka memlekete gönderilenlerden, geçici görev süresi bir aya kadar olanların (Bir ay dahil) aylıkları; esas görevli oldukları yabancı memlekete ait katsayılı aylıklarıdır.
+Bu tarihten itibaren esas görevli bulunduğu yabancı memleketteki göreve başladığı tarihe kadar olan süre için:
+a) Geçici görevle bulunduğu memleketin katsayılı aylık tutarı, almakta olduğu kat sayılı aylığından fazla ise, aradaki fark günlük olarak kendisine hareketinden evvel veya vazifesine döndükten sonra ödenir.
+b) Geçici görevde bulunduğu memleketin katsayılı aylık tutarı, kendi katsayılı aylığından az ise aradaki fark kendisinden alınmaz.
+
+  KART 72-42 [Başka ülkeye geçici görev]
+    HUKUM: Yurt dışındaki görevliden geçici görevle başka memlekete gönderilenlerin, geçici görev süresi bir aya kadar (bir ay dâhil) olanların aylıkları esas görevli oldukları memleketin katsayılı aylığıdır; bu süreden sonra esas görev yerine dönene kadar: geçici görev memleketinin katsayılı aylığı fazla ise fark günlük olarak hareketten önce veya dönüşten sonra ödenir; az ise fark kendisinden alınmaz (m.165)
+    YANLIS: Geçici görev yerinin katsayılı aylığı azsa aradaki fark kendisinden alınır
+    DOGRU: Bir ayı aşan geçici görevde, gidilen ülkenin aylığı azsa fark kendisinden alınmaz; fazlaysa fark günlük olarak ödenir (m.165)
+  TABLO:
+    ["Başka ülkeye geçici görevde esas ülke aylığı", "Bir aya kadar (bir ay dâhil) (m.165)", "165"]
+  SORU 1: 926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre, bir aydan sonraki dönemde geçici görev yerinin katsayılı aylık tutarı, esas görevli olunan ülkenin katsayılı aylığından az ise aradaki fark hakkında aşağıdakilerden hangisi doğrudur?
+     * Aradaki fark kendisinden alınmaz
+       Aradaki fark derhal geri alınır
+       Aradaki fark bir sonraki yıl mahsup edilir
+       Aradaki fark yarı yarıya paylaştırılır
+       Aradaki fark emekli ikramiyesinden kesilir

@@ -1,0 +1,132 @@
+{
+ "kanun_id": 140,
+ "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_140.json",
+ "kartlar": [
+  {
+   "id": "140-0",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Özlük işlerinde uygulanacak kanunlar",
+   "hukum": "Jandarma Hizmetleri Sınıfı personelinin her türlü özlük işlerinde, bu Kanunda hüküm bulunmayan hâllerde 657 sayılı Devlet Memurları Kanunu uygulanır; ancak nasıp ve terfi, aylık ve diğer mali ve sosyal haklar bakımından statü ve rütbelerine göre 926 (TSK Personel), 4678 (sözleşmeli subay-astsubay), 3466 (Uzman Jandarma), 3269 (Uzman Erbaş) ve 6191 (Sözleşmeli Erbaş ve Er) sayılı kanunların ilgili hükümleri uygulanır (m.13/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aylık ve mali haklarda 657 uygulanır\" yanlış; 657 yalnız kanunda hüküm bulunmayan genel özlük işlerinde, mali haklarda statü kanunları",
+    "Nasıp-terfi ve mali haklarda 657 sayılı DMK uygulanır"
+   ],
+   "dogrusu": [
+    "926, 4678, 3466, 3269, 6191; 657 yalnız hüküm bulunmayan genel özlük işlerinde (m.13/1)"
+   ]
+  },
+  {
+   "id": "140-1",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Diğer hizmet sınıflarındaki memurlar",
+   "hukum": "Jandarma Hizmetleri Sınıfı hariç olmak üzere JGK'nın diğer hizmet sınıflarındaki kadrolarda bulunan Devlet memurları, TSK kadrolarındaki emsallerinin yararlandığı mali ve sosyal haklardan aynı şekilde yararlanır (m.13/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Emniyet teşkilatındaki emsalleri esas alınır\" yanlış; TSK kadrolarındaki emsaller"
+   ],
+   "dogrusu": [
+    "TSK kadrolarındaki emsallerinin"
+   ]
+  },
+  {
+   "id": "140-2",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Çarşı ve mahalle bekçileri",
+   "hukum": "Jandarma Hizmetleri Sınıfındaki çarşı ve mahalle bekçileri hakkında, Emniyet Hizmetleri Sınıfındaki emsali bekçilerin mali ve sosyal hakları aynı usul ve esaslarla uygulanır; bunlar hakkında birinci fıkranın ikinci cümlesi (askerî statü kanunlarına atıf) uygulanmaz (m.13/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bekçilerin mali hakları 926 sayılı Kanuna göre belirlenir\" yanlış; Emniyet Hizmetleri Sınıfındaki emsali esas alınır",
+    "Çarşı ve mahalle bekçilerinin mali hakları TSK emsallerine göre belirlenir"
+   ],
+   "dogrusu": [
+    "Emniyet Hizmetleri Sınıfındaki emsali (m.13/2)"
+   ]
+  },
+  {
+   "id": "140-3",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Nasıp ve görevde bırakma yaşları",
+   "hukum": "Subaylığa ve astsubaylığa nasıp işlemleri İçişleri Bakanlığının onayıyla yapılır; rütbe bekleme süresinin dolması veya kadrosuzluk nedeniyle emekliliğe sevk edilecek durumda olan ancak hizmetlerine ihtiyaç duyulan albaylar 60, generaller 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilir (m.13/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Albaylar 65, generaller 67 yaşına kadar\" veya \"Cumhurbaşkanı onayıyla\" yanlış; albay 60, general 65, İçişleri Bakanı onayı",
+    "İhtiyaç duyulan albaylar 65 yaşına kadar görevde bırakılabilir"
+   ],
+   "dogrusu": [
+    "Albay 60, general 65 (m.13/3)"
+   ]
+  },
+  {
+   "id": "140-4",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Erken emekliye sevk, inha yetkileri, uzmanların terfisi",
+   "hukum": "Personel kaynağı planlaması, iç güvenlik politikaları ve güvenlik ihtiyaçlarına göre albay ve üstü rütbeler bekleme süreleri dolmadan kadrosuzluk tazminatı ödenerek Cumhurbaşkanı onayı ile emekliye sevk edilebilir; 926 ve diğer kanunlarla İçişleri Bakanlığı dışındaki mercilere verilmiş inha, seçim, görüş alma vb. yetkiler JGK personeli için uygulanmaz; uzman jandarma ve uzman erbaşların nasıp ve terfileri JGK'ca özel kanunlarına göre yapılır (m.13/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Albay ve üstü rütbeler İçişleri Bakanı onayıyla bekleme süresi dolmadan emekliye sevk edilir\" yanlış; Cumhurbaşkanı onayı ve kadrosuzluk tazminatı ödenerek",
+    "Albay ve generallerin görevde bırakılması Cumhurbaşkanı onayıyla olur",
+    "Uzman jandarmaların nasıp ve terfisi İçişleri Bakanlığınca yapılır"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanı onayı; Cumhurbaşkanı onayı erken emekliye sevkte (m.13/3)",
+    "JGK'ca özel kanunlarına göre (m.13/3)"
+   ]
+  },
+  {
+   "id": "140-5",
+   "madde": [
+    "13"
+   ],
+   "baslik": "OYAK, işçiler ve güvenlik soruşturması",
+   "hukum": "JGK personeli hakkında TSK'da karşılığı olan rütbe ve kıdem üzerinden aynı şartlarla 205 sayılı Ordu Yardımlaşma Kurumu Kanunu uygulanır (m.13/5); işçilerin işe alınma, işyeri değişikliği, yükselme, izin, sicil, ödül ve hizmet akdinin feshi işlemleri 4857 sayılı İş Kanunu ve varsa toplu iş sözleşmesine göre (m.13/6); JGK nam ve hesabına eğitim-öğrenim görecekler ile Jandarma ve Sahil Güvenlik Akademisi ve bağlı kurumlarda eğitim görecekler hakkında güvenlik soruşturması ve arşiv araştırması yapılır (m.13/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma işçilerinin işe alınma ve feshi işlemleri 657'ye göre yapılır\" yanlış; 4857 sayılı İş Kanunu ve toplu iş sözleşmesi"
+   ],
+   "dogrusu": [
+    "rütbe ve kıdem · 205 sayılı Ordu Yardımlaşma Kurumu Kanunu · işçilerin · 4857 sayılı İş Kanunu · Jandarma ve Sahil Güvenlik Akademisi · güvenlik soruşturması ve arşiv araştırması"
+   ]
+  },
+  {
+   "id": "140-6",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Asayiş tazminatı: kime ve ne kadar",
+   "hukum": "JGK fiili kadrolarına atanmış subay, astsubay, uzman jandarma ve uzman erbaşlara; 657'de belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil) komando ve sınır birliklerinde %52, diğer karargâh, birlik ve kurumlarda %40 tutarını geçmemek üzere, İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Oranlar Hazine ve Maliye Bakanlığınca belirlenir\" veya \"komando-sınır %40, diğer %52\" yanlış; İçişleri Bakanlığı, komando-sınır %52, diğerleri %40",
+    "Asayiş tazminatı diğer birliklerde en yüksek memur aylığının %52'sini geçemez",
+    "Asayiş tazminatı oranlarını Hazine ve Maliye Bakanlığı belirler",
+    "Asayiş tazminatı yalnız subay ve astsubaylara ödenir"
+   ],
+   "dogrusu": [
+    "%40; %52 komando ve sınır birliklerinde (m.21)",
+    "İçişleri Bakanlığı (m.21)",
+    "Uzman jandarma ve uzman erbaşlara da (m.21)"
+   ]
+  },
+  {
+   "id": "140-7",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Asayiş tazminatında kesinti",
+   "hukum": "Bu tazminattan damga vergisi hariç herhangi bir vergi ve kesinti yapılmaz (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Asayiş tazminatından hiçbir vergi kesilmez\" (damga dahil) ya da \"gelir vergisi kesilir\" yanlış; yalnız damga vergisi kesilir",
+    "Asayiş tazminatından damga vergisi dahil hiçbir kesinti yapılmaz"
+   ],
+   "dogrusu": [
+    "Damga vergisi kesilir, başka vergi-kesinti yok (m.21)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

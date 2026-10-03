@@ -1,0 +1,413 @@
+{
+ "kanun_id": 68,
+ "ad": "5809 sayılı Elektronik Haberleşme Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_68.json",
+ "kartlar": [
+  {
+   "id": "68-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam (genel)",
+   "hukum": "Hizmet yürütülmesi, altyapı/şebeke tesisi ve işletimi, cihaz imal-ithal-satış-kurulum, frekans dâhil kıt kaynak planlama ve tahsisi, düzenleme-yetkilendirme-denetleme-uzlaştırma bu Kanuna tabidir (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca hizmet sunumu\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "Hizmet yürütülmesi …"
+   ]
+  },
+  {
+   "id": "68-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Saklı kalan kanunlar",
+   "hukum": "Millî güvenlik, kamu düzeni, olağanüstü hâl, seferberlik, savaş ve doğal afet hâllerinde özel kanunlar ile 697, 3348, 5369, 5397 ve 5651 sayılı Kanunlar saklıdır (m.2/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğal afet\" listeden düşürülür veya 697 yerine başka kanun yazılır",
+    "Doğal afette özel kanun hükümleri saklı değildir"
+   ],
+   "dogrusu": [
+    "m.2/2 doğal afeti sayar"
+   ]
+  },
+  {
+   "id": "68-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam dışı kurumlar",
+   "hukum": "TSK, JGK, SGK, Dışişleri Bakanlığı, Telekomünikasyon İletişim Başkanlığı, MİT ve EGM'nin cihaz/sistem/şebekeleri hakkında 36 ve 39 hariç bu Kanun uygulanmaz (m.2/3)",
+   "sinavda_boyle_yazarlar": [
+    "Dışişleri veya EGM için \"Kanun'un tümü uygulanır\" denir — 2024'ün doğru cevabı buydu"
+   ],
+   "dogrusu": [
+    "36 ve 39 hariç"
+   ]
+  },
+  {
+   "id": "68-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Bedeli kurumca ödenen sistemler",
+   "hukum": "Bu kurumların bedelini ödeyip işletmecilere kurdurduğu sistemler de aynı istisnaya girer (m.2/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"işletmeci kurduğu için Kanun tümüyle uygulanır\" denir"
+   ],
+   "dogrusu": [
+    "Bedeli kurumca ödenen sistemler"
+   ]
+  },
+  {
+   "id": "68-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Görev sahası kaydı",
+   "hukum": "Dışişleri, TİB, MİT ve EGM için istisna, kuruluş kanunları/CB kararnamelerindeki görev sahalarıyla ilgili konularla sınırlıdır; TSK, JGK ve SGK'da böyle bir kayıt yoktur (m.2/3)",
+   "sinavda_boyle_yazarlar": [
+    "kayıt TSK'ya da genişletilir"
+   ],
+   "dogrusu": [
+    "görev sahalarıyla ilgili konularla"
+   ]
+  },
+  {
+   "id": "68-5",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Devletin yetkisi",
+   "hukum": "Cihaz/sistem/şebeke kurma-işletme izni, frekans-numara-uydu pozisyonu tahsisi ve düzenlenmesi Devletin yetki ve sorumluluğu altındadır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"işletmeciler serbestçe belirler\" denir"
+   ],
+   "dogrusu": [
+    "Devletin yetki ve sorumluluğu"
+   ]
+  },
+  {
+   "id": "68-6",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: rekabet",
+   "hukum": "Serbest ve etkin rekabet ortamının sağlanması ve korunması (m.4/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "\"rekabetin sınırlandırılması\""
+   ],
+   "dogrusu": [
+    "İlke: rekabet"
+   ]
+  },
+  {
+   "id": "68-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: tüketici",
+   "hukum": "Tüketici hak ve menfaatlerinin gözetilmesi (m.4/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"satıcı\" veya \"işletmeci\" yazılır — 2024'ün klasik bozması"
+   ],
+   "dogrusu": [
+    "Tüketici"
+   ]
+  },
+  {
+   "id": "68-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: politika metinleri",
+   "hukum": "Kalkınma planları ve üst politika metinleri ile Bakanlıkça belirlenen stratejilerin gözetilmesi (m.4/1-c)",
+   "sinavda_boyle_yazarlar": [
+    "eski metindeki \"Hükümet programları\" yazılır"
+   ],
+   "dogrusu": [
+    "İlke: politika metinleri"
+   ]
+  },
+  {
+   "id": "68-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: makul ücret",
+   "hukum": "Herkesin makul bir ücret karşılığında şebeke ve hizmetlerden yararlanmasını sağlayacak uygulamaların teşviki (m.4/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"ücretsiz\" denir"
+   ],
+   "dogrusu": [
+    "makul bir ücret"
+   ]
+  },
+  {
+   "id": "68-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: ayrım gözetmeme",
+   "hukum": "Eşit şartlardaki abone, kullanıcı ve işletmeciler arasında ayrım gözetilmemesi; objektif nedenler ve ihtiyaç sahibi kesimlere özel kolaylıklar istisnadır (m.4/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "istisna yokmuş gibi mutlaklaştırılır"
+   ],
+   "dogrusu": [
+    "İlke: ayrım gözetmeme"
+   ]
+  },
+  {
+   "id": "68-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: uluslararası norm",
+   "hukum": "Sistemlerin uluslararası normlara uygun olması (m.4/1-f)",
+   "sinavda_boyle_yazarlar": [
+    "\"aykırı olması\" — 2024'te öncül III böyle bozulmuştu"
+   ],
+   "dogrusu": [
+    "uygun"
+   ]
+  },
+  {
+   "id": "68-12",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: millî güvenlik önceliği",
+   "hukum": "Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi (m.4/1-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"öncelik verilmez\" denir veya acil durum çıkarılır"
+   ],
+   "dogrusu": [
+    "acil durum ihtiyaçlarına öncelik"
+   ]
+  },
+  {
+   "id": "68-13",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: ücret serbestisi",
+   "hukum": "Kanun, mevzuat ve yetkilendirmede açıkça belirlenen hâller dışında işletmeciler arabağlantı ve erişim ücretleri ile hat/devre kiraları dâhil ücretleri serbestçe belirler (m.4/1-ı)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurum belirler\" denir"
+   ],
+   "dogrusu": [
+    "serbestçe"
+   ]
+  },
+  {
+   "id": "68-14",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: engelli-yaşlı",
+   "hukum": "Teknolojik yeniliklerin kullanılması dâhil engelli, yaşlı ve sosyal açıdan korunmaya muhtaç kesimlerin özel ihtiyaçlarının dikkate alınması (m.4/1-k)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca engelliler\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "engelli, yaşlı ve sosyal açıdan korunmaya muhtaç"
+   ]
+  },
+  {
+   "id": "68-15",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: sağlık ve çevre",
+   "hukum": "Cihaz ve sistemlerin kurulması, kullanılması ve işletilmesinde insan sağlığı, can ve mal güvenliği, çevre ve tüketicinin korunması açısından asgarî uluslararası normların dikkate alınması (m.4/1-i)",
+   "sinavda_boyle_yazarlar": [
+    "\"azami normlar\" denir"
+   ],
+   "dogrusu": [
+    "Cihaz ve sistemlerin kurulması …"
+   ]
+  },
+  {
+   "id": "68-16",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlke: gizlilik",
+   "hukum": "Bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi (m.4/1-l)",
+   "sinavda_boyle_yazarlar": [
+    "son bent olduğu için \"ilkeler arasında yok\" denir"
+   ],
+   "dogrusu": [
+    "Bilgi güvenliği ve haberleşme gizliliğinin"
+   ]
+  },
+  {
+   "id": "68-17",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Frekans planlaması",
+   "hukum": "Millî frekans planlaması, tahsisi, uluslararası koordinasyon ve tescil işlemleri Kurum (BTK) tarafından yapılır ve uygulanır (m.36/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bakanlık yapar\" denir"
+   ],
+   "dogrusu": [
+    "tescil · Kurum (BTK)"
+   ]
+  },
+  {
+   "id": "68-18",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Tahsis-tescil zorunluluğu",
+   "hukum": "Telsiz cihaz/sistemi kurmak ve işletmek isteyenler Kuruma frekans tahsis ve tescil işlemlerini yaptırmak zorundadır (m.36/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"zorunda olmadan kurabilir\" — 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "zorundadır"
+   ]
+  },
+  {
+   "id": "68-19",
+   "madde": [
+    "37",
+    "36"
+   ],
+   "baslik": "Tahsis-tescil istisnası",
+   "hukum": "m.37'deki, telsiz kurma-kullanma iznine ve ruhsatnameye ihtiyaç göstermeyen cihazların frekansları için tahsis ve tescil yapılmaz (m.36/1-b)",
+   "sinavda_boyle_yazarlar": [
+    "istisna yok denir veya başka maddeye bağlanır",
+    "Telsiz kuracaklar tahsis ve tescil yaptırmak zorunda değildir"
+   ],
+   "dogrusu": [
+    "zorunludur, istisna sadece m.37"
+   ]
+  },
+  {
+   "id": "68-20",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Frekans önceliği",
+   "hukum": "Frekans tahsislerinde Dışişleri Bakanlığı, JGK ve SGK ihtiyaçları dâhil TSK'ya, MİT'e ve EGM'ye öncelik tanınır (m.36/2)",
+   "sinavda_boyle_yazarlar": [
+    "RTÜK veya işletmeciler önceliklilere eklenir"
+   ],
+   "dogrusu": [
+    "TSK'ya, MİT'e ve EGM'ye"
+   ]
+  },
+  {
+   "id": "68-21",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Kendi planını yapanlar",
+   "hukum": "TSK ile RTÜK, millî frekans planı çerçevesinde kendilerine tahsis edilen bantlarda planlamayı yapar ve uygular (m.36/3)",
+   "sinavda_boyle_yazarlar": [
+    "JGK/SGK bu ikiliye eklenir; burada yokturlar",
+    "JGK ve SGK kendi bantlarında planlama yapar"
+   ],
+   "dogrusu": [
+    "m.36/3'te sadece TSK ve RTÜK"
+   ]
+  },
+  {
+   "id": "68-22",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Koordinasyon ve değişiklik",
+   "hukum": "Kurum, tahsisli frekans ve bantlar için Bakanlık ve ilgili kurumlarla koordinasyonu sağlar; Devlet güvenlik ve istihbaratında zafiyet yaratmayacak şekilde iptal dâhil her türlü değişiklik yapabilir ve bu nedenle yükümlülük altına girmez (m.36/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"iptal edemez\" veya \"Kurum tazminat öder\" denir"
+   ],
+   "dogrusu": [
+    "Devlet güvenlik ve istihbaratında zafiyet yaratmayacak şekilde iptal dâhil her türlü değişiklik"
+   ]
+  },
+  {
+   "id": "68-23",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Kriptolu haberleşme yetkisi",
+   "hukum": "Telsiz haberleşme sistemleri üzerinden kriptolu haberleşme yapmaya TSK, JGK, SGK, MİT, EGM ve Dışişleri Bakanlığı yetkilidir (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "TİB listeye eklenir (TİB m.2/3'te var, m.39'da yok) veya bir kurum düşürülür",
+    "Kriptolu haberleşmeye TİB de yetkilidir"
+   ],
+   "dogrusu": [
+    "m.39'daki 6 kurum arasında TİB yok"
+   ]
+  },
+  {
+   "id": "68-24",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Diğerlerinin kodlu/kriptolu haberleşmesi",
+   "hukum": "Yukarıdaki kurumlara ait olanlar dışında kamu kurum ve kuruluşları ile gerçek ve tüzel kişilerin elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme usul ve esaslarını Kurum belirler (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"yasaktır\" ya da \"Bakanlık belirler\" denir"
+   ],
+   "dogrusu": [
+    "Kurum"
+   ]
+  },
+  {
+   "id": "68-25",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Spektrum sınırı",
+   "hukum": "9 kHz–3000 GHz arası (uluslararası düzenleme hâlinde üstü de dâhil) elektromanyetik dalga frekans aralığı (m.3/1-kk)",
+   "sinavda_boyle_yazarlar": [
+    "9 MHz veya 300 GHz yapılır"
+   ],
+   "dogrusu": [
+    "Spektrum sınırı"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Dışişleri Bakanlığı'nın cihaz ve şebekeleri hakkında Kanun'un tümü uygulanır"
+   ],
+   "dogru": "sadece 36 ve 39"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Satıcı hak ve menfaatlerinin gözetilmesi bir ilkedir"
+   ],
+   "dogru": "metin tüketici der"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Sistemlerin uluslararası normlara aykırı olması"
+   ],
+   "dogru": "uygun olması"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Frekans planlamasını Bakanlık yapar"
+   ],
+   "dogru": "Kurum yapar"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kurum tahsis ettiği frekansı iptal edemez"
+   ],
+   "dogru": "iptal dâhil her türlü değişikliği yapabilir"
+  }
+ ]
+}

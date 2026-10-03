@@ -1,0 +1,275 @@
+{
+ "kanun_id": 83,
+ "ad": "3212 sayılı Silahlı Kuvvetler İhtiyaç Fazlası Mal ve Hizmetlerinin Tahsis, Devir, Satış ve Kiraya Verilmesi Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_83.json",
+ "kartlar": [
+  {
+   "id": "83-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Amaç: beş değerlendirme yolu + yabancı askerî personel eğitimi",
+   "hukum": "Kanunun amacı, TSK tarafından üretilen, çeşitli yollarla temin edilen veya ihtiyaç fazlası bulunan her cins ikmal maddeleri ile bunlardan HEK durumunda olan veya hurdaya ayrılan mal ve hizmetlerin satışı, kiralanması, tahsisi, lisans verilmesi veya teknoloji transferi yoluyla değerlendirilmesi ve eğitim görecek yabancı askerî personele dair esas ve usulleri belirlemektir (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Değerlendirme yolları arasında hangisi sayılmamıştır?\" sorusunda cevap hibedir; hibe m.2'nin dost/müttefik devlet bentlerinde geçer, m.1'in amaç cümlesinde yer almaz",
+    "m.1'de sayılan değerlendirme yolları arasında hibe de vardır"
+   ],
+   "dogrusu": [
+    "m.1 yalnız satış, kiralama, tahsis, lisans verme, teknoloji transferi sayar; hibe sayılmaz (m.1)"
+   ]
+  },
+  {
+   "id": "83-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam (a): yurt içi kurum ve kuruluşlara işlemler",
+   "hukum": "Kanun, TSK'nin ürettiği veya yurt içi/yurt dışından elde ettiği ikmal maddeleri ile HEK, hurda, ihtiyaç fazlası veya kadro dışı bırakılan mal veya hizmetlerin Türkiye'deki kamu veya özel kurum ve kuruluşlarına kiralanması, bedelli veya bedelsiz tahsisi, bedelsiz devredilmesi, satılması, lisans verilmesi, teknoloji transferi veya mübadelesini kapsar (m.2/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kanun yalnız kamu kurumlarına devri kapsar\" → yanlış; kamu veya özel kurum ve kuruluşlar"
+   ],
+   "dogrusu": [
+    "kamu veya özel kurum ve kuruluşlarına kiralanması, bedelli veya bedelsiz tahsisi, bedelsiz devredilmesi, satılması, lisans verilmesi, teknoloji transferi veya mübadelesini"
+   ]
+  },
+  {
+   "id": "83-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam (b): dost veya müttefik devletler ve Dışişleri mütalaası",
+   "hukum": "Türkiye Cumhuriyetinin dış siyasi tutum ve menfaatlerine aykırı olmadığının Dışişleri Bakanlığının mütalaasıyla belirlenmesi şartıyla, dost veya müttefik devletlerdeki kamu kurum ve kuruluşlarına 1) bağışlanması, 2) belirlenen değerinden az bedel karşılığında yardım olarak verilmesi, 3) satılması, kiralanması, mübadelesi, lisans verilmesi ve teknoloji transferi, 4) satılan silah ve malzemenin başkalarına satışı için alıcıya yetki verilmesi; bu devletlerdeki özel kurum ve kuruluşlara ise (1) ve (2) hariç aynı işlemler (m.2/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dost devletlerdeki özel kuruluşlara da bağış yapılabilir\" → yanlış; bağış ve değerinden az bedelle yardım yalnız kamu kurum ve kuruluşlarına",
+    "Dost devletlerdeki özel kuruluşlara da bağış yapılabilir"
+   ],
+   "dogrusu": [
+    "Bağış ve değerinden az bedelle yardım yalnız kamu kurum ve kuruluşlarına; özel kuruluşlar için (1) ve (2) hariç (m.2/b)"
+   ]
+  },
+  {
+   "id": "83-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam (c)-(h): bakım-eğitim, proje tahsisi, devletler adına alım, sipariş kabulü, eğitim karşılığı, gerçek kişilere satış",
+   "hukum": "Yurt içi kuruluşlar ile diğer devletlere satılan silah ve malzemenin bakım, onarım, yenileştirme, teknik hizmet ve eğitimi (c); TSK'nin savunma ve güvenlik proje veya ön çalışmalarında bedelli veya bedelsiz tahsis (d); her türlü masrafın ilgili devletlerce karşılanması şartıyla bu devletler adına yurt içi ve yurt dışı alımlar (e); TSK'nin ürettiği malzeme için sipariş kabulü (f); dost veya müttefik devlet personeline verilecek askerî ve teknik eğitim karşılığı alınacak döviz, mal veya hizmetler (g); yurt içindeki gerçek kişilere, kullanım yeri bulunmayan veya ihtiyaç fazlası askerî nitelikli olmayan taşınır malların satış, hibe ve mübadelesi (h) (m.2/c-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt içindeki gerçek kişilere askerî nitelikli silah ve mühimmat satılabilir\" → yanlış; gerçek kişilere yalnız askerî nitelikli olmayan taşınır mallar"
+   ],
+   "dogrusu": [
+    "bakım, onarım, yenileştirme, teknik hizmet ve eğitimi · bedelli veya bedelsiz tahsis · her türlü masrafın ilgili devletlerce karşılanması şartıyla · sipariş kabulü · döviz, mal veya hizmetler · gerçek kişilere · askerî nitelikli olmayan taşınır malların"
+   ]
+  },
+  {
+   "id": "83-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Taşınmazlar kapsam dışı; istisna MSB tahsisi",
+   "hukum": "Hazinenin özel mülkiyetinde veya Devletin hüküm ve tasarrufu altında bulunan taşınmazların satışı, kiralanması, mübadelesi, bedelsiz tahsisi ve hibe edilmesi bu Kanun kapsamı dışındadır; ancak TSK tarafından yürütülen savunma ve güvenlik ile ilgili proje veya ön çalışmalarda taşınmazlar kamu veya özel kurum ve kuruluşlara Millî Savunma Bakanlığınca bedelli veya bedelsiz tahsis edilebilir (m.2 son fıkra)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hazine taşınmazlarının satışı bu Kanunun asıl düzenleme konusudur\" → yanlış; kapsam dışı. İkinci tuzak: proje tahsisinde yetkili makam \"Cumhurbaşkanı\" veya \"Genelkurmay\" değil, Millî Savunma Bakanlığı",
+    "Hazine taşınmazlarının satış ve kiralanması bu Kanunun asıl düzenleme konusudur"
+   ],
+   "dogrusu": [
+    "Kapsam dışıdır; yalnız TSK savunma-güvenlik projelerinde MSB'ce tahsis edilebilir (m.2 son fıkra)"
+   ]
+  },
+  {
+   "id": "83-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tarif: ikmal maddesi",
+   "hukum": "Bir Komutanlığın donanımı, bakım, onarım, idame ve eğitim faaliyetleri için zaruri olan her cins araç, gereç, makine, teçhizat, hammadde, silah, mühimmat, ana malzeme, kimyevi malzeme, yedek parça, giyecek, yiyecek, yakacak, akaryakıt, ilaç, donatım ve eğitim malzemeleri (m.3/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"İkmal maddesi yalnız silah ve mühimmatı ifade eder\" → yanlış; giyecek, yiyecek, yakacak, ilaç da ikmal maddesidir"
+   ],
+   "dogrusu": [
+    "donanımı, bakım, onarım, idame ve eğitim faaliyetleri için zaruri olan"
+   ]
+  },
+  {
+   "id": "83-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tarif: HEK (Onarımı Yapılmayan Ordu Malı)",
+   "hukum": "Hizmette vasfını kaybeden, arızalı hale geldiklerinde onarılmaları iktisaden mahzurlu olan mallar (m.3/2)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta HEK tanımı ile hurda tanımı yer değiştirilir: \"İmal sırasında bozulan iktisadi kıymetler HEK'tir\" → yanlış; o hurda (A) tanımıdır",
+    "Hizmette vasfını kaybeden, onarımı iktisaden mahzurlu mal hurdadır"
+   ],
+   "dogrusu": [
+    "HEK'tir (m.3/2); hurda ayrı tanımdır (m.3/3)"
+   ]
+  },
+  {
+   "id": "83-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tarif: hurda (A, B, C) ve maden hurdası",
+   "hukum": "Hurda: (A) imal sırasında bozulup başka maksatla kullanılamayan iktisadi kıymetler; (B) imal sırasında elde edilen kırpıntı, döküntü gibi artık ve parçalar; (C) ikmal maddesi kapsamındaki malzeme, silah, teçhizat ve mühimmattan (a) tedarik maksadına uygun kullanılamayanlar, (b) giderilmesi mümkün veya iktisadi olmayan arızalılar, (c) normal çalışma müddetini dolduranlar veya kullanılması tehlikeli olanlar, (d) teknolojinin gelişmesi karşısında ekonomik fayda vermeyenler, (e) muhafaza müddeti sona eren, miadını dolduran veya muhafaza şartları aksayanlar, (f) kullanılması men olup imhası cihetine gidilecekler (m.3/3); maden hurdası: bunlardan bir veya birden ziyade maden veya madeni halitalardan mamul olanlar veya yapılışları itibariyle madeni aksamı galip bulunanlar (m.3/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Maden hurdası, hurdadan bağımsız ayrı bir mal grubudur\" → yanlış; maden hurdası \"bunlardan\" yani hurdalardan madenî olanlardır"
+   ],
+   "dogrusu": [
+    "Hurda · kırpıntı, döküntü · normal çalışma müddetini dolduranlar · muhafaza müddeti sona eren, miadını dolduran · imhası · maden hurdası · maden veya madeni halitalardan mamul · madeni aksamı galip"
+   ]
+  },
+  {
+   "id": "83-8",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tarif: hizmet ve yabancı özel kuruluşlara tahsis sınırı",
+   "hukum": "Hizmet: taraflar (kamu veya özel kuruluş ve şahıslar ile dost veya müttefik devletler ve bunlardaki kurum-kuruluşlar) arasındaki anlaşmaya göre bir işin yapılması için verilecek eğitim, teknik bilgi, destek, geliştirme, bakım, onarım, kurtarma, imha, liman ve müşavirlik desteği ile mülkiyeti elde olmak kaydıyla tahsis edilebilecek kara, deniz ve hava araç, gereç, silahları, bina ve araziyi ifade eder; ancak TSK'nin savunma ve güvenlik proje veya ön çalışmaları kapsamındaki tahsisler dışında, dost veya müttefik devletlerdeki özel nitelikteki kuruluşlar hakkında bu tahsis hükmü uygulanmaz (m.3/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hizmet kapsamında tahsis edilen aracın mülkiyeti karşı tarafa geçer\" → yanlış; mülkiyeti elde olmak kaydıyla. İkinci tuzak: \"Dost devletlerdeki özel kuruluşlara tahsis hükmü her koşulda, istisnasız uygulanmaz\" → yanlış; TSK savunma-güvenlik proje/ön çalışma tahsisleri istisnadır",
+    "Hizmet kapsamındaki tahsiste mülkiyet karşı tarafa geçer"
+   ],
+   "dogrusu": [
+    "Mülkiyeti elde olmak kaydıyla tahsis (m.3/5)"
+   ]
+  },
+  {
+   "id": "83-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yurt içi TL kaynak: (B) cetveli, özel tertip, devir",
+   "hukum": "m.2 usulleriyle yapılan satışlardan yurt içinden elde edilecek Türk Lirası kaynak, Bütçenin (B) işaretli cetveline gelir, diğer yandan Milli Savunma Bakanlığı bütçesinin sonunda açılacak özel tertibe ödenek kaydolunur; yılı içinde harcanmayan miktarlar ertesi yıla devredilir (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yılı içinde harcanmayan miktarlar iptal edilir / Hazineye irat kaydedilir\" → yanlış; ertesi yıla devredilir. İkinci tuzak: \"(A) işaretli cetvel\" → yanlış; (B) cetveli",
+    "Yurt içi TL kaynak Bütçenin (A) cetveline gelir kaydedilir",
+    "Yılı içinde harcanmayan miktarlar iptal edilir"
+   ],
+   "dogrusu": [
+    "(B) işaretli cetvel (m.4/1)",
+    "Ertesi yıla devredilir (m.4/1)"
+   ]
+  },
+  {
+   "id": "83-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Döviz kaynağı: TCMB'de MSB adına ABD Doları hesabı ve transfer",
+   "hukum": "Dost ve müttefik devletlere yapılan satışlardan elde edilecek yabancı paralar T.C. Merkez Bankasında Milli Savunma Bakanlığı adına açılacak özel döviz hesabına ABD Doları olarak kaydedilir (m.4/2); bu dövizler Genelkurmay Başkanlığının görüşü alınarak Milli Savunma Bakanlığının vereceği talimata uygun şekilde TCMB'ce Türk Lirası nakti aranmaksızın bekletilmeden transfer edilir (m.4/3); transfer edilen miktardan kesin harcamaya dönüşen kısım gider belgelerine dayanılarak transfer tarihindeki döviz alış kuru üzerinden ilgili bütçeye gelir, ödenek ve gider kaydolunur; bu amaçla Maliye ve Gümrük Bakanlığı ilgili bütçelerde tertip açmaya yetkilidir (m.4/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kesin harcama yıl sonu kuru üzerinden kaydedilir\" → yanlış; transfer tarihindeki döviz alış kuru. İkinci tuzak: \"Tertip açmaya Milli Savunma Bakanlığı yetkilidir\" → yanlış; kanun metninde Maliye ve Gümrük Bakanlığı yazar",
+    "Dövizler Merkez Bankasında Genelkurmay Başkanlığı adına Euro olarak tutulur",
+    "Kesin harcama yıl sonu kuru üzerinden kaydedilir"
+   ],
+   "dogrusu": [
+    "MSB adına, ABD Doları olarak (m.4/2)",
+    "Transfer tarihindeki döviz alış kuru (m.4/4)"
+   ]
+  },
+  {
+   "id": "83-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kaynağın kullanımı: Genelkurmay tespit, MSB onay, MSB Bakanı yetkisi, Kuvvet Komutanlıkları",
+   "hukum": "Sağlanan kaynaklar, Genelkurmay Başkanlığınca tespit edilen ve Millî Savunma Bakanlığınca onaylanan ilke, öncelik ve ana programlara göre; MSB bütçesine konan ödenekler ile özel döviz hesabındaki ABD Doları, savunma sanayiinin geliştirilmesi, araştırma ve geliştirme hizmetleri ve Silahlı Kuvvetlerin ihtiyacı bulunan silah ve malzemenin tedariki için, Milli Savunma Bakanının vereceği yetkiye dayanılarak Kuvvet Komutanlıklarınca kullanılır (m.4 son fıkra/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaynak Cumhurbaşkanının yetkisine dayanılarak Genelkurmay Başkanlığınca kullanılır\" → yanlış; MSB Bakanının yetkisiyle Kuvvet Komutanlıklarınca"
+   ],
+   "dogrusu": [
+    "Genelkurmay Başkanlığınca tespit edilen ve Millî Savunma Bakanlığınca onaylanan · savunma sanayiinin geliştirilmesi, araştırma ve geliştirme hizmetleri ve Silahlı Kuvvetlerin ihtiyacı bulunan silah ve malzemenin tedariki · Milli Savunma Bakanının vereceği yetkiye dayanılarak Kuvvet Komutanlıklarınca"
+   ]
+  },
+  {
+   "id": "83-12",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Gelecek yıllara sari taahhüt: MSB",
+   "hukum": "Bu Kanun uyarınca elde edilen kaynaklara dayanılarak gelecek yıllara sari taahhütlere girişmeye Milli Savunma Bakanlığı yetkilidir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gelecek yıllara sari taahhüde girişmeye Cumhurbaşkanlığı / Hazine ve Maliye Bakanlığı yetkilidir\" → yanlış; Milli Savunma Bakanlığı"
+   ],
+   "dogrusu": [
+    "gelecek yıllara sari taahhütlere girişmeye Milli Savunma Bakanlığı"
+   ]
+  },
+  {
+   "id": "83-13",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yabancı personel eğitiminde harcamalara katılma: andlaşmayla",
+   "hukum": "Dost veya müttefik devletlerin silahlı kuvvetleri personeline Türkiye'de veya o ülkede yaptırılacak askerî eğitimin gerektirdiği malzemenin değeri, sevki ve teslimi harcamalarına ve eğitim personelinin yolluk, aylık ve diğer özlük hakları masraflarına tarafların hangi nispette ve ne şekilde katılacakları, m.7/3'teki usulle yürürlüğe konulacak andlaşmalarla tespit edilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Katılma oranı Cumhurbaşkanı kararıyla / MSB yönetmeliğiyle belirlenir\" → yanlış; andlaşmalarla"
+   ],
+   "dogrusu": [
+    "malzemenin değeri, sevki ve teslimi · eğitim personelinin yolluk, aylık ve diğer özlük hakları · hangi nispette ve ne şekilde katılacakları · andlaşmalarla"
+   ]
+  },
+  {
+   "id": "83-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Usul-esas Cumhurbaşkanı kararı; 1050 ve 2886'ya tabi değil",
+   "hukum": "Kanunun uygulanmasına dair her türlü faaliyet ve muamelelerin usul ve esasları Cumhurbaşkanı kararı ile tespit edilir (m.7/1); bu Kanuna göre yapılması gereken her türlü faaliyet ve muameleler 1050 sayılı Muhasebe-i Umumiye Kanunu ve 2886 sayılı Devlet İhale Kanunu hükümlerine tabi değildir (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta \"5018 ve 4734\" veya \"2886 ve 4734\" ikilisi verilir; metinde yazan 1050 ve 2886dır. İkinci tuzak: \"Usul ve esaslar MSB yönetmeliğiyle belirlenir\" → yanlış; Cumhurbaşkanı kararı",
+    "Bu Kanuna göre yapılan işlemler 2886 sayılı Devlet İhale Kanununa tabidir"
+   ],
+   "dogrusu": [
+    "Tabi değildir (1050 ve 2886) (m.7/2)"
+   ]
+  },
+  {
+   "id": "83-15",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Andlaşma: imzalayan, değiştiren, yürürlük",
+   "hukum": "Dost veya müttefik devletlere ve bu devletlerdeki kamu veya özel kurum ve kuruluşlara mal veya hizmetin hibesi, mübadelesi veya yardım olarak verilmesine ilişkin andlaşmaları imzalamaya Cumhurbaşkanı kararıyla belirlenecek kişi ve kuruluşlar yetkilidir; bu andlaşmalarda değişiklik yapmaya Milli Savunma Bakanı yetkilidir; andlaşmalar, aksine hüküm yoksa imza tarihi itibarıyla Cumhurbaşkanı kararıyla yürürlüğe girer (m.7/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Andlaşmaları imzalamaya Milli Savunma Bakanı yetkilidir\" → yanlış; MSB Bakanı değişiklik yapar, imzalama yetkisi CB kararıyla belirlenecek kişi ve kuruluşlarda",
+    "Andlaşmaları imzalamaya Milli Savunma Bakanı yetkilidir"
+   ],
+   "dogrusu": [
+    "İmzalama Cumhurbaşkanı kararıyla belirlenecek kişi ve kuruluşlar; MSB Bakanı değişiklik yapar (m.7/3)"
+   ]
+  },
+  {
+   "id": "83-16",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Anlaşmasız hibe: limit ve cinsi her yıl CB, verme yetkisi MSB Bakanı",
+   "hukum": "Parasal limiti ve cinsi her yıl Cumhurbaşkanı tarafından belirlenen mal veya hizmetlerin, anlaşma akdedilmeksizin dost veya müttefik devletlere ve bunlardaki kamu veya özel kurum ve kuruluşlara hibesi, mübadelesi veya yardım olarak verilmesine Milli Savunma Bakanı yetkilidir (m.7 ek fıkra)",
+   "sinavda_boyle_yazarlar": [
+    "İki soru ayrı ayrı gelir: \"limiti kim belirler?\" → Cumhurbaşkanı; \"anlaşmasız vermeye kim yetkili?\" → Milli Savunma Bakanı. Şıklarda ikisi yer değiştirir"
+   ],
+   "dogrusu": [
+    "Parasal limiti ve cinsi her yıl Cumhurbaşkanı tarafından belirlenen · anlaşma akdedilmeksizin · Milli Savunma Bakanı"
+   ]
+  },
+  {
+   "id": "83-17",
+   "madde": [
+    "8",
+    "9"
+   ],
+   "baslik": "Muafiyet: KDV ve damga vergisi HARİÇ",
+   "hukum": "Bu Kanun hükümlerine göre sağlanacak ihtiyaçlar ve bunlarla ilgili muameleler katma değer vergisi ve damga vergisi hariç her türlü vergi, resim, harç ve resmi kuruluşlara ait ardiye ücretinden muaftır (m.8); 8 Mayıs 1969 tarih ve 1176 sayılı Kanun ile diğer kanunların bu Kanuna aykırı hükümleri yürürlükten kaldırılmıştır (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu Kanun kapsamındaki işlemler KDV'den de muaftır\" → yanlış; KDV ve damga vergisi muafiyet dışı. İkinci tuzak: \"Özel kuruluşlara ait ardiye ücretinden de muaftır\" → yanlış; resmi kuruluşlara ait ardiye ücreti",
+    "Bu Kanun kapsamındaki işlemler katma değer vergisinden de muaftır"
+   ],
+   "dogrusu": [
+    "KDV ve damga vergisi hariç muafiyet (m.8)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

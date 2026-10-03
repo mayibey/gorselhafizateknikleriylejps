@@ -1,0 +1,95 @@
+{
+ "kanun_id": 94,
+ "ad": "4925 sayılı Karayolu Taşıma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_94.json",
+ "kartlar": [
+  {
+   "id": "94-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar",
+   "hukum": "Karayolu taşımalarını düzenlemek, düzen ve güvenlik, taşımacı-acente-komisyoncu-nakliyat ambarı-kargo işletmeciliği şartları, çalışanların nitelik-hak-sorumlulukları (m.1); kamuya açık karayolunda motorlu taşıtlarla yolcu ve eşya taşımalarını kapsar; kapsam dışı: özel otomobiller ve römorkları, genel-katma bütçeli daireler, il özel idareleri, belediyeler, üniversiteler ve KİT'lere ait otomobillerle yapılan taşımalar, TSK, JGK, SGK ve EGM'ye ait motorlu taşıt ve römorklarıyla yapılan taşımalar, lastik tekerlekli traktör römorkuyla taşımalar (m.2); Bakanlık: Ulaştırma Bakanlığı; taşıma işleri: taşımacılık, acentelik, komisyonculuk, nakliyat ambarı ve kargo işletmeciliği; sorumluluk sigortası: 2918'deki zorunlu mali sorumluluk sigortası; taşımacı: yetki belgeli, kendi nam ve hesabına ücret karşılığı taşımayı üstlenen; eşya: insandan başka taşınabilen canlı-cansız her nesne; gönderen taşıma senedini imzalayan, gönderilen eşyanın teslim edileceği kişi; acente bağımlı sıfatı olmaksızın sözleşmeyle belirli bölgede taşımacıyı ilgilendiren sözleşmelerde aracılık eden; taşıma işleri komisyoncusu, nakliyat ambarı işletmecisi, kargo işletmecisi, yolcu bileti, taşıma senedi, düzenli/arızi sefer, terminal, tarife tanımları (m.3); taşımalar ekonomik, seri, elverişli, güvenli, çevreye etkisi en az ve kamu yararını gözeten serbest rekabet ortamında (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belediye otobüsüyle yapılan taşımalar kapsam dışı\" yanlış; belediye otomobilleri kapsam dışı",
+    "Jandarma araçlarıyla yapılan taşımalar bu Kanuna tabidir"
+   ],
+   "dogrusu": [
+    "Tabi değil (m.2)"
+   ]
+  },
+  {
+   "id": "94-1",
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "baslik": "Yetki belgesi ve taşımacılık hizmeti",
+   "hukum": "Taşımacılık, acentelik, komisyonculuk, nakliyat ambarı ve kargo işletmeciliği için Bakanlıktan yetki belgesi zorunlu; belge için meslekî saygınlık, malî yeterlilik ve meslekî yeterlilik şart; ticari araç şoförlerinin sürücü mesleki yeterlilik belgesi zorunlu; taşımacılara yetki belgesinden ayrı taşıtların nitelik ve sayısını gösteren taşıt belgesi ve her taşıt için taşıtta bulunması gereken taşıt kartı; Bakanlık sayı, kapasite, güvenlik nedeniyle yetki belgelerinde sınırlama getirebilir; tehlikeli yük taşıyanlar yetki belgesinden ayrı ilgili mercilerden izin alır; taşımacılar meslekleri ve sözleşmeleriyle bağdaşan taşıma hizmetini yapmaktan kaçınamaz; taşımacılar birbirlerinin faaliyetini engelleyemez (m.5); yolcu ve eşya taşımaları kanunlara ve sözleşmelere uygun; yolcu taşımaları biletsiz veya sözleşmesiz, eşya taşımaları taşıma senetsiz yapılamaz; taşımacı acentesinin işlemlerinden müteselsilen sorumlu; taşımacı yolcu ve eşyanın güvenli taşınmasından sorumlu; çevre mevzuatına uyar (m.6); taşımacı yolcuların sağlıklı-güvenli yolculuğu için tedbir alır, taahhüt ettiği yere kadar götürür; uygun taşıt ve nitelikli şoför, sürücü belgesi araştırma, teknik şartlara uymayan ve sigortasız taşıtları trafiğe çıkarmama, yeterli şoför; beklenmeyen sebeplerle taşıma devam edemezse ve bekleme varış zamanının bir katından fazlasını gerektirirse başka güzergâhtan tamamlar, olmazsa yolcuyu dilediği yere götürür veya geri getirir, ek ödeme isteyemez; taşımacılar altışar aylık süre ile yılda en az iki defa şoförlerini mesleki eğitime tabi tutar (m.7); gönderen eşyanın varış noktası, cinsi, miktarı ve niteliklerini tam ve doğru bildirir, yanlış bildirimden sorumlu; taşımacı ihbar-şüphede yetkililer huzurunda eşyayı kontrol ettirebilir (m.8); acenteler ve komisyoncular taşımacıyla müştereken ve müteselsilen sorumlu; nakliyat ambarı ve kargo işletmecileri eşyayı teslim aldığı andan teslim edinceye kadar kayıp-hasardan sorumlu (m.9); acente ve komisyoncu yetki belgeliler taşımacı belgesi almadan kendi nam ve hesaplarına taşıma yapamaz; komisyoncular müvekkil hesabına taşıtır; yolcu taşımacılığında komisyonculuk yapılamaz (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yolcu taşımacılığında komisyonculuk yapılabilir\" yanlış",
+    "Yolcu taşımacılığında komisyonculuk yapılabilir"
+   ],
+   "dogrusu": [
+    "Yapılamaz (m.10)"
+   ]
+  },
+  {
+   "id": "94-2",
+   "madde": [
+    "11",
+    "12",
+    "13"
+   ],
+   "baslik": "Tarifeler ve uluslararası taşımalar",
+   "hukum": "Düzenli yolcu-eşya taşımaları ile nakliyat ambarı ve kargo ücret tarifeleri yetki belgesi sahiplerince geçerlilik süresi belirtilerek hazırlanır ve Bakanlığa bildirilir; tarifelere uyulması ve işyeri-terminal-bilet satış yerlerine asılması zorunlu; ekonomi ve kamu yararı aleyhine sonuç, aşırı ücret veya rekabet bozulmasında taban ve tavan ücretleri Bakanlıkça tespit edilebilir; gidiş-dönüş aynı, değişik fiyat uygulanamaz; düzenli taşımalar zaman tarifesine tabi, zaman tarifeleri Bakanlıkça onaylandıktan sonra yürürlüğe girer; ücretsiz ve tarife altı uygulamalar yönetmelikle (m.11); uluslararası taşımalar: (a) Türkiye'ye karayolu/demiryoluyla hudut kapısından giren veya limana denizyoluyla gelen karayolu taşıtlarıyla transit taşımalar; (b) demiryolu-deniz-havayoluyla gelip karayolu taşıtlarıyla üçüncü ülkelere yapılan taşımalar; (c) Türkiye'den diğer ülkelere; (d) diğer ülkelerden Türkiye'ye (m.12); (a) taşımaları ikili-çok taraflı anlaşmalara göre yetkili veya Bakanlıkça izinli yabancı plakalı taşıtlar ile uluslararası yetki belgeli taşımacılarla; (b) taşımaları uluslararası taşımacı yetki belgeli taşımacılarca, yabancı plakalılara Cumhurbaşkanı kararıyla yetki; hangi ülkelere hangi kapıdan Bakanlıkça; (c)(d) uluslararası yetki belgeli taşımacılar ve anlaşmayla izinli veya Bakanlıkça özel izin belgeli yabancı taşımacılar; ★ çıkmış yabancı plakalı taşıtlar Türkiye sınırları dâhilindeki iki nokta arasında taşıma yapamaz (m.13); zorunlu hâllerde sınır mülki idare amirinin izni dışında yolcu-eşya sınır kapılarına taşınamaz, aktarma-depolama yapılamaz, yolcular yaya geçip başka taşıta binemez (m.14); transit taşımalarda kota sistemi uygulanabilir; anlaşması olmayan ülkelerin taşıtları Bakanlık iznine tabi (m.15); yabancı plakalı araçlardan karayolu bakımı için geçiş ücreti alınır (köprü-tünel-otoyol ücreti dâhil değil); Bakanlık geçiş ücretini tespit-artırma-indirme-kaldırmaya yetkili (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ücret tarifesi Bakanlık onayıyla yürürlüğe girer\" yanlış; ücret tarifesi bildirilir, zaman tarifesi onaylanır",
+    "Ücret tarifeleri Bakanlık onayıyla yürürlüğe girer",
+    "Yabancı plakalı taşıt Türkiye içinde iki nokta arasında taşıma yapabilir"
+   ],
+   "dogrusu": [
+    "Ücret tarifesi bildirilir; zaman tarifesi onaylanır (m.11)",
+    "Yapamaz (m.13)"
+   ]
+  },
+  {
+   "id": "94-3",
+   "madde": [
+    "7",
+    "26",
+    "27"
+   ],
+   "baslik": "Cezalar ve yetkililer",
+   "hukum": "Yetki belgesiz veya kapsam dışı faaliyet 17.000-170.000 TL (2025); taşıtını yetki belgesine kaydettirmeden kullanma 8.500-85.000; taşıma hizmetinden kaçınma 8.500-85.000; başka taşımacının faaliyetini engelleme 25.000-250.000; biletsiz/senetsiz taşıma 8.500-85.000; m.7/1'e aykırı yolcu taşımacıları 17.000-170.000; komisyonculuk yasağına aykırılık, tarifelere uymama, sınır kapısı ihlali, yabancı taşıtla iç taşıma vb. cezalar (m.26); idari para cezalarını uygulamaya: Ulaştırma Bakanının yetkilendirdiği Bakanlık personeli, trafik polisi ve zabıtası, trafik polisinin görev alanı dışında kalan yerlerde rütbeli jandarma personeli, sınır kapılarında gümrük muhafaza ve gümrük muayene memurları ile amirleri, terminallerde belediye zabıtası yetkili; uyarma, geçici durdurma ve iptal müeyyideleri yönetmelikle, para cezası bunlara engel değil (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma her yerde ceza uygulayabilir\" yanlış; trafik polisinin görev alanı dışında",
+    "İl özel idaresi personeli idari para cezası uygulayabilir"
+   ],
+   "dogrusu": [
+    "Uygulayamaz (m.27)"
+   ]
+  },
+  {
+   "id": "94-4",
+   "madde": [
+    "32",
+    "33",
+    "34"
+   ],
+   "baslik": "Terminal, ücretler, yönetmelik, yetki devri",
+   "hukum": "Düzenli seferli yolcu taşımalarında kalkış-varışlar terminalden; önceden belirlenen ara duraklarda indirme-bindirme; yolcu taşımacıları en az bir yolcu terminaline sahip olmak veya kullanma hakkını haiz olmak zorunda; aynı terminalden birden fazla taşımacı yararlanabilir; eşya taşımacılığında terminal zorunluluğu aranmaz (m.32); yetki belgeleri ve taşıt kartlarından ücret alınır, ücret alınmadan verilmez; yenileme ve zayiinde ücretin %15'i; unvan-adres değişikliğiyle süresi bitmeden yenilenenden ücret alınmaz; ücretler her yıl yeniden değerleme oranında artar; Bakanlık merkezde Bakan onayıyla döner sermaye kurabilir, miktarını Cumhurbaşkanı belirler (m.33); yönetmelikler Kanunun yürürlüğünden itibaren 6 ay içinde Bakanlıkça (yetki belgeleri, mesleki yeterlilik, taşıt yaşı-kapasitesi, belge süreleri, yükümlülükler, tarifeler, şoför şartları, denetim vb.) (m.34); Bakanlık düzenleme-kural ihdası ve m.27 (ceza) hariç görev ve yetkilerinin bir kısmını protokol/sözleşmeyle en az 1 en fazla 5 yıl süreyle kamu kurumları, TOBB, TESK ve bağlı federasyon-birlik-odalara devredebilir (m.35); hüküm bulunmayan hâllerde Türk Ticaret Kanunu, 2918 Karayolları Trafik Kanunu, Sigorta Murakabe Kanunu (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ceza kesme yetkisi TOBB'a devredilebilir\" yanlış; m.27 devredilemez",
+    "Eşya taşımacılığında da terminal zorunludur"
+   ],
+   "dogrusu": [
+    "Aranmaz (m.32)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

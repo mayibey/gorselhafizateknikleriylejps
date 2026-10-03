@@ -1,0 +1,182 @@
+[
+ {"kanun_id": 31, "kart_id": "31-0", "sorun": "kirmizi_kutu",
+  "aciklama": "Vize süresi (doksan gün) ve sınır kapısını belirleyen makam (Cumhurbaşkanı kararı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vize, Türkiye'de en fazla yüz seksen güne kadar kalma hakkı tanıyan izindir.”",
+    "“Sınır kapıları, İçişleri Bakanının onayıyla belirlenen sınır geçiş noktalarıdır.”"
+   ],
+   "dogrusu": [
+    "Vize, Türkiye'de en fazla doksan güne kadar kalma hakkı tanıyan ya da transit geçişi sağlayan izindir (m.3)",
+    "Sınır kapısı, Cumhurbaşkanı kararıyla Türkiye'ye giriş ve çıkış için belirlenen sınır geçiş noktasıdır (m.3)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-1", "sorun": "kirmizi_kutu",
+  "aciklama": "İlkenin kapsamı (yalnız mülteciler) ve korunan muamele türleri daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Geri göndermeme ilkesi yalnızca mülteci statüsü verilmiş kişiler için uygulanır.”",
+    "“Geri göndermeme ilkesi yalnızca işkence tehlikesinde uygulanır; insanlık dışı veya onur kırıcı muamele bu ilkenin kapsamında değildir.”"
+   ],
+   "dogrusu": [
+    "Geri göndermeme ilkesi Kanun kapsamındaki herkes için geçerlidir; kimse işkence veya zulüm göreceği yere gönderilemez (m.4)",
+    "Kimse işkenceye, insanlık dışı ya da onur kırıcı ceza veya muameleye tabi tutulacağı bir yere gönderilemez (m.4)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; giriş-çıkış belgesi ve yeri bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye'ye giriş ve çıkışta yalnızca geçerli pasaport kabul edilir; pasaport yerine geçen belgeyle giriş yapılamaz.”",
+    "“Türkiye'ye giriş ve Türkiye'den çıkış, sınır kapıları dışında kalan noktalardan da yapılabilir.”"
+   ],
+   "dogrusu": [
+    "Türkiye'ye giriş ve çıkış, geçerli pasaport veya pasaport yerine geçen belgelerle yapılır (m.5)",
+    "Türkiye'ye giriş ve Türkiye'den çıkış sınır kapılarından yapılır (m.5)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Kapsamlı kontrolde ülkesine dönme hakkı ve bekletme süresi (dört saat) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kapsamlı kontrole tabi tutulan yabancı, kontrol süresince ülkesine dönemez.”",
+    "“Kapsamlı kontrole tabi tutulması gerekli görülenler en fazla yirmi dört saat bekletilebilir.”"
+   ],
+   "dogrusu": [
+    "Kapsamlı kontrole tabi tutulan yabancı, bu süre içinde her an ülkesine dönebilir (m.6/5)",
+    "Kapsamlı kontrole tabi tutulması gerekli görülenler en fazla dört saat bekletilebilir (m.6/5)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Pasaport geçerlilik süresi (altmış gün) ve bekletme yeri (sınır kapısındaki alan) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vize veya ikamet izni süresinin bitiminden itibaren en az otuz gün süreli pasaportu bulunan yabancı, pasaport süresi yönünden kabul edilemeyen yolcu sayılmaz.”",
+    "“Kabul edilemeyen yolcular, işlemleri sonuçlanıncaya kadar geri gönderme merkezlerinde bekletilir.”"
+   ],
+   "dogrusu": [
+    "Vize, vize muafiyeti veya ikamet izni süresinin bitiminden itibaren en az altmış gün süreli pasaportu olmayan yabancı kabul edilemeyen yolcudur (m.7/1-b)",
+    "Kabul edilemeyen yolcular, işlemleri sonuçlanıncaya kadar sınır kapılarında kendileri için belirlenen alanlarda bekletilir (m.7/3)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Karar makamı (valilik) ve gönderilebilecek ülkeler bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sınır dışı etme kararını, valiliğin talebi üzerine Göç İdaresi Genel Müdürlüğü alır.”",
+    "“Yabancılar, sınır dışı etme kararıyla yalnızca menşe ülkesine sınır dışı edilebilir.”"
+   ],
+   "dogrusu": [
+    "Sınır dışı etme kararı, Genel Müdürlüğün talimatı üzerine veya resen valiliklerce alınır (m.53/1)",
+    "Yabancılar menşe ülkesine, transit gideceği ülkeye ya da üçüncü bir ülkeye sınır dışı edilebilir (m.52)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Başvuru süresi (yedi gün), merci (idare mahkemesi) ve dava süresince sınır dışı edilmeme bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sınır dışı etme kararına karşı, kararın tebliğinden itibaren on beş gün içinde idare mahkemesine başvurulabilir.”",
+    "“Sınır dışı etme kararına karşı sulh ceza hâkimine başvurulur.”",
+    "“Sınır dışı etme kararına karşı dava açılması, kararın uygulanmasını durdurmaz.”"
+   ],
+   "dogrusu": [
+    "Sınır dışı etme kararına karşı, kararın tebliğinden itibaren yedi gün içinde idare mahkemesine başvurulabilir (m.53/3)",
+    "Sınır dışı etme kararına karşı idare mahkemesine başvurulur; sulh ceza hâkimi idari gözetim kararına itirazın merciidir (m.53/3, m.57/6)",
+    "Yabancının rızası saklı kalmak kaydıyla, dava açma süresi içinde ve yargılama sonuçlanıncaya kadar yabancı sınır dışı edilmez (m.53/3)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Listeye olmayan hâl (Türk vatandaşıyla evlilik) eklendi; insan ticareti mağdurunun korunması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türk vatandaşıyla evli olup aile birliği içinde yaşayan yabancı hakkında sınır dışı etme kararı alınmaz.”",
+    "“Mağdur destek sürecinden yararlanan insan ticareti mağdurları, 54 üncü madde kapsamındaysa sınır dışı edilir.”"
+   ],
+   "dogrusu": [
+    "Türk vatandaşıyla evli olmak, sınır dışı etme kararı alınmayacak yabancılar arasında sayılmaz (m.55/1)",
+    "Mağdur destek sürecinden yararlanan insan ticareti mağdurları, 54 üncü madde kapsamında olsalar dahi sınır dışı edilmez (m.55/1-ç)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Terk süresi (on beş günden az olmamak üzere otuz güne kadar), belgenin harçsızlığı ve süre tanınmayanlar bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sınır dışı etme kararı alınanlara, Türkiye'yi terk edebilmeleri için en az otuz gün süre tanınır.”",
+    "“Türkiye'den çıkış için süre tanınan kişilere verilen Çıkış İzin Belgesi harca tabidir.”",
+    "“Kamu güvenliği açısından tehdit oluşturan yabancıya da Türkiye'yi terk etmesi için süre tanınır.”"
+   ],
+   "dogrusu": [
+    "Sınır dışı kararı alınanlara Türkiye'yi terk için on beş günden az olmamak üzere otuz güne kadar süre tanınır (m.56/1)",
+    "Türkiye'den çıkış için süre tanınanlara verilen Çıkış İzin Belgesi hiçbir harca tabi değildir (m.56/2)",
+    "Kamu düzeni, kamu güvenliği veya kamu sağlığı açısından tehdit oluşturanlara Türkiye'yi terk için süre tanınmaz (m.56/1)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Toplam gözetim süresi (altı + altı ay) ve değerlendirme sıklığı (her ay) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Geri gönderme merkezlerindeki idari gözetim, uzatmalarla birlikte on sekiz aya kadar sürebilir.”",
+    "“İdari gözetimin devamında zaruret olup olmadığı valilik tarafından üç ayda bir değerlendirilir.”"
+   ],
+   "dogrusu": [
+    "İdari gözetim altı ayı geçemez; iş birliği yapılmaması gibi hâllerde en fazla altı ay daha uzatılabilir (m.57/3)",
+    "İdari gözetimin devamında zaruret olup olmadığı valilik tarafından her ay düzenli olarak değerlendirilir (m.57/4)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-13", "sorun": "kirmizi_kutu",
+  "aciklama": "Yükümlülük süresi (yirmi dört ay) ve elektronik izlemeye karşı başvuru mercii bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İdari gözetime alternatif yükümlülüklerin süresi on iki ayı geçemez.”",
+    "“Elektronik izleme yükümlülüğüne karşı idare mahkemesine başvurulur.”"
+   ],
+   "dogrusu": [
+    "İdari gözetime alternatif yükümlülüklerin süresi yirmi dört ayı geçemez (m.57/A)",
+    "Elektronik izleme yükümlülüğüne karşı sulh ceza hâkimine başvurulur; hâkim incelemeyi beş gün içinde sonuçlandırır (m.57/A)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-14", "sorun": "kirmizi_kutu",
+  "aciklama": "İşleten makam (Bakanlık) ve protokolle işlettirme imkânı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Geri gönderme merkezleri yalnızca Bakanlık tarafından işletilir; başka kurumlara işlettirilemez.”",
+    "“Geri gönderme merkezleri valilikler tarafından işletilir.”"
+   ],
+   "dogrusu": [
+    "Bakanlık, geri gönderme merkezlerini kamu kurumları, Kızılay veya göç alanında uzman derneklerle protokol yaparak işlettirebilir (m.58/2)",
+    "Geri gönderme merkezleri Bakanlık tarafından işletilir (m.58/2)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-15", "sorun": "kirmizi_kutu",
+  "aciklama": "STK ziyaretindeki izin şartı ve ücretsiz sağlık hizmeti bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Göç alanında uzman sivil toplum kuruluşu temsilcileri, geri gönderme merkezlerini izin almadan ziyaret edebilir.”",
+    "“Geri gönderme merkezlerinde acil ve temel sağlık hizmetleri, bedeli yabancı tarafından ödenmek şartıyla verilir.”"
+   ],
+   "dogrusu": [
+    "Göç alanında uzman STK temsilcileri, geri gönderme merkezlerini Genel Müdürlüğün izniyle ziyaret edebilir (m.59/2)",
+    "Yabancı tarafından bedeli karşılanamayan acil ve temel sağlık hizmetleri ücretsiz verilir (m.59/1-a)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-17", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; coğrafi sınırlama (Avrupa ülkelerindeki olaylar) ve statü belirleme şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Mülteci statüsü, dünyanın herhangi bir yerinde meydana gelen olaylar nedeniyle zulüm korkusu taşıyan yabancıya verilir.”",
+    "“Mülteci statüsü, statü belirleme işlemleri yapılmaksızın sınır kapısında verilir.”"
+   ],
+   "dogrusu": [
+    "Mülteci statüsü, Avrupa ülkelerinde meydana gelen olaylar nedeniyle zulüm korkusu taşıyan yabancıya verilir (m.61)",
+    "Mülteci statüsü, statü belirleme işlemleri sonrasında verilir (m.61)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-19", "sorun": "kirmizi_kutu",
+  "aciklama": "İkincil korumanın kime verildiği (mülteci sayılamayan) ve vatansız kişiyi kapsaması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İkincil koruma statüsü, mülteci olarak nitelendirilen ancak Avrupa dışından gelen yabancılara verilir.”",
+    "“İkincil koruma statüsü yalnızca yabancılara verilir; vatansız kişiler bu statüden yararlanamaz.”"
+   ],
+   "dogrusu": [
+    "İkincil koruma, mülteci veya şartlı mülteci olarak nitelendirilemeyen ancak ciddi tehlikeyle karşılaşacak kişiye verilir (m.63)",
+    "İkincil koruma statüsü, şartları taşıyan yabancıya ya da vatansız kişiye verilir (m.63)"
+   ]}},
+ {"kanun_id": 31, "kart_id": "31-20", "sorun": "kirmizi_kutu",
+  "aciklama": "Aile üyelerinin hariçte tutulması ve kamu düzenine tehlike oluşturanın ikincil korumadan hariç tutulması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Başvuru sahibinin uluslararası korumadan hariçte tutulması, aile üyelerinin de hariçte tutulmasını gerektirir.”",
+    "“Kamu düzeni veya kamu güvenliği açısından tehlike oluşturduğuna dair ciddi emare bulunan kişi ikincil koruma statüsünden yararlanabilir.”"
+   ],
+   "dogrusu": [
+    "Başvuru sahibinin hariçte tutulması, aile üyeleri için hariçte tutma nedeni oluşmadıkça onların da hariçte tutulmasını gerektirmez (m.64/6)",
+    "Kamu düzeni veya kamu güvenliği açısından tehlike oluşturduğuna dair ciddi emare bulunan kişi ikincil korumadan hariçte tutulur (m.64/5)"
+   ]}}
+]

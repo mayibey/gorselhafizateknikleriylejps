@@ -1,0 +1,78 @@
+{
+ "kanun_id": 123,
+ "ad": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_123.json",
+ "kartlar": [
+  {
+   "id": "123-0",
+   "madde": [
+    "1",
+    "11",
+    "2"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar, ilkeler, komisyon",
+   "hukum": "Mal alımlarında ara denetim ile muayene ve kabul esasları (m.1); 4734 kapsamındaki idarelerin ihaleleri sonucu teslim edilen mal için 4735 m.11 uyarınca kuracakları komisyonlar (m.2); dayanak 4734 m.53 (m.3); komisyon: en az 3 üye; numune; hakem laboratuvar: ihale dokümanında itiraz muayenesi için belirtilen, raporu kesin laboratuvar; fiziksel muayene: görsel ve duyusal kontrol; ara denetim: imalat sürecinde geri dönüşü olmayan hataları önlemek için üretim tamamlandıktan sonra kontrol imkânı olmayan hususların denetimi (m.4); ilkeler: mal idareye teslim edilmedikçe muayene-kabul yapılamaz; yurt dışından FOB/FCA teslimli mallar için dokümanda belirtilmek kaydıyla yurt dışında muayene veya fabrika test raporlarına istinaden teslimden sonra; imalat gerektiren işler dokümanda hüküm varsa ara denetime tabi tutulabilir (komisyon yetkisini kaldırmaz); dokümanda belirtilmek koşuluyla kısmî kabul; yüklenici bildirime rağmen hazır bulunmaz veya imzadan imtina ederse tutanak; danışmanlık yükleniciyle mali-hukuki ilişkisi olandan alınamaz; zorunlu hâller dışında idareyle hiçbir bağı olmayan laboratuvar hakem (m.5); komisyon yetkili makamca, biri başkan, biri işin uzmanı olmak üzere en az 3 veya daha fazla tek sayıda kişi + yedek üyeler; uzman yoksa 4734'e tabi idarelerden; ara denetimi yapan personel komisyonda görevlendirilebilir ama komisyonun tamamı ara denetimcilerden oluşamaz; kısa sürede niteliği değişen/günlük teslim mallarda komisyon öncelikle malı kullanacak birim görevlilerinden (m.6); görevler: dokümana uygunluk incelemesi; üyeler her muayenede hazır; kısa sürede bozulabilen maddelere öncelik (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Komisyonun tamamı ara denetim personelinden oluşabilir\" yanlış",
+    "Mal teslim edilmeden de muayene yapılabilir",
+    "Komisyon 4 kişiden oluşabilir"
+   ],
+   "dogrusu": [
+    "Yapılamaz (FOB istisnası) (m.5)",
+    "Tek sayı (m.6)"
+   ]
+  },
+  {
+   "id": "123-1",
+   "madde": [
+    "8",
+    "9",
+    "10"
+   ],
+   "baslik": "Ara denetim, muayene süreci, yüklenici görevleri",
+   "hukum": "Ara denetim dokümanda hüküm varsa üretim sürecinde belirli aşamalarda; son muayenede kontrol imkânı olan hususlar için yapılmayabilir; masrafı idarece karşılanan uzmanlarla üretim yerinde; dokümanda yer alması koşuluyla önceden haber vermeksizin kontrol; rapor denetim görevlisi ve firma yetkilisince imzalanır; idarenin uyarılarına rağmen üretim şekli değiştirilmezse idare malı test ve muayeneye tabi tutmaksızın reddedebilir; yüklenici ara denetim raporlarını öne sürerek sorumluluktan kurtulamaz; denetim idare personelince, gerekirse hizmet satın alınır (m.8); muayene edilecek mal idarenin mallarıyla karışmaması için ayrı depoda geçici saklanır (m.9); yurt dışı tedarikte farklı usuller belirlenebilir (dokümanda); yurt dışı muayenede yükleniciden harcırah dâhil masraf istenemez; komisyon gönderilemezse bağımsız denetim kuruluşundan hizmet alınır, raporları nihai değil, komisyon onayıyla kesinleşir (m.10); yüklenicinin teslimi veya teslime hazır bildirimini izleyen en geç 5 iş günü içinde muayene-kabul işlemlerine başlanır; yükleniciye tarih yazılı bildirilir (m.11); yüklenicinin muayeneye hazırlık görevleri: malın tamamının incelenmesini kolaylaştıracak düzende bulundurulması; numune alımı için aparat, malzeme ve ekipmanın hazır edilmesi; kolay muayene için belirli bölümlere ayrılması (m.12); muayenede aranacak hususlar dokümandaki şartlar; numune alınması ve muhafazası idarenin sorumluluğunda; numune mühürlü, dokümanda belirlenen süre alıkonulur (m.13); ilk incelemede kanaat edinilemezse ikinci muayene; ikisi aynıysa nihai karar; farklıysa üçüncü muayene, üç sonuca göre karar (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Numune alma ve saklama yüklenicinin sorumluluğunda\" yanlış; idarenin",
+    "Numune muhafazası yüklenicinin görevidir"
+   ],
+   "dogrusu": [
+    "İdarenin (m.13)"
+   ]
+  },
+  {
+   "id": "123-2",
+   "madde": [
+    "15",
+    "16",
+    "17"
+   ],
+   "baslik": "Muayene yöntemi, laboratuvar, hakem, süre içinde haklar, rapor, karar",
+   "hukum": "Önce fiziksel nitelikler; fiziksel niteliklerin tamamı uygun bulunmayan malın numuneleri laboratuvara gönderilmez; bazıları uygun çıkmazsa muayene yarıda bırakılmaz, tamamlanır; yüklenici red raporuna itirazla ikinci muayene isteyebilir → mal aynen korunarak ilk muayenede bulunmamış kişilerden en az 3 kişilik ikinci komisyon; kararı kesin (dokümanda hüküm zorunlu); ikinci komisyon yalnız itiraz konusu kısımları inceler; olumsuzsa red raporu, laboratuvara geçilmez, itiraz edilemez; olumluysa laboratuvar; o da uygunsa kabul raporu (m.15); fiziksel muayeneden önce tutanak; aynı günde bitmezse gün-saat tebliğ (m.16); laboratuvar muayeneleri önce idarenin kendi laboratuvarında, yoksa diğer kamu laboratuvarlarında, o da yoksa özel laboratuvarlarda; dokümanda kimin, hangi yöntemle, masraf kime, hangi sonuç muteber (m.17); laboratuvarda reddedilen mal yüklenicinin itirazında veya idare dışı laboratuvarda uygunluk raporu verilen mal için idarenin gerek görmesi hâlinde idarede saklanan numuneler üzerinden hakem laboratuvarda; raporu kesin; itiraz muayenesi yalnız olumsuz çıkan ve itiraz edilen noktalar üzerinde (m.18); son teslim tarihinden önce teslim edilen mal uygun değilse yüklenici süre içinde malını alıp yenisini getirmekte veya itiraz muayenesi istemekte serbest; uygun mal teslim edebilme sayısı sözleşmede; süre dolmuşsa dokümandaki ihtarlı süre verilerek bir defa getirilecek mallar muayene edilir; yine olumsuzsa yüklenici depodaki malın tamamını dokümandaki sürede geri almak zorunda, almazsa hak talep edemez (m.19); raporda dokümandaki nitelikler ile bulunan nitelikler ayrı ayrı, sonuç \"niteliklerine uygundur\" / \"niteliklerine uygun değildir\" (m.20); komisyon eksiksiz toplanır, çoğunlukla karar, ara denetim raporları dikkate alınır, karşı oy gerekçesi yazılır, çekimser kalınamaz (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fiziksel muayenede bir nitelik uygun çıkmazsa muayene durdurulur\" yanlış; tamamlanır",
+    "İkinci komisyonun kararına hakem laboratuvarda itiraz edilir"
+   ],
+   "dogrusu": [
+    "İkinci komisyon fiziksel red verirse itiraz edilemez (m.15)"
+   ]
+  },
+  {
+   "id": "123-3",
+   "madde": [
+    "22",
+    "23",
+    "24"
+   ],
+   "baslik": "Kabul işlemleri, sorumluluk, erken teslim",
+   "hukum": "Teslimden sonra işletmeye alınarak kapasite-yeterlilik-verimliliğin anlaşılması için zaman gerekiyorsa dokümanda belirtilmek kaydıyla geçici kabul (m.22); geçici kabule hazırsa en az 3 nüsha geçici kabul tutanağı, yetkili makama; yetkili makam onayıyla geçerli; hazır değilse tutanakla idareye, geçici kabul yapılmamış sayılır (m.23); dokümanda belirtilmişse tamamlanmış ve müstakil kullanıma elverişli bölümler için kısmi kabul (m.24); denetim-muayene-testler tamamlanınca komisyonun olumlu raporu ödeme belgesine esas; geçici kabul olan alımlarda kesin kabul zamanı dokümanda; zamanı gelince yüklenici dilekçeyle başvurur, idarece kesin kabul teklif belgesi, geçici kabulü yapan komisyon (zorunlu hâlde yeni komisyon) (m.25); dokümanda hüküm varsa teknik dokümandan farklı önerilen mal, asgari özelliklere sahip ve mevcudundan daha iyi ise komisyon onayıyla kabul edilebilir, yüklenici ilave bedel isteyemez (m.26); komisyon ve ilgililerin tarafsız yapmaması, ihmal-kusur → disiplin + ceza kovuşturması + tazmin (m.27); süresinden önce teslim: yüklenicinin başvurusu üzerine, ek maliyet getirmemesi kaydıyla idarece uygun görülürse teslim tarihi beklenmeden muayene-kabul (m.28); idareler Yönetmeliğe aykırı olmamak koşuluyla özel düzenleme yapabilir, belge şekil-içeriği idarelerce (m.29); 1/1/2003 yürürlük (m.30); Kamu İhale Kurumu Başkanı yürütür (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"Daha iyi özellikli mal teslim eden yüklenici fark bedeli alır\" yanlış",
+    "Erken teslimde idarenin tek taraflı kararı yeterlidir"
+   ],
+   "dogrusu": [
+    "Yüklenici başvurusu + ek maliyet yok + idare onayı (m.28)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

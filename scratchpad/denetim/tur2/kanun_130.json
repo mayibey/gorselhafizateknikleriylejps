@@ -1,0 +1,62 @@
+{
+ "kanun_id": 130,
+ "ad": "TSK Beslenme Bedellerinin Uygulanmasına Dair Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_130.json",
+ "kartlar": [
+  {
+   "id": "130-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar, ödeme",
+   "hukum": "Kazandan beslenemeyen askerî personele aylık beslenme bedelinin peşin ödenmesi ile (askerî öğrenci, erbaş-er, nöbetçi, yüzer birlik, savaş-iç güvenlik-sınır ötesi harekât hariç) kazandan beslenenlerin aylıklarından kesintiler (m.1); beslenme bedeli uygulayan TSK birlik ve kurumları (m.2); dayanak 5668 m.11/1 (m.3); askerî personel: subay, astsubay, uzman jandarma, uzman erbaş, askerî öğrenci, sivil memur, işçi, erbaş-er; beslenme bedeli = tayın bedeli; TSK: Genelkurmay, Kara-Deniz-Hava Kuvvetleri, JGK ve SGK (bu yönetmelikte); yemek yardımı: toplu iş sözleşmesiyle işçilere günlük ödenen yemek parası (m.4); beslenme bedelinin aylık tutarı 5668 ölçütleri dikkate alınarak 2155 sayılı Kanun ve Tayın Bedeli Yönetmeliğine göre tespit edilir ve ödenir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Beslenme bedeli 5668'e göre ödenir\" yanlış; 2155'e göre"
+   ],
+   "dogrusu": [
+    "askerî personel · beslenme bedeli = tayın bedeli · TSK · yemek yardımı · 2155 sayılı Kanun ve Tayın Bedeli Yönetmeliğine"
+   ]
+  },
+  {
+   "id": "130-1",
+   "madde": [
+    "6",
+    "7",
+    "8"
+   ],
+   "baslik": "Kesinti, nakil, geri alma",
+   "hukum": "Nöbetçiler, savaş-iç güvenlik-sınır ötesi harekât, yüzer birlik ve 500 sayılı Kanuna (Kıbrıs) tabi birlik personeli hariç, tayın bedeli/yemek yardımı aldığı hâlde kazandan beslenen personelin beslendiği gün ve öğün sayısına karşılık gelen kısmı aylığından kesilir; kazandan beslenen işçilerin o günlere ait yemek yardımı ödenmez (m.6); atama veya nakil nedeniyle kesinti yapılamamışsa ayrılış-katılış bildiriminde miktar belirtilerek yeni birlik/kurum keser (m.7); beslenme bedeli peşin ödenen personelin istifa, emeklilik ve görevden ayırma hâllerinde, süreli hapis cezası infazı sürelerinde, kısa süreli kaçma, izin tecavüzü (mazerete dayalı olduğu adli mercilerce saptananlar hariç) ve firarda fiilin başladığı tarihten itibaren gün ve öğün sayısına göre geri alınır; ölüm hâlinde geri alınmaz (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ölüm hâlinde de geri alınır\" yanlış",
+    "Nöbetçinin tayın bedeli kesilir",
+    "Ölen personelin peşin ödenen beslenme bedeli geri alınır"
+   ],
+   "dogrusu": [
+    "Kesilmez (m.6)",
+    "Alınmaz (m.8)"
+   ]
+  },
+  {
+   "id": "130-2",
+   "madde": [
+    "9",
+    "10",
+    "11"
+   ],
+   "baslik": "Tutuklu, gözaltı, toplu beslenen, yurt dışı",
+   "hukum": "Askerî ceza ve tutukevleri ile disiplin ceza-tutukevlerindeki tutuklu subay, astsubay, uzman jandarma, uzman erbaş, sivil memur mevcudu günlük yoklamada sabah-öğle-akşam ayrı sütunlarda; Ceza ve Tutukevi Müdürlüğü tutukluların beslendiği günleri her ayın 14'ünü takip eden 5 iş günü içinde bağlı birliğe bildirir; personel birimi kesinti çizelgesini maaş birimine gönderir; tutarlar müteakip aylıktan kesilir; üç öğün yenmişse tayın bedeli ayın gün sayısına bölünerek günlük tutar; öğün hesabında günlük tutarın sabah 1/5, öğle 2/5, akşam 2/5 (m.9); birliklerde gözaltında bulunan veya disiplin cezasıyla birlikten ayrılamayanlar da aynı usulle, çizelge ayın 14'ünü takip eden 5 iş günü içinde (m.10); toplu beslenmesi uygun görülen birlik personeli yoklamada ayrı sütunda, m.9/5-6 esaslarıyla kesinti (m.11); yurt dışı görevde beslemenin başladığı günden bittiği güne kadar tayın bedeli/yemek yardımından gün-öğün kesinti (m.12); kuvvet komutanlıkları, JGK ve SGK yönerge düzenleyebilir (m.13); 15/1/2008'den geçerli (m.14); MSB ve İçişleri Bakanı birlikte yürütür (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öğünler eşit üçe bölünür\" yanlış; 1/5-2/5-2/5",
+    "Tutuklu kesinti bildirimi ay sonunda yapılır",
+    "Öğün kesintisi eşit üçe bölünür"
+   ],
+   "dogrusu": [
+    "Ayın 14'ünü takip eden 5 iş günü (m.9)",
+    "1/5 – 2/5 – 2/5 (m.9)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

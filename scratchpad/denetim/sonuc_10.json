@@ -1,0 +1,3602 @@
+[
+ {
+  "kanun_id": 3,
+  "kart_id": "3-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu anahtar kelime dizisi; kırmızı kutudaki iki yanlışı açıkça düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tamamen veya kısmen otomatik ya da veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla yapılan işlemler de işlemedir; kullanılmasının engellenmesi de işleme sayılır (m.3/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; 'fiilen işleyen' yanlışına cevap vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Veri sorumlusu işleme amaçlarını ve vasıtalarını belirleyen kişidir; onun adına verileri işleyen kişi veri işleyendir (m.3/1-ı, ğ)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız ikinci yanlışı karşılıyor, 'sınırsız işlenebilme' yanlışının doğrusu yok; kırmızı kutuda 'MEBS 2024'ün doğru cevabı' gibi konu dışı not var.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Amaçla bağlantılı olmak kaydıyla veriler sınırsız işlenebilir",
+    "Her hâlde ilgili kişinin açık rızasını almak m.4'teki ilkelerden biridir"
+   ],
+   "dogrusu": [
+    "Veriler işlendikleri amaçla bağlantılı, sınırlı ve ölçülü olmalıdır (m.4/2-ç)",
+    "m.4/2'deki ilkeler beş tanedir; açık rıza bu ilkeler arasında yer almaz (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda doğru bilgi karışık ve 'yedi istisna' deniyor; m.6/3'te açık rıza dahil sekiz hâl (a-g) var.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Özel nitelikli veri yalnız açık rıza varsa işlenebilir, başka hiçbir hâlde işlenemez"
+   ],
+   "dogrusu": [
+    "Özel nitelikli verilerin işlenmesi kural olarak yasaktır; açık rıza dahil m.6/3'te sayılan sekiz hâlden biri varsa işlenebilir (m.6/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; kırmızı kutudaki iki düşürülen şartı net söylemiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İlgili kişinin alenileştirdiği özel nitelikli veri her amaçla işlenebilir",
+    "Vakıf ve dernekler üyelerinin özel nitelikli verilerini üçüncü kişilere açıklayabilir"
+   ],
+   "dogrusu": [
+    "Alenileştirilen veri ancak alenileştirme iradesine uygun olarak işlenebilir (m.6/3-ç)",
+    "Vakıf, dernek ve benzeri kuruluşlar bu verileri üçüncü kişilere açıklamamak kaydıyla işleyebilir (m.6/3-g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; 'tebliğle/Kurul kararıyla' yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Silme, yok etme ve anonim hâle getirmenin usul ve esasları yönetmelikle düzenlenir (m.7/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kart m.28/2 hakkında ama madde alanı 10-11-16 gösteriyor; doğrusu uzun kelime dizisi ve yanlışa birebir cevap vermiyor.",
+  "duzeltme": {
+   "madde": [
+    "28"
+   ],
+   "dogrusu": [
+    "m.28/2 hâllerinde de zararın giderilmesini talep etme hakkı uygulanmaya devam eder (m.28/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Tuzak doğru ve m.28/2 kısmi istisna kartının konusu.",
+  "duzeltme": {
+   "karta_bagla": "3-26"
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-8",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart parmak sırası (m.24/2) hakkında; doğrusu ve 'Kardeşlerinden biri huzurunda' yanlışı m.24/1'e ait.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sol elin baş parmağı yoksa doğrudan sağ elin baş parmağı bastırılır",
+    "İlk sırada sağ elin baş parmağı bastırılır"
+   ],
+   "dogrusu": [
+    "Sol el baş parmağı yoksa aynı elin diğer bir parmağı, sol el yoksa sağ el baş parmağı, o da yoksa sağ elin diğer parmaklarından biri bastırılır (m.24/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Resmî yazışma belgeleri elektronik ortamda paylaşılır ve elektronik ortamda saklanır (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Güvenli elektronik imzalı belge çıktısı alınarak el yazısıyla imzalanmaz ve fiziksel ortamda saklanmaz (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "El yazısıyla imzalı belge yalnız zorunlu hâllerde veya olağanüstü durumlarda kullanılır (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Güvenli elektronik imzalı belge tek nüsha; zorunlu hâl veya olağanüstü durumda en az iki nüsha hazırlanır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Belge ekleri farklı form, format veya ebatlarda hazırlanabilir (m.6/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yazı tipi Times New Roman (12 punto) veya Arial (11 punto) olur (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yazı alanında 9 puntoya, iletişim bilgileri kısmında 8 puntoya kadar düşürülebilir (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Üst, sol ve sağ kenardan 1,5 cm boşluk bırakılır; logo kullanılırsa üst boşluk 0,5 cm olur (m.8/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Logo kullanımı zorunlu değildir; iki logoda hiyerarşide üst idarenin logosu solda, alt idareninki sağda yer alır (m.9/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Başlık, belgeyi gönderen idarenin adıdır ve yazı alanının üst kısmına ortalanarak yazılır (m.10/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İkinci satırdaki idare adı büyük harflerle yazılır (m.10/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; harflerin karşılığını vermiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sayıda E elektronik ortamı, Z zorunlu hâli, O olağanüstü durumu gösterir (m.11/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Her belgenin kayıt numarası hazırlanma sürecine göre eşsiz olmak zorundadır (m.11/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tarih, sayı ile aynı satırda yazı alanının en sağına yazılır; yıl dört hanelidir (m.12/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Belge tarihi, en son yetkilinin güvenli elektronik imzasına ait zaman damgasındaki tarihtir (m.12/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Metin alanı \"Muhatap\" veya varsa \"İlgi\" ile \"İmza\" arasındaki kısımdır (m.16/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; nokta-virgül yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Dört ve daha çok haneli sayılarda üçlü gruplar nokta ile, kesirler virgül ile ayrılır (m.16/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Alt makamlara \"rica ederim\", üst ve aynı düzeydeki makamlara \"arz ederim\" yazılır (m.16/12-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı.",
+  "duzeltme": {
+   "dogrusu": [
+    "İmza için metnin bitiminden itibaren iki ilâ dört satır boşluk bırakılır (m.17/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Elektronik imzalı belgede ad-soyad üzerinde e-imzaya dair hiçbir ibare, şekil veya ifadeye yer verilmez (m.17/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "El yazısıyla imza ve paraf mavi renkli kalemle atılır (m.17/6, m.21/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İki imzada üst unvan sahibi sağda; ikiden fazla imzada en üst unvan sahibi en solda yer alır (m.17/11)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yetki devrinde \"Vali a.\" gibi \"a.\", vekâlette \"Başkan V.\" gibi \"V.\" ibaresi kullanılır (m.17/9-10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Gereğini yerine getirecekler \"Gereği:\", bilgi sahibi olması istenenler \"Bilgi:\" kısmına yazılır (m.19/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; köşe/renk/sayfa yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "ACELE/GÜNLÜDÜR ibaresi yazı alanının sağ üst köşesine kırmızı renkle ve yalnız birinci sayfaya yazılır (m.26/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "\"Hizmete Özel\" belgeler elektronik ortamda, \"Özel\" ve üstü gizlilik dereceli belgeler fiziksel ortamda işlem görür (m.25/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Gizlilik derecesini belirlemekten belgenin imzacısı olan yetkili makam sorumludur (m.25/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Belge görüntüsündeki tarih, sayı gibi bilgiler ile üstveri bilgileri arasında fark olamaz (m.28/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'İdare …' yazıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ret, belgenin ulaştığı tarihi takip eden ikinci iş gününün sonuna kadar sebepleriyle bildirilir (m.30/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-29",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bildirim yapılmazsa şifreli belge açılmış ve rehbere uygun hazırlanmış kabul edilir (m.30/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "\"ASLI GİBİDİR\" ibareli ve yetkilendirilmiş görevlice imzalanan örnek asıl belge gibi kabul edilir (m.29/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Süre belirtilmeyen bilgi ve görüş talepleri en geç on beş iş günü içinde yerine getirilir (m.33/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Belge talebi beş iş günü, bilgi ve görüş talebi on beş iş günü içinde karşılanır (m.33/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-33",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Süresinde cevap verilmezse muhataba tekit yazısı yazılabilir; zorunlu değildir (m.34/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Aykırılık sürerse müteakip belgeler gerekçesiyle iade edilebilir; süreli belgeler iade edilmez (m.35/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 15,
+  "kart_id": "15-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "\"Arz ederim\" ile bitmeyen dilekçe de işleme alınır (m.31/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İzinler dört türdür: yıllık izin, mazeret izinleri, sıhhi izinler ve yurt dışı izinleri (m.5/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Her türlü izin işlemi özlük işlemlerinin yerine getirildiği makamlarca yürütülür (m.5/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Şüpheli …' yazıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Adli makama şüpheli, sanık, tanık, mağdur veya bilirkişi olarak çağrılmada geçen süre kanuni izinlerden mahsup edilmez (m.5/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Vekâlet eden, vekâlet ettiği kadronun izin verme yetkisine sahiptir (m.5/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; yurt içi/yurt dışı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "hukum": "3289 sayılı Kanunun 29 uncu maddesi uyarınca milletlerarası seviyede yurt içi ve yurt dışı spor müsabakaları ile hazırlık çalışmalarına katılan personel, organizasyonun devamı süresince izinli sayılır (m.5/1-f)",
+   "dogrusu": [
+    "Milletlerarası seviyede yurt içi ve yurt dışı müsabakaya katılan personel organizasyon süresince izinli sayılır (m.5/1-f)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Savaş ve olağanüstü hallerde izin süreleri kısaltılabilir veya kaldırılabilir, personel izinden geri çağrılabilir (m.5/1-g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; 'sadece yazılı' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Geri çağırmayı asgari yıllık izin planlamasını onaylayan makam yapar; çağrı yazılı veya sözlü olabilir (m.5/1-ğ)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İzinden dönüş ve tekrar izne gidiş masrafları Harcırah Kanununa göre personele ödenir (m.5/1-ğ)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İzin başlangıç ve bitiş saati günün başlangıç saatidir; istisnai durumda yetkili amir farklı saat belirleyebilir (m.5/1-h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı.",
+  "duzeltme": {
+   "dogrusu": [
+    "48 saat içinde, en kısa yoldan ve en seri vasıta ile dönüşe geçilir; mücbir sebeple süre uzatılabilir (m.5/1-i)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; mahsup yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Personel görev yaptığı ilin dışına izinsiz çıkamaz; tatil günlerinde verilen il dışı izinleri kanuni izinlerden mahsup edilmez (m.5/1-j)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Mesai dışında …' yazıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Mülki teşkilata tabi birliklerde vali, Ankara'da Jandarma Genel Komutanlığı, diğer illerde asgari alay ve eşiti birlik komutanı/kurum amiri belirler (m.5/1-k)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; iki yanlışı da düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Geçerli özrü olan kursiyere, kurs bitiş tarihini aşmamak kaydıyla kursu veren birim izin verebilir (m.5/1-m)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Kapsam: subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman jandarma ve uzman erbaşlar (m.20/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Seyahat maksadıyla yurt dışına giden personel şahsi, zati ve miri silahını götüremez (m.20/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yurt dışında zorunlu olmadıkça üniforma giyilemez (m.20/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Ölçüt mevzuat ve malî imkânlardır; meslekî şerefe uygun bir meskende yaşanır (m.20/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı; makam yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Uyarıcı bilgileri bağlı bulunulan birlik, karargâh ve kurum amirlikleri ve komutanlıkları verir (m.20/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "Esasları Jandarma Genel Komutanlığı belirler; personel bu esaslara uyar (m.20/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İzin belgeleri birlik ve sayısal özlük dosyalarında muhafaza edilir (m.5/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı.",
+  "duzeltme": {
+   "dogrusu": [
+    "O yıl kullanılan izin süre ve tarihleri ayrılış/katılış belgelerinin izin bölümüne yazılır ve onaylanır (m.5/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kartın başlığından ibaret.",
+  "duzeltme": {
+   "dogrusu": [
+    "İletişim vasıtası ve adresleri izin belgesinde belirtmek her izinde zorunludur (m.5/1-l)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu hükmün kesik tekrarı.",
+  "duzeltme": {
+   "dogrusu": [
+    "Bu kişiler hakkında yasal işlem yapılır (m.5/1-ı)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu 'üye sayısı 25' diyor; doğrusu kelime dizisi, 11 sayısını net vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İl av komisyonu yirmi beş üyeden oluşur"
+   ],
+   "dogrusu": [
+    "İl av komisyonu vali veya vali yardımcısı başkanlığında toplam on bir üyeden oluşur (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; 'yalnız avlanması yasak' yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Koruma altındaki hayvanlar avlanamaz; ayrıca yaban hayvanları üreme, tüy değiştirme ve göç dönemlerinde rahatsız edilemez, yavru ve yumurtaları toplanamaz (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; '30 gün' yanlışına net cevap vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Radyo ve televizyonlar av sezonundan otuz gün önce eğitici yayın yapar"
+   ],
+   "dogrusu": [
+    "Eğitici yayın av sezonunun başlamasından on beş gün önce ve sona ermesinden itibaren on beş gün süreyle yapılır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda '2026'nın öncül III'ü' gibi konu dışı not var; doğrusu çok kısa.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Haznesi iki fişekle sınırlandırılmış yarı otomatik tüfek avda kullanılamaz"
+   ],
+   "dogrusu": [
+    "Haznesi iki fişekle sınırlandırılmış tüfek kullanılabilir; yasak olan sınırlandırılmamış otomatik, yarı otomatik ve pompalı tüfeklerdir (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; izin makamı yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Özel avlakta avlanma izni Genel Müdürlükçe verilir"
+   ],
+   "dogrusu": [
+    "Özel avlakta izin avlak sahibinden alınır; Devlet, genel ve örnek avlaklarda izin Genel Müdürlüğündür (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Alır' diyor; tek başına anlaşılmıyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yivli av tüfeği ruhsatı olan ayrıca avcılık belgesi almaz"
+   ],
+   "dogrusu": [
+    "Yivli av tüfeği sahibi avlanmak için ayrıca avcılık belgesi almak zorundadır (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Avcı turistlere sürekli avcılık belgesi verilir"
+   ],
+   "dogrusu": [
+    "Avcı turistlere geçici avcılık belgesi verilir; avladıkları hayvanları bu belgeye kaydettirmek zorundadırlar (m.13, m.15)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda 'çıkmış soruda tam bu çeldiriciydi' notu var; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Avcılar belge ve izinlerini av komisyonu üyelerine de ibraz etmek zorundadır"
+   ],
+   "dogrusu": [
+    "Belge; orman muhafaza, av ve doğa koruma memurları, saha bekçileri, polis, jandarma, köy ve kır bekçileri ile muhtar ve ihtiyar heyeti üyelerine ibraz edilir; komisyon üyeleri sayılmaz (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yasak fiili fahri av müfettişi işlerse ceza iki misli uygulanır (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında 78 var (Orman Kanunu maddesi, bu kanunun değil); doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "20"
+   ],
+   "dogrusu": [
+    "Bu personele silahlar demirbaş olarak verilir ve 6831 sayılı Kanun m.78'deki hâllerde kullanılır (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; hapis aralığı karışıklığını net ayırmıyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ortamı zehirleyene bir-üç yıl, zehirle avlanana iki-beş yıl hapis verilir"
+   ],
+   "dogrusu": [
+    "Ortamı zehirleyene iki-beş yıl hapis (m.21); zehirle avlanana bir-üç yıl hapis ve en az elli gün adlî para cezası (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Beş yıl içinde tekrarda ceza iki katı uygulanır"
+   ],
+   "dogrusu": [
+    "Beş yıl içinde tekrarda ceza üç katı uygulanır (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Elkonulan eşyanın mülkiyetinin kamuya geçirilmesine mahkeme karar verir"
+   ],
+   "dogrusu": [
+    "Mülkiyetin kamuya geçirilmesine mahallî mülkî amir karar verir (m.28)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 29,
+  "kart_id": "29-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.29'a dayanıyor ama madde alanı 21-23-24; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "29"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Tekrarda avcılık belgesi bir yıl süreyle verilmez"
+   ],
+   "dogrusu": [
+    "Tekrarda avcılık belgesi iptal edilir ve iki yıl süreyle verilmez (m.29)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı 'yanlış; sürücü koltuğu' diye doğruyu içeriyor ve ikinci satırla aynı; doğrusu tek kelime.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hususi araçta yolcu koltuğunda içmek yasaktır"
+   ],
+   "dogrusu": [
+    "Hususi araçlarda yasak sürücü koltuğu içindir (m.2/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm sağlık, spor, eğitim binalarının açık alanlarını da yasak sayıyor; m.2/1'de açık alan yasağı yalnız (ç) bendindeki kurumlar içindir, diğerlerinde yalnız kapalı alan.",
+  "duzeltme": {
+   "hukum": "Okul öncesi eğitim kurumları, dershaneler ve özel eğitim-öğretim kurumları dahil ilk ve orta öğrenim kurumları ile kültür ve sosyal hizmet binalarının kapalı ve açık alanlarında tütün ürünü tüketilemez (m.2/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "Okul bahçesinde (açık alanda) sigara içilebilir"
+   ],
+   "dogrusu": [
+    "Okullarda bahçe gibi açık alanlar dahil tütün ürünü tüketilemez (m.2/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-2",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "'Cezaevinde tamamen yasak' yanlışı istisna alanları kartına (48-3) ait; doğrusu tribün yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Stat tribününde (seyir yerinde) tütün ürünü serbesttir"
+   ],
+   "dogrusu": [
+    "Açık hava etkinliklerinin yapıldığı yerler ve seyir yerlerinde tütün yasaktır; ancak tüketime mahsus ayrı alan oluşturulabilir (m.2/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; 48-2'den gelen cezaevi yanlışı buraya ait.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hastanelerin tümünde veya askerî kışlalarda tütün alanı oluşturulabilir",
+    "Cezaevlerinde tütün tüketimine mahsus alan oluşturulamaz"
+   ],
+   "dogrusu": [
+    "Tütün alanı yalnız yaşlı bakım evleri, ruh ve sinir hastalıkları hastaneleri, cezaevleri ile şehirlerarası veya uluslararası deniz yolcu araçlarının güvertelerinde oluşturulabilir (m.2/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "'Elektronik sigara da kapsama alınmıştır' metinde yok; m.2/6 tütün içermeyen taklit nargile ve sigarayı sayar.",
+  "duzeltme": {
+   "hukum": "Tütün içermeyen ancak tütün mamulünü taklit eder tarzda kullanılan her türlü nargile ve sigara tütün ürünü kabul edilir (m.2/6)",
+   "sinavda_boyle_yazarlar": [
+    "Tütün içermeyen (bitkisel) nargile kapsam dışıdır"
+   ],
+   "dogrusu": [
+    "Tütün içermeyen nargile de tütün ürünü kabul edilir (m.2/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-5",
+  "sorun": "hukum_hatali",
+  "aciklama": "Metinde genel 'görünür teşhir yasağı' yok; m.3/13 yalnız 18 yaş altının doğrudan ulaşacağı ve işletme dışından görülecek şekilde satışa arzı yasaklar; 'rafta görünür satış' yanlışı metne dayanmıyor.",
+  "duzeltme": {
+   "hukum": "Tütün ürünlerinin ve üretici firmaların isim, marka veya alâmetleri kullanılarak reklam ve tanıtımı yapılamaz; firmalar hiçbir etkinliğe isim, amblem veya marka kullanarak destek olamaz (m.3/1). Tütün ürünleri 18 yaş altının doğrudan ulaşacağı ve işletme dışından görülecek şekilde satışa arz edilemez (m.3/13)",
+   "sinavda_boyle_yazarlar": [
+    "Tütün firmaları markalarını kullanarak bir etkinliğe sponsor olabilir",
+    "Tütün ürünleri işletme dışından görülecek şekilde satışa arz edilebilir"
+   ],
+   "dogrusu": [
+    "Firmalar hiçbir etkinliğe isim, amblem veya marka kullanarak destek olamaz (m.3/1)",
+    "Tütün ürünleri işletme dışından görülecek şekilde satışa arz edilemez (m.3/13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda meta not var, doğrusu yalnız '18'; şeker/oyuncak hükmü m.3/14'tür ve yalnız 18 yaş altına yönelik değildir.",
+  "duzeltme": {
+   "hukum": "Tütün ürünleri ve nargile 18 yaşını doldurmamış kişilere satılamaz ve tüketimlerine sunulamaz (m.3/8); 18 yaş altı kişiler tütün ürünü işletmelerinde, pazarlanmasında ve satışında istihdam edilemez (m.3/9)",
+   "sinavda_boyle_yazarlar": [
+    "Tütün ürünleri 16 yaşından küçüklere satılamaz"
+   ],
+   "dogrusu": [
+    "Tütün ürünleri 18 yaşını doldurmamış kişilere satılamaz (m.3/8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-7",
+  "sorun": "hukum_hatali",
+  "aciklama": "Fıkra atıfları yanlış (adet satış m.3/10, elektronik/kargo m.3/11, kurumlarda satış m.3/7); 'posta ile' ve 'mesafeli satış' ifadeleri metinde yok; madde alanındaki 12 bir fıkra no.",
+  "duzeltme": {
+   "madde": [
+    "3"
+   ],
+   "hukum": "Tütün ürünleri paket açılarak adet şeklinde veya daha küçük paketlere bölünerek satılamaz (m.3/10); otomatik makinelerle, telefon, televizyon ve internet gibi elektronik ortamlarla satılamaz, satış amacıyla kargo yoluyla taşınamaz (m.3/11); sağlık, eğitim-öğretim, kültür ve spor hizmeti verilen yerlerde satılamaz (m.3/7)",
+   "dogrusu": [
+    "Tütün ürünleri hiçbir satış yerinde paket açılarak adet şeklinde satılamaz (m.3/10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-8",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm 10 cm'yi uyarı yazısına, 3 cm'yi cezai hüküm yazısına bağlıyor; m.4/1'de 10 cm salonlar, 3 cm toplu taşım araçları içindir.",
+  "duzeltme": {
+   "hukum": "Tütün içilmesi yasak yerlerde yasal düzenlemeyi ve cezai sonuçlarını belirten uyarılar salonlarda asgari 10 cm, toplu taşım araçlarında 3 cm puntolarla görülebilir yerlere asılır; satış yerlerine 18 yaş uyarısı asılır (m.4/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "Uyarılar toplu taşım araçlarında 10 cm, salonlarda 3 cm puntoyla asılır"
+   ],
+   "dogrusu": [
+    "Salonlarda asgari 10 cm, toplu taşım araçlarında 3 cm punto kullanılır (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-9",
+  "sorun": "hukum_hatali",
+  "aciklama": "Metinde uyarı 'paketin %85'i' değil en geniş iki yüzün her birinin en az %85'i; marka sınırı bir yüzeyin %5'idir.",
+  "duzeltme": {
+   "hukum": "Paketin en geniş iki yüzünün her birinde uyarılar alanın %85'inden az olamaz; marka yalnız bir yüzeye ve o yüzeyin %5'ini aşmayacak şekilde yazılır; düz ve standart paket uygulanır; yanıltıcı veya özendirici ibare kullanılamaz (m.4/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "Paket uyarısı en geniş yüzlerin %65'ini kaplar"
+   ],
+   "dogrusu": [
+    "Uyarılar en geniş iki yüzün her birinde en az %85'tir (m.4/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-10",
+  "sorun": "hukum_hatali",
+  "aciklama": "Yükümlülük yalnız 'TRT ve ulusal yayın kuruluşları' değil; ulusal, bölgesel ve yerel TV ve radyoları kapsar; kırmızı kutu somut bir yanlış içermiyor.",
+  "duzeltme": {
+   "hukum": "TRT ile ulusal, bölgesel ve yerel yayın yapan özel televizyon ve radyolar ayda en az 90 dakika uyarıcı-eğitici yayın yapar; en az 30 dakikası 17:00-22:00 arasında olmak üzere 08:00-22:00 arasında yapılır (m.4/7)",
+   "sinavda_boyle_yazarlar": [
+    "Tütün zararları yayını yalnız TRT ve ulusal kanallar için zorunludur"
+   ],
+   "dogrusu": [
+    "TRT ile ulusal, bölgesel ve yerel TV ve radyolar ayda en az 90 dakika yayın yapar; en az 30 dakikası 17:00-22:00 arasındadır (m.4/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda 'yanlış; iç' notu var; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "3",
+    "4",
+    "5"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Anüs bölgesi muayenesi dış beden muayenesidir"
+   ],
+   "dogrusu": [
+    "Cinsel organlar veya anüs bölgesinde yapılan muayene iç beden muayenesi sayılır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı diğerlerini tekrarlayan meta not; doğrusu tek kelimelik.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Savcının iç muayene kararı 48 saatte hâkime sunulur",
+    "Onaylanmayan karar hükümsüz kalsa da deliller kullanılır",
+    "Anüs bölgesi muayenesi dış muayenedir"
+   ],
+   "dogrusu": [
+    "Savcının kararı 24 saat içinde hâkim veya mahkeme onayına sunulur (m.4)",
+    "Onaylanmayan karar hükümsüz kalır ve elde edilen deliller kullanılamaz (m.4)",
+    "Cinsel organ veya anüs bölgesi muayenesi iç beden muayenesidir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Dış beden muayenesini kolluk görevlisi yapar"
+   ],
+   "dogrusu": [
+    "Dış beden muayenesi ancak tabip tarafından yapılır; kolluk yalnız talep eder (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış değil açıklama; doğrusu yalnız '2 yıldan az'.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Üst sınırı 3 yıldan az hapis cezası gerektiren suçlarda örnek alınamaz"
+   ],
+   "dogrusu": [
+    "Üst sınırı 2 yıldan az hapis cezası gerektiren suçlarda kan, saç, tükürük, tırnak gibi örnekler alınamaz (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı 'yanlış; derhâl yok edilir' diye doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Elde edilen veriler 10 yıl saklanır",
+    "Beraat edenin genetik verisi saklanır"
+   ],
+   "dogrusu": [
+    "Veriler Cumhuriyet savcısının huzurunda derhâl yok edilir ve tutanağa geçirilir (m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu da içeren açıklama; doğrusu '18 (m.6)' gibi kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Çocuk deyimi 15 yaşını doldurmamış kişiyi ifade eder",
+    "Avukatlar yargı görevi yapan sayılmaz",
+    "Mübaşir ve uzlaştırmacı yargı görevi yapan sayılır"
+   ],
+   "dogrusu": [
+    "Çocuk, henüz 18 yaşını doldurmamış kişidir (m.6/1-b)",
+    "Yargı görevi yapan: yüksek mahkemeler, adlî ve idarî mahkemeler üye ve hâkimleri, Cumhuriyet savcısı ve avukatlar; mübaşir ve uzlaştırmacı sayılmaz (m.6/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı ve doğruyu içeriyor; doğrusu çok kısa.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Konusu suç teşkil eden emri yerine getiren sorumlu olmaz"
+   ],
+   "dogrusu": [
+    "Konusu suç teşkil eden emri yerine getiren de emri veren de sorumludur (m.24/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-2",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kırmızı kutu haksız tahrik (m.29) hakkında açıklama; kart meşru savunma/zorunluluk hâli; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Meşru savunmada saldırı ile savunma arasında orantı aranmaz"
+   ],
+   "dogrusu": [
+    "Meşru savunmada saldırı o anda, hâl ve koşullara göre orantılı biçimde defedilmelidir (m.25/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız bir ifade parçası.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kişinin öldürülmesine rıza göstermesi faile ceza verilmesini engeller"
+   ],
+   "dogrusu": [
+    "Rıza yalnız kişinin mutlak surette tasarruf edebileceği bir hakkına ilişkin fiillerde cezayı kaldırır (m.26/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'suçun faili sayılır' parçası; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Cebir veya tehditle zorlanarak suç işleyen kişi yardım eden olarak sorumludur"
+   ],
+   "dogrusu": [
+    "Karşı koyamayacağı cebir veya ağır tehditle suç işleyene ceza verilmez; cebri kullanan suçun faili sayılır (m.28)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı ve doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Haksız tahrik hâlinde ceza verilmez"
+   ],
+   "dogrusu": [
+    "Haksız tahrik cezayı kaldırmaz, indirir; diğer hâllerde ceza 1/4'ten 3/4'e kadar indirilir (m.29)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "15 yaşını doldurmamış çocuğun ceza sorumluluğu yoktur"
+   ],
+   "dogrusu": [
+    "12 yaşını doldurmamışın ceza sorumluluğu yoktur; 12-15 yaş arasında sorumluluk algılama ve yönlendirme yeteneğine bağlıdır (m.31/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı; doğrusu tek kelime.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İradi olarak alınan alkol etkisinde suç işleyenin cezası indirilir"
+   ],
+   "dogrusu": [
+    "İradi alınan alkol veya uyuşturucu etkisinde suç işleyene m.34/1'deki cezasızlık uygulanmaz (m.34/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; başlangıç günü yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Şikâyet süresi suçun işlendiği günden başlar"
+   ],
+   "dogrusu": [
+    "Altı aylık süre, fiili ve failin kim olduğunu bilme veya öğrenme gününden başlar; zamanaşımını geçemez (m.73/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-9",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Olası kastla öldürme listede değil' iddiası metne dayanmıyor (m.77 'kasten öldürme' diyor); doğrusu zamanaşımı yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Soykırım suçu 30 yıl sonra zamanaşımına uğrar"
+   ],
+   "dogrusu": [
+    "Soykırım ve insanlığa karşı suçlarda zamanaşımı işlemez (m.76/4, m.77/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız zamanaşımını anlatıyor, teşebbüs yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Göçmen kaçakçılığı teşebbüste kalırsa ceza indirilir",
+    "İnsan ticaretinde zamanaşımı işlemez"
+   ],
+   "dogrusu": [
+    "Göçmen kaçakçılığı teşebbüste kalsa dahi tamamlanmış gibi cezalandırılır (m.79/1)",
+    "m.80'de zamanaşımının işlemeyeceğine dair hüküm yoktur; bu kural soykırım, insanlığa karşı suç ve işkence içindir (m.76-78, m.94/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; kırmızı kutuda yıl notu var.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kasten öldürmenin kadına karşı işlenmesi müebbet hapis gerektirir"
+   ],
+   "dogrusu": [
+    "Kadına karşı kasten öldürme ağırlaştırılmış müebbet hapis gerektirir (m.82/1-f)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Başkasının intiharına yardım etmek suç değildir"
+   ],
+   "dogrusu": [
+    "İntihara azmettiren, teşvik eden, kararı kuvvetlendiren veya yardım eden 2-5 yıl; intihar gerçekleşirse 4-10 yıl hapis alır (m.84/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda 'şıklar uydurma' açıklaması var; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taksirle birden fazla kişinin ölümüne neden olan 2-6 yıl hapis alır"
+   ],
+   "dogrusu": [
+    "Birden fazla kişinin ölümüne neden olan taksirli failin cezası 2-15 yıl hapistir (m.85/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Silahla basit yaralama da şikâyete bağlıdır"
+   ],
+   "dogrusu": [
+    "Silahla işlenen kasten yaralamada şikâyet aranmaz, ceza yarı oranında artırılır (m.86/3-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kemik kırığına neden olan kasten yaralamada ceza bir kat artırılır"
+   ],
+   "dogrusu": [
+    "Kemik kırığı veya çıkığında ceza, hayat fonksiyonlarına etkisine göre yarısına kadar artırılır (m.87/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taksirle yaralama her hâlde re'sen soruşturulur"
+   ],
+   "dogrusu": [
+    "Taksirle yaralama şikâyete bağlıdır; birinci fıkra hariç bilinçli taksirle işlenirse şikâyet aranmaz (m.89/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İnsan üzerinde bilimsel deneyde sözlü rıza yeterlidir"
+   ],
+   "dogrusu": [
+    "Rıza yeterli bilgilendirmeye dayalı, yazılı ve menfaat teminine bağlı olmamalıdır (m.90/2-g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış değil açıklama.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İşkence suçunu herkes işleyebilir"
+   ],
+   "dogrusu": [
+    "İşkencenin faili kamu görevlisidir, iştirak edenler de kamu görevlisi gibi cezalandırılır; eziyeti herkes işleyebilir (m.94, m.96)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Eziyet suçunu yalnız kamu görevlisi işleyebilir"
+   ],
+   "dogrusu": [
+    "Eziyet suçunu herkes işleyebilir; temel cezası 2-5 yıl hapistir (m.96/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Suç sonucu gebe kalan kadının gebeliği en fazla 10 haftaya kadar sonlandırılabilir"
+   ],
+   "dogrusu": [
+    "Suç sonucu gebe kalan kadının rızasıyla, 20 haftayı geçmemek üzere uzman hekimlerce hastanede gebeliği sonlandırana ceza verilmez (m.99/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Organ veya cisim sokma suretiyle cinsel saldırı eşe karşı işlense de re'sen soruşturulur"
+   ],
+   "dogrusu": [
+    "Bu fiil eşe karşı işlenirse soruşturma ve kovuşturma mağdurun şikâyetine bağlıdır (m.102/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu açıklama karışık; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Cebir, tehdit veya hile olmadan 15 yaşını tamamlamış çocukla rızaya dayalı cinsel davranış çocuğun cinsel istismarıdır"
+   ],
+   "dogrusu": [
+    "15 yaşını tamamlamış çocuklara karşı yalnız cebir, tehdit, hile veya iradeyi etkileyen nedene dayalı davranış istismardır (m.103/1-b); diğer hâlde m.104 uygulanır"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sosyal medya veya mesajla cinsel taciz basit taciz sayılır"
+   ],
+   "dogrusu": [
+    "Posta veya elektronik haberleşme araçlarının kolaylığıyla işlenen tacizde ceza yarı oranında artırılır (m.105/2-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Malvarlığına zarar verileceği tehdidi 6 ay-2 yıl hapis gerektirir ve re'sen soruşturulur"
+   ],
+   "dogrusu": [
+    "Malvarlığına büyük zarar tehdidi şikâyete bağlıdır; 2-6 ay hapis veya adlî para cezası gerektirir (m.106/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kişiyi hürriyetinden yoksun kılmanın cinsel amaçla işlenmesinde ceza bir kat artırılır"
+   ],
+   "dogrusu": [
+    "Cinsel amaçla işlenirse ceza yarı oranında artırılır; silahla veya çocuğa karşı gibi hâllerde bir kat artırılır (m.109/3, 5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Cebir veya tehditle iş ve çalışma hürriyetinin ihlali re'sen soruşturulur"
+   ],
+   "dogrusu": [
+    "İş ve çalışma hürriyetinin ihlali mağdurun şikâyetine bağlıdır; ceza 6 ay-2 yıl hapis veya adlî para cezasıdır (m.117/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Eşlerden birinin rızasıyla konuta giren de konut dokunulmazlığını ihlal etmiş olur"
+   ],
+   "dogrusu": [
+    "Aile bireylerinden veya ortak kullananlardan birinin meşru amaca yönelik rızası varsa suç oluşmaz (m.116/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.123'ü de içeriyor ama madde alanında yok; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "120",
+    "121",
+    "122",
+    "123"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Hukuka aykırı üst araması yalnız disiplin suçudur, ceza gerektirmez"
+   ],
+   "dogrusu": [
+    "Hukuka aykırı olarak üst veya eşya arayan kamu görevlisi 3 ay-1 yıl hapis cezası alır (m.120)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-29",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Gıyapta hakaretin cezalandırılması için iki kişiyle ihtilat yeter"
+   ],
+   "dogrusu": [
+    "Gıyapta hakaret için fiilin en az üç kişiyle ihtilat ederek işlenmesi gerekir (m.125/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; karşılıklı hakaret yanlışını net düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Karşılıklı hakarette her iki taraf da tam ceza alır"
+   ],
+   "dogrusu": [
+    "Karşılıklı hakarette taraflardan biri veya ikisi hakkında ceza 1/3'e kadar indirilebilir ya da ceza vermekten vazgeçilebilir (m.129/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ölünün hatırasına hakarette ihtilat şartı aranmaz"
+   ],
+   "dogrusu": [
+    "Ölünün hatırasına hakaret için en az üç kişiyle ihtilat gerekir (m.130/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu açıklama; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Katıldığı aleni olmayan konuşmayı kaydetmek, başkalarının konuşmasını dinleyip kaydetmekle aynı cezayı gerektirir"
+   ],
+   "dogrusu": [
+    "Katıldığı aleni olmayan söyleşiyi rızasız kaydeden 6 ay-2 yıl hapis veya adlî para cezası; başkalarının konuşmasını dinleyen veya kaydeden 2-5 yıl hapis alır (m.133/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-33",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sağlık verisini hukuka aykırı kaydetmede ceza bir kat artırılır"
+   ],
+   "dogrusu": [
+    "Sağlık durumuna ilişkin kişisel veride ceza yarı oranında artırılır (m.135/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taşınmaz mal da hırsızlık suçunun konusu olur"
+   ],
+   "dogrusu": [
+    "Hırsızlığın konusu yalnız taşınır maldır (m.141/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Alacağını tahsil için cebir kullanan yağma suçundan cezalandırılır"
+   ],
+   "dogrusu": [
+    "Hukuki ilişkiye dayanan alacağın tahsili için tehdit veya cebirde yalnız tehdit veya kasten yaralama hükümleri uygulanır (m.150/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-36",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mezarlık tesislerini kirletmenin cezası 1-4 yıl hapistir"
+   ],
+   "dogrusu": [
+    "Kirletmede ceza 3 ay-1 yıl hapis veya adlî para cezası; yıkma, bozma, kırmada 1-4 yıl hapistir (m.153/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Meslek, ticaret veya hizmet ilişkisiyle teslim edilen mal hakkında güveni kötüye kullanma şikâyete bağlıdır"
+   ],
+   "dogrusu": [
+    "Şikâyet şartı yalnız basit hâl (m.155/1) içindir; nitelikli hâlde (m.155/2) şikâyet aranmaz, ceza 1-7 yıl hapistir"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kendini kamu görevlisi veya banka çalışanı tanıtarak yapılan telefon dolandırıcılığı basit dolandırıcılıktır"
+   ],
+   "dogrusu": [
+    "Kendini kamu görevlisi veya banka çalışanı olarak tanıtma ya da bilişim/banka aracılığı nitelikli dolandırıcılıktır; hapis alt sınırı 4 yıldır (m.158/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-39",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı ve yıl notu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sayacı engelleyerek kaçak elektrik kullanmak hırsızlıktır"
+   ],
+   "dogrusu": [
+    "Kaçak elektrik, su veya doğal gaz tüketimi karşılıksız yararlanma suçudur, 1-3 yıl hapis (m.163/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ses ve gaz fişeği atabilen (kurusıkı) silahla ateş etmek suç değildir"
+   ],
+   "dogrusu": [
+    "Ses ve gaz fişeği atabilen silahla ateş etmek 6 ay-3 yıl hapis gerektirir (m.170/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-41",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Alkollü araç kullanmanın yaptırımı yalnız idari para cezasıdır"
+   ],
+   "dogrusu": [
+    "Alkol veya uyuşturucu etkisiyle emniyetli araç kullanamayacak hâlde araç kullanan 6 ay-2 yıl hapis cezası alır (m.179/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Uyuşturucuyu satma ve ticaret amacıyla bulundurmanın cezası 2-5 yıl hapistir"
+   ],
+   "dogrusu": [
+    "Ülke içinde satma ve bulundurmanın cezası en az 10 yıl hapistir; 2-5 yıl kullanmak için bulundurmanın cezasıdır (m.188/3, m.191/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-43",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Uyuşturucu kullanımını alenen özendirmenin yaptırımı yalnız adlî para cezasıdır"
+   ],
+   "dogrusu": [
+    "Alenen özendirme 5-10 yıl hapis ve 1.000-10.000 gün adlî para cezası gerektirir (m.190/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-44",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kart yalnız m.191 hakkında; kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "madde": [
+    "191"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kullanmak için uyuşturucu bulunduran hakkında doğrudan kamu davası açılır"
+   ],
+   "dogrusu": [
+    "CMK 171 şartları aranmaksızın beş yıl süreyle kamu davasının açılmasının ertelenmesine karar verilir (m.191/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-45",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.207'yi de içeriyor ama madde alanında yok; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "197",
+    "204",
+    "206",
+    "207"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Özel belgede sahtecilik için belgeyi sahte düzenlemek yeterlidir, kullanılması gerekmez"
+   ],
+   "dogrusu": [
+    "Özel belgede sahtecilik için sahte düzenleme veya değiştirmenin yanında belgenin kullanılması da gerekir (m.207/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-46",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu tekrarlı; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İki kişi suç örgütü kurabilir"
+   ],
+   "dogrusu": [
+    "Örgütün varlığı için üye sayısının en az üç olması gerekir (m.220/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-47",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu çok uzun kelime dizisi; yanlışa cevap vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Fuhuş yapan kişi TCK m.227'ye göre cezalandırılır"
+   ],
+   "dogrusu": [
+    "m.227 fuhşa teşvik eden, yolunu kolaylaştıran, aracılık eden veya yer temin edeni cezalandırır; fuhşa sürüklenen kişi tedavi veya terapiye tabi tutulabilir (m.227/2, 8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-48",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı şık açıklaması.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İftirada dava zamanaşımı suç tarihinden başlar"
+   ],
+   "dogrusu": [
+    "İftirada dava zamanaşımı, mağdurun fiili işlemediğinin sabit olduğu tarihten başlar (m.267/8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-49",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış değil açıklama; doğrusu tek kelime.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kimse fail gösterilmeden işlenmemiş bir suçu ihbar etmek iftiradır"
+   ],
+   "dogrusu": [
+    "İşlenmemiş suçu işlenmiş gibi ihbar etmek suç uydurmadır (m.271); belli bir kişiye suç isnat etmek iftiradır (m.267)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-50",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.280'i de içeriyor ama madde alanında yok; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "277",
+    "278",
+    "279",
+    "280"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kardeşinin işlediği suçu bildirmeyen cezalandırılır"
+   ],
+   "dogrusu": [
+    "Tanıklıktan çekinebilecek kişiler suçu bildirmeme nedeniyle cezalandırılmaz (m.278/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-51",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kardeşini veya suç ortağını kayıran cezalandırılır"
+   ],
+   "dogrusu": [
+    "Kayırma üstsoy, altsoy, eş, kardeş veya diğer suç ortağı tarafından işlenirse ceza verilmez (m.283/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-52",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Malın sahibi olan yediemin muhafaza görevini kötüye kullanırsa cezalandırılmaz"
+   ],
+   "dogrusu": [
+    "Kişi malın sahibiyse ceza yarı oranında indirilir (m.289/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 67,
+  "kart_id": "67-53",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.314'e dayanıyor ama madde alanı m.220 gösteriyor; kırmızı kutuda örgüt karışıklığı var ama doğrusu yalnız m.299.",
+  "duzeltme": {
+   "madde": [
+    "299",
+    "301",
+    "314"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Cumhurbaşkanına hakaret suçunda kovuşturma Cumhurbaşkanının şikâyetine bağlıdır",
+    "Silahlı örgüt kuranın cezası adi suç örgütündeki gibi 5-10 yıldır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanına hakarette kovuşturma Adalet Bakanının iznine bağlıdır (m.299/3)",
+    "Silahlı örgüt kuran veya yöneten 10-15 yıl, üye 5-10 yıl hapis alır (m.314)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Askerlik çağı 18 yaşına girilen yıl başlar"
+   ],
+   "dogrusu": [
+    "Askerlik çağı 20 yaşına girilen yılın 1 Ocak'ında başlar, 41 yaşına girilen yılın 1 Ocak'ında biter (m.3/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında 148 var (Askerî Ceza Kanunu maddesi); kırmızı kutunun ilk satırı şık açıklaması.",
+  "duzeltme": {
+   "madde": [
+    "5"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Cumhurbaşkanı hizmet süresini 6 ayın altına indirebilir",
+    "Askerliğe devam etmek isteyen erde lise mezuniyeti aranır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanınca belirlenen hizmet süresi 6 aydan az olamaz (m.5/2)",
+    "Devam için öğrenim şartı yoktur; diğer şartlar yanında Birlik Komutanlığınca olumlu nitelik belgesi aranır (m.5/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu 'İkisi çapraz sorulur' diyor, somut yanlış yok; doğrusu kelime dizisi; madde alanı m.12 olmalı.",
+  "duzeltme": {
+   "madde": [
+    "12"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Görevden ayrılan uzman jandarmanın hizmet süresinin üçte biri askerlikten sayılır"
+   ],
+   "dogrusu": [
+    "Görevden ayrılan uzman jandarmanın hizmette geçirdiği sürenin tamamı askerlikten sayılır (m.12/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Eşi doğum yapan erbaş ve ere 7 gün ilave izin verilir"
+   ],
+   "dogrusu": [
+    "Eşi doğum yapan veya eşi ya da ikinci derece dahil yakını vefat eden erbaş ve ere talebi üzerine ilave 10 gün izin verilir (m.28/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.32'yi de içeriyor ama madde alanında yok; kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu tek kelime.",
+  "duzeltme": {
+   "madde": [
+    "29",
+    "30",
+    "31",
+    "32"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Beraat edenin gözaltı ve tutuklulukta geçen süresi askerlikten sayılmaz"
+   ],
+   "dogrusu": [
+    "Yargılama sonucu beraat edenlerin gözaltı ve tutukluluk süreleri askerlik hizmetinden sayılır (m.31/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.37'yi de içeriyor ama madde alanında yok; kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "madde": [
+    "34",
+    "35",
+    "36",
+    "37"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "2 yıla kadar hapis cezasının infazı askerlik hizmetinin sonuna bırakılır"
+   ],
+   "dogrusu": [
+    "Bir yıl ve daha az süreli hapis cezasının infazı askerlik hizmetinin sonuna bırakılır (m.36/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanındaki 41, 5510 sayılı Kanunun maddesi; kırmızı kutu somut yanlış içermiyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "40"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Altı aylık hizmeti tamamlayıp terhis olana sınav tam notunun %15'ine kadar ilave puan verilir"
+   ],
+   "dogrusu": [
+    "Altı ayı tamamlayıp terhis olana %5'e, hizmete devam edip terhis olana %15'e kadar ilave puan verilir; MYO ve meslek lisesi mezunlarında %10 ve %20'dir (m.40/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; yanlışı net düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Terörle mücadelede hayatını kaybeden kamu görevlisinin kardeşlerinin tamamı silahaltına alınmaz"
+   ],
+   "dogrusu": [
+    "Kamu görevlisinin çocuklarının tamamı ile kardeşlerinden biri istekli olmadıkça silahaltına alınmaz (m.42/2-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 76,
+  "kart_id": "76-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Uzman erbaşın sözleşme süresinin tamamı askerlikten sayılır"
+   ],
+   "dogrusu": [
+    "Uzman erbaşın sözleşme döneminin üçte biri sayılır (m.48/1-ç); uzman jandarmada sürenin tamamı sayılır (m.12/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 84,
+  "kart_id": "84-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruları sıralayan açıklama.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Güçlendirilmiş yemek bedeli günlük yemek bedelinin %50 fazlasıdır"
+   ],
+   "dogrusu": [
+    "Güçlendirilmiş yemek bedeli günlük yemek bedelinin %25 artırılmış hâlidir (m.2/1-g); %50 bayram ve yılbaşı içindir (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 84,
+  "kart_id": "84-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; onay makamı yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Zorunlu içme suyu birlik komutanının onayıyla verilir",
+    "İçme suyu kişi başı günlük 2 litreye kadar verilir"
+   ],
+   "dogrusu": [
+    "İçme suyu Kuvvet Komutanı, Jandarma Genel Komutanı, Sahil Güvenlik Komutanı veya yetkilendirdikleri makamın onayıyla verilir (m.4/7)",
+    "Bir kişi için günlük üç litreye kadar ambalajlanmış içme suyu verilir (m.4/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 84,
+  "kart_id": "84-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.9'u da içeriyor ama madde alanında yok; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kazandan beslenen nöbetçi personelin tayın bedeli kesilir",
+    "JGK'da güçlendirilmiş yemek için Millî Savunma Bakanının onayı alınır"
+   ],
+   "dogrusu": [
+    "Birlik ve kurum nöbetçilerinin tayın bedeli kesilmez (m.6)",
+    "JGK ve SGK için güçlendirilmiş yemekte İçişleri Bakanının onayı alınır (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 84,
+  "kart_id": "84-3",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Temizlik maddeleri yönetmeliğini Maliye birlikte hazırlar, yemek hizmetinde görüş verir' ifadesi m.11/3 ve m.11/5'e göre doğrudur; madde alanındaki 23 (2803 m.23) yerine m.12 olmalı.",
+  "duzeltme": {
+   "madde": [
+    "10",
+    "11",
+    "12"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Günlük yemek bedelinden artan para ertesi güne devreder",
+    "Yemek hizmeti satın alma yönetmeliğinde Strateji ve Bütçe Başkanlığının görüşü alınır"
+   ],
+   "dogrusu": [
+    "Günlük yemek bedelinden artan parasal değerler sonraki günlere aktarılmaz (m.10/2)",
+    "Yemek hizmeti yönetmeliğinde Maliye Bakanlığı, Sayıştay ve Kamu İhale Kurumunun görüşü alınır (m.11/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; istisna işlerde yasaklama yanlışını düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kanunun istisna tuttuğu işlerde ihalelerden yasaklama hükümleri uygulanmaz"
+   ],
+   "dogrusu": [
+    "Yasaklama kararı m.2 ve m.3 ile istisna edilenler dahil bütün kamu kurum ve kuruluşlarının ihalelerini kapsar (m.58/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış değil şık açıklaması.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ön yeterlik değerlendirmesi sonucu davet edilenlerin teklif verebildiği usul pazarlık usulüdür"
+   ],
+   "dogrusu": [
+    "Ön yeterlik sonucu davet edilenlerin teklif verdiği usul belli istekliler arasında ihale usulüdür (m.4, m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.5-6-7'ye dayanıyor ama madde alanında m.21 var, m.7 yok; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "İhale komisyonu en az 3 kişiden oluşur"
+   ],
+   "dogrusu": [
+    "İhale komisyonu en az beş ve tek sayıda kişiden oluşur (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.8-9-10'a dayanıyor ama madde alanı 13-63-8; kırmızı kutudaki iş deneyim belgesi yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "8",
+    "9",
+    "10"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "İş deneyim belgesi başka istekliye kiralanabilir",
+    "Yaklaşık maliyet ihale ilanında gösterilir"
+   ],
+   "dogrusu": [
+    "İş deneyim belgeleri devredilemez, kiraya verilemez ve satılamaz (m.10)",
+    "Yaklaşık maliyete ilanlarda yer verilmez, isteklilere açıklanmaz (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda birbirinin zıddı iki ifade var; biri doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Teknik şartnamede belli bir marka veya model serbestçe belirtilebilir"
+   ],
+   "dogrusu": [
+    "Belli marka veya model belirtilemez; ancak teknik standart yoksa \"veya dengi\" ifadesiyle belirtilebilir (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Eşik değer üstü açık ihalede ilan ihaleden en az 25 gün önce yapılır",
+    "Pazarlık usulünde ilan ihaleden en az 40 gün önce yapılır"
+   ],
+   "dogrusu": [
+    "Açık ihale ilanı en az 40 gün, pazarlık usulü ilanı en az 25 gün önce yapılır (m.13/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.14-20'yi kapsıyor ama madde alanı 14-16; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Konsorsiyum her türlü ihaleye teklif verebilir"
+   ],
+   "dogrusu": [
+    "İş ortaklığı her türlü ihaleye teklif verebilir; konsorsiyumun teklif verip veremeyeceği ihale dokümanında belirtilir (m.14)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında m.10 var, m.23 yok; kırmızı kutunun ilk satırı açıklama.",
+  "duzeltme": {
+   "madde": [
+    "21",
+    "22",
+    "23"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Doğrudan teminde ihale komisyonu kurulması zorunludur"
+   ],
+   "dogrusu": [
+    "Doğrudan teminde ihale komisyonu kurma zorunluluğu yoktur; görevlendirilen kişilerce piyasa fiyat araştırması yapılır (m.22)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.24-29'u kapsıyor ama madde alanı 24-25-13; doküman bedeli yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Doküman bedeli hazırlanma maliyetine göre belirlenir",
+    "Zeyilname son teklif gününden en az 5 gün önce gönderilir"
+   ],
+   "dogrusu": [
+    "Doküman bedeli basım maliyetini aşmayacak şekilde belirlenir (m.28)",
+    "Zeyilname son teklif verme gününden en az on gün önce gönderilir (m.29)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.30-39'u kapsıyor ama madde alanı 30-32; kırmızı kutunun ilk satırı doğruyu içeriyor.",
+  "duzeltme": {
+   "madde": [
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Geçici teminat teklif bedelinin %6'sından az olamaz",
+    "Kesin teminat teklif bedelinin %3'üdür"
+   ],
+   "dogrusu": [
+    "Geçici teminat teklif bedelinin en az %3'üdür (m.33); kesin teminat ihale bedelinin %6'sıdır (m.43)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.40-47'yi kapsıyor, madde alanında m.21 var; noter tescili yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "İhale sözleşmelerinin notere tescili her durumda zorunludur",
+    "İhale yetkilisi komisyon kararını 20 gün içinde onaylar",
+    "Sözleşme sonuç bildiriminden hemen sonra imzalanabilir"
+   ],
+   "dogrusu": [
+    "Dokümanda aksi belirtilmedikçe sözleşmenin notere tescili zorunlu değildir (m.46)",
+    "İhale yetkilisi kararı en geç 5 iş günü içinde onaylar veya iptal eder (m.40)",
+    "Bildirimden itibaren m.21/b-c ihalelerinde 5 gün, diğerlerinde 10 gün geçmeden sözleşme imzalanamaz (m.41)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.48-52'yi kapsıyor, madde alanında m.13 var; malî teklif yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "48",
+    "49",
+    "50",
+    "51",
+    "52"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Danışmanlık ihalesinde önce malî teklifler açılır",
+    "Danışmanlık hizmetleri açık ihale usulüyle ihale edilir"
+   ],
+   "dogrusu": [
+    "Önce teknik teklif değerlendirilir, malî teklifler ikinci aşamada açılır (m.52)",
+    "Danışmanlık hizmetleri yalnız belli istekliler arasında ihale usulüyle ihale edilir (m.48)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kamu İhale Kurulu kararları yerindelik denetimine tabidir"
+   ],
+   "dogrusu": [
+    "Kamu İhale Kurulu kararları yerindelik denetimine tabi tutulamaz (m.53/e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.54-57'yi kapsıyor, madde alanında m.21 var; doğrudan dava yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "54",
+    "55",
+    "56",
+    "57"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Şikâyet yoluna gitmeden doğrudan dava açılabilir",
+    "Şikâyet başvurusu sözleşme imzalandıktan sonra da yapılabilir"
+   ],
+   "dogrusu": [
+    "Şikâyet ve itirazen şikâyet, dava açılmadan önce tüketilmesi zorunlu idari başvuru yollarıdır (m.54)",
+    "Şikâyet sözleşme imzalanmadan önce idareye yapılır (m.55)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.58-61'i kapsıyor, madde alanında m.17 var; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "58",
+    "59",
+    "60",
+    "61"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Sözleşme imzalamayan istekli 1-2 yıl ihalelerden yasaklanır"
+   ],
+   "dogrusu": [
+    "Mücbir sebep dışında sözleşme yapmayana 6 ay-1 yıl, m.17 yasak fiillerine 1-2 yıl yasaklama verilir (m.58)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.62-69'u kapsıyor, madde alanında 21-22 var; tatil yanlışının doğrusu yok.",
+  "duzeltme": {
+   "madde": [
+    "62",
+    "63",
+    "64",
+    "65",
+    "66",
+    "67",
+    "68",
+    "69"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "İhale tarihi tatile rastlarsa ihale yeniden ilan edilir",
+    "Eşik değerler her yıl 1 Ocak'ta güncellenir"
+   ],
+   "dogrusu": [
+    "Tatile rastlayan ihale, yeniden ilana gerek olmadan izleyen ilk iş günü aynı yer ve saatte yapılır (m.62)",
+    "Eşik değerler her yıl 1 Şubat'tan geçerli olmak üzere güncellenir (m.67)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu yanlış değil açıklama; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Uygulama projesine dayalı yapım işlerinde işin tamamı için götürü bedel (anahtar teslimi olmayan) sözleşme yapılır"
+   ],
+   "dogrusu": [
+    "Yapım işlerinde anahtar teslimi götürü bedel, mal ve hizmet alımlarında götürü bedel sözleşme yapılır (m.6/a-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hükümde '★ çıkmış' gibi konu dışı not var; madde alanındaki 62, 4734 sayılı Kanunun maddesi; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "hukum": "Sözleşmede işin adı-miktarı, bedel-tür-süre, fiyat farkı, kesin teminat, gecikme cezası, mücbir sebep, muayene-kabul, fesih gibi hususlar zorunludur (m.7); fiyat farkı esas ve usullerini Kamu İhale Kurumunun teklifi üzerine Cumhurbaşkanı belirler, sözleşme imzalandıktan sonra değiştirilemez (m.8); yapımda yüklenici sigorta yaptırmak zorundadır (m.9); mücbir sebepler: doğal afetler, kanuni grev, genel salgın hastalık, kısmî veya genel seferberlik ilânı ve Kurumca belirlenecek benzeri hâller; mücbir sebep 20 gün içinde yazılı bildirilmeli ve belgelendirilmelidir (m.10); muayene ve kabul en az üç kişilik komisyonca yapılır (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "Fiyat farkı esaslarını Kamu İhale Kurumu belirler",
+    "Kanuni olmayan grev de mücbir sebeptir"
+   ],
+   "dogrusu": [
+    "Fiyat farkı esaslarını Kamu İhale Kurumunun teklifi üzerine Cumhurbaşkanı belirler (m.8)",
+    "Mücbir sebep sayılan grev yalnız kanuni grevdir (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış değil açıklama; doğrusu kopuk.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ek kesin teminat fiyat farkından doğan artışın %3'üdür"
+   ],
+   "dogrusu": [
+    "Ek kesin teminat, fiyat farkından doğan sözleşme bedeli artışının %6'sıdır (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.15-18'i kapsıyor, madde alanı 15-20-26; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "15",
+    "16",
+    "17",
+    "18"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Sözleşme Kamu İhale Kurumunun izniyle devredilir"
+   ],
+   "dogrusu": [
+    "Sözleşme zorunlu hâllerde ihale yetkilisinin yazılı izniyle devredilebilir (m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.19-23'ü kapsıyor, madde alanında m.25 var; kırmızı kutunun ilk satırı açıklama.",
+  "duzeltme": {
+   "madde": [
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Fesih için idarenin en az 20 gün süreli ihtarı gerekir"
+   ],
+   "dogrusu": [
+    "İdare en az on gün süreli ve nedenleri açıkça belirtilen ihtara rağmen aykırılık sürerse sözleşmeyi fesheder (m.20/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-5",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm %5 ödemeyi 'yapmadığı kısmın %5'i' diye veriyor; m.24'te sözleşme bedelinin %80'i ile yapılan iş tutarı arasındaki farkın %5'idir; madde alanında m.16 var.",
+  "duzeltme": {
+   "madde": [
+    "24",
+    "25",
+    "26",
+    "27"
+   ],
+   "hukum": "Öngörülemeyen durumlarla zorunlu iş artışı, proje içinde kalması ve asıl işten ayrılamaması şartıyla anahtar teslimi götürü bedel yapımda %10'a, birim fiyat mal-hizmet-yapımda %20'ye kadar aynı yükleniciye yaptırılabilir; birim fiyat yapımda Cumhurbaşkanı %40'a kadar artırabilir; iş sözleşme bedelinin %80'inden düşük tamamlanacaksa yüklenici işi bitirir ve sözleşme bedelinin %80'i ile yaptığı iş tutarı arasındaki farkın %5'i ödenir (m.24); yasak fiillerde 1-2 yıl yasaklama (m.25-26); suç oluşturan fiillerde ayrıca mahkeme kararıyla 1-3 yıl yasaklama (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "Anahtar teslimi götürü bedel yapım işinde %20 iş artışı yapılabilir"
+   ],
+   "dogrusu": [
+    "Anahtar teslimi götürü bedel yapımda %10, birim fiyat sözleşmelerde %20'ye kadar iş artışı yapılabilir (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 88,
+  "kart_id": "88-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Hüküm m.28-39'u kapsıyor, madde alanı 28-30; kırmızı kutunun ilk satırı tekrar.",
+  "duzeltme": {
+   "madde": [
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kanunda hüküm bulunmayan hâllerde 2886 sayılı Devlet İhale Kanunu uygulanır"
+   ],
+   "dogrusu": [
+    "Hüküm bulunmayan hâllerde Borçlar Kanunu uygulanır (m.36); bu sözleşmelerde 2886 sayılı Kanun uygulanmaz (m.39)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu 'yanlış; ...' diye doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kanunun amaçları arasında tarım ürünleri ihracatının teşviki de vardır",
+    "Kişisel tüketim amaçlı birincil üretim de Kanun kapsamındadır"
+   ],
+   "dogrusu": [
+    "Amaç gıda ve yem güvenilirliği, halk sağlığı, bitki ve hayvan sağlığı, hayvan ıslahı ve refahını korumaktır; ihracat teşviki sayılmaz (m.1)",
+    "Kişisel tüketim amaçlı birincil üretim ve kişisel tüketim için hazırlanan gıdalar kapsam dışıdır (m.2/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeren açıklama; doğrusu yalnız başlık kelimeleri.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kozmetikler gıda tanımına dahildir",
+    "Gıdada bulunan böcek parçası bulaşan sayılır"
+   ],
+   "dogrusu": [
+    "Kozmetikler gıda tanımının dışındadır (m.3)",
+    "Hayvan tüyü, böcek parçası gibi yabancı maddeler bulaşan tanımı dışındadır (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeren açıklama; doğrusu yalnız başlık kelimeleri.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kümes hayvanları ev ve süs hayvanı sayılır"
+   ],
+   "dogrusu": [
+    "Kümes hayvanları ev ve süs hayvanı tanımının dışındadır (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeren açıklama; doğrusu kelime dizisi (ilgili tanımlar paket metninde kesik, hüküm esas alındı).",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bakanlıktan yetki alan serbest veteriner hekim resmî veteriner hekimdir",
+    "Veteriner ecza deposu yalnız eczacı sorumluluğunda faaliyet gösterir"
+   ],
+   "dogrusu": [
+    "Bakanlık dışından yetki verilen hekim yetkilendirilmiş veteriner hekimdir; resmî veteriner hekim Bakanlık personelidir (m.3)",
+    "Veteriner ecza deposu eczacı veya veteriner hekim sorumluluğunda faaliyet gösterir (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tazminatlı hayvan hastalıkları ve tazminat oranları Bakanlıkça belirlenir"
+   ],
+   "dogrusu": [
+    "Tazminatlı hastalıklar ve oranları Cumhurbaşkanınca, ihbarı mecburî hastalıklar Bakanlıkça belirlenir (m.4/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sebebi belli olmayan hayvan ölümleri ihbar yükümlülüğü kapsamında değildir"
+   ],
+   "dogrusu": [
+    "Bulaşıcı hastalık ya da sebebi belli olmayan hayvan ölümlerinden haberdar olanlar Bakanlığa ihbar etmekle yükümlüdür (m.4/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvan hastalık tazminatını Sağlık Bakanlığı öder",
+    "Aşı uygulaması sonrası ölen hayvan için tazminat ödenmez"
+   ],
+   "dogrusu": [
+    "Tazminatı Cumhurbaşkanınca belirlenen oranlarda Bakanlık öder (m.5/1)",
+    "Aşı ve serum uygulaması nedeniyle öldüğü resmî veteriner hekim raporuyla tespit edilen hayvanın bedeli ödenir (m.5/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar; doğrusu tek kelime.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kamu kurum ve kuruluşlarına ait hayvanlar için de hastalık tazminatı ödenir"
+   ],
+   "dogrusu": [
+    "Kamu kurum ve kuruluşlarına ait hayvanlar için tazminat ödenmez (m.5/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yerel kıymet takdir komisyonu beş veteriner hekimden oluşur",
+    "Tazminat oranını yerel kıymet takdir komisyonu belirler"
+   ],
+   "dogrusu": [
+    "Komisyon bir Bakanlık temsilcisi, mülkî amirin belirlediği bir üye ve hayvan sahibinin seçtiği bir STK temsilcisi olmak üzere üç kişidir (m.5/4)",
+    "Oranı Cumhurbaşkanı belirler (m.5/1); komisyon rayiç bedele göre tazminat değerini belirler (m.5/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvansal yan ürünlerin bertarafı belediye ruhsatlı her tesiste yapılabilir"
+   ],
+   "dogrusu": [
+    "Hayvansal yan ürünlerin depolanması, işlenmesi ve bertarafı yalnız Bakanlıkça onaylı işletmelerde yapılır (m.6/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Küpe uygulama ücreti Bakanlık bütçesinden karşılanır",
+    "Hayvanını tanımlatmayan sahibe koyun başına 50 TL ceza verilir"
+   ],
+   "dogrusu": [
+    "Tanımlama aracının uygulama ücretini hayvan sahibi veya bakıcısı öder (m.7/2)",
+    "Ceza sığır başına 50 TL, koyun-keçi başına 5 TL'dir (m.36/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvancılık işletmesinden doğrudan satış da hayvan pazarında yapılmak zorundadır"
+   ],
+   "dogrusu": [
+    "İşletmeden doğrudan satış hariç hayvan alım-satımı ruhsatlı pazar, borsa ve izinli panayırlarda yapılır (m.8/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvan refahı yükümlülüğü yalnız Bakanlığa aittir",
+    "Kurbanlık kesimler için istisna getirilemez"
+   ],
+   "dogrusu": [
+    "Barınma, bakım, beslenme ve sağlık yükümlülüğü hayvan sahibi veya bakımından sorumlu kişiye aittir (m.9/1)",
+    "Bakanlık kurbanlık ve köylerdeki kişisel ihtiyaç kesimlerine istisnaî uygulama getirebilir (m.44/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-13",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; il tarım müdürü yanlışının doğrusu ayrı yazılmamış.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvan sahibi ekonomik gerekçeyle ötenazi talep edebilir",
+    "Ötenaziye il tarım müdürü karar verir"
+   ],
+   "dogrusu": [
+    "Ötenazi yalnız m.9/3'teki üç hâlde mümkündür; ekonomik gerekçe bunlardan değildir (m.9/3)",
+    "Ötenaziye veteriner hekim karar verir; işlem veteriner hekim tarafından veya gözetiminde yapılır (m.9/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sahte pedigri düzenleyene at başına 5.000 TL ceza verilir"
+   ],
+   "dogrusu": [
+    "Sahte belgede ceza at başına 100.000 TL, sığır başına 5.000 TL'dir (m.36/1-h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İthal edilen safkan atlar gümrük girişinden itibaren üç ay içinde soy kütüğüne kaydedilir"
+   ],
+   "dogrusu": [
+    "İthal safkan atlar gümrük girişinden itibaren iki ay, Türkiye'de doğan taylar doğumdan itibaren üç ay içinde kaydedilir (m.10/12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında ilgisiz '1' var; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "10",
+    "36"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Soy kütüğüne kayıtlı atın don değişikliği bir ay içinde bildirilir"
+   ],
+   "dogrusu": [
+    "Sahip değişikliği bir ay, don değişikliği on iki ay içinde bildirilir (m.10/13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında ilgisiz '2' var; kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Bir ilde aynı türden birden fazla ıslah birliği kurulabilir",
+    "Islah birliği Bakanlık onayıyla tüzel kişilik kazanır"
+   ],
+   "dogrusu": [
+    "İl düzeyinde aynı türden yalnızca bir birlik kurulabilir (m.10/A/2)",
+    "Birlik ticaret siciline tescil ile tüzel kişilik kazanır (m.10/A/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Birliğin mali genel kurulu dört yılda bir yapılır",
+    "Yönetim kurulu üç yıl için seçilir"
+   ],
+   "dogrusu": [
+    "Olağan genel kurul dört yılda bir, mali genel kurul iki yılda bir yapılır (m.10/B)",
+    "Yönetim kurulu dört yıl için seçilir (m.10/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Aday üyeler genel kurulda oy kullanabilir"
+   ],
+   "dogrusu": [
+    "Aday üyeler genel kurula katılamaz ve oy kullanamaz (m.10/Ç/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvan hastanesi açılması için de yalnız veteriner hekime onay verilir"
+   ],
+   "dogrusu": [
+    "Yalnız veteriner hekime onay şartı muayenehane, klinik ve poliklinik içindir (m.11/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; ziraat mühendisi yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Veteriner biyolojik ürünlerin onayını eczacılar da alabilir",
+    "Ziraat mühendisi veteriner tıbbî ürün onayı alabilir"
+   ],
+   "dogrusu": [
+    "Biyolojik ürün onayını yalnız veteriner hekimler ve veteriner hekim istihdam eden tüzel kişiler alır (m.12/3)",
+    "Veteriner tıbbî ürün onayını kimyager, kimya mühendisi, eczacı veya veteriner hekim alabilir (m.12/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hatalı veteriner biyolojik ürün, hatası giderilirse yeniden piyasaya arz edilebilir"
+   ],
+   "dogrusu": [
+    "Hatası giderilerek yeniden arz imkânı yalnız biyolojik ürünler dışındaki veteriner tıbbî ürünler içindir (m.12/10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-23",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Veteriner ilacı perakende olarak yalnız eczanelerde satılır"
+   ],
+   "dogrusu": [
+    "Perakende satış eczaneler ile veteriner muayenehane, klinik, poliklinik ve hayvan hastaneleri kanalıyla yapılır (m.13/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Psikotropik veteriner ürünler için azaltılmış tanıtım numunesi hazırlanabilir"
+   ],
+   "dogrusu": [
+    "Bu ürünler için azaltılmış olsa dahi tanıtım numunesi hazırlanamaz (m.13/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Veteriner biyolojik ürünleri yalnız veteriner hekim uygulayabilir"
+   ],
+   "dogrusu": [
+    "Veteriner biyolojik ürünleri veteriner hekim veya yardımcı sağlık personeli uygular (m.14/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-26",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Karantinaya tâbi zararlı organizma listesi Cumhurbaşkanınca belirlenir"
+   ],
+   "dogrusu": [
+    "Karantinaya tâbi zararlı organizmalar listesi Bakanlıkça belirlenir (m.15/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-27",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Devlet ormanlarındaki zararlı organizma mücadelesini Tarım Bakanlığı yapar"
+   ],
+   "dogrusu": [
+    "Devlet ormanlarında mücadeleyi Bakanlığın belirlediği esaslara göre Çevre ve Orman Bakanlığı yapar (m.15/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-28",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; bitki pasaportu kısmı paket metninde olmayan m.17'ye dayanıyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ekimin yasaklandığı alanda üretim yapanın imha edilen ürünü için tazminat ödenir"
+   ],
+   "dogrusu": [
+    "Ekim-dikimin kısıtlandığı veya yasaklandığı alanda üretim yapanlara tazminat ödenmez (m.16/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-29",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı açıklama.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bitki koruma ürünleri eczacı veya veteriner hekim sorumluluğunda üretilebilir"
+   ],
+   "dogrusu": [
+    "Bitki koruma ürünleri ziraat mühendisi, kimya mühendisi veya kimyager sorumluluğunda üretilir (m.18/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-30",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bitki koruma ürünleri perakende olarak eczanelerde satılır"
+   ],
+   "dogrusu": [
+    "Toptan satış toptancı bayiler, perakende satış perakendeci bayiler tarafından yapılır (m.19/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-31",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir partide yalnız bozuk bulunan bölüm güvenilmez sayılır"
+   ],
+   "dogrusu": [
+    "Kalanın güvenilir olduğu ispat edilemezse partinin tamamı güvenilir olmayan gıda kabul edilir (m.21/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-32",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hayvan sağlığı için tehlikeli yem üretene hapis cezası verilir"
+   ],
+   "dogrusu": [
+    "Tehlikeli yemi üreten veya arz edene 5.000 TL idarî para cezası verilir; hapis cezası insan hayatını tehlikeye sokan gıda içindir (m.40/1-a, b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-33",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İşletmeci güvenilmez ürünü Bakanlığa bildirmeden kendisi imha edebilir",
+    "Ek-1 işletmeleri en az beş lisanslı personel çalıştırmak zorundadır"
+   ],
+   "dogrusu": [
+    "İşletmeci toplama işlemini derhal başlatır ve Bakanlığı bilgilendirir (m.22/2)",
+    "Ek-1 işletmeleri lisans eğitimi almış en az bir personel çalıştırır (m.22/7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-34",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Gıdalarda sağlık beyanı iznini Tarım ve Orman Bakanlığı verir"
+   ],
+   "dogrusu": [
+    "Gıda ve takviye edici gıdalarda sağlık beyanı iznini Türkiye İlaç ve Tıbbi Cihaz Kurumu verir (m.23/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-35",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tağşişli ürün işlenerek başka bir ürüne dönüştürülebilir"
+   ],
+   "dogrusu": [
+    "Taklit veya tağşiş yapılmış ürün işleme tâbi tutulamaz ve piyasaya arz edilemez (m.24/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-36",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart taklit-tağşiş cezası (m.40/1-l) hakkında; doğrusu ve ikinci yanlış hayatı tehlikeye sokan gıda (m.40/1-a) konusuna ait, 95-50 kartında zaten var.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taklit veya tağşiş yapan üreticiye ilk seferde hapis cezası verilir"
+   ],
+   "dogrusu": [
+    "Taklit-tağşişte ilk seferde yıllık gayri safi gelirin yüzde biri oranında idarî para cezası verilir (m.40/1-l)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-37",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hızlı uyarı sistemini Türk Standartları Enstitüsü kurar"
+   ],
+   "dogrusu": [
+    "Risk bildirimine ilişkin sistemleri Bakanlık kurar ve temas noktası olur (m.25/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Risk değerlendirme komisyonlarının kararları bağlayıcıdır"
+   ],
+   "dogrusu": [
+    "Risk değerlendirme sonuçları tavsiye niteliğindedir (m.26/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-39",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; diyet gıda yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Jandarma ve Sahil Güvenlik birliklerinin su analizleri ücret karşılığı yapılır",
+    "Özel tıbbî amaçlı diyet gıda esaslarını Tarım ve Orman Bakanlığı belirler"
+   ],
+   "dogrusu": [
+    "TSK, JGK ve SGK birliklerinin içme ve kullanma suyu analizleri Sağlık Bakanlığı laboratuvarlarında ücretsiz yapılır (m.27/1)",
+    "Özel tıbbî amaçlı diyet gıdaların esaslarını Sağlık Bakanlığı belirler (m.28/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-40",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "HACCP sistemi kurma yükümlülüğü birincil üretimi de kapsar"
+   ],
+   "dogrusu": [
+    "HACCP yükümlülüğü birincil üretim hariç gıda ve yem işletmecileri içindir (m.29/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-41",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Askıya alınan onay, eksiklikler altı ay içinde giderilmezse iptal edilir",
+    "Faaliyetini durduran işletmeci bunu bir ay içinde bildirir"
+   ],
+   "dogrusu": [
+    "Eksiklikler askıya alma tarihinden itibaren bir yıl içinde giderilmezse onay iptal edilir (m.30/2)",
+    "Faaliyeti durdurma üç ay içinde Bakanlığa bildirilir (m.30/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu çok uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Resmî kontroller en az 30 gün önce yazılı bildirimle yapılır",
+    "Mikrobiyolojik analiz sonucuna da yedi gün içinde itiraz edilebilir"
+   ],
+   "dogrusu": [
+    "Resmî kontroller ön bildirim gereken hâller dışında önceden haber verilmeksizin yapılır (m.31/1)",
+    "Mikrobiyolojik incelemelerde analiz sonucuna itiraz edilemez (m.31/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-43",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 'a) · b) · c)' gibi anlamsız kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Düzeltilebilir eksikliği olan ürün her hâlde imha edilir"
+   ],
+   "dogrusu": [
+    "Sağlık açısından tehlike oluşturmayan, düzeltilebilir eksikliği olan ürüne mevzuata uygun hâle getirilmesi koşuluyla arz izni verilebilir (m.32/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-44",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Laboratuvarın sorumlu idarî personeli ön lisans mezunu olabilir",
+    "Onaysız faaliyet gösteren laboratuvara 30.000 TL ceza verilir"
+   ],
+   "dogrusu": [
+    "Sorumlu idarî personel en az lisans düzeyinde eğitim almış olmalıdır (m.33/1-ç)",
+    "Onaysız laboratuvar faaliyetten men edilir ve 15.000 TL ceza verilir (m.41/1-g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-45",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kaçak getirilen canlı sığırlar menşe ülkeye iade edilir"
+   ],
+   "dogrusu": [
+    "Kaçak sığır, koyun ve keçiler en yakın kesimhanede kestirilir ve mülkiyeti kamuya geçer (m.41/1-ı)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-46",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İnsan sağlığı için tehlikeli ürün alıcı ülke kabul ederse ihraç edilebilir"
+   ],
+   "dogrusu": [
+    "Sağlık için tehlikeli olanlar hariç, Kanuna uymayan ürün alıcı ülke mevzuatına uygunsa veya alıcı ülke kabul ederse ihraç edilebilir (m.34/6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-47",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bakanlığın ücret tarifesi her yıl Ocak ayında belirlenir"
+   ],
+   "dogrusu": [
+    "Faaliyet ve kontrol ücretleri her yıl Aralık ayında Bakanlıkça belirlenir (m.35/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-48",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanı boş (m.36 olmalı); doğrusu yalnız '5.000 TL · 500 TL'.",
+  "duzeltme": {
+   "madde": [
+    "36"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Hastalık ihbarını yapmayan veteriner hekime ceza verilmez"
+   ],
+   "dogrusu": [
+    "İhbar yükümlülüğüne uymayan hayvan sahibi, bakıcı ve muayene eden veteriner hekime 500 TL ceza verilir (m.36/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-49",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "37"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Sahte veteriner ilacı üretene yalnız 30.000 TL idarî para cezası verilir"
+   ],
+   "dogrusu": [
+    "Onaylı ürünü taklit ederek sahtesini üretip arz edene 1-3 yıl hapis ve bin gün adlî para cezası verilir (m.37/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-50",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanı boş (m.40 olmalı); kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "40"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kişilerin hayatını tehlikeye sokan gıdayı üretene yalnız idarî para cezası verilir"
+   ],
+   "dogrusu": [
+    "Bu gıdayı üreten, ithal eden veya arz eden işletmeciye 1-5 yıl hapis ve 1.000-5.000 gün adlî para cezası verilir (m.40/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-51",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kontrol görevlisi acil tehlikede idarî para cezası da uygulayabilir",
+    "İdarî yaptırımları vali uygular"
+   ],
+   "dogrusu": [
+    "Acil durumda kontrol görevlisi idarî para cezaları hariç diğer yaptırımları uygulayabilir (m.42/2)",
+    "İdarî yaptırımları il tarım müdürü uygular; yetkisini ilçe tarım müdürüne yazılı devredebilir (m.42/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-52",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu doğruyu içeriyor; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tarım alanlarına zarar veren yabanî hayvanlarla mücadelede İçişleri Bakanlığı yardımcı olur"
+   ],
+   "dogrusu": [
+    "Yabanî hayvanlar konusunda Çevre ve Orman Bakanlığı, hayvan ve bitki hastalıklarıyla mücadelede İçişleri Bakanlığı yardımcı olur (m.43/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-53",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeriyor; veteriner hizmeti yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "JGK'nın veteriner hizmetlerini Sağlık Bakanlığı karşılar",
+    "Askerî birliklerde satın alma amaçlı denetimde uygunsuzluk çıkarsa Kanunun yaptırımları uygulanır"
+   ],
+   "dogrusu": [
+    "JGK ve SGK'nın veteriner hizmetlerini Gıda, Tarım ve Hayvancılık Bakanlığı, mümkün değilse MSB birimleri ücretsiz karşılar (m.45/3)",
+    "Bu denetimlerde uygunsuzlukta yaptırım hükümleri uygulanmaz, önlemi ilgili Komutanlık alır (m.45/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-54",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Madde alanında başka kanunların madde numaraları (23, 6343, 11) var; doğrusu uzun kelime dizisi.",
+  "duzeltme": {
+   "madde": [
+    "47",
+    "48",
+    "49"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "5199 sayılı Hayvanları Koruma Kanunu tümüyle yürürlükten kaldırılmıştır",
+    "Kanunun tamamı yayımı tarihinde yürürlüğe girmiştir"
+   ],
+   "dogrusu": [
+    "5199 sayılı Kanunun yalnız 23. maddesi yürürlükten kaldırılmıştır (m.47)",
+    "Kural olarak hükümler yayımından altı ay sonra yürürlüğe girmiştir (m.49)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış ifade değil, şık açıklaması ve doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Belli bir malı satmaktan kaçınmak tek başına suçun oluşması için yeterlidir"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı yanlış ifade değil, açıklama.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bu suçu yalnız sağlık meslek mensubu işleyebilir",
+    "Bu suç yalnızca kamu görevlisi tarafından işlenebilir"
+   ],
+   "dogrusu": [
+    "Madde faili \"kişi\" olarak sayar, özel sıfat aramaz; herkes işleyebilir (m.240/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı '→ yanlış' diye doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Suç yalnız mal satımından kaçınmayla oluşur; hizmet kapsam dışıdır"
+   ],
+   "dogrusu": [
+    "Suç belli bir mal veya hizmeti satmaktan kaçınmayla oluşur (m.240/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı '→ yanlış' diye doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tek bir kişinin acil ihtiyacının doğması suç için yeterlidir"
+   ],
+   "dogrusu": [
+    "Kaçınma kamu için acil bir ihtiyacın ortaya çıkmasına neden olmalıdır (m.240/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı şık açıklaması ve doğruyu içeriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mal veya hizmet satımından kaçınma suçunun cezası iki yıldan beş yıla kadar hapistir",
+    "Bu suçun cezası adli para cezasıdır"
+   ]
+  }
+ },
+ {
+  "kanun_id": 139,
+  "kart_id": "139-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren tekrar.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Failin tacir sıfatını taşıması şarttır",
+    "Malın fiyatının piyasa değerinin üzerinde belirlenmiş olması suçun unsurudur"
+   ],
+   "dogrusu": [
+    "Failde tacir gibi özel sıfat aranmaz (m.240/1)",
+    "Maddede fiyat şartı yoktur; unsurlar satmaktan kaçınma ve kamu için acil ihtiyaçtır (m.240/1)"
+   ]
+  }
+ }
+]

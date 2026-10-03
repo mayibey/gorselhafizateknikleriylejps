@@ -1,0 +1,87 @@
+{
+ "kanun_id": 59,
+ "ad": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğin Tespiti Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_59.json",
+ "kartlar": [
+  {
+   "id": "59-0",
+   "madde": [
+    "3",
+    "4",
+    "5"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Dış beden muayenesi: vücudun dış yüzeyi ile kulak, burun ve ağız bölgelerinin gözle ve elle yüzeysel tıbbî incelemesi; iç beden muayenesi: kafa, göğüs ve karın boşlukları ile cilt altı dokularının incelenmesi; cinsel organlar veya anüs bölgesindeki muayene de iç beden muayenesi sayılır; girişimsel olmayan tıbbî görüntüleme (röntgen, ultrason) dış muayene sayılır; örnek: delil için alınan biyolojik ve diğer materyal; moleküler genetik inceleme: kişiyi diğerlerinden ayıran kalıtsal özelliklerin moleküler düzeyde araştırılması (m.3-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Anüs bölgesi muayenesi dış muayenedir\" yanlış; iç",
+    "Anüs bölgesi muayenesi dış muayenedir"
+   ],
+   "dogrusu": [
+    "İç muayene (m.4)"
+   ]
+  },
+  {
+   "id": "59-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İç beden muayenesi — karar ve 24 saat",
+   "hukum": "Şüpheli/sanık üzerinde iç beden muayenesine savcı veya mağdurun istemiyle ya da re'sen hâkim veya mahkeme, gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı karar verir; savcının kararı 24 saat içinde hâkim/mahkeme onayına sunulur, hâkim 24 saat içinde karar verir; onaylanmayan karar hükümsüz kalır ve elde edilen deliller kullanılamaz; iç muayene ancak tabip tarafından; müdahalenin kişinin sağlığına açıkça ve öngörülebilir zarar tehlikesi olmamalı; üst sınırı 2 yıldan az hapis gerektiren suçlarda iç beden muayenesi yapılamaz (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"48 saat\" ve \"kolluk amirinin uygun görüşü\" şıkları yanlış; \"onaylanmasa da deliller kullanılır\" yanlış",
+    "Savcının iç muayene kararı 48 saatte hâkime sunulur",
+    "Onaylanmayan karar hükümsüz kalsa da deliller kullanılır"
+   ],
+   "dogrusu": [
+    "24 saat (m.4)",
+    "Kullanılamaz (m.4)"
+   ]
+  },
+  {
+   "id": "59-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Dış beden muayenesi",
+   "hukum": "Şüpheli/sanık üzerinde dış beden muayenesi Cumhuriyet savcısı ile emrindeki adli kolluk görevlileri veya kovuşturma makamlarının talebiyle yapılabilir; ancak tabip tarafından; sağlığa zarar tehlikesi olmamalı; girişimsel olmayan görüntüleme tabip veya tabip gözetiminde sağlık mesleği mensubunca yapılabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dış beden muayenesini kolluk görevlisi yapar\" yanlış; tabip",
+    "Dış beden muayenesini kolluk yapar"
+   ],
+   "dogrusu": [
+    "Tabip yapar; kolluk talep eder (m.5)"
+   ]
+  },
+  {
+   "id": "59-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Vücuttan örnek alınması",
+   "hukum": "Kan, saç, tükürük, tırnak gibi örnek alınmasına savcı/mağdur istemiyle veya re'sen hâkim/mahkeme, gecikmesinde sakınca hâlinde savcı karar verir; savcı kararı 24 saat içinde hâkim onayına, hâkim 24 saat içinde karar, onaylanmazsa hükümsüz ve deliller kullanılamaz; örnekler savcı huzurunda uygun usulle derhâl yok edilir (işi bitince) ve tutanağa geçirilir; müdahale tabip veya tabip gözetiminde sağlık mesleği mensubunca; sağlığa zarar tehlikesi olmamalı; üst sınırı 2 yıldan az hapis gerektiren suçlarda örnek alınamaz; özel kanunlardaki alkol muayenesi ve kan örneği hükümleri saklı (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sadece adli para cezası gerektiren suçlarda alınamaz\" diye ayrı bir kural yoktur; ölçüt 2 yıl",
+    "Üst sınırı 3 yıldan az suçlarda örnek alınamaz"
+   ],
+   "dogrusu": [
+    "2 yıldan az (m.6)"
+   ]
+  },
+  {
+   "id": "59-4",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Verilerin yok edilmesi",
+   "hukum": "Kovuşturmaya yer olmadığı kararına itiraz süresinin dolması, itirazın reddi, beraat veya ceza verilmesine yer olmadığı kararının kesinleşmesi hâllerinde elde edilen veriler Cumhuriyet savcısının huzurunda ve uygun göreceği usulle derhâl yok edilir, tutanağa geçirilir (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Veriler 10 yıl saklanır\" yanlış; derhâl yok edilir",
+    "Beraat edenin genetik verisi saklanır"
+   ],
+   "dogrusu": [
+    "Derhâl yok edilir (m.16)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

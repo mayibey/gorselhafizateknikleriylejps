@@ -1,0 +1,114 @@
+{
+ "kanun_id": 63,
+ "ad": "Kum, Çakıl ve Benzeri Maddelerin Alınması, İşletilmesi ve Kontrolü Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_63.json",
+ "kartlar": [
+  {
+   "id": "63-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "Yönetmelik, 2872 sayılı Çevre Kanununun Ek 1. maddesinin (d) bendine dayanılarak hazırlanmıştır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Maden Kanununa dayanır\" yanlış",
+    "Yönetmelik Maden Kanununa dayanır"
+   ],
+   "dogrusu": [
+    "Çevre Kanunu Ek 1 (m.3)"
+   ]
+  },
+  {
+   "id": "63-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Ocak açılamayacak yerler",
+   "hukum": "İçme-kullanma suyu temin edilen yüzeysel su kaynakları ve bunları besleyen akar/kuru derelerde; termal su kaynaklarının 1. ve 2. derece koruma alanlarında; yeraltı suyu rezervi olan akiferlerde; denizlerde kıyı çizgisi ile kıyı kenar çizgisi arasında ve sahil şeritlerinde; kıyıdan denize doğru 20 metreden az derin denizlerde; her iki kıyısı taşkın tesisleriyle ıslah edilmiş mecralarda; menderes dış kurblarında; şev dibine şev yüksekliğinin iki katından az mesafede; yatağın genişletilmek istenmesinde; boğaz çıkışı sonrası rüsup konisi üzerinde; yerleşim ve tarım arazilerini taşkına maruz bırakacak yerlerde; köprü, menfez ve sanat yapılarına menba yönünde 750 m ve mansap yönünde 1000 m'den yakın; koruma altındaki alanlarda kum-çakıl ocağı açılmasına izin verilmez (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "Menba (yukarı) 750 / mansap (aşağı) 1000 çapraz verilir",
+    "Köprüye menba yönünde 500 m'de ocak açılabilir",
+    "Derinliği 10 m'yi aşan denizlerde alınabilir"
+   ],
+   "dogrusu": [
+    "750 m'den yakın yasak; mansap 1.000 m (m.5)",
+    "20 m'den az derinlikte yasak (m.5)"
+   ]
+  },
+  {
+   "id": "63-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Akarsu ve kuru derelerde işletme esasları",
+   "hukum": "Ocak sahası beton kazıklarla işaretlenir (en az 1,5 m yüksek, sabit röper noktalarına); dere yatağının doğal formu bozulmaz, yükselti oluşturulmaz; yatak duraylılığını bozacak, akış yönünü değiştirecek, seddelere ve kıyıya zarar verecek çalışma yasak; servis yolu kesiti daraltmaz; ruhsat bitiminde ıslah ve rehabilitasyon yapılıp saha terk edilir; belirlenen talveg kotundan derine inilmez; malzeme alımı akış rejimi bozulmadan ve mendereslenmeye meydan vermeyecek şekilde; yıkama-eleme pasası ruhsat alanı içinde doğaya kazandırmada kullanılmak üzere depolanır; atık bırakılmaz; kimyasal yıkamada atık su deşarj standartları; derinlik ölçüm ekipmanı bulundurulur; su kalitesi Su Kirliliği Yönetmeliği Tablo-1'e göre korunur; Tarım Bakanlığından su ürünleri görüşü alınır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Talveg kotunun altına inilebilir\" yanlış"
+   ],
+   "dogrusu": [
+    "beton kazıklarla · 1,5 m · doğal formu bozulmaz · yasak · ıslah ve rehabilitasyon · talveg kotundan · akış rejimi bozulmadan ve mendereslenmeye meydan vermeyecek · derinlik ölçüm ekipmanı · Tarım Bakanlığından su ürünleri görüşü"
+   ]
+  },
+  {
+   "id": "63-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Deniz ve göllerde işletme",
+   "hukum": "Ekosistem bütünlüğü ve doğal hayat korunur; kıyının jeomorfolojik yapısı korunur; su kalitesi Tablo-2/3/4'e göre; deniz ve göl rezervuarlarına su akışı engellenmez; Tarım Bakanlığı su ürünleri görüşü; atıklar mevzuata göre bertaraf; derinlik ölçüm ekipmanı (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Denizden kum alımında Tarım Bakanlığı görüşü gerekmez\" yanlış"
+   ],
+   "dogrusu": [
+    "jeomorfolojik yapısı · Tarım Bakanlığı su ürünleri görüşü"
+   ]
+  },
+  {
+   "id": "63-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Sulak alanlar",
+   "hukum": "Sulak alanlardan kum-çakıl alınmasında bu Yönetmeliğe ilaveten Sulak Alanların Korunması Yönetmeliği hükümleri uygulanır; derinlik ölçüm ekipmanı bulundurulur (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sulak alanda yalnız bu Yönetmelik uygulanır\" yanlış",
+    "Sulak alanda yalnız bu Yönetmelik uygulanır"
+   ],
+   "dogrusu": [
+    "Sulak Alanların Korunması Yönetmeliği de uygulanır (m.8)"
+   ]
+  },
+  {
+   "id": "63-5",
+   "madde": [
+    "10"
+   ],
+   "baslik": "ÇED ve çevre yönetim planı",
+   "hukum": "ÇED raporu zorunlu faaliyet sahipleri Doğaya Yeniden Kazandırma Planı, çevre yönetim uygulama takvimi ve noter tasdikli taahhüdü ÇED ekinde sunar; \"ÇED gerekli değildir\" kararı alanlar ve ÇED dışı faaliyetler Çevre Yönetim Planını ve noter tasdikli taahhüdü il çevre müdürlüğüne 3 nüsha verir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"ÇED gerekmeyen faaliyette plan istenmez\" yanlış; Çevre Yönetim Planı istenir"
+   ],
+   "dogrusu": [
+    "Doğaya Yeniden Kazandırma Planı · noter tasdikli taahhüdü · Çevre Yönetim Planını · il çevre müdürlüğüne 3 nüsha"
+   ]
+  },
+  {
+   "id": "63-6",
+   "madde": [
+    "12",
+    "14",
+    "20"
+   ],
+   "baslik": "Denetim ve yaptırım",
+   "hukum": "Denetimlerde Çevre Kanunu m.12 uyarınca Bakanlık, il çevre müdürlüğü ve Bakanlıkça yetki devri yapılmış kurumlar yetkilidir (m.14); aykırı faaliyette Çevre Kanunu m.20/1-(l) uyarınca idari para cezası ve m.15 uyarınca faaliyeti durdurma (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cezayı jandarma keser\" yanlış; Çevre Kanunu yetkilileri",
+    "Aykırılıkta ceza Maden Kanununa göre kesilir"
+   ],
+   "dogrusu": [
+    "Çevre Kanunu m.20 ve m.15 (m.15)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

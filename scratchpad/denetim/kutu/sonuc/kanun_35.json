@@ -1,0 +1,119 @@
+[
+ {"kanun_id": 35, "kart_id": "35-0", "sorun": "kirmizi_kutu",
+  "aciklama": "Çekimser oy yasağı, komisyon başkanı (vali yardımcısı) ve başvuran temsilcisinin üyeliği bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik komisyonunda üyeler çekimser oy kullanabilir.”",
+    "“Özel güvenlik komisyonuna vali başkanlık eder.”",
+    "“Özel güvenlik izni için başvuran kuruluşun temsilcisi, komisyon toplantısına yalnızca gözlemci olarak katılır.”"
+   ],
+   "dogrusu": [
+    "Özel güvenlik komisyonunda çekimser oy kullanılamaz; kararlar oy çokluğuyla alınır (m.4)",
+    "Özel güvenlik komisyonuna valinin görevlendireceği bir vali yardımcısı başkanlık eder (m.4)",
+    "Özel güvenlik izni için başvuran kişi veya kuruluşun temsilcisi ilgili komisyon toplantısına üye olarak katılır (m.4)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Faaliyet iznini veren makam (İçişleri Bakanlığı), şube bildirim süresi (bir ay) ve yöneticinin öğrenim şartı (lisans) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik şirketlerinin faaliyet izni valilik tarafından verilir.”",
+    "“Özel güvenlik şirketlerinin şubelerini Bakanlığa bildirme süresi üç aydır.”",
+    "“Özel güvenlik şirketi yöneticisinin önlisans mezunu olması yeterlidir.”"
+   ],
+   "dogrusu": [
+    "Şirketlerin özel güvenlik alanında faaliyette bulunması İçişleri Bakanlığının iznine tabidir (m.5)",
+    "Özel güvenlik şirketleri şubelerini bir ay içinde Bakanlığa ve ilgili valiliğe yazılı olarak bildirir (m.5)",
+    "Özel güvenlik şirketi yöneticilerinin lisans mezunu olması ve temel eğitimi başarıyla tamamlamış olması gerekir (m.5)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Girdide m.7 metni boştu, src/assets/kart-madde-metinleri.ts (Özel Güvenlik m.7) okundu. Elle arama, kolluğa bildirmeden emanete alma ve gözaltı yetkisi iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik görevlisi, koruduğu alana girmek isteyenlerin üstünü elle arayabilir.”",
+    "“Özel güvenlik görevlisi, aramada bulduğu suç eşyasını genel kolluğa bildirmeden emanete alabilir.”",
+    "“Özel güvenlik görevlisi, görev alanında yakaladığı şüpheliyi gözaltına alabilir.”"
+   ],
+   "dogrusu": [
+    "Özel güvenlik görevlisi, koruduğu alana girmek isteyenlerin üstünü dedektörle arar, eşyasını X-ray veya benzeri sistemlerden geçirir (m.7)",
+    "Suç teşkil eden veya delil olabilecek eşya, genel kolluğa derhal bildirilmek şartıyla emanete alınabilir (m.7/g)",
+    "Özel güvenlik görevlisinin yetkileri arasında gözaltı yoktur; Kanunda sayılan hâllerde yakalama yapabilir (m.7)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Yaş şartı (18) ve silahlı-silahsız öğrenim şartları (lise / ilköğretim-ortaokul) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Silahlı özel güvenlik görevlisi olabilmek için 21 yaşını doldurmuş olmak gerekir.”",
+    "“Silahlı görev yapacak özel güvenlik görevlisinin en az lisans mezunu olması gerekir.”",
+    "“Silahsız görev yapacak özel güvenlik görevlisinin en az lise mezunu olması gerekir.”"
+   ],
+   "dogrusu": [
+    "Özel güvenlik görevlisinde yaş şartı, silahlı veya silahsız ayrımı olmaksızın 18 yaşını doldurmuş olmaktır (m.10)",
+    "Silahlı görev yapacaklar için en az lise veya dengi okul mezunu olmak yeterlidir (m.10)",
+    "Silahsız görev yapacaklar için en az sekiz yıllık ilköğretim veya ortaokul mezunu olmak yeterlidir (m.10)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Devam eden kovuşturmanın engel olduğu suç grupları ve HAGB'nin etkisi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hakkında dolandırıcılık suçundan devam eden kovuşturma bulunan kişi özel güvenlik görevlisi olamaz.”",
+    "“Hakkında haberleşmenin gizliliğini ihlal suçundan devam eden kovuşturma bulunması özel güvenlik görevlisi olmaya engel değildir.”",
+    "“Hırsızlık suçundan hakkında hükmün açıklanmasının geri bırakılması kararı verilen kişi özel güvenlik görevlisi olabilir.”"
+   ],
+   "dogrusu": [
+    "Devam eden kovuşturma yalnız Devletin güvenliği, anayasal düzen, özel hayat, cinsel dokunulmazlık ve uyuşturucu suçlarında engeldir (m.10)",
+    "Özel hayata ve hayatın gizli alanına karşı suçlardan devam eden kovuşturma, özel güvenlik görevlisi olmaya engeldir (m.10)",
+    "Hırsızlık suçundan hakkında hükmün açıklanmasının geri bırakılması kararı verilen kişi özel güvenlik görevlisi olamaz (m.10)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-5", "sorun": "kirmizi_kutu",
+  "aciklama": "Temel eğitim (yüz yirmi) ve yenileme eğitimi (altmış) saatleri ile emekli kolluk muafiyeti bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik temel eğitiminin asgari süresi yüz ders saatidir.”",
+    "“Özel güvenlik yenileme eğitiminin asgari süresi otuz ders saatidir.”",
+    "“Genel kolluktan emekli olanlar da özel güvenlik temel eğitimini tamamlamak zorundadır.”"
+   ],
+   "dogrusu": [
+    "Özel güvenlik temel eğitimi yüz yirmi ders saatinden az olmamak üzere düzenlenir (m.14)",
+    "Özel güvenlik yenileme eğitimi altmış ders saatinden az olmamak üzere düzenlenir (m.14)",
+    "Genel kolluk ve MİT'ten emekli olanlarda özel güvenlik temel eğitimi ve öğrenim şartı aranmaz (m.14)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Grev yasağının yaptırımı (altı ay görev alamama) ve yaptırımı veren makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Greve katılan özel güvenlik görevlisinin kimlik kartı iptal edilir ve bir daha bu alanda çalışamaz.”",
+    "“Grev yasağına uymayan özel güvenlik görevlisi bir yıl süreyle özel güvenlik alanında görev alamaz.”",
+    "“Grev yasağına uymayan görevliye yaptırımı İçişleri Bakanlığı uygular.”"
+   ],
+   "dogrusu": [
+    "Grev yasağına uymayan özel güvenlik görevlisi altı ay süreyle özel güvenlik alanında görev alamaz (m.20/ı)",
+    "Grev yasağına uymayan görevli altı ay görev alamaz; bir yıllık yasak emirlere uymayanlar içindir (m.20)",
+    "Grev yasağına aykırılık dâhil bu maddedeki cezalar mahalli mülki amir tarafından verilir (m.20)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Sigortasız istihdamın adli niteliği, silahlı çalıştırmada artırım (bir kat) ve izinsiz reklamın yaptırımı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Mali sorumluluk sigortası yaptırmadan özel güvenlik görevlisi istihdam edene idari para cezası verilir.”",
+    "“Çalışma izni verilmeyen kişinin silahlı olarak çalıştırılması hâlinde ceza yarı oranında artırılır.”",
+    "“Faaliyet izni almadan özel güvenlik hizmeti verdiğini ilan eden kişiye yalnızca idari para cezası verilir.”"
+   ],
+   "dogrusu": [
+    "Mali sorumluluk sigortası yaptırmadan görevli çalıştırana her kişi için yüz elli gün adli para cezası verilir (m.19)",
+    "Çalışma izni verilmeyen kişi silahlı olarak çalıştırılmışsa verilecek ceza bir kat artırılır (m.19)",
+    "İzinsiz özel güvenlik hizmeti ilanı veya reklamı yapan altı aya kadar hapis ve elli günden az olmamak üzere adli para cezasıyla cezalandırılır (m.19)"
+   ]}},
+ {"kanun_id": 35, "kart_id": "35-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Kimlik kartını iptal eden makam (valilik), cezayı veren makam (mahalli mülki amir) ve emre uymamada süre (bir yıl) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik kimlik kartını başkasına kullandıran görevlinin kartını İçişleri Bakanlığı iptal eder.”",
+    "“Bu Kanundaki idari para cezalarını özel güvenlik komisyonu verir.”",
+    "“Mülki amirin emirlerini yerine getirmeyen özel güvenlik görevlisi altı ay süreyle görev alamaz.”"
+   ],
+   "dogrusu": [
+    "Kimlik kartını başkasına kullandıran görevlinin kartı valilikçe iptal edilir ve bir daha bu alanda çalışamaz (m.20/a)",
+    "Bu maddede öngörülen cezalar mahalli mülki amir tarafından verilir (m.20)",
+    "Mülki amirin veya yetkili genel kolluk amirinin emirlerini yerine getirmeyen görevli bir yıl süreyle görev alamaz (m.20/d)"
+   ]}}
+]

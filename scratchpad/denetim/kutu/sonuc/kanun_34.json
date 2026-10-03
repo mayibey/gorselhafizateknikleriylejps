@@ -1,0 +1,485 @@
+[
+ {"kanun_id": 34, "kart_id": "34-0", "sorun": "kirmizi_kutu",
+  "aciklama": "Banket-yaya yolu tanımı karıştırıldı; otoyola girebilecekler ve trafik tanımının kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Banket, karayolunun taşıt yolu kenarı ile mülkler arasında kalan ve yalnız yayaların kullanımına ayrılmış kısmıdır.”",
+    "“Erişme kontrollü karayollarına (otoyol) motorsuz araçlar girebilir; yalnızca yaya ve hayvanların girişi yasaktır.”",
+    "“Trafik, yalnızca araçların karayolu üzerindeki hâl ve hareketleridir.”"
+   ],
+   "dogrusu": [
+    "Banket, yaya yolu ayrılmamış karayolunda taşıt yolu kenarı ile şev başı arasında kalan, yaya ve hayvanların kullandığı kısımdır (m.3)",
+    "Erişme kontrollü karayollarına yaya, hayvan ve motorsuz araçlar giremez (m.3)",
+    "Trafik; yayaların, hayvanların ve araçların karayolu üzerindeki hâl ve hareketleridir (m.3)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Minibüs oturma yeri sınırı (on yedi), moped silindir sınırı (50 cm³) ve kamyonet-kamyon ayrımı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Minibüs, sürücüsü dâhil en fazla on beş oturma yeri olan otobüstür.”",
+    "“Motorlu bisiklet (moped), içten yanmalı motorlu ise silindir hacmi 125 santimetreküpü geçmeyen taşıttır.”",
+    "“Azami yüklü ağırlığı 3.500 kilogramı geçmeyen yük taşıtı kamyondur.”"
+   ],
+   "dogrusu": [
+    "Minibüs, sürücüsü dâhil oturma yeri on yediyi aşmayan otobüstür (m.3)",
+    "Motorlu bisiklet, içten yanmalı motorlu ise silindir hacmi 50 santimetreküpü geçmeyen taşıttır (m.3)",
+    "Azami yüklü ağırlığı 3.500 kilogramı geçmeyen yük taşıtı kamyonettir; bunu aşan kamyondur (m.3)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-2", "sorun": "kirmizi_kutu",
+  "aciklama": "İşaretleme standartları İçişleri'ne yüklendi; tescil-plaka görevi başka kuruma verildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Trafik işaretlemesine ilişkin standartları tespit etmek İçişleri Bakanlığının görevleri arasındadır.”",
+    "“Araçların tescil işlemlerini yaparak belge ve plakalarını vermek Karayolları Genel Müdürlüğünün görevidir.”"
+   ],
+   "dogrusu": [
+    "İşaretleme standartlarını tespit etmek İçişleri Bakanlığının sayılan görevleri arasında yer almaz; Karayolları Genel Müdürlüğüne aittir (m.5, m.7)",
+    "Araçların tescil işlemlerini yaparak belge ve plakalarını vermek İçişleri Bakanlığının görevidir (m.5/f)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Genel zabıtanın trafik suçuna el koyma yetkisi, trafik zabıtasının acil hâllerdeki genel zabıta yetkisi ve otoyol birimlerindeki görevlendirme bozuldu. KART_CELISKI: hüküm 'mülki amirin zorunlu gördüğü hâller dışında trafik zabıtasına genel zabıta görevi verilemez' diyerek tek istisna sayıyor; 12/2/2026-7574 ile eklenen cümleye göre otoyollardan sorumlu birimlerdeki trafik zabıtası, sorumluluk sahasıyla sınırlı olarak İçişleri Bakanının uygun görmesiyle genel zabıta olarak da görevlendirilebilir",
+  "duzeltme": {
+   "hukum": "Trafik zabıtası görevi sırasında karşılaştığı acil ve zorunlu hâllerde genel zabıta görevi yapmakla da yetkilidir; otoyollardan sorumlu birimlerdeki trafik zabıtası, sorumluluk sahasıyla sınırlı olmak üzere İçişleri Bakanının uygun görmesi hâlinde genel zabıta olarak da görevlendirilebilir; mülki idare amirlerince emniyet ve asayiş bakımından zorunlu görülen hâller dışında trafik zabıtasına genel zabıta görevi verilemez, araç ve teçhizatı trafik hizmeti dışında kullanılamaz. Genel zabıta, trafik zabıtasının bulunmadığı veya yeterli olmadığı yerlerde, sorumluluk bölgesine göre trafiği düzenlemeye ve trafik suçlarına el koymaya görevli ve yetkilidir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "“Genel zabıta hiçbir hâlde trafik suçlarına el koyamaz; bu yetki yalnızca trafik zabıtasına aittir.”",
+    "“Trafik zabıtası, görevi sırasında karşılaştığı acil ve zorunlu hâllerde dahi genel zabıta görevi yapamaz.”",
+    "“Otoyollardan sorumlu birimlerdeki trafik zabıtası, hiçbir şekilde genel zabıta olarak görevlendirilemez.”"
+   ],
+   "dogrusu": [
+    "Genel zabıta, trafik zabıtasının bulunmadığı veya yeterli olmadığı yerlerde trafiği düzenler ve trafik suçlarına el koyar (m.6/b)",
+    "Trafik zabıtası, görevi sırasında karşılaştığı acil ve zorunlu hâllerde genel zabıta görevi yapmakla da yetkilidir (m.6/a)",
+    "Otoyollardan sorumlu birimlerdeki trafik zabıtası, sorumluluk sahasıyla sınırlı olarak İçişleri Bakanının uygun görmesiyle genel zabıta olarak görevlendirilebilir (m.6/a)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-4", "sorun": "kirmizi_kutu",
+  "aciklama": "İlçe komisyonu kararlarının yürürlüğü, eşitlik hâli ve temsilci sınırı (üç) bozuldu. KART_CELISKI: hüküm üçle sınırlı temsilcilere 'oda'yı da katıyor; resmî metinde 3 sınırı yalnız üniversite, vakıf ve kamuya yararlı dernek veya kuruluş temsilcileri içindir (oda bu sınırda sayılmaz)",
+  "duzeltme": {
+   "hukum": "İllerde vali veya yardımcısı, ilçelerde kaymakam başkanlığında; belediye, emniyet, jandarma, millî eğitim, karayolları ve Şoförler Federasyonuna bağlı oda temsilcileri ile valilikçe uygun görülen üniversite, oda, vakıf ve dernek temsilcilerinden oluşur (üniversite, vakıf ve kamuya yararlı dernek veya kuruluş temsilcilerinin toplamı üçü geçemez); kararlar oy çokluğuyla alınır, eşitlikte başkanın tarafı çoğunluk sayılır; il komisyonu kararları valinin onayıyla yürürlüğe girer; ilçe komisyonu kararları il komisyonunca incelenip vali onayından sonra yürürlüğe girer. Belediye sınırı içinde ticarî yolcu ve yük taşıtlarının çalışma şekli, güzergâhı ve sayısı ile geçici otopark yerlerini belirler (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "“İlçe trafik komisyonu kararları kaymakamın onayıyla yürürlüğe girer.”",
+    "“Trafik komisyonunda oyların eşitliği hâlinde oylama tekrarlanır.”",
+    "“Komisyondaki üniversite, vakıf ve kamuya yararlı dernek temsilcilerinin toplam sayısı beşi geçemez.”"
+   ],
+   "dogrusu": [
+    "İlçe trafik komisyonu kararları il trafik komisyonunca incelenip vali tarafından onaylandıktan sonra yürürlüğe girer (m.12)",
+    "Trafik komisyonunda oyların eşitliği hâlinde başkanın bulunduğu taraf çoğunluk sayılır (m.12)",
+    "Komisyondaki üniversite, vakıf ve kamuya yararlı dernek veya kuruluş temsilcilerinin toplam sayısı üçü geçemez (m.12)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-5", "sorun": "kirmizi_kutu",
+  "aciklama": "İlk tescil süresi (üç ay), noter şartı ve mirasçının başvuru süresi (doksan gün) bozuldu. NOT: 2026 (7574) ile yetkili satıcıların elektronik ilk tescilinde üç aylık süre yerine üç iş günü öngörüldü; hüküm genel kuralı veriyor",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlk tescili yapılacak araçlar için tescil başvuru süresi, satın alma tarihinden itibaren altı aydır.”",
+    "“Tescilli bir aracın noter dışında yapılan elden satışı da geçerlidir.”",
+    "“Araç sahibinin vefatı hâlinde mirasçıların tescil için başvuru süresi altı aydır.”"
+   ],
+   "dogrusu": [
+    "İlk tescili yapılacak araçlar için satın alma veya gümrükten çekme tarihinden itibaren üç ay içinde başvurulur (m.20/a)",
+    "Tescilli araçların her çeşit satış ve devri noterlerce yapılır; noter dışı satış ve devirler geçersizdir (m.20/d)",
+    "Araç sahibi vefat ederse mirasçılar, vefat tarihinden itibaren doksan gün içinde tescil kuruluşuna başvurur (m.20/f)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-6", "sorun": "kirmizi_kutu",
+  "aciklama": "JGK araçlarının tescil makamı (EGM), tarım iş makinelerinin tescili ve motorsuz taşıtlarda komisyon kararı şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Jandarma Genel Komutanlığına ait bütün araçların tescili Türk Silahlı Kuvvetlerince yapılır.”",
+    "“Tarım kesiminde kullanılan, özel kişilere ait iş makinelerinin tescili ticaret ve sanayi odalarınca yapılır.”",
+    "“Motorsuz taşıtların tescili, il trafik komisyonu kararı aranmaksızın belediyelerce yapılır.”"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığına ait bütün araçların tescili Emniyet Genel Müdürlüğünce yapılır (m.22)",
+    "Özel kişilere ait iş makinelerinden tarım kesiminde kullanılanların tescili ziraat odalarınca yapılır (m.22)",
+    "Motorsuz taşıtlardan gerekli görülenlerin tescili, il trafik komisyonundan karar alınmak şartıyla belediyelerce yapılır (m.22)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Sahte plakada TCK m.204'ün de uygulanması, plakasız kullanmada geri alma süresi ve plaka değişikliğinde men süresi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sahte plaka takan sürücüye yalnızca idari para cezası uygulanır; Türk Ceza Kanunu hükümleri uygulanmaz.”",
+    "“Tescilli aracı plakasız kullanan sürücünün sürücü belgesi on beş gün süreyle geri alınır.”",
+    "“Plakasının okunmasını bilerek engelleyecek değişiklik yapan sürücünün aracı on beş gün trafikten menedilir.”"
+   ],
+   "dogrusu": [
+    "Sahte veya başka araca ait plaka takana idari para cezasının yanında TCK'nın 204 üncü maddesi de uygulanır (m.23)",
+    "Tescilli aracı plakasız kullanan sürücünün belgesi otuz gün geri alınır ve araç otuz gün trafikten menedilir (m.23)",
+    "Plakanın farklı okunmasına veya okunamamasına bilerek neden olan sürücünün aracı otuz gün trafikten menedilir (m.23)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Takograf eşiği (3.500 kg), müdahalede belge geri alma süresi ve işletene uygulanacak ceza (iki katı) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yük taşıtlarında takograf zorunluluğu, azami yüklü ağırlığı 5.000 kilogramı aşanlardan başlar.”",
+    "“Takografa müdahalede bulunarak hatalı veri üretilmesine yol açan sürücünün sürücü belgesi on beş gün geri alınır.”",
+    "“Sürücü işleten değilse, araç işletenine sürücüye verilen cezanın yarısı uygulanır.”"
+   ],
+   "dogrusu": [
+    "Takograf, azami yüklü ağırlığı 3.500 kilogramdan fazla olan yük taşıtlarında zorunludur (m.31)",
+    "Takografa müdahale ederek yanlış veri üretecek duruma getiren sürücünün belgesi otuz gün geri alınır (m.31)",
+    "Sürücü işleten değilse, sorumluluğunu yerine getirmeyen işletene sürücü cezasının iki katı uygulanır (m.31)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Değişikliği işletme süresi (otuz gün) ve gürültülü değişiklikte men süresi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Araç üzerinde mevzuata uygun yapılan değişikliğin on beş gün içinde tescil belgesine işletilmesi zorunludur.”",
+    "“Mevzuata aykırı değişiklik çevreyi rahatsız edecek gürültü çıkarıyorsa araç on beş gün trafikten menedilir.”"
+   ],
+   "dogrusu": [
+    "Mevzuata uygun her araç değişikliği işleten tarafından otuz gün içinde tescil belgesine işletilir (m.32)",
+    "Mevzuata aykırı değişiklik çevreyi rahatsız edecek gürültü çıkarıyorsa araç otuz gün süreyle trafikten menedilir (m.32)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-10", "sorun": "kirmizi_kutu",
+  "aciklama": "Sigortasız aracın muayeneye alınmaması, trafik zabıtasının muayene yetkisi ve muayene için süre tanınması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Zorunlu mali sorumluluk sigortası yaptırılmamış araçlar da muayeneye alınır.”",
+    "“Karayolunda kullanılan araçları yalnızca muayene istasyonları muayene edebilir; trafik zabıtası araçları muayene edemez.”",
+    "“Muayenesi yapılmamış araçla trafiğe çıkıldığında araç, muayene için süre tanınmadan derhal trafikten menedilir.”"
+   ],
+   "dogrusu": [
+    "Zorunlu mali sorumluluk sigortası yaptırılmamış araçlar muayeneye alınmaz (m.34)",
+    "Karayollarında kullanılan araçlar trafik zabıtasınca kontrol edilerek her an muayene edilebilir (m.34)",
+    "Muayenesiz araçla trafiğe çıkan araç sahibine ceza verilir ve muayene için süre tanınır (m.34)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Geri alınmış belgeyle sürmenin cezası (beş katı) belgesizle eşitlendi; işletenin cezası kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sürücü belgesi geri alındığı hâlde araç kullanana, belgesiz araç kullanana verilen idari para cezasının aynısı verilir.”",
+    "“Sürücü belgesi olmayan kişinin araç kullanmasına izin veren işletene idari para cezası verilmez.”"
+   ],
+   "dogrusu": [
+    "Belgesi geri alınmış veya iptal edilmişken araç kullanana, belgesiz sürücü cezasının beş katı verilir (m.36)",
+    "Belgesiz kişinin araç kullanmasına izin veren işletene de tescil plakası üzerinden belgesiz sürücüyle aynı ceza verilir (m.36)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-12", "sorun": "kirmizi_kutu",
+  "aciklama": "Yaş sınırları (bisiklet 11, elektrikli bisiklet-skuter 15, motorsuz taşıt-hayvan 13) yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hayvan sürücülerinin 15 yaşını bitirmiş olmaları zorunludur.”",
+    "“Bisiklet kullananların 13 yaşını bitirmiş olmaları zorunludur.”",
+    "“Elektrikli skuter kullananların 11 yaşını bitirmiş olmaları yeterlidir.”"
+   ],
+   "dogrusu": [
+    "Motorsuz taşıt kullananlar ile hayvan sürücülerinin 13 yaşını bitirmiş olmaları zorunludur (m.37)",
+    "Bisiklet kullananların 11 yaşını bitirmiş olmaları zorunludur (m.37)",
+    "Elektrikli bisiklet ve elektrikli skuter kullananların 15 yaşını bitirmiş olmaları zorunludur (m.37)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-14", "sorun": "kirmizi_kutu",
+  "aciklama": "Toplantı-gösteri istisnası, otoyol-köprü-tünelde iki kat uygulama ve ters yönde geri alma süresi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kanuna uygun toplantı ve gösteri yürüyüşleri sırasında araçlarla yolu keyfî olarak kesmek de yol kesme kabahatini oluşturur.”",
+    "“Keyfî hareketlerle yol kesme ihlali otoyolda yapılırsa ceza ve süreler yarı oranında artırılır.”",
+    "“Otoyolda ters yönde araç süren sürücünün belgesi otuz gün geri alınır.”"
+   ],
+   "dogrusu": [
+    "Kanuna uygun düzenlenen toplantı ve gösteri yürüyüşleri sırasında bu fiiller işlenirse yol kesme kabahati oluşmaz (m.46)",
+    "Keyfî yol kesme otoyol, köprü, viyadük veya tünelde yapılırsa ceza ile belge geri alma ve men süreleri iki kat uygulanır (m.46)",
+    "Otoyolda veya yerleşim yeri dışındaki bölünmüş yolda ters yönde sürenin belgesi altmış gün geri alınır, araç altmış gün menedilir (m.46)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-15", "sorun": "kirmizi_kutu",
+  "aciklama": "Uyma sıralaması (görevli, ışık, levha, diğer kurallar) değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Karayolundan faydalananlar öncelikle trafik ışıklarına, ardından trafik zabıtasının işaretlerine uymak zorundadır.”",
+    "“Trafik işaret levhaları ve yer işaretlemeleri, uyma sırasında trafik ışıklarından önce gelir.”"
+   ],
+   "dogrusu": [
+    "Önce trafik zabıtası ve yetkili kişilerin uyarı ve işaretlerine, sonra trafik ışıklarına uyulur (m.47/1)",
+    "Uyma sırasında trafik ışıkları, işaret levhaları ve yer işaretlemelerinden önce gelir (m.47/1)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-16", "sorun": "kirmizi_kutu",
+  "aciklama": "Dur ikazına uymamanın yaptırımı ve kırmızı ışık tekrarında geri alma-iptal kademeleri bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Denetimde dur ikazına uymayarak kaçan sürücüye yalnızca idari para cezası uygulanır.”",
+    "“Bir yıl içinde kırmızı ışık ihlalini üç defa yapan sürücünün belgesi altmış gün geri alınır.”",
+    "“Bir yıl içinde kırmızı ışık ihlalini beş defa yapan sürücünün sürücü belgesi iptal edilir.”"
+   ],
+   "dogrusu": [
+    "Dur ikazına uymayıp kaçana idari para cezası verilir; ayrıca belge altmış gün geri alınır ve araç altmış gün menedilir (m.47)",
+    "Bir yıl içinde kırmızı ışığı üç defa ihlal edenin belgesi otuz gün, dört defa ihlal edeninki altmış gün geri alınır (m.47)",
+    "Bir yıl içinde kırmızı ışığı beş defa ihlal edenin belgesi doksan gün geri alınır; altı defa ihlal edenin belgesi iptal edilir (m.47)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-17", "sorun": "kirmizi_kutu",
+  "aciklama": "İkinci ihlalde geri alma süresi (iki yıl), ticari araçlarda promil sınırı (0,21) ve ilk ihlalde süre (altı ay) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Alkollü araç kullanma nedeniyle beş yıl içinde ikinci defa yakalanan sürücünün belgesi bir yıl süreyle geri alınır.”",
+    "“Hususi otomobil dışındaki araçları kullanan sürücüler için de promil alt sınırı 0,50 olarak uygulanır.”",
+    "“0,50 promilin üzerinde alkollü araç kullanan sürücünün belgesi ilk seferde iki yıl süreyle geri alınır.”"
+   ],
+   "dogrusu": [
+    "Beş yıl içinde alkolden ikinci defa yakalananın sürücü belgesi iki yıl süreyle geri alınır (m.48)",
+    "Hususi otomobil dışındaki araçları kullanan sürücüler bakımından promil alt sınırı 0,21 olarak uygulanır (m.48)",
+    "0,50 promilin üzerinde alkollü araç kullanan sürücünün belgesi ilk seferde altı ay süreyle geri alınır (m.48)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-18", "sorun": "kirmizi_kutu",
+  "aciklama": "Ölçüm reddinde geri alma süresi (beş yıl), uyuşturucuda iptal ve yeniden kursa başlama süresi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kolluğun alkol veya uyuşturucu ölçümünü yaptırmayan sürücünün belgesi iki yıl süreyle geri alınır.”",
+    "“Uyuşturucu veya uyarıcı madde aldığı tespit edilen sürücünün belgesi altı ay süreyle geri alınır.”",
+    "“Uyuşturucu nedeniyle belgesi iptal edilen kişi, iptalden bir yıl sonra yeniden sürücü kursuna başlayabilir.”"
+   ],
+   "dogrusu": [
+    "Kolluğun ölçüm talebini yerine getirmeyen sürücünün belgesi beş yıl süreyle geri alınır (m.48)",
+    "Uyuşturucu veya uyarıcı madde aldığı tespit edilen sürücünün sürücü belgesi iptal edilir (m.48)",
+    "Uyuşturucu nedeniyle belgesi iptal edilenin kursa başlayabilmesi için iptalden itibaren en az beş yıl geçmelidir (m.48)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-19", "sorun": "kirmizi_kutu",
+  "aciklama": "Otoyol (120) ve çift yönlü yol (90) üst sınırları ile 20 km/s artırma yetkisinin kapsamı (yalnız otomobil) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kanunda otoyollar için öngörülen hız üst sınırı 130 km/s'dir.”",
+    "“Kanunda şehirlerarası çift yönlü karayolları için öngörülen hız üst sınırı 110 km/s'dir.”",
+    "“İçişleri Bakanlığı, hız sınırlarını bütün motorlu araçlar için 20 km/s artırmaya yetkilidir.”"
+   ],
+   "dogrusu": [
+    "Otoyollarda hız sınırı 120 km/s'yi geçmemek üzere yönetmelikte belirlenir (m.50)",
+    "Şehirlerarası çift yönlü karayollarında hız sınırı 90 km/s'yi geçmemek üzere yönetmelikte belirlenir (m.50)",
+    "İçişleri Bakanlığı yol standartlarını dikkate alarak hız sınırlarını yalnız otomobiller için 20 km/s artırabilir (m.50)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-20", "sorun": "kirmizi_kutu",
+  "aciklama": "Radar dedektörü yasağı, 46-55 km/s aşımında geri alma süresi ve küçük yerleşimlerde denetim yerini belirleyen makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hız ölçen cihazların yerini tespit eden radar dedektörünü araçta bulundurmak serbesttir; yalnızca imali yasaktır.”",
+    "“Yerleşim yeri içinde hız sınırını 46-55 km/s aşan sürücünün belgesi altmış gün geri alınır.”",
+    "“Nüfusu 5.000'in altındaki yerleşim yerlerinde hız denetimi yerini il trafik komisyonu belirler.”"
+   ],
+   "dogrusu": [
+    "Radar dedektörü imal etmek, ithal etmek ve araçta bulundurmak yasaktır; cihazın mülkiyeti kamuya geçirilir (m.51)",
+    "Yerleşim yeri içinde hız sınırını 46-55 km/s aşan sürücünün belgesi her seferinde 30 gün geri alınır (m.51)",
+    "Nüfusu 5.000'in altındaki yerleşim yerlerinde hız denetimi yerini mahalli mülki idare amiri belirler (m.51)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-21", "sorun": "kirmizi_kutu",
+  "aciklama": "Dönel kavşakta öncelik, sol-sağ kuralı ve ışık izin verse de kavşağa girme yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Dönel kavşağa gelen sürücüler, dönel kavşak içindeki araçlara göre geçiş üstünlüğüne sahiptir.”",
+    "“Kavşak kolları işaretle belirlenmemişse motorlu araçlardan sağdaki, soldan gelen araca geçiş hakkı verir.”",
+    "“Işıklı trafik işareti izin veriyorsa, kavşak içinde durmak zorunda kalınacak olsa bile kavşağa girilebilir.”"
+   ],
+   "dogrusu": [
+    "Dönel kavşağa gelen sürücüler, dönel kavşak içindeki araçlara geçiş hakkını vermek zorundadır (m.57)",
+    "Kavşak kolları işaretle belirlenmemişse motorlu araçlardan soldaki, sağdan gelen araca geçiş hakkı verir (m.57)",
+    "Işıklı işaret izin verse bile kavşak içinde durmaya zorlayacak veya diğer trafiği engelleyecekse kavşağa girilmez (m.57)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-22", "sorun": "kirmizi_kutu",
+  "aciklama": "Skuterin kullanılamayacağı yollar (50 km/s üzeri), motosiklette iki el kuralı ve akrobaside geri alma süresi bozuldu. KART_CELISKI: hüküm 'skuterle yük ve yolcu taşınmaz' ve 'motosikletle akrobatik hareketler yasaktır' diyor; resmî metinde sırtta taşınabilen kişisel eşya DIŞINDAKİ yük ve yolcu yasak, akrobasi yasağı izin alınarak yapılan gösteriler DIŞINDA ve motorlu bisikleti (moped) de kapsıyor (istisnalar düşmüştü)",
+  "duzeltme": {
+   "hukum": "Ayrı bisiklet yolu veya şeridi varsa bisiklet ve skuter taşıt yolunda; bunlar, moped ve motosiklet yayalara ayrılmış yerde; ikiden fazlası bir şeritte yan yana sürülemez; bisiklet sürücüsü en az bir elle, skuter ve moped sürücüsü işaret verme dışında iki elle, motosiklet sürücüsü devamlı iki elle sürer; arkada yeterli oturma yeri yoksa yolcu alınmaz; skuterle sırtta taşınabilen kişisel eşya dışında yük ve yolcu taşınmaz, skuter otoyolda, şehirlerarası yolda ve hız sınırı 50 km/s üzeri yollarda kullanılamaz; moped ve motosikletle izin alınarak yapılan gösteriler dışında tek teker, sele üzerinde ayağa kalkma, kendi etrafında dönme gibi akrobatik hareketler yasaktır, ihlalinde ağır ceza, belge altmış gün geri, araç altmış gün men; beş yıl içinde ikinci geri almada belge iptal; paylaşımlı skuter işletmeciliği Ulaştırma ve Altyapı Bakanlığı yetki belgesine bağlıdır (m.66)",
+   "sinavda_boyle_yazarlar": [
+    "“Elektrikli skuter, azami hız sınırı 30 km/s üzerinde olan karayollarında kullanılamaz.”",
+    "“Motosiklet sürücüleri, manevra için işaret verirken taşıtlarını tek elle sürebilir.”",
+    "“Motosikletle akrobatik hareket yapan sürücünün belgesi otuz gün geri alınır.”"
+   ],
+   "dogrusu": [
+    "Elektrikli skuter otoyol, şehirlerarası karayolu ve azami hız sınırı 50 km/s üzerindeki karayollarında kullanılamaz (m.66)",
+    "Motosiklet sürücüleri taşıtlarını devamlı iki elle sürer; işaret verme istisnası skuter ve motorlu bisiklet içindir (m.66)",
+    "Motosikletle akrobatik hareket yapanın belgesi altmış gün geri alınır ve araç altmış gün trafikten menedilir (m.66)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-23", "sorun": "kirmizi_kutu",
+  "aciklama": "Yarış izni makamları (valilik / İçişleri Bakanlığı) ve taşıt yolunda hayvan bulundurma yasağı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bir il sınırı içindeki karayollarında yapılacak yarışlar için il trafik komisyonundan izin alınır.”",
+    "“Birden fazla il sınırları içinde yapılacak milletlerarası yarışlar için ilgili valiliklerden izin alınması yeterlidir.”",
+    "“Yerleşim birimleri dışındaki karayolunda, taşıt yolu üzerinde hayvan bulundurmak serbesttir.”"
+   ],
+   "dogrusu": [
+    "Bir il sınırı içindeki karayollarında yapılacak yarış ve koşular için o ilin valiliğinden izin alınır (m.70)",
+    "Birden fazla il sınırları içindeki milli ve milletlerarası yarışlar için İçişleri Bakanlığından izin alınır (m.70)",
+    "Yerleşim birimleri dışındaki karayolunda, zorunlu hâller dışında taşıt yolu üzerinde hayvan bulundurmak yasaktır (m.69)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-24", "sorun": "kirmizi_kutu",
+  "aciklama": "Geçiş üstünlüğü sırası (cankurtaran, itfaiye, zabıta) ve görev hâli şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Geçiş üstünlüğüne sahip araçlar karşılaştığında, asayiş için olay yerine giden zabıta aracı cankurtarandan önce geçer.”",
+    "“Geçiş üstünlüğüne sahip araçlar, görev hâlinde olmasalar da bu haktan yararlanır.”",
+    "“İtfaiye araçları, geçiş üstünlüğü sırasında cankurtaran araçlarından önce gelir.”"
+   ],
+   "dogrusu": [
+    "Geçiş üstünlüğü sırası cankurtaran, itfaiye ve ardından zabıta araçlarıdır; cankurtaran zabıta aracından önce geçer (m.71)",
+    "Geçiş üstünlüğü, araçlar görev hâlindeyken duyulur ve görünür işaret vermek şartıyla kullanılır (m.71)",
+    "Geçiş üstünlüğü sırasında cankurtaran ve acil hasta taşıyan araçlar itfaiye araçlarından önce gelir (m.71)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-25", "sorun": "kirmizi_kutu",
+  "aciklama": "İlk geçiş hakkının yayaya ait olması ve geçmek üzere olan yayayı kapsaması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Işıklı işaret bulunmayan yaya geçidinde, geçmek üzere olan yaya araçların geçmesini beklemek zorundadır.”",
+    "“Sürücüler yalnızca yaya geçidinden geçmekte olan yayalara yol verir; geçmek üzere olanlara yol vermek zorunlu değildir.”"
+   ],
+   "dogrusu": [
+    "Yaya geçidine yaklaşan sürücü yavaşlar ve geçen ya da geçmek üzere olan yayaya durarak ilk geçiş hakkını verir (m.74)",
+    "Sürücüler, yaya veya okul geçidinden geçen ya da geçmek üzere bulunan yayalara durarak ilk geçiş hakkını verir (m.74)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-26", "sorun": "kirmizi_kutu",
+  "aciklama": "Çocuk yaşı (15), kemer ihlalinde belge geri alma eşiği (dört ihlal) ve yolcuya ceza bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sürücülerin koruyucu sistem kullandırma yükümlülüğü yalnızca 12 yaşını doldurmamış çocuklar için geçerlidir.”",
+    "“Emniyet kemeri takmayan sürücünün belgesi, bir yıl içindeki ikinci ihlalde otuz gün geri alınır.”",
+    "“Emniyet kemeri takmama hâlinde yalnızca sürücüye ceza verilir; yolcuya ceza uygulanmaz.”"
+   ],
+   "dogrusu": [
+    "Sürücüler, 15 yaşını doldurmamış çocukların koruyucu sistem kullanmasını sağlamak zorundadır (m.78)",
+    "Bir yıl içinde emniyet kemeri kuralını dört veya daha fazla ihlal eden sürücünün belgesi her seferinde otuz gün geri alınır (m.78)",
+    "Emniyet kemeri kuralını ihlal eden sürücülere ve yolculara idari para cezası uygulanır (m.78)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-27", "sorun": "kirmizi_kutu",
+  "aciklama": "Maddi hasarlı kazada anlaşarak ayrılma, ölümlü-yaralanmalı kazada hapis yaptırımı ve zabıtaya bilgi verme yükümlülüğü bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yalnız maddi hasarlı kazalarda da taraflar, yetkili ve görevli kişi gelmeden kaza yerinden ayrılamaz.”",
+    "“Ölümlü veya yaralanmalı kazada zabıtanın izni olmadan zaruret dışında olay yerinden ayrılan sürücüye yalnızca idari para cezası verilir.”",
+    "“Sahibi bulunmayan araca zarar veren sürücü, üzerine yazılı bilgi bırakırsa zabıtaya haber vermek zorunda değildir.”"
+   ],
+   "dogrusu": [
+    "Yalnız maddi hasarlı kazada taraflar yetkiliyi beklemeden durumu aralarında yazılı saptayıp ayrılabilir (m.81)",
+    "Ölümlü veya yaralanmalı kazada izinsiz ayrılan sürücüye bir yıldan üç yıla kadar hapis verilir, belgesi iki yıl geri alınır (m.81)",
+    "Sahibi bulunamayan araca zarar veren sürücü, yazılı bilgi bırakmanın yanında en kısa zamanda zabıtaya da bilgi verir (m.81)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-28", "sorun": "kirmizi_kutu",
+  "aciklama": "Tamirhanenin bildirim yükümlülüğü, geçen sürücünün ilk yardım yükümlülüğü ve ilk yardım malzemesi zorunluluğunun kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tamirhane ve garaj sahipleri, ölümlü veya yaralanmalı kaza geçirdiği belli olan aracı zabıtaya bildirmek zorunda değildir.”",
+    "“Kaza yerinden geçen sürücülerin, kazaya karışmamışlarsa ilk yardım önlemi alma yükümlülüğü yoktur.”",
+    "“İlk yardım malzemesi bulundurma zorunluluğu, şehir içindeki akaryakıt istasyonları için öngörülmüştür.”"
+   ],
+   "dogrusu": [
+    "Tamirhane ve garajlar, ölümlü veya yaralanmalı kaza geçirdiği belli olan aracı gecikmeksizin zabıtaya bildirip deftere işler (m.82)",
+    "Kaza yerinden geçmekte olan sürücüler de ilk yardım önlemlerini almak ve en yakın zabıtaya veya sağlık kuruluşuna haber vermek zorundadır (m.82)",
+    "Şehirlerarası akaryakıt istasyonları, standartlara uygun ilk yardım malzemesini her an kullanılabilir durumda bulundurur (m.82)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-29", "sorun": "kirmizi_kutu",
+  "aciklama": "Savcı gecikecekse yolun açılması, el koyan zabıtaların rolleri ve anlaşmalı maddi hasarlı kazada kovuşturma bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ölümlü kaza nedeniyle kapanan karayolu, Cumhuriyet savcısı olay yerine gelmeden hiçbir şekilde trafiğe açılamaz.”",
+    "“Trafik kazalarına adli yönden trafik zabıtası, kaza tespit tutanağı düzenlemek üzere genel zabıta el koyar.”",
+    "“Yalnız maddi hasarlı kazada taraflar anlaşsa bile adli kovuşturma yapılır.”"
+   ],
+   "dogrusu": [
+    "Başka yoldan geçiş verilemiyor ve savcının gecikeceği anlaşılıyorsa, işaretleme yapılıp durum tutanakla tespit edildikten sonra yol açılır (m.83)",
+    "Kazalara adli yönden mahalli genel zabıta, kaza tespit tutanağı düzenlemek üzere trafik zabıtası el koyar (m.83)",
+    "Yalnız maddi hasarlı kazada taraflar anlaşır ve fiil başka suç oluşturmazsa adli kovuşturma yapılmaz (m.83)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-30", "sorun": "kirmizi_kutu",
+  "aciklama": "Listede olmayan hâl (hız aşımı) eklendi; arkadan çarpma ve park etmiş araca çarpma listeden çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hız sınırını aşmak, Karayolları Trafik Kanununda sayılan aslî kusur hâllerindendir.”",
+    "“Arkadan çarpma, aslî kusur hâlleri arasında yer almaz.”",
+    "“Park yerinde kurallara uygun park edilmiş araca çarpan sürücü aslî kusurlu sayılmaz.”"
+   ],
+   "dogrusu": [
+    "Hız sınırını aşma, aslî kusur sayılan hâller arasında sayılmamıştır (m.84)",
+    "Arkadan çarpma, aslî kusur sayılan hâllerdendir (m.84)",
+    "Park yerinde veya taşıt yolu dışında kurallara uygun park edilmiş araca çarpan sürücü aslî kusurlu sayılır (m.84)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-31", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; aracı çalanın, işletenin ve sürücünün sorumluluğu bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Motorlu aracı çalan kişi, aracın işleteni gibi sorumlu tutulmaz; zarardan yalnızca işleten sorumludur.”",
+    "“İşleten, aracın çalınmasında kusursuz olduğunu ispat etse bile zarardan sorumlu tutulur.”",
+    "“Aracın çalıntı olduğunu bilen sürücü, zarardan sorumlu tutulamaz.”"
+   ],
+   "dogrusu": [
+    "Bir motorlu aracı çalan veya gasbeden kimse işleten gibi sorumlu tutulur (m.107)",
+    "İşleten, aracın çalınmasında kendisinin veya sorumlu olduğu kişilerin kusurlu olmadığını ispat ederse sorumlu tutulamaz (m.107)",
+    "Aracın çalındığını bilen veya özen gösterseydi öğrenebilecek sürücü de müteselsilen sorumludur (m.107)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-32", "sorun": "kirmizi_kutu",
+  "aciklama": "Zamanaşımı süreleri (iki yıl / her hâlde on yıl) ve sigortacıya karşı kesilme bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Motorlu araç kazasından doğan maddi zarar talepleri, her hâlde kaza gününden itibaren beş yıl içinde zamanaşımına uğrar.”",
+    "“Maddi zarar talepleri, zarar görenin zararı ve yükümlüsünü öğrenmesinden itibaren bir yıl içinde zamanaşımına uğrar.”",
+    "“Tazminat yükümlüsüne karşı kesilen zamanaşımı, sigortacıya karşı kesilmiş sayılmaz.”"
+   ],
+   "dogrusu": [
+    "Maddi zarar talepleri her hâlde kaza gününden itibaren on yıl içinde zamanaşımına uğrar (m.109)",
+    "Maddi zarar talepleri, zararın ve yükümlünün öğrenilmesinden itibaren iki yıl içinde zamanaşımına uğrar (m.109)",
+    "Zamanaşımı tazminat yükümlüsüne karşı kesilirse sigortacıya karşı da kesilmiş olur (m.109)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-33", "sorun": "kirmizi_kutu",
+  "aciklama": "Hız ihlalinde geri alma yetkisi (6 ncı maddedeki görevliler) ve davaların birleştirilememesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Hız sınırı ihlali nedeniyle sürücü belgesinin geri alınmasına mahkeme karar verir.”",
+    "“Bu Kanuna göre görülen davalar, diğer kanunlara göre görülen davalarla birleştirilebilir.”"
+   ],
+   "dogrusu": [
+    "Hız ihlali ve 100 ceza puanını doldurma nedeniyle belge geri almaya 6 ncı maddede sayılan görevliler yetkilidir (m.112)",
+    "Bu Kanuna göre görülen davalar, diğer kanunlara göre görülen davalarla birleştirilemez (m.112)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-34", "sorun": "kirmizi_kutu",
+  "aciklama": "Tutanak düzenleyenler (jandarma dâhil), mahkemeye gönderme süresi (7 iş günü) ve her suça ayrı ceza bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Trafik suçu işleyenler hakkında tutanağı yalnızca Emniyet Genel Müdürlüğü personeli düzenleyebilir.”",
+    "“Yargı yetkisine giren suçlarla ilgili tutanağın suretini mahkemeye gönderme süresi on beş iş günüdür.”",
+    "“Birkaç trafik suçu bir arada işlenirse yalnızca en ağır suçun cezası uygulanır.”"
+   ],
+   "dogrusu": [
+    "Trafik tutanağını yetki sınırları içinde Emniyet ve Jandarma personeli ile Ulaştırma Bakanlığı ve Karayollarının yetkili personeli düzenler (m.114)",
+    "Yargı yetkisine giren suçlarla ilgili tutanağın bir sureti ilgili mahkemeye 7 iş günü içinde gönderilir (m.114)",
+    "Birkaç trafik suçu bir arada işlenirse her suç için ayrı ceza uygulanır (m.114)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-35", "sorun": "kirmizi_kutu",
+  "aciklama": "Tutanağı düzenleyenin tahsilat yasağı, gecikme faizi oranı ve yabancı plakalı aracın çıkış şartı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Trafik idari para cezası karar tutanağını düzenleyen personel, cezayı yerinde tahsil edebilir.”",
+    "“Bir ay içinde ödenmeyen trafik para cezasına her ay yüzde on faiz uygulanır.”",
+    "“Yabancı plakalı araca uygulanan trafik cezası tahsil edilmeden de aracın ülkeyi terk etmesine izin verilir.”"
+   ],
+   "dogrusu": [
+    "Tutanak düzenlemeye yetkili personel tarafından trafik idari para cezası tahsilatı yapılamaz (m.115)",
+    "Bir ay içinde ödenmeyen cezalara her ay yüzde 5 faiz uygulanır; bulunacak tutar cezanın iki katını geçemez (m.115)",
+    "Yabancı plakalı aracın trafik cezaları tahsil edilmeden ülkeyi terk etmesine izin verilmez (m.115)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-36", "sorun": "kirmizi_kutu",
+  "aciklama": "İkinci 100 puanda geri alma süresi (4 ay), üçüncüde süresiz iptal ve ölümlü kazada süre (1 yıl) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Aynı yıl içinde ikinci defa 100 ceza puanını dolduran sürücünün belgesi 6 ay süreyle geri alınır.”",
+    "“Bir yıl içinde üç defa 100 ceza puanını dolduran sürücünün belgesi 1 yıl süreyle geri alınır.”",
+    "“Ölümle sonuçlanan kazaya aslî kusurlu sebep olan sürücünün belgesi 2 ay süreyle geri alınır.”"
+   ],
+   "dogrusu": [
+    "Aynı yıl içinde ikinci defa 100 ceza puanını dolduranın belgesi 4 ay geri alınır (m.118)",
+    "Bir yıl içinde üç defa 100 ceza puanını dolduran sürücünün belgesi süresiz olarak iptal edilir (m.118)",
+    "Ölümle sonuçlanan kazaya aslî kusurlu sebebiyet veren sürücünün belgesi 1 yıl geri alınır (m.118)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-37", "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; Genelkurmay görüşü şartı ve barışta tatbikat uygulaması bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Olağanüstü hâllerde ve savaşta karayolu trafiğinin yönetimi esasları, Genelkurmay Başkanlığının görüşü alınmaksızın İçişleri Bakanlığınca belirlenir.”",
+    "“Barışta yapılacak manevra ve tatbikatlarda karayolu trafiğine ilişkin özel uygulama yapılamaz.”"
+   ],
+   "dogrusu": [
+    "Olağanüstü hâl ve savaşta karayolu trafiğinin esasları Genelkurmay Başkanlığının görüşü alınarak yönetmelikte belirtilir (m.126)",
+    "Barışta manevra ve tatbikatlarda Genelkurmay Başkanlığının istemi üzerine özel uygulamalar yapılabilir (m.126)"
+   ]}},
+ {"kanun_id": 34, "kart_id": "34-38", "sorun": "kirmizi_kutu",
+  "aciklama": "Fahri müfettişliği veren makam (vali), aday sürücülük süresi (en az bir yıl) ve satış için bekleme süresi (altı ay) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Fahri trafik müfettişliği görevi il trafik komisyonu kararıyla verilir.”",
+    "“Kanuna göre ilk defa sürücü belgesi alanlar en az iki yıl süreyle aday sürücü sayılır.”",
+    "“Trafikten men edilerek alıkonulan aracın Hazinece satılabilmesi için sahibinin bir yıl boyunca teslim almaması gerekir.”"
+   ],
+   "dogrusu": [
+    "Fahri trafik müfettişliği görevi, Karayolu Trafik Güvenliği Üst Kurulunca uygun görülen kişilere valilerce verilir (Ek m.6)",
+    "İlk defa sürücü belgesi alanlar en az bir yıl süreyle aday sürücü sayılır (Ek m.17)",
+    "Trafikten men edilip sahibince altı ay içinde teslim alınmayan veya aranmayan araçlar Hazinece satılır (Ek m.14)"
+   ]}}
+]

@@ -1,0 +1,621 @@
+{
+ "kanun_id": 21,
+ "ad": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_21.json",
+ "kartlar": [
+  {
+   "id": "21-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İhbar herkese açık",
+   "hukum": "Şiddet veya şiddete uğrama tehlikesi hâlinde herkes durumu yazılı, sözlü veya başka bir suretle ihbar edebilir (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca mağdur / yakınları / görgü tanıkları ihbar edebilir\" denir"
+   ],
+   "dogrusu": [
+    "İhbar herkese açık"
+   ]
+  },
+  {
+   "id": "21-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kamu kurumu için ihbar zorunlu",
+   "hukum": "Şiddetten haberdar olan kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşları durumu derhâl şikâyet mercilerine bildirmek zorundadır (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "onlar için de \"bildirebilir\" (ihtiyari) denir"
+   ],
+   "dogrusu": [
+    "Kamu kurumu için ihbar zorunlu"
+   ]
+  },
+  {
+   "id": "21-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Şikâyet mercileri",
+   "hukum": "Kolluk, mülki amir, Cumhuriyet başsavcılığı, hâkim ve Bakanlığın ilgili birimleridir (m.3/1-r)",
+   "sinavda_boyle_yazarlar": [
+    "listeye sulh ceza hâkimliği, merkez komutanlığı, Cumhurbaşkanlığı eklenir"
+   ],
+   "dogrusu": [
+    "Şikâyet mercileri"
+   ]
+  },
+  {
+   "id": "21-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "ŞÖNİM'e gelen ihbarın yönlendirileceği yerler",
+   "hukum": "Müdürlük veya ŞÖNİM'e yapılan ihbar/şikâyet, olayın özelliğine göre kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime gecikmeksizin bildirilir (m.4/4)",
+   "sinavda_boyle_yazarlar": [
+    "dördünden biri çıkarılır ya da yerine Cumhurbaşkanlığı konur"
+   ],
+   "dogrusu": [
+    "ŞÖNİM'e gelen ihbarın yönlendirileceği yerler"
+   ]
+  },
+  {
+   "id": "21-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Sözlü ihbar tutanağa geçer",
+   "hukum": "Sözlü yapılan şikâyet ve ihbarlar derhâl tutanağa geçirilir (m.4/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"yazılı başvuru şartı vardır\" denir"
+   ],
+   "dogrusu": [
+    "Sözlü ihbar tutanağa geçer"
+   ]
+  },
+  {
+   "id": "21-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Mülki amirin koruyucu tedbirleri (5 tane)",
+   "hukum": "Barınma yeri sağlanması, geçici maddi yardım, rehberlik ve danışmanlık, geçici koruma altına alınma, kreş imkânı (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "araya işyeri değiştirme, aile konutu şerhi, kimlik değiştirme, silah teslimi sokulur"
+   ],
+   "dogrusu": [
+    "Mülki amirin koruyucu tedbirleri (5 tane)"
+   ]
+  },
+  {
+   "id": "21-6",
+   "madde": [
+    "6",
+    "30"
+   ],
+   "baslik": "Koruyucu tedbirde delil aranmaz",
+   "hukum": "Mülki amir bu tedbirlere delil veya belge aranmaksızın, talep üzerine ya da resen karar verir (m.6/1; m.30/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"şiddetin uygulandığı belgelenmelidir\" denir"
+   ],
+   "dogrusu": [
+    "Koruyucu tedbirde delil aranmaz"
+   ]
+  },
+  {
+   "id": "21-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Hâkimin koruyucu tedbirleri (4 tane)",
+   "hukum": "İşyerinin değiştirilmesi, evli ise müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi, tapu kütüğüne aile konutu şerhi, kimlik ve diğer bilgi/belgelerin değiştirilmesi (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "bunlardan biri mülki amirin tedbiri gibi gösterilir; ayrı yerleşim yeri belirlenmesi \"önleyici tedbir\" diye sunulur"
+   ],
+   "dogrusu": [
+    "İşyerinin değiştirilmesi …"
+   ]
+  },
+  {
+   "id": "21-8",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Kimlik değiştirmenin üç şartı",
+   "hukum": "Hayati tehlike bulunmalı, diğer tedbirler yetersiz kalmalı ve ilgilinin aydınlatılmış rızası olmalı; karar hâkim tarafından Cumhuriyet başsavcılığına gönderilir, gereğini İçişleri Bakanlığı yerine getirir (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"gereğini Adalet Bakanlığı yerine getirir\" denir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığı (m.16)"
+   ]
+  },
+  {
+   "id": "21-9",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Hâkimin önleyici tedbirleri şiddet uygulayana yöneliktir",
+   "hukum": "Tehdit/hakaret etmeme, konuttan uzaklaştırma, yaklaşmama, kişisel ilişkinin sınırlanması, yakın ve tanıklara yaklaşmama, eşyaya zarar vermeme, iletişimle rahatsız etmeme, silahları kolluğa teslim, zimmetindeki silahı kurumuna teslim, alkol/uyuşturucu yasağı, sağlık kuruluşuna başvurma (m.17/1)",
+   "sinavda_boyle_yazarlar": [
+    "korunan kişiye yönelik bir koruyucu tedbir bu listeye sokulur"
+   ],
+   "dogrusu": [
+    "Tehdit/hakaret etmeme …"
+   ]
+  },
+  {
+   "id": "21-10",
+   "madde": [
+    "17",
+    "25",
+    "26"
+   ],
+   "baslik": "Kamu görevi silahı kuruma, diğer silahlar kolluğa",
+   "hukum": "İzinli silahlar kolluğa (m.17/1-g, m.25), kamu görevi nedeniyle zimmetteki silah kurumuna teslim edilir (m.17/1-ğ, m.26/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"silah taşıması zorunlu kamu görevlisi bu tedbirden muaftır\" denir"
+   ],
+   "dogrusu": [
+    "Kamu görevi silahı kuruma, diğer silahlar kolluğa"
+   ]
+  },
+  {
+   "id": "21-11",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Teslim alınan silah iade edilmez",
+   "hukum": "Kurum amiri, süre dolmadıkça veya yeni bir karar verilmedikçe silahı hiçbir şekilde iade etmez; teslim/iade kurum amiri, şiddet uygulayan ve bir tanık arasında tutanakla yapılır (m.26/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"amirin takdiriyle iade edilebilir\" denir"
+   ],
+   "dogrusu": [
+    "Kurum amiri …"
+   ]
+  },
+  {
+   "id": "21-12",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Talep edilmese bile tedbir nafakası",
+   "hukum": "Şiddet uygulayan ailenin geçimini sağlayan kişi ise hâkim, nafakaya hükmedilmemiş olması kaydıyla talep edilmese dahi tedbir nafakasına hükmedebilir (m.17/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"mutlaka talep şarttır\" denir"
+   ],
+   "dogrusu": [
+    "Talep edilmese bile tedbir nafakası"
+   ]
+  },
+  {
+   "id": "21-13",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Kolluk amirinin alabildiği koruyucu tedbirler sadece ikisi",
+   "hukum": "Gecikmesinde sakınca bulunan hâllerde kolluk amiri yalnızca barınma yeri sağlanması ve geçici koruma altına alınma tedbirlerini alabilir (m.29/1)",
+   "sinavda_boyle_yazarlar": [
+    "kolluk amirine geçici maddi yardım veya kreş yetkisi verilir"
+   ],
+   "dogrusu": [
+    "Kolluk amirinin alabildiği koruyucu tedbirler sadece ikisi"
+   ]
+  },
+  {
+   "id": "21-14",
+   "madde": [
+    "18",
+    "22",
+    "29"
+   ],
+   "baslik": "Kolluk amirinin alabildiği önleyici tedbirler dört madde ile sınırlı",
+   "hukum": "Gecikmesinde sakınca bulunan hâllerde kolluk amiri m.18, 19, 20 ve 22'deki tedbirleri alabilir: tehdit/hakaret etmeme, konuttan uzaklaştırma, korunan kişinin bulunduğu yerlere yaklaşmama, yakın-tanık-çocuklara yaklaşmama (m.29/2)",
+   "sinavda_boyle_yazarlar": [
+    "listeye silah teslimi veya alkol yasağı eklenir"
+   ],
+   "dogrusu": [
+    "Gecikmesinde sakınca bulunan hâllerde kolluk amiri m.18, 19, 20 ve 22'deki tedbirleri alabilir: tehdit/hakaret etmeme …"
+   ]
+  },
+  {
+   "id": "21-15",
+   "madde": [
+    "29"
+   ],
+   "baslik": "İki ayrı onay süresi",
+   "hukum": "Kolluk amirinin aldığı koruyucu tedbir mülki amirce 48 saat, önleyici tedbir hâkimce 24 saat içinde onaylanmazsa kendiliğinden kalkar; evrak her iki hâlde de tedbirin alındığı tarihi takip eden ilk işgünü içinde onaya sunulur (m.29/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "48 ile 24 yer değiştirilir; \"ilk işgünü\" yerine \"24 saat içinde sunar\" denir"
+   ],
+   "dogrusu": [
+    "48 saat · 24 saat (m.29/1-2)"
+   ]
+  },
+  {
+   "id": "21-16",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Tatil günü süreye dâhil",
+   "hukum": "Tatil günleri sürenin hesabına dâhildir; süre resmî tatile veya hafta sonuna rastlarsa takip eden ilk iş günü sona erer (m.29/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tatil günleri hesaba katılmaz\" denir"
+   ],
+   "dogrusu": [
+    "Tatil günü süreye dâhil"
+   ]
+  },
+  {
+   "id": "21-17",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Tedbir kararının süresi",
+   "hukum": "Tedbir kararı ilk defasında en çok altı ay için verilebilir; tehlike devam ediyorsa süre veya şekil değiştirilerek ya da aynen devam ettirilerek uzatılabilir (m.30/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"en çok bir yıl\", \"en çok üç ay\" ya da \"hiç uzatılamaz\" denir"
+   ],
+   "dogrusu": [
+    "altı ay (m.30/2)"
+   ]
+  },
+  {
+   "id": "21-18",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Karar talep edilebilecek merciler",
+   "hukum": "Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülki amirden ya da kolluktan talep edilebilir; talebi ilgili, müdürlük, ŞÖNİM, kolluk görevlileri veya Cumhuriyet savcısı yapabilir (m.30/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca yerleşim yeri mahkemesinden istenir\" denir"
+   ],
+   "dogrusu": [
+    "Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden …"
+   ]
+  },
+  {
+   "id": "21-19",
+   "madde": [
+    "31"
+   ],
+   "baslik": "Ret kararı sadece mağdura tebliğ",
+   "hukum": "Tedbir talebinin reddine ilişkin karar sadece korunan kişiye tebliğ edilir; kabul kararı ise hem korunan kişiye hem şiddet uygulayana tefhim/tebliğ edilir (m.31/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"ret kararı da şiddet uygulayana tebliğ edilir\" denir"
+   ],
+   "dogrusu": [
+    "Ret kararı sadece mağdura tebliğ"
+   ]
+  },
+  {
+   "id": "21-20",
+   "madde": [
+    "31",
+    "38"
+   ],
+   "baslik": "Zorlama hapsi ihtarı karara yazılır",
+   "hukum": "Tedbir kararına aykırı davranılması hâlinde zorlama hapsi uygulanacağı ihtarı kararda belirtilir ve tefhim/tebliğ sırasında da yapılır; bu ihtar yapılmamışsa zorlama hapsine karar verilemez (m.31/5; m.38/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"ihtar şart değildir\" denir"
+   ],
+   "dogrusu": [
+    "Tedbir kararına aykırı davranılması hâlinde zorlama hapsi uygulanacağı ihtarı kararda belirtilir ve tefhim/tebliğ sırasında da yapılır …"
+   ]
+  },
+  {
+   "id": "21-21",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Gizlilik ve adres",
+   "hukum": "Korunan kişiye yapılacak tebligatlarda ŞÖNİM adresi kullanılır; gizlilik kararı varsa resmî iş ve işlemlerde adres beyanı istenmez, kayıtlar sadece elektronik ortamda tutulur (m.32/3, m.32/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"kendi adresi kullanılır\" denir"
+   ],
+   "dogrusu": [
+    "Korunan kişiye yapılacak tebligatlarda ŞÖNİM adresi kullanılır …"
+   ]
+  },
+  {
+   "id": "21-22",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Gizlilik şerhinin silinmesi",
+   "hukum": "Nüfus kaydına işlenen gizlilik şerhi, tedbir kararının süresinin sona ermesini takip eden onbeşinci gün MERNİS'ten silinir (m.32/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"otuzuncu gün\" veya \"derhâl silinir\" denir"
+   ],
+   "dogrusu": [
+    "onbeşinci gün (m.32/6)"
+   ]
+  },
+  {
+   "id": "21-23",
+   "madde": [
+    "33",
+    "34"
+   ],
+   "baslik": "İtiraz mercii aile mahkemesi, süre iki hafta",
+   "hukum": "Mülki amirin koruyucu tedbir kararına da, hâkimin tedbir ve zorlama hapsi kararlarına da tefhim veya tebliğden itibaren iki hafta içinde aile mahkemesine itiraz edilir; karar bir hafta içinde, duruşma yapılmaksızın verilir ve kesindir (m.33/1-3; m.34/1, m.34/4, m.34/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"sulh ceza hâkimliğine itiraz edilir\", \"itiraz üzerine verilen karar temyiz edilebilir\", \"süre bir hafta\" denir"
+   ],
+   "dogrusu": [
+    "Mülki amirin koruyucu tedbir kararına da …"
+   ]
+  },
+  {
+   "id": "21-24",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Kolluğun kontrol usulü",
+   "hukum": "Önleyici tedbirin uygulanıp uygulanmadığı konutun haftada en az bir kez ziyareti, ikinci derece dâhil yakınlarla iletişim, komşuların bilgisine başvurulması, muhtardan bilgi alınması ve konut çevresinde araştırma ile kontrol edilir (m.35/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"ayda iki kez ziyaret\" denir"
+   ],
+   "dogrusu": [
+    "haftada en az bir kez (m.35/5)"
+   ]
+  },
+  {
+   "id": "21-25",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Uzlaşma önerilemez",
+   "hukum": "Tedbir kararlarının alınması ve yerine getirilmesi aşamasında mağdur ile şiddet uygulayan arasında uzlaşma ya da arabuluculuk önerilemez (m.35/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"gerekli görülürse arabuluculuk önerilebilir\" denir"
+   ],
+   "dogrusu": [
+    "Uzlaşma önerilemez"
+   ]
+  },
+  {
+   "id": "21-26",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Tebliğ edilmemesi uygulamayı durdurmaz",
+   "hukum": "Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez (m.35/8)",
+   "sinavda_boyle_yazarlar": [
+    "\"tebliğ edilmeden uygulanamaz\" denir"
+   ],
+   "dogrusu": [
+    "Tebliğ edilmemesi uygulamayı durdurmaz"
+   ]
+  },
+  {
+   "id": "21-27",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Geçici korumada bilgi verme",
+   "hukum": "Korunan kişi acil durumlarda hemen, diğer hâllerde yirmidört saat öncesinden gideceği yeri görevli ve yetkili kolluğa bildirir; gideceği yerdeki kolluk gecikmeksizin haberdar edilir (m.10/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"48 saat öncesinden\" denir ya da \"başka yere giderse koruma sona erer\" denir"
+   ],
+   "dogrusu": [
+    "yirmidört saat öncesinden (m.10/2)"
+   ]
+  },
+  {
+   "id": "21-28",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Teknik takibin sınırı",
+   "hukum": "Hâkim teknik araç ve yöntem kullanılmasına karar verebilir; ancak bu araçlarla ses ve görüntü kaydı alınamaz, kişiler dinlenemez ve izlenemez (m.37/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"hâkim kararıyla dinleme yapılabilir\" denir"
+   ],
+   "dogrusu": [
+    "Teknik takibin sınırı"
+   ]
+  },
+  {
+   "id": "21-29",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Zorlama hapsi süreleri",
+   "hukum": "Tedbire aykırı davranana fiili suç oluştursa bile hâkim tarafından üç günden on güne kadar, her tekrarında onbeş günden otuz güne kadar zorlama hapsi verilir; toplam süre altı ayı geçemez (m.38/5-6)",
+   "sinavda_boyle_yazarlar": [
+    "alt-üst sınırlar yer değiştirilir; \"fiil suç oluşturuyorsa zorlama hapsi verilmez\" denir"
+   ],
+   "dogrusu": [
+    "üç günden on güne kadar · onbeş günden otuz güne kadar · altı ayı (m.38/5-6)"
+   ]
+  },
+  {
+   "id": "21-30",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Zorlama hapsinin niteliği",
+   "hukum": "Kararlar duruşma yapılmaksızın verilir (hâkim gerekli görürse ilgililer dinlenebilir); tekerrüre esas olmaz, koşullu salıverilme hükümleri uygulanmaz, adli sicile işlenmez (m.38/4, m.38/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"duruşma yapılmaksızın verilemez\", \"adli sicile işlenir\" denir"
+   ],
+   "dogrusu": [
+    "Kararlar duruşma yapılmaksızın verilir (hâkim gerekli görürse ilgililer dinlenebilir) …"
+   ]
+  },
+  {
+   "id": "21-31",
+   "madde": [
+    "38"
+   ],
+   "baslik": "İhlalin akışı",
+   "hukum": "İhlali kolluk tespit ederse tutanak Cumhuriyet başsavcılığına, oradan ivedilikle aile mahkemesine gider; ihlali aile mahkemesi kendisi tespit ederse başka işleme gerek kalmaksızın resen zorlama hapsine karar verebilir (m.38/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde savcılık talebi gerekir\" denir"
+   ],
+   "dogrusu": [
+    "İhlali kolluk tespit ederse tutanak Cumhuriyet başsavcılığına …"
+   ]
+  },
+  {
+   "id": "21-32",
+   "madde": [
+    "7",
+    "27",
+    "6"
+   ],
+   "baslik": "ŞÖNİM karar veremez",
+   "hukum": "ŞÖNİM barınma-iaşe giderini öder, güvenli nakli sağlar, barınmak istemeyeni rızasıyla istediği yere ulaştırır, tedavi sürecini izler; ancak koruyucu/önleyici tedbire hükmetme yetkisi yoktur, o yetki mülki amir ve hâkimdedir (m.7/2, m.7/6, m.27/2; m.6, m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"ŞÖNİM ihbarı inceleyip koruma tedbirine hükmeder\" denir"
+   ],
+   "dogrusu": [
+    "ŞÖNİM barınma-iaşe giderini öder …"
+   ]
+  },
+  {
+   "id": "21-33",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Barınma yerine derhâl kabul",
+   "hukum": "Mülki amirin veya kolluk amirinin kararıyla kamu kurumuna ait barınma yerine getirilen şiddet mağduru, başka herhangi bir karar veya onay aranmaksızın derhâl kabul edilir (m.7/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"kurum amirinin onayı aranır\" denir"
+   ],
+   "dogrusu": [
+    "Mülki amirin veya kolluk amirinin kararıyla kamu kurumuna ait barınma yerine getirilen şiddet mağduru …"
+   ]
+  },
+  {
+   "id": "21-34",
+   "madde": [
+    "6",
+    "11"
+   ],
+   "baslik": "Kreşin iki süresi",
+   "hukum": "Korunan kişi çalışmıyorsa dört ay, çalışıyorsa iki ay süreyle, net asgari ücretin yarısını geçmemek üzere kreş imkânı sağlanır; ödeme doğrudan kreşe yapılır (m.6/1-d; m.11/1, m.11/3)",
+   "sinavda_boyle_yazarlar": [
+    "süreler ters çevrilir; \"ödeme korunan kişiye yapılır\" denir"
+   ],
+   "dogrusu": [
+    "Korunan kişi çalışmıyorsa dört ay …"
+   ]
+  },
+  {
+   "id": "21-35",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Geçici maddi yardımın rücusu",
+   "hukum": "Geçici maddi yardım tutarının tebliğden itibaren bir ay içinde ödenmesi şiddet uygulayana tebliğ edilir; süresinde ödenmezse 6183 sayılı Kanuna göre vergi dairesince takip ve tahsil edilir (m.42/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tahsil icra müdürlüğünce yapılır\", \"süre üç ay\" denir"
+   ],
+   "dogrusu": [
+    "bir ay (m.42/1)"
+   ]
+  },
+  {
+   "id": "21-36",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Nafakanın maaştan kesilmesi",
+   "hukum": "Nafaka yükümlüsünün SGK ile bağlantısı varsa korunan kişinin başvurusu aranmaksızın nafaka, aylık/maaş/ücretinden icra müdürlüğü tarafından tahsil edilir (m.43/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tahsili SGK yapar\" veya \"korunan kişinin başvurusu şarttır\" denir"
+   ],
+   "dogrusu": [
+    "icra müdürlüğü (m.43/3)"
+   ]
+  },
+  {
+   "id": "21-37",
+   "madde": [
+    "44"
+   ],
+   "baslik": "Genel sağlık sigortası",
+   "hukum": "Prim borcu sebebiyle GSS'den yararlanamayan veya kapsam dışı kalan korunan kişi, bu hâllerin devamı süresince gelir testine tabi tutulmaksızın genel sağlık sigortalısı sayılır (m.44/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"prim borcu varsa hiçbir şekilde yararlanamaz\" denir"
+   ],
+   "dogrusu": [
+    "Prim borcu sebebiyle GSS'den yararlanamayan veya kapsam dışı kalan korunan kişi …"
+   ]
+  },
+  {
+   "id": "21-38",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Masraf ve vergi muafiyeti",
+   "hukum": "Kanun kapsamındaki başvurular ile kararların icra ve infazı işlemlerinden yargılama gideri, harç, posta gideri ve benzeri hiçbir ad altında masraf alınmaz (m.45/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca harçtan muaftır\" denir"
+   ],
+   "dogrusu": [
+    "Masraf ve vergi muafiyeti"
+   ]
+  },
+  {
+   "id": "21-39",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlarda kolluk",
+   "hukum": "Kolluk; polis, jandarma ve sahil güvenlik birimleridir; hâkim ise aile mahkemesi hâkimidir (m.3/1-h, m.3/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "kolluk tanımına gümrük muhafaza eklenir; hâkim \"asliye hukuk hâkimi\" diye verilir"
+   ],
+   "dogrusu": [
+    "Tanımlarda kolluk"
+   ]
+  },
+  {
+   "id": "21-40",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Uyruk şartı yok",
+   "hukum": "Şiddet mağduru, mütekabiliyet ilkesi çerçevesinde uyruğuna bakılmaksızın şiddete doğrudan veya dolaylı maruz kalan ya da kalma tehlikesi bulunan kişidir (m.3/1-n)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca Türk vatandaşları korunur\" denir"
+   ],
+   "dogrusu": [
+    "Uyruk şartı yok"
+   ]
+  },
+  {
+   "id": "21-41",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tek taraflı ısrarlı takip",
+   "hukum": "Aralarında aile bağı veya ilişki bulunup bulunmadığına bakılmaksızın korku ve çaresizlik duygusu yaratan her türlü fiili, sözlü, yazılı tutum ve iletişimdir; mağduru da korunan kişi sayılır (m.3/1-ş, m.3/1-j)",
+   "sinavda_boyle_yazarlar": [
+    "\"aile bağı şartı vardır\" denir"
+   ],
+   "dogrusu": [
+    "Aralarında aile bağı veya ilişki bulunup bulunmadığına bakılmaksızın korku ve çaresizlik duygusu yaratan her türlü fiili …"
+   ]
+  },
+  {
+   "id": "21-42",
+   "madde": [
+    "3",
+    "39"
+   ],
+   "baslik": "ŞÖNİM'in çalışma düzeni",
+   "hukum": "ŞÖNİM'i Bakanlık kurar; çalışmalar yedi gün yirmidört saat esasına göre yürütülür, tercihen kadın personel istihdam edilir (m.3/1-o, m.39/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"mesai saatleri içinde hizmet verir\" denir"
+   ],
+   "dogrusu": [
+    "ŞÖNİM'in çalışma düzeni"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

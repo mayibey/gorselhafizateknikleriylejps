@@ -1,0 +1,678 @@
+{
+ "kanun_id": 52,
+ "ad": "Karayolları Trafik Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_52.json",
+ "kartlar": [
+  {
+   "id": "52-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar — yol türleri",
+   "hukum": "Tali yol: trafik yoğunluğu bakımından bağlandığı yoldan daha az önemde olan yol; anayol: kesen yoldaki trafiğin ilk geçiş hakkını vermesi gereken işaretlerle belirlenmiş yol; geçiş yolu: araçların bir mülke girip çıkması için yapılmış yolun karayoluna bağlanan kısmı; bağlantı yolu: kavşak yakınında taşıt yollarını birbirine bağlayan, tek yönlü trafiğe ayrılmış yol; banket: yaya yolu ayrılmamış karayolunda taşıt yolu kenarı ile şev başı arasında kalan kısım; platform: taşıt yolu + yaya yolu/banket (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "Geçiş yolu (mülk girişi) ile bağlantı yolu (kavşak bağlantısı) karıştırılır",
+    "Bağlandığı yoldan daha az önemli yol = bağlantı yolu"
+   ],
+   "dogrusu": [
+    "Tali yol (m.3)"
+   ]
+  },
+  {
+   "id": "52-1",
+   "madde": [
+    "3",
+    "112"
+   ],
+   "baslik": "Tanımlar — hareket hâlleri",
+   "hukum": "Durma: kırmızı ışık, dur işareti gibi trafik zorunluluğu nedeniyle durdurma; duraklama: trafik zorunluluğu dışında indirme-bindirme, yükleme için kısa süre durdurma (bekleme amaçlıysa en çok 5 dakika); parketme: durma ve duraklama dışındaki bırakma; trafikten men: belgelerin alınıp aracın belirli yere çekilerek alıkonulması (m.3, 112)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kırmızı ışıkta beklemek duraklamadır\" yanlış; durmadır"
+   ],
+   "dogrusu": [
+    "Durma · duraklama · kısa süre · en çok 5 dakika · parketme · trafikten men"
+   ]
+  },
+  {
+   "id": "52-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar — kişiler",
+   "hukum": "Sürücü: motorlu/motorsuz araç veya taşıtı sevk ve idare eden; şoför: ticari olarak tescilli motorlu taşıtı süren; işleten: araç sahibi veya uzun süreli kiracı/ariyet/rehin alan, ya da aracı kendi hesabına işlettiği ispat edilen kişi; yolcu: sürücü ve hizmetliler dışında araçta bulunan (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hususi aracını süren kişi şoför\" yanlış"
+   ],
+   "dogrusu": [
+    "Sürücü · şoför · ticari olarak tescilli · işleten · yolcu"
+   ]
+  },
+  {
+   "id": "52-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Karayolu Güvenliği Yüksek Kurulu ve Karayolu Trafik Güvenliği Kurulu",
+   "hukum": "Yüksek Kurul ilgili bakanlar, Jandarma Genel Komutanı, Emniyet Genel Müdürü, Karayolları Genel Müdüründen oluşur, yılda iki defa olağan toplanır, sekreterya EGM; Karayolu Trafik Güvenliği Kurulu EGM Trafik Hizmetleri Başkanı başkanlığında ayda bir toplanır, JGK temsilcisi de üye; fahri trafik müfettişi adaylarını Yüksek Kurula önerir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "İki kurulun başkanı ve toplantı sıklığı çapraz sorulur"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanı · yılda iki defa · EGM · EGM Trafik Hizmetleri Başkanı · ayda bir"
+   ]
+  },
+  {
+   "id": "52-4",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Karayolları Genel Müdürlüğünün trafik görevleri",
+   "hukum": "Yapım ve bakımından sorumlu olduğu yollarda düzenleme-işaretleme, tüm karayollarındaki işaretleme standartlarını tespit etmek, İçişleri'nin uygun görüşüyle hız sınırlarını değiştirmek, Kanunun 13, 14, 16, 17, 18, 47/a ve 65. maddelerine aykırılıkta tutanak düzenlemek (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "Çıkmış soru: İçişleri'nin görevleri arasında olmayan → \"işaretleme standartlarını tespit etmek\" (KGM'nindir)",
+    "İşaretleme standartlarını İçişleri Bakanlığı belirler"
+   ],
+   "dogrusu": [
+    "Karayolları Genel Müdürlüğü (m.11)"
+   ]
+  },
+  {
+   "id": "52-5",
+   "madde": [
+    "35",
+    "13",
+    "17"
+   ],
+   "baslik": "Ulaştırma Bakanlığı ve belediyeler",
+   "hukum": "Ulaştırma: araç muayenesi, muayene istasyonu denetimi, Kanun m.35 cezaları, ağırlık-boyut kontrolü (m.13); belediyeler: kendi yollarında işaretleme, park yeri, alt-üst geçit, Kanun m.17 tesislerine izin, çocuk trafik eğitim parkları yapmak; belediye trafiği denetleyemez ve trafik ceza tutanağı düzenleyemez (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Belediye trafik zabıtası ceza tutanağı düzenler\" yanlış"
+   ],
+   "dogrusu": [
+    "çocuk trafik eğitim parkları · trafiği denetleyemez ve trafik ceza tutanağı düzenleyemez"
+   ]
+  },
+  {
+   "id": "52-6",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Çocuk trafik eğitim parkları esasları",
+   "hukum": "Çocuk trafik eğitim parklarının yapılma, açılma, eğitim, denetim ve çalışma esaslarını belirleme görevi Milli Eğitim Bakanlığına aittir; belediyeler parkları yapar/izin verir (m.16 ve ilgili bölüm)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karayolları Genel Müdürlüğü belirler\" yanlış; MEB"
+   ],
+   "dogrusu": [
+    "Milli Eğitim Bakanlığına"
+   ]
+  },
+  {
+   "id": "52-7",
+   "madde": [
+    "17"
+   ],
+   "baslik": "İl ve ilçe trafik komisyonları",
+   "hukum": "İllerde vali veya yardımcısı başkanlığında belediye, emniyet, jandarma, millî eğitim, karayolları ve Şoförler Odası temsilcileri + valilikçe uygun görülen üniversite/oda/vakıf/dernek temsilcileri (en çok 3); ilçelerde kaymakam başkanlığında; kararlar oy çokluğu ile, eşitlikte başkanın tarafı; il komisyonu kararları valinin onayı ile yürürlüğe girer; ilçe kararları il komisyonunca incelenip vali onayıyla yürürlüğe girer (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"İlçe komisyonu kararları kaymakam onayıyla yürürlüğe girer\" yanlış; il komisyonu + vali"
+   ],
+   "dogrusu": [
+    "vali veya yardımcısı · jandarma · en çok 3 · kaymakam · oy çokluğu · valinin onayı"
+   ]
+  },
+  {
+   "id": "52-8",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Karayolu kenarındaki tesisler",
+   "hukum": "Karayolu sınır çizgisine 50 metre mesafe içinde akaryakıt istasyonu, servis, terminal, fabrika, çarşı, eğlence yeri gibi trafik güvenliğini etkileyecek tesisler için o karayolunun yapım-bakım-işletmesiyle ilgili kuruluştan izin alınması zorunludur; izinsiz tesis durdurulur, bağlantı yolu masrafı sorumluya ait olmak üzere kaldırılır (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"100 metre\" tuzak; 50 metre"
+   ],
+   "dogrusu": [
+    "50 metre · izin"
+   ]
+  },
+  {
+   "id": "52-9",
+   "madde": [
+    "75"
+   ],
+   "baslik": "Sürücü belgesi sınıfları",
+   "hukum": "M: moped; A1: 125 cc / 11 kW'a kadar motosiklet; A2: 35 kW'a kadar; A: tüm motosikletler; B1: 15 kW / 400 kg'a kadar dört tekerlekli motosiklet; B: otomobil ve kamyonet (eğitimle 4.250 kg'a kadar birleşik araç); BE: B + 3.500 kg'a kadar römork; C1: 3.500-7.500 kg kamyon; C: kamyon ve çekici; D1: minibüs; D: minibüs ve otobüs; F: lastik tekerlekli traktör; G: iş makinesi; K: sürücü aday belgesi (m.75)",
+   "sinavda_boyle_yazarlar": [
+    "\"D1 otobüs\" yanlış; D1 minibüs, D minibüs+otobüs"
+   ],
+   "dogrusu": [
+    "M · A1 · A2 · A · B1 · B · BE · C1 · C · D1 · D · F · G · K"
+   ]
+  },
+  {
+   "id": "52-10",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Sürücü adayı — yaş şartları",
+   "hukum": "M, A1, B1: 16; A2, B, BE, C1, C1E, F, G: 18; A: 20 (15 kW'ı aşan üç tekerlekli için 21); C, CE, D1, D1E: 21; D, DE: 24 (m.76/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"B sınıfı için 17 yaş\" yanlış; 18"
+   ],
+   "dogrusu": [
+    "M, A1, B1: 16 · A2, B, BE, C1, C1E, F, G: 18 · A: 20 · C, CE, D1, D1E: 21 · D, DE: 24"
+   ]
+  },
+  {
+   "id": "52-11",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Sürücü adayı — deneyim ve öğrenim",
+   "hukum": "A sınıfı için en az 2 yıllık A2; C1, C, D1, D için en az B; BE için B, CE için C, C1E için C1, DE için D, D1E için D1; öğrenim en az ilkokul; A sınıfı alacak 24 yaşını doldurmuş adaylarda 2 yıllık A2 deneyimi aranmaz (m.76/b-c, fıkra)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az ortaokul\" yanlış; ilkokul. Yaş sorusunda \"20\" (A sınıfı asgari yaşı) tuzak; deneyim muafiyeti 24",
+    "A sınıfı için 20 yaşını dolduranda A2 deneyimi aranmaz",
+    "Sürücü adayı en az ortaokul mezunu olmalı"
+   ],
+   "dogrusu": [
+    "24 yaş (m.76)",
+    "İlkokul (m.76)"
+   ]
+  },
+  {
+   "id": "52-12",
+   "madde": [
+    "4",
+    "6136",
+    "12"
+   ],
+   "baslik": "Sürücü adayı — adli sicil",
+   "hukum": "Adli sicilde TCK 188, 190, 191 (uyuşturucu imal-ticaret, kullanmayı kolaylaştırma, kullanma), 5607 sayılı Kanun m.4/7 ve 6136 sayılı Kanun m.12/2 vd. suçlarından hüküm bulunmaması; bu suçlardan hüküm giyenlerin sürücü belgesi adli sicil kaydı silininceye kadar geri alınır (m.76/e, m.168)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her suçtan hüküm giyen alamaz\" yanlış; sayılı suçlar"
+   ],
+   "dogrusu": [
+    "188, 190, 191"
+   ]
+  },
+  {
+   "id": "52-13",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Askerî/polis okulu mezunlarına yaş 20",
+   "hukum": "EGM eğitim kurumları ile TSK'nın subay/astsubay sınıf okulu, astsubay MYO ve temel kursunda eğitim gören/mezun olanlar için A, C, D ve D1 sınıfı belgede yaş şartı 20 uygulanır ve deneyim şartı aranmaz (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "\"B sınıfı için de 20\" — B zaten 18"
+   ],
+   "dogrusu": [
+    "A, C, D ve D1 · 20"
+   ]
+  },
+  {
+   "id": "52-14",
+   "madde": [
+    "76"
+   ],
+   "baslik": "EGM personeline sertifika — teklif/onay",
+   "hukum": "EGM personeline ve EGM eğitim kurumlarındaki öğrencilere sürücü belgesine dönüştürülmek üzere sertifika verilir; eğitim ve sınavlar illerde emniyet müdürünün teklifi ve valinin onayı, merkez teşkilatında Trafik Hizmetleri Başkanının teklifi ve Emniyet Genel Müdürünün onayı ile yapılır (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "Merkezde teklif makamı \"Trafik Hizmetleri Başkanı\"dır, \"EGM\" değil",
+    "Merkez teşkilatında EGM sertifika sınavını EGM'nin teklifi ile yapılır"
+   ],
+   "dogrusu": [
+    "Trafik Hizmetleri Başkanının teklifi, EGM onayı (m.76)"
+   ]
+  },
+  {
+   "id": "52-15",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Jandarma personeline sertifika — teklif/onay",
+   "hukum": "Jandarma teşkilatı mensubu subay, astsubay, uzman jandarma ve uzman erbaşlar ile JSGA öğrencilerine sertifika verilir; eğitim ve sınavlar illerde il jandarma komutanlığının teklifi ve valinin onayı, merkez için Asayiş Başkanının teklifi ve Jandarma Genel Komutan Yardımcısının onayı üzerine oluşturulan Eğitim Yürütme Kurulları tarafından yapılır (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "Merkezde onay \"Jandarma Genel Komutanı\" değil Komutan Yardımcısı; teklif Asayiş Başkanı"
+   ],
+   "dogrusu": [
+    "il jandarma komutanlığının teklifi ve valinin onayı · Asayiş Başkanının teklifi ve Jandarma Genel Komutan Yardımcısının onayı · Eğitim Yürütme Kurulları"
+   ]
+  },
+  {
+   "id": "52-16",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Zırhlı taşıt — en az B sınıfı",
+   "hukum": "EGM, JGK ve SGK personelinden en az B sınıfı sürücü belgesine sahip ve birimlerince düzenlenen Zırhlı Taşıt Sürücü Eğitimini başarıyla tamamlayanlar, yeterlilik (sertifika) belgesiyle zırhlı araçları kullanmaya yetkilidir; MSB personeli için de askerî araç intibak eğitimi ve en az B sınıfı (m.76)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az C sınıfı\" tuzak; B",
+    "Zırhlı taşıt için en az C sınıfı gerekir"
+   ],
+   "dogrusu": [
+    "B sınıfı + eğitim (m.76)"
+   ]
+  },
+  {
+   "id": "52-17",
+   "madde": [
+    "79"
+   ],
+   "baslik": "Psiko-teknik değerlendirme",
+   "hukum": "İlgili trafik suçlarını işleyen sürücüler il sağlık müdürlüğünce ruhsatlı merkezlerde psikolog gözetiminde psiko-teknik değerlendirmeye alınır; rapor ile 45 gün içinde psikiyatri uzmanına başvurur; başvurmayan 6 ay tekrar teste alınmaz; rapora 30 gün içinde il sağlık müdürlüğüne itiraz; başarısız olan 2 yıl tekrar teste alınmaz; raporlar sistemde 10 yıl saklanır; sahte rapor veren merkezin cihazları 5 yıl kullanılamaz (m.79)",
+   "sinavda_boyle_yazarlar": [
+    "45 gün / 30 gün / 6 ay / 2 yıl süreleri çapraz sorulur"
+   ],
+   "dogrusu": [
+    "psikolog · 45 gün · 6 ay · 30 gün · 2 yıl · 10 yıl · 5 yıl"
+   ]
+  },
+  {
+   "id": "52-18",
+   "madde": [
+    "85"
+   ],
+   "baslik": "Araç sürme yetkisi (hangi belge neyi kapsar)",
+   "hukum": "B ile M, B1, F; BE ile M, B, B1, F; C ile M, B, B1, C1, F; CE ile ayrıca BE, C1E; D ile M, B, B1, D1, F; A ile M, A1, A2; A2 ile M, A1; F ve G ile M; 2 yıllık B sınıfı + sağlık şartı + 5 yılda belgesi geri alınmamış olmak + MEB direksiyon eğitimi ile A1 sınıfı motosikletler de (ticari hariç) sürülebilir (m.85)",
+   "sinavda_boyle_yazarlar": [
+    "\"B belgesi ile motosiklet kullanılamaz\" — şartlı olarak A1 kullanılabilir (2024 eki)"
+   ],
+   "dogrusu": [
+    "2 yıllık B sınıfı"
+   ]
+  },
+  {
+   "id": "52-19",
+   "madde": [
+    "87"
+   ],
+   "baslik": "Belge geçerlilik süreleri",
+   "hukum": "M, A1, A2, A, B1, B, BE, F, G: 10 yıl; C1, C1E, C, CE, D1, D1E, D, DE: 5 yıl; yenileme herhangi bir tescil kuruluşuna veya dış temsilciliğe başvuruyla, harçsız; teslim edilinceye kadar 15 gün geçerli geçici belge verilebilir (m.87)",
+   "sinavda_boyle_yazarlar": [
+    "\"C sınıfı 10 yıl\" yanlış; 5 yıl"
+   ],
+   "dogrusu": [
+    "10 yıl · 5 yıl · harçsız · 15 gün"
+   ]
+  },
+  {
+   "id": "52-20",
+   "madde": [
+    "95"
+   ],
+   "baslik": "Uyma önceliği sırası",
+   "hukum": "Yolu kullananlar sırasıyla: (1) trafik görevlilerinin uyarı ve işaretleri, (2) ışıklı ve sesli işaretler, (3) işaret levhaları ve yer işaretleri, (4) Kanun ve Yönetmelikteki diğer kurallar; uymadaki öncelik bu sıraya göredir (m.95)",
+   "sinavda_boyle_yazarlar": [
+    "\"Işıklı işaret görevlinin işaretinden önce gelir\" yanlış"
+   ],
+   "dogrusu": [
+    "trafik görevlilerinin · ışıklı ve sesli · işaret levhaları ve yer işaretleri"
+   ]
+  },
+  {
+   "id": "52-21",
+   "madde": [
+    "96"
+   ],
+   "baslik": "Görevlinin trafiği yönetme hareketleri",
+   "hukum": "Bir kolun dik yukarı kaldırılması: tüm yönler için DUR (kavşağa yeni girmiş olanlar hariç); kolların yatay yana uzatılması: kolları kesen yönler için DUR, kol doğrultusundan gelenler geçebilir; kırmızı ışığın sallanması: yöneltilen yön için DUR; kısa düdük uyarma, uzun düdük DUR (m.96)",
+   "sinavda_boyle_yazarlar": [
+    "Uzun/kısa düdük anlamları çapraz sorulur"
+   ],
+   "dogrusu": [
+    "tüm yönler için DUR · kesen yönler için DUR · kısa · uzun"
+   ]
+  },
+  {
+   "id": "52-22",
+   "madde": [
+    "27",
+    "97"
+   ],
+   "baslik": "Alkol sınırları ve geri alma süreleri",
+   "hukum": "Hususi otomobil sürücülerinde 0,50 promil, diğer araç sürücülerinde 0,20 promil üstü yasak; sürücüler her zaman alkol kontrolüne tabi tutulabilir, uyuşturucu kontrolü şüphe üzerine; sınırı aşanların belgesi 5 yıl içinde 1. kez 6 ay, 2. kez 2 yıl, 3+ her seferinde 5 yıl geri alınır; teknik cihazı kabul etmeyenin belgesi 2 yıl geri alınır; 1,00 promil üstü ayrıca TCK 179/3 için mahallî zabıtaya teslim; ölçüme itirazda tekrar ölçüm yapılmaz, itiraz Kabahatler Kanunu m.27'ye göre mahkemeye (m.97)",
+   "sinavda_boyle_yazarlar": [
+    "Çıkmış soru: \"Ölçüm talebini yerine getirmeyenin belgesi 2 yıl geri alınır\" doğru; \"beş yıl içinde ikinci defa 2 yıl\" doğru; şıklarda süreler kaydırılır",
+    "Alkol ölçümünü reddedenin belgesi 6 ay geri alınır"
+   ],
+   "dogrusu": [
+    "2 yıl (m.97)"
+   ]
+  },
+  {
+   "id": "52-23",
+   "madde": [
+    "75",
+    "97"
+   ],
+   "baslik": "Uyuşturucu tespiti",
+   "hukum": "Test, solunum havası/tükürük gibi örneklerle tek kullanımlık kit ile yapılır; eşik değerleri Adalet ve Sağlık Bakanlığının görüşü alınarak EGM ve JGK'ca müştereken belirlenir; pozitif çıkan sürücü CMK m.75 kapsamında kan/idrar için mahallî zabıtaya teslim edilir; uyuşturucu kullandığı tespit edilenin belgesi 5 yıl geri alınır; teknik cihazı reddedenin belgesi 2 yıl geri alınır, ayrıca tespit yaptırılır (m.97)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uyuşturucuda ilk seferde 6 ay\" yanlış; 5 yıl",
+    "Uyuşturucuda ilk seferde 6 ay"
+   ],
+   "dogrusu": [
+    "5 yıl (m.97)"
+   ]
+  },
+  {
+   "id": "52-24",
+   "madde": [
+    "97"
+   ],
+   "baslik": "Kazada alkol tespiti ve saat başı 0,15 promil",
+   "hukum": "Yaralanmalı/ölümlü kazalarda ölçüme izin vermeyen sürücünün belgesi 2 yıl geri alınır ve sağlık kuruluşuna götürülür; teknik cihaz sonucuna itirazla sağlık kuruluşunda tespit yaptırılırsa iki tespit arasındaki süre için her saat 0,15 promil eklenerek alkol oranı belirlenir (m.97)",
+   "sinavda_boyle_yazarlar": [
+    "\"0,10 promil\" tuzak; 0,15"
+   ],
+   "dogrusu": [
+    "her saat 0,15 promil"
+   ]
+  },
+  {
+   "id": "52-25",
+   "madde": [
+    "98"
+   ],
+   "baslik": "Araç kullanma ve dinlenme süreleri",
+   "hukum": "3,5 tonu geçen yük ve 9 kişiyi geçen yolcu taşıyan araç şoförleri 24 saatte toplam 9 saat, sürekli 4,5 saatten fazla süremez; 4,5 saat sonra en az 45 dakika mola (15'er dakika bölünebilir); günde 11 saat kesintisiz dinlenme (haftada 3 kez 9 saate inebilir); 6 günde 1 gün hafta tatili (en az 24 saat); iki haftada toplam 90 saat; takograf kayıtları 1 ay araçta, 5 yıl iş yerinde saklanır (m.98)",
+   "sinavda_boyle_yazarlar": [
+    "9 saat/4,5 saat/45 dk üçlüsü çapraz sorulur"
+   ],
+   "dogrusu": [
+    "toplam 9 saat, sürekli 4,5 saatten · en az 45 dakika · 11 saat · 90 saat · 1 ay araçta, 5 yıl iş yerinde"
+   ]
+  },
+  {
+   "id": "52-26",
+   "madde": [
+    "100"
+   ],
+   "baslik": "Hız sınırları",
+   "hukum": "Otomobil: yerleşim içi 50, şehirlerarası çift yönlü 90, bölünmüş yol 110, otoyol 120; minibüs-otobüs: 50/80/90/100; kamyonet 50/80/85/95; panelvan 50/85/100/110; kamyon-çekici 50/80/85/90; motosiklet 50/80/90/100; motorlu bisiklet 30/45/45/otoyola giremez; traktör 20/30/40/giremez; arızalı aracı çeken 20/20/30/40; römorklu araçlarda azami hız 10 km/s düşük; asgari hız şehirlerarası 15, otoyol 40; servis freni bozuk aracı çeken 15 km/s üstü süremez; hız sınırlayıcı: otobüs-minibüs 110, kamyon-çekici 99; İçişleri otomobiller için sınırı 20 km/s'e kadar artırabilir; trafik komisyonları yerleşim içi bölünmüş yollarda 32 / 20 km/s artırabilir (m.100)",
+   "sinavda_boyle_yazarlar": [
+    "\"Otoyolda otomobil 130\" yanlış; 120. Römorklu 10 km/s eksik",
+    "Otoyolda otomobil 130 km/s"
+   ],
+   "dogrusu": [
+    "120 (m.100)"
+   ]
+  },
+  {
+   "id": "52-27",
+   "madde": [
+    "102"
+   ],
+   "baslik": "Dönüş kuralları",
+   "hukum": "Sağa dönüş: sinyal, sağ şerit, yavaşlama, dar kavis, yaya-bisiklete geçiş hakkı, gidiş şeridine giriş; sola dönüş: en sol şerit (iki şeritli yolda sağ şeridin soluna), geniş kavis, sağdan gelene ilk geçiş hakkı, karşıdan gelen yaklaşmış araçları bekleme; dönel kavşakta sola/geriye dönecek orta adaya bitişik şeritten girer (m.102)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sola dönüş dar kavisle\" yanlış"
+   ],
+   "dogrusu": [
+    "dar kavis · geniş kavis"
+   ]
+  },
+  {
+   "id": "52-28",
+   "madde": [
+    "109"
+   ],
+   "baslik": "Kavşaklarda geçiş hakkı",
+   "hukum": "İşaretsiz kavşakta sıra: geçiş üstünlüğü olan araçlara, doğru geçen tramvaya, bölünmüş yola çıkan bölünmüş yoldakine, tali yoldan ana yola çıkan ana yoldakine, dönel kavşağa gelen içindekine, mülkten çıkan karayolundakine, dönüş yapan doğru gidene geçiş hakkı verir; yoğunluk farkı belirlenmemişse motorsuz → motorluya, traktör-iş makinesi → diğer motorluya, soldaki sağdan gelene; kavşak içinde durmaya zorlayacaksa ışık yeşil olsa da girmek yasak; ray üzerindeki taşıtlara her kavşakta öncelik (m.109)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağdan gelen her zaman önce geçer\" yanlış; önce ana yol/bölünmüş yol kuralı"
+   ],
+   "dogrusu": [
+    "tali yoldan ana yola çıkan ana yoldakine · soldaki sağdan gelene"
+   ]
+  },
+  {
+   "id": "52-29",
+   "madde": [
+    "113",
+    "115"
+   ],
+   "baslik": "Duraklama ve park yasakları — metreler",
+   "hukum": "Kavşak, tünel, köprü, bağlantı yollarına yerleşim içinde 5 m, dışında 100 m mesafede duraklamak yasak; işaret levhalarına yaklaşım yönünde yerleşim içinde 15 m, dışında 100 m; park: yangın musluğuna 5 m, durak levhalarına 15 m, geçiş üstünlüğü olan araçların giriş-çıkış levhalarına 15 m, giriş-çıkış kapılarına 5 m, alt-üst geçit ve köprülere 10 m (m.113, 115)",
+   "sinavda_boyle_yazarlar": [
+    "\"Durak levhasına 5 m\" yanlış; 15 m"
+   ],
+   "dogrusu": [
+    "5 m · 100 m · 15 m · 5 m · 15 m · 10 m"
+   ]
+  },
+  {
+   "id": "52-30",
+   "madde": [
+    "142"
+   ],
+   "baslik": "Geçiş üstünlüğü olan araca yol verme",
+   "hukum": "Geçiş üstünlüğü bulunan aracın sesli/ışıklı işaretini alan sürücüler yol açar, gerekirse durur ve tamamen geçilinceye kadar bekler; kavşakta iken işaret alanlar derhal kavşağı boşaltır (m.142)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kavşakta olan olduğu yerde durur\" yanlış; kavşağı boşaltır"
+   ],
+   "dogrusu": [
+    "tamamen geçilinceye kadar · derhal kavşağı boşaltır"
+   ]
+  },
+  {
+   "id": "52-31",
+   "madde": [
+    "150"
+   ],
+   "baslik": "Koruyucu tertibat — kask ve kemer",
+   "hukum": "Bisiklet, elektrikli bisiklet, motorlu bisiklet, motosiklet ve T3 traktör sürücüleri koruma başlığı ve gözlüğü, motosiklet sürücü ve yolcuları koruyucu eldiven (2025 eki); otomobil, kamyonet, kamyon, minibüs, otobüslerin bütün koltuklarında emniyet kemeri; taksilerde en az 1, şehirlerarası otobüslerde koltukların en az 1/10'u kadar çocuk bağlama sistemi; 150 cm'den kısa ve 36 kg altı çocuklar için çocuk koltuğu zorunlu, 135 cm'den uzun çocuk ön koltukta oturmamak şartıyla kemer kullanabilir; çocuk koltuğu yoksa 3 yaş altı taşınamaz; yerleşim içi ticari minibüs/otobüs yolcuları ve 25 km/s altı geri gitme-park manevrası yapan sürücüler kemer muafiyetinde; sağlık raporu olan raporda belirtilen süre muaf (m.150)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ambulanstaki tüm görevliler kemerden muaf\" — yalnız hastaya müdahale eden görevliler"
+   ],
+   "dogrusu": [
+    "koruma başlığı ve gözlüğü · koruyucu eldiven · emniyet kemeri · 1/10'u · çocuk bağlama sistemi · 150 cm'den kısa ve 36 kg altı · 135 cm'den uzun · 3 yaş altı · 25 km/s"
+   ]
+  },
+  {
+   "id": "52-32",
+   "madde": [
+    "152"
+   ],
+   "baslik": "Kazaya karışanların yükümlülükleri",
+   "hukum": "Yaralanmamış veya hafif yaralı olanlar: hemen durmak, işaret koymak, iz ve delilleri değiştirmemek, kimlik-belge-sigorta göstermek, yaralıya ilk yardım için ayrılma hariç görevliler gelinceye kadar ayrılmamak; sahibi bulunmayan mal/araca zarar veren: ilgilisini bulmak, bulamazsa yazılı bilgi bırakmak, en kısa sürede yetkililere haber vermek (m.152)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yaralıyı hastaneye götürmek için ayrılmak yasaktır\" yanlış; bu istisnadır"
+   ],
+   "dogrusu": [
+    "iz ve delilleri değiştirmemek · yaralıya ilk yardım için ayrılma hariç · yazılı bilgi bırakmak"
+   ]
+  },
+  {
+   "id": "52-33",
+   "madde": [
+    "152"
+   ],
+   "baslik": "Maddi hasarlı kaza tutanağı — ne zaman kolluk düzenler",
+   "hukum": "Yalnız maddi hasarlı kazada taraflar anlaşırsa kendi aralarında Maddi Hasarlı Trafik Kazası Tespit Tutanağı düzenleyip ayrılabilir; anlaşanlar sonradan yetkililerden tutanak isteyemez; şu hâllerde tutanağı trafik zabıtası, yoksa genel kolluk düzenler: (1) tek araçlı kaza, (2) taraflardan birinin sürücü belgesi yok veya yetersiz, (3) zorunlu mali sorumluluk sigortası yok, (4) alkol/uyuşturucu şüphesi, (5) araçlardan biri kamu kurumuna ait (Sağlık Bakanlığı ambulansları hariç), (6) kamu malına veya üçüncü kişiye ait eşyaya zarar (m.152)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ambulans dahil tüm kamu araçları\" yanlış; Sağlık Bakanlığı ambulansları hariç",
+    "Kamu aracının karıştığı her kazada kolluk tutanak tutar"
+   ],
+   "dogrusu": [
+    "Sağlık Bakanlığı ambulansları hariç (m.152)"
+   ]
+  },
+  {
+   "id": "52-34",
+   "madde": [
+    "154"
+   ],
+   "baslik": "Kazaya el koyma",
+   "hukum": "Trafik kazalarına adli yönden mahallî genel zabıta, kaza tespit tutanağı için trafik zabıtası (polis veya jandarma) el koyar; trafik zabıtasının olmadığı yerlerde tutanağı mahallî zabıta düzenleyip bir örneğini trafik zabıtasına gönderir; ölümlü/ağır yaralanmalı kazada yol kapanmış, başka geçit yoksa ve Cumhuriyet savcısı gecikecekse, işaretleme ve tespitler yapılıp tutanağa bağlandıktan sonra yol trafiğe açılır (m.154)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ölümlü kazada yol ancak savcı gelince açılır\" yanlış",
+    "Ölümlü kazada yol savcı gelmeden açılamaz"
+   ],
+   "dogrusu": [
+    "Savcı gecikecekse tespit sonrası açılır (m.154)"
+   ]
+  },
+  {
+   "id": "52-35",
+   "madde": [
+    "155"
+   ],
+   "baslik": "El koyanların görev ve yetkileri",
+   "hukum": "Ek tehlikeyi önleme, yaralıya ilk yardım ve sevk, yolu açma, mal güvenliği (araçların kurcalanmaması, izinsiz aranmaması; sahipleri ölmüş/ağır yaralıysa eşyanın tutanakla muhafazası), örneğine uygun kaza tespit tutanağı düzenleme (m.155)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kazaya el koyan kolluk aracı arayabilir\" — sahibinin izni veya zorunlu hâlde tutanak gerekir"
+   ],
+   "dogrusu": [
+    "mal güvenliği"
+   ]
+  },
+  {
+   "id": "52-36",
+   "madde": [
+    "157"
+   ],
+   "baslik": "Aslî kusur sayılan hâller",
+   "hukum": "(1) Kırmızı ışıkta/dur işaretinde geçme, (2) taşıt giremez işaretli yola veya karşı yönün şeridine girme, (3) ikiden fazla şeritli yolda karşı yönün şeridine girme, (4) arkadan çarpma, (5) geçme yasağı olan yerden geçme, (6) doğrultu değiştirme manevralarını yanlış yapma, (7) şeride tecavüz, (8) kavşakta geçiş önceliğine uymama, (9) dar kaplamada geçiş önceliğine uymama, (10) manevra kurallarına uymama, (11) yerleşim dışı taşıt yolunda zorunlu hâl dışında park-duraklama ve tedbir almama, (12) kurallara uygun park etmiş araca çarpma; başkasının kural dışı hareketi yüzünden kural ihlaline mecbur kalan aslî kusurlu sayılmaz (m.157)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hız sınırını aşma\" listede aslî kusur olarak sayılmaz (kusur ama aslî kusur listesinde değil)",
+    "Hız sınırını aşmak aslî kusurdur"
+   ],
+   "dogrusu": [
+    "Listede yok; arkadan çarpma, şeride tecavüz vb. (m.157)"
+   ]
+  },
+  {
+   "id": "52-37",
+   "madde": [
+    "160",
+    "162"
+   ],
+   "baslik": "Sürücü belgesinin geri alınması ve iptaline karar",
+   "hukum": "Kanunda sayılı görevlilerin ve tescil kuruluşlarının yetkili olduğu hâller hariç, sürücü belgelerinin geri alınmasına ve iptaline sulh ceza hâkimlikleri karar verir; idari yaptırımlara itirazda Kabahatler Kanunu uygulanır; tutanak düzenleyen görevli birim adı, ad-soyad-sicil yazıp imzalar, ilgiliye imzalatıp bir nüsha verir, imzadan kaçınana \"imza etmedi\" notu düşer (m.160-162)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sürücü belgesi iptaline vali karar verir\" yanlış"
+   ],
+   "dogrusu": [
+    "sulh ceza hâkimlikleri · Kabahatler Kanunu"
+   ]
+  },
+  {
+   "id": "52-38",
+   "madde": [
+    "166"
+   ],
+   "baslik": "Jandarmanın trafik yetkisi ve plakaya göre tutanak",
+   "hukum": "Trafik zabıtasının bulunmadığı/yetersiz olduğu yerlerde polis, polisin ve trafik teşkilatının görev alanı dışında kalan yerlerde jandarma (trafik eğitimi almış subay, astsubay ve uzman jandarmalar); tehlikeli/yasak yere park eden, sürücüsü tespit edilemeyen araçlara ve Kanun 26/1-2, 31/1-b, 36, 49'a uymayan sürücülerin araç sahiplerine tescil plakasına göre tutanak düzenlenir (m.166)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma her yerde trafik denetimi yapar\" yanlış; polis/trafik alanı dışında"
+   ],
+   "dogrusu": [
+    "jandarma · tescil plakasına göre"
+   ]
+  },
+  {
+   "id": "52-39",
+   "madde": [
+    "167"
+   ],
+   "baslik": "Ceza puanı — 100 puan",
+   "hukum": "Bir yıl içinde 100 ceza puanını aşan sürücünün belgesi 1. kez 2 ay (MEB eğitimi sonrası iade), 2. kez 4 ay (psiko-teknik + psikiyatri muayenesi), 3. kez sulh ceza hâkimliğine sevk; ölümlü kazaya aslî kusurlu sebep olan sürücünün belgesi mahkemece 1 yıl geri alınır; puanlar EGM PolNet'e işlenir (m.167)",
+   "sinavda_boyle_yazarlar": [
+    "\"1. kez 4 ay\" yanlış; 2 ay",
+    "100 puanı ilk aşanın belgesi 4 ay alınır"
+   ],
+   "dogrusu": [
+    "2 ay; ikinci 4 ay (m.167)"
+   ]
+  },
+  {
+   "id": "52-40",
+   "madde": [
+    "4",
+    "6136",
+    "12"
+   ],
+   "baslik": "Mahkûmiyetle belge geri alma",
+   "hukum": "Mahkeme/savcılık geri alma kararı hürriyeti bağlayıcı cezanın infazından sonra uygulanır, tebliğle başlar; TCK 188-190-191, 5607 m.4/7 ve 6136 m.12/2 suçlarından hüküm giyenin belgesi adli sicilden silininceye kadar geri alınır (m.168)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hapis süresiyle birlikte işler\" yanlış"
+   ],
+   "dogrusu": [
+    "hürriyeti bağlayıcı cezanın infazından sonra · adli sicilden silininceye kadar"
+   ]
+  },
+  {
+   "id": "52-41",
+   "madde": [
+    "173"
+   ],
+   "baslik": "Olağanüstü hâl ve savaşta askerî trafik",
+   "hukum": "Askerî trafik için kullanılacak karayolları Genelkurmay Başkanlığınca belirlenir; askerî trafiğe ayrılan yollarda yönetim ve denetim askerî kişilerce; kesişme ve geçitlerde trafik zabıtası askerî görevlilerin isteklerine uyar; askerî yönetimdeki yolda siviller asker görevlilerin, sivil yönetimdeki yolda askerler trafik görevlilerinin talimatına uyar (m.173)",
+   "sinavda_boyle_yazarlar": [
+    "\"OHAL'de askerî yolları İçişleri belirler\" yanlış; Genelkurmay"
+   ],
+   "dogrusu": [
+    "Genelkurmay Başkanlığınca · askerî kişilerce"
+   ]
+  },
+  {
+   "id": "52-42",
+   "madde": [
+    "174"
+   ],
+   "baslik": "Terk edilmiş / uzun süre park edilmiş araçlar",
+   "hukum": "Karayolunu uzun süre etkileyecek şekilde park edilmiş, terk edilmiş veya hasarlı araçları tutanakla kaldırıp trafikten men etmeye trafik zabıtası yetkilidir; men işleminde Kanunun Ek-14 hükmü yazılı tebliğ edilir, Trafikten Men Edilen Araç Defterine kaydedilir; araçlar resmî/özel otoparkta muhafaza edilir; bilgiler men tarihinden itibaren 4 ay içinde Defterdarlık/Mal Müdürlüğüne gönderilir (m.174)",
+   "sinavda_boyle_yazarlar": [
+    "\"6 ay\" tuzak; 4 ay"
+   ],
+   "dogrusu": [
+    "trafik zabıtası · Trafikten Men Edilen Araç Defterine · 4 ay · Defterdarlık/Mal Müdürlüğüne"
+   ]
+  },
+  {
+   "id": "52-43",
+   "madde": [
+    "178"
+   ],
+   "baslik": "Okul geçidi görevlisi",
+   "hukum": "İlk ve orta dereceli okullarda istekli öğretmenler, veliler ve 12 yaşını doldurmuş öğrenciler olabilir; il emniyet müdürlüğü koordinatörlüğünde komisyonca seçilir, trafik zabıtasınca eğitilir, il emniyet müdürü imzalı belge alır; taşıt trafiğini durdurma yetkisi vardır, uymayan sürücü için tutanak düzenleyip 3 iş günü içinde trafik kuruluşuna teslim eder; görev fahridir; bir yüzü yeşil \"GEÇ\", diğer yüzü kırmızı \"DUR\" yazılı işaret çubuğu taşır (m.178)",
+   "sinavda_boyle_yazarlar": [
+    "\"10 yaşını doldurmuş öğrenci\" yanlış; 12"
+   ],
+   "dogrusu": [
+    "öğretmenler, veliler ve 12 yaşını doldurmuş öğrenciler · taşıt trafiğini durdurma yetkisi · 3 iş günü · fahri"
+   ]
+  },
+  {
+   "id": "52-44",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Belediye elektronik sistemleri — %30",
+   "hukum": "Belediyelerin kendi bütçesiyle kurduğu elektronik sistemler EGM'ce trafik ihlali tespitinde kullanılırsa, düzenlenen tutanaklardaki idari para cezasının %30'u izleyen ayın sonuna kadar EGM bütçesinden belediyeye hizmet bedeli olarak ödenir (Ek m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"%50\" tuzak; %30"
+   ],
+   "dogrusu": [
+    "%30'u"
+   ]
+  },
+  {
+   "id": "52-45",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Aday sürücü — 2 yıl, 75 puan",
+   "hukum": "İlk defa sürücü belgesi alanlar ve iptal edilip yeniden alanlar 2 yıl süreyle aday sürücü sayılır; bu sürede Kanunun 47/1-b, 48, 51, 53/2, 74, 78. maddelerinden birinin 3 kez ihlali, araç cinsine bakılmaksızın 0,20 promil üzeri alkol veya toplam 75 ceza puanı aşımında belge trafik görevlilerince iptal edilir; yeniden almak için kursa gidip sınavı geçmek gerekir (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aday sürücüye de 100 puan uygulanır\" yanlış; 75",
+    "Aday sürücü 100 puanla belge kaybeder"
+   ],
+   "dogrusu": [
+    "75 puan; 0,20 promil (Ek m.3)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

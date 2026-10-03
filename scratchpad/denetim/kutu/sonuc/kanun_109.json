@@ -1,0 +1,17 @@
+[
+{"kanun_id": 109, "kart_id": "109-0", "sorun": "kirmizi_kutu", "aciklama": "dayanıklı tüketim istisnası ve tek kantin kuralı",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Kantinlerde personelin buzdolabı gibi dayanıklı tüketim malları da dahil tüm ihtiyaçları karşılanır.”", "“Aynı birlik içinde Jandarma Genel Komutanlığına bağlı birden fazla kantin kurulabilir.”"],
+ "dogrusu": ["Kantinde dayanıklı tüketim malları hariç zaruri ihtiyaçlar karşılanır (m.5)", "Aynı birlik içinde JGK'ya bağlı birden fazla kantin kurulamaz; ihtiyaç hâlinde şube açılabilir (m.5)"]}},
+{"kanun_id": 109, "kart_id": "109-1", "sorun": "kirmizi_kutu", "aciklama": "aday sayısı ve atamalı heyetin süresi",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Kantin heyeti seçiminde aday sayısı seçilecek asil üye sayısının iki katından az olamaz.”", "“Atama ile teşkil edilen kantin heyetinin görev süresi bir yıldır.”"],
+ "dogrusu": ["Aday sayısı seçilecek asil üye sayısının üç katından az olamaz (m.7)", "Atama ile teşkil edilen kantin heyetinin görev süresi en fazla üç yıldır; seçimle teşkilde bir yıldır (m.6)"]}},
+{"kanun_id": 109, "kart_id": "109-2", "sorun": "kirmizi_kutu", "aciklama": "kapatma onayı ve ayrı kalma süresi",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Kantinler bağlı oldukları birlik komutanının onayıyla kapatılır.”", "“Kantin başkan ve üyeleri görevden kesintisiz bir aydan fazla ayrı kalırsa değiştirilir.”"],
+ "dogrusu": ["Kantinler ilgili birliğin teklifi ve JGK onayıyla kapatılır; şubeleri birlik komutanının onayıyla kapatılır (m.13)", "Görevden kesintisiz iki aydan fazla ayrı kalan başkan ve üyeler birlik komutanınca değiştirilir (m.9)"]}},
+{"kanun_id": 109, "kart_id": "109-3", "sorun": "kirmizi_kutu", "aciklama": "sermaye artışı ve avansın kapatılması",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Kantin sermayesi her ay TÜFE ne olursa olsun en az %4 oranında artırılır.”", "“Kantin gelirlerinden verilen avans en geç verildiği yılın sonuna kadar kapatılır.”"],
+ "dogrusu": ["Sermaye her ay en az TÜFE kadar artırılır; TÜFE %4'ten fazlaysa artış %4'tür (m.19)", "Kantin gelirlerinden verilen avans en geç verildiği takvim ayının sonuna kadar kapatılır (m.20)"]}},
+{"kanun_id": 109, "kart_id": "109-5", "sorun": "kirmizi_kutu", "aciklama": "hazine payı kapsamı ve süresi",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Tüm kantinler aylık gayrisafi hasılatlarının %1'ini genel bütçeye yatırır.”", "“Hazine payı en geç takip eden ayın sonuna kadar yatırılır.”"],
+ "dogrusu": ["Hazine payını yalnız birlik sınırları dışındaki kantin ve şubeler, aylık gayrisafi hasılatın %1'i olarak yatırır (m.39)", "Hazine payı en geç takip eden ayın 20'sine kadar yatırılır (m.39)"]}}
+]

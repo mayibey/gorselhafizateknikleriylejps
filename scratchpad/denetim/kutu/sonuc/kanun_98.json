@@ -1,0 +1,176 @@
+[
+ {"kanun_id": 98, "kart_id": "98-0", "sorun": "kirmizi_kutu",
+  "aciklama": "HEK yalnız ekonomik ömrünü tamamlayanlara daraltıldı; teknik ve fizikî neden idari nedene çevrildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yalnızca ekonomik ömrünü tamamlamış taşınır mallar HEK’e ayrılabilir.”",
+     "“Ekonomik ömrünü tamamlamamış taşınırlar, yalnızca idari nedenlerle hizmet dışı bırakıldığında HEK’e ayrılabilir.”"],
+   "dogrusu": [
+     "Ekonomik ömrünü tamamlamış taşınırların yanında, teknik ve fizikî nedenlerle hizmet dışı bırakılanlar da HEK'e ayrılır (m.25/1)",
+     "Ekonomik ömrünü tamamlamamış taşınırlar, teknik ve fizikî nedenlerle kullanılmasında yarar görülmeyerek hizmet dışı bırakılınca HEK'e ayrılır (m.25/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-1", "sorun": "kirmizi_kutu",
+  "aciklama": "Yedek parçalar kapsam dışı gösterildi; başka yerde kullanılabilen malzemeler de kapsama alındı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Hizmet dışı bırakılan taşınıra ait yedek parçalar, başka bir yerde kullanma imkânı bulunmasa bile HEK’e ayrılamaz.”",
+     "“Başka bir yerde kullanma imkânı bulunan idame ve işletme malzemeleri de HEK’e ayrılarak kayıtlardan düşülür.”"],
+   "dogrusu": [
+     "Başka yerde kullanılamayan idame malzemesi, yedek parça ve diğer muhteviyat da HEK'e ayrılır (m.25/1)",
+     "İdame veya işletme malzemeleri, yalnızca başka bir yerde kullanma imkânı bulunmuyorsa HEK'e ayrılır (m.25/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-2", "sorun": "kirmizi_kutu",
+  "aciklama": "Onay makamlarına vali eklendi (2024 kalıbı); onay şartı kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“HEK’e ayırma onayını harcama yetkilisi, birlik komutanı, kurum amiri veya vali verebilir.”",
+     "“Yetkili komisyonun kararı, ayrıca onay aranmaksızın taşınırın HEK’e ayrılması için yeterlidir.”"],
+   "dogrusu": [
+     "HEK'e ayırma onayı harcama yetkilisi, birlik komutanı ya da kurum amiri tarafından verilir; vali sayılmamıştır (m.25/1)",
+     "Komisyon kararına ek olarak harcama yetkilisinin veya birlik komutanı ya da kurum amirinin onayı da gerekir (m.25/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-3", "sorun": "kirmizi_kutu",
+  "aciklama": "Komisyon kararı devreden çıkarıldı; karar yetkisi harcama yetkilisine verildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Taşınır mallar, komisyon kararı aranmaksızın yalnızca kurum amirinin onayıyla HEK’e ayrılarak kayıtlardan düşülebilir.”",
+     "“HEK’e ayırma kararını harcama yetkilisi tek başına verir; komisyon yalnızca danışma niteliğinde görüş bildirir.”"],
+   "dogrusu": [
+     "HEK'e ayırma için kurum amiri onayı tek başına yetmez; kamu idaresinde oluşturulan yetkili komisyonun kararı da gerekir (m.25/1)",
+     "HEK'e ayırma, yetkili komisyon kararı ile harcama yetkilisinin veya birlik komutanı ya da kurum amirinin onayıyla yapılır (m.25/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-4", "sorun": "kirmizi_kutu",
+  "aciklama": "Teknik rapor listesi yalnız uzaya daraltıldı; ekonomik olmama hâli listeden çıkarıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Teknik rapor yalnızca uzayda atmosferik şartlar nedeniyle kaybolan malzemelerin kayıtlarının silinmesinde düzenlenir.”",
+     "“Karada yer altından çıkarılması teknik olarak mümkün olup yalnızca ekonomik olmayan malzemeler için teknik rapor düzenlenmez.”"],
+   "dogrusu": [
+     "Teknik rapor; uzayda kaybolan ve denizaltından veya karada yer altından çıkarılması teknik olarak mümkün ya da ekonomik olmayan malzemeler için düzenlenir (m.25/1)",
+     "Çıkarılması teknik olarak mümkün olsa da ekonomik olmayan malzemelerin kayıt silinmesinde de teknik rapor tanzim edilir (m.25/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-5", "sorun": "kirmizi_kutu",
+  "aciklama": "İmha aynı komisyona verildi; tutanak şartı kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“İmha edilmesi gerektiği belirtilen taşınır mallar, HEK kararını veren aynı komisyon tarafından tutanakla imha edilir.”",
+     "“İmha işlemi tutanak düzenlenmeksizin, harcama yetkilisinin onayıyla yapılır.”"],
+   "dogrusu": [
+     "İmhası gereken taşınırları, ilk komisyondan ayrı olarak kurulan başka bir komisyon tutanakla imha eder (m.25/2)",
+     "İmha, birinci fıkradaki komisyon dışında oluşturulan ayrı bir komisyon tarafından tutanak düzenlenerek yapılır (m.25/2)"]}},
+ {"kanun_id": 98, "kart_id": "98-6", "sorun": "kirmizi_kutu",
+  "aciklama": "Listeye çevresel neden eklendi; ekonomik değersizliğin tek başına yeterliliği kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Taşınırların imha gerekçeleri arasında çevresel nedenler de sayılmıştır.”",
+     "“Ekonomik değeri bulunmayan taşınırlar, teknik, hijyenik, stratejik veya tıbbi bir neden yoksa imha edilemez.”"],
+   "dogrusu": [
+     "İmha gerekçeleri; ekonomik değerin olmaması ile teknik, hijyenik, stratejik ve tıbbi nedenlerdir (m.25/2)",
+     "Komisyon kararında ekonomik değerinin olmadığı belirtilen taşınırlar, ayrıca başka bir neden aranmaksızın imha edilir (m.25/2)"]}},
+ {"kanun_id": 98, "kart_id": "98-7", "sorun": "kirmizi_kutu",
+  "aciklama": "Kayıt silmeye esas belge gereksiz gösterildi; HEK'e ayrılanlar belge dışı bırakıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“HEK’e ayrılan taşınır mallar, herhangi bir belge düzenlenmeksizin komisyon kararıyla kayıtlardan doğrudan çıkarılır.”",
+     "“Kayıt silmeye esas belge yalnızca imha edilen taşınırlar için düzenlenir; HEK’e ayrılanlar için belge gerekmez.”"],
+   "dogrusu": [
+     "HEK'e ayrılan veya imha edilen taşınırlar, kayıt silmeye esas belgeye dayanılarak kayıtlardan çıkarılır (m.25/3)",
+     "Kayıt silmeye esas belge hem HEK'e ayrılan hem de imha edilen taşınırlar için düzenlenir (m.25/3)"]}},
+ {"kanun_id": 98, "kart_id": "98-8", "sorun": "kirmizi_kutu",
+  "aciklama": "Ekonomik değeri olan yerine olmayan yazıldı; özel mevzuat saklılığı kaldırıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“HEK’e ayrılan ve ekonomik değeri olmayan malzemeler hakkında Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri uygulanır.”",
+     "“HEK’e ayrılan ve ekonomik değeri olan malzemeler hakkında, özel mevzuattaki hükümlere bakılmaksızın MKE Ana Statüsü uygulanır.”"],
+   "dogrusu": [
+     "HEK'e ayrılan ve ekonomik değeri olan malzemelere Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri uygulanır (m.25/4)",
+     "MKE Ana Statüsü hükümleri, özel mevzuatındaki hükümler saklı kalmak üzere uygulanır (m.25/4)"]}},
+ {"kanun_id": 98, "kart_id": "98-9", "sorun": "kirmizi_kutu",
+  "aciklama": "Kripto imhası Yönetmelik usulüne bağlandı; kripto teknik rapor listesine sokuldu (2024 kalıbı)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Kripto malzemeler, diğer taşınırlar gibi ayrı bir komisyon tarafından bu Yönetmelikteki usulle tutanak düzenlenerek imha edilir.”",
+     "“Kripto malzemeler, kayıtları silinirken teknik rapor tanzim edilmesi gereken malzemeler arasında sayılmıştır.”"],
+   "dogrusu": [
+     "Kripto malzemelerin imha işlemleri kendi özel düzenlemelerinde belirtildiği şekilde yapılır (m.25/5)",
+     "Teknik rapor listesinde kripto malzeme yoktur; kripto malzemelerin imhası kendi özel düzenlemelerine göre yapılır (m.25/1, m.25/5)"]}},
+ {"kanun_id": 98, "kart_id": "98-10", "sorun": "kirmizi_kutu",
+  "aciklama": "Sözleşme veya protokol hükmü şartı kaldırıldı; kısmi mahsup dışlandı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Taşınmaz onarımında ortaya çıkan ekonomik değerli malzemeler, sözleşme veya protokolde hüküm bulunmasa da onarım bedeline mahsuben yükleniciye bırakılabilir.”",
+     "“Malzemeler yalnızca onarım bedelinin tamamına mahsuben bırakılabilir; bedelin bir kısmına mahsup yapılamaz.”"],
+   "dogrusu": [
+     "Bu malzemeler, ancak sözleşme veya protokoldeki hükme dayanılarak bedelin tamamına veya bir kısmına mahsuben bırakılabilir (m.25/A)",
+     "Malzemeler, yıkım, bakım veya onarım bedelinin tamamı veya bir kısmına mahsuben bırakılabilir (m.25/A)"]}},
+ {"kanun_id": 98, "kart_id": "98-11", "sorun": "kirmizi_kutu",
+  "aciklama": "Kayıtsızlar kayda alındı; kayıtlılar çıkış dışı bırakıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yükleniciye bırakılan malzemelerden kayıtlı olmayanlar önce taşınır mal kayıtlarına alınır, sonra çıkış işlemine tabi tutulur.”",
+     "“Yükleniciye bırakılan malzemelerden kayıtlı olanlar için çıkış işlemi yapılmaz.”"],
+   "dogrusu": [
+     "Yükleniciye bırakılan malzemelerden kayıtlı olmayanlar taşınır mal kayıtlarına alınmaz (m.25/A)",
+     "Yükleniciye bırakılan malzemelerden kayıtlı olanlar çıkış işlemine tabi tutulur (m.25/A)"]}},
+ {"kanun_id": 98, "kart_id": "98-12", "sorun": "kirmizi_kutu",
+  "aciklama": "m.25/4 ile m.25/A'nın MKE kuralı karıştırıldı (iki yönde)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Taşınmaz onarımından çıkıp bedele mahsuben yükleniciye bırakılan malzemeler hakkında MKE Ana Statüsü hükümleri uygulanır.”",
+     "“MKE Ana Statüsü hükümleri, taşınmaz onarımından çıkan malzemelere uygulanmadığı gibi HEK’e ayrılan ekonomik değerli malzemelere de uygulanmaz.”"],
+   "dogrusu": [
+     "Yıkım ve onarımdan çıkıp bırakılan bu malzemeler hakkında MKE Ana Statüsü hükümleri uygulanmaz (m.25/A)",
+     "MKE Ana Statüsü, HEK'e ayrılan ekonomik değerli malzemelere uygulanır; taşınmaz onarımından çıkıp bırakılanlara uygulanmaz (m.25/4, m.25/A)"]}},
+ {"kanun_id": 98, "kart_id": "98-13", "sorun": "kirmizi_kutu",
+  "aciklama": "Yılda iki sayım öne sürüldü (2024 kalıbı); kullanımdaki taşınırlar kapsam dışı bırakıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Depolarda ve kullanımda olan taşınır mallar, yıl ortası ve yıl sonu olmak üzere yılda iki kez sayılır.”",
+     "“Yıl sonu sayımı yalnızca depolardaki taşınır malları kapsar; kullanımdaki taşınırlar sayılmaz.”"],
+   "dogrusu": [
+     "Depolarda ve kullanımda olan taşınır mallar yıl sonlarında sayım kurullarınca sayılır (m.32/1)",
+     "Yıl sonu sayımı depolardaki taşınırlarla birlikte kullanımda olan taşınır malları da kapsar (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-14", "sorun": "kirmizi_kutu",
+  "aciklama": "Sayım taşınır kayıt yetkilisine verildi; dayanak madde 34 yapıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Yıl sonu sayımını taşınır kayıt yetkilisi tek başına yapar.”",
+     "“Yıl sonu sayımını yapacak sayım kurulları 34 üncü maddeye göre oluşturulur.”"],
+   "dogrusu": [
+     "Yıl sonu sayımını, 30 uncu maddeye göre oluşturulan sayım kurulları yapar (m.32/1)",
+     "Sayım kurulları 30 uncu maddeye göre oluşturulur (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-15", "sorun": "kirmizi_kutu",
+  "aciklama": "Fark için ayrı tutanak öne sürüldü (2024 kalıbı); sütunlar yer değiştirdi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Sayımda bulunan miktar ile kayıtlı miktar arasındaki fark için ayrı bir tutanak düzenlenir.”",
+     "“Kayıtlarda bulunan miktarlar, sayım tutanağının fazla veya noksan sütununa kaydedilir.”"],
+   "dogrusu": [
+     "Sayımda bulunan miktar ile kayıtlı miktar arasındaki fark, sayım tutanağının fazla veya noksan sütununa kaydedilir (m.32/1)",
+     "Kayıtlarda bulunan miktarlar sayım tutanağının kayıtlı miktar sütununa kaydedilir (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-16", "sorun": "kirmizi_kutu",
+  "aciklama": "Fire ayrıca gösterilmez denildi; fire dayanağı madde 34 yapıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Fire nedeniyle ortaya çıkan noksanlıklar sayım tutanağında ayrıca gösterilmez.”",
+     "“Sayımda tespit edilen fire noksanlıkları, 34 üncü maddeye göre belirlenir.”"],
+   "dogrusu": [
+     "23 üncü maddeye göre tespit edilen fire nedeniyle ortaya çıkan noksanlıklar tutanakta ayrıca gösterilir (m.32/1)",
+     "Tutanakta ayrıca gösterilen fire, 23 üncü maddeye göre tespit edilir (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-17", "sorun": "kirmizi_kutu",
+  "aciklama": "Araştırma yalnız noksanlığa daraltıldı (hüküm tek öğeli, tek cümle)",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Sayımda yalnızca noksan çıkan taşınırların nedenleri araştırılır; fazla çıkanlar için araştırma yapılmaz.”"],
+   "dogrusu": [
+     "Sayımda noksan çıkmasının yanında fazla çıkmasının nedenleri de araştırılır (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-18", "sorun": "kirmizi_kutu",
+  "aciklama": "Dayanak madde 23 yapıldı; sorumluluk yalnız kasta daraltıldı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Taşınırların noksan çıkmasında kasıt, ihmal veya tedbirsizliği olanlar hakkında 23 üncü maddeye göre işlem yapılır.”",
+     "“Taşınırların noksan çıkmasında yalnızca kasıt bulunan hâllerde sorumlular hakkında işlem yapılır; ihmal ve tedbirsizlik işlem gerektirmez.”"],
+   "dogrusu": [
+     "Noksanlıkta kasıt, ihmal veya tedbirsizliği olanlar hakkında 34 üncü maddeye göre ayrıca işlem yapılır (m.32/1)",
+     "Noksanlıkta yalnız kasıt değil, ihmal veya tedbirsizliği olanlar hakkında da 34 üncü maddeye göre işlem yapılır (m.32/1)"]}},
+ {"kanun_id": 98, "kart_id": "98-19", "sorun": "kirmizi_kutu",
+  "aciklama": "Kayıt düzeltmesi kaldırıldı; işlem belgesi sayım bitmeden düzenletildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Sayımda bulunan fazla ve noksanlar yalnızca sayım tutanağında gösterilir; taşınır kayıtlarında değişiklik yapılmaz.”",
+     "“Kayıtları sayım sonucuna uydurmak için taşınır mal işlem belgesi, sayım işlemleri tamamlanmadan düzenlettirilir.”"],
+   "dogrusu": [
+     "Fazla ve noksan miktarların giriş ve çıkış kayıtları yaptırılarak kayıtların sayım sonuçlarıyla uygunluğu sağlanır (m.32/2)",
+     "Taşınır mal işlem belgesi, sayım işlemleri tamamlandıktan sonra sayım kurulunca düzenlettirilir (m.32/2)"]}},
+ {"kanun_id": 98, "kart_id": "98-21", "sorun": "kirmizi_kutu",
+  "aciklama": "Özel sayım usulü tüm askerî müzelere yayıldı; kripto genel usule bağlandı",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Tüm askerî müzelerin koleksiyonlarındaki eserlerin sayımı kendi özel düzenlemelerine göre yapılır.”",
+     "“Kripto malzemeler de diğer taşınırlar gibi yıl sonunda sayım kurullarınca bu Yönetmelikteki usulle sayılır.”"],
+   "dogrusu": [
+     "Özel düzenlemeye göre sayım, yalnız birinci sınıf askerî müzelerin koleksiyonundaki eserler ile kripto malzemeler için geçerlidir (m.32/3)",
+     "Kripto malzemelerin sayım işlemleri kendi özel düzenlemelerinde belirtildiği şekilde yapılır (m.32/3)"]}},
+ {"kanun_id": 98, "kart_id": "98-22", "sorun": "kirmizi_kutu",
+  "aciklama": "Refakat gereksiz gösterildi; imza harcama yetkilisine verildi",
+  "duzeltme": {"sinavda_boyle_yazarlar": [
+     "“Sayım yapılan birimin taşınır mal sorumlusunun sayım süresince sayım kuruluna refakat etmesi gerekmez.”",
+     "“Kurulca düzenlenen sayım tutanağını, taşınır mal sorumlusu yerine birimin harcama yetkilisi imzalar.”"],
+   "dogrusu": [
+     "Sayım yapılan birimin taşınır mal sorumlusu, sayım süresince sayım kuruluna refakat eder (m.32/4)",
+     "Kurulca düzenlenen sayım tutanağını sayım yapılan birimin taşınır mal sorumlusu imzalar (m.32/4)"]}}
+]

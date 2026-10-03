@@ -1,0 +1,142 @@
+{
+ "kanun_id": 47,
+ "ad": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_47.json",
+ "kartlar": [
+  {
+   "id": "47-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Karar mercii",
+   "hukum": "Taşınmaz mal zilyetliğine tecavüz ve müdahalenin önlenmesine merkez ilçede vali veya görevlendireceği vali yardımcısı, diğer ilçelerde kaymakam karar verir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sulh hukuk mahkemesi karar verir\" yanlış; bu kanun idari yol",
+    "Zilyetlik tecavüzüne sulh hukuk mahkemesi karar verir"
+   ],
+   "dogrusu": [
+    "Vali/kaymakam (m.2)"
+   ]
+  },
+  {
+   "id": "47-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Başvuru hakkı",
+   "hukum": "Başvuru zilyet tarafından yapılır; köy tüzel kişiliğine ait taşınmazlarda köy halkından herhangi biri, kamuya ait taşınmazlarda ilgili idare başvurabilir ya da mülkî amir re'sen harekete geçer (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Köy taşınmazı için yalnız muhtar başvurabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "zilyet · köy tüzel kişiliğine ait · herhangi biri · kamuya ait · re'sen"
+   ]
+  },
+  {
+   "id": "47-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Başvuru süreleri",
+   "hukum": "Tecavüzün öğrenilmesinden itibaren 60 gün, her hâlde tecavüzün oluşundan itibaren 1 yıl içinde başvurulmalıdır; Devletin hüküm ve tasarrufundaki yerler ile umuma ait taşınmazlarda süre şartı yoktur (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mera için de 1 yıl içinde başvurulmalıdır\" yanlış; kamu mallarında süre yok",
+    "Meraya tecavüzde de 1 yıl içinde başvurulmalıdır"
+   ],
+   "dogrusu": [
+    "Kamu mallarında süre yok (m.4)"
+   ]
+  },
+  {
+   "id": "47-3",
+   "madde": [
+    "5",
+    "6"
+   ],
+   "baslik": "Soruşturma 15 gün",
+   "hukum": "Mülkî amir başvurudan itibaren 15 gün içinde soruşturmayı tamamlayıp karar verir; soruşturmayı bizzat veya görevlendireceği memurlar eliyle yerinde yapar (m.5-6)",
+   "sinavda_boyle_yazarlar": [
+    "\"30 gün\" tuzak; 15 gün"
+   ],
+   "dogrusu": [
+    "15 gün"
+   ]
+  },
+  {
+   "id": "47-4",
+   "madde": [
+    "7",
+    "15"
+   ],
+   "baslik": "Kararların niteliği",
+   "hukum": "Mülkî amirin kararları kesindir, ancak idari yargıya başvurulabilir; karar zilyetliği belirler, mülkiyeti belirlemez; taraflar adli yargıda mülkiyet davası açabilir (m.7, 15)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karar mülkiyeti belirler\" yanlış",
+    "Karar mülkiyeti belirler"
+   ],
+   "dogrusu": [
+    "Yalnız zilyetliği (m.15)"
+   ]
+  },
+  {
+   "id": "47-5",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tebliğ ve ilan",
+   "hukum": "Karar taraflara tebliğ edilir; infazdan en az 3 gün önce karar taraflara ve gerekirse ilan yoluyla duyurulur (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "İnfaz süresi (5 gün) ile ilan süresi (3 gün) karıştırılır"
+   ],
+   "dogrusu": [
+    "3 gün önce"
+   ]
+  },
+  {
+   "id": "47-6",
+   "madde": [
+    "9"
+   ],
+   "baslik": "İnfaz 5 gün",
+   "hukum": "Karar, tebliğinden/ilanından itibaren 5 gün içinde infaz edilir; infaz mülkî amirin görevlendireceği memurlarca yapılır (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karar kesinleşince tarafın istemiyle icra dairesince infaz edilir\" yanlış; mülkî amir memurları 5 günde"
+   ],
+   "dogrusu": [
+    "5 gün"
+   ]
+  },
+  {
+   "id": "47-7",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Güvenlik kuvvetlerinin rolü",
+   "hukum": "Kararın infazında gerekirse mülkî amirin yazılı emri ile güvenlik kuvvetleri (jandarma/polis) tedbir alır, direnme ve tekrar tecavüz önlenir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma kendiliğinden tecavüzü önler\" yanlış; mülkî amirin yazılı emri",
+    "Jandarma kendiliğinden müdahale eder"
+   ],
+   "dogrusu": [
+    "Mülkî amirin yazılı emriyle (m.10)"
+   ]
+  },
+  {
+   "id": "47-8",
+   "madde": [
+    "12",
+    "15"
+   ],
+   "baslik": "İkinci tecavüz — suç",
+   "hukum": "Önlenen tecavüzü ikinci kez yapan: kamuya ait taşınmazda 6 aydan 2 yıla kadar, özel şahsa ait taşınmazda 3 aydan 1 yıla kadar hapis; fiil silahla veya birden fazla kişi ile işlenirse ceza bir kat artırılır; taşınmazı paylaşma amacıyla işlenmişse 1/3, silahlı ise yarı artırılır (m.12, 15)",
+   "sinavda_boyle_yazarlar": [
+    "Kamu / özel cezaları ters verilir",
+    "İkinci tecavüz özel malda 6 ay-2 yıl"
+   ],
+   "dogrusu": [
+    "3 ay-1 yıl; kamu malında 6 ay-2 yıl (m.15)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

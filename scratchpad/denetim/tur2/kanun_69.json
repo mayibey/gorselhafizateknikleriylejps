@@ -1,0 +1,362 @@
+{
+ "kanun_id": 69,
+ "ad": "2920 sayılı Türk Sivil Havacılık Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\havacilik\\pack_69.json",
+ "kartlar": [
+  {
+   "id": "69-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kanunun amacı",
+   "hukum": "Sivil havacılık sahasındaki faaliyetlerin ulusal çıkarlarımıza ve uluslararası ilişkilerimize uygun biçimde düzenlenmesini sağlamaktır (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız uluslararası ilişkiler\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "ulusal çıkarlarımıza ve uluslararası ilişkilerimize uygun"
+   ]
+  },
+  {
+   "id": "69-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam ve Devlet hava aracı istisnası",
+   "hukum": "Kanun, kamu kurum ve kuruluşları ile gerçek ve özel hukuk tüzel kişilerinin havacılık faaliyetlerini kapsar; Devlet hava araçları, açık hüküm bulunmayan hâllerde kapsam dışındadır (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Devlet hava araçları hiçbir surette kapsam dışıdır\" denir",
+    "Devlet hava araçları her hâlde kanun kapsamı dışındadır"
+   ],
+   "dogrusu": [
+    "Açık hüküm bulunmayan hâllerde kapsam dışıdır (m.2)"
+   ]
+  },
+  {
+   "id": "69-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Türk Hava Sahası",
+   "hukum": "Türkiye Cumhuriyetinin egemenliği altındaki ülke ile Türk karasuları üzerindeki sahadır (m.3/a)",
+   "sinavda_boyle_yazarlar": [
+    "karasuları çıkarılır"
+   ],
+   "dogrusu": [
+    "egemenliği altındaki ülke ile Türk karasuları üzerindeki"
+   ]
+  },
+  {
+   "id": "69-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Hava aracı",
+   "hukum": "Havalanabilen ve havada seyredebilme kabiliyetine sahip her türlü araçtır (m.3/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"motorlu\" şartı eklenir"
+   ],
+   "dogrusu": [
+    "Havalanabilen ve havada seyredebilme kabiliyetine sahip"
+   ]
+  },
+  {
+   "id": "69-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Devlet hava aracı",
+   "hukum": "Devletin askerlik, güvenlik, gümrük ve orman yangınlarıyla mücadele hizmetlerinde kullandığı hava araçlarıdır (m.3/c)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"protokol mensuplarını taşıma\", \"sağlık\" veya \"posta\" eklenir — 2026'nın doğru cevabı \"protokol taşıma\"nın Devlet hava aracı sayılmadığı idi",
+    "Protokol mensuplarını taşıyan uçak Devlet hava aracıdır"
+   ],
+   "dogrusu": [
+    "Sayılan dört hizmet arasında yok (m.3/c)"
+   ]
+  },
+  {
+   "id": "69-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Türk sivil hava aracı",
+   "hukum": "Devlet hava aracı tanımı dışında kalan ve mülkiyeti Türk Devletine, kamu tüzel kişilerine veya Türk vatandaşlarına ait araçlardır (m.3/d)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız Türk vatandaşlarına ait\" diye daraltılır"
+   ],
+   "dogrusu": [
+    "Türk Devletine, kamu tüzel kişilerine veya Türk vatandaşlarına"
+   ]
+  },
+  {
+   "id": "69-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Havaalanı",
+   "hukum": "Karada ve su üzerinde hava araçlarının kalkması ve inmesi için özel olarak hazırlanmış; bakım ve diğer ihtiyaçların karşılanmasına, yolcu ve yük alınıp verilmesine elverişli tesisleri bulunan yerlerdir (m.3/e)",
+   "sinavda_boyle_yazarlar": [
+    "\"su üzeri\" çıkarılır"
+   ],
+   "dogrusu": [
+    "su üzerinde"
+   ]
+  },
+  {
+   "id": "69-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ferry uçuş",
+   "hukum": "Bir hava aracının yolcu ve yük taşımaksızın; satın alınması veya kiralanmasında tescil işlemleri yapılmadan yurda getirilmesi maksadıyla yapılan uçuşlar ile uçuşa elverişliliğine halel getirmeyen kısmî arızalı olarak yapılan uçuşlardır (m.3/f)",
+   "sinavda_boyle_yazarlar": [
+    "şıklara \"trans uçuş\", \"serbest uçuş\", \"dolaylı uçuş\" gibi uydurma kavramlar konur — hepsi kanunda yoktur"
+   ],
+   "dogrusu": [
+    "yolcu ve yük taşımaksızın · uçuşa elverişliliğine halel getirmeyen kısmî arızalı"
+   ]
+  },
+  {
+   "id": "69-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Hava egemenliği",
+   "hukum": "Türkiye Cumhuriyeti Türk hava sahasında tam ve münhasır egemenliği haizdir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"tam ve mutlak\", \"sınırlı ve münhasır\", \"tam ve mündemiç\" çiftleri konur",
+    "Türkiye hava sahasında tam ve mutlak egemenliği haizdir"
+   ],
+   "dogrusu": [
+    "Tam ve münhasır (m.4)"
+   ]
+  },
+  {
+   "id": "69-9",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Hava sahasının kullanımı",
+   "hukum": "Türk hava sahası, hava araçlarınca bu Kanun ve ilgili diğer mevzuat çerçevesinde kullanılır (m.5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "bu Kanun ve ilgili diğer mevzuat"
+   ]
+  },
+  {
+   "id": "69-10",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Uçuş yapabilecekler",
+   "hukum": "Uçuşa elverişli olmak şartıyla: (a) Türk Devlet hava araçları, (b) Türk uçak siciline kayıtlı Türk sivil hava araçları, (c) Türkiye'nin taraf olduğu anlaşmalar uyarınca izin verilen hava araçları. Bunların dışındakiler Ulaştırma Bakanlığının iznine tabidir; Bakanlık izinden önce Genelkurmay Başkanlığı ve Dışişleri Bakanlığının görüşünü alır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "üç bentten biri düşürülüp \"yalnız I ve II\" dedirtilir; ya da görüş alınacak makam \"İçişleri\" yapılır"
+   ],
+   "dogrusu": [
+    "(a) Türk Devlet hava araçları, (b) Türk uçak siciline kayıtlı Türk sivil hava araçları, (c) Türkiye'nin taraf olduğu anlaşmalar uyarınca izin verilen hava araçları · Ulaştırma Bakanlığının iznine · Genelkurmay Başkanlığı ve Dışişleri Bakanlığının görüşünü"
+   ]
+  },
+  {
+   "id": "69-11",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Uçuş yasağı ve sınırlama",
+   "hukum": "Cumhurbaşkanı; kamu düzeni, emniyet veya askerî sebeplerle geçici ya da devamlı olarak hava sahasının tamamını veya bir bölümünü kullanmayı yasaklayabilir veya sınırlayabilir. Uçuş güvenliği için Genelkurmay ve Ulaştırma Bakanlığınca konulacak diğer tahditler bu hükme tabi olmaksızın Ulaştırma Bakanlığınca uygulanır (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "yetki \"Bakanlar Kurulu\"na verilir — bu ibare 703 sayılı KHK ile Cumhurbaşkanı olarak değiştirildi"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı"
+   ]
+  },
+  {
+   "id": "69-12",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Uçuş yolları",
+   "hukum": "Hava araçlarının izleyeceği uçuş yolları ve kullanacağı hava alanları, Genelkurmay Başkanlığı ile gerekli koordinasyon yapılmak suretiyle Ulaştırma Bakanlığınca belirlenir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hava Kuvvetleri Komutanlığı - İçişleri Bakanlığı\" veya \"Cumhurbaşkanlığı\" çiftleri konur",
+    "Uçuş yolları İçişleri Bakanlığınca belirlenir"
+   ],
+   "dogrusu": [
+    "Ulaştırma Bakanlığınca (m.8)"
+   ]
+  },
+  {
+   "id": "69-13",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Havaalanını kim kurar",
+   "hukum": "Havaalanları Devlet veya kamu tüzel kişileri tarafından kurulur ve işletilir (m.34/1)",
+   "sinavda_boyle_yazarlar": [
+    "öncüllere \"özel hukuk tüzel kişileri\" ve \"şirketler\" eklenip doğru sayılır",
+    "Havaalanını şirketler de kurup işletebilir"
+   ],
+   "dogrusu": [
+    "Kural olarak Devlet ve kamu tüzel kişileri; diğerleri ancak izinle (m.34)"
+   ]
+  },
+  {
+   "id": "69-14",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Standartları kim saptar",
+   "hukum": "Sivil amaçlı havaalanı, pist, hangar, hizmet ve işletme tesislerinin yeniden inşası ve geliştirilmesinde ihtiyaç ve standartlar, Genelkurmay Başkanlığı ile yapılacak koordinasyon sonucu Ulaştırma Bakanlığı tarafından saptanır (m.34/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Millî Savunma - İçişleri\" çifti konur"
+   ],
+   "dogrusu": [
+    "Genelkurmay Başkanlığı ile yapılacak koordinasyon sonucu Ulaştırma Bakanlığı"
+   ]
+  },
+  {
+   "id": "69-15",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Kamulaştırma ve inşaat",
+   "hukum": "Bu hizmetlerle ilgili kamulaştırma, etüd, proje, aplikasyon, onarım ve inşaat işleri Bayındırlık Bakanlığınca yapılır; Bayındırlık ve Ulaştırma Bakanlıkları koordinasyon ve iş birliği yapar (m.34/2)",
+   "sinavda_boyle_yazarlar": [
+    "işler Ulaştırma Bakanlığına verilir"
+   ],
+   "dogrusu": [
+    "kamulaştırma, etüd, proje, aplikasyon, onarım ve inşaat işleri Bayındırlık Bakanlığınca"
+   ]
+  },
+  {
+   "id": "69-16",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Özel havaalanı izni",
+   "hukum": "Gerçek ve tüzel kişilerin havaalanı ve iniş şeridi inşa edip işletmesi, Genelkurmay Başkanlığının olumlu mütalaası üzerine Ulaştırma Bakanlığı iznine bağlıdır; izin süreye ve yükümlülüklere bağlanabilir. Millî güvenlik, kamu düzeni ve sağlığın tehlikeye girebileceği kanaatini haklı kılan nedenler varsa izin verilmez; iznin kapsamı dışında kullanım hâlinde izin iptal edilir; gerektiğinde havaalanı veya iniş şeridi kamulaştırılır (m.34/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"izin iptal edilemez\" veya \"kamulaştırılamaz\" denir",
+    "Özel havaalanı izni iptal edilemez"
+   ],
+   "dogrusu": [
+    "Kapsam dışı kullanımda iptal edilir (m.34/3)"
+   ]
+  },
+  {
+   "id": "69-17",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Uluslararası trafiğe açılma",
+   "hukum": "Sivil Havacılık Genel Müdürlüğünce belirlenen standartlara uygun teknik özelliklere sahip; gümrük, pasaport, sağlık vb. işlemler için kolaylıkları bulunan ve SHGM'ce sertifikalandırılan havaalanları uluslararası hava trafiğine açılabilir (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "sertifikalandırma şartı düşürülür — bu şart 2024'te eklendi"
+   ],
+   "dogrusu": [
+    "Sivil Havacılık Genel Müdürlüğünce belirlenen standartlara uygun · SHGM'ce sertifikalandırılan"
+   ]
+  },
+  {
+   "id": "69-18",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Kısıtlayıcı tedbirler",
+   "hukum": "Hava trafiği veya üzerindeki hava sahası gerektirirse ya da kamu düzeni nedeniyle, trafiğe açık bir havaalanının kullanılmasına her zaman tahdit konabilir veya havaalanı geçici olarak kapatılabilir; kararlar Ulaştırma Bakanlığınca duyurulur (m.36/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız olağanüstü hâlde kapatılabilir\" denir"
+   ],
+   "dogrusu": [
+    "her zaman tahdit konabilir veya havaalanı geçici olarak kapatılabilir"
+   ]
+  },
+  {
+   "id": "69-19",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Aynı bölgede birden çok havaalanı",
+   "hukum": "Ulaştırma Bakanlığı kamu yararına ilişkin nedenlerle bunların kullanımını düzenleyebilir; her birini belirli hava aracı tiplerine veya faaliyetlerin belirli bir bölümüne tahsis edebilir (m.36/2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "belirli hava aracı tiplerine"
+   ]
+  },
+  {
+   "id": "69-20",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Askerî-sivil havaalanı kullanımı",
+   "hukum": "TSK'ya ait havaalanlarının sivil hava araçlarınca kullanılması Genelkurmay Başkanlığı ile Ulaştırma Bakanlığı arasında; Devlet hava araçlarının sivil havaalanlarından yararlanması ise ilgili bakanlıklar ile Ulaştırma Bakanlığı arasında yapılacak protokollerle düzenlenir (m.39/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yönetmelikle düzenlenir\" denir; kanun protokol diyor",
+    "TSK havaalanının sivil kullanımı yönetmelikle düzenlenir"
+   ],
+   "dogrusu": [
+    "Protokolle (m.39/1)"
+   ]
+  },
+  {
+   "id": "69-21",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Yabancı taşımacı ve askerî meydan",
+   "hukum": "Yabancı hava taşımacılarının askerî meydanlardan yararlanması; ilgili Kuvvet Komutanlığı, Dışişleri, İçişleri, Gümrük ve Tekel bakanlıkları koordinasyonu sonunda Genelkurmay Başkanlığı onayı ile belirlenir (m.39/2)",
+   "sinavda_boyle_yazarlar": [
+    "onay makamı Ulaştırma Bakanlığı yapılır"
+   ],
+   "dogrusu": [
+    "ilgili Kuvvet Komutanlığı, Dışişleri, İçişleri, Gümrük ve Tekel bakanlıkları koordinasyonu sonunda Genelkurmay Başkanlığı onayı"
+   ]
+  },
+  {
+   "id": "69-22",
+   "madde": [
+    "49"
+   ],
+   "baslik": "Türk sivil hava aracı sayılma",
+   "hukum": "Dernek, vakıf, sendika, siyasi parti ve kamu kurumu niteliğindeki meslek kuruluşlarının araçlarında idari organı oluşturanların çoğunluğunun Türk vatandaşı olması; Türk Ticaret Siciline kayıtlı şirket, kooperatif ve birliklerin araçlarında ise idare ve temsile yetkili olanların çoğunluğunun Türk vatandaşı olması ve ana sözleşmeye göre oy çoğunluğunun Türk ortaklarda bulunması gerekir (m.49)",
+   "sinavda_boyle_yazarlar": [
+    "\"çoğunluğu\" yerine \"tamamı\", \"ana sözleşme\" yerine \"tüzük\", \"oy çoğunluğu\" yerine \"bütün oylar\" konur — 2026'da üç boşluk birden bu şekilde sorulmuştu",
+    "Şirket araçlarında ortakların tamamının Türk olması gerekir"
+   ],
+   "dogrusu": [
+    "Çoğunluğunun (m.49)"
+   ]
+  },
+  {
+   "id": "69-23",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Terk edilen hava aracı",
+   "hukum": "Havaalanlarında altı aydan fazla bekleyen ve alınmayan Türk siciline kayıtlı hava araçlarının maliklerine Tebligat Kanunu hükümlerine göre veya ilanen, otuz gün içinde ücret ve vergi borçlarını ödeyip aracı kaldırması tebliğ olunur; yabancı sicile kayıtlı araçlarda ilgili ülke otoritesine doksan gün süre bildirilir. Süresinde işlem yapılmazsa araç sicilden terkin edilip hurdaya ayrılır ve açık artırmayla satılır; alacaklardan kalan miktar beş yıl içinde başvuran hak sahiplerine iade edilir (Ek m.1)",
+   "sinavda_boyle_yazarlar": [
+    "6 ay / 30 gün / 90 gün / 5 yıl süreleri birbirine karıştırılır"
+   ],
+   "dogrusu": [
+    "altı aydan fazla · otuz gün · yabancı sicile kayıtlı · doksan gün · beş yıl"
+   ]
+  },
+  {
+   "id": "69-24",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Orman alanında havaalanı",
+   "hukum": "Devlet ormanları kapsamındaki alanlarda havaalanı projeleri için verilen izinlerden herhangi bir bedel alınmaz (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"ecrimisil ödenir\" denir"
+   ],
+   "dogrusu": [
+    "herhangi bir bedel alınmaz"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

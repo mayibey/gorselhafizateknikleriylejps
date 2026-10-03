@@ -1,0 +1,148 @@
+[
+ {
+  "kanun_id": 50,
+  "kart_id": "50-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yatılı okul pansiyonu ve köy odaları kapsam dışı gösterildi; günübirlik kiralanan evler sorumlu işletici zorunluluğundan çıkarıldı. Not: tuzak satırındaki 'orduevi kapsam dışı' bilgisi yönetmelik metninde geçmediği için kullanılmadı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yatılı okulların pansiyonları ve köy odaları, Kimlik Bildirme Yönetmeliğinin 6. maddesindeki konaklama yerleri kapsamı dışındadır.”",
+    "“Günübirlik kiralanan evlerde sorumlu işletici bulundurulması zorunlu değildir.”"
+   ],
+   "dogrusu": [
+    "Yatılı okul pansiyonları, yetiştirme yurtları ve köy odaları da m.6 kapsamındaki konaklama yerlerine dahildir (m.6)",
+    "Günübirlik kiralanan evlerde de her an ulaşılabilecek bir sorumlu işletici bulunur (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "24 saat (m.6 tesisleri) ile 3 gün (diğer iş yerleri) yer değiştirildi; elektronik bildirimde muhtar onayı aranır gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Otel ve pansiyonlarda çalıştırılanların kimlik bildirme belgesi üç gün içinde, dükkânlarda çalıştırılanlarınki ise yirmi dört saat içinde kolluğa verilir.”",
+    "“Köydeki iş yerinde çalışanların bildirimi elektronik ortamda yapılsa bile belgelerin muhtara onaylatılması zorunludur.”"
+   ],
+   "dogrusu": [
+    "Otel ve pansiyon gibi m.6 tesislerinde çalışanların belgesi 24 saat, diğer ticaret ve sanat iş yerlerinde çalışanlarınki üç gün içinde verilir (m.8)",
+    "Bildirim elektronik ortamda yapıldığında köydeki iş yerleri için de muhtar onayı aranmaz (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Üç gün iş günü olarak gösterildi; 24 saatin başlangıcı olay saatinden gün bitimine kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kimlik Bildirme Yönetmeliğindeki üç günlük süre, işe başlamayı izleyen üç iş günü olarak hesaplanır.”",
+    "“Yönetmelikteki yirmi dört saatlik süre, işe başlamanın vuku bulduğu günün bitiminden itibaren işlemeye başlar.”"
+   ],
+   "dogrusu": [
+    "Yönetmelikteki üç gün, iş günü değil; işe başlama, geliş veya ayrılmanın vuku bulduğu saatten başlayan 72 saattir (m.4/b)",
+    "Yirmi dört saatlik süre, işe başlamanın veya ayrılmanın vuku bulduğu saatten itibaren işler (m.4/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sözlü beyanla barındırmaya izin verildi; çalıştırma yasağı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kimliğini resmî belgeyle ispat edemeyen kişi, sözlü beyanı kayda geçirilerek tesiste barındırılabilir.”",
+    "“Kimliğini resmî belgeyle ispat edemeyen kişiler konaklama tesislerinde barındırılamaz; ancak iş yerlerinde çalıştırılabilir.”"
+   ],
+   "dogrusu": [
+    "Kimliğini resmî belgeyle ispat edemeyen kişi tesiste barındırılamaz ve çalıştırılamaz; sözlü beyan yetmez (m.5)",
+    "Kimliğini resmî geçerli belgeyle ispat edemeyenler tesislerde barındırılamaz, konut ve iş yerlerinde de çalıştırılamaz (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Misafir bildirim eşiği 30 günden 15 güne indirildi; belge verme süresi 3 günden 10 güne çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Konutlara misafir olarak gelip on beş günden fazla kalacak kişilerin kimlikleri kolluğa bildirilir.”",
+    "“Otuz günden fazla kalacak misafirin kimlik bildirme belgesini kolluğa vermek için aile reisine on günlük süre tanınmıştır.”"
+   ],
+   "dogrusu": [
+    "Konutlara misafir olarak gelip 30 günden fazla kalacak kişilerin kimlikleri bildirilir (m.15)",
+    "Otuz günden fazla kalacak misafirin belgesi aile reisince düzenlenir ve üç gün içinde en yakın genel kolluğa verilir (m.15)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sabahçı kahvesinde kalanlar için bildirim zorunlu gösterildi; izin makamı mülkî amirden belediye başkanına kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Terminal ve iskelelerdeki sabahçı kahvelerinde kalan kişilerin kimlikleri üç gün içinde kolluğa bildirilir.”",
+    "“Sabahçı kahvelerinin açık tutulmasına ve buralarda kişilerin kalmasına belediye başkanı izin verir.”"
+   ],
+   "dogrusu": [
+    "İzinli sabahçı kahvesi ve benzeri tesislerde kalanlar için kimlik bildirimi yapılmaz (m.19)",
+    "Sabahçı kahvelerinin açık tutulmasına, kolluk ile belediye veya köy idaresinin olumlu görüşü alınarak mahallin en büyük mülkî amiri izin verir (m.19)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Eski işletici belgesinin imha yerine saklandığı iddia edildi; belgenin iki örneğinin de kollukta kaldığı gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yeni işletici belgesi alındığında önceki sorumlu işleticiye ait kimlik bildirme belgesi kollukta saklanmaya devam eder.”",
+    "“İşletici kimlik bildirme belgesinin her iki örneği de kolluk örgütünde saklanır.”"
+   ],
+   "dogrusu": [
+    "Kolluk görevlisi isim karşılaştırmasından sonra önceki sorumlu işleticiye ait belgeyi imha eder (m.20)",
+    "Görevli belgenin birinci örneğini saklar, öteki örneğini yükümlüye geri verir; bu örnek tesis çalıştığı sürece tesiste saklanır (m.20)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Defter onayı kolluktan notere kaydırıldı; belge (1 yıl) ve defter (5 yıl) saklama süreleri yer değiştirildi; asgari sayfa sayısı düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Konaklama yeri kayıt defteri kullanılmaya başlanmadan önce notere onaylatılır.”",
+    "“Konaklama yeri kayıt defterleri bir yıl, konaklama belgeleri ise beş yıl süreyle tesiste saklanır.”",
+    "“Konaklama yeri kayıt defterinin elli sayfa olması yeterlidir.”"
+   ],
+   "dogrusu": [
+    "Konaklama yeri kayıt defteri kullanılmadan önce sayfa sayısı belirtilerek en yakın yetkili genel kolluk örgütüne onaylatılır (m.24)",
+    "Konaklama belgeleri izleyen takvim yılından başlayarak bir yıl, kayıt defterleri beş yıl tesiste saklanır (m.24)",
+    "Konaklama yeri kayıt defteri yüz sayfadan aşağı olamaz (m.24)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 50,
+  "kart_id": "50-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tarama sıklığı üç aydan altı aya çıkarıldı; nümerotaj cetvelini isteme yetkisi mülkî amirden karakol komutanına kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Her karakol, bölgesini altı ayda bir kez tarayarak yeni veya yıkılan yapıları saptar.”",
+    "“Belediyeler, nümerotaj cetvelinin bir örneğini karakol komutanının istemesi hâlinde vermekle yükümlüdür.”"
+   ],
+   "dogrusu": [
+    "Her karakol üç ayda bir kez ve gerektiğinde sürekli olarak bölgesini tarar (m.28)",
+    "Belediyeler, mahallin en büyük mülkî amirince istenmesi hâlinde nümerotaj cetvelinin birer örneğini vermekle yükümlüdür (m.28)"
+   ]
+  }
+ }
+]

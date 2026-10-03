@@ -1,0 +1,453 @@
+{
+ "kanun_id": 41,
+ "ad": "5607 sayılı Kaçakçılıkla Mücadele Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_41.json",
+ "kartlar": [
+  {
+   "id": "41-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Gümrük işlemine tabi tutmadan eşya sokma",
+   "hukum": "1 yıldan 5 yıla kadar hapis ve 10.000 güne kadar adli para cezası; eşya gümrük kapıları dışından sokulmuşsa ceza 1/3'ten yarısına kadar artırılır (m.3/1)",
+   "sinavda_boyle_yazarlar": [
+    "Ceza \"5 yıla kadar\" değil \"1 yıldan 5 yıla\"; alt sınır var"
+   ],
+   "dogrusu": [
+    "dışından"
+   ]
+  },
+  {
+   "id": "41-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Aldatıcı işlem ve davranışla vergi kaçırma",
+   "hukum": "Eşyayı aldatıcı işlemle gümrük vergileri kısmen veya tamamen ödenmeksizin ülkeye sokan 2 yıldan 5 yıla kadar hapis ve 10.000 güne kadar adli para cezası (m.3/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"1-5 yıl\" diyen şık gümrüksüz sokma içindir, aldatıcı işlemde 2-5 yıl"
+   ],
+   "dogrusu": [
+    "Aldatıcı işlem ve davranışla vergi kaçırma"
+   ]
+  },
+  {
+   "id": "41-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Transit rejimi ihlali",
+   "hukum": "Transit rejimi çerçevesinde taşınan serbest dolaşımda bulunmayan eşyayı rejim hükümlerine aykırı olarak gümrük bölgesinde bırakan 1 yıldan 3 yıla kadar hapis ve 5.000 güne kadar adli para cezası (m.3/3)",
+   "sinavda_boyle_yazarlar": [
+    "Transit ve antrepo ihlalleri \"1-3 yıl\" bandında; \"2-5\" değil"
+   ],
+   "dogrusu": [
+    "Transit rejimi çerçevesinde taşınan serbest dolaşımda bulunmayan eşyayı rejim hükümlerine aykırı olarak gümrük bölgesinde bırakan 1 yıldan 3 yıla kada …"
+   ]
+  },
+  {
+   "id": "41-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "İthali yasak eşya",
+   "hukum": "İthali kanun gereği yasak olan eşyayı ülkeye sokan 2 yıldan 6 yıla kadar hapis ve 20.000 güne kadar adli para cezası; fiil ayrıca daha ağır ceza gerektiren suç oluşturuyorsa yalnız o suçtan ceza verilir (m.3/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"İhracı yasak eşya\"nın cezası daha düşük (1-3 yıl) — ithal/ihraç karıştırılıyor"
+   ],
+   "dogrusu": [
+    "İthali kanun gereği yasak olan eşyayı ülkeye sokan 2 yıldan 6 yıla kadar hapis ve 20.000 güne kadar adli para cezası …"
+   ]
+  },
+  {
+   "id": "41-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "İhracı yasak eşya",
+   "hukum": "İhracı kanun gereği yasak olan eşyayı ülkeden çıkaran 1 yıldan 3 yıla kadar hapis ve 5.000 güne kadar adli para cezası (m.3/8)",
+   "sinavda_boyle_yazarlar": [
+    "İthal yasağı 2-6 yıl, ihraç yasağı 1-3 yıl"
+   ],
+   "dogrusu": [
+    "İhracı yasak eşya"
+   ]
+  },
+  {
+   "id": "41-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Akaryakıt, tütün, alkol ağırlaştırması",
+   "hukum": "Kaçakçılık fiillerinin konusunu akaryakıt, tütün, tütün mamulleri, etil alkol, metanol ve alkollü içkiler oluşturuyorsa fıkralardaki cezalar yarısından iki katına kadar artırılır; hapis cezası 3 yıldan az olamaz (m.3/10)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az 5 yıl\" diyen şık yanlış; alt sınır 3 yıl",
+    "Sigara kaçakçılığında hapis en az 5 yıl"
+   ],
+   "dogrusu": [
+    "En az 3 yıl (m.3/10)"
+   ]
+  },
+  {
+   "id": "41-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ulusal marker (akaryakıt işaretleyici)",
+   "hukum": "Ulusal marker uygulamasına tabi olup marker içermeyen ya da standart dışı marker içeren akaryakıtı ticari amaçla üreten, bulunduran veya nakleden, satışa arz eden 2 yıldan 5 yıla kadar hapis ve 20.000 güne kadar adli para cezası (m.3/11)",
+   "sinavda_boyle_yazarlar": [
+    "Markersiz akaryakıt 2-5 yıl; \"bandrolsüz sigara\" 3-6 yıl — ikisi karıştırılıyor"
+   ],
+   "dogrusu": [
+    "Ulusal marker uygulamasına tabi olup marker içermeyen ya da standart dışı marker içeren akaryakıtı ticari amaçla üreten …"
+   ]
+  },
+  {
+   "id": "41-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Bandrolsüz / sahte bandrollü ürün",
+   "hukum": "Bandrol, etiket, hologram gibi işaretleri taşımayan tütün mamulü/alkol ürünlerini ticari amaçla üreten, bulunduran, nakleden, satan 3 yıldan 6 yıla kadar hapis ve 20.000 güne kadar adli para cezası (m.3/16)",
+   "sinavda_boyle_yazarlar": [
+    "Alt sınır 3 yıl; \"1 yıldan 3 yıla\" şıkkı tuzak"
+   ],
+   "dogrusu": [
+    "Bandrol …"
+   ]
+  },
+  {
+   "id": "41-8",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Teşebbüs tamamlanmış gibi cezalandırılır",
+   "hukum": "Kaçakçılık suçlarına teşebbüs, tamamlanmış suç gibi cezalandırılır (m.3/21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Teşebbüs halinde ceza indirilir\" şıkkı YANLIŞ",
+    "Teşebbüs halinde ceza indirilir"
+   ],
+   "dogrusu": [
+    "Tamamlanmış gibi cezalandırılır (m.3/21)"
+   ]
+  },
+  {
+   "id": "41-9",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Eşyanın değerine göre artırım/indirim",
+   "hukum": "Eşyanın değeri fahiş ise ceza yarısından bir katına kadar artırılır; hafif ise yarısına kadar, pek hafif ise 1/3'üne kadar indirilir (m.3/22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fahiş değer → 2 kat artırım\" yanlış, \"yarısından bir katına kadar\""
+   ],
+   "dogrusu": [
+    "fahiş · hafif · pek hafif"
+   ]
+  },
+  {
+   "id": "41-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Örgüt ve 3+ kişi",
+   "hukum": "Suç bir örgütün faaliyeti çerçevesinde işlenirse ceza 2 kat; üç veya daha fazla kişi tarafından birlikte işlenirse yarı oranında artırılır (m.4/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"İki kişi birlikte → yarı artırım\" şıkkı yanlış; en az üç kişi gerekir",
+    "İki kişi birlikte işlerse yarı artırım"
+   ],
+   "dogrusu": [
+    "Üç veya daha fazla kişi (m.4/2)"
+   ]
+  },
+  {
+   "id": "41-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kamu görevlisi / meslek gereği işleyen",
+   "hukum": "Kaçakçılığı önlemek, izlemek, araştırmakla görevli kişi veya ticaret-meslek gereği işleyen kişi için ceza yarı oranında artırılır (m.4/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "Kamu görevlisi için \"2 kat\" diyen şık yanlış, örgüt için 2 kat"
+   ],
+   "dogrusu": [
+    "yarı oranında"
+   ]
+  },
+  {
+   "id": "41-12",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Göz yuman görevli",
+   "hukum": "Kaçakçılığı önlemekle görevli kişi suçun işlenmesine kasten göz yumarsa işlenen suçun müşterek faili olarak sorumlu tutulur (m.4/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yardım eden sıfatıyla ceza alır\" şıkkı yanlış",
+    "Görevli göz yumarsa yardım eden olur"
+   ],
+   "dogrusu": [
+    "Müşterek fail (m.4/5)"
+   ]
+  },
+  {
+   "id": "41-13",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Devlet güvenliği / toplum sağlığı",
+   "hukum": "Kaçakçılık suçunun konusu Devletin güvenliği veya toplum sağlığı bakımından tehlike oluşturuyorsa ceza 10 yıldan az olamaz (m.4/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"5 yıldan az olamaz\" tuzak; 10 yıl"
+   ],
+   "dogrusu": [
+    "10 yıldan az olamaz"
+   ]
+  },
+  {
+   "id": "41-14",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Etkin pişmanlık — haber alınmadan önce",
+   "hukum": "Suça iştirak etmiş kişi, resmi makamlarca haber alınmadan önce fiili, diğer failleri ve kaçak eşyanın saklandığı yerleri merciine haber verirse, verilen bilginin failler ve eşyanın ele geçmesini sağlaması hâlinde ceza verilmez (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "Haber alındıktan sonra yardım ederse ceza 2/3 oranında indirilir, kalkmaz"
+   ],
+   "dogrusu": [
+    "ceza verilmez"
+   ]
+  },
+  {
+   "id": "41-15",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Etkin pişmanlık — gümrüklenmiş değeri ödeme",
+   "hukum": "Eşyanın gümrüklenmiş değerinin iki katını ödeyen: soruşturma evresinde ceza yarısı, kovuşturma evresinde hüküm verilinceye kadar 1/3'ü oranında indirilir; mükerrirler ve örgüt faaliyeti çerçevesinde işleyenler yararlanamaz (m.5/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Değerinin kendisini ödeme\" değil \"iki katı\"; mükerrir ve örgüt üyesi yararlanamaz",
+    "Kovuşturmada 2 kat ödeyen yarı indirim alır"
+   ],
+   "dogrusu": [
+    "Kovuşturmada 1/3, soruşturmada ½ (m.5/2)"
+   ]
+  },
+  {
+   "id": "41-16",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Arama CMK'ya göre",
+   "hukum": "Kaçakçılık suçlarında arama ve elkoyma CMK hükümlerine göre yapılır (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaçakçılık aramasında hâkim kararı gerekmez\" şıkkı yanlış"
+   ],
+   "dogrusu": [
+    "CMK"
+   ]
+  },
+  {
+   "id": "41-17",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Taşıta elkoyma ve teminat",
+   "hukum": "Kaçak eşya taşıyan taşıta CMK 128/4 uyarınca elkonur; sahibi kaçakçılığa iştirak etmemişse gümrüklenmiş değer kadar teminat karşılığı iade edilebilir; teminat elkoymadan itibaren 30 gün, tebligattan itibaren 90 gün içinde yatırılmalıdır (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "İki süre birlikte soruluyor: 30 gün elkoymadan, 90 gün tebligattan"
+   ],
+   "dogrusu": [
+    "gümrüklenmiş değer · 30 gün · 90 gün"
+   ]
+  },
+  {
+   "id": "41-18",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kaçak akaryakıtın tasfiyesi",
+   "hukum": "Elkonan kaçak akaryakıt il özel idaresi (büyükşehirlerde büyükşehir belediyesi) tarafından teslim alınıp tasfiye edilir (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gümrük idaresi tasfiye eder\" şıkkı akaryakıt için yanlış"
+   ],
+   "dogrusu": [
+    "il özel idaresi"
+   ]
+  },
+  {
+   "id": "41-19",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Taşıt müsaderesi — 3 koşul",
+   "hukum": "Kaçak eşyanın taşınmasında kullanılan taşıt şu hallerde müsadere edilir: (a) taşıt kaçak eşya taşımak için özel tertibat yapılmış, (b) taşıtın değeri kaçak eşyanın değerine göre düşük ya da eşya taşıtın ağırlığı/hacmi ile orantılı, (c) taşıtın sahibi fiile iştirak etmiş (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaçak eşya taşıyan her araç müsadere edilir\" yanlış"
+   ],
+   "dogrusu": [
+    "özel tertibat · değeri kaçak eşyanın değerine göre düşük · ağırlığı/hacmi ile orantılı · fiile iştirak"
+   ]
+  },
+  {
+   "id": "41-20",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Tasfiye süreleri",
+   "hukum": "Elkonan eşyanın 6 ay içinde kaçak olup olmadığına karar verilmezse tasfiye edilebilir; bozulacak/tehlikeli eşya için süre 1 ay; muhafazası masraflı eşyada ihaleyle satılıp bedeli emanete alınır (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "6 ay / 1 ay sürelerini \"1 yıl / 3 ay\" olarak veren şıklar"
+   ],
+   "dogrusu": [
+    "6 ay · 1 ay"
+   ]
+  },
+  {
+   "id": "41-21",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Görevli mahkeme",
+   "hukum": "Bu kanunda tanımlanan suçlara asliye ceza mahkemesinde bakılır; ancak evrakta sahtecilik gibi ağır ceza mahkemesinin görevine giren suçla birlikte işlenmişse ağır ceza bakar (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kaçakçılık suçlarına ağır ceza bakar\" genellemesi yanlış",
+    "Kaçakçılık davalarına ağır ceza bakar"
+   ],
+   "dogrusu": [
+    "Asliye ceza; sahtecilik birleşirse ağır ceza (m.17)"
+   ]
+  },
+  {
+   "id": "41-22",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Gümrük idaresinin katılan sıfatı",
+   "hukum": "Kaçakçılık davalarında gümrük idaresi (ve fiilden zarar gören diğer idareler) katılan olarak yer alır; davaya katılma talebi aranmaz (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gümrük idaresi tanık olarak dinlenir\" yanlış; katılan"
+   ],
+   "dogrusu": [
+    "gümrük idaresi · katılan"
+   ]
+  },
+  {
+   "id": "41-23",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Kaçakçılıkla görevli kurumlar",
+   "hukum": "Mülkî amirler, Ticaret Bakanlığı (gümrük) personeli, Emniyet, Jandarma, Sahil Güvenlik komutanlıkları kaçakçılığı önleme, izleme, soruşturmakla görevlidir; kara sınırlarında ve hudut kapılarında gerektiğinde hudut birlikleri de destek verir (m.19/1)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklarda MİT sayılırsa yanlış; MİT bu kanunda görevli kurum değil",
+    "MİT kaçakçılıkla görevli kurumdur"
+   ],
+   "dogrusu": [
+    "Değildir (m.19)"
+   ]
+  },
+  {
+   "id": "41-24",
+   "madde": [
+    "19",
+    "20"
+   ],
+   "baslik": "Mülkî amire bilgi ve muhbir gizliliği",
+   "hukum": "Görevliler operasyon sonucu yakaladıkları kaçakçılık olaylarını mülkî amire bildirir; muhbirlerin kimliği açıklanamaz, açıklayan görevli cezalandırılır (m.19-20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Muhbir kimliği mahkemeye açıklanır\" yanlış; gizli kalır"
+   ],
+   "dogrusu": [
+    "mülkî amire bildirir · açıklanamaz"
+   ]
+  },
+  {
+   "id": "41-25",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Silah kullanma — kara",
+   "hukum": "Kaçakçılığı önlemekle görevli olanlar, dur ihtarına uymayan ve kaçmaya devam eden şüpheli için önce havaya uyarı atışı yapar, buna da uymayan kişiye karşı sadece meşru müdafaa şartlarında hedefe ateş edilebilir; yakalamak amacıyla kaçan kişiye doğrudan ateş edilmez (m.22/1)",
+   "sinavda_boyle_yazarlar": [
+    "PVSK 16'daki \"yakalayacak ölçüde ateş\" formülü burada geçerli değil; kaçakçılıkta sadece meşru müdafaa",
+    "Kaçan kaçakçıya yakalamak için ateş edilir"
+   ],
+   "dogrusu": [
+    "Yalnız meşru müdafaa şartlarında (m.22/1)"
+   ]
+  },
+  {
+   "id": "41-26",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Silah kullanma — deniz",
+   "hukum": "Deniz araçlarında: ihtar → uyarı ateşi → durmayan araca karşı durdurucu ateş (aracı hareketsiz kılmaya yönelik) (m.22/2)",
+   "sinavda_boyle_yazarlar": [
+    "Deniz için \"durdurucu ateş\" var, kara için yok"
+   ],
+   "dogrusu": [
+    "ihtar · uyarı ateşi · durdurucu ateş"
+   ]
+  },
+  {
+   "id": "41-27",
+   "madde": [
+    "23"
+   ],
+   "baslik": "İkramiye dağılımı",
+   "hukum": "Kaçak eşyanın satışından/idari para cezasından elde edilen tutarın belirlenen kısmı ikramiye olarak dağıtılır: %50 muhbirlere, %50 elkoyanlara; muhbir yoksa tamamı elkoyanlara (m.23/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Muhbir yoksa hazineye kalır\" yanlış; tamamı elkoyanlara"
+   ],
+   "dogrusu": [
+    "%50 muhbirlere, %50 elkoyanlara"
+   ]
+  },
+  {
+   "id": "41-28",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Görevliye muhbir ikramiyesi yok",
+   "hukum": "Kaçakçılığı önlemekle görevli kişiler muhbir ikramiyesinden yararlanamaz; yalnız elkoyan ikramiyesi alabilir (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma personeli muhbir olarak da ikramiye alır\" yanlış",
+    "Görevliler muhbir ikramiyesi alır"
+   ],
+   "dogrusu": [
+    "Alamaz; yalnız elkoyan ikramiyesi (m.23)"
+   ]
+  },
+  {
+   "id": "41-29",
+   "madde": [
+    "23"
+   ],
+   "baslik": "İkramiye vergiden istisna ve tavan",
+   "hukum": "İkramiyeler damga vergisi hariç her türlü vergiden müstesnadır; yılda her bir kişiye ödenecek ikramiye tavanı memur aylık katsayısının 30.000 (elkoyan) ve 120.000 (muhbir) gösterge rakamı ile çarpımını geçemez (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tüm vergilerden muaf\" yanlış, damga vergisi hariç",
+    "İkramiye tüm vergilerden muaftır"
+   ],
+   "dogrusu": [
+    "Damga vergisi hariç (m.23)"
+   ]
+  },
+  {
+   "id": "41-30",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Hudut birliklerine ikramiye",
+   "hukum": "Hudut hattında kaçak eşyayı ele geçiren hudut birlikleri personeli de elkoyan ikramiyesinden yararlanır (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız jandarma ve emniyet alır\" yanlış"
+   ],
+   "dogrusu": [
+    "hudut birlikleri"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

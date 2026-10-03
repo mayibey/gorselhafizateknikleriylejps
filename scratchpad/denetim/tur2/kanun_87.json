@@ -1,0 +1,272 @@
+{
+ "kanun_id": 87,
+ "ad": "4734 sayılı Kamu İhale Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_87.json",
+ "kartlar": [
+  {
+   "id": "87-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, kapsam, istisnalar",
+   "hukum": "Kamu hukukuna tabi, kamunun denetimindeki veya kamu kaynağı kullanan kurumların ihalelerinde uygulanacak esas ve usuller (m.1); kapsam: genel bütçe ve özel bütçeli idareler, il özel idareleri, belediyeler ve bağlı döner sermaye-birlik-tüzel kişiler; KİT'ler; sosyal güvenlik kuruluşları, fonlar, kamu görevi verilmiş tüzel kişiler; bunların yarısından fazla sermayesine sahip olduğu kuruluş ve şirketler; 4603 kapsamındaki bankaların yapım ihaleleri; TMSF, kamu bankaları ve enerji-su-ulaştırma-telekomünikasyon şirketleri kapsam dışı (m.2); istisnalar (m.3): (a) tarım-hayvancılık ürünü alımları ve orman köylüleri kooperatiflerinden hizmet; (b) savunma, güvenlik veya istihbarat alanlarıyla ilişkili olduğuna veya gizlilik içinde yürütülmesi gerektiğine Cumhurbaşkanı veya ilgili bakanlıkça karar verilen veya özel güvenlik tedbiri gerektiren veya devlet güvenliğine ilişkin temel menfaatlerin korunmasını gerektiren mal-hizmet-yapım işleri; (c) dış finansmanlı işler, Merkez Bankası banknot vb.; (d) yurt dışı kuruluşların alımları; (e) ceza infaz kurumları işyurtları, MEB üretim okulları, Devlet Malzeme Ofisi, TCDD, TÜBİTAK, Et ve Balık Kurumu, Çay-Kur, MKE monoblok tekerlek vb. kuruluşlardan alımlar; (f) Ar-Ge; (g) KİT'lerin ticari-sınai faaliyetlerinde belli limiti aşmayan alımlar; (h) tedaviye yönelik hizmet alımları ve reçeteli ilaç; (i) kültür varlıkları restorasyonu; (j) deniz kirliliği acil müdahale; (k) vakıf kültür varlıkları; (l) tanık koruma; (m) BOTAŞ doğal gaz; (n) uluslararası spor organizasyonları; (o) erken uyarı sistemleri; (p) TSK vb. hizmet alımları; (r) muhtelif; bu işlerde ceza ve yasaklama hükümleri hariç Kanun uygulanmaz, esaslar Cumhurbaşkanınca",
+   "sinavda_boyle_yazarlar": [
+    "\"İstisna kapsamındaki işlerde yasaklama hükümleri de uygulanmaz\" yanlış; ceza ve yasaklama hükümleri uygulanır"
+   ],
+   "dogrusu": [
+    "genel bütçe ve özel bütçeli idareler, il özel idareleri, belediyeler · KİT'ler · yarısından fazla sermayesine · yapım · istisnalar · (b) savunma, güvenlik veya istihbarat alanlarıyla ilişkili olduğuna veya gizlilik içinde yürütülmesi gerektiğine Cumhurbaşkanı veya ilgili bakanlıkça karar verilen · Devlet Malzeme Ofisi"
+   ]
+  },
+  {
+   "id": "87-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Mal: her türlü ihtiyaç maddeleri ile taşınır-taşınmaz mal ve haklar; hizmet: bakım-onarım, taşıma, haberleşme, sigorta, Ar-Ge, muhasebe, danışmanlık, tanıtım, basım, temizlik, yemek, güvenlik, mesleki eğitim, yazılım, kiralama vb.; yapım: bina, yol, köprü, tünel, baraj, santral, tesisat, büyük onarım, restorasyon, montaj vb.; tedarikçi (mal), hizmet sunucusu, yapım müteahhidi, danışman (yüklenicilerle organik bağı olmayan); aday: ön yeterliğe başvuran; ortak girişim: iş ortaklığı veya konsorsiyum; istekli: teklif veren; istekli olabilecek: doküman satın almış; yerli istekli: T.C. vatandaşı gerçek kişiler ve Türk kanunlarına göre kurulmuş tüzel kişiler; yüklenici: sözleşme imzalanan istekli; ihale yetkilisi: ihale ve harcama yapma yetkisine sahip kişi/kurul; ihale dokümanı: idari-teknik şartname, sözleşme tasarısı vb.; ön proje / kesin proje / uygulama projesi; ihale: ihale yetkilisinin onayını müteakip sözleşmenin imzalanmasıyla tamamlanan işlemler; açık ihale usulü: bütün isteklilerin teklif verebildiği; belli istekliler arasında ihale usulü: ön yeterlik değerlendirmesi sonucunda idarece davet edilen isteklilerin teklif verebildiği; pazarlık usulü: iki aşamalı, teknik detay ve belli hâllerde fiyatın görüşüldüğü; doğrudan temin: davet edilen isteklilerle teknik şart ve fiyat görüşülerek; ön ilan, EKAP, dinamik alım sistemi, elektronik eksiltme, çerçeve anlaşma, teminat mektubu (banka mektupları + kefalet senetleri) (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Pazarlık usulü\" şıkkı tuzak",
+    "Ön yeterlik sonucu davet edilenlerin teklif verdiği usul pazarlık usulüdür"
+   ],
+   "dogrusu": [
+    "Belli istekliler arasında ihale usulü (m.4, 20)"
+   ]
+  },
+  {
+   "id": "87-2",
+   "madde": [
+    "5",
+    "6",
+    "7"
+   ],
+   "baslik": "Temel ilkeler, ihale komisyonu, işlem dosyası",
+   "hukum": "İdareler saydamlık, rekabet, eşit muamele, güvenirlik, gizlilik, kamuoyu denetimi, ihtiyaçların uygun şartlarla zamanında karşılanması ve kaynakların verimli kullanılmasını sağlamakla sorumlu; doğal bağlantı yoksa mal, hizmet ve yapım bir arada ihale edilemez; eşik değerlerin altında kalmak amacıyla kısımlara bölünemez; açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir, diğerleri özel hâllerde; Cumhurbaşkanlığı alımları m.21/c ile yapılabilir; ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz; ÇED gereken işlerde ÇED olumlu belgesi şart (doğal afet yapımlarında aranmaz) (m.5); ihale komisyonu: ihale yetkilisince biri başkan, ikisi işin uzmanı olmak üzere idare personelinden en az 4 kişi + muhasebe/mali işlerden sorumlu 1 personel = en az 5 ve tek sayıda üye (yedekler dâhil); yeterli personel yoksa diğer idarelerden üye alınabilir; dosya örneği ilan/daveti izleyen 3 gün içinde üyelere; komisyon eksiksiz toplanır, çoğunlukla karar alır, çekimser kalınamaz, karşı oy gerekçesi yazılır (m.6); her iş için ihale işlem dosyası (onay belgesi, yaklaşık maliyet hesap cetveli, doküman, ilan, teklifler, tutanaklar) (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"İhale komisyonu en az 3 kişi\" yanlış (o muayene-kabul); ihale komisyonu en az 5",
+    "İhale komisyonu en az 3 kişidir"
+   ],
+   "dogrusu": [
+    "En az 5 ve tek sayı (m.6)"
+   ]
+  },
+  {
+   "id": "87-3",
+   "madde": [
+    "8",
+    "9",
+    "10"
+   ],
+   "baslik": "Eşik değerler, yaklaşık maliyet, yeterlik, ihale dışı bırakılma",
+   "hukum": "Eşik değerler (m.13 ilan ve m.63 yerli avantaj için; her yıl 1 Şubat'ta KİK günceller): genel bütçeli idarelerin mal-hizmet alımları, diğer idarelerin mal-hizmet alımları, yapım işleri için üç ayrı değer (m.8); ihaleden önce fiyat araştırmasıyla KDV hariç yaklaşık maliyet belirlenir, hesap cetvelinde gösterilir; ilanlarda yer verilmez, isteklilere açıklanmaz (m.9); yeterlik: ekonomik-mali (banka belgeleri, bilanço, ciro) ve mesleki-teknik (oda kaydı, iş deneyimi: son 15 yıl içinde geçici kabulü yapılan yapım ve yapımla ilgili hizmet işleri, %80 oranında denetlenen/yönetilen işler, son 5 yıl içinde kabulü yapılan mal ve hizmet alımları; devredilen işlerde %80 tamamlanma; üretim kapasitesi, personel, teknik personel, tesis-ekipman, kalite kontrol, akredite sertifikalar, numune-katalog); denetim-yönetim belgeleri için mühendis/mimar şartı; iş deneyim belgeleri devredilemez, kiralanamaz, satılamaz; belge sahibinin tüzel kişide en az 1 yıldır yarısından fazla hisse; denetim-yönetim belgeleri beşte bir oranında dikkate alınır; yapımla ilgili hizmet belgeleri yapımda kullanılamaz; ihale dışı bırakılacaklar: iflas-tasfiye-konkordato; iflası ilan edilen; kesinleşmiş SGK prim borcu; kesinleşmiş vergi borcu; ihaleden önceki 5 yıl içinde mesleki faaliyetinden yargı kararıyla hüküm giyen; 5 yıl içinde idareye yaptığı işlerde iş-meslek ahlakına aykırılığı ispat edilen; odasınca meslekten men edilen; belge vermeyen/yanıltıcı-sahte belge veren; m.11'e göre katılamayacağı hâlde katılan; m.17 yasak fiillerde bulunan (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"İş deneyim belgesi kiralanabilir\" yanlış",
+    "Yaklaşık maliyet ilanda gösterilir"
+   ],
+   "dogrusu": [
+    "Gösterilmez, açıklanmaz (m.9); ancak zarf açılışında açıklanır (m.36)"
+   ]
+  },
+  {
+   "id": "87-4",
+   "madde": [
+    "11",
+    "12"
+   ],
+   "baslik": "İhaleye katılamayacaklar, şartnameler",
+   "hukum": "Katılamaz: geçici/sürekli yasaklılar ve 3713 (terör), örgütlü suç veya rüşvet suçundan hükümlüler; hileli iflas edenler; ihaleyi yapan idarenin ihale yetkilisi kişileri ve kurul üyeleri; ihale işlemlerini hazırlamak-yürütmek-sonuçlandırmak-onaylamakla görevliler; bunların eşleri, üçüncü dereceye kadar kan ve ikinci dereceye kadar kayın hısımları, evlatlıkları ve evlat edinenleri; bunların ortakları ve şirketleri (yönetim kurulunda olmadıkları veya %10'undan fazla hissesi olmayan A.Ş.'ler hariç); danışmanlık hizmetini yapan yükleniciler o işin ihalesine, işin yüklenicileri de danışmanlık ihalesine katılamaz; idare bünyesindeki vakıf, dernek, birlik, sandık ve şirketleri idarenin ihalelerine katılamaz; katılanlar ihale dışı bırakılır, geçici teminatı gelir, ihale yapılmışsa iptal (m.11); idari ve teknik şartnameler idarece hazırlanır (mümkün değilse ihale yetkilisi onayıyla hazırlattırılır); teknik kriterler verimlilik ve fonksiyonellik sağlayacak, rekabeti engellemeyecek, fırsat eşitliği sağlayacak; belli bir marka, model, patent, menşei, kaynak veya ürün belirtilemez; standart yoksa \"veya dengi\" ifadesiyle marka-model belirtilebilir (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Teknik şartnamede hiçbir şekilde marka yazılamaz\" yanlış; standart yoksa \"veya dengi\" ile yazılabilir",
+    "Teknik şartnamede marka belirtilebilir"
+   ],
+   "dogrusu": [
+    "Yalnız standart yoksa \"veya dengi\" ile (m.12)"
+   ]
+  },
+  {
+   "id": "87-5",
+   "madde": [
+    "13"
+   ],
+   "baslik": "İlan süreleri ve ön ilan",
+   "hukum": "Eşik değere eşit veya üstü ihalelerde: açık ihale ilanı ihale tarihinden en az 40 gün önce; belli istekliler ön yeterlik ilanı son başvurudan en az 14 gün önce; pazarlık ilanı en az 25 gün önce Kamu İhale Bülteninde; belli isteklilerde yeterliği belirlenen adaylara ihaleden en az 40 gün önce davet; eşik değer altı: yaklaşık maliyeti (limitlere göre) küçük olanlar en az 7 gün önce yerel gazete + internet haber sitesinde; orta olanlar en az 14 gün önce Bülten + yerel gazete + internet sitesi; büyük olanlar en az 21 gün önce Bülten + yerel gazete + internet sitesi; eşik altı belli isteklilerde ön yeterlik ilanı en az 7 gün önce; elektronik hazırlanıp gönderilen ilanlarda 40 günlük süre 7 gün kısaltılabilir; EKAP'tan dokümana doğrudan erişimde 40 günlük ilan ve davet süresi 5 gün kısaltılabilir; ön ilan yapılırsa 40 gün 24 güne indirilebilir (ön ilandan itibaren en az 40 gün sonra ilan; ön ilan ihale yükümlülüğü getirmez; açık veya belli istekliler usulüyle yapılmak zorunda; Bültende ücretsiz); ilan yerinde gazete/haber sitesi yoksa Basın İlan Kurumu Portalında; uluslararası ilan yapılırsa sürelere 12 gün eklenir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Pazarlık usulü ilanı 40 gün önce\" yanlış; 25 gün",
+    "Açık ihale ilanı ihaleden 25 gün önce yapılır"
+   ],
+   "dogrusu": [
+    "40 gün; 25 gün pazarlık (m.13)"
+   ]
+  },
+  {
+   "id": "87-6",
+   "madde": [
+    "14",
+    "15",
+    "16"
+   ],
+   "baslik": "Ortak girişim, alt yüklenici, iptal, yasak fiiller, usuller",
+   "hukum": "Ortak girişim iş ortaklığı (işin tümünü birlikte, müştereken ve müteselsilen sorumlu; pilot ortak) veya konsorsiyum (kendi uzmanlık kısmını; koordinatör ortak); iş ortaklığı her ihaleye teklif verebilir, konsorsiyumun katılıp katılamayacağı dokümanda belirtilir; ihale üzerinde kalınca sözleşmeden önce noter tasdikli ortaklık sözleşmesi (m.14); işin özelliği gerektirirse alt yüklenicilere yaptırılacak işler ihale aşamasında istenir, sözleşmeden önce liste idare onayına; alt yüklenici yüklenicinin sorumluluğunu kaldırmaz (m.15); idarenin gerekli gördüğü veya dokümanda düzeltilemez engel bulunduğu hâllerde ihale saatinden önce ihale iptal edilebilir; teklifler açılmaksızın iade, hak talebi yok (m.16); yasak fiiller: hile-vaat-tehdit-nüfuz-çıkar-anlaşma-irtikâp-rüşvetle fesat; isteklileri tereddüde düşürme, katılımı engelleme, anlaşma teklifi, rekabeti etkileme; sahte belge/teminat; alternatif teklif hâlleri dışında birden fazla teklif verme; m.11'e rağmen katılma (m.17); usuller: açık ihale, belli istekliler arasında ihale, pazarlık (m.18); açık ihale bütün istekliler (m.19); belli istekliler: ön yeterlik sonucu davet edilenler; uzmanlık ve/veya ileri teknoloji gerektiren işler ile yaklaşık maliyeti eşik değerin yarısını aşan yapım işleri bu usulle yaptırılabilir; yeterliği tespit edilenlerden listeye alınanlar veya tamamı davet edilebilir; davet edilebilecek aday sayısı 5'ten az veya teklif veren istekli sayısı 3'ten az olursa ihale iptal (3'ten az teklifle iptalde doküman düzeltilip bütün yeterli istekliler tekrar davet edilebilir) (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Konsorsiyum her ihaleye teklif verebilir\" yanlış; iş ortaklığı her ihaleye, konsorsiyum dokümanda izin varsa"
+   ],
+   "dogrusu": [
+    "iş ortaklığı · pilot ortak · konsorsiyum · koordinatör ortak · noter tasdikli · ihale saatinden önce · yasak fiiller · birden fazla teklif · usuller · uzmanlık ve/veya ileri teknoloji gerektiren · yaklaşık maliyeti eşik değerin yarısını aşan yapım işleri · davet edilebilecek aday sayısı 5'ten az veya teklif veren istekli sayısı 3'ten az"
+   ]
+  },
+  {
+   "id": "87-7",
+   "madde": [
+    "21",
+    "22",
+    "23"
+   ],
+   "baslik": "Pazarlık usulü ve doğrudan temin",
+   "hukum": "Pazarlık hâlleri: (a) açık veya belli istekliler ihalesinde teklif çıkmaması; (b) doğal afet, salgın, can-mal kaybı tehlikesi gibi ani-beklenmeyen veya yapım tekniği açısından özellikli veya can-mal güvenliği için ivedi işler, öngörülemeyen olaylar; (c) savunma ve güvenlikle ilgili özel durumlarda ivedilik; (d) Ar-Ge gerektiren, seri üretime konu olmayan; (e) özgün ve karmaşık nitelikte teknik-mali özellikleri belirlenemeyen; (f) yaklaşık maliyeti belli limite kadar mamul mal, malzeme veya hizmet alımları; (b), (c), (f)'de ilan zorunlu değil, ilan yapılmayan hâllerde en az 3 istekli davet edilir; (a), (d), (e)'de yeterliği tespit edilenler önce fiyatı içermeyen ilk teklif sunar, komisyon her istekliyle teknik görüşme yapar, sonra fiyat teklifleri; ilk fiyat tekliflerini aşmamak üzere son yazılı fiyat teklifleri alınarak ihale sonuçlandırılır; (b), (c), (f) mal alımlarında malın sözleşme yapma süresi içinde teslimi ve idarece uygun bulunması hâlinde sözleşme ve kesin teminat zorunlu değil (m.21); doğrudan temin (ilansız, teminatsız): (a) ihtiyacın tek kişi tarafından karşılanabilmesi; (b) tek kişinin özel hakkı; (c) mevcut mal-ekipman-teknolojiyle uyum ve standardizasyon için zorunlu alımların toplam süresi 3 yılı geçmeyecek sözleşmelerle ilk alım yapılandan alınması; (d) büyükşehir belediyesi sınırları içindeki idarelerin belli limiti (diğerlerinin daha düşük limiti) aşmayan ihtiyaçları ile temsil-ağırlama konaklama-seyahat-iaşe alımları; (e) taşınmaz alımı veya kiralanması; (f) stoklanması ekonomik olmayan veya acil ilaç, aşı, serum, kan ürünleri, ortez-protez, tıbbi sarf; (g) milletlerarası tahkim davalarında avukat hizmeti; (h) 4353 avukat hizmetleri ve fikri-sınai hak tescili; (ı) İŞKUR görevleri; (i) seçim malzemeleri; doğrudan teminde ihale komisyonu kurma ve m.10 yeterlik kuralları arama zorunluluğu yok, ihale yetkilisince görevlendirilen kişi/kişiler piyasa fiyat araştırması yaparak temin eder (m.22); tasarım yarışmaları jüri değerlendirmeli, ödüllü/ödülsüz (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"Doğrudan teminde en az 3 teklif alınır\" yanlış; o ilansız pazarlıktır (en az 3 istekli davet)",
+    "Doğrudan teminde ihale komisyonu kurulur"
+   ],
+   "dogrusu": [
+    "Kurulmaz (m.22)"
+   ]
+  },
+  {
+   "id": "87-8",
+   "madde": [
+    "24",
+    "25",
+    "26"
+   ],
+   "baslik": "İlan içeriği, doküman, zeyilname",
+   "hukum": "İhale ilanında zorunlu: idare bilgileri, ihalenin adı-türü-miktarı, teslim/yapım yeri, başlama-bitirme tarihi, usul-katılım şartları-belgeler, yeterlik kriterleri, yerli istekli-fiyat avantajı, dokümanın nerede-hangi bedelle alınacağı, ihale yeri-tarih-saati, tekliflerin verileceği yer, teklif ve sözleşme türü, teklif bedelinin %3'ünden az olmamak üzere geçici teminat, geçerlilik süresi, konsorsiyum katılımı (m.24); ön yeterlik ilanı benzer (m.25); m.13, 24, 25'e uymayan ilan geçersiz; ilan yapılmaması/sürelere uyulmaması hariç, 24-25'e aykırı hatalar için 25 ve 40 günlük ilanlı ihalelerde 15 gün, diğerlerinde 10 gün içinde düzeltme ilanı (m.26); ihale dokümanı: idari şartname, teknik şartname, sözleşme tasarısı; idari şartnamede zorunlu hususlar (işin adı-miktarı, idare, usul-tarih-yer, talimatlar, yeterlik, açıklama yöntemi, geçerlilik süresi, konsorsiyum-kısmi teklif-alternatif teklif, giderler, değerlendirme usulü, yerli istekli, teklif-sözleşme türü, teminat oranları, ihale saatinden önce iptalde idarenin serbest olduğu, bütün tekliflerin reddinde serbestlik, başlama-bitirme-gecikme cezası, ödeme-avans-fiyat farkı, süre uzatımı-iş artışı, vergiler, sigorta-yapı denetimi, muayene-kabul, anlaşmazlık çözümü) (m.27); doküman idarede bedelsiz görülebilir, katılmak isteyenler satın almak zorunda; ilan yapılmayan ihalelerde yalnız davet edilenlere satılır; bedel basım maliyetini aşmaz (m.28); ilandan sonra dokümanda değişiklik yapılmaması esas; zorunluysa tutanakla önceki ilanlar geçersiz, yeniden ilan; maddi-teknik hata/eksiklik tespitinde zeyilname son teklif gününden en az 10 gün önce doküman alanların tamamına gönderilir; ek süre gerekirse ihale tarihi bir defaya mahsus en fazla 20 gün ertelenir; zeyilnamede teklifini vermiş olanlara geri çekip yeniden verme imkânı; istekliler son teklif gününden 20 gün öncesine kadar yazılı açıklama talep edebilir, açıklama 10 gün öncesinde bütün doküman alanlara talep eden belirtilmeksizin gönderilir (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"Doküman bedeli hazırlanma maliyetine göre belirlenir\" eski hüküm; basım maliyeti",
+    "Zeyilname son teklif gününden 5 gün önce gönderilir"
+   ],
+   "dogrusu": [
+    "10 gün (m.29)"
+   ]
+  },
+  {
+   "id": "87-9",
+   "madde": [
+    "30",
+    "31",
+    "32"
+   ],
+   "baslik": "Tekliflerin sunulması, teminat, açılması, değerlendirme",
+   "hukum": "Teklif mektubu ve geçici teminat dâhil tüm belgeler tek zarfa; zarfa isteklinin adı-adresi, iş, idarenin adresi yazılır, yapıştırılan yer imzalanır ve mühürlenir; teklif mektupları yazılı-imzalı; dokümanın kabul edildiği, bedelin rakam ve yazıyla uygun yazıldığı, kazıntı-silinti olmadığı, yetkili imzası şart; alternatif teklif dokümanda hüküm varsa (mal alımı); teklifler ihale saatine kadar sıra numaralı alındı karşılığı verilir, sonrası açılmaksızın iade; iadeli taahhütlü posta ile gönderilebilir, ihale saatine kadar ulaşmalı, postadaki gecikme tutanakla; teklifler zeyilname hariç geri alınamaz, değiştirilemez (m.30); başvuru belgeleri aynı esaslarla (m.31); geçerlilik süresi dokümanda; idarece gerekirse isteklinin kabulüyle en fazla dokümandaki süre kadar uzatılabilir (m.32); geçici teminat teklif bedelinin %3'ünden az olmamak üzere istekli tarafından belirlenen tutarda; danışmanlık hizmet ihalelerinde dokümanda belirtilerek geçici teminat alınmayabilir (m.33); teminat olarak kabul edilen değerler: tedavüldeki Türk parası, teminat mektupları (banka + kefalet senetleri), Devlet iç borçlanma senetleri; yabancı bankaların mektupları ve kontrgarantili Türk banka mektupları da kabul; teminat mektupları dışındaki teminatlar ihale komisyonunca teslim alınamaz, saymanlık/muhasebe müdürlüğüne yatırılır; ihale üzerinde kalan ve ekonomik açıdan en avantajlı ikinci teklif sahibinin mektupları ihaleden sonra saymanlığa teslim, diğerleri hemen iade; sözleşme imzalanınca ikincinin teminatı iade; teminatlar haczedilemez, ihtiyati tedbir konulamaz (m.34); teminat mektuplarının kapsam ve şeklini KİK belirler; geçici teminat mektubu süresi teklif geçerlilik süresinden en az 30 gün fazla; kesin teminat mektubu süresi işin bitiş tarihine göre idarece (m.35); teklifler ihale saatinde tutanakla tespit, hazır bulunanlara duyurulur, hemen ihaleye başlanır; zarflar alınış sırasına göre incelenir, m.30/1'e uygun olmayanlar değerlendirmeye alınmaz; zarflar hazır bulunanlar önünde açılır, belge eksikliği ve teklif mektubu-geçici teminat uygunluğu kontrol edilir, eksik olanlar tutanakla; istekliler, teklif fiyatları ve yaklaşık maliyet tutarı açıklanır; bu aşamada red-kabul kararı verilmez, belgeler düzeltilemez-tamamlanamaz; oturum kapatılır (m.36); komisyon net olmayan hususlarda yazılı açıklama isteyebilir, ama fiyat değişikliği veya uygun olmayan teklifi uygun hâle getirme amaçlı olamaz; önce belgeleri eksik/teminatı uygun olmayanlar değerlendirme dışı; teklifin esasını değiştirmeyen bilgi eksikliği idarece belirlenen sürede tamamlatılır, tamamlamayan değerlendirme dışı + geçici teminatı gelir; sonra yeterlik ve dokümana uygunluk ile birim fiyat cetvelinde aritmetik hata incelenir, hatalı teklif değerlendirme dışı (m.37); aşırı düşük teklif: diğer tekliflere veya yaklaşık maliyete göre aşırı düşük olanlardan önemli bileşenler için yazılı açıklama istenir; imalat sürecinin ekonomikliği, teknik çözümler-avantajlı koşullar, işin özgünlüğü dikkate alınır; açıklaması yetersiz veya açıklama yapmayanlar reddedilir; Kurum sınır değer ve sorgulama kriterleri belirlemeye, eşik değerin yarısına kadar hizmet ve yapım ihalelerinde sınır değer altı teklifleri açıklama istenmeksizin reddettirmeye yetkili (m.38); komisyon kararı üzerine idare bütün teklifleri reddedip ihaleyi iptal etmekte serbest, isteklilere derhal bildirilir, yükümlülük doğmaz, talep edilirse gerekçe bildirilir (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"Geçici teminat teklif bedelinin %6'sı\" yanlış; %3 (kesin teminat %6)",
+    "Kesin teminat teklif bedelinin %3'üdür"
+   ],
+   "dogrusu": [
+    "Geçici %3; kesin ihale bedelinin %6'sı (m.33, 43)"
+   ]
+  },
+  {
+   "id": "87-10",
+   "madde": [
+    "40",
+    "41",
+    "42"
+   ],
+   "baslik": "Karar, onay, bildirim, sözleşme, kesin teminat",
+   "hukum": "İhale ekonomik açıdan en avantajlı teklifi veren istekliye bırakılır; en avantajlı teklif sadece fiyat veya fiyatla birlikte işletme-bakım maliyeti, verimlilik, kalite gibi fiyat dışı unsurlar dikkate alınarak (dokümanda parasal değer/ağırlık belirtilir); yerli avantajı uygulanır; en düşük fiyat esasında eşit tekliflerde fiyat dışı unsurlar; komisyon gerekçeli kararını ihale yetkilisi onayına sunar; ihale yetkilisi karar tarihini izleyen en geç 5 iş günü içinde onaylar veya gerekçeyle iptal eder; onaylanınca geçerli, iptalde hükümsüz; onaydan önce ihale üzerinde kalan ve ikinci isteklinin yasaklı olup olmadığı teyit ettirilir, ikisi de yasaklıysa ihale iptal (m.40); ihale sonucu onayı izleyen en geç 3 gün içinde teklif veren bütün isteklilere gerekçeleriyle bildirilir; bildirimden itibaren m.21/b-c ihalelerinde 5 gün, diğer hâllerde 10 gün geçmedikçe sözleşme imzalanamaz (m.41); sürelerin bitimini (ön mali kontrol gerekiyorsa tamamlanmasını) izleyen 3 gün içinde ihale üzerinde kalana tebliğden itibaren 10 gün içinde kesin teminatı verip sözleşme imzalaması bildirilir; yabancı isteklilere 12 gün ilave; sözleşme tarihinde yasaklılık teyidi (m.42); kesin teminat: ihale bedeli üzerinden %6; danışmanlık hizmet ihalelerinde dokümanda belirtilerek sözleşmeden önce alınmayabilir, her hakedişten %6 kesinti; Kurum, teklifi sınır değerin altında olanlardan yaklaşık maliyetin %6'sından az %15'inden fazla olmamak üzere kesin teminat düzenleyebilir (m.43); ihale üzerinde kalan kesin teminatı verip sözleşmeyi imzalamak zorunda; imzalanınca geçici teminat iade; imzalamazsa protestosuz geçici teminatı gelir, idare ihale yetkilisince uygun görülürse ikinci en avantajlı istekliyle (10 günlük sürenin bitimini izleyen 3 gün içinde tebligatla) sözleşme imzalayabilir; o da imzalamazsa teminatı gelir, ihale iptal (m.44); idare görevini yapmazsa istekli sürenin bitimini izleyen en geç 5 gün içinde 10 gün süreli noter ihbarnamesiyle taahhüdünden vazgeçebilir, geçici teminat iade ve belgelendirilmiş giderler (m.45); bütün ihaleler sözleşmeye bağlanır, ihale yetkilisi ve yüklenici imzalar, ortak girişimde bütün ortaklar; dokümanda aksi yoksa notere tescil zorunlu değil (m.46); ihale sonuçları en geç 15 gün içinde Kuruma bildirilir, Bültende yayımlanır; savunma-güvenlik-istihbarat idarelerinin sonuçlarından hangilerinin yayımlanacağını idarenin görüşüyle Kurum belirler (m.47)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözleşmeler noterde tescil edilmek zorundadır\" yanlış",
+    "İhale yetkilisi kararı 20 gün içinde onaylar",
+    "Sözleşme sonuç bildiriminden hemen sonra imzalanabilir"
+   ],
+   "dogrusu": [
+    "5 iş günü (m.40)",
+    "5/10 gün beklenir (m.41)"
+   ]
+  },
+  {
+   "id": "87-11",
+   "madde": [
+    "48",
+    "49",
+    "50"
+   ],
+   "baslik": "Danışmanlık hizmet ihaleleri",
+   "hukum": "Mimarlık-mühendislik, etüt-proje, harita-kadastro, imar planı, ÇED raporu, yazılım geliştirme, tasarım, teknik şartname hazırlama, denetim-kontrolörlük gibi teknik-mali-hukuki hizmetler danışmanlık hizmet sunucularından alınır; sadece belli istekliler arasında ihale usulüyle; yaklaşık maliyeti m.13/b-2 hizmet limitinin 4 katının altında kalan danışmanlıklar hizmet alımı ihalesiyle yapılabilir (m.48); ön yeterlik ilanı m.13 sürelerinde; ilanda kısa listeye alınacak aday sayısı; yeterli adaylar arasından en az 3 en fazla 10 adayın yer aldığı kısa liste (m.49); listedekilere m.13 süreleriyle davet mektubu; yeterli bulunmayanlara bildirim; davet edilebilecek aday 3'ten az ise ihale yapılmaz; açıklama talebi 20 gün, cevap 10 gün, zeyilname 10 gün, erteleme en fazla 20 gün (m.50); malî teklif (teklif mektubu + geçici teminat) ve teknik teklif ayrı zarflarda, ikisi birlikte dış zarfta (m.51); açılışta teknik teklif zarfları açılır, malî teklifler açılmaksızın paketlenip mühürlenir; değerlendirme teknik ve malî iki aşamalı, ayrı puanlama, ağırlık katsayıları (teknik puan ağırlığı daha yüksek); teknik kriterler: benzer sözleşme deneyimi, yöntem, organizasyon, yönetici ve teknik personel nitelikleri; asgari teknik puanın altında kalanlar değerlendirme dışı, malî teklifleri açılmadan iade; asgari puan ve üstü alanların malî zarfları açılır, fiyatlar ve yaklaşık maliyet açıklanır; toplam puanı en yüksek istekli görüşmeye davet edilir, anlaşılırsa ihale; imzalamazsa geçici teminat gelir, ikinciyle görüşme; ön yeterlik veya değerlendirme sonucunda 3'ten az aday/istekli kalırsa ihale yapılmaz (m.52)",
+   "sinavda_boyle_yazarlar": [
+    "\"Danışmanlık ihalesinde önce malî teklif açılır\" yanlış; önce teknik, malî mühürlü bekler",
+    "Danışmanlık ihaleleri açık ihale usulüyle yapılır"
+   ],
+   "dogrusu": [
+    "Belli istekliler (m.48)"
+   ]
+  },
+  {
+   "id": "87-12",
+   "madde": [
+    "53"
+   ],
+   "baslik": "Kamu İhale Kurumu ve Kurulu",
+   "hukum": "KİK kamu tüzel kişiliğini haiz, idari ve malî özerk; ilişkili bakanlık Maliye Bakanlığı; merkezi Ankara; bağımsız, hiçbir organ emir-talimat veremez; Kurum = Kamu İhale Kurulu + Başkanlık + hizmet birimleri; görevleri: ihale başlangıcından sözleşme imzasına kadar idarenin işlemlerine ilişkin şikâyetleri inceleyip sonuçlandırmak; mevzuatı, standart dokümanları ve tip sözleşmeleri hazırlamak; eğitim ve koordinasyon; istatistik; yasaklıların sicilini tutmak; Ar-Ge; ilan esasları ve Kamu İhale Bültenini yayımlamak; yabancı ülkelerde yerli isteklilere engel çıkarılırsa mukabele için Cumhurbaşkanına teklif; bütçe; standart doküman, tip sözleşme, yönetmelik ve tebliğler Kurul kararıyla, Resmî Gazete'de; Kamu İhale Kurulu biri başkan biri ikinci başkan Cumhurbaşkanınca atanan 9 üye (en az 4 yıllık öğrenim; siyasi parti ilişkisi olmamalı); süresi dolmadan görevden alınamaz (hastalık, şart kaybı, görevi kötüye kullanma/yüz kızartıcı suçta Cumhurbaşkanı onayıyla); boşalan üyeliğe 1 ay içinde atama; üyeler Yargıtay Birinci Başkanlık Kurulu huzurunda yemin eder; telif ve ders dışında görev alamaz, ticaret yapamaz; hisselerini 30 gün içinde elden çıkarır; Kurul kararları yerindelik denetimine tabi tutulamaz; üyeler ve personel hakemlik-bilirkişilik yapamaz; görevleri nedeniyle suçlarda Devlet memuru sayılır; mal beyanı; Kurul üye tam sayısıyla toplanır, çoğunlukla karar, eşitlikte başkanın tarafı, çekimser oy yok, en az 6 üyeyle toplanabilir; hısımlarını ilgilendiren kararlara katılamaz; yılda 5 toplantıya katılmayan çekilmiş sayılır; 4 başkan yardımcısı (Bakanca) (m.53)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurul kararları yerindelik denetimine tabidir\" yanlış"
+   ],
+   "dogrusu": [
+    "kamu tüzel kişiliğini haiz, idari ve malî özerk · Maliye Bakanlığı · Ankara · Kamu İhale Kurulu + Başkanlık + hizmet birimleri · şikâyetleri inceleyip sonuçlandırmak · yasaklıların sicilini tutmak · Kamu İhale Bültenini · Cumhurbaşkanına teklif · Kurul kararıyla · Kamu İhale Kurulu · Cumhurbaşkanınca atanan 9 üye · 1 ay · Yargıtay Birinci Başkanlık Kurulu · 30 gün · Kurul kararları yerindelik denetimine tabi tutulamaz · üye tam sayısıyla · çoğunlukla · çekimser oy yok · 6 üyeyle · 5 toplantıya · 4 başkan yardımcısı"
+   ]
+  },
+  {
+   "id": "87-13",
+   "madde": [
+    "54",
+    "55",
+    "56"
+   ],
+   "baslik": "Şikâyet, itirazen şikâyet, yargı",
+   "hukum": "Hak kaybı/zarar iddia eden aday, istekli ve istekli olabilecekler şikâyet (idareye) ve itirazen şikâyet (Kuruma) başvurusu yapabilir; bunlar dava açılmadan önce tüketilmesi zorunlu idari başvuru yolları; dilekçede başvuru sahibi, idare-ihale, farkına varılan tarih, konu-sebep-deliller, şikâyet bildirim tarihi; itirazen şikâyette Cumhurbaşkanı kararıyla başvuru bedelinin 4 katına kadar başvuru teminatı alınabilir; aynı kişi birden fazla ihaleye, birden fazla kişi aynı ihaleye tek dilekçeyle başvuramaz; başka mercie yapılıp gönderilen başvurularda kayıt tarihi başvuru tarihi; eksiklikler başvuru süresi sonuna kadar giderilebilir; kararlar: ihalenin iptali, düzeltici işlem belirlenmesi, başvurunun reddi (süre-usul-şekil, sözleşme imzalanmış olması, hukuka aykırılık yok, görev alanı dışı); görev alanı dışı hariç redde başvuru teminatı gelir (m.54); şikâyet işlemin farkına varıldığı tarihi izleyen günden itibaren m.21/b-c ihalelerinde 5 gün, diğerlerinde 10 gün içinde ve sözleşme imzalanmadan önce idareye; ilana yönelik başvuru süresi ilk ilan tarihinden, dokümana yönelik dokümanın satın alındığı tarihten; ilan-doküman şikâyetleri en geç ihale tarihinden 3 iş günü öncesine kadar; idare 10 gün içinde gerekçeli karar alır, kararı izleyen 3 gün içinde bildirir; karar alınmazsa sürenin bitimini, uygun bulunmazsa bildirimi izleyen 10 gün içinde Kuruma itirazen şikâyet; şikâyet üzerine kararın son bildiriminden (veya karar süresinin bitiminden) itibaren 10 gün geçmeden ve itirazen şikâyet sorgulaması yapılmadan ya da Kurum nihai karar vermeden sözleşme imzalanamaz (m.55); itirazen şikâyet sözleşme imzalanmadan önce; ihalenin iptali kararlarından yalnız şikâyet/itirazen şikâyet üzerine alınanlar itirazen şikâyete konu olur, bunlara karşı 5 gün içinde doğrudan Kuruma; Kurum iddialar, idarenin kararındaki hususlar ve eşit muamele ilkesi açısından inceler; usulsüz sözleşme imzalanması veya feragat incelemeye engel değil; Kurul gerekirse tarafları dinler; Kurum nihai kararını dosyanın kayıtlara alındığı tarihi izleyen 20 gün içinde vermek zorunda (m.21/b-c ve iptal kararına itirazlarda 10 iş günü); teknik konularda uzman görüşü alınabilir; kararlar karar tarihini izleyen 5 iş günü içinde tebligata, tebligatı izleyen 5 gün içinde internette; erişim ücretsiz; idareler Kurul kararlarını ivedilikle uygular (m.56); Kurumun nihai kararları mahkemelerde dava konusu edilebilir, öncelikle görülür (m.57)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şikâyet yoluna gitmeden doğrudan dava açılabilir\" yanlış; zorunlu idari başvuru",
+    "Şikâyet başvurusu sözleşme imzalandıktan sonra da yapılabilir"
+   ],
+   "dogrusu": [
+    "Sözleşmeden önce (m.55)"
+   ]
+  },
+  {
+   "id": "87-14",
+   "madde": [
+    "58",
+    "59",
+    "60"
+   ],
+   "baslik": "Yasaklama ve ceza sorumluluğu",
+   "hukum": "m.17 yasak fiillerde bulunanlara 1 yıldan az olmamak üzere 2 yıla kadar; üzerine ihale yapıldığı hâlde mücbir sebep dışında sözleşme yapmayanlara 6 aydan az olmamak üzere 1 yıla kadar bütün kamu ihalelerinden yasaklama; karar ihaleyi yapan bakanlık/ilgili-bağlı bakanlık, bakanlığa bağlı sayılmayan idarelerde ihale yetkilileri, il özel idarelerinde İçişleri Bakanlığı, belediyelerde Çevre ve Şehircilik Bakanlığı; şahıs şirketinde ortakların tamamı, sermaye şirketinde yarısından fazla hisseli ortaklar; yasaklılar ortağı oldukları şirketler de; yasaklama kararının yürürlüğüne kadar aynı idarenin sonraki ihalelerine de alınmaz; karar tespiti izleyen en geç 45 gün içinde, Resmî Gazete'ye 15 gün içinde, yayımıyla yürürlük; KİK sicil tutar; idareler yasaklama gerektiren durumu bakanlığa bildirmekle yükümlü (m.58); TCK'ya göre suç oluşturan yasak fiillerde Cumhuriyet Savcılığına suç duyurusu; idari yasaklamanın bitiminden itibaren 1 yıldan az olmamak üzere 3 yıla kadar mahkeme kararıyla yasaklama; kamu davası açılanlar yargılama sonuna kadar ihalelere katılamaz, KİK'e bildirilir; mükerrer ceza alanlar ve şirketleri sürekli yasaklanır; sürekli yasaklılar KİK'çe 15 gün içinde RG'de duyurulur (m.59); ihale yetkilisi, komisyon başkan-üyeleri ve süreçteki görevliler yasak fiil, tarafsızlık ihlali, ihmal-kusurla zarara yol açarsa disiplin cezası + ceza kovuşturması + tazmin; hüküm giyenler bu işlerde görevlendirilemez, yetkili kadrolara atanamaz; m.5 ilkelerine ve m.62 kurallarına aykırı ihaleye izin verenler ve yapanlar hakkında da aynı müeyyideler (m.60); görevliler ve danışmanlar ihale süreci bilgilerini ve yaklaşık maliyeti ifşa edemez; aksine m.58 ve 60 (m.61)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözleşme yapmayana 1-2 yıl yasaklama\" yanlış; 6 ay-1 yıl",
+    "Sözleşme imzalamayan istekli 1-2 yıl yasaklanır"
+   ],
+   "dogrusu": [
+    "6 ay-1 yıl (m.58)"
+   ]
+  },
+  {
+   "id": "87-15",
+   "madde": [
+    "62",
+    "63",
+    "64"
+   ],
+   "baslik": "İdarelerce uyulacak diğer kurallar, yerli istekli, süreler, tebligat, güncelleme",
+   "hukum": "Birden fazla yılı kapsayan işlerde yıllar itibarıyla ödenek programlanması zorunlu; ilk yıl ödeneği proje maliyetinin %10'undan az olamaz (stratejik yatırımlar hariç), sonraki dilimler azaltılamaz; ihaleler zamanında, yatırım niteliğinde birden fazla yıllı işlerde yılın ilk 9 ayında sonuçlandırılması esas (doğal afet hariç); ertesi yılın süreklilik arz eden mal-hizmet alımları için önceki yıl ihaleye çıkılabilir; yapım işlerinde arsa temin edilmeden, mülkiyet-kamulaştırma-imar tamamlanmadan ve uygulama projesi yapılmadan ihaleye çıkılamaz; özgün-karmaşık işlerde ön/kesin proje; uygulama projesi olan yapımda anahtar teslimi götürü bedel zorunlu; afet, onarım, zemin etüdü gerektiren işler (bina hariç) ve güzergâh değişikliği muhtemel işlerde kesin proje üzerinden; baraj, sulama, isale hattı, enerji hattı, karayolu, liman, demiryolu, boru hattında arsa-kamulaştırma şartı aranmaz; yaklaşık maliyet isteklilere duyurulmaz; personel çalıştırılmasına dayalı hizmet alımı yasağı (5018 I-IV cetvel idareleri, MİT hariç, belediyeler vb.); tanım: personel sayısı dokümanda belirli, çalışma saatlerinin tamamı idare için, yaklaşık maliyetin en az %70'i işçilik, süreklilik arz eden işler; danışmanlık, hastane bilgi sistemi ve çağrı merkezi hariç; ihale dokümanı hazırlanmadan ilan yapılamaz; ilan sürelerinin hesabında ilan günü sayılır, ihale günü sayılmaz; ihale tarihi tatile rastlarsa tekrar ilana gerek kalmaksızın tatili izleyen ilk iş günü aynı yer-saatte; ilandan sonra çalışma saati değişse de ilan edilen saatte; iş deneyimi olmayan mühendis-mimarlar için mezuniyetten sonraki her yıl (toplam 15 yılı geçmemek üzere) belli tutar benzer iş deneyimi sayılır, 5 yıldır en az %51 hisseli tüzel kişilerce de kullanılabilir; m.21 ve 22 limitleri dâhilindeki harcamaların yıllık toplamı bütçe ödeneklerinin %10'unu Kamu İhale Kurulunun uygun görüşü olmadıkça aşamaz (m.62); yerli istekli: eşik değer altı ihalelerde yalnız yerli isteklilerin katılabileceği düzenlenebilir; hizmet ve yapımda yerli istekliler lehine %15'e kadar fiyat avantajı; mal alımında yerli malı teklif edene %15'e kadar avantaj, Sanayi Bakanlığınca belirlenip Kurumca ilan edilen orta-yüksek teknolojili ürünlerde %15 avantaj mecburi, yerli yazılımda %15 mecburi; yapımda makine-malzeme-ekipmanın yerli malı olması şartı getirilebilir (listedeki mallarda şart); yerli malı belgesi; ortak girişimin yerli sayılması için bütün ortakların yerli olması gerekli (m.63); sürelerde hüküm yoksa Borçlar Kanunu (m.64); tebligat: imza karşılığı elden, iadeli taahhütlü mektup, elektronik ortam, faks; iadeli taahhütlüde postaya verilmeyi izleyen 7. gün (AYM iptal), yabancı isteklilerde 19. gün tebliğ sayılır (erken ulaşırsa fiili tarih); elektronik/faks bildirimlerde bildirim tarihi tebliğ tarihi, çerçeve anlaşma fiyat tekliflerinin aynı gün teyidi; e-imza ve EKAP işlemlerinde teyit aranmaz (m.65); değişiklik ancak bu Kanunda (m.66); eşik değerler ve parasal limitler önceki yılın TEFE'sine göre KİK'çe güncellenir, her yıl 1 Şubat'tan geçerli, 1 milyon TL altı dikkate alınmaz; olağanüstü hâllerde Kurum teklifi + Cumhurbaşkanı kararıyla (m.67); bu Kanun kapsamındaki ihalelerde 2886 sayılı Devlet İhale Kanunu uygulanmaz; TOKİ projelerinde bazı şartlar aranmaz (m.68); m.53 ve geçici 1, 5 yayımında, diğer maddeler 1.1.2003'te yürürlük (m.69)",
+   "sinavda_boyle_yazarlar": [
+    "\"İhale tarihi tatile rastlarsa yeniden ilan yapılır\" yanlış",
+    "Eşik değerler her yıl 1 Ocak'ta güncellenir"
+   ],
+   "dogrusu": [
+    "1 Şubat (m.67)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

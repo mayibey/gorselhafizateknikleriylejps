@@ -1,0 +1,741 @@
+{
+ "kanun_id": 103,
+ "ad": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_103.json",
+ "kartlar": [
+  {
+   "id": "103-0",
+   "madde": [],
+   "baslik": "Rehber'in dayanağı",
+   "hukum": "06.07.2019 tarih ve 30823 sayılı RG'de yayımlanan 2019/12 sayılı Genelge doğrultusunda, Cumhurbaşkanlığı Dijital Dönüşüm Ofisi (CBDDO) koordinasyonunda paydaş katılımıyla hazırlanmıştır (Giriş)",
+   "sinavda_boyle_yazarlar": [
+    "hazırlayan kurum BTK veya USOM yapılır"
+   ],
+   "dogrusu": [
+    "06.07.2019 tarih ve 30823 sayılı RG · 2019/12 sayılı Genelge · Cumhurbaşkanlığı Dijital Dönüşüm Ofisi (CBDDO)"
+   ]
+  },
+  {
+   "id": "103-1",
+   "madde": [],
+   "baslik": "Amaç",
+   "hukum": "Bilgi güvenliği risklerinin azaltılması, ortadan kaldırılması ve gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik bilgi/verinin güvenliği için asgari güvenlik tedbirlerinin belirlenmesi (Giriş 1.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"azami tedbirler\" denir"
+   ],
+   "dogrusu": [
+    "gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik bilgi/verinin · asgari güvenlik tedbirlerinin"
+   ]
+  },
+  {
+   "id": "103-2",
+   "madde": [],
+   "baslik": "Kapsam",
+   "hukum": "Bilgi işlem birimi barındıran veya bilgi işlem hizmetlerini sözleşmeyle üçüncü taraflardan alan, devlet teşkilatı içindeki kurum ve kuruluşlar ile kritik altyapı hizmeti veren işletmeler (Giriş 1.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca kendi bilgi işlem birimi olanlar\" denir"
+   ],
+   "dogrusu": [
+    "veya · devlet teşkilatı içindeki kurum ve kuruluşlar · kritik altyapı hizmeti veren işletmeler"
+   ]
+  },
+  {
+   "id": "103-3",
+   "madde": [],
+   "baslik": "Hedef sayısı",
+   "hukum": "Rehber'in uygulanması sonucu beklenenler somutlaştırılarak 12 hedef tanımlanmıştır (Şekil 1)",
+   "sinavda_boyle_yazarlar": [
+    "10 veya 15 denir"
+   ],
+   "dogrusu": [
+    "12 hedef"
+   ]
+  },
+  {
+   "id": "103-4",
+   "madde": [],
+   "baslik": "Hedef 1",
+   "hukum": "Yerli ve millî ürün kullanımının teşvik edilmesi",
+   "sinavda_boyle_yazarlar": [
+    "\"yabancı ürün yasağı\" diye sertleştirilir"
+   ],
+   "dogrusu": [
+    "Yerli ve millî ürün kullanımının teşvik edilmesi"
+   ]
+  },
+  {
+   "id": "103-5",
+   "madde": [],
+   "baslik": "Hedef 2",
+   "hukum": "Rehber'i uygulayacak kurumlarda mükerrer çalışma ve yatırımların önüne geçilmesi",
+   "sinavda_boyle_yazarlar": [
+    "\"her kurumun kendi rehberini hazırlaması\" denir"
+   ],
+   "dogrusu": [
+    "mükerrer çalışma ve yatırımların önüne geçilmesi"
+   ]
+  },
+  {
+   "id": "103-6",
+   "madde": [],
+   "baslik": "Hedef 3",
+   "hukum": "Güvenlik tedbirlerinin üç seviyeli olacak şekilde derecelendirilmesi ve varlık gruplarına güvenlik dereceleriyle uyumlu asgari tedbirlerin uygulanması",
+   "sinavda_boyle_yazarlar": [
+    "\"iki seviyeli\" denir — 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "üç seviyeli · asgari"
+   ]
+  },
+  {
+   "id": "103-7",
+   "madde": [],
+   "baslik": "Hedef 4-5",
+   "hukum": "Güvenlik tedbirleriyle ilgili detayların izlenebilirliğinin sağlanacak şekilde yapılandırılması; tedbirlerin ürün ve teknoloji bağımsız olarak uygulanabilmesi",
+   "sinavda_boyle_yazarlar": [
+    "\"belirli ürünlere özgü\" denir"
+   ],
+   "dogrusu": [
+    "izlenebilirliğinin · ürün ve teknoloji bağımsız"
+   ]
+  },
+  {
+   "id": "103-8",
+   "madde": [],
+   "baslik": "Hedef 6-7",
+   "hukum": "Tedbirlerin uygulanıp uygulanmadığının denetlenebilmesi; tedbirlerin birbirinden bağımsız uygulanabilirliğini sağlayacak şekilde gruplandırılması ve Rehber'in modülerliği",
+   "sinavda_boyle_yazarlar": [
+    "\"tedbirler ancak toptan uygulanır\" denir"
+   ],
+   "dogrusu": [
+    "denetlenebilmesi · birbirinden bağımsız uygulanabilirliğini · modülerliği"
+   ]
+  },
+  {
+   "id": "103-9",
+   "madde": [],
+   "baslik": "Hedef 8-9",
+   "hukum": "Tedbirlerin teknik olarak tüm kurum ve kuruluşlarca uygulanabilir olması; ihtiyaçlar ile gelişen ve değişen şartlar dikkate alınarak Rehber'in sürdürülebilirliği",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız büyük kurumlar uygular\" denir"
+   ],
+   "dogrusu": [
+    "tüm kurum ve kuruluşlarca uygulanabilir · sürdürülebilirliği"
+   ]
+  },
+  {
+   "id": "103-10",
+   "madde": [],
+   "baslik": "Hedef 10",
+   "hukum": "Rehber'in format ve içeriğinin özgün olması",
+   "sinavda_boyle_yazarlar": [
+    "\"hedefler arasında değildir\" denir; listede 10 numaradadır"
+   ],
+   "dogrusu": [
+    "format ve içeriğinin özgün olması"
+   ]
+  },
+  {
+   "id": "103-11",
+   "madde": [],
+   "baslik": "Hedef 11",
+   "hukum": "Rehber'in hem tedbirleri uygulayacak personele hem de bunların uygulanıp uygulanmadığını denetleyecek denetçilere hitap etmesi",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız teknik personele hitap eder\" denir"
+   ],
+   "dogrusu": [
+    "tedbirleri uygulayacak personele · denetçilere"
+   ]
+  },
+  {
+   "id": "103-12",
+   "madde": [],
+   "baslik": "Hedef 12",
+   "hukum": "Rehber içeriğinin bilgi güvenliği çerçevesinde oluşturulmuş mevzuat ve rehberler ile ulusal/uluslararası standartlara uyumlu olması",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca ulusal mevzuat\" denir"
+   ],
+   "dogrusu": [
+    "mevzuat ve rehberler ile ulusal/uluslararası standartlara uyumlu"
+   ]
+  },
+  {
+   "id": "103-13",
+   "madde": [],
+   "baslik": "Rehber'in dört ana bölümü",
+   "hukum": "(1) Rehber Uygulama Süreci, (2) Varlık Gruplarına Yönelik Güvenlik Tedbirleri, (3) Uygulama ve Teknoloji Alanlarına Yönelik Güvenlik Tedbirleri, (4) Sıkılaştırma Tedbirleri",
+   "sinavda_boyle_yazarlar": [
+    "\"denetim tedbirleri\" diye beşinci bölüm uydurulur"
+   ],
+   "dogrusu": [
+    "Rehber Uygulama Süreci · Varlık Gruplarına Yönelik Güvenlik Tedbirleri · Uygulama ve Teknoloji Alanlarına Yönelik Güvenlik Tedbirleri · Sıkılaştırma Tedbirleri"
+   ]
+  },
+  {
+   "id": "103-14",
+   "madde": [],
+   "baslik": "BGYS ilişkisi",
+   "hukum": "Rehber uygulama süreci, bilgi güvenliği yönetim süreçlerine alternatif değildir; mevcut süreçlere teknik katkı sağlar ve kurumlar bu faaliyetleri mevcut süreçleri kapsamında uyarlayarak yürütür",
+   "sinavda_boyle_yazarlar": [
+    "\"ISO 27001 yerine geçer\" denir"
+   ],
+   "dogrusu": [
+    "alternatif değildir · teknik katkı · uyarlayarak"
+   ]
+  },
+  {
+   "id": "103-15",
+   "madde": [],
+   "baslik": "Uygulama süreci alt süreçleri",
+   "hukum": "Planlama, uygulama, kontrol etme ve önlem alma ve değişiklik yönetimi (Bölüm 2, Şekil 5)",
+   "sinavda_boyle_yazarlar": [
+    "alt süreç sayısı 3 yapılır veya \"denetim\" ayrı alt süreç gösterilir"
+   ],
+   "dogrusu": [
+    "Planlama · uygulama · kontrol etme ve önlem alma · değişiklik yönetimi"
+   ]
+  },
+  {
+   "id": "103-16",
+   "madde": [],
+   "baslik": "Planlama adımları",
+   "hukum": "Varlıkların gruplandırılması → varlık gruplarının kritiklik derecelendirmesi → mevcut durum ve boşluk analizi → rehber uygulama yol haritasının hazırlanması (2.1)",
+   "sinavda_boyle_yazarlar": [
+    "sıra bozulur; boşluk analizi kritiklik derecelendirmesinden önce gösterilir"
+   ],
+   "dogrusu": [
+    "kritiklik derecelendirmesi · mevcut durum ve boşluk analizi · rehber uygulama yol haritasının hazırlanması"
+   ]
+  },
+  {
+   "id": "103-17",
+   "madde": [],
+   "baslik": "Varlık grubu ana başlıkları",
+   "hukum": "Ağ ve Sistemler, Uygulamalar, Taşınabilir Cihaz ve Ortamlar, Nesnelerin İnterneti (IoT) Cihazları, Fiziksel Mekânlar, Personel (2.1.1). Altı başlıktır ve Personel de bir varlık grubudur",
+   "sinavda_boyle_yazarlar": [
+    "\"Personel varlık grubu değildir\" denir veya \"Veri\" diye yedinci başlık eklenir"
+   ],
+   "dogrusu": [
+    "Ağ ve Sistemler, Uygulamalar, Taşınabilir Cihaz ve Ortamlar, Nesnelerin İnterneti (IoT) Cihazları, Fiziksel Mekânlar, Personel · Altı başlıktır ve Personel de bir varlık grubudur"
+   ]
+  },
+  {
+   "id": "103-18",
+   "madde": [],
+   "baslik": "Tek grup kuralı",
+   "hukum": "Tüm kurumsal varlıkların mümkün olduğunca tek bir varlık grubunda yer alması sağlanır; birden fazla grupça adreslenmesi gereken varlık, kritiklik derecesi en yüksek varlık grubu üzerinden değerlendirilir ve dâhil olduğu tüm grupların tedbirleri ele alınır (2.1.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"en düşük kritiklik\" denir"
+   ],
+   "dogrusu": [
+    "mümkün olduğunca tek bir varlık grubunda · kritiklik derecesi en yüksek"
+   ]
+  },
+  {
+   "id": "103-19",
+   "madde": [],
+   "baslik": "Gruplama ilkeleri",
+   "hukum": "Aynı güvenlik izolasyonundaki varlıklar mümkünse aynı gruba; farklı güvenlik seviyesi gerektirenler farklı gruplara konur; aynı seviyede tedbir uygulanacak gruplar birleştirilerek grup sayısı azaltılır; her ana başlık altındaki grup sayısı yönetilebilir olmalıdır (2.1.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"grup sayısı ne kadar fazlaysa o kadar iyidir\" denir"
+   ],
+   "dogrusu": [
+    "aynı · farklı güvenlik seviyesi · farklı · birleştirilerek grup sayısı azaltılır · yönetilebilir"
+   ]
+  },
+  {
+   "id": "103-20",
+   "madde": [],
+   "baslik": "Kritiklik derecesi boyutları",
+   "hukum": "İşlenen veri: gizlilik, bütünlük, erişilebilirlik. Etki alanı: bağımlı varlıklar, etkilenen kişi sayısı, kurumsal sonuçlar, sektörel etki, toplumsal sonuçlar (2.1.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"maliyet\" boyutu eklenir"
+   ],
+   "dogrusu": [
+    "İşlenen veri · Etki alanı"
+   ]
+  },
+  {
+   "id": "103-21",
+   "madde": [],
+   "baslik": "Gizlilik-bütünlük-erişilebilirlik",
+   "hukum": "Gizlilik: bilginin yetkisiz kişilerin erişimine karşı korunması. Bütünlük: bilginin tam ve doğru olma durumunun korunması. Erişilebilirlik: bilginin yetkili kişilerce ulaşılabilir ve kullanılabilir olması (2.1.2)",
+   "sinavda_boyle_yazarlar": [
+    "gizlilik ile bütünlük tanımları yer değiştirilir"
+   ],
+   "dogrusu": [
+    "yetkisiz kişilerin erişimine karşı · tam ve doğru olma · yetkili kişilerce ulaşılabilir ve kullanılabilir"
+   ]
+  },
+  {
+   "id": "103-22",
+   "madde": [],
+   "baslik": "Kritiklik anketi ve Delfi",
+   "hukum": "Her varlık grubu için EK-C.1'deki anket ilgili paydaşların katılımıyla doldurulur; Delfi metodu önerilir: uzmanlar belirlenir → anket doldurulur → sonuçlar değerlendirilir → ortak karara varılana kadar tekrarlanır → uzlaşılan karar uygulanır (2.1.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"anket bir kez doldurulur\" denir"
+   ],
+   "dogrusu": [
+    "EK-C.1'deki anket · Delfi metodu · ortak karara varılana kadar"
+   ]
+  },
+  {
+   "id": "103-23",
+   "madde": [],
+   "baslik": "Kritiklik eşikleri",
+   "hukum": "Anket puanı 18'den küçükse Derece 1; 18 (dâhil) ile 28 arasındaysa Derece 2; 28 ve daha yüksekse Derece 3 (Tablo 3)",
+   "sinavda_boyle_yazarlar": [
+    "eşikler 20/30 yapılır ya da \"18 dâhil\" kaydı kaldırılır"
+   ],
+   "dogrusu": [
+    "18'den küçükse Derece 1 · 18 (dâhil) ile 28 arasındaysa Derece 2 · 28 ve daha yüksekse Derece 3"
+   ]
+  },
+  {
+   "id": "103-24",
+   "madde": [],
+   "baslik": "Denetim yöntemleri",
+   "hukum": "Mülakat, gözden geçirme, güvenlik denetimi, sızma testi, kaynak kod analizi (Giriş 1.4). Beş yöntemdir",
+   "sinavda_boyle_yazarlar": [
+    "\"anket\" veya \"gözlem\" altıncı yöntem olarak eklenir"
+   ],
+   "dogrusu": [
+    "Mülakat, gözden geçirme, güvenlik denetimi, sızma testi, kaynak kod analizi"
+   ]
+  },
+  {
+   "id": "103-25",
+   "madde": [],
+   "baslik": "Mülakat / gözden geçirme",
+   "hukum": "Mülakat: çalışmaların nasıl yapıldığının ilgili personelle yüz yüze görüşülerek öğrenilmesi. Gözden geçirme: güvenlik gereksinimleri göz önünde bulundurularak detaylı ve sistematik inceleme",
+   "sinavda_boyle_yazarlar": [
+    "ikisi yer değiştirilir"
+   ],
+   "dogrusu": [
+    "ilgili personelle yüz yüze görüşülerek · detaylı ve sistematik inceleme"
+   ]
+  },
+  {
+   "id": "103-26",
+   "madde": [],
+   "baslik": "Sızma testi",
+   "hukum": "Güvenlik açıklarının tespitini sağlayan, yetkin kişilerce ve yasalara uygun olarak gerçekleştirilen güvenlik testleri",
+   "sinavda_boyle_yazarlar": [
+    "\"yasal izin gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "yetkin kişilerce ve yasalara uygun"
+   ]
+  },
+  {
+   "id": "103-27",
+   "madde": [],
+   "baslik": "Tedbir alt başlıkları",
+   "hukum": "Tedbir ana başlıkları amacı, önemi ve uygulama adımları ile açıklanır; alt başlıklar Tedbirler (seviyelendirilmiş liste) ve Denetim Maddeleri (yöntem ve soru önerileri) olarak detaylandırılır",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız tedbir listesi vardır\" denir"
+   ],
+   "dogrusu": [
+    "amacı, önemi ve uygulama adımları · Tedbirler · Denetim Maddeleri"
+   ]
+  },
+  {
+   "id": "103-28",
+   "madde": [],
+   "baslik": "Denetim sıklığı",
+   "hukum": "Rehber'in uygulanmasına ilişkin denetimler, gerekli mekanizmalar oluşturularak yılda en az bir kez, iç denetim yoluyla yapılır; Bilgi ve İletişim Güvenliği Denetim Rehberi esas alınır (2.3.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"dış denetim zorunludur\" veya \"iki yılda bir\" denir"
+   ],
+   "dogrusu": [
+    "yılda en az bir kez, iç denetim yoluyla · Bilgi ve İletişim Güvenliği Denetim Rehberi"
+   ]
+  },
+  {
+   "id": "103-29",
+   "madde": [],
+   "baslik": "Yol haritası izleme",
+   "hukum": "Dönem sonlarında; yürütülen çalışmalar, planlanan hedeflerden sapmalar, sorun ve riskler ile alınan önlemleri içeren yol haritası ilerleme raporları hazırlanır (2.3.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"rapor gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "planlanan hedeflerden sapmalar · yol haritası ilerleme raporları"
+   ]
+  },
+  {
+   "id": "103-30",
+   "madde": [],
+   "baslik": "Ağların izole edilmesi (3.1.6.6)",
+   "hukum": "Kablolu ve kablosuz ağlar bilgi güvenliği gereksinimleri doğrultusunda katmanlara ayrılmalı; yalnızca yetkili sistemlerin iletişim kurabilmesi için LAN/VLAN'lar arasında erişim denetimi yapılmalı; istemci ağları ile sunucu/uygulama ağları ayrılmalı, sunucu ağında istemci yer almamalı; yönetimsel işlemler için ayrı yönetim ağları kullanılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"sunucu ağında istemci yer almalıdır\" denir — 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "katmanlara ayrılmalı · LAN/VLAN'lar arasında erişim denetimi · istemci ağları ile sunucu/uygulama ağları ayrılmalı · sunucu ağında istemci yer almamalı · ayrı yönetim ağları"
+   ]
+  },
+  {
+   "id": "103-31",
+   "madde": [],
+   "baslik": "Ağ topolojisi (3.1.6.1)",
+   "hukum": "Kurum ağlarına ait topolojiler güvenli bir şekilde tutulmalı ve güncelliği kontrol edilmelidir",
+   "sinavda_boyle_yazarlar": [
+    "izolasyon tedbiriyle karıştırılır"
+   ],
+   "dogrusu": [
+    "güvenli bir şekilde tutulmalı · güncelliği kontrol edilmelidir"
+   ]
+  },
+  {
+   "id": "103-32",
+   "madde": [],
+   "baslik": "Ağ cihazlarının güvenli konfigürasyonu (3.1.6.2)",
+   "hukum": "Endüstri standartları ve üretici tavsiyelerine uygun yapılandırma; varsayılan parola ve kullanıcı adları değiştirilmeli; yönetimsel erişimde komut satırı ve konsola parola ile girilmeli; güvenli protokoller kullanılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"varsayılan parolalar korunur\" denir"
+   ],
+   "dogrusu": [
+    "varsayılan parola ve kullanıcı adları değiştirilmeli · parola ile · güvenli protokoller"
+   ]
+  },
+  {
+   "id": "103-33",
+   "madde": [],
+   "baslik": "DoS/DDoS koruması (3.1.6.7)",
+   "hukum": "İnternete açık hizmetler için güvenlik ürünlerinde özel konfigürasyon, engelleme sistemlerinin düzenli test edilmesi ve iyileştirilmesi, hizmet bir sağlayıcıdan alınıyorsa taahhüt alınması ve bunun şartname ve sözleşmelerde belirtilmesi",
+   "sinavda_boyle_yazarlar": [
+    "ağ izolasyonu tanımıyla karıştırılır"
+   ],
+   "dogrusu": [
+    "özel konfigürasyon · düzenli test edilmesi ve iyileştirilmesi · taahhüt alınması · şartname ve sözleşmelerde belirtilmesi"
+   ]
+  },
+  {
+   "id": "103-34",
+   "madde": [],
+   "baslik": "İnternetten kurum içi kaynaklara erişim (3.1.6.8)",
+   "hukum": "Kontrol dışı erişim engellenmeli; gerekliyse VPN kullanılmalı; uzaktan erişimler kurum politikalarına uygun, kısıtlı süre ve yetkilerle yapılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"süre ve yetki sınırı gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "engellenmeli · VPN · kısıtlı süre ve yetkilerle"
+   ]
+  },
+  {
+   "id": "103-35",
+   "madde": [],
+   "baslik": "Misafir ağı (3.1.6.10)",
+   "hukum": "Kurum ağıyla fiziksel ve/veya mantıksal olarak izole bir misafir ağı kurulmalı; misafirler bağlanmadan önce kimlik doğrulanmalı, tüm erişimler kayıt altına alınmalı ve misafir cihazları yalnızca misafir ağına erişebilmelidir",
+   "sinavda_boyle_yazarlar": [
+    "\"misafirler kurum ağına da erişebilir\" denir"
+   ],
+   "dogrusu": [
+    "fiziksel ve/veya mantıksal olarak izole · kimlik doğrulanmalı · kayıt altına alınmalı · yalnızca misafir ağına"
+   ]
+  },
+  {
+   "id": "103-36",
+   "madde": [],
+   "baslik": "Yerel güvenlik duvarı (3.1.6.11)",
+   "hukum": "Tüm sunucu ve istemcilerde yerel güvenlik duvarı, en az yetki prensibi gözetilerek yapılandırılmalı; yapılandırma varsayılan reddetme (default deny) kuralını içermeli, tüm açık portlara kural yazılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"default allow\" denir"
+   ],
+   "dogrusu": [
+    "en az yetki prensibi · varsayılan reddetme (default deny)"
+   ]
+  },
+  {
+   "id": "103-37",
+   "madde": [],
+   "baslik": "IP telefon (3.1.6.12-14)",
+   "hukum": "IP telefon kullanılıyorsa sistem güvenlik duvarlarıyla korunmalı; iz kayıtları tutulmalı ve düzenli aralıklarla bir sunucuda yedeklenmeli; parolalar güçlü olmalı ve periyodik güncellenmelidir",
+   "sinavda_boyle_yazarlar": [
+    "\"iz kaydı gerekmez\" denir. MEBS için tipik soru alanı"
+   ],
+   "dogrusu": [
+    "güvenlik duvarlarıyla korunmalı · iz kayıtları tutulmalı · yedeklenmeli · güçlü olmalı ve periyodik güncellenmelidir"
+   ]
+  },
+  {
+   "id": "103-38",
+   "madde": [],
+   "baslik": "E-posta güvenliği (3.1.4)",
+   "hukum": "Relay belirlenen IP'ler dışında yasak, kullanılmayan protokoller kapatılır; gönderimde SMTP kimlik doğrulaması; spam için DNS tabanlı filtreleme ve kara liste; sahte/değiştirilmiş e-postalara karşı SPF, DKIM; risk içeren çalıştırılabilir dosya türleri engellenir; sunucular varsayılan ayarlarla kullanılmaz",
+   "sinavda_boyle_yazarlar": [
+    "\"beyaz liste yerine kara liste yoktur\" veya SPF/DKIM yerine başka teknoloji yazılır"
+   ],
+   "dogrusu": [
+    "belirlenen IP'ler dışında yasak · SMTP kimlik doğrulaması · DNS tabanlı filtreleme ve kara liste · SPF, DKIM · çalıştırılabilir dosya türleri engellenir · varsayılan ayarlarla kullanılmaz"
+   ]
+  },
+  {
+   "id": "103-39",
+   "madde": [],
+   "baslik": "Zararlı yazılımdan korunma (3.1.5)",
+   "hukum": "İstemci ve sunucuların tamamında korunma uygulaması bulunmalı, imza veri tabanı ve yamalar güncel olmalı, politikalar merkezi yönetilmeli; tüm bilgisayarlar taşınabilir diskleri otomatik taramalı ve taşınabilir ortamlarda otomatik kod çalıştırmasına izin vermemeli",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca istemcilerde\" denir"
+   ],
+   "dogrusu": [
+    "tamamında · imza veri tabanı ve yamalar güncel · merkezi · otomatik taramalı · otomatik kod çalıştırmasına izin vermemeli"
+   ]
+  },
+  {
+   "id": "103-40",
+   "madde": [],
+   "baslik": "Uzaktan çalışma (3.1.14)",
+   "hukum": "Politika hazırlanmalı; personel yalnızca kurumca sağlanan veya ayarları kurum gereksinimlerine uygun cihazları kullanmalı; dosya paylaşımında kurumsal kaynaklar kullanılmalı; kurum kaynaklarına erişim VPN ve çok faktörlü kimlik doğrulama ile sağlanmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"kişisel cihaz serbesttir\" veya \"tek faktör yeterlidir\" denir"
+   ],
+   "dogrusu": [
+    "kurumca sağlanan veya ayarları kurum gereksinimlerine uygun · kurumsal kaynaklar · VPN ve çok faktörlü kimlik doğrulama"
+   ]
+  },
+  {
+   "id": "103-41",
+   "madde": [],
+   "baslik": "Uzaktan çalışma politikası içeriği",
+   "hukum": "Önerilen çalışma ortamı, zararlı yazılım ve güvenlik duvarı gereksinimleri, yetkisiz erişimin engellenmesi, kablosuz ağ kullanımı, yedekleme, fiziksel güvenlik, fikri mülkiyet anlaşmazlıkları, çalışmanın sona ermesinde yetki iptali ve teçhizat iadesi (3.1.14.1)",
+   "sinavda_boyle_yazarlar": [
+    "fikri mülkiyet veya teçhizat iadesi listeden çıkarılır"
+   ],
+   "dogrusu": [
+    "fikri mülkiyet · yetki iptali ve teçhizat iadesi"
+   ]
+  },
+  {
+   "id": "103-42",
+   "madde": [],
+   "baslik": "Taşınabilir ortam güvenliği (3.3.3)",
+   "hukum": "Kullanım politikası fiziksel koruma, saklama, yedekleme, el değiştirme ve imha hususlarını içermeli; ortamlar üretici tavsiyelerine uygun saklanmalı; üzerlerindeki kritik veri şifreli tutulmalı; kullanım süresi dolanlar güvenli imha edilmelidir",
+   "sinavda_boyle_yazarlar": [
+    "\"şifreleme gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "fiziksel koruma, saklama, yedekleme, el değiştirme ve imha · üretici tavsiyelerine uygun · kritik veri şifreli · güvenli imha"
+   ]
+  },
+  {
+   "id": "103-43",
+   "madde": [],
+   "baslik": "TEMPEST (3.6.3)",
+   "hukum": "Sistem odası/veri merkezinde gizlilik seviyeli bilgi işleyen tüm cihazların hangi odalarda kullanıldığını gösteren liste tutulmalı (seviye 1); bu cihazların TEMPEST onayları olmalı ve envanteri tutulmalı (seviye 2); ilgili odalarda TEMPEST tesisat kurallarına uyulmalıdır (seviye 3)",
+   "sinavda_boyle_yazarlar": [
+    "seviyeler karıştırılır veya \"TEMPEST onayı gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "gizlilik seviyeli bilgi işleyen tüm cihazların hangi odalarda kullanıldığını gösteren liste · TEMPEST onayları · envanteri tutulmalı · TEMPEST tesisat kurallarına"
+   ]
+  },
+  {
+   "id": "103-44",
+   "madde": [],
+   "baslik": "Kriptografik algoritma seçimi (4.4.1.1)",
+   "hukum": "Seçim; kullanım amacı, algoritmayı kullanacak taraflar ve işlenecek bilgi/verinin kritiklik seviyesi göz önünde bulundurularak yapılır",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız maliyet\" denir"
+   ],
+   "dogrusu": [
+    "kullanım amacı, algoritmayı kullanacak taraflar ve işlenecek bilgi/verinin kritiklik seviyesi"
+   ]
+  },
+  {
+   "id": "103-45",
+   "madde": [],
+   "baslik": "Standart dışı algoritma (4.4.1.2)",
+   "hukum": "Standartlaştırılmış ve güvenli algoritma takımında yer almayan algoritma kullanılacaksa, kullanım öncesinde yetkilendirilmiş kripto analiz laboratuvarınca analiz ve değerlendirme yapılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "\"kullanımdan sonra\" denir"
+   ],
+   "dogrusu": [
+    "kullanım öncesinde yetkilendirilmiş kripto analiz laboratuvarınca"
+   ]
+  },
+  {
+   "id": "103-46",
+   "madde": [],
+   "baslik": "Kripto modülü testi (4.4.1.3)",
+   "hukum": "Kripto modüllerinin uygun güvenlik hedefi veya koruma profiliyle Ortak Kriterlere ve/veya TS ISO/IEC 19790-24759 standardına uygunluğu yetkili laboratuvarlarca test edilmeli; varlıkların kritiklik derecesine uygun modüller kullanılmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "standart numarası değiştirilir"
+   ],
+   "dogrusu": [
+    "Ortak Kriterlere ve/veya TS ISO/IEC 19790-24759 · yetkili laboratuvarlarca test edilmeli"
+   ]
+  },
+  {
+   "id": "103-47",
+   "madde": [],
+   "baslik": "Millî kripto cihazı tedariki (4.4.1.4, seviye 3)",
+   "hukum": "Kritik bilgi işleyen kurumlar, kritiklik seviyesine uygun millî kriptografik algoritmaların donanımsal gerçeklendiği cihazları temin etmeli; bu cihazların kripto analiz raporu olmalı ve COMSEC güvenlik testlerinden başarıyla geçmiş olmalıdır. COMSEC testine tabi modüllerde Ortak Kriter/19790 uyumu aranmaz",
+   "sinavda_boyle_yazarlar": [
+    "son cümle ters çevrilir"
+   ],
+   "dogrusu": [
+    "millî kriptografik algoritmaların donanımsal gerçeklendiği · kripto analiz raporu · COMSEC güvenlik testlerinden · Ortak Kriter/19790 uyumu aranmaz"
+   ]
+  },
+  {
+   "id": "103-48",
+   "madde": [],
+   "baslik": "Elektronik haberleşme sektörü tedbirleri (4.5.3)",
+   "hukum": "Hizmet güvenliği ve sürekliliği için güvenlik politikası belirlenip periyodik güncellenmeli; sinyalleşme trafiğinde sahtecilik tespit ve önleme sistemi kurulmalı; kaynak IP doğrulaması ile spoofed adreslerin dolaşımı engellenmeli; arayan numara manipülasyonuna (Caller ID Manipulation) karşı teknik ve hukuki tedbir alınmalı; ekipman arıza sinyalleri için alarm mekanizması kurulmalıdır",
+   "sinavda_boyle_yazarlar": [
+    "tedbirler enerji sektörü tedbirleriyle karıştırılır"
+   ],
+   "dogrusu": [
+    "güvenlik politikası · sinyalleşme trafiğinde sahtecilik tespit ve önleme sistemi · kaynak IP doğrulaması · arayan numara manipülasyonuna (Caller ID Manipulation) · arıza sinyalleri için alarm mekanizması"
+   ]
+  },
+  {
+   "id": "103-49",
+   "madde": [],
+   "baslik": "Personel güvenliği (3.5.1)",
+   "hukum": "İşe alımda akademik bilgiler, geçmiş iş tecrübeleri, referanslar ve sertifikaların geçerliliği kontrol edilir, adli sicil sorgulaması yapılır; temiz masa temiz ekran politikası tanımlanır; sosyal medya kullanım politikası ile gizlilik dereceli veri paylaşılmaması garanti altına alınır; ihlal olayları için disiplin süreci tanımlanır",
+   "sinavda_boyle_yazarlar": [
+    "\"temiz masa politikası Rehber'de yoktur\" denir"
+   ],
+   "dogrusu": [
+    "adli sicil sorgulaması · temiz masa temiz ekran politikası · sosyal medya kullanım politikası · disiplin süreci"
+   ]
+  },
+  {
+   "id": "103-50",
+   "madde": [],
+   "baslik": "Kişisel verilerin güvenliği (4.1)",
+   "hukum": "Alt başlıklar: Kayıt Yönetimi, Erişim Kayıtları Yönetimi, Yetkilendirme, Şifreleme, Yedekleme-Silme-Yok Etme ve Anonim Hale Getirme, Aydınlatma Yönetimi, Açık Rıza Yönetimi, Kişisel Veri Yönetim Sürecinin İşletilmesi (8 başlık)",
+   "sinavda_boyle_yazarlar": [
+    "\"açık rıza yönetimi yoktur\" denir"
+   ],
+   "dogrusu": [
+    "Kayıt Yönetimi, Erişim Kayıtları Yönetimi, Yetkilendirme, Şifreleme, Yedekleme-Silme-Yok Etme ve Anonim Hale Getirme, Aydınlatma Yönetimi, Açık Rıza Yönetimi, Kişisel Veri Yönetim Sürecinin İşletilmesi"
+   ]
+  },
+  {
+   "id": "103-51",
+   "madde": [],
+   "baslik": "Sıkılaştırma bölümü (Bölüm 5)",
+   "hukum": "İşletim sistemi (genel, Linux, Windows), veri tabanı ve sunucu (web sunucusu, sanallaştırma sunucusu) sıkılaştırma tedbirlerini içerir",
+   "sinavda_boyle_yazarlar": [
+    "\"ağ cihazı sıkılaştırması\" beşinci bölümde gösterilir; o Ağ Güvenliği başlığı altındadır"
+   ],
+   "dogrusu": [
+    "İşletim sistemi · veri tabanı · sunucu"
+   ]
+  },
+  {
+   "id": "103-52",
+   "madde": [],
+   "baslik": "Ekler",
+   "hukum": "EK-A Genelge maddeleri eşleştirme tablosu, EK-B uluslararası standartlar eşleştirme tablosu, EK-C formlar (C.1 kritiklik derecelendirme anketi, C.2 varlık grubu ve kritiklik derecesi tanımlama formu, C.3 mevcut durum ve boşluk analiz formu, C.4 yol haritası belirleme formu, C.5 telafi edici kontrol kayıt formu, C.6 taahhütname örneği)",
+   "sinavda_boyle_yazarlar": [
+    "EK-A ile EK-B yer değiştirilir"
+   ],
+   "dogrusu": [
+    "EK-A · EK-B · EK-C · telafi edici kontrol kayıt formu · taahhütname örneği"
+   ]
+  },
+  {
+   "id": "103-53",
+   "madde": [],
+   "baslik": "Güncellenebilirlik",
+   "hukum": "Rehber yaşayan bir dokümandır; ihtiyaçlar, gelişen teknoloji ve değişen şartlar göz önünde bulundurularak sürekli güncellenir, eski ve güncel sürümlerine cbddo.gov.tr üzerinden erişilir",
+   "sinavda_boyle_yazarlar": [
+    "\"değiştirilemez\" denir"
+   ],
+   "dogrusu": [
+    "yaşayan bir doküman · cbddo.gov.tr"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Güvenlik tedbirleri iki seviyeli derecelendirilir"
+   ],
+   "dogru": "üç seviyeli"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Sunucu ağında istemci yer almalıdır"
+   ],
+   "dogru": "yer almamalıdır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Rehber'in format ve içeriğinin özgün olması hedeflerden biri değildir"
+   ],
+   "dogru": "10 numaralı hedeftir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Rehber yalnız tedbirleri uygulayacak personele hitap eder"
+   ],
+   "dogru": "denetçilere de hitap eder (Hedef 11)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Varlık grubu ana başlıkları arasında Personel yoktur"
+   ],
+   "dogru": "altı ana başlıktan biridir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Bir varlık birden fazla gruba giriyorsa en düşük kritiklik derecesi esas alınır"
+   ],
+   "dogru": "en yüksek derece esas alınır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Anket puanı 18 ise Derece 1'dir"
+   ],
+   "dogru": "18 dâhil olduğu için Derece 2"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Rehber denetimi dış denetim yoluyla ve iki yılda bir yapılır"
+   ],
+   "dogru": "iç denetim, yılda en az bir kez"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Rehber, kurumun bilgi güvenliği yönetim sisteminin yerine geçer"
+   ],
+   "dogru": "alternatif değil, teknik katkı sağlar"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Denetim yöntemleri arasında anket vardır"
+   ],
+   "dogru": "beş yöntem: mülakat, gözden geçirme, güvenlik denetimi, sızma testi, kaynak kod analizi"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Standart dışı kripto algoritması kullanıldıktan sonra analiz edilir"
+   ],
+   "dogru": "kullanım öncesinde analiz edilir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Yerel güvenlik duvarı varsayılan izin verme (default allow) ile yapılandırılır"
+   ],
+   "dogru": "varsayılan reddetme (default deny)"
+  }
+ ]
+}

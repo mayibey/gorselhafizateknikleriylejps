@@ -1,0 +1,65 @@
+{
+ "kanun_id": 126,
+ "ad": "Yapım İşleri Muayene ve Kabul Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_126.json",
+ "kartlar": [
+  {
+   "id": "126-0",
+   "madde": [
+    "11",
+    "1",
+    "53"
+   ],
+   "baslik": "Amaç, dayanak, komisyon",
+   "hukum": "4734 kapsamındaki idarelerin ihaleleri sonucu teslim edilen yapım işlerinin muayene-kabul işlemleri için 4735 m.11 uyarınca kuracakları komisyonların kuruluş-çalışma esasları (m.1); dayanak 4734 m.53 (m.2); geçici veya kesin kabul komisyonları yetkili makamca, biri başkan en az 3 kişi; işin önemine göre üye sayısı tek sayı olmak üzere artırılabilir; tamamı teknik eleman zorunlu; idarede yeterli teknik eleman yoksa 4734 kapsamındaki kurumlardan görevlendirilebilir; işin denetimindeki yapı denetim görevlisi komisyonda görev alamaz, ancak kabul çalışmalarında işyerinde hazır bulunması zorunlu (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Komisyonda mali işlerden bir üye bulunur\" yanlış; tamamı teknik eleman (o ihale komisyonu)",
+    "Yönetmelik 4735'e dayanılarak hazırlanmıştır",
+    "Yapı denetim görevlisi komisyon üyesi olabilir",
+    "Komisyon 5 kişiden az olamaz"
+   ],
+   "dogrusu": [
+    "4734 m.53 (m.2)",
+    "Olamaz; hazır bulunur (m.3)",
+    "En az 3 (m.3)"
+   ]
+  },
+  {
+   "id": "126-1",
+   "madde": [
+    "41",
+    "44",
+    "4"
+   ],
+   "baslik": "Görevler, kararlar, geçici kabul",
+   "hukum": "Geçici kabul komisyonu kurulmasından itibaren en geç 10 gün içinde işyerine gider, Yapım İşleri Genel Şartnamesi m.41'e göre inceler, işletme-çalışma deneyleri yapar, engel yoksa geçici kabulü yapar; kesin kabul komisyonu 10 gün içinde YİGŞ m.41 ve 44'e göre; süreler yetkili makamca uzatılabilir (m.4); komisyonlar eksiksiz görev yapar, çoğunlukla karar alır, çekimser kalınamaz, karşı oy gerekçesi yazılıp imzalanır (m.5); iş tamamlanınca yüklenici yazılı geçici kabul başvurusu; zorunlu neden yoksa başvurudan itibaren en geç 10 gün içinde yapı denetim görevlisi ön inceleme yapar, uygunsa \"Geçici Kabul Teklif Belgesi\" düzenleyip yetkili makama; yetkili makam en geç 10 gün içinde komisyonu oluşturur (m.6); komisyon işi kabule hazır bulursa \"Geçici Kabul Tutanağı\" düzenler, komisyon ve yüklenici imzalar; tutanağın imzalandığı tarih geçici kabul tarihi; kabule engel olmayan kusur-noksan varsa tutanakta belirtilir, tamamlanması için süre verilir, nüshası yapı denetim görevlisi ve yükleniciye; tamamlanınca yapı denetim görevlisi ve yüklenici tutanağa bağlar; süresinde tamamlanmazsa YİGŞ m.41; kabule hazır değilse tutanakla idareye bildirilir, geçici kabul yapılmamış sayılır (m.7); yüklenici işi iş bitim tarihinde tamamladığı ön incelemede tespit edilmişse, komisyonun geç gitmesi hâlinde tutanakta itibar tarihi olarak işin fiilen bittiği tarih gösterilir ve geçici kabul tarihi sayılır (m.8); geçici kabul tutanağı yetkili makamın onayıyla geçerli olur (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Geçici kabul tarihi onay tarihidir\" yanlış; tutanağın imza tarihi (onayla geçerli olur)",
+    "Kabul komisyonu çekimser oy kullanabilir",
+    "Geçici kabul tarihi onay tarihidir"
+   ],
+   "dogrusu": [
+    "Kullanamaz (m.5)",
+    "Tutanak imza tarihi (m.7, 9)"
+   ]
+  },
+  {
+   "id": "126-2",
+   "madde": [
+    "10",
+    "41",
+    "44"
+   ],
+   "baslik": "Kesin kabul, kısmi kabul, sorumluluk",
+   "hukum": "Kesin kabul süresi tamamlanınca yüklenici yazılı başvurur; yapı denetim görevlisi veya idarece görevlendirilen teknik eleman incelemesi uygunsa \"Kesin Kabul Teklif Belgesi\"; belgenin hazırlandığı tarihten itibaren en geç 10 gün içinde komisyon oluşturulur, yükleniciye yazılı bildirim (m.10); komisyon YİGŞ m.41 ve 44'e göre inceler, hazır bulursa \"Kesin Kabul Tutanağı\" düzenler, komisyon ve yüklenici imzalar (m.11); kabule engel olmayan kusur-noksan tutanakta gösterilir ve süre verilir; tutanak, noksanların tamamlandığının yapı denetim görevlisi ve yüklenicice tutanağa bağlanıp yetkili makama gönderilmesinden sonra işleme konur; engel nitelikte kusurda kesin kabul yapılmaksızın süre verilir, muayene sonraya bırakılır; süresinde tamamlanmazsa idare YİGŞ m.41-44'e göre yüklenici nam ve hesabına tamamlatır (m.12); kesin kabul tutanağı yetkili makam onayıyla geçerli; onaydan sonra yüklenicinin idareye karşı sorumluluğu kalmaz, ancak 4735 m.13 (teminat) ve m.30 (15 yıl) saklı (m.13); sözleşmede öngörülen veya öngörülmese de zorunlu nedenlerle ihtiyaç duyulan tamamlanmış ve müstakil kullanıma elverişli bölümler için kısmi geçici kabul; yüklenicinin yazılı müracaatı ve idarenin uygun görüşüyle teminat süresi dikkate alınarak kısmi kesin kabul (işin bütününün kesin kabulü anlamına gelmez) (m.14); iş süresinden önce bitirilirse yüklenicinin başvurusu üzerine idare bitim tarihini beklemeksizin kabul yapabilir (m.15); komisyon üyeleri, yapı denetim görevlileri ve ilgililer görevlerini kanuni gereklere uygun/tarafsız yapmaz, ihmal-kusurla zarara yol açarsa disiplin cezası + ceza kovuşturması + tazmin (m.16); 2002 Yönetmeliği kaldırıldı (m.17); 5/3/2009 yürürlük (m.18); Kamu İhale Kurumu Başkanı yürütür (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kesin kabulle yüklenicinin tüm sorumluluğu sona erer\" yanlış; 4735 m.13 ve 30 saklı",
+    "Kesin kabulden sonra yüklenicinin hiçbir sorumluluğu kalmaz"
+   ],
+   "dogrusu": [
+    "4735 m.13 ve m.30 saklı (m.13)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

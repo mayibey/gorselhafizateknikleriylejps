@@ -1,0 +1,14 @@
+[
+{"kanun_id": 106, "kart_id": "106-0", "sorun": "kirmizi_kutu", "aciklama": "tescil edilen idare",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Şehitlik olarak edinilen taşınmazlar Millî Savunma Bakanlığı adına tapuya tescil edilir.”", "“Büyükşehir olan illerde şehitlik taşınmazları il özel idaresi adına tapuya tescil edilir.”"],
+ "dogrusu": ["Şehitlik taşınmazları büyükşehirde YİKOB, diğer illerde il özel idaresi adına tapuya tescil edilir (m.2)", "Büyükşehir olan illerde şehitlik taşınmazları yatırım izleme ve koordinasyon başkanlığı adına tescil edilir (m.2)"]}},
+{"kanun_id": 106, "kart_id": "106-1", "sorun": "kirmizi_kutu", "aciklama": "defnedilmeyenler",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Kanuni izinde hayatını kaybeden asker şehitliğe defnedilir.”", "“İntihar sonucu hayatını kaybeden personel şehitliğe defnedilir.”"],
+ "dogrusu": ["Kanuni izin, hava değişimi veya bunlara gidiş-dönüş sırasında hayatını kaybedenler şehitliğe defnedilmez (m.3)", "İntihar veya intihara teşebbüs sonucu hayatını kaybedenler şehitliğe defnedilmez (m.3)"]}},
+{"kanun_id": 106, "kart_id": "106-3", "sorun": "kirmizi_kutu", "aciklama": "belirleme ve yönetim makamları",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Yurt içinde şehitlik yerleri İçişleri Bakanlığınca belirlenir.”", "“Yurt dışındaki şehitliklerin yönetim, bakım ve onarım işlemleri Millî Savunma Bakanlığınca yürütülür.”"],
+ "dogrusu": ["Yurt içinde şehitlik yerleri valiliklerce, yurt dışında Dışişleri Bakanlığı vasıtasıyla belirlenir (m.7)", "Yurt dışındaki şehitlikleri büyükelçilikler, büyükelçilik yoksa Dışişleri Bakanlığının o yerdeki temsilcilikleri yönetir (m.8)"]}},
+{"kanun_id": 106, "kart_id": "106-4", "sorun": "kirmizi_kutu", "aciklama": "Mart / Ağustos süreleri",
+ "duzeltme": {"sinavda_boyle_yazarlar": ["“Yurt içindeki şehitliklere ait keşif raporları müteakip yılın Ağustos ayı sonuna kadar İçişleri Bakanlığına gönderilir.”", "“Yurt dışındaki şehitliklerin ödenek ihtiyacı Mart ayı sonuna kadar Dışişleri Bakanlığına gönderilir.”"],
+ "dogrusu": ["Yurt içi şehitliklerin keşif raporları müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir (m.10)", "Yurt dışı şehitliklerin ödenek ihtiyacı Ağustos ayı sonuna kadar Dışişleri Bakanlığına gönderilir (m.10)"]}}
+]

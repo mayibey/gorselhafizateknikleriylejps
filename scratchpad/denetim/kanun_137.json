@@ -1,0 +1,146 @@
+{
+ "kanun_id": 137,
+ "ad": "3269 sayılı Uzman Erbaş Kanunu (personel hükümleri)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_137.json",
+ "kartlar": [
+  {
+   "id": "137-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar",
+   "hukum": "Uzman çavuş: en az lise/dengi mezunu çavuşlar veya en az ilköğretim mezunu olup muvazzaflığı çavuş rütbesiyle tamamlayanlardan teknik-kritik görev yerlerinde istihdam edilenler (ve yönetmelikle uzman onbaşılıktan geçirilenler); uzman onbaşı: en az ilköğretim mezunu, teknik-kritik uzmanlık görev yerlerinde istihdam edilenler; uzman erbaş: bu Kanuna göre istihdam edilen uzman çavuş ve onbaşılar (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaş yalnız uzman çavuştur\" yanlış; onbaşı da uzman erbaş"
+   ],
+   "dogrusu": [
+    "Uzman çavuş · uzman onbaşı · uzman erbaş"
+   ]
+  },
+  {
+   "id": "137-1",
+   "madde": [
+    "42",
+    "4"
+   ],
+   "baslik": "Göreve alınma — yaş sınırları",
+   "hukum": "Kadro görev yerleri her yıl duyurulur; (a) muvazzaflık hizmetini yapmakta olan çavuş-onbaşı-erler ile terhis olanlar (veya Askeralma Kanunu m.42 kapsamında muaf tutulanlar) müracaat yılının ocak ayının ilk günü itibarıyla 27 yaşını bitirmemiş olmak; (b) sözleşmeli erbaş ve erlerden en az 3 yıl görev yapmış olanlar 29 yaşını bitirmemiş olmak ve sıralı üç disiplin amirince \"uzman erbaş olur\" nitelik belgesi doldurulmak şartıyla müracaat eder; askerliğini yaptığı komutanlıkta uzman erbaş olmak için müracaat edip sınavı kazananlar kalan askerlik süresine bakılmaksızın ilk eğitime tefrik edilir; sözleşme döneminde geçen sürelerin üçte biri askerlik yükümlülüğünden mahsup edilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"25 yaş\" eski hüküm; şimdi 27/29"
+   ],
+   "dogrusu": [
+    "ocak ayının ilk günü · 27 yaşını · sözleşmeli erbaş ve erlerden en az 3 yıl · 29 yaşını · üç disiplin amiri · üçte biri"
+   ]
+  },
+  {
+   "id": "137-2",
+   "madde": [
+    "40",
+    "92",
+    "5"
+   ],
+   "baslik": "Sözleşme süresi — 2 yıldan az, 5 yıldan fazla olamaz",
+   "hukum": "Uzman erbaşlar 2 yıldan az, 5 yıldan fazla olmamak şartıyla sözleşme yaparak göreve başlar ve T.C. Emekli Sandığı ile ilgilendirilir; sağlık nitelikleri uygun olanların (ve 3713 kapsamında malul olup uygun görülenlerin) müteakip sözleşmeleri 1 yıldan az, 5 yıldan fazla olmamak üzere 5434 sayılı Kanun m.40'taki yaş haddine kadar uzatılabilir; yaş haddini doldurdukları yılın ağustos ayında emekliye sevk edilirler; seferde 5434 m.40/e yaş sınırına kadar en gençten başlanarak orduya alınabilir; terörle mücadelede alıkonulan/kaybolanların sözleşmesi Bakanlık onayıyla talebe bakılmaksızın uzatılır; OHAL/terörle mücadelede ihtiyaç duyulanların sözleşmesi Kuvvet Komutanı/JGK/SGK onayıyla birer yıl uzatılabilir; 657 m.92'den (memurluktan çekilenlerin yeniden atanması) yararlanmak için en az 7 hizmet yılı (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözleşme hiçbir şekilde uzatılamaz\" ve \"en fazla 2 yıl\" şıkları yanlış",
+    "Uzman erbaş sözleşmesi en fazla 2 yıldır",
+    "657 m.92'den yararlanmak için 5 hizmet yılı yeter"
+   ],
+   "dogrusu": [
+    "2-5 yıl (m.5)",
+    "7 (m.5)"
+   ]
+  },
+  {
+   "id": "137-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Statü — asker kişi",
+   "hukum": "Uzman erbaşlar onbaşı ve çavuş rütbesini taşıyan asker kişi sayılır; muvazzaflık ve yedeklikte hizmete çağrıldıklarında er ve emsal rütbedeki erbaşların üstü; cezai müeyyide ve yargılama usulü bakımından er ve erbaşların hükümlerine tabi; askerî öğrencilerle astlık-üstlük ilişkileri yok; rütbenin geri alınması fer'i cezası uygulanmaz; yedeklik döneminde düzenlenmeyen hususlarda 1111 sayılı Kanun (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaşa rütbenin geri alınması cezası verilir\" yanlış",
+    "Uzman erbaşa rütbe geri alma cezası verilebilir"
+   ],
+   "dogrusu": [
+    "Verilemez (m.6)"
+   ]
+  },
+  {
+   "id": "137-4",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Kademe ilerlemesi ve derece yükselmesi",
+   "hukum": "Kademe ilerlemesi: bulunduğu kademede en az 1 yıl, o yıl olumlu sicil, ilerleyebileceği kademe bulunmak; derece yükselmesi: derecesi içinde en az 3 yıl ve bu derecenin 3. kademesinde 1 yıl çalışmak, derecenin her kademesinde olumlu sicil, yükselebileceği üst derece bulunmak; en az 1 yıl hizmet edip başarılı olan uzman onbaşılar uzman çavuşluğa terfi ettirilir; muvazzaf askerlikte geçen süreler kademe ilerlemesi yapılarak derece yükselmesinde değerlendirilir, fark ödemesi yapılmaz (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "Uzman Jandarma Kanunu sorusu olarak da aynı madde sorulmuş (\"üç yıl - bir yıl\")",
+    "Derece yükselmesi için derecede 5 yıl gerekir"
+   ],
+   "dogrusu": [
+    "3 yıl + 3. kademede 1 yıl (m.9)"
+   ]
+  },
+  {
+   "id": "137-5",
+   "madde": [
+    "78",
+    "11"
+   ],
+   "baslik": "İzinler",
+   "hukum": "Barışta her yıl 30 gün yıllık planlı izin (yol hariç); kısa süreli mazeretler için 15 güne kadar yıllık mazeret izni; ayrıca eşin doğumu, eş-çocuk-ana-baba-kardeş ölümü hâllerinin her birinde 10 güne kadar, kendisinin veya çocuğunun evlenmesinde 7 güne kadar; doğumda eşinin ölümü hâlinde anne için öngörülen süre kadar; yangın-deprem-su baskını gibi olağanüstü mazerette yılda 30 güne kadar; en az %70 engelli çocuğun hastalığında yılda 10 güne kadar mazeret izni; refakat: ana-baba-eş-çocuk-kardeşin ağır kaza/uzun hastalığında sağlık kurulu raporuyla 3 aya kadar aylıklı izin, bir katına uzatılabilir, sonra 6 aya kadar aylıksız (aynı vaka için bir defa; aylıksız süre sözleşmeden sayılmaz); 1111 m.78 izinleri ayrıca; hizmet ihtiyacında asgari tugay ve eşidi amir onayıyla izinden geri çağrılabilir; kullanılamayan yıllık izin ertelenerek müteakip yıl verilir, toplam 60 günü geçemez; kendi isteğiyle kullanmayanın izni devretmez (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yıllık izne yol dahildir\" yanlış",
+    "Yıllık izin 30 gündür, yol dahildir"
+   ],
+   "dogrusu": [
+    "Yol hariç (m.11)"
+   ]
+  },
+  {
+   "id": "137-6",
+   "madde": [
+    "148",
+    "12"
+   ],
+   "baslik": "Sözleşmenin feshi — ilişik kesme hâlleri",
+   "hukum": "İlk 5 aylık intibak döneminde intibak edemeyenler ve ayrılmak isteyenlerin sözleşmesi feshedilir; görevde başarısız veya kendilerinden istifade edilemeyeceği anlaşılanların barışta sözleşme süresine bakılmaksızın ilişiği kesilir (yedekte er kaynağına); ayrıca: sicile göre kademe ilerlemesi yapamayanlar; ceza ertelense, HAGB verilse, affa uğrasa dahi Devletin şahsiyetine karşı suçlar, zimmet, irtikâp, iftira, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, inancı kötüye kullanma, yalan tanıklık, cinsel suçlar, kaçakçılık (istimal-istihlak hariç), ihaleye fesat, Devlet sırrını açığa vurma, firar, amire fiilen taarruz, emre itaatsizlikte ısrar, üste hakaret, mukavemet, fesat, isyan ve Askerî Ceza Kanunu m.148 suçlarından mahkûm olanlar; taksirli suçlar hariç 30 günden fazla hürriyeti bağlayıcı cezaya mahkûm olanlar; son 1 yıl içinde toplam 30 gün ve fazla oda hapsi/hizmet yerini terk etmeme cezası alanlar veya en az iki disiplin amirinden toplam 8 defa disiplin cezası alanlar; MSB'ce uygun görülmeyen yabancı uyrukluyla evlenenler; Türk vatandaşlığını kaybedenler; terör örgütleriyle eylem birliği/yardım/propaganda; sözleşmesi feshedilenler bir daha TSK'ya alınmaz (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taksirli suçtan 30 gün üstü ceza da ilişik keser\" yanlış; taksirli hariç",
+    "Taksirli suçtan 40 gün hapis alan uzman erbaşın ilişiği kesilir"
+   ],
+   "dogrusu": [
+    "Taksirli hariç (m.12)"
+   ]
+  },
+  {
+   "id": "137-7",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Gece kışlada kalma",
+   "hukum": "İsteyen uzman erbaşlar (nöbetçiler hariç) İç Hizmet Kanunu saklı kalmak üzere gece evlerine gidebilir; kışlada/gemide kalmayı kabul edenler yetkili amirin izni olmadan ayrılamaz, mümkün olduğunca erbaş ve erlerden ayrı yerlerde yatırılır; evlerine gidenler subay-astsubay servislerinden yararlanıp mesai başında bulunur (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaş kışlada yatmak zorundadır\" yanlış"
+   ],
+   "dogrusu": [
+    "gece evlerine gidebilir · erbaş ve erlerden ayrı"
+   ]
+  },
+  {
+   "id": "137-8",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Astsubaylığa geçirilme",
+   "hukum": "(a) doğrudan astsubay çavuşluğa nasıp: kendi nam ve hesabına fakülte/yüksekokul/MYO mezunu, muvazzaf astsubay olmaya istekli, başvuruda 4. hizmet yılını tamamlamış, 8. hizmet yılını bitirmemiş, yönetmelik sınavlarında ve temel askerlik eğitiminde başarılı, 926 ve yönetmelikteki nitelik şartları; (b) astsubay MYO yoluyla: lise/dengi mezunu, en az 1 yıl uzman erbaş, sözleşme süresi içinde müracaat, giriş sınavına başvurulan yılın ocak ayının ilk günü itibarıyla 25 yaşını bitirmemiş, giriş sınavında başarılı; okul/temel eğitim süresince uzman erbaş statüsü devam eder, evli-nişanlı olmama şartı aranmaz, öğrenci harçlığı ödenmez; başarısız olanlar/ayrılanlar uzman erbaş olarak devam eder; astsubaylığa geçenler 926'ya tabi olur, mecburi hizmet ilk sözleşme onayından itibaren 15 yıl, uzman erbaşlıkta geçen süre astsubay rütbe bekleme süresinden sayılmaz; harekât/yurt dışı görevi nedeniyle başvuramayanlara kaçırdıkları sınav sayısı kadar hak (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "Uzman jandarmada doğrudan geçiş için \"35 yaşından gün almamış + en az 3 yıl\"; uzman erbaşta \"4-8. hizmet yılı\" — karıştırılır"
+   ],
+   "dogrusu": [
+    "doğrudan · 4. hizmet yılını tamamlamış, 8. hizmet yılını bitirmemiş · astsubay MYO · 1 yıl · 25 yaşını · evli-nişanlı olmama şartı aranmaz · mecburi hizmet ilk sözleşme onayından itibaren 15 yıl · astsubay rütbe bekleme süresinden sayılmaz"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

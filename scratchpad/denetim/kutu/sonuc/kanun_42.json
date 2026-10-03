@@ -1,0 +1,80 @@
+[
+ {
+  "kanun_id": 42,
+  "kart_id": "42-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ekim yerlerini tespit eden makam Bakanlığa kaydırıldı; yeni karar alınmazsa önceki kararın sürdüğü kuralı tersine çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Haşhaş ekilecek, afyon ve kapsül üretilecek yerler her yıl Tarım ve Orman Bakanlığınca tespit edilir.”",
+    "“Haşhaş ekim yerleri için yeni bir karar alınmazsa o yıl haşhaş ekimi yapılamaz.”"
+   ],
+   "dogrusu": [
+    "Haşhaş ekilecek, afyon ve kapsül üretilecek yerleri her yıl Cumhurbaşkanı tespit eder; karar en geç 1 Temmuz'a kadar yayımlanır (m.2)",
+    "Yeni bir karar alınmaması hâlinde önceki kararname hükümlerinin uygulanmasına devam olunur (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ekim kavramı tohum atma anına daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Uyuşturucu Maddelerle İlgili Kanun kapsamında ekim yapma, yalnızca tohumun toprağa atıldığı anı ifade eder.”"
+   ],
+   "dogrusu": [
+    "Ekim yapma ibaresinden, tohumun toprağa ekilmesinden ürünün hasadına kadarki süreç anlaşılır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İzinsiz ekimin cezası izin sınırını aşanın cezasıyla (6 ay-3 yıl) karıştırıldı; suç idarî yaptırıma indirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzinsiz olarak haşhaş ekimi yapan kişi altı aydan üç yıla kadar hapis ve adlî para cezası ile cezalandırılır.”",
+    "“İzinsiz haşhaş ekimi yapan kişiye mahallî mülkî amir tarafından idarî para cezası verilir.”"
+   ],
+   "dogrusu": [
+    "İzinsiz haşhaş ekimi yapan kişi bir yıldan beş yıla kadar hapis ve adlî para cezası ile cezalandırılır (m.4)",
+    "İzinsiz haşhaş ekimi idarî yaptırım değil suçtur; bir yıldan beş yıla kadar hapis ve adlî para cezası gerektirir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İzin sınırını aşan ekime izinsiz ekimin cezası (1-5 yıl) verildi; hapis yerine idarî para cezası gösterildi. Resmî metin düz paragraf olduğundan fıkra no belirsiz, atıf (m.4) yazıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzin belgesinde belirtilen alandan bilerek fazla yerde haşhaş ekimi yapan kişi bir yıldan beş yıla kadar hapis ve adlî para cezası ile cezalandırılır.”",
+    "“İzin belgesinde kayıtlı yerden başka yerde haşhaş ekimi yapan izinli üreticiye yalnızca idarî para cezası verilir.”"
+   ],
+   "dogrusu": [
+    "İzinli olup belgesindeki alandan fazla veya başka yerde bilerek ekim yapan altı aydan üç yıla kadar hapis ve adlî para cezası alır (m.4)",
+    "İzin belgesinde kayıtlı yerden başka yerde bilerek ekim yapan kişi altı aydan üç yıla kadar hapis ve adlî para cezası alır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Eksik teslime idarî para cezası yerine hapis gösterildi; cezayı veren makam mülkî amirden Bakanlığa kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İzin belgesindeki miktardan az ham afyon teslim eden üretici, altı aydan üç yıla kadar hapis cezası ile cezalandırılır.”",
+    "“Eksik kapsül teslim eden üreticiye idarî para cezasını Tarım ve Orman Bakanlığı verir.”"
+   ],
+   "dogrusu": [
+    "Eksik teslim eden üreticiye, fiil suç oluşturmuyorsa, mülkî amirce eksik miktarın baş alım fiyatının iki misli idarî para cezası verilir (m.4)",
+    "Eksik teslim eden üreticiye idarî para cezasını mahallî mülkî amir verir (m.4)"
+   ]
+  }
+ }
+]

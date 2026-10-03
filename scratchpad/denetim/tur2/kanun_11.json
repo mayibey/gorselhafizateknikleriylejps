@@ -1,0 +1,320 @@
+{
+ "kanun_id": 11,
+ "ad": "2893 sayılı Türk Bayrağı Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_11.json",
+ "kartlar": [
+  {
+   "id": "11-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Amaç",
+   "hukum": "Kanunun amacı Türk Bayrağının şekli, yapımı ve korunması ile ilgili esas ve usulleri belirlemektir (m.1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "şekli, yapımı ve korunması"
+   ]
+  },
+  {
+   "id": "11-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Tanım",
+   "hukum": "Türk Bayrağı, Kanuna ekli cetvelde gösterilen şekil ve oranlarda olmak kaydıyla beyaz ay-yıldızlı albayraktır (m.2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "ekli cetvelde · beyaz ay-yıldızlı albayraktır"
+   ]
+  },
+  {
+   "id": "11-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Özel bayraklar",
+   "hukum": "Sembolik bayrak, özel işaret, flama, flandra ve fors; standartları ve hangi kumaş/maddelerden yapılacağı yönetmelikte gösterilir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Listeye \"arma\" veya \"sancak\" eklenir — bu beş kavram dışındakiler özel bayrak değildir"
+   ],
+   "dogrusu": [
+    "yönetmelikte"
+   ]
+  },
+  {
+   "id": "11-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Nerelere çekilir",
+   "hukum": "Kamu kurum ve kuruluşlarıyla yurt dışı temsilciliklerine ve kamu kuruluşlarıyla gerçek ve tüzel kişilerin deniz vasıtalarına çekilir (m.3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yurt dışı temsilciliklerine · gerçek ve tüzel kişilerin deniz vasıtalarına"
+   ]
+  },
+  {
+   "id": "11-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Araçlara takma",
+   "hukum": "Yurt içinde ve yurt dışında yetkililerin araçlarına takılır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca yurt içinde\" denir",
+    "yalnızca yurt içinde"
+   ],
+   "dogrusu": [
+    "Yurt içinde ve yurt dışında yetkililerin araçlarına takılır (m.3)"
+   ]
+  },
+  {
+   "id": "11-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tören",
+   "hukum": "Bayrak çekilirken ve indirilirken tören yapılır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"indirilirken tören yapılmasına gerek yoktur\"",
+    "indirilirken tören gerekmez"
+   ],
+   "dogrusu": [
+    "Çekilirken ve indirilirken tören yapılır (m.3)"
+   ]
+  },
+  {
+   "id": "11-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tören sorumluluğu",
+   "hukum": "Bayrak törenlerinin gereken biçimde yapılmasından o mahaldeki yetkili amirler sorumludur (m.3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "o mahaldeki yetkili amirler"
+   ]
+  },
+  {
+   "id": "11-7",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Sürekli çekili",
+   "hukum": "Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca resmî bayramlar süresince\", \"her akşam indirilir\"",
+    "yalnızca resmî bayramlar süresince çekili kalır"
+   ],
+   "dogrusu": [
+    "Kamu kurumlarında Bayrak sürekli çekili kalır (m.3)"
+   ]
+  },
+  {
+   "id": "11-8",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Yönetmeliğe bırakılanlar",
+   "hukum": "Nerelerde daimî çekilmeyeceği, hangi kapalı yerlere konulacağı, fon olarak nerelere takılacağı, kamu kurumları dışındaki yerlerde ne zaman-nasıl çekileceği; TSK ile Sahil Güvenlik Komutanlığı yüzer birliklerinde ve Türk bandıralı ticaret gemilerinde çekme-indirme zamanları ve tören esasları yönetmelikte gösterilir (m.3)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "TSK ile Sahil Güvenlik Komutanlığı yüzer birliklerinde · Türk bandıralı ticaret gemilerinde"
+   ]
+  },
+  {
+   "id": "11-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Yarıya çekme günü",
+   "hukum": "Türk Bayrağı, yas alameti olarak 10 Kasım'da yarıya çekilir (m.4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "10 Kasım"
+   ]
+  },
+  {
+   "id": "11-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Diğer yas hâlleri",
+   "hukum": "Yarıya çekileceği diğer hâller ve zamanı Cumhurbaşkanlığınca ilan edilir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığı\", \"valilikler\", \"TBMM Başkanlığı\"",
+    "İçişleri Bakanlığı",
+    "valilikler"
+   ],
+   "dogrusu": [
+    "Diğer yas hâllerini Cumhurbaşkanlığı ilan eder (m.4)"
+   ]
+  },
+  {
+   "id": "11-11",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Selamlama",
+   "hukum": "Çekilmesi ve indirilmesi esnasında veya tören geçişlerinde Bayrak, cephe alınarak selamlanır (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"sağ kolda kalacak şekilde\", \"başla selam verilerek\"",
+    "sağ kolda kalacak şekilde selamlanır"
+   ],
+   "dogrusu": [
+    "Bayrak cephe alınarak selamlanır (m.5)"
+   ]
+  },
+  {
+   "id": "11-12",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Örtülebileceği yerler",
+   "hukum": "Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde tabutlarına; açılış törenlerinde Atatürk heykellerine; resmî yemin törenlerinde masalara örtülebilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"kürsüye örtülebilir\", \"sporcuların omuzlarına\", \"her vatandaşın tabutuna\"",
+    "kürsüye ve protokol masasına örtülebilir"
+   ],
+   "dogrusu": [
+    "Açılışta Atatürk heykeline örtülebilir (m.6)"
+   ]
+  },
+  {
+   "id": "11-13",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Diğer kullanımlar",
+   "hukum": "Millî örf ve âdetler göz önünde tutularak Bayrağın diğer kullanılma şekil ve yeri yönetmelikte gösterilir (m.6)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yönetmelikte"
+   ]
+  },
+  {
+   "id": "11-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Fiziksel yasaklar",
+   "hukum": "Bayrak yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk veya manevi değerini zedeleyecek şekilde kullanılamaz (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "yasaklar listesine \"onarılması\" eklenir"
+   ],
+   "dogrusu": [
+    "Bayrağın onarılması yasak değildir (m.7'de sayılmaz)"
+   ]
+  },
+  {
+   "id": "11-15",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Masa-kürsü yasağı",
+   "hukum": "Resmî yemin törenleri dışında her ne maksatla olursa olsun masalara, kürsülere örtü olarak serilemez (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir törende masaya serilemez\" denir — resmî yemin töreni istisnadır",
+    "hiçbir törende masaya serilemez"
+   ],
+   "dogrusu": [
+    "Masaya serme resmî yemin töreninde mümkündür (m.7)"
+   ]
+  },
+  {
+   "id": "11-16",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Oturulan yer ve giysi",
+   "hukum": "Oturulan veya ayakla basılan yerlere konulamaz, bu yerlere ve benzeri eşyaya Bayrağın şekli yapılamaz, elbise veya üniforma şeklinde giyilemez (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "elbise veya üniforma şeklinde giyilemez"
+   ]
+  },
+  {
+   "id": "11-17",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Amblem yasağı",
+   "hukum": "Hiçbir siyasi parti, teşekkül, dernek, vakıf ve yönetmelikte belirlenecek kamu kurumları dışında kalan kurum ve kuruluşun amblem, flama, sembol ve benzerlerinin ön veya arka yüzünde esas veya fon teşkil edecek şekilde kullanılamaz (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "ön veya arka yüzünde esas veya fon teşkil edecek şekilde"
+   ]
+  },
+  {
+   "id": "11-18",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Hakaret ve saygısızlık",
+   "hukum": "Türk Bayrağına sözle, yazı veya hareketle veya herhangi bir şekilde hakaret edilemez, saygısızlıkta bulunulamaz; yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz"
+   ]
+  },
+  {
+   "id": "11-19",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Önleme yükümlülüğü",
+   "hukum": "Bu Kanuna ve yönetmeliğe aykırı fiiller yetkililerce derhâl önlenir ve gerekli soruşturma yapılır (m.7)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yetkililerce derhâl önlenir"
+   ]
+  },
+  {
+   "id": "11-20",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Aykırı bayraklar",
+   "hukum": "Kanuna ve yönetmeliğe aykırı olarak Bayrak yapmak, satmak ve kullanmak yasaktır; bu bayraklar o mahallin yetkili amirlerince toplatılır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "sulh ceza hâkimi",
+    "ağır ceza mahkemesi",
+    "il jandarma komutanı",
+    "Cumhuriyet savcılığı toplatır"
+   ],
+   "dogrusu": [
+    "İdari para cezasını mahalli mülki amir verir (m.8)",
+    "Aykırı bayrakları o mahallin yetkili amirleri toplatır (m.8)"
+   ]
+  },
+  {
+   "id": "11-21",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Yönetmelik",
+   "hukum": "Kanunun uygulanmasına ilişkin esaslar Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İçişleri Bakanlığı\", \"Millî Savunma Bakanlığı\", \"TBMM\"",
+    "İçişleri Bakanlığı",
+    "TBMM"
+   ],
+   "dogrusu": [
+    "Yönetmeliği Cumhurbaşkanı çıkarır (m.9)"
+   ]
+  },
+  {
+   "id": "11-22",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Yürürlük",
+   "hukum": "Kanun yayımı tarihinden altı ay sonra yürürlüğe girer (m.11)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "altı ay sonra"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

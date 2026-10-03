@@ -1,0 +1,264 @@
+{
+ "kanun_id": 73,
+ "ad": "3269 sayılı Uzman Erbaş Kanunu (Mali Hükümler)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_73.json",
+ "kartlar": [
+  {
+   "id": "73-0",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sağlık işlemleri hangi kanuna göre",
+   "hukum": "Uzman erbaşlar ve bakmakla yükümlü oldukları aile fertlerinin tüm sağlık işlemleri hakkında 211 sayılı TSK İç Hizmet Kanunu uygulanır (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık işlemlerinde 657 sayılı DMK uygulanır\" yanlış; 211 sayılı Kanun"
+   ],
+   "dogrusu": [
+    "tüm sağlık işlemleri · 211 sayılı TSK İç Hizmet Kanunu"
+   ]
+  },
+  {
+   "id": "73-1",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Hava değişimi ve istirahat sınırı",
+   "hukum": "Hava değişimi ve istirahat süresinin toplamı, tedavi süresi hariç, başladığı tarihten geriye doğru son bir yıl içinde üç ayı geçemez; hesaba en son alınan süre de dahil edilir; üç ayı geçenlerin TSK ile ilişiği kesilir; ancak görev esnasında veya görevlerinden dolayı saldırıya, kazaya uğrayan ya da meslek hastalığına yakalananların iyileşinceye kadar ilişiği kesilmez, izinli sayılırlar (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Süre hesabına tedavi süresi de dahildir\" ya da \"en son alınan süre dahil edilmez\" yanlış",
+    "Hava değişimi ve istirahat süresi son bir yılda altı ayı geçemez"
+   ],
+   "dogrusu": [
+    "Üç ay (m.10)"
+   ]
+  },
+  {
+   "id": "73-2",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Uzun süreli hastalık istisnası",
+   "hukum": "Kanser, tüberküloz, kronik böbrek yetmezliği, ruh ve sinir hastalıkları gibi uzun tedavi isteyen hastalığa yakalananlar, sağlık kurulu raporunda gösterilecek lüzum üzerine toplam ve fiilen üç yılı geçmemek şartıyla tedavi, istirahat veya hava değişimine tabi tutulabilir, ilişikleri kesilmez; 5/1-(b) bendindekiler hariç sıhhi arızası devam edenler ve kendilerinden istifade edilemeyeceği anlaşılanlar hakkında 5434 sayılı Emekli Sandığı Kanunu uygulanır (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ağır hastalıklarda süre toplam beş yıl\" veya \"sağlık kurulu raporu aranmaz\" yanlış; toplam ve fiilen üç yıl, rapor şart"
+   ],
+   "dogrusu": [
+    "Kanser, tüberküloz, kronik böbrek yetmezliği, ruh ve sinir hastalıkları · toplam ve fiilen üç yılı · 5434 sayılı Emekli Sandığı Kanunu"
+   ]
+  },
+  {
+   "id": "73-3",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Emekliler, malullük aylığı alanlar, dul ve yetimler",
+   "hukum": "Uzman erbaş emeklileri, harp-vazife-adî malullük aylığı bağlanarak ayrılanlar, bunların bakmakla yükümlü olduğu aile fertleri ile harp ve vazife malullüğünü gerektiren nedenlerle vefat edenlerin maaşa müstahak dul ve yetimleri 211 sayılı Kanunun 66'ncı maddesinin (a) ve (b) fıkraları ile 67 ve 70'inci maddelerinden aynen yararlanır (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adî malullük aylığıyla ayrılanlar bu haktan yararlanamaz\" yanlış; harp, vazife ve adî malullük üçü de sayılmış"
+   ],
+   "dogrusu": [
+    "211 sayılı Kanunun 66'ncı maddesinin (a) ve (b) fıkraları ile 67 ve 70'inci maddelerinden"
+   ]
+  },
+  {
+   "id": "73-4",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Ayrılanlara ücretsiz sağlık süresi",
+   "hukum": "(a) Kendi kusuru olmaksızın idarece sözleşmesi yenilenmeyenler ile vefat, fazla hava değişimi, kadronun kaldırılması, kadronun sağlık niteliğini kaybetme nedeniyle sözleşmesi sona erenler ve aileleri: uzman erbaş olarak hizmet edilen süre kadar, on yılı geçmemek üzere; (b) sözleşme sonunda kendi isteğiyle yenilemeyenler ile kuvvet değişikliği veya sınıfın kaldırılması sebebiyle kendi isteğiyle feshedenler ve aileleri: hizmet süresinin yarısı kadar, beş yılı geçmemek üzere; muayene ve tedavi garnizon komutanlıklarından sevk alınmak şartıyla kamu sağlık kuruluşlarında ücretsiz; giderler MSB veya İçişleri Bakanlığı bütçesinden; kamu kurumları veya sosyal güvenlik kurumlarından sağlık hakkı doğanlar bu hak sürdükçe yararlanamaz (m.10/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kendi isteğiyle ayrılanlar hizmet süresi kadar, en çok on yıl\" yanlış; yarısı kadar, en çok beş yıl",
+    "Kendi isteğiyle ayrılana hizmet süresi kadar, en çok on yıl ücretsiz sağlık hizmeti verilir"
+   ],
+   "dogrusu": [
+    "Yarısı kadar, en çok beş yıl (m.10)"
+   ]
+  },
+  {
+   "id": "73-5",
+   "madde": [
+    "12",
+    "10"
+   ],
+   "baslik": "Yargılananların sağlık hakkının sona ermesi",
+   "hukum": "Görevdeyken işledikleri ve m.12/4 (b), (c), (ç), (d) bentlerindeki hususlar nedeniyle hakkında dava açılan ama yargılama sırasında sözleşme süresi bitince kendi isteğiyle ayrılanlardan mahkûm olanlar ile aile fertlerinin ücretsiz yararlanmasına karar kesinleşme tarihinden itibaren son verilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dava açıldığı tarihten itibaren son verilir\" yanlış; kararın kesinleştiği tarihten itibaren"
+   ],
+   "dogrusu": [
+    "m.12/4 (b), (c), (ç), (d) · mahkûm olanlar · karar kesinleşme tarihinden itibaren"
+   ]
+  },
+  {
+   "id": "73-6",
+   "madde": [
+    "28",
+    "10"
+   ],
+   "baslik": "Sağlık nedeniyle ayrılana sağlık yardımı",
+   "hukum": "Sözleşmesi sağlık nedeniyle sona erenlerden sona ermeye neden olan sıhhi arızasının tedavisine devam edilenlere, sona erme tarihinden başlamak şartıyla on iki ayı geçmemek üzere tedavi süresince, görevdeki emsallerinin net maaşlarının 2/3'ü her ay sağlık yardımı olarak kurumlarınca ödenir (375 sayılı KHK m.28 ek tazminatlar, 500 sayılı Kanuna göre tazminat ve yabancı dil tazminatı hariç); bu ödemeden hiçbir kesinti yapılmaz; usul ve esaslar yönetmelikle; on iki ay içinde aynı arızadan 5434'e göre malullük aylığına hak kazananlara hak kazandıkları tarihten itibaren yardım kesilir (m.10/son)",
+   "sinavda_boyle_yazarlar": [
+    "\"Net maaşın yarısı, altı ay süreyle\" veya \"bu yardımdan damga vergisi kesilir\" yanlış; 2/3, en çok 12 ay, hiçbir kesinti yok",
+    "Sağlık nedeniyle ayrılana net maaşın yarısı yirmi dört ay ödenir"
+   ],
+   "dogrusu": [
+    "2/3'ü, en çok on iki ay (m.10)"
+   ]
+  },
+  {
+   "id": "73-7",
+   "madde": [
+    "12"
+   ],
+   "baslik": "İntibak dönemi ve başarısızlık",
+   "hukum": "Sözleşmenin imzalanmasından sonra ilk beş aylık intibak dönemi içinde göreve intibak edemeyenler ile ayrılmak isteyenlerin sözleşmeleri feshedilerek TSK ile ilişikleri kesilir; peşin ödenen aylık ve diğer özlük haklarının çalışılmayan günlere ait kısmı geri alınır; görevde başarısız olan veya kendilerinden istifade edilemeyeceği anlaşılanların barışta sözleşme sürelerine bakılmaksızın ilişiği kesilir, bunlar yedekte er kaynağına alınır; bu hâllerde yapılacak işlemler yönetmelikte düzenlenir (m.12/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"İntibak dönemi altı aydır\" veya \"peşin ödenen aylık geri alınmaz\" yanlış; beş ay, çalışılmayan günlerin kısmı geri alınır",
+    "İntibak döneminde ayrılanların peşin ödenen aylığı geri alınmaz"
+   ],
+   "dogrusu": [
+    "Çalışılmayan günlere ait kısmı geri alınır (m.12)"
+   ]
+  },
+  {
+   "id": "73-8",
+   "madde": [
+    "148",
+    "12"
+   ],
+   "baslik": "Sözleşmenin feshi hâlleri",
+   "hukum": "(a) Aldığı sicile göre kademe ilerlemesi yapamayanlar; (b) ceza ertelense, seçenek yaptırıma çevrilse, hükmün açıklanması geri bırakılsa veya affa uğrasa dahi Devletin şahsiyetine karşı suçlar, zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, inancı kötüye kullanma gibi yüz kızartıcı suçlar ile kaçakçılık (istimal ve istihlâk hariç), ihaleye fesat, Devlet sırlarını açığa vurma, firar, üste fiilen taarruz, emre itaatsizlikte ısrar, üste hakaret, isyan gibi suçlardan ve Askerî Ceza Kanunu m.148 suçlarından mahkûm olanlar; (c) taksirli suçlar hariç diğer suçlardan otuz günden fazla hürriyeti bağlayıcı cezaya mahkûm olanlar; (d) kararın kesinleştiği tarihten geriye doğru son bir yılda toplam otuz gün ve daha fazla oda hapsi veya hizmet yerini terk etmeme cezası alanlar ya da en son disiplin cezasından geriye doğru son bir yılda en az iki disiplin amirinden toplam sekiz veya daha fazla disiplin cezası alanlar; (e) yabancı uyruklu kişiyle evliliği yönetmelik esasları dahilinde MSB'ce uygun görülmeyenler; (f) Türk vatandaşlığını kaybedenler veya çıkartılanlar; (g) terör örgütleriyle eylem birliği içinde olan, yardım eden, kamu imkânlarını bunlara kullandıran, propagandasını yapanlar sözleşmeleri feshedilerek ilişikleri kesilir; (ç) bendi AYM kararıyla iptal (m.12/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Taksirli suçtan otuz günden fazla hapis de fesih sebebidir\" yanlış; taksirli suçlar hariç"
+   ],
+   "dogrusu": [
+    "kademe ilerlemesi yapamayanlar · ertelense, seçenek yaptırıma çevrilse, hükmün açıklanması geri bırakılsa veya affa uğrasa dahi · taksirli suçlar hariç · otuz günden fazla · son bir yılda toplam otuz gün ve daha fazla oda hapsi · en az iki disiplin amirinden toplam sekiz · MSB'ce uygun görülmeyenler"
+   ]
+  },
+  {
+   "id": "73-9",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Tekrar alınmama",
+   "hukum": "Her ne sebeple olursa olsun sözleşmesi feshedilerek TSK ile ilişiği kesilen uzman erbaşlar tekrar TSK'ya alınmazlar (m.12/son)",
+   "sinavda_boyle_yazarlar": [
+    "\"Beş yıl geçtikten sonra yeniden başvurabilirler\" yanlış; hiçbir şekilde tekrar alınmazlar",
+    "Sözleşmesi feshedilen uzman erbaş belli süre sonra tekrar alınabilir"
+   ],
+   "dogrusu": [
+    "Tekrar alınmaz (m.12)"
+   ]
+  },
+  {
+   "id": "73-10",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Aylık, ek gösterge, giriş derecesi",
+   "hukum": "Göreve başlamış olmak kaydıyla sözleşmenin onaylandığı tarihten geçerli olarak Kanuna ekli Ek-1 sayılı aylık gösterge tablosu üzerinden aylık verilir; dereceleri itibarıyla Ek-2 sayılı ek gösterge cetveli uygulanır; uzman çavuşlar 10'uncu derecenin, uzman onbaşılar 11'inci derecenin birinci kademesinden giriş yapar; uzman onbaşılıktan uzman çavuşluğa terfi edenler bulundukları derece ve kademenin bir üst derecesinin aynı kademesine intibak ettirilir (m.16/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman onbaşı 10, uzman çavuş 11'inci dereceden başlar\" ya da \"aylık Ek-2 tablosuna göre verilir\" yanlış; çavuş 10/1, onbaşı 11/1; aylık Ek-1, ek gösterge Ek-2"
+   ],
+   "dogrusu": [
+    "Göreve başlamış olmak kaydıyla sözleşmenin onaylandığı tarihten · Ek-1 · Ek-2 · uzman çavuşlar 10'uncu derecenin · uzman onbaşılar 11'inci derecenin birinci kademesinden · bir üst derecesinin aynı kademesine"
+   ]
+  },
+  {
+   "id": "73-11",
+   "madde": [
+    "65",
+    "16"
+   ],
+   "baslik": "Ödemelerin dayanağı, konut, peşin aylık",
+   "hukum": "Yan ödemeler, Silahlı Kuvvetler hizmet tazminatı, aile yardımı, doğum yardımı, ölüm yardımı ödeneği ve yakacak yardımı 926 sayılı Kanun esaslarına göre; tayın bedeli 2155 sayılı Kanun esaslarına göre ödenir; uzman erbaşlar MSB, JGK ve Sahil Güvenlik Komutanlığına ait konutlardan, kiralama sisteminden ve lojman tazminatından yararlanır; tutuklanan, firar veya izin tecavüzünde bulunan ve cezası infaz edilenlerin aylık, ödenek ve tazminatlarında 926 m.65 uygulanır; aylıklar her ayın başında peşin ödenir; emekliye ayrılma ve ölüm hâllerinde o aya ait peşin aylık geri alınmaz; askerî hizmete ilişkin görevleri sebebiyle kamu davası açılanlar hakkında 926 uygulanır (m.16/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tayın bedeli 926 sayılı Kanuna göre ödenir\" veya \"ölüm hâlinde o ayki peşin aylık geri alınır\" yanlış",
+    "Uzman erbaşların tayın bedeli 926 sayılı Kanuna göre ödenir",
+    "Uzman erbaşların aylığı ay sonunda ödenir"
+   ],
+   "dogrusu": [
+    "2155 sayılı Kanun (m.16)",
+    "Her ayın başında peşin; emeklilik ve ölümde o ayki geri alınmaz (m.16)"
+   ]
+  },
+  {
+   "id": "73-12",
+   "madde": [
+    "28",
+    "16"
+   ],
+   "baslik": "İkramiye hesabı",
+   "hukum": "Kendi kusuru olmaksızın hizmet süresi uzatılmayan veya sözleşme süresini bitirip ayrılanlardan hizmeti beş yılı geçmeyenlere: ayrıldıkları tarihteki net maaşın iki katı × toplam hizmet yılı; beş yılı geçenlere: ilk beş yıl bu esasla + net maaş × beş yıldan fazla hizmet yılı; net maaşa 375 sayılı KHK m.28 ek tazminatlar, 500 sayılı Kanuna göre tazminat, lojman tazminatı ve yabancı dil tazminatı katılmaz; ikramiye hiçbir suretle ikramiyeye esas net maaşın yirmi katını geçemez; bir tam yıldan eksik süreler kıst ödenir; ikramiyelerden damga vergisi hariç vergi kesilmez (m.16/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"İkramiye net maaşın otuz katını geçemez\" veya \"beş yıldan sonraki her yıl için de iki kat\" yanlış; tavan 20 kat, beş yıldan sonrası bir kat",
+    "İkramiye net maaşın otuz katını geçemez",
+    "İkramiyeden gelir vergisi kesilir"
+   ],
+   "dogrusu": [
+    "Yirmi katı (m.16)",
+    "Damga vergisi hariç vergi kesilmez (m.16)"
+   ]
+  },
+  {
+   "id": "73-13",
+   "madde": [
+    "16"
+   ],
+   "baslik": "İkramiye ödenmeyen ve kısmi ödenen hâller",
+   "hukum": "Emeklilik hakkı kazananlara bu ikramiye ödenmez, 5434 uygulanır; yabancı evliliği MSB'ce uygun görülmeyenler, vatandaşlığı kaybedenler veya çıkartılanlar ile disiplinsizlik ve ahlaki nedenlerle kalması uygun görülmeyenlerin sözleşmeleri feshedilir ve ikramiye ödenmez; astsubay nasbedilenlere de ikramiye verilmez; sağlık, vefat, kuvvet komutanlığı veya sınıf değişikliği ya da kadronun kaldırılması sebebiyle bir yılı tamamlamadan ayrılanlara bir yıllık ikramiyenin on iki aya bölünmesiyle her hizmet ayına düşen tutar ödenir (m.16/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Astsubaylığa geçen uzman erbaşa ikramiye ödenir\" yanlış; ödenmez"
+   ],
+   "dogrusu": [
+    "Emeklilik hakkı kazananlara · disiplinsizlik ve ahlaki nedenlerle · ikramiye ödenmez · astsubay nasbedilenlere · bir yılı tamamlamadan · on iki aya bölünmesiyle"
+   ]
+  },
+  {
+   "id": "73-14",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Kuvvet-sınıf değişikliği, komando 40 yaş, fesih isteyene ikramiye",
+   "hukum": "Asgari dört yıl fiili hizmetini komando birliklerinde komando olarak veya yalnız yüzer birliklerde bulunan sınıflarda tamamlayanlar ile kadro görev yeri kaldırılanlar kuvvet komutanlıklarınca ihtisas sahibi olduğu diğer birliklere atanabilir veya başka sınıfta istihdam edilebilir; kuvvetleri kuvvet komutanlıklarının görüşü alınarak MSB tarafından değiştirilebilir; böyle atanan veya kuvvet-sınıf değişikliğine tabi tutulan sözleşmenin feshini isteyebilir, istek kabul edilir ve ikramiye ödenir; komando branşında 40 yaşını dolduranlar yönetmelikte belirlenen uygun kadrolara o yıl içinde atanır, devam isteyip uygun görülenler her iki yılda bir sağlık kurulu raporuyla aynı branşta devam eder (m.16/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kuvvet değişikliği nedeniyle fesih isteyene ikramiye ödenmez\" yanlış; ödenir"
+   ],
+   "dogrusu": [
+    "dört yıl · kuvvet komutanlıklarınca · MSB · sözleşmenin feshini isteyebilir · ikramiye ödenir · 40 yaşını dolduranlar · her iki yılda bir"
+   ]
+  },
+  {
+   "id": "73-15",
+   "madde": [
+    "12",
+    "16"
+   ],
+   "baslik": "Kamuya geçiş, yargılama, mirasçılar, esirler",
+   "hukum": "Uzman erbaşlıktan ayrılıp memur, sözleşmeli personel veya işçi olarak çalışanların emekliliğinde, 5434 ek 20'ye göre emekli ikramiyesi veya kıdem tazminatı hesabında bu maddeye göre ikramiyesi ödenmiş süreler dikkate alınmaz; m.12/4 (b), (c), (ç), (d) sebebiyle dava açılıp yargılama sırasında sözleşme süresi biterek kendi isteğiyle ayrılana karar kesinleşinceye kadar ikramiye ödenmez, beraat edene ödenir, mahkûm olana ödenmez; vefat edenin dul ve yetimine Emekli Sandığınca aylık bağlanamazsa ikramiye kanuni mirasçılara aynen ödenir; esir düşen, harp gaibi, enterne edilen veya terörle mücadelede alıkonulan-kaybolanlar hakkında 926 uygulanır (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yargılaması süren uzman erbaşa ikramiye ödenir, mahkûm olursa geri alınır\" yanlış; kesinleşinceye kadar hiç ödenmez",
+    "Astsubay nasbedilen uzman erbaşa ikramiye ödenir"
+   ],
+   "dogrusu": [
+    "Ödenmez (m.16)"
+   ]
+  },
+  {
+   "id": "73-16",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Fiili hizmet süresi zammı",
+   "hukum": "Uzman erbaşlar 5434 sayılı Kanunun 32'nci maddesinin (a) fıkrasında belirtilen fiili hizmet süresi zammından yararlanır (m.17)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman erbaşlar fiili hizmet süresi zammından yararlanamaz\" veya \"5510 m.32'ye göre\" yanlış; 5434 m.32/a"
+   ],
+   "dogrusu": [
+    "5434 sayılı Kanunun 32'nci maddesinin (a) fıkrasında · fiili hizmet süresi zammından"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

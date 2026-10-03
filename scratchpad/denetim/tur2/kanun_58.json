@@ -1,0 +1,264 @@
+{
+ "kanun_id": 58,
+ "ad": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_58.json",
+ "kartlar": [
+  {
+   "id": "58-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Tanımlar — yakalama, gözaltı, muhafaza",
+   "hukum": "Yakalama: kamu güvenliğine, kamu düzenine veya kişinin vücut/hayatına yönelik tehlikenin giderilmesi için denetim altına alınması gereken veya suç işlediği yönünde kuvvetli iz, eser, emare ve delil bulunan kişinin gözaltı/muhafaza işlemlerinden önce özgürlüğünün geçici ve fiilen kısıtlanması; gözaltına alma: yakalananın hâkim önüne çıkarılmasına veya serbest bırakılmasına kadar kanunî süre içinde alıkonulması; muhafaza altına alma: yetkili merci önüne çıkarılması gereken kişilerin teslim alınana kadar zorunlu ölçüde alıkonulması; ifade alma: şüphelinin kolluk veya savcı tarafından dinlenmesi; sorgu: hâkim/mahkeme tarafından dinlenmesi; bilgi alma: müşteki, mağdur ve şüpheli olmayanların dinlenmesi; toplu suç: iştirak iradesi olmasa da 3 veya daha fazla kişi tarafından işlenen suç (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Şüpheli hâkim tarafından ifadeye çekilir\" yanlış; sorgu",
+    "Şüpheli hâkim tarafından ifadeye çekilir"
+   ],
+   "dogrusu": [
+    "Hâkim sorgu yapar, kolluk/savcı ifade alır (m.4)"
+   ]
+  },
+  {
+   "id": "58-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kolluğun yakalama yetkisi",
+   "hukum": "Kolluk: gecikmesinde sakınca olan ve savcıya/amire ulaşılamayan hâllerde yakalama emri veya tutuklama kararı gereken kişileri, suçüstü veya kuvvetli delil bulunan şüphelileri; kolluğun emrine itaatsizlik edenleri; görevde mukavemet edenleri; haklarında yakalama/tutuklama kararı olanları; uyuşturucu alan-satan-kullananları; rezalet çıkaracak derecede sarhoşları; huzur bozan, kavga edenleri; toplum için tehlikeli akıl hastası, madde tutkunu, serseri ve hastalık bulaştırabilecekleri; yurda yerleştirilmesine karar verilen çocukları; usulsüz ülkeye giren veya sınır dışı kararı olanları yakalayabilir; kimliğini belgeyle veya tanınmış/güvenilir kişilerin tanıklığıyla ispat edemeyenler ile belgesinden şüphe edilenler, aranan kişi olup olmadıkları anlaşılıncaya veya gerçek kimliği ortaya çıkıncaya kadar 24 saati geçmemek üzere yakalanıp muhafaza altına alınabilir; herkes suçu işlerken rastlanan veya suçüstü izlenip kaçma ihtimali olan/kimliği belirlenemeyen kişiyi geçici yakalayabilir; kendini idareden aciz kişilere karşı suçüstünde yakalama şikâyete bağlı değil; şikâyete bağlı suçta şikâyetten önce yakalama olursa şikâyete yetkiliye bildirilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"48 saat\" ve \"12 saat\" şıkları yanlış",
+    "Kimliğini ispat edemeyen 48 saat tutulabilir"
+   ],
+   "dogrusu": [
+    "24 saat (m.5)"
+   ]
+  },
+  {
+   "id": "58-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yakalama işlemi",
+   "hukum": "Yakalama hâkim kararı, savcı emri, doğrudan kolluk veya suçüstünde herkes tarafından yapılabilir; yakalanana kaba üst araması yapılıp silahtan arındırılır; delillerin yok edilmesini önleyici tedbir alınır; yakalanana suç ayrımı gözetilmeksizin yakalama sebebi, iddialar, susma ve müdafiden yararlanma, yakalanmaya itiraz hakları her hâlde yazılı, hemen mümkün değilse sözlü derhâl bildirilir; kolluk yakalamayı, kişiyi ve tedbirleri derhâl savcıya bildirir; yakınına haber verme savcının emriyle gecikmeksizin; yakalama tutanağa bağlanır, bir sureti yakalanana verilir; Şüpheli ve Sanık Hakları Formu (EK-A) imzalatılıp örneği verilir; savcının sözlü emri yazılıya dönüştürülür ama kolluk beklemeden yerine getirir; savcı serbest bırakmazsa gözaltına alınır; muhafaza altına alınacak kişiyi ilgili kurum teslim almazsa tutanak mülkî amire gönderilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hafif suçlarda haklar bildirilmez\" yanlış; suç ayrımı gözetilmez"
+   ],
+   "dogrusu": [
+    "kaba üst araması · suç ayrımı gözetilmeksizin · susma ve müdafiden yararlanma, yakalanmaya itiraz · her hâlde yazılı · derhâl savcıya · savcının emriyle · bir sureti yakalanana · Şüpheli ve Sanık Hakları Formu (EK-A) · sözlü emri · gözaltına · mülkî amire"
+   ]
+  },
+  {
+   "id": "58-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kelepçe",
+   "hukum": "Yakalanan veya nakledilen kişiye kaçacağına ya da kendisi veya başkalarının hayat ve beden bütünlüğü bakımından tehlike arz ettiğine ilişkin belirtilerin varlığı hâlinde kelepçe takılabilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her yakalanana kelepçe takılır\" yanlış; çocuklara takılamaz (m.19)"
+   ],
+   "dogrusu": [
+    "kaçacağına · hayat ve beden bütünlüğü · belirtilerin varlığı"
+   ]
+  },
+  {
+   "id": "58-4",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yakınlarına haber verme",
+   "hukum": "Yanındaki kişi vasıtasıyla, telefonla, ilgili yer kolluğu vasıtasıyla veya adresiyle irtibat kurularak; yakalandığı, gözaltına alındığı veya süresinin uzatıldığı savcının emriyle gecikmeksizin bir yakınına veya belirlediği kişiye bildirilir; yabancı ise yazılı karşı çıkmazsa büyükelçilik/konsolosluğa; muhafaza altına alınanın yakalandığı istediği yakınlarına derhâl bildirilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yabancının konsolosluğuna her hâlde haber verilir\" yanlış; yazılı karşı çıkmaması şart"
+   ],
+   "dogrusu": [
+    "savcının emriyle · bir yakınına veya belirlediği kişiye · yabancı · büyükelçilik/konsolosluğa · derhâl"
+   ]
+  },
+  {
+   "id": "58-5",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Sağlık kontrolü",
+   "hukum": "Gözaltına alınacak veya zor kullanılarak yakalanan kişi hekim kontrolünden geçirilir; yer değişikliği, süre uzatımı, serbest bırakma veya sevkten önce de hekim raporu; ifadeyi alan/soruşturan kolluk ile muayeneye götüren kolluk farklı olmalı (personel yetersizliği belgelenir); muayene adli tıp veya resmî sağlık kuruluşunca; rapor 3 nüsha: giriş raporunda biri sağlık kuruluşunda, biri gözaltına alınana, biri dosyaya; çıkış/uzatma raporlarında biri sağlık kuruluşunda, ikisi kapalı mühürlü zarfla başsavcılığa; hekim işkence/eziyet bulgusu görürse derhâl savcıya bildirir; muayenede hekim-hasta yalnız kalır, hekim güvenlik endişesiyle kolluk gözetimi isteyebilir, o zaman müdafi de bulunabilir; kadının muayenesi talebi hâlinde kadın hekim (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İfadeyi alan görevli muayeneye götürür\" yanlış; farklı görevli"
+   ],
+   "dogrusu": [
+    "zor kullanılarak · hekim kontrolünden · ifadeyi alan/soruşturan kolluk ile muayeneye götüren kolluk farklı · 3 nüsha · kapalı mühürlü zarfla başsavcılığa · işkence/eziyet · kadın hekim"
+   ]
+  },
+  {
+   "id": "58-6",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Nezarethaneye giriş",
+   "hukum": "Nezarethaneye konmadan önce usulünce aranır; kadının araması kadın görevli veya görevlendirilen bir kadın tarafından; kemer, kravat, ip, kesici-delici alet alınır; eşya ve para tutanakla muhafaza, bir sureti kişiye verilir (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kadını erkek görevli arayabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "usulünce aranır · kadın görevli · bir sureti"
+   ]
+  },
+  {
+   "id": "58-7",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Nezarethane işlemleri",
+   "hukum": "Giriş Nezarethaneye Alınanların Kaydına Ait Deftere (EK-B); aynı suçla ilgililer, hasımlar, erkek ve kadınlar bir araya konmaz, çocuklar yetişkinlerden ayrı; zarurî hâller dışında 5'ten fazla kişi bir arada bulundurulmaz; tuvalet-temizlik memur gözetiminde; yiyecek-içecek kontrol edilir; saldırgan kişi önce sözle, olmazsa hareketini giderecek derecede kuvvetle kontrol, kontrol edilemezse sağlık kuruluşuna; yaşam hakkını koruma için gözetlenebilir, kayda alınabilir; giderler ilgili birimin bağlı olduğu Bakanlığın bütçesinden (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"10 kişi\" tuzak; 5",
+    "Nezarethanede en çok 10 kişi bulundurulur"
+   ],
+   "dogrusu": [
+    "5 (m.11)"
+   ]
+  },
+  {
+   "id": "58-8",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Gözaltı süresi",
+   "hukum": "CMK 90'a göre yakalanan, savcı bırakmazsa gözaltına alınır; gözaltı süresi yakalama yerine en yakın hâkime gönderilme için zorunlu süre hariç yakalama anından itibaren 24 saati geçemez; gönderilme için zorunlu süre 12 saatten fazla olamaz (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yol süresi 24 saat\" yanlış; 12 saat"
+   ],
+   "dogrusu": [
+    "24 saati · 12 saatten"
+   ]
+  },
+  {
+   "id": "58-9",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Toplu suçta uzatma ve OHAL",
+   "hukum": "Toplu suçlarda delil toplama güçlüğü veya şüpheli çokluğu nedeniyle savcı gözaltı süresini her defasında 1 günü geçmemek üzere 3 gün uzatılmasına yazılı emir verebilir; uzatma emri gözaltındakine derhâl tebliğ; süreler geçince hâkim kararı olmaksızın kimse alıkonamaz; OHAL bölgelerinde CMK 250 suçlarında 4 günlük süre savcının talebi ve hâkim kararıyla 7 güne kadar uzatılabilir, hâkim önce kişiyi dinler (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her seferinde 1 gün, toplam 5 gün\" yanlış",
+    "Toplu suçta savcı gözaltını 5 gün uzatabilir"
+   ],
+   "dogrusu": [
+    "Her defasında 1 gün, 3 gün (m.14)"
+   ]
+  },
+  {
+   "id": "58-10",
+   "madde": [
+    "15",
+    "18"
+   ],
+   "baslik": "Hâkime başvuru ve yeniden yakalama yasağı",
+   "hukum": "Yakalama, gözaltı veya uzatma emrine karşı yakalanan, müdafi, kanunî temsilci, eşi, 1. veya 2. derece kan hısmı hemen serbest bırakılma için sulh ceza hâkimine başvurabilir; dilekçe en seri şekilde ulaştırılır (m.15); gözaltı süresi dolup veya hâkim kararıyla serbest bırakılan kişi, yeni ve yeterli delil ve savcının kararı olmadıkça aynı nedenle bir daha yakalanamaz (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"3. derece hısım da başvurabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "eşi · 1. veya 2. derece kan hısmı · sulh ceza hâkimine · yeni ve yeterli delil · savcının kararı · bir daha yakalanamaz"
+   ]
+  },
+  {
+   "id": "58-11",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Çocuklar",
+   "hukum": "Fiili işlediği sırada 12 yaşını doldurmamış olanlar ile 15 yaşını doldurmamış sağır-dilsizler suç nedeniyle yakalanamaz ve suç tespitinde kullanılamaz; yalnız kimlik ve suç tespiti için yakalanıp hemen serbest bırakılır, durum tedbir için başsavcılığa bildirilir; 12-18 yaş çocuklar suç sebebiyle yakalanabilir, yakınları ve müdafiye haber verilerek derhâl başsavcılığa sevk, soruşturma Cumhuriyet başsavcısı veya görevlendireceği savcı tarafından bizzat yapılır: gözaltı ana-baba/vasiye bildirilir; talebi olmasa bile müdafi görevlendirilir; ifade müdafi hazır bulundurularak alınır; ana-baba yararına aykırı değilse ifadede bulunabilir; yetişkinlerden ayrı tutulur; büyüklerle birlikte işlenen suçta evrak ayrılır, soruşturma ayrı yürütülür; kimlik ve eylemleri gizli; çocuk mağdursa suçüstünde şikâyet şartı aranmaz; işlemler mümkün olduğunca sivil kıyafetli görevlilerce; kelepçe takılamaz (zorunlu hâlde önlem) (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çocuk kendi istemezse müdafi görevlendirilmez\" yanlış",
+    "12-18 yaş çocuk yetişkinle aynı yerde tutulur",
+    "Çocuğa gerekirse kelepçe takılır"
+   ],
+   "dogrusu": [
+    "Ayrı tutulur, evrak ayrılır (m.19)",
+    "Takılamaz (m.19)"
+   ]
+  },
+  {
+   "id": "58-12",
+   "madde": [
+    "20",
+    "22"
+   ],
+   "baslik": "Müdafi",
+   "hukum": "Şüpheli/sanık her aşamada bir veya birden fazla müdafiden yararlanır; soruşturmada ifade almada en çok 3 müdafi hazır bulunabilir; müdafinin görüşme ve yanında olma hakkı engellenemez; seçemeyecek durumdaysa talebiyle baro görevlendirir; 18 yaşını doldurmamış, sağır-dilsiz veya kendini savunamayacak malûl ise ve üst sınırı en az 5 yıl hapis gerektiren suçlarda talep aranmaksızın müdafi görevlendirilir (m.20); müdafi soruşturmada dosyayı inceleyip belgelerin örneğini harçsız alabilir, kolluktaki dosya için savcının yazılı emri gerekir; iddianame verildikten sonra tüm dosya ve delilleri inceler; suçtan zarar görenin vekili de bu haklardan yararlanır (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"İfadede en çok 2 müdafi\" yanlış; 3"
+   ],
+   "dogrusu": [
+    "en çok 3 müdafi · engellenemez · baro · 18 yaşını doldurmamış · en az 5 yıl · talep aranmaksızın · harçsız · savcının yazılı emri"
+   ]
+  },
+  {
+   "id": "58-13",
+   "madde": [
+    "23"
+   ],
+   "baslik": "İfade almanın esasları",
+   "hukum": "Kimlik saptanır (şüpheli kimlik sorularını doğru cevaplamakla yükümlü); yüklenen suç anlatılır; müdafi seçme hakkı ve baro görevlendirmesi bildirilir; müdafi yalnız hukukî yardımda bulunur, şüpheliye sorulan soruya doğrudan cevap veremez, onun yerini aldığı izlenimi veren müdahale yapamaz, kanunî hakları hatırlatabilir, müdahalesi tutanağa geçer; yakınına yakalandığı bildirilir; susma hakkı söylenir; lehine delil toplanmasını isteyebileceği hatırlatılır; kişisel ve ekonomik durumu hakkında bilgi alınır; teknik kayıt yapılabilir; tutanakta yer-tarih, hazır bulunanlar ve kimlik, işlemlerin yerine getirilip getirilmediği, okunup imzalandığı, imzadan çekinme nedeni yazılır; İfade Tutanağı (EK-D) (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "Yanıltıcı öncüller genelde bu ikisi",
+    "Müdafi şüpheliye sorulan soruya cevap verebilir",
+    "İfadede ekonomik durum sorulmaz"
+   ],
+   "dogrusu": [
+    "Veremez (m.23)",
+    "Sorulur (m.23)"
+   ]
+  },
+  {
+   "id": "58-14",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Yasak yöntemler ve yeniden ifade",
+   "hukum": "İfade özgür iradeye dayanmalı; kötü davranma, işkence, ilâç verme, yorma, aldatma, cebir, tehdit, bazı araçları kullanma gibi bedensel/ruhsal müdahale yapılamaz; kanuna aykırı yarar vaat edilemez; yasak usulle alınan ifade rıza ile verilse de delil olamaz; aynı olayla ilgili yeniden ifade ancak Cumhuriyet savcısı tarafından alınabilir; kimse kendini veya yakınlarını suçlayan beyana zorlanamaz (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yorma\" ve \"aldatma\" da yasak yöntemdir",
+    "Rızayla verilen ifade yasak usulle alınsa da delildir",
+    "Kolluk aynı olayla ilgili yeniden ifade alabilir"
+   ],
+   "dogrusu": [
+    "Delil olamaz (m.24)",
+    "Yalnız savcı (m.24)"
+   ]
+  },
+  {
+   "id": "58-15",
+   "madde": [
+    "25",
+    "26"
+   ],
+   "baslik": "Nezarethane ve ifade odası standartları",
+   "hukum": "Nezarethane en az 7 m², 2,5 m yükseklik, duvarlar arası en az 2 m; doğal ışık ve havalandırma; sabit oturma yerleri, battaniye-yatak; girişe onaylı nezarethane talimatı asılır; ifade alma odası bağımsız, teknik donanımlı; standartlara uygunluk kolluğun yetkili birimlerince denetlenir; Cumhuriyet başsavcıları/savcıları nezarethaneleri, ifade odalarını, gözaltı neden ve sürelerini, kayıtları denetler ve sonucu Nezarethane Defterine kaydeder (m.25-26)",
+   "sinavda_boyle_yazarlar": [
+    "\"En az 10 m²\" yanlış; 7"
+   ],
+   "dogrusu": [
+    "en az 7 m² · 2,5 m · en az 2 m · nezarethane talimatı · Cumhuriyet başsavcıları/savcıları · Nezarethane Defterine"
+   ]
+  },
+  {
+   "id": "58-16",
+   "madde": [
+    "27",
+    "28"
+   ],
+   "baslik": "Soruşturmanın gizliliği ve yer gösterme",
+   "hukum": "Masumiyet karinesi esastır; gözaltındaki kişi \"suçlu\" olarak kamuoyuna duyurulamaz, basın önüne çıkarılamaz, görüntüsü alınamaz, teşhir edilemez, soruşturma evrakı yayımlanamaz (m.27); yer gösterme işlemini suç hakkında açıklamada bulunmuş şüpheliye Cumhuriyet savcısı yaptırır; CMK 250 kapsamındaki suçlarda adli kolluk amiri de yaptırabilir, diğer suçlarda kolluk amiri yaptıramaz; müdafi hazır bulunabilir; tutanağa bağlanır (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her suçta kolluk amiri yer gösterme yaptırabilir\" yanlış",
+    "Kolluk amiri her suçta yer gösterme yaptırabilir"
+   ],
+   "dogrusu": [
+    "Yalnız CMK 250 suçlarında (m.28)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

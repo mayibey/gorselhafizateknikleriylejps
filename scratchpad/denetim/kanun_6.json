@@ -1,0 +1,828 @@
+{
+ "kanun_id": 6,
+ "ad": "5326 sayılı Kabahatler Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_6.json",
+ "kartlar": [
+  {
+   "id": "6-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Amaç ve kapsam",
+   "hukum": "Kanun; toplum düzenini, genel ahlâkı, genel sağlığı, çevreyi ve ekonomik düzeni korumak amacıyla (a) kabahatlere ilişkin genel ilkeleri, (b) idarî yaptırımların tür ve sonuçlarını, (c) kabahatler dolayısıyla karar alma sürecini, (d) yaptırım kararlarına karşı kanun yolunu, (e) kararların yerine getirilmesine ilişkin esasları belirler ve çeşitli kabahatleri tanımlar (m.1)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "toplum düzenini, genel ahlâkı, genel sağlığı, çevreyi ve ekonomik düzeni · genel ilkeleri · tür ve sonuçlarını · karar alma sürecini · kanun yolunu · yerine getirilmesine (m.1)"
+   ]
+  },
+  {
+   "id": "6-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kabahat tanımı",
+   "hukum": "Kanunun, karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"kanunun suç saydığı hafif fiil\" denir"
+   ],
+   "dogrusu": [
+    "karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık (m.2)"
+   ]
+  },
+  {
+   "id": "6-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kanunun uygulama alanı",
+   "hukum": "Bu Kanunun kanun yoluna ilişkin hükümleri, diğer kanunlarda aksine hüküm bulunmaması hâlinde; diğer genel hükümleri ise idarî para cezası veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında uygulanır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "iki kural yer değiştirilir (kanun yolu mutlak, genel hükümler şartlı gösterilir)"
+   ],
+   "dogrusu": [
+    "kanun yoluna ilişkin · aksine hüküm bulunmaması · diğer genel hükümleri · bütün fiiller (m.3)"
+   ]
+  },
+  {
+   "id": "6-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kanunilik",
+   "hukum": "Hangi fiillerin kabahat oluşturduğu kanunda açıkça tanımlanabileceği gibi, kanunun belirlediği çerçeve hükmün içeriği idarenin genel ve düzenleyici işlemleriyle de doldurulabilir; ancak yaptırımın türü, süresi ve miktarı ancak KANUNLA belirlenir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yaptırımın miktarı da yönetmelikle belirlenebilir\" — bu yanlıştır. (Suçtaki mutlak kanunilikle farkı buradadır.)",
+    "Yönetmelikle de belirlenebilir"
+   ],
+   "dogrusu": [
+    "Yaptırımın türü ve miktarı yalnız kanunla belirlenir (4/2)"
+   ]
+  },
+  {
+   "id": "6-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Zaman bakımından uygulama",
+   "hukum": "TCK'nın zaman bakımından uygulamaya ilişkin hükümleri kabahatlerde de uygulanır; ancak yaptırım kararlarının yerine getirilmesi bakımından DERHAL UYGULAMA kuralı geçerlidir (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yerine getirmede de lehe kanun uygulanır\"",
+    "Lehe kanun uygulanır"
+   ],
+   "dogrusu": [
+    "Yerine getirmede derhal uygulama kuralı geçerlidir (5/1)"
+   ]
+  },
+  {
+   "id": "6-5",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kabahatin işlendiği an",
+   "hukum": "Kabahat, failin icraî veya ihmali davranışı gerçekleştirdiği zaman işlenmiş sayılır; neticenin oluştuğu zaman dikkate alınmaz (m.5/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"netice anına göre belirlenir\"",
+    "Neticenin gerçekleştiği an esastır"
+   ],
+   "dogrusu": [
+    "Kabahat davranış anında işlenmiş sayılır, netice dikkate alınmaz (5/2)"
+   ]
+  },
+  {
+   "id": "6-6",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İcra ve ihmal",
+   "hukum": "Kabahat icraî veya ihmali davranışla işlenebilir; ihmali kabahatin varlığı için kişi açısından belli bir icraî davranışta bulunma hususunda hukukî yükümlülüğün varlığı gereklidir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız icraî davranışla işlenebilir\""
+   ],
+   "dogrusu": [
+    "icraî veya ihmali davranışla · hukukî yükümlülüğün (m.7)"
+   ]
+  },
+  {
+   "id": "6-7",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Tüzel kişinin sorumluluğu",
+   "hukum": "Organ veya temsilci görevi yapan ya da tüzel kişinin faaliyeti çerçevesinde görev üstlenen kişinin bu görevi kapsamında işlediği kabahatten dolayı tüzel kişi hakkında da idarî yaptırım uygulanabilir (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "Kabahatlerde tüzel kişilerin sorumluluğu benimsenmemiştir"
+   ],
+   "dogrusu": [
+    "Kabahatlerde tüzel kişilerin sorumluluğu benimsenmiştir (8)"
+   ]
+  },
+  {
+   "id": "6-8",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Temsil edilen ve iş sahibi",
+   "hukum": "Temsilci sıfatıyla hareket edenin bu sıfatla bağlantılı kabahatinden temsil edilen gerçek kişi; gerçek kişiye ait işte çalışanın faaliyeti çerçevesindeki kabahatinden iş sahibi hakkında da yaptırım uygulanabilir; organ/temsilcilik veya hizmet ilişkisinin dayanağı işlem hukuken geçersiz olsa dahi bu hükümler uygulanır (m.8/2-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"işlem geçersizse sorumluluk doğmaz\""
+   ],
+   "dogrusu": [
+    "temsil edilen gerçek kişi · iş sahibi · hukuken geçersiz olsa dahi (m.8/2-4)"
+   ]
+  },
+  {
+   "id": "6-9",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Kusurluluk",
+   "hukum": "Kabahatler, kanunda açıkça hüküm bulunmayan hâllerde hem kasten hem de taksirle işlenebilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız kasten işlenebilir\" (suçtaki kuralla karıştırılır)",
+    "Yalnızca kasten işlenebilir"
+   ],
+   "dogrusu": [
+    "Kabahat hem kasten hem taksirle işlenebilir (9)"
+   ]
+  },
+  {
+   "id": "6-10",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Yaş küçüklüğü ve akıl hastalığı",
+   "hukum": "Fiili işlediği sırada onbeş yaşını doldurmamış çocuk hakkında idarî para cezası uygulanamaz; akıl hastalığı nedeniyle fiilin hukuki anlam ve sonuçlarını algılayamayan veya davranışlarını yönlendirme yeteneği önemli derecede azalmış kişi hakkında da uygulanamaz (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "yaş \"on iki\" veya \"on sekiz\" yapılır (TCK'daki yaşlarla karıştırılır)"
+   ],
+   "dogrusu": [
+    "onbeş yaşını doldurmamış çocuk · önemli derecede azalmış (m.11)"
+   ]
+  },
+  {
+   "id": "6-11",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Teşebbüs",
+   "hukum": "Kabahate teşebbüs cezalandırılmaz; ancak ilgili kanunda teşebbüsün de cezalandırılacağına dair hüküm varsa TCK'nın teşebbüs ve gönüllü vazgeçme hükümleri uygulanır (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"kabahate teşebbüs de cezalandırılır\"",
+    "Kabahate teşebbüs de cezalandırılır"
+   ],
+   "dogrusu": [
+    "Kabahate teşebbüs cezalandırılmaz (13)"
+   ]
+  },
+  {
+   "id": "6-12",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İştirak",
+   "hukum": "Kabahatin işlenişine birden fazla kişi iştirak ederse her biri hakkında FAİL olarak idarî para cezası verilir; özel faillik niteliği aranan durumlarda bu niteliği taşımayan iştirakçiye de fail olarak ceza verilir (m.14/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"azmettiren ve yardım eden ayrımı yapılır\""
+   ],
+   "dogrusu": [
+    "birden fazla kişi iştirak ederse her biri hakkında FAİL olarak · özel faillik niteliği aranan · fail olarak (m.14/1-2)"
+   ]
+  },
+  {
+   "id": "6-13",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İştirakin şartı ve suçla kesişme",
+   "hukum": "İştirak için kasten ve hukuka aykırı işlenmiş bir fiilin varlığı yeterlidir; fiil özel faillik niteliğini taşıyan kişi açısından suç, diğerleri açısından kabahat olarak tanımlanmışsa ortaklaşa işlenmesi hâlinde suça iştirake ilişkin hükümler uygulanır (m.14/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde kabahat hükümleri uygulanır\""
+   ],
+   "dogrusu": [
+    "kasten ve hukuka aykırı işlenmiş · suç · kabahat · suça iştirake (m.14/3-4)"
+   ]
+  },
+  {
+   "id": "6-14",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Fikri içtima (kabahatte)",
+   "hukum": "Bir fiille birden fazla kabahat işlenmiş ve tanımlarda sadece idarî para cezası öngörülmüşse en ağır idarî para cezası verilir; para cezasından başka yaptırımlar da öngörülmüşse bunların her birinin uygulanmasına karar verilir (m.15/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"her kabahat için ayrı para cezası verilir\""
+   ],
+   "dogrusu": [
+    "sadece idarî para cezası · en ağır idarî para cezası · bunların her birinin uygulanmasına (m.15/1)"
+   ]
+  },
+  {
+   "id": "6-15",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Aynı kabahatin tekrarı",
+   "hukum": "Aynı kabahatin birden fazla işlenmesinde her biri için ayrı ayrı idarî para cezası verilir; kesintisiz fiille işlenebilen kabahatlerde, idarî yaptırım kararı verilinceye kadar fiil tek sayılır (m.15/2)",
+   "sinavda_boyle_yazarlar": [
+    "Sadece bir idarî para cezası verilir"
+   ],
+   "dogrusu": [
+    "Aynı kabahatin tekrarında her biri için ayrı ceza (15/2)"
+   ]
+  },
+  {
+   "id": "6-16",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Suç-kabahat içtimaı",
+   "hukum": "Bir fiil hem kabahat hem suç olarak tanımlanmışsa sadece suçtan dolayı yaptırım uygulanır; ancak suçtan dolayı yaptırım uygulanamayan hâllerde kabahat dolayısıyla yaptırım uygulanır (m.15/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"her ikisi de uygulanır\" ya da ikinci cümle silinir"
+   ],
+   "dogrusu": [
+    "sadece suçtan dolayı · suçtan dolayı yaptırım uygulanamayan hâllerde (m.15/3)"
+   ]
+  },
+  {
+   "id": "6-17",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Yaptırım türleri",
+   "hukum": "Kabahatler karşılığında uygulanacak idarî yaptırımlar idarî para cezası ve idarî tedbirlerden ibarettir; idarî tedbirler mülkiyetin kamuya geçirilmesi ve ilgili kanunlardaki diğer tedbirlerdir (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"hapis cezası\" ya da \"faaliyetten men\" eklenip tek yaptırım gösterilir"
+   ],
+   "dogrusu": [
+    "idarî para cezası ve idarî tedbirlerden · mülkiyetin kamuya geçirilmesi (m.16)"
+   ]
+  },
+  {
+   "id": "6-18",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Cezanın türü ve belirlenmesi",
+   "hukum": "İdarî para cezası maktu veya nispi olabilir; kanunda alt ve üst sınır gösterilerek de belirlenebilir, bu durumda miktar belirlenirken kabahatin haksızlık içeriği ile failin kusuru ve ekonomik durumu birlikte göz önünde bulundurulur (m.17/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız failin ekonomik durumuna bakılır\""
+   ],
+   "dogrusu": [
+    "maktu veya nispi · alt ve üst sınır · kabahatin haksızlık içeriği ile failin kusuru ve ekonomik durumu birlikte (m.17/1-2)"
+   ]
+  },
+  {
+   "id": "6-19",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Gelir kaydı",
+   "hukum": "Cumhuriyet başsavcılıkları ve mahkemelerce verilen idarî para cezaları Genel Bütçeye; sosyal güvenlik kurumları ile mahalli idarelerce verilenler kendi bütçelerine gelir kaydedilir (m.17/3)",
+   "sinavda_boyle_yazarlar": [
+    "hepsi genel bütçeye kaydedilir denir"
+   ],
+   "dogrusu": [
+    "Cumhuriyet başsavcılıkları ve mahkemelerce · Genel Bütçeye · sosyal güvenlik kurumları ile mahalli idarelerce · kendi bütçelerine (m.17/3)"
+   ]
+  },
+  {
+   "id": "6-20",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Taksitlendirme",
+   "hukum": "Kişinin ekonomik durumu müsait değilse, ilk taksitin peşin ödenmesi koşuluyla bir yıl içinde ve dört eşit taksit hâlinde ödenmesine karar verilebilir; taksitler zamanında ve tam ödenmezse kalan kısmın tamamı tahsil edilir (m.17/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki yıl içinde altı taksit\""
+   ],
+   "dogrusu": [
+    "ilk taksitin peşin ödenmesi koşuluyla bir yıl içinde ve dört eşit taksit · kalan kısmın tamamı (m.17/3)"
+   ]
+  },
+  {
+   "id": "6-21",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Peşin ödeme indirimi",
+   "hukum": "İdarî para cezasının ödeme süresi içinde ödenmesi hâlinde cezadan %25 oranında indirim yapılır; ödeme, kişinin kanun yoluna başvurma hakkını etkilemez (m.17/6)",
+   "sinavda_boyle_yazarlar": [
+    "Ödeyen artık başvuramaz",
+    "beşte dördü tahsil edilir",
+    "İkisi karıştırılır"
+   ],
+   "dogrusu": [
+    "Süresinde ödemede %25 indirim, kanun yolu hakkı etkilenmez (17/6)",
+    "Ödeme süresi 1 ay, başvuru süresi 15 gün (17/6, 27/1)"
+   ]
+  },
+  {
+   "id": "6-22",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Yeniden değerleme",
+   "hukum": "İdarî para cezaları her takvim yılı başından geçerli olmak üzere yeniden değerleme oranında artırılarak uygulanır; bu hüküm nispî nitelikteki cezalara uygulanmaz (m.17/7)",
+   "sinavda_boyle_yazarlar": [
+    "nispî cezalar da artırılır denir. (Aşağıdaki tabloda yer alan tutarlar kanun metnindeki maktu rakamlardır; her yıl yeniden değerlemeyle güncellenir.)"
+   ],
+   "dogrusu": [
+    "her takvim yılı başından geçerli olmak üzere yeniden değerleme oranında artırılarak · nispî · uygulanmaz (m.17/7)"
+   ]
+  },
+  {
+   "id": "6-23",
+   "madde": [
+    "18",
+    "4"
+   ],
+   "baslik": "Mülkiyetin kamuya geçirilmesi",
+   "hukum": "Ancak kanunda açık hüküm bulunan hâllerde karar verilebilir; eşyanın mülkiyeti kanunda açık hüküm varsa ilgili kamu kurum ve kuruluşuna, aksi takdirde Devlete geçer (m.18/1, 4)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde Devlete geçer\""
+   ],
+   "dogrusu": [
+    "kanunda açık hüküm bulunan · ilgili kamu kurum ve kuruluşuna · Devlete (m.18/1, 4)"
+   ]
+  },
+  {
+   "id": "6-24",
+   "madde": [
+    "18",
+    "7"
+   ],
+   "baslik": "Kamuya geçirmenin özellikleri",
+   "hukum": "Karar, eşyanın kullanılmaz hâle getirilmesi, niteliğinin değiştirilmesi veya ancak belli bir surette kullanılması koşullarından birine bağlı olarak belli bir süre geciktirilebilir; fail hakkında idarî para cezası veya başka bir yaptırım kararı verilmiş olması ŞART DEĞİLDİR; kaim değerin kamuya geçirilmesine de karar verilebilir; başka türlü değerlendirilemeyen eşya imha edilir (m.18/2, 5, 6, 7)",
+   "sinavda_boyle_yazarlar": [
+    "\"fail hakkında ceza verilmiş olması şarttır\"",
+    "Önce idarî para cezası verilmiş olmalıdır"
+   ],
+   "dogrusu": [
+    "Mülkiyetin kamuya geçirilmesi için fail hakkında ceza verilmesi şart değildir (18/5)"
+   ]
+  },
+  {
+   "id": "6-25",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Soruşturma zamanaşımı",
+   "hukum": "Süre dolunca kişi hakkında idarî para cezasına karar verilemez; süreler: 100.000 TL veya daha fazla cezayı gerektirenlerde 5 yıl; 50.000 TL veya daha fazlada 4 yıl; 50.000 TL'den azında 3 yıl (m.20/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "kademeler kaydırılır",
+    "5 / 6 / 7 / 10 yıl"
+   ],
+   "dogrusu": [
+    "Nispî cezada soruşturma zamanaşımı 8 yıl (20/3)"
+   ]
+  },
+  {
+   "id": "6-26",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Zamanaşımının başlangıcı",
+   "hukum": "Süre, kabahate ilişkin tanımdaki fiilin işlenmesiyle veya neticenin gerçekleşmesiyle işlemeye başlar; fiil aynı zamanda suç oluşturuyorsa suça ilişkin dava zamanaşımı hükümleri uygulanır (m.20/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde kabahat zamanaşımı uygulanır\""
+   ],
+   "dogrusu": [
+    "fiilin işlenmesiyle veya neticenin gerçekleşmesiyle · suç · suça ilişkin dava zamanaşımı (m.20/4-5)"
+   ]
+  },
+  {
+   "id": "6-27",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Yerine getirme zamanaşımı",
+   "hukum": "Süre dolunca karar yerine getirilemez; 50.000 TL veya daha fazlada 7 yıl; 20.000 TL veya daha fazlada 5 yıl; 10.000 TL veya daha fazlada 4 yıl; 10.000 TL'den azında 3 yıl; mülkiyetin kamuya geçirilmesinde 10 YIL (m.21/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "kamuya geçirme süresi \"5 yıl\" gösterilir"
+   ],
+   "dogrusu": [
+    "yerine getirilemez · 50.000 TL veya daha fazla · 7 yıl · 20.000 TL veya daha fazla · 5 yıl · 10.000 TL veya daha fazla · 4 yıl · 10.000 TL'den az · 3 yıl · mülkiyetin kamuya geçirilmesinde 10 YIL (m.21/1-3)"
+   ]
+  },
+  {
+   "id": "6-28",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Yerine getirme zamanaşımının başlangıcı ve durması",
+   "hukum": "Süre, kararın kesinleşmesinin rastladığı takvim yılını takip eden takvim yılı başından itibaren işler; kanun hükmü gereği yaptırımın yerine getirilmesine başlanamaması veya getirilememesi hâlinde zamanaşımı işlemez (durur) (m.21/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"kesinleşme tarihinden itibaren işler\""
+   ],
+   "dogrusu": [
+    "kararın kesinleşmesinin rastladığı takvim yılını takip eden takvim yılı başından · işlemez (durur) (m.21/4-5)"
+   ]
+  },
+  {
+   "id": "6-29",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Asıl yetki",
+   "hukum": "Kabahat dolayısıyla idarî yaptırım kararı vermeye ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri yetkilidir (m.22/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde mülki amir yetkilidir\""
+   ],
+   "dogrusu": [
+    "ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri (m.22/1)"
+   ]
+  },
+  {
+   "id": "6-30",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Açık hüküm yoksa",
+   "hukum": "Kanunda açık hüküm bulunmayan hâllerde ilgili kamu kurum ve kuruluşunun EN ÜST AMİRİ yetkilidir (m.22/2)",
+   "sinavda_boyle_yazarlar": [
+    "İlin valisi",
+    "Cumhuriyet başsavcısı"
+   ],
+   "dogrusu": [
+    "Kanunda hüküm yoksa yetkili en üst amir (22/2)"
+   ]
+  },
+  {
+   "id": "6-31",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Cumhuriyet savcısının yetkisi",
+   "hukum": "Savcı kanunda açıkça hüküm bulunan hâllerde yaptırım kararı vermeye yetkilidir; bir suç soruşturması kapsamında kabahat işlendiğini öğrenirse durumu ilgili kuruma bildirebileceği gibi kendisi de karar verebilir (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "\"savcı hiçbir hâlde karar veremez\""
+   ],
+   "dogrusu": [
+    "kanunda açıkça hüküm bulunan · bildirebileceği gibi kendisi de (m.23)"
+   ]
+  },
+  {
+   "id": "6-32",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Mahkemenin yetkisi",
+   "hukum": "Kovuşturma konusu fiilin kabahat oluşturduğunun anlaşılması hâlinde mahkeme tarafından idarî yaptırım kararı verilir (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"dosya idareye gönderilir\""
+   ],
+   "dogrusu": [
+    "kabahat oluşturduğunun anlaşılması · mahkeme tarafından (m.24)"
+   ]
+  },
+  {
+   "id": "6-33",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Tebliğ",
+   "hukum": "İdarî yaptırım kararı 7201 sayılı Tebligat Kanunu hükümlerine göre tebliğ edilir; elektronik ortamda yapılan tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen BEŞİNCİ GÜNÜN SONUNDA yapılmış sayılır (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"ulaştığı anda\" veya \"yedinci günün sonunda\""
+   ],
+   "dogrusu": [
+    "7201 sayılı Tebligat Kanunu · ulaştığı tarihi izleyen BEŞİNCİ GÜNÜN SONUNDA (m.26)"
+   ]
+  },
+  {
+   "id": "6-34",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Başvuru süresi ve merci",
+   "hukum": "İdarî para cezası ve mülkiyetin kamuya geçirilmesi kararına karşı, tebliğ veya tefhim tarihinden itibaren en geç ON BEŞ GÜN içinde sulh ceza mahkemesine başvurulabilir; bu sürede başvurulmazsa karar kesinleşir (m.27/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"idare mahkemesine\" ya da \"30 gün\""
+   ],
+   "dogrusu": [
+    "tebliğ veya tefhim tarihinden itibaren en geç ON BEŞ GÜN · sulh ceza mahkemesine · kesinleşir (m.27/1)"
+   ]
+  },
+  {
+   "id": "6-35",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Mücbir sebep",
+   "hukum": "Mücbir sebeple süre kaçırılmışsa, sebebin ortadan kalktığı tarihten itibaren en geç YEDİ GÜN içinde başvurulabilir (m.27/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"on beş gün\" denir"
+   ],
+   "dogrusu": [
+    "ortadan kalktığı tarihten itibaren en geç YEDİ GÜN (m.27/2)"
+   ]
+  },
+  {
+   "id": "6-36",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Başvurunun şekli",
+   "hukum": "Başvuru bizzat, kanunî temsilci veya avukat tarafından sulh ceza mahkemesine verilecek dilekçeyle yapılır; dilekçe iki nüsha olarak verilir (m.27/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız avukatla yapılabilir\" veya \"üç nüsha\""
+   ],
+   "dogrusu": [
+    "bizzat, kanunî temsilci veya avukat · iki nüsha (m.27/3)"
+   ]
+  },
+  {
+   "id": "6-37",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Ön inceleme",
+   "hukum": "Yetkisizlik hâlinde dosya yetkili mahkemeye gönderilir; süresinde yapılmama, incelenebilir bir karar olmaması veya başvuru hakkı bulunmaması hâlinde başvurunun reddine; aksi hâlde usulden kabulüne karar verilir (m.28/1)",
+   "sinavda_boyle_yazarlar": [
+    "yetkisizlikte \"başvuru reddedilir\" denir"
+   ],
+   "dogrusu": [
+    "yetkili mahkemeye gönderilir · başvurunun reddine · usulden kabulüne (m.28/1)"
+   ]
+  },
+  {
+   "id": "6-38",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Kurumun cevabı",
+   "hukum": "İlgili kamu kurum ve kuruluşu, başvuru dilekçesinin tebliği tarihinden itibaren en geç ON BEŞ GÜN içinde mahkemeye cevap verir (m.28/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yedi gün\" veya \"otuz gün\""
+   ],
+   "dogrusu": [
+    "en geç ON BEŞ GÜN (m.28/3)"
+   ]
+  },
+  {
+   "id": "6-39",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Kesinlik sınırı",
+   "hukum": "On beş bin Türk Lirası dâhil idarî para cezalarına karşı başvuru üzerine verilen kararlar KESİNDİR (m.28/10)",
+   "sinavda_boyle_yazarlar": [
+    "\"3.000 TL\" gibi eski/farklı bir rakam verilir"
+   ],
+   "dogrusu": [
+    "On beş bin Türk Lirası dâhil · KESİNDİR (m.28/10)"
+   ]
+  },
+  {
+   "id": "6-40",
+   "madde": [
+    "29"
+   ],
+   "baslik": "İtiraz",
+   "hukum": "Mahkemenin verdiği son karara karşı CMK'ya göre itiraz edilebilir; itiraz, kararın tebliğinden itibaren en geç İKİ HAFTA içinde yapılır; itirazla ilgili karar dosya üzerinden inceleme yapılarak verilir (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"on beş gün\" ya da \"duruşmalı inceleme yapılır\""
+   ],
+   "dogrusu": [
+    "CMK'ya göre itiraz · tebliğinden itibaren en geç İKİ HAFTA · dosya üzerinden (m.29)"
+   ]
+  },
+  {
+   "id": "6-41",
+   "madde": [
+    "30"
+   ],
+   "baslik": "Vazgeçme ve geri alma",
+   "hukum": "Başvuran kişi, karar verilinceye kadar vazgeçebilir; vazgeçtikten sonra aynı konuda bir daha başvuramaz; ilgili kurum da mahkemece karar verilinceye kadar başvuruyu kabul ederek yaptırım kararını geri alabilir (m.30)",
+   "sinavda_boyle_yazarlar": [
+    "\"vazgeçtikten sonra yeniden başvurabilir\""
+   ],
+   "dogrusu": [
+    "vazgeçebilir · aynı konuda bir daha başvuramaz · yaptırım kararını geri alabilir (m.30)"
+   ]
+  },
+  {
+   "id": "6-42",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Emre aykırı davranış",
+   "hukum": "Yetkili makamlarca adlî işlemler nedeniyle ya da kamu güvenliği, kamu düzeni veya genel sağlığın korunması amacıyla hukuka uygun olarak verilen emre aykırı hareket edene 100 TL; bu cezaya emri veren makam karar verir (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "karar makamı \"kolluk\" gösterilir"
+   ],
+   "dogrusu": [
+    "kamu güvenliği, kamu düzeni veya genel sağlığın korunması · 100 TL · emri veren makam (m.32)"
+   ]
+  },
+  {
+   "id": "6-43",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Dilencilik",
+   "hukum": "50 TL idarî para cezası; elde edilen gelire el konularak mülkiyetin kamuya geçirilmesine karar verilir; para cezası ve el koymaya kolluk veya belediye zabıta görevlileri, mülkiyetin kamuya geçirilmesine mülki amir veya belediye encümeni karar verir (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "kamuya geçirme kararı \"kolluğa\" verilir"
+   ],
+   "dogrusu": [
+    "50 TL · el konularak mülkiyetin kamuya geçirilmesine · kolluk veya belediye zabıta görevlileri · mülki amir veya belediye encümeni (m.33)"
+   ]
+  },
+  {
+   "id": "6-44",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Kumar",
+   "hukum": "1.000 TL; elde edilen gelire el konularak mülkiyetin kamuya geçirilmesine karar verilir; para cezası ve el koymaya kolluk görevlileri, mülkiyetin kamuya geçirilmesine mülki amir karar verir (m.34)",
+   "sinavda_boyle_yazarlar": [
+    "belediye zabıtası da yetkili gösterilir — kumarda yalnız kolluktır"
+   ],
+   "dogrusu": [
+    "1.000 TL · kolluk görevlileri · mülki amir (m.34)"
+   ]
+  },
+  {
+   "id": "6-45",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Sarhoşluk",
+   "hukum": "Sarhoş olarak başkalarının huzur ve sükûnunu bozacak şekilde davranan kişiye kolluk görevlilerince 50 TL; kişi ayrıca sarhoşluğun etkisi geçinceye kadar kontrol altında tutulur (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "İçki içmek kabahattir"
+   ],
+   "dogrusu": [
+    "Kabahat olan sarhoş olup huzuru bozmaktır (35)"
+   ]
+  },
+  {
+   "id": "6-46",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Gürültü",
+   "hukum": "Başkalarının huzur ve sükûnunu bozacak şekilde gürültüye neden olana 50 TL; fiil bir ticarî işletmenin faaliyeti çerçevesinde işlenirse işletme sahibine 1.000-5.000 TL; karar kolluk veya belediye zabıta görevlileri (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "ticari işletme cezası maktu gösterilir"
+   ],
+   "dogrusu": [
+    "50 TL · ticarî işletmenin faaliyeti çerçevesinde · 1.000-5.000 TL · kolluk veya belediye zabıta görevlileri (m.36)"
+   ]
+  },
+  {
+   "id": "6-47",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Rahatsız etme",
+   "hukum": "Mal veya hizmet satmak için başkalarını rahatsız edene 50 TL; kolluk veya belediye zabıta görevlileri yetkilidir (m.37)",
+   "sinavda_boyle_yazarlar": [
+    "yalnız zabıta yetkili denir"
+   ],
+   "dogrusu": [
+    "50 TL · kolluk veya belediye zabıta görevlileri (m.37)"
+   ]
+  },
+  {
+   "id": "6-48",
+   "madde": [
+    "38"
+   ],
+   "baslik": "İşgal",
+   "hukum": "Yetkili makamların açık ve yazılı izni olmaksızın meydan, cadde, sokak veya kaldırımları işgal eden ya da buralarda mal satışa arz edene belediye zabıta görevlilerince 50 TL; buralara inşaat malzemesi yığana 100-500 TL (m.38)",
+   "sinavda_boyle_yazarlar": [
+    "işgalde kolluk yetkili gösterilir (belediye zabıtasıdır)"
+   ],
+   "dogrusu": [
+    "açık ve yazılı izni olmaksızın · belediye zabıta görevlilerince 50 TL · inşaat malzemesi yığana 100-500 TL (m.38)"
+   ]
+  },
+  {
+   "id": "6-49",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Tütün mamulü tüketmek",
+   "hukum": "Kamu hizmet binalarının kapalı alanlarında tüketene, ilgili idarî birim amirinin yetkili kıldığı kamu görevlilerince 50 TL; toplu taşıma araçlarında tüketene 50 TL (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"açık alanlarda da ceza verilir\""
+   ],
+   "dogrusu": [
+    "Kamu hizmet binalarının kapalı alanlarında · ilgili idarî birim amirinin yetkili kıldığı kamu görevlilerince 50 TL · toplu taşıma araçlarında · 50 TL (m.39)"
+   ]
+  },
+  {
+   "id": "6-50",
+   "madde": [
+    "40"
+   ],
+   "baslik": "Kimliği bildirmeme",
+   "hukum": "Görevle bağlantılı olarak sorulması hâlinde kamu görevlisine kimliği veya adresiyle ilgili bilgi vermekten kaçınan veya gerçeğe aykırı beyanda bulunana, bu görevli tarafından 50 TL; kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir, kişi kimliği açıkça anlaşılıncaya kadar gözaltına alınır ve gerekirse tutuklanır (m.40)",
+   "sinavda_boyle_yazarlar": [
+    "\"savcıya bildirilmez\" veya \"gözaltına alınamaz\""
+   ],
+   "dogrusu": [
+    "bilgi vermekten kaçınan veya gerçeğe aykırı beyanda bulunana · bu görevli tarafından 50 TL · tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir · gözaltına alınır ve gerekirse tutuklanır (m.40)"
+   ]
+  },
+  {
+   "id": "6-51",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Çevreyi kirletme",
+   "hukum": "Evsel atık ve artıkları, toplanmasına veya depolanmasına özgü yerler dışına atana 20 TL; karar belediye sınırları içinde belediye zabıta görevlileri, belediye sınırları dışında kolluk görevlileri tarafından verilir; kirlilik kişi tarafından derhal giderilirse idarî para cezasına karar verilmeyebilir (m.41)",
+   "sinavda_boyle_yazarlar": [
+    "içeride/dışarıda yetkili görevli ters çevrilir"
+   ],
+   "dogrusu": [
+    "20 TL · belediye sınırları içinde belediye zabıta görevlileri · belediye sınırları dışında kolluk görevlileri · kişi tarafından derhal giderilirse · karar verilmeyebilir (m.41)"
+   ]
+  },
+  {
+   "id": "6-52",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Afiş asma",
+   "hukum": "Meydan, park, cadde-sokak kenarındaki kamuya ait duvar ve alanlara ya da rızası olmaksızın özel kişilere ait alanlara afiş/ilân asana 100-3.000 TL; aynı içerikteki afiş ve ilânlar TEK FİİL sayılır; karar kolluk veya belediye zabıta görevlileri (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"her afiş ayrı fiildir\"",
+    "Her afiş ayrı kabahattir"
+   ],
+   "dogrusu": [
+    "Aynı içerikteki afişler tek fiil sayılır (42)"
+   ]
+  },
+  {
+   "id": "6-53",
+   "madde": [
+    "42"
+   ],
+   "baslik": "112 Acil Çağrı Merkezini meşgul etme",
+   "hukum": "Meşgul etmek amacıyla arayıp görevlilerle konuşan veya ısrarla çağrı bırakana il valileri tarafından 1.500 TL; ihbarın asılsız olduğu olay yerine giden ekiplerce tutanakla tespit edilirse il valileri tarafından 15.000 TL; fiillerin bir yıl içinde tekrarı hâlinde ceza iki katı uygulanır (m.42/A)",
+   "sinavda_boyle_yazarlar": [
+    "yetkili \"kolluk\" gösterilir — bu maddede yetkili il valileridir",
+    "Kolluk görevlileri karar verir"
+   ],
+   "dogrusu": [
+    "112 ile ilgili cezalarda yetkili il valileridir (42/A)"
+   ]
+  },
+  {
+   "id": "6-54",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Silah taşıma",
+   "hukum": "Yetkili makamlardan ruhsat almaksızın, kanuna göre yasak olmayan silahları park, meydan, cadde veya sokaklarda görünür şekilde taşıyana kolluk tarafından 50 TL (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"yasak silahlar\" denir — o suçtur, kabahat değil"
+   ],
+   "dogrusu": [
+    "ruhsat almaksızın · yasak olmayan · görünür şekilde · kolluk tarafından 50 TL (m.43)"
+   ]
+  },
+  {
+   "id": "6-55",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Tüzel kişiler hakkında idarî para cezası",
+   "hukum": "Tüzel kişinin organ veya temsilcisince dolandırıcılık, uyuşturucu imal-ticareti, ihaleye veya edimin ifasına fesat, rüşvet, aklama, zimmet, kaçakçılık, petrol piyasası suçu, terörizmin finansmanı suçlarının tüzel kişi yararına işlenmesi hâlinde tüzel kişiye 10.000 TL - 50.000.000 TL idarî para cezası; ceza işleme/eyleme konu menfaatin iki katından az olamaz; yargılamayı yapan mahkeme yetkilidir (m.43/A)",
+   "sinavda_boyle_yazarlar": [
+    "yetkili \"mülki amir\" gösterilir"
+   ],
+   "dogrusu": [
+    "dolandırıcılık, uyuşturucu imal-ticareti, ihaleye veya edimin ifasına fesat, rüşvet, aklama, zimmet, kaçakçılık, petrol piyasası suçu, terörizmin finansmanı · 10.000 TL - 50.000.000 TL · işleme/eyleme konu menfaatin iki katından az olamaz · yargılamayı yapan mahkeme (m.43/A)"
+   ]
+  },
+  {
+   "id": "6-56",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Sahte paranın bildirilmemesi",
+   "hukum": "Bankalara, finansal kuruluşlara ibraz edilen paranın sahte olduğu anlaşıldığında bildirim yükümlülüğü yerine getirilmezse, bu tüzel kişilere Cumhuriyet savcısı tarafından 1.000-5.000 TL idarî para cezası (m.43/B)",
+   "sinavda_boyle_yazarlar": [
+    "yetkili \"mahkeme\" veya \"mülki amir\" gösterilir"
+   ],
+   "dogrusu": [
+    "bildirim yükümlülüğü yerine getirilmezse · Cumhuriyet savcısı tarafından 1.000-5.000 TL (m.43/B)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "25",
+   "yanlis": [
+    "İdarî yaptırımın türü ve miktarı",
+    "mücbir sebepler\" listeye eklenir"
+   ],
+   "dogru": "Tutanak unsurları dörttür (25/1)"
+  }
+ ]
+}

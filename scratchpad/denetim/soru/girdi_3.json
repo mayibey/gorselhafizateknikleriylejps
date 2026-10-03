@@ -1,0 +1,1073 @@
+[
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-19",
+  "madde": [
+   "11"
+  ],
+  "baslik": "Mülki görevlerin esasları",
+  "hukum": "Can, ırz ve malı korumak; kamu düzenini sağlamak; ceza infaz kurumlarının dış korumasını sağlamak; kaçakçılığa engel olmak; trafik hizmetlerini yürütmek (m.11/1)",
+  "tuzak": "\"ceza infaz kurumlarının iç güvenliği\" görevler arasına sokulur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-20",
+  "madde": [
+   "13"
+  ],
+  "baslik": "Kişisel koruma",
+  "hukum": "Esas olan genel ve koruyucu önlemdir; kişisel koruma ancak özel hüküm varsa veya özel nitelikli durumda yetkili mülki amirin emriyle yapılır (m.13/1)",
+  "tuzak": "\"talep eden herkese kişisel koruma verilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-21",
+  "madde": [
+   "14"
+  ],
+  "baslik": "Olağanüstü durumlar",
+  "hukum": "Yangın, sel, deprem, toprak kayması, çığ gibi olaylarda amirlere ve ilgili kamu görevlilerine haber verilir, olay yerine gidilir; tutanağın bir örneği mülki amire, bir örneği Cumhuriyet savcılığına verilir (m.14/1)",
+  "tuzak": "tutanak yalnız mülki amire verilir denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-22",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Kuduz ve akıl hastası sevki",
+  "hukum": "Kuduz hayvanlar ve ısırılanlar ivedilikle sağlık kuruluşlarına bildirilir; polis teşkilatı olmayan yerlerde saldırı ihtimali olan akıl hastalarının sevki, yalnız saldırıya engel olmak amacıyla jandarmaca yapılır (m.15/2-3)",
+  "tuzak": "\"jandarma sevkten sorumludur\" denir; oysa sevkten sorumlu değildir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-23",
+  "madde": [
+   "16"
+  ],
+  "baslik": "Konut dokunulmazlığı",
+  "hukum": "Özel hayatın ve aile hayatının gizliliğini korumak, konut dokunulmazlığına ilişkin görevler başlığı altındadır (m.16/1-c)",
+  "tuzak": "bu yükümlülük \"hak ve hürriyetlerin korunması\" görevine bağlanır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-30",
+  "madde": [
+   "29"
+  ],
+  "baslik": "Kadın-erkek sevki",
+  "hukum": "İştirak hâlinde suç işleyenler ve kanunen önemli ilişki sayılacak yakınlığı olanlar dışında kadın ve erkek tutuklu/hükümlüler birlikte sevk edilemez; kadın sevk edilirken kadın ceza infaz koruma görevlisi verilir (m.29)",
+  "tuzak": "istisnalar kaldırılıp \"hiçbir şekilde birlikte sevk edilemez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-31",
+  "madde": [
+   "32"
+  ],
+  "baslik": "Sevkte silah kullanma",
+  "hukum": "Firar hazırlığı kuşkusunda devriye komutanı silah kullanılacağını ihtar eder; ihtara uymayıp firara teşebbüste başka şekilde önlenemiyorsa silah kullanılır (m.32/1)",
+  "tuzak": "\"ihtara gerek olmadan\" veya \"ihtar sonrası derhal\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-32",
+  "madde": [
+   "38"
+  ],
+  "baslik": "Adli görevlerde emir",
+  "hukum": "Soruşturma işlemleri Cumhuriyet savcısının emir ve talimatı doğrultusunda adli kolluğa yaptırılır; adli kolluk, adli görev dışındaki hizmetlerde üstlerinin emrindedir (m.38/2)",
+  "tuzak": "adli kolluğun her işte savcıya bağlı olduğu söylenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-41",
+  "madde": [
+   "46"
+  ],
+  "baslik": "Kimliği belirlenemeyen kişi",
+  "hukum": "Kimliği sair surette de belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir (m.46/9)",
+  "tuzak": "\"mülki amire bildirilir\" ya da \"serbest bırakılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-43",
+  "madde": [
+   "47"
+  ],
+  "baslik": "Arama kararının içeriği",
+  "hukum": "Kararda/emirde sebebi, konusu ve kapsamı, yapılacağı yer, yapılacağı zaman ve geçerli olacağı süre belirtilir (m.47/3)",
+  "tuzak": "\"aramayı yapacak personelin adı ve soyadı\" listeye eklenir — yoktur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-46",
+  "madde": [
+   "47"
+  ],
+  "baslik": "Korunan bina girişi",
+  "hukum": "Jandarmanın güvenliğini sağladığı bina ve tesislere gelenlerin üstü, aracı ve eşyası herhangi bir emir veya karar olmaksızın teknik cihazla, gerektiğinde elle aranabilir; girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır (m.47/7)",
+  "tuzak": "\"bu aramalar için de mülki amir emri gerekir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-49",
+  "madde": [
+   "54"
+  ],
+  "baslik": "Bölge komutanının görevi",
+  "hukum": "İl jandarma komutanlıkları arasında koordinasyon ve işbirliği, lojistik/teknik destek planlaması, personelin özlük işlemleri; konuşlu olduğu ilin valisinin onayıyla terörle mücadele operasyonlarını planlamak ve iller arası kuvvet kaydırması yapmak (m.54/1)",
+  "tuzak": "bu görevler il jandarma komutanına ya da Genel Komutana bağlanır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-50",
+  "madde": [
+   "57"
+  ],
+  "baslik": "Karakol komutanının görevleri",
+  "hukum": "Tedbir ve kararları uygulamak, öneride bulunmak, adli görevleri ifa etmek, denetlemek, ilçe jandarma komutanınca verilen görevleri takip etmek, astlarını yetiştirmek, disiplini sağlamak, personelin özlük işlemlerini yürütmek (m.57/2)",
+  "tuzak": "\"ihtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak\" karakol komutanına yüklenir — bu görev il ve ilçe komutanındadır (m.55/2-g, m.56/2-ğ)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-54",
+  "madde": [
+   "59"
+  ],
+  "baslik": "Olay bildirimi",
+  "hukum": "Suçlar, asayişi bozan olaylar, afetler, salgın hastalıklar ve bölücü propagandalar vakit geçirmeksizin mülki amire sözlü ya da yazılı bildirilir; suçla ilgili olanlar ayrıca Cumhuriyet savcılığına bildirilir (m.59/1)",
+  "tuzak": "\"yalnız savcılığa\" ya da \"yazılı olmak zorunda\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-55",
+  "madde": [
+   "60"
+  ],
+  "baslik": "Yazışma kanalı",
+  "hukum": "Merkez ve taşra teşkilatı mahalli vaka bilgisi, teknik, muhasebe, lojistik ve özlük konuları dışında resen muhabere edemez; yazışmalar Bakanlık ve mülki amirler aracılığıyla, hak-yükümlülük doğuranlar her hâlükârda valilikler aracılığıyla yapılır (m.60/1)",
+  "tuzak": "\"tüm yazışmalar doğrudan yapılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-56",
+  "madde": [
+   "60"
+  ],
+  "baslik": "Asayiş raporu ve istatistik",
+  "hukum": "Jandarma alanındaki olaylara ait asayiş raporları il jandarma komutanlığınca hazırlanır, vali imzasıyla gönderilir; istatistikler beş örnek olarak birleştirilir, iki örneği vali imzasıyla Bakanlığa sunulur (m.60/4-5)",
+  "tuzak": "raporun jandarma komutanı imzasıyla gönderildiği söylenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-58",
+  "madde": [
+   "65"
+  ],
+  "baslik": "Müşterek operasyonun komutası",
+  "hukum": "Jandarma, sahil güvenlik ve polisin birlikte çalıştığı operasyonda komuta, sevk ve idarenin hangi kolluğa ait olduğunu mülki amir belirler (m.65/6)",
+  "tuzak": "\"en kıdemli komutan belirler\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-60",
+  "madde": [
+   "70"
+  ],
+  "baslik": "Kılık kıyafet",
+  "hukum": "Esas resmi kıyafetle görev yapmaktır; suç ve suçluların gizli takibi, istihbarat, kaçakçılık ve terörle mücadelede mülki amirin veya il jandarma komutanının izniyle farklı kılık kıyafetle hizmet yürütülebilir (m.70/1)",
+  "tuzak": "izin yetkisi yalnız mülki amire ya da yalnız Genel Komutanlığa bağlanır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-61",
+  "madde": [
+   "71"
+  ],
+  "baslik": "Geçici görevlendirme",
+  "hukum": "Jandarma, sahil güvenlik ve emniyet yetersiz kaldığında geçici süre birbirinin alanında görevlendirilebilir; görev süreklilik taşımaz ve görevlendirme mülki amirin onayı ile yapılır (m.71)",
+  "tuzak": "görevlendirmenin kurum amirlerince yapıldığı söylenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-62",
+  "madde": [
+   "72"
+  ],
+  "baslik": "İller arası ekip",
+  "hukum": "Önemli olaylarda Bakanlıkça doğrudan veya valinin talebiyle ekip görevlendirilebilir; ekiplerin kolluk yetkisi jandarma sorumluluk alanıyla sınırlı değildir, mahallin mülki amirine bilgi verir ve ona karşı da sorumludur (m.72)",
+  "tuzak": "\"yetkileri yalnız jandarma alanıyla sınırlıdır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-63",
+  "madde": [
+   "73"
+  ],
+  "baslik": "Tahsis ve devir",
+  "hukum": "JGK, SGK ve EGM silah, mühimmat, taşıt ve taşınmazlarını Bakan onayı ile birbirine geçici tahsis edebilir veya bedelsiz devredebilir (m.73/1)",
+  "tuzak": "onay makamı Genel Komutan veya vali gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-65",
+  "madde": [
+   "75"
+  ],
+  "baslik": "Emniyet ve asayiş planları",
+  "hukum": "Suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekat planı hazırlanır; planlar mülki amirin onayı ile yürürlüğe girer (m.75)",
+  "tuzak": "planların Bakan onayıyla yürürlüğe girdiği söylenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-67",
+  "madde": [
+   "77"
+  ],
+  "baslik": "Tebligat",
+  "hukum": "Tebligat 7201 sayılı Kanuna göre yapılır; mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez (m.77/1)",
+  "tuzak": "\"mülki amirin uygun gördüğü her tebligat yapılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 17,
+  "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+  "kart_id": "17-68",
+  "madde": [
+   "82"
+  ],
+  "baslik": "Yürütme",
+  "hukum": "Yönetmelik hükümlerini Cumhurbaşkanı yürütür (m.82/1)",
+  "tuzak": "İçişleri Bakanı yürütür denir (2019 değişikliği öncesi hâli)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_17.json"
+ },
+ {
+  "kanun_id": 18,
+  "kanun": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+  "kart_id": "18-5",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Yok etmede tedbir yükümlüsü",
+  "hukum": "Veri sorumlusu, yok etmeyle ilgili her türlü teknik ve idari tedbiri almakla yükümlüdür (m.9/2)",
+  "tuzak": "yükümlülük \"ilgili kişiye\" ya da Kurula devredilmiş gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_18.json"
+ },
+ {
+  "kanun_id": 18,
+  "kanun": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+  "kart_id": "18-9",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Anonimde tedbir yükümlüsü",
+  "hukum": "Veri sorumlusu, anonim hale getirmeyle ilgili her türlü teknik ve idari tedbiri almakla yükümlüdür (m.10/3)",
+  "tuzak": "öncül sorularında bu cümle \"yükümlü değildir\" diye olumsuzlanır — yanlış öncül budur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_18.json"
+ },
+ {
+  "kanun_id": 19,
+  "kanun": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+  "kart_id": "19-13",
+  "madde": [
+   "2"
+  ],
+  "baslik": "İMKB ibaresi",
+  "hukum": "Madde metnindeki \", İMKB\" ibaresi 9/4/2019 tarihli 864 sayılı Cumhurbaşkanı Kararı ile çıkarılmıştır (m.2 dipnotu)",
+  "tuzak": "Güncel metinde İMKB/Borsa ismen sayılıyormuş gibi sorulur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_19.json"
+ },
+ {
+  "kanun_id": 19,
+  "kanun": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+  "kart_id": "19-14",
+  "madde": [
+   "3"
+  ],
+  "baslik": "Dayanak",
+  "hukum": "Yönetmelik, 9/10/2003 tarihli ve 4982 sayılı Bilgi Edinme Hakkı Kanununun 31 inci maddesi uyarınca hazırlanmıştır (m.3)",
+  "tuzak": "Kanun numarası 6698 (KVKK) veya 3071 (Dilekçe Hakkı) verilir; dayanak madde 5 veya 13 gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_19.json"
+ },
+ {
+  "kanun_id": 20,
+  "kanun": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik",
+  "kart_id": "20-3",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Satıcılık sağlık raporu içeriği",
+  "hukum": "Silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan sakınca olmadığına dair rapor (m.10/a)",
+  "tuzak": "sadece \"bedeni\" ya da sadece \"ruhi\" diye daraltılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_20.json"
+ },
+ {
+  "kanun_id": 20,
+  "kanun": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik",
+  "kart_id": "20-8",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Yenileme evrakı",
+  "hukum": "5 yıllık harcın ödendiğine ilişkin belge ile kimlik beyanı, sabıka beyanı, sağlık raporu ve iki fotoğraf istenir (m.10/b)",
+  "tuzak": "\"yenilemede sadece harç yeter\" denir; bu yalnız taşıma yetkisi olanlar için geçerlidir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_20.json"
+ },
+ {
+  "kanun_id": 20,
+  "kanun": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik",
+  "kart_id": "20-12",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Tüfeğin belgeye işlenmesi",
+  "hukum": "Ruhsatname sahibi, tüfeğin cins, marka, çap (kalibre) ve seri numarasını belgesine işletmek zorundadır (m.10/b)",
+  "tuzak": "sadece seri numarası ya da sadece marka sayılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_20.json"
+ },
+ {
+  "kanun_id": 20,
+  "kanun": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik",
+  "kart_id": "20-23",
+  "madde": [
+   "14"
+  ],
+  "baslik": "Meskun mahalde silah atma",
+  "hukum": "Kamu davası açılmamış olsa bile, zorunlu olmadığı halde meskun mahalde veya civarında ya da umuma mahsus yol üzerinde veya bu yola doğru silah atanlara verilmez (m.14/c)",
+  "tuzak": "\"mahkûmiyet şarttır\" denir; metin dava açılmamış olsa bile diyor",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_20.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-0",
+  "madde": [
+   "4"
+  ],
+  "baslik": "İhbar herkese açık",
+  "hukum": "Şiddet veya şiddete uğrama tehlikesi hâlinde herkes durumu yazılı, sözlü veya başka bir suretle ihbar edebilir (m.4/1)",
+  "tuzak": "\"yalnızca mağdur / yakınları / görgü tanıkları ihbar edebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-1",
+  "madde": [
+   "4"
+  ],
+  "baslik": "Kamu kurumu için ihbar zorunlu",
+  "hukum": "Şiddetten haberdar olan kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşları durumu derhâl şikâyet mercilerine bildirmek zorundadır (m.4/1)",
+  "tuzak": "onlar için de \"bildirebilir\" (ihtiyari) denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-3",
+  "madde": [
+   "4"
+  ],
+  "baslik": "ŞÖNİM'e gelen ihbarın yönlendirileceği yerler",
+  "hukum": "Müdürlük veya ŞÖNİM'e yapılan ihbar/şikâyet, olayın özelliğine göre kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime gecikmeksizin bildirilir (m.4/4)",
+  "tuzak": "dördünden biri çıkarılır ya da yerine Cumhurbaşkanlığı konur",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-8",
+  "madde": [
+   "16"
+  ],
+  "baslik": "Kimlik değiştirmenin üç şartı",
+  "hukum": "Hayati tehlike bulunmalı, diğer tedbirler yetersiz kalmalı ve ilgilinin aydınlatılmış rızası olmalı; karar hâkim tarafından Cumhuriyet başsavcılığına gönderilir, gereğini İçişleri Bakanlığı yerine getirir (m.16)",
+  "tuzak": "\"gereğini Adalet Bakanlığı yerine getirir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-11",
+  "madde": [
+   "26"
+  ],
+  "baslik": "Teslim alınan silah iade edilmez",
+  "hukum": "Kurum amiri, süre dolmadıkça veya yeni bir karar verilmedikçe silahı hiçbir şekilde iade etmez; teslim/iade kurum amiri, şiddet uygulayan ve bir tanık arasında tutanakla yapılır (m.26/2-3)",
+  "tuzak": "\"amirin takdiriyle iade edilebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-12",
+  "madde": [
+   "17"
+  ],
+  "baslik": "Talep edilmese bile tedbir nafakası",
+  "hukum": "Şiddet uygulayan ailenin geçimini sağlayan kişi ise hâkim, nafakaya hükmedilmemiş olması kaydıyla talep edilmese dahi tedbir nafakasına hükmedebilir (m.17/3)",
+  "tuzak": "\"mutlaka talep şarttır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-16",
+  "madde": [
+   "29"
+  ],
+  "baslik": "Tatil günü süreye dâhil",
+  "hukum": "Tatil günleri sürenin hesabına dâhildir; süre resmî tatile veya hafta sonuna rastlarsa takip eden ilk iş günü sona erer (m.29/3)",
+  "tuzak": "\"tatil günleri hesaba katılmaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-19",
+  "madde": [
+   "31"
+  ],
+  "baslik": "Ret kararı sadece mağdura tebliğ",
+  "hukum": "Tedbir talebinin reddine ilişkin karar sadece korunan kişiye tebliğ edilir; kabul kararı ise hem korunan kişiye hem şiddet uygulayana tefhim/tebliğ edilir (m.31/1-2)",
+  "tuzak": "\"ret kararı da şiddet uygulayana tebliğ edilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-27",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Geçici korumada bilgi verme",
+  "hukum": "Korunan kişi acil durumlarda hemen, diğer hâllerde yirmidört saat öncesinden gideceği yeri görevli ve yetkili kolluğa bildirir; gideceği yerdeki kolluk gecikmeksizin haberdar edilir (m.10/2)",
+  "tuzak": "\"48 saat öncesinden\" denir ya da \"başka yere giderse koruma sona erer\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-34",
+  "madde": [
+   "6",
+   "11"
+  ],
+  "baslik": "Kreşin iki süresi",
+  "hukum": "Korunan kişi çalışmıyorsa dört ay, çalışıyorsa iki ay süreyle, net asgari ücretin yarısını geçmemek üzere kreş imkânı sağlanır; ödeme doğrudan kreşe yapılır (m.6/1-d; m.11/1, m.11/3)",
+  "tuzak": "süreler ters çevrilir; \"ödeme korunan kişiye yapılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-36",
+  "madde": [
+   "43"
+  ],
+  "baslik": "Nafakanın maaştan kesilmesi",
+  "hukum": "Nafaka yükümlüsünün SGK ile bağlantısı varsa korunan kişinin başvurusu aranmaksızın nafaka, aylık/maaş/ücretinden icra müdürlüğü tarafından tahsil edilir (m.43/3)",
+  "tuzak": "\"tahsili SGK yapar\" veya \"korunan kişinin başvurusu şarttır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-37",
+  "madde": [
+   "44"
+  ],
+  "baslik": "Genel sağlık sigortası",
+  "hukum": "Prim borcu sebebiyle GSS'den yararlanamayan veya kapsam dışı kalan korunan kişi, bu hâllerin devamı süresince gelir testine tabi tutulmaksızın genel sağlık sigortalısı sayılır (m.44/1)",
+  "tuzak": "\"prim borcu varsa hiçbir şekilde yararlanamaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-38",
+  "madde": [
+   "45"
+  ],
+  "baslik": "Masraf ve vergi muafiyeti",
+  "hukum": "Kanun kapsamındaki başvurular ile kararların icra ve infazı işlemlerinden yargılama gideri, harç, posta gideri ve benzeri hiçbir ad altında masraf alınmaz (m.45/1)",
+  "tuzak": "\"yalnızca harçtan muaftır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 21,
+  "kanun": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği",
+  "kart_id": "21-42",
+  "madde": [
+   "3",
+   "39"
+  ],
+  "baslik": "ŞÖNİM'in çalışma düzeni",
+  "hukum": "ŞÖNİM'i Bakanlık kurar; çalışmalar yedi gün yirmidört saat esasına göre yürütülür, tercihen kadın personel istihdam edilir (m.3/1-o, m.39/1)",
+  "tuzak": "\"mesai saatleri içinde hizmet verir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_21.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-3",
+  "madde": [
+   "16"
+  ],
+  "baslik": "Genel kolluk arası geçici görevlendirme",
+  "hukum": "Lüzum görülen hâllerde EGM, SGK ve JGK arasında her kademedeki personeli geçici görevlendirmeye Bakan (İçişleri Bakanı) yetkilidir; bu yetkisini il valilerine devredebilir (m.16/1)",
+  "tuzak": "yetkili olarak Genelkurmay Başkanı, MSB veya Cumhurbaşkanı gösterilir; yetki devri \"kaymakamlara\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-4",
+  "madde": [
+   "16"
+  ],
+  "baslik": "Geçici görevlendirilenin özlük ve disiplini",
+  "hukum": "Aylık/mali/sosyal haklar kendi kurumunun bütçesinden; değerlendirme ve özlük işleri kendi kurumunca; disiplin soruşturması fiilen görevli olduğu kurumda yapılır, dosya mensubu olduğu kurumun disiplin amirine gönderilir (m.16/2)",
+  "tuzak": "\"disiplin soruşturması da kendi kurumunda yapılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-7",
+  "madde": [
+   "47"
+  ],
+  "baslik": "Takdir belgesi",
+  "hukum": "Görevini eksiksiz yerine getiren personele, morali yükseltmek ve emsaline örnek olması maksadıyla amirleri tarafından verilir (m.47/1)",
+  "tuzak": "takdir belgesini \"Bakan verir\" denir; başarı belgesiyle karıştırılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-8",
+  "madde": [
+   "47"
+  ],
+  "baslik": "Başarı belgesini kim verir",
+  "hukum": "Merkezde Bakan, illerde valiler, ilçelerde kaymakamlar (m.47/2)",
+  "tuzak": "\"yalnızca birinci amir verir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-10",
+  "madde": [
+   "46"
+  ],
+  "baslik": "Ödül sisteminin bağımsızlığı",
+  "hukum": "Ödül sistemi disiplinle ilgili yaptırım ve cezalardan bağımsız çalışır; personel sadece ödüle gerekçe olan durum içinde değerlendirilir (m.46/3)",
+  "tuzak": "\"disiplin cezası olan ödüllendirilemez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-13",
+  "madde": [
+   "42"
+  ],
+  "baslik": "Nöbetin devri ve mazeret",
+  "hukum": "Mazereti kurum amirince uygun görülenin nöbeti kendisinden sonra gelene tevdi edilir; mazeret kalkınca geçmiş nöbetlerinden bir tanesi tutturulur (m.42/3)",
+  "tuzak": "\"geçmiş nöbetlerinin tamamı tutturulur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-14",
+  "madde": [
+   "42"
+  ],
+  "baslik": "Nöbet yerinden ayrılmama",
+  "hukum": "Nöbetin özelliğine göre nöbetçi nöbet yerinden ayrılmaz, her zaman göreve hazır bulunur (m.42/7)",
+  "tuzak": "\"amirin sözlü izniyle ayrılabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-16",
+  "madde": [
+   "45"
+  ],
+  "baslik": "Değerlendirme sonuçlarının kullanımı",
+  "hukum": "Görevlere seçim, atama ve yer değiştirme, mesleki gelişim, statüler arası geçiş, terfi, rütbe kademeliği ve kıdemliliği, kıdem sırası ve ödüllendirmede dikkate alınır (m.45/3)",
+  "tuzak": "sayılanlardan biri çıkarılıp \"emeklilik\" veya \"disiplin cezası tayini\" eklenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-17",
+  "madde": [
+   "45"
+  ],
+  "baslik": "Değerlendirme sistemini kim düzenler",
+  "hukum": "Sisteme ilişkin hususlar Bakanlıkça yürürlüğe konulan yönetmelikle belirlenir (m.45/5)",
+  "tuzak": "\"Jandarma Genel Komutanlığınca belirlenir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-18",
+  "madde": [
+   "12"
+  ],
+  "baslik": "Atamada dikkate alınacak esaslar",
+  "hukum": "Mesleki gelişim, kadro ihtiyacı, hizmet bölgesindeki süre, terfi durumu, branş/ihtisas, kendisinin-eşinin-bakmakla yükümlü olduğu çocuğun hayati önemi haiz sağlık durumu, puanlama, tercih, asayiş-idari-zaruri sebepler (m.12/1)",
+  "tuzak": "\"çocukların her seviyedeki eğitim durumu\" veya \"eşin çalışma durumu\" kritere eklenir; sağlık şartındaki \"hayati önemi haiz\" ibaresi silinir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-19",
+  "madde": [
+   "12"
+  ],
+  "baslik": "Memleket ataması yasağı",
+  "hukum": "Personel, belediye sınırları içindeki nüfusu 1.000.000'u aşan ilçeler hariç, kendisinin ve eşinin evlenmeden önce nüfusa kayıtlı olduğu ilçeye atanmaz (m.12/2)",
+  "tuzak": "sınır 500.000 gösterilir ya da \"hiçbir istisna yoktur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-20",
+  "madde": [
+   "13"
+  ],
+  "baslik": "Hizmet bölgesi derecelendirme kriterleri",
+  "hukum": "Genel gelişmişlik, barınma, coğrafya ve iklim, eğitim, emniyet ve asayiş, sosyal-kültürel ve sağlık imkânları, günlük yaşam, özlük haklarındaki farklılıklar, istenilirlik düzeyi, ulaştırma ve haberleşme (m.13/1)",
+  "tuzak": "listeye \"ikinci iş imkânı\" veya \"nüfus yoğunluğu\" eklenir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-22",
+  "madde": [
+   "10"
+  ],
+  "baslik": "Astsubayın subay kadrosuna atanması",
+  "hukum": "İhtiyaç hâlinde liyakat esas alınarak emsali arasında temayüz etmiş astsubaylar subay kadrolarına atanabilir; bunlar için astları hakkında değerlendirme yapmada rütbe şartı aranmaz (m.10/7)",
+  "tuzak": "\"rütbe şartı aranır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-23",
+  "madde": [
+   "11"
+  ],
+  "baslik": "İlk atamada kura",
+  "hukum": "Öğrenimini, temel kursunu ve/veya stajını başarıyla bitirenlerin ilk görev yerine ataması branş ve ihtisasına göre kura ile yapılır (m.11/1)",
+  "tuzak": "\"tercih sırasına göre\" veya \"başarı sıralamasına göre\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-26",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Devir zorunluluğu olanlar",
+  "hukum": "Sayman, mal/hesap sorumlusu, muhasebe yetkilisi ve mutemetlerde süre devrin sona ermesiyle başlar; bu süre hiçbir şekilde bir ayı geçemez (m.15/2-b)",
+  "tuzak": "\"iki ayı geçemez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-28",
+  "madde": [
+   "15"
+  ],
+  "baslik": "Tebligata engel olmayan hâller",
+  "hukum": "İzinli, raporlu, tutuklu, görevden uzaklaştırılmış, göreve gelmemiş olmak veya hastanede yatmak tebligata engel değildir; ilişik kesme ve katılış gıyapta evrak üzerinden yapılabilir (m.15/5)",
+  "tuzak": "\"tutuklu personele tebligat yapılamaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-30",
+  "madde": [
+   "24"
+  ],
+  "baslik": "Zimmete geçirilen para",
+  "hukum": "Devlet dairelerine tevdi veya bu dairelerce tahsil/muhafaza edilen para ve para hükmündeki değerli kâğıt zimmete geçirilirse, miktar cezai takibat sonucu beklenmeden Hazine tarafından hak sahibine ödenir (m.24/1)",
+  "tuzak": "\"ceza davası kesinleştikten sonra ödenir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-31",
+  "madde": [
+   "24"
+  ],
+  "baslik": "AİHM tazminatında rücu",
+  "hukum": "İşkence ya da zalimane, gayri insani veya haysiyet kırıcı muamele suçları nedeniyle AİHM kararı sonucu Devletçe ödenen tazminatlarda da sorumlu personele rücu edilir (m.24/2)",
+  "tuzak": "\"maaştan resen kesinti yapılır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-32",
+  "madde": [
+   "36"
+  ],
+  "baslik": "Grev yasağı",
+  "hukum": "Greve karar vermek, grev tertiplemek, ilan etmek, propaganda yapmak yasaktır; greve veya teşebbüse katılmak, desteklemek, teşvik etmek de yasaktır (m.36)",
+  "tuzak": "\"karar verebilir ama propaganda yapamaz\" gibi yasağın bir kısmı serbest gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-33",
+  "madde": [
+   "35"
+  ],
+  "baslik": "Toplu eylem yasağı",
+  "hukum": "Kamu hizmetini aksatacak şekilde kasıtlı birlikte çekilme, göreve gelmeme veya hizmeti yavaşlatma/aksatma sonucu doğuracak eylemler yasaktır (m.35)",
+  "tuzak": "\"sendikal amaçla yapılırsa serbesttir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-39",
+  "madde": [
+   "40"
+  ],
+  "baslik": "İkinci görev yasağı",
+  "hukum": "657'ye tabi kurumlarda, sermayesi tamamen Devletçe verilen iktisadi kurumlarda, sermayesinin yarısından fazlası Devlete ait bankalarda ve bunların yarıdan fazla katılımıyla kurulan kuruluşlarda ikinci görev verilemez, her ne ad ile olursa olsun ödeme yapılamaz (m.40/1)",
+  "tuzak": "\"ücretsiz olmak şartıyla verilebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-40",
+  "madde": [
+   "39"
+  ],
+  "baslik": "Denetimindeki teşebbüsten menfaat",
+  "hukum": "Denetimi altında bulunan veya görevi ya da kurumu ile ilgisi olan teşebbüsten doğrudan veya aracı eliyle her ne ad altında olursa olsun menfaat sağlaması yasaktır (m.39)",
+  "tuzak": "\"aracı eliyle sağlanan menfaat kapsam dışıdır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-41",
+  "madde": [
+   "32"
+  ],
+  "baslik": "Müracaat ve şikâyet usulü",
+  "hukum": "Müracaat/şikâyet söz veya yazı ile en yakın amirden başlayarak silsile yoluyla, şikâyet edilen amirler atlanarak yapılır; incelenip en kısa zamanda ilgiliye bildirilir (m.32/2, m.32/3)",
+  "tuzak": "\"doğrudan Bakanlığa yapılır\" veya \"şikâyet edilen amir atlanmaz\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-43",
+  "madde": [
+   "30",
+   "31"
+  ],
+  "baslik": "Emeklilik ve çekilme talebi zamanı",
+  "hukum": "Talepler Ocak-Şubat ile Temmuz-Ağustos aylarında iletilir; kabulü müracaat tarihinden itibaren bir aydan fazla geciktirilemez; diğer aylardaki talepler hizmet gerekleri uygun görülürse kabul edilebilir (m.30/2, m.31/3)",
+  "tuzak": "aylar değiştirilir; \"diğer aylarda talep edilemez\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-45",
+  "madde": [
+   "54"
+  ],
+  "baslik": "Resmi üniforma zorunluluğu",
+  "hukum": "Görev sırasında mevzuattaki istisnalar saklı kalmak kaydıyla resmi üniforma giymek zorunludur (m.54)",
+  "tuzak": "\"istisnasız zorunludur\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-49",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Branş belirleme kurulları",
+  "hukum": "Üye tam sayısı ile toplanır, oyçokluğu ile karar alır, çekimser oy kullanılamaz, oyların eşitliğinde başkanın bulunduğu taraf çoğunluk sayılır (m.9/2)",
+  "tuzak": "\"çekimser oy kullanılabilir\" denir (MEBS 2024'te sorulan ayırt edici nokta)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-50",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Kurul kararının kesinleşmesi",
+  "hukum": "İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının; ilk branş belirleme ve branş değişikliğine ilişkin kurul kararları ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayıyla kesinleşir (m.9/2)",
+  "tuzak": "onay makamı Bakan yapılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-55",
+  "madde": [
+   "43"
+  ],
+  "baslik": "Yıllık iznin kullanılması ve geri çağırma",
+  "hukum": "Yıllık iznin senesi içinde kullanılması esastır, zorunlu nedenle kullanılamayan izin izleyen yıl verilebilir; görev ihtiyacında izin planlamasını onaylayan makam personeli izinden geri çağırabilir (m.43)",
+  "tuzak": "geri çağırma yetkisi \"birinci amire\" verilir; \"iki yıl sonra da kullanılabilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-56",
+  "madde": [
+   "19"
+  ],
+  "baslik": "Tarafsızlık ve siyaset yasağı",
+  "hukum": "Personel siyasi partiye üye olamaz; dil, ırk, cinsiyet, siyasi düşünce, felsefi inanç, din ve mezhep ayrımı yapamaz; siyasi-ideolojik amaçlı beyan ve eylemde bulunamaz (m.19/1)",
+  "tuzak": "\"izinli iken siyasi faaliyet serbesttir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-58",
+  "madde": [
+   "26"
+  ],
+  "baslik": "Resmi belge ve araçlar",
+  "hukum": "Görevle ilgili resmi belge, araç ve gereçler yetki verilen mahaller dışına çıkarılamaz, hususi işte kullanılamaz; görev sona erince iade zorunludur ve bu zorunluluk mirasçılara da şamildir (m.26)",
+  "tuzak": "mirasçı yükümlülüğü kaldırılır",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-59",
+  "madde": [
+   "21"
+  ],
+  "baslik": "Amirin sınırları",
+  "hukum": "Amir, maiyetine kanunlara aykırı emir veremez; maiyetinden ve astından hususi menfaat temin edecek talepte bulunamaz, hediyesini kabul edemez, borç alamaz (m.21/3)",
+  "tuzak": "\"yazılı emir vermesi hâlinde aykırı emir verilebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-60",
+  "madde": [
+   "29"
+  ],
+  "baslik": "Güvenlik hakkı",
+  "hukum": "Kanunlarda yazılı hâller dışında personelin görevine son verilmez, aylık ve başka hakları elinden alınamaz (m.29)",
+  "tuzak": "\"amirin takdiriyle görevine son verilebilir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-61",
+  "madde": [
+   "56"
+  ],
+  "baslik": "Asayiş tazminatı",
+  "hukum": "JGK ve SGK kadrolarına atanmış personel ayrıca Asayiş Tazminatından yararlanır (m.56/2)",
+  "tuzak": "\"yalnızca il ve ilçe komutanlıklarındaki personel yararlanır\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-62",
+  "madde": [
+   "2"
+  ],
+  "baslik": "Yönetmeliğin kapsamı",
+  "hukum": "Subay, astsubay, sözleşmeli subay ve astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erleri kapsar; nasıp-terfi ve mali-sosyal haklar 926, 4678, 3466, 3269, 6191 ve 657 sayılı Kanunlara göre yürütülür (m.2)",
+  "tuzak": "\"nasıp ve terfi de bu Yönetmelikle düzenlenir\" denir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 22,
+  "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+  "kart_id": "22-63",
+  "madde": [
+   "3"
+  ],
+  "baslik": "Dayanak",
+  "hukum": "Yönetmelik 2803 sayılı Kanunun 24 üncü ve 2692 sayılı Kanunun 23 üncü maddesine dayanılarak hazırlanmıştır (m.3)",
+  "tuzak": "dayanak 657 sayılı Kanun gösterilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_22.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-5",
+  "madde": [
+   "8"
+  ],
+  "baslik": "Astın itaati",
+  "hukum": "Ast, âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla yapar (m.8/2)",
+  "tuzak": "\"her emri, doğruluğunu veya yasaya uygunluğunu sorgulamadan yerine getirir\" (çıkmışta bu şık yanlış cevaptır)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-7",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Âmirin ödül-ceza takdiri",
+  "hukum": "Âmir, ödül veya cezada gerekçesiz takdir hakkı kullanmaz; her konuyu etraflıca değerlendirir, ölçülü ve hakkaniyetli davranır (m.9/11)",
+  "tuzak": "\"gerekçe göstermeksizin takdir hakkını kullanabilir\" (2024 MEBS'in doğru cevabı bu çarpıtmaydı)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-8",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Âmirin müdahalesi",
+  "hukum": "Âmir, maiyetine görevini icra ederken mecbur kalmadıkça müdahale etmez (m.9/8)",
+  "tuzak": "\"her aşamada müdahale eder\" veya \"hiçbir şekilde müdahale edemez\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-9",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Âmirin maiyetle ilişkisi",
+  "hukum": "Görev esnasında ilişkiler daima ciddi, görev dışındaki görüşmeler samimi ve candandır; itaat ve itimadı bozacak davranıştan kaçınılır (m.9/3)",
+  "tuzak": "\"görev esnasında da samimi ve candan olur\" diye ters çevrilir",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-10",
+  "madde": [
+   "9"
+  ],
+  "baslik": "Âmirin maiyeti tanıması",
+  "hukum": "Âmir, maiyetindeki personelin isimlerini, hususi vasıflarını, kişilik özelliklerini ve mizaçlarını ayrıntılarıyla bilir (m.9/6)",
+  "tuzak": "\"yalnızca sicil bilgilerini bilmesi yeterlidir\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-15",
+  "madde": [
+   "11"
+  ],
+  "baslik": "Şikâyette boşluk",
+  "hukum": "Maddede hüküm bulunmayan hâllerde Devlet Memurlarının Şikâyet ve Müracaatları Hakkında Yönetmelik uygulanır (m.11/5)",
+  "tuzak": "\"TSK İç Hizmet Yönetmeliği uygulanır\" (çıkmışta bu şık yanlış cevaptır)",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-16",
+  "madde": [
+   "14"
+  ],
+  "baslik": "İzin planlaması",
+  "hukum": "İzinler göreve ve mümkün olduğunca personelin talep edeceği aylara göre önceden planlanır; olağandışı gelişmeler dışında plandaki gün ve sürelere sadık kalınır (m.14/2)",
+  "tuzak": "\"personelin talebine göre planlanamaz, tek esas görevdir\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ },
+ {
+  "kanun_id": 23,
+  "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+  "kart_id": "23-18",
+  "madde": [
+   "14"
+  ],
+  "baslik": "İzni kullandıran",
+  "hukum": "İzinler yetkili âmir tarafından kullandırılır; bu tasarruf daha büyük âmirlerce kendi inisiyatiflerine alınamaz; âmir izinden feragate yönelik ima dahi yapamaz (m.14/3-4)",
+  "tuzak": "\"büyük âmir izin yetkisini her zaman kendine alabilir\"",
+  "resmi_metin_paketi": "scripts/altin-ozet/paketler/pack_23.json"
+ }
+]

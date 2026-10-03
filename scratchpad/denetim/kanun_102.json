@@ -1,0 +1,429 @@
+{
+ "kanun_id": 102,
+ "ad": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_102.json",
+ "kartlar": [
+  {
+   "id": "102-0",
+   "madde": [],
+   "baslik": "Amaç (Giriş)",
+   "hukum": "Gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik türdeki verilerin güvenliğini sağlamak",
+   "sinavda_boyle_yazarlar": [
+    "\"ticari sır\" veya \"ekonomik kayıp\" gerekçesi eklenir"
+   ],
+   "dogrusu": [
+    "millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek"
+   ]
+  },
+  {
+   "id": "102-1",
+   "madde": [],
+   "baslik": "Tedbir 1",
+   "hukum": "Nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler gibi kritik bilgi ve veriler yurt içinde güvenli bir şekilde depolanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"yurt dışında da depolanabilir\" denir ya da listeden sağlık/iletişim düşürülür"
+   ],
+   "dogrusu": [
+    "Nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler · yurt içinde güvenli bir şekilde"
+   ]
+  },
+  {
+   "id": "102-2",
+   "madde": [],
+   "baslik": "Tedbir 2",
+   "hukum": "Kritik veriler internete kapalı ve fiziksel güvenliği sağlanmış ortamda bulunan güvenli bir ağda tutulacak, bu ağdaki cihazlara erişim kontrollü sağlanacak, log kayıtları değiştirilmeye karşı önlem alınarak saklanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"internete açık olabilir, güvenlik duvarı yeter\" denir"
+   ],
+   "dogrusu": [
+    "internete kapalı · fiziksel güvenliği sağlanmış · kontrollü · log kayıtları değiştirilmeye karşı önlem alınarak"
+   ]
+  },
+  {
+   "id": "102-3",
+   "madde": [],
+   "baslik": "Tedbir 3",
+   "hukum": "Kamu verileri, kurumların kendi özel sistemleri veya kurum kontrolündeki yerli hizmet sağlayıcılar hariç, bulut depolama hizmetlerinde saklanmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "iki istisnadan biri düşürülür ya da \"hiçbir bulutta saklanamaz\" denir"
+   ],
+   "dogrusu": [
+    "kurumların kendi özel sistemleri · kurum kontrolündeki yerli hizmet sağlayıcılar"
+   ]
+  },
+  {
+   "id": "102-4",
+   "madde": [],
+   "baslik": "Yerli hizmet sağlayıcı",
+   "hukum": "Genelgede tanımı yoktur; ölçü şirketin Türkiye'de kurulu ve Türk hukukuna tabi olmasıdır, ortakların uyruğu değil",
+   "sinavda_boyle_yazarlar": [
+    "\"ortakları Türk olan yurt dışı şirket yerlidir\" denir — 2024'ün doğru cevabı bunun yanlış olduğuydu"
+   ],
+   "dogrusu": [
+    "Türkiye'de kurulu ve Türk hukukuna tabi"
+   ]
+  },
+  {
+   "id": "102-5",
+   "madde": [],
+   "baslik": "Tedbir 4",
+   "hukum": "Mevzuatta kodlu veya kriptolu haberleşmeye yetkilendirilmiş kurumlarca geliştirilen yerli mobil uygulamalar hariç, mobil uygulamalar üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "istisna silinir veya \"tüm yerli uygulamalar\" denir; şart yetkili kurumca geliştirilmiş olmasıdır"
+   ],
+   "dogrusu": [
+    "yetkilendirilmiş kurumlarca geliştirilen yerli mobil uygulamalar hariç · gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır"
+   ]
+  },
+  {
+   "id": "102-6",
+   "madde": [],
+   "baslik": "Tedbir 5",
+   "hukum": "Sosyal medya üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"şifreli paylaşılabilir\" denir"
+   ],
+   "dogrusu": [
+    "Sosyal medya üzerinden"
+   ]
+  },
+  {
+   "id": "102-7",
+   "madde": [],
+   "baslik": "Tedbir 6",
+   "hukum": "Sosyal medya ve haberleşme uygulamalarına ait yerli uygulamaların kullanımı tercih edilecektir",
+   "sinavda_boyle_yazarlar": [
+    "\"zorunludur\" denir — 2024'ün doğru cevabı. Genelgedeki tek \"tercih\" ifadesidir"
+   ],
+   "dogrusu": [
+    "yerli uygulamaların kullanımı tercih edilecektir"
+   ]
+  },
+  {
+   "id": "102-8",
+   "madde": [],
+   "baslik": "Tedbir 7",
+   "hukum": "Gizlilik dereceli bilgilerin işlendiği yerlerde yayma güvenliği (TEMPEST) veya benzeri güvenlik önlemleri alınacaktır",
+   "sinavda_boyle_yazarlar": [
+    "TEMPEST \"şifreleme yöntemi\" diye tanımlanır; TEMPEST elektromanyetik yayma güvenliğidir"
+   ],
+   "dogrusu": [
+    "yayma güvenliği (TEMPEST)"
+   ]
+  },
+  {
+   "id": "102-9",
+   "madde": [],
+   "baslik": "Tedbir 8",
+   "hukum": "Kritik veri, doküman ve belgelerin bulunduğu ve/veya görüşmelerin yapıldığı çalışma odalarında mobil cihazlar ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"kapalıysa bulundurulabilir\" denir"
+   ],
+   "dogrusu": [
+    "mobil cihazlar ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır"
+   ]
+  },
+  {
+   "id": "102-10",
+   "madde": [],
+   "baslik": "Tedbir 9",
+   "hukum": "Gizlilik dereceli veya kurumsal mahremiyet içeren veri ve belgeler, kurumsal olarak yetkilendirilmemiş veya kişisel cihazlarda (dizüstü, mobil cihaz, harici bellek vb.) bulundurulmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "yalnız \"gizlilik dereceli\" denir; kurumsal mahremiyet de kapsamdadır"
+   ],
+   "dogrusu": [
+    "kurumsal mahremiyet içeren · kurumsal olarak yetkilendirilmemiş veya kişisel"
+   ]
+  },
+  {
+   "id": "102-11",
+   "madde": [],
+   "baslik": "Tedbir 10",
+   "hukum": "Kaynağından emin olunmayan taşınabilir cihazlar (kişisel olanlar dâhil) kurum sistemlerine bağlanmayacaktır; gizlilik dereceli veri içeren cihazlar ancak veriler donanımsal ve/veya yazılımsal olarak kriptolanmak suretiyle kurum dışına çıkarılabilir ve bu cihazlar kayıt altına alınır",
+   "sinavda_boyle_yazarlar": [
+    "\"kriptolamaya gerek yok, tutanak yeter\" denir"
+   ],
+   "dogrusu": [
+    "Kaynağından emin olunmayan · donanımsal ve/veya yazılımsal olarak kriptolanmak · kayıt altına alınır"
+   ]
+  },
+  {
+   "id": "102-12",
+   "madde": [],
+   "baslik": "Tedbir 11",
+   "hukum": "Yerli ve millî kripto sistemlerinin geliştirilmesi teşvik edilerek, kurumların gizlilik dereceli haberleşmesinin bu sistemler üzerinden gerçekleştirilmesi sağlanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"teşvik edilmez, yalnız ithal sistem kullanılır\" denir"
+   ],
+   "dogrusu": [
+    "Yerli ve millî kripto sistemlerinin geliştirilmesi teşvik edilerek"
+   ]
+  },
+  {
+   "id": "102-13",
+   "madde": [],
+   "baslik": "Tedbir 12",
+   "hukum": "Temin edilecek yazılım veya donanımların kullanım amacına uygun olmayan bir özellik ve arka kapı açıklığı içermediğine dair üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde taahhütname alınır\" (metin \"imkânlar ölçüsünde\" der) veya \"yalnızca yazılımlar\" denir"
+   ],
+   "dogrusu": [
+    "arka kapı · üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname"
+   ]
+  },
+  {
+   "id": "102-14",
+   "madde": [],
+   "baslik": "Arka kapı tanımı",
+   "hukum": "Kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti (Tedbir 12 parantez içi)",
+   "sinavda_boyle_yazarlar": [
+    "\"yetkili erişim yöntemi\" diye olumlu tanımlanır"
+   ],
+   "dogrusu": [
+    "bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti"
+   ]
+  },
+  {
+   "id": "102-15",
+   "madde": [],
+   "baslik": "Tedbir 13",
+   "hukum": "Yazılımların güvenli geliştirilmesi için tedbir alınacak; temin edilen veya geliştirilen yazılımlar kullanılmadan önce güvenlik testlerinden geçirilecektir",
+   "sinavda_boyle_yazarlar": [
+    "\"kullanıma alındıktan sonra test edilir\" denir"
+   ],
+   "dogrusu": [
+    "güvenli geliştirilmesi · kullanılmadan önce güvenlik testlerinden geçirilecektir"
+   ]
+  },
+  {
+   "id": "102-16",
+   "madde": [],
+   "baslik": "Tedbir 14",
+   "hukum": "Kurum ve kuruluşlar, siber tehdit bildirimleri ile ilgili gerekli tedbirleri alacaktır",
+   "sinavda_boyle_yazarlar": [
+    "tehdit bildirimi yalnız bir kuruma özgü gibi gösterilir"
+   ],
+   "dogrusu": [
+    "siber tehdit bildirimleri"
+   ]
+  },
+  {
+   "id": "102-17",
+   "madde": [],
+   "baslik": "Tedbir 15",
+   "hukum": "Üst düzey yöneticiler de dâhil olmak üzere personelin sistemlere erişim yetkilendirmeleri, fiilen yürütülen işler ve ihtiyaçlar dikkate alınarak yapılacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"üst düzey yöneticiler bu kuraldan muaftır\" denir — sık kurulan tuzak"
+   ],
+   "dogrusu": [
+    "Üst düzey yöneticiler de dâhil · fiilen yürütülen işler ve ihtiyaçlar"
+   ]
+  },
+  {
+   "id": "102-18",
+   "madde": [],
+   "baslik": "Tedbir 16",
+   "hukum": "Endüstriyel kontrol sistemleri internete kapalı tutulacak; internete açık olması zorunluysa güvenlik duvarı, uçtan uca tünelleme, yetkilendirme ve kimliklendirme gibi önlemler alınacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde internete açılamaz\" denir; zorunluluk hâli istisnadır"
+   ],
+   "dogrusu": [
+    "Endüstriyel kontrol sistemleri internete kapalı · uçtan uca tünelleme"
+   ]
+  },
+  {
+   "id": "102-19",
+   "madde": [],
+   "baslik": "Tedbir 17",
+   "hukum": "Millî güvenliği doğrudan etkileyen stratejik önemi haiz kurumların üst yöneticileri ile kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel hakkında güvenlik soruşturması veya arşiv araştırması yaptırılacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"tüm kamu personeli\" denir"
+   ],
+   "dogrusu": [
+    "stratejik önemi haiz kurumların üst yöneticileri · kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel · güvenlik soruşturması veya arşiv araştırması"
+   ]
+  },
+  {
+   "id": "102-20",
+   "madde": [],
+   "baslik": "Tedbir 18",
+   "hukum": "Kamu e-posta sistemleri güvenli yapılandırılacak; e-posta sunucuları ülkemizde ve kurumun kontrolünde bulundurulacak, sunucular arası iletişim şifreli olacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"yurt dışı sunucu kullanılabilir\" denir"
+   ],
+   "dogrusu": [
+    "e-posta sunucuları ülkemizde ve kurumun kontrolünde · sunucular arası iletişim şifreli"
+   ]
+  },
+  {
+   "id": "102-21",
+   "madde": [],
+   "baslik": "Tedbir 19",
+   "hukum": "Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak; kurumsal e-postalar şahsi amaçlarla (özel iletişim, kişisel sosyal medya hesabı vb.) kullanılmayacaktır",
+   "sinavda_boyle_yazarlar": [
+    "yasağın yalnız bir yönü verilir; yasak çift yönlüdür"
+   ],
+   "dogrusu": [
+    "Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak · şahsi amaçlarla"
+   ]
+  },
+  {
+   "id": "102-22",
+   "madde": [],
+   "baslik": "Tedbir 20",
+   "hukum": "Haberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de internet değişim noktası kurmakla yükümlüdür; yurt içinde değiştirilmesi gereken yurt içi iletişim trafiğinin yurt dışına çıkarılmaması için tedbir alınacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"kurabilir\" denir; yükümlülüktür"
+   ],
+   "dogrusu": [
+    "Türkiye'de internet değişim noktası kurmakla yükümlüdür · yurt içinde değiştirilmesi gereken yurt içi iletişim trafiğinin yurt dışına çıkarılmaması"
+   ]
+  },
+  {
+   "id": "102-23",
+   "madde": [],
+   "baslik": "Tedbir 21",
+   "hukum": "İşletmecilerce kritik kurumların bulunduğu bölgelerdeki veriler radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır; kritik veri iletiminde radyolink kullanılmayacak, zorunlu hâllerde veriler millî kripto sistemlerine sahip cihazlarla kriptolanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"radyolink serbesttir\" veya \"herhangi bir kripto cihazı yeterlidir\" denir; millî kripto şarttır"
+   ],
+   "dogrusu": [
+    "kritik kurumların bulunduğu bölgelerdeki veriler radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır · millî kripto sistemlerine sahip cihazlarla"
+   ]
+  },
+  {
+   "id": "102-24",
+   "madde": [],
+   "baslik": "Kapanış: uyma zorunluluğu",
+   "hukum": "Kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerin Rehbere uyması zorunludur; mevcut altyapılar güvenlik seviyeleri dikkate alınarak kademeli olarak uyumlanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"tavsiye niteliğindedir\" denir"
+   ],
+   "dogrusu": [
+    "Kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerin Rehbere uyması zorunludur · kademeli olarak"
+   ]
+  },
+  {
+   "id": "102-25",
+   "madde": [],
+   "baslik": "Kapanış: denetim",
+   "hukum": "Denetim mekanizmaları oluşturulacak ve yılda en az bir defa uygulanacaktır",
+   "sinavda_boyle_yazarlar": [
+    "\"iki yılda bir\" denir ya da metinde olmayan yaptırımlar (faaliyetten men) eklenir — 2024'ün doğru cevabı buydu"
+   ],
+   "dogrusu": [
+    "Denetim mekanizmaları oluşturulacak ve yılda en az bir defa uygulanacaktır"
+   ]
+  },
+  {
+   "id": "102-26",
+   "madde": [],
+   "baslik": "Genelgede olmayanlar",
+   "hukum": "Genelge faaliyetten men, para cezası, kapatma gibi bir yaptırım öngörmez; yalnız denetim mekanizması kurar",
+   "sinavda_boyle_yazarlar": [
+    "\"denetim sonucu kamu kurumu faaliyetten men edilebilir\" denir. ★ 2024"
+   ],
+   "dogrusu": [
+    "faaliyetten men, para cezası, kapatma"
+   ]
+  },
+  {
+   "id": "102-27",
+   "madde": [],
+   "baslik": "İdari sözleşme mantığı",
+   "hukum": "Taahhütname sözleşme şartı olarak konur; idare, kamu yararı gereği idari sözleşmelerde üstün ve ayrıcalıklı yetkilere sahiptir, şartları tek taraflı belirleyebilir",
+   "sinavda_boyle_yazarlar": [
+    "\"idare karşı tarafın kabul etmediği hususları dayatamaz\" denir — 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "üstün ve ayrıcalıklı yetkilere"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Yerli sosyal medya ve haberleşme uygulamalarının kullanımı zorunludur"
+   ],
+   "dogru": "tercih edilecektir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Denetim sonucu eksikliği tespit edilen kamu kurumu faaliyetten men edilebilir"
+   ],
+   "dogru": "Genelgede böyle bir yaptırım yok"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Ortakları tamamen Türk olan yurt dışı merkezli şirket yerli hizmet sağlayıcıdır"
+   ],
+   "dogru": "şirket Türkiye'de kurulu olmalıdır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "İdare, karşı tarafın kabul etmediği hususları sözleşmede dayatamaz"
+   ],
+   "dogru": "idari sözleşmede üstün yetkisi vardır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kamu verileri hiçbir bulut hizmetinde saklanamaz"
+   ],
+   "dogru": "iki istisna vardır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Üst düzey yöneticiler erişim yetkilendirme kuralından muaftır"
+   ],
+   "dogru": "metin \"üst düzey yöneticiler de dâhil\" der"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Endüstriyel kontrol sistemleri hiçbir şartla internete açılamaz"
+   ],
+   "dogru": "zorunlu hâlde önlemlerle açılabilir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kurumsal e-posta şahsi amaçla kullanılabilir"
+   ],
+   "dogru": "yasak çift yönlüdür"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "E-posta sunucuları yurt dışında tutulabilir"
+   ],
+   "dogru": "ülkemizde ve kurumun kontrolünde olacaktır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kritik veri radyolinkle taşınabilir"
+   ],
+   "dogru": "fiber optik esastır, zorunlu hâlde millî kripto şarttır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Denetim iki yılda bir yapılır"
+   ],
+   "dogru": "yılda en az bir defa"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Mobil uygulamalardan gizlilik dereceli haberleşme serbesttir"
+   ],
+   "dogru": "yalnız yetkili kurumlarca geliştirilen yerli uygulamalar istisnadır"
+  }
+ ]
+}

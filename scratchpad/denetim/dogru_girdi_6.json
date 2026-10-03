@@ -1,0 +1,2081 @@
+[
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-11",
+  "baslik": "Tedbir 10",
+  "hukum": "Kaynağından emin olunmayan taşınabilir cihazlar (kişisel olanlar dâhil) kurum sistemlerine bağlanmayacaktır; gizlilik dereceli veri içeren cihazlar ancak veriler donanımsal ve/veya yazılımsal olarak kriptolanmak suretiyle kurum dışına çıkarılabilir ve bu cihazlar kayıt altına alınır",
+  "sinavda_boyle_yazarlar": [
+   "\"kriptolamaya gerek yok, tutanak yeter\" denir"
+  ],
+  "simdiki_dogrusu": "Kaynağından emin olunmayan · donanımsal ve/veya yazılımsal olarak kriptolanmak · kayıt altına alınır"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-13",
+  "baslik": "Tedbir 12",
+  "hukum": "Temin edilecek yazılım veya donanımların kullanım amacına uygun olmayan bir özellik ve arka kapı açıklığı içermediğine dair üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"her hâlde taahhütname alınır\" (metin \"imkânlar ölçüsünde\" der) veya \"yalnızca yazılımlar\" denir"
+  ],
+  "simdiki_dogrusu": "arka kapı · üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-15",
+  "baslik": "Tedbir 13",
+  "hukum": "Yazılımların güvenli geliştirilmesi için tedbir alınacak; temin edilen veya geliştirilen yazılımlar kullanılmadan önce güvenlik testlerinden geçirilecektir",
+  "sinavda_boyle_yazarlar": [
+   "\"kullanıma alındıktan sonra test edilir\" denir"
+  ],
+  "simdiki_dogrusu": "güvenli geliştirilmesi · kullanılmadan önce güvenlik testlerinden geçirilecektir"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-17",
+  "baslik": "Tedbir 15",
+  "hukum": "Üst düzey yöneticiler de dâhil olmak üzere personelin sistemlere erişim yetkilendirmeleri, fiilen yürütülen işler ve ihtiyaçlar dikkate alınarak yapılacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"üst düzey yöneticiler bu kuraldan muaftır\" denir — sık kurulan tuzak"
+  ],
+  "simdiki_dogrusu": "Üst düzey yöneticiler de dâhil · fiilen yürütülen işler ve ihtiyaçlar"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-18",
+  "baslik": "Tedbir 16",
+  "hukum": "Endüstriyel kontrol sistemleri internete kapalı tutulacak; internete açık olması zorunluysa güvenlik duvarı, uçtan uca tünelleme, yetkilendirme ve kimliklendirme gibi önlemler alınacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"hiçbir şekilde internete açılamaz\" denir; zorunluluk hâli istisnadır"
+  ],
+  "simdiki_dogrusu": "Endüstriyel kontrol sistemleri internete kapalı · uçtan uca tünelleme"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-19",
+  "baslik": "Tedbir 17",
+  "hukum": "Millî güvenliği doğrudan etkileyen stratejik önemi haiz kurumların üst yöneticileri ile kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel hakkında güvenlik soruşturması veya arşiv araştırması yaptırılacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"tüm kamu personeli\" denir"
+  ],
+  "simdiki_dogrusu": "stratejik önemi haiz kurumların üst yöneticileri · kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel · güvenlik soruşturması veya arşiv araştırması"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-20",
+  "baslik": "Tedbir 18",
+  "hukum": "Kamu e-posta sistemleri güvenli yapılandırılacak; e-posta sunucuları ülkemizde ve kurumun kontrolünde bulundurulacak, sunucular arası iletişim şifreli olacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"yurt dışı sunucu kullanılabilir\" denir"
+  ],
+  "simdiki_dogrusu": "e-posta sunucuları ülkemizde ve kurumun kontrolünde · sunucular arası iletişim şifreli"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-21",
+  "baslik": "Tedbir 19",
+  "hukum": "Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak; kurumsal e-postalar şahsi amaçlarla (özel iletişim, kişisel sosyal medya hesabı vb.) kullanılmayacaktır",
+  "sinavda_boyle_yazarlar": [
+   "yasağın yalnız bir yönü verilir; yasak çift yönlüdür"
+  ],
+  "simdiki_dogrusu": "Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak · şahsi amaçlarla"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-22",
+  "baslik": "Tedbir 20",
+  "hukum": "Haberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de internet değişim noktası kurmakla yükümlüdür; yurt içinde değiştirilmesi gereken yurt içi iletişim trafiğinin yurt dışına çıkarılmaması için tedbir alınacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"kurabilir\" denir; yükümlülüktür"
+  ],
+  "simdiki_dogrusu": "Türkiye'de internet değişim noktası kurmakla yükümlüdür · yurt içinde değiştirilmesi gereken yurt içi iletişim trafiğinin yurt dışına çıkarılmaması"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-23",
+  "baslik": "Tedbir 21",
+  "hukum": "İşletmecilerce kritik kurumların bulunduğu bölgelerdeki veriler radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır; kritik veri iletiminde radyolink kullanılmayacak, zorunlu hâllerde veriler millî kripto sistemlerine sahip cihazlarla kriptolanacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"radyolink serbesttir\" veya \"herhangi bir kripto cihazı yeterlidir\" denir; millî kripto şarttır"
+  ],
+  "simdiki_dogrusu": "kritik kurumların bulunduğu bölgelerdeki veriler radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır · millî kripto sistemlerine sahip cihazlarla"
+ },
+ {
+  "kanun_id": 102,
+  "kanun": "Cumhurbaşkanlığı 2019/12 Bilgi ve İletişim Güvenliği Tedbirl",
+  "kart_id": "102-24",
+  "baslik": "Kapanış: uyma zorunluluğu",
+  "hukum": "Kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerin Rehbere uyması zorunludur; mevcut altyapılar güvenlik seviyeleri dikkate alınarak kademeli olarak uyumlanacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"tavsiye niteliğindedir\" denir"
+  ],
+  "simdiki_dogrusu": "Kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerin Rehbere uyması zorunludur · kademeli olarak"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-0",
+  "baslik": "Rehber'in dayanağı",
+  "hukum": "06.07.2019 tarih ve 30823 sayılı RG'de yayımlanan 2019/12 sayılı Genelge doğrultusunda, Cumhurbaşkanlığı Dijital Dönüşüm Ofisi (CBDDO) koordinasyonunda paydaş katılımıyla hazırlanmıştır (Giriş)",
+  "sinavda_boyle_yazarlar": [
+   "hazırlayan kurum BTK veya USOM yapılır"
+  ],
+  "simdiki_dogrusu": "06.07.2019 tarih ve 30823 sayılı RG · 2019/12 sayılı Genelge · Cumhurbaşkanlığı Dijital Dönüşüm Ofisi (CBDDO)"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-1",
+  "baslik": "Amaç",
+  "hukum": "Bilgi güvenliği risklerinin azaltılması, ortadan kaldırılması ve gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik bilgi/verinin güvenliği için asgari güvenlik tedbirlerinin belirlenmesi (Giriş 1.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"azami tedbirler\" denir"
+  ],
+  "simdiki_dogrusu": "gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda millî güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik bilgi/verinin · asgari güvenlik tedbirlerinin"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-2",
+  "baslik": "Kapsam",
+  "hukum": "Bilgi işlem birimi barındıran veya bilgi işlem hizmetlerini sözleşmeyle üçüncü taraflardan alan, devlet teşkilatı içindeki kurum ve kuruluşlar ile kritik altyapı hizmeti veren işletmeler (Giriş 1.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnızca kendi bilgi işlem birimi olanlar\" denir"
+  ],
+  "simdiki_dogrusu": "veya · devlet teşkilatı içindeki kurum ve kuruluşlar · kritik altyapı hizmeti veren işletmeler"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-6",
+  "baslik": "Hedef 3",
+  "hukum": "Güvenlik tedbirlerinin üç seviyeli olacak şekilde derecelendirilmesi ve varlık gruplarına güvenlik dereceleriyle uyumlu asgari tedbirlerin uygulanması",
+  "sinavda_boyle_yazarlar": [
+   "\"iki seviyeli\" denir — 2024'ün doğru cevabı"
+  ],
+  "simdiki_dogrusu": "üç seviyeli · asgari"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-7",
+  "baslik": "Hedef 4-5",
+  "hukum": "Güvenlik tedbirleriyle ilgili detayların izlenebilirliğinin sağlanacak şekilde yapılandırılması; tedbirlerin ürün ve teknoloji bağımsız olarak uygulanabilmesi",
+  "sinavda_boyle_yazarlar": [
+   "\"belirli ürünlere özgü\" denir"
+  ],
+  "simdiki_dogrusu": "izlenebilirliğinin · ürün ve teknoloji bağımsız"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-8",
+  "baslik": "Hedef 6-7",
+  "hukum": "Tedbirlerin uygulanıp uygulanmadığının denetlenebilmesi; tedbirlerin birbirinden bağımsız uygulanabilirliğini sağlayacak şekilde gruplandırılması ve Rehber'in modülerliği",
+  "sinavda_boyle_yazarlar": [
+   "\"tedbirler ancak toptan uygulanır\" denir"
+  ],
+  "simdiki_dogrusu": "denetlenebilmesi · birbirinden bağımsız uygulanabilirliğini · modülerliği"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-9",
+  "baslik": "Hedef 8-9",
+  "hukum": "Tedbirlerin teknik olarak tüm kurum ve kuruluşlarca uygulanabilir olması; ihtiyaçlar ile gelişen ve değişen şartlar dikkate alınarak Rehber'in sürdürülebilirliği",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnız büyük kurumlar uygular\" denir"
+  ],
+  "simdiki_dogrusu": "tüm kurum ve kuruluşlarca uygulanabilir · sürdürülebilirliği"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-11",
+  "baslik": "Hedef 11",
+  "hukum": "Rehber'in hem tedbirleri uygulayacak personele hem de bunların uygulanıp uygulanmadığını denetleyecek denetçilere hitap etmesi",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnız teknik personele hitap eder\" denir"
+  ],
+  "simdiki_dogrusu": "tedbirleri uygulayacak personele · denetçilere"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-13",
+  "baslik": "Rehber'in dört ana bölümü",
+  "hukum": "(1) Rehber Uygulama Süreci, (2) Varlık Gruplarına Yönelik Güvenlik Tedbirleri, (3) Uygulama ve Teknoloji Alanlarına Yönelik Güvenlik Tedbirleri, (4) Sıkılaştırma Tedbirleri",
+  "sinavda_boyle_yazarlar": [
+   "\"denetim tedbirleri\" diye beşinci bölüm uydurulur"
+  ],
+  "simdiki_dogrusu": "Rehber Uygulama Süreci · Varlık Gruplarına Yönelik Güvenlik Tedbirleri · Uygulama ve Teknoloji Alanlarına Yönelik Güvenlik Tedbirleri · Sıkılaştırma Tedbirleri"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-14",
+  "baslik": "BGYS ilişkisi",
+  "hukum": "Rehber uygulama süreci, bilgi güvenliği yönetim süreçlerine alternatif değildir; mevcut süreçlere teknik katkı sağlar ve kurumlar bu faaliyetleri mevcut süreçleri kapsamında uyarlayarak yürütür",
+  "sinavda_boyle_yazarlar": [
+   "\"ISO 27001 yerine geçer\" denir"
+  ],
+  "simdiki_dogrusu": "alternatif değildir · teknik katkı · uyarlayarak"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-15",
+  "baslik": "Uygulama süreci alt süreçleri",
+  "hukum": "Planlama, uygulama, kontrol etme ve önlem alma ve değişiklik yönetimi (Bölüm 2, Şekil 5)",
+  "sinavda_boyle_yazarlar": [
+   "alt süreç sayısı 3 yapılır veya \"denetim\" ayrı alt süreç gösterilir"
+  ],
+  "simdiki_dogrusu": "Planlama · uygulama · kontrol etme ve önlem alma · değişiklik yönetimi"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-16",
+  "baslik": "Planlama adımları",
+  "hukum": "Varlıkların gruplandırılması → varlık gruplarının kritiklik derecelendirmesi → mevcut durum ve boşluk analizi → rehber uygulama yol haritasının hazırlanması (2.1)",
+  "sinavda_boyle_yazarlar": [
+   "sıra bozulur; boşluk analizi kritiklik derecelendirmesinden önce gösterilir"
+  ],
+  "simdiki_dogrusu": "kritiklik derecelendirmesi · mevcut durum ve boşluk analizi · rehber uygulama yol haritasının hazırlanması"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-17",
+  "baslik": "Varlık grubu ana başlıkları",
+  "hukum": "Ağ ve Sistemler, Uygulamalar, Taşınabilir Cihaz ve Ortamlar, Nesnelerin İnterneti (IoT) Cihazları, Fiziksel Mekânlar, Personel (2.1.1). Altı başlıktır ve Personel de bir varlık grubudur",
+  "sinavda_boyle_yazarlar": [
+   "\"Personel varlık grubu değildir\" denir veya \"Veri\" diye yedinci başlık eklenir"
+  ],
+  "simdiki_dogrusu": "Ağ ve Sistemler, Uygulamalar, Taşınabilir Cihaz ve Ortamlar, Nesnelerin İnterneti (IoT) Cihazları, Fiziksel Mekânlar, Personel · Altı başlıktır ve Personel de bir varlık grubudur"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-18",
+  "baslik": "Tek grup kuralı",
+  "hukum": "Tüm kurumsal varlıkların mümkün olduğunca tek bir varlık grubunda yer alması sağlanır; birden fazla grupça adreslenmesi gereken varlık, kritiklik derecesi en yüksek varlık grubu üzerinden değerlendirilir ve dâhil olduğu tüm grupların tedbirleri ele alınır (2.1.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"en düşük kritiklik\" denir"
+  ],
+  "simdiki_dogrusu": "mümkün olduğunca tek bir varlık grubunda · kritiklik derecesi en yüksek"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-19",
+  "baslik": "Gruplama ilkeleri",
+  "hukum": "Aynı güvenlik izolasyonundaki varlıklar mümkünse aynı gruba; farklı güvenlik seviyesi gerektirenler farklı gruplara konur; aynı seviyede tedbir uygulanacak gruplar birleştirilerek grup sayısı azaltılır; her ana başlık altındaki grup sayısı yönetilebilir olmalıdır (2.1.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"grup sayısı ne kadar fazlaysa o kadar iyidir\" denir"
+  ],
+  "simdiki_dogrusu": "aynı · farklı güvenlik seviyesi · farklı · birleştirilerek grup sayısı azaltılır · yönetilebilir"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-20",
+  "baslik": "Kritiklik derecesi boyutları",
+  "hukum": "İşlenen veri: gizlilik, bütünlük, erişilebilirlik. Etki alanı: bağımlı varlıklar, etkilenen kişi sayısı, kurumsal sonuçlar, sektörel etki, toplumsal sonuçlar (2.1.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"maliyet\" boyutu eklenir"
+  ],
+  "simdiki_dogrusu": "İşlenen veri · Etki alanı"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-21",
+  "baslik": "Gizlilik-bütünlük-erişilebilirlik",
+  "hukum": "Gizlilik: bilginin yetkisiz kişilerin erişimine karşı korunması. Bütünlük: bilginin tam ve doğru olma durumunun korunması. Erişilebilirlik: bilginin yetkili kişilerce ulaşılabilir ve kullanılabilir olması (2.1.2)",
+  "sinavda_boyle_yazarlar": [
+   "gizlilik ile bütünlük tanımları yer değiştirilir"
+  ],
+  "simdiki_dogrusu": "yetkisiz kişilerin erişimine karşı · tam ve doğru olma · yetkili kişilerce ulaşılabilir ve kullanılabilir"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-22",
+  "baslik": "Kritiklik anketi ve Delfi",
+  "hukum": "Her varlık grubu için EK-C.1'deki anket ilgili paydaşların katılımıyla doldurulur; Delfi metodu önerilir: uzmanlar belirlenir → anket doldurulur → sonuçlar değerlendirilir → ortak karara varılana kadar tekrarlanır → uzlaşılan karar uygulanır (2.1.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"anket bir kez doldurulur\" denir"
+  ],
+  "simdiki_dogrusu": "EK-C.1'deki anket · Delfi metodu · ortak karara varılana kadar"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-23",
+  "baslik": "Kritiklik eşikleri",
+  "hukum": "Anket puanı 18'den küçükse Derece 1; 18 (dâhil) ile 28 arasındaysa Derece 2; 28 ve daha yüksekse Derece 3 (Tablo 3)",
+  "sinavda_boyle_yazarlar": [
+   "eşikler 20/30 yapılır ya da \"18 dâhil\" kaydı kaldırılır"
+  ],
+  "simdiki_dogrusu": "18'den küçükse Derece 1 · 18 (dâhil) ile 28 arasındaysa Derece 2 · 28 ve daha yüksekse Derece 3"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-25",
+  "baslik": "Mülakat / gözden geçirme",
+  "hukum": "Mülakat: çalışmaların nasıl yapıldığının ilgili personelle yüz yüze görüşülerek öğrenilmesi. Gözden geçirme: güvenlik gereksinimleri göz önünde bulundurularak detaylı ve sistematik inceleme",
+  "sinavda_boyle_yazarlar": [
+   "ikisi yer değiştirilir"
+  ],
+  "simdiki_dogrusu": "ilgili personelle yüz yüze görüşülerek · detaylı ve sistematik inceleme"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-27",
+  "baslik": "Tedbir alt başlıkları",
+  "hukum": "Tedbir ana başlıkları amacı, önemi ve uygulama adımları ile açıklanır; alt başlıklar Tedbirler (seviyelendirilmiş liste) ve Denetim Maddeleri (yöntem ve soru önerileri) olarak detaylandırılır",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnız tedbir listesi vardır\" denir"
+  ],
+  "simdiki_dogrusu": "amacı, önemi ve uygulama adımları · Tedbirler · Denetim Maddeleri"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-28",
+  "baslik": "Denetim sıklığı",
+  "hukum": "Rehber'in uygulanmasına ilişkin denetimler, gerekli mekanizmalar oluşturularak yılda en az bir kez, iç denetim yoluyla yapılır; Bilgi ve İletişim Güvenliği Denetim Rehberi esas alınır (2.3.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"dış denetim zorunludur\" veya \"iki yılda bir\" denir"
+  ],
+  "simdiki_dogrusu": "yılda en az bir kez, iç denetim yoluyla · Bilgi ve İletişim Güvenliği Denetim Rehberi"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-29",
+  "baslik": "Yol haritası izleme",
+  "hukum": "Dönem sonlarında; yürütülen çalışmalar, planlanan hedeflerden sapmalar, sorun ve riskler ile alınan önlemleri içeren yol haritası ilerleme raporları hazırlanır (2.3.1)",
+  "sinavda_boyle_yazarlar": [
+   "\"rapor gerekmez\" denir"
+  ],
+  "simdiki_dogrusu": "planlanan hedeflerden sapmalar · yol haritası ilerleme raporları"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-30",
+  "baslik": "Ağların izole edilmesi (3.1.6.6)",
+  "hukum": "Kablolu ve kablosuz ağlar bilgi güvenliği gereksinimleri doğrultusunda katmanlara ayrılmalı; yalnızca yetkili sistemlerin iletişim kurabilmesi için LAN/VLAN'lar arasında erişim denetimi yapılmalı; istemci ağları ile sunucu/uygulama ağları ayrılmalı, sunucu ağında istemci yer almamalı; yönetimsel işlemler için ayrı yönetim ağları kullanılmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "\"sunucu ağında istemci yer almalıdır\" denir — 2024'ün doğru cevabı"
+  ],
+  "simdiki_dogrusu": "katmanlara ayrılmalı · LAN/VLAN'lar arasında erişim denetimi · istemci ağları ile sunucu/uygulama ağları ayrılmalı · sunucu ağında istemci yer almamalı · ayrı yönetim ağları"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-31",
+  "baslik": "Ağ topolojisi (3.1.6.1)",
+  "hukum": "Kurum ağlarına ait topolojiler güvenli bir şekilde tutulmalı ve güncelliği kontrol edilmelidir",
+  "sinavda_boyle_yazarlar": [
+   "izolasyon tedbiriyle karıştırılır"
+  ],
+  "simdiki_dogrusu": "güvenli bir şekilde tutulmalı · güncelliği kontrol edilmelidir"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-32",
+  "baslik": "Ağ cihazlarının güvenli konfigürasyonu (3.1.6.2)",
+  "hukum": "Endüstri standartları ve üretici tavsiyelerine uygun yapılandırma; varsayılan parola ve kullanıcı adları değiştirilmeli; yönetimsel erişimde komut satırı ve konsola parola ile girilmeli; güvenli protokoller kullanılmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "\"varsayılan parolalar korunur\" denir"
+  ],
+  "simdiki_dogrusu": "varsayılan parola ve kullanıcı adları değiştirilmeli · parola ile · güvenli protokoller"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-33",
+  "baslik": "DoS/DDoS koruması (3.1.6.7)",
+  "hukum": "İnternete açık hizmetler için güvenlik ürünlerinde özel konfigürasyon, engelleme sistemlerinin düzenli test edilmesi ve iyileştirilmesi, hizmet bir sağlayıcıdan alınıyorsa taahhüt alınması ve bunun şartname ve sözleşmelerde belirtilmesi",
+  "sinavda_boyle_yazarlar": [
+   "ağ izolasyonu tanımıyla karıştırılır"
+  ],
+  "simdiki_dogrusu": "özel konfigürasyon · düzenli test edilmesi ve iyileştirilmesi · taahhüt alınması · şartname ve sözleşmelerde belirtilmesi"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-34",
+  "baslik": "İnternetten kurum içi kaynaklara erişim (3.1.6.8)",
+  "hukum": "Kontrol dışı erişim engellenmeli; gerekliyse VPN kullanılmalı; uzaktan erişimler kurum politikalarına uygun, kısıtlı süre ve yetkilerle yapılmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "\"süre ve yetki sınırı gerekmez\" denir"
+  ],
+  "simdiki_dogrusu": "engellenmeli · VPN · kısıtlı süre ve yetkilerle"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-35",
+  "baslik": "Misafir ağı (3.1.6.10)",
+  "hukum": "Kurum ağıyla fiziksel ve/veya mantıksal olarak izole bir misafir ağı kurulmalı; misafirler bağlanmadan önce kimlik doğrulanmalı, tüm erişimler kayıt altına alınmalı ve misafir cihazları yalnızca misafir ağına erişebilmelidir",
+  "sinavda_boyle_yazarlar": [
+   "\"misafirler kurum ağına da erişebilir\" denir"
+  ],
+  "simdiki_dogrusu": "fiziksel ve/veya mantıksal olarak izole · kimlik doğrulanmalı · kayıt altına alınmalı · yalnızca misafir ağına"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-36",
+  "baslik": "Yerel güvenlik duvarı (3.1.6.11)",
+  "hukum": "Tüm sunucu ve istemcilerde yerel güvenlik duvarı, en az yetki prensibi gözetilerek yapılandırılmalı; yapılandırma varsayılan reddetme (default deny) kuralını içermeli, tüm açık portlara kural yazılmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "\"default allow\" denir"
+  ],
+  "simdiki_dogrusu": "en az yetki prensibi · varsayılan reddetme (default deny)"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-37",
+  "baslik": "IP telefon (3.1.6.12-14)",
+  "hukum": "IP telefon kullanılıyorsa sistem güvenlik duvarlarıyla korunmalı; iz kayıtları tutulmalı ve düzenli aralıklarla bir sunucuda yedeklenmeli; parolalar güçlü olmalı ve periyodik güncellenmelidir",
+  "sinavda_boyle_yazarlar": [
+   "\"iz kaydı gerekmez\" denir. MEBS için tipik soru alanı"
+  ],
+  "simdiki_dogrusu": "güvenlik duvarlarıyla korunmalı · iz kayıtları tutulmalı · yedeklenmeli · güçlü olmalı ve periyodik güncellenmelidir"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-38",
+  "baslik": "E-posta güvenliği (3.1.4)",
+  "hukum": "Relay belirlenen IP'ler dışında yasak, kullanılmayan protokoller kapatılır; gönderimde SMTP kimlik doğrulaması; spam için DNS tabanlı filtreleme ve kara liste; sahte/değiştirilmiş e-postalara karşı SPF, DKIM; risk içeren çalıştırılabilir dosya türleri engellenir; sunucular varsayılan ayarlarla kullanılmaz",
+  "sinavda_boyle_yazarlar": [
+   "\"beyaz liste yerine kara liste yoktur\" veya SPF/DKIM yerine başka teknoloji yazılır"
+  ],
+  "simdiki_dogrusu": "belirlenen IP'ler dışında yasak · SMTP kimlik doğrulaması · DNS tabanlı filtreleme ve kara liste · SPF, DKIM · çalıştırılabilir dosya türleri engellenir · varsayılan ayarlarla kullanılmaz"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-39",
+  "baslik": "Zararlı yazılımdan korunma (3.1.5)",
+  "hukum": "İstemci ve sunucuların tamamında korunma uygulaması bulunmalı, imza veri tabanı ve yamalar güncel olmalı, politikalar merkezi yönetilmeli; tüm bilgisayarlar taşınabilir diskleri otomatik taramalı ve taşınabilir ortamlarda otomatik kod çalıştırmasına izin vermemeli",
+  "sinavda_boyle_yazarlar": [
+   "\"yalnızca istemcilerde\" denir"
+  ],
+  "simdiki_dogrusu": "tamamında · imza veri tabanı ve yamalar güncel · merkezi · otomatik taramalı · otomatik kod çalıştırmasına izin vermemeli"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-40",
+  "baslik": "Uzaktan çalışma (3.1.14)",
+  "hukum": "Politika hazırlanmalı; personel yalnızca kurumca sağlanan veya ayarları kurum gereksinimlerine uygun cihazları kullanmalı; dosya paylaşımında kurumsal kaynaklar kullanılmalı; kurum kaynaklarına erişim VPN ve çok faktörlü kimlik doğrulama ile sağlanmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "\"kişisel cihaz serbesttir\" veya \"tek faktör yeterlidir\" denir"
+  ],
+  "simdiki_dogrusu": "kurumca sağlanan veya ayarları kurum gereksinimlerine uygun · kurumsal kaynaklar · VPN ve çok faktörlü kimlik doğrulama"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-41",
+  "baslik": "Uzaktan çalışma politikası içeriği",
+  "hukum": "Önerilen çalışma ortamı, zararlı yazılım ve güvenlik duvarı gereksinimleri, yetkisiz erişimin engellenmesi, kablosuz ağ kullanımı, yedekleme, fiziksel güvenlik, fikri mülkiyet anlaşmazlıkları, çalışmanın sona ermesinde yetki iptali ve teçhizat iadesi (3.1.14.1)",
+  "sinavda_boyle_yazarlar": [
+   "fikri mülkiyet veya teçhizat iadesi listeden çıkarılır"
+  ],
+  "simdiki_dogrusu": "fikri mülkiyet · yetki iptali ve teçhizat iadesi"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-42",
+  "baslik": "Taşınabilir ortam güvenliği (3.3.3)",
+  "hukum": "Kullanım politikası fiziksel koruma, saklama, yedekleme, el değiştirme ve imha hususlarını içermeli; ortamlar üretici tavsiyelerine uygun saklanmalı; üzerlerindeki kritik veri şifreli tutulmalı; kullanım süresi dolanlar güvenli imha edilmelidir",
+  "sinavda_boyle_yazarlar": [
+   "\"şifreleme gerekmez\" denir"
+  ],
+  "simdiki_dogrusu": "fiziksel koruma, saklama, yedekleme, el değiştirme ve imha · üretici tavsiyelerine uygun · kritik veri şifreli · güvenli imha"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-43",
+  "baslik": "TEMPEST (3.6.3)",
+  "hukum": "Sistem odası/veri merkezinde gizlilik seviyeli bilgi işleyen tüm cihazların hangi odalarda kullanıldığını gösteren liste tutulmalı (seviye 1); bu cihazların TEMPEST onayları olmalı ve envanteri tutulmalı (seviye 2); ilgili odalarda TEMPEST tesisat kurallarına uyulmalıdır (seviye 3)",
+  "sinavda_boyle_yazarlar": [
+   "seviyeler karıştırılır veya \"TEMPEST onayı gerekmez\" denir"
+  ],
+  "simdiki_dogrusu": "gizlilik seviyeli bilgi işleyen tüm cihazların hangi odalarda kullanıldığını gösteren liste · TEMPEST onayları · envanteri tutulmalı · TEMPEST tesisat kurallarına"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-46",
+  "baslik": "Kripto modülü testi (4.4.1.3)",
+  "hukum": "Kripto modüllerinin uygun güvenlik hedefi veya koruma profiliyle Ortak Kriterlere ve/veya TS ISO/IEC 19790-24759 standardına uygunluğu yetkili laboratuvarlarca test edilmeli; varlıkların kritiklik derecesine uygun modüller kullanılmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "standart numarası değiştirilir"
+  ],
+  "simdiki_dogrusu": "Ortak Kriterlere ve/veya TS ISO/IEC 19790-24759 · yetkili laboratuvarlarca test edilmeli"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-47",
+  "baslik": "Millî kripto cihazı tedariki (4.4.1.4, seviye 3)",
+  "hukum": "Kritik bilgi işleyen kurumlar, kritiklik seviyesine uygun millî kriptografik algoritmaların donanımsal gerçeklendiği cihazları temin etmeli; bu cihazların kripto analiz raporu olmalı ve COMSEC güvenlik testlerinden başarıyla geçmiş olmalıdır. COMSEC testine tabi modüllerde Ortak Kriter/19790 uyumu aranmaz",
+  "sinavda_boyle_yazarlar": [
+   "son cümle ters çevrilir"
+  ],
+  "simdiki_dogrusu": "millî kriptografik algoritmaların donanımsal gerçeklendiği · kripto analiz raporu · COMSEC güvenlik testlerinden · Ortak Kriter/19790 uyumu aranmaz"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-48",
+  "baslik": "Elektronik haberleşme sektörü tedbirleri (4.5.3)",
+  "hukum": "Hizmet güvenliği ve sürekliliği için güvenlik politikası belirlenip periyodik güncellenmeli; sinyalleşme trafiğinde sahtecilik tespit ve önleme sistemi kurulmalı; kaynak IP doğrulaması ile spoofed adreslerin dolaşımı engellenmeli; arayan numara manipülasyonuna (Caller ID Manipulation) karşı teknik ve hukuki tedbir alınmalı; ekipman arıza sinyalleri için alarm mekanizması kurulmalıdır",
+  "sinavda_boyle_yazarlar": [
+   "tedbirler enerji sektörü tedbirleriyle karıştırılır"
+  ],
+  "simdiki_dogrusu": "güvenlik politikası · sinyalleşme trafiğinde sahtecilik tespit ve önleme sistemi · kaynak IP doğrulaması · arayan numara manipülasyonuna (Caller ID Manipulation) · arıza sinyalleri için alarm mekanizması"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-49",
+  "baslik": "Personel güvenliği (3.5.1)",
+  "hukum": "İşe alımda akademik bilgiler, geçmiş iş tecrübeleri, referanslar ve sertifikaların geçerliliği kontrol edilir, adli sicil sorgulaması yapılır; temiz masa temiz ekran politikası tanımlanır; sosyal medya kullanım politikası ile gizlilik dereceli veri paylaşılmaması garanti altına alınır; ihlal olayları için disiplin süreci tanımlanır",
+  "sinavda_boyle_yazarlar": [
+   "\"temiz masa politikası Rehber'de yoktur\" denir"
+  ],
+  "simdiki_dogrusu": "adli sicil sorgulaması · temiz masa temiz ekran politikası · sosyal medya kullanım politikası · disiplin süreci"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-51",
+  "baslik": "Sıkılaştırma bölümü (Bölüm 5)",
+  "hukum": "İşletim sistemi (genel, Linux, Windows), veri tabanı ve sunucu (web sunucusu, sanallaştırma sunucusu) sıkılaştırma tedbirlerini içerir",
+  "sinavda_boyle_yazarlar": [
+   "\"ağ cihazı sıkılaştırması\" beşinci bölümde gösterilir; o Ağ Güvenliği başlığı altındadır"
+  ],
+  "simdiki_dogrusu": "İşletim sistemi · veri tabanı · sunucu"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-52",
+  "baslik": "Ekler",
+  "hukum": "EK-A Genelge maddeleri eşleştirme tablosu, EK-B uluslararası standartlar eşleştirme tablosu, EK-C formlar (C.1 kritiklik derecelendirme anketi, C.2 varlık grubu ve kritiklik derecesi tanımlama formu, C.3 mevcut durum ve boşluk analiz formu, C.4 yol haritası belirleme formu, C.5 telafi edici kontrol kayıt formu, C.6 taahhütname örneği)",
+  "sinavda_boyle_yazarlar": [
+   "EK-A ile EK-B yer değiştirilir"
+  ],
+  "simdiki_dogrusu": "EK-A · EK-B · EK-C · telafi edici kontrol kayıt formu · taahhütname örneği"
+ },
+ {
+  "kanun_id": 103,
+  "kanun": "CBDDO Bilgi ve İletişim Güvenliği Rehberi",
+  "kart_id": "103-53",
+  "baslik": "Güncellenebilirlik",
+  "hukum": "Rehber yaşayan bir dokümandır; ihtiyaçlar, gelişen teknoloji ve değişen şartlar göz önünde bulundurularak sürekli güncellenir, eski ve güncel sürümlerine cbddo.gov.tr üzerinden erişilir",
+  "sinavda_boyle_yazarlar": [
+   "\"değiştirilemez\" denir"
+  ],
+  "simdiki_dogrusu": "yaşayan bir doküman · cbddo.gov.tr"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-7",
+  "baslik": "CPL lisanslı aday",
+  "hukum": "Pilot lisansı (CPL) olan adayın sağlık yetenekleri kategori-1'i karşılamıyorsa kategori-2 veya kategori-3 hükümleri uygulanır ve aday uçuşa elverişli kabul edilir (m.64/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"elverişsiz sayılır\" denir"
+  ],
+  "simdiki_dogrusu": "kategori-2 veya kategori-3 hükümleri · uçuşa elverişli kabul edilir"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-9",
+  "baslik": "Periyodik muayeneler",
+  "hukum": "Uçucuların yıllık periyodik muayeneleri yetkili hastaneler ile Hava Harp Okulundaki hava sağlık ve muayene merkezinde; dört yıllık periyodik muayeneleri Sağlık Bakanlığınca belirlenen yetkili hastanelerde, fizyolojik eğitimleri Uçucu Sağlığı Araştırma ve Eğitim Merkezinde yapılır. Yıllık ve dört yıllık muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayana uçuş verilmez (m.65/a)",
+  "sinavda_boyle_yazarlar": [
+   "\"eksik muayeneyle uçuş verilebilir\" denir"
+  ],
+  "simdiki_dogrusu": "yıllık · dört yıllık · Yıllık ve dört yıllık muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayana uçuş verilmez"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-11",
+  "baslik": "Elverişsizlik kararının alınışı",
+  "hukum": "\"Uçuşa (Pilotaja) Elverişsizdir\" veya \"Hava Aracı Kategorisi Değişikliği Uygundur\" kararları ilgili uzmanlık branşından üç uzman tabibin çoğunluk kararıyla alınır; iki kez bu karar verilenlerde nihai kararı, personelin veya kuvvetin talebi üzerine, Sağlık Bakanlığınca oluşturulan ve Askerî Uçuş Tabipliği eğitimi almış bir hekimin de üyesi olduğu kurul verir (m.65/b-1)",
+  "sinavda_boyle_yazarlar": [
+   "\"iki uzman\" ya da \"bir kez\" denir"
+  ],
+  "simdiki_dogrusu": "ilgili uzmanlık branşından üç uzman tabibin çoğunluk kararıyla · iki kez · Askerî Uçuş Tabipliği eğitimi almış bir hekimin de üyesi olduğu kurul"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-13",
+  "baslik": "Kaza kırım sonrası",
+  "hukum": "Küçük kaza kırım geçirenler gerekli görüldüğünde, yaralanma veya uçaktan atlamayla sonuçlanan büyük kaza kırım geçirenler ise zorunlu olarak yetkili hastanelere ve Uçucu Sağlığı Araştırma ve Eğitim Merkezine gönderilir; yalnızca hava aracının zarar gördüğü büyük kaza kırımlar bu kapsamda değerlendirilmez (m.65/c-2)",
+  "sinavda_boyle_yazarlar": [
+   "son cümle atlanır"
+  ],
+  "simdiki_dogrusu": "gerekli görüldüğünde · zorunlu olarak · yalnızca hava aracının zarar gördüğü"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-14",
+  "baslik": "Kadın uçucu: hamilelik",
+  "hukum": "Kadın uçucular hamilelik döneminde uçamaz ve fizyolojik eğitime alınmaz; ancak kadın hastalıkları ve doğum uzmanı uygun görürse kategori-3 hava aracı uçucularına gebeliğin 13-24'üncü haftaları arasında uçuş müsaadesi verilir (m.65/d-1)",
+  "sinavda_boyle_yazarlar": [
+   "hafta aralığı veya kategori değiştirilir"
+  ],
+  "simdiki_dogrusu": "uçamaz ve fizyolojik eğitime alınmaz · kategori-3 · 13-24'üncü haftaları arasında"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-16",
+  "baslik": "Kadın uçucu: diğer kurallar",
+  "hukum": "Menstrüasyon süresince uçamaz; öncesi ve sonrası günlerde uçuş uçuş tabibinin iznine bağlıdır; oral kontraseptife ilk başlarken veya preparat değiştirirken bir hafta uçamaz; kategori-1 hava aracı pilotu kadın uçucular rahim içi araç kullanamaz (m.65/d-2)",
+  "sinavda_boyle_yazarlar": [
+   "bir haftalık kısıt atlanır"
+  ],
+  "simdiki_dogrusu": "uçuş tabibinin iznine · bir hafta · kategori-1 hava aracı pilotu kadın uçucular rahim içi araç kullanamaz"
+ },
+ {
+  "kanun_id": 104,
+  "kanun": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığ",
+  "kart_id": "104-18",
+  "baslik": "Rütbeye göre karar",
+  "hukum": "Uçuş emniyetini ihlal edeceği değerlendirilen hastalıklarda; kıdemli yüzbaşı ve üstü subaylar ile kıdemli üstçavuş ve üstü astsubaylar hakkında \"Uçuşa Elverişli Değildir, Fiilen Uçuşu Gerektirmeyen ... Görev Yerlerinde Görev Yapar\"; daha ast rütbeliler hakkında ise \"Sınıfı/Branşı Görevini Yapamaz, ... Yeniden Sınıflandırılması/Branşının Belirlenmesi Uygundur\" kararı verilir (m.67/1)",
+  "sinavda_boyle_yazarlar": [
+   "rütbe eşiği \"binbaşı\" yapılır"
+  ],
+  "simdiki_dogrusu": "kıdemli yüzbaşı ve üstü subaylar ile kıdemli üstçavuş ve üstü astsubaylar · daha ast rütbeliler"
+ },
+ {
+  "kanun_id": 106,
+  "kanun": "Şehitlik Yönetmeliği",
+  "kart_id": "106-0",
+  "baslik": "Amaç ve tanımlar",
+  "hukum": "Şehitlik yerlerinin tespiti, tescili, tahsisi, yönetimi, inşası, bakımı, korunması ve kimlerin defnedileceği (m.1); tahsis: Hazine/Devlet/kamu taşınmazlarının YİKOB'a veya il özel idaresine tahsisi; tescil: edinilen taşınmazların büyükşehirde YİKOB, diğer illerde il özel idaresi adına tapuya tescili (m.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"Şehitlikler MSB adına tescil edilir\" yanlış"
+  ],
+  "simdiki_dogrusu": "kimlerin defnedileceği · tahsis · YİKOB'a veya il özel idaresine · tescil · büyükşehirde YİKOB, diğer illerde il özel idaresi"
+ },
+ {
+  "kanun_id": 107,
+  "kanun": "Subay Sicil Yönetmeliği",
+  "kart_id": "107-0",
+  "baslik": "Tanımlar ve farklar",
+  "hukum": "Astsubay yönetmeliğindeki tanımlara ek: lisansüstü öğrenim: kuvvet harp akademileri, yüksek lisans, doktora, tıpta-dişte-veterinerlikte-eczacılıkta uzmanlık, doçentlik; rütbe kıdemliliği: nasıptan itibaren 2 yılını tamamlayan albayların kıdemli albaylığa; 3 yılını tamamlayan binbaşı, yüzbaşı ve üsteğmenlerin kıdemli binbaşı/yüzbaşı/üsteğmenliğe yükselmesi; sicil notu: sicil üstü değerlendirme notlarının ortalaması + (general-amiraller hariç) FYDT; sicil notu ortalaması: teğmende teğmenlik, üsteğmende teğmenlikten itibaren aritmetik; yüzbaşıda %100/%70; binbaşıda %100/%90/%70; yarbayda %100/%90/%85/%70; albayda %100/%95/%90/%85/%70; general-amirallerde bulundukları rütbedeki geçerli notların ortalaması; sicil belgesi genel-amiral için \"Ayırt Edici Nitelikler\" notlandırması; kategori notları 93/85/71/59,99 (m.3); dayanak 926 (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kıdemli albaylık için 3 yıl\" yanlış; 2"
+  ],
+  "simdiki_dogrusu": "lisansüstü öğrenim · rütbe kıdemliliği · 2 yılını · albayların kıdemli albaylığa · 3 yılını · binbaşı, yüzbaşı ve üsteğmenlerin · sicil notu · general-amiraller hariç · general-amirallerde bulundukları rütbedeki geçerli notların ortalaması"
+ },
+ {
+  "kanun_id": 107,
+  "kanun": "Subay Sicil Yönetmeliği",
+  "kart_id": "107-2",
+  "baslik": "Sicil belgeleri",
+  "hukum": "Amaç: yetenek ve başarı derecesini saptamak, her işi yeterli olana vermek, üst görevlere yetenekli olanları çıkarmak (m.19); üç çeşit: General/Amiral (EK-1), Teğmen-Albay (EK-2), Yedek Subay (EK-3) (m.20-21); değerlendirme bölümleri general-amiral için üç, teğmen-albay için yedi (m.22); nitelikler: (a) temel nitelikler (nota tahvil edilmez; zafiyette TSK Yüksek Disiplin Kurulları Yönetmeliğine göre işlem); (b) teğmen-albay için genel değerlendirme (kategori) ve ayırt edici nitelikler; (c) general-amiral için değerlendirme notu; (d) başarılı olabileceği görevler (general: komutanlık, karargâhta yöneticilik, kurumlarda yöneticilik; teğmen-albay: kıta subaylığı-komutanlık, karargâh-kurum yöneticiliği, karargâh subaylığı, eğitim-öğretim, mesleki uzmanlık); (e) bir üst göreve hazırlık durumu (hazırdır / eğitimi gereklidir / hazır değildir); (f) müstakil görev yapma kabiliyeti; (g) temsil kabiliyeti (m.23)",
+  "sinavda_boyle_yazarlar": [
+   "\"Subay sicil belgesi iki çeşittir\" yanlış; üç (yedek subay dâhil)"
+  ],
+  "simdiki_dogrusu": "üç çeşit · General/Amiral (EK-1), Teğmen-Albay (EK-2), Yedek Subay (EK-3) · general-amiral için üç, teğmen-albay için yedi · temel nitelikler · TSK Yüksek Disiplin Kurulları Yönetmeliğine · genel değerlendirme (kategori) · ayırt edici nitelikler · başarılı olabileceği görevler · bir üst göreve hazırlık durumu · müstakil görev yapma kabiliyeti · temsil kabiliyeti"
+ },
+ {
+  "kanun_id": 107,
+  "kanun": "Subay Sicil Yönetmeliği",
+  "kart_id": "107-7",
+  "baslik": "Açıkta-tutuklu-firarda olanlar, kıdemden düşme, ceza infazı, savaş takdirnamesi, harp gaibi, sınıf değişimi, öğrenim, sıhhi izin",
+  "hukum": "Açığa alınanlardan açıkları devam edenlerin, hapisle açığı kaldırılıp hükmü kesinleşmemişlerin, karar beklenmeden açığı kaldırılanların terfileri yapılmaz; KYOK-beraat-tecil-kısa hapis-tedbir/para cezası kararı kesinleşenler kadro açığı şartı aranmadan derhal terfi, nasıp emsaline; ilişik kesmeyen hapis cezasında infaz sonrası nasıp düzeltmesi, ilk 30 Ağustos'ta terfi; tutuklu ve davası devam edenler terfi edemez; firar/izin tecavüzü devam edenler ve davası sürenler terfi edemez; aklananlar derhal; mahkûmiyeti kesinleşenlerin nasbı infaz sonrası düzeltilir; sicil/kıt'a noksanı nedeniyle terfi edemeyenler ilk 30 Ağustos'ta (m.60); kıdemden düşülen süreler (kısa hapis, tecil, tedbir/para cezası hariç): gözaltı-tutukluluk-hükümlülük, açıkta geçen süre, askerî mahkemeyle sabit firar/izin tecavüzü; son rütbe nasbının aleyhe düzeltilmesiyle; kısmen infaz kuralları (m.61); kıdemden düşmeyi gerektiren cezanın infazı sırasında terfi/kıdemlilik/kademe yapılmaz; tahliye sonrası nasıp düzeltilir, emsali terfi etmişse ilk 30 Ağustos'ta; kademe ilerlemesinde rütbe aranmaksızın en son sicile göre (m.62); savaş takdirnamesi alan subaya bir defa iki yıl kıdem, terfi durumuna girenler şartsız derhal terfi (m.63); harp gaibi, esir, enterne edilenlerin esaret süresi bekleme süresinden sayılır; şartları kazanmışlar terfi; iki yıllık sicil kuralı; kadro açığı aranmaz; mahkûm olanların süreleri düşülür (m.64); sınıf değiştirenler eski+yeni sicillerle yeni sınıfta (m.65); fakülte/yüksekokulda okuyan, kurs-ihtisas-stajdaki teğmen-yarbaylar: gönderilmeden önce terfi şartlarını kazanmışlar emsaliyle; kıt'a ve sicil oranı şartlarını kazanamamışlar bu şartlar aranmaksızın mevcut sicil ortalamasıyla emsaliyle terfi; sonraki yılda terfi edenlerin nasbı bir yıl geriye götürülmez; rütbesine ait hiç sicili olmayanlar bir sicil sağlanıncaya kadar bekletilir (m.66); sıhhi izin terfiye engel değil, bekleme süresinden sayılır (m.67)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yurt dışında öğrenimde olan subayın sicili yoksa terfi edemez ve nasbı bir yıl geriye gider\" yanlış; nasıp geriye götürülmez"
+  ],
+  "simdiki_dogrusu": "açıkları devam edenlerin · kadro açığı şartı aranmadan derhal · kıdemden düşülen süreler · savaş takdirnamesi · iki yıl kıdem · harp gaibi, esir, enterne · iki yıllık sicil · kadro açığı aranmaz · fakülte/yüksekokulda okuyan, kurs-ihtisas-stajdaki teğmen-yarbaylar · kıt'a ve sicil oranı şartlarını kazanamamışlar bu şartlar aranmaksızın mevcut sicil ortalamasıyla · bir yıl geriye götürülmez · hiç sicili olmayanlar bir sicil sağlanıncaya kadar · sıhhi izin"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-0",
+  "baslik": "Tanımlar",
+  "hukum": "Rütbe, nasıp, kıdem, normal/en az/en çok bekleme süresi 926'daki gibi; fiilî bekleme süresi: nasıp düzeltmesiyle verilen itibari süreler hariç rütbede fiilen bulunulan süre; terfi yılı 30 Ağustos-30 Ağustos; kademe bekleme süresi en az bir terfi yılı; sicil alma eğilimi: asgari beş yıllık sicil notu olanlar için, sicil üstü değerlendirme notlarının standart sapmasının üç katının ortalamaya eklenip çıkarılmasıyla bulunan aralık; geri bildirim; ayırt edici nitelik ve kıstas (alt nitelik); rütbe kademeliliği: nasıptan itibaren üç yılını tamamlayan başçavuşların kademeli başçavuşluğa, kıdemli başçavuşların kademeli kıdemli başçavuşluğa, kademeli kıdemli başçavuşlukta üç yılını tamamlayanların ikinci kademeli kıdemli başçavuşluğa yükselmesi; kademe ilerlemesi maaş artışı; yeterlik; yeterlik derecesi; sicil notu: sicil belgesi notlarının ortalaması + FYDT notu; sicil notu ortalaması: çavuşta bulunulan rütbe; kıdemli çavuşta çavuşluktan itibaren; üstçavuşta üstçavuş %100 + kıdemli çavuş %70; kıdemli üstçavuşta %100/%90/%70; başçavuşta %100/%90/%85/%70; kıdemli başçavuşta %100/%95/%90/%85/%70; sicil tam notu 100; sicil süresi bir terfi yılı; genel değerlendirme kategorisi: ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ, YETERSİZ; genel değerlendirme notu: sırasıyla 93, 85, 71, 59,99 (m.3); dayanak 926 (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yetersiz kategorisi 60 puan\" yanlış; 59,99 (kademe ilerlemesini keser)"
+  ],
+  "simdiki_dogrusu": "fiilî bekleme süresi · terfi yılı 30 Ağustos-30 Ağustos · kademe bekleme süresi · sicil alma eğilimi · beş yıllık · standart sapmasının üç katının · geri bildirim · ayırt edici nitelik · kıstas (alt nitelik) · rütbe kademeliliği · üç yılını · kademe ilerlemesi · yeterlik · yeterlik derecesi · sicil notu · sicil notu ortalaması · sicil tam notu 100 · sicil süresi · genel değerlendirme kategorisi · genel değerlendirme notu · 93, 85, 71, 59,99"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-3",
+  "baslik": "Sicil belgesi ve bölümleri",
+  "hukum": "Belge şekli EK-1 (m.19); belge altı bölüm: (a) temel nitelikler (her astsubayda olması gereken, nota tahvil edilmez, zafiyette disiplinsizlik/ahlâki durumdan ayırma); (b) sicil üstlerinin değerlendirmesi: genel değerlendirme (kategori) (ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ, YETERSİZ) ve ayırt edici nitelikler; (c) başarılı olabileceği görevler (iki öncelikle: kıta, karargâh-kurum, eğitim-öğretim, teknik); (d) müstakil görev yapma kabiliyeti (Yapar / Yapamaz); (e) sicil üstü olabilme durumu (olabilir / olamaz); (f) yurt dışı görev yapabilme (Vardır / Yoktur) (m.20)",
+  "sinavda_boyle_yazarlar": [
+   "\"Temel nitelikler nota tahvil edilir\" yanlış"
+  ],
+  "simdiki_dogrusu": "EK-1 · altı bölüm · temel nitelikler · nota tahvil edilmez · sicil üstlerinin değerlendirmesi · genel değerlendirme (kategori) · ayırt edici nitelikler · başarılı olabileceği görevler · müstakil görev yapma kabiliyeti · sicil üstü olabilme durumu · yurt dışı görev yapabilme"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-4",
+  "baslik": "Sicil belgelerinin düzenlenmesi",
+  "hukum": "Birinci sicil üstü emrindeki bütün astsubayların sicilini doldurur; en az üç ay birlikte fiilen görev şart; nitelik tanım ve standartları Genelkurmay'ın \"TSK Sicil Belgesi Düzenleme Kılavuzu\"nda; sicil üstleri astsubaylar için not takdiri yapmaz, kıstas işaretler; bilgilerin doğru doldurulmasından birinci sicil üstü sorumlu; birinci sicil üstü \"başarılı olabileceği görevler\"i işaretler; ilâve kanaatler yazılabilir ve atama-seçimde kullanılabilir; ÜSTÜN BAŞARILI ve KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE ile YETERSİZ ve EMSALLERİNİN ALTINDA değerlendirmeleri için NE ZAMAN, NEREDE, NEDEN sorularına cevap veren en az 20 kelime (150 karakter) gerekçe zorunlu; birinci sicil üstü elektronik işlemi bitirince ikinciye bilgi verir; ikinci sicil üstü katılıyorsa \"Birinci Sicil Üstüne Katılıyorum\"u işaretler, katılmıyorsa değerlendirme yapar; mutlaka tamamını işaretlemesi gereken hâller: birinci sicil üstü yeterli süre çalışmamışsa, 2 Mayıs'taki birinci sicil üstü yeterli süre çalışmamışsa, görevden ayrılma ve kanaat değişikliğinde; m.16 hâllerinde ikinci sicil üstü birinci gibi işaretler; ikinci sicil üstü olan Kuvvet Komutanları, MSB Müsteşarı, orgeneral/oramiraller yeterince tanımadığı personel için sicil tanzim etmeyebilir; üçüncü sicil üstlerinin sicil tanzimi kendi isteğine bağlı, ancak birinci/ikinci sicil üstü değerlendirme yapamamışsa veya işaretledikleri kategori arasında birden fazla seviye farkı varsa (orgeneral/oramiral üçüncü sicil üstleri hariç) mutlaka değerlendirme yapar; üçüncü sicil üstleri kıstas işaretleme ve kanaat yazma hariç yetkilerini yazılı emirle ikinciye devredebilir; personel başkanlığı incelemesinde sicil üstlerinin notları arasında 20 veya daha fazla fark varsa Sicil Değerlendirme ve Denetleme Kurulunda görüşülür; belgeler en az müstakil tugay ve eşidi birliklerce toplanıp Personel Başkanlığına; sicil doldurma esasları sınıf okulu müfredatına dâhil; görevden ayrılma (30 Ağustos-2 Mayıs arası): üç ayı tamamlayan birinci sicil üstü kendi bölümünü işaretler, yeni birinci sicil üstüne devreder (m.21); birden fazla birinci/ikinci sicil üstüyle görev yapılmasında m.21'e göre (m.22)",
+  "sinavda_boyle_yazarlar": [
+   "\"Üçüncü sicil üstü her zaman sicil düzenler\" yanlış; kendi isteğine bağlı (istisnalar hariç)"
+  ],
+  "simdiki_dogrusu": "bütün · en az üç ay · \"TSK Sicil Belgesi Düzenleme Kılavuzu\" · not takdiri yapmaz · birinci sicil üstü · ÜSTÜN BAŞARILI ve KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE ile YETERSİZ ve EMSALLERİNİN ALTINDA · NE ZAMAN, NEREDE, NEDEN · en az 20 kelime (150 karakter) · ikinci sicil üstü · mutlaka tamamını işaretlemesi gereken hâller · Kuvvet Komutanları, MSB Müsteşarı, orgeneral/oramiraller · üçüncü sicil üstlerinin sicil tanzimi kendi isteğine bağlı · birden fazla seviye farkı · mutlaka · 20 veya daha fazla fark · Sicil Değerlendirme ve Denetleme Kurulunda · en az müstakil tugay ve eşidi · görevden ayrılma (30 Ağustos-2 Mayıs arası)"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-7",
+  "baslik": "Temel nitelikler ve olumsuz işaretleme",
+  "hukum": "Temel nitelikler bulunmaması hâlinde TSK'dan ayrılmayı gerektiren nitelikler; tam sahip olanlar için birinci kıstas, şüphe duyulanlar için \"b\" kıstası ve belge eklenir; sahip olmadığından emin olunanlardan Yüksek Disiplin Kurulları Yönetmeliği şartlarını taşıyanlar hakkında o yönetmeliğe göre işlem; \"b\" işaretlenen personelin her üç sicil üstü de mutlaka işlem yapar (m.29); sicil üstlerinin tamamı birinci niteliğin \"b\"sini işaretlerse \"TSK İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi\"ne göre işlem; yalnız biri işaretlerse üçüncü sicil üstü nihaî durumu belirler; ikinci ve üçüncü nitelikler ilk defa \"b\" ile değerlendirilen personel bir sonraki döneme kadar takip ve kontrol altında; \"b\" üst üste iki dönem işaretlenebilir, üçüncü dönemde \"b\" ile değerlendirilmez, yasal işlem ve YDK'dan ayırma cezası teklifi yapılır (m.30)",
+  "sinavda_boyle_yazarlar": [
+   "\"Temel nitelik b işareti üç dönem konabilir\" yanlış; iki"
+  ],
+  "simdiki_dogrusu": "birinci kıstas · \"b\" kıstası · her üç sicil üstü de · sicil üstlerinin tamamı birinci niteliğin \"b\"sini · \"TSK İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi\" · takip ve kontrol altında · üst üste iki dönem · üçüncü dönemde · ayırma cezası teklifi"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-9",
+  "baslik": "Terfi esasları ve sicil notu ortalaması",
+  "hukum": "Terfi için 926'daki şartlar; 926 m.85/b gereğince kıdem alanlar için fiilî bekleme süresinin üçte ikisi; küsurat bir ve üzerinde alt tama, birin altında bire iblağ; astsubay nasbedilenlerin muvazzaf askerlikte geçen süreleri kıdemden sayılır, nasıpları düzeltilir, terfi/kademe nasbı götürüldüğü yılın 30 Ağustos'u; görevde yaralanıp uzun tedavi görenlerin terfisi ortalamaya göre, 926 m.85/b-c şartları aranmadan (m.34); yeterlik terfi yılında bulunan sicil notu ortalamasıyla; eşitlikte bulunulan rütbedeki ortalama, sonra bir önceki rütbeler, hâlâ eşitse m.62/e-f (m.35); sicil notu ortalaması: çavuşta çavuşlukta, kıdemli çavuşta çavuşluk + kıdemli çavuşlukta alınan notların aritmetik ortalaması; üstçavuş, kıdemli üstçavuş, başçavuş ve kıdemli başçavuş için her rütbenin ortalaması × rütbe sicil notu katsayısı (rütbe katkısı) toplanır, toplam katsayıya bölünür; muteber notu olmayan rütbenin katsayısı hesaba girmez; iki hane yürütülür; bekleme süresinin son yılında kıdemli çavuşluğa nasıptan itibaren geçerli sicil notları toplanıp adede bölünür (m.36)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kıdem alanlarda üçte iki hesabında küsurat her zaman üst tama\" yanlış; 1 ve üstünde alt tama, altındaysa 1"
+  ],
+  "simdiki_dogrusu": "üçte ikisi · bir ve üzerinde alt tama, birin altında bire · muvazzaf askerlikte geçen süreleri kıdemden sayılır · sicil notu ortalaması · üstçavuş, kıdemli üstçavuş, başçavuş ve kıdemli başçavuş · rütbe sicil notu katsayısı · kıdemli çavuşluğa nasıptan itibaren"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-11",
+  "baslik": "Açıkta, tutuklu, firarda olanların terfisi; kıdemden düşme",
+  "hukum": "Bekleme süresinde açığa alınan, tutuklanan, firar/izin tecavüzünde bulunanlar (kısa süreli kaçma/izin geçirme hariç) için hazırlıklar yokmuş gibi yürütülür; terfi sırasında: 30 Ağustos'ta açığı devam edenler, hapis cezasıyla açığı kaldırılıp hükmü kesinleşmemişler, fiilleri hizmete engel olmadığı için karar beklenmeden açığı kaldırılanların terfileri yapılmaz, yapılmışsa iptal; KYOK, beraat, muhakemenin men'i, davanın düşmesi, tecil, kısa hapis, tedbir/para cezasına çevirme kararı kesinleşenler emsal şartlarıyla derhal terfi, nasıp emsaline; ilişik kesmeyi gerektirmeyen hürriyeti bağlayıcı cezada infaz sonrası nasıp düzeltilir, yeni nasıba göre ilk 30 Ağustos'ta terfi; tutuklular ve hükmü kesinleşmemişler için aynı; firar/izin tecavüzü devam edenler ve davası sürenler terfi edemez; beraat vb. ile derhal; mahkûmiyet kesinleşenlerin nasbı infaz sonrası düzeltilir; sicil mecburiyetini tamamlayamadığı için terfi edemeyenler ilk 30 Ağustos'ta (m.41); kıdemden düşülen süreler (kısa hapis, tecil, tedbir/para cezası hariç): gözaltı-tutukluluk-hükümlülük (infaz süresi dikkate alınarak), açığı gerektiren suçtan mahkûmiyette açıkta geçen süre, askerî mahkeme kararıyla sabit firar/izin tecavüzü süreleri; işlem firar-açık için hükmün kesinleşmesini, hapis için infazı müteakip son rütbe nasbının aleyhe düzeltilmesiyle derhal; infazın durdurulmasıyla tahliye kısmen infaz sayılır; kısmen infazda geri kalan kısım başka rütbede infaz edilirse aynı rütbe nasbı düzeltilir (m.42)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kısa süreli kaçma da terfiyi durdurur\" yanlış; hariç"
+  ],
+  "simdiki_dogrusu": "yokmuş gibi · 30 Ağustos'ta açığı devam edenler · terfileri yapılmaz, yapılmışsa iptal · derhal · nasıp düzeltilir · kıdemden düşülen süreler · son rütbe nasbının aleyhe düzeltilmesiyle · kısmen infaz"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-12",
+  "baslik": "Savaş takdirnamesi, harp gaibi, sınıf değiştirme, sıhhi izin, kademe ilerlemesi",
+  "hukum": "Savaş takdirnamesi alan astsubaya bir defaya mahsus iki yıl kıdem, terfi durumuna girenler şartlar aranmaksızın derhal terfi; giremeyenler sıraya girince şartsız terfi (m.43); harp gaibi, esir, enterne edilenlerden terfiye engeli olmayanların esarette geçen süresi bekleme süresinden sayılır; bekleme hariç şartları kazanmışların terfisi derhal; kazanmamışlardan iki yıllık sicili olanlar o yıl, olmayanlar iki yıllık sicil sağlanınca; bir rütbeden fazla geri kalanlar her rütbede iki yıllık sicille; kadro açığı aranmaz; mahkûm olanların süreleri düşülür (m.44); sınıf değiştirenler eski ve yeni sınıf sicilleriyle yeni sınıfta terfi (m.45); sıhhi izin terfiye engel değil, bekleme süresinden sayılır (m.46); kademe ilerlemesi: çavuş-kıdemli çavuş-üstçavuş-kıdemli üstçavuş-başçavuşlardan terfi sırasında olmayanlar ve terfi edemeyenler ile kademeli başçavuş-kıdemli başçavuş-kademeli kıdemli başçavuş-iki kademeli kıdemli başçavuşlar EK-VIII gösterge tablosuna göre; MYO mezunu ve fakülte/yüksekokul/MYO bitirip temel eğitimle astsubay olanlar EK-VIII/A'ya göre (m.47); sicil notu Personel Başkanlığınca m.27'ye göre hesaplanır (m.48); terfi/kademelilik sırasında olmayanlardan sicil notu %60'ın altında olanların listesi Personel Başkanınca onaylanıp asgari tugay seviyesinde yayımlanır; listede olmayanlar \"Kademe İlerlemesi Onay Çizelgesi\" (EK-3)'ne geçirilir, asgari alay ve eşidi komutanlıkça onaylanır; son kademedekiler için çizelge hazırlanmaz (m.49); terfi/kademelilik yapamayanlardan o yıl sicil notu %60 ve üstü olanlar kademe ilerlemesi yapar, işlem Personel Başkanlığınca (m.50); öğrenim, kurs, hava değişimi, istirahat, tedavi nedeniyle sicil düzenlenemeyenler ve sicil notu iptal edilenlerin kademe ilerlemesi sicil notu ortalamasına göre (o yılın sicil notu sayılmaz); geçerli sicili olmayanların kademe ilerlemesi olumlu sicil tanzim edilinceye kadar yapılmaz, sonra emsal tarihinden (m.51); açıkta-tutuklu-firarda olanların kademe ilerlemesi m.41'deki mantıkla (m.52); nasbı lehe düzeltilenlerin kademe intibakı onay metnindeki tarihten (yoksa onay tarihinden), nasıp düzeltme emri sureti maaş bordrosuna; müteakip 30 Ağustos'ta yeniden ilerleyebilir (m.53); nasbı aleyhe düzeltilenlerin kademe ilerlemesi yeni nasba göre kademe aylığına intibak edinceye kadar yapılmaz (m.54); kanunî izinler, sıhhi izin ve bekleme süresinden sayılan durumlar terfi yılından sayılır; aleyhe nasıp düzeltmeleri toplamı bir yılı geçmiyorsa sonraki terfi yılları tamamlanmış sayılır (m.55); harp gaibi/esirlerin kademe ilerlemesi dönüşlerine kadar yapılmaz, suçu sabit olmayanlar sicil şartsız derhal emsal kademesine (m.56)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sıhhi izin bekleme süresinden sayılmaz\" yanlış; sayılır"
+  ],
+  "simdiki_dogrusu": "Savaş takdirnamesi · iki yıl kıdem · derhal · harp gaibi, esir, enterne · iki yıllık sicili olanlar · kadro açığı aranmaz · sınıf değiştirenler · sıhhi izin · EK-VIII · MYO mezunu ve fakülte/yüksekokul/MYO bitirip temel eğitimle astsubay olanlar EK-VIII/A · %60'ın altında · asgari tugay · \"Kademe İlerlemesi Onay Çizelgesi\" (EK-3) · asgari alay ve eşidi · %60 ve üstü · sicil notu iptal edilenlerin · sicil notu ortalamasına · onay metnindeki tarihten · bir yılı geçmiyorsa"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-14",
+  "baslik": "Kıdem ve kıdem sırası",
+  "hukum": "Rütbelerde kıdem onay metnindeki tarihten; aynı tarihte nasbedilenlerde okul not ortalaması, branşlara göre yetiştirilenlerde branş mevcutları 100 kabul edilerek başarı derecesi, eşitse sicil numarası küçük olan; aynı rütbe ve nasıplılarda her yıl yeterlik derecesi; kaynağı farklı olup kıyaslanamayanlarda sıra: (1) Astsubay MYO mezunları, (3) uzman erbaşlıktan astsubay olanlar, (4) kıt'a erbaş ve erlerinden astsubay olanlar, (5) sözleşmeli astsubaylıktan muvazzafa geçenler, (6) sivil kaynaktan muvazzaf astsubay olanlar, (7) sözleşmeli astsubaylar; farklı sınıflarda: yeterlik derecesi → astsubaylık hizmet süresi → bir önceki rütbeye yükselme tarihi → önceki rütbenin son yıl yeterliği; sınıfı değiştirilenler yeni sınıf aynı nasıplılarının sonunda (onay tarihi esas); nasbı lehe düzeltilenler ve üstün başarı kıdemi alanlar aynı nasıplıların sonunda, aleyhe düzeltilenler yeni nasıplıların başında; kuvvetleri ayrı olanlarda kıdem almadan yükselen önce, sonra önceki rütbeye yükselme tarihi önce olan, eşitlikte kara, deniz, hava (m.62)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uzman erbaştan astsubay olan, MYO mezunundan kıdemlidir\" yanlış"
+  ],
+  "simdiki_dogrusu": "onay metnindeki tarihten · okul not ortalaması · sicil numarası küçük · yeterlik derecesi · (1) Astsubay MYO mezunları, (3) uzman erbaşlıktan astsubay olanlar, (4) kıt'a erbaş ve erlerinden astsubay olanlar, (5) sözleşmeli astsubaylıktan muvazzafa geçenler, (6) sivil kaynaktan muvazzaf astsubay olanlar, (7) sözleşmeli astsubaylar · aynı nasıplıların sonunda · başında · kara, deniz, hava"
+ },
+ {
+  "kanun_id": 108,
+  "kanun": "Astsubay Sicil Yönetmeliği",
+  "kart_id": "108-15",
+  "baslik": "Özlük dosyaları",
+  "hukum": "Muvazzaf ve sözleşmeli astsubayların her birine nasıpta ikişer özlük dosyası; bölümler: özlük, atanma, terfi-kıdem-kademe, takdir-ödül, adli işlemler, sağlık, kurslar ve meslek programları, nasıp öncesi işlemler (8 grup); atananların kıt'a özlük dosyası atandığı birliğe gönderilir, yazıda devam eden/sonuçlanan hukuki-adli işlemler belirtilir; detaylar Kuvvet yönergesiyle (m.63); kıt'a özlük dosyası birinci sicil üstünde, diğeri Kuvvet Personel Başkanlığında; muhafazadan sicil üstleri ve şube müdürleri sorumlu (m.64); yurt dışı sürekli göreve atananların kıt'a dosyası ilgili makama; diğer yurt dışı görevlilerinki yurt içindeki sicil üstünce muhafaza (m.66); TSK'dan ayrılanların kıt'a dosyası Kuvvet Komutanlığına (m.68); Personel Başkanlığına gelen siciller incelenir, uygun olanlar sicil subayı, kısım amiri ve şube müdürünce imzalanınca kesinleşir; uygun düzenlenmemişler üçüncü sicil üstlerine iade; imza ve işaretleme hataları dışındaki hatalar inceleyen şubece düzeltilebilir (m.71); matbu siciller okunaklı, kazınmaz-silinmez; kanaat düzeltmesi üzeri okunacak şekilde çizilip yeniden yazılır ve sicil üstünce imzalanır (m.72)",
+  "sinavda_boyle_yazarlar": [
+   "\"Özlük dosyası 6 gruptan oluşur\" yanlış; 8"
+  ],
+  "simdiki_dogrusu": "ikişer · özlük, atanma, terfi-kıdem-kademe, takdir-ödül, adli işlemler, sağlık, kurslar ve meslek programları, nasıp öncesi işlemler · kıt'a özlük dosyası · kıt'a özlük dosyası birinci sicil üstünde · Kuvvet Personel Başkanlığında · Kuvvet Komutanlığına · sicil subayı, kısım amiri ve şube müdürünce · kesinleşir · üçüncü sicil üstlerine iade"
+ },
+ {
+  "kanun_id": 111,
+  "kanun": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Y",
+  "kart_id": "111-2",
+  "baslik": "Giriş ve emniyet",
+  "hukum": "Üyelerden kendileri ve hak sahibi aile fertleri adına üye aidatı, hak sahibi olmayan giriş kartlılardan kart ücreti alınır; tesisler Yönergeyle kategorilere ve sınıflara ayrılabilir; üyeler dışında kimlerin hangi tesisten yararlanacağı ve kart ücreti MSB'ce; yabancı silahlı kuvvetler mensupları MSB esaslarıyla; MSB'ce uygun görülen kişiler özel giriş kartıyla günübirlik girebilir (m.10); giriş, giriş kartları, kıyafet, emniyet, istifade, tertip-düzen esasları MSB'ce belirlenen usullere göre (m.11)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yabancı asker orduevine giremez\" yanlış; MSB esaslarıyla girebilir"
+  ],
+  "simdiki_dogrusu": "üye aidatı · kart ücreti · kategorilere ve sınıflara · MSB · yabancı silahlı kuvvetler mensupları · özel giriş kartıyla günübirlik · MSB"
+ },
+ {
+  "kanun_id": 112,
+  "kanun": "JGK Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği",
+  "kart_id": "112-0",
+  "baslik": "Kapsam ve dayanak",
+  "hukum": "JGK'ya mensup subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmalar ile yükümlü personeli (yedek subay/astsubay) kapsar; Cumhurbaşkanlığı kararnamesine istinaden yapılan atamalar ve Cumhurbaşkanı onayı/kararıyla yapılan atamalar kapsam dışı (m.2); dayanak 2803 m.13, 13/A, 14 ve Personel Yönetmeliği m.10-14 (m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uzman erbaşları da kapsar\" yanlış"
+  ],
+  "simdiki_dogrusu": "subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmalar ile yükümlü personeli · Cumhurbaşkanlığı kararnamesine istinaden yapılan atamalar ve Cumhurbaşkanı onayı/kararıyla yapılan atamalar kapsam dışı"
+ },
+ {
+  "kanun_id": 112,
+  "kanun": "JGK Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği",
+  "kart_id": "112-10",
+  "baslik": "Genel atama dönemi dışında / süre tamamlanmadan atama",
+  "hukum": "Hâller: uygun görülen mazeretler; terfi; statü/branş değişikliği ve eğitimleri; kadro/konuş değişikliği; yurt dışı sürekli göreve seçilme; kritik kadroların boşalması; başka bölge/kadrodaki görev ihtiyacının önceliği; yönetici personeli atama/değiştirme ihtiyacı; belgelenmesi şartıyla personelin kusuru: görevi etkin takip etmeme, verimsizlik, başarısızlık, yetersizlik; sorunlu kişisel ilişkiler; saygınlığını yitirmesi; görevde kalmasına engel disiplinsizlik ile adli/idari soruşturma; olaylar ve özellikli görevler nedeniyle ilave personel, tecrübeli personel veya yetenek ihtiyacı; diğer zaruri durumlar; kusur kapsamındaki personel atanma nedenine bakılmaksızın atamaya tabi tutulabilir; bu personel öncelikle bulunduğu bölgede, mümkün değilse il içi/dışı başka bölgede aynı hizmet süresine tabi bir kadroya (m.34)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kusur nedeniyle atama için belge aranmaz\" yanlış; belgeleme şart"
+  ],
+  "simdiki_dogrusu": "terfi · belgelenmesi şartıyla · saygınlığını yitirmesi"
+ },
+ {
+  "kanun_id": 114,
+  "kanun": "Er ve Erbaş Harçlıkları Yönetmeliği",
+  "kart_id": "114-0",
+  "baslik": "Bordronun düzenlenmesi",
+  "hukum": "Harçlık ve munzam harçlıkları içeren bordrolar, bir ay zarfındaki durum ve geçmiş aylara ait ödenmemiş istihkaklar göz önüne alınarak ayın son günü, bağımsız takım, bölük ve benzeri birlik ve kurumlarca düzenlenir (m.7/1-a)",
+  "sinavda_boyle_yazarlar": [
+   "\"Bordro ayın ilk günü tabur/alay komutanlığınca düzenlenir\" yanlış; ayın son günü, bağımsız takım-bölük"
+  ],
+  "simdiki_dogrusu": "bir ay zarfındaki durum ve geçmiş aylara ait ödenmemiş istihkaklar · ayın son günü · bağımsız takım, bölük ve benzeri birlik ve kurumlarca"
+ },
+ {
+  "kanun_id": 114,
+  "kanun": "Er ve Erbaş Harçlıkları Yönetmeliği",
+  "kart_id": "114-2",
+  "baslik": "Munzam harçlık müstahaklarının tespiti (Ek-2)",
+  "hukum": "Munzam harçlığa müstahak görülecek er ve erbaşların tespiti için Ek-2 kullanılır; form, bağlı bulundukları birlik komutanı veya kurum amirince düzenlenip silsile yoluyla birlik veya kurumun bağlı olduğu harcama yetkilisinin onayına sunulur; bu belgeler her ay için ayrı ayrı ve ayın son günü düzenlenir (m.7/1-c)",
+  "sinavda_boyle_yazarlar": [
+   "\"Ek-2 formu üç ayda bir düzenlenir\" veya \"muhasebe yetkilisinin onayına sunulur\" yanlış; her ay ayrı ayrı, harcama yetkilisinin onayına"
+  ],
+  "simdiki_dogrusu": "Ek-2 · birlik komutanı veya kurum amirince · silsile yoluyla · harcama yetkilisinin onayına · her ay için ayrı ayrı ve ayın son günü"
+ },
+ {
+  "kanun_id": 114,
+  "kanun": "Er ve Erbaş Harçlıkları Yönetmeliği",
+  "kart_id": "114-6",
+  "baslik": "Bankacılık sistemiyle ödeme",
+  "hukum": "Kanun m.9'a dayanarak ödeme bankadan yapılabiliyorsa, bordroyu tanzim eden ve dağıtımdan sorumlu birlik komutanlığı veya kurum amirliğince hazırlanan banka listesi, harçlık ödemelerini gerçekleştiren birimce er ve erbaşların hesaplarına yatırılır; harcama yetkilisince onaylanan banka listeleri denetlemelere hazır şekilde muhafaza edilir (m.8)",
+  "sinavda_boyle_yazarlar": [
+   "\"Banka listesini muhasebe yetkilisi onaylar\" yanlış; harcama yetkilisi onaylar"
+  ],
+  "simdiki_dogrusu": "birlik komutanlığı veya kurum amirliğince · banka listesi · hesaplarına yatırılır · harcama yetkilisince onaylanan banka listeleri denetlemelere hazır şekilde muhafaza"
+ },
+ {
+  "kanun_id": 114,
+  "kanun": "Er ve Erbaş Harçlıkları Yönetmeliği",
+  "kart_id": "114-7",
+  "baslik": "Banka dışı dağıtım: teslim",
+  "hukum": "Birlik/kurum mutemetlerince toptan alınan harçlıklar, bordroyu tanzim eden birlik komutanı veya kurum amirine bordro toplamı üzerinden teslim edilerek Ek-3 düzenlenir veya dağıtımdan sorumlu birliğin banka hesabına havale edilerek alınan banka dekontu ilgili ayın bordrosu ekinde muhafaza edilir (m.9/1-a)",
+  "sinavda_boyle_yazarlar": [
+   "\"Mutemet harçlıkları doğrudan er ve erbaşlara tek tek dağıtır\" yanlış; birlik komutanı/kurum amirine teslim eder"
+  ],
+  "simdiki_dogrusu": "mutemetlerince toptan alınan · bordro toplamı üzerinden · Ek-3 · veya · banka dekontu"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-1",
+  "baslik": "İç kontrolün amaçları",
+  "hukum": "(a) kamu gelir, gider, varlık ve yükümlülüklerinin etkili, ekonomik ve verimli yönetimi, (b) kanunlara ve düzenlemelere uygun faaliyet, (c) malî karar ve işlemlerde usulsüzlük ve yolsuzluğun önlenmesi, (d) karar ve izleme için düzenli, zamanında ve güvenilir rapor ve bilgi edinilmesi, (e) varlıkların kötüye kullanılması ve israfının önlenmesi, kayıplara karşı korunması (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"İç kontrolün amacı kamu görevlisini cezalandırmaktır\" yanlış; amaç önleme, uygunluk ve güvenilir bilgidir"
+  ],
+  "simdiki_dogrusu": "etkili, ekonomik ve verimli · usulsüzlük ve yolsuzluğun önlenmesi · kötüye kullanılması ve israfının önlenmesi"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-5",
+  "baslik": "İç kontrol güvence beyanı ve yıllık değerlendirme",
+  "hukum": "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkilileri her yıl, iş ve işlemlerinin amaçlara, iyi malî yönetim ilkelerine, kontrol düzenlemelerine ve mevzuata uygun gerçekleştirildiğini içeren iç kontrol güvence beyanını düzenler ve birim faaliyet raporları ile idare faaliyet raporlarına ekler; iç kontrol düzenlemeleri ve işleyişi yöneticilerin görüşü, kişi/idarelerin talep ve şikâyetleri ile iç ve dış denetim raporları dikkate alınarak yılda en az bir kez değerlendirilir (m.8)",
+  "sinavda_boyle_yazarlar": [
+   "\"Güvence beyanı Sayıştaya ayrıca gönderilen bağımsız bir belgedir\" yanlış; faaliyet raporlarına eklenir"
+  ],
+  "simdiki_dogrusu": "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkilileri · iç kontrol güvence beyanını · birim faaliyet raporları ile idare faaliyet raporlarına ekler · iç ve dış denetim raporları · yılda en az bir kez"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-6",
+  "baslik": "İç kontrol standartları ve merkezî uyumlaştırma",
+  "hukum": "İç kontrol standartları merkezî uyumlaştırma görevi çerçevesinde Bakanlıkça belirlenir ve yayımlanır; idareler malî ve malî olmayan tüm işlemlerinde bu standartlara uymak zorundadır; Kanun ve standartlara aykırı olmamak koşuluyla idareler kendi yöntem, süreç ve özellikli işlemleri için standart belirleyebilir (m.5); iç kontrole ilişkin standart ve yöntemleri Bakanlık belirler, geliştirir ve uyumlaştırır: iç kontrol standartlarını belirler ve uyumu izler; ön malî kontrole ilişkin standart ve yöntemler ile ön malî kontrole tabi işlemleri belirler; koordinasyon ve rehberlik sağlar; idarelerle işbirliği yapar, çalışma toplantıları düzenler; idarelerden rapor ve bilgi alarak işleyişi izler; malî hizmetler birimlerinin çalışma usul ve esaslarını belirler; iyi uygulama örneklerini araştırır; eğitim programları hazırlar (m.9)",
+  "sinavda_boyle_yazarlar": [
+   "\"İç kontrol standartlarını Sayıştay belirler ve bunlara yalnız malî işlemlerde uyulur\" yanlış; Bakanlık belirler, malî olmayan işlemler de dâhildir"
+  ],
+  "simdiki_dogrusu": "merkezî uyumlaştırma görevi · Bakanlıkça · malî ve malî olmayan tüm işlemlerinde · Bakanlık · ön malî kontrole ilişkin standart ve yöntemler ile ön malî kontrole tabi işlemleri · rehberlik · malî hizmetler birimlerinin çalışma usul ve esaslarını"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-7",
+  "baslik": "Ön malî kontrolün kapsamı",
+  "hukum": "Ön malî kontrol idarelerin yönetim sorumluluğu çerçevesinde harcama birimleri ve malî hizmetler birimi tarafından yerine getirilir; harcama birimlerinin kontrolleri + malî hizmetler biriminin kontrollerinden oluşur; işlemler bütçe, tertip, kullanılabilir ödenek, ayrıntılı harcama veya finansman programı, bütçe kanunu ve diğer malî mevzuata uygunluk yönünden kontrol edilir; kaynakların etkili, ekonomik ve verimli kullanımı açısından kontrolü harcama birimleri de yapar (m.10)",
+  "sinavda_boyle_yazarlar": [
+   "\"Ön malî kontrol yalnız malî hizmetler birimince yapılır\" yanlış; harcama birimleri de yapar"
+  ],
+  "simdiki_dogrusu": "yönetim sorumluluğu · harcama birimleri ve malî hizmetler birimi · uygunluk · kaynakların etkili, ekonomik ve verimli kullanımı açısından kontrolü harcama birimleri"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-9",
+  "baslik": "Ön malî kontrol süreci ve süreç kontrolü",
+  "hukum": "Malî hizmetler biriminin kontrolüne tabi işlemler birime gönderilir, görüş yazısı düzenlenip ilgili birime gönderilir; yazılı görüşler ayrıntılı, açık ve gerekçeli olmak zorundadır; görüş yazısı işlem dosyasında saklanır ve bir örneği ödeme emri belgesine eklenir; harcama birimlerinde süreç kontrolü yapılır: her işlem önceki işlemlerin kontrolünü içerecek şekilde tasarlanır; süreç kontrolü için malî işlemlerin süreç akış şeması hazırlanır ve üst yöneticinin onayıyla yürürlüğe konur (m.12)",
+  "sinavda_boyle_yazarlar": [
+   "\"Süreç akış şeması harcama yetkilisinin onayıyla yürürlüğe girer\" yanlış; üst yönetici onayı"
+  ],
+  "simdiki_dogrusu": "görüş yazısı · ayrıntılı, açık ve gerekçeli · ödeme emri belgesine eklenir · süreç kontrolü · malî işlemlerin süreç akış şeması hazırlanır ve üst yöneticinin onayıyla"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-10",
+  "baslik": "Ödeme emrini düzenleyen gerçekleştirme görevlisi",
+  "hukum": "Harcama yetkilileri yardımcıları veya hiyerarşik olarak en yakın üst kademe yöneticileri arasından bir veya daha fazla gerçekleştirme görevlisini ödeme emri belgesi düzenlemekle görevlendirir; bu görevliler ödeme emri ve ekleri üzerinde ön malî kontrol yapar ve belgeye \"Kontrol edilmiş ve uygun görülmüştür\" şerhi düşerek imzalar; 3152 m.28/A kapsamında il yatırım izleme ve koordinasyon başkanlıklarınca yapılan alım ve yapım işlerinde ödeneği aktaran idarenin ildeki il müdürü ve eşdeğeri bu görevli olarak belirlenebilir (m.12)",
+  "sinavda_boyle_yazarlar": [
+   "\"Ödeme emri belgesini düzenleyecek gerçekleştirme görevlisini muhasebe yetkilisi görevlendirir\" yanlış; harcama yetkilisi"
+  ],
+  "simdiki_dogrusu": "yardımcıları veya hiyerarşik olarak en yakın üst kademe yöneticileri · ödeme emri belgesi düzenlemekle · \"Kontrol edilmiş ve uygun görülmüştür\" · ildeki il müdürü ve eşdeğeri"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-11",
+  "baslik": "Kontrol usulü",
+  "hukum": "Uygun görülen işlemde dayanak belgeye \"Kontrol edilmiş ve uygun görülmüştür\" şerhi düşülür veya yazılı görüş düzenlenir; uygun görülmezse nedenleri açıkça belirtilen görüş yazısı belgeler eklenerek ilgili birime gönderilir; malî hizmetler birimince m.17 (taahhüt evrakı-sözleşme tasarısı) ve m.26 (yurt dışı kira katkısı) kontrollerinde yazılı görüş zorunludur; giderilebilir eksikliklerde, eksiklik ve düzeltme yolu belirtilip düzeltilmesi kaydıyla uygun görüş verilebilir (m.13)",
+  "sinavda_boyle_yazarlar": [
+   "\"Taahhüt evrakı kontrolünde şerh yeterlidir, yazılı görüş gerekmez\" yanlış; yazılı görüş zorunlu"
+  ],
+  "simdiki_dogrusu": "\"Kontrol edilmiş ve uygun görülmüştür\" · nedenleri açıkça belirtilen görüş yazısı · m.17 (taahhüt evrakı-sözleşme tasarısı) ve m.26 (yurt dışı kira katkısı) · yazılı görüş zorunludur · düzeltilmesi kaydıyla uygun"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-12",
+  "baslik": "Kontrol yetkisi",
+  "hukum": "Malî hizmetler biriminde ön malî kontrol yetkisi malî hizmetler birimi yöneticisine aittir, yazılı görüş ve şerhleri o imzalar; bu yetkiyi sınırlarını açıkça belirterek yazılı olarak yardımcısına veya iç kontrol alt birim yöneticisine devredebilir; birim yöneticisi aynı zamanda harcama yetkilisiyse ön malî kontrolü iç kontrol alt birim yöneticisi yürütür; birimin kontrolü iç kontrol alt birimi eliyle yapılır; harcama birimlerinde ödeme emri üzerindeki kontrolü ödeme emrini düzenleyen gerçekleştirme görevlisi yapar (m.14)",
+  "sinavda_boyle_yazarlar": [
+   "\"Malî hizmetler birimi yöneticisi kontrol yetkisini sözlü olarak devredebilir\" yanlış; sınırları belirtilerek yazılı"
+  ],
+  "simdiki_dogrusu": "malî hizmetler birimi yöneticisine · sınırlarını açıkça belirterek yazılı olarak · iç kontrol alt birim yöneticisine · aynı zamanda harcama yetkilisiyse · iç kontrol alt birim yöneticisi · iç kontrol alt birimi · ödeme emrini düzenleyen gerçekleştirme görevlisi"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-14",
+  "baslik": "Kanun tasarılarının malî yükü",
+  "hukum": "Gelirleri azaltacak veya giderleri artıracak ve idareye yükümlülük getirecek kanun tasarıları malî yükünün hesaplanması için malî hizmetler birimine gönderilir; malî yük en az üç yıllık dönem için hesaplanıp orta vadeli program ve malî plan çerçevesinde stratejik plan, performans programı ve bütçeye etkisi yönünden değerlendirilir; sosyal güvenliğe yönelik tasarılarda en az yirmi yıllık aktüeryal hesaplama yapılır (m.16)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sosyal güvenliğe yönelik tasarılarda malî yük üç yıllık hesaplanır\" yanlış; en az yirmi yıllık aktüeryal hesap"
+  ],
+  "simdiki_dogrusu": "en az üç yıllık · sosyal güvenliğe yönelik tasarılarda en az yirmi yıllık aktüeryal"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-16",
+  "baslik": "Ödenek gönderme belgeleri",
+  "hukum": "Bütçe ödeneklerinin dağıtımı ödenek gönderme belgesiyle yapılır; belge harcama yetkilisince imzalandıktan sonra malî hizmetler birimine gönderilir; bütçe kanunu, tertip, ayrıntılı harcama/finansman programı ve dağıtım esaslarına uygunluk yönünden kontrol edilen belgeler en geç üç iş günü içinde sonuçlandırılır; uygun görülmeyenler gerekçeli yazıyla harcama yetkilisine gönderilir (m.18)",
+  "sinavda_boyle_yazarlar": [
+   "\"Ödenek gönderme belgeleri on iş günü içinde kontrol edilir\" yanlış; üç iş günü"
+  ],
+  "simdiki_dogrusu": "ödenek gönderme belgesiyle · harcama yetkilisince imzalandıktan sonra · en geç üç iş günü · gerekçeli yazıyla harcama yetkilisine"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-18",
+  "baslik": "Kadro dağılım cetvelleri",
+  "hukum": "190 sayılı KHK'ya tabi idarelerin cetvelleri Bakanlık ve Devlet Personel Başkanlığı ile uygunluk sağlandıktan sonra, 78 sayılı KHK'ya tabi olanlar YÖK onayından sonra kontrole tabidir; cetveller en geç beş iş günü içinde kontrol edilir; ödemeler onaylı cetvellere göre yapılır; değişiklikler de aynı şekilde kontrol edilir; 190 sayılı KHK'ya tabi olmayan idarelerde kadro ihdas ve değişiklikleri aynı sürede kontrol edilir; TSK personelinin kadroları ile millî güvenlik nedeniyle gizli kalması gereken kadrolara bu madde uygulanmaz (m.20)",
+  "sinavda_boyle_yazarlar": [
+   "\"TSK personel kadroları da kadro dağılım cetveli kontrolüne tabidir\" yanlış; uygulanmaz"
+  ],
+  "simdiki_dogrusu": "Bakanlık ve Devlet Personel Başkanlığı ile uygunluk sağlandıktan sonra · YÖK onayından sonra · en geç beş iş günü · onaylı cetvellere · TSK personelinin kadroları ile millî güvenlik nedeniyle gizli kalması gereken kadrolara bu madde uygulanmaz"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-19",
+  "baslik": "Seyahat kartı ve seyyar görev tazminatı",
+  "hukum": "6245 m.48 uyarınca İçişleri, Maliye ve Ulaştırma Bakanlıklarınca müştereken belirlenen esaslara göre seyahat kartı verilecek personel listesi, esaslara uygunluk ve ödenek yeterliliği yönünden en geç üç iş günü içinde kontrol edilir (m.21); her birim, bölge, il ve ilçe için ayrı hazırlanan seyyar görev dağılım listeleri 6245, ilgili düzenlemeler, bütçe ödeneği ve Bakanlıkça vize edilen cetvellere uygunluk yönünden en geç üç iş günü içinde kontrol edilir; uygun görülmeyenler gerekçeli yazıyla ilgili birime gönderilir (m.22)",
+  "sinavda_boyle_yazarlar": [
+   "\"Seyahat kartı listeleri beş iş günü içinde kontrol edilir\" yanlış; üç iş günü"
+  ],
+  "simdiki_dogrusu": "İçişleri, Maliye ve Ulaştırma Bakanlıklarınca · seyahat kartı · en geç üç iş günü · seyyar görev dağılım listeleri · en geç üç iş günü"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-20",
+  "baslik": "Geçici işçi, yan ödeme ve sözleşmeli personel",
+  "hukum": "Bütçe kanunundaki yetki çerçevesinde genel bütçeli, özel bütçeli idareler ve sosyal güvenlik kurumlarında geçici işçi pozisyon (adam/ay) sayılarının aylar ve birimler itibarıyla dağılımı; norm kadroya geçmemiş mahallî idarelerde İçişleri Bakanlığı vizesinden sonra birimlere dağılım cetvelleri kontrole tabidir; en geç beş iş günü (m.23); 657 m.152'ye dayanan Bakanlar Kurulu kararı uyarınca serbest kadro üzerinden hazırlanan yan ödeme cetveli ve birim dağılım listeleri malî hizmetler birimince kontrol edilir, süreç ve üst yönetici onayı o kararın esaslarına göre yürür (m.24); Bakanlıkça vize edilen cetvellere ve tip sözleşmeye uygun çalıştırılacak personelle ve vizesiz çalıştırılabilecek sözleşmeli personelle yapılacak sözleşmeler en geç beş iş günü içinde sonuçlandırılır (m.25)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sözleşmeli personel sözleşmeleri üç iş günü içinde sonuçlandırılır\" yanlış; beş iş günü"
+  ],
+  "simdiki_dogrusu": "geçici işçi pozisyon (adam/ay) sayılarının aylar ve birimler itibarıyla dağılımı · İçişleri Bakanlığı vizesinden sonra · en geç beş iş günü · yan ödeme cetveli · tip sözleşmeye · sözleşmeli personelle · en geç beş iş günü"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-21",
+  "baslik": "Yurt dışı kira katkısı",
+  "hukum": "657 ve 926 sayılı TSK Personel Kanununa tabi olup yurt dışı kadrolara sürekli görevle atanan personelin yurt dışı kira katkısı işlem dosyası birimlerince hazırlanıp malî hizmetler birimine gönderilir; bütçe kanunu ve Bakanlık esaslarına uygunluk yönünden incelenir, uygun olanlara en geç üç iş günü içinde uygun görüş verilir; bu kontrolde yazılı görüş zorunludur (m.26, m.13)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yurt dışı kira katkısı yalnız 657'ye tabi memurlar içindir\" yanlış; 926 sayılı Kanuna tabi TSK personeli de kapsamdadır"
+  ],
+  "simdiki_dogrusu": "926 sayılı TSK Personel Kanununa · sürekli görevle · en geç üç iş günü · yazılı görüş zorunludur"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-22",
+  "baslik": "İdarelerce yapılacak düzenlemeler",
+  "hukum": "Sayılanlar dışındaki malî işlemlerin de malî hizmetler birimine kontrol ettirilmesi için düzenleme yapılabilir; bu düzenlemeler üst yöneticinin onayıyla yürürlüğe girer; kontrole tabi işlemler riskli alanlar dikkate alınarak tür, tutar ve konu itibarıyla belirlenir ve yılda bir kez değerlendirilir; iç kontrol ve ön malî kontrol düzenlemeleri üst yönetici onayını izleyen on iş günü içinde Bakanlığa bildirilir (m.27)",
+  "sinavda_boyle_yazarlar": [
+   "\"İdare düzenlemeleri Bakanlık onayıyla yürürlüğe girer\" yanlış; üst yönetici onayıyla girer, Bakanlığa sonradan bildirilir"
+  ],
+  "simdiki_dogrusu": "üst yöneticinin onayıyla · riskli alanlar · yılda bir kez · on iş günü içinde Bakanlığa bildirilir"
+ },
+ {
+  "kanun_id": 117,
+  "kanun": "İç Kontrol ve Ön Malî Kontrole İlişkin Usul ve Esaslar",
+  "kart_id": "117-23",
+  "baslik": "Uygun görüş verilmeyen işlemler",
+  "hukum": "Ön malî kontrolde uygun görüş verilmediği hâlde harcama yetkililerince gerçekleştirilen işlemlerin kayıtları malî hizmetler birimince tutulur ve aylık dönemler itibarıyla üst yöneticiye bildirilir; bu kayıtlar iç ve dış denetim sırasında denetçilere de sunulur (m.28)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uygun görüş verilmeyen işlemler yıllık olarak Sayıştaya bildirilir\" yanlış; aylık olarak üst yöneticiye bildirilir"
+  ],
+  "simdiki_dogrusu": "kayıtları malî hizmetler birimince tutulur · aylık dönemler itibarıyla üst yöneticiye · iç ve dış denetim"
+ },
+ {
+  "kanun_id": 121,
+  "kanun": "Kamu Konutları Yönetmeliği",
+  "kart_id": "121-0",
+  "baslik": "Kapsam, tanımlar, kiralama, türler",
+  "hukum": "2946 sayılı Kamu Konutları Kanunu m.2'deki kurumların yurt içi-dışında inşa, satın alma ve kiralama ile sağladıkları konutlar; hizmet binalarında konuta ayrılan bölümler de (m.2); yetkili makam: merkez teşkilatındaki en üst amir/organ ile yetki devrettiği makam veya rütbe sahibi; yönetici: yakıt dışındaki müşterek hizmetler için oturanların kendi aralarından seçtiği kişi; İdare: Devlete ait konutlarda Maliye Bakanlığı Milli Emlak Genel Müdürlüğü veya tahsisli olanlarda adına tahsis yapılan kurum (m.3); kiralama suretiyle konut sağlanabilecekler: Bakanlar ve milletvekilleri; kalkınmada öncelikli yörelerde mahallen temin edilemeyen personel; TSK personeli; JGK ve SGK personeli; EGM'ce ihtiyaç gösterilen emniyet personeli; yurt dışında büyükelçiler vb. ve daimi görevli personel; hâkim-savcılar (emsal kira fazlası kurum bütçesinden); büyük cezaevlerinde müdür ve infaz koruma memurları; diğer personel (Bakanlık teklifi + Maliye görüşü + Başbakanlık izni) (m.4); konut türleri (4): özel tahsisli (1 sayılı cetvel, temsil özelliği olan makam-rütbe sahipleri), görev tahsisli (2 sayılı cetvel, görevin önemi ve yetki-sorumluluk gereği), sıra tahsisli (4 sayılı cetveldeki puan durumuna göre m.9 usulüyle), hizmet tahsisli (hudut karakolu, istasyon, haberleşme, gözlem, araştırma, inşaat mahalli gibi meskûn yerlerden uzak, normal mesaiyle sınırlandırılamayan personel; makam şoförü ve koruma görevlileri; kapıcı-kaloriferci; bina, baraka, prefabrik, karavan, kulübe vb.) (m.5); yetkili makamca türlerine göre ayrımı yapılınca kamu konutu özelliği kazanır; genel bütçeli dairelerin konutları ilgili idareye tahsis edildiği tarihte; tahsis talepten itibaren en geç 1 ay; TSK, JGK ve SGK'da ayırım subay, astsubay ve sivil memur (uzman çavuş ve uzman jandarma dâhil) arasında (m.6)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sıra tahsisli konut 2 sayılı cetvele göre\" yanlış; 4 sayılı cetvel puanı"
+  ],
+  "simdiki_dogrusu": "yetkili makam · yönetici · İdare · kiralama suretiyle konut · TSK personeli · JGK ve SGK personeli · konut türleri (4) · özel tahsisli · görev tahsisli · sıra tahsisli · puan durumuna · hizmet tahsisli · ilgili idareye tahsis edildiği tarihte · en geç 1 ay · TSK, JGK ve SGK'da ayırım subay, astsubay ve sivil memur (uzman çavuş ve uzman jandarma dâhil) arasında"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-0",
+  "baslik": "Amaç, kapsam, yetki, katılım",
+  "hukum": "Hazinenin özel mülkiyetindeki taşınmazların satışı, trampası, arsa/kat karşılığı inşaat, kiraya verilmesi, ön izin, irtifak hakkı; Devletin hüküm ve tasarrufu altındaki yerlerin kiraya verilmesi, ön izin ve kullanma izni; ecrimisil ve tahliye (m.1); tarihî ve bediî değeri olan taşınmazlar hariç (m.2); tapu sicilinde işlem yapmaya illerde il müdürü, ilçelerde millî emlak müdürü/müdür yardımcısı (m.5); birden fazla ilçedeki taşınmazda yüzölçümünün fazla olduğu yer birimi; Hazine yararı varsa tek ihale (m.6); ihale yetkilisi ita amiri (m.7); katılım şartları: yasal yerleşim yeri, tebligat adresi, TC/vergi kimlik no, geçici teminat, özel hukuk tüzel kişilerinde ihale yılı içinde alınmış sicil kayıt belgesi + temsil belgesi/vekâletname (m.8); katılamayacaklar: ita amirleri, ihale işlemlerini hazırlayan-yürüten-denetleyenler, bunların eşleri ve ikinci dereceye kadar kan-kayın hısımları, ortakları; 2886 m.83-85 ve diğer kanunlarla yasaklılar (m.9); şartnamede zorunlu hususlar arasında ihale kararının 15 iş günü içinde ita amirince onaylanacağı veya feshedilebileceği; tekniğe uygun olmayan şartta komisyon ihaleyi erteler, yeni ilan (m.10)",
+  "sinavda_boyle_yazarlar": [
+   "\"Üçüncü dereceye kadar hısımlar\" yanlış; ikinci derece"
+  ],
+  "simdiki_dogrusu": "ecrimisil ve tahliye · tarihî ve bediî değeri olan taşınmazlar hariç · il müdürü · millî emlak müdürü/müdür yardımcısı · yüzölçümünün fazla olduğu yer · ita amiri · ihale yılı içinde alınmış sicil kayıt belgesi · katılamayacaklar · eşleri ve ikinci dereceye kadar kan-kayın hısımları · ihale kararının 15 iş günü içinde ita amirince onaylanacağı veya feshedilebileceği · erteler"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-1",
+  "baslik": "Tahmin edilen bedel, ödeme, artış",
+  "hukum": "Tahmin edilen bedeli bedel tespit komisyonu tespit eder, rayiç bedel esas; kullanma izni/irtifak hakkında ilk yıl rayiç bedelin %2'si, kiralamalarda %4'ü; kamu yararına dernek-vakıf irtifak/kullanma izni %1, eğitim tesisleri binde 5 (eğitim faaliyeti en az %80, hizmetin %10'u bedelsiz); tarım-hayvancılık-sanayi irtifakı %1, kirası %1,5; irtifak/kullanma izninde 2. ve 3. yıl bedelleri %70 indirimli; ön izin bedeli ihale bedelinin 1-2. yıl %20, 3. yıl %30, 4. yıl %40; ön izin sonrası ilk yıl bedeli TÜFE artışıyla; bedel sermaye piyasası değerleme kuruluşlarına veya Bakanlık merkez denetim elemanlarına tespit ettirilebilir; büfe, kantin, çay ocağı tahminî kira bedeli personel sayısı-gelir-alan bilgileriyle İdarece (m.12); satış bedeli (taksitli satışta %25'i), ilk yıl irtifak-kullanma izni-ön izin bedelleri onay kararının tebliğinden itibaren 15 gün içinde peşin; ilk yıl kira bedelinin dörtte biri 15 günde peşin, kalanı üçer aylık 3 eşit taksit; müteakip yıllar üçer aylık 4 eşit taksit; tarım arazisi kirasında kalan bedel dönemin son ayında tek seferde; köydeki tarım arazisi kira gelirinin %10'u köy tüzel kişiliğine (Bakanlık iki katına çıkarabilir) (m.13); bir yıldan uzun sözleşmelerde sonraki yıl bedelleri TÜFE (12 aylık ortalama), tarımsal sözleşmelerde kanuni faiz oranında artar (m.14); vadesinde ödenmeyen bedellere 6183 m.51 gecikme faizi (m.15); her iş için onay belgesi (İdarece hazırlanır, ita amiri onaylar) (m.16)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kira ilk yıl rayiç bedelin %2'si\" yanlış; %4 (irtifak %2)"
+  ],
+  "simdiki_dogrusu": "bedel tespit komisyonu · rayiç bedel · rayiç bedelin %2'si · %4'ü · %1 · binde 5 · 2. ve 3. yıl bedelleri %70 indirimli · ön izin bedeli · sermaye piyasası değerleme kuruluşlarına · büfe, kantin, çay ocağı · %25'i · 15 gün içinde peşin · dörtte biri 15 günde peşin, kalanı üçer aylık 3 eşit taksit · üçer aylık 4 eşit taksit · %10'u köy tüzel kişiliğine · TÜFE (12 aylık ortalama) · kanuni faiz · 6183 m.51 gecikme faizi · onay belgesi"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-2",
+  "baslik": "Komisyonlar",
+  "hukum": "İhale komisyonu ita amirince: başkan illerde millî emlak müdürü/emlak müdürü, ilçelerde millî emlak müdürü veya millî emlak şefliği yetkilisi; İdareden üye ve Maliye üyesi millî emlak memurlarından; birden fazla komisyon kurulabilir (başkan müdür yardımcısı/uzman/şef); karara katılmamak şartıyla yardımcı memur-uzman; komisyon eksiksiz toplanır, çoğunlukla karar, çekimser yok, muhalif üye gerekçesini yazar; oy ve kararlardan sorumlu (m.17); bedel tespit komisyonu ita amirince başkan (millî emlak müdür yardımcısı/uzman/şef) + 2 üye, bir yıllık süre için; taşınmaz-değerleme konusunda ehil kişiler; ilçelerdeki bedeller il komisyonuna yaptırılabilir; program dâhilinde, eksiksiz, çekimser yok; \"Tahmin Edilen Bedel Tespit Raporu\" (Ek-17) ile karar (m.18)",
+  "sinavda_boyle_yazarlar": [
+   "\"Bedel tespit komisyonu ihale bazında kurulur\" yanlış; bir yıllık"
+  ],
+  "simdiki_dogrusu": "başkan · İdareden üye · Maliye üyesi · eksiksiz toplanır, çoğunlukla karar, çekimser yok · bedel tespit komisyonu · 2 üye · bir yıllık süre için · \"Tahmin Edilen Bedel Tespit Raporu\" (Ek-17)"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-3",
+  "baslik": "İlan, teminat, usuller",
+  "hukum": "İlan: ihalenin yapılacağı yerde çıkan bir gazete ve bir internet haber sitesi; ilk ilan ile ihale günü arası 10 günden, son ilan ile ihale günü arası 5 günden az olamaz; gazete çıkmayan yerde Basın İlan Kurumu İlan Portalı; bütçe kanunu miktarını aşan işler diğer şehirlerde de (en az 10 gün önce birer defa); miktarın 3 katını aşanlar Resmî Gazetede de en az 10 gün önce bir defa; pazarlıkta ilan İdarenin takdirinde; ayrıca Millî Emlak internet sitesi, hükûmet-belediye ilan tahtaları; sürelerde ilan günü ile ihale günü sayılmaz; onaylanan kararlar internette yayınlanır (m.19); ilanda zorunlu hususlar (m.20); ilandan sonra şartname değişikliği yok, zorunluysa tutanakla önceki ilan geçersiz, yeniden ilan (m.21); usulsüz ilan geçersiz, ilan yenilenmedikçe ihale yapılamaz; sonradan anlaşılırsa ihale/sözleşme feshedilir, ivedilik ve Devlet yararı varsa Bakanlık onayıyla geçerli sayılabilir, müşteriye gerçek masrafları ödenir (m.22); ihale tatile rastlarsa ilansız tatili izleyen ilk iş günü aynı yer-saat (m.23); açılma saati Türk Telekom veya TRT saat ayarı (m.24); geçici teminat tahmin edilen bedelin %10'undan az olmamak üzere %30'una kadar ita amirince; tarım arazisi kirasında alınmayabilir (m.25); teminat olarak kabul: Türk parası, mevduat/katılım bankası süresiz teminat mektubu, Devlet İç Borçlanma Senetleri, satış ihalelerinde yurt dışı yerleşiklerden konvertibl döviz; teminat mektupları dışındaki teminatlar muhasebe birimine yatırılır, komisyon teslim alamaz; teminatlar haczedilemez, ihtiyati tedbir konulamaz (m.26); usuller kapalı teklif, açık teklif, pazarlık (m.27)",
+  "sinavda_boyle_yazarlar": [
+   "\"Süresiz banka teminat mektubu kabul edilmez\" yanlış; süresiz olması şart"
+  ],
+  "simdiki_dogrusu": "bir gazete ve bir internet haber sitesi · ilk ilan ile ihale günü arası 10 günden, son ilan ile ihale günü arası 5 günden az olamaz · 3 katını · Resmî Gazetede · pazarlıkta ilan İdarenin takdirinde · ilan günü ile ihale günü sayılmaz · Bakanlık onayıyla · tatile rastlarsa ilansız tatili izleyen ilk iş günü · Türk Telekom veya TRT saat ayarı · geçici teminat · %10'undan az olmamak üzere %30'una kadar · tarım arazisi kirasında alınmayabilir · süresiz · muhasebe birimine · haczedilemez, ihtiyati tedbir konulamaz · kapalı teklif, açık teklif, pazarlık"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-4",
+  "baslik": "Kapalı, açık, pazarlık usulleri ve kararlar",
+  "hukum": "Kapalı teklif: iç zarf (teklif mektubu, imzalı) + dış zarf (teminat ve belgeler); fiyat rakam ve yazıyla; kazıntı-silinti-düzeltmeli teklif hiç yapılmamış sayılır (m.28); teklifler sıra numaralı alındı karşılığı; iadeli taahhütlü posta ile de; postadaki gecikme işleme konmaz; verilen teklif geri alınamaz (m.29); dış zarflar alınış sırasıyla açılır; belge-teminatı eksik olanların iç zarfı açılmadan iade, ihaleye katılamaz (m.30); iç zarflar numara sırasıyla; en yüksek teklifin altında olmamak üzere hazır bulunanlardan sıra ile sözlü veya yazılı yeni teklif, tek istekli kalıncaya kadar; geçerli teklif 3'ten fazlaysa en yüksek 3 teklif sahibiyle; çekilen yeniden teklif veremez; komisyon yazılı son teklifleri alarak sonuçlandırabilir (m.31); karar: ihale yapıldı (ita amiri onayına bağlı) veya yapılmadı (m.32); istekli çıkmaz/bedel uygun görülmezse aynı usulle yeniden (m.33); açık teklif: sözlü teklif; posta ile de, hazır bulunmazsa son ve kesin teklif sayılır (m.34); komisyon başkanı belgeleri inceler, katılamayacaklar çıkarılır, şartname imzalanır, teklifler artırma kâğıdına (m.35-37); pazarlık: şekle bağlı değil, bir veya daha fazla istekliden yazılı/sözlü teklif, gerekçe pazarlık kararında (m.38); komisyon ihaleyi yapıp yapmamakta serbest, yapmama kararı kesin (m.39); kararlar (m.40); kesinleşme: bütçe kanunu parasal sınırına kadar ita amiri, aşanlar Bakanlık onay/ret; karar tarihinden en geç 15 iş günü (m.41); kesinleşen karar en geç 5 iş günü içinde imza karşılığı veya iadeli taahhütlü tebliğ (m.44); ihalede hazır bulunmayan veya noter vekâletnameli vekil göndermeyen itiraz edemez (m.45)",
+  "sinavda_boyle_yazarlar": [
+   "\"Postayla gelen açık teklif ilk teklif sayılır\" yanlış; son ve kesin teklif"
+  ],
+  "simdiki_dogrusu": "rakam ve yazıyla · hiç yapılmamış sayılır · iadeli taahhütlü posta · geri alınamaz · sıra ile sözlü veya yazılı yeni teklif · tek istekli kalıncaya kadar · 3'ten fazlaysa en yüksek 3 teklif sahibiyle · aynı usulle · açık teklif · son ve kesin teklif · artırma kâğıdına · pazarlık · ihaleyi yapıp yapmamakta serbest · kesin · kesinleşme · ita amiri · Bakanlık · en geç 15 iş günü · en geç 5 iş günü içinde · itiraz edemez"
+ },
+ {
+  "kanun_id": 127,
+  "kanun": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+  "kart_id": "127-9",
+  "baslik": "Yasaklar, sorumluluk, son hükümler",
+  "hukum": "Yasak fiiller: fesat karıştırma, açık teklif/pazarlıkta isteklileri tereddüde düşürecek söz ve anlaşmaya çağrı, sahte belge-teminat, taahhüdü kötü niyetle yerine getirmeme, hileli malzeme (m.90); ihale safhasındaki fiillerde İdarece ihaleye alınmaz ve Bakanlıkça 1 yıla kadar bütün kamu ihalelerinden yasaklama; sözleşme yapmayan veya taahhüdünü yerine getirmeyen müşteriye 1 yıla kadar yalnız Bakanlık ihalelerinden yasaklama; kararlar Resmî Gazetede; sermaye çoğunluğuna sahip olduğu tüzel kişilere de; İdare yasaklamayı gerektiren durumu en geç 1 ay içinde Bakanlığa bildirir (m.91); görevlilerin tarafsız yapmaması, ihmal-kusur → disiplin + ceza kovuşturması + zarar tazmini (m.92); sürelerin hesabında Borçlar Kanunu (m.93); formlar Ek-1 Satış Şartnamesi … Ek-8 Taşınmaz Tespit Tutanağı, Ek-9 Ecrimisil İhbarnamesi, Ek-10 Düzeltme İhbarnamesi, Ek-14 İrtifak resmî senet hükümleri, Ek-16 Kullanma İzni Sözleşmesi, Ek-17 Bedel Tespit Raporu, Ek-18 Protokol (m.95); Sayıştay görüşüyle hazırlanan Yönetmelik 1/7/2007 yürürlük (m.98)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yasaklama kararını İdare (il müdürlüğü) verir\" yanlış; Bakanlık"
+  ],
+  "simdiki_dogrusu": "Bakanlıkça 1 yıla kadar bütün kamu ihalelerinden yasaklama · 1 yıla kadar yalnız Bakanlık ihalelerinden yasaklama · Resmî Gazetede · en geç 1 ay içinde Bakanlığa · Borçlar Kanunu · Sayıştay görüşüyle · 1/7/2007"
+ },
+ {
+  "kanun_id": 128,
+  "kanun": "Hekimlik Meslek Etiği Kuralları",
+  "kart_id": "128-0",
+  "baslik": "Amaç, kapsam, dayanak, görev ve ilkeler",
+  "hukum": "Amaç hekimlerin uymak zorunda olduğu meslek etiği kurallarını belirlemek (m.1); Türkiye'de hekimlik yapma hakkını kazanmış ve mesleğini uygulayan tüm hekimler kapsamda (m.2); dayanak 6023 sayılı Türk Tabipleri Birliği Yasası m.59/g (m.3); Bakanlık: Sağlık Bakanlığı; hekim: tıp doktorları; hekim örgütü: Türk Tabipleri Birliği (m.4); hekimin öncelikli görevi hastalıkları önlemek ve bilimsel gerekleri yerine getirerek hastaları iyileştirmeye çalışarak insanın yaşamını ve sağlığını korumak; insan onurunu gözetmek öncelikli ödev; gelişmeleri izler (m.5); evrensel tıbbi etik ilkeleri yararlılık, zarar vermeme, adalet ve özerklik (m.6); hekim görevlerini siyasal görüş, sosyal durum, dini inanç, milliyet, etnik köken, ırk, cinsiyet, yaş, ekonomik durum farkı gözetmeksizin yerine getirir (yansızlık) (m.7); vicdani ve mesleki bilimsel kanaatine göre hareket eder (m.8)",
+  "sinavda_boyle_yazarlar": [
+   "\"Dayanak Sağlık Bakanlığı yönetmeliği\" yanlış; TTB Yasası"
+  ],
+  "simdiki_dogrusu": "tüm hekimler · 6023 sayılı Türk Tabipleri Birliği Yasası m.59/g · Bakanlık · hekim · hekim örgütü · insanın yaşamını ve sağlığını korumak · insan onurunu gözetmek · yararlılık, zarar vermeme, adalet ve özerklik · yansızlık · vicdani ve mesleki bilimsel kanaatine"
+ },
+ {
+  "kanun_id": 129,
+  "kanun": "TSK, JGK ve SGK Besleme Kanunu Uygulama Yönetmeliği",
+  "kart_id": "129-0",
+  "baslik": "Amaç, kapsam, tanımlar",
+  "hukum": "5668'in uygulanma usul ve esasları (m.1); Genelkurmay, Kara-Deniz-Hava, JGK ve SGK'yı kapsar (m.2); dayanak 5668 m.11 (m.3); tanımlar: ara öğün; askerî personel (sözleşmeli erbaş-er dâhil); birleştirilmiş günlük besleme bildirim çizelgesi (birliklerin çizelgelerinin personel birimince birleştirilip mal saymanlığına/beslenme birimine gönderilen, günlük yemek çizelgesine esas belge); günlük besleme bildirim çizelgesi (personel birimine gönderilen); hayvan besleme çizelgeleri; günlük yem bedeli (Hayvanların Beslenmesine Dair Yönetmelikteki üst miktar); güçlendirilmiş yemek bedeli %25; günlük yemek bedeli; günlük yemek çizelgesi (denetime bağlı tüketim belgesi); günlük yemek çizelge özeti; kazandan besleme; özel günler için günlük yemek bedeli: %50 fazlasına kadar; tayın bedeli; TSK (Kara, Deniz, Hava); bedelen besleme (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Günlük yemek çizelgesi bildirim belgesidir\" yanlış; denetime bağlı tüketim belgesi"
+  ],
+  "simdiki_dogrusu": "ara öğün · birleştirilmiş günlük besleme bildirim çizelgesi · günlük besleme bildirim çizelgesi · günlük yem bedeli · güçlendirilmiş yemek bedeli %25 · günlük yemek çizelgesi · günlük yemek çizelge özeti · özel günler için günlük yemek bedeli: %50 fazlasına kadar · bedelen besleme"
+ },
+ {
+  "kanun_id": 130,
+  "kanun": "TSK Beslenme Bedellerinin Uygulanmasına Dair Yönetmelik",
+  "kart_id": "130-0",
+  "baslik": "Amaç, kapsam, tanımlar, ödeme",
+  "hukum": "Kazandan beslenemeyen askerî personele aylık beslenme bedelinin peşin ödenmesi ile (askerî öğrenci, erbaş-er, nöbetçi, yüzer birlik, savaş-iç güvenlik-sınır ötesi harekât hariç) kazandan beslenenlerin aylıklarından kesintiler (m.1); beslenme bedeli uygulayan TSK birlik ve kurumları (m.2); dayanak 5668 m.11/1 (m.3); askerî personel: subay, astsubay, uzman jandarma, uzman erbaş, askerî öğrenci, sivil memur, işçi, erbaş-er; beslenme bedeli = tayın bedeli; TSK: Genelkurmay, Kara-Deniz-Hava Kuvvetleri, JGK ve SGK (bu yönetmelikte); yemek yardımı: toplu iş sözleşmesiyle işçilere günlük ödenen yemek parası (m.4); beslenme bedelinin aylık tutarı 5668 ölçütleri dikkate alınarak 2155 sayılı Kanun ve Tayın Bedeli Yönetmeliğine göre tespit edilir ve ödenir (m.5)",
+  "sinavda_boyle_yazarlar": [
+   "\"Beslenme bedeli 5668'e göre ödenir\" yanlış; 2155'e göre"
+  ],
+  "simdiki_dogrusu": "askerî personel · beslenme bedeli = tayın bedeli · TSK · yemek yardımı · 2155 sayılı Kanun ve Tayın Bedeli Yönetmeliğine"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-0",
+  "baslik": "Amaç, kapsam, dayanak",
+  "hukum": "Amaç: toplumun temel sağlık bilgisini artırmak, ilkyardımı topluma öğretmek, tüm kamu ve özel kurumlarda personel sayısına göre ilkyardımcı bulundurulması, kazalara bağlı ölüm ve sakatlık riskini azaltmak; bunun için eğitici eğitmeni, eğitmen ve ilkyardımcı yetiştirilmesi ile merkezlerin açılış, işleyiş ve denetimi (m.1); kapsam: ilkyardım eğitimi verecek yetki belgeli ve bu eğitimi alacak bütün kamu kurum ve kuruluşları, gerçek kişiler, özel hukuk tüzel kişileri (m.2); dayanak 3359 sayılı Sağlık Hizmetleri Temel Kanunu m.9/c ile 1 sayılı Cumhurbaşkanlığı Kararnamesi m.356/1-g, ğ ve m.508 (m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yalnız özel merkezleri kapsar\" yanlış; kamu kurumları da kapsamda"
+  ],
+  "simdiki_dogrusu": "tüm kamu ve özel kurumlarda personel sayısına göre ilkyardımcı bulundurulması · eğitici eğitmeni, eğitmen ve ilkyardımcı yetiştirilmesi · bütün kamu kurum ve kuruluşları, gerçek kişiler, özel hukuk tüzel kişileri · 3359 sayılı Sağlık Hizmetleri Temel Kanunu m.9/c · 1 sayılı Cumhurbaşkanlığı Kararnamesi m.356/1-g, ğ ve m.508"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-1",
+  "baslik": "İlkyardım ve ilkyardımcı tanımı",
+  "hukum": "İlkyardım: ani ortaya çıkan hastalık veya yaralanmada kişinin hayatını korumak, sağlık durumunun kötüleşmesini önlemek ve iyileşmesine destek olmak amacıyla olay yerindeki mevcut imkânlarla yapılan hızlı ve etkili müdahaleler (m.4/d); ilkyardımcı: Bakanlıkça belirlenen standartlara uygun eğitimi alıp verilen eğitim çerçevesinde uygulama yapabilen ilkyardımcı belgesi sahibi kişi (m.4/e)",
+  "sinavda_boyle_yazarlar": [
+   "\"Standartları Genel Müdürlük belirler\" boşluk sorusunda yanlış; tanımda Bakanlıkça"
+  ],
+  "simdiki_dogrusu": "İlkyardım · hayatını korumak, sağlık durumunun kötüleşmesini önlemek ve iyileşmesine destek olmak · olay yerindeki mevcut imkânlarla · ilkyardımcı · Bakanlıkça belirlenen standartlara · ilkyardımcı belgesi sahibi"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-2",
+  "baslik": "İlkyardım eğitmeni ve eğitici eğitmeni",
+  "hukum": "İlkyardım eğitmeni: eğitici eğitimi veren merkezden eğitim alıp yetki belgesi düzenlenmiş, 1219 sayılı Kanuna göre sağlık meslek mensubu veya sağlık hizmetlerinde çalışan diğer meslek mensubu kişi (m.4/ğ); ilkyardım eğitici eğitmeni: sağlık alanında en az ön lisans, en az 1 yıllık ilkyardım eğitmeni yetki belgesi, en az 10 yetki belgeli ilkyardım eğitimi verdiğini belgeleyen eğitmenlerden Genel Müdürlükçe düzenlenen eğitici eğitmeni programına katılıp yetki belgesi alan kişi (m.4/f); eğitici eğitmeni yetki belgesi sahipleri ilkyardım eğitmeni sayılır (m.23/1-d)",
+  "sinavda_boyle_yazarlar": [
+   "\"Eğitici eğitmeni için lisans şart\" yanlış; ön lisans yeter. \"En az 3 yıllık eğitmenlik\" yanlış; 1 yıl"
+  ],
+  "simdiki_dogrusu": "İlkyardım eğitmeni · 1219 sayılı Kanuna göre sağlık meslek mensubu veya sağlık hizmetlerinde çalışan diğer meslek mensubu · ilkyardım eğitici eğitmeni · en az ön lisans · en az 1 yıllık · en az 10 yetki belgeli ilkyardım eğitimi · Genel Müdürlükçe düzenlenen · ilkyardım eğitmeni sayılır"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-3",
+  "baslik": "Mesul müdür tanımı",
+  "hukum": "Sağlık alanında en az ön lisans öğrenim görmüş, ilkyardım eğitmeni yetki belgesine sahip ve yetki belgeli en az 10 ilkyardım eğitimi vermiş kişi (m.4/i)",
+  "sinavda_boyle_yazarlar": [
+   "\"Eğitici eğitmeni belgesi zorunlu\" yanlış; eğitmen belgesi + 10 eğitim yeter. \"15 eğitim\" ile karıştırma; 15 eğitmen belgesinin yenilenme sayısıdır (m.23)"
+  ],
+  "simdiki_dogrusu": "en az ön lisans · ilkyardım eğitmeni yetki belgesine · yetki belgeli en az 10 ilkyardım eğitimi vermiş"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-4",
+  "baslik": "Kurumlar, ekipler ve OED",
+  "hukum": "Bakan/Bakanlık: Sağlık; Genel Müdürlük: Acil Sağlık Hizmetleri Genel Müdürlüğü; Müdürlük: İl Sağlık Müdürlükleri; denetim ekibi: en az biri ilkyardım eğitmeni yetki belgeli olmak üzere sağlık personelinden iki kişilik ekip; sınav gözetmeni: Genel Müdürlükte, müdürlüğün acil sağlık hizmetlerinden sorumlu başkanlığına bağlı birimlerde ve ilçe sağlık müdürlüklerinde fiilen görev yapan yetki belgeli eğitmen/eğitici eğitmeni; sınav gözetmen ekibi: en az iki kişilik gözetmen; OED: Otomatik Eksternal Defibrilatör (m.4/a-c, ç, j, k, l, m)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sınav gözetmen ekibi en az üç kişidir\" yanlış; iki. \"Genel Müdürlük = Sağlık Hizmetleri Genel Müdürlüğü\" yanlış; Acil Sağlık Hizmetleri"
+  ],
+  "simdiki_dogrusu": "Bakan/Bakanlık · Genel Müdürlük · Acil Sağlık Hizmetleri Genel Müdürlüğü · Müdürlük · İl Sağlık Müdürlükleri · denetim ekibi · ilkyardım eğitmeni yetki belgeli · iki kişilik · sınav gözetmeni · fiilen görev yapan · sınav gözetmen ekibi · en az iki kişilik · OED"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-5",
+  "baslik": "Merkez açma yetkisi",
+  "hukum": "Şartları taşıyan kamu kurum ve kuruluşları, gerçek kişiler ve özel hukuk tüzel kişileri ilkyardımcı ve eğitmen yetiştirmek için merkez açabilir; merkezler bağımsız veya başka bir özel/kamu eğitim kurumunda program ilavesi olarak açılabilir; Genel Müdürlük ve müdürlükler ilkyardım eğitimi ve eğitici eğitimi düzenleyebilir; müdürlükler eğitici eğitimini Genel Müdürlüğün onayı ile; eğitici eğitmeni eğitimi yalnız Genel Müdürlükçe düzenlenir (m.5)",
+  "sinavda_boyle_yazarlar": [
+   "\"Müdürlükler eğitici eğitimini serbestçe düzenler\" yanlış; GM onayı şart"
+  ],
+  "simdiki_dogrusu": "kamu kurum ve kuruluşları, gerçek kişiler ve özel hukuk tüzel kişileri · bağımsız veya başka bir özel/kamu eğitim kurumunda program ilavesi · Genel Müdürlük ve müdürlükler · Genel Müdürlüğün onayı ile · eğitici eğitmeni eğitimi yalnız Genel Müdürlükçe"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-6",
+  "baslik": "Eğitim salonu özellikleri",
+  "hukum": "Masa ve sandalyeler katılımcıların birbirini görebileceği U şeklinde; ortada uygulama alanı olan en az 20 metrekarelik salon; idare odası, eğitmen odası, lavabo, tuvalet, dinlenme alanı; kişi başına asgari 3,5 metrekare kullanım alanı (m.6/1); merkezler bu özellikleri taşımak şartı ve müdürlüğün onayı ile aynı il sınırları içinde başka uygun yerlerde de eğitim verebilir (m.6/2); Genel Müdürlük, müdürlükler, eğitim ve araştırma hastaneleri, üniversitelerin sağlık fakülte ve yüksekokulları, Kızılay Genel Müdürlüğü ve halk eğitim müdürlükleri salon şartını taşıyorsa asli hizmet alanlarında da eğitim düzenleyebilir (m.6/3); eğitim malzemeleri salonda hazır bulunur (m.6/4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kişi başı 3 metrekare\" yanlış; 3,5. \"Başka ilde de eğitim verilebilir\" yanlış; aynı il"
+  ],
+  "simdiki_dogrusu": "U şeklinde · en az 20 metrekarelik · kişi başına asgari 3,5 metrekare · müdürlüğün onayı · aynı il sınırları içinde · Genel Müdürlük, müdürlükler, eğitim ve araştırma hastaneleri, üniversitelerin sağlık fakülte ve yüksekokulları, Kızılay Genel Müdürlüğü ve halk eğitim müdürlükleri · asli hizmet alanlarında"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-7",
+  "baslik": "Açma başvurusu ve belgeler",
+  "hukum": "Eğitim merkezi açmak isteyen müdürlüğe başvurur: dilekçe; ticaret şirketiyse Ticaret Sicil Gazetesi örneği; vakıf/dernekse yöneticisince onaylı tüzük/ana sözleşme; mesul müdür ve eğitmenlerin kimlik ve eğitmen yetki belgesi örnekleri; eğitmenlerin çalışma isteği dilekçesi; bütün odaların metrekaresini gösterir kroki; sahibi veya mesul müdür imzalı araç-gereç listesi (Ek-5); eğitim kitabı ve sunum CD'si; yangın tedbiri belgesi (m.7/1); kamu kurumlarında açılacak merkezler yalnız (a), (ç), (d), (e), (f), (g), (ğ), (ı) bentlerindeki belgelerle başvurur (m.7/2); eğitici eğitim merkezi için ek olarak eğitici eğitmenlerinin yetki belgeleri ile ilkyardım uygulamaları kitabı, ilkyardım eğitim becerileri kitabı ve sunum CD'leri; eğitim merkezi bünyesinde açılacaksa mesul müdürlük belgesi, eğitici eğitmenlerinin kimlik ve dilekçesi ve merkezin yetki belgesi örneği eklenir (m.8)",
+  "sinavda_boyle_yazarlar": [
+   "\"Başvuru Genel Müdürlüğe yapılır\" yanlış; müdürlüğe"
+  ],
+  "simdiki_dogrusu": "müdürlüğe · Ticaret Sicil Gazetesi · tüzük/ana sözleşme · eğitmen yetki belgesi · bütün odaların metrekaresini gösterir kroki · araç-gereç listesi (Ek-5) · yangın tedbiri belgesi · kamu kurumlarında · eğitici eğitim merkezi · ilkyardım eğitim becerileri kitabı"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-8",
+  "baslik": "Merkez kapatma başvurusu",
+  "hukum": "Merkez sahibi veya mesul müdür kapanma dilekçesiyle birlikte müdürlükçe düzenlenmiş tüm belgeleri müdürlüğe teslim eder; müdürlük belgeleri iptal edip kapatmayı yapar ve Genel Müdürlüğe yazılı bildirir; eğitici eğitimi yetki belgesinin iptali için belge aslı müdürlük aracılığıyla Genel Müdürlüğe gönderilir, iptal Genel Müdürlükçe; sınav kâğıtları, denetim formları ve tüm eğitim dokümanları müdürlüğe teslim edilir (m.9)",
+  "sinavda_boyle_yazarlar": [
+   "\"Eğitici eğitimi yetki belgesini müdürlük iptal eder\" yanlış; Genel Müdürlük"
+  ],
+  "simdiki_dogrusu": "tüm belgeleri müdürlüğe teslim eder · Genel Müdürlüğe yazılı bildirir · eğitici eğitimi yetki belgesinin iptali için belge aslı müdürlük aracılığıyla Genel Müdürlüğe · Genel Müdürlükçe"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-11",
+  "baslik": "Sınav gözetmen ekibinin sorumlulukları",
+  "hukum": "Katılımcıları nüfus cüzdanı veya fotoğraflı resmi kimlik kontrolüyle sınava almak; sınav süresini ve kurallarını açıklamak; kurala uymamanın sınavı sonlandıracağını önceden bildirmek; aykırı davranışta sınavı sonlandırıp tutanak tutarak müdürlüğe teslim etmek; teorik sınavın usulüne uygun yapılmasını sağlamak; merkez eğitmenlerince yapılan uygulamalı sınavda gözetmen olarak bulunmak ve sınavı merkez eğitmeniyle birlikte sonuçlandırmak; sınav türüne uygun tutanağı (Ek-7a veya Ek-7b) tutup bir nüshasını merkeze, bir nüshasını müdürlüğe vermek (m.12/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uygulama sınavını yalnız gözetmen sonuçlandırır\" yanlış; merkez eğitmeni ile birlikte"
+  ],
+  "simdiki_dogrusu": "nüfus cüzdanı veya fotoğraflı resmi kimlik · sınavı sonlandırıp tutanak · uygulamalı sınavda gözetmen olarak bulunmak ve sınavı merkez eğitmeniyle birlikte sonuçlandırmak · bir nüshasını merkeze, bir nüshasını müdürlüğe"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-12",
+  "baslik": "Gözetmen olma şartı ve gözetmenlikten çıkarılma",
+  "hukum": "Gözetmen ekibinde görev almak için dilekçe veren eğitmenler, müdürlüğün düzenlediği en az 3 yetki belgeli ilkyardım eğitiminde görev aldıktan sonra gözetmenlik yapabilir (m.12/2); müdürlük eğitimlerinde eğitmen olarak görevlendirilen eğitmen/eğitici eğitmeni, bir takvim yılında 3 kez katılmazsa 1 yıl süreyle gözetmenlikten çıkarılır (m.12/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"5 eğitimde görev aldıktan sonra\" yanlış; 3. \"Süresiz çıkarılır\" yanlış; 1 yıl"
+  ],
+  "simdiki_dogrusu": "en az 3 yetki belgeli ilkyardım eğitiminde görev aldıktan sonra · bir takvim yılında 3 kez katılmazsa 1 yıl süreyle"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-14",
+  "baslik": "Mesul müdürün konumu ve temel görevleri",
+  "hukum": "Mesul müdür sadece bir merkezde müdürlük yapabilir; idari işlerden bizzat, eğitim işlerinden eğitmenlerle birlikte sorumlu (m.15/1); müdürlük yaptığı merkezde eğitmenlik de yapabilir (m.15/2) ama başka bir merkezde eğitmenlik yapamaz (m.28/3); görevleri: açılış-işleyiş işlemleri, eğitimlerin standarda uygunluğu ve iç denetim, eğitim planlama, eğitimler sırasında merkezde tam zamanlı bulunma, denetim ve sınavlarda yetkililere eşlik, açılış belgelerinin asıllarını idari odada asılı bulundurma, ilkyardımcı yetki belgelerini eğitmen ile birlikte imzalayıp müdürlük onayına sunma, eğitici eğitimi yetki belgesi uzatma işlemleri, sınavda başarısız olanlara kursa katıldığına dair yazı düzenleme (m.15/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Mesul müdür iki merkezde müdürlük yapabilir\" yanlış; tek merkez"
+  ],
+  "simdiki_dogrusu": "sadece bir merkezde · idari işlerden bizzat, eğitim işlerinden eğitmenlerle birlikte · eğitmenlik de yapabilir · başka bir merkezde eğitmenlik yapamaz · iç denetim · eğitimler sırasında merkezde tam zamanlı bulunma · açılış belgelerinin asıllarını idari odada asılı bulundurma · eğitmen ile birlikte imzalayıp müdürlük onayına sunma · kursa katıldığına dair yazı"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-15",
+  "baslik": "Mesul müdürün bildirim süreleri",
+  "hukum": "Düzenlenecek eğitimleri ve katılımcı listelerini yazılı olarak en geç bir gün öncesinden müdürlüğe bildirir (m.15/3-d); şirket ortaklarındaki değişiklikleri on beş gün içinde (m.15/3-f); eğitmen, eğitici eğitmeni ve merkez adres değişikliklerini on beş gün içinde (m.15/3-g); çalışması sonlanan eğitimcilerin çalışma izin belgelerini bir hafta içinde iade eder (m.15/3-ğ); merkez kapanırsa on beş gün içinde sınav kâğıtları ve tüm evrakı müdürlüğe, yönetim değişikliğinde yeni yönetime teslim eder (m.15/3-j)",
+  "sinavda_boyle_yazarlar": [
+   "\"Çalışma izin belgesi 15 gün içinde iade edilir\" yanlış; bir hafta"
+  ],
+  "simdiki_dogrusu": "yazılı olarak en geç bir gün öncesinden · şirket ortaklarındaki değişiklikleri on beş gün içinde · eğitmen, eğitici eğitmeni ve merkez adres değişikliklerini on beş gün içinde · çalışma izin belgelerini bir hafta içinde · on beş gün içinde"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-16",
+  "baslik": "Kayıt ve sınav kâğıdı saklama süreleri",
+  "hukum": "Mesul müdür düzenlenen eğitimlerin kayıtlarını tutup müdürlüğe gönderir (Ek-6a, 6b, 6c, 6e); kayıtların bir örneğini on yıl saklar (m.15/3-h, ı); sınav kâğıtlarını ilkyardımcı belgesi geçerlilik süresi boyunca saklar ve Genel Müdürlük ile müdürlüğün denetimine açık tutar (m.15/3-i)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sınav kâğıtları 10 yıl saklanır\" yanlış; belge geçerlilik süresi boyunca; 10 yıl kayıtlar içindir"
+  ],
+  "simdiki_dogrusu": "on yıl · sınav kâğıtlarını ilkyardımcı belgesi geçerlilik süresi boyunca"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-18",
+  "baslik": "Eğitmenlerin görevleri ve öğretim üyesi muafiyeti",
+  "hukum": "Eğitici eğitmeni ve ilkyardım eğitmeni kendi adına düzenlenmiş çalışma belgesiyle çalışır; eğitimlerin standarda uygunluğunu sağlar; aksaklıkları mesul müdüre yazılı bildirir; eğitici eğitmeni ilkyardım eğitmeni yetki belgesini, ilkyardım eğitmeni ilkyardımcı yetki belgesini mesul müdürle birlikte imzalayıp müdürlük onayına sunar (m.17/1, m.18/1); Bakanlığın eğitim ve araştırma hastaneleri ile sağlık alanında eğitim veren fakülte ve yüksekokullarda açılacak merkezlerde eğitmenlik yapacak uzmanlığını almış öğretim üye ve görevlilerinden eğitici eğitmeni / ilkyardım eğitmeni yetki belgesi istenmez (m.17/2, m.18/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"Her merkezdeki öğretim üyesinden yetki belgesi istenmez\" yanlış; muafiyet yalnız EAH ve sağlık fakülte/yüksekokullarındaki merkezler için"
+  ],
+  "simdiki_dogrusu": "kendi adına düzenlenmiş çalışma belgesiyle · mesul müdüre yazılı · ilkyardım eğitmeni yetki belgesini · ilkyardımcı yetki belgesini · eğitim ve araştırma hastaneleri · fakülte ve yüksekokullarda · uzmanlığını almış öğretim üye ve görevlilerinden · istenmez"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-20",
+  "baslik": "Zorunlu kurslar ve öğretmenler",
+  "hukum": "Özel güvenlik ve sürücü kursları gibi ilkyardım eğitiminin zorunlu verildiği kurslarda eğitim bu Yönetmeliğe göre yetki belgesi almış eğitimcilerce verilir (m.19/2); Milli Eğitim Bakanlığı programında ilkyardım eğitimi verecek öğretmenlerin 16 saatlik ilkyardım eğitimi almaları zorunlu (m.19/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Öğretmenler 40 saatlik eğitici eğitimi almalıdır\" yanlış; 16 saat"
+  ],
+  "simdiki_dogrusu": "bu Yönetmeliğe göre yetki belgesi almış eğitimcilerce · Milli Eğitim Bakanlığı · öğretmenlerin 16 saatlik ilkyardım eğitimi"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-22",
+  "baslik": "Eğitim konuları",
+  "hukum": "Konular ulusal ve uluslararası standartlara göre Genel Müdürlükçe belirlenir (m.21/1); ilkyardım eğitimi: genel ilkyardım bilgileri, vücut sistemleri, TYD, OED kullanımı, havayolu tıkanıklığı, bilinç bozuklukları, kanamalar, şok ve göğüs ağrısı, yaralanmalar, boğulmalar, kırık-çıkık-burkulma, acil taşıma, böcek sokması-hayvan ısırığı, zehirlenmeler, yanık-donma-sıcak çarpması, göz-kulak-buruna yabancı cisim; TYD ve OED kullanımı eğitimi: erişkin, çocuk ve bebekte TYD; afetlerde ilkyardım: genel bilgiler, TYD, kanamalar, kırık-çıkık-burkulma, acil taşıma; eğitici eğitimi: ilkyardım konularına ek olarak yetişkin eğitimi, iletişim, beceri ve sunum becerisi, küçük grup çalışması, yeterliliğe dayalı değerlendirme vb.; eğitici eğitmeni eğitimi: eğitim programı oluşturma, ihtiyaç belirleme, içerik analizi, kurs modeli (m.21/2); Genel Müdürlük eğitim, konu ve malzeme listesini güncelleyip duyurur (m.21/6)",
+  "sinavda_boyle_yazarlar": [
+   "\"Afetlerde ilkyardım eğitiminde zehirlenmeler de vardır\" yanlış; yok"
+  ],
+  "simdiki_dogrusu": "Genel Müdürlükçe · ilkyardım eğitimi · OED kullanımı · TYD ve OED kullanımı eğitimi · erişkin, çocuk ve bebekte TYD · afetlerde ilkyardım · eğitici eğitimi · eğitici eğitmeni eğitimi"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-26",
+  "baslik": "Soru havuzu, uygulama sınavı konuları ve sınav zamanı",
+  "hukum": "Teorik sınav soruları Genel Müdürlükçe oluşturulan soru havuzundan müdürlükçe belirlenir (m.22/6); uygulama sınavında temel yaşam desteği, hava yolu tıkanıklığı ve araç içinden yaralı çıkarma mutlaka bulunur, buna ek beceri gerektiren en az 2 konu daha sınav gözetmenince seçilir, beceri rehberleri ve Ek-7a esas alınır (m.22/7); teorik ve uygulamalı sınavlar aynı gün, hafta sonu veya mesai saatleri dışında, müdürlükçe belirlenen tarihlerde (m.22/9); sınavlar eğitimin bittiği tarihi izleyen günden itibaren otuz gün içinde yapılır; mücbir sebep, doğal afet veya tehlikeli salgında müdürlükçe engelin kalkmasından itibaren bir ay uzatılabilir (m.22/10)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uygulama sınavında yalnız TYD zorunludur\" yanlış; TYD + hava yolu tıkanıklığı + araç içinden yaralı çıkarma üçü zorunlu"
+  ],
+  "simdiki_dogrusu": "Genel Müdürlükçe oluşturulan soru havuzundan müdürlükçe · temel yaşam desteği, hava yolu tıkanıklığı ve araç içinden yaralı çıkarma mutlaka · en az 2 konu daha sınav gözetmenince · aynı gün · hafta sonu veya mesai saatleri dışında · müdürlükçe belirlenen · otuz gün içinde · bir ay uzatılabilir"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-28",
+  "baslik": "Belgeleri kim hazırlar ve onaylar",
+  "hukum": "Ek-3a ve Ek-3c'deki ilkyardımcı belgesi/yetki belgesi merkez veya müdürlük, Ek-3f ve Ek-3g'deki belgeler merkez tarafından hazırlanır; Ek-3b ilkyardımcı kimlik belgesi eğitimi veren merkezce düzenlenir, müdürlükçe onaylanır (m.23/1-e); merkezler kendi hazırladıkları belgede Bakanlık logosu ile birlikte kendi logosunu da kullanabilir (m.23/1-f)",
+  "sinavda_boyle_yazarlar": [
+   "\"Merkez yalnız kendi logosunu kullanır\" yanlış; Bakanlık logosu ile birlikte"
+  ],
+  "simdiki_dogrusu": "merkez veya müdürlük · merkez · Ek-3b ilkyardımcı kimlik belgesi eğitimi veren merkezce düzenlenir, müdürlükçe onaylanır · Bakanlık logosu ile birlikte kendi logosunu"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-29",
+  "baslik": "Çalışma saatleri ve eğitim bildirimleri",
+  "hukum": "Merkezler 09.00-21.00 arasında çalışır, çalışma saatlerini belirleyip müdürlüğe bildirir (m.24/1); beyan ettikleri saatlerde Genel Müdürlük ve müdürlük denetimine açık (m.24/2); ilkyardım eğitimlerini en az bir iş günü öncesinden bildirir (m.24/3); eğitici eğitimlerini en az üç iş günü öncesinden bildirip onay alır (m.24/4); eğitim iptalini gerekçesiyle iptal kararı verildiği gün yazılı bildirir (m.24/5)",
+  "sinavda_boyle_yazarlar": [
+   "\"İlkyardım eğitimi için de onay gerekir\" yanlış; onay yalnız eğitici eğitimi için. \"Eğitici eğitmeni eğitimi 5 iş günü önce bildirilir\" yanlış; öyle bir hüküm yok, o eğitimi zaten Genel Müdürlük düzenler (m.5/5)"
+  ],
+  "simdiki_dogrusu": "09.00-21.00 · Genel Müdürlük ve müdürlük denetimine açık · ilkyardım eğitimlerini en az bir iş günü · eğitici eğitimlerini en az üç iş günü · onay alır · iptal kararı verildiği gün yazılı"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-30",
+  "baslik": "Ücret tespit komisyonu ve ücretsiz eğitimler",
+  "hukum": "Ek-9'daki ücretleri ücret tespit komisyonu belirler; komisyon: merkezlerin hazır bulunan mesul müdürü veya temsilcisi, il ticaret odasından bir temsilci, acil sağlık hizmetlerinden sorumlu başkan/başkan yardımcısı ve müdürlükte ilkyardım işlerini yürüten eğitmen/eğitici eğitmeni; başkanlık il sağlık müdürü veya görevlendireceği acil sağlık hizmetlerinden sorumlu başkan/yardımcısı; fiyat endeksi, yerel koşullar, emsal ücretler değerlendirilir; kararlar il sağlık müdürünce imzalanıp onay için Genel Müdürlüğe gönderilir, uygun bulunmayan yeniden komisyona döner (m.25/1); komisyon her yılın ocak ayı başından şubat ayı sonuna kadar toplanır, tespit yıllık (m.25/2); süresinde oluşturulamazsa bir önceki yılın ücreti geçerli (m.25/3); sınav ücreti ile gözetmenlere ödenecek ücret Bakanlıkça (m.25/4); Temel Yaşam Desteği ve Afetlerde İlkyardım Eğitimi ücretsiz (m.25/5); merkezler Genel Müdürlükçe onaylanan ücretin üzerinde ücret talep edemez (m.28/2-e)",
+  "sinavda_boyle_yazarlar": [
+   "\"Komisyon mart-nisan aylarında toplanır\" yanlış; ocak-şubat. \"Güncelleme eğitimi ücretsizdir\" yanlış; ücretsiz olan TYD ve afet eğitimleridir"
+  ],
+  "simdiki_dogrusu": "ücret tespit komisyonu · mesul müdürü veya temsilcisi · il ticaret odasından bir temsilci · acil sağlık hizmetlerinden sorumlu başkan/başkan yardımcısı · eğitmen/eğitici eğitmeni · il sağlık müdürü veya görevlendireceği acil sağlık hizmetlerinden sorumlu başkan/yardımcısı · il sağlık müdürünce imzalanıp onay için Genel Müdürlüğe · her yılın ocak ayı başından şubat ayı sonuna kadar · yıllık · bir önceki yılın ücreti · sınav ücreti ile gözetmenlere ödenecek ücret Bakanlıkça · Temel Yaşam Desteği ve Afetlerde İlkyardım Eğitimi ücretsiz · Genel Müdürlükçe onaylanan ücretin üzerinde ücret talep edemez"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-32",
+  "baslik": "Yasaklar, reklam ve tanıtım",
+  "hukum": "Merkezler müdürlükçe onaylanmış müfredat dışında kaynak kullanamaz; yetki belgesi almadan katılımcı kaydı yapamaz ve eğitime başlayamaz; çalışma belgesi olmayan eğitmen çalıştıramaz; resmi kurum isimlerini ticari isim olarak kullanamaz; tabela ve evrakta yetki belgesindeki isim/unvan dışında isim kullanamaz; onaylı ücretin üzerinde ücret isteyemez; bünyesinde olmayan faaliyetin reklamını veremez; eğitim sırasında salonda eğitim malzemesi dışında malzeme bulunduramaz (m.28/2); mesul müdür başka merkezde eğitmenlik yapamaz (m.28/3); broşür, afiş ve tanıtım videosu müdürlük onayından sonra kullanılır (m.30/1); merkezler, üniversiteler, dernekler, STK'lar ve kamu kurumları mevzuat şartlarını yerine getirip müdürlükten izin alarak ücretsiz TYD eğitimi, halka yönelik özendirici faaliyet ve sosyal sorumluluk projesi yürütebilir (m.30/2); yanıltıcı, paniğe sevk edici ve yanlış yönlendirici reklam yasak (m.30/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yetki belgesi başvurusu yapıldığı anda kayıt alınabilir\" yanlış; belge alınmadıkça kayıt ve eğitim yasak"
+  ],
+  "simdiki_dogrusu": "müdürlükçe onaylanmış müfredat dışında kaynak kullanamaz · yetki belgesi almadan katılımcı kaydı yapamaz ve eğitime başlayamaz · çalışma belgesi olmayan eğitmen çalıştıramaz · bünyesinde olmayan faaliyetin reklamını veremez · müdürlük onayından sonra · müdürlükten izin alarak · yanıltıcı, paniğe sevk edici ve yanlış yönlendirici"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-33",
+  "baslik": "Müeyyideler: adreste bulunmayan merkez ve taahhütname",
+  "hukum": "Sahibine ve mesul müdürüne ulaşılamayan, yetki belgesindeki adreste bulunmayan veya başvurusuz kapandığı tespit edilen merkez on beş gün içinde müdürlükçe iki kez denetlenir, faaliyet göstermediği tutanak altına alınır, kapatma başvurusu aranmaksızın sürekli kapatma yapılır ve Genel Müdürlüğe bildirilir (m.29/1); usul ve esaslara ve yasaklara aykırılıkta denetim formundaki (Ek-8a) hükümler uygulanır (m.29/2); Bakanlık eğitimleriyle belge almış kamu personeli eğitimcilerinden belge geçerlilik süresince görev yapma taahhütnamesi alınır; taahhüt süresinden önce kamudan istifa edenden eğitim ücreti alınır (m.29/3)",
+  "sinavda_boyle_yazarlar": [
+   "\"30 gün içinde bir kez denetlenir\" yanlış; 15 gün içinde iki kez"
+  ],
+  "simdiki_dogrusu": "on beş gün içinde müdürlükçe iki kez denetlenir · tutanak · kapatma başvurusu aranmaksızın sürekli kapatma · denetim formundaki (Ek-8a) hükümler · taahhütnamesi · taahhüt süresinden önce kamudan istifa edenden eğitim ücreti alınır"
+ },
+ {
+  "kanun_id": 134,
+  "kanun": "İlkyardım Yönetmeliği",
+  "kart_id": "134-34",
+  "baslik": "Geçici hükümler: eski sertifikalar, OED eğitimi, Covid",
+  "hukum": "Yönetmelikten önce alınan sertifikalar belgede yazılı süre kadar geçerli; güncellenince Yönetmelik süreleri uygulanır (Geçici m.1); OED eğitimi almamış ilkyardımcı ve eğitmenler 1 yıl içinde, OED tanıtımı, kullanıldığı durumlar ve uygulamasını içeren 2 saatlik OED eğitimi alırsa yetki mevcut belgeye işlenir; başarı için pratik sınavda 100 tam puan gerekir; merkezler 1 yıl içinde OED eğitimi yetki belgesi almak zorunda, belgesi olmayan merkez OED eğitimi düzenleyemez; ücret merkezlerde Ek-9'a göre, sağlık müdürlüklerinde ücretsiz (Geçici m.2); Covid-19 nedeniyle 16/3/2020'den itibaren yapılamayan güncelleme eğitimlerinin tarihleri ve belgelerin geçerliliği Genel Müdürlükçe belirlenir (Geçici m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"OED pratik sınavında 85 puan yeter\" yanlış; 100 tam puan"
+  ],
+  "simdiki_dogrusu": "belgede yazılı süre kadar · 1 yıl içinde · 2 saatlik OED eğitimi · pratik sınavda 100 tam puan · 1 yıl içinde OED eğitimi yetki belgesi · sağlık müdürlüklerinde ücretsiz · 16/3/2020 · Genel Müdürlükçe"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-1",
+  "baslik": "Temel tanımlar: acil servis, acil ünitesi, tipler, seviye",
+  "hukum": "Acil servis: yataklı tesis bünyesinde poliklinik ve yataklı servis işlevi görebilen bölüm; acil ünitesi: kesin tedavi merkezine nakle kadar temel ve ileri yaşam desteğinin verilebildiği en az bir odadan oluşan birim; acil servis tipi: karma, erişkin, çocuk, kadın-doğum veya dal acil servisi; acil servis seviyesi: Ek-1 kriterlerine göre müdürlükçe belirlenip Genel Müdürlükçe onaylanan tescilli seviye; Genel Müdürlük = Sağlık Hizmetleri Genel Müdürlüğü; Müdürlük = il sağlık müdürlüğü; tescil komisyonu: müdürlük bünyesinde seviyeleri belirleyen komisyon; SBYS = Sağlık Bilgi Yönetim Sistemi (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Acil servis seviyesini Genel Müdürlük belirler, müdürlük onaylar\" ters; müdürlük belirler, Genel Müdürlük onaylar (m.4/ç, m.5/1)"
+  ],
+  "simdiki_dogrusu": "Acil servis · acil ünitesi · en az bir odadan · acil servis tipi · karma, erişkin, çocuk, kadın-doğum veya dal · acil servis seviyesi · müdürlükçe belirlenip Genel Müdürlükçe onaylanan · Genel Müdürlük · Müdürlük · tescil komisyonu · SBYS"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-2",
+  "baslik": "Tabip tanımları ve konsültasyon",
+  "hukum": "Acil servis sorumlu tabibi: işleyişin bütün olarak yürümesi için koordinasyon ve denetimi yapan tabip; icapçı tabip: uzman sayısı nöbet tutacak miktardan az kurumlarda ev nöbeti tutan uzman; nöbetçi tabip: nöbetini hastanede fiilen tutan tabip; müdavi tabip: hastayı ilk muayene eden ya da bakımını resmî olarak devralan, fiilen acil serviste görev yapan tabip; konsültan tabip: müdavi tabibin görüş istediği uzman; konsültasyon işlemi: branş uzmanlarından yazılı görüş istemi; kritik bakım: hayati tehlike arz eden hasta veya yaralılara yaşamsal tanı-tedavi girişimleri ve tıbbi bakım; kritik bakım ünitesi: bunların yapıldığı oda; triyaj: başvuran hastaların şikâyet, belirti şiddeti ve aciliyetine göre tıbbi önceliğinin ve yönlendirileceği birimin belirlenmesi; SKKM: 112 acil çağrı merkezi bünyesinde çağrıların karşılandığı ve ambulansların sevk-idare edildiği birim; ASKOM: acil sağlık hizmetleri, özellikli hizmetler, yoğun bakım, 112 nakilleri gibi hizmetlerin kurumlar arası koordinasyonunu planlayan komisyon; sağlık personeli: tabip, hemşire, acil tıp teknikeri/teknisyeni, ebe, eczacı, eczane teknikeri, tıbbi protez-ortez teknisyeni/teknikeri, hemşire ve ebe yardımcısı, sağlık bakım teknisyeni, tıbbi sekreter (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"İcapçı tabip nöbetini hastanede fiilen tutar\" yanlış; o nöbetçi tabiptir, icapçı ev nöbeti tutar (m.4/ğ, m)"
+  ],
+  "simdiki_dogrusu": "Acil servis sorumlu tabibi · icapçı tabip · ev nöbeti · nöbetçi tabip · hastanede fiilen · müdavi tabip · konsültan tabip · konsültasyon işlemi · yazılı görüş istemi · kritik bakım · kritik bakım ünitesi · triyaj · tıbbi önceliğinin ve yönlendirileceği birimin belirlenmesi · SKKM · ASKOM · sağlık personeli"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-4",
+  "baslik": "Acil servis tipleri: hangi hastanede hangisi",
+  "hukum": "Üniversite hastaneleri, çocuk sağlığı ve hastalıkları eğitim kliniği olan şehir hastaneleri ve A-I genel rol grubu kamu hastanelerinde erişkin ve çocuk acil servisleri ayrı ayrı kurulabilir, fiziki imkân varsa ayaktan girişleri de ayrılır; kadın-doğum acil servisi de kurulabilir; aynı binada ayrı kurulunca her biri ayrı tescil edilir, ama fizik mekân kıstasları toplam üzerinden, hizmet kıstasları ayrı ayrı değerlendirilir (m.5/3-a); A-I dışındaki kamu hastanelerinde tüm yaş ve branşlara tek bir karma acil servis kurulur; uygun ve ihtiyaç varsa erişkin-çocuk ayrılabilir (m.5/3-b); özel tesisler seviyelerine göre tescil edilir, karma veya erişkin/çocuk/kadın-doğum kurabilir; özel hastaneler için Genel Müdürlük asgari seviye düzenlemesi yapabilir (m.5/3-c); dal rol grubu hastanelerinin tipi dal acil servisi; birden çok branş varsa her branş için ayrı dal acil servisi tescil edilebilir, fizik mekân toplam üzerinden (m.5/3-ç); acil servisler bu tipler dışında farklı isimlerle tescil edilemez (m.5/4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Aynı binada ayrı kurulan erişkin ve çocuk acillerin fizik mekân kıstasları ayrı ayrı değerlendirilir\" yanlış; fizik mekân toplam üzerinden, hizmet kıstasları ayrı ayrı (m.5/3-a)"
+  ],
+  "simdiki_dogrusu": "Üniversite hastaneleri, çocuk sağlığı ve hastalıkları eğitim kliniği olan şehir hastaneleri ve A-I genel rol grubu kamu hastanelerinde · ayrı ayrı · kadın-doğum acil servisi · ayrı tescil · fizik mekân kıstasları toplam üzerinden · A-I dışındaki kamu hastanelerinde · tek bir karma acil servis · özel tesisler · Genel Müdürlük asgari seviye düzenlemesi · dal rol grubu · dal acil servisi · farklı isimlerle tescil edilemez"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-5",
+  "baslik": "Değişiklik ve yeni açılışta süre",
+  "hukum": "Rol grubu değiştirilen tesislerdeki, seviye veya tipi değiştirilen ve yeni açılan acil servisler için seviye tespiti ve tip belirlemesi değişikliği veya hizmet başlangıcını takip eden ay içinde yapılır (m.5/5); yeni açılan acil servis için m.5 işlemleri hizmet başlangıcını takip eden 1 ay içinde yapılıp Genel Müdürlüğe bildirilir, tescil ise en geç Genel Müdürlük onayını takip eden ay içinde tamamlanır (m.6/11)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yeni açılan acil servisin seviye tespiti 6 ay içinde yapılır\" yanlış; takip eden ay / 1 ay (m.5/5, m.6/11)"
+  ],
+  "simdiki_dogrusu": "yeni açılan · değişikliği veya hizmet başlangıcını takip eden ay içinde · 1 ay içinde · Genel Müdürlük onayını takip eden ay içinde"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-8",
+  "baslik": "Seviye yükseltme talebi ve yeniden değerlendirme",
+  "hukum": "Tescilli acil servisin seviyesinin yükseltilmesi veya yeniden değerlendirilmesi talepleri baştabip tarafından müdürlüğe resmî yazı ile yapılır; başvuru yazının müdürlüğe intikalinden itibaren 1 ay içinde sonuçlandırılır (m.6/9); uygun tescil edilmiş acil servisin tekrar tescili zorunlu değil, ancak yıllık denetimlerde kriterlere uymadığı tespit edilen acil servis yeniden değerlendirilir (m.6/10)",
+  "sinavda_boyle_yazarlar": [
+   "\"Seviye yükseltme talebi acil servis sorumlu tabibince doğrudan Genel Müdürlüğe yapılır\" yanlış; baştabip, müdürlüğe (m.6/9)"
+  ],
+  "simdiki_dogrusu": "baştabip tarafından müdürlüğe resmî yazı ile · 1 ay içinde · tekrar tescili zorunlu değil · yıllık denetimlerde"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-9",
+  "baslik": "Tabela ve yönlendirme standartları",
+  "hukum": "Çevre cadde ve sokaklara acil servisi gösteren levhalar konulur (m.7/1-a); yerleşke içinde beyaz zemin üzerine kırmızı hilal (\"ters C\" şeklinde) ve altında koyu mavi harflerle \"ACİL\" ibaresi ve yön işareti bulunan levhalar; gerekirse uluslararası kabul gören yabancı dilde ek tabela (m.7/1-b); bina cephesinde ışıklandırmalı, en az 20 metreden okunabilecek, kırmızı renkle yazılı \"ACİL SERVİS\" tabelası (gerekirse erişkin/çocuk/kadın-doğum ayrımlı); ışıklı pano da olabilir; çatıda ışıklı tabela bulundurulabilir (m.7/1-c)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yönlendirme levhasında kırmızı zemin üzerine beyaz hilal\" ters; beyaz zemin, kırmızı hilal, koyu mavi ACİL (m.7/1-b). \"Cephe tabelası en az 10 metreden okunabilir olmalı\" yanlış; 20 metre (m.7/1-c)"
+  ],
+  "simdiki_dogrusu": "beyaz zemin üzerine kırmızı hilal (\"ters C\" şeklinde) ve altında koyu mavi harflerle \"ACİL\" · uluslararası kabul gören yabancı dilde · ışıklandırmalı, en az 20 metreden okunabilecek · kırmızı · bulundurulabilir"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-10",
+  "baslik": "Giriş, otopark, rampa, sundurma ve bekleme alanları",
+  "hukum": "Ambulans, engelli, resmî araç ve hasta yakınları için yeterli otopark, ışıklandırma, gözetleme kamerası ve güvenlik personeli (m.7/1-ç); acil servis hastanenin ana girişinden ayrı, ana yola yakın, giriş katında; kot farkı nedeniyle olmazsa ambulansla ulaşılabilir katta; rampalar en fazla %8 eğimli (m.7/1-d); ayaktan hasta girişi ile ambulans girişi birbirinden ayrı, varsa KBRN dekontaminasyon ünitesi girişi de ayrı; ambulans girişinden kırmızı veya sarı alana direkt geçiş (m.7/1-e); araç parkından girişe kadar hava koşullarından koruma, mümkün değilse girişin önünü ve yanlarını en az 2 metre koruyan sundurma; tekerlekli sandalye ve sedye muhafaza alanı (m.7/1-f); görüntüleme, laboratuvar, morg, ameliyathane ve yoğun bakımla uygun bağlantı (m.7/1-g); yeterli kayıt, tıbbi sekreter, karşılama, yönlendirme, taşıma ve danışma personeli (m.7/1-ğ); uygun tesislerde 24 saat hizmet veren kafeterya (m.7/1-h); gün ışığı alan, ısı korunaklı, havalandırmalı, ergonomik, bilgilendirme ekranlı bekleme alanları (m.7/1-ı)",
+  "sinavda_boyle_yazarlar": [
+   "\"Rampalar en fazla %10 eğimli olur\" yanlış; %8 (m.7/1-d). \"Ayaktan hasta ve ambulans aynı girişi kullanır\" yanlış; ayrı girişler (m.7/1-e)"
+  ],
+  "simdiki_dogrusu": "otopark · gözetleme kamerası ve güvenlik personeli · hastanenin ana girişinden ayrı, ana yola yakın, giriş katında · ambulansla ulaşılabilir katta · en fazla %8 eğimli · ayaktan hasta girişi ile ambulans girişi birbirinden ayrı · kırmızı veya sarı alana direkt geçiş · en az 2 metre · sundurma · 24 saat hizmet veren kafeterya · bilgilendirme ekranlı"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-11",
+  "baslik": "Triyaj yöntemi ve eğitimi",
+  "hukum": "Triyaj, hastaların zarar görmesini engellemek ve tıbbi bakıma gecikmeksizin ulaşmalarını sağlamak amacıyla Ek-4 hükümleri çerçevesinde uygun sayıda personelle yapılır (m.8/1); Ek-4 tablosu veya uluslararası kabul görmüş başka bir triyaj yöntemi kullanılabilir; triyaj personeline hizmet içi eğitim verilmiş olmalı; eğitimi acil servis sorumlu tabibi verir veya verdirir; farklı sistem uygulansa da skorlar Ek-4 renk kodlamasına en yakın şekilde SBYS'ye kaydedilir (m.8/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"Triyaj eğitimini il sağlık müdürlüğü verir\" yanlış; acil servis sorumlu tabibi verir veya verdirir (m.8/2). \"Yalnız Ek-4 tablosu kullanılabilir\" yanlış; uluslararası kabul görmüş başka yöntem de olur (m.8/2)"
+  ],
+  "simdiki_dogrusu": "Ek-4 · uluslararası kabul görmüş başka bir triyaj yöntemi · hizmet içi eğitim · acil servis sorumlu tabibi verir veya verdirir · Ek-4 renk kodlamasına en yakın şekilde SBYS'ye"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-12",
+  "baslik": "Kayıt-triyaj sırası ve bekleme alanı triyajı",
+  "hukum": "Ayaktan girişte kayıt ve triyajın aynı anda yapılması esas; olmazsa önce triyaj sonra kayıt; ayaktan geldiği halde hayati tehlikesi olduğu değerlendirilen hasta kayıt ve triyaj yapılmaksızın sağlık personeli eşliğinde uygun alana alınır, kayıt uygun zamanda yapılır (m.8/3); yoğun yerlerde bekleme alanındaki hastaların durumu değişebileceği için sağlık personeli sabit noktadan gözlemle veya dolaşarak triyaj/takip yapabilir; bu triyaj vital bulgu alınmadan, gözlem ve/veya basit şikâyet sorgusuyla yapılır (m.8/4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kayıt ve triyaj aynı anda yapılamıyorsa önce kayıt sonra triyaj yapılır\" ters; önce triyaj (m.8/3)"
+  ],
+  "simdiki_dogrusu": "kayıt ve triyajın aynı anda · önce triyaj sonra kayıt · hayati tehlikesi olduğu değerlendirilen hasta kayıt ve triyaj yapılmaksızın · sabit noktadan gözlemle veya dolaşarak · vital bulgu alınmadan"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-14",
+  "baslik": "Hasta kabulü esastır; yoğunluk yönetimi",
+  "hukum": "Acil servise başvuran hastanın kabul edilmesi esastır; başvuru artışı acil servis imkânlarıyla yönetilemez hale gelirse hastanedeki personel ve diğer birimlerin imkânlarından yararlanılır; yoğunluğu azaltmak için acil servis sorumlu tabibinin öngördüğü önlemler baştabip onayıyla uygulanır, yazılı protokoller oluşturulabilir, gerekirse hastane afet ve acil durum planları aktive edilebilir (m.8/7)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yoğunluk önlemlerini baştabip öngörür, sorumlu tabip onaylar\" ters; sorumlu tabip öngörür, baştabip onaylar (m.8/7)"
+  ],
+  "simdiki_dogrusu": "kabul edilmesi esastır · acil servis sorumlu tabibinin öngördüğü önlemler baştabip onayıyla · hastane afet ve acil durum planları"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-16",
+  "baslik": "Bilgilendirme kim yapar; karşılama-taşıma elemanı",
+  "hukum": "Hasta ve yakınlarının yapılan işlemler hakkında bilgilendirilmesi ve hastaya ait acil bilgilerin çalışana iletilmesi sosyal hizmet uzmanlarınca, yoksa eğitim almış personelce yapılır; tıbbi bilgiyi ilgili alandan sorumlu tabibin bizzat vermesi esas; yoğunluk veya hastanın kritikliği nedeniyle tabip başından ayrılamıyorsa ve/veya seçilmiş vakalarda (kırmızı alan hastaları) bilgilendirme alanlarında eğitim almış sağlık personeli bilgilendirir (m.9/4); ambulans ve acil girişlerinde hasta karşılama ve taşıma elemanı, yoğunluğa göre yeterli eleman, tekerlekli sandalye ve sedye (m.9/5)",
+  "sinavda_boyle_yazarlar": [
+   "\"Hastanın tıbbi durumu hakkında bilgiyi kural olarak sosyal hizmet uzmanı verir\" yanlış; tıbbi bilgiyi sorumlu tabip bizzat verir, sosyal hizmet uzmanı işlemler hakkında bilgilendirir (m.9/4)"
+  ],
+  "simdiki_dogrusu": "sosyal hizmet uzmanlarınca, yoksa eğitim almış personelce · tıbbi bilgiyi ilgili alandan sorumlu tabibin bizzat vermesi esas · kırmızı alan hastaları · eğitim almış sağlık personeli · hasta karşılama ve taşıma elemanı"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-17",
+  "baslik": "Nöbet düzeni: 24 saat, E rolü, acil tıp uzmanı nöbeti",
+  "hukum": "Acil servis hizmeti 24 saat kesintisiz yürütülür (m.10/1); E rolündeki ilçe Devlet hastanelerinde nöbet aile hekimliği mevzuatına göre, özel hastanelerde ilgili mevzuatına göre düzenlenir (m.10/2-3); kadrosunda 5 ve daha fazla acil tıp uzmanı veya çocuk acil tıp yan dal uzmanı bulunan tesislerde acil serviste 24 saat esasına göre en az birinin görev yapması esas; sayı yeterliyse aynı anda birden çok uzmana nöbet (m.10/4); kadrosunda beş ve daha fazla acil tıp uzmanı bulunan tesislerde 24 saat kesintisiz acil servis sorumlu tabip nöbeti tutulur (m.12/2); acil tıp uzmanı sayısı yetersizse tüm uzman tabipler, acil servis sorumlu tabibinin teklifi ve baştabibin onayı ile acil nöbetine dahil edilebilir (m.10/5); hizmet yeterli uzman varsa uzman düzeyinde, yoksa bir uzmanın denetim ve sorumluluğunda tabip tarafından verilir (m.12/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"Acil tıp uzmanı nöbeti için en az 3 uzman yeterlidir\" yanlış; 5 ve daha fazla (m.10/4, m.12/2). \"Diğer uzmanlar acil nöbetine baştabibin teklifi, müdürlüğün onayıyla dahil edilir\" yanlış; sorumlu tabip teklifi, baştabip onayı (m.10/5)"
+  ],
+  "simdiki_dogrusu": "24 saat kesintisiz · E rolündeki ilçe Devlet hastanelerinde · aile hekimliği mevzuatına · 5 ve daha fazla acil tıp uzmanı veya çocuk acil tıp yan dal uzmanı · 24 saat esasına göre en az birinin · beş ve daha fazla acil tıp uzmanı · acil servis sorumlu tabip nöbeti · tüm uzman tabipler, acil servis sorumlu tabibinin teklifi ve baştabibin onayı · bir uzmanın denetim ve sorumluluğunda tabip"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-19",
+  "baslik": "Havuz nöbeti, yan dal ve tek uzmanlı branşlar",
+  "hukum": "Uzman sayısı 6'nın altındaysa ve her dal için branş nöbeti kurulamıyorsa klinisyen uzmanlar arasında dahili branş havuz nöbeti ve cerrahi branş havuz nöbeti düzenlenir; bunun için dahili ve cerrahi klinisyen branşların her ikisinde de ayrı ayrı toplam 6 ve üzeri uzman gerekir; havuz nöbeti tutulan hastanelerde nöbetçilerin branşı dışındaki hasta kabulü ve konsültasyon için her branşın acil icapçı tabip listesi düzenlenir (m.10/8, m.12/7); havuz nöbetine dahil uzmanlara ayrıca icap nöbeti tutturulur, hangi branşlarda icap düzenleneceğine baştabip karar verir (m.12/10); ana dalda uzman yetersizse yan dal uzmanları ana dal nöbetine dahil edilebilir, yan dal icap nöbeti verilebilir, kararı baştabip verir (m.10/9); yan dalda birden fazla uzman varsa ana dal müstakil nöbetine veya havuz nöbetine dahil edilebilir ve ana dalın acil konsültasyonlarını yürütür (m.12/8); uzman mevcudu 1 olan branşlar acil branş nöbetine dahil edilmez, bunlara icap nöbeti tutturulur; icapçının çağrılıp çağrılmayacağına acil servis sorumlu tabibi veya nöbetçi uzman tabip karar verir ve daveti bizzat yapar (m.12/9); havuz nöbetçilerinden biri idari uzman tabip nöbetçisi olarak, biri de mesai dışı yoğun bakım hizmetlerini yürütmek üzere baştabipçe görevlendirilebilir (m.12/11-12)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uzman mevcudu 1 olan branş da acil branş nöbetine dahil edilir\" yanlış; dahil edilmez, icap nöbeti tutar (m.12/9). \"İcapçıyı hastaneye hasta yakını veya hemşire çağırır\" yanlış; sorumlu tabip veya nöbetçi uzman tabip bizzat davet eder (m.12/9)"
+  ],
+  "simdiki_dogrusu": "dahili branş havuz nöbeti ve cerrahi branş havuz nöbeti · dahili ve cerrahi klinisyen branşların her ikisinde de ayrı ayrı toplam 6 ve üzeri · her branşın acil icapçı tabip listesi · ayrıca icap nöbeti · baştabip · yan dal uzmanları · uzman mevcudu 1 olan branşlar acil branş nöbetine dahil edilmez · icap nöbeti · acil servis sorumlu tabibi veya nöbetçi uzman tabip · idari uzman tabip nöbetçisi · yoğun bakım hizmetlerini"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-20",
+  "baslik": "Dal hastanesi ve eğitim hastanesi nöbetleri",
+  "hukum": "Dal hastanesi bulunan yerlerde ilgili daldaki acil branş nöbeti dal hastanesinde planlanır; genel hastanelerde bu branşlar için hasta yoğunluğu, uzman sayısı ve dal hastanesine uzaklık gözetilerek nöbet düzenlenmeyebilir; dal hastanesi uzmanları ihtiyaç halinde genel hastane nöbetine dahil edilebilir; planlamayı müdürlük yapar (m.10/10); aynı ilçe sınırlarındaki genel hastaneler bu branşlar için kapsam dışı tutulur (m.12/6); dal hastanelerinde hizmet alanının gerektirdiği branşlarda 24 saat acil branş nöbeti; uzman yetersizse nöbetin nasıl yürütüleceğine baştabip karar verir (m.10/11, m.12/11); acil tıp uzmanlık eğitimi veren üniversite ve eğitim-araştırma hastanelerinde nöbetler acil tıp asistanları ve rotasyona gelen asistanlarca, acil tıp öğretim üyeleri veya klinik şefleri gözetiminde bütün olarak planlanır; ihtiyaçta tüm klinik tabipleri acilde görevlendirilebilir (m.12/13)",
+  "sinavda_boyle_yazarlar": [
+   "\"Dal hastanesi-genel hastane nöbet planlamasını baştabipler kendi aralarında yapar\" yanlış; müdürlük planlar (m.10/10)"
+  ],
+  "simdiki_dogrusu": "dal hastanesinde planlanır · düzenlenmeyebilir · müdürlük · aynı ilçe sınırlarındaki genel hastaneler · baştabip · acil tıp asistanları ve rotasyona gelen asistanlarca, acil tıp öğretim üyeleri veya klinik şefleri gözetiminde"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-21",
+  "baslik": "Özel sağlık tesislerinde seviyeye göre personel",
+  "hukum": "Özel tesislerde acil hizmeti 24 saat kesintisiz; I. seviye: tabipler veya varsa aile hekimi uzmanı veya acil tıp uzmanı yürütür, ihtiyaçta dal uzmanı kuruma davet edilir; II. seviye: biri dahili diğeri cerrahi branşta en az 2 uzman tabip günün her saatinde tesiste bulunur, hizmet bunların denetiminde tabiplerce verilir; III. seviye: faaliyet izin belgesinde yazılı olmak kaydıyla iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı ve hastalıkları branşlarında müstakil acil branş nöbeti zorunlu; uzman yeterliyse diğer branşlarda da tutulabilir (m.12/14)",
+  "sinavda_boyle_yazarlar": [
+   "\"II. seviye özel acil serviste en az 3 uzman bulunur\" yanlış; biri dahili biri cerrahi en az 2 (m.12/14). \"III. seviye zorunlu branşları arasında anestezi vardır\" yanlış; iç hastalıkları, genel cerrahi, kadın doğum, çocuk (m.12/14)"
+  ],
+  "simdiki_dogrusu": "I. seviye · II. seviye · biri dahili diğeri cerrahi branşta en az 2 uzman tabip günün her saatinde tesiste · III. seviye · iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı ve hastalıkları · müstakil acil branş nöbeti zorunlu"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-26",
+  "baslik": "Sevkle gelen stabil hasta ve acil cerrahi hastası",
+  "hukum": "Tanısı konulmuş, tedavi planı belli, stabil ve önceden koordinasyonla başka tesisten sevkle gelen, nakilde akut sorun gelişmemiş hasta gerekmedikçe acil serviste yeniden değerlendirilmez; bekletilmeksizin yatış işlemi derhal tamamlanıp kliniğe yatırılır (m.14/4); acil cerrahi endikasyonuyla yatırılan hastanın yoğun bakım yatağı ihtiyacını yoğun bakım sorumlu uzmanı belirler; ameliyat öncesi anestezi konsültasyonunu ilgili cerrahi klinik uzmanı yapar; yeterli yoğun bakım yatağı olmayan hastane geçici post op ara bakım ünitesi kurarak kabul eder; post op yoğun bakım yatağının bulunmaması ameliyatı geciktirmemeli; sevk ihtiyacını ilgili klinik ve tanımlı yoğun bakım uzmanı sağlar (m.14/5)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sevkle gelen her hasta acil serviste yeniden değerlendirilir\" yanlış; stabil ve koordinasyonlu gelen gerekmedikçe değerlendirilmez (m.14/4). \"Yoğun bakım yatağı yoksa acil ameliyat ertelenir\" yanlış; geciktirilmemeli (m.14/5)"
+  ],
+  "simdiki_dogrusu": "gerekmedikçe acil serviste yeniden değerlendirilmez · yatış işlemi derhal · yoğun bakım yatağı ihtiyacını yoğun bakım sorumlu uzmanı · anestezi konsültasyonunu ilgili cerrahi klinik uzmanı · post op ara bakım ünitesi · post op yoğun bakım yatağının bulunmaması ameliyatı geciktirmemeli"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-29",
+  "baslik": "Sevk Değerlendirme ve Denetleme Komisyonu: ayda 1, ilçe 2 ayda bir",
+  "hukum": "Üçüncü basamağa il dışı ve il içinden koordinasyonsuz uygunsuz sevklerin önlenmesi ve acil vakayı kabul etmeyen tesisler için müdürlükçe ASKOM bünyesinde Sevk Değerlendirme ve Denetleme Komisyonu kurulur; il sağlık müdürü başkanlığında, baştabipler/mesul müdürler, acilden sorumlu tabipler ve il ambulans servisi baştabibinin katılımıyla ayda en az bir defa toplanır (m.16/1); il dışı ve il içi sevkleri, kabul etmeyen ve ambulansta bekleten tesisleri değerlendirir; kararlar tutanak altına alınır, ilgili baştabibe yazılı bildirilir; tekrarı hâlinde baştabip ve sorumlular hakkında idari soruşturma; sekretarya ASKOM; müdürlüğün uygun gördüğü ilçelerde ilçe sağlık müdürü başkanlığında alt komisyon; ilçe sağlık müdürlükleri ilçedeki tüm tesisleri 2 ayda bir denetler ve müdürlüğe bildirir (m.16/2)",
+  "sinavda_boyle_yazarlar": [
+   "\"Komisyon üç ayda bir toplanır\" yanlış; ayda en az bir (m.16/1). \"İlçe denetimi 6 ayda bir\" yanlış; ilçe 2 ayda bir (m.16/2), müdürlüğün periyodik denetimi 6 ayda bir (m.17/2)"
+  ],
+  "simdiki_dogrusu": "uygunsuz sevklerin · acil vakayı kabul etmeyen · ASKOM bünyesinde Sevk Değerlendirme ve Denetleme Komisyonu · il sağlık müdürü başkanlığında · ayda en az bir defa · ambulansta bekleten · yazılı · tekrarı hâlinde baştabip ve sorumlular hakkında idari soruşturma · ilçe sağlık müdürü başkanlığında alt komisyon · 2 ayda bir"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-30",
+  "baslik": "Sorumluluk zinciri ve denetim",
+  "hukum": "Tebliğe uygun yürütme ve koordinasyondan müdürlükler, baştabipler, acil servisten sorumlu baştabip yardımcıları ve acil servis sorumlu tabipleri birinci derecede ve müteselsilen sorumlu (m.15/1, m.17/1); müdürlükler işleyişi denetler, sonuçları gerekirse Genel Müdürlüğe raporlar (m.15/2); denetim müdürlükçe belirlenen ekip ile, ekipte ilgili hizmet başkanlığı personeli bulunur, birden çok ekip olabilir; denetim sonucunda seviye, tip ve tescilde değişiklik işlemi başlatılabilir; Genel Müdürlük her zaman resen denetim yapabilir (m.15/3); aykırılıkta kamu tesislerinde ilgililere tabi oldukları mevzuata göre disiplin hükümleri, özel tesislerde 3359 sayılı Kanunun ek 11. maddesi uygulanır (m.15/4); müdürlükler periyodik olarak 6 ayda bir denetim yapar, gerekirse Bakanlığa bildirir (m.17/2); kuruluşlar izleme ve değerlendirme cetvellerindeki bilgileri müdürlüğe, müdürlükler Bakanlığa bildirmekle yükümlü (m.17/3); Bakanlıkça uyulmadığı tespit edilirse idari işlem (m.17/4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sorumluluk yalnız acil servis sorumlu tabibindedir\" yanlış; müdürlük, baştabip, sorumlu baştabip yardımcısı ve sorumlu tabip müteselsilen (m.15/1). \"Özel tesislerdeki aykırılıkta 657 disiplin hükümleri uygulanır\" yanlış; 3359 ek m.11 (m.15/4)"
+  ],
+  "simdiki_dogrusu": "müdürlükler, baştabipler, acil servisten sorumlu baştabip yardımcıları ve acil servis sorumlu tabipleri birinci derecede ve müteselsilen sorumlu · Genel Müdürlüğe · ekip · Genel Müdürlük her zaman resen · kamu · disiplin hükümleri · özel · 3359 sayılı Kanunun ek 11. maddesi · periyodik olarak 6 ayda bir · izleme ve değerlendirme cetvellerindeki"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-31",
+  "baslik": "Acilden sorumlu baştabip yardımcısı ve sorumlu tabip görevlendirme",
+  "hukum": "Baştabip yardımcılarından biri acil servislerden sorumlu baştabip yardımcısı olarak görevlendirilir (m.15/5); acil tıp eğitim kliniği bulunan hastanelerde klinik idari sorumlusu acil servis sorumlu tabibidir (m.15/6); eğitim kliniği yoksa baştabip sorumlu tabibi şu sırayla görevlendirir: varsa acil tıp uzmanı, yoksa acilde yoğun hizmet veren klinik branş uzmanlarından bir tabip, o da yoksa acilde görevli bir tabip; çocuk acilde varsa çocuk acil yan dal uzmanı yoksa çocuk sağlığı ve hastalıkları uzmanı; dal hastanesinde ilgili branş uzmanları arasından; mesai dışı nöbette ihtiyaç halinde nöbetçi tabiplerden birine sorumlu tabibe vekâlet yetkisi verilebilir ve nöbet listesinde belirtilir (m.15/7)",
+  "sinavda_boyle_yazarlar": [
+   "\"Acil servis sorumlu tabibini il sağlık müdürlüğü görevlendirir\" yanlış; baştabip (m.15/7). \"Eğitim kliniği olan hastanede sorumlu tabip baştabipçe ayrıca seçilir\" yanlış; klinik idari sorumlusu sorumlu tabiptir (m.15/6)"
+  ],
+  "simdiki_dogrusu": "acil servislerden sorumlu baştabip yardımcısı · acil tıp eğitim kliniği bulunan · klinik idari sorumlusu acil servis sorumlu tabibidir · baştabip · varsa acil tıp uzmanı, yoksa acilde yoğun hizmet veren klinik branş uzmanlarından bir tabip, o da yoksa acilde görevli bir tabip · varsa çocuk acil yan dal uzmanı yoksa çocuk sağlığı ve hastalıkları uzmanı · ilgili branş uzmanları · sorumlu tabibe vekâlet · nöbet listesinde belirtilir"
+ },
+ {
+  "kanun_id": 135,
+  "kanun": "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygula",
+  "kart_id": "135-32",
+  "baslik": "Yürütme, yayım ve geçici hükümler",
+  "hukum": "Tebliğ hükümlerini Sağlık Bakanı yürütür; yayımlandığı Resmî Gazete 13/9/2022 tarihli ve 31952 sayılı; değişiklikler 13/5/2023-32189 ve 11/10/2024-32689 (m.18); mevcut acil servislerin seviyelendirilmesi yürürlükten itibaren 2 ay içinde tamamlanır, valilik onayıyla tescil için Bakanlığa bildirilir (Geçici m.1); mevcut acil servislerin uyumu iş ve işlemler yönünden hemen, fiziksel mekân revizyonları yönünden 31/12/2020 tarihine kadar; yeni hizmet binasına taşınması planlanan hastaneler bu süre içinde fiziki alan standartlarından muaf (Geçici m.2)",
+  "sinavda_boyle_yazarlar": [
+   "\"Tebliğ hükümlerini Cumhurbaşkanı yürütür\" yanlış; Sağlık Bakanı (m.18). \"Mevcut acil servislerin seviyelendirilmesi 6 ay içinde tamamlanır\" yanlış; 2 ay (Geçici m.1)"
+  ],
+  "simdiki_dogrusu": "Sağlık Bakanı · 13/9/2022 tarihli ve 31952 sayılı · 2 ay içinde · iş ve işlemler yönünden hemen · 31/12/2020 · muaf"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-1",
+  "baslik": "Görev ve sorumluluk",
+  "hukum": "Subay ve astsubayların görev ve sorumlulukları İç Hizmet Kanunu ve Yönetmeliği, diğer mevzuat ve hizmet kadrolarının açıklamalarında gösterilir (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"Görevler 926'da sayılır\" yanlış"
+  ],
+  "simdiki_dogrusu": "İç Hizmet Kanunu ve Yönetmeliği · hizmet kadrolarının açıklamalarında"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-3",
+  "baslik": "En çok bekleme süreleri",
+  "hukum": "4 yıldan az yüksekokul mezunu subayların teğmenlik bekleme süresi harp okulu emsalleri yetişinceye kadar; normal bekleme dışında rütbede en çok kalınabilecek süre: teğmen ve üsteğmenlikte rütbenin yaş haddine kadar, yüzbaşı subaylıktaki 21., binbaşı 22., yarbay 25. fiilî hizmet yılını dolduruncaya kadar; m.109'a göre subay olup yüzbaşılığa yükselenlerin en çok bekleme süresi rütbenin yaş haddine kadar (m.32)",
+  "sinavda_boyle_yazarlar": [
+   "Yıllar çapraz sorulur"
+  ],
+  "simdiki_dogrusu": "teğmen ve üsteğmenlikte rütbenin yaş haddine kadar · yüzbaşı subaylıktaki 21., binbaşı 22., yarbay 25. fiilî hizmet yılını"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-4",
+  "baslik": "Terfi zamanı ve engel hâller",
+  "hukum": "Kıdem alanlar, nasıpları lehe düzeltilenler ile açığa alınma, tutuklanma, firar veya izin tecavüzü (kısa süreli kaçma ve izin süresini geçirme hariç) nedeniyle terfi edemeyen ve rütbe kıdemliliği onanmayanlardan; KYOK, kamu davasının ertelenmesi/düşmesi, (firar-izin tecavüzü hariç) HAGB, beraat, kısa süreli hapsin seçenek yaptırıma çevrilmesi veya erteleme kararı verilenlerin terfileri emsalleri terfi etmişse kararın kesinleşme tarihinden geçerli yapılıp emsalleri tarihine götürülür, maaş farkı ödenmez; sicil mecburiyetini 30 Ağustos'a kadar tamamlayacaklar (albaylar hariç) hakkında ilk fıkra uygulanmaz (m.33)",
+  "sinavda_boyle_yazarlar": [
+   "\"Nasıp düzeltmesinde maaş farkı ödenir\" yanlış"
+  ],
+  "simdiki_dogrusu": "açığa alınma, tutuklanma, firar veya izin tecavüzü · HAGB · emsalleri terfi etmişse · emsalleri tarihine götürülür · maaş farkı ödenmez"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-5",
+  "baslik": "Subaylığa nasıp",
+  "hukum": "Subaylığa nasıp Millî Savunma Bakanının onayı ile (m.34); harp okulunu bitirenler o yılın 30 Ağustos'unda teğmen; teğmen nasbedilmeden önce açığa alınmayı gerektiren suçtan kamu davası açılan/tutuklanan/gözaltına alınanların nasıpları yapılmaz, aklananlar nasbedilip emsal tarihine götürülür; kazai/idari/sıhhi zorunlulukla 30 Ağustos'tan sonra bitirenler bitirdikleri ayın sonundan geçerli teğmen (emsale götürülür); yedek subay okulunu bitirenler bitirdikleri tarihten asteğmen; MSB adına fakültede okuyan askerî öğrencilerin nasıp tarihi mezuniyet tarihi; kendi hesabına fakülte bitirip muvazzaf subay olanlar nasıp onayı tarihinden geçerli subay, kademe/terfi için onay yılının 30 Ağustos'u esas, maaş farkı ödenmez; askerlik sırasında/sonrasında muvazzaf subaylığa geçenlerin askerlik süreleri nasıp tarihine eklenir (m.35)",
+  "sinavda_boyle_yazarlar": [
+   "\"Subaylığa nasıp Cumhurbaşkanı onayıyla\" yanlış; MSB"
+  ],
+  "simdiki_dogrusu": "Millî Savunma Bakanının onayı · 30 Ağustos · asteğmen · mezuniyet tarihi · nasıp onayı tarihinden · maaş farkı ödenmez"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-9",
+  "baslik": "Astsubayların bekleme süreleri ve nasıp",
+  "hukum": "Savaşa katılanlar için Cumhurbaşkanı kararı ile normal bekleme yarısına kadar indirilebilir; üstün başarı kıdemi alan üstçavuş, kıdemli üstçavuş ve başçavuşların normal bekleme süreleri 1 yıl eksik; kendi hesabına fakülte/yüksekokul/MYO bitirip muvazzaf astsubay olanların astsubay MYO'dan fazla öğrenim süreleri kıdemden sayılır (m.79); astsubayların normal bekleme dışında her rütbede kalabilecekleri süre o rütbenin yaş haddine kadar (m.80); terfi zamanı m.33 gibi (m.81); astsubaylığa nasıp MSB onayı, rütbe terfileri İçişleri Bakanı (JGK/SGK) veya MSB onayı ile; fakülte/MYO mezunu olup temel askerlik eğitiminde başarılı olanlar nasıp onayı tarihinden astsubay çavuş (kademe/terfi için onay yılının 30 Ağustos'u, maaş farkı yok); astsubay MYO'yu bitirenler o yılın 30 Ağustos'unda astsubay çavuş; nasıp öncesi kamu davası/tutuklama/gözaltı olanların nasıpları yapılmaz, aklananlar emsal tarihine götürülür; muvazzaf askerlikte geçen süreler kıdemden sayılır; yedek astsubay okulunu bitirenler astsubay astçavuş (m.82)",
+  "sinavda_boyle_yazarlar": [
+   "\"Astsubay terfileri JGK onayıyla\" yanlış; İçişleri Bakanı"
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanı kararı · üstün başarı kıdemi · üstçavuş, kıdemli üstçavuş ve başçavuşların · 1 yıl eksik · o rütbenin yaş haddine kadar · astsubaylığa nasıp MSB onayı · rütbe terfileri İçişleri Bakanı (JGK/SGK) veya MSB onayı · nasıp onayı tarihinden · 30 Ağustos · astsubay astçavuş"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-10",
+  "baslik": "Astsubay nasıp düzeltilmesi ve kıdem",
+  "hukum": "Kazai-idari kararlarla nasıp düzeltmesi m.36 (a,b,c)'ye göre; sıhhi devamsızlık, özel nitelikli kurslar ve 3 ay (dahil) kısa kurslar için m.36/b uygulanmaz; kendi hesabına yüksek lisans yapan astsubaylara m.36/d esaslarıyla kıdem; Astsubay Üst Karargâh Hizmetleri eğitimini (iki yarıyıl) bitirenlere 1 yıl kıdem (m.83)",
+  "sinavda_boyle_yazarlar": [
+   "\"Astsubaya yüksek lisans kıdemi verilmez\" yanlış"
+  ],
+  "simdiki_dogrusu": "3 ay (dahil) kısa kurslar · yüksek lisans · Astsubay Üst Karargâh Hizmetleri · 1 yıl"
+ },
+ {
+  "kanun_id": 136,
+  "kanun": "926 sayılı TSK Personel Kanunu (personel hükümleri)",
+  "kart_id": "136-12",
+  "baslik": "Astsubay kademe ilerlemesi",
+  "hukum": "Şartlar: bulunduğu kademede bir terfi yılı doldurmak, ilerleyebileceği kademe bulunmak, sicil notu %60 ve üstü; kademe ilerlemesiyle üst rütbe maaşını almak terfii gerektirmez; onay makamları Astsubay Sicil Yönetmeliğinde; terfi eden astsubay yeni rütbenin 1. kademesine ilerlemiş olur, yeni aylık eskisinden azsa fark kapanana kadar eski aylık; kadrosuzluktan terfi edemeyenler kademe ilerlemesi yapar; görevde yaralanıp sicil notu olmayanlarda sicil şartı aranmaz (m.93)",
+  "sinavda_boyle_yazarlar": [
+   "\"Kademe ilerlemesi için %70\" yanlış; %60"
+  ],
+  "simdiki_dogrusu": "bir terfi yılı · sicil notu %60 ve üstü · terfii gerektirmez · 1. kademesine"
+ },
+ {
+  "kanun_id": 137,
+  "kanun": "3269 sayılı Uzman Erbaş Kanunu (personel hükümleri)",
+  "kart_id": "137-0",
+  "baslik": "Tanımlar",
+  "hukum": "Uzman çavuş: en az lise/dengi mezunu çavuşlar veya en az ilköğretim mezunu olup muvazzaflığı çavuş rütbesiyle tamamlayanlardan teknik-kritik görev yerlerinde istihdam edilenler (ve yönetmelikle uzman onbaşılıktan geçirilenler); uzman onbaşı: en az ilköğretim mezunu, teknik-kritik uzmanlık görev yerlerinde istihdam edilenler; uzman erbaş: bu Kanuna göre istihdam edilen uzman çavuş ve onbaşılar (m.3)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uzman erbaş yalnız uzman çavuştur\" yanlış; onbaşı da uzman erbaş"
+  ],
+  "simdiki_dogrusu": "Uzman çavuş · uzman onbaşı · uzman erbaş"
+ },
+ {
+  "kanun_id": 137,
+  "kanun": "3269 sayılı Uzman Erbaş Kanunu (personel hükümleri)",
+  "kart_id": "137-1",
+  "baslik": "Göreve alınma — yaş sınırları",
+  "hukum": "Kadro görev yerleri her yıl duyurulur; (a) muvazzaflık hizmetini yapmakta olan çavuş-onbaşı-erler ile terhis olanlar (veya Askeralma Kanunu m.42 kapsamında muaf tutulanlar) müracaat yılının ocak ayının ilk günü itibarıyla 27 yaşını bitirmemiş olmak; (b) sözleşmeli erbaş ve erlerden en az 3 yıl görev yapmış olanlar 29 yaşını bitirmemiş olmak ve sıralı üç disiplin amirince \"uzman erbaş olur\" nitelik belgesi doldurulmak şartıyla müracaat eder; askerliğini yaptığı komutanlıkta uzman erbaş olmak için müracaat edip sınavı kazananlar kalan askerlik süresine bakılmaksızın ilk eğitime tefrik edilir; sözleşme döneminde geçen sürelerin üçte biri askerlik yükümlülüğünden mahsup edilir (m.4)",
+  "sinavda_boyle_yazarlar": [
+   "\"25 yaş\" eski hüküm; şimdi 27/29"
+  ],
+  "simdiki_dogrusu": "ocak ayının ilk günü · 27 yaşını · sözleşmeli erbaş ve erlerden en az 3 yıl · 29 yaşını · üç disiplin amiri · üçte biri"
+ },
+ {
+  "kanun_id": 137,
+  "kanun": "3269 sayılı Uzman Erbaş Kanunu (personel hükümleri)",
+  "kart_id": "137-7",
+  "baslik": "Gece kışlada kalma",
+  "hukum": "İsteyen uzman erbaşlar (nöbetçiler hariç) İç Hizmet Kanunu saklı kalmak üzere gece evlerine gidebilir; kışlada/gemide kalmayı kabul edenler yetkili amirin izni olmadan ayrılamaz, mümkün olduğunca erbaş ve erlerden ayrı yerlerde yatırılır; evlerine gidenler subay-astsubay servislerinden yararlanıp mesai başında bulunur (m.14)",
+  "sinavda_boyle_yazarlar": [
+   "\"Uzman erbaş kışlada yatmak zorundadır\" yanlış"
+  ],
+  "simdiki_dogrusu": "gece evlerine gidebilir · erbaş ve erlerden ayrı"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-0",
+  "baslik": "Aylık ve ek gösterge",
+  "hukum": "Uzman jandarmalara 926 sayılı TSK Personel Kanununda uzman jandarmalar için belirlenen gösterge tablosuna göre aylık verilir; ayrıca dereceleri itibarıyla Kanuna ekli Ek-1 sayılı ek gösterge cetveli uygulanır (m.21/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"Aylık 3466'ya ekli Ek-1 gösterge tablosuna göre verilir\" yanlış; aylık 926'daki tabloya göre, Ek-1 ek gösterge cetveli"
+  ],
+  "simdiki_dogrusu": "926 sayılı TSK Personel Kanununda uzman jandarmalar için belirlenen gösterge tablosuna · Ek-1"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-5",
+  "baslik": "Yolluk ve gündelikler",
+  "hukum": "Uzman jandarma çavuşlarından görevin ifası için sürekli veya geçici olarak görev yerinden ayrılanların yolluk giderleri ve gündelikleri yürürlükteki özel kanun hükümlerine göre ödenir (m.24)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yalnız sürekli görevle ayrılanlara yolluk ödenir\" yanlış; sürekli veya geçici"
+  ],
+  "simdiki_dogrusu": "sürekli veya geçici · yürürlükteki özel kanun hükümlerine"
+ },
+ {
+  "kanun_id": 138,
+  "kanun": "3466 sayılı Uzman Jandarma Kanunu",
+  "kart_id": "138-6",
+  "baslik": "Mal bildirimi",
+  "hukum": "Uzman jandarmalar kendileri ile eşlerine ve velayet altındaki çocuklarına ait taşınır ve taşınmaz mallar, alacak ve borçları hakkında özel kanundaki hükümler uyarınca mal bildiriminde bulunur (m.25)",
+  "sinavda_boyle_yazarlar": [
+   "\"Yalnız taşınmaz mallar bildirilir\" veya \"anne-babanın malları da bildirilir\" yanlış; taşınır-taşınmaz, alacak-borç; kendisi, eşi, velayet altındaki çocukları"
+  ],
+  "simdiki_dogrusu": "kendileri ile eşlerine ve velayet altındaki çocuklarına · taşınır ve taşınmaz mallar, alacak ve borçları · özel kanundaki"
+ },
+ {
+  "kanun_id": 140,
+  "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Ma",
+  "kart_id": "140-5",
+  "baslik": "OYAK, işçiler ve güvenlik soruşturması",
+  "hukum": "JGK personeli hakkında TSK'da karşılığı olan rütbe ve kıdem üzerinden aynı şartlarla 205 sayılı Ordu Yardımlaşma Kurumu Kanunu uygulanır (m.13/5); işçilerin işe alınma, işyeri değişikliği, yükselme, izin, sicil, ödül ve hizmet akdinin feshi işlemleri 4857 sayılı İş Kanunu ve varsa toplu iş sözleşmesine göre (m.13/6); JGK nam ve hesabına eğitim-öğrenim görecekler ile Jandarma ve Sahil Güvenlik Akademisi ve bağlı kurumlarda eğitim görecekler hakkında güvenlik soruşturması ve arşiv araştırması yapılır (m.13/7)",
+  "sinavda_boyle_yazarlar": [
+   "\"Jandarma işçilerinin işe alınma ve feshi işlemleri 657'ye göre yapılır\" yanlış; 4857 sayılı İş Kanunu ve toplu iş sözleşmesi"
+  ],
+  "simdiki_dogrusu": "rütbe ve kıdem · 205 sayılı Ordu Yardımlaşma Kurumu Kanunu · işçilerin · 4857 sayılı İş Kanunu · Jandarma ve Sahil Güvenlik Akademisi · güvenlik soruşturması ve arşiv araştırması"
+ },
+ {
+  "kanun_id": 141,
+  "kanun": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Ast",
+  "kart_id": "141-0",
+  "baslik": "Ön sözleşme aylığı: subay adayı",
+  "hukum": "Sözleşmeli subay olarak yetiştirilecekler 926 sayılı Kanuna bağlı EK-VI cetvelde asteğmenler için öngörülen dokuzuncu derecenin birinci kademe aylığı ile bu rütbenin karşılığı tazminat, yan ödeme ve sosyal amaçlı yardım ve ödeneklerden tayın bedeli hariç aynen yararlanır; askerî eğitim süresince iaşe ve ibateleri Devlet tarafından karşılanır; 2629 sayılı Kanun hükümleri saklıdır (m.14/a)",
+  "sinavda_boyle_yazarlar": [
+   "\"Subay adayları tayın bedeli dahil tüm haklardan yararlanır\" yanlış; tayın bedeli hariç"
+  ],
+  "simdiki_dogrusu": "926 sayılı Kanuna bağlı EK-VI · asteğmenler · dokuzuncu derecenin birinci kademe · tayın bedeli hariç · iaşe ve ibateleri Devlet · 2629 sayılı Kanun"
+ },
+ {
+  "kanun_id": 141,
+  "kanun": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Ast",
+  "kart_id": "141-4",
+  "baslik": "Sağlık işlemleri ve sosyal haklar",
+  "hukum": "Sözleşmeli subay-astsubaylar ile bakmakla yükümlü oldukları kimselerin sözleşme süresince sosyal hakları ve sağlık işlemlerinde 211 sayılı Kanunun muvazzaf subay ve astsubaylara ilişkin hükümleri uygulanır; emekli olanlar, harp-vazife-adî malullük aylığıyla ayrılanlar, aile fertleri ve harp-vazife malullüğü nedeniyle vefat edenlerin maaşa müstahak dul ve yetimleri 211 m.66 (a) ve (b) bentleri ile 67 ve 70'inci maddelerinden aynen yararlanır; aile fertleri 211 m.69'da belirtilenlerdir (m.16/1)",
+  "sinavda_boyle_yazarlar": [
+   "\"Sağlık işlemlerinde 5510 sayılı Kanun uygulanır\" yanlış; 211 sayılı Kanunun muvazzaflara ilişkin hükümleri"
+  ],
+  "simdiki_dogrusu": "sözleşme süresince · 211 sayılı Kanunun muvazzaf subay ve astsubaylara ilişkin hükümleri · 211 m.66 (a) ve (b) bentleri ile 67 ve 70'inci maddelerinden · 211 m.69"
+ },
+ {
+  "kanun_id": 141,
+  "kanun": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Ast",
+  "kart_id": "141-6",
+  "baslik": "Sağlık nedeniyle ayrılana sağlık yardımı",
+  "hukum": "Sözleşmesi sağlık nedeniyle sona erenlerden tedavisine devam edilenlere sona erme tarihinden başlamak şartıyla on iki ayı geçmemek üzere tedavi süresince görevdeki emsallerinin net maaşlarının 2/3'ü oranında her ay sağlık yardımı kurumlarınca ödenir (375 sayılı KHK m.28 ek tazminatlar, 500 sayılı Kanuna göre tazminat ve yabancı dil tazminatı hariç); hiçbir kesinti yapılmaz; usul-esaslar yönetmelikle; on iki ay içinde aynı arızadan 5510 m.26'ya göre malul sayılıp malul aylığı bağlananlar ile 5510 geçici 4 kapsamında 5434'e göre malullük aylığına hak kazananlara hak kazandıkları tarihten itibaren yardım kesilir (m.16/son)",
+  "sinavda_boyle_yazarlar": [
+   "\"Net maaşın tamamı\" veya \"yirmi dört ay süreyle\" yanlış; 2/3, en çok 12 ay"
+  ],
+  "simdiki_dogrusu": "sağlık nedeniyle · on iki ayı geçmemek · net maaşlarının 2/3'ü · hiçbir kesinti yapılmaz · 5510 m.26'ya göre malul · 5434'e göre malullük aylığına · kesilir"
+ },
+ {
+  "kanun_id": 141,
+  "kanun": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Ast",
+  "kart_id": "141-10",
+  "baslik": "İlk sözleşme süresinde yetiştirme masrafı",
+  "hukum": "İlk sözleşme süresi içinde yabancı uyrukluyla evliliği yönetmelik esasları dahilinde MSB'ce uygun görülmeyenler, Türk vatandaşlığını kaybedenler veya çıkarılanlar, TSK'dan çıkarmayı gerektiren bir suçtan mahkûm olanlar ile disiplinsizlik ve ahlaki durumları sebebiyle ilişiği kesilenler, sözleşme süresinin eksik kısmı ile orantılı olarak öğrenim, eğitim ve yetiştirme masraflarını tazminat olarak öder; hesaplamada 926 sayılı Kanun esasları uygulanır (m.18/4-a)",
+  "sinavda_boyle_yazarlar": [
+   "\"Masrafların tamamı ödenir\" yanlış; sözleşme süresinin eksik kısmıyla orantılı"
+  ],
+  "simdiki_dogrusu": "MSB'ce uygun görülmeyenler · TSK'dan çıkarmayı gerektiren bir suçtan mahkûm · disiplinsizlik ve ahlaki · eksik kısmı ile orantılı · 926 sayılı Kanun"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-0",
+  "baslik": "Haberleşme giderlerinde yetkili",
+  "hukum": "Kamu kurum ve kuruluşlarının harcama yetkilileri, haberleşme giderlerini hizmet gerekleri ve teknolojik imkânlar çerçevesinde gözden geçirerek, sayı, tutar veya kullanım kısıtlamaları dâhil gerekli her türlü tedbiri alacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"gerçekleştirme görevlileri\" denir — 2024'ün doğru cevabı"
+  ],
+  "simdiki_dogrusu": "harcama yetkilileri · sayı, tutar veya kullanım kısıtlamaları dâhil"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-1",
+  "baslik": "Milletlerarası görüşmeye açılacak telefonlar",
+  "hukum": "Kurum hizmetlerinin gerektirdiği zorunlu hâller ile güvenlik, istihbarat, askerî ve uluslararası ilişkiler maksatlı milletlerarası görüşmelere açılacak telefonları; bakanlıklarda bakan, il özel idarelerinde vali, belediyelerde belediye başkanı, diğer idarelerde üst yönetici belirler",
+  "sinavda_boyle_yazarlar": [
+   "yetki harcama yetkilisine veya genel müdüre verilir"
+  ],
+  "simdiki_dogrusu": "güvenlik, istihbarat, askerî ve uluslararası ilişkiler · bakan · vali · belediye başkanı · üst yönetici"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-2",
+  "baslik": "Cep telefonu tahsis edilebilecek makamlar",
+  "hukum": "Sadece Cumhurbaşkanı Yardımcısı, bakanlar, yüksek yargı organları başkanları, valiler ve belediye başkanları ile hizmet gereksinimi dikkate alınarak 3 sayılı CBK'ya ekli (I) sayılı cetveldeki kadro, pozisyon ve görevlerde bulunanlar ve belediyelerde genel sekreterler ve genel müdürler",
+  "sinavda_boyle_yazarlar": [
+   "\"Merkez Bankası başkan yardımcıları\" (2021/14 metnindeydi, 2024/7'de yok) veya müsteşar/daire başkanı eklenir"
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanı Yardımcısı, bakanlar, yüksek yargı organları başkanları, valiler ve belediye başkanları · 3 sayılı CBK'ya ekli (I) sayılı cetveldeki · belediyelerde genel sekreterler ve genel müdürler"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-4",
+  "baslik": "Tahsisi belirleyen makam",
+  "hukum": "Tahsis edilecek makamları; bakanlıklarda bakan, belediyelerde belediye başkanı, diğer idarelerde üst yönetici belirler",
+  "sinavda_boyle_yazarlar": [
+   "\"Cumhurbaşkanlığı belirler\" denir; Cumhurbaşkanlığı yalnız listeyi alır"
+  ],
+  "simdiki_dogrusu": "bakan · belediye başkanı · üst yönetici"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-5",
+  "baslik": "Liste gönderilecek makam",
+  "hukum": "Cep telefonu tahsis edilen makamların listesi; bakanlıklar, bağlı-ilgili-ilişkili kuruluşlar ve diğer idareler bakımından Cumhurbaşkanlığına, belediyeler bakımından Çevre, Şehircilik ve İklim Değişikliği Bakanlığına gönderilir",
+  "sinavda_boyle_yazarlar": [
+   "iki muhatap yer değiştirilir veya belediyeler için İçişleri Bakanlığı yazılır"
+  ],
+  "simdiki_dogrusu": "Cumhurbaşkanlığına · Çevre, Şehircilik ve İklim Değişikliği Bakanlığına"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-12",
+  "baslik": "Fiziki arşiv",
+  "hukum": "Kurum arşivleri elektronik bilgi yönetim sistemlerine taşınacak ve bunu müteakip fiziki arşiv tutulmayacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"ikili sistem sürdürülür\" denir"
+  ],
+  "simdiki_dogrusu": "elektronik bilgi yönetim sistemlerine taşınacak · fiziki arşiv tutulmayacaktır"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-14",
+  "baslik": "Giriş: yaptırım",
+  "hukum": "Tedbirlerin uygulanması hassasiyetle takip edilecek, denetlenecek, raporlanacak ve aykırı hareket edenler hakkında gerekli yaptırımlar uygulanacaktır",
+  "sinavda_boyle_yazarlar": [
+   "\"yaptırım öngörülmemiştir\" denir. 2019/12'den farkı budur"
+  ],
+  "simdiki_dogrusu": "hassasiyetle takip edilecek, denetlenecek, raporlanacak · aykırı hareket edenler hakkında gerekli yaptırımlar uygulanacaktır"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-18",
+  "baslik": "Hizmet binası istisnası",
+  "hukum": "Deprem riski nedeniyle yıkım kararı verilmişse, o hizmet için tahsis edilebilecek Hazine taşınmazının bulunmadığı tevsik edildikten sonra mevcut/tahsisli yerlere yeni inşaat yapılabilir",
+  "sinavda_boyle_yazarlar": [
+   "\"hiçbir istisna yoktur\" denir"
+  ],
+  "simdiki_dogrusu": "Deprem riski nedeniyle yıkım kararı · tevsik edildikten sonra"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-19",
+  "baslik": "Taşıt yasağı",
+  "hukum": "3 yıl süreyle her ne şekilde olursa olsun yeni taşıt edinilmez; savunma ve güvenlik hizmetleri için ihtiyaç duyulan taşıtlar ile ambulans ve itfaiye araçları acil ve zorunlu hâllerde edinilebilir",
+  "sinavda_boyle_yazarlar": [
+   "savunma-güvenlik istisnası silinir. JGK/SGK için kritik istisnadır"
+  ],
+  "simdiki_dogrusu": "3 yıl süreyle · savunma ve güvenlik hizmetleri için ihtiyaç duyulan taşıtlar ile ambulans ve itfaiye araçları"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-21",
+  "baslik": "Demirbaş yasağı",
+  "hukum": "Zorunlu hâller hariç 3 yıl süreyle büro malzemesi, makine-teçhizat, tefrişat, bilgisayar ve donanımı ile benzeri demirbaş alımı yapılmaz; bu varlıklar ekonomik ömrü tamamlanmadan elden çıkarılmaz",
+  "sinavda_boyle_yazarlar": [
+   "bilgisayar donanımı istisna gibi gösterilir — MEBS için kritik"
+  ],
+  "simdiki_dogrusu": "Zorunlu hâller hariç 3 yıl süreyle · bilgisayar ve donanımı · ekonomik ömrü tamamlanmadan elden çıkarılmaz"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-22",
+  "baslik": "Bilgi işlem sistemleri",
+  "hukum": "Bilgi işlem sistemlerinin yenilenmesi ve genişletilmesinde hizmet ihtiyacının gerektirdiği özellikler ve kapasite dikkate alınır; yakın makam ve birimlerde fotokopi, faks vb. büro malzemeleri ortaklaşa kullanılır",
+  "sinavda_boyle_yazarlar": [
+   "\"en yüksek kapasite tercih edilir\" denir"
+  ],
+  "simdiki_dogrusu": "hizmet ihtiyacının gerektirdiği özellikler ve kapasite · ortaklaşa kullanılır"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-23",
+  "baslik": "Basın-yayın",
+  "hukum": "İdareyi tanıtmaya yönelik rapor, kitap, dergi, bülten vb. hiçbir şekilde basılmaz, elektronik ortamda hazırlanıp paylaşılır; hiçbir şekilde günlük gazete alımı yapılmaz, görev alanıyla ilgisiz yayına abone olunmaz",
+  "sinavda_boyle_yazarlar": [
+   "\"sınırlı sayıda basılabilir\" denir"
+  ],
+  "simdiki_dogrusu": "hiçbir şekilde basılmaz · hiçbir şekilde günlük gazete alımı yapılmaz"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-24",
+  "baslik": "Personel görevlendirmeleri",
+  "hukum": "Hizmet içi eğitim, konferans, seminer, çalıştay, toplantı vb. faaliyetlerin uzaktan erişim yöntemleriyle yapılması esastır; yüz yüze zorunluysa kamu tesisleri kullanılır, görev süresi ve görevli sayısı asgari tutulur",
+  "sinavda_boyle_yazarlar": [
+   "\"yüz yüze esastır\" denir"
+  ],
+  "simdiki_dogrusu": "uzaktan erişim yöntemleriyle · kamu tesisleri"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-25",
+  "baslik": "Temsil ve ağırlama",
+  "hukum": "Temsil ve ağırlama ödenekleri zorunlu hâller dışında kullanılmaz; uluslararası toplantılar ile millî bayramlar hariç açılış, konferans, yıl dönümü vb. için gezi, kokteyl, yemek, davet düzenlenmez, hediye verilmez; tebrik ve kutlama mesajları elektronik ortamda gönderilir; ajanda, takvim, plaket, hatıra, hediye, eşantiyon alınmaz, bastırılmaz, dağıtılmaz",
+  "sinavda_boyle_yazarlar": [
+   "millî bayram istisnası silinir"
+  ],
+  "simdiki_dogrusu": "zorunlu hâller dışında · uluslararası toplantılar ile millî bayramlar hariç · hediye verilmez · elektronik ortamda · alınmaz, bastırılmaz, dağıtılmaz"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-26",
+  "baslik": "Personel servisi",
+  "hukum": "Savunma ve güvenlik hizmetleri hariç; toplu taşıma olan yerlerde personel servisi sonlandırılır, hizmet alımıyla sağlanan servis sözleşme süresi bitimine kadar devam edebilir",
+  "sinavda_boyle_yazarlar": [
+   "savunma-güvenlik istisnası silinir"
+  ],
+  "simdiki_dogrusu": "Savunma ve güvenlik hizmetleri hariç · sözleşme süresi bitimine kadar"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-28",
+  "baslik": "Enerji ve su",
+  "hukum": "Kamu Binalarında Tasarruf Hedefi ve Uygulama Rehberindeki önlemlere uyulur; genel aydınlatmada LED dönüşümü ivedilikle uygulanır; alımlarda enerji verimliliği yüksek projeler ve enerji kullanımı düşük ürünler tercih edilir",
+  "sinavda_boyle_yazarlar": [
+   "rehberin adı değiştirilir"
+  ],
+  "simdiki_dogrusu": "Kamu Binalarında Tasarruf Hedefi ve Uygulama Rehberindeki · LED dönüşümü · enerji verimliliği yüksek · enerji kullanımı düşük"
+ },
+ {
+  "kanun_id": 142,
+  "kanun": "Cumhurbaşkanlığı 2024/7 Tasarruf Tedbirleri Genelgesi (Haber",
+  "kart_id": "142-31",
+  "baslik": "Fatura ödemeleri",
+  "hukum": "Kurumlar ek mali yüklerle karşılaşmamak için fatura karşılığı ödemelerini ve diğer yükümlülüklerini zamanında yerine getirir",
+  "sinavda_boyle_yazarlar": [
+   "\"ödemeler ertelenerek tasarruf sağlanır\" denir; Genelge tam tersini söyler"
+  ],
+  "simdiki_dogrusu": "ek mali yüklerle karşılaşmamak için · zamanında"
+ },
+ {
+  "kanun_id": 143,
+  "kanun": "2872 sayılı Çevre Kanunu",
+  "kart_id": "143-1",
+  "baslik": "Askerî yerlerde denetim",
+  "hukum": "Askerî işyerleri, askerî bölgeler ve tatbikatların bu Kanun çerçevesindeki denetimi Genelkurmay Başkanlığı, Millî Savunma Bakanlığı, İçişleri Bakanlığı ve Bakanlık tarafından müştereken hazırlanacak yönetmeliğe göre yürütülür (m.12/2)",
+  "sinavda_boyle_yazarlar": [
+   "askerî yerlerin denetim dışı olduğu söylenir"
+  ],
+  "simdiki_dogrusu": "Genelkurmay Başkanlığı, Millî Savunma Bakanlığı, İçişleri Bakanlığı ve Bakanlık · müştereken"
+ },
+ {
+  "kanun_id": 143,
+  "kanun": "2872 sayılı Çevre Kanunu",
+  "kart_id": "143-2",
+  "baslik": "Bilgi verme yükümlülüğü",
+  "hukum": "İlgililer; Bakanlığın veya yetkili mercilerin istediği bilgi ve belgeleri vermek, analiz ve ölçüm giderlerini karşılamak, denetimde her türlü kolaylığı göstermek zorundadır; kirliliğe yol açabilecek faaliyetlerle ilgili hammadde, yakıt, ürün, atık, üretim şeması, acil durum planı ve kirlilik raporlarını talep hâlinde vermek zorundadır; bu yükümlülüğü yerine getirmeyene idarî para cezası verilir (m.12/3-4, m.20/g)",
+  "sinavda_boyle_yazarlar": [
+   "\"ölçüm giderleri Bakanlıkça karşılanır\" denir"
+  ],
+  "simdiki_dogrusu": "bilgi ve belgeleri vermek · analiz ve ölçüm giderlerini karşılamak · her türlü kolaylığı göstermek · acil durum planı"
+ }
+]

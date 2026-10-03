@@ -1,0 +1,324 @@
+{
+ "kanun_id": 31,
+ "ad": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_31.json",
+ "kartlar": [
+  {
+   "id": "31-0",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Temel tanımlar",
+   "hukum": "Yabancı: Türkiye ile vatandaşlık bağı bulunmayan kişi; vatansız: hiçbir devlete vatandaşlık bağıyla bağlı olmayan ve yabancı sayılan kişi; çocuk: on sekiz yaşını doldurmamış ve ergin olmamış kişi; vize: Türkiye'de en fazla doksan güne kadar kalma hakkı tanıyan izin; sınır kapısı: Cumhurbaşkanı kararıyla belirlenen geçiş noktası; kabul edilemeyen yolcu: koşulları taşımadığından girişine izin verilmeyen kişi; taşıyıcı: yabancı yolcu taşıyan taşıt sahipleri ve işletmecileri; Genel Müdürlük: Göç İdaresi Genel Müdürlüğü (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "vize süresi 180 gün yapılır"
+   ],
+   "dogrusu": [
+    "Yabancı · vatansız · çocuk · vize · en fazla doksan güne · sınır kapısı · kabul edilemeyen yolcu · taşıyıcı · Genel Müdürlük"
+   ]
+  },
+  {
+   "id": "31-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Geri göndermeme ilkesi",
+   "hukum": "Bu Kanun kapsamındaki hiç kimse, işkenceye, insanlık dışı ya da onur kırıcı ceza veya muameleye tâbi tutulacağı veya ırkı, dini, tabiiyeti, toplumsal grubu veya siyasi fikirleri dolayısıyla hayatı veya hürriyeti tehdit altında bulunacağı bir yere gönderilemez (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız mülteciler için geçerlidir\" denir"
+   ],
+   "dogrusu": [
+    "hiç kimse · bir yere gönderilemez"
+   ]
+  },
+  {
+   "id": "31-2",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Giriş ve çıkış",
+   "hukum": "Türkiye'ye giriş ve çıkış sınır kapılarından, geçerli pasaport veya pasaport yerine geçen belgelerle yapılır (m.5)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "sınır kapılarından · pasaport veya pasaport yerine geçen belgelerle"
+   ]
+  },
+  {
+   "id": "31-3",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Belge kontrolü ve kapsamlı kontrol",
+   "hukum": "Yabancı, belgelerini giriş ve çıkışta görevlilere göstermek zorundadır; kontroller taşıtlarda seyir hâlinde de yapılabilir; havalimanı transit alanlarını kullananlar da kontrole tâbi tutulabilir. Kapsamlı kontrole tâbi tutulanlar en fazla dört saat bekletilebilir; yabancı bu süre içinde her an ülkesine dönebileceği gibi dört saatle sınırlı kalmaksızın işlemlerin sonuçlanmasını da bekleyebilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"kapsamlı kontrol süresince yabancı ülkesine dönemez\" denir — çıkmış soruda yanlış şık buydu",
+    "Kapsamlı kontrol süresince yabancı ülkesine dönemez"
+   ],
+   "dogrusu": [
+    "Her an dönebilir (m.6)"
+   ]
+  },
+  {
+   "id": "31-4",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Kabul edilemeyen yolcu",
+   "hukum": "Pasaportu, vizesi veya ikamet/çalışma izni olmayanlar ya da bunları hileli yolla edinen veya sahte olanlar; vize veya ikamet süresinin bitiminden itibaren en az altmış gün süreli pasaportu olmayanlar; giriş yasağı kapsamındakiler kabul edilemeyen yolcu sayılıp geri çevrilir; işlem tebliğ edilir, itiraz hakları bildirilir; işlemleri sonuçlanıncaya kadar sınır kapılarında belirlenen alanlarda bekletilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "süre otuz gün yapılır"
+   ],
+   "dogrusu": [
+    "hileli yolla edinen veya sahte · en az altmış gün · kabul edilemeyen yolcu"
+   ]
+  },
+  {
+   "id": "31-5",
+   "madde": [
+    "52",
+    "53"
+   ],
+   "baslik": "Sınır dışı etme kararı",
+   "hukum": "Yabancılar menşe ülkesine, transit gideceği ülkeye ya da üçüncü bir ülkeye sınır dışı edilebilir; karar Genel Müdürlüğün talimatı üzerine veya re'sen valiliklerce alınır ve gerekçesiyle yabancıya, yasal temsilcisine veya avukatına tebliğ edilir (m.52, m.53/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "karar makamı \"Göç İdaresi Genel Müdürlüğü\" ya da \"mahkeme\" yapılır",
+    "Sınır dışı kararını Göç İdaresi Genel Müdürlüğü alır"
+   ],
+   "dogrusu": [
+    "Valilik alır (m.53)"
+   ]
+  },
+  {
+   "id": "31-6",
+   "madde": [
+    "53"
+   ],
+   "baslik": "Sınır dışı kararına itiraz",
+   "hukum": "Yabancı, kararın tebliğinden itibaren yedi gün içinde idare mahkemesine başvurabilir; başvuru on beş gün içinde sonuçlandırılır ve mahkeme kararı kesindir. Yabancının rızası saklı kalmak kaydıyla, dava açma süresi içinde veya yargılama sonuçlanıncaya kadar yabancı sınır dışı edilmez (m.53/3)",
+   "sinavda_boyle_yazarlar": [
+    "süre on beş gün, mahkeme \"sulh ceza\" yapılır — sulh ceza idari gözetim itirazının merciidir, karıştırılır",
+    "Sınır dışı kararına sulh ceza hâkimine itiraz edilir"
+   ],
+   "dogrusu": [
+    "İdare mahkemesine; sulh ceza, idari gözetimin merciidir (m.53, m.57)"
+   ]
+  },
+  {
+   "id": "31-7",
+   "madde": [
+    "59",
+    "54"
+   ],
+   "baslik": "Sınır dışı edilecekler",
+   "hukum": "TCK m.59 kapsamında sınır dışı edilmesi gerekenler; terör veya çıkar amaçlı suç örgütü yöneticisi, üyesi, destekleyicisi; giriş-vize-ikamet işlemlerinde sahte belge kullananlar; geçimini meşru olmayan yollardan sağlayanlar; kamu düzeni, güvenliği veya sağlığı açısından tehdit oluşturanlar; vize süresini on günden fazla aşanlar; ikamet izni iptal edilenler veya süresini on günden fazla ihlal edenler; çalışma izni olmadan çalışanlar; yasal giriş-çıkış hükümlerini ihlal edenler; giriş yasağına rağmen gelenler; uluslararası koruma başvurusu reddedilenler; ikamet uzatması reddedilip on gün içinde çıkmayanlar (m.54)",
+   "sinavda_boyle_yazarlar": [
+    "\"vizeyi bir gün aşan sınır dışı edilir\" denir"
+   ],
+   "dogrusu": [
+    "terör veya çıkar amaçlı suç örgütü · sahte belge · meşru olmayan yollardan · kamu düzeni, güvenliği veya sağlığı · on günden fazla · on günden fazla · çalışma izni olmadan · on gün"
+   ]
+  },
+  {
+   "id": "31-8",
+   "madde": [
+    "54",
+    "55"
+   ],
+   "baslik": "Sınır dışı edilmeyecekler",
+   "hukum": "m.54 kapsamında olsalar dahi; gönderileceği ülkede ölüm cezası, işkence, insanlık dışı muamele riski olanlar; ciddi sağlık sorunu, yaş ve hamilelik nedeniyle seyahati riskli olanlar; hayatî tehlike arz eden hastalığının tedavisi gönderileceği ülkede bulunmayanlar; destek sürecindeki insan ticareti mağdurları; tedavileri tamamlanıncaya kadar psikolojik, fiziksel veya cinsel şiddet mağdurları. Değerlendirme herkes için ayrı yapılır; bu kişilerden belli adreste ikamet ve bildirim istenebilir (m.55)",
+   "sinavda_boyle_yazarlar": [
+    "\"Türk vatandaşıyla evli olup aile birliği içinde yaşayan\" listeye eklenir — çıkmış soruda yanlış şık buydu",
+    "Türk vatandaşıyla evli yabancı sınır dışı edilmez"
+   ],
+   "dogrusu": [
+    "Listede yoktur (m.55)"
+   ]
+  },
+  {
+   "id": "31-9",
+   "madde": [
+    "56"
+   ],
+   "baslik": "Türkiye'yi terke davet",
+   "hukum": "Sınır dışı kararı alınanlara, kararda belirtilmek kaydıyla Türkiye'yi terk için on beş günden az olmamak üzere otuz güne kadar süre tanınır; kaçma-kaybolma riski olanlara, yasal giriş-çıkışı ihlal edenlere, sahte belge kullananlara, kamu düzeni-güvenliği-sağlığı için tehdit oluşturanlara bu süre tanınmaz. Süre tanınanlara Çıkış İzin Belgesi verilir ve bu belge hiçbir harca tâbi değildir (m.56)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"en az otuz gün\" yapılır"
+   ],
+   "dogrusu": [
+    "on beş günden az olmamak üzere otuz güne kadar · kaçma-kaybolma riski · tanınmaz · Çıkış İzin Belgesi · hiçbir harca tâbi değildir"
+   ]
+  },
+  {
+   "id": "31-10",
+   "madde": [
+    "54",
+    "57"
+   ],
+   "baslik": "Yakalanan yabancı ve idari gözetim",
+   "hukum": "m.54 kapsamındaki yabancılar kolluk tarafından yakalandığında derhâl valiliğe bildirilir; sınır dışı kararı valilikçe alınır ve değerlendirme-karar süresi kırk sekiz saati geçemez. Kaçma-kaybolma riski olan, giriş-çıkış kurallarını ihlal eden, sahte belge kullanan, tanınan sürede çıkmayan veya tehdit oluşturanlar hakkında valilik idari gözetim kararı alır ya da alternatif yükümlülük getirir; idari gözetime alınanlar yakalamayı yapan kolluk birimince geri gönderme merkezine kırk sekiz saat içinde götürülür (m.57/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "kararı kolluğun aldığı ya da süre 24 saat denir",
+    "İdari gözetim en çok on sekiz aydır"
+   ],
+   "dogrusu": [
+    "6 + 6 ay (m.57)"
+   ]
+  },
+  {
+   "id": "31-11",
+   "madde": [
+    "57"
+   ],
+   "baslik": "İdari gözetim süresi ve denetimi",
+   "hukum": "Geri gönderme merkezlerinde idari gözetim altı ayı geçemez; yabancının iş birliği yapmaması veya ülkesiyle ilgili doğru bilgi vermemesi nedeniyle tamamlanamazsa en fazla altı ay daha uzatılabilir. Gözetimin devamında zaruret olup olmadığı valilikçe her ay değerlendirilir; zaruret görülmeyen için gözetim derhâl sonlandırılır ve alternatif yükümlülük getirilir (m.57/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "toplam süre \"on sekiz ay\" yapılır veya aylık denetim \"üç ayda bir\" denir"
+   ],
+   "dogrusu": [
+    "altı ayı · iş birliği yapmaması · en fazla altı ay daha · valilikçe her ay · derhâl"
+   ]
+  },
+  {
+   "id": "31-12",
+   "madde": [
+    "57"
+   ],
+   "baslik": "İdari gözetime itiraz",
+   "hukum": "İdari gözetim kararına karşı sulh ceza hâkimine başvurulabilir; başvuru gözetimi durdurmaz; hâkim incelemeyi beş gün içinde sonuçlandırır ve kararı kesindir; şartlar değiştiği iddiasıyla yeniden başvurulabilir; avukat ücretini karşılayamayanlara talep hâlinde Avukatlık Kanunu'na göre avukat sağlanır; uyruğun tespiti için yabancının elektronik ve iletişim cihazları incelenebilir (m.57/5-8)",
+   "sinavda_boyle_yazarlar": [
+    "iki merci yer değiştirilir"
+   ],
+   "dogrusu": [
+    "sulh ceza hâkimine · gözetimi durdurmaz · beş gün · kesindir · yeniden · elektronik ve iletişim cihazları incelenebilir"
+   ]
+  },
+  {
+   "id": "31-13",
+   "madde": [
+    "57"
+   ],
+   "baslik": "İdari gözetime alternatif yükümlülükler",
+   "hukum": "Belirli adreste ikamet, bildirimde bulunma, aile temelli geri dönüş, geri dönüş danışmanlığı, kamu yararına gönüllü görev, teminat ve elektronik izleme; bu yükümlülüklerin süresi yirmi dört ayı geçemez; elektronik izlemeye karşı sulh ceza hâkimine başvurulur, hâkim beş gün içinde karar verir (m.57/A)",
+   "sinavda_boyle_yazarlar": [
+    "süre on iki ay yapılır"
+   ],
+   "dogrusu": [
+    "teminat · elektronik izleme · yirmi dört ayı · beş gün"
+   ]
+  },
+  {
+   "id": "31-14",
+   "madde": [
+    "58"
+   ],
+   "baslik": "Geri gönderme merkezleri",
+   "hukum": "İdari gözetime alınanlar geri gönderme merkezlerinde tutulur; merkezler Bakanlıkça işletilir; kamu kurumları, Türkiye Kızılay Derneği veya göç alanında uzman kamu yararına derneklerle protokol yapılarak işlettirilebilir (m.58)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız Bakanlık işletir\" denir"
+   ],
+   "dogrusu": [
+    "Bakanlıkça · Türkiye Kızılay Derneği"
+   ]
+  },
+  {
+   "id": "31-15",
+   "madde": [
+    "59"
+   ],
+   "baslik": "Merkezlerdeki hizmetler",
+   "hukum": "Bedeli karşılanamayan acil ve temel sağlık hizmetleri ücretsiz; yakınlarına, notere, yasal temsilciye ve avukata erişim ile telefon imkânı; ziyaretçi, konsolosluk yetkilisi ve BMMYK görevlisiyle görüşme; çocukların yüksek yararı gözetilir, aileler ayrı yerlerde barındırılır; çocukların eğitimi için MEB tedbir alır; STK temsilcileri Genel Müdürlüğün izniyle ziyaret edebilir (m.59)",
+   "sinavda_boyle_yazarlar": [
+    "STK ziyaretinin izinsiz olduğu söylenir"
+   ],
+   "dogrusu": [
+    "acil ve temel sağlık hizmetleri ücretsiz · konsolosluk yetkilisi ve BMMYK görevlisiyle · aileler ayrı yerlerde · Genel Müdürlüğün izniyle"
+   ]
+  },
+  {
+   "id": "31-16",
+   "madde": [
+    "60"
+   ],
+   "baslik": "Sınır dışının yerine getirilmesi ve masraflar",
+   "hukum": "Merkezlerdeki yabancılar kolluk birimince sınır kapılarına götürülür; merkeze sevk gerekmeyenler Genel Müdürlük taşra teşkilatının koordinesinde kolluk birimlerince götürülür. Seyahat masrafları yabancının kendisince karşılanır; parası yetiyorsa oradan alınır, artan kendisine bırakılır; hiç parası yoksa Genel Müdürlükçe karşılanır; kısmen yetiyorsa temel gereksinim tutarı bırakılıp kalanı Hazineye gelir kaydedilir; masraflar geri ödenmediği sürece yabancının Türkiye'ye girişine izin verilmeyebilir. Pasaportları sınır dışı edilinceye kadar tutulabilir, biletleri paraya çevrilebilir; kalışını garanti edenler ve izinsiz çalıştıran işveren masraflardan sorumludur (m.60)",
+   "sinavda_boyle_yazarlar": [
+    "\"masraflar her hâlde Devletçe karşılanır\" denir"
+   ],
+   "dogrusu": [
+    "kolluk birimince · yabancının kendisince · Genel Müdürlükçe · masraflar geri ödenmediği sürece yabancının Türkiye'ye girişine izin verilmeyebilir · garanti edenler · izinsiz çalıştıran işveren"
+   ]
+  },
+  {
+   "id": "31-17",
+   "madde": [
+    "61"
+   ],
+   "baslik": "Mülteci",
+   "hukum": "Avrupa ülkelerinde meydana gelen olaylar nedeniyle ırkı, dini, tabiiyeti, toplumsal grubu veya siyasi düşüncesi dolayısıyla zulme uğrayacağından haklı sebeplerle korktuğu için ülkesi dışında bulunan ve ülkesinin korumasından yararlanamayan yabancıya veya vatansız kişiye statü belirleme sonrasında mülteci statüsü verilir (m.61)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Avrupa ülkelerinde · mülteci"
+   ]
+  },
+  {
+   "id": "31-18",
+   "madde": [
+    "62"
+   ],
+   "baslik": "Şartlı mülteci",
+   "hukum": "Aynı sebeplerle Avrupa ülkeleri dışında meydana gelen olaylar nedeniyle ülkesi dışında bulunan kişiye şartlı mülteci statüsü verilir; üçüncü ülkeye yerleştirilinceye kadar Türkiye'de kalmasına izin verilir (m.62)",
+   "sinavda_boyle_yazarlar": [
+    "iki tanım yer değiştirilir",
+    "Suriye'den zulüm nedeniyle kaçana mülteci statüsü verilir"
+   ],
+   "dogrusu": [
+    "Şartlı mülteci (m.62)"
+   ]
+  },
+  {
+   "id": "31-19",
+   "madde": [
+    "63"
+   ],
+   "baslik": "İkincil koruma",
+   "hukum": "Mülteci veya şartlı mülteci olarak nitelendirilemeyen, ancak geri gönderildiğinde ölüm cezasına mahkûm olacak, işkence veya onur kırıcı muameleye maruz kalacak ya da silahlı çatışmada ayrım gözetmeyen şiddet nedeniyle ciddi tehditle karşılaşacak yabancı veya vatansız kişiye ikincil koruma statüsü verilir (m.63)",
+   "sinavda_boyle_yazarlar": [
+    "ikincil koruma \"mültecinin bir alt derecesi\" gibi sunulur — ayrı bir statüdür"
+   ],
+   "dogrusu": [
+    "ölüm cezasına · işkence veya onur kırıcı muameleye · silahlı çatışmada ayrım gözetmeyen şiddet · ikincil koruma"
+   ]
+  },
+  {
+   "id": "31-20",
+   "madde": [
+    "1",
+    "64"
+   ],
+   "baslik": "Korumadan hariçte tutulma",
+   "hukum": "BMMYK dışında başka bir BM organından koruma görenler; ikamet ettiği ülkede o ülke vatandaşlarıyla aynı haklara sahip olanlar; Sözleşme m.1/F'deki fiillerden (savaş suçu, insanlığa karşı suç, ağır adi suç) suçlu olduğuna dair ciddi kanaat bulunanlar uluslararası korumadan hariçte tutulur; Türkiye dışında zalimce eylem yaptığı düşünülenler de değerlendirilir. Kamu düzeni veya güvenliği için tehlike oluşturanlar ile ceza çekmemek için ülkesini terk edenler ikincil korumadan hariçte tutulur. Başvuru sahibinin hariçte tutulması aile üyelerinin de hariçte tutulmasını gerektirmez (m.64)",
+   "sinavda_boyle_yazarlar": [
+    "\"aile üyeleri de otomatik hariçte tutulur\" denir"
+   ],
+   "dogrusu": [
+    "ciddi kanaat · zalimce eylem · Kamu düzeni veya güvenliği · ikincil korumadan · aile üyelerinin"
+   ]
+  },
+  {
+   "id": "31-21",
+   "madde": [
+    "102"
+   ],
+   "baslik": "İdarî para cezaları",
+   "hukum": "Türkiye'ye yasa dışı giren veya terk eden ya da buna teşebbüs eden yabancıya; giriş yasağına rağmen girebilenlere; tanınan sürede ayrılmayanlara; işlemler sırasında kaçanlara; yükümlülüklerine uymayan taşıyıcılara idarî para cezası verilir. Geçerli belgesi olmayan yabancıların ülkeye girmesine, seyahat etmesine, barınmasına, konaklamasına imkân sağlayanlar ile gayrimenkulünü kiralayanlara, fiil suç değilse tespit edilen her bir yabancı sayısınca ceza verilir. Bir takvim yılı içinde gerçek kişilerce tekrarda cezalar yarı oranında artırılır; cezalar valilik, Genel Müdürlük ya da kolluk birimlerince uygulanır ve tebliğden itibaren otuz gün içinde ödenir (m.102)",
+   "sinavda_boyle_yazarlar": [
+    "tekrarda \"iki katı\" denir ya da ceza yetkisi kolluktan alınır",
+    "Kaçak göçmene ev kiralayan cezalandırılmaz"
+   ],
+   "dogrusu": [
+    "Her yabancı için ayrı idarî para cezası (m.102)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

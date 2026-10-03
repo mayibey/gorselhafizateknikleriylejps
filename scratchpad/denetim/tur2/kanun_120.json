@@ -1,0 +1,63 @@
+{
+ "kanun_id": 120,
+ "ad": "Kamu İdarelerine Ait Taşınmazların Kaydına İlişkin Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_120.json",
+ "kartlar": [
+  {
+   "id": "120-0",
+   "madde": [
+    "1",
+    "2",
+    "44"
+   ],
+   "baslik": "Amaç, kapsam, dayanak, tanımlar, kayıt değeri",
+   "hukum": "Genel yönetim kapsamındaki kamu idareleri ile bağlı kurumlarının mülkiyetinde, yönetiminde veya kullanımında bulunan taşınmazların kaydı ve icmal cetvelleri (m.1-2); dayanak 5018 m.44, 45 ve 60 + 1 sayılı CBK m.101/1-e (m.3); Bakanlık: Çevre ve Şehircilik Bakanlığı; cins tashihi: mevcut kullanım şekli ile tapu kaydı farklıysa tapunun kullanım şekline göre düzeltilmesi; yönetiminde veya kullanımında bulunan taşınmaz: tapuda üçüncü kişiler/diğer idareler adına tescilli olup irtifak, kiralama, kullanma izni, tahsis gibi yollarla yönetim-kullanım hakkı verilenler; kayıt planı (Ek-1); malik idare: Hazine taşınmazları ve Devletin hüküm ve tasarrufundaki yerler için Çevre ve Şehircilik Bakanlığı, diğerlerinde kendi tüzel kişilikleri; üst yönetici 5018 m.11 (m.4); kayıt-kontrol = mevcutlarla birlikte yıl içinde edinilen ve elden çıkarılanların miktar ve değer olarak takibi; kayıtlar belgeye dayanır; tapuda kayıtlı taşınmazlar maliyet bedeli, belirlenemezse rayiç değer; maliyet ve rayiç bedeli belirlenemeyenler, tapuda kayıtlı olmayanlardan ekonomik değerlendirmeye konu olanlar/kamusal ihtiyaçta kullanılanlar, orta malları, genel hizmet alanları ve Bakanlıkça karar verilenler iz bedeliyle; rayiç değeri malik idare (başka idarenin kullanımındaysa o idare) tespit eder; değer Genel Yönetim Muhasebe Yönetmeliğine göre güncellenir; işlemler idarelerin yetkili birimlerince, harcama yetkililerinin görevlendireceği personele yaptırılabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bakanlık = Hazine ve Maliye\" yanlış; Çevre ve Şehircilik (2020 değişikliği)",
+    "Orta malları maliyet bedeliyle kaydedilir"
+   ],
+   "dogrusu": [
+    "İz bedeli (m.5)"
+   ]
+  },
+  {
+   "id": "120-1",
+   "madde": [
+    "6",
+    "7",
+    "8"
+   ],
+   "baslik": "Görevler, formlar, icmal, numara, dosya",
+   "hukum": "Görevli birim/personel kayıtları mevzuata uygun, saydam ve erişilebilir tutar, denetime hazır muhafaza eder; görevden ayrılırken devir-teslim; harcama yetkilisine karşı sorumlu; Kayıt Planına göre oluşturulan formları en geç 7 gün içinde muhasebe birimine ve mali hizmetler birimine, işlemin yapıldığı ayı takip eden ay sonuna kadar (Aralık ayı işlemleri aynı ay sonuna kadar) maliki kamu idaresine gönderir (m.6); kayıt şekli: tapuda adına tescilli → Ek-2 \"Tapuda Kayıtlı Olan Taşınmazlar Formu\"; tapuda kayıtlı olmayanlardan ekonomik/kamusal olanlar → Ek-3 \"Tapuda Kayıtlı Olmayan Taşınmazlar Formu\"; Ek-4 \"Orta Malları Formu\"; Ek-5 \"Genel Hizmet Alanları Formu\"; üçüncü kişiler adına tescilli veya diğer idarelerin yönetiminde olup irtifak-tahsis-kiralama-kullanma izniyle kullanım hakkı verilenler → Ek-6 \"Sınırlı Aynî Haklar ile Kişisel Haklar ve Tahsis Formu\"; bilgisayarda veya defterde; formlar mali hizmetler birimine gönderilir, orada konsolide edilerek Ek-7 taşınmaz icmal cetvelleri; icmalde her unsur için bir satır, adet, yüzölçüm ve değer toplamları (m.7); her taşınmaza daha önce belirlenmiş numara varsa o, yoksa idarenin belirleyeceği taşınmaz numarası (m.8); her taşınmaz için aynı numaralı dosya: satın almada satış sözleşmesi+tapu; trampada trampa sözleşmesi+tapu; kamulaştırmada anlaşma tutanağı+satış sözleşmesi veya mahkeme kararı+tapu; 6183 m.98 teferruğunda satış komisyonu kararı, 2004 İİK teferruğunda ihale kararı; devletleştirmede 3082 komisyon tutanağı; mahkeme kararıyla geçenlerde kesinleşen karar; kadastroda kesinleşen kadastro tutanağı; bağışta bağış formu; idari tescilde yazı; yapım suretiyle edinilende yetkili makamca onaylı kesin kabul tutanağı; kiralananda kira sözleşmesi; irtifakta resmî senet, kullanma izninde sözleşme; tahsiste tahsis eden idarenin kararı; 5018 m.45 bedelsiz devirde devir kararı; yazışmalar (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İcmal cetvelini taşınmaz kayıt birimi hazırlar\" yanlış; mali hizmetler birimi",
+    "Taşınmaz Sayım Formu kayıt formlarından biridir",
+    "Tahsisle kullanılan Hazine taşınmazı Ek-2'de izlenir",
+    "Formlar 15 gün içinde muhasebe birimine gönderilir"
+   ],
+   "dogrusu": [
+    "Değildir (m.7)",
+    "Ek-6 (m.7)",
+    "7 gün (m.6)"
+   ]
+  },
+  {
+   "id": "120-2",
+   "madde": [
+    "10",
+    "11",
+    "12"
+   ],
+   "baslik": "Cins tashihi, kayıt değişikliği, yenileme, Bakanlık yetkisi, yürürlük",
+   "hukum": "Mevcut kullanım şekli ile tapu kaydı uyumsuzsa taşınmaz mevcut kullanım şekliyle kayda alınır, idare cins tashihi işlemlerini yapar; savunma, güvenlik ve istihbarat hizmetlerinde kullanılan taşınmazlardan ilgili idarelerce belirlenenlerin cins tashihi yapılır; tahsisli/irtifaklı taşınmazlarda yükümlülük malik idareye, belgeler ve mali yükümlülükler kullanıcıya (m.10); kadastro, imar, ifraz, tevhid, cins tashihi, yüzölçüm değişikliği, kat mülkiyeti, kamuya terk gibi değişikliklerde kayıt kapatılıp yeni kayıt; terkin, satış, devirde neden açıklanarak kayıt kapatılır; değer artırıcı harcamalar taşınmazın değerine eklenir; değişiklikler 7 gün içinde muhasebe ve mali hizmetler birimine, ay sonuna kadar maliki idareye (m.11); yenilemede kapatılanlar dâhil eski kayıtların tamamı yeni kayıtlara işlenir (m.12); düzenleme yapmaya, tereddütleri gidermeye, zorunlu hâllerde süreleri yarısına kadar indirmeye veya bir katına kadar artırmaya Bakanlık yetkili (m.13); Sayıştay görüşüyle, 1/1/2006'dan geçerli (m.14); Cumhurbaşkanı yürütür (m.15); Kayıt Planı (Ek-1): 1. Tapuda Kayıtlı (bina-tesisler: idare, eğitim, sağlık, sosyal-kültürel, spor, turizm, konutlar, cezaevleri, ticari, depolama, tarihî, sanayi, tarımsal, askerî bina ve tesisler; arsalar; araziler; ormanlar; yer altı-yer üstü düzenleri), 2. Tapuda Kayıtlı Olmayan (+dolgu alanları, kıyılar), 3. Orta Malları (meralar, yaylaklar, kışlaklar, umumi çayır-otlaklar, harman yerleri, panayır yeri, sıvat-eyrek yeri, umuma ait çekek yerleri), 4. Genel Hizmet Alanları (meydanlar, parklar, mesire yerleri, rekreasyon, otoparklar, pazar yeri, genel mezarlıklar, umuma ait binalar)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bakanlık süreleri iki katına çıkarabilir\" yanlış; bir katına kadar artırır (yani iki katına — \"yarısına indirme/bir katına artırma\" ifadesini aynen bil)",
+    "Değer artırıcı harcamalar gider yazılır"
+   ],
+   "dogrusu": [
+    "Taşınmazın değerine eklenir (m.11)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

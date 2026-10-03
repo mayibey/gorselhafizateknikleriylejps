@@ -1,0 +1,344 @@
+{
+ "kanun_id": 104,
+ "ad": "TSK, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_104.json",
+ "kartlar": [
+  {
+   "id": "104-0",
+   "madde": [
+    "62"
+   ],
+   "baslik": "Muayene yeri",
+   "hukum": "İlk defa uçuşa başlayacak personelin ve 2629 kapsamındaki yetişmiş uçucuların sağlık yeteneklerini belirlemek için yapılacak muayeneler uçucu ve dalgıç sınıfı raporları vermeye yetkili hastanelerde; fizyolojik eğitimleri ise Hava ve Uzay Hekimliği Uzmanı Tabibin/Uçuş Tabibinin başkanlık ettiği Uçucu Sağlığı Araştırma ve Eğitim Merkezinde yapılır (m.62)",
+   "sinavda_boyle_yazarlar": [
+    "aile hekimliği, devlet hastanesi, şehir hastanesi veya eğitim-araştırma hastanesi denir",
+    "Uçucu muayenesi devlet hastanesinde yapılır"
+   ],
+   "dogrusu": [
+    "Uçucu ve dalgıç sınıfı raporları vermeye yetkili hastanelerde (m.62)"
+   ]
+  },
+  {
+   "id": "104-1",
+   "madde": [
+    "63"
+   ],
+   "baslik": "Uçucu tanımı",
+   "hukum": "Uçucu; pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi ve bunların adaylarıdır (m.63/1)",
+   "sinavda_boyle_yazarlar": [
+    "görev ekibi eklenir"
+   ],
+   "dogrusu": [
+    "pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi ve bunların adaylarıdır"
+   ]
+  },
+  {
+   "id": "104-2",
+   "madde": [
+    "63"
+   ],
+   "baslik": "Kategori-1 hava aracı",
+   "hukum": "Akselerasyon (G) kuvvetleri ve manevra kapasitesi itibarıyla yüksek performanslı hava araçlarıdır (F-16, T-38M, KT-1T vb.) (m.63/2-a)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yüksek performanslı"
+   ]
+  },
+  {
+   "id": "104-3",
+   "madde": [
+    "63"
+   ],
+   "baslik": "Kategori-2 hava aracı",
+   "hukum": "G kapasitesi yüksek olmayan ancak yüksek ve alçak irtifada manevra kapasitesine sahip orta performanslı araçlardır (S-70 Sikorsky, Blackhawk, AS-532 Cougar, SF-260 D, T-129 ATAK vb.) (m.63/2-b)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "orta performanslı"
+   ]
+  },
+  {
+   "id": "104-4",
+   "madde": [
+    "63"
+   ],
+   "baslik": "Kategori-3 hava aracı",
+   "hukum": "G kapasitesi düşük, manevra kapasitesi sınırlı düşük performanslı araçlardır (C-130, CN-235, ATR-72, TB-20, S-70B Seahawk, AB-212, KC-135R, E-7T, Mi-17, AB-205, B-350 vb.) (m.63/2-c)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "düşük performanslı"
+   ]
+  },
+  {
+   "id": "104-5",
+   "madde": [
+    "63"
+   ],
+   "baslik": "Kategori-4 uçuş",
+   "hukum": "Bir hava aracı kategorisi değildir; yalnızca kategori-3 araçlarda, her iki pilotun kategori-4 olmaması şartıyla yardımcı/ikinci pilot olarak ya da kategori-4 uçak komutanı olarak, tecrübeli bir pilotla birlikte yapılan uçuşu ifade eder. Kategori-3 sağlık yeteneklerini karşılamayan ancak kategori-4'e elverişli uçucular, tecrübeli pilot bulunmaksızın uçurulmaz (m.63/2-ç)",
+   "sinavda_boyle_yazarlar": [
+    "\"kategori-4 de bir hava aracı türüdür\" denir",
+    "Kategori-4 bir hava aracı türüdür"
+   ],
+   "dogrusu": [
+    "Hava aracı kategorisi değildir, bir uçuş türüdür (m.63/2-ç)"
+   ]
+  },
+  {
+   "id": "104-6",
+   "madde": [
+    "64"
+   ],
+   "baslik": "Uçucu adayının sağlık yeteneği",
+   "hukum": "Hava Harp Okulu sonrası pilot adaylığına ayrılacaklar ile Hava Kuvvetleri uçuş okulunda eğitime başlayacak Deniz Kuvvetleri, JGK ve SGK uçucu adaylarında, başlangıç ve temel uçuş eğitimi birinci safha öncesi kategori-1 hava aracı uçucuları için belirtilen sağlık yeteneği aranır (m.64/1)",
+   "sinavda_boyle_yazarlar": [
+    "kategori-2 denir"
+   ],
+   "dogrusu": [
+    "kategori-1"
+   ]
+  },
+  {
+   "id": "104-7",
+   "madde": [
+    "64"
+   ],
+   "baslik": "CPL lisanslı aday",
+   "hukum": "Pilot lisansı (CPL) olan adayın sağlık yetenekleri kategori-1'i karşılamıyorsa kategori-2 veya kategori-3 hükümleri uygulanır ve aday uçuşa elverişli kabul edilir (m.64/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"elverişsiz sayılır\" denir"
+   ],
+   "dogrusu": [
+    "kategori-2 veya kategori-3 hükümleri · uçuşa elverişli kabul edilir"
+   ]
+  },
+  {
+   "id": "104-8",
+   "madde": [
+    "64"
+   ],
+   "baslik": "Kara Kuvvetleri adayları",
+   "hukum": "Kara Kuvvetleri uçucu adayları ile orada eğitim alacak Deniz Kuvvetleri, JGK ve SGK adaylarına kategori-2 ve kategori-3 hükümleri uygulanır (m.64/4)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "kategori-2 ve kategori-3"
+   ]
+  },
+  {
+   "id": "104-9",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Periyodik muayeneler",
+   "hukum": "Uçucuların yıllık periyodik muayeneleri yetkili hastaneler ile Hava Harp Okulundaki hava sağlık ve muayene merkezinde; dört yıllık periyodik muayeneleri Sağlık Bakanlığınca belirlenen yetkili hastanelerde, fizyolojik eğitimleri Uçucu Sağlığı Araştırma ve Eğitim Merkezinde yapılır. Yıllık ve dört yıllık muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayana uçuş verilmez (m.65/a)",
+   "sinavda_boyle_yazarlar": [
+    "\"eksik muayeneyle uçuş verilebilir\" denir"
+   ],
+   "dogrusu": [
+    "yıllık · dört yıllık · Yıllık ve dört yıllık muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayana uçuş verilmez"
+   ]
+  },
+  {
+   "id": "104-10",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Kararı kim verir",
+   "hukum": "Uçucular hakkında uçuşa elverişlilik, elverişsizlik, sınıf/branş değişikliği veya kurumda görev yapamayacağına ilişkin kararlar sadece uçucu ve dalgıç sınıfı raporları vermeye yetkili hastanelerce verilir; istirahat kararı diğer sağlık kurullarınca da verilebilir ancak istirahat sonunda personel yetkili hastaneye sevk edilir (m.65/a-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"her sağlık kurulu uçuşa elverişsizlik kararı verebilir\" denir",
+    "Uçuşa elverişsizlik kararını her sağlık kurulu verebilir"
+   ],
+   "dogrusu": [
+    "Yalnız yetkili hastaneler; diğerleri sadece istirahat verir (m.65/a-4)"
+   ]
+  },
+  {
+   "id": "104-11",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Elverişsizlik kararının alınışı",
+   "hukum": "\"Uçuşa (Pilotaja) Elverişsizdir\" veya \"Hava Aracı Kategorisi Değişikliği Uygundur\" kararları ilgili uzmanlık branşından üç uzman tabibin çoğunluk kararıyla alınır; iki kez bu karar verilenlerde nihai kararı, personelin veya kuvvetin talebi üzerine, Sağlık Bakanlığınca oluşturulan ve Askerî Uçuş Tabipliği eğitimi almış bir hekimin de üyesi olduğu kurul verir (m.65/b-1)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki uzman\" ya da \"bir kez\" denir"
+   ],
+   "dogrusu": [
+    "ilgili uzmanlık branşından üç uzman tabibin çoğunluk kararıyla · iki kez · Askerî Uçuş Tabipliği eğitimi almış bir hekimin de üyesi olduğu kurul"
+   ]
+  },
+  {
+   "id": "104-12",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Birlik uçuş tabibinin yetkisi",
+   "hukum": "Uçucunun tıbbi bir nedenle uçmasını sakıncalı gördüğünde yirmi güne kadar uçuş men veya on güne kadar istirahat kararı verebilir; aynı hastalıktan yirmi günden fazla tedavi gören veya istirahat alan uçucular, bitiminde en yakın yetkili hastaneye gönderilir (m.65/c-1)",
+   "sinavda_boyle_yazarlar": [
+    "iki süre yer değiştirilir",
+    "Birlik uçuş tabibi 20 güne kadar istirahat verebilir"
+   ],
+   "dogrusu": [
+    "20 gün uçuş men, 10 gün istirahat (m.65/c-1)"
+   ]
+  },
+  {
+   "id": "104-13",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Kaza kırım sonrası",
+   "hukum": "Küçük kaza kırım geçirenler gerekli görüldüğünde, yaralanma veya uçaktan atlamayla sonuçlanan büyük kaza kırım geçirenler ise zorunlu olarak yetkili hastanelere ve Uçucu Sağlığı Araştırma ve Eğitim Merkezine gönderilir; yalnızca hava aracının zarar gördüğü büyük kaza kırımlar bu kapsamda değerlendirilmez (m.65/c-2)",
+   "sinavda_boyle_yazarlar": [
+    "son cümle atlanır"
+   ],
+   "dogrusu": [
+    "gerekli görüldüğünde · zorunlu olarak · yalnızca hava aracının zarar gördüğü"
+   ]
+  },
+  {
+   "id": "104-14",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Kadın uçucu: hamilelik",
+   "hukum": "Kadın uçucular hamilelik döneminde uçamaz ve fizyolojik eğitime alınmaz; ancak kadın hastalıkları ve doğum uzmanı uygun görürse kategori-3 hava aracı uçucularına gebeliğin 13-24'üncü haftaları arasında uçuş müsaadesi verilir (m.65/d-1)",
+   "sinavda_boyle_yazarlar": [
+    "hafta aralığı veya kategori değiştirilir"
+   ],
+   "dogrusu": [
+    "uçamaz ve fizyolojik eğitime alınmaz · kategori-3 · 13-24'üncü haftaları arasında"
+   ]
+  },
+  {
+   "id": "104-15",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Kadın uçucu: doğum sonrası",
+   "hukum": "Kategori-1 hava aracı pilotu kadın uçucular doğumdan altı ay sonra, kategori-1 haricindeki pilotlar üç ay sonra uçuş için periyodik muayeneye gönderilir; bu süre zarfında uçurulmazlar (m.65/d-1)",
+   "sinavda_boyle_yazarlar": [
+    "iki süre yer değiştirilir",
+    "Kategori-1 kadın pilot doğumdan 3 ay sonra uçabilir"
+   ],
+   "dogrusu": [
+    "6 ay (m.65/d-1)"
+   ]
+  },
+  {
+   "id": "104-16",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Kadın uçucu: diğer kurallar",
+   "hukum": "Menstrüasyon süresince uçamaz; öncesi ve sonrası günlerde uçuş uçuş tabibinin iznine bağlıdır; oral kontraseptife ilk başlarken veya preparat değiştirirken bir hafta uçamaz; kategori-1 hava aracı pilotu kadın uçucular rahim içi araç kullanamaz (m.65/d-2)",
+   "sinavda_boyle_yazarlar": [
+    "bir haftalık kısıt atlanır"
+   ],
+   "dogrusu": [
+    "uçuş tabibinin iznine · bir hafta · kategori-1 hava aracı pilotu kadın uçucular rahim içi araç kullanamaz"
+   ]
+  },
+  {
+   "id": "104-17",
+   "madde": [
+    "66"
+   ],
+   "baslik": "Rapora itiraz",
+   "hukum": "Yetkili hastanelerce verilen raporlara tebliğ tarihinden itibaren otuz gün içinde itiraz edilirse veya rapor onay makamınca yeterli bulunmazsa ya da ihbar yapılırsa uçucu birinci kontrol muayenesi için başka bir yetkili hastaneye gönderilir; kararlar uyuşursa karar kesinleşir, uyuşmazsa üçüncü bir hastaneye gönderilir ve bu merkezin kararı önceki iki karardan hangisine uyuyorsa ona göre işlem yapılır (m.66)",
+   "sinavda_boyle_yazarlar": [
+    "süre 15 gün yapılır ya da \"üçüncü hastanenin kararı tek başına kesindir\" denir",
+    "Rapora itiraz süresi 15 gündür"
+   ],
+   "dogrusu": [
+    "30 gün (m.66)"
+   ]
+  },
+  {
+   "id": "104-18",
+   "madde": [
+    "67"
+   ],
+   "baslik": "Rütbeye göre karar",
+   "hukum": "Uçuş emniyetini ihlal edeceği değerlendirilen hastalıklarda; kıdemli yüzbaşı ve üstü subaylar ile kıdemli üstçavuş ve üstü astsubaylar hakkında \"Uçuşa Elverişli Değildir, Fiilen Uçuşu Gerektirmeyen ... Görev Yerlerinde Görev Yapar\"; daha ast rütbeliler hakkında ise \"Sınıfı/Branşı Görevini Yapamaz, ... Yeniden Sınıflandırılması/Branşının Belirlenmesi Uygundur\" kararı verilir (m.67/1)",
+   "sinavda_boyle_yazarlar": [
+    "rütbe eşiği \"binbaşı\" yapılır"
+   ],
+   "dogrusu": [
+    "kıdemli yüzbaşı ve üstü subaylar ile kıdemli üstçavuş ve üstü astsubaylar · daha ast rütbeliler"
+   ]
+  },
+  {
+   "id": "104-19",
+   "madde": [
+    "67"
+   ],
+   "baslik": "Kategori düşürme",
+   "hukum": "Daha düşük performanslı hava araçlarında risk oluşturmayacak hastalıklarda, raporun karar hanesinde uçuşa elverişli olduğu hava aracı kategorisi belirtilir (m.67/1 son)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğrudan elverişsiz sayılır\" denir"
+   ],
+   "dogrusu": [
+    "uçuşa elverişli olduğu hava aracı kategorisi"
+   ]
+  },
+  {
+   "id": "104-20",
+   "madde": [
+    "68"
+   ],
+   "baslik": "Uçuş ekibi personeli",
+   "hukum": "Uçuş ekibi personeli ile Deniz Kuvvetleri ve SGK taktik koordine subayları hakkında, Hava Kuvvetleri (1) Numaralı Sınıflandırma Çizelgesindeki seyrüsefer sınıfı personelinin sağlık yetenekleri uygulanır (m.68/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"pilot sınıfı\" denir"
+   ],
+   "dogrusu": [
+    "seyrüsefer sınıfı"
+   ]
+  },
+  {
+   "id": "104-21",
+   "madde": [
+    "69"
+   ],
+   "baslik": "Görev ekibi",
+   "hukum": "Görev ekibi; uçağa verilen görevin yapılması için uçakta bulunan, uçağın uçurulmasında doğrudan sorumluluğu olmayan kişilerdir (uçuş tabibi, serbest paraşütçü, uçuş ekibi dışında uçan bakım personeli vb.). Sadece ilk muayeneleri yetkili hastanelerde yapılır; periyodik muayenelere ilaveten her yıl birliklerinde uçuş tabibince muayene edilirler (m.69)",
+   "sinavda_boyle_yazarlar": [
+    "\"her muayenesi yetkili hastanede yapılır\" denir",
+    "Görev ekibinin bütün muayeneleri yetkili hastanede yapılır"
+   ],
+   "dogrusu": [
+    "Sadece ilk muayenesi (m.69/2)"
+   ]
+  },
+  {
+   "id": "104-22",
+   "madde": [
+    "70"
+   ],
+   "baslik": "Hidrazin ve benzeri görevler",
+   "hukum": "Hidrazin, korozyon, akü şarj, yakıt sistemi ve uçak yıkama gibi görevleri yapan personel, göreve ilk başladıklarında ve yılda bir kez yetkili sağlık kuruluşunda muayeneye tabi tutulur (m.70)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki yılda bir\" denir"
+   ],
+   "dogrusu": [
+    "göreve ilk başladıklarında ve yılda bir kez"
+   ]
+  },
+  {
+   "id": "104-23",
+   "madde": [
+    "70"
+   ],
+   "baslik": "İHA personeli",
+   "hukum": "İHA personeli: İHA pilotu, görev komutanı, faydalı yük işletmeni, yer sistem teknisyeni ve bakım/aviyonik teknisyenidir. Aday/ilk muayene esasları dört yıllık uçucu periyodik muayene esaslarıyla aynıdır; İHA pilotu, görev komutanı, faydalı yük işletmeni ve uçuş/yer sistemleri teknisyeninin periyodik muayenesi her üç yılda bir yapılır, ayrıca her yıl uçuş tabibince kontrol edilirler; bakım/aviyonik teknisyenleri kendi kuvvet çizelgesine göre muayene edilir (m.70/A)",
+   "sinavda_boyle_yazarlar": [
+    "periyodik muayene \"her yıl\" veya \"dört yılda bir\" denir",
+    "İHA personeli her yıl yetkili hastanede periyodik muayene olur"
+   ],
+   "dogrusu": [
+    "Üç yılda bir (m.70/A)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

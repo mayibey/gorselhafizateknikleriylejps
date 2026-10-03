@@ -1,0 +1,975 @@
+{
+ "kanun_id": 17,
+ "ad": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_17.json",
+ "kartlar": [
+  {
+   "id": "17-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Yönetmeliğin amacı",
+   "hukum": "Jandarmanın teşkilat, görev, yetki ve sorumluluklarını, diğer makamlarla ilişkilerini, komuta ve kontrol ilişkilerini düzenler (m.1/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"personelin özlük hakları\" amaç içinde gösterilir"
+   ],
+   "dogrusu": [
+    "Yönetmeliğin amacı"
+   ]
+  },
+  {
+   "id": "17-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "2803 sayılı Kanunun 24 üncü maddesi (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "dayanak madde 25 veya 26 diye verilir"
+   ],
+   "dogrusu": [
+    "Dayanak"
+   ]
+  },
+  {
+   "id": "17-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Mülki amir tanımı",
+   "hukum": "İllerde vali, ilçelerde kaymakam (m.3/1-l)",
+   "sinavda_boyle_yazarlar": [
+    "\"illerde vali yardımcısı\" veya \"bölge komutanı\" denir"
+   ],
+   "dogrusu": [
+    "Mülki amir tanımı"
+   ]
+  },
+  {
+   "id": "17-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Genel kolluk tanımı",
+   "hukum": "Bakanlığa bağlı jandarma, sahil güvenlik ve polis (m.3/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "özel güvenlik ya da bekçiler genel kolluk sayılır"
+   ],
+   "dogrusu": [
+    "Genel kolluk tanımı"
+   ]
+  },
+  {
+   "id": "17-4",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kamu düzeni tanımı",
+   "hukum": "Emniyet ve asayiş, huzur ve sükûn, genel sağlık ve genel ahlak unsurlarından oluşur (m.3/1-i)",
+   "sinavda_boyle_yazarlar": [
+    "unsurlardan biri çıkarılır ya da \"ekonomik istikrar\" eklenir"
+   ],
+   "dogrusu": [
+    "Kamu düzeni tanımı"
+   ]
+  },
+  {
+   "id": "17-5",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Kapalı yerler tanımı",
+   "hukum": "Konut, işyeri ve eklentileri ile zilyedin rızası olmadıkça girilmemesi gerektiğini belirtir şekilde çit, parmaklık, duvarla çevrili yerler (m.3/1-j)",
+   "sinavda_boyle_yazarlar": [
+    "etrafı çevrili olmayan açık araziler de kapalı yer sayılır"
+   ],
+   "dogrusu": [
+    "Kapalı yerler tanımı"
+   ]
+  },
+  {
+   "id": "17-6",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Jandarma hizmet merkezi",
+   "hukum": "İhtiyaç üzerine mülki amirin onayı ile geçici olarak teşkil edilen jandarma birimi (m.3/1-ğ)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bakan onayı ile daimi olarak\" denir"
+   ],
+   "dogrusu": [
+    "Jandarma hizmet merkezi"
+   ]
+  },
+  {
+   "id": "17-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bağlılık",
+   "hukum": "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır; Genel Komutan Bakana karşı sorumludur (m.4/1)",
+   "sinavda_boyle_yazarlar": [
+    "Genelkurmay Başkanlığına ya da Cumhurbaşkanlığına bağlı gösterilir"
+   ],
+   "dogrusu": [
+    "Bağlılık"
+   ]
+  },
+  {
+   "id": "17-8",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Teşkilat",
+   "hukum": "Merkez teşkilatı, taşra teşkilatı ve doğrudan merkeze bağlı birimlerden oluşur (m.5/1)",
+   "sinavda_boyle_yazarlar": [
+    "jandarma bölge/il/ilçe komutanlıkları \"merkez teşkilatı\" diye verilir; oysa taşradır"
+   ],
+   "dogrusu": [
+    "Teşkilat"
+   ]
+  },
+  {
+   "id": "17-9",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Birlik kurma",
+   "hukum": "Her düzeydeki jandarma birlikleri Bakan onayı ile kurulur; konuşlanmada mülki taksimat esas alınır (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"vali onayı ile\" veya \"askeri taksimat esas alınır\" denir"
+   ],
+   "dogrusu": [
+    "Birlik kurma"
+   ]
+  },
+  {
+   "id": "17-10",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Bölge komutanlığı",
+   "hukum": "Geçici olarak birden çok ili içine alan bölge komutanlığı kurulabilir; bölge komutanı konuşlu olduğu ilin valisine karşı sorumludur (m.6/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Genel Komutana karşı sorumludur\" denir"
+   ],
+   "dogrusu": [
+    "Bölge komutanlığı"
+   ]
+  },
+  {
+   "id": "17-11",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Karakol sorumluluk bölgesi ölçütleri",
+   "hukum": "Emniyet ve asayiş durumu, suç oranları/suç haritaları, coğrafi durum ve ekonomik şartlar, yerleşim alanlarının durumu, nüfus yoğunluğu, ulaşım durumu, sosyal-kültürel gelişim (m.6/5)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"karakoldaki personel sayısı\" eklenir — bu ölçüt değildir"
+   ],
+   "dogrusu": [
+    "Emniyet ve asayiş durumu …"
+   ]
+  },
+  {
+   "id": "17-12",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Karakol onayları",
+   "hukum": "Karakolun sorumluluk bölgesi il jandarma komutanının önerisi üzerine valinin onayıyla, konuş yeri ise Bakan onayıyla belirlenir (m.6/7)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi de vali ya da ikisi de Bakan gösterilir"
+   ],
+   "dogrusu": [
+    "Karakol onayları"
+   ]
+  },
+  {
+   "id": "17-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Görev alanı",
+   "hukum": "Jandarmanın alanı polis ve sahil güvenliğin görev alanı dışı, yani belediye sınırları dışı ya da polis/sahil güvenlik bulunmayan yerlerdir; Bakanın kararıyla bir il veya ilçenin tamamı polis ya da jandarma alanı yapılabilir (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "tamamını belirleme yetkisi Cumhurbaşkanına ya da valiye verilir"
+   ],
+   "dogrusu": [
+    "Jandarmanın alanı polis ve sahil güvenliğin görev alanı dışı …"
+   ]
+  },
+  {
+   "id": "17-14",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Görev sınırı",
+   "hukum": "Görevler üçe ayrılır: mülki, adli ve askeri görevler (m.8/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"idari görev\", \"istihbari görev\" dördüncü tür olarak eklenir"
+   ],
+   "dogrusu": [
+    "Görev sınırı"
+   ]
+  },
+  {
+   "id": "17-15",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Görev istenemez ilkesi",
+   "hukum": "Mevzuatta ve yetkili makam emirlerinde öngörülmeyen hiçbir görev jandarmadan istenemez (m.8/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"mülki amir gerekli gördüğü her görevi verebilir\" denir"
+   ],
+   "dogrusu": [
+    "Görev istenemez ilkesi"
+   ]
+  },
+  {
+   "id": "17-16",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Görev alanı sayılan haller",
+   "hukum": "Polis teşkilatı kurulmamışsa, özel kolluk alanında jandarmayı ilgilendiren suç işlenmişse veya özel kolluğun yokluğundan suç doğmuşsa jandarma elkoyabilir; görev yaptığı o yer görev alanı sayılır (m.9/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"kendiliğinden elkoyamaz, mutlaka görevlendirme gerekir\" denir"
+   ],
+   "dogrusu": [
+    "Polis teşkilatı kurulmamışsa …"
+   ]
+  },
+  {
+   "id": "17-17",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sorumluluk alanı komisyonu",
+   "hukum": "Sınırlar; ilçede kaymakam, ilde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin komisyonunca belirlenir, kararlar İçişleri Bakanının onayıyla yürürlüğe girer (m.10/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "onay makamı \"mülki amir\" olarak bırakılır (2019'da değişti)"
+   ],
+   "dogrusu": [
+    "Sınırlar …"
+   ]
+  },
+  {
+   "id": "17-18",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Sınır anlaşmazlığı",
+   "hukum": "Sorumluluk alanı sınırlarında kolluk birimleri arasındaki anlaşmazlığı mülki amir kesin olarak çözer (m.10/4)",
+   "sinavda_boyle_yazarlar": [
+    "sulh ceza hâkimi, savcı veya garnizon komutanı gösterilir"
+   ],
+   "dogrusu": [
+    "Sınır anlaşmazlığı"
+   ]
+  },
+  {
+   "id": "17-19",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Mülki görevlerin esasları",
+   "hukum": "Can, ırz ve malı korumak; kamu düzenini sağlamak; ceza infaz kurumlarının dış korumasını sağlamak; kaçakçılığa engel olmak; trafik hizmetlerini yürütmek (m.11/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ceza infaz kurumlarının iç güvenliği\" görevler arasına sokulur"
+   ],
+   "dogrusu": [
+    "Mülki görevlerin esasları"
+   ]
+  },
+  {
+   "id": "17-20",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Kişisel koruma",
+   "hukum": "Esas olan genel ve koruyucu önlemdir; kişisel koruma ancak özel hüküm varsa veya özel nitelikli durumda yetkili mülki amirin emriyle yapılır (m.13/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"talep eden herkese kişisel koruma verilir\" denir"
+   ],
+   "dogrusu": [
+    "Kişisel koruma"
+   ]
+  },
+  {
+   "id": "17-21",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Olağanüstü durumlar",
+   "hukum": "Yangın, sel, deprem, toprak kayması, çığ gibi olaylarda amirlere ve ilgili kamu görevlilerine haber verilir, olay yerine gidilir; tutanağın bir örneği mülki amire, bir örneği Cumhuriyet savcılığına verilir (m.14/1)",
+   "sinavda_boyle_yazarlar": [
+    "tutanak yalnız mülki amire verilir denir"
+   ],
+   "dogrusu": [
+    "Yangın …"
+   ]
+  },
+  {
+   "id": "17-22",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Kuduz ve akıl hastası sevki",
+   "hukum": "Kuduz hayvanlar ve ısırılanlar ivedilikle sağlık kuruluşlarına bildirilir; polis teşkilatı olmayan yerlerde saldırı ihtimali olan akıl hastalarının sevki, yalnız saldırıya engel olmak amacıyla jandarmaca yapılır (m.15/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"jandarma sevkten sorumludur\" denir; oysa sevkten sorumlu değildir"
+   ],
+   "dogrusu": [
+    "Kuduz hayvanlar ve ısırılanlar ivedilikle sağlık kuruluşlarına bildirilir …"
+   ]
+  },
+  {
+   "id": "17-23",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Konut dokunulmazlığı",
+   "hukum": "Özel hayatın ve aile hayatının gizliliğini korumak, konut dokunulmazlığına ilişkin görevler başlığı altındadır (m.16/1-c)",
+   "sinavda_boyle_yazarlar": [
+    "bu yükümlülük \"hak ve hürriyetlerin korunması\" görevine bağlanır"
+   ],
+   "dogrusu": [
+    "Konut dokunulmazlığı"
+   ]
+  },
+  {
+   "id": "17-24",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Umuma açık yer ruhsatı",
+   "hukum": "Jandarma sorumluluk alanında ruhsatı belediye/mücavir alan içinde belediyeler, dışında il özel idaresi verir; jandarma görüşünü genel güvenlik ve asayiş açısından yedi gün içinde bildirir (m.19/3)",
+   "sinavda_boyle_yazarlar": [
+    "ruhsatı jandarmanın verdiği ya da sürenin on beş gün olduğu söylenir"
+   ],
+   "dogrusu": [
+    "Jandarma sorumluluk alanında ruhsatı belediye/mücavir alan içinde belediyeler …"
+   ]
+  },
+  {
+   "id": "17-25",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Gürültü",
+   "hukum": "Mesken içinde ve dışında saat yirmi dörtten sonra civar halkının rahat ve huzurunu bozacak gürültü jandarmaca menolunur (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "saat 22.00 veya 23.00 verilir"
+   ],
+   "dogrusu": [
+    "Gürültü"
+   ]
+  },
+  {
+   "id": "17-26",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Toplanma bildirimi",
+   "hukum": "Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır (m.21/2)",
+   "sinavda_boyle_yazarlar": [
+    "süre yirmi dört ya da yetkili makam jandarma komutanlığı gösterilir"
+   ],
+   "dogrusu": [
+    "Toplanma bildirimi"
+   ]
+  },
+  {
+   "id": "17-27",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Ceza infaz kurumu dış koruma",
+   "hukum": "Dış koruma jandarmaya aittir; jandarma hiçbir şekilde iç işlerde ve infaz koruma memurluğu görevinde kullanılamaz; tutuklu ve hükümlülerle görüşmesi yasaktır (m.24/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"gerekli görülen hâllerde iç işlerde görevlendirilir\" denir"
+   ],
+   "dogrusu": [
+    "Ceza infaz kurumu dış koruma"
+   ]
+  },
+  {
+   "id": "17-28",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Kargaşaya müdahale",
+   "hukum": "İçeride bastırılamayacak genel hareket ve kargaşada, kurum müdürü/vekili veya infaz koruma memurlarının başvurusu üzerine jandarma müdahale eder (m.24/2)",
+   "sinavda_boyle_yazarlar": [
+    "jandarmanın resen ya da savcı emriyle girebileceği söylenir"
+   ],
+   "dogrusu": [
+    "Kargaşaya müdahale"
+   ]
+  },
+  {
+   "id": "17-29",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Sevk aracı",
+   "hukum": "Sevkte esas, ceza infaz kurumu araçlarıdır; yoksa önce kamuya ait kitle ulaşım araçları kullanılır, jandarmaya ait hizmet araçları sevklerde kullanılmaz (m.27/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"öncelikle jandarma araçları kullanılır\" denir"
+   ],
+   "dogrusu": [
+    "Sevk aracı"
+   ]
+  },
+  {
+   "id": "17-30",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Kadın-erkek sevki",
+   "hukum": "İştirak hâlinde suç işleyenler ve kanunen önemli ilişki sayılacak yakınlığı olanlar dışında kadın ve erkek tutuklu/hükümlüler birlikte sevk edilemez; kadın sevk edilirken kadın ceza infaz koruma görevlisi verilir (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "istisnalar kaldırılıp \"hiçbir şekilde birlikte sevk edilemez\" denir"
+   ],
+   "dogrusu": [
+    "İştirak hâlinde suç işleyenler ve kanunen önemli ilişki sayılacak yakınlığı olanlar dışında kadın ve erkek tutuklu/hükümlüler birlikte sevk edilemez …"
+   ]
+  },
+  {
+   "id": "17-31",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Sevkte silah kullanma",
+   "hukum": "Firar hazırlığı kuşkusunda devriye komutanı silah kullanılacağını ihtar eder; ihtara uymayıp firara teşebbüste başka şekilde önlenemiyorsa silah kullanılır (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ihtara gerek olmadan\" veya \"ihtar sonrası derhal\" denir"
+   ],
+   "dogrusu": [
+    "Sevkte silah kullanma"
+   ]
+  },
+  {
+   "id": "17-32",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Adli görevlerde emir",
+   "hukum": "Soruşturma işlemleri Cumhuriyet savcısının emir ve talimatı doğrultusunda adli kolluğa yaptırılır; adli kolluk, adli görev dışındaki hizmetlerde üstlerinin emrindedir (m.38/2)",
+   "sinavda_boyle_yazarlar": [
+    "adli kolluğun her işte savcıya bağlı olduğu söylenir"
+   ],
+   "dogrusu": [
+    "Soruşturma işlemleri Cumhuriyet savcısının emir ve talimatı doğrultusunda adli kolluğa yaptırılır …"
+   ]
+  },
+  {
+   "id": "17-33",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Askeri görev",
+   "hukum": "Seferberlik ve savaşta Bakanlar Kurulu kararıyla belirlenen bölümle kuvvet komutanlıkları emrine girilir; ayrıca Genelkurmay Başkanlığının talebi üzerine Bakanın, illerde garnizon komutanının talebi hâlinde valinin onayıyla askeri görev yapılır (m.41)",
+   "sinavda_boyle_yazarlar": [
+    "illerde onay makamı garnizon komutanı gösterilir; oysa talep onda, onay validedir"
+   ],
+   "dogrusu": [
+    "Seferberlik ve savaşta Bakanlar Kurulu kararıyla belirlenen bölümle kuvvet komutanlıkları emrine girilir …"
+   ]
+  },
+  {
+   "id": "17-34",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Polis yetkileri",
+   "hukum": "Jandarma mülki ve adli görevlerinde 2803, 2559 ve 5271 sayılı Kanunlara göre hareket eder ve polisin sahip olduğu yetki ve sorumluluklara sahiptir (m.42/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"polisin yetkilerini kullanamaz, yalnız 2803'e tabidir\" denir"
+   ],
+   "dogrusu": [
+    "Polis yetkileri"
+   ]
+  },
+  {
+   "id": "17-35",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Hukuka aykırı emir",
+   "hukum": "Aykırı görülen emir yerine getirilmez, aykırılık emri verene bildirilir; amir yazılı olarak ısrar ederse emir yerine getirilir ve yerine getiren sorumlu olmaz; konusu suç teşkil eden emir hiçbir suretle yerine getirilmez (m.42/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yazılı tekrarda suç teşkil eden emir de yerine getirilir\" denir"
+   ],
+   "dogrusu": [
+    "Aykırı görülen emir yerine getirilmez …"
+   ]
+  },
+  {
+   "id": "17-36",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Yazılı istenemeyen sözlü emirler",
+   "hukum": "m.42/2'de sayılan hâllerde (can-ırz-mal emniyeti, kaçanın yakalanması, kanunsuz toplantının dağıtılması, yolun trafiğe açılması vb.) yetkili amirin sözlü emri derhal yerine getirilir, yazılı verilmesi istenemez, sorumluluk emri verene aittir (m.42/2-j)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde yazılı emir istenebilir\" veya \"sorumluluk emri uygulayana aittir\" denir"
+   ],
+   "dogrusu": [
+    "m.42/2'de sayılan hâllerde (can-ırz-mal emniyeti …"
+   ]
+  },
+  {
+   "id": "17-37",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Onsekiz yaş yasağı",
+   "hukum": "Bar, pavyon, gazino, meyhane gibi içkili yerler ile kıraathane, internet salonu ve oyun oynatılan yerlere veli ve vasileri yanında olsa bile onsekiz yaşını doldurmamış küçüklerin girmesi engellenir (m.45/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"veli yanındaysa girebilir\" istisnası uydurulur"
+   ],
+   "dogrusu": [
+    "Bar …"
+   ]
+  },
+  {
+   "id": "17-38",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Durdurma yetkisi",
+   "hukum": "Suç/kabahat önlemek, kaçan failleri yakalamak, yakalama emri veya zorla getirme kararı olanları tespit etmek, mevcut veya muhtemel tehlikeyi önlemek amacıyla kişi ve araç durdurulabilir (m.46/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"kimlik tespiti için sebep aranmaksızın herkes durdurulur\" denir"
+   ],
+   "dogrusu": [
+    "Suç/kabahat önlemek …"
+   ]
+  },
+  {
+   "id": "17-39",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Makul sebep ve süre",
+   "hukum": "Durdurma için jandarmanın tecrübesine ve edindiği izlenime dayanan makul sebep gerekir; süreklilik arz edecek ve keyfilik oluşturacak durdurma yapılamaz, süre işlemin zorunlu kıldığı süreyi aşamaz (m.46/2, m.46/4)",
+   "sinavda_boyle_yazarlar": [
+    "süre \"en çok yirmi dört saat\" gibi sabit bir rakamla verilir"
+   ],
+   "dogrusu": [
+    "Durdurma için jandarmanın tecrübesine ve edindiği izlenime dayanan makul sebep gerekir …"
+   ]
+  },
+  {
+   "id": "17-40",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Durdurulanda arama sınırı",
+   "hukum": "Silah/tehlikeli eşya şüphesinde tedbir alınabilir; elbisenin çıkarılması veya aracın içi görünmeyen bölümlerinin açılması istenemez; el ile dıştan kontrol hariç arama, mülki amirin görevlendireceği kolluk amirinin yazılı (acelede sonradan teyit edilen sözlü) emriyle yapılır ve karar yirmidört saat içinde hâkim onayına sunulur (m.46/6)",
+   "sinavda_boyle_yazarlar": [
+    "onay süresi kırk sekiz saat ya da onay makamı savcı gösterilir"
+   ],
+   "dogrusu": [
+    "Silah/tehlikeli eşya şüphesinde tedbir alınabilir …"
+   ]
+  },
+  {
+   "id": "17-41",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Kimliği belirlenemeyen kişi",
+   "hukum": "Kimliği sair surette de belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir (m.46/9)",
+   "sinavda_boyle_yazarlar": [
+    "\"mülki amire bildirilir\" ya da \"serbest bırakılır\" denir"
+   ],
+   "dogrusu": [
+    "Kimliği belirlenemeyen kişi"
+   ]
+  },
+  {
+   "id": "17-42",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Önleme araması kararı",
+   "hukum": "Sulh ceza hâkiminin kararı; gecikmesinde sakınca bulunan hâllerde mülki amirin yazılı emri gerekir (m.47/1)",
+   "sinavda_boyle_yazarlar": [
+    "yazılı emri veren makam savcı veya il jandarma komutanı gösterilir"
+   ],
+   "dogrusu": [
+    "Önleme araması kararı"
+   ]
+  },
+  {
+   "id": "17-43",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Arama kararının içeriği",
+   "hukum": "Kararda/emirde sebebi, konusu ve kapsamı, yapılacağı yer, yapılacağı zaman ve geçerli olacağı süre belirtilir (m.47/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"aramayı yapacak personelin adı ve soyadı\" listeye eklenir — yoktur"
+   ],
+   "dogrusu": [
+    "Arama kararının içeriği"
+   ]
+  },
+  {
+   "id": "17-44",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Önleme araması yerleri",
+   "hukum": "Toplantı ve gösteri yürüyüşü yerleri ve yakın çevresi, halkın topluca bulunduğu yerler, umumi veya umuma açık yerler, her türlü toplu taşıma aracı ve seyir hâlindeki taşıtlar (m.47/4); konutta, yerleşim yerinde, kamuya açık olmayan işyeri ve eklentilerinde önleme araması yapılamaz (m.47/5)",
+   "sinavda_boyle_yazarlar": [
+    "konut veya kapalı işyeri eklentisi izin verilen yerler arasına sokulur"
+   ],
+   "dogrusu": [
+    "Toplantı ve gösteri yürüyüşü yerleri ve yakın çevresi …"
+   ]
+  },
+  {
+   "id": "17-45",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Gecikmesinde sakınca karinesi",
+   "hukum": "Spor karşılaşması, miting, konser, festival, toplantı ve gösteri yürüyüşünde veya aniden topluluk oluşmasında gecikmesinde sakınca bulunan hâl var sayılır (m.47/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde hâkim kararı şarttır\" denir"
+   ],
+   "dogrusu": [
+    "Gecikmesinde sakınca karinesi"
+   ]
+  },
+  {
+   "id": "17-46",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Korunan bina girişi",
+   "hukum": "Jandarmanın güvenliğini sağladığı bina ve tesislere gelenlerin üstü, aracı ve eşyası herhangi bir emir veya karar olmaksızın teknik cihazla, gerektiğinde elle aranabilir; girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır (m.47/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"bu aramalar için de mülki amir emri gerekir\" denir"
+   ],
+   "dogrusu": [
+    "Jandarmanın güvenliğini sağladığı bina ve tesislere gelenlerin üstü …"
+   ]
+  },
+  {
+   "id": "17-47",
+   "madde": [
+    "48"
+   ],
+   "baslik": "Kapalı yere girme",
+   "hukum": "İmdat istenmesi, yangın, su baskını, boğulma gibi büyük tehlikelerde kişileri kurtarmak için ve bir suçun işlenmesine veya devamına engel olmak için konutlara, işyerlerine ve eklentilerine girilebilir (m.48/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde hâkim kararı gerekir\" ya da \"sadece savcı emriyle\" denir"
+   ],
+   "dogrusu": [
+    "İmdat istenmesi …"
+   ]
+  },
+  {
+   "id": "17-48",
+   "madde": [
+    "52",
+    "58"
+   ],
+   "baslik": "Jandarma Genel Komutanı sorumluluğu",
+   "hukum": "Teşkilatın sevk ve idaresinden, mevzuatın yürütülmesinden Bakana karşı sorumludur (m.52/3, m.58/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"valilere karşı sorumludur\" denir"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanı sorumluluğu"
+   ]
+  },
+  {
+   "id": "17-49",
+   "madde": [
+    "54"
+   ],
+   "baslik": "Bölge komutanının görevi",
+   "hukum": "İl jandarma komutanlıkları arasında koordinasyon ve işbirliği, lojistik/teknik destek planlaması, personelin özlük işlemleri; konuşlu olduğu ilin valisinin onayıyla terörle mücadele operasyonlarını planlamak ve iller arası kuvvet kaydırması yapmak (m.54/1)",
+   "sinavda_boyle_yazarlar": [
+    "bu görevler il jandarma komutanına ya da Genel Komutana bağlanır"
+   ],
+   "dogrusu": [
+    "İl jandarma komutanlıkları arasında koordinasyon ve işbirliği …"
+   ]
+  },
+  {
+   "id": "17-50",
+   "madde": [
+    "57"
+   ],
+   "baslik": "Karakol komutanının görevleri",
+   "hukum": "Tedbir ve kararları uygulamak, öneride bulunmak, adli görevleri ifa etmek, denetlemek, ilçe jandarma komutanınca verilen görevleri takip etmek, astlarını yetiştirmek, disiplini sağlamak, personelin özlük işlemlerini yürütmek (m.57/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"ihtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak\" karakol komutanına yüklenir — bu görev il ve ilçe komutanındadır (m.55/2-g, m.56/2-ğ)"
+   ],
+   "dogrusu": [
+    "Tedbir ve kararları uygulamak …"
+   ]
+  },
+  {
+   "id": "17-51",
+   "madde": [
+    "58"
+   ],
+   "baslik": "Bağlılık zinciri",
+   "hukum": "Bakan jandarma teşkilatının en üst amiridir; bölge komutanları konuşlu olduğu ilin valisine, il ve ilçe jandarma komutanları mülki amirlere bağlı ve sorumlu olarak görev yapar (m.58/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "il jandarma komutanının yalnızca bölge komutanına bağlı olduğu söylenir"
+   ],
+   "dogrusu": [
+    "Bakan jandarma teşkilatının en üst amiridir …"
+   ]
+  },
+  {
+   "id": "17-52",
+   "madde": [
+    "58"
+   ],
+   "baslik": "Doğrudan emir yetkisi",
+   "hukum": "Mülki amirler ile adli makamlar jandarma personeline doğrudan emir verebilir; diğer makamlar kanuni dayanağını belirterek mülki amire başvurur (m.58/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"her kamu kurumu jandarmaya doğrudan görev verebilir\" denir"
+   ],
+   "dogrusu": [
+    "Doğrudan emir yetkisi"
+   ]
+  },
+  {
+   "id": "17-53",
+   "madde": [
+    "58"
+   ],
+   "baslik": "Araç gereç seçimi",
+   "hukum": "Görevde kullanılacak araç ve gerecin seçimi jandarma komutanlarına aittir; mülki amir yetersizlikte diğer kurumlardan sağlayıp jandarmanın hizmetine verebilir (m.58/7)",
+   "sinavda_boyle_yazarlar": [
+    "seçim yetkisi mülki amire verilir"
+   ],
+   "dogrusu": [
+    "Araç gereç seçimi"
+   ]
+  },
+  {
+   "id": "17-54",
+   "madde": [
+    "59"
+   ],
+   "baslik": "Olay bildirimi",
+   "hukum": "Suçlar, asayişi bozan olaylar, afetler, salgın hastalıklar ve bölücü propagandalar vakit geçirmeksizin mülki amire sözlü ya da yazılı bildirilir; suçla ilgili olanlar ayrıca Cumhuriyet savcılığına bildirilir (m.59/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız savcılığa\" ya da \"yazılı olmak zorunda\" denir"
+   ],
+   "dogrusu": [
+    "Suçlar …"
+   ]
+  },
+  {
+   "id": "17-55",
+   "madde": [
+    "60"
+   ],
+   "baslik": "Yazışma kanalı",
+   "hukum": "Merkez ve taşra teşkilatı mahalli vaka bilgisi, teknik, muhasebe, lojistik ve özlük konuları dışında resen muhabere edemez; yazışmalar Bakanlık ve mülki amirler aracılığıyla, hak-yükümlülük doğuranlar her hâlükârda valilikler aracılığıyla yapılır (m.60/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüm yazışmalar doğrudan yapılır\" denir"
+   ],
+   "dogrusu": [
+    "Merkez ve taşra teşkilatı mahalli vaka bilgisi …"
+   ]
+  },
+  {
+   "id": "17-56",
+   "madde": [
+    "60"
+   ],
+   "baslik": "Asayiş raporu ve istatistik",
+   "hukum": "Jandarma alanındaki olaylara ait asayiş raporları il jandarma komutanlığınca hazırlanır, vali imzasıyla gönderilir; istatistikler beş örnek olarak birleştirilir, iki örneği vali imzasıyla Bakanlığa sunulur (m.60/4-5)",
+   "sinavda_boyle_yazarlar": [
+    "raporun jandarma komutanı imzasıyla gönderildiği söylenir"
+   ],
+   "dogrusu": [
+    "Jandarma alanındaki olaylara ait asayiş raporları il jandarma komutanlığınca hazırlanır …"
+   ]
+  },
+  {
+   "id": "17-57",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Polis/sahil güvenlikle ilişki",
+   "hukum": "Jandarma alanındaki suçla karşılaşan polis veya sahil güvenlik olaya müdahale eder, jandarmaya haber verir, jandarma gelene kadar soruşturma yapamaz, delilleri korur; makul sürede gelinmezse savcıya haber verilir (m.65/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"polis soruşturmayı tamamlar\" denir"
+   ],
+   "dogrusu": [
+    "Jandarma alanındaki suçla karşılaşan polis veya sahil güvenlik olaya müdahale eder …"
+   ]
+  },
+  {
+   "id": "17-58",
+   "madde": [
+    "65"
+   ],
+   "baslik": "Müşterek operasyonun komutası",
+   "hukum": "Jandarma, sahil güvenlik ve polisin birlikte çalıştığı operasyonda komuta, sevk ve idarenin hangi kolluğa ait olduğunu mülki amir belirler (m.65/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"en kıdemli komutan belirler\" denir"
+   ],
+   "dogrusu": [
+    "Müşterek operasyonun komutası"
+   ]
+  },
+  {
+   "id": "17-59",
+   "madde": [
+    "67"
+   ],
+   "baslik": "Denetim",
+   "hukum": "Bakan her kademedeki jandarma birimini denetler veya Bakan adına Mülkiye Teftiş Kurulu Başkanlığı yapar; bu denetim illerde vali, ilçelerde kaymakam tarafından yapılır (m.67/1)",
+   "sinavda_boyle_yazarlar": [
+    "denetim yalnızca Genel Komutana bırakılır"
+   ],
+   "dogrusu": [
+    "Bakan her kademedeki jandarma birimini denetler veya Bakan adına Mülkiye Teftiş Kurulu Başkanlığı yapar …"
+   ]
+  },
+  {
+   "id": "17-60",
+   "madde": [
+    "70"
+   ],
+   "baslik": "Kılık kıyafet",
+   "hukum": "Esas resmi kıyafetle görev yapmaktır; suç ve suçluların gizli takibi, istihbarat, kaçakçılık ve terörle mücadelede mülki amirin veya il jandarma komutanının izniyle farklı kılık kıyafetle hizmet yürütülebilir (m.70/1)",
+   "sinavda_boyle_yazarlar": [
+    "izin yetkisi yalnız mülki amire ya da yalnız Genel Komutanlığa bağlanır"
+   ],
+   "dogrusu": [
+    "Esas resmi kıyafetle görev yapmaktır …"
+   ]
+  },
+  {
+   "id": "17-61",
+   "madde": [
+    "71"
+   ],
+   "baslik": "Geçici görevlendirme",
+   "hukum": "Jandarma, sahil güvenlik ve emniyet yetersiz kaldığında geçici süre birbirinin alanında görevlendirilebilir; görev süreklilik taşımaz ve görevlendirme mülki amirin onayı ile yapılır (m.71)",
+   "sinavda_boyle_yazarlar": [
+    "görevlendirmenin kurum amirlerince yapıldığı söylenir"
+   ],
+   "dogrusu": [
+    "Jandarma …"
+   ]
+  },
+  {
+   "id": "17-62",
+   "madde": [
+    "72"
+   ],
+   "baslik": "İller arası ekip",
+   "hukum": "Önemli olaylarda Bakanlıkça doğrudan veya valinin talebiyle ekip görevlendirilebilir; ekiplerin kolluk yetkisi jandarma sorumluluk alanıyla sınırlı değildir, mahallin mülki amirine bilgi verir ve ona karşı da sorumludur (m.72)",
+   "sinavda_boyle_yazarlar": [
+    "\"yetkileri yalnız jandarma alanıyla sınırlıdır\" denir"
+   ],
+   "dogrusu": [
+    "Önemli olaylarda Bakanlıkça doğrudan veya valinin talebiyle ekip görevlendirilebilir …"
+   ]
+  },
+  {
+   "id": "17-63",
+   "madde": [
+    "73"
+   ],
+   "baslik": "Tahsis ve devir",
+   "hukum": "JGK, SGK ve EGM silah, mühimmat, taşıt ve taşınmazlarını Bakan onayı ile birbirine geçici tahsis edebilir veya bedelsiz devredebilir (m.73/1)",
+   "sinavda_boyle_yazarlar": [
+    "onay makamı Genel Komutan veya vali gösterilir"
+   ],
+   "dogrusu": [
+    "Tahsis ve devir"
+   ]
+  },
+  {
+   "id": "17-64",
+   "madde": [
+    "74"
+   ],
+   "baslik": "Yoklama kaçağı ve bakaya",
+   "hukum": "Yakalanarak muhafaza altına alınan yükümlüler vakit geçirmeksizin ve en geç yirmidört saat içinde en yakın askerlik şubesine getirilir; şubece teslim alınamayanlar tutanağa istinaden derhal serbest bırakılır (m.74/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre kırk sekiz saat verilir ya da \"serbest bırakılmaz, nezarete konur\" denir"
+   ],
+   "dogrusu": [
+    "Yakalanarak muhafaza altına alınan yükümlüler vakit geçirmeksizin ve en geç yirmidört saat içinde en yakın askerlik şubesine getirilir …"
+   ]
+  },
+  {
+   "id": "17-65",
+   "madde": [
+    "75"
+   ],
+   "baslik": "Emniyet ve asayiş planları",
+   "hukum": "Suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekat planı hazırlanır; planlar mülki amirin onayı ile yürürlüğe girer (m.75)",
+   "sinavda_boyle_yazarlar": [
+    "planların Bakan onayıyla yürürlüğe girdiği söylenir"
+   ],
+   "dogrusu": [
+    "Suçları önleme ve suçlara müdahale planı …"
+   ]
+  },
+  {
+   "id": "17-66",
+   "madde": [
+    "76"
+   ],
+   "baslik": "Stratejik hedef planı",
+   "hukum": "Beş yıllık dönemi kapsar, Bakan onayı ile yürürlüğe konur, en az iki yılda bir gözden geçirilir (m.76/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre üç yıl ya da onay makamı Cumhurbaşkanı verilir"
+   ],
+   "dogrusu": [
+    "Stratejik hedef planı"
+   ]
+  },
+  {
+   "id": "17-67",
+   "madde": [
+    "77"
+   ],
+   "baslik": "Tebligat",
+   "hukum": "Tebligat 7201 sayılı Kanuna göre yapılır; mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez (m.77/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"mülki amirin uygun gördüğü her tebligat yapılır\" denir"
+   ],
+   "dogrusu": [
+    "Tebligat"
+   ]
+  },
+  {
+   "id": "17-68",
+   "madde": [
+    "82"
+   ],
+   "baslik": "Yürütme",
+   "hukum": "Yönetmelik hükümlerini Cumhurbaşkanı yürütür (m.82/1)",
+   "sinavda_boyle_yazarlar": [
+    "İçişleri Bakanı yürütür denir (2019 değişikliği öncesi hâli)"
+   ],
+   "dogrusu": [
+    "Yürütme"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,905 @@
+{
+ "kanun_id": 22,
+ "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_22.json",
+ "kartlar": [
+  {
+   "id": "22-0",
+   "madde": [
+    "52"
+   ],
+   "baslik": "Görevden uzaklaştırma yetkilileri",
+   "hukum": "Atamaya yetkili amirler, Bakanlık müfettişleri, illerde valiler, ilçelerde kaymakamlar (m.52/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye belediye başkanı, garnizon komutanı veya Cumhuriyet savcısı eklenir"
+   ],
+   "dogrusu": [
+    "Görevden uzaklaştırma yetkilileri"
+   ]
+  },
+  {
+   "id": "22-1",
+   "madde": [
+    "51"
+   ],
+   "baslik": "Görevden uzaklaştırmanın niteliği",
+   "hukum": "Görevi başında kalmasında sakınca görülen personel hakkında alınan ihtiyati bir tedbirdir; usulde 657'ye uyulur (m.51/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"disiplin cezasıdır\" denir"
+   ],
+   "dogrusu": [
+    "Görevden uzaklaştırmanın niteliği"
+   ]
+  },
+  {
+   "id": "22-2",
+   "madde": [
+    "52"
+   ],
+   "baslik": "Vali/kaymakam tedbiri bildirimi",
+   "hukum": "Valiler ve kaymakamların aldığı görevden uzaklaştırma tedbiri personelin kurumuna derhal bildirilir (m.52/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"onbeş gün içinde bildirilir\" denir"
+   ],
+   "dogrusu": [
+    "Vali/kaymakam tedbiri bildirimi"
+   ]
+  },
+  {
+   "id": "22-3",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Genel kolluk arası geçici görevlendirme",
+   "hukum": "Lüzum görülen hâllerde EGM, SGK ve JGK arasında her kademedeki personeli geçici görevlendirmeye Bakan (İçişleri Bakanı) yetkilidir; bu yetkisini il valilerine devredebilir (m.16/1)",
+   "sinavda_boyle_yazarlar": [
+    "yetkili olarak Genelkurmay Başkanı, MSB veya Cumhurbaşkanı gösterilir; yetki devri \"kaymakamlara\" denir"
+   ],
+   "dogrusu": [
+    "Lüzum görülen hâllerde EGM, SGK ve JGK arasında her kademedeki personeli geçici görevlendirmeye Bakan (İçişleri Bakanı) yetkilidir …"
+   ]
+  },
+  {
+   "id": "22-4",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Geçici görevlendirilenin özlük ve disiplini",
+   "hukum": "Aylık/mali/sosyal haklar kendi kurumunun bütçesinden; değerlendirme ve özlük işleri kendi kurumunca; disiplin soruşturması fiilen görevli olduğu kurumda yapılır, dosya mensubu olduğu kurumun disiplin amirine gönderilir (m.16/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"disiplin soruşturması da kendi kurumunda yapılır\" denir"
+   ],
+   "dogrusu": [
+    "Aylık/mali/sosyal haklar kendi kurumunun bütçesinden …"
+   ]
+  },
+  {
+   "id": "22-5",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Ödül çeşitleri",
+   "hukum": "Başarı belgesi, üstün başarı belgesi, takdir belgesi, şerit rozet, bröve ve madalya (m.46/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yurt dışı görevi\", \"para ödülü\", \"sicil notu artırımı\" ödül olarak sayılır"
+   ],
+   "dogrusu": [
+    "Ödül çeşitleri"
+   ]
+  },
+  {
+   "id": "22-6",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Üstün başarı belgesi şartı",
+   "hukum": "Üç defa başarı belgesi alana üstün başarı belgesi verilir (m.47/2)",
+   "sinavda_boyle_yazarlar": [
+    "sayı iki veya dört yapılır; ya da \"üç takdir belgesi\" denir"
+   ],
+   "dogrusu": [
+    "Üstün başarı belgesi şartı"
+   ]
+  },
+  {
+   "id": "22-7",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Takdir belgesi",
+   "hukum": "Görevini eksiksiz yerine getiren personele, morali yükseltmek ve emsaline örnek olması maksadıyla amirleri tarafından verilir (m.47/1)",
+   "sinavda_boyle_yazarlar": [
+    "takdir belgesini \"Bakan verir\" denir; başarı belgesiyle karıştırılır"
+   ],
+   "dogrusu": [
+    "Takdir belgesi"
+   ]
+  },
+  {
+   "id": "22-8",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Başarı belgesini kim verir",
+   "hukum": "Merkezde Bakan, illerde valiler, ilçelerde kaymakamlar (m.47/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca birinci amir verir\" denir"
+   ],
+   "dogrusu": [
+    "Başarı belgesini kim verir"
+   ]
+  },
+  {
+   "id": "22-9",
+   "madde": [
+    "50"
+   ],
+   "baslik": "Madalya",
+   "hukum": "Görevi fiilen hayatını tehlikeye atarak üstün cesaret ve feragatle yerine getirene üstün cesaret ve feragat madalyası Bakan tarafından verilir (m.50/1)",
+   "sinavda_boyle_yazarlar": [
+    "madalyayı Jandarma Genel Komutanı veya Cumhurbaşkanı verir denir"
+   ],
+   "dogrusu": [
+    "Madalya"
+   ]
+  },
+  {
+   "id": "22-10",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Ödül sisteminin bağımsızlığı",
+   "hukum": "Ödül sistemi disiplinle ilgili yaptırım ve cezalardan bağımsız çalışır; personel sadece ödüle gerekçe olan durum içinde değerlendirilir (m.46/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"disiplin cezası olan ödüllendirilemez\" denir"
+   ],
+   "dogrusu": [
+    "Ödül sisteminin bağımsızlığı"
+   ]
+  },
+  {
+   "id": "22-11",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Nöbet süresi",
+   "hukum": "Nöbet kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez (m.42/2)",
+   "sinavda_boyle_yazarlar": [
+    "süre oniki veya otuzaltı saat yapılır"
+   ],
+   "dogrusu": [
+    "Nöbet süresi"
+   ]
+  },
+  {
+   "id": "22-12",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Hamile/engelli personelde gece nöbeti",
+   "hukum": "Kadın memurlara tabip raporunda belirtilmesi hâlinde hamilelik boyunca ve doğumdan sonraki iki yıl gece nöbeti/gece vardiyası verilemez; engelli memurlara isteği dışında verilemez (m.42/2)",
+   "sinavda_boyle_yazarlar": [
+    "süre 6 ay veya 1 yıl gösterilir; engelliler için \"hiçbir şekilde verilemez\" denir (doğrusu \"isteği dışında\")"
+   ],
+   "dogrusu": [
+    "Kadın memurlara tabip raporunda belirtilmesi hâlinde hamilelik boyunca ve doğumdan sonraki iki yıl gece nöbeti/gece vardiyası verilemez …"
+   ]
+  },
+  {
+   "id": "22-13",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Nöbetin devri ve mazeret",
+   "hukum": "Mazereti kurum amirince uygun görülenin nöbeti kendisinden sonra gelene tevdi edilir; mazeret kalkınca geçmiş nöbetlerinden bir tanesi tutturulur (m.42/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"geçmiş nöbetlerinin tamamı tutturulur\" denir"
+   ],
+   "dogrusu": [
+    "Nöbetin devri ve mazeret"
+   ]
+  },
+  {
+   "id": "22-14",
+   "madde": [
+    "42"
+   ],
+   "baslik": "Nöbet yerinden ayrılmama",
+   "hukum": "Nöbetin özelliğine göre nöbetçi nöbet yerinden ayrılmaz, her zaman göreve hazır bulunur (m.42/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"amirin sözlü izniyle ayrılabilir\" denir"
+   ],
+   "dogrusu": [
+    "Nöbet yerinden ayrılmama"
+   ]
+  },
+  {
+   "id": "22-15",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Değerlendirme sıklığı",
+   "hukum": "Değerlendirme yılda en az bir kez yapılır (m.45/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yılda en az iki kez\" veya \"gerekli görülen hâllerde\" denir"
+   ],
+   "dogrusu": [
+    "Değerlendirme sıklığı"
+   ]
+  },
+  {
+   "id": "22-16",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Değerlendirme sonuçlarının kullanımı",
+   "hukum": "Görevlere seçim, atama ve yer değiştirme, mesleki gelişim, statüler arası geçiş, terfi, rütbe kademeliği ve kıdemliliği, kıdem sırası ve ödüllendirmede dikkate alınır (m.45/3)",
+   "sinavda_boyle_yazarlar": [
+    "sayılanlardan biri çıkarılıp \"emeklilik\" veya \"disiplin cezası tayini\" eklenir"
+   ],
+   "dogrusu": [
+    "Görevlere seçim …"
+   ]
+  },
+  {
+   "id": "22-17",
+   "madde": [
+    "45"
+   ],
+   "baslik": "Değerlendirme sistemini kim düzenler",
+   "hukum": "Sisteme ilişkin hususlar Bakanlıkça yürürlüğe konulan yönetmelikle belirlenir (m.45/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Jandarma Genel Komutanlığınca belirlenir\" denir"
+   ],
+   "dogrusu": [
+    "Değerlendirme sistemini kim düzenler"
+   ]
+  },
+  {
+   "id": "22-18",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Atamada dikkate alınacak esaslar",
+   "hukum": "Mesleki gelişim, kadro ihtiyacı, hizmet bölgesindeki süre, terfi durumu, branş/ihtisas, kendisinin-eşinin-bakmakla yükümlü olduğu çocuğun hayati önemi haiz sağlık durumu, puanlama, tercih, asayiş-idari-zaruri sebepler (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"çocukların her seviyedeki eğitim durumu\" veya \"eşin çalışma durumu\" kritere eklenir; sağlık şartındaki \"hayati önemi haiz\" ibaresi silinir"
+   ],
+   "dogrusu": [
+    "Mesleki gelişim …"
+   ]
+  },
+  {
+   "id": "22-19",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Memleket ataması yasağı",
+   "hukum": "Personel, belediye sınırları içindeki nüfusu 1.000.000'u aşan ilçeler hariç, kendisinin ve eşinin evlenmeden önce nüfusa kayıtlı olduğu ilçeye atanmaz (m.12/2)",
+   "sinavda_boyle_yazarlar": [
+    "sınır 500.000 gösterilir ya da \"hiçbir istisna yoktur\" denir"
+   ],
+   "dogrusu": [
+    "Memleket ataması yasağı"
+   ]
+  },
+  {
+   "id": "22-20",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Hizmet bölgesi derecelendirme kriterleri",
+   "hukum": "Genel gelişmişlik, barınma, coğrafya ve iklim, eğitim, emniyet ve asayiş, sosyal-kültürel ve sağlık imkânları, günlük yaşam, özlük haklarındaki farklılıklar, istenilirlik düzeyi, ulaştırma ve haberleşme (m.13/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"ikinci iş imkânı\" veya \"nüfus yoğunluğu\" eklenir"
+   ],
+   "dogrusu": [
+    "Genel gelişmişlik …"
+   ]
+  },
+  {
+   "id": "22-21",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Atama ilkesi ve hizmet bölgesi süresi",
+   "hukum": "Atamalarda hizmet bölgesinin özellikleri esastır; subay ve astsubayın atandığı bölgede hizmet süresini tamamlaması esastır (m.10/1, m.10/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"her hâlde süre tamamlanmadan atama yapılamaz\" denir; oysa atama yönetmeliklerindeki sebepler saklıdır"
+   ],
+   "dogrusu": [
+    "Atama ilkesi ve hizmet bölgesi süresi"
+   ]
+  },
+  {
+   "id": "22-22",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Astsubayın subay kadrosuna atanması",
+   "hukum": "İhtiyaç hâlinde liyakat esas alınarak emsali arasında temayüz etmiş astsubaylar subay kadrolarına atanabilir; bunlar için astları hakkında değerlendirme yapmada rütbe şartı aranmaz (m.10/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"rütbe şartı aranır\" denir"
+   ],
+   "dogrusu": [
+    "İhtiyaç hâlinde liyakat esas alınarak emsali arasında temayüz etmiş astsubaylar subay kadrolarına atanabilir …"
+   ]
+  },
+  {
+   "id": "22-23",
+   "madde": [
+    "11"
+   ],
+   "baslik": "İlk atamada kura",
+   "hukum": "Öğrenimini, temel kursunu ve/veya stajını başarıyla bitirenlerin ilk görev yerine ataması branş ve ihtisasına göre kura ile yapılır (m.11/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tercih sırasına göre\" veya \"başarı sıralamasına göre\" denir"
+   ],
+   "dogrusu": [
+    "İlk atamada kura"
+   ]
+  },
+  {
+   "id": "22-24",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Genel atama zamanı",
+   "hukum": "Genel atamalar her yılın Mayıs ve Ekim (dâhil) ayları arasında yapılır; hizmet gerekleriyle Bakanlıkça belirlenen diğer zamanlarda da yapılabilir (m.14/2, m.14/3)",
+   "sinavda_boyle_yazarlar": [
+    "aylar Haziran-Eylül yapılır ya da \"başka zaman atama yapılamaz\" denir"
+   ],
+   "dogrusu": [
+    "Genel atama zamanı"
+   ]
+  },
+  {
+   "id": "22-25",
+   "madde": [
+    "15"
+   ],
+   "baslik": "İlişik kesme ve göreve başlama",
+   "hukum": "Aynı yerdeki göreve atanan tebliğ gününü; başka yerdeki göreve atanan tebliğden itibaren onbeş gün içinde hareket edip yol süresini izleyen işgünü içinde işe başlar (m.15/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre 10 veya 30 gün yapılır; \"tebliğ gününden itibaren 15 gün içinde işe başlar\" diye kısaltılır"
+   ],
+   "dogrusu": [
+    "Aynı yerdeki göreve atanan tebliğ gününü …"
+   ]
+  },
+  {
+   "id": "22-26",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Devir zorunluluğu olanlar",
+   "hukum": "Sayman, mal/hesap sorumlusu, muhasebe yetkilisi ve mutemetlerde süre devrin sona ermesiyle başlar; bu süre hiçbir şekilde bir ayı geçemez (m.15/2-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"iki ayı geçemez\" denir"
+   ],
+   "dogrusu": [
+    "Devir zorunluluğu olanlar"
+   ]
+  },
+  {
+   "id": "22-27",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Atama emrinin tebliği",
+   "hukum": "Atama emrinde aksi belirlenmedikçe emir amire ulaştıktan en geç on gün içinde ilgilisine tebliğ edilir (m.15/4)",
+   "sinavda_boyle_yazarlar": [
+    "süre onbeş gün gösterilir"
+   ],
+   "dogrusu": [
+    "Atama emrinin tebliği"
+   ]
+  },
+  {
+   "id": "22-28",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Tebligata engel olmayan hâller",
+   "hukum": "İzinli, raporlu, tutuklu, görevden uzaklaştırılmış, göreve gelmemiş olmak veya hastanede yatmak tebligata engel değildir; ilişik kesme ve katılış gıyapta evrak üzerinden yapılabilir (m.15/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"tutuklu personele tebligat yapılamaz\" denir"
+   ],
+   "dogrusu": [
+    "İzinli …"
+   ]
+  },
+  {
+   "id": "22-29",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Kişilerin uğradığı zararlar",
+   "hukum": "Kişiler, kamu hukukuna tabi görevle ilgili zarardan dolayı personel aleyhine değil ilgili kurum aleyhine dava açar; kurumun rücu hakkı saklıdır (m.24/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"personel aleyhine de dava açılabilir\" veya \"kurum rücu edemez\" denir"
+   ],
+   "dogrusu": [
+    "Kişilerin uğradığı zararlar"
+   ]
+  },
+  {
+   "id": "22-30",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Zimmete geçirilen para",
+   "hukum": "Devlet dairelerine tevdi veya bu dairelerce tahsil/muhafaza edilen para ve para hükmündeki değerli kâğıt zimmete geçirilirse, miktar cezai takibat sonucu beklenmeden Hazine tarafından hak sahibine ödenir (m.24/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ceza davası kesinleştikten sonra ödenir\" denir"
+   ],
+   "dogrusu": [
+    "Devlet dairelerine tevdi veya bu dairelerce tahsil/muhafaza edilen para ve para hükmündeki değerli kâğıt zimmete geçirilirse …"
+   ]
+  },
+  {
+   "id": "22-31",
+   "madde": [
+    "24"
+   ],
+   "baslik": "AİHM tazminatında rücu",
+   "hukum": "İşkence ya da zalimane, gayri insani veya haysiyet kırıcı muamele suçları nedeniyle AİHM kararı sonucu Devletçe ödenen tazminatlarda da sorumlu personele rücu edilir (m.24/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"maaştan resen kesinti yapılır\" denir"
+   ],
+   "dogrusu": [
+    "İşkence ya da zalimane …"
+   ]
+  },
+  {
+   "id": "22-32",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Grev yasağı",
+   "hukum": "Greve karar vermek, grev tertiplemek, ilan etmek, propaganda yapmak yasaktır; greve veya teşebbüse katılmak, desteklemek, teşvik etmek de yasaktır (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"karar verebilir ama propaganda yapamaz\" gibi yasağın bir kısmı serbest gösterilir"
+   ],
+   "dogrusu": [
+    "Grev yasağı"
+   ]
+  },
+  {
+   "id": "22-33",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Toplu eylem yasağı",
+   "hukum": "Kamu hizmetini aksatacak şekilde kasıtlı birlikte çekilme, göreve gelmeme veya hizmeti yavaşlatma/aksatma sonucu doğuracak eylemler yasaktır (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "\"sendikal amaçla yapılırsa serbesttir\" denir"
+   ],
+   "dogrusu": [
+    "Toplu eylem yasağı"
+   ]
+  },
+  {
+   "id": "22-34",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Hediye alma, menfaat sağlama yasağı",
+   "hukum": "Doğrudan veya aracı eliyle hediye istemek, görev sırasında olmasa dahi menfaat sağlama amacıyla hediye kabul etmek, iş sahiplerinden borç para istemek ve almak yasaktır; kapsamda Kamu Görevlileri Etik Kurulu kararları uygulanır (m.38)",
+   "sinavda_boyle_yazarlar": [
+    "\"görev dışında alınan hediye serbesttir\" denir"
+   ],
+   "dogrusu": [
+    "Doğrudan veya aracı eliyle hediye istemek …"
+   ]
+  },
+  {
+   "id": "22-35",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Ticaret yasağı ve istisnası",
+   "hukum": "Tacir/esnaf sayılmayı gerektiren faaliyet, ticari mümessillik, kollektif şirkette ortaklık, komandit şirkette komandite ortaklık, ofis-büro-muayenehane açma ve vakıf yükseköğretim kurumunda çalışma yasaktır; yapı-kalkınma-tüketim kooperatifleri ile meslek kuruluşları ve kanunla kurulmuş yardım sandıklarının kurul üyelikleri yasak dışıdır (m.37/1, m.37/2)",
+   "sinavda_boyle_yazarlar": [
+    "kooperatif üyeliği de yasak gösterilir"
+   ],
+   "dogrusu": [
+    "Tacir/esnaf sayılmayı gerektiren faaliyet …"
+   ]
+  },
+  {
+   "id": "22-36",
+   "madde": [
+    "37"
+   ],
+   "baslik": "Aile bildirimi yükümlülüğü",
+   "hukum": "Eşi, reşit olmayan veya mahcur çocuğu yasaklanan faaliyette bulunan personel bunu onbeş gün içinde kurumuna bildirir (m.37/3)",
+   "sinavda_boyle_yazarlar": [
+    "süre bir ay yapılır ya da \"bildirim yükümlülüğü yoktur\" denir"
+   ],
+   "dogrusu": [
+    "Aile bildirimi yükümlülüğü"
+   ]
+  },
+  {
+   "id": "22-37",
+   "madde": [
+    "41"
+   ],
+   "baslik": "Gizli bilgi açıklama yasağı",
+   "hukum": "Gizli bilgi, kanunla veya yetkili makamca gizli nitelendirilen bilgidir; personel görevden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz (m.41/1, m.41/2)",
+   "sinavda_boyle_yazarlar": [
+    "izin makamı \"birinci amir\"/\"Jandarma Genel Komutanı\" yapılır; \"görevden ayrılınca yasak biter\" denir"
+   ],
+   "dogrusu": [
+    "Gizli bilgi açıklama yasağı"
+   ]
+  },
+  {
+   "id": "22-38",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Basına bilgi veya demeç verme",
+   "hukum": "Personel kamu görevleri hakkında basına, haber ajanslarına, radyo-televizyona bilgi veya demeç veremez; bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilebilir (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "yetkili olarak \"il jandarma komutanı\" veya \"basın müşaviri\" gösterilir"
+   ],
+   "dogrusu": [
+    "Personel kamu görevleri hakkında basına …"
+   ]
+  },
+  {
+   "id": "22-39",
+   "madde": [
+    "40"
+   ],
+   "baslik": "İkinci görev yasağı",
+   "hukum": "657'ye tabi kurumlarda, sermayesi tamamen Devletçe verilen iktisadi kurumlarda, sermayesinin yarısından fazlası Devlete ait bankalarda ve bunların yarıdan fazla katılımıyla kurulan kuruluşlarda ikinci görev verilemez, her ne ad ile olursa olsun ödeme yapılamaz (m.40/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"ücretsiz olmak şartıyla verilebilir\" denir"
+   ],
+   "dogrusu": [
+    "657'ye tabi kurumlarda …"
+   ]
+  },
+  {
+   "id": "22-40",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Denetimindeki teşebbüsten menfaat",
+   "hukum": "Denetimi altında bulunan veya görevi ya da kurumu ile ilgisi olan teşebbüsten doğrudan veya aracı eliyle her ne ad altında olursa olsun menfaat sağlaması yasaktır (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"aracı eliyle sağlanan menfaat kapsam dışıdır\" denir"
+   ],
+   "dogrusu": [
+    "Denetimindeki teşebbüsten menfaat"
+   ]
+  },
+  {
+   "id": "22-41",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Müracaat ve şikâyet usulü",
+   "hukum": "Müracaat/şikâyet söz veya yazı ile en yakın amirden başlayarak silsile yoluyla, şikâyet edilen amirler atlanarak yapılır; incelenip en kısa zamanda ilgiliye bildirilir (m.32/2, m.32/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"doğrudan Bakanlığa yapılır\" veya \"şikâyet edilen amir atlanmaz\" denir"
+   ],
+   "dogrusu": [
+    "Müracaat/şikâyet söz veya yazı ile en yakın amirden başlayarak silsile yoluyla …"
+   ]
+  },
+  {
+   "id": "22-42",
+   "madde": [
+    "33"
+   ],
+   "baslik": "İftira hâlinde kamu davası istemi",
+   "hukum": "İhbar/şikâyet garaz veya mücerret hakaret için uydurma suç isnadıyla yapılmış ve isnat sabit olmamışsa, merkezde en büyük amir, illerde valiler isnatta bulunanlar hakkında kamu davası açılmasını Cumhuriyet savcılığından ister (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "istemi \"personelin kendisi yapar\" veya \"ilçelerde kaymakam ister\" denir"
+   ],
+   "dogrusu": [
+    "İhbar/şikâyet garaz veya mücerret hakaret için uydurma suç isnadıyla yapılmış ve isnat sabit olmamışsa …"
+   ]
+  },
+  {
+   "id": "22-43",
+   "madde": [
+    "30",
+    "31"
+   ],
+   "baslik": "Emeklilik ve çekilme talebi zamanı",
+   "hukum": "Talepler Ocak-Şubat ile Temmuz-Ağustos aylarında iletilir; kabulü müracaat tarihinden itibaren bir aydan fazla geciktirilemez; diğer aylardaki talepler hizmet gerekleri uygun görülürse kabul edilebilir (m.30/2, m.31/3)",
+   "sinavda_boyle_yazarlar": [
+    "aylar değiştirilir; \"diğer aylarda talep edilemez\" denir"
+   ],
+   "dogrusu": [
+    "Talepler Ocak-Şubat ile Temmuz-Ağustos aylarında iletilir …"
+   ]
+  },
+  {
+   "id": "22-44",
+   "madde": [
+    "55"
+   ],
+   "baslik": "Üniforma kuralları",
+   "hukum": "Resmi üniforma sivil kıyafete dönüştürülemez, sivil giysiyle birlikte giyilemez, personel dışındaki kişilere verilemez; ilişik kesildiği tarihten itibaren üniforma çıkarılır; hamileliğini belgeleyen kadın personel sivil kıyafetle görev yapabilir (m.55/1-c, m.55/1-ç, m.55/1-e, m.55/3)",
+   "sinavda_boyle_yazarlar": [
+    "hamilelik istisnası kaldırılıp \"resmi pantolon sivil gömlekle giyilebilir\" gibi yasak fiiller serbest gösterilir"
+   ],
+   "dogrusu": [
+    "Resmi üniforma sivil kıyafete dönüştürülemez …"
+   ]
+  },
+  {
+   "id": "22-45",
+   "madde": [
+    "54"
+   ],
+   "baslik": "Resmi üniforma zorunluluğu",
+   "hukum": "Görev sırasında mevzuattaki istisnalar saklı kalmak kaydıyla resmi üniforma giymek zorunludur (m.54)",
+   "sinavda_boyle_yazarlar": [
+    "\"istisnasız zorunludur\" denir"
+   ],
+   "dogrusu": [
+    "Resmi üniforma zorunluluğu"
+   ]
+  },
+  {
+   "id": "22-46",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Branşlar",
+   "hukum": "JGK'de subay branşları arasında Öğretmen, Tabip, Hukuk, İnsansız Hava Aracı vardır; JGK astsubay branşları Jandarma, İstihkâm, Muhabere, Uçak ve helikopter teknisyeni, İkmal, Bakım, Personel, Maliye, Bando, Sağlık ve İnsansız Hava Aracıdır (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "subay branşı olan \"Öğretmen\" astsubay branşı gibi sorulur"
+   ],
+   "dogrusu": [
+    "JGK'de subay branşları arasında Öğretmen, Tabip, Hukuk, İnsansız Hava Aracı vardır …"
+   ]
+  },
+  {
+   "id": "22-47",
+   "madde": [
+    "7"
+   ],
+   "baslik": "SGK branşları",
+   "hukum": "SGK subay branşları Sahil güvenlik, İkmal, Mühendis, Hukuk; astsubay branşları Güverte, Makine, İkmal, Uçak bakım, İdari, Bilgi teknolojileridir (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "JGK branşları SGK listesine karıştırılır"
+   ],
+   "dogrusu": [
+    "SGK branşları"
+   ]
+  },
+  {
+   "id": "22-48",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Branş değişikliği sebepleri",
+   "hukum": "Sağlık durumu, uçuştan ayrılma, özel hizmet niteliğini kaybetme, ikinci bir tahsil, yeterlilik değişikliği, kuruluş-kadro değişikliği ve yeni branş kurulması hâlinde branş belirleme kurulu kararıyla değiştirilebilir (m.8/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"personelin talebiyle her zaman değiştirilir\" denir"
+   ],
+   "dogrusu": [
+    "Sağlık durumu …"
+   ]
+  },
+  {
+   "id": "22-49",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Branş belirleme kurulları",
+   "hukum": "Üye tam sayısı ile toplanır, oyçokluğu ile karar alır, çekimser oy kullanılamaz, oyların eşitliğinde başkanın bulunduğu taraf çoğunluk sayılır (m.9/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"çekimser oy kullanılabilir\" denir (MEBS 2024'te sorulan ayırt edici nokta)"
+   ],
+   "dogrusu": [
+    "Branş belirleme kurulları"
+   ]
+  },
+  {
+   "id": "22-50",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Kurul kararının kesinleşmesi",
+   "hukum": "İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının; ilk branş belirleme ve branş değişikliğine ilişkin kurul kararları ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayıyla kesinleşir (m.9/2)",
+   "sinavda_boyle_yazarlar": [
+    "onay makamı Bakan yapılır"
+   ],
+   "dogrusu": [
+    "İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının …"
+   ]
+  },
+  {
+   "id": "22-51",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Personel kaynakları",
+   "hukum": "İhtiyaç, Jandarma ve Sahil Güvenlik Akademisi ile eğitim komutanlıklarındaki eğitimi başarıyla tamamlayanlardan karşılanır; personel ihtiyacı Bakanlıkça onaylanan insan gücü planına göre giderilir (m.5/1, m.5/4)",
+   "sinavda_boyle_yazarlar": [
+    "kaynaklara \"açıktan atama\" veya \"diğer kamu kurumlarından nakil\" eklenir"
+   ],
+   "dogrusu": [
+    "İhtiyaç, Jandarma ve Sahil Güvenlik Akademisi ile eğitim komutanlıklarındaki eğitimi başarıyla tamamlayanlardan karşılanır …"
+   ]
+  },
+  {
+   "id": "22-52",
+   "madde": [
+    "53"
+   ],
+   "baslik": "Soruşturma usulleri",
+   "hukum": "Mülki görevden doğan suçlarda 4483, adli görevden doğan suçlarda 5271 m.161/5, askeri görev verilmişse 353 sayılı Kanun, kişisel suçlarda genel hükümler uygulanır; disiplin işleri özel kanuna göre yürütülür (m.53)",
+   "sinavda_boyle_yazarlar": [
+    "mülki ile adli görev usulü yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Mülki görevden doğan suçlarda 4483 …"
+   ]
+  },
+  {
+   "id": "22-53",
+   "madde": [
+    "44"
+   ],
+   "baslik": "İzin vermeye yetkili makam (üst düzey)",
+   "hukum": "Jandarma Genel Komutanı ve Sahil Güvenlik Komutanı ile Jandarma ve Sahil Güvenlik Akademisi Başkanının iznini Bakan verir; jandarma bölge komutanı ile sahil güvenlik bölge ve grup komutanlarının iznini konuşlu bulunduğu ilin valisi verir (m.44/1)",
+   "sinavda_boyle_yazarlar": [
+    "bölge komutanının iznini \"Jandarma Genel Komutanı verir\" denir"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanı ve Sahil Güvenlik Komutanı ile Jandarma ve Sahil Güvenlik Akademisi Başkanının iznini Bakan verir …"
+   ]
+  },
+  {
+   "id": "22-54",
+   "madde": [
+    "44"
+   ],
+   "baslik": "İzin vermeye yetkili makam (il-ilçe)",
+   "hukum": "İl ve ilçe jandarma komutanlıklarındaki tüm personel için vali ve kaymakamlar; sahil güvenlik karakollarındaki personel için ilgisine göre vali ve kaymakam; diğer personel için birinci amirler izin verir (m.44/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüm izinleri birinci amir verir\" denir"
+   ],
+   "dogrusu": [
+    "İl ve ilçe jandarma komutanlıklarındaki tüm personel için vali ve kaymakamlar …"
+   ]
+  },
+  {
+   "id": "22-55",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Yıllık iznin kullanılması ve geri çağırma",
+   "hukum": "Yıllık iznin senesi içinde kullanılması esastır, zorunlu nedenle kullanılamayan izin izleyen yıl verilebilir; görev ihtiyacında izin planlamasını onaylayan makam personeli izinden geri çağırabilir (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "geri çağırma yetkisi \"birinci amire\" verilir; \"iki yıl sonra da kullanılabilir\" denir"
+   ],
+   "dogrusu": [
+    "Yıllık iznin senesi içinde kullanılması esastır …"
+   ]
+  },
+  {
+   "id": "22-56",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Tarafsızlık ve siyaset yasağı",
+   "hukum": "Personel siyasi partiye üye olamaz; dil, ırk, cinsiyet, siyasi düşünce, felsefi inanç, din ve mezhep ayrımı yapamaz; siyasi-ideolojik amaçlı beyan ve eylemde bulunamaz (m.19/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"izinli iken siyasi faaliyet serbesttir\" denir"
+   ],
+   "dogrusu": [
+    "Personel siyasi partiye üye olamaz …"
+   ]
+  },
+  {
+   "id": "22-57",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Kişisel sorumluluk ve zarar",
+   "hukum": "Kasıt, kusur, ihmal veya tedbirsizlikle idare zarara uğratılmışsa zararın ilgili personelce rayiç bedel üzerinden ödenmesi esastır (m.23/2)",
+   "sinavda_boyle_yazarlar": [
+    "ölçüt \"maliyet bedeli\" veya \"sigorta bedeli\" yapılır"
+   ],
+   "dogrusu": [
+    "Kişisel sorumluluk ve zarar"
+   ]
+  },
+  {
+   "id": "22-58",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Resmi belge ve araçlar",
+   "hukum": "Görevle ilgili resmi belge, araç ve gereçler yetki verilen mahaller dışına çıkarılamaz, hususi işte kullanılamaz; görev sona erince iade zorunludur ve bu zorunluluk mirasçılara da şamildir (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "mirasçı yükümlülüğü kaldırılır"
+   ],
+   "dogrusu": [
+    "Görevle ilgili resmi belge …"
+   ]
+  },
+  {
+   "id": "22-59",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Amirin sınırları",
+   "hukum": "Amir, maiyetine kanunlara aykırı emir veremez; maiyetinden ve astından hususi menfaat temin edecek talepte bulunamaz, hediyesini kabul edemez, borç alamaz (m.21/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"yazılı emir vermesi hâlinde aykırı emir verilebilir\" denir"
+   ],
+   "dogrusu": [
+    "Amirin sınırları"
+   ]
+  },
+  {
+   "id": "22-60",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Güvenlik hakkı",
+   "hukum": "Kanunlarda yazılı hâller dışında personelin görevine son verilmez, aylık ve başka hakları elinden alınamaz (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"amirin takdiriyle görevine son verilebilir\" denir"
+   ],
+   "dogrusu": [
+    "Güvenlik hakkı"
+   ]
+  },
+  {
+   "id": "22-61",
+   "madde": [
+    "56"
+   ],
+   "baslik": "Asayiş tazminatı",
+   "hukum": "JGK ve SGK kadrolarına atanmış personel ayrıca Asayiş Tazminatından yararlanır (m.56/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca il ve ilçe komutanlıklarındaki personel yararlanır\" denir"
+   ],
+   "dogrusu": [
+    "Asayiş tazminatı"
+   ]
+  },
+  {
+   "id": "22-62",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Yönetmeliğin kapsamı",
+   "hukum": "Subay, astsubay, sözleşmeli subay ve astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erleri kapsar; nasıp-terfi ve mali-sosyal haklar 926, 4678, 3466, 3269, 6191 ve 657 sayılı Kanunlara göre yürütülür (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"nasıp ve terfi de bu Yönetmelikle düzenlenir\" denir"
+   ],
+   "dogrusu": [
+    "Subay …"
+   ]
+  },
+  {
+   "id": "22-63",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "Yönetmelik 2803 sayılı Kanunun 24 üncü ve 2692 sayılı Kanunun 23 üncü maddesine dayanılarak hazırlanmıştır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "dayanak 657 sayılı Kanun gösterilir"
+   ],
+   "dogrusu": [
+    "Dayanak"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

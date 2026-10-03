@@ -1,0 +1,397 @@
+{
+ "kanun_id": 98,
+ "ad": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_98.json",
+ "kartlar": [
+  {
+   "id": "98-0",
+   "madde": [
+    "25"
+   ],
+   "baslik": "HEK'e ayırma şartı",
+   "hukum": "Ekonomik ömrünü tamamlamış olan veya tamamlamadığı hâlde teknik ve fizikî nedenlerle kullanılmasında yarar görülmeyerek hizmet dışı bırakılan taşınırlar HEK'e ayrılır (m.25/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca ekonomik ömrünü tamamlayanlar\" denir"
+   ],
+   "dogrusu": [
+    "veya"
+   ]
+  },
+  {
+   "id": "98-1",
+   "madde": [
+    "25"
+   ],
+   "baslik": "HEK kapsamına girenler",
+   "hukum": "Taşınır malın yanı sıra, başka yerde kullanma imkânı bulunmayan her türlü idame veya işletme malzemesi, yedek parça ve diğer muhteviyat da HEK'e ayrılır (m.25/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yedek parçalar kapsam dışıdır\" denir"
+   ],
+   "dogrusu": [
+    "başka yerde kullanma imkânı bulunmayan"
+   ]
+  },
+  {
+   "id": "98-2",
+   "madde": [
+    "25"
+   ],
+   "baslik": "HEK onay makamları",
+   "hukum": "Yetkili komisyon kararı ve harcama yetkilisinin veya birlik komutanının ya da kurum amirinin onayı ile HEK'e ayrılıp kayıttan düşülür (m.25/1)",
+   "sinavda_boyle_yazarlar": [
+    "listeye vali eklenir (2024) veya \"komisyon kararı yeter, onay gerekmez\" denir",
+    "HEK onayını vali de verebilir"
+   ],
+   "dogrusu": [
+    "m.25/1'de vali yok"
+   ]
+  },
+  {
+   "id": "98-3",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Komisyon kararı şart",
+   "hukum": "Onay tek başına yetmez; önce kamu idarelerinde oluşturulan yetkili komisyonun kararı gerekir (m.25/1)",
+   "sinavda_boyle_yazarlar": [
+    "sadece amir onayıyla düşülebileceği söylenir"
+   ],
+   "dogrusu": [
+    "kamu idarelerinde oluşturulan yetkili komisyonun kararı"
+   ]
+  },
+  {
+   "id": "98-4",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Teknik rapor gereken dört hâl",
+   "hukum": "(1) Uzayda atmosferik şartlar nedeniyle kaybolan, (2) denizaltından çıkarılması teknik olarak mümkün olmayan, (3) karada yer altından çıkarılması teknik olarak mümkün olmayan, (4) ekonomik olmayan malzemelerin kayıtlarının silinmesinde ilgili makamlarca teknik rapor tanzim edilir (m.25/1 son cümle)",
+   "sinavda_boyle_yazarlar": [
+    "listeye kripto malzeme eklenir (2024) veya \"denizaltı\" çıkarılır"
+   ],
+   "dogrusu": [
+    "ekonomik olmayan · teknik rapor"
+   ]
+  },
+  {
+   "id": "98-5",
+   "madde": [
+    "25"
+   ],
+   "baslik": "İmha komisyonu ayrıdır",
+   "hukum": "Komisyon kararında ekonomik değeri olmadığı veya teknik, hijyenik, stratejik ve tıbbi nedenlerle imhası gerektiği belirtilen taşınırlar, birinci fıkradaki komisyon dışında oluşturulan ayrı bir komisyon tarafından tutanak düzenlenerek imha edilir (m.25/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"aynı komisyon imha eder\" denir — en sık kurulan tuzak"
+   ],
+   "dogrusu": [
+    "veya teknik, hijyenik, stratejik ve tıbbi · birinci fıkradaki komisyon dışında oluşturulan ayrı bir komisyon · tutanak düzenlenerek"
+   ]
+  },
+  {
+   "id": "98-6",
+   "madde": [
+    "25"
+   ],
+   "baslik": "İmha gerekçeleri",
+   "hukum": "Ekonomik değersizlik + teknik, hijyenik, stratejik, tıbbi nedenler (m.25/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"çevresel\" veya \"askerî\" gibi metinde olmayan gerekçe eklenir"
+   ],
+   "dogrusu": [
+    "teknik, hijyenik, stratejik, tıbbi"
+   ]
+  },
+  {
+   "id": "98-7",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Kayıttan çıkarma belgesi",
+   "hukum": "HEK'e ayrılan veya imha edilen taşınırlar, kayıt silmeye esas belgeye dayanılarak kayıtlardan çıkarılır (m.25/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tutanağa gerek yoktur\" denir"
+   ],
+   "dogrusu": [
+    "kayıt silmeye esas belgeye dayanılarak"
+   ]
+  },
+  {
+   "id": "98-8",
+   "madde": [
+    "25"
+   ],
+   "baslik": "MKE hükümleri",
+   "hukum": "HEK'e ayrılan ve ekonomik değeri olan her türlü maden, malzeme, araç, metal ve gereçler hakkında, özel mevzuat saklı kalmak üzere Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri uygulanır (m.25/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"ekonomik değeri olmayanlar\" denir veya başka kurum yazılır"
+   ],
+   "dogrusu": [
+    "ekonomik değeri olan · Makina ve Kimya Endüstrisi Kurumu Ana Statüsü"
+   ]
+  },
+  {
+   "id": "98-9",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Kripto malzemenin imhası",
+   "hukum": "Kripto malzemelerin imha işlemleri kendi özel düzenlemelerinde belirtildiği şekilde yapılır (m.25/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"bu Yönetmeliğe göre imha edilir\" denir; 2024'te teknik rapor listesine sokularak soruldu"
+   ],
+   "dogrusu": [
+    "imha işlemleri kendi özel düzenlemelerinde"
+   ]
+  },
+  {
+   "id": "98-10",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Taşınmaz yıkımı-bakımı-onarımı çıkışı",
+   "hukum": "Kamu kurumları, belediyeler veya yüklenici eliyle yapılan taşınmaz yıkım, bakım ya da onarımında ortaya çıkan ekonomik değere sahip taşınır malzemeler, sözleşme veya protokoldeki hükme dayanılarak bedele mahsuben kuruma/yükleniciye bırakılabilir (m.25/A)",
+   "sinavda_boyle_yazarlar": [
+    "\"sözleşmede hüküm aranmaz\" denir"
+   ],
+   "dogrusu": [
+    "ekonomik değere sahip"
+   ]
+  },
+  {
+   "id": "98-11",
+   "madde": [
+    "25"
+   ],
+   "baslik": "25/A: kayıtlı-kayıtsız ayrımı",
+   "hukum": "Bu şekilde bırakılanlardan kayıtlı olanlar çıkış işlemine tabi tutulur, kayıtlı olmayanlar taşınır mal kayıtlarına alınmaz (m.25/A)",
+   "sinavda_boyle_yazarlar": [
+    "ikisi ters çevrilir veya \"hepsi kayda alınır\" denir",
+    "Kayıtlı olmayan malzemeler de taşınır kayıtlarına alınır"
+   ],
+   "dogrusu": [
+    "alınmaz (m.25/A)"
+   ]
+  },
+  {
+   "id": "98-12",
+   "madde": [
+    "25"
+   ],
+   "baslik": "25/A: MKE istisnası",
+   "hukum": "Bu malzemeler hakkında MKE Ana Statüsü hükümleri uygulanmaz (m.25/A)",
+   "sinavda_boyle_yazarlar": [
+    "m.25/4 ile karıştırılıp \"MKE hükümleri uygulanır\" denir. İki maddenin farkı tam burasıdır",
+    "Taşınmaz onarımından çıkan malzemeye MKE hükümleri uygulanır"
+   ],
+   "dogrusu": [
+    "m.25/A'da uygulanmaz"
+   ]
+  },
+  {
+   "id": "98-13",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Sayım zamanı",
+   "hukum": "Depolarda ve kullanımda olan taşınır mallar yıl sonlarında sayılır (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yıl ortası ve yıl sonu olmak üzere yılda iki kez\" denir — 2024'ün bozulan öncülü"
+   ],
+   "dogrusu": [
+    "yıl sonlarında"
+   ]
+  },
+  {
+   "id": "98-14",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Sayım kurulu",
+   "hukum": "Sayımı, 30 uncu maddeye göre oluşturulan sayım kurulları yapar (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"34 üncü madde\" veya \"taşınır kayıt yetkilisi sayar\" denir"
+   ],
+   "dogrusu": [
+    "30 uncu maddeye göre oluşturulan sayım kurulları"
+   ]
+  },
+  {
+   "id": "98-15",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Tutanağa kayıt",
+   "hukum": "Bulunan miktarlar sayım tutanağına yazılır; kayıtlardaki miktarlar tutanağın \"kayıtlı miktar\" sütununa, sayımda bulunan miktar ile kayıtlı miktar arasındaki fark ise \"fazla veya noksan\" sütununa kaydedilir (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "fark için \"ayrıca bir tutanak tutulur\" denir — 2024'ün bozulan öncülü"
+   ],
+   "dogrusu": [
+    "kayıtlardaki miktarlar tutanağın \"kayıtlı miktar\" sütununa · \"fazla veya noksan\" sütununa"
+   ]
+  },
+  {
+   "id": "98-16",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Fire",
+   "hukum": "23 üncü maddeye göre tespit edilen fire nedeniyle ortaya çıkan noksanlıklar tutanakta ayrıca gösterilir (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "madde numarası 34 yapılır veya \"gösterilmez\" denir"
+   ],
+   "dogrusu": [
+    "23 üncü maddeye göre · ayrıca gösterilir"
+   ]
+  },
+  {
+   "id": "98-17",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Neden araştırması",
+   "hukum": "Fazla veya noksan çıkmasının nedenleri araştırılır (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca noksanlıkların nedeni araştırılır\" denir"
+   ],
+   "dogrusu": [
+    "Fazla veya noksan"
+   ]
+  },
+  {
+   "id": "98-18",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Sorumluluk",
+   "hukum": "Taşınırların noksan çıkmasında kasıt, ihmal veya tedbirsizliği olanlar hakkında 34 üncü maddeye göre ayrıca işlem yapılır (m.32/1)",
+   "sinavda_boyle_yazarlar": [
+    "madde 23 yapılır veya \"işlem yapılmaz\" denir"
+   ],
+   "dogrusu": [
+    "kasıt, ihmal veya tedbirsizliği · 34 üncü maddeye göre"
+   ]
+  },
+  {
+   "id": "98-19",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Kayıtların düzeltilmesi",
+   "hukum": "Sayım sonrası sayım kurulunca taşınır mal işlem belgesi düzenlettirilir; fazla ve noksan sütunlarındaki miktarların giriş ve çıkış kayıtları yaptırılarak kayıtlar sayım sonucuyla uyumlu hâle getirilir (m.32/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"kayıtlar değiştirilmez, tutanak yeterlidir\" denir"
+   ],
+   "dogrusu": [
+    "taşınır mal işlem belgesi · giriş ve çıkış kayıtları"
+   ]
+  },
+  {
+   "id": "98-20",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Özel düzenlemeye tabi sayımlar",
+   "hukum": "Birinci sınıf askerî müzelerin koleksiyonundaki eserler ile kripto malzemelerin sayım işlemleri kendi özel düzenlemelerinde belirtildiği şekilde yapılır (m.32/3)",
+   "sinavda_boyle_yazarlar": [
+    "müze eserleri için \"bu Yönetmelik hükümlerine tabidir\" denir — 2024'ün doğru cevabı"
+   ],
+   "dogrusu": [
+    "Birinci sınıf askerî müzelerin koleksiyonundaki eserler · kripto malzemelerin · kendi özel düzenlemelerinde"
+   ]
+  },
+  {
+   "id": "98-21",
+   "madde": [
+    "32"
+   ],
+   "baslik": "\"Birinci sınıf\" kaydı",
+   "hukum": "Muafiyet tüm askerî müzelere değil, birinci sınıf askerî müze koleksiyonlarına tanınmıştır (m.32/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"tüm askerî müzeler\" denir"
+   ],
+   "dogrusu": [
+    "birinci sınıf"
+   ]
+  },
+  {
+   "id": "98-22",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Refakat ve imza",
+   "hukum": "Sayımı yapılan birimin taşınır mal sorumlusu, sayım süresince kurula refakat eder ve düzenlenen sayım tutanağını imzalar (m.32/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"harcama yetkilisi imzalar\" veya \"refakat gerekmez\" denir"
+   ],
+   "dogrusu": [
+    "taşınır mal sorumlusu · refakat eder · sayım tutanağını imzalar"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Kripto malzeme için teknik rapor düzenlenir"
+   ],
+   "dogru": "kripto imhası özel düzenlemeye tabidir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Birinci sınıf askerî müze koleksiyonundaki eserlerin sayımı bu Yönetmeliğe tabidir"
+   ],
+   "dogru": "kendi özel düzenlemesine tabidir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Sayım yılda iki kez yapılır"
+   ],
+   "dogru": "yıl sonlarında yapılır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Fark için ayrı bir tutanak tutulur"
+   ],
+   "dogru": "aynı tutanağın fazla/noksan sütununa yazılır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "İmhayı HEK kararını veren komisyon yapar"
+   ],
+   "dogru": "ayrı bir komisyon yapar"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Ekonomik ömrünü tamamlamayan mal hiçbir şekilde HEK'e ayrılamaz"
+   ],
+   "dogru": "teknik-fizikî nedenle hizmet dışı bırakılırsa ayrılır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Noksanlıkta sorumluluk işlemi 23 üncü maddeye göre yapılır"
+   ],
+   "dogru": "34 üncü maddeye göre"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Sayım tutanağını harcama yetkilisi imzalar"
+   ],
+   "dogru": "taşınır mal sorumlusu imzalar"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Yalnızca noksanlıkların nedeni araştırılır"
+   ],
+   "dogru": "fazla veya noksan çıkmasının nedenleri araştırılır"
+  }
+ ]
+}

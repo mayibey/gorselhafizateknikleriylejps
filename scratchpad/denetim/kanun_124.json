@@ -1,0 +1,101 @@
+{
+ "kanun_id": 124,
+ "ad": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_124.json",
+ "kartlar": [
+  {
+   "id": "124-0",
+   "madde": [
+    "1",
+    "2",
+    "44"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar, sorumluluk",
+   "hukum": "TSK, MİT, EGM, JGK ve SGK elindeki taşınır malların kaydı, kayıtlardan çıkarılması, yönetim ve iç denetimi (m.1-2); dayanak 5018 m.44 (m.3); tanımlar: birim maliyet bedeli (alış bedeli + vergi-resim-harç + yükleme-boşaltma-sigorta); dayanıklı taşınır mallar (makine, alet, silah, taşıt, iş makinesi, büro makinesi, döşeme-mefruşat gibi demirbaşlar); demirbaş; depo veya ambar; harcama yetkilisi; HEK (Hurda-Enkaz-Köhne): ekonomik ömrünü tamamlamış veya teknik-fiziki nedenlerle kullanılamayan veya tamiri mümkün/ekonomik olmayan taşınır mallar ile üretim kırpıntı-döküntüleri; kamu idaresi; imza (e-imza dâhil); taşınır mal; taşınır mal işlem belgesi (giriş, çıkış, depolar arası devir ve değer artışlarında kayda esas belge); taşınır mal kayıt sorumlusu/hesap sorumlusu (giriş-çıkış belgelerini düzenler, kayıt tutar; yönetim yetkilisine karşı sorumlu); taşınır mal sorumlusu (teslim alır, depolar, muhafaza eder, kullanıcı birimlere teslim eder; yönetim yetkilisine karşı sorumlu); taşınır mal yönetim birimi/saymanlığı; taşınır mal yönetim yetkilisi/saymanı; tüketilebilir taşınır mal; üretim maliyet bedeli; diğer kavramlar Taşınır Mal Yönetmeliğine göre (m.4); sorumluluk: taşınır malların etkili, ekonomik, verimli ve hukuka uygun edinilmesi, kullanımı ve kayıtlarının tutulması harcama yetkililerinin veya birlik komutanlarının sorumluluğunda; bunu yönetim yetkilileri, mal sorumluları ve kayıt sorumluları aracılığıyla yerine getirir; yönetim → yönetim yetkilisi; teslim alma-muhafaza-teslim → mal sorumlusu; kayıt → kayıt sorumlusu; bu üç görevden herhangi ikisi aynı kişide birleşemez; kendisine taşınır mal teslim edilen kamu görevlileri en iyi şekilde muhafaza, amacına uygun kullanma, bakım-onarımdan sorumlu (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sorumluluk taşınır mal yönetim yetkilisinindir\" yanlış; o aracıdır, sorumlu komutan",
+    "Taşınır malların yönetiminden Sayıştay sorumludur",
+    "Yönetim yetkilisi ile kayıt sorumlusu aynı kişi olabilir"
+   ],
+   "dogrusu": [
+    "Harcama yetkilileri veya birlik komutanları (m.5)",
+    "Herhangi ikisi birleşemez (m.5)"
+   ]
+  },
+  {
+   "id": "124-1",
+   "madde": [
+    "6",
+    "7",
+    "8"
+   ],
+   "baslik": "Görevliler",
+   "hukum": "Yönetim yetkilisi: uygun birimlere ihtiyaç kadar atanır; alınma, depolama, muhafaza, teslim, elden çıkarma ve giriş-çıkış kayıtlarının usulüne uygun tutulmasını sağlar; belge-cetvel-defterleri denetime hazır bulundurur; sorumluluk sınırları idarece; unvana bakılmaksızın bilgi-niteliğe göre (m.6); mal sorumlusu: unvana bakılmaksızın; yoğun birimlerde birden fazla; sayarak, tartarak, ölçerek teslim alır, depolarda muhafaza eder; eksiklik ve ambalaj bozukluğunu tutanağa yazar, kesin kabulü yapılmadan kullanıma verilmesini önler; tüketime-kullanıma verilenleri ilgililere teslim eder; yangın-ıslanma-bozulma-çalınmaya karşı tedbir alır; yönetim yetkilisine karşı sorumlu; depolarındaki kasıt-ihmal-tedbirsizlikten kaynaklanan kayıp ve noksanlardan doğrudan sorumlu; depoları devir-teslim etmeden görevden ayrılamaz (m.7); kayıt sorumlusu: yönetim yetkilisi adına giriş-çıkış envanter kayıtlarını denetlenebilir tutar; belge usulüne uygun düzenlenmedikçe hiçbir giriş-çıkış kaydı yapamaz; sayım tutanağındaki miktarların kayıtlarla uygunluğunu kontrol eder, farkları noksan/fazla sütununa, fazla çıkanların giriş belgelerini düzenler, noksanlar için yönetim yetkilisini bilgilendirir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mal sorumlusu depoyu devretmeden tayin olabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "Yönetim yetkilisi · mal sorumlusu · sayarak, tartarak, ölçerek teslim alır · kesin kabulü yapılmadan kullanıma verilmesini önler · depolarındaki kasıt-ihmal-tedbirsizlikten kaynaklanan kayıp ve noksanlardan doğrudan sorumlu · depoları devir-teslim etmeden görevden ayrılamaz · kayıt sorumlusu · belge usulüne uygun düzenlenmedikçe hiçbir giriş-çıkış kaydı yapamaz"
+   ]
+  },
+  {
+   "id": "124-2",
+   "madde": [
+    "9",
+    "10",
+    "14"
+   ],
+   "baslik": "Kayıt işlemleri, işlem belgesi, kayıt değeri, girişler",
+   "hukum": "Kayıt işlemleri: önceki yıldan devredenler + yıl içinde edinilenler, elden çıkarılanlar, kayıp-fire azalmaları ve sayım fazlalarının envanter ve muhasebe kayıtlarında miktar/değer olarak takibi; kayıtlar belgeye dayanır; e-imzada üst yönetici uygun görüşü (m.9); giriş-çıkışta taşınır mal işlem belgesi esas; aynı idare içindeki yönetim birimleri arası hareketler de giriş/çıkış; belge düzenlenmeyen taşınırlar: satın alındığı anda tüketilen elektrik, su, doğalgaz, kum, çakıl, bahçe toprağı-gübresi, çim tohumu, fidan, fide, çiçek; 22/f ile hastaya özgü alınıp ameliyatta sarf edilen tıbbi malzeme; servislerde bakım-onarımda kullanılan yedek parça-yağ-antifriz ve sivil akaryakıt istasyonlarından doğrudan taşıt deposuna konulan akaryakıt-LPG ile yurt dışına giden hava araçlarının akaryakıtı; mutfak-sanayi tüpü, yangın tüpü gaz dolumları, toner-kartuş dolumları; dergi-gazete gibi süreli yayınlar ve arşivlenmeyen kütüphane materyali; temsil-tanıtma tertibinden makam için alınan yiyecek-içecek; FMS, NSPA, BAAINBw anlaşmaları kapsamında yurt dışında depolanmak üzere tedarik edilenler; MİT'in 2937 görevleri için üst yöneticinin kayda alınmamasını uygun gördükleri; MSB ve İçişleri'nin dost-müttefik ülkelere yardım için tedarik ettikleri; ancak (g) hariç bunlardan depolanan/arşivlenen veya ciltletilen süreli yayınlar için belge zorunlu; işlem belgesi en az 3 nüsha; satın alınanlarda birinci nüsha ödeme emri belgesine; diğer edinme ve çıkışlarda birinci nüsha kayda esas, ikincisi sıralı dosya; defter-belge-cetveller bilgisayar ortamında (m.10); kayıt zamanı: kullanılmak üzere teslim alındığında giriş; sarf, satış, devir, bağış-yardım, HEK, yıpranma-kırılma-bozulma, kaybolma-çalınma, canlı malın ölümünde çıkış; kayıt değeri: satın alma ve değer artırıcı değişiklikte birim maliyet bedeli; bedelsiz devir, ölüm, kırılma, bozulma, kaybolma, çalınma, HEK ve firede kayıtlı değeri; bağış-yardımda belgedeki değer, yoksa m.14 komisyonunun tespit ettiği değer; idarece üretilende üretim maliyet bedeli; yardım verilen malların amaç dışı kullanımında geri alma (m.11); satın alınanlar geçici olarak teslim alınır, muayene-kabulden sonra birim maliyet bedeliyle giriş; FMS, NSPA, BAAINBw alımları ile MSB, İçişleri ve SSB projelerinden teslim alınanlar iz bedeliyle, proje sonunda gemi-denizaltı-uçak gibi ana sistemler maliyet bedeliyle; faturada toplu giderler alış bedelleriyle orantılı paylaştırılır; uluslararası alımların muayene uyuşmazlığında uygun kısım ve uyuşmazlık kısmı için ayrı belge, en az 3 ve tek sayıda uzmandan teknik komisyon raporu; süreli yayınlar cilt bütünlüğü sağlanınca kayda (m.12); değer artırıcı harcamalar (bakım-onarım hariç, niteliği değiştiren, süreklilik arz eden) işlem belgesiyle maliyete eklenir (m.13); bağış-yardım: değeri belli olmayan/faturasız → değer tespit komisyonu; değeri belli → o değer; faturalı → fatura bedeli; belgenin bir nüshası bağışçıya; değer tespit komisyonu: harcama yetkilisi/birlik komutanı/kurum amirinin belirleyeceği kişi başkanlığında kayıt sorumlusu ve işin uzmanının katıldığı en az 3 ve tek sayıda kişi, yedekler; ticaret-sanayi odası, borsa, piyasa, meslek kuruluşlarından yararlanır (m.14); sayım fazlası aynı nitelikte mal varsa o değerle, yoksa komisyon değeriyle giriş (m.15); devralınan mallar devreden idarenin belgesindeki değerle, yoksa komisyon (m.16); tasfiye idaresinden tahsis edilenler bedeli belliyse o, yoksa komisyon (m.17); iç imkânlarla üretilen mallar üretim maliyet bedeliyle giriş, kullanılan ilk madde kayıtlı değeriyle çıkış (m.18); iade: tüketim malzemesi iadesinde birim yetkilisi onaylı cins-miktar belgesiyle giriş; zimmetle verilen dayanıklı taşınırın iadesinde işlem belgesi düzenlenmez, veriliş belgesinin ilgili bölümü imzalanıp kişiye geri verilir (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Süreli yayınlar hiçbir zaman kayda alınmaz\" yanlış; ciltletilince alınır",
+    "Elektrik ve akaryakıt için taşınır mal işlem belgesi düzenlenir",
+    "Zimmetle verilen dayanıklı malın iadesinde işlem belgesi düzenlenir"
+   ],
+   "dogrusu": [
+    "Düzenlenmez (m.10)",
+    "Düzenlenmez (m.19)"
+   ]
+  },
+  {
+   "id": "124-3",
+   "madde": [
+    "20",
+    "21",
+    "22"
+   ],
+   "baslik": "Çıkışlar (tüketim, devir, satış, fire, kayıp, HEK, mübadele), tahsis, yetki",
+   "hukum": "Tüketime verilenler kullanıcılarca sarf edildikten sonra çıkış (m.20); devir: kamu idarelerine veya özel kuruluşlara bedelsiz devredilenler kayıtlı değerle, devralanın belgesi eklenir; millî güvenlik, kamu düzeni, terör, toplumsal olaylar ve asayişin zorunlu kıldığı hâllerde idareler taşıt dâhil ihtiyaç duyulan malları MİT'te üst yönetici onayı, diğerlerinde devreden idarenin üst yöneticisinin teklifi ve ilgili Bakanın onayıyla herhangi bir şarta bağlı olmaksızın bedelsiz devredebilir; normal devirler TSK'da 3212 sayılı Kanun, EGM'de 4645, MİT'te genel hükümler, JGK'da 2803, SGK'da 2692 sayılı Kanuna göre; diğer ülkelere devredilenler yetkili makam onayıyla (m.21); satış: yetkili makam onayıyla satılanlar bedelinin muhasebe birimi veznesine yatırıldığına ilişkin alındı üzerine işlem belgesiyle kayıtlı değerden çıkış; MKE'ye satışına karar verilip doğrudan teslim edilenler teslim belgesiyle çıkış (Millî Emlak'a teslim de aynı); diğer ülkelere satışta banka dekontu (m.22); fire: özelliğinden/olağan kullanımdan yıpranmalar ve usulüne uygun taşıma-depolama-doldurma-boşaltmadaki ağırlık-miktar azalmaları sayım tutanağında; kasıt-ihmal-tedbirsizlik olup olmadığı ayrı tutanak/raporda; hukuki işlem gerektirmeyen fire ve sayım noksanı kayıtlardan çıkarılır, kusur varsa m.34 (m.23); kaybolma, kırılma, bozulma, evsafını kaybetme, kullanım süresinin dolması, canlı malın ölümü → çıkış; eskimiş-solmuş-yırtılmış bayraklar Türk Bayrağı Tüzüğü m.38'e dayalı Yönetmelikle belirlenen yerlere teslim edilerek çıkış; kusur araştırması + m.34 (m.24); HEK'e ayırma: ekonomik ömrünü tamamlamış veya teknik-fiziki nedenlerle hizmet dışı bırakılan taşınırlar ve başka yerde kullanılamayan idame-işletme malzemeleri, yedek parçaları kamu idarelerinde oluşturulan yetkili komisyon kararı ve harcama yetkilisinin veya birlik komutanı ya da kurum amirinin onayıyla HEK'e ayrılarak kayıtlardan düşülür; uzayda kaybolan, denizaltından/yer altından çıkarılması mümkün veya ekonomik olmayan malzemelerde teknik rapor; ekonomik değeri olmayan veya teknik, hijyenik, stratejik, tıbbi nedenlerle imhası gerekenler HEK komisyonu dışında ayrı bir komisyonca tutanakla imha; kayıt silmeye esas belgeyle çıkış; ekonomik değeri olan HEK maden-metal-araçlarda MKE Ana Statüsü; kripto malzemelerin imhası özel düzenlemelerine göre (m.25); mübadele: verilen ve alınanlar kayıtlı değerle, değeri yoksa veren birliğin komisyonunun tespit ettiği değerle; yetkili makam onayı ve gerekiyorsa muayene-kabul raporu belgeye eklenir (m.26); taşınırlar mevzuat uyarınca geçici tahsis edilebilir; kamu kurumlarından, gerçek-tüzel kişiler, vakıf ve derneklerden geçici ve bedelsiz tahsis alınabilir; ayrı kayıtlarda izlenir (m.27); dayanıklı taşınırların kullanıma verilmesinde teslim anındaki durumu belirten belge + ilgilinin imzası; geri alınmada aynı belgeye durum kaydı (m.28); kayıtlardan çıkarma yetkisi: üst yöneticinin belirlediği tutara kadar yetki verilmiş makamlar, aşanlar ve yetki verilmeyenler üst yönetici onayı (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"HEK'e ayrılanları aynı komisyon imha eder\" yanlış; ayrı komisyon"
+   ],
+   "dogrusu": [
+    "Tüketime verilenler kullanıcılarca sarf edildikten sonra çıkış · devir · millî güvenlik, kamu düzeni, terör, toplumsal olaylar · taşıt dâhil · MİT'te üst yönetici onayı, diğerlerinde devreden idarenin üst yöneticisinin teklifi ve ilgili Bakanın onayıyla · TSK'da 3212 sayılı Kanun · EGM'de 4645 · MİT'te genel hükümler · JGK'da 2803 · SGK'da 2692 · satış · muhasebe birimi veznesine yatırıldığına ilişkin alındı · MKE'ye satışına karar verilip doğrudan teslim edilenler · fire · kasıt-ihmal-tedbirsizlik · m.34 · kaybolma, kırılma, bozulma, evsafını kaybetme, kullanım süresinin dolması, canlı malın ölümü · eskimiş-solmuş-yırtılmış bayraklar · HEK'e ayırma · kamu idarelerinde oluşturulan yetkili komisyon kararı ve harcama yetkilisinin veya birlik komutanı ya da kurum amirinin onayıyla HEK'e ayrılarak kayıtlardan düşülür · uzayda kaybolan, denizaltından/yer altından çıkarılması mümkün veya ekonomik olmayan · teknik, hijyenik, stratejik, tıbbi nedenlerle imhası · dışında ayrı bir komisyonca · MKE Ana Statüsü · kripto malzemelerin imhası özel düzenlemelerine göre · mübadele · geçici tahsis edilebilir · geçici ve bedelsiz tahsis alınabilir · teslim anındaki durumu belirten belge + ilgilinin imzası · kayıtlardan çıkarma yetkisi · yetki verilmiş makamlar · üst yönetici onayı"
+   ]
+  },
+  {
+   "id": "124-4",
+   "madde": [
+    "28",
+    "15",
+    "23"
+   ],
+   "baslik": "Sayım, devir, yönetim hesabı, zarar, denetim, kodlama, son hükümler",
+   "hukum": "Sayım kurulları: harcama yetkilisi/birlik komutanı/kurum amirinin görevlendirdiği kişi başkanlığında en az 3 kişi; uzman alınabilir; yurt dışı birlik-ataşeliklerde 3 kişi oluşturulamazsa amir başkanlığında mevcut personel; sayımı yapılan malın taşınır mal sorumlusuna sayım kurulunda görev verilmez; depolar sayım hazırlığı için kapatılabilir, giriş-çıkışlar durdurulur (bozulabilir mallar için tedbir); güvenlik önlemleri kurulun sorumluluğunda; sayım tutanağı (adı, kayıtlı miktar, sayımda bulunan, noksan, fazla); kayıtlı miktar bölümü yönetim birimince doldurulur, kurul fiilen sayar; taşıtlar-iş makineleri ve odalardaki mallar m.28 belgelerine göre; fark varsa sayım bir kez daha tekrarlanır, yine farklıysa fazla/noksan sütununa; fire ayrıca; sayım her yıl sonunda mutlaka, ayrıca amir gerekli gördüğünde; TSK, MİT, JGK ve SGK'da birlik komutanınca belirlenen bakım/onarım/ikmal/tedarik merkezleri, tersaneler, birinci sınıf askerî müzeler ve ana depolarda sayım programıyla 3 mali yılı geçmemek üzere yıllara sâri yapılabilir; fazla-noksan-fire için m.15, m.23; kusurlular için m.34 (m.30); devir: yönetim yetkilisi, mal ve kayıt sorumluları depolardaki malları ve kayıtları devretmeden görevden ayrılamaz; depo devir ve teslim tutanağı en az 3 nüsha (dosya, devreden, devralan); ortak alanlardaki mallar veriliş belgelerine göre sayılıp imzayla devredilir; devir-teslim edemeyenlerin malları 30 gün içinde devir kurulu aracılığıyla; devir kurulu amirin görevlendirdiği kişi başkanlığında devralanın da katıldığı en az 3 kişi; 3 aydan kısa ayrılmalarda geçici devir, amir onayıyla azami 6 aya uzatılabilir; kullanıcılar dayanıklı taşınırı başkasına devredemez, mal sorumlusuna devretmeden ayrılamaz (m.31); yıl sonu sayımları m.30 kurullarınca; sonuçlara göre işlem belgesi düzenlettirilerek kayıtlar uyumlaştırılır; birinci sınıf askerî müzelerin koleksiyonundaki eserler ile kripto malzemelerin sayımı kendi özel düzenlemelerine göre; mal sorumlusu sayım kuruluna refakat eder ve tutanağı imzalar (m.32); taşınır mal yönetim hesabı: önceki yıldan devreden, yıl içinde giren-çıkan, ertesi yıla devredilen ve sayım fazla-noksanlarının hesap cetvellerinde gösterilmesi; yönetim yetkilisi hazırlar, harcama yetkilisi/birlik komutanı/kurum amiri onaylar; stok birim fiyatında ağırlıklı ortalama veya ilk giren ilk çıkar (FIFO); cetveller Sayıştay ve yetkili mercilere istenildiğinde gönderilmek üzere birimlerde, saklama süresi Tüzükteki süreden az olamaz (m.33); kasıt, ihmal veya tedbirsizlikle fire-kayıp-kırılma-bozulmadan doğan kamu zararı ilgili mevzuata göre sorumlulardan tahsil; tarihî veya sanat değeri olan mallarda en az 3 bilirkişi heyeti önce eserin değerini, sonra zararı tespit eder; olağan yıpranmada sorumluluk aranmaz (m.34); iç denetim 5018 m.63 iç denetim birimi olan idarelerde iç denetçiler, diğerlerinde denetim elemanları; edinme yöntemlerinin mevzuata uygunluğu, giriş-çıkışların belgeyle yapılıp yapılmadığı, ekonomiklik-etkililik-verimlilik, kusurlular hakkında tazmin işlemlerinin zamanaşımı içinde yapılıp yapılmadığı; soruşturma gerektiren durum en üst amire; raporlar ilgili birimlere; hesap denetimi = mevzuata göre teftişler (m.35); taşınırlara kod veya stok numarası, yönetim birimleri ve depolara kod (m.36); idareler Taşınır Mal Yönetmeliğindeki defter-belge-cetvelleri aynen kullanabilir veya HMB uygun görüşüyle değiştirebilir; işlem belgesi düzenlenmeyen malların takibi, HMB tutarına kadar değer artırıcı harcamaların türleri, geçici devir usulleri, kodlama, kayıttan çıkarma belgeleri ve yetkili merciler, HEK usulleri ve komisyonları, tutanak şekilleri idarece belirlenir; eğitim kursları (m.37); Sayıştay görüşüyle, 1/1/2011 yürürlük (m.38); Cumhurbaşkanı yürütür (m.39); işlem belgesi açıklamaları: belge numarası mali yıl başında 1'den; muayene-kabul raporu tarih-sayısı; işlem çeşidi giriş/çıkış; birim maliyet bedeli girişte alış, çıkışta stok bedeli",
+   "sinavda_boyle_yazarlar": [
+    "\"Kayıp taşınırın sorumluluğu her hâlde aranır\" yanlış; olağan yıpranmada aranmaz",
+    "Mal sorumlusu sayım kurulunda görev alır",
+    "Sayım 3 yılda bir yapılır",
+    "Telsiz cihazlarının sayımı özel düzenlemeye tabidir",
+    "Olağan yıpranmada da sorumluluk aranır"
+   ],
+   "dogrusu": [
+    "Alamaz (m.30)",
+    "Her yıl sonu; yalnız ana depo vb. 3 yıla yayılabilir (m.30)",
+    "Müze eserleri ve kripto (m.32)",
+    "Aranmaz (m.34)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

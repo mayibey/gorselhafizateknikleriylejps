@@ -1,0 +1,142 @@
+{
+ "kanun_id": 55,
+ "ad": "Adli Kolluk Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_55.json",
+ "kartlar": [
+  {
+   "id": "55-0",
+   "madde": [
+    "7",
+    "3"
+   ],
+   "baslik": "Tanımlar — adli kolluk görevlisi ve sorumlusu",
+   "hukum": "Adli kolluk görevlileri: CMK, 3201 (EGM), 2803 (JGK m.7), 2692 (SGK), Gümrük mevzuatı ve Jandarma Yönetmeliğindeki soruşturma işlemlerini yapmak üzere görevlendirilen komutan, amir, memur ve görevliler; adli kolluk sorumlusu: mahallin en büyük mülkî idare amiri tarafından görevlendirilen adli kolluğun komutanı/amiri; en üst dereceli kolluk amiri: EGM'de il/ilçe emniyet müdürü, JGK'da il jandarma komutanı, ilçe ve merkez ilçe jandarma komutanı, SGK'da birlik komutanı, gümrükte kaçakçılık ve istihbarat müdürü (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adli kolluk sorumlusunu Cumhuriyet başsavcısı görevlendirir\" yanlış; mülkî idare amiri"
+   ],
+   "dogrusu": [
+    "adli kolluk sorumlusu · mahallin en büyük mülkî idare amiri · en üst dereceli kolluk amiri · JGK'da il jandarma komutanı, ilçe ve merkez ilçe jandarma komutanı"
+   ]
+  },
+  {
+   "id": "55-1",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Tanımlar — evreler ve gecikmesinde sakınca",
+   "hukum": "Soruşturma: suç şüphesinin öğrenilmesinden iddianamenin kabulüne kadar; kovuşturma: iddianamenin kabulünden hükmün kesinleşmesine kadar; gecikmesinde sakınca bulunan hâl: derhâl işlem yapılmazsa delillerin kaybolması, şüphelinin kaçması veya kimliğinin saptanamaması ihtimali (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kovuşturma iddianamenin düzenlenmesiyle başlar\" yanlış; kabulüyle"
+   ],
+   "dogrusu": [
+    "Soruşturma · iddianamenin kabulüne · kovuşturma · hükmün kesinleşmesine · gecikmesinde sakınca bulunan hâl"
+   ]
+  },
+  {
+   "id": "55-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Nerede adli kolluk görevlendirilir",
+   "hukum": "Soruşturma yapmak üzere: EGM asgari tam teşekküllü polis karakolu bulunan yerlerde; JGK asgari tam teşekküllü jandarma karakolu bulunan yerlerde; SGK asgari sahil güvenlik bot komutanlıklarının bulunduğu yerlerde; Gümrük Muhafaza kaçakçılık-istihbarat müdürlüğü, gümrük müdürlüğü, müstakil bölge ve kısım amirlikleri bulunan yerlerde mevcut imkânlar ölçüsünde yeterince adli kolluk personeli görevlendirir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "MİT şıkta verilir; adli kolluk değildir",
+    "Tam teşekküllü polis karakolunda adli kolluğu JGK görevlendirir",
+    "MİT adli kolluk görevlendirir"
+   ],
+   "dogrusu": [
+    "EGM (m.4)",
+    "Adli kolluk kurumu değildir (m.4)"
+   ]
+  },
+  {
+   "id": "55-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Genel esaslar — emir zinciri ve özlük",
+   "hukum": "Cumhuriyet başsavcılığı adli emirleri öncelikle adli kolluk sorumlularına verir; adli kolluk bağlı olduğu kolluk teşkilatının parçasıdır, öncelikli görevi karşılaştığı suçun işlenmesini önlemektir; adli görevler dışındaki hizmetlerde üstlerinin emrindedir; adli görevi bulunmayan üstleri, yürütülen soruşturmayla ilgili emir veremez; adli kolluk görevlileri kadrolarındaki birimin diğer görevlerini de yapar; özlük hakları bağlı oldukları teşkilat tarafından yürütülür; en üst dereceli kolluk amiri adli olayları mülkî idare amirine derhal bildirir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adli görevi olmayan üst soruşturmaya talimat verebilir\" yanlış",
+    "Özlük hakları Cumhuriyet Başsavcılığınca yürütülür",
+    "Adli görevi olmayan üst soruşturmaya emir verebilir"
+   ],
+   "dogrusu": [
+    "Bağlı teşkilat (m.5)",
+    "Veremez (m.5)"
+   ]
+  },
+  {
+   "id": "55-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Görev ve yetkiler",
+   "hukum": "Soruşturma işlemleri savcının emir ve talimatıyla öncelikle adli kolluğa yaptırılır; adli kolluk savcının emirlerini gecikmeksizin yerine getirir; ihbar-şikâyetleri, el koyduğu olayları, yakalananları ve tedbirleri derhâl Cumhuriyet başsavcılığına ve en üst dereceli kolluk amirine bildirir; CMK 135/6'daki suçlarda soruşturma aşamaları savcı tarafından başsavcıya yazılı bildirilir; en üst dereceli kolluk amiri adli kolluk üzerinde gözetim, denetim, planlama ve iş bölümü yapmaya yetkilidir; doğal olmayan ölüm veya kimliği belirsiz ölü → derhâl başsavcılığa bildirim; savcı emirleri yazılı, acele hâlde sözlü verir, sözlü emir en kısa sürede yazılıya dönüştürülür ama kolluk yazılıyı beklemeden yerine getirir; suçüstü ve gecikmesinde sakınca olan hâlde savcıya ulaşılamıyorsa veya olay savcının iş gücünü aşıyorsa sulh ceza hâkimi de soruşturma işlemlerini yapabilir; şüphelinin lehine ve aleyhine tüm delilleri toplayıp fezleke ile savcıya sunar, hukuka aykırı delil tespitine fezlekede yer verir; olay yerinde işleme engel olanları önce sözlü ikaz, uymazsa zor kullanarak uzaklaştırma, ısrarda yakalama (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözlü emir yazılı hâle gelene kadar beklenir\" yanlış",
+    "Adli kolluk sadece aleyhe delilleri toplar"
+   ],
+   "dogrusu": [
+    "Lehe ve aleyhe tüm deliller (m.6)"
+   ]
+  },
+  {
+   "id": "55-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Diğer kolluk birimlerinin adli görevi",
+   "hukum": "Gerektiğinde veya savcının talebi hâlinde diğer kolluk birimleri de adli kolluk görevini yapmakla yükümlüdür; bu durumda haklarında adli görevleri dolayısıyla CMK hükümleri uygulanır (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız görevlendirilmiş adli kolluk soruşturma yapabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "diğer kolluk birimleri de · CMK"
+   ]
+  },
+  {
+   "id": "55-6",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Değerlendirme raporu",
+   "hukum": "Cumhuriyet başsavcıları her yılın sonunda adli kolluk sorumluları hakkında değerlendirme raporu düzenleyip mülkî idare amirlerine gönderir; raporda ehliyet, çalışkanlık, iş disiplini ve başarı durumu yer alır; raporlar ilgilinin sicilinin düzenlenmesinde dikkate alınır; birden fazla başsavcılık çevresinde faaliyet gösteren sorumlular için diğer başsavcılıkların görüşü alınarak merkezin bulunduğu yer başsavcısı düzenler (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "Düzenleyen ile gönderilen makam ters verilir",
+    "Değerlendirme raporunu mülkî amir düzenler / başsavcılığa gönderilir"
+   ],
+   "dogrusu": [
+    "Başsavcı düzenler, mülkî amire gönderir (m.11)"
+   ]
+  },
+  {
+   "id": "55-7",
+   "madde": [],
+   "baslik": "Eğitim",
+   "hukum": "Adli kolluk görevlilerine verilecek eğitim İçişleri Bakanlığı ve Adalet Bakanlığınca müştereken düzenlenir (Yönetmelik eğitim hükmü)",
+   "sinavda_boyle_yazarlar": [
+    "\"Adalet Bakanlığı talep eder, İçişleri eğitici görevlendirir\" gibi tek yönlü şıklar yanlış; müştereken"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığı ve Adalet Bakanlığınca müştereken"
+   ]
+  },
+  {
+   "id": "55-8",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Denetim",
+   "hukum": "Cumhuriyet başsavcıları ve savcıları adli kolluğun adli işlemlerini her zaman denetler; soruşturma evrakını ilgili adli kolluk biriminde inceleyip eksiklerin ikmalini emredebilir veya evrakın bulunduğu hâl üzere başsavcılığa intikalini isteyebilir; gözaltına alınanların nezarethanelerini, ifade alma odalarını, durumlarını, gözaltı sürelerini ve tüm kayıt-işlemleri denetler, sonucunu nezarethane defterine kaydeder (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Savcı nezarethaneyi ancak şikâyet üzerine denetler\" yanlış; her zaman",
+    "Savcı şüpheliyi gözaltı yerine ev hapsine karar verebilir"
+   ],
+   "dogrusu": [
+    "Denetim yetkisi değildir (m.13)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

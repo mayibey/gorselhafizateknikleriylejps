@@ -1,0 +1,194 @@
+{
+ "kanun_id": 138,
+ "ad": "3466 sayılı Uzman Jandarma Kanunu (personel hükümleri)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_138.json",
+ "kartlar": [
+  {
+   "id": "138-0",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Görevler",
+   "hukum": "Uzman jandarmalar (a) İç Hizmet Kanun ve Yönetmeliğinde erbaşlar için belirtilen görevlerle kadro açıklamalarındaki görevleri, (b) zabıta memuru olarak 2803 sayılı Kanunun verdiği görevleri yapar ve yetkileri kullanır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman jandarma kolluk yetkisi kullanamaz\" yanlış"
+   ],
+   "dogrusu": [
+    "erbaşlar için · zabıta memuru · 2803 sayılı Kanunun"
+   ]
+  },
+  {
+   "id": "138-1",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Statü ve sorumluluk",
+   "hukum": "Uzman jandarmalar çavuş rütbesi taşıyan asker kişi sayılır; hizmete çağrıldıklarında uzman erbaş, sözleşmeli erbaş-er, erbaş ve erlerin üstü; cezai müeyyide ve yargılama usulü bakımından erbaşlarla aynı hükümlere tabi; askerî öğrencilerle astlık-üstlük yok; yedeklik dönemi için 1111 sayılı Kanun; mülkî görevlerin ifası sırasında işledikleri suçlardan 4483 sayılı Kanuna (memurların yargılanması) tabidirler (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uzman jandarma her suçtan doğrudan askerî mahkemede yargılanır\" yanlış; mülkî görev suçlarında 4483"
+   ],
+   "dogrusu": [
+    "çavuş rütbesi taşıyan asker kişi · uzman erbaş, sözleşmeli erbaş-er, erbaş ve erlerin üstü · erbaşlarla aynı · mülkî görevlerin ifası sırasında işledikleri suçlardan 4483 sayılı Kanuna"
+   ]
+  },
+  {
+   "id": "138-2",
+   "madde": [
+    "4",
+    "5",
+    "12"
+   ],
+   "baslik": "Kaynak, eğitim ve nasıp",
+   "hukum": "Kaynak: 18 yaşını bitirmiş, 24 yaşını geçmeyen, en az lise/dengi mezunu erkeklerden askerliğini yapıp terhisi müteakip 2 yıl içinde müracaat edenler ve askerliğini yapmamış olanlar; yalnız bando için aynı şartlarda kadınlar (m.4); uzman jandarma olabilmek için 6 aydan az olmayan eğitim ve öğrenimi başarıyla bitirmek şart; adayların ihtiyaçları Devletçe karşılanır; sağlık dışı sebeple ilişiği kesilenlere Devletçe yapılan masraf faiziyle ödettirilir ve bunlar subay-astsubay-uzman jandarma-uzman erbaş olarak TSK'ya alınmaz (m.5); uzman jandarma çavuşluğa nasıp Jandarma Genel Komutanının, terfiler JGK Kurmay Başkanının onayıyla; nasıplar okulu bitirdikleri yılın 30 Ağustos'una götürülür; nasbedilenler 6 ay stajyer olarak görev başı eğitimine tabi tutulur (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Nasıp ve terfi İçişleri Bakanının onayıyla\" yanlış",
+    "Uzman jandarma eğitimi en az 1 yıl",
+    "Nasıp İçişleri Bakanı onayıyla"
+   ],
+   "dogrusu": [
+    "6 ay (m.5)",
+    "Jandarma Genel Komutanı (m.12)"
+   ]
+  },
+  {
+   "id": "138-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Mecburi hizmet ve yaş haddi",
+   "hukum": "Uzman jandarmaların mecburi hizmet süresi uzman jandarma çavuşluğa nasıp tarihinden itibaren 15 yıl, yaş hadleri 56; bunun 5 yıl fazlası askerlik çağı sonu; mecburi hizmet içinde istifa edenler/ilişiği kesilenler Devletçe yapılan masrafı öder (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "Eski metindeki \"on yıl\" şıkkı tuzak; güncel 15 yıl",
+    "Mecburi hizmet 10 yıl"
+   ],
+   "dogrusu": [
+    "15 yıl, yaş haddi 56 (m.7)"
+   ]
+  },
+  {
+   "id": "138-4",
+   "madde": [
+    "10",
+    "11"
+   ],
+   "baslik": "Rütbeler ve bekleme süreleri",
+   "hukum": "Rütbeler: uzman jandarma çavuş, 1.-8. kademeli çavuş (9 rütbe) (m.10); her rütbede normal bekleme süresi 3, en fazla bekleme süresi (sıhhi izin hariç) 4 yıl; terfiler her yıl 30 Ağustos'ta (m.11)",
+   "sinavda_boyle_yazarlar": [
+    "\"2-3\" şıkkı yanlış",
+    "Normal bekleme 2, en fazla 3 yıl"
+   ],
+   "dogrusu": [
+    "3 / 4 (m.11)"
+   ]
+  },
+  {
+   "id": "138-5",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Sicil ve terfi — %60 ve 2 yıllık sicil",
+   "hukum": "Her yıl askerî ve mülkî olmak üzere iki çeşit sicil belgesi düzenlenir (mülkî görevi olmayan birliklerde yalnız askerî); yıllık sicil notu ortalaması sicil tam notunun %60 ve yukarısı olanlara kademe ilerlemesi (şartlar 926'ya göre); görev esnasında yaralanıp uzun tedavi görenlerin kademe ilerlemesi sicil notu şartı aranmadan ortalamaya göre; rütbe bekleme süresi içinde asgari 2 yıllık sicili bulunan ve ortalaması %60 ve yukarısı olanlar bir üst rütbeye terfi ettirilir; normal bekleme sonunda ortalaması %60'ın altında olan o rütbede 1 yıl daha bekletilir, müteakip yıl %60 ve üstü olursa terfi eder; en fazla bekleme süresi sonunda terfi edemeyenler ile bir rütbede en fazla 2 defa kademe ilerlemesi yapamayanların yetersizlikten ilişiği kesilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"%70\" ve \"üç yıllık sicil\" şıkları yanlış",
+    "Terfi için 3 yıllık sicil ve %70"
+   ],
+   "dogrusu": [
+    "2 yıl, %60 (m.13)"
+   ]
+  },
+  {
+   "id": "138-6",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Kıdem sırası",
+   "hukum": "Rütbelerde kıdem JGK onay metnindeki tarihten başlar; aynı gün nasbedilenler arasında kıdem okulda kazanılan not ortalamasına göre; aynı rütbe ve nasıplılar arasında her yıl tespit edilen yeterlik derecesine göre (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aynı nasıplılarda kıdem yaşa göre\" yanlış"
+   ],
+   "dogrusu": [
+    "okulda kazanılan not ortalamasına · yeterlik derecesine"
+   ]
+  },
+  {
+   "id": "138-7",
+   "madde": [
+    "131",
+    "16"
+   ],
+   "baslik": "İlişik kesme (m.16)",
+   "hukum": "JGK onayı ile: stajyer görev başı eğitiminde başarısız olanlar; mahkeme kararıyla rütbesi geri alınanlar; ertelense/HAGB/affa uğrasa bile Devletin şahsiyetine karşı suçlar, zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, inancı kötüye kullanma, dolanlı iflas, iftira gibi yüz kızartıcı suçlar, kaçakçılık (istimal-istihlak hariç), ihaleye fesat suçlarından hüküm giyenler (Askerî Ceza Kanunu m.131/1 az vahim hâl hariç) (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "İlişik kesme onayı Jandarma Genel Komutanı"
+   ],
+   "dogrusu": [
+    "başarısız olanlar · rütbesi geri alınanlar · Devletin şahsiyetine karşı suçlar"
+   ]
+  },
+  {
+   "id": "138-8",
+   "madde": [
+    "65",
+    "36",
+    "17"
+   ],
+   "baslik": "Açığa alınma, atama",
+   "hukum": "Açığa çıkarılan, tutuklanan, firar/izin tecavüzünde bulunan, cezası infaz edilen uzman jandarmalar hakkında 926 m.65; nasıp düzeltmeleri 926 m.36 (a,b,e); esir-kayıp-alıkonulanlar için 926 hükümleri (m.17); atamalar JGK'nın teklifi ve İçişleri Bakanının onayı ile; iller emrine atananların görev yeri İl J.K.'nın teklifi, valinin onayı ile; okulu bitirenler 6 ay stajyer olarak kura ile atanır; atandığı yerde sağlık/idari/asayiş/zorunlu sebep dışında asgari 2 yıl kalmayan yeniden atamaya tabi tutulmaz (il içi yer değiştirme hariç) (m.19); sağlık, izin ve sıhhi izin yönünden 211 ve 926 sayılı Kanunlar (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Atamayı JGK tek başına yapar\" yanlış; İçişleri Bakanı onayı"
+   ],
+   "dogrusu": [
+    "926 m.65 · JGK'nın teklifi ve İçişleri Bakanının onayı · İl J.K.'nın teklifi, valinin onayı · 6 ay stajyer · kura ile · asgari 2 yıl · 211 ve 926"
+   ]
+  },
+  {
+   "id": "138-9",
+   "madde": [
+    "21",
+    "22",
+    "23"
+   ],
+   "baslik": "Mali hükümler ve emeklilik",
+   "hukum": "Aylık 926'daki uzman jandarma gösterge tablosuna göre + Ek-1 ek gösterge; Silahlı Kuvvetler Tazminatı, aile-doğum-ölüm-yakacak yardımı 926'ya, tayın bedeli 2155'e, asayiş ücreti 2803'e göre; 30 Ağustos'ta rütbe terfii onananlara terfi tarihinden aybaşına kadar kıst aylık farkı ödenir (m.21); ilk atananlar nasıp tarihini takip eden aybaşından aylığa hak kazanır, okul mezunlarına takip eden aybaşına kadar kıst aylık peşin ödenir (m.22); adaylara okulda uzman jandarma çavuş 1. kademe brüt aylığının net tutarında harçlık, vergisiz ve haczedilemez (m.23); yolluk özel kanuna göre (m.24); mal bildirimi eş ve velayet altındaki çocuklar için de (m.25); 5434 Emekli Sandığı ile ilgilendirilir ve fiili hizmet süresi zammından yararlanır, OYAK daimi üyesi; emeklilik hakkını kazananlar emekliliklerini Ocak, Şubat, Temmuz veya Ağustos aylarında isteyebilir, diğer aylarda ancak Jandarma Genel Komutanının hizmet gerekleri itibarıyla uygun görmesiyle (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklar \"Ocak, Nisan, Temmuz, Ekim\" diye de verilir; doğrusu Ocak, Şubat, Temmuz, Ağustos",
+    "Emeklilik Ocak, Nisan, Temmuz, Ekim'de istenir"
+   ],
+   "dogrusu": [
+    "Ocak, Şubat, Temmuz, Ağustos (m.26)"
+   ]
+  },
+  {
+   "id": "138-10",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Astsubaylığa geçirilme",
+   "hukum": "(a) doğrudan astsubay çavuşluğa: kendi nam ve hesabına fakülte/yüksekokul/MYO mezunu, muvazzaf astsubay olmaya istekli, 35 yaşından gün almamış, en az 3 yıl uzman jandarma olarak görev yapmış, yönetmelik sınavlarında başarılı, 926 nitelik şartları, temel askerlik eğitiminde başarılı; (b) astsubay MYO yoluyla: JGK'nın belirlediği sivil lise/dengi mezunu, başvuruda en az uzman jandarma 1. kademeli çavuş, 3. hizmet yılını tamamlamış, 6. hizmet yılını bitirmemiş, giriş sınavına başvuruda 26 yaşından gün almamış, giriş sınavında başarılı; okulda uzman jandarma statüsü devam eder, evli-nişanlı şartı aranmaz, öğrenci harçlığı ödenmez (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "Uzman erbaştaki \"4-8. hizmet yılı\" ile karıştırma",
+    "Astsubaylığa geçiş 30 yaş, 5 yıl"
+   ],
+   "dogrusu": [
+    "35 yaş, 3 yıl (m.18)"
+   ]
+  },
+  {
+   "id": "138-11",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Öğrenim intibakı",
+   "hukum": "Görevdeyken lise bitiren ortaokul mezununa 1 derece; 2 yıllık yükseköğrenim 1 kademe, 3 yıllık 2 kademe, 4+ yıllık 1 derece; yükseköğrenimden dolayı intibakların toplamı 1 dereceyi geçemez; lise mezunu uzman jandarma 2. derecenin 6. kademesine kadar ilerleyebilir (Ek m.1); askerî hizmet görevleri sebebiyle kamu davası açılanlara 926 uygulanır (Ek m.2); İçişleri Bakanı emeklilik ve istifa onay yetkisini JGK'ya devredebilir (Ek m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"4 yıllık fakülte bitirene 2 derece\" yanlış; 1 derece"
+   ],
+   "dogrusu": [
+    "1 derece · 1 kademe · 2 kademe · 1 derece · 1 dereceyi · 2. derecenin 6. kademesine · İçişleri Bakanı · JGK'ya devredebilir"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,2149 @@
+[
+ {
+  "kanun_id": 67,
+  "madde": "6",
+  "baslik": "Ceza kanunlarındaki temel tanımlar",
+  "oz": "Ceza kanunlarında geçen temel kavramlar bu maddede tanımlanır. Çocuk, henüz 18 yaşını doldurmamış kişidir. Yargı görevi yapan; yüksek mahkemeler, adlî ve idarî mahkemelerin üye ve hâkimleri, Cumhuriyet savcısı ve avukatlardır. Gece vakti güneş battıktan 1 saat sonra başlar, doğmadan 1 saat önce biter; itiyadi suçlu, kasıtlı bir suçu 1 yıl içinde farklı zamanlarda ikiden fazla işleyen kişidir.",
+  "sorulur": [
+   "“Hangisi yargı görevi yapan sayılmaz?” diye sorulur; doğru cevap listede olmayan bir meslektir, örneğin noter, mübaşir ya da uzlaştırmacı. Avukat ve Cumhuriyet savcısı listededir.",
+   "Öncüllü tanım sorusunda tek ayrıntı değiştirilir: itiyadi suçlu için “bir yılda iki defa” yazılırsa öncül yanlıştır; doğrusu 1 yıl içinde ikiden fazla işlemektir."
+  ],
+  "akilda": [
+   "Yargı görevi yapan üçlüsü: hâkim ya da mahkeme üyesi, savcı, avukat. Noter, mübaşir ve uzlaştırmacı bu listede yok.",
+   "Gece vakti güneşe 1 saat payla bağlıdır: batıştan 1 saat sonra başlar, doğuştan 1 saat önce biter.",
+   "İtiyadi suçlu: 1 yıl içinde, farklı zamanlarda, ikiden fazla (en az 3) kasıtlı suç."
+  ],
+  "karis": [
+   {
+    "madde": "31",
+    "neden": "Çocuk 18 yaşın altıdır; ceza sorumluluğunun hiç olmadığı sınır 12 yaştır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.6/1-a-j)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "24",
+  "baslik": "Kanunun hükmü ve amirin emri",
+  "oz": "Kanunun bir hükmünü yerine getiren kişiye ceza verilmez. Yetkili bir merciden gelen ve yerine getirilmesi görev gereği zorunlu olan emri uygulayan da sorumlu olmaz. Ancak konusu suç olan emir hiçbir şekilde yerine getirilemez; getirilirse hem uygulayan hem de emri veren sorumlu olur. Emrin hukuka uygunluğunun denetlenmesi kanunla engellenmişse yalnız emri veren sorumludur.",
+  "sorulur": [
+   "İki durum karşılaştırılır: konusu suç olan emirde ve denetimi kanunla engellenmiş emirde kim sorumludur? Şıklarda “yalnız emri veren”, “yalnız uygulayan”, “ikisi birlikte” ve “hiç kimse” yer değiştirir.",
+   "Tuzak şık, görev gereği yapıldığı için suç olan emri uygulayanın sorumlu olmadığını ya da cezasının indirildiğini söyler; maddede böyle bir kurtuluş yoktur."
+  ],
+  "akilda": [
+   "Suç olan emir: ikisi birden yanar, veren de uygulayan da. Denetlenemeyen emir: yalnız veren yanar.",
+   "Kanunun hükmü ve yetkili merciin zorunlu emri kalkandır; emrin konusu suçsa kalkan düşer."
+  ],
+  "karis": [
+   {
+    "madde": "28",
+    "neden": "Cebirle suç işletilende yalnız cebri kullanan fail sayılır; suç olan emirde ikisi de sorumludur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.24/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "25",
+  "baslik": "Meşru savunma ve zorunluluk hâli",
+  "oz": "Kendine ya da başkasına ait bir hakka yönelen, gerçekleşen ya da gerçekleşmesi veya tekrarı muhakkak haksız bir saldırıyı o anda, koşullara göre orantılı biçimde defeden kişiye ceza verilmez; buna meşru savunma denir. Zorunluluk hâlinde kişi, bilerek neden olmadığı ve başka türlü korunamayacağı ağır ve muhakkak bir tehlikeden kendini ya da başkasını kurtarır. Tehlike ile konu ve kullanılan vasıta arasında orantı varsa ceza verilmez.",
+  "sorulur": [
+   "Zorunluluk hâlinin şartları sayılıp hangisinin şart olmadığı sorulur; doğru cevap meşru savunmaya ait bir ifadedir, örneğin “saldırının orantılı karşılanması”. Zorunluluk hâlinde saldırı değil tehlike vardır.",
+   "Meşru savunmada tuzak şık orantının aranmadığını söyler; doğrusu saldırının o anda, hâl ve koşullara göre orantılı biçimde defedilmesidir."
+  ],
+  "akilda": [
+   "Saldırı varsa meşru savunma, tehlike varsa zorunluluk hâli. İkisinde de kendin ya da başkası için hareket edebilirsin, ikisinde de orantı şarttır.",
+   "Zorunluluk hâlinin üç kilidi: tehlikeye bilerek neden olmamak, başka kurtuluş yolu bulunmaması, tehlike ile vasıta arasında orantı."
+  ],
+  "karis": [
+   {
+    "madde": "28",
+    "neden": "Başkasının karşı konulamaz cebri ya da ağır tehdidiyle suç işletilirse zorlayan fail sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.25/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "26",
+  "baslik": "Hakkın kullanılması ve ilgilinin rızası",
+  "oz": "Hakkını kullanan kişiye ceza verilmez. Kişinin üzerinde mutlak olarak tasarruf edebileceği bir hakkına ilişkin olmak şartıyla, onun açıkladığı rızanın sınırları içinde işlenen fiil için de kimse cezalandırılmaz. Rıza, kişinin mutlak tasarruf edemeyeceği haklarda ve açıklanan sınırı aşan fiillerde cezayı kaldırmaz.",
+  "sorulur": [
+   "Rızanın cezayı kaldırması için aranan koşul sorulur; doğrusu rızanın, kişinin mutlak surette tasarruf edebileceği bir hakka ilişkin olmasıdır. Çeldiricilerde yazılı rıza, sonradan onay, yaşam hakkı dâhil her hak ve yakınların rızası durur."
+  ],
+  "akilda": [
+   "Rıza kalkanı üç şartla çalışır: hak kişinin kendisine ait olacak, üzerinde mutlak tasarruf edilebilecek, fiil açıklanan rızanın sınırında kalacak.",
+   "Fiil, önceden açıklanmış rızanın çerçevesinde işlenmelidir; fiilden sonra verilen onay bu şartı karşılamaz."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.26/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "28",
+  "baslik": "Cebir, şiddet, korkutma ve tehdit",
+  "oz": "Karşı koyamayacağı ya da kurtulamayacağı cebir ve şiddet ile veya muhakkak ve ağır bir korkutma ya da tehdit sonucunda suç işleyen kişiye ceza verilmez. Bu durumda cebir, şiddet, korkutma ya da tehdidi kullanan kişi suçun faili sayılır.",
+  "sorulur": [
+   "Zorla suç işletilen kişinin durumu sorulur; doğrusu “ceza verilmez, cebir ve şiddeti kullanan suçun faili sayılır”dır. Çeldiricilerde yarı indirim, azmettirenlik, yardım etme ve müşterek faillik geçer."
+  ],
+  "akilda": [
+   "Kukla ile kuklacı: zorlanan kukla cezasız kalır, ipleri tutan kuklacı fail olur.",
+   "Baskı “karşı konulamaz” ya da “ağır ve muhakkak” olmalı; bu düzeye varmayan baskı cezayı kaldırmaz."
+  ],
+  "karis": [
+   {
+    "madde": "24",
+    "neden": "Suç olan emri uygulayan da veren de sorumludur; cebirle zorlanan sorumlu değildir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.28/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "29",
+  "baslik": "Haksız tahrik",
+  "oz": "Haksız bir fiilin yarattığı hiddet ya da şiddetli elemin etkisiyle suç işleyen kişinin cezası indirilir. Ağırlaştırılmış müebbet yerine 18-24 yıl, müebbet yerine 12-18 yıl hapis verilir. Diğer cezalarda indirim dörtte birden dörtte üçe kadardır. Haksız tahrik cezayı kaldırmaz, yalnız azaltır.",
+  "sorulur": [
+   "Boşluk doldurma: müebbet dışındaki hâllerde indirim oranı sorulur; doğrusu “dörtte birinden dörtte üçüne kadar”dır. Çeldiricilerde üçte bir-yarı, yarı-üçte iki gibi başka oranlar durur.",
+   "Müebbet karşılıkları kaydırılarak sorulur: ağırlaştırılmış müebbete 18-24, müebbete 12-18 yıl düşer. Tuzak şık haksız tahrikte ceza verilmediğini söyler."
+  ],
+  "akilda": [
+   "Merdiven: ağırlaştırılmış müebbet 18-24, müebbet 12-18; 18 iki basamağı birleştirir.",
+   "Diğer hâller “çeyrekten üç çeyreğe”: 1/4'ten 3/4'e kadar indirim."
+  ],
+  "karis": [
+   {
+    "madde": "31",
+    "neden": "Yaş küçüklüğünde de 15-18 yaşta ağırlaştırılmış müebbete 18-24 yıl düşer, müebbete 12-15 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.29/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "31",
+  "baslik": "Yaş küçüklüğü",
+  "oz": "Fiili işlediğinde 12 yaşını doldurmamış çocuğun ceza sorumluluğu yoktur; kovuşturma yapılamaz, çocuklara özgü güvenlik tedbiri uygulanabilir. 12-15 yaş arasındaki çocuk fiilin hukuki anlamını algılayamıyor ya da davranışlarını yönlendiremiyorsa yine sorumlu değildir; algılıyorsa diğer cezaların yarısı indirilir, her fiil için hapis 7 yılı geçemez. 15-18 yaşta diğer cezaların üçte biri indirilir, tavan 12 yıldır.",
+  "sorulur": [
+   "12 yaşını doldurmamış çocuk hakkında kovuşturma yapılıp yapılamayacağı sorulur; doğrusu “kovuşturma yapılamaz, çocuklara özgü güvenlik tedbiri uygulanabilir”dir. Çeldiricilerde yarı ya da üçte bir indirim ve erteleme geçer.",
+   "Tuzak şık, sorumluluğun hiç olmadığı sınırı 12 yerine 15 yaşa çeker; 12-15 arasında sorumluluk algılama ve yönlendirme yeteneğine bağlıdır.",
+   "Yaş gruplarının müebbet karşılıkları ve tavan cezaları (7 ve 12 yıl) şıklarda birbirine karıştırılarak sorulabilir."
+  ],
+  "akilda": [
+   "Üç kapı: 12 altı tamamen cezasız, 12-15 algılıyorsa yarı indirim ve tavan 7 yıl, 15-18 üçte bir indirim ve tavan 12 yıl.",
+   "12-15 yaşta ağırlaştırılmış müebbetin karşılığı da 12-15 yıldır: yaş aralığı ceza aralığına eşit. Müebbetin karşılığı 9-11 yıl.",
+   "15-18 yaşta ağırlaştırılmış müebbet yerine 18-24, müebbet yerine 12-15 yıl verilir."
+  ],
+  "karis": [
+   {
+    "madde": "6",
+    "neden": "Çocuk tanımı 18 yaşa kadardır; cezasızlık sınırı 12 yaştır."
+   },
+   {
+    "madde": "33",
+    "neden": "Sağır ve dilsizlerde 12, 15 ve 18 eşikleri 3'er yıl yukarı kayar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.31/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "32",
+  "baslik": "Akıl hastalığı",
+  "oz": "Akıl hastalığı yüzünden fiilin hukuki anlam ve sonuçlarını algılayamayan ya da davranışlarını yönlendirme yeteneği önemli derecede azalmış kişiye ceza verilmez, güvenlik tedbirine hükmolunur. Yetenek bu derecede olmasa da azalmışsa ağırlaştırılmış müebbet yerine 25 yıl, müebbet yerine 20 yıl hapis verilir; diğer cezalar en çok altıda bir indirilebilir. Bu kişiye ayrıca akıl hastalarına özgü güvenlik tedbiri uygulanır.",
+  "sorulur": [
+   "Algılama yeteneği tamamen ortadan kalkmış akıl hastası için ne uygulanacağı sorulur; doğrusu “ceza verilmez, güvenlik tedbirine hükmolunur”dur. Çeldiricilerde yarı ya da altıda bir indirim, 25 yıl ve erteleme durur.",
+   "Kısmi azalmada müebbet karşılıkları sorulursa 25 ile 20 yıl yer değiştirebilir; diğer cezalarda indirim en çok altıda birdir ve takdire bağlıdır (“indirilebilir”)."
+  ],
+  "akilda": [
+   "Ağır etkide cezasız ama tedbirli; hafif azalmada 25-20 kuralı: ağırlaştırılmış müebbet yerine 25, müebbet yerine 20 yıl.",
+   "Diğer cezalarda en çok altıda bir ve “indirilebilir”; yaş küçüklüğündeki zorunlu yarı ve üçte bir indirimle karıştırma."
+  ],
+  "karis": [
+   {
+    "madde": "34",
+    "neden": "Aynı algılama ölçütü; neden akıl hastalığı değil, geçici neden ya da alkol-uyuşturucu."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.32/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "33",
+  "baslik": "Sağır ve dilsizlik",
+  "oz": "Sağır ve dilsizlerde yaş küçüklüğü hükümleri 3 yıl yukarı kaydırılarak uygulanır. 12 yaşını doldurmamış çocuklara ait hükümler 15 yaşını doldurmamış sağır ve dilsizlere; 12-15 yaş hükümleri 15-18 yaş arasındakilere; 15-18 yaş hükümleri ise 18-21 yaş arasındaki sağır ve dilsizlere uygulanır.",
+  "sorulur": [
+   "Beklenen kalıp: Bir sağır ve dilsizin yaşı verilip hangi yaş grubunun hükümlerine tabi olduğu sorulur; şıklarda 15, 18 ve 21 yaş sınırları kaydırılır."
+  ],
+  "akilda": [
+   "Her eşiğe 3 ekle: 12→15, 15→18, 18→21.",
+   "18 yaşını doldurmuş ama 21 yaşını doldurmamış sağır ve dilsiz, 15-18 yaş grubunun hükümleriyle değerlendirilir."
+  ],
+  "karis": [
+   {
+    "madde": "31",
+    "neden": "Temel yaş eşikleri 12, 15 ve 18; sağır ve dilsizde 3 yıl yukarı kayar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.33/1). SAYI_ONAY: 3 — eşiklerin kayma miktarı (12→15, 15→18, 18→21)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "34",
+  "baslik": "Geçici nedenler, alkol ve uyuşturucu",
+  "oz": "Geçici bir neden ya da irade dışı alınan alkol veya uyuşturucu etkisiyle fiilin hukuki anlam ve sonuçlarını algılayamayan ya da davranışlarını yönlendirme yeteneği önemli derecede azalmış kişiye ceza verilmez. Alkolü ya da uyuşturucuyu kendi iradesiyle alıp suç işleyen kişi bu cezasızlıktan yararlanamaz.",
+  "sorulur": [
+   "Beklenen kalıp: Alkol ya da uyuşturucunun nasıl alındığı verilir; irade dışı alındıysa ceza verilmez, iradi alındıysa bu hüküm uygulanmaz. Tuzak şık, iradi sarhoşlukta cezanın indirildiğini söyler."
+  ],
+  "akilda": [
+   "Kendi elinle içtiysen kalkan yok; zorla ya da habersizce içirildiysen kalkan var.",
+   "Ölçüt akıl hastalığındakiyle aynıdır: algılayamama ya da yönlendirme yeteneğinin önemli derecede azalması."
+  ],
+  "karis": [
+   {
+    "madde": "32",
+    "neden": "Akıl hastalığında da aynı ölçüt var; ayrıca güvenlik tedbirine hükmolunur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.34/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "73",
+  "baslik": "Şikâyet süresi ve şikâyetten vazgeçme",
+  "oz": "Şikâyete bağlı suçta yetkili kişi 6 ay içinde şikâyet etmezse soruşturma ve kovuşturma yapılamaz. Süre, fiili ve failin kim olduğunu öğrendiği günden başlar ve zamanaşımını geçemez; hakarette şikâyet süresi fiilden itibaren 2 yılı aşamaz. Şikâyetten vazgeçme davayı düşürür; iştirak hâlinde birinden vazgeçme hepsini kapsar, ama vazgeçmeyi kabul etmeyen sanığı etkilemez.",
+  "sorulur": [
+   "Şikâyet süresi sorulur; doğrusu 6 aydır. Çeldiricilerde 3 ay, 1 yıl, 2 yıl ve 5 yıl durur; 2 yıl yalnız hakarete özgü üst sınırdır.",
+   "Sürenin başlangıcı sorulur; tuzak “suçun işlendiği gün”dür, doğrusu fiili ve faili bilme ya da öğrenme günüdür.",
+   "Vazgeçmenin etkisi sorulabilir: hüküm kesinleştikten sonraki vazgeçme infazı engellemez; şahsi haklarından da vazgeçtiğini açıklayan hukuk davası açamaz."
+  ],
+  "akilda": [
+   "6 ay öğrenmeden, 2 yıl hakarette fiilden işler: öğrenme geç olsa da hakarette 2 yıl tavanı aşılmaz.",
+   "Vazgeçme bir şeriğe yapılsa da bütün şeriklere yayılır, ama kabul etmeyen sanığa işlemez."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.73/1-7); m.73/8 mülga."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "76",
+  "baslik": "Soykırım",
+  "oz": "Bir plan doğrultusunda millî, etnik, ırki ya da dinî bir grubu tamamen veya kısmen yok etmek amacıyla grup üyelerine karşı şu fiilleri işlemek soykırımdır: kasten öldürme, bedensel ya da ruhsal bütünlüğe ağır zarar verme, yok edici koşullarda yaşamaya zorlama, doğumları engelleme ve grubun çocuklarını başka gruba zorla nakletme. Ceza ağırlaştırılmış müebbettir; öldürme ve yaralamada her mağdur için ayrı ceza verilir. Zamanaşımı işlemez.",
+  "sorulur": [
+   "Öncüllü soruda fiiller sıralanıp hangilerinin soykırım olduğu sorulur. Çocukları başka gruba zorla nakletmek ve doğumları engellemek soykırımdır; zorla fuhşa sevk insanlığa karşı suçun (m.77) fiilidir.",
+   "Zamanaşımı işlemeyen suçlar sorulur: soykırım, insanlığa karşı suç ve işkence doğru; insan ticareti yanlış şıktır."
+  ],
+  "akilda": [
+   "Soykırımın grupları: millî, etnik, ırki, dinî. İnsanlığa karşı suçun saikleri: siyasal, felsefi, ırki, dinî. Siyasal grup soykırım listesinde yok.",
+   "Fiillerin hepsi grubu bitirmeye yöneliktir: öldürme, ağır zarar, yok edici yaşam koşulu, doğumu engelleme, çocukları zorla nakil."
+  ],
+  "karis": [
+   {
+    "madde": "77",
+    "neden": "İnsanlığa karşı suçta hedef toplumun bir kesimi; saik siyasal ya da felsefi de olabilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.76/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "77",
+  "baslik": "İnsanlığa karşı suçlar",
+  "oz": "Siyasal, felsefi, ırki ya da dinî saiklerle toplumun bir kesimine karşı bir plan doğrultusunda sistemli olarak işlenen belirli fiiller insanlığa karşı suçtur: kasten öldürme, kasten yaralama, işkence, eziyet ya da köleleştirme, hürriyetten yoksun kılma, bilimsel deney, cinsel saldırı ve çocuk istismarı, zorla hamile bırakma, zorla fuhşa sevk. Öldürmede ağırlaştırılmış müebbet, diğer fiillerde 8 yıldan az olmamak üzere hapis verilir. Zamanaşımı işlemez.",
+  "sorulur": [
+   "Kasten öldürme dışındaki fiillerin cezası sorulur; doğrusu “8 yıldan az olmamak üzere hapis”tir. Çeldiricilerde ağırlaştırılmış müebbet, müebbet, “5 yıldan az olmamak” ve örgüt cezasındaki 10-15 yıl durur.",
+   "Soykırımla ayırt etme sorulabilir: hedef toplumun bir kesimiyse ve saik siyasal ya da felsefi olabiliyorsa insanlığa karşı suç vardır."
+  ],
+  "akilda": [
+   "Madde 8 bentlik (a-h); öldürme dışındaki bentlerin alt sınırı da 8 yıl.",
+   "Bu bölümün üç maddesinde (m.76, m.77, m.78) zamanaşımı işlemez ve tüzel kişiye güvenlik tedbiri uygulanır."
+  ],
+  "karis": [
+   {
+    "madde": "76",
+    "neden": "Soykırımda hedef millî, etnik, ırki ya da dinî gruptur; siyasal grup sayılmaz."
+   },
+   {
+    "madde": "78",
+    "neden": "Örgüt kurana 10-15, üyeye 5-10 yıl; 8 yıl alt sınırı fiillerin kendisi içindir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.77/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "78",
+  "baslik": "Soykırım ve insanlığa karşı suç örgütü",
+  "oz": "Soykırım ya da insanlığa karşı suç işlemek amacıyla örgüt kuran veya yöneten kişi 10-15 yıl, bu örgüte üye olan kişi 5-10 yıl hapis alır. Bu suçlarda tüzel kişilere de güvenlik tedbiri uygulanır ve zamanaşımı işlemez.",
+  "sorulur": [
+   "Beklenen kalıp: Örgüt kurana ya da üyeye verilecek ceza sorulur; şıklarda 10-15 ve 5-10 yıl aralıkları yer değiştirir. Zamanaşımının işlemediği öncül olarak da verilebilir."
+  ],
+  "akilda": [
+   "Kurucu ve yönetici 10-15, üye 5-10: üyenin tavanı kurucunun tabanıdır.",
+   "Silahlı örgütle aynı sayılar: m.314'te de kurucuya 10-15, üyeye 5-10 yıl verilir."
+  ],
+  "karis": [
+   {
+    "madde": "220",
+    "neden": "Adi suç örgütünde kurucu 5-10, üye 2-5 yıl alır."
+   },
+   {
+    "madde": "314",
+    "neden": "Silahlı örgütte de kurucuya 10-15, üyeye 5-10 yıl verilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.78/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "79",
+  "baslik": "Göçmen kaçakçılığı",
+  "oz": "Doğrudan ya da dolaylı maddi menfaat için, yasal olmayan yollardan bir yabancıyı ülkeye sokan ya da ülkede kalmasını sağlayan, bir Türk vatandaşının veya yabancının yurt dışına çıkmasını sağlayan kişi 5-8 yıl hapis ve 1.000-10.000 gün adli para cezası alır. Suç teşebbüste kalsa bile tamamlanmış gibi cezalandırılır. Mağdurun hayatı tehlikeye girerse ya da onur kırıcı muamele görürse ceza yarısından üçte ikisine kadar artırılır.",
+  "sorulur": [
+   "Göçmen kaçakçılığının temel cezası sorulur; doğrusu “5-8 yıl hapis ve 1.000-10.000 gün adli para”dır. Çeldiricide insan ticaretinin “8-12 yıl ve 10.000 güne kadar” cezası durur.",
+   "Tuzak şık, teşebbüste kalan kaçakçılıkta cezanın indirildiğini söyler; doğrusu tamamlanmış gibi ceza verilmesidir. İnsan ticaretinde zamanaşımı işlemediğini söyleyen şık da yanlıştır."
+  ],
+  "akilda": [
+   "Kaçakçılık parayla, ticaret zorla: göçmen kaçakçılığında amaç maddi menfaat, insan ticaretinde zorla çalıştırma, fuhuş, esaret ya da organ.",
+   "Kaçakçılık 5-8, ticaret 8-12: kaçakçılığın tavanı ticaretin tabanıdır."
+  ],
+  "karis": [
+   {
+    "madde": "80",
+    "neden": "İnsan ticaretinde amaç sömürü, araç cebir ya da kandırma; ceza 8-12 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.79/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "80",
+  "baslik": "İnsan ticareti",
+  "oz": "Zorla çalıştırmak, hizmet ettirmek, fuhuş yaptırmak, esarete tabi kılmak ya da organ verdirmek amacıyla; tehdit, baskı, cebir, nüfuzu kötüye kullanma, kandırma veya çaresizlikten yararlanarak kişileri ülkeye sokan, dışarı çıkaran, tedarik eden, kaçıran, götüren ya da barındıran kişi 8-12 yıl hapis ve 10 bin güne kadar adli para cezası alır. Bu durumda mağdurun rızası geçersizdir. Mağdur 18 yaşını doldurmamışsa araç fiil aranmaz.",
+  "sorulur": [
+   "Beklenen kalıp: İnsan ticaretinin amaçları ya da cezası sorulur; şıklarda göçmen kaçakçılığının 5-8 yılı ile insan ticaretinin 8-12 yılı yer değiştirir.",
+   "Mağdurun rızası sorulursa doğrusu, suçu oluşturan fiiller varken rızanın geçersiz olduğudur. Zamanaşımı işlemeyen suçlar sorusunda insan ticareti yanlış şıktır."
+  ],
+  "akilda": [
+   "Formül: amaç (sömürü) + araç (tehdit, kandırma, çaresizlik) + hareket (sokma, taşıma, barındırma). Çocukta araç aranmaz.",
+   "Ticaret 8-12, kaçakçılık 5-8: 8 iki suçun buluşma noktasıdır."
+  ],
+  "karis": [
+   {
+    "madde": "79",
+    "neden": "Göçmen kaçakçılığında amaç maddi menfaattir, zorlama aranmaz; ceza 5-8 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.80/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "81",
+  "baslik": "Kasten öldürme",
+  "oz": "Bir insanı kasten öldüren kişi müebbet hapis cezasıyla cezalandırılır. Bu, suçun temel hâlidir; tasarlama, canavarca his, kadına ya da çocuğa karşı işleme gibi nitelikli hâllerde ceza ağırlaştırılmış müebbete çıkar (m.82).",
+  "sorulur": [
+   "Beklenen kalıp: Temel kasten öldürmenin cezası sorulur; doğrusu müebbet hapistir. Tuzak, nitelikli bir hâl için (ör. kadına karşı) müebbet yazmaktır; nitelikli hâllerin cezası ağırlaştırılmış müebbettir."
+  ],
+  "akilda": [
+   "Öldürme basamakları: temel hâl müebbet, nitelikli hâl ağırlaştırılmış müebbet (m.82), taksirle öldürme 2-6 yıl (m.85)."
+  ],
+  "karis": [
+   {
+    "madde": "82",
+    "neden": "Tasarlama, töre, kadına karşı gibi hâllerde ceza ağırlaştırılmış müebbettir."
+   },
+   {
+    "madde": "85",
+    "neden": "Kast yoksa taksirle öldürme: tek ölümde 2-6 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.81/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "82",
+  "baslik": "Nitelikli kasten öldürme",
+  "oz": "Kasten öldürmenin cezası bazı hâllerde ağırlaştırılmış müebbete çıkar. Bunlar: tasarlama; canavarca his ya da eziyet; yangın, su baskını, bombalama ya da nükleer, biyolojik, kimyasal silah; üstsoy, altsoy, eş, boşandığı eş ya da kardeşe karşı; çocuğa, kendini savunamayacak kişiye ya da kadına karşı; kamu görevi nedeniyle; suçu gizleme, delil yok etme ya da yakalanmama amacı; bir suçu işleyememenin infiali; kan gütme ve töre saikidir.",
+  "sorulur": [
+   "“Hangisi nitelikli hâllerden biri değildir?” diye sorulur; doğru cevap listede olmayan bir durumdur, örneğin taksirle işlenme. Tasarlama, kan gütme, töre ve kadına karşı işlenme listededir.",
+   "Ceza türü sorulur: bentlerin hepsinde ağırlaştırılmış müebbet verilir; tuzak şık bu hâllerden biri için müebbet yazar."
+  ],
+  "akilda": [
+   "Üç soru: Nasıl? (tasarlama, eziyet, yangın-bomba) · Kime? (aile, çocuk, savunamayan, kadın, kamu görevlisi) · Neden? (suçu gizleme, infial, kan gütme, töre).",
+   "Bentler a'dan k'ya uzar ama ceza tektir: ağırlaştırılmış müebbet."
+  ],
+  "karis": [
+   {
+    "madde": "81",
+    "neden": "Nitelikli hâl yoksa temel kasten öldürme: müebbet hapis."
+   },
+   {
+    "madde": "86",
+    "neden": "Yaralamanın nitelikli listesinde silah ve nüfuz kötüye kullanma var; tasarlama yok."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.82/1-a-k)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "83",
+  "baslik": "Kasten öldürmenin ihmali davranışla işlenmesi",
+  "oz": "Yapmakla yükümlü olduğu bir davranışı yapmayarak ölüme neden olan kişi, bu ihmal icrai davranışa eşdeğerse ölümden sorumlu tutulur. Eşdeğerlik için kanunda iki durum sayılır: kanundan ya da sözleşmeden doğan bir yapma yükümlülüğü ve önceki davranışın başkalarının hayatı için tehlike yaratması. Ceza ağırlaştırılmış müebbet yerine 20-25 yıl, müebbet yerine 15-20 yıl, diğer hâllerde 10-15 yıl olabilir; indirim de yapılmayabilir.",
+  "sorulur": [
+   "Eşdeğerlik şartlarından biri sorulur; doğru şık “kanuni düzenlemeden veya sözleşmeden kaynaklanan yükümlülük”tür. Çeldiricilerde sabıka, kamu görevlisi olmak, mağdurun yaşı ve gece vakti gibi ilgisiz koşullar durur.",
+   "Ceza aralıkları kaydırılarak sorulabilir: ağırlaştırılmış müebbete 20-25, müebbete 15-20, diğer hâllere 10-15 yıl karşılık gelir."
+  ],
+  "akilda": [
+   "Eşdeğerliğin iki kaynağı: kanun ya da sözleşmeden doğan yükümlülük ve önceden yaratılan tehlike.",
+   "Merdiven 5'er yıl iner: 20-25, 15-20, 10-15; her basamağın tavanı, bir üst basamağın tabanıdır."
+  ],
+  "karis": [
+   {
+    "madde": "88",
+    "neden": "Kasten yaralama ihmalle işlenirse ceza üçte ikisine kadar indirilebilir."
+   },
+   {
+    "madde": "85",
+    "neden": "İhmal hareketsizliktir; dikkatsizlikle ölüme neden olmak taksirle öldürmedir: 2-6 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.83/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "84",
+  "baslik": "İntihara yönlendirme",
+  "oz": "Başkasını intihara azmettiren, teşvik eden, intihar kararını kuvvetlendiren ya da intiharına herhangi bir şekilde yardım eden kişi 2-5 yıl hapis alır; intihar gerçekleşirse ceza 4-10 yıldır. Başkalarını alenen intihara teşvik edene 3-8 yıl verilir. Algılama yeteneği gelişmemiş ya da ortadan kaldırılmış kişiyi intihara sevk eden ya da cebir veya tehditle intihara mecbur eden kasten öldürmeden sorumlu olur.",
+  "sorulur": [
+   "Boşluk doldurma: temel ceza ile intihar gerçekleşince verilecek ceza sırayla sorulur; doğrusu “2-5 yıl - 4-10 yıl”dır. Çeldiricilerde aralıkların sırası ters çevrilir ya da alenen teşvikin 3-8 yılı konur."
+  ],
+  "akilda": [
+   "Üç basamak: yönlendirme 2-5, alenen teşvik 3-8, intihar gerçekleşirse 4-10. Alt sınırlar 2-3-4 diye artar.",
+   "Cebirle intihara zorlamak ya da algılayamayanı sevk etmek artık intihar değil, kasten öldürmedir."
+  ],
+  "karis": [
+   {
+    "madde": "81",
+    "neden": "Cebir, tehdit ya da algılayamayan kişide fiil kasten öldürme sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.84/1-4); m.84/3'ün ikinci cümlesi mülga."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "85",
+  "baslik": "Taksirle öldürme",
+  "oz": "Taksirle, yani dikkat ve özen eksikliğiyle bir insanın ölümüne neden olan kişi 2-6 yıl hapis alır. Fiil birden fazla insanın ölümüne ya da en az bir ölümle birlikte bir veya daha fazla kişinin yaralanmasına yol açtıysa ceza 2-15 yıla çıkar.",
+  "sorulur": [
+   "Boşluk doldurma: tek ölümde ve çok ölüm ya da ölümle birlikte yaralanmada verilecek cezalar sırayla sorulur; doğrusu “2-6 yıl - 2-15 yıl”dır. Çeldiricide alt sınır da kaydırılır (ör. 5-15 yıl).",
+   "Tuzak şık, birden fazla ölümde de 2-6 yıl verileceğini söyler; doğrusu 2-15 yıldır."
+  ],
+  "akilda": [
+   "Taban sabit 2 yıl, tavan büyür: tek ölüm 6, çok ölüm ya da ölüm artı yaralı 15.",
+   "Kast varsa müebbet (m.81), taksir varsa 2-6 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "81",
+    "neden": "Öldürme kastı varsa ceza müebbet hapistir."
+   },
+   {
+    "madde": "89",
+    "neden": "Ölüm olmadan birden fazla kişi yaralanırsa taksirle yaralama: 9 ay - 5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.85/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "86",
+  "baslik": "Kasten yaralama",
+  "oz": "Kasten başkasının vücuduna acı veren ya da sağlığını veya algılama yeteneğini bozan kişi 1 yıl 6 ay - 3 yıl hapis alır. Etki basit tıbbi müdahaleyle giderilecek kadar hafifse, şikâyet üzerine 6 ay - 1 yıl 6 ay hapis veya adli para cezası verilir; kadına karşıysa alt sınır 9 aydır. Aileye, savunamayana, kamu görevi nedeniyle ya da silahla işlenirse şikâyet aranmaz, ceza yarı artar; canavarca hisle bir kat artar.",
+  "sorulur": [
+   "Temel ceza sorulur; doğrusu 1 yıl 6 ay - 3 yıl hapistir. Çeldiricilerde basit yaralamanın 6 ay - 1 yıl 6 ay aralığına benzeyen kısa süreler ve 2-5 yıl durur.",
+   "Şikâyet sorulur: basit tıbbi müdahaleyle giderilebilen yaralama şikâyete bağlıdır; silahla, aileye ya da kamu görevi nedeniyle işlenirse şikâyet aranmaz."
+  ],
+  "akilda": [
+   "Hafifin tavanı temelin tabanı: hafif yaralama 6 ay - 1 yıl 6 ay, temel yaralama 1 yıl 6 ay - 3 yıl.",
+   "Nitelikli hâl gelince şikâyet düşer ve ceza yarı artar; canavarca histe bir kat artar."
+  ],
+  "karis": [
+   {
+    "madde": "87",
+    "neden": "Kemik kırığı, organ kaybı ya da ölüm gibi ağır neticelerde ceza ayrıca artar."
+   },
+   {
+    "madde": "89",
+    "neden": "Kast yoksa taksirle yaralama: 4 ay - 2 yıl hapis veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.86/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "87",
+  "baslik": "Neticesi sebebiyle ağırlaşmış yaralama",
+  "oz": "Kasten yaralama ağır bir sonuç doğurursa ceza artırılır. Sürekli zayıflama, konuşmada sürekli zorluk, yüzde sabit iz, hayati tehlike ya da erken doğumda ceza 1 kat; iyileşmez hastalık, organ işlevinin yitirilmesi, yüzün sürekli değişikliği ya da çocuğun düşmesinde 2 kat artar. Kemik kırığı veya çıkıkta artırım yarısına kadardır. Yaralama ölümle sonuçlanırsa 10-14 yıl, nitelikli yaralamada 14-18 yıl hapis verilir.",
+  "sorulur": [
+   "Yaralama sonucu ölümün cezası sorulur; temel yaralamada doğrusu 10-14 yıl, nitelikli yaralamada 14-18 yıldır. Çeldiricilerde müebbet ve ağırlaştırılmış müebbet durur; bu fiil kasten öldürme sayılmaz.",
+   "Kemik kırığı tuzağı: şıkta “bir kat artırılır” yazıyorsa yanlıştır; kırık ve çıkıkta artırım, hayat fonksiyonlarına etkisine göre yarısına kadardır."
+  ],
+  "akilda": [
+   "Zayıflama 1 kat, yitirme 2 kat: sürekli zayıflama ve sabit iz bir kat; yitirme, kayıp, sürekli değişiklik ve düşük iki kat.",
+   "Ölüm merdiveni 10-14 ve 14-18: nitelikli yaralamada aralık 4 yıl yukarı kayar."
+  ],
+  "karis": [
+   {
+    "madde": "81",
+    "neden": "Öldürme kastı varsa müebbet; yalnız yaralama kastıyla ölümde 10-14 yıl."
+   },
+   {
+    "madde": "89",
+    "neden": "Taksirle yaralamada aynı neticeler yarı ve 1 kat artırır; kastta 1 ve 2 kat."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.87/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "88",
+  "baslik": "Kasten yaralamanın ihmali davranışla işlenmesi",
+  "oz": "Kasten yaralama ihmali davranışla, yani yapılması gereken bir davranış yapılmayarak işlenirse ceza üçte ikisine kadar indirilebilir. Bu indirimde kasten öldürmenin ihmali davranışla işlenmesine ilişkin koşullar, yani kanun ya da sözleşmeden doğan yükümlülük ve önceki tehlikeli davranış dikkate alınır.",
+  "sorulur": [
+   "İndirimin en fazla ne kadar olabileceği sorulur; doğrusu “üçte ikisine kadar”dır. Çeldiricilerde yarı, üçte bir, dörtte bir ve altıda bir oranları durur."
+  ],
+  "akilda": [
+   "İhmalle yaralama: indirim 2/3'e kadar ve takdirîdir (“indirilebilir”). Şartlar ihmalle öldürmeden (m.83) ödünç alınır."
+  ],
+  "karis": [
+   {
+    "madde": "83",
+    "neden": "İhmalle öldürmede oran yerine 20-25, 15-20, 10-15 yıllık özel cezalar var."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.88/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "89",
+  "baslik": "Taksirle yaralama",
+  "oz": "Taksirle başkasının vücuduna acı veren ya da sağlığını veya algılama yeteneğini bozan kişi 4 ay - 2 yıl hapis veya adli para cezası alır. Kemik kırığı, sürekli zayıflama, yüzde sabit iz gibi neticelerde ceza yarı oranında; organ işlevinin yitirilmesi, bitkisel hayat ya da çocuğun düşmesinde 1 kat artar. Birden fazla kişi yaralanırsa 9 ay - 5 yıl verilir. Suç şikâyete bağlıdır; birinci fıkra dışındaki bilinçli taksirde şikâyet aranmaz.",
+  "sorulur": [
+   "Şikâyete bağlılık sorulur; doğrusu “şikâyete bağlıdır, ancak birinci fıkra dışındaki yaralama bilinçli taksirle işlenmişse şikâyet aranmaz”dır. Tuzak şık bu istisnayı basit yaralamaya (birinci fıkra) uygular.",
+   "Birden fazla kişinin yaralanmasında ceza sorulur; doğrusu 9 ay - 5 yıl hapistir. Çeldiricide temel cezanın 4 ay - 2 yıl aralığı da durur."
+  ],
+  "akilda": [
+   "Kast ile taksirin artırımı bir basamak farklıdır: kastta 1 kat ve 2 kat (m.87), taksirde yarı ve 1 kat.",
+   "Bilinçli taksir şikâyeti kaldırır, ama basit yaralamada (birinci fıkra) kaldırmaz."
+  ],
+  "karis": [
+   {
+    "madde": "87",
+    "neden": "Aynı ağır neticeler kasten yaralamada 1 ve 2 kat artırım getirir."
+   },
+   {
+    "madde": "85",
+    "neden": "Ölümle birlikte yaralanma varsa taksirle öldürme: 2-15 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.89/1-5)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "90",
+  "baslik": "İnsan üzerinde deney",
+  "oz": "İnsan üzerinde bilimsel deney yapan kişi 1-3 yıl hapis alır. Rızalı deneyin suç sayılmaması için yetkili kurul izni, önce insan dışı ortamda ya da hayvanda deney, kalıcı zarar ve onur kırıcı acı olmaması, amacın külfete ağır basması ve bilgilendirmeye dayalı, yazılı, menfaatsiz rıza gerekir. Çocuklarda ayrıca ana-baba ya da vasinin yazılı muvafakati ve kurulda çocuk sağlığı ve hastalıkları uzmanı aranır. Hasta üzerinde rızasız tedavi denemesi 1 yıla kadar hapistir.",
+  "sorulur": [
+   "Rızanın niteliği sorulur; doğrusu “yeterli bilgilendirmeye dayalı, yazılı ve menfaat teminine bağlı olmayan” rızadır. Çeldiricilerde sözlü rıza, noter onayı, ücret ve sonradan yazıya geçirme durur.",
+   "Çocuklara özgü ek koşul sorulur; doğru şık “izin verecek kurulda çocuk sağlığı ve hastalıkları uzmanının bulunması”dır. Bakan onayı, yaş sınırı ve çocuk mahkemesi izni çeldiricidir."
+  ],
+  "akilda": [
+   "Rıza üç sıfatlı: bilgilendirilmiş, yazılı, karşılıksız.",
+   "Çocukta iki onay ve bir uzman: çocuğun rızası ile ana-baba ya da vasinin yazılı muvafakati, kurulda çocuk sağlığı ve hastalıkları uzmanı.",
+   "Bilinen yöntemler sonuç vermezse uzman hekimin hastanede yaptığı rızalı ve yazılı tedavi denemesi suç değildir."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.90/1-6)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "94",
+  "baslik": "İşkence",
+  "oz": "Bir kişiye insan onuruyla bağdaşmayan, bedensel ya da ruhsal acı veren, algılama veya irade yeteneğini etkileyen ya da onu aşağılayan davranışları gerçekleştiren kamu görevlisi 3-12 yıl hapis alır; kadına karşıysa alt sınır 5 yıldır. Çocuğa, savunamayana, gebe kadına ya da görevi nedeniyle avukata veya kamu görevlisine karşı ceza 8-15 yıl, cinsel taciz şeklinde 10-15 yıldır. İştirak edenler de kamu görevlisi gibi cezalandırılır; zamanaşımı işlemez.",
+  "sorulur": [
+   "Eziyetle farkı sorulur; doğru şık eziyetin failinin herkes olabileceğini söyler. İşkencenin faili kamu görevlisidir; eziyette zamanaşımının işlemediğini ya da failin yalnız kamu görevlisi olduğunu söyleyen şık yanlıştır.",
+   "Zamanaşımı işlemeyen suçlar sorulur: işkence, soykırım ve insanlığa karşı suç listededir; insan ticareti yanlış şıktır."
+  ],
+  "akilda": [
+   "İşkence = kamu görevlisi + onur kırıcı acı; eziyet = herkes. İşkenceye katılan sıradan kişi de kamu görevlisi gibi cezalandırılır.",
+   "Üç “yok”: ihmalde indirim yok, zamanaşımı yok, iştirakçiye ayrıcalık yok.",
+   "Ceza basamakları: temel 3-12, korunmasız ya da görevli mağdur 8-15, cinsel taciz 10-15; kadına karşı alt sınır 5."
+  ],
+  "karis": [
+   {
+    "madde": "96",
+    "neden": "Eziyetin faili herkes olabilir; ceza 2-5 yıl, zamanaşımı kuralı yok."
+   },
+   {
+    "madde": "95",
+    "neden": "İşkencenin ağır neticeleri ayrı maddededir; ölümde ağırlaştırılmış müebbet verilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.94/1-6)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "95",
+  "baslik": "Neticesi sebebiyle ağırlaşmış işkence",
+  "oz": "İşkence ağır bir sonuç doğurursa ceza artar. Sürekli zayıflama, konuşmada sürekli zorluk, yüzde sabit iz, hayati tehlike ya da erken doğumda ceza yarı oranında; iyileşmez hastalık, bitkisel hayat, organ işlevinin yitirilmesi, yüzün sürekli değişikliği ya da çocuğun düşmesinde 1 kat artırılır. Kemik kırığında 8-15 yıl, ölümde ağırlaştırılmış müebbet hapis verilir.",
+  "sorulur": [
+   "İşkence sonucu ölümün cezası sorulur; doğrusu ağırlaştırılmış müebbettir. Çeldiricilerde kasten yaralama sonucu ölümün 14-18 yılı, kemik kırığının 8-15 yılı ve müebbet durur."
+  ],
+  "akilda": [
+   "Yaralamada 1 ve 2 kat, işkencede yarı ve 1 kat artırım; ama işkence ölümle biterse doğrudan ağırlaştırılmış müebbet.",
+   "Kemik kırığı işkencede sabit aralıktır: 8-15 yıl; kasten yaralamada ise yarısına kadar artırım."
+  ],
+  "karis": [
+   {
+    "madde": "87",
+    "neden": "Kasten yaralamada aynı neticeler 1 ve 2 kat artırır; ölümde 10-14 ya da 14-18 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.95/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "96",
+  "baslik": "Eziyet",
+  "oz": "Bir kimsenin eziyet çekmesine yol açacak davranışları gerçekleştiren kişi 2-5 yıl hapis alır; kadına karşıysa alt sınır 2 yıl 6 aydır. Fiil çocuğa, kendini savunamayacak kişiye, gebe kadına ya da üstsoy, altsoy, babalık, analık, eş veya boşandığı eşe karşı işlenirse ceza 3-8 yıldır. İşkenceden farklı olarak eziyetin faili herkes olabilir.",
+  "sorulur": [
+   "Eşe karşı eziyetin cezası sorulur; doğrusu 3-8 yıldır. Çeldiricilerde temel cezanın 2-5 yılı ve kadına karşı alt sınırdan türetilen “2 yıl 6 ay - 5 yıl” durur."
+  ],
+  "akilda": [
+   "Eziyet 2-5, aile ve korunmasız mağdur 3-8; işkence ise 3-12 ile başlar ve faili kamu görevlisidir.",
+   "Aile listesinde üstsoy, altsoy, eş ve boşandığı eşin yanında babalık ve analık da sayılır."
+  ],
+  "karis": [
+   {
+    "madde": "94",
+    "neden": "İşkencenin faili yalnız kamu görevlisidir; ceza 3-12 yıl, zamanaşımı işlemez."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.96/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "97",
+  "baslik": "Terk",
+  "oz": "Yaşı ya da hastalığı nedeniyle kendini idare edemeyen ve bu yüzden koruma ve gözetim yükümlülüğü altında bulunan birini kendi hâline bırakan kişi 3 ay - 2 yıl hapis alır. Terk yüzünden mağdur hastalanır, yaralanır ya da ölürse neticesi sebebiyle ağırlaşmış suç hükümlerine göre ceza verilir.",
+  "sorulur": [
+   "Terkin cezası sorulur; doğrusu 3 ay - 2 yıl hapistir. Çeldiricilerde yakın aralıklar ve “yalnızca adli para cezası” durur; tavanın 2 yıl olduğunu ezberle.",
+   "Mağdurun iki özelliği öncül olarak verilebilir: yaşı ya da hastalığı nedeniyle kendini idare edememe ve koruma-gözetim yükümlülüğü altında bulunma."
+  ],
+  "akilda": [
+   "Terk 3 ay - 2 yıl; sonuç ağırlaşırsa ceza, netice sebebiyle ağırlaşmış suç kurallarına göre büyür.",
+   "Eziyet acı vererek, terk yalnız bırakarak işlenir: biri davranışla, öteki koruma görevini bırakmakla."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.97/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "99",
+  "baslik": "Çocuk düşürtme",
+  "oz": "Rızası olmadan bir kadının çocuğunu düşürten kişi 5-10 yıl hapis alır. Tıbbi zorunluluk yokken, rızası olsa bile 10 haftayı aşan gebeliği sonlandıran 2-4 yıl, rıza gösteren kadın 1 yıla kadar hapis veya adli para cezası alır. Kadının sağlığı bozulur ya da ölürse ceza ağırlaşır. Suç sonucu gebe kalan kadının rızasıyla, 20 haftayı aşmayan gebeliği hastanede uzman hekimlerin sonlandırmasına ceza verilmez.",
+  "sorulur": [
+   "Suç sonucu gebelikte cezasızlık koşulları sorulur; doğrusu “20 haftayı geçmeme, kadının rızası, uzman hekimlerce hastanede sonlandırma”dır. Çeldiricilerde 10 hafta, 12 hafta, mahkeme izni ve eşin rızası durur.",
+   "Rızasız düşürtmenin cezası sorulur; doğrusu 5-10 yıldır. Çeldiricide rızalı düşürtmenin 2-4 yılı ve ağırlaşmış hâllerin 6-12, 15-20 yılı durur."
+  ],
+  "akilda": [
+   "Olağan sınır 10 hafta, suç mağduru kadın için 20 hafta: suçun mağduruna sürenin iki katı tanınır.",
+   "Rızasız 5-10, rızalı (10 haftadan sonra) 2-4; rıza gösteren kadın da 1 yıla kadar hapis veya adli para alır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.99/1-6)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "102",
+  "baslik": "Cinsel saldırı",
+  "oz": "Cinsel davranışlarla bir kimsenin vücut dokunulmazlığını ihlal eden kişi, mağdurun şikâyeti üzerine 5-10 yıl hapis alır; davranış sarkıntılık düzeyinde kalırsa 2-5 yıl verilir. Vücuda organ ya da cisim sokulursa ceza 12 yıldan az olamaz; bu fiil eşe karşıysa soruşturma şikâyete bağlıdır. Savunamayana, nüfuz kötüye kullanılarak, yakın hısıma, silahla ya da birden fazla kişiyle işlenirse ceza yarı artar; bitkisel hayat ya da ölümde ağırlaştırılmış müebbet verilir.",
+  "sorulur": [
+   "Organ ya da cisim sokma hâlinin asgari cezası sorulur; doğrusu 12 yıldan az olmamaktır. Çeldiricilerde 5, 8, 10 ve 15 yıl durur; 16 yıl çocukların cinsel istismarındaki sınırdır.",
+   "Şikâyet sorulur: temel cinsel saldırı şikâyete bağlıdır; organ sokma suretiyle işlenende şikâyet yalnız fiil eşe karşıysa aranır."
+  ],
+  "akilda": [
+   "Organ sokmada alt sınır yetişkinde 12, çocukta 16 yıl. Temel hâlde yetişkin 5-10, çocuk 8-15 yıl.",
+   "Şikâyet kuralı tersine döner: basit cinsel saldırı şikâyetli, organ sokma şikâyetsiz; ama eşe karşı organ sokma yine şikâyetli."
+  ],
+  "karis": [
+   {
+    "madde": "103",
+    "neden": "Mağdur çocuksa ceza 8-15 yıl, organ sokmada en az 16 yıl."
+   },
+   {
+    "madde": "105",
+    "neden": "Vücut dokunulmazlığı ihlal edilmeden cinsel amaçlı rahatsız etme cinsel tacizdir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.102/1-5)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "103",
+  "baslik": "Çocukların cinsel istismarı",
+  "oz": "Çocuğu cinsel yönden istismar eden 8-15 yıl, sarkıntılık düzeyinde kalırsa 3-8 yıl hapis alır; mağdur 12 yaşını tamamlamamışsa alt sınır istismarda 10, sarkıntılıkta 5 yıldır. 15 yaşını tamamlamamış ya da algılama yeteneği gelişmemiş çocuğa her türlü cinsel davranış istismardır; diğer çocuklarda cebir, tehdit, hile ya da iradeyi etkileyen başka bir neden aranır. Organ ya da cisim sokmada en az 16 yıl, mağdur 12 yaşını tamamlamamışsa en az 18 yıl verilir.",
+  "sorulur": [
+   "Temel şeklin cezası sorulur; doğrusu 8-15 yıldır. Çeldiricilerde sarkıntılığın 3-8 yılı, cinsel saldırının 5-10 yılı ve 10, 16 yıllık alt sınırlar durur.",
+   "Kavram tuzağı: 15 yaşını tamamlamış çocukla cebir, tehdit ya da hile olmadan rızaya dayalı davranış istismar sayılmaz; bu durum reşit olmayanla cinsel ilişkidir (m.104)."
+  ],
+  "akilda": [
+   "İki yaş çizgisi: 15 altında her davranış istismar, 15 üstünde cebir, tehdit ya da hile şart. 12 altında alt sınırlar yükselir.",
+   "Organ sokma merdiveni: yetişkinde 12 (m.102), çocukta 16, 12 yaşını tamamlamamış çocukta 18 yıldan az olamaz."
+  ],
+  "karis": [
+   {
+    "madde": "104",
+    "neden": "15 yaşını bitirmiş çocukla cebirsiz ilişki şikâyet üzerine 2-5 yıl."
+   },
+   {
+    "madde": "102",
+    "neden": "Mağdur yetişkinse ceza 5-10 yıl, organ sokmada en az 12 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.103/1-6). Girdideki ikinci örnek soru (suçu bildirmemenin adli kolluk eliyle işlenmesi) m.279'a ait; bu maddede kullanılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "104",
+  "baslik": "Reşit olmayanla cinsel ilişki",
+  "oz": "Cebir, tehdit ve hile olmadan 15 yaşını bitirmiş bir çocukla cinsel ilişkide bulunan kişi, şikâyet üzerine 2-5 yıl hapis alır. Fail, mağdurla arasında evlenme yasağı bulunan biriyse şikâyet aranmaz ve ceza 10-15 yıldır. Evlat edinme öncesi bakımı üstlenen ya da koruyucu aile olarak bakım ve gözetim yükümlüsü olan kişi için de aynı şikâyetsiz ceza uygulanır.",
+  "sorulur": [
+   "Evlenme yasağı bulunan kişinin fiili sorulur; doğrusu “10-15 yıl, şikâyet aranmaz”dır. Çeldiricilerde temel hâlin “2-5 yıl, şikâyete bağlı” seçeneği ve çocuk istismarının 8-15 yılı durur."
+  ],
+  "akilda": [
+   "Temel hâl hafif ve şikâyetli (2-5 yıl); evlenme yasağı olan yakınlık varsa ağır ve şikâyetsiz (10-15 yıl).",
+   "Üç şart: 15 yaşını bitirmiş çocuk, cebir-tehdit-hile yok, cinsel ilişki var. Cebir varsa istismar (m.103)."
+  ],
+  "karis": [
+   {
+    "madde": "103",
+    "neden": "Cebir, tehdit, hile varsa ya da çocuk 15 yaş altındaysa istismar: 8-15 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.104/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "105",
+  "baslik": "Cinsel taciz",
+  "oz": "Bir kimseyi cinsel amaçla taciz eden kişi, mağdurun şikâyeti üzerine 3 ay - 2 yıl hapis veya adli para cezası alır; mağdur çocuksa 6 ay - 3 yıl hapis verilir. Kamu görevi, hizmet ya da aile içi ilişkinin, aynı işyerinin, posta veya elektronik haberleşmenin kolaylığından yararlanılarak ya da teşhir yoluyla işlenirse ceza yarı oranında artar. Mağdur işini, okulunu ya da ailesini bırakmak zorunda kalırsa ceza 1 yıldan az olamaz.",
+  "sorulur": [
+   "Beklenen kalıp: Taciz biçimi verilip cezanın artıp artmadığı sorulur; mesaj ya da sosyal medya yoluyla taciz “posta veya elektronik haberleşme” kolaylığıdır, ceza yarı oranında artar. Basit taciz sayan şık yanlıştır.",
+   "Beklenen kalıp: Mağdurun işini, okulunu ya da ailesini bırakmak zorunda kaldığı hâlde alt sınır sorulur; doğrusu 1 yıldır."
+  ],
+  "akilda": [
+   "Cinsel saldırı vücut dokunulmazlığını ihlal eder (m.102); taciz bu ihlale varmayan cinsel amaçlı rahatsız etmedir.",
+   "Yetişkinde 3 ay - 2 yıl ya da adli para, çocukta 6 ay - 3 yıl hapis: çocukta para cezası seçeneği yok."
+  ],
+  "karis": [
+   {
+    "madde": "102",
+    "neden": "Vücut dokunulmazlığı ihlal edilirse cinsel saldırı: 5-10 yıl, sarkıntılıkta 2-5 yıl."
+   },
+   {
+    "madde": "123",
+    "neden": "Amaç cinsel değil, sırf huzur bozmaksa ısrarlı telefon huzur bozma suçudur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.105/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "106",
+  "baslik": "Tehdit",
+  "oz": "Bir kişiyi, kendisinin ya da yakınının hayatına, vücut veya cinsel dokunulmazlığına saldıracağını söyleyerek tehdit eden kişi 6 ay - 2 yıl hapis alır; kadına karşıysa alt sınır 9 aydır. Malvarlığına büyük zarar ya da başka bir kötülük tehdidi şikâyete bağlıdır, cezası 2-6 ay hapis veya adli para cezasıdır. Silahla, kimliğini gizleyerek, imzasız mektupla, birden fazla kişiyle ya da örgütün korkutucu gücüyle tehditte ceza 2-7 yıldır.",
+  "sorulur": [
+   "Silahlı tehdidin cezası sorulur; doğrusu 2-7 yıldır. Çeldiricilerde temel tehdidin 6 ay - 2 yılı, mala zarar tehdidinin 2-6 ayı ve şantajın 1-3 yılı durur.",
+   "Tuzak şık, malvarlığına zarar tehdidini “6 ay - 2 yıl ve re'sen” diye verir; doğrusu şikâyete bağlı ve 2-6 aydır."
+  ],
+  "akilda": [
+   "Can tehdidi 6 ay - 2 yıl, mal tehdidi 2-6 ay: aylar ile yıllar yer değiştirir. Mal tehdidi ayrıca şikâyetlidir.",
+   "Ağırlaştırıcı dörtlü: silah, gizlenme ya da imzasız mektup, kalabalık, örgüt gücü. Hepsinde 2-7 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "107",
+    "neden": "Şantajda hak ya da sır koz yapılır, amaç bir şey yaptırmaktır; ceza 1-3 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.106/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "107",
+  "baslik": "Şantaj",
+  "oz": "Hakkı olan ya da yapmakla yükümlü olduğu bir şeyi yapacağını veya yapmayacağını söyleyerek birini kanuna aykırı ya da yükümlü olmadığı bir şeyi yapmaya, yapmamaya veya haksız çıkar sağlamaya zorlayan kişi 1-3 yıl hapis ve 5 bin güne kadar adli para cezası alır. Yarar sağlamak için birinin şerefine zarar verecek şeyleri açıklamak ya da isnat etmekle tehdit eden de aynı cezayı alır.",
+  "sorulur": [
+   "Şantajın cezası sorulur; doğrusu “1-3 yıl hapis ve 5 bin güne kadar adli para”dır. Çeldiricilerde tehdidin 6 ay - 2 yılı ve adli para içermeyen hapis aralıkları durur."
+  ],
+  "akilda": [
+   "Şantajda kişi hakkını silaha çevirir: “Şikâyet ederim, ifşa ederim” diyerek haksız bir sonuç ister.",
+   "İki ceza birden: hapis (1-3 yıl) ve adli para (5 bin güne kadar)."
+  ],
+  "karis": [
+   {
+    "madde": "106",
+    "neden": "Tehditte saldırı ya da kötülük bildirilir; ceza 6 ay - 2 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.107/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "108",
+  "baslik": "Cebir",
+  "oz": "Bir kişiye, bir şeyi yapması, yapmaması ya da failin yapmasına izin vermesi için cebir kullanılırsa kasten yaralama suçunun cezası üçte birinden yarısına kadar artırılarak verilir. Yani cebir, belli bir amaca yönelmiş yaralama gibi cezalandırılır.",
+  "sorulur": [
+   "Beklenen kalıp: Cebir suçunun cezasının nasıl belirlendiği sorulur; doğrusu kasten yaralama cezasının üçte birden yarıya kadar artırılmasıdır. Şıklarda artırım oranı ve dayanılan suç değiştirilir."
+  ],
+  "akilda": [
+   "Cebir = amaçlı yaralama: yaralama cezası + üçte birden yarıya kadar artırım.",
+   "Tehdit söze, cebir kaba kuvvete dayanır; ikisinde de kişinin iradesi bükülür."
+  ],
+  "karis": [
+   {
+    "madde": "106",
+    "neden": "Tehditte kuvvet kullanılmaz, kötülük bildirilir; ceza 6 ay - 2 yıl."
+   },
+   {
+    "madde": "86",
+    "neden": "Cebrin cezası kasten yaralamanın cezasına bağlıdır; üstüne artırım yapılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.108/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "109",
+  "baslik": "Kişiyi hürriyetinden yoksun kılma",
+  "oz": "Bir kimseyi hukuka aykırı olarak bir yere gitme ya da bir yerde kalma hürriyetinden yoksun bırakan kişi 1-5 yıl hapis alır; cebir, tehdit ya da hile kullanırsa 2-7 yıl verilir. Silahla, birden fazla kişiyle, kamu görevi nedeniyle, aileye, çocuğa ya da savunamayana karşı işlenirse ceza 1 kat artar. Cinsel amaçla işlenirse ceza yarı oranında artırılır; mağdur önemli ekonomik kayba uğrarsa ayrıca 1.000 güne kadar adli para cezası verilir.",
+  "sorulur": [
+   "Boşluk doldurma: temel ceza ve cebir, tehdit ya da hile kullanılınca verilecek ceza sırayla sorulur; doğrusu “1-5 yıl - 2-7 yıl”dır. Çeldiricide sıra ters çevrilir.",
+   "Artırım oranı sorulur: silah, çocuk ya da aile gibi hâllerde bir kat, cinsel amaçta yarı oranında artırım yapılır; tuzak şık cinsel amacı bir kata bağlar."
+  ],
+  "akilda": [
+   "1-5'ten 2-7'ye: cebir, tehdit ya da hile alt sınıra 1, üst sınıra 2 yıl ekler.",
+   "Cinsel amaç yarı, silah-kalabalık-aile-çocuk bir kat artırır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.109/1-6)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "112",
+  "baslik": "Eğitim ve öğretimin engellenmesi",
+  "oz": "Cebir, tehdit ya da hukuka aykırı başka bir davranışla Devletçe kurulan veya izinle yürütülen eğitim-öğretim faaliyetlerine, kişinin eğitim hakkını kullanmasına ya da öğrencilerin toplu kaldığı binalara girilmesine veya orada kalınmasına engel olan kişi 2-5 yıl hapis alır. Engellenen şeyin okul, eğitim hakkı ya da yurt olması cezayı değiştirmez.",
+  "sorulur": [
+   "Eğitim faaliyetine engel olmanın cezası sorulur; doğrusu 2-5 yıl hapistir. Çeldiricilerde iş ve çalışma hürriyetinin ihlalindeki 6 ay - 2 yıla benzeyen kısa süreler durur."
+  ],
+  "akilda": [
+   "Okul, eğitim hakkı, yurt: üç hedef, tek ceza 2-5 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "117",
+    "neden": "İş ve çalışma hürriyetini ihlal şikâyetlidir: 6 ay - 2 yıl veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.112/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "116",
+  "baslik": "Konut dokunulmazlığının ihlali",
+  "oz": "Bir kimsenin konutuna ya da eklentilerine rızasına aykırı giren veya rızayla girip çıkmayan kişi, şikâyet üzerine 6 ay - 2 yıl hapis alır. Herkesin serbestçe giremediği işyerlerinde ceza, şikâyet üzerine 6 ay - 1 yıl hapis veya adli para cezasıdır. Aile bireylerinden ya da ortak kullananlardan birinin meşru amaçlı rızası varsa suç oluşmaz. Cebir, tehdit ya da gece vakti işlenirse ceza 1-3 yıldır.",
+  "sorulur": [
+   "Öncüllü soruda basit hâlin şikâyete bağlılığı, aile bireyinin meşru amaçlı rızası ve gece vakti işlenme verilir. İlk ikisi doğrudur; gece vakti “yarı oranında artırım” değil, 1-3 yıl ayrı cezadır."
+  ],
+  "akilda": [
+   "Konut 6 ay - 2 yıl, işyeri 6 ay - 1 yıl ya da para; gece ya da zorla girerse 1-3 yıl.",
+   "Ortak evde tek anahtar yeter: aile bireylerinden ya da ortak kullananlardan birinin meşru amaçlı rızası suçu ortadan kaldırır.",
+   "Gece vakti m.6'daki tanımdır: güneş batışından 1 saat sonra başlar, doğuşundan 1 saat önce biter."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.116/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "117",
+  "baslik": "İş ve çalışma hürriyetinin ihlali",
+  "oz": "Cebir, tehdit ya da hukuka aykırı başka bir davranışla iş ve çalışma hürriyetini ihlal eden, şikâyet hâlinde 6 ay - 2 yıl hapis veya adli para cezası alır. Çaresizliği sömürerek birini ücretsiz ya da çok düşük ücretle çalıştıran veya onur kırıcı koşullara tabi kılan 6 ay - 3 yıl hapis ya da en az 100 gün adli para alır. Cebirle işi durdurmak da 6 ay - 3 yıldır.",
+  "sorulur": [
+   "Cebir veya tehditle iş hürriyetinin ihlali sorulur; doğrusu “mağdurun şikâyeti hâlinde 6 ay - 2 yıl hapis veya adli para”dır. Çeldiricilerde re'sen soruşturma, yalnız adli para ve 1-3 yıl durur."
+  ],
+  "akilda": [
+   "Şikâyet şartı yalnız temel ihlalde geçer (6 ay - 2 yıl); sömürüyle çalıştırma ve işi durdurma 6 ay - 3 yıldır.",
+   "Sömürüde seçimlik ceza: 6 ay - 3 yıl hapis ya da en az 100 gün adli para."
+  ],
+  "karis": [
+   {
+    "madde": "118",
+    "neden": "Sendikaya üyeliğe zorlama 6 ay - 2 yıl; sendika faaliyetini engelleme 1-3 yıl."
+   },
+   {
+    "madde": "112",
+    "neden": "Eğitim faaliyetini ya da eğitim hakkını engellemenin cezası 2-5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.117/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "118",
+  "baslik": "Sendikal hakların kullanılmasının engellenmesi",
+  "oz": "Bir kimseyi sendikaya üye olmaya ya da olmamaya, sendika faaliyetine katılmaya ya da katılmamaya, sendikadan veya sendika yönetimindeki görevinden ayrılmaya zorlamak için cebir veya tehdit kullanan kişi 6 ay - 2 yıl hapis alır. Cebir, tehdit ya da hukuka aykırı başka bir davranışla sendikanın faaliyetlerini engelleyene 1-3 yıl hapis verilir.",
+  "sorulur": [
+   "Beklenen kalıp: Kişiyi sendika konusunda zorlamak ile sendikanın faaliyetini engellemek karşılaştırılır; şıklarda 6 ay - 2 yıl ve 1-3 yıl aralıkları yer değiştirir."
+  ],
+  "akilda": [
+   "Kişiye baskı 6 ay - 2 yıl, kuruma baskı 1-3 yıl: hedef sendikanın kendisiyse ceza yükselir."
+  ],
+  "karis": [
+   {
+    "madde": "117",
+    "neden": "İş ve çalışma hürriyetini ihlal şikâyete bağlıdır: 6 ay - 2 yıl veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.118/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "120",
+  "baslik": "Haksız arama",
+  "oz": "Hukuka aykırı olarak bir kimsenin üstünü ya da eşyasını arayan kamu görevlisi 3 ay - 1 yıl hapis alır. Bu fiil yalnız disiplin meselesi değil, hapis cezası gerektiren bir suçtur ve faili ancak kamu görevlisi olabilir.",
+  "sorulur": [
+   "Haksız aramanın cezası sorulur; doğrusu 3 ay - 1 yıl hapistir. Çeldiricilerde “yalnızca disiplin cezası”, dilekçe suçunun 6 aya kadarı, 1-3 yıl ve yalnız adli para durur."
+  ],
+  "akilda": [
+   "Haksız arama 3 ay - 1 yıl; dilekçenin hukuki neden olmadan kabul edilmemesi 6 aya kadar (m.121).",
+   "Faili yalnız kamu görevlisidir: kolluğun hukuka aykırı üst ya da eşya araması doğrudan bu suçu oluşturur."
+  ],
+  "karis": [
+   {
+    "madde": "121",
+    "neden": "Dilekçeyi hukuki neden olmadan kabul etmemenin cezası 6 aya kadar hapistir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.120/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "121",
+  "baslik": "Dilekçe hakkının kullanılmasını engelleme",
+  "oz": "Bir kişinin belli bir hakkı kullanmak için yetkili kamu makamlarına verdiği dilekçe hukuki bir neden olmadan kabul edilmezse, fail 6 aya kadar hapis cezası alır. Dilekçenin reddi için hukuki bir neden varsa suç oluşmaz.",
+  "sorulur": [
+   "Dilekçenin hukuki neden olmadan kabul edilmemesinin cezası sorulur; doğrusu 6 aya kadar hapistir. Çeldiricide haksız aramanın 3 ay - 1 yılı ve “yalnızca disiplin cezası” durur."
+  ],
+  "akilda": [
+   "Ceza yalnız üst sınırla verilmiştir: 6 aya kadar hapis.",
+   "Kilit ifade “hukuki bir neden olmaksızın”: reddin hukuki nedeni varsa suç yoktur."
+  ],
+  "karis": [
+   {
+    "madde": "120",
+    "neden": "Kamu görevlisinin hukuka aykırı üst veya eşya araması 3 ay - 1 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.121/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "122",
+  "baslik": "Nefret ve ayırımcılık",
+  "oz": "Dil, ırk, milliyet, renk, cinsiyet, engellilik, siyasi düşünce, felsefi inanç, din ya da mezhep farklılığından kaynaklanan nefret nedeniyle bir kişiye kamuya sunulmuş bir malın satılmasını, devrini veya kiralanmasını, bir hizmetten yararlanmasını, işe alınmasını ya da olağan bir ekonomik etkinlikte bulunmasını engelleyen kişi 1-3 yıl hapis alır. Suçun özü, farklılıktan doğan nefretle bu dört alandan birinin engellenmesidir.",
+  "sorulur": [
+   "Beklenen kalıp: Nefret saiklerinin sayıldığı listede hangisinin olmadığı ya da engellenen alanlardan biri sorulur; şıklarda ceza aralığı (1-3 yıl) başka aralıklarla değiştirilir."
+  ],
+  "akilda": [
+   "Nefret saiki + dört engel: mal (satış, devir, kira), hizmet, işe alınma, ekonomik etkinlik.",
+   "Saik listesi geniştir: dil, ırk, milliyet, renk, cinsiyet, engellilik, siyasi düşünce, felsefi inanç, din, mezhep."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.122/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "123",
+  "baslik": "Kişilerin huzur ve sükûnunu bozma",
+  "oz": "Sırf huzur ve sükûnunu bozmak amacıyla bir kimseye ısrarla telefon eden, gürültü yapan ya da aynı amaçla hukuka aykırı başka bir davranışta bulunan kişi, mağdurun şikâyeti üzerine 3 ay - 1 yıl hapis alır. Tek seferlik bir rahatsızlık değil, ısrarlı ve yalnız huzur bozmaya yönelik davranış cezalandırılır.",
+  "sorulur": [
+   "Beklenen kalıp: Israrla telefon etme ya da gürültü örneği verilip suçun adı, şikâyete bağlılığı ve cezası sorulur; doğrusu şikâyet üzerine 3 ay - 1 yıl hapistir."
+  ],
+  "akilda": [
+   "Üç anahtar kelime: “sırf” (başka amaç yok), “ısrarla” (tek sefer yetmez), “şikâyet” (soruşturma şikâyete bağlı)."
+  ],
+  "karis": [
+   {
+    "madde": "105",
+    "neden": "Rahatsız etme cinsel amaçlıysa cinsel taciz: 3 ay - 2 yıl veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.123/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "125",
+  "baslik": "Hakaret",
+  "oz": "Bir kimseye onur, şeref ve saygınlığını zedeleyecek somut bir fiil ya da olgu isnat eden veya söven kişi 3 ay - 2 yıl hapis ya da adli para cezası alır. Mağdurun yokluğunda hakaretin cezalandırılması için en az 3 kişiyle ihtilat gerekir. Kamu görevlisine görevinden dolayı, inanç ve düşünceleri nedeniyle ya da kutsal değerlerden bahisle işlenirse alt sınır 1 yıldır. Alenen işlenirse ceza altıda bir artırılır.",
+  "sorulur": [
+   "Alenen hakaretteki artırım oranı sorulur; doğrusu 1/6'dır. Çeldiricilerde 1/2, 1/3, 1/4 ve bir kat durur.",
+   "Gıyapta hakaret için ihtilat edilecek kişi sayısı sorulur; doğrusu en az 3 kişidir, tuzak şık 2 kişi der."
+  ],
+  "akilda": [
+   "Gıyapta 3 kişi, nitelikli hâlde alt sınır 1 yıl, alenen 1/6 artırım.",
+   "Kurula hakaret her üyeye hakaret sayılır; ama tek tek değil, zincirleme suç hükmüyle cezalandırılır."
+  ],
+  "karis": [
+   {
+    "madde": "129",
+    "neden": "Haksız fiile tepki ya da karşılıklı hakarette ceza 1/3'e kadar indirilebilir."
+   },
+   {
+    "madde": "130",
+    "neden": "Ölünün hatırasına hakarette de 3 kişiyle ihtilat ve alenen 1/6 artırım var."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.125/1-5); m.125/1'deki (...) ile gösterilen çıkarılmış ibare yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "126",
+  "baslik": "Hakarette mağdurun belirlenmesi",
+  "oz": "Hakarette mağdurun adı açıkça söylenmemiş ya da isnat üstü kapalı geçiştirilmiş olsa bile, sözün niteliği ve kime yöneldiği konusunda tereddüt yoksa hem mağdurun adı belirtilmiş hem de hakaret açıklanmış sayılır. Yani isim vermemek hakaretten kurtarmaz.",
+  "sorulur": [
+   "Beklenen kalıp: İsim vermeden yapılan hakaretin suç oluşturup oluşturmadığı sorulur; doğru şık, mağdurun kim olduğunda duraksama yoksa hakaretin oluştuğudur."
+  ],
+  "akilda": [
+   "İsim şart değil, adres yeter: kime söylendiği belliyse hakaret o kişiye yapılmış sayılır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.126/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "127",
+  "baslik": "İsnadın ispatı",
+  "oz": "Hakarette isnat edilen ve suç oluşturan fiil ispat edilirse kişiye ceza verilmez; hakaret edilen bu suçtan kesin olarak mahkûm olmuşsa isnat ispatlanmış sayılır. Diğer hâllerde ispat istemi ancak kamu yararı varsa ya da şikâyetçi ispata razıysa kabul edilir. Ancak ispat edilmiş bir fiilden söz edilerek hakaret edilirse ceza verilir.",
+  "sorulur": [
+   "Suç oluşturan isnadın ispatlanması hâlinde ne olacağı sorulur; doğrusu “kişiye ceza verilmez”dir. Çeldiricilerde yarı ya da üçte bir indirim, artırım ve şikâyetten vazgeçilmiş sayılma durur."
+  ],
+  "akilda": [
+   "Doğruyu söylemek suç değil, doğruyla aşağılamak suç: ispat cezasızlık getirir, ispatlı fiilden söz ederek hakaret cezalandırılır.",
+   "İspata izin iki kapıdan biriyle açılır: kamu yararı ya da şikâyetçinin rızası. Kesin mahkûmiyet varsa ispat zaten tamamdır."
+  ],
+  "karis": [
+   {
+    "madde": "128",
+    "neden": "Yargı ya da idare önündeki iddia ve savunmada somut vakıaya dayalı isnat cezalandırılmaz."
+   },
+   {
+    "madde": "129",
+    "neden": "Haksız fiile tepkide ceza indirilebilir ya da hiç verilmeyebilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.127/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "128",
+  "baslik": "İddia ve savunma dokunulmazlığı",
+  "oz": "Yargı mercileri ya da idari makamlar önünde yapılan yazılı veya sözlü başvuru, iddia ve savunmalarda kişiler hakkında somut isnatlarda ya da olumsuz değerlendirmelerde bulunan kişiye ceza verilmez. Bunun için isnat ve değerlendirmeler gerçek ve somut vakıalara dayanmalı ve uyuşmazlıkla bağlantılı olmalıdır.",
+  "sorulur": [
+   "Beklenen kalıp: Dava dilekçesinde ya da savunmada karşı taraf hakkında söylenen olumsuz sözlerin hakaret sayılıp sayılmayacağı sorulur; doğrusu, gerçek ve somut vakıalara dayanıp uyuşmazlıkla bağlantılıysa ceza verilmediğidir."
+  ],
+  "akilda": [
+   "İki şartlı kalkan: gerçek ve somut vakıa + uyuşmazlıkla bağlantı. Biri eksikse kalkan düşer."
+  ],
+  "karis": [
+   {
+    "madde": "127",
+    "neden": "İspatlanan suç isnadında da ceza yok; ama orada şart ispattır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.128/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "129",
+  "baslik": "Hakarette haksız fiile tepki",
+  "oz": "Hakaret haksız bir fiile tepki olarak işlenirse ceza üçte birine kadar indirilebilir ya da hiç ceza verilmeyebilir. Hakaret bir kasten yaralamaya tepki olarak işlenmişse kişiye ceza verilmez. Karşılıklı hakarette, olayın niteliğine göre taraflardan biri ya da ikisi hakkında ceza üçte birine kadar indirilebilir veya ceza vermekten vazgeçilebilir.",
+  "sorulur": [
+   "Beklenen kalıp: Karşılıklı hakarette tarafların durumu sorulur; tuzak şık her ikisinin de tam ceza alacağını söyler. Doğrusu, biri ya da ikisi hakkında 1/3'e kadar indirim veya ceza vermekten vazgeçmedir.",
+   "Kasten yaralamaya tepki olarak yapılan hakaret sorulursa doğru cevap “ceza verilmez”dir, indirim değil."
+  ],
+  "akilda": [
+   "Haksız fiile tepki “belki” (indirim ya da vazgeçme), kasten yaralamaya tepki “kesin” (ceza yok).",
+   "İndirim tavanı 1/3; alenen hakaretteki 1/6 artırımla karıştırma (m.125)."
+  ],
+  "karis": [
+   {
+    "madde": "125",
+    "neden": "Alenen hakarette ceza 1/6 artırılır; tepkide ise 1/3'e kadar indirilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.129/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "130",
+  "baslik": "Ölünün hatırasına hakaret",
+  "oz": "Ölmüş bir kimsenin hatırasına en az 3 kişiyle ihtilat ederek hakaret eden kişi 3 ay - 2 yıl hapis ya da adli para cezası alır; alenen işlenirse ceza altıda bir oranında artırılır. Ölünün cesedini veya kemiklerini kısmen ya da tamamen alan ya da bunlara tahkir edici fiillerde bulunan kişi 3 ay - 2 yıl hapis alır.",
+  "sorulur": [
+   "Suçun unsuru sorulur; doğrusu “en az 3 kişiyle ihtilat”tır. Çeldiricilerde 2 kişi, basın yolu, ölünün kamu görevlisi olması ve ölümden sonraki 1 yıl durur.",
+   "Alenen işlenmedeki artırım sorulur; doğrusu altıda birdir. Yarı, üçte bir ve bir kat çeldiricidir."
+  ],
+  "akilda": [
+   "Hakaretin kuralları ölüye de geçer: 3 kişiyle ihtilat, alenen 1/6 artırım, 3 ay - 2 yıl.",
+   "Cesede ya da kemiğe yönelik fiilde ceza yalnız hapistir (3 ay - 2 yıl); adli para seçeneği yoktur."
+  ],
+  "karis": [
+   {
+    "madde": "125",
+    "neden": "Yaşayana gıyapta hakarette de 3 kişiyle ihtilat şart, alenen işlenirse 1/6 artırım var."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.130/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "132",
+  "baslik": "Haberleşmenin gizliliğini ihlal",
+  "oz": "Kişiler arasındaki haberleşmenin gizliliğini ihlal eden 1-3 yıl hapis alır; ihlal içeriklerin kaydı yoluyla olursa ceza bir kat artar. Haberleşme içeriklerini hukuka aykırı ifşa eden 2-5 yıl hapis alır. Kendisiyle yapılan haberleşmenin içeriğini diğer tarafın rızası olmadan hukuka aykırı biçimde alenen ifşa eden kişi 1-3 yıl hapis alır; bu verilerin basın ve yayın yoluyla yayımlanmasında da aynı ceza verilir.",
+  "sorulur": [
+   "Beklenen kalıp: İhlal, kayıt ve ifşa hâlleri karşılaştırılır; şıklarda 1-3 yıl, bir kat artırım ve 2-5 yıl yer değiştirir. Kendi haberleşmesini alenen ifşa 1-3 yıl, başkalarınınkini ifşa 2-5 yıldır."
+  ],
+  "akilda": [
+   "Gizliliği bozmak 1-3, kaydederek bozmak bir kat fazlası, başkalarının içeriğini ifşa 2-5; kendi yazışmanı alenen ifşa yine 1-3.",
+   "Özel hayatın gizliliğinde (m.134) aynı kalıp tekrarlanır: ihlal 1-3, kayıtla bir kat artırım, ifşa 2-5."
+  ],
+  "karis": [
+   {
+    "madde": "133",
+    "neden": "Aleni olmayan konuşmaları aletle dinleme ya da kaydetme ayrı suçtur: 2-5 yıl."
+   },
+   {
+    "madde": "134",
+    "neden": "Özel hayatın gizliliğinde aynı ceza kalıbı var; konu haberleşme değil, özel hayattır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.132/1-3); m.132/4 mülga."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "133",
+  "baslik": "Konuşmaların dinlenmesi ve kayda alınması",
+  "oz": "Kişiler arasındaki aleni olmayan konuşmaları taraflardan hiçbirinin rızası olmadan bir aletle dinleyen ya da ses alma cihazıyla kaydeden kişi 2-5 yıl hapis alır. Katıldığı aleni olmayan bir söyleşiyi diğerlerinin rızası olmadan kaydeden 6 ay - 2 yıl hapis ya da adli para cezası alır. Bu kayıtlardan elde edilen verileri hukuka aykırı ifşa eden 2-5 yıl hapis ve 4 bin güne kadar adli para cezası alır.",
+  "sorulur": [
+   "Katıldığı söyleşiyi gizlice kaydedenin cezası sorulur; doğrusu “6 ay - 2 yıl hapis veya adli para”dır. Çeldiricilerde başkalarının konuşmasını dinlemenin 2-5 yılı ve ifşanın “2-5 yıl ve 4 bin gün” cezası durur."
+  ],
+  "akilda": [
+   "İçindeysen hafif, dışarıdansan ağır: katıldığın konuşmayı kaydetmek 6 ay - 2 yıl, başkalarınınkini dinlemek 2-5 yıl.",
+   "İfşa en ağırıdır: 2-5 yıl hapis üstüne 4 bin güne kadar adli para."
+  ],
+  "karis": [
+   {
+    "madde": "132",
+    "neden": "Haberleşmenin gizliliğini ihlal 1-3 yıl, içeriği ifşa 2-5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.133/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "134",
+  "baslik": "Özel hayatın gizliliğini ihlal",
+  "oz": "Kişilerin özel hayatının gizliliğini ihlal eden 1-3 yıl hapis alır; ihlal görüntü ya da seslerin kaydı yoluyla olursa ceza bir kat artar. Özel hayata ilişkin görüntü veya sesleri hukuka aykırı olarak ifşa eden 2-5 yıl hapis alır. İfşa edilen bu verilerin basın ve yayın yoluyla yayımlanmasında da aynı ceza verilir.",
+  "sorulur": [
+   "Beklenen kalıp: İhlal, kayıtla ihlal ve ifşa hâllerinin cezaları karşılaştırılır; şıklarda 1-3 yıl, bir kat artırım ve 2-5 yıl yer değiştirir."
+  ],
+  "akilda": [
+   "Haberleşmenin gizliliğiyle (m.132) aynı kalıp: ihlal 1-3, kayıtla bir kat artırım, ifşa 2-5.",
+   "Kayıt iki maddede farklı artırır: özel hayatı kayda almak bir kat, hassas kişisel veriyi kaydetmek yarı oranında (m.135)."
+  ],
+  "karis": [
+   {
+    "madde": "135",
+    "neden": "Kişisel veriyi hukuka aykırı kaydetme 1-3 yıl; hassas veride yarı artırım."
+   },
+   {
+    "madde": "132",
+    "neden": "Aynı ceza kalıbı; ama konu kişiler arasındaki haberleşmedir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.134/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "135",
+  "baslik": "Kişisel verilerin kaydedilmesi",
+  "oz": "Hukuka aykırı olarak kişisel verileri kaydeden kişi 1-3 yıl hapis alır. Veri; siyasi, felsefi ya da dinî görüşlere, ırki kökene, ahlaki eğilimlere, cinsel yaşama, sağlık durumuna veya sendikal bağlantılara ilişkinse ceza yarı oranında artırılır.",
+  "sorulur": [
+   "Hassas verideki ceza değişikliği sorulur; doğrusu “yarı oranında artırılır”dır. Çeldiricilerde bir kat artırım, indirimler ve “ceza değişmez” durur."
+  ],
+  "akilda": [
+   "Hassas veri ailesi: görüş (siyasi, felsefi, dinî), köken (ırk), mahrem alan (ahlak, cinsel yaşam, sağlık), sendika.",
+   "Hassas veri yarı artırır; özel hayatı görüntü ya da sesle kaydetmek bir kat artırır (m.134)."
+  ],
+  "karis": [
+   {
+    "madde": "134",
+    "neden": "Özel hayatı görüntü ya da ses kaydıyla ihlalde ceza bir kat artar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.135/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "141",
+  "baslik": "Hırsızlık",
+  "oz": "Zilyedinin rızası olmadan başkasına ait taşınır bir malı, kendisine ya da başkasına yarar sağlamak amacıyla bulunduğu yerden alan kişi 1-3 yıl hapis alır. Suçun konusu yalnız taşınır maldır; taşınmaz bir mal hırsızlığa konu olmaz.",
+  "sorulur": [
+   "Beklenen kalıp: Hırsızlığın unsurları sorulur; doğru şık “zilyedin rızası olmadan, yarar sağlamak amacıyla, taşınır malı bulunduğu yerden alma”dır. Tuzak şık taşınmazı da suçun konusu sayar."
+  ],
+  "akilda": [
+   "Hırsızlığın taşları: zilyedin rızası yok, mal başkasının, mal taşınır, yarar amacı var, mal bulunduğu yerden alınır.",
+   "Temel ceza 1-3 yıl; paydaş malda ya da alacak tahsilinde ceza hafifler ve şikâyete bağlanır (m.144)."
+  ],
+  "karis": [
+   {
+    "madde": "144",
+    "neden": "Paydaş malda ya da alacak tahsilinde ceza şikâyet üzerine 2 ay - 1 yıl."
+   },
+   {
+    "madde": "148",
+    "neden": "Malı cebir ya da tehditle aldırmak yağmadır: 6-10 yıl."
+   },
+   {
+    "madde": "163",
+    "neden": "Sayacı engelleyerek elektrik, su ya da doğal gaz kullanmak karşılıksız yararlanmadır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.141/1); m.141/2 mülga."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "144",
+  "baslik": "Hırsızlıkta daha az ceza gerektiren hâller",
+  "oz": "Hırsızlık paydaş ya da elbirliğiyle malik olunan mal üzerinde veya hukuki bir ilişkiye dayanan alacağı tahsil amacıyla işlenirse, şikâyet üzerine 2 ay - 1 yıl hapis veya adli para cezası verilir. Yani kişi kısmen kendi hakkı saydığı bir şeyi aldığında da suç işler, ama cezası hafifler.",
+  "sorulur": [
+   "Paydaş malda ya da alacak tahsilinde hırsızlığın cezası sorulur; doğrusu “şikâyet üzerine 2 ay - 1 yıl hapis veya adli para”dır. Çeldiricilerde temel hırsızlığın 1-3 yılı, “ceza verilmez” ve indirim seçenekleri durur."
+  ],
+  "akilda": [
+   "Kendi payından ya da alacağından alan da hırsızdır, ama şikâyetle ve hafif cezayla: 2 ay - 1 yıl.",
+   "Alacak tahsili üç maddede hafifletir: hırsızlıkta 2 ay - 1 yıl, dolandırıcılıkta 6 ay - 1 yıl (m.159), yağmada yalnız tehdit ya da yaralama (m.150)."
+  ],
+  "karis": [
+   {
+    "madde": "141",
+    "neden": "Temel hırsızlıkta şikâyet aranmaz; ceza 1-3 yıl hapis."
+   },
+   {
+    "madde": "159",
+    "neden": "Alacak için dolandırıcılık da şikâyetlidir: 6 ay - 1 yıl hapis veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.144/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "148",
+  "baslik": "Yağma",
+  "oz": "Birini, kendisinin ya da yakınının hayatına, vücut veya cinsel dokunulmazlığına saldırı ya da malvarlığına büyük zarar tehdidiyle veya cebir kullanarak bir malı teslim etmeye ya da alınmasına karşı koymamaya mecbur eden kişi 6-10 yıl hapis alır. Cebir ya da tehditle borç senedi verdirmek, imzalatmak veya senedi imha ettirmek de aynı cezayı gerektirir. Mağduru bir vasıtayla kendini bilmez ve savunamaz hâle getirmek de cebir sayılır.",
+  "sorulur": [
+   "Yağmanın temel cezası sorulur; doğrusu 6-10 yıldır. Çeldiricilerde hırsızlığın 1-3 yılı ve nitelikli yağmanın 10-15 yılı durur.",
+   "Mağduru ilaçla ya da başka bir vasıtayla bilinçsiz bırakıp malını almak sorulursa cevap yağmadır; bu durum da cebir sayılır."
+  ],
+  "akilda": [
+   "Hırsızlık + cebir ya da tehdit = yağma; ceza 1-3 yıldan 6-10 yıla sıçrar.",
+   "Yağmada tehdit iki türlüdür: can, beden ya da cinsel dokunulmazlığa saldırı veya malvarlığına büyük zarar. Sair kötülük tehdidi yağma unsuru sayılmaz."
+  ],
+  "karis": [
+   {
+    "madde": "141",
+    "neden": "Cebir ve tehdit yoksa hırsızlık: 1-3 yıl."
+   },
+   {
+    "madde": "149",
+    "neden": "Silahla, gece ya da birden fazla kişiyle işlenirse 10-15 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.148/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "149",
+  "baslik": "Nitelikli yağma",
+  "oz": "Yağma silahla, kimliği gizleyerek, birden fazla kişiyle, yol kesip ya da konutta, işyerinde veya eklentilerinde, kendini savunamayacak kişiye karşı, suç örgütünün korkutucu gücüyle ya da örgüte yarar sağlamak için veya gece vaktinde işlenirse ceza 10-15 yıl hapistir. Yağma sırasında kasten yaralamanın ağır neticeleri doğarsa ayrıca yaralama hükümleri uygulanır.",
+  "sorulur": [
+   "“Hangisi nitelikli yağma hâli değildir?” diye sorulur; doğru cevap listede olmayan durumdur, örneğin malın değerinin azlığı. Değerin azlığı cezayı artırmaz, indirir (m.150)."
+  ],
+  "akilda": [
+   "a'dan h'ye ağırlaştırıcılar tek cezaya bağlanır: 10-15 yıl. Temel yağmanın tavanı 10, nitelikli yağmanın tabanıdır.",
+   "Tehditteki ağırlaştırıcılar (silah, tanınmaz hâl, kalabalık, örgüt gücü) burada da var; yağmaya yol kesme, konut ve gece eklenir."
+  ],
+  "karis": [
+   {
+    "madde": "148",
+    "neden": "Temel yağmanın cezası 6-10 yıl."
+   },
+   {
+    "madde": "150",
+    "neden": "Malın değerinin azlığı indirim sebebidir: üçte birden yarıya kadar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.149/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "150",
+  "baslik": "Yağmada daha az ceza gerektiren hâller",
+  "oz": "Kişi, hukuki bir ilişkiye dayanan alacağını tahsil etmek için tehdit ya da cebir kullanırsa yağmadan değil, yalnız tehdit veya kasten yaralama hükümlerinden cezalandırılır. Yağmanın konusu olan malın değeri azsa ceza üçte birden yarıya kadar indirilebilir.",
+  "sorulur": [
+   "Beklenen kalıp: Alacağını tahsil için zor kullanan kişinin hangi suçtan cezalandırılacağı sorulur; doğrusu tehdit ya da kasten yaralamadır, yağma diyen şık tuzaktır.",
+   "Beklenen kalıp: Değerin azlığındaki indirim oranı sorulur; doğrusu üçte birden yarıya kadardır ve takdirîdir (“indirilebilir”)."
+  ],
+  "akilda": [
+   "Alacak tahsili yağmayı tehdide ya da yaralamaya indirir; hırsızlıkta da cezayı hafifletir (m.144).",
+   "Değer azlığı: üçte birden yarıya kadar indirim; nitelikli hâl değil, indirim sebebidir."
+  ],
+  "karis": [
+   {
+    "madde": "149",
+    "neden": "Değer azlığı nitelikli hâl sayılmaz; nitelikli yağma 10-15 yıl."
+   },
+   {
+    "madde": "144",
+    "neden": "Hırsızlıkta alacak tahsili şikâyetli ve 2 ay - 1 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.150/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "151",
+  "baslik": "Mala zarar verme",
+  "oz": "Başkasının taşınır ya da taşınmaz malını kısmen veya tamamen yıkan, tahrip eden, yok eden, bozan, kullanılamaz hâle getiren ya da kirleten kişi, mağdurun şikâyeti üzerine 4 ay - 3 yıl hapis veya adli para cezası alır. Hırsızlıktan farklı olarak burada taşınmaz mal da suçun konusudur.",
+  "sorulur": [
+   "Beklenen kalıp: Mala zarar vermenin şikâyete bağlılığı ve cezası sorulur; doğrusu “şikâyet üzerine 4 ay - 3 yıl hapis veya adli para”dır. Taşınmazın da konu olduğu öncül olarak verilebilir."
+  ],
+  "akilda": [
+   "Fiiller: yıkma, tahrip, yok etme, bozma, kullanılamaz hâle getirme, kirletme. Mal taşınır da olabilir taşınmaz da.",
+   "Temel hâl şikâyetli 4 ay - 3 yıl; kamu malı ya da ağaç gibi hâllerde ceza 1-4 yıla çıkar (m.152)."
+  ],
+  "karis": [
+   {
+    "madde": "152",
+    "neden": "Kamu malı, ağaç, sulama tesisi gibi yerlerde ceza 1-4 yıl."
+   },
+   {
+    "madde": "141",
+    "neden": "Hırsızlığın konusu yalnız taşınır mal; mala zarar vermede taşınmaz da olur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.151/1); m.151/2 mülga."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "152",
+  "baslik": "Nitelikli mala zarar verme",
+  "oz": "Mala zarar verme; kamu kurumlarının ya da kamu hizmetine ayrılmış yerlerin, afetlere karşı korunma eşyasının, Devlet ormanı dışındaki ağaçların, sulama ve içme suyu tesislerinin, siyasi parti ve meslek kuruluşu mallarının zararına ya da kamu görevlisinden öç almak için işlenirse ceza 1-4 yıldır. Yakarak, patlayıcıyla, sel ya da radyasyon yoluyla işlenirse ceza bir katına kadar artar. Haberleşme, enerji, demiryolu ya da havayolu hizmeti aksarsa yarısından 2 katına kadar artar.",
+  "sorulur": [
+   "Beklenen kalıp: Bir eşya ya da yer verilip mala zarar vermenin nitelikli hâli olup olmadığı sorulur; tuzak, Devlet ormanındaki ağacı bu listeye koymaktır, Devlet ormanı istisnadır.",
+   "Beklenen kalıp: Artırım oranları karşılaştırılır: yakma ve patlayıcıda bir katına kadar, haberleşme, enerji, demiryolu ya da havayolu hizmeti aksarsa yarısından 2 katına kadar."
+  ],
+  "akilda": [
+   "Kamu ve ortak yarar malları 1-4 yıl; ağaçta tek istisna Devlet ormanı.",
+   "Ateş bir kat, hizmet aksarsa iki kat: yakma ve patlayıcı bir katına kadar, kamu hizmeti aksarsa 2 katına kadar artırır."
+  ],
+  "karis": [
+   {
+    "madde": "151",
+    "neden": "Temel mala zarar verme şikâyetli: 4 ay - 3 yıl."
+   },
+   {
+    "madde": "153",
+    "neden": "İbadethane ve mezarlıkta yıkma 1-4 yıl, kirletme 3 ay - 1 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.152/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "153",
+  "baslik": "İbadethanelere ve mezarlıklara zarar",
+  "oz": "İbadethanelere, eklentilerine ve içindeki eşyaya, mezarlara, mezarlık tesislerine ve koruma yapılarına yıkarak, bozarak ya da kırarak zarar veren kişi 1-4 yıl hapis alır. Bu yerleri kirleten 3 ay - 1 yıl hapis veya adli para cezası alır. Fiil, o dinî inanışı benimseyen toplum kesimini tahkir amacıyla işlenirse ceza üçte bir oranında artırılır.",
+  "sorulur": [
+   "Boşluk doldurma: yıkma, bozma ya da kırma cezası ve tahkir amacındaki artırım sırayla sorulur; doğrusu “1-4 yıl - üçte bir oranında artırım”dır. Çeldiricide 1-3 yıl ile üçte bir eşleştirilir.",
+   "Tuzak şık kirletmeye de 1-4 yıl yazar; kirletmenin cezası 3 ay - 1 yıl hapis veya adli paradır."
+  ],
+  "akilda": [
+   "Kırarsan 1-4 yıl, kirletirsen 3 ay - 1 yıl; tahkir amacı varsa üçte bir fazlası."
+  ],
+  "karis": [
+   {
+    "madde": "152",
+    "neden": "Kamu malına zarar da 1-4 yıl; orada tahkir artırımı yoktur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.153/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "155",
+  "baslik": "Güveni kötüye kullanma",
+  "oz": "Saklamak ya da belirli bir şekilde kullanmak için kendisine teslim edilen başkasının malı üzerinde, devir amacı dışında tasarruf eden veya teslimi inkâr eden kişi, şikâyet üzerine 6 ay - 2 yıl hapis ve adli para cezası alır. Mal meslek, ticaret, hizmet ilişkisi ya da mal idaresi yetkisi gereği teslim edilmişse 1-7 yıl hapis ve 3 bin güne kadar adli para verilir. Konu motorlu taşıtsa ceza bir kat artırılır.",
+  "sorulur": [
+   "Konu motorlu kara, deniz ya da hava taşıtıysa cezanın nasıl değiştiği sorulur; doğrusu “bir kat artırılır”dır. Çeldiricilerde yarı indirim, üçte bir ve iki kat artırım durur.",
+   "Şikâyet tuzağı: şikâyet yalnız basit hâlde aranır; meslek, ticaret ya da hizmet ilişkisiyle teslim edilen malda şikâyet aranmaz."
+  ],
+  "akilda": [
+   "Emanete hıyanet: malı sana güvenip verdiler, sen amacı dışında kullandın ya da “almadım” dedin.",
+   "Basit hâl şikâyetli 6 ay - 2 yıl; meslek ya da ticaret güveni varsa 1-7 yıl; taşıtta bir kat fazlası."
+  ],
+  "karis": [
+   {
+    "madde": "157",
+    "neden": "Dolandırıcılıkta mal hileyle elde edilir; burada mal zaten güvenle teslim edilmiştir."
+   },
+   {
+    "madde": "289",
+    "neden": "Malı resmen muhafaza için teslim alan yedieminin tasarrufu ayrı suçtur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.155/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "156",
+  "baslik": "Bedelsiz senedi kullanma",
+  "oz": "Bedelsiz kalmış bir senedi kullanan kişi, şikâyet üzerine 6 ay - 2 yıl hapis ve adli para cezası alır. Burada hapis ile adli para birlikte verilir; biri diğerinin yerine seçilmez.",
+  "sorulur": [
+   "Beklenen kalıp: Bedelsiz senedi kullanmanın şikâyete bağlılığı ve cezası sorulur; doğrusu “şikâyet üzerine 6 ay - 2 yıl hapis ve adli para”dır. Çeldiricide “hapis veya adli para” ya da re'sen soruşturma yazılır."
+  ],
+  "akilda": [
+   "Güveni kötüye kullanmanın basit hâliyle ikizdir: şikâyetli, 6 ay - 2 yıl, hapis VE adli para."
+  ],
+  "karis": [
+   {
+    "madde": "155",
+    "neden": "Güveni kötüye kullanmanın basit hâli de şikâyetli ve 6 ay - 2 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.156/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "157",
+  "baslik": "Dolandırıcılık",
+  "oz": "Hileli davranışlarla bir kimseyi aldatıp, onun ya da başkasının zararına olarak kendisine veya başkasına yarar sağlayan kişi 1-5 yıl hapis ve 5 bin güne kadar adli para cezası alır. Suçun özü hile, aldatma, zarar ve yarar zinciridir.",
+  "sorulur": [
+   "Temel dolandırıcılığın cezası sorulur; doğrusu “1-5 yıl hapis ve 5 bin güne kadar adli para”dır. Çeldiricilerde nitelikli dolandırıcılığın 3-10 yılı ve 2-5 yıl, 6 ay - 2 yıl gibi aralıklar durur.",
+   "Kendini polis ya da banka çalışanı tanıtarak yapılan telefon dolandırıcılığı sorulursa doğru cevap basit değil, nitelikli dolandırıcılıktır (m.158)."
+  ],
+  "akilda": [
+   "Dört halka: hile → aldatma → mağdurun zararı → failin yararı.",
+   "Temel 1-5, nitelikli 3-10; ikisinde de 5 bin güne kadar adli para."
+  ],
+  "karis": [
+   {
+    "madde": "158",
+    "neden": "Banka, bilişim ya da kamu görevlisi kılığı gibi hâllerde 3-10 yıl."
+   },
+   {
+    "madde": "155",
+    "neden": "Malı hileyle değil, emanet olarak eline geçirmişse güveni kötüye kullanma."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.157/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "158",
+  "baslik": "Nitelikli dolandırıcılık",
+  "oz": "Dolandırıcılık dinî duyguların ya da zor durumun istismarıyla, kamu kurumu veya bilişim sistemi ve banka araç yapılarak, kamu zararına, sigorta bedeli için ya da kendini kamu görevlisi veya banka çalışanı tanıtarak işlenirse 3-10 yıl hapis ve 5 bin güne kadar adli para verilir. Kamu zararı, bilişim-banka, kredi, sigorta ve sahte sıfat hâllerinde hapis en az 4 yıl, adli para menfaatin 2 katından az olamaz.",
+  "sorulur": [
+   "Beklenen kalıp: Bir dolandırıcılık örneği verilip nitelikli olup olmadığı sorulur; kendini polis, savcı ya da banka çalışanı tanıtmak ve bilişim sistemini araç yapmak nitelikli hâldir. Basit dolandırıcılık diyen şık tuzaktır.",
+   "Beklenen kalıp: Alt sınırı 4 yıl olan bentler sorulur: kamu zararı (e), bilişim-banka (f), kredi (j), sigorta (k) ve sahte sıfat (l). Bu hâllerde adli para menfaatin 2 katından az olamaz."
+  ],
+  "akilda": [
+   "Alt sınırı 4 yıl olan beşli para ve devlet ekseninde: kamu zararı, bilişim-banka, kredi, sigorta, kamu görevlisi ya da banka çalışanı gibi tanıtma.",
+   "Kalabalık ve örgüt: 3 ya da daha fazla kişi yarı, örgüt bir kat artırır; yalnız kartını ya da hesabını veren iştirakçinin cezası yarı indirilir.",
+   "“Kamu görevlilerinde hatırım var, işini gördürürüm” diyerek aldatıp menfaat almak da aynı cezayı gerektirir."
+  ],
+  "karis": [
+   {
+    "madde": "157",
+    "neden": "Temel dolandırıcılık 1-5 yıl ve 5 bin güne kadar adli para."
+   },
+   {
+    "madde": "159",
+    "neden": "Alacağı tahsil için dolandırıcılık şikâyetlidir: 6 ay - 1 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.158/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "159",
+  "baslik": "Dolandırıcılıkta alacak tahsili",
+  "oz": "Dolandırıcılık, hukuki bir ilişkiye dayanan alacağı tahsil etmek amacıyla işlenirse fail, şikâyet üzerine 6 ay - 1 yıl hapis veya adli para cezası alır. Yani alacaklı olmak hileyi suç olmaktan çıkarmaz; yalnız cezayı hafifletir ve soruşturmayı şikâyete bağlar.",
+  "sorulur": [
+   "Beklenen kalıp: Alacağını hileyle tahsil eden kişinin durumu sorulur; doğrusu “şikâyet üzerine 6 ay - 1 yıl hapis veya adli para”dır. “Suç oluşmaz” ve temel dolandırıcılığın 1-5 yılı çeldiricidir."
+  ],
+  "akilda": [
+   "Alacak tahsili üç malvarlığı suçunda hafifletir: hırsızlıkta 2 ay - 1 yıl (m.144), dolandırıcılıkta 6 ay - 1 yıl, yağmada yalnız tehdit ya da yaralama (m.150)."
+  ],
+  "karis": [
+   {
+    "madde": "157",
+    "neden": "Temel dolandırıcılık 1-5 yıl hapis ve 5 bin güne kadar adli para."
+   },
+   {
+    "madde": "144",
+    "neden": "Hırsızlıkta alacak tahsili de şikâyetli: 2 ay - 1 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.159/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "160",
+  "baslik": "Kaybolmuş eşya üzerinde tasarruf",
+  "oz": "Kaybedildiği için sahibinin elinden çıkmış ya da hata sonucu ele geçen bir eşyayı, iade etmeden veya yetkili mercilere haber vermeden kendi malıymış gibi kullanan kişi, şikâyet üzerine 1 yıla kadar hapis veya adli para cezası alır. Eşyayı sahibine vermek ya da yetkililere bildirmek bu sorumluluktan kurtarır.",
+  "sorulur": [
+   "Beklenen kalıp: Yolda bulduğu cüzdanı sahibine vermeden ya da haber vermeden harcayan kişinin suçu ve cezası sorulur; doğrusu şikâyet üzerine 1 yıla kadar hapis veya adli paradır. Hırsızlık diyen şık tuzaktır."
+  ],
+  "akilda": [
+   "Bulmak suç değil, sahiplenmek suç: iade et ya da haber ver; ikisini de yapmayıp malik gibi davranırsan suç olur."
+  ],
+  "karis": [
+   {
+    "madde": "141",
+    "neden": "Hırsızlıkta mal, zilyedin rızası olmadan bulunduğu yerden alınır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.160/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "163",
+  "baslik": "Karşılıksız yararlanma",
+  "oz": "Otomatla sunulan ve bedeli ödenince yararlanılan bir hizmetten ödeme yapmadan yararlanan kişi 2-6 ay hapis veya adli para cezası alır. Telefon hatlarından, frekanslardan ya da şifreli veya şifresiz yayınlardan rızasız yararlanan 6 ay - 2 yıl hapis veya adli para cezası alır. Elektrik, su ya da doğal gazı rızasız ve sayacın ölçümünü engelleyerek tüketene 1-3 yıl hapis verilir.",
+  "sorulur": [
+   "“Hangisi karşılıksız yararlanma değildir?” diye sorulur; otomat, şifreli yayın, telefon hattı ve kaçak elektrik bu suçtur. Başkasının banka hesabından habersiz para çekmek listede yoktur, doğru cevaptır.",
+   "Tuzak, kaçak elektriği hırsızlık saymaktır; sayacı engelleyerek elektrik, su ya da doğal gaz tüketmek karşılıksız yararlanmadır ve 1-3 yıl hapistir."
+  ],
+  "akilda": [
+   "Ceza merdiveni: otomat 2-6 ay, hat ve yayın 6 ay - 2 yıl, kaçak elektrik-su-gaz 1-3 yıl.",
+   "Zarar soruşturma bitmeden tamamen ödenirse kamu davası açılmaz (m.168); bu imkândan en fazla 2 kez yararlanılır."
+  ],
+  "karis": [
+   {
+    "madde": "141",
+    "neden": "Hırsızlık taşınır malı bulunduğu yerden almaktır; kaçak tüketim karşılıksız yararlanmadır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.163/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "168",
+  "baslik": "Malvarlığı suçlarında etkin pişmanlık",
+  "oz": "Hırsızlık, mala zarar verme, güveni kötüye kullanma, dolandırıcılık, hileli ve taksirli iflasta fail, kovuşturma başlamadan zararı aynen geri verir ya da tamamen tazmin ederse ceza üçte ikisine kadar; kovuşturma başladıktan sonra hükümden önce giderirse yarısına kadar indirilir. Yağmada bu oranlar yarı ve üçte birdir. Kısmi iadede mağdurun rızası gerekir. Karşılıksız yararlanmada zarar soruşturma bitmeden ödenirse kamu davası açılmaz.",
+  "sorulur": [
+   "Boşluk doldurma: kovuşturmadan önce ve sonra gösterilen pişmanlıktaki indirimler sırayla sorulur; doğrusu “üçte ikisine kadar - yarısına kadar”dır. Çeldiricide oranların sırası ters çevrilir ya da yağmanın oranları konur.",
+   "Yağmadaki oranlar sorulabilir: kovuşturmadan önce yarısına, sonra üçte birine kadar indirim yapılır; kısmi iadede mağdurun rızası şarttır."
+  ],
+  "akilda": [
+   "Erken gelen çok kazanır: kovuşturmadan önce 2/3, sonra 1/2. Yağmada her şey bir basamak aşağı: 1/2 ve 1/3.",
+   "Karşılıksız yararlanmada en büyük ödül: soruşturma bitmeden tam tazmin edenin davası açılmaz; ama bu kapı en fazla 2 kez açılır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.168/1-5); m.168/1'deki (…) ile gösterilen çıkarılmış ibare yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "170",
+  "baslik": "Genel güvenliğin kasten tehlikeye sokulması",
+  "oz": "Kişilerin hayatı, sağlığı ya da malvarlığı için tehlikeli ya da panik yaratacak biçimde yangın çıkaran, bina çökmesine, toprak kaymasına, sele neden olan ya da silahla ateş eden veya patlayıcı kullanan kişi 1-5 yıl hapis alır. Ses ve gaz fişeği atabilen silahla ateşte ceza 6 ay - 3 yıldır; suç toplu bulunulan yerde işlenirse yarı artar. Bu felaketlerin yalnız tehlikesine neden olmak 3 ay - 1 yıl hapis veya adli paradır.",
+  "sorulur": [
+   "Ses ve gaz fişeği atabilen silahla ateşin cezası sorulur; doğrusu 6 ay - 3 yıldır. Çeldiricilerde 1-5 yıl, “3 ay - 1 yıl hapis veya adli para” ve “suç oluşmaz, idari para cezası” durur.",
+   "Toplu bulunulan yerde işlenmedeki artırım sorulur; doğrusu yarı oranındadır. Üçte bir, altıda bir ve bir kat çeldiricidir."
+  ],
+  "akilda": [
+   "Gerçek silah 1-5 yıl, ses ve gaz fişeği atabilen silah 6 ay - 3 yıl, yalnız tehlike yaratma 3 ay - 1 yıl. Kalabalıkta yarı fazlası."
+  ],
+  "karis": [
+   {
+    "madde": "174",
+    "neden": "Patlayıcıyı izinsiz bulundurmak ya da taşımak ayrı suçtur: 4-8 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.170/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "174",
+  "baslik": "Tehlikeli maddelerin izinsiz bulundurulması",
+  "oz": "Yetkili makamın izni olmadan patlayıcı, yakıcı, aşındırıcı, zehirleyici, nükleer, radyoaktif, kimyasal ya da biyolojik maddeleri imal, ithal, ihraç eden, taşıyan, saklayan, satan, satın alan veya işleyen kişi 4-8 yıl hapis ve 5 bin güne kadar adli para alır. Bunları üretmek için gereken malzemeyi izinsiz bulunduran da aynı cezayı alır. Örgüt faaliyetiyle işlenirse ceza bir kat artar; önemsiz tür ve miktarda patlayıcıda 1 yıla kadar hapis verilir.",
+  "sorulur": [
+   "Beklenen kalıp: İzinsiz patlayıcı ya da kimyasal madde bulundurmanın cezası sorulur; doğrusu 4-8 yıl hapis ve 5 bin güne kadar adli paradır. Önemsiz miktarda patlayıcıda ceza 1 yıla kadardır; şıklarda bu iki hâl karıştırılır."
+  ],
+  "akilda": [
+   "İzin yoksa 4-8 yıl; örgütle bir kat; önemsiz patlayıcıda kullanılış amacına göre 1 yıla kadar.",
+   "Madde listesi silah tanımındaki maddelerle aynı ailedendir (m.6): yakıcı, aşındırıcı, boğucu, zehirleyici, nükleer, kimyasal, biyolojik."
+  ],
+  "karis": [
+   {
+    "madde": "170",
+    "neden": "Patlayıcıyı kullanıp genel güvenliği tehlikeye sokmak ayrı suçtur: 1-5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.174/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "179",
+  "baslik": "Trafik güvenliğini tehlikeye sokma",
+  "oz": "Kara, deniz, hava ya da demiryolu ulaşımının güvenliği için konulan işaretleri değiştiren, kaldıran, yanlış işaret veren, yola bir şey koyan veya teknik sisteme müdahale ederek tehlikeye neden olan kişi 1-6 yıl hapis alır. Ulaşım aracını tehlikeli şekilde sevk ve idare eden 4 ay - 2 yıl hapis alır. Alkol, uyuşturucu ya da başka bir nedenle emniyetli kullanamayacak hâldeyken araç kullanan 6 ay - 2 yıl hapis alır.",
+  "sorulur": [
+   "Alkol ya da uyuşturucu etkisinde araç kullanmanın cezası sorulur; doğrusu 6 ay - 2 yıl hapistir. Çeldiricilerde tehlikeli sevk ve idarenin 4 ay - 2 yılı ile işaretlere müdahalenin 1-6 yılı durur.",
+   "Tuzak şık, alkollü araç kullanmanın yaptırımının yalnız idari para cezası olduğunu söyler; emniyetli kullanamayacak hâldeyse hapis cezası vardır."
+  ],
+  "akilda": [
+   "Yola müdahale 1-6 yıl, tehlikeli sürüş 4 ay - 2 yıl, alkollü sürüş 6 ay - 2 yıl: son ikisinde tavan aynı, fark alt sınırda."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.179/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "188",
+  "baslik": "Uyuşturucu imal ve ticareti",
+  "oz": "Uyuşturucu ya da uyarıcı maddeyi ruhsatsız imal, ithal veya ihraç eden 20-30 yıl hapis alır. Ülke içinde satan, veren, taşıyan, depolayan, satın alan ya da bulunduran en az 10 yıl, madde çocuğa verilmiş ya da satılmışsa en az 15 yıl hapis alır. Eroin, kokain ya da sentetik maddelerde veya okul, yurt, hastane, kışla çevresinde 200 metre içinde ceza yarı artar; örgütle işlenirse bir kat artar.",
+  "sorulur": [
+   "Boşluk doldurma: imal, ithal, ihraç ile ülke içinde satma ve bulundurmanın cezaları sırayla sorulur; doğrusu “20-30 yıl - en az 10 yıl”dır. Çeldiricide sıra ters çevrilir ya da çocuğa satıştaki 15 yıl konur.",
+   "Tuzak, ticaret amaçlı bulundurmaya 2-5 yıl yazmaktır; 2-5 yıl kullanmak için bulundurmanın cezasıdır (m.191)."
+  ],
+  "akilda": [
+   "Sınır kapısı 20-30, iç piyasa en az 10, çocuğa satış en az 15 yıl.",
+   "200 metre kuralı: okul, yurt, hastane, kışla, ibadethane çevresinde satış yarı artırımlıdır.",
+   "Meslek artırımı: tabip, eczacı, hemşire gibi sağlık ya da ecza mesleğinden biri işlerse ceza yarı artar."
+  ],
+  "karis": [
+   {
+    "madde": "191",
+    "neden": "Kullanmak için bulundurma 2-5 yıldır, kamu davasının açılması ertelenir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.188/1-8)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "190",
+  "baslik": "Uyuşturucu kullanımını kolaylaştırma ve özendirme",
+  "oz": "Uyuşturucu ya da uyarıcı madde kullanılmasını kolaylaştırmak için özel yer, donanım veya malzeme sağlayan, kullananların yakalanmasını zorlaştıracak önlem alan ya da kullanma yöntemlerini öğreten kişi 5-10 yıl hapis ve 1.000-10.000 gün adli para cezası alır. Uyuşturucu kullanımını alenen özendiren ya da bu nitelikte yayın yapan da aynı cezayı alır. Sağlık ya da ecza mesleğinden biri işlerse ceza yarı oranında artar.",
+  "sorulur": [
+   "Alenen özendirmenin cezası sorulur; doğrusu “5-10 yıl hapis ve 1.000-10.000 gün adli para”dır. Çeldiricilerde ticaretin en az 10 yılı, imalin 20-30 yılı ve kullanmanın 2-5 yılı durur."
+  ],
+  "akilda": [
+   "Kolaylaştırma ve özendirme aynı kefede: ikisi de 5-10 yıl ve 1.000-10.000 gün.",
+   "Uyuşturucu ceza merdiveni: kullanmak 2-5, kolaylaştırmak 5-10, satmak en az 10, imal ve ithal 20-30 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "188",
+    "neden": "Satış ve bulundurma en az 10 yıl, imal ve ithal 20-30 yıl."
+   },
+   {
+    "madde": "191",
+    "neden": "Kullanmak için bulundurma ya da kullanma 2-5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.190/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "191",
+  "baslik": "Kullanmak için uyuşturucu bulundurma",
+  "oz": "Kullanmak için uyuşturucu ya da uyarıcı madde satın alan, kabul eden, bulunduran veya kullanan kişi 2-5 yıl hapis alır. Soruşturmada 5 yıl süreyle kamu davasının açılmasının ertelenmesine karar verilir; bu sürede en az 1 yıl denetimli serbestlik uygulanır, gerekirse tedavi yapılır. Şüpheli yükümlülüklere uyarsa kovuşturmaya yer olmadığı kararı verilir; tekrar kullanır ya da ısrarla uymazsa kamu davası açılır.",
+  "sorulur": [
+   "Ceza ve özel kurum birlikte sorulur; doğrusu “2-5 yıl hapis; 5 yıl süreyle kamu davasının açılmasının ertelenmesi”dir. Çeldiricilerde ticaretin en az 10 yılı ve 1-2 yıllık erteleme süreleri durur.",
+   "Erteleme rakamları sorulabilir: erteleme 5 yıl, denetimli serbestlik en az 1 yıl, uzatma altışar aylık sürelerle en fazla 2 yıl, kullanım tespiti yılda en az 2 kez."
+  ],
+  "akilda": [
+   "Şifre 5-1-2-2: erteleme 5 yıl, denetimli serbestlik en az 1 yıl, uzatma en çok 2 yıl, test yılda en az 2 kez.",
+   "Kullanıcıya önce şans: dava hemen açılmaz, ertelenir. Erteleme içinde tekrar kullanmak ayrı suç değil, ihlal sayılır ve dava açılır."
+  ],
+  "karis": [
+   {
+    "madde": "188",
+    "neden": "Satış ya da ticaret amaçlı bulundurma en az 10 yıl hapis."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.191/1-10)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "197",
+  "baslik": "Parada sahtecilik",
+  "oz": "Ülkede ya da yabancı ülkelerde kanunen tedavülde olan parayı sahte olarak üreten, ülkeye sokan, taşıyan, saklayan veya tedavüle koyan kişi 2-12 yıl hapis ve 10 bin güne kadar adli para cezası alır. Sahte parayı bilerek kabul eden 1-3 yıl hapis ve adli para cezası alır. Sahte olduğunu bilmeden aldığı parayı, öğrendikten sonra tedavüle koyan 3 ay - 1 yıl hapis alır.",
+  "sorulur": [
+   "Beklenen kalıp: Üç fail karşılaştırılır: sahte para üreten, bilerek kabul eden ve bilmeden alıp sonra bilerek tedavüle koyan. Şıklarda 2-12 yıl, 1-3 yıl ve 3 ay - 1 yıl yer değiştirir."
+  ],
+  "akilda": [
+   "Üreten 2-12, bilerek alan 1-3, kandırılıp sonra elden çıkaran 3 ay - 1 yıl: kast azaldıkça ceza düşer."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.197/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "204",
+  "baslik": "Resmî belgede sahtecilik",
+  "oz": "Resmî bir belgeyi sahte düzenleyen, gerçek bir resmî belgeyi aldatacak şekilde değiştiren ya da sahte resmî belgeyi kullanan kişi 2-5 yıl hapis alır. Görevi gereği düzenlemeye yetkili olduğu belgede bunu yapan ya da gerçeğe aykırı belge düzenleyen kamu görevlisi 3-8 yıl hapis alır. Belge, sahteliği sabit oluncaya kadar geçerli nitelikteyse ceza yarı oranında artırılır.",
+  "sorulur": [
+   "Yetkili kamu görevlisinin sahte resmî belge düzenlemesinin cezası sorulur; doğrusu 3-8 yıldır. Çeldiricilerde sıradan kişinin 2-5 yılı ve özel belgedeki 1-3 yıl durur."
+  ],
+  "akilda": [
+   "Herkes 2-5, yetkili kamu görevlisi 3-8, özel belge 1-3: belgenin resmîliği ve failin yetkisi cezayı büyütür.",
+   "Kamu görevlisine özgü ek fiil “gerçeğe aykırı belge düzenleme”dir: biçim doğru, içerik yalan."
+  ],
+  "karis": [
+   {
+    "madde": "207",
+    "neden": "Özel belgede ceza 1-3 yıl ve suç için kullanma da şarttır."
+   },
+   {
+    "madde": "206",
+    "neden": "Belge düzenleyen görevliye yalan beyan 3 ay - 2 yıl veya adli para."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.204/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "206",
+  "baslik": "Resmî belgenin düzenlenmesinde yalan beyan",
+  "oz": "Resmî bir belgeyi düzenleme yetkisi olan kamu görevlisine yalan beyanda bulunan kişi 3 ay - 2 yıl hapis veya adli para cezası alır. Burada belgeyi düzenleyen görevli gerçeği bilmez; sahteliğe yol açan, ona yalan söyleyen kişidir.",
+  "sorulur": [
+   "Beklenen kalıp: Belge düzenlemeye yetkili görevliye yalan beyanda bulunan kişinin cezası sorulur; doğrusu 3 ay - 2 yıl hapis veya adli paradır. Resmî belgede sahteciliğin 2-5 yılı çeldiricidir."
+  ],
+  "akilda": [
+   "Kalemi tutan görevli dürüst, yalanı söyleyen vatandaş: ceza vatandaşa, 3 ay - 2 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "204",
+    "neden": "Belgeyi bizzat sahte düzenlemek ya da kullanmak 2-5 yıl hapis."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.206/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "207",
+  "baslik": "Özel belgede sahtecilik",
+  "oz": "Bir özel belgeyi sahte olarak düzenleyen ya da gerçek bir özel belgeyi aldatacak şekilde değiştiren ve bunu kullanan kişi 1-3 yıl hapis alır. Sahte bir özel belgeyi sahte olduğunu bilerek kullanan kişi de aynı cezayı alır. Resmî belgeden farkı, suçun oluşması için belgenin kullanılmasının da gerekmesidir.",
+  "sorulur": [
+   "Beklenen kalıp: Özel belgede sahtecilik için kullanmanın gerekip gerekmediği sorulur; doğrusu düzenleme ya da değiştirmenin yanında kullanmanın da gerektiğidir. “Düzenlemek yeter” diyen şık tuzaktır."
+  ],
+  "akilda": [
+   "Tek kelime farkı: resmî belgede “veya kullanan”, özel belgede “ve kullanan”.",
+   "Ceza: resmî belge 2-5 yıl, özel belge 1-3 yıl."
+  ],
+  "karis": [
+   {
+    "madde": "204",
+    "neden": "Resmî belgede düzenlemek tek başına yeter, kullanma şartı yok; ceza 2-5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.207/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "220",
+  "baslik": "Suç işlemek amacıyla örgüt kurma",
+  "oz": "Suç işlemek amacıyla; yapısı, üye sayısı ve araç-gereci bakımından amaç suçlara elverişli bir örgüt kuran ya da yöneten kişi 5-10 yıl hapis alır; örgüt için en az 3 üye gerekir. Örgüte üye olan 2-5 yıl alır; örgüt silahlıysa ceza yarı artar. Örgüt faaliyetiyle işlenen suçlardan ayrıca ceza verilir; hiyerarşiye girmeden bilerek yardım eden üye gibi cezalandırılır. Örgütün cebir, şiddet ya da tehdit yöntemlerini öven propaganda 1-3 yıldır.",
+  "sorulur": [
+   "Örgüt için asgari üye sayısı sorulur; doğrusu 3'tür. Çeldiricilerde 2, 4, 5 ve 6 durur.",
+   "Kurucu ve üye cezası karşılaştırılır: kuran ya da yöneten 5-10, üye 2-5 yıl; örgüt silahlıysa yarı artırım."
+  ],
+  "akilda": [
+   "Üç kişi örgüt kurar: 2 kişi örgüt değildir, en az 3 üye şart.",
+   "Yönetici 5-10, üye 2-5: üyenin tavanı yöneticinin tabanıdır. Soykırım örgütünde (m.78) bu sayılar 10-15 ve 5-10'dur.",
+   "Hiyerarşide yer almadan bilerek yardım eden üye sayılır; ceza yardımın niteliğine göre 1/3'e kadar indirilebilir."
+  ],
+  "karis": [
+   {
+    "madde": "314",
+    "neden": "Devlete karşı suçlar için silahlı örgütte kurucu 10-15, üye 5-10 yıl."
+   },
+   {
+    "madde": "78",
+    "neden": "Soykırım ve insanlığa karşı suç örgütünde kurucu 10-15, üye 5-10 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.220/1-8); Anayasa Mahkemesince iptal edilen m.220/6 yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "226",
+  "baslik": "Müstehcenlik",
+  "oz": "Çocuğa müstehcen ürün veren ya da gösteren, bunları çocukların görebileceği yerde veya alenen sergileyen, özel satış yerleri dışında satan ya da reklamını yapan kişi 6 ay - 2 yıl hapis ve adli para cezası alır; basın yoluyla yayınlayan 6 ay - 3 yıl alır. Bu ürünlerin üretiminde çocuk kullanan 5-10 yıl, bu ürünleri satan, taşıyan ya da bulunduran 2-5 yıl hapis alır. Bilimsel eserlere bu madde uygulanmaz.",
+  "sorulur": [
+   "Beklenen kalıp: Müstehcen ürünün türü ve fiil verilip ceza sorulur; şıklarda çocuğa gösterme (6 ay - 2 yıl), çocuk kullanarak üretme (5-10 yıl) ve bu ürünleri bulundurma (2-5 yıl) aralıkları yer değiştirir.",
+   "Beklenen kalıp: İstisna sorulur: bilimsel eserlere madde uygulanmaz; sanatsal ve edebî eserlerde istisna, çocuklara ulaşması engellenirse geçerlidir ve çocuk kullanılan ürünleri kapsamaz."
+  ],
+  "akilda": [
+   "Çocuk ürünün içindeyse ağır: üretmek 5-10, bulundurmak 2-5 yıl. Çocuk yalnız izleyiciyse 6 ay - 2 yıl.",
+   "Bilim kalkanı her zaman çalışır; sanat kalkanı çocuk içerikli üründe çalışmaz.",
+   "Şiddet, hayvan, ölü beden ya da doğal olmayan yol içeren ürünler 1-4 yıl; bunları yayınlamak ya da çocuğa ulaştırmak 6-10 yıl."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.226/1-7)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "227",
+  "baslik": "Fuhuş",
+  "oz": "Çocuğu fuhşa teşvik eden, yolunu kolaylaştıran, tedarik eden, barındıran ya da çocuğun fuhşuna aracılık eden kişi 4-10 yıl hapis ve 5 bin güne kadar adli para alır; hazırlık hareketleri de tamamlanmış suç gibi cezalandırılır. Bir kimseyi fuhşa teşvik eden, aracılık eden ya da yer temin eden 2-4 yıl alır; fuhuş kazancıyla geçinmek teşvik sayılır. Cebir, tehdit, hile ya da çaresizlikten yararlanılırsa ceza yarısından 2 katına kadar artar.",
+  "sorulur": [
+   "Çocuğu fuhşa teşvikin cezası sorulur; doğrusu 4-10 yıldır. Çeldiricilerde yetişkine teşvikin 2-4 yılı ile 3-8, 5-10 ve 6-12 yıl durur.",
+   "Tuzak şık fuhuş yapan kişinin bu maddeye göre cezalandırıldığını söyler; madde teşvik eden, aracılık eden ve yer temin edeni cezalandırır, fuhşa sürüklenen kişi tedavi ya da terapiye tabi tutulabilir."
+  ],
+  "akilda": [
+   "Çocukta 4-10, diğerinde 2-4: diğerinin tavanı çocuğun tabanıdır.",
+   "Fuhuş yapan mağdurdur: ceza aracıya, tedavi ya da terapi fuhşa sürüklenene."
+  ],
+  "karis": [
+   {
+    "madde": "80",
+    "neden": "Fuhuş amacıyla kişileri tehdit ya da kandırmayla tedarik etmek insan ticaretidir: 8-12 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.227/1-8)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "267",
+  "baslik": "İftira",
+  "oz": "İşlemediğini bildiği hâlde, hakkında soruşturma ya da idari yaptırım başlatılması için yetkili makamlara ihbar, şikâyet ya da basın yoluyla bir kimseye hukuka aykırı fiil isnat eden kişi 1-4 yıl hapis alır. Maddi eser ve delil uydurulursa ceza yarı oranında artar. Mağdur ağırlaştırılmış müebbet ya da müebbete mahkûm olmuşsa iftira eden 20-30 yıl alır. Dava zamanaşımı, mağdurun fiili işlemediğinin sabit olduğu tarihten başlar.",
+  "sorulur": [
+   "İftiranın temel cezası sorulur; doğrusu 1-4 yıldır. Çeldiricilerde 6 ay - 2 yıl, 2-4 yıl ve 3 yıla kadar gibi aralıklar durur.",
+   "Zamanaşımının başlangıcı sorulur; tuzak “suç tarihi”dir, doğrusu mağdurun fiili işlemediğinin sabit olduğu tarihtir."
+  ],
+  "akilda": [
+   "İftiranın saati aklanma anında başlar: zamanaşımı suç gününden değil, mağdurun fiili işlemediğinin sabit olduğu günden işler.",
+   "Mağdur gözaltına alınır ya da tutuklanırsa iftira eden ayrıca hürriyetten yoksun kılmanın (m.109) dolaylı faili olur."
+  ],
+  "karis": [
+   {
+    "madde": "271",
+    "neden": "Belirli bir kişi suçlanmadan işlenmemiş suçu ihbar etmek suç uydurmadır: 3 yıla kadar."
+   },
+   {
+    "madde": "272",
+    "neden": "Yalan tanıklıkta da mağdur müebbete mahkûm olursa ceza 20-30 yıldır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.267/1-9); m.267/5'teki (…) kısmı ve iptal edilen m.267/7 yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "271",
+  "baslik": "Suç uydurma",
+  "oz": "İşlenmediğini bildiği bir suçu yetkili makamlara işlenmiş gibi ihbar eden ya da işlenmeyen bir suçun delil veya emarelerini soruşturma başlatılacak biçimde uyduran kişi 3 yıla kadar hapis alır. Burada belirli bir kişi suçlanmaz; belirli bir kişiye işlemediği bir fiil yüklenirse suç iftiradır.",
+  "sorulur": [
+   "Beklenen kalıp: Kimse gösterilmeden işlenmemiş bir suçun ihbar edildiği olay verilip suçun adı sorulur; doğrusu suç uydurmadır. İftira diyen şık tuzaktır, iftirada belirli bir kişiye fiil isnat edilir (m.267).",
+   "Beklenen kalıp: Cezası sorulur; doğrusu 3 yıla kadar hapistir, maddede alt sınır yazılmamıştır."
+  ],
+  "akilda": [
+   "İftirada kurban var, suç uydurmada yok: “Evime hırsız girdi” yalanı suç uydurma, “Ahmet çaldı” yalanı iftiradır.",
+   "İftira 1-4 yıl, suç uydurma 3 yıla kadar."
+  ],
+  "karis": [
+   {
+    "madde": "267",
+    "neden": "Belirli bir kişiye işlemediği fiil isnat edilirse iftira: 1-4 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.271/1)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "272",
+  "baslik": "Yalan tanıklık",
+  "oz": "Bir soruşturmada tanık dinlemeye yetkili kişi ya da kurul önünde gerçeğe aykırı tanıklık yapan 4 ay - 1 yıl hapis alır. Mahkeme huzurunda ya da yeminle dinlenirken yalan söyleyen 1-3 yıl; 3 yıldan fazla hapis gerektiren bir suçun dosyasında yalan tanıklık yapan 2-4 yıl alır. Aleyhine tanıklık yapılan kişi ağırlaştırılmış müebbet ya da müebbete mahkûm olmuşsa ceza 20-30 yıl, hapis dışı yaptırım uygulanmışsa 3-7 yıldır.",
+  "sorulur": [
+   "Mahkeme huzurunda ya da yeminle yalan tanıklığın cezası sorulur; doğrusu 1-3 yıldır. Çeldiricilerde soruşturmadaki 4 ay - 1 yıl, ağır suçtaki 2-4 yıl ve 6 ay - 2 yıl durur."
+  ],
+  "akilda": [
+   "Yalanın sahnesi büyüdükçe ceza büyür: soruşturma 4 ay - 1 yıl, mahkeme ya da yemin 1-3 yıl, ağır suç dosyası 2-4 yıl.",
+   "Sonuç ağırlaşınca iftiradaki kurallar tekrarlanır: müebbet mahkûmiyette 20-30 yıl, gözaltı ya da tutuklamada hürriyetten yoksun kılmanın dolaylı faili."
+  ],
+  "karis": [
+   {
+    "madde": "267",
+    "neden": "İftirada da mağdur müebbete mahkûm olursa ceza 20-30 yıldır; temel ceza 1-4 yıl."
+   },
+   {
+    "madde": "277",
+    "neden": "Tanığı hukuka aykırı etkilemeye teşebbüs eden ayrı suç işler: 2-4 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.272/1-8); m.272/6'daki (…) kısmı yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "277",
+  "baslik": "Yargı görevini yapanı etkileme",
+  "oz": "Görülmekte olan bir davada gerçeğin ortaya çıkmasını engellemek ya da haksızlık yaratmak için, taraflardan birinin, sanığın, katılanın veya mağdurun lehine ya da aleyhine karar, işlem veya beyan sağlamak amacıyla yargı görevi yapanı, bilirkişiyi ya da tanığı hukuka aykırı etkilemeye teşebbüs eden 2-4 yıl hapis alır. Teşebbüs iltimas derecesini geçmezse ceza 6 ay - 2 yıldır. Fiil başka bir suç da oluşturursa ceza yarısına kadar artırılır.",
+  "sorulur": [
+   "Teşebbüs iltimas derecesinde kalırsa ceza sorulur; doğrusu 6 ay - 2 yıldır. Çeldiricilerde temel cezanın 2-4 yılı ve “ceza verilmez” durur."
+  ],
+  "akilda": [
+   "Etkilemeye teşebbüs bile suçtur, sonuç aranmaz. Torpil düzeyindeyse (iltimas) 6 ay - 2 yıl, ötesi 2-4 yıl.",
+   "Hedef üçlü: yargı görevi yapan (m.6'ya göre hâkim, savcı, avukat), bilirkişi, tanık."
+  ],
+  "karis": [
+   {
+    "madde": "272",
+    "neden": "Tanığın kendisi gerçeğe aykırı tanıklık yaparsa yalan tanıklık suçu oluşur."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.277/1-2); metindeki (…) ile gösterilen çıkarılmış ibareler yazılmadı."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "278",
+  "baslik": "Suçu bildirmeme",
+  "oz": "İşlenmekte olan bir suçu yetkili makamlara bildirmeyen kişi 1 yıla kadar hapis alır. İşlenmiş olsa da sonuçları hâlâ sınırlandırılabilecek bir suçu bildirmeyen de aynı cezayı alır. Mağdur 15 yaşını bitirmemiş çocuk, engelli ya da hamileliği nedeniyle kendini savunamayacak biriyse ceza yarı oranında artar. Tanıklıktan çekinebilecek kişilere ceza verilmez; ancak suçu önleme yükümlülüğünden doğan sorumluluk saklıdır.",
+  "sorulur": [
+   "Tanıklıktan çekinebilecek kişinin durumu sorulur; doğrusu “cezaya hükmolunmaz; suçu önleme yükümlülüğüne ilişkin hükümler saklıdır”dır. Çeldiricilerde yarı indirim, 1 yıla kadar hapis ve erteleme durur.",
+   "Tuzak şık, kardeş gibi tanıklıktan çekinebilecek bir yakını cezalandırır; bu kişilere suçu bildirmeme nedeniyle ceza verilmez."
+  ],
+  "akilda": [
+   "İki zaman: suç işlenirken ya da işlendikten sonra sonuçları hâlâ sınırlanabiliyorken. İkisinde de ceza 1 yıla kadar.",
+   "Korunmasız mağdurda (15 yaşını bitirmemiş çocuk, engelli, hamile) ceza yarı artar."
+  ],
+  "karis": [
+   {
+    "madde": "279",
+    "neden": "Kamu görevlisi görevle öğrendiği suçu bildirmezse 6 ay - 2 yıl."
+   },
+   {
+    "madde": "283",
+    "neden": "Kayırmada cezasız çevre dardır: üstsoy, altsoy, eş, kardeş ve suç ortağı."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.278/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "279",
+  "baslik": "Kamu görevlisinin suçu bildirmemesi",
+  "oz": "Kamu adına soruşturma ve kovuşturma gerektiren bir suçun işlendiğini göreviyle bağlantılı olarak öğrenen, ama yetkili makamlara bildirmeyi ihmal eden ya da geciktiren kamu görevlisi 6 ay - 2 yıl hapis alır. Bu suçu adli kolluk görevi yapan kişi işlerse ceza yarı oranında artırılır.",
+  "sorulur": [
+   "Beklenen kalıp: Suçun adli kolluk görevini yapan kişi tarafından işlenmesindeki artırım sorulur; doğrusu yarı oranındadır. Çeldiricilerde iki kat, bir kat, üçte bir ve üçte iki durur."
+  ],
+  "akilda": [
+   "Kolluğa ek yük: suçu bildirmeyen adli kolluk görevlisinin cezası yarı artar. Temel ceza 6 ay - 2 yıl.",
+   "Üç bildirim suçu: herkes 1 yıla kadar (m.278), kamu görevlisi 6 ay - 2 yıl, sağlık mesleği mensubu 1 yıla kadar (m.280)."
+  ],
+  "karis": [
+   {
+    "madde": "278",
+    "neden": "Herkes için suçu bildirmeme: işlenmekte olan suçta 1 yıla kadar hapis."
+   },
+   {
+    "madde": "280",
+    "neden": "Sağlık mesleği mensubu suç belirtisini bildirmezse 1 yıla kadar hapis."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.279/1-2). Girdide bu maddeye ait bir soru (adli kolluk eliyle işlenmede yarı artırım) yanlışlıkla m.103 altında duruyor; sorulur satırı ona dayanır."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "280",
+  "baslik": "Sağlık mensuplarının suçu bildirmemesi",
+  "oz": "Görevini yaparken bir suçun işlendiğine dair bir belirtiyle karşılaşan, ama durumu yetkili makamlara bildirmeyen ya da geciktiren sağlık mesleği mensubu 1 yıla kadar hapis alır. Sağlık mesleği mensubu; tabip, diş tabibi, eczacı, ebe, hemşire ve sağlık hizmeti veren diğer kişilerdir.",
+  "sorulur": [
+   "Beklenen kalıp: Sağlık mesleği mensubu sayılanlar ya da ceza sorulur; tabip, diş tabibi, eczacı, ebe, hemşire ve sağlık hizmeti veren diğer kişiler listededir. Şıklarda kamu görevlisinin 6 ay - 2 yıl cezası çeldiricidir."
+  ],
+  "akilda": [
+   "Sağlıkçıda eşik düşük: suçun kesinleşmesi değil, bir belirtiyle karşılaşmak bile bildirim yükümlülüğü doğurur.",
+   "Sağlıkçı 1 yıla kadar, kamu görevlisi 6 ay - 2 yıl (m.279)."
+  ],
+  "karis": [
+   {
+    "madde": "279",
+    "neden": "Kamu görevlisi görevle öğrendiği suçu bildirmezse 6 ay - 2 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.280/1-2)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "281",
+  "baslik": "Suç delillerini yok etme",
+  "oz": "Gerçeğin ortaya çıkmasını engellemek için bir suçun delillerini yok eden, silen, gizleyen, değiştiren ya da bozan kişi 6 ay - 5 yıl hapis alır. Kendi işlediği ya da iştirak ettiği suçun delilleri için bu ceza verilmez. Kamu görevlisi göreviyle bağlantılı işlerse ceza yarı artar; hükümden önce gizlenen delilleri mahkemeye teslim edenin cezası beşte dört indirilir.",
+  "sorulur": [
+   "Beklenen kalıp: Kendi suçunun delilini yok eden kişinin bu maddeden cezalandırılıp cezalandırılmayacağı sorulur; doğrusu ceza verilmeyeceğidir. Şıklarda 6 ay - 5 yıl, yarı artırım ve beşte dört indirim yer değiştirir."
+  ],
+  "akilda": [
+   "Kendi izini silen bu maddeden ceza almaz; başkasının izini silen 6 ay - 5 yıl.",
+   "Pişmanlık ödülü büyük: delili hükümden önce mahkemeye teslim edenin cezası beşte dört indirilir."
+  ],
+  "karis": [
+   {
+    "madde": "283",
+    "neden": "Suçluya kaçma imkânı sağlamak kayırmadır; ceza yine 6 ay - 5 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.281/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "282",
+  "baslik": "Suç gelirlerini aklama",
+  "oz": "Alt sınırı 6 ay veya daha fazla hapis gerektiren bir suçtan elde edilen malvarlığını yurt dışına çıkaran ya da kaynağını gizlemek veya meşru göstermek için işlemlere tabi tutan kişi 3-7 yıl hapis ve 20 bin güne kadar adli para alır. Suça katılmadan bu değeri bilerek satın alan, kabul eden, bulunduran ya da kullanan 2-5 yıl alır. Kovuşturmadan önce değerlerin ele geçirilmesini sağlayana ceza verilmez.",
+  "sorulur": [
+   "Beklenen kalıp: Aklamanın öncül suç şartı sorulur; doğrusu alt sınırı 6 ay veya daha fazla hapis gerektiren suçtur. Şıklarda 3-7 yıl, 2-5 yıl ve etkin pişmanlık hâli karıştırılır."
+  ],
+  "akilda": [
+   "Kara parayı aklayan 3-7, bilerek kullanan 2-5 yıl. Kamu görevlisi ya da meslek sahibinde yarı, örgütte bir kat artar.",
+   "Öncül suç eşiği 6 ay: alt sınırı 6 ay ya da daha fazla olan suçların geliri aklamaya konu olur."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.282/1-6)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "283",
+  "baslik": "Suçluyu kayırma",
+  "oz": "Suç işleyen bir kişinin araştırmadan, yakalanmaktan, tutuklanmaktan ya da hükmün infazından kurtulmasına imkân sağlayan kişi 6 ay - 5 yıl hapis alır. Kamu görevlisi göreviyle bağlantılı olarak işlerse ceza yarı oranında artar. Kayıran kişi suçlunun üstsoyu, altsoyu, eşi, kardeşi ya da diğer suç ortağıysa ceza verilmez.",
+  "sorulur": [
+   "Eş, üstsoy, altsoy ya da kardeşin kayırması sorulur; doğrusu “cezaya hükmolunmaz”dır. Çeldiricilerde artırım, yarı ya da üçte bir indirim ve “ceza değişmez” durur.",
+   "Kimlerin cezasız kaldığı sorulur; kardeş doğru cevaptır. Amca, nişanlı, komşu ve iş arkadaşı listede yoktur, cezalandırılır."
+  ],
+  "akilda": [
+   "Kayırmada cezasız çevre dar: üstsoy, altsoy, eş, kardeş ve suç ortağı. Amca, nişanlı, arkadaş yok.",
+   "Suçu bildirmemede muafiyet ölçütü farklıdır: orada tanıklıktan çekinebilecek kişiler cezasızdır (m.278)."
+  ],
+  "karis": [
+   {
+    "madde": "278",
+    "neden": "Suçu bildirmemede tanıklıktan çekinebilecek kişilerin hepsi cezasız kalır."
+   },
+   {
+    "madde": "281",
+    "neden": "Delil karartma da 6 ay - 5 yıl; kendi suçunun delilinde ceza yok."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.283/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "289",
+  "baslik": "Muhafaza görevini kötüye kullanma",
+  "oz": "Muhafaza etmek üzere kendisine resmen teslim edilen rehinli, hacizli ya da el konulmuş mal üzerinde teslim amacı dışında tasarruf eden kişi 3 ay - 2 yıl hapis ve 3 bin güne kadar adli para alır; mal kendisininse ceza yarı indirilir. Kovuşturmadan önce malı geri veren ya da bedelini ödeyenin cezası beşte dört indirilir. Dikkatsizlikle malın kaybolmasına ya da bozulmasına neden olan adli para cezası alır.",
+  "sorulur": [
+   "Failin malın sahibi olması hâlinde ceza sorulur; doğrusu yarı oranında indirimdir. “Ceza verilmez” şıkkı tuzaktır.",
+   "Kovuşturmadan önce geri vermenin etkisi sorulur; doğrusu cezanın beşte dördünün indirilmesidir. Yarı, üçte iki, dörtte bir indirim ve “ceza verilmez” çeldiricidir."
+  ],
+  "akilda": [
+   "Yediemin kendi malını bile kurcalarsa suç işler; yalnız ceza yarıya iner.",
+   "Geri ver, cezanın beşte dördünden kurtul: kovuşturmadan önce iade ya da bedel ödeme 4/5 indirim getirir.",
+   "Soruşturmada el konulan eşyayı amacı dışında kullanmak da suçtur: 1 yıla kadar hapis."
+  ],
+  "karis": [
+   {
+    "madde": "155",
+    "neden": "Güveni kötüye kullanmada mal özel ilişkiyle teslim edilir; burada resmen teslim edilmiştir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.289/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "299",
+  "baslik": "Cumhurbaşkanına hakaret",
+  "oz": "Cumhurbaşkanına hakaret eden kişi 1-4 yıl hapis alır. Suç alenen işlenirse ceza altıda bir oranında artırılır. Bu suçtan kovuşturma yapılması Adalet Bakanının iznine bağlıdır.",
+  "sorulur": [
+   "Beklenen kalıp: Kovuşturmanın neye bağlı olduğu sorulur; doğrusu Adalet Bakanının iznidir. Cumhurbaşkanının şikâyetine bağlı diyen şık tuzaktır.",
+   "Beklenen kalıp: Temel ceza (1-4 yıl) ve alenen işlenmedeki artırım (altıda bir) sorulur; şıklarda hakaretin 3 ay - 2 yıl cezası çeldiricidir."
+  ],
+  "akilda": [
+   "Adalet Bakanının izni iki maddede: Cumhurbaşkanına hakarette kovuşturma, Devleti aşağılamada soruşturma (m.301).",
+   "Alenen 1/6 artırım hakaret ailesinin ortak kuralıdır (m.125, m.130)."
+  ],
+  "karis": [
+   {
+    "madde": "125",
+    "neden": "Sıradan hakaret 3 ay - 2 yıl hapis veya adli para."
+   },
+   {
+    "madde": "301",
+    "neden": "Devleti ve organlarını alenen aşağılama 6 ay - 2 yıl; soruşturma izne bağlı."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.299/1-3)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "301",
+  "baslik": "Türk Milletini ve Devletini aşağılama",
+  "oz": "Türk Milletini, Türkiye Cumhuriyeti Devletini, TBMM'yi, Hükûmeti ya da Devletin yargı organlarını alenen aşağılayan kişi 6 ay - 2 yıl hapis alır. Devletin askerî ya da emniyet teşkilatını alenen aşağılayan da aynı cezayı alır. Eleştiri amacıyla yapılan düşünce açıklamaları suç oluşturmaz. Soruşturma yapılması Adalet Bakanının iznine bağlıdır.",
+  "sorulur": [
+   "Beklenen kalıp: Soruşturmanın kimin iznine bağlı olduğu sorulur; doğrusu Adalet Bakanıdır. Şıklarda başka makamlar ya da şikâyet şartı konur.",
+   "Beklenen kalıp: Hangi açıklamanın suç oluşturmadığı sorulur; doğrusu eleştiri amacıyla yapılan düşünce açıklamasıdır."
+  ],
+  "akilda": [
+   "Aşağılama “alenen” olmalı; eleştiri amaçlı düşünce açıklaması suç değildir.",
+   "Korunanlar: Millet, Devlet, TBMM, Hükûmet, yargı organları, askerî ve emniyet teşkilatı."
+  ],
+  "karis": [
+   {
+    "madde": "299",
+    "neden": "Cumhurbaşkanına hakaret 1-4 yıl; orada kovuşturma Adalet Bakanının iznine bağlı."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.301/1-4)."
+ },
+ {
+  "kanun_id": 67,
+  "madde": "314",
+  "baslik": "Silahlı örgüt",
+  "oz": "Kanunun bu kısmının dördüncü ve beşinci bölümlerindeki suçları, yani Devletin güvenliğine ve anayasal düzene karşı suçları işlemek amacıyla silahlı örgüt kuran ya da yöneten kişi 10-15 yıl hapis alır. Bu örgüte üye olanlara 5-10 yıl verilir. Suç işlemek amacıyla örgüt kurma suçunun diğer hükümleri burada da aynen uygulanır.",
+  "sorulur": [
+   "Boşluk doldurma: kurucu ve üye cezası sırayla sorulur; doğrusu “10-15 yıl - 5-10 yıl”dır. Çeldiricide adi suç örgütünün 5-10 ve 2-5 yılı konur."
+  ],
+  "akilda": [
+   "Silahlı örgüt bir basamak ağırdır: adi örgütte yönetici 5-10, üye 2-5 (m.220); silahlı örgütte yönetici 10-15, üye 5-10.",
+   "İki örgütte de üyenin tavanı yöneticinin tabanıdır."
+  ],
+  "karis": [
+   {
+    "madde": "220",
+    "neden": "Adi suç örgütünde kurucu 5-10, üye 2-5 yıl."
+   },
+   {
+    "madde": "78",
+    "neden": "Soykırım ve insanlığa karşı suç örgütünde de 10-15 ve 5-10 yıl."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.314/1-4); Anayasa Mahkemesince iptal edilen m.314/3 yazılmadı."
+ }
+]

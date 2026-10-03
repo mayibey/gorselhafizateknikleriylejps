@@ -1,0 +1,203 @@
+{
+ "kanun_id": 30,
+ "ad": "1380 sayılı Su Ürünleri Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_30.json",
+ "kartlar": [
+  {
+   "id": "30-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Su ürünleri tanımı",
+   "hukum": "Denizlerde ve içsularda bulunan bitkiler ile hayvanlar ve bunların yumurtalarıdır; Kara Avcılığı Kanunu kapsamındaki hayvanlar hariçtir. İçsular: göller, suni göller, lagünler, baraj gölleri, bentler, kanallar, akarsular, mansaplar, üretme-yetiştirme yerleri; lagün: denizle irtibatı olan göl; mansap: akarsuyun göl veya denize açıldığı bölge (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnız balıklar\" denir"
+   ],
+   "dogrusu": [
+    "bitkiler ile hayvanlar ve bunların yumurtaları · İçsular · lagün · mansap"
+   ]
+  },
+  {
+   "id": "30-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Trol türleri ve gemi",
+   "hukum": "Dip trolü zemin üzerinde sürütülerek; orta su trolü dibe temas etmeden suyun ortasından çekilen ağdır; kombine trol her ikisine elverişlidir. Gemi: tonajı ve adı ne olursa olsun kayık, sandal, yelkenli, salmavna dâhil her türlü yüzer vasıtadır (m.2)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "Dip trolü · orta su trolü · kombine trol · Gemi"
+   ]
+  },
+  {
+   "id": "30-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Ruhsat tezkeresi",
+   "hukum": "Ticarî amaçlı su ürünleri avcılığı yapacak gerçek ve tüzel kişiler ile bu işte kullanılacak gemiler için Tarım ve Orman Bakanlığından ruhsat tezkeresi veya izin alınması zorunludur; ruhsat ve izinlerin talep hâlinde yetkililere gösterilmesi zorunludur; amatör avcılık ile yerli ve yabancıların amatör avcılığına ilişkin usul ve esaslar yönetmelikle belirlenir; 4922 sayılı Denizde Can ve Mal Koruma Hakkında Kanun hükümleri saklıdır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"amatör avcılık için de ruhsat tezkeresi alınır\" denir — 2026'da yanlış şık buydu",
+    "Amatör avcılık için ruhsat tezkeresi zorunludur"
+   ],
+   "dogrusu": [
+    "Ruhsat ticarî avcılık içindir (m.3)"
+   ]
+  },
+  {
+   "id": "30-3",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Yasak av yöntemleri",
+   "hukum": "Bomba, torpil, dinamit, kapsül ve benzeri patlayıcılar; öldürücü veya uyuşturucu maddeler; sönmemiş kireç; Bakanlık izni olmaksızın elektrik cereyanı, elektroşok ve hava tazyiki ile avlanmak yasaktır. Belli aydınlatma gücünü geçmeyen elektrikle aydınlatma ve yalnız denizde oltayla avlanan ürünün sudan çıkarılmasında elektroşok izne bağlı değildir (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"münhasıran sünger avında kullanılan kankava\" yasak sayılır — kankava troldan sayılmaz ve yasak değildir",
+    "Elektrikle avlanmak her hâlde yasaktır"
+   ],
+   "dogrusu": [
+    "Bakanlık izniyle mümkündür (m.19)"
+   ]
+  },
+  {
+   "id": "30-4",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Sulara zararlı madde",
+   "hukum": "Su ürünlerine, tüketenlerin sağlığına veya av vasıtalarına zarar veren maddelerin içsulara ve denizlerdeki istihsal yerlerine dökülmesi veya döküleceği şekilde tesisat yapılması yasaktır (m.20)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "dökülmesi · tesisat yapılması"
+   ]
+  },
+  {
+   "id": "30-5",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Yabancıların avcılık yasağı",
+   "hukum": "Türk vatandaşı olmayanların karasularına veya içsulara girip su ürünleri avcılığı yapmaları yasaktır; yabancı turistler ile Bakanlık izniyle etüt-araştırma işlerinde çalışacak yabancılar müstesnadır (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "istisna tamamen kaldırılır"
+   ],
+   "dogrusu": [
+    "Türk vatandaşı olmayanların · yabancı turistler"
+   ]
+  },
+  {
+   "id": "30-6",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Akarsularda engel ve balık geçidi",
+   "hukum": "Bakanlık izni olmadan akarsularda su ürünlerinin geçmesine engel olacak ağ, bent, çit yapılması yasaktır. Baraj ve regülatör gibi su yapılarında balık geçidi yapılması ve işler durumda tutulması zorunludur; yüksekliği yirmi metreden fazla yapılarda geçit işlevsiz olacaksa asansörle taşıma, yapay üretim gibi tedbirler alınabilir; projelerin onay ve kabulü DSİ tarafından yapılır (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"yirmi metrenin üstünde geçit zorunluluğu kalkar\" denir — kalkmaz, alternatif tedbir aranır"
+   ],
+   "dogrusu": [
+    "ağ, bent, çit · balık geçidi · işler durumda tutulması · yirmi metreden fazla · asansörle taşıma, yapay üretim · DSİ"
+   ]
+  },
+  {
+   "id": "30-7",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Yönetmelikle konulan yasaklar",
+   "hukum": "Av vasıtalarının asgarî vasıf ve şartları ile bölge, mevsim, zaman, tür, ağırlık, irilik gibi vasıflar bakımından yasak, sınırlama ve yükümlülükler yönetmelikle düzenlenir (m.23)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "yönetmelikle"
+   ]
+  },
+  {
+   "id": "30-8",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Trol yasağı",
+   "hukum": "İçsular, Marmara Denizi, İstanbul ve Çanakkale Boğazlarında her çeşit trol ile avlanma yasaktır (ilmî inceleme hariç); karasularında dip trolü ayrı yönetmelikle düzenlenir; orta su trolünün dip trolü olarak kullanılması yasaktır; münhasıran sünger avında kullanılan kankava troldan sayılmaz (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "Karadeniz yasak bölgeye eklenir",
+    "Sünger avında kullanılan kankava yasaktır",
+    "Karadeniz'de her çeşit trol yasaktır"
+   ],
+   "dogrusu": [
+    "Troldan sayılmaz, yasak değildir (m.24)",
+    "Yasak bölge içsular, Marmara ve Boğazlardır (m.24)"
+   ]
+  },
+  {
+   "id": "30-9",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Yasak ürünün satışı",
+   "hukum": "İstihsali yasak olan su ürünlerinin yasak süresince satışı, nakli, imalatta kullanılması yasaktır; m.19 ve m.24'e aykırı avlanan ürünlere elkonulup mülkiyeti kamuya geçirilir; su ürünlerinin yurt dışına çıkarılması ve canlı olarak yurt içine sokulması izne tâbidir (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"nakli serbesttir\" denir"
+   ],
+   "dogrusu": [
+    "satışı, nakli, imalatta kullanılması · elkonulup mülkiyeti kamuya geçirilir · yurt dışına çıkarılması ve canlı olarak yurt içine sokulması izne"
+   ]
+  },
+  {
+   "id": "30-10",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Koruma ve kontrolde kolluk",
+   "hukum": "Bakanlık personeli ile emniyet, jandarma, sahil güvenlik, gümrük ve orman muhafaza teşkilatı mensupları, belediye zabıtası, kamu tüzel kişilerinin muhafız, bekçi ve korucuları ile emniyet ve jandarmanın bulunmadığı yerlerde köy muhtarı ve ihtiyar heyeti üyeleri; bu Kanun kapsamındaki kabahat ve suçlar hakkında zabıt varakası tutmak, av vasıtalarına ve ürünlere elkoymak ve idarî para cezalarını kesmekle görevli ve yetkilidir (m.33)",
+   "sinavda_boyle_yazarlar": [
+    "ceza yetkisi yalnız Bakanlığa verilir",
+    "Jandarma yalnız tutanak tutar, ceza kesemez"
+   ],
+   "dogrusu": [
+    "İdarî para cezası kesmeye de yetkilidir (m.33)"
+   ]
+  },
+  {
+   "id": "30-11",
+   "madde": [
+    "34"
+   ],
+   "baslik": "Elkonulan ürün ve vasıtalar",
+   "hukum": "Muhafazası mümkün olmayan cansız ürünler gerekirse veteriner veya tabibe muayene ettirilip Bakanlıkça açık artırmayla satılır; asgarî boydan küçük veya av yasağı döneminde avlananlar perakende satılamaz, yem hammaddesi olarak satılabilir; avlanması tamamen yasak türler kamu, bilim veya sosyal yardım kuruluşlarına bağışlanabilir. Sahibi belli av vasıtaları karar kesinleşinceye kadar yedieminde tutulur; mülkiyeti kamuya geçen vasıtalar satılamaz, bağışlanabilir; bağışlanamayanlar imha edilir. Mülkiyetin kamuya geçirilmesi kararlarını vali verir (m.34)",
+   "sinavda_boyle_yazarlar": [
+    "mülkiyet kararı mahkemeye veya Bakanlığa verilir",
+    "Mülkiyetin kamuya geçirilmesine mahkeme karar verir"
+   ],
+   "dogrusu": [
+    "Vali karar verir (m.34)"
+   ]
+  },
+  {
+   "id": "30-12",
+   "madde": [
+    "35"
+   ],
+   "baslik": "Kesinleşen mülkiyet",
+   "hukum": "Mülkiyeti kamuya geçirilen su ürünleri satılıp bedeli genel bütçeye gelir kaydedilir; av vasıtaları kamu veya bilim kuruluşlarına bağışlanır, bağışlanamayanlar imha edilir (m.35)",
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": [
+    "genel bütçeye"
+   ]
+  },
+  {
+   "id": "30-13",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Ceza yapısı",
+   "hukum": "Ruhsatsız ticarî avcılıkta kişiye ve gemi sahibine ayrı ayrı idarî para cezası; yönetmeliğe aykırı ticarî avcılıkta ruhsat tezkeresi ilk seferde bir ay, ikincide üç ay geri alınır, tekrarında iptal edilir; içsular, Karadeniz, Marmara ve Boğazlar'da ağla avlanma amaçlı ışık kullanan gemi sahibine ağır ceza ve ışık donanımına elkoyma; m.19'a aykırı (patlayıcı-zehir) avcılıkta ürün ve aletlere elkoyma ve mülkiyetin kamuya geçirilmesi; balık geçidi yapmayana on sekiz aya kadar süre verilip giderilmezse ağır ceza (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"ilk ihlalde ruhsat iptal edilir\" denir"
+   ],
+   "dogrusu": [
+    "yönetmeliğe aykırı ticarî avcılıkta · ilk seferde bir ay, ikincide üç ay · iptal · ışık kullanan · on sekiz aya kadar"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

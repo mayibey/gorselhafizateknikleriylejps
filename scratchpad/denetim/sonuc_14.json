@@ -1,0 +1,241 @@
+[
+  {"kanun_id": 135, "kart_id": "135-0", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı (yanlış + açıklama), sade yanlışa ayrıldı, yeşil kutu yazıldı; madde listesine dayanaktaki başka mevzuat numaraları (355, 508, 15) karışmıştı.",
+   "duzeltme": {"madde": ["1", "2", "3"],
+     "sinavda_boyle_yazarlar": ["“Özel hastaneler ve vakıf üniversitesi hastaneleri bu Tebliğin kapsamı dışındadır”", "“Ağız ve diş sağlığı hastaneleri ve merkezleri de bu Tebliğin kapsamındadır”"],
+     "dogrusu": ["Özel hastaneler ve vakıf üniversitesi hastaneleri de Özel Hastaneler Yönetmeliğinin acil hükümleri saklı kalmak kaydıyla Tebliğe tabidir (m.2/2)", "Ağız ve diş sağlığı hastaneleri ve merkezleri Tebliğin kapsamı dışındadır (m.2/1)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-1", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis tipleri karma, erişkin, çocuk ve travma acil servisidir”", "“Acil ünitesi en az üç odadan oluşan acil sağlık birimidir”"],
+     "dogrusu": ["Acil servis tipleri karma, erişkin, çocuk, kadın-doğum ve dal acil servisidir (m.4/e)", "Acil ünitesi en az bir odadan oluşan acil sağlık birimidir (m.4/f)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-2", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“İcapçı tabip nöbetini hastanede fiilen tutan tabiptir”", "“Konsültasyon işlemi, müdavi tabibin branş uzmanından sözlü görüş istemesidir”"],
+     "dogrusu": ["İcapçı tabip ev nöbeti tutan uzmandır; nöbetini hastanede fiilen tutan nöbetçi tabiptir (m.4/ğ, m)", "Konsültasyon işlemi, müdavi tabibin branş uzmanlarından yazılı görüş istemidir (m.4/j)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-3", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Triyaj, hastaların başvuru sırasına göre muayene sırasının belirlenmesidir”", "“Tıbbi sekreter bu Tebliğe göre sağlık personeli sayılmaz”"],
+     "dogrusu": ["Triyaj, hastaların şikâyet ve aciliyetine göre tıbbi önceliklerinin ve yönlendirilecekleri tedavi biriminin belirlenmesidir (m.4/p)", "Tebliğdeki sağlık personeli tanımına tıbbi sekreter de dahildir (m.4/n)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-4", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Genel Müdürlük, müdürlüğün bildirdiği acil servis seviyesini aynen onaylamak zorundadır”", "“Bir hastanenin ana binası ve ek binasındaki acil servisler tek tescil ile kaydedilir”"],
+     "dogrusu": ["Genel Müdürlük, müdürlüğün bildirdiği seviyeyi aynen veya değiştirerek onaylar (m.5/1)", "Ana bina, ek bina, blok ve semt polikliniği gibi her birim için ayrı tescil yapılır (m.6/3)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-5", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Aynı binada ayrı kurulan erişkin ve çocuk acil servislerin fizik mekân kıstasları ayrı ayrı değerlendirilir”", "“A-I dışındaki kamu hastanelerinde esas olarak erişkin ve çocuk acil servisleri ayrı ayrı kurulur”"],
+     "dogrusu": ["Aynı binada ayrı kurulan acil servislerde fizik mekân kıstasları toplam üzerinden, hizmet kıstasları ayrı ayrı değerlendirilir (m.5/3-a)", "A-I dışındaki kamu hastanelerinde esas olarak tüm yaş ve branşlara hizmet veren tek bir karma acil servis kurulur (m.5/3-b)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-6", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Yeni açılan acil servisin seviye tespiti hizmet başlangıcından itibaren 6 ay içinde yapılır”", "“Yeni açılan acil servisin tescili Genel Müdürlük onayından itibaren 6 ay içinde tamamlanır”"],
+     "dogrusu": ["Yeni açılan acil servisin seviye tespiti hizmet başlangıcını takip eden ay içinde yapılır (m.5/5, m.6/11)", "Yeni açılan acil servisin tescili en geç Genel Müdürlük onayını takip eden ay içinde tamamlanır (m.6/11)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-7", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servisler dört seviyeye ayrılır”", "“Acil servis seviyesinin tescili Genel Müdürlük onayıyla yapılır”"],
+     "dogrusu": ["Acil servisler I., II. ve III. seviye olmak üzere üç seviyeye ayrılır (m.6/1)", "Seviye, tescil komisyonu raporu üzerine valilik onayı alınarak tescil edilir ve Genel Müdürlüğe bildirilir (m.6/1)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-8", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Tescil komisyonu en az 3 üyeden oluşur”", "“Tescil komisyonunda oy eşitliği olursa karar ertelenir”"],
+     "dogrusu": ["Tescil komisyonu biri başkan olmak üzere en az 5 üyeden oluşur (m.6/5)", "Tescil komisyonunda oy eşitliğinde başkanın taraf olduğu karar geçerlidir (m.6/8)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-9", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Seviye yükseltme talebi acil servis sorumlu tabibince doğrudan Genel Müdürlüğe yapılır”", "“Uygun seviyede tescil edilmiş acil servislerin her yıl yeniden tescil edilmesi zorunludur”"],
+     "dogrusu": ["Seviye yükseltme talebini baştabip müdürlüğe resmî yazıyla yapar; başvuru 1 ay içinde sonuçlandırılır (m.6/9)", "Uygun tescilli acil servisin yeniden tescili zorunlu değildir; yıllık denetimde uygunsuz bulunursa yeniden değerlendirilir (m.6/10)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-10", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Yönlendirme levhası kırmızı zemin üzerine beyaz hilal ve beyaz ACİL yazısından oluşur”", "“Bina cephesindeki ACİL SERVİS tabelası en az 10 metreden okunabilir olmalıdır”"],
+     "dogrusu": ["Yönlendirme levhası beyaz zemin üzerine kırmızı hilal ve altında koyu mavi ACİL yazısından oluşur (m.7/1-b)", "Cephedeki ışıklandırmalı ACİL SERVİS tabelası en az 20 metreden okunabilmelidir (m.7/1-c)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-11", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis rampaları en fazla %10 eğimli olur”", "“Ayaktan hastalar ve ambulanslar acil servise aynı girişten girer”"],
+     "dogrusu": ["Acil servis rampaları en fazla %8 eğimli olur (m.7/1-d)", "Ayaktan hasta girişi ile ambulans girişi birbirinden ayrı düzenlenir (m.7/1-e)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-12", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“İcap ve konsültan çağrı görüşmelerinin kayıtları en az 1 ay saklanır”", "“Ayrı tescil edilen erişkin ve çocuk acil servisleri tek bir ortak bekleme alanı kullanabilir”"],
+     "dogrusu": ["İcap ve konsültan çağrı görüşmeleri santrale entegre donanımla kaydedilir ve en az 2 ay saklanır (m.7/1-o)", "Tescil edilen her acil servis için ayrı bir bekleme alanı oluşturulur (m.7/1-ı)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-13", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis güvenlik kameraları yalnız görüntü kaydeder ve kayıtlar en az 1 ay saklanır”", "“Güvenlik için acil servisin tüm alanları mahremiyet gözetilmeksizin kamerayla izlenir”"],
+     "dogrusu": ["Güvenlik kamerası sistemi ses kaydını da içerir ve kayıtlar en az 2 ay saklanır (m.7/1-ö)", "Kameralar mahremiyeti ihlal edecek şekilde konumlandırılamaz; mahremiyet gözetilerek kör alan bırakılmaz (m.7/1-ö)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-14", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis ameliyathanesi bulunmayan hastanede acil ameliyat için ayrı oda belirlenmesi gerekmez”"],
+     "dogrusu": ["Acil servis ameliyathanesi yoksa hastane ameliyathanesinin en az bir odası acil ameliyathane olarak belirlenir (m.7/2-e)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-15", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Kritik bakım ünitesi her seviyedeki acil serviste kurulabilir”", "“Acil servis kritik bakım ünitesinin sorumluluğu yoğun bakım servisine aittir”"],
+     "dogrusu": ["Kritik bakım ünitesi III. seviye ve Bakanlıkça uygun görülen II. seviye acil servislerde kurulabilir (m.7/2-f)", "Kritik bakım ünitesinin sorumluluğu acil servise aittir (m.7/2-f)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-16", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis laboratuvarı kurulmasına il sağlık müdürlüğü karar verir”", "“Acil laboratuvarı olmayan hastanede acil hastaların tetkikleri genel laboratuvarda normal sırayla yapılır”"],
+     "dogrusu": ["Acil laboratuvarı kurulmasına, acil servis ve laboratuvar sorumlularının görüşü alınarak baştabip karar verir (m.7/2-g)", "Acil laboratuvarı yoksa acil hastaların tetkikleri genel laboratuvarda öncelikli olarak yapılır (m.7/2-g)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-17", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Triyaj eğitimini il sağlık müdürlüğü verir”", "“Triyaj yalnız Ek-4'teki tablo kullanılarak yapılabilir”"],
+     "dogrusu": ["Triyaj eğitimini acil servis sorumlu tabibi verir veya verdirir (m.8/2)", "Triyaj, Ek-4 tablosu yanında uluslararası kabul görmüş başka bir yöntemle de yapılabilir (m.8/2)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-18", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Kayıt ve triyaj aynı anda yapılamıyorsa önce kayıt, sonra triyaj yapılır”", "“Bekleme alanında dolaşarak yapılan triyajda her hastanın vital bulguları alınır”"],
+     "dogrusu": ["Kayıt ve triyaj aynı anda yapılamıyorsa önce triyaj, sonra kayıt yapılır (m.8/3)", "Bekleme alanında dolaşarak yapılan triyaj vital bulgu alınmadan, gözlem veya basit şikâyet sorgusuyla yapılır (m.8/4)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-19", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“112 ambulansıyla getirilen hastaya acil serviste ayrıca triyaj yapılır”", "“Ayrı ambulans kayıt bankosu tüm seviyelerdeki acil servislerde zorunludur”"],
+     "dogrusu": ["112 ambulansıyla getirilen hastaya ayrıca triyaj yapılmaz, ihtiyacına göre kırmızı veya sarı alana alınır (m.8/5)", "Ayrı ambulans kayıt bankosu, ambulans vakası karşılayan III. seviye acil servislerde oluşturulur (m.8/6)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-20", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Yoğunluğu azaltacak önlemleri baştabip öngörür, acil servis sorumlu tabibi onaylar”", "“Acil servis kapasitesi dolduğunda yeni başvuran hastalar kabul edilmez”"],
+     "dogrusu": ["Yoğunluğu azaltacak önlemleri acil servis sorumlu tabibi öngörür, baştabip onaylar (m.8/7)", "Acil servise başvuran hastanın kabulü esastır; yoğunlukta hastanenin diğer personel ve birimlerinden yararlanılır (m.8/7)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-21", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklamaları tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Kırmızı ve sarı alanda refakatçi hiçbir durumda kabul edilemez”", "“Numune örneklerini laboratuvara hasta yakını götürür”"],
+     "dogrusu": ["Kırmızı ve sarı alanda refakatçi kabul edilmemesi esastır; istisnai durumlarda tabip onayıyla kabul edilir (m.9/1)", "Acil servislerde hasta yakınlarına numune veya benzeri taşıma işi yaptırılmaz (m.9/3)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-22", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Hastanın tıbbi durumu hakkındaki bilgilendirmeyi kural olarak sosyal hizmet uzmanı yapar”", "“Velisi veya vasisi bulunan hasta hakkında bilgi öncelikle birinci derece yakınına verilir”"],
+     "dogrusu": ["Bilgilendirmeyi ilgili tabip veya personel yapar; sosyal hizmet uzmanı ve psikolog gerektiğinde görüşmelere eşlik eder (m.9/4-5)", "Bilgi hastaya veya öncelikle velisi ya da vasisine, yoksa birinci derece yakınına verilir (m.9/4)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-23", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil tıp uzmanı yetersizse diğer uzmanlar baştabibin teklifi ve müdürlüğün onayıyla acil nöbetine dahil edilir”", "“E rolündeki ilçe devlet hastanelerinde nöbet bu Tebliğin branş nöbeti esaslarına göre düzenlenir”"],
+     "dogrusu": ["Diğer uzmanlar acil servis sorumlu tabibinin teklifi ve baştabibin onayıyla acil nöbetine dahil edilebilir (m.10/5)", "E rolündeki ilçe devlet hastanelerinde nöbet aile hekimliği mevzuatına göre düzenlenir (m.10/2)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-24", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Branş nöbeti düzenlenmesi için aynı uzmanlık dalında 5 uzman yeterlidir”", "“Müstakil acil branş nöbeti tutan tabibe nöbet günü elektif ameliyat listesi verilebilir”"],
+     "dogrusu": ["Branş nöbeti, aynı uzmanlık dalında 6 ve üzeri uzman bulunan branşlarda düzenlenir (m.10/6)", "Müstakil acil branş nöbeti tutan tabibe o gün elektif iş planlarında veya idari birimlerde görev verilemez (m.10/7)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-25", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Havuz nöbeti için dahili ve cerrahi branşlarda birlikte toplam 6 uzman bulunması yeterlidir”", "“Yan dal uzmanlarının ana dal nöbetine dahil edilmesine il sağlık müdürlüğü karar verir”"],
+     "dogrusu": ["Havuz nöbeti için dahili ve cerrahi branşların her birinde ayrı ayrı toplam 6 ve üzeri uzman bulunmalıdır (m.10/8)", "Yan dal uzmanlarının ana dal nöbetine dahil edilmesine baştabip karar verir (m.10/9)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-26", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklamaları tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Dal hastanesi ile genel hastane arasındaki acil nöbet planlamasını baştabipler kendi aralarında yapar”", "“İl geneli nöbet için üniversite hastanesi uzmanları da diğer kamu tesislerine görevlendirilebilir”"],
+     "dogrusu": ["Dal hastanesi ile genel hastane arasındaki acil nöbet planlamasını il sağlık müdürlüğü yapar (m.10/10)", "İl geneli nöbet görevlendirmesinde üniversite hastaneleri hariç tutulur (m.10/12)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-27", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“III. seviye acil servislerde zorunlu acil branş nöbetleri arasında anestezi ve reanimasyon da vardır”", "“II. seviye acil serviste her vardiyada tabipler hariç en az 2 sağlık personeli görev yapar”"],
+     "dogrusu": ["III. seviyede iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı branşlarında acil branş nöbeti zorunludur (m.10/14)", "II. seviye acil serviste her vardiyada tabipler hariç en az 4 sağlık personeli görev yapar (m.10/14)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-28", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“İcap nöbetçisinin hastaneye çağrılmasına hemşire veya hasta yakını karar verir”", "“İcap nöbetçisi daveti, kayda alınmayan kişisel telefonla yapılabilir”"],
+     "dogrusu": ["İcap nöbetçisinin hastaneye davet edilip edilmeyeceğine acil servis tabibi karar verir (m.10/16-c)", "İcapçı daveti, acil servise ayrılmış ve görüşmeleri kayda alınan telefonla yapılır (m.10/16-c)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-29", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Sağlık güvencesi olmayan acil hasta, ödeme gücünü belgelemeden kabul edilmez”", "“Geçerli kimlik belgesi olmayan acil hastaya belgeler tamamlanmadan müdahale edilmez”"],
+     "dogrusu": ["Tesisler tüm acil vakaları sağlık güvencesi ve ödeme gücüne bakmaksızın kabul etmekle yükümlüdür (m.11/1)", "Kimlik belgesi ibraz edemeyen hastaya acil durumdaysa müdahale zorunludur, işlemler sonradan yapılır (m.11/2)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-30", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil serviste hasta takibinin 12 saati geçmemesi esastır”", "“Kesin tanısı konamayan hastanın yatışını acil servis sorumlu tabibi veremez”"],
+     "dogrusu": ["Acil serviste hasta takibinin 8 saati geçmemesi esastır; hasta en geç 8 saatte ilgili kliniğe nakledilir (m.11/3)", "Kesin tanısı konamayan hastayı acil servis sorumlu tabibi değerlendirir, gerekirse uygun klinik adına yatışını verir (m.11/3)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-31", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Yatışı verilen hasta en geç 8 saat içinde kliniğe nakledilir”", "“İlgili klinik, acil servis tabibinin verdiği yatışı uygun görmezse reddedebilir”"],
+     "dogrusu": ["Yatışı verilen hasta uygun yatak varsa en geç 2 saat içinde kliniğe nakledilir (m.11/4)", "Acil servis tabibinin verdiği yatışı ilgili klinik reddedemez; hasta doğrudan kabul edilir (m.11/4)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-32", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Klinikler arası sevkle getirilen hasta önce acil servis tabibine teslim edilir”", "“Koordinasyonla yataklı kliniğe sevk edilen hastayı kabul eden tabip gerekirse reddedebilir”"],
+     "dogrusu": ["112 ekipleri klinikler arası sevk edilen hastayı ilgili servise veya yoğun bakıma teslim eder (m.14/4)", "Koordinasyonla sevk edilen hasta, kabul eden tabip tarafından reddedilemez veya acil servise yönlendirilemez (m.11/8)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-33", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklama tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Mesai dışında acil konsültasyonu öncelikle icap nöbetçisi tabip verir”", "“Acil servis konsültasyon daveti ve konsültan görüşü sözlü olarak yapılabilir”"],
+     "dogrusu": ["Mesai dışında konsültasyonu öncelikle ilgili branşın tesisteki nöbetçi tabibi, yoksa icap nöbetçisi verir (m.11/11)", "Konsültasyon daveti ve konsültan görüşü yazılı olarak yapılır (m.11/11)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-34", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Sevk edilen hastanın sorumluluğu ambulans hastaneden ayrıldığı anda karşı tesise geçer”", "“İl dışı sevk taleplerini hastanenin baştabibi onaylar”"],
+     "dogrusu": ["Sevk edilen hastanın sorumluluğu, tedavi edileceği tesise kabulü sağlanana kadar sevk eden tesistedir (m.12/3)", "İl dışı sevk taleplerini il sağlık müdürünün görevlendireceği hizmet başkanı veya başkan yardımcısı onaylar (m.12/5)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-35", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklamaları tek satırdaydı, ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“ASKOM kararları valilik onayıyla yürürlüğe girer”", "“ASKOM bünyesindeki sevk değerlendirme komisyonları en az 5 üyeden oluşur”"],
+     "dogrusu": ["ASKOM kararları il sağlık müdürünün onayıyla yürürlüğe girer (m.13/1)", "ASKOM bünyesindeki sevk değerlendirme komisyonları en az 3 üyeden oluşur (m.13/6)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-36", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Sevk edilecek hastaneyi gönderen hastanenin baştabibi belirler”", "“Ambulans ekibi hastayı teslim etmeden acil servisten ayrılabilir”"],
+     "dogrusu": ["Acil nakilde nihai tedavi tesisinin belirlenmesi 112 Komuta Kontrol Merkezinin yönetim ve koordinasyonunda yapılır (m.14/2)", "Ambulans ekibi hastayı teslim etmeden acil servisten ayrılmaz (m.14/3)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-37", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Özel sağlık tesislerindeki acil servislerde Tebliğe aykırılıkta 657 sayılı Kanunun disiplin hükümleri uygulanır”", "“Acil servis hizmetlerinin Tebliğe uygun yürütülmesinden yalnız acil servis sorumlu tabibi sorumludur”"],
+     "dogrusu": ["Özel sağlık tesislerindeki aykırılıkta 3359 sayılı Kanunun ek 11. maddesi uygulanır (m.15/4)", "Müdürlükler, baştabipler, acilden sorumlu baştabip yardımcıları ve sorumlu tabipler birinci derecede ve müteselsilen sorumludur (m.15/1)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-38", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutu ham Tuzak satırıydı, sade yanlışa ayrıldı; yeşil kutu yazıldı.",
+   "duzeltme": {
+     "sinavda_boyle_yazarlar": ["“Acil servis sorumlu tabibini il sağlık müdürlüğü görevlendirir”", "“Acil tıp eğitim kliniği bulunan hastanede acil servis sorumlu tabibi baştabipçe ayrıca seçilir”"],
+     "dogrusu": ["Eğitim kliniği bulunmayan hastanelerde acil servis sorumlu tabibini baştabip görevlendirir (m.15/7)", "Acil tıp eğitim kliniği bulunan hastanede klinik idari sorumlusu acil servis sorumlu tabibidir (m.15/6)"]}},
+
+  {"kanun_id": 135, "kart_id": "135-39", "sorun": "dogrusu_hatali",
+   "aciklama": "Kırmızı kutuda iki yanlış ve açıklamaları tek satırdaydı, ayrıldı; yeşil kutu yazıldı; madde listesindeki '1' Geçici m.1'den gelmiş, kartı m.1 (Amaç) ile karıştırıyordu, çıkarıldı.",
+   "duzeltme": {"madde": ["16", "17", "18"],
+     "sinavda_boyle_yazarlar": ["“Tebliğ hükümlerini Cumhurbaşkanı yürütür”", "“Mevcut acil servislerin seviyelendirme ve tescil işlemleri 1 yıl içinde tamamlanır”"],
+     "dogrusu": ["Tebliğ hükümlerini Sağlık Bakanı yürütür (m.18)", "Mevcut acil servislerin seviyelendirme ve tescil işlemleri yayımdan itibaren 2 yıl içinde tamamlanır (Geçici m.1)"]}}
+]

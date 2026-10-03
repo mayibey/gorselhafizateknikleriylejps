@@ -1,0 +1,624 @@
+{
+ "kanun_id": 113,
+ "ad": "7567 sayılı 2026 Yılı Merkezî Yönetim Bütçe Kanunu (H · K · E Cetvelleri)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_113.json",
+ "kartlar": [
+  {
+   "id": "113-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Ödenekler (A cetveli)",
+   "hukum": "5018'e ekli (I) sayılı cetveldeki genel bütçeli idarelere 18.801.514.833.000 TL, (II) sayılı cetveldeki özel bütçeli idarelere 1.637.331.680.000 TL, (III) sayılı cetveldeki düzenleyici ve denetleyici kurumlara 87.139.973.000 TL ödenek verilmiştir; dağılım (A) işaretli cetvelde (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "Ödenekler (B) cetvelinde değil, (A) cetvelinde gösterilir; (B) gelir cetvelidir"
+   ],
+   "dogrusu": [
+    "18.801.514.833.000 TL · 1.637.331.680.000 TL · 87.139.973.000 TL"
+   ]
+  },
+  {
+   "id": "113-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Gelir ve finansman (B ve F cetvelleri)",
+   "hukum": "Genel bütçe gelirleri 16.082.032.487.000 TL; özel bütçeli idareler 145.096.263.000 TL öz gelir + 1.499.024.964.000 TL Hazine yardımı = 1.644.121.227.000 TL; düzenleyici ve denetleyici kurumlar 84.171.212.000 TL öz gelir + 2.968.761.000 TL Hazine yardımı = 87.139.973.000 TL olarak tahmin edilmiştir (B cetvelleri); özel bütçeli idarelerin net finansmanı 226.500.000 TL (F cetvelleri) (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "Gelirler kesinleşmiş değil \"tahmin edilmiştir\"; finansman (F) cetveli özel bütçeli idarelerin net finansmanıdır"
+   ],
+   "dogrusu": [
+    "16.082.032.487.000 TL · 1.644.121.227.000 TL · 87.139.973.000 TL · 226.500.000 TL"
+   ]
+  },
+  {
+   "id": "113-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Denge",
+   "hukum": "Genel bütçe ödenekleri toplamı ile genel bütçe tahmini gelirleri arasındaki fark net borçlanma ile karşılanır (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "Açık \"vergi artışı\" ya da \"yedek ödenek\" ile değil, net borçlanma ile karşılanır",
+    "Genel bütçe açığı yedek ödenekten karşılanır"
+   ],
+   "dogrusu": [
+    "Net borçlanma ile karşılanır (m.3)"
+   ]
+  },
+  {
+   "id": "113-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Bağlı cetveller — harf anahtarı",
+   "hukum": "(A) ödenek dağılımı; (B) tahsiline devam olunacak gelirler; (C) gelirlere dayanak temel hükümler; (E) bazı ödeneklerin kullanımına ve harcamalara ilişkin esaslar; (F) (II) ve (III) sayılı cetveldeki idarelerin nakit imkânları ve harcanması öngörülen tutarlar; (H) 6245 sayılı Harcırah Kanunu uyarınca gündelik ve tazminat tutarları; (İ) bütçe kanununda gösterilmesi gereken parasal sınırlar; (K) ek ders, konferans ve fazla çalışma ücretleri ile diğer ücret ödemeleri; (M) MEB okul pansiyon ücretleri; (O) millî müdafaa mükellefiyetiyle alınacak hayvanların alım değerleri; (P) motorlu taşıtların ortalama alım değerleri ve günlük kira bedelleri; (T) edinilecek taşıtlar ve azami satın alma bedelleri; (V) vatani hizmet aylıkları (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "K cetveli harcama yetkilisi limiti değildir; ek ders-konferans-fazla çalışma ücretleridir. Parasal sınırlar (İ), taşıtlar (T) cetvelindedir; mal-hizmet alım tertibinden ödeme limitleri (E) cetvelinin 24. sırasındadır",
+    "K cetveli, harcama yetkililerinin alım limitlerini gösterir"
+   ],
+   "dogrusu": [
+    "K cetveli ek ders, konferans ve fazla çalışma ücretleri ile diğer ücret ödemelerinin tutarlarıdır (m.4)"
+   ]
+  },
+  {
+   "id": "113-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Gerektiğinde kullanılabilecek ödenekler",
+   "hukum": "Strateji ve Bütçe Başkanlığı bütçesindeki: Personel Giderlerini Karşılama Ödeneği (personel giderleri ve SGK devlet primi tertiplerine), Yedek Ödenek ((01), (02), (03), (05), (08) ekonomik kodlu tertiplere; çok acil ve zorunlu hâllerde (06) ve (07)'ye), Yatırımları Hızlandırma Ödeneği (öncelikli sektör projelerine), Doğal Afet Giderlerini Karşılama Ödeneği (her türlü doğal afet gideri) — bunlardan aktarma yapmaya Cumhurbaşkanı yetkilidir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "Bu ödenekler Hazine ve Maliye Bakanlığı değil, Strateji ve Bütçe Başkanlığı bütçesindedir; yedek ödenekten (06)-(07)'ye aktarma yalnız çok acil ve zorunlu hâllerde"
+   ],
+   "dogrusu": [
+    "Personel Giderlerini Karşılama Ödeneği · Yedek Ödenek · Yatırımları Hızlandırma Ödeneği · Doğal Afet Giderlerini Karşılama Ödeneği · Cumhurbaşkanı"
+   ]
+  },
+  {
+   "id": "113-5",
+   "madde": [
+    "6"
+   ],
+   "baslik": "İdareler arası %10 aktarma",
+   "hukum": "İhtiyaç fazlası ödeneği başka idarenin ihtiyacına kaydırmak veya öncelikli hizmetlere yöneltmek için, genel bütçe ödeneklerinin %10'unu aşmamak kaydıyla genel ve özel bütçeli idarelerin (01)-(09) kodlu ödeneklerini idareler arasında veya SBB \"Yedek Ödenek\" tertibine aktarmaya Cumhurbaşkanı yetkilidir (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "Sınır %10'dur; yetki idarelerin değil Cumhurbaşkanınındır",
+    "Cumhurbaşkanı genel bütçe ödeneklerinin %30'una kadar idareler arasında aktarma yapabilir"
+   ],
+   "dogrusu": [
+    "%10'unu aşmamak kaydıyla (m.6/1); %30 güvenlik kurumlarının devren ödenek sınırıdır (m.6/7)"
+   ]
+  },
+  {
+   "id": "113-6",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kurumların kendi aktarma yetkileri",
+   "hukum": "Genel bütçeli idareler, Çevre, Şehircilik ve İklim Değişikliği Bakanlığına yaptıracakları işlerin ödeneğini o Bakanlık bütçesine aktarmaya yetkilidir (m.6/2); MSB, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ve EGM bütçelerindeki tek merkezden yönetilmesi gereken ikmal ve tedarik hizmetleri ödeneğini kurumlar arasında aktarmaya ilgili kurumlar yetkilidir (m.6/3)",
+   "sinavda_boyle_yazarlar": [
+    "İkmal-tedarik aktarmasında yetkili Cumhurbaşkanı değil ilgili kurumlardır"
+   ],
+   "dogrusu": [
+    "MSB, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ve EGM · tek merkezden yönetilmesi gereken ikmal ve tedarik hizmetleri · ilgili kurumlar"
+   ]
+  },
+  {
+   "id": "113-7",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Gelir fazlasının ödenek eklenmesi ve kaynak transferi",
+   "hukum": "Özel bütçeli idareler ile düzenleyici-denetleyici kurumlar (B) cetvelindeki tahmini aşan gelirleri ve (F)'deki net finansmanı aşan tutarları Cumhurbaşkanlığınca belirlenecek usulle kendi bütçelerine ödenek ekleyebilir (m.6/4); idareler hizmeti yürütecek idareye kaynak transferi yapabilir; genel bütçeliler arasında ödenek aktarma, diğerlerinde bütçe gideri kaydı suretiyle; tahsil edilen tutarlar \"14\" (merkezi yönetim bütçesi içinden) veya \"15\" (bütçe dışından) finansman kodlu tertiplere ödenek kaydedilir; harcanmayan kısım aynı amaçla devren kaydedilir (m.6/5)",
+   "sinavda_boyle_yazarlar": [
+    "Genel bütçeli idareler arasındaki transfer gider kaydıyla değil, ödenek aktarmayla yapılır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanlığınca belirlenecek usulle · ödenek aktarma · bütçe gideri kaydı · devren"
+   ]
+  },
+  {
+   "id": "113-8",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Özel gelir–özel ödenek (JGK kule geliri)",
+   "hukum": "Cumhurbaşkanı; EGM okullarındaki yabancı öğrenci giderleri karşılığı ödenenleri, NATO'nun yedek havaalanları bakım-onarımı için ödediklerini, TRT'ye intikal eden bandrol ücretlerinin %2'si oranında Ticaret Bakanlığı hizmetleri için ödenenleri ve Jandarma Genel Komutanlığına ait/tahsisli taşınmazlardaki kule, tekrarlayıcı merkezi ile konuş yeri içindeki alan ve ünitelerin haberleşme amacıyla merkezi yönetim dışı kuruluşlar ve özel teşebbüslerin kullanımına açılması karşılığı tahsil edilen tutarları aynı amaçla kullanılmak üzere genel bütçeye özel gelir, ilgili idareye özel ödenek kaydetmeye yetkilidir (m.6/6)",
+   "sinavda_boyle_yazarlar": [
+    "Özel gelir-özel ödenek kaydı yetkisi JGK'nın değil Cumhurbaşkanınındır"
+   ],
+   "dogrusu": [
+    "%2'si · Jandarma Genel Komutanlığına ait/tahsisli taşınmazlardaki kule, tekrarlayıcı merkezi ile konuş yeri içindeki alan ve ünitelerin haberleşme amacıyla merkezi yönetim dışı kuruluşlar ve özel teşebbüslerin kullanımına açılması karşılığı tahsil edilen tutarları"
+   ]
+  },
+  {
+   "id": "113-9",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Güvenlik kurumlarında devren ödenek %30",
+   "hukum": "Cumhurbaşkanı; MSB, JGK, SGK ve EGM'nin 2025 bütçelerinde mal ve hizmet alım giderleri ile sermaye giderlerinden harcanmayan kısımları (tedavi-cenaze giderleri, özel ödenekler ve EGM Güvenlik Hizmetleri Yatırımları hariç), bu tertiplere tahsis edilen ödenek toplamının %30'unu aşmamak üzere 2026 bütçesine devren ödenek kaydetmeye yetkilidir (m.6/7-a); ayrıca Kültür ve Turizm tanıtma ödenekleri, TÜBİTAK TARAL, KKTC yardımları, EGM güvenlik yatırımları vb. için de devren kayıt yetkisi vardır (m.6/7)",
+   "sinavda_boyle_yazarlar": [
+    "Oran %30'dur (%10 değil); tedavi ve cenaze giderleri devir dışındadır"
+   ],
+   "dogrusu": [
+    "%30'unu aşmamak · devren"
+   ]
+  },
+  {
+   "id": "113-10",
+   "madde": [
+    "7"
+   ],
+   "baslik": "01.04 kodu — arızi ve kısmi zamanlı ödemeler",
+   "hukum": "(I) ve (II) sayılı cetveldeki idareler; yılda bir ayı aşmayan sürelerle arızi işlerde çalıştırılanlara, kısmi zamanlı hizmet satın alınanlara, 3308 sayılı Kanun kapsamındaki aday çırak-çırak ve stajyer öğrencilere, ders ücreti karşılığı görevlendirilen resmî görevi olmayanlara ödemeleri (01.04) ödeneğini aşmayacak şekilde yapar; bu tertibe ödenek eklenemez, başka tertipten aktarılamaz, ödenek üstü harcama yapılamaz; akademik jüri ücreti ile (c)-(ç) ödemeleri için aktarmaya yalnız Cumhurbaşkanı yetkilidir (m.7/1)",
+   "sinavda_boyle_yazarlar": [
+    "Bu kodda istisnai aktarma yetkisi idarede değil Cumhurbaşkanındadır; arızi işte süre bir ayı aşamaz"
+   ],
+   "dogrusu": [
+    "bir ayı aşmayan · (01.04) ödeneğini aşmayacak · ödenek eklenemez · aktarılamaz · ödenek üstü harcama yapılamaz · Cumhurbaşkanı"
+   ]
+  },
+  {
+   "id": "113-11",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Taşıt edinimi (T cetveli)",
+   "hukum": "(T) cetvelindeki taşıtlar ancak çok acil ve zorunlu hâllere münhasır olmak kaydıyla ilgili bakanlığın teklifi üzerine Cumhurbaşkanı kararı ile edinilebilir (m.7/2)",
+   "sinavda_boyle_yazarlar": [
+    "Karar veren Cumhurbaşkanıdır; ilgili bakanlık yalnız teklif eder",
+    "T cetvelindeki taşıtlar ilgili bakanlığın kararıyla edinilir"
+   ],
+   "dogrusu": [
+    "Çok acil ve zorunlu hâllerde, bakanlığın teklifi üzerine Cumhurbaşkanı kararıyla (m.7/2)"
+   ]
+  },
+  {
+   "id": "113-12",
+   "madde": [
+    "7"
+   ],
+   "baslik": "İşçi ödenekleri ve fazla çalışma",
+   "hukum": "Sürekli ve geçici işçiler (01.03) ve (02.03) ödeneklerini aşmayacak sayı/süreyle istihdam edilir; toplu sözleşme, ihbar-kıdem, asgari ücret ve prim artışından doğan ihtiyaç için aktarmaya Cumhurbaşkanı yetkilidir; bunlar dışında bu kodlara aktarma yapılamaz, başka tertipten işçi ücreti ve fazla çalışma ücreti ödenemez; bu kısıtlar kendi tertiplerinden aktarmak koşuluyla TÜBİTAK'a uygulanmaz (m.7/3); harcama yetkilileri işçilere ödeneği aşan fazla çalışma yaptırmamak ve ertesi yıla borç bırakmamakla yükümlüdür; deprem, yangın, su baskını, yer kayması, kaya düşmesi, çığ gibi afetlerde Cumhurbaşkanı kararıyla yaptırılan fazla çalışmalar ve ilama bağlı borçlar hariç fazla çalışma için aktarma yapılamaz (m.7/4)",
+   "sinavda_boyle_yazarlar": [
+    "Fazla çalışma aktarma yasağının istisnası afetler ve ilama bağlı borçlardır; \"ihtiyaç hâlinde serbestçe aktarılır\" yanlıştır"
+   ],
+   "dogrusu": [
+    "(01.03) ve (02.03) · Cumhurbaşkanı · TÜBİTAK · ertesi yıla borç bırakmamakla · ilama bağlı borçlar"
+   ]
+  },
+  {
+   "id": "113-13",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Uluslararası kuruluş üyeliği",
+   "hukum": "Genel ve özel bütçeli idareler, uluslararası anlaşma, kanun ve kararnameyle üye olunanlar dışındaki uluslararası kuruluşlara ödenek temini konusunda Cumhurbaşkanlığının uygun görüşü alınmadan üye olamaz, katılma payı veya üyelik aidatı ödeyemez (m.7/5)",
+   "sinavda_boyle_yazarlar": [
+    "Gereken Cumhurbaşkanlığının uygun görüşüdür; Dışişleri veya HMB görüşü değil"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanlığının uygun görüşü alınmadan"
+   ]
+  },
+  {
+   "id": "113-14",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sosyal tesisler",
+   "hukum": "Eğitim ve dinlenme tesisi, misafirhane, çocuk bakımevi, kreş, spor tesisi gibi sosyal tesislerin giderleri münhasıran bu tesislerin işletme gelirlerinden karşılanır; buralarda bütçe, döner sermaye ve fonlardan ücret ödenmek üzere 2026'da ilk defa istihdam edilecek yeni personel görevlendirilmez (m.7/6)",
+   "sinavda_boyle_yazarlar": [
+    "Sosyal tesis giderleri genel bütçeden karşılanmaz; yeni istihdam edilen personel buraya verilemez",
+    "Sosyal tesislerin giderleri gerektiğinde genel bütçeden karşılanır"
+   ],
+   "dogrusu": [
+    "Münhasıran tesislerin kendi işletme gelirlerinden karşılanır (m.7/6)"
+   ]
+  },
+  {
+   "id": "113-15",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Yolluk, temsil, bakım-onarım ve YÖK öz gelir kısıtı",
+   "hukum": "Genel ve özel bütçeli idareler 03.03 Yolluk, 03.06 Temsil ve Tanıtma, 03.07 Menkul Mal-Gayrimaddi Hak Alım-Bakım-Onarım, 03.08 Gayrimenkul Bakım-Onarım tertiplerindeki ödeneği aşmayacak şekilde harcar; ihtiyaçta aktarma ve ekleme yetkisi Cumhurbaşkanında (m.7/7); yükseköğretim öz gelir finansman kodlu ödenekler arasında (öğrenci yaşamı alt programı faaliyetleri arasındakiler hariç) aktarma yapılamaz (m.7/8)",
+   "sinavda_boyle_yazarlar": [
+    "Bu kodlara aktarma yetkisi harcama yetkilisinde değil Cumhurbaşkanında"
+   ],
+   "dogrusu": [
+    "03.03 Yolluk, 03.06 Temsil ve Tanıtma, 03.07 Menkul Mal-Gayrimaddi Hak Alım-Bakım-Onarım, 03.08 Gayrimenkul Bakım-Onarım · Cumhurbaşkanı · aktarma yapılamaz"
+   ]
+  },
+  {
+   "id": "113-16",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Yatırım harcamaları",
+   "hukum": "2026 Yılı Yatırım Programına ek cetvellerde yer almayan projeye harcama yapılamaz; yıllara sari işe 2026'da başlanabilmesi için 2026 yatırım ödeneği proje maliyetinin %10'undan az olamaz (şehir içi raylı sistem, metro ve demiryolu projeleri ile EÜAŞ'ın 900 MW ve üzeri doğalgaz çevrim santrali projeleri hariç); altında kalanlar revize edilebilir (m.8/1); yatırım programı değişiklikleri ve ödenek ekleme-devir-aktarma işlemleri \"2026 Yılı Kamu Yatırım Programının Uygulanması, Koordinasyonu ve İzlenmesine Dair Karar\" esaslarına göre yapılır (m.8/2-3); 3152 ve 5302 kapsamında devren kaydedilen ödenekler SBB'ye bilgi verilerek proje sahibi kurumca ilişkilendirilir (m.8/4)",
+   "sinavda_boyle_yazarlar": [
+    "Oran %10'dur ve raylı sistem-metro-demiryolu projeleri bu kuraldan istisnadır"
+   ],
+   "dogrusu": [
+    "2026 Yılı Yatırım Programına ek cetvellerde yer almayan projeye harcama yapılamaz · proje maliyetinin %10'undan az olamaz"
+   ]
+  },
+  {
+   "id": "113-17",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Mahalli idarelere aktarımlar (KÖYDES-SUKAP)",
+   "hukum": "HMB bütçesindeki ödenekler: 5286 sayılı Kanunla il özel idarelerine devredilen personelin haklarına (il özel idarelerine), KÖYDES ile köy altyapısına (il özel idareleri ve/veya köylere hizmet götürme birliklerine), SUKAP ile belediyelerin içme suyu-atık su projelerine (İller Bankası A.Ş.'ye) tahakkuk ettirilerek kullandırılır; bu Hazine yardımları haczedilemez, ihtiyati tedbir konulamaz (m.9/1); (a) bendi usul ve esasları İçişleri Bakanlığı ile HMB birlikte; KÖYDES il bazında, SUKAP belediye bazında dağılım usulü Cumhurbaşkanı kararıyla belirlenir (m.9/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "SUKAP ödeneği doğrudan belediyeye değil İller Bankası'na tahakkuk ettirilir; bu yardımlar haczedilemez"
+   ],
+   "dogrusu": [
+    "KÖYDES · SUKAP · İller Bankası A.Ş · tahakkuk ettirilerek · haczedilemez, ihtiyati tedbir konulamaz · İçişleri Bakanlığı ile HMB birlikte · Cumhurbaşkanı"
+   ]
+  },
+  {
+   "id": "113-18",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Savunma Sanayii Destekleme Fonu",
+   "hukum": "TSK stratejik hedef planı ile Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığının ihtiyaç planları uyarınca modern silah, araç-gereç ile savunma ve NATO altyapı yatırımları; 3238 sayılı Kanunla kurulan Savunma Sanayii Destekleme Fonu kaynakları, bütçe ödenekleri ve diğer imkânlar birlikte değerlendirilerek Savunma Sanayii İcra Komitesince tespit edilecek esaslarla karşılanır (m.10/1); MSB, JGK, SGK ödeneklerinden bu tutarları (ve EGM'nin zırhlı araç, uçak-helikopter, İHA, KGYS vb. tutarlarını) Fona ödemeye ilgisine göre Milli Savunma, İçişleri, Sağlık, Tarım ve Orman, Kültür ve Turizm, Adalet, Ulaştırma ve Altyapı veya Sanayi ve Teknoloji Bakanı yetkilidir (m.10/2); Fondan Hazineye yatırılanları gelir ve MSB bütçesine ödenek kaydetmeye Cumhurbaşkanı yetkili (m.10/3); kullanılmayan kısımlar idarenin muhasebe birimi hesabına yatırılıp gelir kaydedilir, ödenek kaydında genel bütçelilerde Cumhurbaşkanı, özel bütçelilerde idare yetkili; MSB, JGK, SGK dışındakilerde kayıt yatırım programıyla ilişkilendirilir (m.10/4); MSB, JGK, SGK ve EGM'nin kullanılmayan Fon tutarları ilgili Bakan onayıyla Savunma Sanayii Başkanlığınca yürütülen diğer projelerinde kullanılabilir (m.10/5)",
+   "sinavda_boyle_yazarlar": [
+    "Esasları tespit eden Savunma Sanayii İcra Komitesidir; Jandarma ve SG için dayanak \"stratejik hedef planı\" değil ihtiyaç planlarıdır (stratejik hedef planı TSK içindir)"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığının ihtiyaç planları · Savunma Sanayii Destekleme Fonu · Savunma Sanayii İcra Komitesince · ilgisine göre · Bakanı · Cumhurbaşkanı · ilgili Bakan onayıyla"
+   ]
+  },
+  {
+   "id": "113-19",
+   "madde": [
+    "11",
+    "8"
+   ],
+   "baslik": "Borçlanma limitleri",
+   "hukum": "4749 sayılı Kanuna göre garantili imkân ve dış borcun ikraz limiti 9,5 milyar ABD doları (m.11/1); başlangıç ödeneklerinin %1'ine kadar ikrazen özel tertip Devlet iç borçlanma senedi ihraç edilebilir (m.11/2); 4749 m.8/A çerçevesinde HMB'nin borç üstlenim taahhüt limiti 3,5 milyar ABD doları (m.11/3)",
+   "sinavda_boyle_yazarlar": [
+    "İkraz limiti 9,5, borç üstlenim limiti 3,5 milyar dolardır; ikisi karıştırılır",
+    "Garantili imkân ve dış borcun ikraz limiti 3,5 milyar ABD dolarıdır"
+   ],
+   "dogrusu": [
+    "9,5 milyar; 3,5 milyar borç üstlenim taahhüt limitidir (m.11)"
+   ]
+  },
+  {
+   "id": "113-20",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Diğer gelir-gider hükümleri",
+   "hukum": "Türk Eximbank'ın politik risk tahsilatı, temettü ve olağanüstü yedek akçelerini Bankanın politik risk alacağına mahsup etmeye Hazine ve Maliye Bakanı, karşılıklarını bütçeye gelir-ödenek kaydetmeye Cumhurbaşkanı yetkilidir (m.12/1); 2006'dan önce katma bütçeli olup 5018 ile genel bütçeye alınan idarelerin kurum gelirleri genel bütçe geliri olarak tahsil edilir (m.12/2)",
+   "sinavda_boyle_yazarlar": [
+    "Mahsup yetkisi Cumhurbaşkanının değil Hazine ve Maliye Bakanınındır; gelir-ödenek kaydı ise Cumhurbaşkanında"
+   ],
+   "dogrusu": [
+    "Hazine ve Maliye Bakanı · Cumhurbaşkanı · genel bütçe geliri"
+   ]
+  },
+  {
+   "id": "113-21",
+   "madde": [
+    "13",
+    "14",
+    "15"
+   ],
+   "baslik": "Yetki, yürürlük, yürütme",
+   "hukum": "Cumhurbaşkanına bütçe uygulamasında verilen yetkilerin kullanımı ve devri Cumhurbaşkanınca belirlenir (m.13); Kanun 1/1/2026'da yürürlüğe girer (m.14); hükümlerini Cumhurbaşkanı yürütür; TBMM ile ilgili hükümleri TBMM Başkanı, Sayıştay ile ilgilileri Sayıştay Başkanı, düzenleyici ve denetleyici kurumlarla ilgilileri kendi kurulları ve/veya kurum başkanları yürütür (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "TBMM hükümlerini Cumhurbaşkanı değil TBMM Başkanı, Sayıştay hükümlerini Sayıştay Başkanı yürütür",
+    "Bütçe Kanununun TBMM ile ilgili hükümlerini Cumhurbaşkanı yürütür"
+   ],
+   "dogrusu": [
+    "TBMM Başkanı yürütür (m.15)"
+   ]
+  },
+  {
+   "id": "113-22",
+   "madde": [],
+   "baslik": "H cetveli — yurt içi gündelikler (6245 m.33)",
+   "hukum": "TBMM Başkanı ve Cumhurbaşkanı Yardımcıları 925 TL; Anayasa Mahkemesi Başkanı, Bakanlar, Genelkurmay Başkanı, milletvekilleri, Kuvvet Komutanları, Jandarma Genel Komutanı, Sahil Güvenlik Komutanı, Orgeneral-Oramiraller, yüksek yargı başkanları vb. 900 TL; memur ve hizmetlilerden ek göstergesi 8000 ve üzeri 890, 6400-8000 (hariç) 880, 3600-6400 (hariç) 870, aylık/kadro derecesi 1-4 860, 5-15 850 TL (H/I)",
+   "sinavda_boyle_yazarlar": [
+    "Jandarma Genel Komutanı 925 TL grubunda değil 900 TL grubundadır; 925 TL yalnız TBMM Başkanı ve Cumhurbaşkanı Yardımcıları içindir"
+   ],
+   "dogrusu": [
+    "925 TL · Jandarma Genel Komutanı, Sahil Güvenlik Komutanı · 900 TL · 8000 ve üzeri 890 · 6400-8000 (hariç) 880 · 3600-6400 (hariç) 870 · 1-4 860 · 5-15 850 TL"
+   ]
+  },
+  {
+   "id": "113-23",
+   "madde": [
+    "33"
+   ],
+   "baslik": "H cetveli — gündelik hesap oranları",
+   "hukum": "6245 m.33/(b) yatacak yer ücreti hesabında gündeliğin %90 artırımlı miktarı; m.33/(d) ödemelerinde görevlendirmenin ilk 10 günü %60 artırımlı, takip eden 80 gün %50'si, müteakip 90 gün %40'ı esas alınır; ek göstergesi 8000 ve üzeri için belirlenen 890 TL, m.33/(b)'ye göre gündelik hesabında esas alınır (H/I dipnotlar)",
+   "sinavda_boyle_yazarlar": [
+    "İlk 10 gün %60 artırımlı, sonraki 80 gün %50, sonraki 90 gün %40 — sıra ve oranlar karıştırılır"
+   ],
+   "dogrusu": [
+    "%90 artırımlı · ilk 10 günü %60 artırımlı · takip eden 80 gün %50'si · müteakip 90 gün %40'ı"
+   ]
+  },
+  {
+   "id": "113-24",
+   "madde": [
+    "50"
+   ],
+   "baslik": "H cetveli — arazi tazminatı (6245 m.50)",
+   "hukum": "m.50'nin 1-5. bentlerindeki personelden kadro derecesi 1-4 olanlara 130 TL, 5-15 olanlara 120 TL; memuriyet mahalli dışında çalışanlar ile 2981 uygulamasında çalışan Tapu ve Kadastro personeline bu miktarların yarısı ek olarak; arazide, şantiyede veya gemide geceleyenlere bu suretle bulunan miktarın yarısı ayrıca ek ödenir (H/II)",
+   "sinavda_boyle_yazarlar": [
+    "Ek ödeme \"iki katı\" değil, yarısı kadardır"
+   ],
+   "dogrusu": [
+    "1-4 olanlara 130 TL · 5-15 olanlara 120 TL · yarısı ek · geceleyenlere · yarısı ayrıca ek"
+   ]
+  },
+  {
+   "id": "113-25",
+   "madde": [
+    "176"
+   ],
+   "baslik": "K cetveli — ek ders ücretleri (askerî ve jandarma okulları)",
+   "hukum": "926 s. Kanun kapsamında MSB yükseköğretim kurumları, sınıf okulları vb.nde öğretim üyesi-görevlilerine 2914'e göre tutarda, öğretmenlere öğretim görevlisi tutarında; MSB yükseköğretim kurumlarına dışarıdan gelen öğretim elemanlarına 2914 tutarının beş katını geçmemek, haftada 10 saati geçmemek üzere; TSK kurslarında 657 m.176 tutarında (K/I-2); Jandarma ve Sahil Güvenlik Akademisine diğer yükseköğretim kurumlarından görevlendirilenlere İçişleri Bakanlığınca belirlenecek esaslarla 2914 tutarının beş katını geçmemek, haftada 10 saati geçmemek üzere (K/I-3); JGK ve SGK sınıf okulları/eğitim merkezi komutanlıkları, istihbarat okulu vb.nde öğretmen ve öğretmen olarak görevlendirilenlere 2914'e göre öğretim görevlisi tutarında, Mesleki Gelişim Planı kurslarında ders verenlere 657 m.176 tutarında; azami ders saatlerini HMB'nin uygun görüşü üzerine İçişleri Bakanlığı belirler (K/I-4); askerî ve JGK-SGK işyerlerindeki işçilere meslek kursu veren MEB öğretmenlerine haftada 10 saate kadar 657 m.176 tutarında (K/I-10)",
+   "sinavda_boyle_yazarlar": [
+    "JGK Mesleki Gelişim Planı kurslarında ölçü 2914 değil 657 m.176'dır; azami ders saatini belirleyen İçişleri Bakanlığı (HMB uygun görüşüyle)"
+   ],
+   "dogrusu": [
+    "beş katını · haftada 10 saati · Jandarma ve Sahil Güvenlik Akademisine · İçişleri Bakanlığınca · beş katını · haftada 10 saati · JGK ve SGK sınıf okulları/eğitim merkezi komutanlıkları, istihbarat okulu · Mesleki Gelişim Planı kurslarında · 657 m.176 · HMB'nin uygun görüşü üzerine İçişleri Bakanlığı · haftada 10 saate kadar"
+   ]
+  },
+  {
+   "id": "113-26",
+   "madde": [
+    "176"
+   ],
+   "baslik": "K cetveli — konferans ücreti",
+   "hukum": "Her bir konferans için 1.965 TL'yi aşmamak üzere kurumlarınca belirlenecek tutarda; 657 m.176 ve yükseköğretimde öğretim programı dışında, Milli Savunma Üniversitesi ile Jandarma ve Sahil Güvenlik Akademisinde (sınıf okulları, özel ihtisas okulları, İstihbarat ve Dil Okulu, KBRN Okulu dâhil), cezaevlerinde müfredat dışı konularda Bakanlık onayıyla konferans verenlere ödenir; hizmet içi eğitim ve kurslarda konferans ücreti ödenmez (K/II)",
+   "sinavda_boyle_yazarlar": [
+    "Hizmet içi eğitim ve kurslarda konferans ücreti ödenmez"
+   ],
+   "dogrusu": [
+    "1.965 TL'yi aşmamak · Milli Savunma Üniversitesi ile Jandarma ve Sahil Güvenlik Akademisinde · hizmet içi eğitim ve kurslarda konferans ücreti ödenmez"
+   ]
+  },
+  {
+   "id": "113-27",
+   "madde": [
+    "178"
+   ],
+   "baslik": "K cetveli — saat başı fazla çalışma ücreti",
+   "hukum": "657 m.178 uyarınca saat başı 16,55 TL (özel kanunlarda bütçe kanunuyla belirlenecek fazla çalışma için de esas); 657'ye tabi personelden bakanlık özel kalem personeline (makam şoförleri dâhil) ayda 90 saati geçmemek üzere 17,60 TL; Kurul Başkanı, Genel Müdür ve üstü, Strateji Geliştirme Başkanı, Vali, General-Amiral rütbeli olmak kaydıyla MSB, Genelkurmay, kuvvet komutanlıkları, JGK ve SGK'daki Daire Başkanı ve üstü yöneticiler, Rektör, büyükşehir ve il belediye başkanlarıyla çalışan personele makam başına aylık toplam 450 saati, kişi başı ayda 90 saati geçmemek üzere 17,60 TL; bakanlık merkez şoförlerine ayda 60 saat sınırıyla 17,60 TL; hepsi makam onayına istinaden; dernek ve spor kulübü denetimi için mülki idare amirlerince görevlendirilenlere İçişleri talebiyle HMB'nin tespit ettiği saatler içinde ve ayda 90 saati aşmamak üzere 16,55 TL; Açıköğretim yardımcı personeli (ayda 60 saat) ve MEB mesleki-teknik okul idari personeli (ayda 100 saat) 28,20 TL; MEB okul döner sermaye işlerinde beher iş saati 67,50 TL'yi geçmemek üzere (öğretim günlerinde günde 3, tatillerde günde 8 saat) (K/III-A)",
+   "sinavda_boyle_yazarlar": [
+    "Genel saat ücreti 16,55, özel kalem-makam personeli 17,60 TL; makam başı tavan 450, kişi başı 90, şoför 60 saat"
+   ],
+   "dogrusu": [
+    "16,55 TL · bakanlık özel kalem · ayda 90 saati · 17,60 TL · JGK ve SGK'daki Daire Başkanı ve üstü · makam başına aylık toplam 450 saati · ayda 90 saati · 17,60 TL · ayda 60 saat · 17,60 TL · makam onayına · ayda 90 saati · 16,55 TL · 28,20 TL · 67,50 TL"
+   ]
+  },
+  {
+   "id": "113-28",
+   "madde": [],
+   "baslik": "K cetveli — fiilen çalışmadan ödeme ve mükerrer ödeme yasağı",
+   "hukum": "Denetimde fiilen fazla çalışma yapmayanlara ödeme yapıldığı tespit edilirse kanuni takibatla birlikte ödenen ücret bir katı fazlasıyla geri alınır; bu tutarın ceza bölümünün yarısı ödeme yapılan personelden, diğer yarısı mesai çizelgesini onaylayandan tahsil edilir; özel kanunlarına göre fazla çalışma ücreti alanlara bu hükümlere göre ayrıca ödenmez (K/III-A-4,5)",
+   "sinavda_boyle_yazarlar": [
+    "Cezanın tamamı personelden değil, yarısı onaylayan amirden alınır"
+   ],
+   "dogrusu": [
+    "fiilen fazla çalışma yapmayanlara · bir katı fazlasıyla · ceza bölümünün yarısı · diğer yarısı mesai çizelgesini onaylayandan · ayrıca ödenmez"
+   ]
+  },
+  {
+   "id": "113-29",
+   "madde": [],
+   "baslik": "K cetveli — aylık maktu fazla çalışma",
+   "hukum": "Belediyeler ve bağlı kuruluşlarda (iktisadi işletmeler hariç) zabıta ve itfaiye hizmetlerinde fiilen çalışan personele (destek hizmeti hariç) belediye meclisi kararıyla belirlenen tutar maktuen ödenir; tavan belediye nüfusuna göre: 10.000'e kadar 2.184, 10.001-50.000 2.336, 50.001-100.000 2.580, 100.001-250.000 2.915, 250.001-1.000.000 3.480, 1.000.001 üzeri ve Ankara-İstanbul-İzmir dışındaki büyükşehirler 4.045, Ankara-İstanbul-İzmir büyükşehir sınırları içi 5.371 TL (K/III-B-1); aylık maktu fazla çalışma ücreti alanlara ayrıca fazla çalışmaya yönelik başka ödeme yapılmaz; bu ücret görev sırasında/görevden dolayı yaralanma-sakatlanmada tedavi süresince, bir yılda toplamı 30 günü geçmeyen hastalık izinlerinde, itfaiyecilerin görevden hastalanmasında tedavi süresince, yurt içi hizmet içi eğitim ve geçici görevde ödenmeye devam eder; diğer hâllerde fiilen çalışılan süreyle orantılı ödenir (K/III-2,3)",
+   "sinavda_boyle_yazarlar": [
+    "Hastalık izninde ödeme yılda 30 günü geçmeyen izinlerle sınırlıdır; \"tüm izinlerde ödenir\" yanlıştır"
+   ],
+   "dogrusu": [
+    "zabıta ve itfaiye hizmetlerinde fiilen çalışan · belediye meclisi kararıyla · 2.184 · 2.336 · 2.580 · 2.915 · 3.480 · 4.045 · 5.371 TL · başka ödeme yapılmaz · bir yılda toplamı 30 günü geçmeyen hastalık izinlerinde · ödenmeye devam"
+   ]
+  },
+  {
+   "id": "113-30",
+   "madde": [
+    "28"
+   ],
+   "baslik": "K cetveli — diğer ödemeler (asker ve jandarmayı ilgilendirenler)",
+   "hukum": "375 s. KHK m.28/(A) ek tazminatın aylık tutarı erbaş ve erler için 2.548 TL'yi geçemez; m.28/(B) ek tazminat tavanı 1.130 TL, Cumhurbaşkanı %50'sine kadar artırabilir; 2155 s. Kanun uyarınca tayın bedelinin aylık tutarı (2.400) gösterge × memur aylık katsayısını geçemez; MSÜ ile JSGA atama jürilerinde her jüri üyeliği için (3.000) gösterge × katsayı, bir kişiye yılda altıyı geçmeyen jüri üyeliği; yarışma jürisinde asli jüri/raportör başına 14.094 TL'yi geçmemek (HMB görüşü alınarak kurumca), danışman jüri 1/2, yedek jüri 1/4, raportör yardımcısı 1/5; öğretim yılına hazırlık ödeneği birinci dönem sonundan önce başlayanlara %75, ikinci dönem sonundan önce başlayanlara %50 (K/IV)",
+   "sinavda_boyle_yazarlar": [
+    "Erbaş-er ek tazminatı tavanı 2.548 TL; 1.130 TL ise m.28/(B) tavanıdır ve %50 artırma yetkisi Cumhurbaşkanında"
+   ],
+   "dogrusu": [
+    "erbaş ve erler için 2.548 TL · 1.130 TL · Cumhurbaşkanı %50'sine kadar · tayın bedelinin · (2.400) gösterge × memur aylık katsayısı · JSGA · (3.000) gösterge × katsayı · yılda altıyı · 14.094 TL · 1/2 · 1/4 · 1/5 · %75 · %50"
+   ]
+  },
+  {
+   "id": "113-31",
+   "madde": [
+    "10",
+    "24",
+    "39"
+   ],
+   "baslik": "K cetveli — gösterge güncellemeleri ve gönüllü ödemesi",
+   "hukum": "442 s. Köy Kanunu (11.500) ve (8.500) göstergeleri 2026'da (14.640) ve (9.189); 2022 s. Kanun göstergeleri (4.860)→(5.253), (3.240)→(3.502), (7000)→(7.567), (8000)→(8.648), (9000)→(9.729); 4769 m.10 (3000)→(3.243); 5302 m.24 (6000)-(2200)→(6.026)-(2.226); 5393 m.39 göstergelerine 2.280 eklenir; 2828 m.32'deki ibare 50.000 gösterge × katsayı olarak uygulanır; denetimli serbestlik gönüllülerine günlük 118 TL, yıllık toplam 150.000 gün; Devlet tiyatroları edebi kurul toplantı ücreti 979 TL (toplantıda 3 kişi, yılda 6 toplantı) (K/IV)",
+   "sinavda_boyle_yazarlar": [
+    "Bu güncellemeler yalnız 1/1/2026-31/12/2026 dönemi için geçerlidir; kalıcı değildir"
+   ],
+   "dogrusu": [
+    "(14.640) ve (9.189) · 2.280 · 50.000 gösterge × katsayı · 118 TL · 150.000 gün · 979 TL"
+   ]
+  },
+  {
+   "id": "113-32",
+   "madde": [],
+   "baslik": "E cetveli — mal ve hizmet alım tertibinden ödeme limitleri",
+   "hukum": "Her bir alım için, ihtiyacın nereden ve hangi usulle temin edileceğine bakılmaksızın vergiler dâhil; menkul mal alımında 140.000 TL, gayrimaddi hak alımında 110.000 TL, menkul mal bakım-onarımında 140.000 TL, gayrimenkul bakım-onarımında 305.000 TL'yi aşan tutarlar \"(03) Mal ve Hizmet Alım Giderleri\" tertiplerinden ödenemez; \"(06) Sermaye Giderleri\"nde bu limitlerin uygulanmasında toplam proje ödeneği esas alınır; TSK, JGK ve SGK'nın (03) tertiplerine analitik bütçe sınıflandırmasına uygun tahsis edilen ödeneklerle yapılacak askerî amaçlı alımlarda bu limitler uygulanmaz (E/24)",
+   "sinavda_boyle_yazarlar": [
+    "Limitler vergiler dâhil ve her bir alım içindir; JGK'nın askerî amaçlı alımlarında uygulanmaz. Gayrimenkul onarımı 305.000, gayrimaddi hak 110.000 TL — karıştırılır"
+   ],
+   "dogrusu": [
+    "vergiler dâhil · menkul mal alımında 140.000 TL · gayrimaddi hak alımında 110.000 TL · menkul mal bakım-onarımında 140.000 TL · gayrimenkul bakım-onarımında 305.000 TL · \"(03) Mal ve Hizmet Alım Giderleri\" · toplam proje ödeneği · TSK, JGK ve SGK · askerî amaçlı alımlarda bu limitler uygulanmaz"
+   ]
+  },
+  {
+   "id": "113-33",
+   "madde": [
+    "98",
+    "99"
+   ],
+   "baslik": "E cetveli — askerî ve jandarma sosyal tesisleri, konut alımı",
+   "hukum": "TSK İç Hizmet Kanunu m.98-99'a göre işletilen tesis ve eğitim merkezleri ile JGK ve SGK'ya bağlı aynı mahiyetteki tesis ve eğitim merkezlerinin, GATA misafirhanelerinin, MİT sosyal tesislerinin, EGM polisevleri ve eğitim-kongre-moral eğitim merkezlerinin elektrik, su ve yakacak giderleri kurum bütçesinden ödenir; bu tesislerin 24. sıranın (d) bendindeki tutarın (305.000 TL) üçte ikisini aşan gayrimenkul onarım giderleri de bütçeden karşılanabilir (E/23); genel yönetim kapsamındaki idareler, döner sermayeler ve KİT'ler zorunlu ihtiyaç hâllerinde ve ancak Cumhurbaşkanlığının izniyle konut satın alabilir (E/25)",
+   "sinavda_boyle_yazarlar": [
+    "Bütçeden karşılanan kalemler elektrik, su ve yakacak (ve eşiği aşan onarım) ile sınırlıdır; konut alımı için izin makamı Cumhurbaşkanlığıdır"
+   ],
+   "dogrusu": [
+    "JGK ve SGK'ya bağlı aynı mahiyetteki tesis ve eğitim merkezlerinin · elektrik, su ve yakacak giderleri · üçte ikisini aşan · zorunlu ihtiyaç hâllerinde ve ancak Cumhurbaşkanlığının izniyle konut satın alabilir"
+   ]
+  },
+  {
+   "id": "113-34",
+   "madde": [],
+   "baslik": "E cetveli — Devlet mallarının sigortası",
+   "hukum": "Diğer tertiplerin esas giderine ilişkin sigorta dışında Devlet mallarının sigorta edilmemesi esastır; istisna: yanıcı-patlayıcı madde, gemi, uçak, helikopter ve ilaç depoları; dış ülkelerdeki temsilcilik binaları ve eşya; dış kuruluş taşıt sigortası; ayrılamayan sigorta-navlun; belediye itfaiye, ambulans, cenaze araçları kaskosu; sondaj-jeofizik araçları; TSK, JGK ve SGK envanterindeki, erbaş ve erlerce kullanılan teknik donanımı yüksek ve özel nitelikli askerî araçların kasko giderleri Kantin Yönetmeliklerine göre kantin gelirlerinden ödenir (E/18)",
+   "sinavda_boyle_yazarlar": [
+    "Erbaş-erlerin kullandığı özel askerî araç kaskosu kantin gelirlerinden; genel bütçeden değil"
+   ],
+   "dogrusu": [
+    "Devlet mallarının sigorta edilmemesi esastır · TSK, JGK ve SGK envanterindeki, erbaş ve erlerce kullanılan teknik donanımı yüksek ve özel nitelikli askerî araçların kasko giderleri Kantin Yönetmeliklerine göre kantin gelirlerinden"
+   ]
+  },
+  {
+   "id": "113-35",
+   "madde": [],
+   "baslik": "E cetveli — yabancı dil kursları",
+   "hukum": "Üst yönetim görevlileri, mesleğe özel yarışma sınavıyla alınanlar ve iç denetçilerden bakan onayıyla uygun görülenlerin mesai dışı dil kursları; mesleki eğitim ön koşulu dil kursları; MSB yurt dışı kadroları için 100 kişi, JGK ve SGK yurt dışı kadroları için İçişleri Bakanlığınca belirlenecek dillerde 20 kişiyi geçmemek üzere gönderilecekler için ders ücretlerinin %50'si, gelir vergisi tevkifatı yapılmaksızın, personel başına aylık 3.600 TL'yi geçmemek üzere ve önceki yıllar dâhil en çok 9 aya kadar ödenir (E/20)",
+   "sinavda_boyle_yazarlar": [
+    "JGK ve SGK kontenjanı 20 kişi (MSB 100); ödeme ücretin %50'si, tavan 3.600 TL, süre 9 ay"
+   ],
+   "dogrusu": [
+    "MSB yurt dışı kadroları için 100 kişi · JGK ve SGK yurt dışı kadroları için İçişleri Bakanlığınca belirlenecek dillerde 20 kişiyi · %50'si · aylık 3.600 TL · en çok 9 aya kadar"
+   ]
+  },
+  {
+   "id": "113-36",
+   "madde": [],
+   "baslik": "E cetveli — eğitim, kurs ve yabancı eğitici giderleri",
+   "hukum": "Bilimsel toplantılara ve bakan veya yetkili makam onayıyla belirlenen personelin görevle doğrudan ilgili kurslarına katılma giderleri kurum bütçesinden (E/22-a); MSB birlikleri ile JGK, SGK ve EGM'nin eğitim ihtiyacı için uluslararası kuruluşlardan veya ihtisas sahibi yabancı eğiticilere ödenecek ücret HMB'nin uygun görüşü üzerine ilgisine göre MSB veya İçişleri Bakanlığınca belirlenecek esaslarla kurum bütçesinden (E/22-b); lisansüstü için yurt dışına gönderilenlerin zorunlu dil kursu giderleri bir sömestre, sömestre yoksa 3 aya kadar (E/16); yurt dışı görev yolculuğunun zorunlu kıldığı belge-işlem, kayıt, aidat giderleri ilgili tertiplerden (E/17); askerî hava trafik kontrolörlerinin dil sınavı ücretleri MSB bütçesinden (E/21)",
+   "sinavda_boyle_yazarlar": [
+    "JGK için yabancı eğitici ücret esaslarını belirleyen İçişleri Bakanlığıdır (MSB değil); HMB yalnız uygun görüş verir"
+   ],
+   "dogrusu": [
+    "JGK, SGK ve EGM · HMB'nin uygun görüşü · MSB veya İçişleri Bakanlığınca · bir sömestre · 3 aya kadar"
+   ]
+  },
+  {
+   "id": "113-37",
+   "madde": [],
+   "baslik": "E cetveli — erbaş, er ve öğrencilerin yol-konaklama giderleri",
+   "hukum": "Er ve erbaşlar, askerî öğrenciler ve Jandarma ve Sahil Güvenlik Akademisi öğrencilerinden hava değişimi, muayeneye sevk, celp-terhis, kurye, kurs ve geçici görevle görevlendirilenlere yerel rayice göre konaklama ve Askeralma Yönetmeliğine göre nakil ücretleri; askerî ceza ve tutukevlerinden tahliye edilenlerin kıtalarına sevk vasıta ücretleri; Kabul Toplanma Merkezi sevk giderleri; kıta intikalleri; kaçak eşya ve hayvanların taşıma, bakım ve koruma giderleri, para taşıma, geçiş ücretleri vb. kurum bütçesinin ilgili tertibinden ödenir (E/31)",
+   "sinavda_boyle_yazarlar": [
+    "Bu giderler kişiye harcırah kanunuyla değil, konaklamada yerel rayiç, nakilde Askeralma Yönetmeliği esasıyla ödenir"
+   ],
+   "dogrusu": [
+    "Jandarma ve Sahil Güvenlik Akademisi öğrencilerinden · kaçak eşya ve hayvanların taşıma, bakım ve koruma giderleri · kurum bütçesinin ilgili tertibinden"
+   ]
+  },
+  {
+   "id": "113-38",
+   "madde": [
+    "7",
+    "4"
+   ],
+   "baslik": "E cetveli — arızi işlerde çalıştırma ve ders ücreti vizesi",
+   "hukum": "Kurumlar m.7/1-(a) kapsamındaki işlerde vize almaksızın ve bir ayı aşmamak üzere kişi çalıştırıp ödeme yapabilir; prim yükümlülüğü sürenlere 4857 ve 5510 uygulanmaz; sürmeyenlere 657 m.4/B'nin bir yıldan az süreli hizmet hükümleri uygulanır ve günlük brüt ücret işçi günlük brüt asgari ücretini geçemez; bir mali yılda aynı kişiye aynı kurumdan en fazla 3 ay (MTA arazi etüt-sondaj 4 ay); TSK, JGK ve SGK'nın yurt dışındaki birliklerinde insani amaçla çalıştırılan yerel personel için süre kaydı aranmaz (E/33); resmî görevi olmayanlara ders ücreti karşılığı görevlendirme Cumhurbaşkanlığınca yapılacak yıllık saat vizesi ile sınırlıdır (E/29)",
+   "sinavda_boyle_yazarlar": [
+    "Yıllık üst sınır 3 aydır (MTA 4 ay); yurt dışındaki jandarma birliklerinin yerel personelinde süre sınırı yoktur"
+   ],
+   "dogrusu": [
+    "vize almaksızın ve bir ayı aşmamak · işçi günlük brüt asgari ücretini · en fazla 3 ay · 4 ay · TSK, JGK ve SGK'nın yurt dışındaki birliklerinde insani amaçla · süre kaydı aranmaz · Cumhurbaşkanlığınca yapılacak yıllık saat vizesi"
+   ]
+  },
+  {
+   "id": "113-39",
+   "madde": [],
+   "baslik": "E cetveli — yurt dışı görev, konut ve stajyer memurluk",
+   "hukum": "Yurt dışı kadrolara sürekli görevle atanan 657 ve 926'ya tabi personelin kiraladığı konutta kira bedelinin (mefruşat, fatura, garaj vb. hariç; möbleli ise kiranın ayrıca %20'si hariç) net ödemelerinin %25'ini aşan kısmının HMB'ce uygun görülen tutarı bütçeden (E/19-a); kurumca kiralanan konut tahsis edilirse kiranın net ödemelerin %25'ine kadar olan kısmının tamamı, aşan kısmın %20'si personelden tahsil edilir (E/19-b); kamu görevlileri YDS'den İngilizce, Fransızca veya Almanca (A) düzeyi şartı ve Bakan onayıyla uluslararası kuruluşların Türkiye'deki temsilciliklerinde iki yıla kadar stajyer memur olarak görevlendirilebilir, süre bir katına kadar uzatılabilir; fark ödemesi 104.000 gösterge × katsayı esasıyla (E/7)",
+   "sinavda_boyle_yazarlar": [
+    "Eşik %25, kurum konutunda aşan kısımdan alınan pay %20; stajyer memurlukta dil şartı (A) düzeyidir"
+   ],
+   "dogrusu": [
+    "%25'ini aşan · %20'si · (A) düzeyi · iki yıla kadar · bir katına kadar · 104.000 gösterge × katsayı"
+   ]
+  },
+  {
+   "id": "113-40",
+   "madde": [],
+   "baslik": "E cetveli — özel ödenekler ve Cumhurbaşkanı yetkileri",
+   "hukum": "SBB bütçesindeki özellikli giderler ödeneğinden mahkeme harç-giderleri, satış aidatı, ödenti ve ikramiyeler için aktarmaya; ilama bağlı borçlar ödeneğinden aktarmaya ve bu tertibe tahsis edilen ödeneğin bir katına kadar ödenek eklemeye Cumhurbaşkanı yetkili (E/37); Adalet Bakanlığı tebligat giderleri yetmezse 2025 yargı para cezaları gelirinin %50'sini geçmemek üzere ödenek eklemeye Cumhurbaşkanı yetkili (E/38); İç Denetim Koordinasyon Kurulu giderleri HMB Kamu Mali Yönetim ve Dönüşüm Genel Müdürlüğü bütçesinden, iç denetim ödeneklerinin harcama yetkisi İç Denetim Birimi Başkanlığı olan idarelerde iç denetim birimi başkanında (E/36); 5217 kapsamındaki gelir tahsili ve ödenek kullanımı usullerini belirlemeye Hazine ve Maliye Bakanı yetkili (E/35); NATO projesi personel ücretleri karşılığı NATO'dan geldiği sürece kurum bütçesinden (E/30); Avrupa İnsan Hakları Mahkemesi ve İnsan Hakları Tazminat Komisyonunca hükmedilen tazminat ödeneği yetmezse bu tertiplere bir katına kadar ödenek eklemeye Cumhurbaşkanı yetkili (E/58); HMB bütçesinden Savunma Sanayii Destekleme Fonuna kaynak aktarmaya Hazine ve Maliye Bakanı yetkili (E/61); genel bütçeli idarelerin Kamu İşverenleri Sendikalarına 2026 üyelik aidatları HMB bütçesindeki tertipten ödenir, bu tertibe hiçbir şekilde aktarma yapılamaz (E/47); evrensel hizmet ve Çevre Kanunu gelir fazlalarını ödenek eklemeye Cumhurbaşkanı yetkili (E/46, E/51)",
+   "sinavda_boyle_yazarlar": [
+    "İç denetim ödeneklerinde harcama yetkilisi üst yönetici değil iç denetim birimi başkanıdır"
+   ],
+   "dogrusu": [
+    "ilama bağlı borçlar · bir katına kadar · Cumhurbaşkanı · yargı para cezaları gelirinin %50'sini · iç denetim birimi başkanı · Hazine ve Maliye Bakanı · Avrupa İnsan Hakları Mahkemesi · bir katına kadar · Savunma Sanayii Destekleme Fonuna · Hazine ve Maliye Bakanı · Kamu İşverenleri Sendikalarına · hiçbir şekilde aktarma yapılamaz"
+   ]
+  },
+  {
+   "id": "113-41",
+   "madde": [],
+   "baslik": "E cetveli — diğer özel esaslar",
+   "hukum": "Tarımsal destekler T.C. Ziraat Bankası aracılığıyla ödenebilir (E/1); özel bütçelilere Hazine yardımı merkez muhasebe birimlerince ödenir (E/3); KKTC yatırım projeleri için aktarma Cumhurbaşkanı, Lefkoşa Büyükelçiliği hesabına gönderilen tutarların kullanım şartları iki ülke arasındaki protokolle (E/4); Barışı Destekleme ve Koruma Harekâtı ödeneklerinin usul ve esasları Cumhurbaşkanlığınca (E/32); MEB'e ücretsiz ders kitabı 7.775.000.000, taşımalı eğitim öğle yemeği 14.500.000.000, özel eğitim öğrencileri ücretsiz taşıma 10.799.000.000 olmak üzere toplam 33.074.000.000 TL'ye kadar aktarmaya Cumhurbaşkanı yetkili (E/39); YÖK gelirlerinden yurt dışına araştırma desteği aylık 52.000 TL'yi geçemez, (g)-(h) en fazla dokuz ay, (ı) bir-üç ay; dil kursu desteği öğretim elemanı başına 24.000 TL; (g),(h),(ı) kapsamında gidenlere harcırah ödenmez, yalnız gidiş-dönüş yol masrafı (E/53); AB mali işbirliğinde sözleşme bütçesinin %15'ini aşmayan ilave tutarlar Ulusal Fondan (E/54); şehit yakınları ile harp ve vazife malullerinin konut edinmesi için ödenek Toplu Konut İdaresi'ne aktarılır (E/64-b); üretimi birden fazla yıla yayılan deniz taşıtlarının bedelleri (T) cetvelinde gösterilmesine gerek olmadan 06.01.40.04 kodundan ödenir (E/45); kalkınma ajansı ve bölge kalkınma idaresi destekleri yararlanıcı idarelerin bütçesine gelir kaydedilmeksizin özel hesapta izlenir, maliyeti 70.000.000 TL'yi aşan projeler Yatırım Programına müstakil proje olarak teklif edilir (E/13); SBB'nin araştırma altyapılarında görevlendirdiği panelist-hakemlere ödeme (60.000) gösterge × katsayıyı geçemez (E/15); 6660 sayılı Kanunla yurt içinde yetiştirilen üstün yetenekli çocuklara (2.000) gösterge × katsayı aylık (E/26); Diyanet'ten İSAM'a 2026 Ocak ayında 160.000.000 TL yardım (E/62); Devletçe karşılanan öğrenci katkı payları HMB bütçesinden yükseköğretim kurumlarına ödenir (E/56)",
+   "sinavda_boyle_yazarlar": [
+    "Şehit yakınlarının konut ödeneği doğrudan ailelere değil TOKİ'ye aktarılır; YÖK yurt dışı desteğinde harcırah ödenmez"
+   ],
+   "dogrusu": [
+    "T.C. Ziraat Bankası · Cumhurbaşkanı · iki ülke arasındaki protokolle · Cumhurbaşkanlığınca · 33.074.000.000 TL · 52.000 TL · dokuz ay · bir-üç ay · 24.000 TL · harcırah ödenmez · %15'ini · Toplu Konut İdaresi · deniz taşıtlarının · (T) cetvelinde gösterilmesine gerek olmadan · gelir kaydedilmeksizin özel hesapta · 70.000.000 TL · (60.000) gösterge × katsayı · (2.000) gösterge × katsayı · İSAM · 160.000.000 TL"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Jandarma Genel Komutanının yurt içi gündeliği 925 TL'dir"
+   ],
+   "dogru": "900 TL; 925 TL TBMM Başkanı ve Cumhurbaşkanı Yardımcılarınındır (H cetveli)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Devlet mallarının sigorta edilmesi esastır"
+   ],
+   "dogru": "Sigorta edilmemesi esastır; istisnalar sayılıdır (E cetveli 18)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Jandarma Genel Komutanlığının askerî amaçlı alımlarında da 140.000 TL menkul mal limiti uygulanır"
+   ],
+   "dogru": "TSK, JGK ve SGK'nın askerî amaçlı alımlarında bu limitler uygulanmaz (E cetveli 24)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Fiilen fazla çalışma yapmayana yapılan ödemenin cezası tamamen personelden alınır"
+   ],
+   "dogru": "Ceza kısmının yarısı personelden, yarısı mesai çizelgesini onaylayandan (K cetveli III-A-4)"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Yabancı dil kursunda JGK ve SGK için kontenjan 100 kişidir"
+   ],
+   "dogru": "20 kişi; 100 kişi MSB içindir (E cetveli 20)"
+  }
+ ]
+}

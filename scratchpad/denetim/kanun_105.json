@@ -1,0 +1,73 @@
+{
+ "kanun_id": 105,
+ "ad": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\personel\\pack_105.json",
+ "kartlar": [
+  {
+   "id": "105-0",
+   "madde": [
+    "24",
+    "2692",
+    "23"
+   ],
+   "baslik": "Dayanak",
+   "hukum": "2803 sayılı Kanun m.24, 2692 sayılı Sahil Güvenlik Komutanlığı Kanunu m.23 ve JGK-SGK Personel Yönetmeliği m.61 (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kıyafet Yönetmeliği m.55\" dayanağı Kıyafet Yönetmeliğinindir"
+   ],
+   "dogrusu": [
+    "Personel Yönetmeliği m.61"
+   ]
+  },
+  {
+   "id": "105-1",
+   "madde": [
+    "205",
+    "6"
+   ],
+   "baslik": "Genel esaslar",
+   "hukum": "Başvuru asıl hak sahibi personel tarafından kimlik bilgisi girmeye yetkili birime (vefat-gaiplik veya kaçınma hâlinde aile fertleri doğrudan); hak sahibine asıl statüsü esas alınarak tek kart, aynı anda birden fazla kart bulunamaz, diğer hak sahiplikleri özel durum hanesine yazılır; hak sahipliğini yitiren başka personel üzerinden kart alamaz; kaybedene yeni kart, çalışan personel kusurundan şüphe varsa disiplin soruşturması; yeni kart tanzim edilene kadar görev belgesi; eski kart iade edilmeden yenisi verilmez (kayıp-çalıntı ücret belgesiyle verilir); 5434 geçici m.205 kapsamında istifa edenlere emekli kimlik kartı, aile fertlerine daimi/günübirlik giriş kartı; mecburi hizmeti tamamlamış ama emeklilik hakkı kazanmamış müstafi subay-astsubay-uzman jandarmaların yalnız kendilerine ve eşlerine günübirlik giriş kartı (vefatta eşinin kartı son kullanma tarihine kadar); mecburi hizmeti tamamlamamış müstafiler ve çekilmiş sayılanlara kart verilmez; kartların basımı TSK Akıllı Kart Yönetim Merkezi Başkanlığı, dağıtım ve yönetimi JGK/SGK; JSGA Başkanı ve Dekanı için MSÜ emsal uygulama; meslekten çıkarmayı gerektiren ceza alan emekliye emekli kartı verilmez (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mecburi hizmetini tamamlamadan istifa edene günübirlik kart verilir\" yanlış",
+    "Bir hak sahibi iki statüsü için iki kart alabilir"
+   ],
+   "dogrusu": [
+    "Tek kart (m.6)"
+   ]
+  },
+  {
+   "id": "105-2",
+   "madde": [
+    "48",
+    "7"
+   ],
+   "baslik": "Geçici geri alma",
+   "hukum": "Kartlar; tutuklanma, hapis cezasının infazı, mahkemece güvenlik tedbiri olarak geçici meslekten/memuriyetten men infazı, çıkarma cezasını gerektiren suçtan veya 657 m.48/A-5 suçlarından görevden uzaklaştırma, genel veya yerel seçim için istifa, diğer hizmet sınıflarındaki memur ve işçiler için silahaltına alınma hâllerinde personelin görev yaptığı birimce muhafaza edilmek üzere geçici olarak geri alınır; bu suçlardan uzaklaştırılan/tutuklu/hükümlü personel emekli olursa emekli kartı, istifa ederse günübirlik giriş kartı verilmez, suçsuz bulunduğunu belgeleyince verilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Seçim için istifa eden kartını kalıcı kaybeder\" yanlış; geçici",
+    "Tutuklanan personelin kartı sürekli geri alınır"
+   ],
+   "dogrusu": [
+    "Geçici (m.7)"
+   ]
+  },
+  {
+   "id": "105-3",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Sürekli geri alma",
+   "hukum": "Kartlar; (a) mahkeme kararıyla teşkilattan/memuriyetten çıkarılma, rütbenin geri alınması, kamu hizmetlerinden yasaklılık; (b) emekli-müstafi personelin çıkarmayı gerektiren suçtan mahkûmiyeti; (c) Yüksek Disiplin Kurulu kararıyla ayırma; (ç) doğumla vatandaş olup İçişleri izniyle çıkanlar hariç T.C. vatandaşlığından çıkma/çıkarılma; (d) yedek subayların terhisi; (e) uzman erbaşların emeklilik hakkı kazanmadan ilişiğinin kesilmesi; (f) emekli sivil personelin kamu hizmetinden yasaklanması; (g) öğrencilerin JSGA'dan ilişiğinin kesilmesi; (ğ) toplumun genel ahlâk kurallarına ve Türk aile yapısına aykırı hayat tarzı benimseme hâllerinde sürekli geri alınır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yedek subayın terhisi geçici geri alma hâlidir\" yanlış; sürekli",
+    "Yurt dışında lisansüstü eğitim kartın sürekli geri alınma sebebidir",
+    "Uzman erbaşın emeklilik hakkı kazanmadan ilişiğinin kesilmesi geçici geri almadır"
+   ],
+   "dogrusu": [
+    "Değildir (m.8)",
+    "Sürekli (m.8)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,144 @@
+{
+ "kanun_id": 35,
+ "ad": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_35.json",
+ "kartlar": [
+  {
+   "id": "35-0",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Özel güvenlik komisyonu",
+   "hukum": "Vali yardımcısı başkanlığında; il emniyet müdürlüğü, il jandarma komutanlığı, ticaret odası ve sanayi odası temsilcilerinden oluşur; sanayi odası yoksa ticaret ve sanayi odası temsilcisi katılır; izin için başvuran kişi veya kuruluşun temsilcisi ilgili toplantıya üye olarak katılır; kararlar oy çokluğuyla, eşitlikte başkanın tarafı çoğunluk, çekimser oy kullanılamaz (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"çekimser oy kullanılabilir\" ya da başkan \"vali\" denir",
+    "Komisyonda çekimser oy kullanılabilir"
+   ],
+   "dogrusu": [
+    "Kullanılamaz (m.4)"
+   ]
+  },
+  {
+   "id": "35-1",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Şirket faaliyet izni",
+   "hukum": "Şirketlerin özel güvenlik alanında faaliyeti İçişleri Bakanlığının iznine tâbidir; hisseler nama yazılı olmalı ve faaliyet alanı münhasıran koruma ve güvenlik olmalıdır; şubeler bir ay içinde Bakanlığa ve valiliğe, hisse devirleri bir ay içinde Bakanlığa bildirilir; yabancıların şirket kurması mütekabiliyete bağlıdır; yöneticiler lisans mezunu ve temel eğitimli olmalı, yalnız bir faaliyet izin belgesinde yönetici olabilir; on beş ve üzeri görevli çalıştırılan yerlerde en az önlisans mezunu bir güvenlik sorumlusu belirlenir; üçüncü kişilere verilecek hizmet hizmetin başladığı gün mesai bitimine kadar valiliğe yazılı bildirilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "faaliyet izni \"valilik\"e verilir"
+   ],
+   "dogrusu": [
+    "İçişleri Bakanlığının iznine · nama yazılı · münhasıran koruma ve güvenlik · bir ay · mütekabiliyete · lisans mezunu · bir · on beş ve üzeri · önlisans mezunu · güvenlik sorumlusu · hizmetin başladığı gün mesai bitimine kadar"
+   ]
+  },
+  {
+   "id": "35-2",
+   "madde": [
+    "90",
+    "168",
+    "24"
+   ],
+   "baslik": "Görevlinin yetkileri",
+   "hukum": "Koruduğu alana girmek isteyenleri duyarlı kapıdan geçirme, üstünü dedektörle, eşyasını X-ray'den geçirme; toplantı, konser, spor müsabakası, cenaze ve düğün törenlerinde kimlik sorma ve aynı kontroller; CMK m.90'a göre yakalama; görev alanında yakalama emri veya mahkûmiyet kararı bulunanları yakalama ve arama; yangın, deprem gibi afet ve imdat istenmesi hâlinde görev alanındaki işyeri ve konutlara girme; hava meydanı, liman, gar gibi toplu ulaşım tesislerinde kimlik sorma ve kontrol; genel kolluğa derhâl bildirmek şartıyla suç teşkil eden, delil olabilecek veya tehlike doğurabilecek eşyayı emanete alma; terk edilmiş ve bulunmuş eşyayı emanete alma; kişinin vücut ve sağlığı için mevcut tehlikeden korunması amacıyla yakalama; olay yerini ve delilleri koruma ve bu amaçla CMK m.168'e göre yakalama; Medenî Kanun, Borçlar Kanunu ve TCK m.24-25'e göre zor kullanma (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"elle üst araması yapabilir\" veya \"gözaltına alabilir\" denir",
+    "Özel güvenlik elle üst araması yapabilir"
+   ],
+   "dogrusu": [
+    "Dedektörle arama; elle arama yetkisi yok (m.7)"
+   ]
+  },
+  {
+   "id": "35-3",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Görevlide aranan şartlar",
+   "hukum": "Türkiye Cumhuriyeti vatandaşı olmak; silahsız görev için en az sekiz yıllık ilköğretim veya ortaokul, silahlı görev için en az lise veya dengi okul mezunu olmak; 18 yaşını doldurmuş olmak; kasten işlenen suçtan bir yıl veya daha fazla hapis cezasına mahkûm olmamak; affa uğramış olsa bile Devletin güvenliğine, anayasal düzene, özel hayata ve cinsel dokunulmazlığa karşı suçlar ile uyuşturucu, zimmet, irtikâp, rüşvet, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat, kaçakçılık ve fuhuş suçlarından mahkûm olmamak veya bu suçlardan HAGB kararı verilmemiş olmak; Devletin güvenliğine, anayasal düzene, özel hayata, cinsel dokunulmazlığa karşı suçlar ile uyuşturucu suçlarından devam eden kovuşturma bulunmamak; görevi engelleyecek vücut ve akıl hastalığı bulunmamak; temel eğitimi başarıyla tamamlamış olmak; güvenlik soruşturması olumlu olmak (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "silahlı için \"en az 21 yaş\" veya \"lisans mezunu\" denir — 2026'da tam bu çeldiriciler vardı",
+    "Silahlı görevli olmak için 21 yaşını doldurmak gerekir",
+    "Silahsız görevli için lise mezunu olmak şarttır"
+   ],
+   "dogrusu": [
+    "18 yaş (m.10)",
+    "İlköğretim/ortaokul yeter; lise silahlı içindir (m.10)"
+   ]
+  },
+  {
+   "id": "35-4",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Kovuşturma engeli",
+   "hukum": "Sayılan suçlardan (Devletin güvenliği, anayasal düzen, özel hayat, cinsel dokunulmazlık, uyuşturucu) devam etmekte olan kovuşturma bulunması görevli olmaya engeldir; hırsızlık, dolandırıcılık gibi diğer suçlarda engel olan şey mahkûmiyet veya HAGB'dir, devam eden kovuşturma değil (m.10/d-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"dolandırıcılıktan devam eden kovuşturma engeldir\" denir — çıkmış soruda doğru cevap haberleşmenin gizliliği (özel hayata karşı suç) idi",
+    "Dolandırıcılıktan devam eden kovuşturma görevli olmaya engeldir"
+   ],
+   "dogrusu": [
+    "Engel olan mahkûmiyet/HAGB; kovuşturma engeli beş suç grubuyla sınırlıdır (m.10)"
+   ]
+  },
+  {
+   "id": "35-5",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Eğitim",
+   "hukum": "Temel eğitim teorik, pratik ve silah eğitiminden oluşmak üzere yüz yirmi ders saatinden, yenileme eğitimi altmış ders saatinden az olamaz; güvenlikle ilgili fakülte ve yüksek okul mezunlarında silah eğitimi dışında temel eğitim aranmaz; genel kolluk ve MİT'ten emekli olanlar ile en az beş yıl çalışıp ayrılanlarda temel eğitim ve öğrenim şartı aranmaz; eğitimi İçişleri Bakanlığı veya Bakanlıktan izinli özel eğitim kurumları verir; yenileme eğitimi valiliğin izniyle hizmet yerinde verilebilir (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "temel eğitim 100 saat yapılır"
+   ],
+   "dogrusu": [
+    "yüz yirmi ders saatinden · altmış ders saatinden · silah eğitimi dışında · genel kolluk ve MİT'ten emekli olanlar ile en az beş yıl çalışıp ayrılanlarda · özel eğitim kurumları · valiliğin izniyle"
+   ]
+  },
+  {
+   "id": "35-6",
+   "madde": [
+    "17",
+    "20"
+   ],
+   "baslik": "Grev yasağı",
+   "hukum": "Özel güvenlik personeli greve katılamaz; grev yasağına uymayan görevliler altı ay süreyle özel güvenlik alanında görev alamaz (m.17, m.20/ı)",
+   "sinavda_boyle_yazarlar": [
+    "yaptırım \"kimlik iptali\" denir"
+   ],
+   "dogrusu": [
+    "greve katılamaz · altı ay"
+   ]
+  },
+  {
+   "id": "35-7",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Adlî suçlar",
+   "hukum": "İzinsiz görevli istihdam eden yöneticiler üç aydan bir yıla kadar hapis veya adlî para cezası; izinsiz faaliyet gösteren şirket kurucu ve yöneticileri ile izinsiz güvenlik birimi oluşturanlar ve izinsiz eğitim verenler üç aydan bir yıla kadar hapis ve beş bin güne kadar adlî para cezası, bunlar bir daha kurucu-yönetici olamaz; çalışma izni verilmeyen kişiyi istihdam edenler üç aydan bir yıla kadar hapis, silahlı çalıştırılmışsa ceza bir kat artırılır; malî sorumluluk sigortası yaptırmadan istihdam edenler her kişi için yüz elli gün adlî para cezası; izinsiz hizmet ilan ve reklamı yapanlar altı aya kadar hapis ve elli günden az olmamak üzere adlî para cezası (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "sigortasız çalıştırma \"idarî para cezası\" denir"
+   ],
+   "dogrusu": [
+    "üç aydan bir yıla kadar hapis veya adlî para cezası · üç aydan bir yıla kadar hapis ve beş bin güne kadar adlî para cezası · çalışma izni verilmeyen · silahlı çalıştırılmışsa ceza bir kat artırılır · malî sorumluluk sigortası · yüz elli gün"
+   ]
+  },
+  {
+   "id": "35-8",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İdarî yaptırımlar",
+   "hukum": "Kimlik kartını başkasına kullandıran yönetici ve görevliye ceza, kartı valilikçe iptal edilir ve bir daha bu alanda çalışamaz; hizmeti süresinde valiliğe bildirmeyen şirkete her bildirim için ceza; mülki amirin istediği ilave tedbirleri almayanlara ceza; mülki amirin veya birlikte görev yapılan genel kolluk amirinin emirlerini yerine getirmeyen ya da göreviyle bağlantılı öğrendiği suçu genel kolluğa bildirmeyen görevli ve yöneticiler bir yıl görev alamaz; denetimde belge vermeyen ve eksiklikleri gidermeyene ceza; görevliyi koruma hizmeti dışında çalıştıran, üniforma giydirmeyen veya izin dışı teçhizat giydirene her tespitte ceza; genel kolluğa karşı direnen, cebir kullanan veya tehdit eden, silahını kanuna aykırı veya görev alanı dışında kullanan, görevi dışında üniformayla toplantı ve gösteri yürüyüşüne katılan görevlinin kimlik kartı valilikçe iptal edilir ve bir daha çalışamaz; bu cezalar mahallî mülki amir tarafından verilir (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "kimlik kartını \"Bakanlık\" iptal eder ya da cezayı \"komisyon\" verir denir",
+    "Kimlik kartını İçişleri Bakanlığı iptal eder"
+   ],
+   "dogrusu": [
+    "Valilik (m.20)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

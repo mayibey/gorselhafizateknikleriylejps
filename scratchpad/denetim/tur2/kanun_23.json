@@ -1,0 +1,611 @@
+{
+ "kanun_id": 23,
+ "ad": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_23.json",
+ "kartlar": [
+  {
+   "id": "23-0",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Suç teşkil eden emir",
+   "hukum": "Konusu suç teşkil eden emir hiçbir surette yerine getirilmez; yerine getiren sorumluluktan kurtulamaz (m.10/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"yazılı olarak yinelenirse yerine getirilir\" kuralı suç emrine de uygulanır gibi gösterilir"
+   ],
+   "dogrusu": [
+    "Suç teşkil eden emir"
+   ]
+  },
+  {
+   "id": "23-1",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Mevzuata aykırı emir",
+   "hukum": "Ast yerine getirmez, aykırılığı emri verene bildirir; âmir ısrar edip emri yazıyla yinelerse emir yerine getirilir, sorumluluk emri verene aittir, durum bir üst âmire bildirilir (m.10/3)",
+   "sinavda_boyle_yazarlar": [
+    "sorumluluk asta yüklenir ya da \"üst âmire bildirilmez\" denir"
+   ],
+   "dogrusu": [
+    "Ast yerine getirmez …"
+   ]
+  },
+  {
+   "id": "23-2",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Emrin kıyafeti",
+   "hukum": "Emir resmî veya sivil kıyafetli olarak verilebilir; âmir gerekirse kurum kimliğiyle kendini tanıtır (m.10/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"emir yalnızca resmî kıyafetli olarak verilebilir\""
+   ],
+   "dogrusu": [
+    "Emrin kıyafeti"
+   ]
+  },
+  {
+   "id": "23-3",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Emrin şekli",
+   "hukum": "Emrin yazılı, sözlü veya sair usulle verilme takdiri âmire aittir (m.10/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"emir mutlaka yazılı verilir\" veya takdir asta bırakılır"
+   ],
+   "dogrusu": [
+    "Emrin şekli"
+   ]
+  },
+  {
+   "id": "23-4",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Emir silsilesi",
+   "hukum": "Emirler kural olarak silsile ile verilir; acele ve zorunlu hallerde sıra atlanabilir, atlanan kademelere en kısa zamanda bilgi verilir, emri alan maiyet de âmirini haberdar eder (m.10/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"hiçbir şekilde silsile atlanamaz\""
+   ],
+   "dogrusu": [
+    "Emirler kural olarak silsile ile verilir …"
+   ]
+  },
+  {
+   "id": "23-5",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Astın itaati",
+   "hukum": "Ast, âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla yapar (m.8/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"her emri, doğruluğunu veya yasaya uygunluğunu sorgulamadan yerine getirir\" (çıkmışta bu şık yanlış cevaptır)"
+   ],
+   "dogrusu": [
+    "mevzuata uygun (m.8/2)"
+   ]
+  },
+  {
+   "id": "23-6",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Emre mütalaa yasağı",
+   "hukum": "Ast aldığı emirden dolayı âmirine mütalâada bulunmaz, mırıldanmaz, doğru bulmadığını sezdirecek hâl ve harekette bulunmaz (m.8/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"emri sesli şekilde tartışabilir\""
+   ],
+   "dogrusu": [
+    "Emre mütalaa yasağı"
+   ]
+  },
+  {
+   "id": "23-7",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Âmirin ödül-ceza takdiri",
+   "hukum": "Âmir, ödül veya cezada gerekçesiz takdir hakkı kullanmaz; her konuyu etraflıca değerlendirir, ölçülü ve hakkaniyetli davranır (m.9/11)",
+   "sinavda_boyle_yazarlar": [
+    "\"gerekçe göstermeksizin takdir hakkını kullanabilir\" (2024 MEBS'in doğru cevabı bu çarpıtmaydı)"
+   ],
+   "dogrusu": [
+    "Âmirin ödül-ceza takdiri"
+   ]
+  },
+  {
+   "id": "23-8",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Âmirin müdahalesi",
+   "hukum": "Âmir, maiyetine görevini icra ederken mecbur kalmadıkça müdahale etmez (m.9/8)",
+   "sinavda_boyle_yazarlar": [
+    "\"her aşamada müdahale eder\" veya \"hiçbir şekilde müdahale edemez\""
+   ],
+   "dogrusu": [
+    "Âmirin müdahalesi"
+   ]
+  },
+  {
+   "id": "23-9",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Âmirin maiyetle ilişkisi",
+   "hukum": "Görev esnasında ilişkiler daima ciddi, görev dışındaki görüşmeler samimi ve candandır; itaat ve itimadı bozacak davranıştan kaçınılır (m.9/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"görev esnasında da samimi ve candan olur\" diye ters çevrilir"
+   ],
+   "dogrusu": [
+    "Âmirin maiyetle ilişkisi"
+   ]
+  },
+  {
+   "id": "23-10",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Âmirin maiyeti tanıması",
+   "hukum": "Âmir, maiyetindeki personelin isimlerini, hususi vasıflarını, kişilik özelliklerini ve mizaçlarını ayrıntılarıyla bilir (m.9/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca sicil bilgilerini bilmesi yeterlidir\""
+   ],
+   "dogrusu": [
+    "Âmirin maiyeti tanıması"
+   ]
+  },
+  {
+   "id": "23-11",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Statüler arası hiyerarşi",
+   "hukum": "Subay diğer rütbeli personelin üstü; astsubay subayın astı, diğerlerinin üstü; uzman jandarma subay ve astsubayın astı, diğerlerinin üstüdür (m.6/1-3)",
+   "sinavda_boyle_yazarlar": [
+    "uzman jandarma ile astsubayın sırası yer değiştirilir"
+   ],
+   "dogrusu": [
+    "Statüler arası hiyerarşi"
+   ]
+  },
+  {
+   "id": "23-12",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Devlet memuru–rütbeli personel ilişkisi",
+   "hukum": "Aralarında astlık-üstlük ilişkisi yoktur, amir-maiyet ilişkisi vardır (m.6/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"astlık-üstlük ilişkisi vardır\" denir; en sevilen tuzaklardan"
+   ],
+   "dogrusu": [
+    "yoktur · vardır (m.6/6)"
+   ]
+  },
+  {
+   "id": "23-13",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Ceza dayanağı",
+   "hukum": "Disiplin cezası gerektiren hâller ve tatbik şekli 7068 sayılı Genel Kolluk Disiplin Hükümleri Kanununda yazılıdır (m.13/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"6413 sayılı TSK Disiplin Kanunu\" yazılır (çıkmışta bu şık yanlış cevaptır)"
+   ],
+   "dogrusu": [
+    "Ceza dayanağı"
+   ]
+  },
+  {
+   "id": "23-14",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Toplu müracaat yasağı",
+   "hukum": "Aynı konu ve şahısla ilgili toplu söz veya yazı ile müracaat yasaktır; aynı olay birden fazla kişiyi ilgilendiriyorsa her biri ayrı ayrı şikâyet hakkını kullanır (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"toplu müracaat serbesttir\" ya da \"ancak toplu yapılabilir\""
+   ],
+   "dogrusu": [
+    "Toplu müracaat yasağı"
+   ]
+  },
+  {
+   "id": "23-15",
+   "madde": [
+    "11"
+   ],
+   "baslik": "Şikâyette boşluk",
+   "hukum": "Maddede hüküm bulunmayan hâllerde Devlet Memurlarının Şikâyet ve Müracaatları Hakkında Yönetmelik uygulanır (m.11/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"TSK İç Hizmet Yönetmeliği uygulanır\" (çıkmışta bu şık yanlış cevaptır)"
+   ],
+   "dogrusu": [
+    "Şikâyette boşluk"
+   ]
+  },
+  {
+   "id": "23-16",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İzin planlaması",
+   "hukum": "İzinler göreve ve mümkün olduğunca personelin talep edeceği aylara göre önceden planlanır; olağandışı gelişmeler dışında plandaki gün ve sürelere sadık kalınır (m.14/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"personelin talebine göre planlanamaz, tek esas görevdir\""
+   ],
+   "dogrusu": [
+    "İzin planlaması"
+   ]
+  },
+  {
+   "id": "23-17",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İzin yılı",
+   "hukum": "İzin yılı her senenin ilk ayından itibaren başlar, izin süre ve sıraları ona göre düzenlenir (m.14/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"mali yılbaşında\" veya \"personelin göreve başlama tarihinde\" başlatılır"
+   ],
+   "dogrusu": [
+    "İzin yılı"
+   ]
+  },
+  {
+   "id": "23-18",
+   "madde": [
+    "14"
+   ],
+   "baslik": "İzni kullandıran",
+   "hukum": "İzinler yetkili âmir tarafından kullandırılır; bu tasarruf daha büyük âmirlerce kendi inisiyatiflerine alınamaz; âmir izinden feragate yönelik ima dahi yapamaz (m.14/3-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"büyük âmir izin yetkisini her zaman kendine alabilir\""
+   ],
+   "dogrusu": [
+    "İzni kullandıran"
+   ]
+  },
+  {
+   "id": "23-19",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Resmî kıyafet esası",
+   "hukum": "Rütbeli personel ve erlerin görev sırasında resmî kıyafetli olması esastır; hangi görevlerde sivil giyileceği görevin mahiyetine göre yetkili makamlarca tespit edilir (m.15/2, m.15/7)",
+   "sinavda_boyle_yazarlar": [
+    "sivil kıyafet serbestisi genelleştirilir"
+   ],
+   "dogrusu": [
+    "Rütbeli personel ve erlerin görev sırasında resmî kıyafetli olması esastır …"
+   ]
+  },
+  {
+   "id": "23-20",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Araç içinde şapka",
+   "hukum": "Resmî kıyafetle araçta yolculuk yaparken şapka çıkarılabilir; araç içinde birlik ve beraberlik esastır (m.15/9-f)",
+   "sinavda_boyle_yazarlar": [
+    "\"şapka çıkarılmaz\" (çıkmışta tam bu çarpıtma doğru cevaptı)"
+   ],
+   "dogrusu": [
+    "Araç içinde şapka"
+   ]
+  },
+  {
+   "id": "23-21",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Adli mercilere çağrı",
+   "hukum": "Tanıklık veya bilirkişilik dışında adlî yargı mercilerine çağrıldığında, tutuklu/hükümlü iken veya görevden uzaklaştırıldığı sürede resmî kıyafet giyilemez (m.15/8)",
+   "sinavda_boyle_yazarlar": [
+    "istisna tersine çevrilip \"tanıklık/bilirkişilik sebebiyle çağrıldığında giyemez\" denir (2024 MEBS'in doğru cevabı)"
+   ],
+   "dogrusu": [
+    "dışında (m.15/8)"
+   ]
+  },
+  {
+   "id": "23-22",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Pardösü ve yağmurluk",
+   "hukum": "Yakaları kaldırılmaz, kuşak ceplere sokulmaz, daima bağlı bulundurulur (m.15/9-i)",
+   "sinavda_boyle_yazarlar": [
+    "\"yakaları kaldırılır, kuşak cebe sokulur\""
+   ],
+   "dogrusu": [
+    "Pardösü ve yağmurluk"
+   ]
+  },
+  {
+   "id": "23-23",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Çanta",
+   "hukum": "Resmî kıyafetle sadece koyu renk ve sade desenli çantalar sol elde taşınabilir (m.15/9-k)",
+   "sinavda_boyle_yazarlar": [
+    "\"sağ elde\" veya \"her renk çanta\" denir"
+   ],
+   "dogrusu": [
+    "sol elde (m.15/9-k)"
+   ]
+  },
+  {
+   "id": "23-24",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Kimlik kartı",
+   "hukum": "Güvenlik ve istihbarata karşı koyma gibi istisnai durumlar dışında, resmî ve sivil hâlde her zaman üzerinde bulundurulur; yetkili makam isterse gösterilmesi zorunludur (m.15/10)",
+   "sinavda_boyle_yazarlar": [
+    "\"sadece resmî kıyafetliyken taşınır\""
+   ],
+   "dogrusu": [
+    "Güvenlik ve istihbarata karşı koyma gibi istisnai durumlar dışında …"
+   ]
+  },
+  {
+   "id": "23-25",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Esas duruşa geçme",
+   "hukum": "Âmir veya üst astın bulunduğu yere gelirse derhal ayağa kalkılır ve esas duruşa geçilir; âmir \"otur\" veya \"rahat\" komutunu vermeden esas duruş bozulmaz (m.17/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"bir süre sonra kendiliğinden bozulabilir\""
+   ],
+   "dogrusu": [
+    "Esas duruşa geçme"
+   ]
+  },
+  {
+   "id": "23-26",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Esas duruşta yön",
+   "hukum": "Âmirle konuşurken hemen esas duruşa geçilir, baş çevrilmez; âmir yan taraftaysa yerinde dönüşle cephe âmire çevrilir (m.17/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"cephe sabit tutulur, baş âmirin bulunduğu yöne çevrilir\" (çıkmışta bu şık yanlış cevaptır)"
+   ],
+   "dogrusu": [
+    "baş çevrilmez (m.17/4)"
+   ]
+  },
+  {
+   "id": "23-27",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Devlet memuru ve esas duruş",
+   "hukum": "Devlet memurları esas duruşa geçmez, ancak âmirleri karşısında saygılı bir duruş sergilemek zorundadır (m.17/7)",
+   "sinavda_boyle_yazarlar": [
+    "\"devlet memurları da esas duruşa geçer\" ya da \"hiçbir yükümlülüğü yoktur\""
+   ],
+   "dogrusu": [
+    "Devlet memuru ve esas duruş"
+   ]
+  },
+  {
+   "id": "23-28",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Selam sırası",
+   "hukum": "Ast üstten önce selam verir; aynı rütbedekiler veya rütbeyi ayırt edemeyenler birbirini beklemeden selamlar; üst selamlamayı bitirmeden ast bitiremez (m.18/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"üst önce selam verir\" veya \"ast, üst bitirmeden bitirebilir\""
+   ],
+   "dogrusu": [
+    "Selam sırası"
+   ]
+  },
+  {
+   "id": "23-29",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Sivil kıyafet ve selam",
+   "hukum": "Sivil kıyafetli olmak selam verilmesine mani değildir; âmir sivil dahi olsa tanınıyorsa veya kimliğini ibraz etmişse esas duruşa geçilip selam verilir (m.18/3, m.18/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"sivil kıyafetliyken selam zorunlu değildir\""
+   ],
+   "dogrusu": [
+    "Sivil kıyafet ve selam"
+   ]
+  },
+  {
+   "id": "23-30",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Millî marşta duruş",
+   "hukum": "Millî marş çalınırken açık yerde şapkalı, kapalı yerde şapkasız olarak cephe marşın çalındığı yöne dönülüp saygı duruşunda bulunulur (m.18/11)",
+   "sinavda_boyle_yazarlar": [
+    "\"açık ve kapalı yerlerde şapkasız\" (2024 MEBS'in doğru cevabı bu çarpıtmaydı)"
+   ],
+   "dogrusu": [
+    "açık yerde şapkalı, kapalı yerde şapkasız (m.18/11)"
+   ]
+  },
+  {
+   "id": "23-31",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Cephe selamı",
+   "hukum": "Cumhurbaşkanına, sancağa, yabancı devlet başkanları ile sancaklarına ve cenazeye cephe selamı verilir (m.18/10)",
+   "sinavda_boyle_yazarlar": [
+    "listeye \"birlik komutanı\" eklenir veya cenaze çıkarılır"
+   ],
+   "dogrusu": [
+    "Cephe selamı"
+   ]
+  },
+  {
+   "id": "23-32",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Eldivenle selam",
+   "hukum": "Tören birliklerindeki personel hariç eldivenle selamlama yapılmaz (m.18/9)",
+   "sinavda_boyle_yazarlar": [
+    "istisna kaldırılıp \"her hâlde eldivenle selam verilebilir\" denir"
+   ],
+   "dogrusu": [
+    "Eldivenle selam"
+   ]
+  },
+  {
+   "id": "23-33",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Devlet memuru ve selamlama",
+   "hukum": "Devlet memurları selamlamadan muaftır, ancak âmirlerine karşı saygılı duruşunu korumakla yükümlüdür (m.18/16)",
+   "sinavda_boyle_yazarlar": [
+    "muafiyet mutlak gösterilip saygı yükümü silinir"
+   ],
+   "dogrusu": [
+    "Devlet memuru ve selamlama"
+   ]
+  },
+  {
+   "id": "23-34",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Ahlaki ve manevi vasıflar",
+   "hukum": "\"Bir vücut gibi çalışmak\" = emel ve fikir birliği; \"ölmekten çekinmemek, fedakârlıkla hareket\" = canını esirgememek; \"tehlikeden korkmayıp pek yürekli olmak\" = cesaret ve şecaat; \"mevzuat ve emirlerin dışına çıkmamak\" = itaat; \"zorluklara katlanıp usanç göstermemek\" = sebat ve mukavemet (m.19/4)",
+   "sinavda_boyle_yazarlar": [
+    "tanımlar birbirine kaydırılır; özellikle cesaret ve şecaat ↔ canını esirgememek karıştırılır"
+   ],
+   "dogrusu": [
+    "\"Bir vücut gibi çalışmak\" = emel ve fikir birliği …"
+   ]
+  },
+  {
+   "id": "23-35",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Basına bilgi verme",
+   "hukum": "Personel kamu görevleri hakkında basına bilgi, yazı, demeç veremez; bu bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilir (m.22/1)",
+   "sinavda_boyle_yazarlar": [
+    "yetki \"birlik komutanı\" veya \"il jandarma komutanı\" olarak gösterilir"
+   ],
+   "dogrusu": [
+    "Basına bilgi verme"
+   ]
+  },
+  {
+   "id": "23-36",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Yayın izni",
+   "hukum": "Siyaset hariç bilimsel, tarihi, iktisadi, içtimai, edebi yazı ve kitap serbesttir; ancak resmî kaynak ve belgelerden yararlanacak olan eserini yazmadan önce JGK veya SGK'dan izin alır (m.22/5)",
+   "sinavda_boyle_yazarlar": [
+    "izin \"bastırmadan önce\" ya da \"valilikten\" alınır denir"
+   ],
+   "dogrusu": [
+    "eserini yazmadan önce (m.22/5)"
+   ]
+  },
+  {
+   "id": "23-37",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Kışla komutanı",
+   "hukum": "Birden fazla birliğin aynı kışlada bulunduğu yerlerde en kıdemli birlik komutanı, karargâh veya kurum âmiri kışla komutanıdır (m.23/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"en büyük rütbeli subay\" veya \"garnizon komutanı\" denir"
+   ],
+   "dogrusu": [
+    "Kışla komutanı"
+   ]
+  },
+  {
+   "id": "23-38",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Haftalık çalışma",
+   "hukum": "Subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir; bu, görev gereği çağrılmaya veya görev yerinden ayrılmamaya engel değildir (m.24/1)",
+   "sinavda_boyle_yazarlar": [
+    "süre 45 saat gösterilir veya \"hiçbir şekilde aşılamaz\" denir"
+   ],
+   "dogrusu": [
+    "Subay …"
+   ]
+  },
+  {
+   "id": "23-39",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Hazır kıt'a",
+   "hukum": "Her birlik ve karargâhta derhal kullanılmak üzere hazır kıt'a bulundurulur; kuvveti en az üç kişiden birliğin tamamına kadar olabilir, zamanı ve kuvvetini birlik komutanı belirler (m.27/1, m.27/3)",
+   "sinavda_boyle_yazarlar": [
+    "alt sınır \"beş kişi\" yapılır veya kuvveti kışla komutanı belirler denir"
+   ],
+   "dogrusu": [
+    "Her birlik ve karargâhta derhal kullanılmak üzere hazır kıt'a bulundurulur …"
+   ]
+  },
+  {
+   "id": "23-40",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Nöbet esasları",
+   "hukum": "Nöbet görevi müşterek görevlerin belli bir sıra ve süreyle yapılması için ihdas edilir; nöbetin tesisi, personelin tespiti, hakkaniyetli sıra ve kayıtlar ilgili yönetmelik ve yönerge esaslarına göre yürütülür (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "bu yönetmelikte olmayan somut nöbet saatleri (24 saat, 8 saat gibi) buraya yazılır — nöbet süreleri bu yönetmelikte yok"
+   ],
+   "dogrusu": [
+    "Nöbet görevi müşterek görevlerin belli bir sıra ve süreyle yapılması için ihdas edilir …"
+   ]
+  },
+  {
+   "id": "23-41",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Afet ve acil durum",
+   "hukum": "Birlik komutanları afet ve acil durumları mahallin en büyük mülki âmirine haber vermekle sorumludur; vali veya kaymakamın isteyeceği yardımları üstlerinden emir beklemeksizin ve gecikmeksizin yerine getirir, sonra sıralı âmirlerine ve JGK/SGK'ya haber verir (m.32/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"üstünden emir aldıktan sonra yardım eder\""
+   ],
+   "dogrusu": [
+    "üstlerinden emir beklemeksizin (m.32/1-2)"
+   ]
+  },
+  {
+   "id": "23-42",
+   "madde": [
+    "2",
+    "3"
+   ],
+   "baslik": "Kapsam ve dayanak",
+   "hukum": "Yönetmelik JGK, SGK ve Jandarma ve Sahil Güvenlik Akademisindeki karargâh, birlik, kurumlar ile personeli kapsar, işçiler kendi mevzuatına tabidir; dayanak 2803 sayılı Kanunun 24'üncü ve 2692 sayılı Kanunun 23'üncü maddesidir (m.2, m.3)",
+   "sinavda_boyle_yazarlar": [
+    "işçiler kapsama sokulur ya da dayanak 5442/2559 gösterilir"
+   ],
+   "dogrusu": [
+    "Yönetmelik JGK, SGK ve Jandarma ve Sahil Güvenlik Akademisindeki karargâh …"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

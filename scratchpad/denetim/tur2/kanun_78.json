@@ -1,0 +1,252 @@
+{
+ "kanun_id": 78,
+ "ad": "6085 sayılı Sayıştay Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_78.json",
+ "kartlar": [
+  {
+   "id": "78-0",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Sayıştayın görevleri",
+   "hukum": "(a) Kamu idarelerinin malî faaliyet, karar ve işlemlerini hesap verme sorumluluğu çerçevesinde denetler ve sonuçları hakkında TBMM'ye doğru, yeterli, zamanlı bilgi ve raporlar sunar; (b) genel yönetim idarelerinin gelir, gider ve mallarına ilişkin hesap ve işlemlerinin hukuka uygunluğunu denetler, sorumluların hesap ve işlemlerinden kamu zararına yol açan hususları kesin hükme bağlar; (c) genel uygunluk bildirimini TBMM'ye sunar; (ç) kanunlarla verilen inceleme, denetleme ve hükme bağlama işlerini yapar (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sayıştay genel uygunluk bildirimini Cumhurbaşkanlığına sunar\" yanlış; TBMM'ye"
+   ],
+   "dogrusu": [
+    "hesap verme sorumluluğu · TBMM'ye · kamu zararına yol açan hususları kesin hükme bağlar · genel uygunluk bildirimini TBMM'ye"
+   ]
+  },
+  {
+   "id": "78-1",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yetkiler: yazışma, belge getirtme, memur çağırma",
+   "hukum": "Sayıştay görevleri sırasında kamu idareleri ve görevlileriyle doğrudan yazışmaya, gerekli gördüğü belge, defter ve kayıtları mensupları aracılığıyla görmeye, mallar hariç dilediği yere getirtmeye, sözlü bilgi için her derece ve sınıftan ilgili memurları çağırmaya, kamu idarelerinden temsilci istemeye yetkilidir (m.6/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sayıştay denetlediği malları da dilediği yere getirtebilir\" yanlış; mallar hariç",
+    "Sayıştay, denetlediği malları dilediği yere getirtebilir"
+   ],
+   "dogrusu": [
+    "Mallar hariç; belge, defter ve kayıtları getirtebilir (m.6)"
+   ]
+  },
+  {
+   "id": "78-2",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yetkiler: bilgi isteme, yerinde inceleme, dönemden bağımsız denetim",
+   "hukum": "Denetimine giren işlemlerle ilgili her türlü bilgi ve belgeyi kamu idareleri ile bankalar dâhil diğer gerçek ve tüzel kişilerden isteyebilir; kayıt, eşya-mal, iş ve hizmetleri mensupları veya bilirkişiler eliyle yerinde ve işlemin her safhasında inceleyebilir; bilirkişinin hukuki durumu, yetkisi ve sorumluluğu genel hükümlere tabidir; hesap ve faaliyetleri hesap veya faaliyet dönemine bağlı olmaksızın yılı içinde veya yıllar itibarıyla, ayrıca sektör, program, proje ve konu bazında denetleyebilir; gerektiğinde Sayıştay dışından uzman görevlendirilebilir, esaslar yönetmelikle (m.6/2-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sayıştay yalnız hesap dönemi sonunda denetim yapabilir\" yanlış; dönemden bağımsız ve işlemin her safhasında",
+    "Sayıştay bankalardan bilgi ve belge isteyemez",
+    "Bilirkişinin sorumluluğu Sayıştay Kanununa özgü hükümlere tabidir"
+   ],
+   "dogrusu": [
+    "Bankalar dâhil gerçek ve tüzel kişilerden isteyebilir (m.6)",
+    "Genel hükümlere tabidir (m.6)"
+   ]
+  },
+  {
+   "id": "78-3",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Sorumlular ve sorumluluk hâlleri",
+   "hukum": "Sorumlular ve sorumluluk hâllerinde 5018 sayılı Kanun ve Sayıştay denetimiyle ilgili diğer kanunlar esas alınır; kamu kaynağını elde eden ve kullanan görevliler kaynakların etkili, ekonomik, verimli ve hukuka uygun elde edilmesi, kullanılması, muhasebeleştirilmesi, raporlanması ve kötüye kullanılmaması için önlem alınmasından sorumludur; bunun yerine getirilip getirilmediği TBMM'ye sunulan Sayıştay raporlarında belirtilir, kamu zararı durumları ise tazmine ilişkin hükme bağlama ile sonuçlandırılır; sorumlular illiyet bağı kurularak ilamda yer alan zarardan tek başlarına veya birlikte tazminle yükümlüdür; usulüne uygun görevlendirilmediği hâlde kendiliğinden veya emirle gelir tahakkuk ettiren, toplayan, harcayan, mal muhafaza edenlerin işlemleri bir hesaba dâhil edilmemişse sorumluluk bunlara da uygulanır, yöneticilerin yazılı emriyle olmuşsa yöneticiler de ortak olur (m.7/1-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Görevlendirilmemiş kişi yaptığı malî işlemden sorumlu tutulamaz\" yanlış"
+   ],
+   "dogrusu": [
+    "5018 sayılı Kanun · etkili, ekonomik, verimli ve hukuka uygun · TBMM'ye sunulan Sayıştay raporlarında · kamu zararı · tazmine ilişkin hükme bağlama · illiyet bağı · tek başlarına veya birlikte · yöneticilerin yazılı emriyle · yöneticiler de ortak"
+   ]
+  },
+  {
+   "id": "78-4",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Bakanların sorumluluğu ve performans denetiminin sonucu",
+   "hukum": "Bakanlar, kamu kaynaklarının etkili, ekonomik ve verimli kullanılması ile hukuki ve malî konularda Cumhurbaşkanına karşı sorumludur; Sayıştayca yapılan performans denetimleri malî ve hukuki sorumluluk doğurmaz (m.7/5-6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Performans denetimi sonucunda sorumlular tazminle yükümlü tutulur\" yanlış",
+    "Performans denetimi malî ve hukuki sorumluluk doğurur"
+   ],
+   "dogrusu": [
+    "Doğurmaz (m.7)"
+   ]
+  },
+  {
+   "id": "78-5",
+   "madde": [
+    "9",
+    "6"
+   ],
+   "baslik": "Bilgi ve belge verme zorunluluğu",
+   "hukum": "Sorumlular ve ilgililer denetçilerin istediği bilgi, kayıt ve belgeleri vermeye ve işlem, faaliyet ve malların fiili ve fiziki durumunu geciktirmeksizin göstermeye mecburdur; verilemeyen belgeler ilgili kamu idaresinden istenir; sorumlular belgelerin asıllarını, aslı gösterilemeyenlerin ikinci nüshalarını göstermek zorundadır; kamu idareleri ve görevlileri her türlü hesap, bilgi ve belgeyi ibraz etmek, yardım ve kolaylık göstermek zorundadır; ilgili idareler bu hükümlerin uygulanış ve sonucu hakkında Sayıştaya bilgi vermek zorundadır (m.9/1-2, 5-6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aslı gösterilemeyen belge için sorumlu hiçbir belge göstermek zorunda değildir\" yanlış; ikinci nüsha gösterilir"
+   ],
+   "dogrusu": [
+    "fiili ve fiziki durumunu geciktirmeksizin göstermeye · belgelerin asıllarını · ikinci nüshalarını · Sayıştaya bilgi vermek"
+   ]
+  },
+  {
+   "id": "78-6",
+   "madde": [
+    "6",
+    "9",
+    "7"
+   ],
+   "baslik": "Yarım aylık ve görevden uzaklaştırma yaptırımı",
+   "hukum": "Hesabı zamanında ve tam vermeyen sorumluların ve denetim-yargılama sırasında istenen bilgi, belge ve defterleri vermeyen veya denetimi güçleştirenlerin aylıkları, Sayıştayın istemi üzerine ilgili kamu idaresince eksiksiz verilinceye kadar yarım olarak ödenir; yarım aylık başladıktan sonra muhasebe yetkilileri en çok üç ay, diğer görevliler Sayıştayca belirlenen süre içinde yine vermezse görevden uzaklaştırılır ve soruşturma/kovuşturma yapılır; Sayıştay ilamlarının infazını izlemeyenlere de aynı hükümler uygulanır; bu hükümlere ve m.6/1-2 gereklerine haklı sebep olmadan uymayanlar hakkında Sayıştayın istemiyle disiplin veya ceza kovuşturması yapılır (m.9/3-4, 7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hesabı vermeyen sorumlunun aylığı tamamen kesilir\" yanlış; yarım olarak ödenir",
+    "Hesabı vermeyen muhasebe yetkilisi yarım aylıktan itibaren altı ay içinde görevden uzaklaştırılır"
+   ],
+   "dogrusu": [
+    "En çok üç ay (m.9)"
+   ]
+  },
+  {
+   "id": "78-7",
+   "madde": [
+    "36"
+   ],
+   "baslik": "Denetim türleri: düzenlilik ve performans",
+   "hukum": "Sayıştay denetimi düzenlilik denetimi ve performans denetimini kapsar; düzenlilik denetimi: (a) gelir, gider ve mallara ilişkin hesap ve işlemlerin kanunlara ve hukuki düzenlemelere uygunluğunun tespiti, (b) malî rapor ve tabloların güvenilirliği ve doğruluğu hakkında görüş bildirilmesi, (c) malî yönetim ve iç kontrol sistemlerinin değerlendirilmesi; performans denetimi: hesap verme sorumluluğu çerçevesinde idarelerce belirlenen hedef ve göstergelerle ilgili faaliyet sonuçlarının ölçülmesi; denetimle ilgili veya denetimden kaynaklanan açıklanması gerekli diğer hususlar da rapor edilebilir (m.36)",
+   "sinavda_boyle_yazarlar": [
+    "\"İç kontrol sistemlerinin değerlendirilmesi performans denetiminin unsurudur\" yanlış; düzenlilik denetiminin unsurudur",
+    "Malî yönetim ve iç kontrol sistemlerinin değerlendirilmesi performans denetimidir"
+   ],
+   "dogrusu": [
+    "Düzenlilik denetimidir (m.36)"
+   ]
+  },
+  {
+   "id": "78-8",
+   "madde": [
+    "6",
+    "48"
+   ],
+   "baslik": "Yargılamaya esas rapor",
+   "hukum": "Denetimde kamu zararına yol açan bir husus tespit edildiğinde denetçiler sorumluların savunmasını alarak malî yıl sonu itibarıyla yargılamaya esas rapor düzenler; ancak m.6/4 (dönemden bağımsız, yıllar itibarıyla, sektör-program-proje bazında) denetimlerle ilgili raporlarda malî yıl sonu beklenmez; tebliğden itibaren 30 gün içinde cevap vermeyen sorumluların savunması dikkate alınmaz; raporlar ekleriyle Başkanlığa sunulur, Başkanlık en geç 15 gün içinde hesap yargılamasını yapacak daireye gönderir (m.48)",
+   "sinavda_boyle_yazarlar": [
+    "\"Savunma süresi tebliğden itibaren 15 gündür\" yanlış; 30 gün (15 gün, Başkanlığın raporu daireye gönderme süresidir)"
+   ],
+   "dogrusu": [
+    "kamu zararına yol açan · denetçiler · savunmasını alarak · malî yıl sonu itibarıyla · malî yıl sonu beklenmez · 30 gün içinde cevap vermeyen · dikkate alınmaz · Başkanlığa · en geç 15 gün · daireye"
+   ]
+  },
+  {
+   "id": "78-9",
+   "madde": [
+    "51"
+   ],
+   "baslik": "İlamlar",
+   "hukum": "İlamlar gerekçeli düzenlenir; ikişer nüsha daire başkanı ve üyelerce imzalanır, imzalı nüshalardan biri dairede kalır, diğeri ve imzasız nüshalar rapor dosyasıyla Sayıştay Başkanlığına verilir; Sayıştay Başkanı veya görevlendireceği kişilerce Sayıştay mührüyle mühürlenip imzalandıktan sonra daire başkan ve üyelerince imzalanan nüsha Başkanlıkça saklanır; ilamda daire ve karar no, idare ve denetim dönemi, denetçi-savcı-raportör adları, sorumlular ve vekilleri, rapor özeti ve savcı düşüncesi, duruşma bilgisi, hukuki dayanak ve gerekçe, tazmin miktarı ve faizin başlangıç tarihi, tahsil edilen hususlar, yersiz tahsil iadesi, hüküm dışı bırakılan hususlar, karar tarihi ve oybirliği/oyçokluğu ve muhalefet şerhi, heyet adları ve imzaları yer alır (m.51)",
+   "sinavda_boyle_yazarlar": [
+    "\"İlamlar gerekçesiz, yalnız hüküm fıkrasıyla düzenlenir\" yanlış; gerekçeli düzenlenir"
+   ],
+   "dogrusu": [
+    "gerekçeli · ikişer nüsha · biri dairede · Sayıştay Başkanlığına · Sayıştay Başkanı veya görevlendireceği kişilerce Sayıştay mührüyle mühürlenip imzalandıktan · Başkanlıkça saklanır · tazmin miktarı ve faizin başlangıç tarihi · oybirliği/oyçokluğu ve muhalefet şerhi"
+   ]
+  },
+  {
+   "id": "78-10",
+   "madde": [
+    "53"
+   ],
+   "baslik": "İlamların yerine getirilmesi",
+   "hukum": "Sayıştay ilamları kesinleştikten sonra doksan gün içinde yerine getirilir; ilam hükümlerinin yerine getirilmesinden ilamın gönderildiği kamu idaresinin üst yöneticisi sorumludur; tazmin miktarı hüküm tarihinden itibaren kanuni faize tabi tutularak 2004 sayılı İcra ve İflas Kanunu hükümlerine göre tahsil edilir (m.53)",
+   "sinavda_boyle_yazarlar": [
+    "\"İlamlar 6183 sayılı Amme Alacakları Kanununa göre tahsil edilir\" yanlış; 2004 sayılı İcra ve İflas Kanunu",
+    "İlamlar kesinleştikten sonra 60 gün içinde yerine getirilir",
+    "Tazmin miktarı 6183 sayılı Kanuna göre tahsil edilir"
+   ],
+   "dogrusu": [
+    "90 gün; sorumlu üst yönetici (m.53)",
+    "2004 sayılı İcra ve İflas Kanunu (m.53)"
+   ]
+  },
+  {
+   "id": "78-11",
+   "madde": [
+    "54"
+   ],
+   "baslik": "Kanun yollarına başvuru dilekçesi",
+   "hukum": "Temyiz, yargılamanın iadesi ve karar düzeltilmesi talepleri Sayıştay Başkanlığına hitaben yazılmış imzalı dilekçeyle yapılır ve Başkanlığa verilir/gönderilir, istenirse alındı verilir; dilekçede başvuranın ve temsilcisinin kimliği-adresi, ilamın tarih ve numarası, hesabın adı ve yılı, başvuru konusu, hangi kanun yolu ve hukuki sebepler, varsa duruşma talebi bulunur; itirazı ispat eden belgeler eklenir; dilekçe ve eklerin örnekleri karşı taraf sayısından bir fazla olur; eksiklik varsa on beş gün içinde tamamlatılır, tamamlanmazsa başvuru reddedilir; ancak kimlik, imza, ilam hükmü ve kanun yolu-sebebini yeterince belirten dilekçe diğer hususlar eksik olsa da kabul edilir (m.54)",
+   "sinavda_boyle_yazarlar": [
+    "\"Dilekçe örnekleri karşı taraf sayısı kadar olur\" yanlış; bir fazla"
+   ],
+   "dogrusu": [
+    "Temyiz, yargılamanın iadesi ve karar düzeltilmesi · Sayıştay Başkanlığına hitaben · ilamın tarih ve numarası · karşı taraf sayısından bir fazla · on beş gün · kabul edilir"
+   ]
+  },
+  {
+   "id": "78-12",
+   "madde": [
+    "55"
+   ],
+   "baslik": "Temyiz ve süreleri",
+   "hukum": "Sayıştay dairelerinin ilamları Temyiz Kurulunda temyiz edilir; Temyiz Kurulu kararları kesindir; temyiz sebepleri: kanuna aykırılık, yetkiyi aşmak, hesap yargılaması usullerine riayet etmemek gibi sebepler; temyiz süresi ilamın ilgiliye tebliğinden itibaren altmış gün; temyiz dilekçesi karşı tarafa tebliğ edilir, cevap süresi otuz gün; bu cevaba temyiz eden on beş gün, onun cevabına da karşı taraf on beş gün içinde cevap verir; cevaplar alınınca veya süresinde verilmezse inceleme yapılır (m.55/1-5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temyiz süresi otuz gündür\" yanlış; altmış gün (30 gün cevap süresidir)",
+    "Temyiz süresi 30 gündür"
+   ],
+   "dogrusu": [
+    "60 gün (m.55)"
+   ]
+  },
+  {
+   "id": "78-13",
+   "madde": [
+    "55"
+   ],
+   "baslik": "Temyiz Kurulunun incelemesi ve kararları",
+   "hukum": "Taraflar duruşma isterse veya Kurul lüzum görürse taraflar davet edilip dinlenir, taraflara ikişer defa söz verilir; yalnız biri gelirse onun açıklaması dinlenir, hiçbiri gelmezse evrak üzerinde inceleme yapılır; Temyiz Kurulu hükmü olduğu gibi veya düzelterek tasdik eder, bozar ya da üye tamsayısının üçte iki çoğunluğuyla kaldırır; bozmada evrak kararı veren daireye gönderilir; daire ilk kararında ısrar eder ve ısrar kararı temyizde tekrar bozulursa daire bu karara uymak zorundadır; tazmin hükmünün kaldırılmasına ilişkin kararlar ilam maddesindeki bütün sorumluları kapsar (m.55/6-9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temyiz Kurulu hükmü salt çoğunlukla kaldırabilir\" yanlış; üye tamsayısının üçte iki çoğunluğu",
+    "Daire, Temyiz Kurulunun ikinci bozma kararına da direnebilir"
+   ],
+   "dogrusu": [
+    "Uymak zorundadır (m.55)"
+   ]
+  },
+  {
+   "id": "78-14",
+   "madde": [
+    "52",
+    "56"
+   ],
+   "baslik": "Yargılamanın iadesi",
+   "hukum": "m.52/1'deki ilgililer isteyebileceği gibi Sayıştay daireleri de doğrudan karar verebilir; sebepler: hesapta maddi hata, isim yanlışlığı veya eksikliği, noksanlık veya mükerrerlik; hükme etki eden belgede sahtecilik; hükümden sonra ortaya çıkan yanlış veya usulsüz işlem; hükümden sonra ortaya çıkan yeni belgeler; hükme esas ilamın bozularak ortadan kalkması; bilirkişi veya uzmanın gerçeğe aykırı rapor düzenlediğinin ortaya çıkması; süre ilamın tebliğinden itibaren beş yıl; istemde bulunmak ilamın icrasını alıkoymaz, ancak daire gerekli görürse teminat karşılığında icranın geciktirilmesine karar verebilir; istemi hükmü veren daire inceler, önce kabul/ret kararı verir, kabulde yalnız iade edilen hususlarla sınırlı yargılama yapar; TBMM'nin kesin hesap kanunu teklifini karara bağlamış olması şahıs borçlarına etkili değildir (m.56)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yargılamanın iadesi istemi ilamın icrasını kendiliğinden durdurur\" yanlış; alıkoymaz, yalnız teminatla geciktirme kararı verilebilir",
+    "Yargılamanın iadesi istemi ilamın icrasını durdurur"
+   ],
+   "dogrusu": [
+    "Durdurmaz; teminatla geciktirilebilir (m.56)"
+   ]
+  },
+  {
+   "id": "78-15",
+   "madde": [
+    "52",
+    "57"
+   ],
+   "baslik": "Karar düzeltilmesi",
+   "hukum": "Temyiz Kurulu kararları hakkında m.52/1'deki ilgililer, yazılı bildirim tarihinden itibaren on beş gün içinde ve bir defaya mahsus karar düzeltilmesi isteyebilir; sebepler: hükmün esasına etkili iddia ve itirazların kararda karşılanmamış olması, kararda aynı konuda birbirine aykırı hükümler, temyiz incelemesi sırasında belgelerde hile ve sahtekârlık ortaya çıkması, temyiz sebeplerinden en az birinin bulunması; istem temyiz şekil ve usulleriyle yürütülür; Temyiz Kurulu ileri sürülen sebeplerle bağlıdır; istem kesin hükmün yerine getirilmesine engel değildir; karar ilgililere tebliğ edilir (m.57)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karar düzeltilmesi daire ilamlarına karşı ve sınırsız sayıda istenebilir\" yanlış; Temyiz Kurulu kararlarına, bir defa",
+    "Karar düzeltilmesi istemi kesin hükmün yerine getirilmesini engeller"
+   ],
+   "dogrusu": [
+    "Engel değildir (m.57)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

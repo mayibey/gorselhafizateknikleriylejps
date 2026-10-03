@@ -1,0 +1,213 @@
+{
+ "kanun_id": 45,
+ "ad": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_45.json",
+ "kartlar": [
+  {
+   "id": "45-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Fon kavramı",
+   "hukum": "\"Fon\": para veya değeri para ile temsil edilebilen her türlü mal, hak, alacak, gelir ve menfaat ile bunların birbirine dönüştürülmesinden hasıl olan menfaat ve değerdir (m.2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fon yalnız para ve dövizdir\" yanlış"
+   ],
+   "dogrusu": [
+    "\"Fon\": para veya değeri para ile temsil edilebilen her türlü mal …"
+   ]
+  },
+  {
+   "id": "45-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Suç tanımı ve ceza",
+   "hukum": "Terör suçlarının işlenmesinde tümüyle veya kısmen kullanılması amacıyla veya kullanılacağını bilerek fon sağlayan/toplayan 5 yıldan 10 yıla kadar hapis; fonun kullanılmış olması şart değildir (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fonun fiilen kullanılması gerekir\" yanlış",
+    "Fonun terörde kullanılması şarttır"
+   ],
+   "dogrusu": [
+    "Şart değil (m.4)"
+   ]
+  },
+  {
+   "id": "45-2",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Ağırlaştırıcı hâl ve tüzel kişi",
+   "hukum": "Suç kamu görevinin sağladığı nüfuz kötüye kullanılarak işlenirse ceza yarı oranında artırılır; tüzel kişiler hakkında güvenlik tedbiri uygulanır; suç yabancı devlet veya uluslararası kuruluş aleyhine işlenmişse kovuşturma Adalet Bakanının talebine bağlıdır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yabancı devlet aleyhine işlenmişse re'sen soruşturulur\" yanlış; Adalet Bakanı talebi"
+   ],
+   "dogrusu": [
+    "kamu görevinin sağladığı nüfuz · yarı oranında · yabancı devlet veya uluslararası kuruluş aleyhine · Adalet Bakanının talebine"
+   ]
+  },
+  {
+   "id": "45-3",
+   "madde": [
+    "5"
+   ],
+   "baslik": "BM Güvenlik Konseyi kararlarının uygulanması",
+   "hukum": "BMGK'nın terörizmin finansmanına ilişkin kararları Cumhurbaşkanı kararı ile Resmî Gazete'de yayımlanarak uygulanır; malvarlığı bu kararla dondurulur (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"BM kararı doğrudan uygulanır\" yanlış",
+    "BM kararları Türkiye'de doğrudan uygulanır"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı kararıyla (m.5)"
+   ]
+  },
+  {
+   "id": "45-4",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Yabancı devlet talebi",
+   "hukum": "Yabancı devletin malvarlığı dondurma talebi Cumhurbaşkanı kararıyla yerine getirilir; talep eden devlet 1 yıl içinde soruşturma/kovuşturma açıldığına ilişkin bilgi vermezse karar kaldırılabilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"1 yıl\" süresi \"6 ay\" olarak verilirse yanlış"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı · 1 yıl"
+   ]
+  },
+  {
+   "id": "45-5",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Türkiye'deki malvarlığının dondurulması",
+   "hukum": "Türkiye'de bulunan malvarlığı, Hazine ve Maliye Bakanı ile İçişleri Bakanının birlikte kararıyla dondurulur; karar 48 saat içinde Ankara ağır ceza mahkemesinin onayına sunulur, mahkeme 5 gün içinde karar verir; dondurma kararı 6 ayda bir yeniden değerlendirilir (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "Süreler çapraz sorulur: 48 saat sunma, 5 gün karar, 6 ay değerlendirme",
+    "Malvarlığını İçişleri Bakanı tek başına dondurur"
+   ],
+   "dogrusu": [
+    "İki bakan birlikte + mahkeme onayı (m.7)"
+   ]
+  },
+  {
+   "id": "45-6",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Mali araştırma Başkanlıkça yapılır",
+   "hukum": "Malvarlığının dondurulması kararları hakkında yapılacak mali araştırma MASAK Başkanlığı tarafından yerine getirilir; kamu kurumları ile gerçek ve tüzel kişiler istenen bilgileri gecikmeksizin Başkanlığa verir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta \"Millî İstihbarat Teşkilâtı\" verilir; doğrusu MASAK"
+   ],
+   "dogrusu": [
+    "mali araştırma MASAK Başkanlığı"
+   ]
+  },
+  {
+   "id": "45-7",
+   "madde": [
+    "8",
+    "9"
+   ],
+   "baslik": "Kararın hüküm doğurması ve tebliği",
+   "hukum": "Malvarlığının dondurulması kararı Resmî Gazete'de yayımı ile hüküm doğurur ve tebliğ edilmiş sayılır (m.8-9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Karar ilgiliye tebliğ ile hüküm doğurur\" yanlış; RG yayımı",
+    "Karar tebliğle hüküm doğurur"
+   ],
+   "dogrusu": [
+    "RG yayımıyla (m.8-9)"
+   ]
+  },
+  {
+   "id": "45-8",
+   "madde": [
+    "11",
+    "12"
+   ],
+   "baslik": "Bildirim süreleri",
+   "hukum": "Dondurulan malvarlığına ilişkin bilgi, ilgili kişi/kurumlarca 30 gün içinde Başkanlığa (MASAK) bildirilir; kurum ve kuruluşlar dondurma kararı kapsamındaki malvarlığını tespit ettiklerinde 7 gün içinde bildirir (m.11-12)",
+   "sinavda_boyle_yazarlar": [
+    "30 gün (malvarlığı sahibi) ile 7 gün (kurum) karıştırılıyor"
+   ],
+   "dogrusu": [
+    "30 gün · 7 gün"
+   ]
+  },
+  {
+   "id": "45-9",
+   "madde": [
+    "13"
+   ],
+   "baslik": "Yönetim ilgilide, işlemler izinle",
+   "hukum": "Dondurulan malvarlığının yönetimi hak sahibine aittir; ancak malvarlığında tasarruf, devir gibi işlemler Başkanlığın (MASAK) izniyle yapılır; kişinin ve bakmakla yükümlü olduğu kişilerin geçimi için harcamalara izin verilir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Malvarlığı hazineye devredilir\" yanlış; yönetim ilgilide, tasarruf izne bağlı",
+    "Dondurulan mal hazineye geçer"
+   ],
+   "dogrusu": [
+    "Yönetim ilgilide, tasarruf izinle (m.13)"
+   ]
+  },
+  {
+   "id": "45-10",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Kamu ödemeleri ve banka hesabı",
+   "hukum": "Dondurulan kişiye kamu kurumlarınca yapılacak ödemeler için izin gerekmez; ödemeler kişinin banka hesabına yapılır ve hesap dondurma kapsamına girer (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kamu ödemesi elden yapılabilir\" yanlış; banka hesabına"
+   ],
+   "dogrusu": [
+    "izin gerekmez · banka hesabına"
+   ]
+  },
+  {
+   "id": "45-11",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Dondurma kararına aykırılık",
+   "hukum": "Dondurma kararına aykırı işlem yapan 6 aydan 2 yıla kadar hapis veya adli para cezası; dondurulan malvarlığından bilerek fon sağlayan 1 yıldan 3 yıla kadar hapis (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "İki ceza aralığı çapraz konur"
+   ],
+   "dogrusu": [
+    "6 aydan 2 yıla kadar · bilerek fon sağlayan · 1 yıldan 3 yıla"
+   ]
+  },
+  {
+   "id": "45-12",
+   "madde": [
+    "3",
+    "16"
+   ],
+   "baslik": "Değerlendirme Komisyonu",
+   "hukum": "Malvarlığının dondurulması kararlarına ilişkin Değerlendirme Komisyonu MASAK Başkanının başkanlığında; Komisyon kararları en az 5 üyenin aynı yöndeki oyuyla alınır; sekreterya MASAK'tadır (m.3, 16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Komisyona İçişleri Bakanı başkanlık eder\" yanlış; MASAK Başkanı",
+    "Komisyon kararları oy çokluğuyla (3 oy) alınır"
+   ],
+   "dogrusu": [
+    "En az 5 oy (m.16)"
+   ]
+  },
+  {
+   "id": "45-13",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Görevlilerin gizlilik yükümlülüğü",
+   "hukum": "Kanun kapsamındaki bilgi ve belgeler gizlidir; görevliler bu bilgileri açıklayamaz (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bilgiler kamuya açıktır\" yanlış"
+   ],
+   "dogrusu": [
+    "Görevlilerin gizlilik yükümlülüğü"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

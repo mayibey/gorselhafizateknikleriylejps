@@ -1,0 +1,505 @@
+[
+ {
+  "kanun_id": 2,
+  "kart_id": "2-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yarım cümle ('Kanun, Jandarma Teşkilatının görev …') ve kırmızı kutudaki kapsam yanlışına cevap vermiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kanun yalnız jandarma birliklerini kapsar, buralarda hizmet gören personeli kapsamaz"
+   ],
+   "dogrusu": [
+    "Kanun; Jandarma Teşkilatındaki karargâh, birlik ve kurumlar ile buralarda hizmet gören personeli ve bunlarla ilgili faaliyet ve esasları kapsar (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Jandarma Genel Komutanı' yazıyor; bilgi içermiyor, yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Jandarma Genel Komutanı yalnız bütçenin hazırlanmasından sorumludur"
+   ],
+   "dogrusu": [
+    "Jandarma Genel Komutanı tüm Jandarma Teşkilatının komutanıdır; Teşkilatın sevk ve idaresinden, kanun ve nizam hükümlerinin icrasını sağlamaktan sorumludur (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-7",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Yanlış 'işlenmiş suçlarla ilgili işlemler mülki görevdir' iken doğrusu dış koruma görevinden söz ediyor; birebir düzeltme değil.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İşlenmiş suçlarla ilgili işlemleri yapmak jandarmanın mülki görevidir"
+   ],
+   "dogrusu": [
+    "İşlenmiş suçlarla ilgili işlemleri yapmak adli görevdir (m.7/b); suç işlenmesini önleyici tedbirleri almak mülki görevdir (m.7/a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu 'mülki görevle karıştırılır', doğrusu yalnız 'Adli görevler'; ikisi de bilgi taşımıyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ceza infaz kurumlarının dış korunmasını yapmak adli görevdir"
+   ],
+   "dogrusu": [
+    "Ceza infaz kurumları ve tutukevlerinin dış korunması mülki görevdir (m.7/a); adli görev, işlenmiş suçlarla ilgili kanunlarda belirtilen işlemleri yapmaktır (m.7/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-14",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Yanlışlar komisyon kararının onay makamı ve belirleme yetkisiyle ilgili; doğrusu il/ilçenin tamamının alan olarak belirlenmesinden söz ediyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Sınırları vali/kaymakam başkanlığındaki komisyon belirler; komisyon kararları İçişleri Bakanının onayıyla yürürlüğe girer (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-38",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Birlik amirlerince' kanuna göre doğrudur (izinleri birlik, karargâh ve kurum amirleri düzenler); doğrusu ise metinde olmayan 'izin kısaltma Cumhurbaşkanına ait' bilgisini veriyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kullanılamayan izin devredilir; toplam 90 güne kadar kullanılabilir",
+    "Yıllık izinlerin zaman ve süresini İçişleri Bakanı düzenler"
+   ],
+   "dogrusu": [
+    "Kullanılamayan izin müteakip sene verilebilir; bu süre hiçbir suretle toplam altmış günü geçemez (Ek m.3/ç)",
+    "Yıllık izinlerin verilmesi, zaman ve süresi birlik, karargâh ve kurum amirlerince düzenlenir (Ek m.3/b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-43",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kart tazminat yükümlülüğü hakkında; kırmızı/yeşil kutu pilotaj eğitimi uzatmasına (6 yıl) kaymış.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mecburi hizmet süresi içinde istifa edenler masrafların dört katını öder"
+   ],
+   "dogrusu": [
+    "İstifa edenler masrafların iki katını; 15. madde kapsamında ilişiği kesilenler ve 7068 sayılı Kanunla meslekten çıkarılanlar dört katını, eksik kalan süreyle orantılı ve kanuni faiziyle öder (Ek m.14)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 2,
+  "kart_id": "2-60",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hüküm resmî metin değil, 'çıkmış sorularda şöyle soruldu… tam metin pakette yok' notu; madde boş, doğrusu yalnız 'değildir'. İlgili 13/A fıkrası pakette kesik olduğundan doğrulanamadı: kart kaldırılmalı ya da tam metinle yeniden yazılmalı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [],
+   "dogrusu": []
+  }
+ },
+ {
+  "kanun_id": 7,
+  "kart_id": "7-3",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kırmızı kutuya 'Yere yat / Ellerini kaldır / Dur', yeşil kutuya 'Emir teslim ol'dur (Ek m.2)' düşmüş; bunlar terör suçlusu tanımıyla ilgisiz.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Örgüte mensup olup suç işlemeyen kişi terör suçlusu sayılmaz",
+    "Örgüte mensup olmayan kişi hiçbir hâlde terör suçlusu sayılmaz"
+   ],
+   "dogrusu": [
+    "Amaçlanan suçu işlemese dahi örgüt mensubu olan kişi terör suçlusudur (m.2)",
+    "Terör örgütüne mensup olmasa dahi örgüt adına suç işleyenler de terör suçlusu sayılır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 7,
+  "kart_id": "7-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kart düşünce açıklaması istisnası hakkında; doğrusu yalnız yayın sorumlularının para cezasını veriyor, birinci yanlışı düzeltmiyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Terör örgütünün şiddet yöntemlerini öven yazı da eleştiri sayılır, suç oluşturmaz",
+    "Suça iştirak etmemiş yayın sorumlularına yaptırım uygulanmaz"
+   ],
+   "dogrusu": [
+    "Yalnız haber verme sınırlarını aşmayan veya eleştiri amacıyla yapılan düşünce açıklamaları suç oluşturmaz; şiddet yöntemlerini meşru gösteren, öven veya teşvik eden propaganda bir yıldan beş yıla kadar hapisle cezalandırılır (m.7/2)",
+    "Suçun işlenmesine iştirak etmemiş yayın sorumlularına da bin günden beş bin güne kadar adli para cezası verilir (m.7/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 7,
+  "kart_id": "7-13",
+  "sorun": "alakasiz_dogrusu",
+  "aciklama": "Kart avukat ücreti yönetmeliğini çıkaran makam hakkında; kırmızı kutuda anlamsız parçalar ('Bir avukat', 'ücreti kendisi öder'), doğrusu ise avukat sayısından söz ediyor.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Avukat ücretlerinin ödenmesine ilişkin yönetmeliği Adalet Bakanlığı çıkarır",
+    "Soruşturma ve kovuşturmalarda personelin yalnız bir avukatının ücreti ödenir"
+   ],
+   "dogrusu": [
+    "Avukat ücretlerinin ödenmesine ilişkin esas ve usuller Millî Savunma ve İçişleri bakanlıklarınca müştereken çıkarılan yönetmelikle düzenlenir (m.15)",
+    "Personelin soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın ücreti ödenir (m.15)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 7,
+  "kart_id": "7-19",
+  "sorun": "hukum_hatali",
+  "aciklama": "Geçici m.19 hükmü 'yürürlüğe girdiği tarihten itibaren dört yıl süreyle' uygulanan geçici bir düzenlemedir; hüküm bu süre sınırını hiç belirtmiyor.",
+  "duzeltme": {
+   "hukum": "Geçici m.19 ile yürürlüğe girdiği tarihten itibaren dört yıl süreyle: TCK İkinci Kitap Dördüncü Kısım Dördüncü-Yedinci Bölüm suçları, bu Kanun kapsamındaki suçlar ve örgüt faaliyeti çerçevesinde işlenen suçlarda gözaltı süresi, en yakın hâkime gönderme için zorunlu süre hariç, yakalama anından itibaren kırk sekiz saati, toplu suçlarda dört günü geçemez; bu sürelerle bağlı kalmak kaydıyla en fazla iki defa uzatılabilir; uzatma kararını Cumhuriyet savcısının istemi üzerine yakalanan kişi dinlenerek hâkim verir (Geçici m.19)"
+  }
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Tuzak doğru (para ödülü yönetmeliğini İçişleri Bakanlığı çıkarır, m.19) ama m.19 için kart yok; bağlanacak kart bulunmadığından olduğu gibi kalabilir.",
+  "duzeltme": {}
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: m.3 listesinde TCK 304 yok; terör suçları kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "7-4"
+  }
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 2,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Yanlış ifade ('örgüt faaliyeti çerçevesinde işlense bile terör suçu sayılır') ile doğrusu ('m.4'te ısrarlı takip yoktur') birbirini tutmuyor; anlamsız eşleşme.",
+  "duzeltme": {
+   "sil": true
+  }
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 3,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: 'ayrıca ceza verilmez' kuralı örgüte üye olmayıp örgüt adına suç işleyenler içindir (m.7 son fıkra); örgüt kurma/üyelik kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "7-8"
+  }
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 4,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: Bakan onayı yalnız davacı konumundaki personelin avukatı için aranır (m.15); avukat ücreti kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "7-13"
+  }
+ },
+ {
+  "kanun_id": 7,
+  "tuzak_index": 5,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: gözaltı 48 saat, toplu suçta 4 gün (Geçici m.19); gözaltı kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "7-19"
+  }
+ },
+ {
+  "kanun_id": 37,
+  "kart_id": "37-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki ilk yanlışın (izinsiz toplayabilecekleri İçişleri Bakanlığı belirler) doğrusu yeşil kutuda yok; yalnız ikinci yanlış düzeltilmiş.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İzin almadan yardım toplayabilecek kuruluşları İçişleri Bakanlığı belirler",
+    "İzinsiz yardım toplama savcı emriyle durdurulur"
+   ],
+   "dogrusu": [
+    "İzin almadan yardım toplayabilecek kamu yararına çalışan dernek, kurum ve vakıfları Cumhurbaşkanı belirleyip ilan eder (m.6)",
+    "İzinsiz girişilen yardım toplama faaliyeti güvenlik kuvvetlerince derhâl men edilir (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 55,
+  "kart_id": "55-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki 'sözlü emir yazılı hâle gelene kadar beklenir' yanlışının doğrusu yeşil kutuda yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kolluk, savcının sözlü emrinin yazılı hâle gelmesini bekler",
+    "Adli kolluk yalnız şüphelinin aleyhine olan delilleri toplar"
+   ],
+   "dogrusu": [
+    "Kolluk görevlisi emrin yazılı hâle getirilmesini beklemeden sözlü emrin gereğini yerine getirir (m.6)",
+    "Adli kolluk şüphelinin lehine veya aleyhine olan tüm delilleri toplar ve fezleke ile savcıya sunar (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 55,
+  "kart_id": "55-8",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kart denetim yetkisi hakkında; 'savcı ev hapsine karar verebilir' ifadesi konu dışı, doğrusu ('Denetim yetkisi değildir') anlamsız.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Savcı nezarethaneleri ancak şikâyet üzerine denetler"
+   ],
+   "dogrusu": [
+    "Cumhuriyet başsavcıları ve savcıları adli işlemleri her zaman denetler; nezarethaneleri, ifade alma odalarını ve gözaltı sürelerini denetleyip sonucunu nezarethane defterine kaydeder (m.13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 72,
+  "kart_id": "72-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki 'askerî personel için ayrı katsayı belirlenir' yanlışının doğrusu yeşil kutuda yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Askerî personel için Devlet memurlarından ayrı bir katsayı belirlenir",
+    "Katsayı değişimi aylıklarda artış sayılır"
+   ],
+   "dogrusu": [
+    "Gösterge rakamlarının çarpılacağı katsayı Devlet memurları için tespit edilen katsayıdır (m.138)",
+    "Katsayı değişimi aylıklarda artış veya eksiliş sayılmaz (m.138)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 72,
+  "kart_id": "72-38",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu yalnız 'Verilmez' diyor; '18 yaşında kesilir' yanlışının doğrusu (25 yaş) yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Çocuk için aile yardımı 18 yaşında kesilir",
+    "Burs alan çocuk için aile yardımı ödenmeye devam eder"
+   ],
+   "dogrusu": [
+    "Aile yardımı 25 yaşını dolduran çocuklara verilmez; evlenmemiş kız çocukları ve çalışamayacak derecede malul olanlara süresiz devam edilir (m.157/b)",
+    "Burs alan veya Devletçe okutulan çocuklar için aile yardımı verilmez (m.157/ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda 'gider pusulası fatura yerine geçmez' yazıyor, yeşil kutuda tek kelime 'Geçmez' var; öğrenci yanlışı onaylanmış sanır. (m.4 pakette yok; doğrusu kartın kendi hükmüne dayanır.)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Gider pusulası fatura yerine geçmez",
+    "Harcama talimatı fatura yerine geçer"
+   ],
+   "dogrusu": [
+    "Serbest meslek makbuzu, gider pusulası ve müstahsil makbuzu fatura yerine geçen belgelerdendir (m.4)",
+    "Harcama talimatı fatura yerine geçmez; giderin konusu, gerekçesi, tutarı ve ödeneğini gösteren, harcama yetkilisinin imzaladığı belgedir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu kırmızı kutudaki yanlışı düzeltmiyor; hükmün anahtar kelimelerinden oluşan çok uzun bir döküm. (m.12 pakette yok; doğrusu kartın kendi hükmüne dayanır.)",
+  "duzeltme": {
+   "dogrusu": [
+    "Doğum ve ölüm yardımında ilgilinin dilekçesi yeterlidir; rapor yalnız ölü doğumda aranır (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu kırmızı kutudaki taksi yanlışını düzeltmiyor; yalnız bildirim adlarının dökümü. (m.27 pakette yok; doğrusu kartın kendi hükmüne dayanır.)",
+  "duzeltme": {
+   "dogrusu": [
+    "Taksi ücreti için fatura/fiş aranır; ancak belediye hudutları içindeki taksi kullanımı bunun dışındadır (m.27)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-5",
+  "sorun": "yanlis_aslinda_dogru",
+  "aciklama": "'Çeşitli hizmet alımlarında onay belgesi bağlanır' yanlış sayılmış; oysa yeşil kutunun da belirttiği gibi onay belgesi taahhüt dosyasının içinde bağlanır, ifade yanıltıcı ama yanlış değil.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tekel niteliğinde olmayan telefon giderinde Hizmet İşleri Hakediş Raporu bağlanır",
+    "Çeşitli hizmet alımlarında Hizmet İşleri Hakediş Raporu aranmaz"
+   ],
+   "dogrusu": [
+    "Tekel dışı telefon giderinde taahhüt dosyası ve daire amirince onanmış fatura bağlanır; hakediş raporu yoktur (m.43)",
+    "Çeşitli hizmet alımlarında taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu bağlanır (m.46)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutudaki tekel elektrik faturası yanlışının doğrusu yeşil kutuda yok.",
+  "duzeltme": {
+   "dogrusu": [
+    "Tekel niteliğindeki elektrik, su, doğalgaz giderinde yalnız fatura bağlanır (m.49)",
+    "Konşimento yalnız yurt dışından yapılan alımlarda bağlanır (m.48)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 0,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: m.2/2'de SGK yanında TSK, JGK, Dışişleri, TİB, MİT ve EGM de kapsam dışıdır; kapsam dışı kurumlar kartına ait.",
+  "duzeltme": {
+   "karta_bagla": "101-1"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 1,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: bedeli bu kurumlarca ödenip işletmecilerce kurulan telsizler kapsam dışıdır (m.2/2).",
+  "duzeltme": {
+   "karta_bagla": "101-2"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 2,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: seyir güvenliği cihaz ve sistemleri kapsam dışıdır (m.2/2).",
+  "duzeltme": {
+   "karta_bagla": "101-3"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 3,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: yasak bölge en az yüz, en fazla dört yüz metre (m.4/1-m).",
+  "duzeltme": {
+   "karta_bagla": "101-7"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 4,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: 13, 16, 17 ve 18. maddeler hariç kapsam dışıdır (m.2/3).",
+  "duzeltme": {
+   "karta_bagla": "101-4"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 5,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: amatör telsiz haberleşmesi maddi çıkar sağlamayan, hobi amaçlı haberleşmedir (m.4/1-c).",
+  "duzeltme": {
+   "karta_bagla": "101-10"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 6,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: BTK bildirim formunu telsiz kuran işletmeciler doldurur (m.4/1-d).",
+  "duzeltme": {
+   "karta_bagla": "101-12"
+  }
+ },
+ {
+  "kanun_id": 101,
+  "tuzak_index": 7,
+  "sorun": "eslesmeyen_tuzak",
+  "aciklama": "Doğru: veri analog veya sayısal bilgiler kümesidir (m.4/1-l).",
+  "duzeltme": {
+   "karta_bagla": "101-13"
+  }
+ },
+ {
+  "kanun_id": 105,
+  "kart_id": "105-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu yalnız 'Tek kart' diyor; kırmızı kutudaki mecburi hizmeti tamamlamayan müstafi yanlışının doğrusu yok.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mecburi hizmetini tamamlamadan istifa edene sosyal tesislere günübirlik giriş kartı verilir",
+    "Bir hak sahibi iki statüsü için iki ayrı kart alabilir"
+   ],
+   "dogrusu": [
+    "Mecburi hizmet yükümlülüğünü tamamlamamış müstafi subay, astsubay ve uzman jandarmalara daimi veya günübirlik giriş kartı verilmez (m.6/1-ğ)",
+    "Hak sahibine asıl statüsü esas alınarak tek kart verilir; diğer hak sahiplikleri özel durum hanesine yazılır (m.6/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 105,
+  "kart_id": "105-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Üç yanlışa karşılık iki belirsiz doğru ('Değildir', 'Sürekli') var; hangisinin hangi yanlışa ait olduğu anlaşılmıyor.",
+  "duzeltme": {
+   "dogrusu": [
+    "Yedek subayların terhisi kartın sürekli geri alınma hâlidir (m.8/d)",
+    "Devlet tarafından eğitim için yurt dışına gönderilen personelin kartı geri alınmaz (m.7/4)",
+    "Uzman erbaşın emeklilik hakkı kazanmadan ilişiğinin kesilmesi kartın sürekli geri alınma hâlidir (m.8/e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 110,
+  "kart_id": "110-0",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Kırmızı kutuda yanlış ifade yok, 'iki dayanak maddesi çapraz sorulabilir' diye bir not var; doğrusu da tek parça.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Kıyafet Yönetmeliğinin dayanağı JGK-SGK Personel Yönetmeliğinin 61. maddesidir"
+   ],
+   "dogrusu": [
+    "Kıyafet Yönetmeliğinin dayanağı 2803 sayılı Kanun m.24 ve JGK-SGK Personel Yönetmeliği m.55'tir (m.3); m.61 Kurum Kimlik Kartı Yönetmeliğinin dayanağıdır"
+   ]
+  }
+ },
+ {
+  "kanun_id": 124,
+  "kart_id": "124-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu kırmızı kutudaki yanlışı düzeltmek yerine hükmün anahtar kelimelerinden oluşan uzun bir döküm.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taşınır mal sorumlusu depoyu devretmeden görevinden ayrılabilir"
+   ],
+   "dogrusu": [
+    "Taşınır mal sorumluları sorumluluklarındaki depoları devir ve teslim etmeden görevlerinden ayrılamaz (m.7/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 124,
+  "kart_id": "124-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yeşil kutu HEK imha yanlışını düzeltmek yerine maddenin tamamını özetleyen çok uzun bir döküm.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "HEK'e ayıran komisyon, imhası gereken malları da kendisi imha eder"
+   ],
+   "dogrusu": [
+    "Ekonomik değeri olmayan veya teknik, hijyenik, stratejik, tıbbi nedenlerle imhası gereken mallar, HEK komisyonu dışında oluşturulan ayrı bir komisyonca tutanakla imha edilir (m.25/2)"
+   ]
+  }
+ }
+]

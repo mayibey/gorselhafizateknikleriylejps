@@ -1,0 +1,289 @@
+{
+ "kanun_id": 100,
+ "ad": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\pack_100.json",
+ "kartlar": [
+  {
+   "id": "100-0",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kapsam dışı altı kurum",
+   "hukum": "Kodlu veya kriptolu haberleşme yapmaya yetkili TSK, JGK, SGK, MİT Müsteşarlığı, EGM ve Dışişleri Bakanlığı bu Yönetmelik kapsamı dışındadır (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "listede olmayan bir bakanlık (2024'te Çevre, Şehircilik ve İklim Değişikliği Bakanlığı) kapsam dışı gibi gösterilir; o tabidir"
+   ],
+   "dogrusu": [
+    "TSK, JGK, SGK, MİT Müsteşarlığı, EGM ve Dışişleri Bakanlığı"
+   ]
+  },
+  {
+   "id": "100-1",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Bağlı kullanıcılar da hariç",
+   "hukum": "Bu kurumlara ait kodlu/kriptolu sistemlerin kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler de kapsam dışıdır (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca altı kurum hariçtir\" denir"
+   ],
+   "dogrusu": [
+    "kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler"
+   ]
+  },
+  {
+   "id": "100-2",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Kimi kapsar",
+   "hukum": "Yönetmelik, hariç tutulanlar dışındaki diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri kapsar (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca kamu kurum ve kuruluşlarını kapsar\" denir — 2024'ün bozulan öncülü; gerçek ve tüzel kişiler de kapsamdadır"
+   ],
+   "dogrusu": [
+    "diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri"
+   ]
+  },
+  {
+   "id": "100-3",
+   "madde": [
+    "2"
+   ],
+   "baslik": "Frekans tahsizi gerektirmeyen cihazlar",
+   "hukum": "Kurum düzenlemelerinde belirlenen ve işletilmesi için frekans tahsisine ihtiyaç duyulmayan, özel amaçlar için tahsis edilmiş frekans bantlarında ve çıkış gücünde çalışan Kurumca onaylı telsiz cihaz ve sistemleri kapsam dışıdır (m.2/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kurumca onaylı\" kaydı düşürülür"
+   ],
+   "dogrusu": [
+    "frekans tahsisine ihtiyaç duyulmayan · Kurumca onaylı"
+   ]
+  },
+  {
+   "id": "100-4",
+   "madde": [
+    "2"
+   ],
+   "baslik": "TSK kapsam dışıdır",
+   "hukum": "TSK, kapsam dışı tutulan altı kurumdan biridir (m.2/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"TSK yönetmelik kapsamındadır\" denir — 2024'ün bozulan öncülü"
+   ],
+   "dogrusu": [
+    "TSK kapsam dışıdır"
+   ]
+  },
+  {
+   "id": "100-5",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kripto",
+   "hukum": "Güvenli veri iletimi ve saklanması amacıyla mesajların şifrelenmesi (m.4/1-ç)",
+   "sinavda_boyle_yazarlar": [
+    "yalnız \"iletim\" denir; saklama da tanımın parçasıdır"
+   ],
+   "dogrusu": [
+    "veri iletimi ve saklanması"
+   ]
+  },
+  {
+   "id": "100-6",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kripto algoritması",
+   "hukum": "Kriptografik işlemlerin şifreleme, şifre çözme, kimlik doğrulama ve benzeri adımlarında kullanılan tüm matematiksel fonksiyonlar ve protokoller (m.4/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"değişken karakter dizisi\" denir; o anahtardır"
+   ],
+   "dogrusu": [
+    "şifreleme, şifre çözme, kimlik doğrulama ve benzeri · matematiksel fonksiyonlar ve protokoller"
+   ]
+  },
+  {
+   "id": "100-7",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kripto anahtarı",
+   "hukum": "Bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisi (m.4/1-e)",
+   "sinavda_boyle_yazarlar": [
+    "\"matematiksel fonksiyon ve protokoller\" denir; o algoritmadır. 2024'te bu tanım soruldu"
+   ],
+   "dogrusu": [
+    "algoritmaya uygulanan değişken karakter dizisi"
+   ]
+  },
+  {
+   "id": "100-8",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kriptolu elektronik haberleşme",
+   "hukum": "Kriptolu elektronik haberleşme cihazları ile kripto teknikleri kullanılarak gerçekleştirilen haberleşme (m.4/1-f)",
+   "sinavda_boyle_yazarlar": [
+    "cihaz tanımı ile karıştırılır"
+   ],
+   "dogrusu": [
+    "cihazları ile kripto teknikleri kullanılarak"
+   ]
+  },
+  {
+   "id": "100-9",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kriptolu elektronik haberleşme cihazı",
+   "hukum": "Dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı ile birlikte kullanılan telli veya telsiz elektronik haberleşme cihazı (m.4/1-g)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca telsiz\" denir"
+   ],
+   "dogrusu": [
+    "Dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı · telli veya telsiz"
+   ]
+  },
+  {
+   "id": "100-10",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kodlu haberleşme",
+   "hukum": "Haberleşmenin üçüncü şahıslar tarafından anlaşılmaması için mesajların önceden üzerinde anlaşılmış bir koda göre değiştirilerek iletilmesi (m.4/1-ğ)",
+   "sinavda_boyle_yazarlar": [
+    "şifreleme (kripto) tanımıyla birleştirilir; kodlu haberleşmede önceden anlaşılmış kod vardır"
+   ],
+   "dogrusu": [
+    "üçüncü şahıslar tarafından anlaşılmaması için · önceden üzerinde anlaşılmış bir koda göre değiştirilerek"
+   ]
+  },
+  {
+   "id": "100-11",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Millî kripto cihazı",
+   "hukum": "MSB'ce üretim yapmasına yetki verilen kurumlarda ve Millî Kripto Klerans Belgesine sahip Türk vatandaşlarınca geliştirilen-üretilen; kriptografik algoritma, protokol ve anahtar yönetim sistemlerinin güvenlik düzeyi yetkili bir kamu kurumunca onaylanmış cihazlar (m.4/1-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"BTK'ca yetki verilen\" veya \"klerans belgesi aranmaz\" denir"
+   ],
+   "dogrusu": [
+    "MSB'ce üretim yapmasına yetki verilen kurumlarda · Millî Kripto Klerans Belgesine sahip Türk vatandaşlarınca · yetkili bir kamu kurumunca onaylanmış"
+   ]
+  },
+  {
+   "id": "100-12",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İhtisas sahibi kuruluşlar",
+   "hukum": "Kurum ile kodlu/kriptolu sistemler konusunda protokol yapılan enstitüler, üniversiteler veya bilimsel araştırma-geliştirme çalışması yürüten kuruluşlar (m.4/1-a)",
+   "sinavda_boyle_yazarlar": [
+    "\"her üniversite\" denir; protokol şartı vardır"
+   ],
+   "dogrusu": [
+    "protokol yapılan"
+   ]
+  },
+  {
+   "id": "100-13",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Telsiz tanımı",
+   "hukum": "Aralarında fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu ses ve veri vermeye/almaya yarayan sistemler (m.4/1-ı)",
+   "sinavda_boyle_yazarlar": [
+    "\"yalnızca açık haberleşme\" denir"
+   ],
+   "dogrusu": [
+    "açık, kodlu veya kriptolu"
+   ]
+  },
+  {
+   "id": "100-14",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Üretici",
+   "hukum": "Cihazı imal eden, ıslah eden veya cihaza adını/markasını koyarak kendini üretici olarak tanıtan kişi; üretici yurt dışındaysa yetkilendirilen temsilci ve/veya ithalatçı; ayrıca satış/tedarik zincirinde yer alıp faaliyetleri cihazın güvenliğine ilişkin özelliklerini etkileyen kişiler (m.4/1-i)",
+   "sinavda_boyle_yazarlar": [
+    "\"dağıtıcı da üreticidir\" denir; dağıtıcının faaliyeti cihazın özelliklerini etkilemez"
+   ],
+   "dogrusu": [
+    "yetkilendirilen temsilci ve/veya ithalatçı · güvenliğine ilişkin özelliklerini etkileyen"
+   ]
+  },
+  {
+   "id": "100-15",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İşletmeci ve Kurum",
+   "hukum": "İşletmeci = yetkilendirme çerçevesinde hizmet sunan/şebeke sağlayan şirket; Kurum = Bilgi Teknolojileri ve İletişim Kurumu (m.4/1-b, c)",
+   "sinavda_boyle_yazarlar": [
+    "Kurum, Ulaştırma Bakanlığı yapılır"
+   ],
+   "dogrusu": [
+    "Bilgi Teknolojileri ve İletişim Kurumu"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": [
+  {
+   "madde": "",
+   "yanlis": [
+    "Yönetmelik yalnızca kamu kurum ve kuruluşlarını kapsar"
+   ],
+   "dogru": "gerçek ve tüzel kişileri de kapsar"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "TSK yönetmelik kapsamındadır"
+   ],
+   "dogru": "kapsam dışı altı kurumdan biridir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı kapsam dışıdır"
+   ],
+   "dogru": "listede yoktur, tabidir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kripto anahtarı = matematiksel fonksiyon ve protokoller"
+   ],
+   "dogru": "o kripto algoritması"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kodlu haberleşme ile kriptolu haberleşme aynıdır"
+   ],
+   "dogru": "kodluda önceden anlaşılmış kod, kriptoda şifreleme vardır"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Kriptolu haberleşme cihazı yalnızca telsiz cihazıdır"
+   ],
+   "dogru": "telli veya telsiz olabilir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Millî kripto cihazı üretim yetkisini BTK verir"
+   ],
+   "dogru": "MSB verir"
+  },
+  {
+   "madde": "",
+   "yanlis": [
+    "Frekans tahsisi gerektirmeyen her cihaz kapsam dışıdır"
+   ],
+   "dogru": "Kurumca onaylı olması şarttır"
+  }
+ ]
+}

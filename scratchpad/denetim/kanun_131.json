@@ -1,0 +1,98 @@
+{
+ "kanun_id": 131,
+ "ad": "Gıda Hijyeni Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\bakim\\pack_131.json",
+ "kartlar": [
+  {
+   "id": "131-0",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Amaç, kapsam, tanımlar, sorumluluk, ilkeler",
+   "hukum": "Amaç gıda güvenilirliği açısından tüketiciyi korumak için gıda işletmecisinin birincil üretimden son tüketiciye kadar uyacağı genel hijyen kuralları (m.1); birincil üretim dâhil üretim-işleme-dağıtımın tüm aşamalarını kapsar; kapsam dışı: kişisel tüketim amaçlı birincil üretim ve hazırlama-depolama; üreticinin küçük miktardaki birincil ürünlerini son tüketiciye/yerel perakendeciye doğrudan arzı; jelatin-kolajen hammaddesi toplama merkezleri ve tabakhaneler (m.2); dayanak 5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu ve 852/2004/EC AB tüzüğü (m.3); tanımlar: ambalajlama (gıdanın doğrudan temas eden kaba yerleştirilmesi) ↔ paketleme (ambalajlanmış gıdanın ikinci kaba); Bakanlık: Gıda, Tarım ve Hayvancılık Bakanlığı; bulaşma: tehlike veya başlangıcı; gıda hijyeni: tehlikenin kontrolü ve insan tüketimine uygunluk için gerekli önlem ve koşullar; gıda işi: kâr amaçlı olsun olmasın, kamu kurumları dâhil, gıdanın üretim-işleme-dağıtımının herhangi bir aşamasıyla ilgili faaliyet; hermetik kap; içilebilir su (İnsani Tüketim Amaçlı Sular Yönetmeliği); işleme: ısıl işlem, tütsüleme, kürleme, kurutma, marinasyon vb. ürünü temelden değiştiren işlem; işlenmemiş ürün: dilimleme, doğrama, soğutma, dondurma vb. görmüş ama işlenmemiş; son tüketici; temiz deniz suyu / temiz su; tesis (m.4); gıda işletmecisi kontrolü altındaki tüm aşamalarda hijyen gerekliliklerinden sorumlu (m.5); genel ilkeler: gıda güvenilirliğinde sorumluluk öncelikle gıda işletmecisinde; güvenilirlik birincil üretimden son tüketiciye gıda zinciri boyunca; soğuk zincirin korunması; HACCP ilkelerine dayalı prosedürlerin iyi hijyen uygulamalarıyla birlikte uygulanmasından işletmeci sorumlu; iyi uygulama kılavuzları yardımcı araç; bilimsel risk değerlendirmesine dayalı mikrobiyolojik kriter ve sıcaklık kontrolü; ithal gıda en az yurt içi gıda ile aynı hijyen kurallarına tabi (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öncelikli sorumluluk Bakanlıkta\" yanlış",
+    "Gıda güvenilirliğinde öncelikli sorumluluk Bakanlığındır"
+   ],
+   "dogrusu": [
+    "Gıda işletmecisi (m.6)"
+   ]
+  },
+  {
+   "id": "131-1",
+   "madde": [
+    "8",
+    "9",
+    "7"
+   ],
+   "baslik": "Birincil üretim ve genel gereklilikler",
+   "hukum": "Birincil üretimdeki işletmeci m.8-9 ile hayvansal ürünlerde Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğini uygular; birincil ürünlerin niteliğini değiştirmeyen taşıma-depolama-ayıklama, canlı hayvan taşıma, bitkisel-balıkçılık-av ürünlerinin tesise taşınması birincil üretim sayılır; sonraki aşamalardaki işletmeci üçüncü bölüm genel gereklilikleri uygular; özel kurallar: mikrobiyolojik kriterler, prosedürler, sıcaklık kontrolü, soğuk zinciri korumak ve kayıt altına almak, numune alıp analiz; iyi uygulama kılavuzları kullanılabilir (m.7); birincil üretimde bulaşmaya karşı koruma; hava-su-toprak-yem-gübre-veteriner ilacı-bitki koruma ürünü-atık bulaşmasının kontrolü, zoonoz kontrolü; hayvan yetiştirenler tesis-ekipman temizliği ve dezenfeksiyonu, kesimhaneye giden hayvanların temizliği, içilebilir/temiz su, personel sağlığı ve eğitimi, haşere önleme, atık depolama, bulaşıcı hastalık şüphesini Bakanlığa bildirme, yem katkısı-veteriner ilacı kuralları; bitkisel üretimde benzer + bitki koruma ürünlerinin mevzuata uygun kullanımı; resmî kontrolde tespit edilen sorunlara düzeltici faaliyet (m.8); işletmeci faaliyet alanı ve büyüklüğüne uygun kayıt tutar, Bakanlığa ve alıcıya ibraz eder; hayvancılıkta yemin niteliği-kökeni, veteriner ilaçları ve kalıntı arınma süreleri, hastalıklar, analiz sonuçları, kontrol raporları; bitkisel üretimde bitki koruma ürünü kullanımı, haşere-hastalık, analiz sonuçları; mesleki eğitimli kişilerden yardım alınabilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kayıtlar yalnız Bakanlığa ibraz edilir\" yanlış; alıcıya da"
+   ],
+   "dogrusu": [
+    "Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğini · soğuk zinciri korumak ve kayıt altına almak · içilebilir/temiz su · Bakanlığa bildirme · kayıt tutar · kalıntı arınma süreleri"
+   ]
+  },
+  {
+   "id": "131-2",
+   "madde": [
+    "10",
+    "11",
+    "12"
+   ],
+   "baslik": "Gıda işletmeleri için genel gereklilikler (bina, oda, seyyar, taşıma, ekipman, atık, su)",
+   "hukum": "İşletmeler temiz, iyi durumda, bakımlı; yerleşim-tasarım bakım-temizlik-dezenfeksiyona izin verir, kir birikimi-toksik temas-yoğunlaşma-küfü engeller, zararlı kontrolü dâhil iyi hijyene izin verir, uygun sıcaklıkta depolama ve sıcaklık izleme-kayıt; yeterli sayıda drenaja bağlı sifonlu tuvalet, tuvaletler gıda odalarına doğrudan açılmaz; el temizliği için sıcak-soğuk akan sulu lavabo, el temizleme ve hijyenik kurulama maddeleri; gerekirse gıda yıkama bölümü el yıkamadan ayrı; doğal/mekanik havalandırma, bulaşık alandan temiz alana hava akımı önlenir, filtrelere kolay ulaşım; tuvalet-duş-soyunma odalarında havalandırma; aydınlatma; drenaj kirli alandan temiz alana akmayacak şekilde; soyunma-giyinme bölümleri ve duş; temizlik-dezenfeksiyon maddeleri gıda alanlarında depolanmaz (m.10); gıdanın hazırlandığı odalarda zemin sağlam, kolay temizlenir, su geçirmez, emici olmayan, yıkanabilir, toksik olmayan, drenajlı; duvarlar aynı nitelikte, işlemlere uygun yüksekliğe kadar pürüzsüz; tavanlar kir-yoğunlaşma-küf-parçacık düşüşünü önleyen; pencereler kir birikimini önler, dışa açılanlarda çıkarılabilir haşere teli, bulaşma riski varsa üretimde kapalı ve sabit; kapılar pürüzsüz, emici olmayan; gıda ile temas eden yüzeyler pürüzsüz, yıkanabilir, korozyona dayanıklı, toksik olmayan; alet-ekipman temizliği-dezenfeksiyonu-depolanması için korozyona dayanıklı, sıcak-soğuk sulu teçhizat ve mekân; gıda yıkama için içilebilir sulu donanım (m.11); çadır, büfe, seyyar satış aracı gibi taşınabilir/geçici işletmeler, özel konut olup düzenli gıda hazırlanan binalar ve satış makineleri: hayvan-haşere bulaşmasını engelleyecek şekilde; el yıkama-kurulama-giysi değiştirme imkânları; temas yüzeyleri sağlam-pürüzsüz-korozyona dayanıklı; alet temizliği; gıda temizleme; sıcak/soğuk içilebilir su; atık depolama-uzaklaştırma; sıcaklık koruma-izleme (m.12); taşıma araç ve kapları temiz, bakımlı, dezenfekte edilebilir; gıdadan başka madde taşınmaz; gıda ile gıda dışı veya farklı gıdalar birlikte taşınırsa yeterince ayrılır; sıvı-granül-toz hâlindeki ambalajsız gıda gıdaya ayrılmış kap/tankerde, üzerinde \"Yalnız Gıda İçindir\" yazısı Türkçe (veya Türkçe + yabancı dil) silinmeyecek şekilde; farklı gıdalar taşınırsa yüklemeler arası temizlik-dezenfeksiyon; uygun sıcaklıkta muhafaza ve izleme (m.13); gıda ile temas eden malzeme-alet-ekipman etkili temizlenir, yeterli sıklıkta dezenfekte edilir, uygun malzemeden, bakımlı; geri dönüşümsüz kaplar hariç ekipman temizlenebilir; temizliğe imkân verecek yerleştirme; gerekirse kontrol cihazı; korozyon önleyici kimyasallar iyi uygulama ilkelerine göre (m.14); gıda atığı ve yan ürünler mümkün olduğunca hızlı uzaklaştırılır; kapatılabilir kaplarda toplanır, kaplar sağlam ve temizlenebilir; atık depoları temiz, hayvan-haşereden korunmuş; atıklar mevzuata göre hijyenik uzaklaştırılır (m.15); su: her zaman yeterli içilebilir su; bütün balıkçılık ürünlerinde temiz su, canlı çift kabuklu yumuşakçalar vb. için temiz deniz suyu; yangın-buhar-soğutma için içilemeyen su ayrı işaretli sistemde, içilebilir suyla bağlantısı olamaz; geri kazanılmış su Bakanlığa ispat edilmedikçe içilebilir su kalitesinde; buz içilebilir sudan (balıkçılıkta temiz sudan), bulaşmadan korunarak; gıdayla temas eden buhar tehlikeli madde içeremez; hermetik kaplarda ısıl işlem sonrası soğutma suyu bulaşma kaynağı olmamalı (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yangın suyu içilebilir su sistemine bağlanabilir\" yanlış",
+    "Tuvaletler mutfağa doğrudan açılabilir",
+    "Gıda tankeriyle başka sıvı da taşınabilir"
+   ],
+   "dogrusu": [
+    "Açılamaz (m.10)",
+    "Taşınamaz; \"Yalnız Gıda İçindir\" (m.13)"
+   ]
+  },
+  {
+   "id": "131-3",
+   "madde": [
+    "17",
+    "18",
+    "19"
+   ],
+   "baslik": "Personel hijyeni, gıdalar, ambalaj, ısıl işlem, eğitim",
+   "hukum": "Gıda alanında çalışan personel kişisel temizliğine azami itina, temiz ve uygun koruyucu kıyafet; gıda ile taşınabilen hastalığı olan/taşıyıcı veya enfekte yara, deri enfeksiyonu, ağrı, ishal gibi şikâyeti olan kişiler bulaştırma ihtimali varsa gıdayla temasa, muameleye ve gıda alanlarına alınmaz; bu belirtileri gösterenler hastalığını gıda işletmecisine bildirir (m.17); gıdalara uygulanabilen hükümler: parazit-patojen-toksinle kirlenmiş, bozulmuş, yabancı maddeli ham madde ve bileşenler kabul edilmez; bileşenler ve ham maddeler bozulma-kokuşma-bulaşmadan korunarak depolanır; tüm aşamalarda bulaşmaya karşı koruma; haşere ve kemirgen kontrolü ve evcil hayvanların girişinin önlenmesi; patojen üremesine imkân verecek maddeler risk oluşturacak sıcaklıklarda tutulmaz, soğuk zincir kırılmaz; hazırlama-taşıma-depolama-sergileme-servis için risk oluşturmamak şartıyla sınırlı süre dış ortam sıcaklığına izin; işlenmiş gıda üretenler ham madde ile işlenmiş maddeyi ayrı depolayacak yeterli oda ve soğuk hava deposuna sahip; düşük sıcaklıkta tutulacak gıda ısıl işlem/son hazırlama sonrası derhal soğutulur; dondurulmuş gıdanın çözündürülmesi patojen üremesini en aza indirecek sıcaklıklarda, çözünme sıvıları drene edilir; tehlikeli/yenilemeyen maddeler ve hayvan yemi etiketlenip ayrı depolanır (m.18); ambalaj-paket materyali bulaşma kaynağı olamaz, bulaşmadan korunarak depolanır; teneke kutu ve cam kavanozda kap bütünlüğü ve temizliği; tekrar kullanılan ambalaj kolay temizlenebilir (m.19); hermetik kaplarda ısıl işlem: ürünün her tarafını verilen sürede istenen sıcaklığa yükseltmeli; sıcaklık, basınç, kapama, mikrobiyoloji parametreleri düzenli kontrol (otomatik cihaz dâhil); yöntem pastörizasyon, UHT veya sterilizasyon gibi uluslararası standartlara uygun (m.20); işletmeci personelin gıda hijyeni konusunda kontrol-bilgilendirme-eğitimini ve HACCP prosedüründen sorumlu personelin HACCP eğitimini sağlar (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Personel hastalığını Bakanlığa bildirir\" yanlış; gıda işletmecisine",
+    "İshali olan personel eldivenle çalışabilir",
+    "Ham madde ve işlenmiş ürün aynı depoda tutulabilir"
+   ],
+   "dogrusu": [
+    "Gıda alanına alınmaz (m.17)",
+    "Ayrı depolanır (m.18)"
+   ]
+  },
+  {
+   "id": "131-4",
+   "madde": [
+    "22",
+    "23",
+    "24"
+   ],
+   "baslik": "HACCP, resmî kontrol, kılavuzlar, ithalat-ihracat",
+   "hukum": "İşletmeci HACCP ilkelerine dayalı kalıcı prosedürü uygulamaya koyar, uygular ve sürdürür; 7 temel ilke: (a) önlenmesi/elimine edilmesi/kabul edilebilir düzeye düşürülmesi gereken tehlikelerin belirlenmesi; (b) kritik kontrol noktalarının belirlenmesi; (c) kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması; (ç) kritik kontrol noktalarında etkin izleme prosedürleri; (d) kontrol altında tutulamayan durumlar için düzeltici faaliyet prosedürleri; (e) tedbirlerin etkin uygulandığının doğrulanması için düzenli prosedürler; (f) işletmenin yapısına uygun belge ve kayıtlar; üründe-yöntemde değişiklikte prosedür gözden geçirilir; HACCP zorunluluğu yalnız birincil üretim sonrası aşamaları yürütenler için; işletmeci şartları karşıladığını kanıtlayan belgeleri Bakanlığın istediği şekilde sağlar, belgeleri günceller, kayıtları uygun süre saklar (m.22); işletmeci Bakanlıkla işbirliği yapar; tesisin kayıt veya onay işlemlerini Gıda İşletmelerinin Kayıt ve Onay İşlemlerine Dair Yönetmeliğe göre yaptırmak zorunda (m.23); Bakanlık HACCP ve iyi hijyen uygulamalarını içeren iyi uygulama kılavuzlarının hazırlanmasını teşvik eder; kılavuzlar ihtiyari; Kodeks Alimentarius dikkate alınarak Bakanlık ve tüketici örgütleri dâhil tarafların katılımıyla gıda sektörü tarafından hazırlanır; TSE himayesinde de hazırlanabilir; Bakanlık değerlendirmesinde usulüne uygunluk, uygulanabilirlik, yol göstericilik (m.24); birincil üretim kılavuzları mikotoksin-ağır metal-radyoaktif bulaşan kontrolü, su-gübre kullanımı, bitki koruma ürünleri, veteriner ilaçları, yem, ölü hayvan-atık uzaklaştırma, bulaşıcı hastalık önleme ve Bakanlığa bildirim, hijyenik üretim-taşıma, kesim hayvanlarının temizliği, kayıt tutma (m.25); ithal ve ihraç/yeniden ihraç edilen gıdaların hijyen gereklilikleri m.6, 7, 22, 23'e uygun olmak zorunda (m.26-27); 2004 tarihli Çalışma İzni ve Gıda Sicili Yönetmeliği yürürlükten kaldırıldı (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"İyi uygulama kılavuzları zorunludur\" yanlış; ihtiyari. \"HACCP birincil üretimde de zorunludur\" yanlış",
+    "HACCP 5 ilkeden oluşur",
+    "İyi uygulama kılavuzları zorunludur"
+   ],
+   "dogrusu": [
+    "7 (m.22)",
+    "İhtiyari (m.24)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

@@ -1,0 +1,526 @@
+{
+ "kanun_id": 134,
+ "ad": "İlkyardım Yönetmeliği",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\eczaci\\pack_134.json",
+ "kartlar": [
+  {
+   "id": "134-0",
+   "madde": [
+    "1",
+    "2",
+    "9"
+   ],
+   "baslik": "Amaç, kapsam, dayanak",
+   "hukum": "Amaç: toplumun temel sağlık bilgisini artırmak, ilkyardımı topluma öğretmek, tüm kamu ve özel kurumlarda personel sayısına göre ilkyardımcı bulundurulması, kazalara bağlı ölüm ve sakatlık riskini azaltmak; bunun için eğitici eğitmeni, eğitmen ve ilkyardımcı yetiştirilmesi ile merkezlerin açılış, işleyiş ve denetimi (m.1); kapsam: ilkyardım eğitimi verecek yetki belgeli ve bu eğitimi alacak bütün kamu kurum ve kuruluşları, gerçek kişiler, özel hukuk tüzel kişileri (m.2); dayanak 3359 sayılı Sağlık Hizmetleri Temel Kanunu m.9/c ile 1 sayılı Cumhurbaşkanlığı Kararnamesi m.356/1-g, ğ ve m.508 (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yalnız özel merkezleri kapsar\" yanlış; kamu kurumları da kapsamda"
+   ],
+   "dogrusu": [
+    "tüm kamu ve özel kurumlarda personel sayısına göre ilkyardımcı bulundurulması · eğitici eğitmeni, eğitmen ve ilkyardımcı yetiştirilmesi · bütün kamu kurum ve kuruluşları, gerçek kişiler, özel hukuk tüzel kişileri · 3359 sayılı Sağlık Hizmetleri Temel Kanunu m.9/c · 1 sayılı Cumhurbaşkanlığı Kararnamesi m.356/1-g, ğ ve m.508"
+   ]
+  },
+  {
+   "id": "134-1",
+   "madde": [
+    "4"
+   ],
+   "baslik": "İlkyardım ve ilkyardımcı tanımı",
+   "hukum": "İlkyardım: ani ortaya çıkan hastalık veya yaralanmada kişinin hayatını korumak, sağlık durumunun kötüleşmesini önlemek ve iyileşmesine destek olmak amacıyla olay yerindeki mevcut imkânlarla yapılan hızlı ve etkili müdahaleler (m.4/d); ilkyardımcı: Bakanlıkça belirlenen standartlara uygun eğitimi alıp verilen eğitim çerçevesinde uygulama yapabilen ilkyardımcı belgesi sahibi kişi (m.4/e)",
+   "sinavda_boyle_yazarlar": [
+    "\"Standartları Genel Müdürlük belirler\" boşluk sorusunda yanlış; tanımda Bakanlıkça"
+   ],
+   "dogrusu": [
+    "İlkyardım · hayatını korumak, sağlık durumunun kötüleşmesini önlemek ve iyileşmesine destek olmak · olay yerindeki mevcut imkânlarla · ilkyardımcı · Bakanlıkça belirlenen standartlara · ilkyardımcı belgesi sahibi"
+   ]
+  },
+  {
+   "id": "134-2",
+   "madde": [
+    "4",
+    "23"
+   ],
+   "baslik": "İlkyardım eğitmeni ve eğitici eğitmeni",
+   "hukum": "İlkyardım eğitmeni: eğitici eğitimi veren merkezden eğitim alıp yetki belgesi düzenlenmiş, 1219 sayılı Kanuna göre sağlık meslek mensubu veya sağlık hizmetlerinde çalışan diğer meslek mensubu kişi (m.4/ğ); ilkyardım eğitici eğitmeni: sağlık alanında en az ön lisans, en az 1 yıllık ilkyardım eğitmeni yetki belgesi, en az 10 yetki belgeli ilkyardım eğitimi verdiğini belgeleyen eğitmenlerden Genel Müdürlükçe düzenlenen eğitici eğitmeni programına katılıp yetki belgesi alan kişi (m.4/f); eğitici eğitmeni yetki belgesi sahipleri ilkyardım eğitmeni sayılır (m.23/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eğitici eğitmeni için lisans şart\" yanlış; ön lisans yeter. \"En az 3 yıllık eğitmenlik\" yanlış; 1 yıl"
+   ],
+   "dogrusu": [
+    "İlkyardım eğitmeni · 1219 sayılı Kanuna göre sağlık meslek mensubu veya sağlık hizmetlerinde çalışan diğer meslek mensubu · ilkyardım eğitici eğitmeni · en az ön lisans · en az 1 yıllık · en az 10 yetki belgeli ilkyardım eğitimi · Genel Müdürlükçe düzenlenen · ilkyardım eğitmeni sayılır"
+   ]
+  },
+  {
+   "id": "134-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Mesul müdür tanımı",
+   "hukum": "Sağlık alanında en az ön lisans öğrenim görmüş, ilkyardım eğitmeni yetki belgesine sahip ve yetki belgeli en az 10 ilkyardım eğitimi vermiş kişi (m.4/i)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eğitici eğitmeni belgesi zorunlu\" yanlış; eğitmen belgesi + 10 eğitim yeter. \"15 eğitim\" ile karıştırma; 15 eğitmen belgesinin yenilenme sayısıdır (m.23)"
+   ],
+   "dogrusu": [
+    "en az ön lisans · ilkyardım eğitmeni yetki belgesine · yetki belgeli en az 10 ilkyardım eğitimi vermiş"
+   ]
+  },
+  {
+   "id": "134-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Kurumlar, ekipler ve OED",
+   "hukum": "Bakan/Bakanlık: Sağlık; Genel Müdürlük: Acil Sağlık Hizmetleri Genel Müdürlüğü; Müdürlük: İl Sağlık Müdürlükleri; denetim ekibi: en az biri ilkyardım eğitmeni yetki belgeli olmak üzere sağlık personelinden iki kişilik ekip; sınav gözetmeni: Genel Müdürlükte, müdürlüğün acil sağlık hizmetlerinden sorumlu başkanlığına bağlı birimlerde ve ilçe sağlık müdürlüklerinde fiilen görev yapan yetki belgeli eğitmen/eğitici eğitmeni; sınav gözetmen ekibi: en az iki kişilik gözetmen; OED: Otomatik Eksternal Defibrilatör (m.4/a-c, ç, j, k, l, m)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sınav gözetmen ekibi en az üç kişidir\" yanlış; iki. \"Genel Müdürlük = Sağlık Hizmetleri Genel Müdürlüğü\" yanlış; Acil Sağlık Hizmetleri"
+   ],
+   "dogrusu": [
+    "Bakan/Bakanlık · Genel Müdürlük · Acil Sağlık Hizmetleri Genel Müdürlüğü · Müdürlük · İl Sağlık Müdürlükleri · denetim ekibi · ilkyardım eğitmeni yetki belgeli · iki kişilik · sınav gözetmeni · fiilen görev yapan · sınav gözetmen ekibi · en az iki kişilik · OED"
+   ]
+  },
+  {
+   "id": "134-5",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Merkez açma yetkisi",
+   "hukum": "Şartları taşıyan kamu kurum ve kuruluşları, gerçek kişiler ve özel hukuk tüzel kişileri ilkyardımcı ve eğitmen yetiştirmek için merkez açabilir; merkezler bağımsız veya başka bir özel/kamu eğitim kurumunda program ilavesi olarak açılabilir; Genel Müdürlük ve müdürlükler ilkyardım eğitimi ve eğitici eğitimi düzenleyebilir; müdürlükler eğitici eğitimini Genel Müdürlüğün onayı ile; eğitici eğitmeni eğitimi yalnız Genel Müdürlükçe düzenlenir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Müdürlükler eğitici eğitimini serbestçe düzenler\" yanlış; GM onayı şart"
+   ],
+   "dogrusu": [
+    "kamu kurum ve kuruluşları, gerçek kişiler ve özel hukuk tüzel kişileri · bağımsız veya başka bir özel/kamu eğitim kurumunda program ilavesi · Genel Müdürlük ve müdürlükler · Genel Müdürlüğün onayı ile · eğitici eğitmeni eğitimi yalnız Genel Müdürlükçe"
+   ]
+  },
+  {
+   "id": "134-6",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Eğitim salonu özellikleri",
+   "hukum": "Masa ve sandalyeler katılımcıların birbirini görebileceği U şeklinde; ortada uygulama alanı olan en az 20 metrekarelik salon; idare odası, eğitmen odası, lavabo, tuvalet, dinlenme alanı; kişi başına asgari 3,5 metrekare kullanım alanı (m.6/1); merkezler bu özellikleri taşımak şartı ve müdürlüğün onayı ile aynı il sınırları içinde başka uygun yerlerde de eğitim verebilir (m.6/2); Genel Müdürlük, müdürlükler, eğitim ve araştırma hastaneleri, üniversitelerin sağlık fakülte ve yüksekokulları, Kızılay Genel Müdürlüğü ve halk eğitim müdürlükleri salon şartını taşıyorsa asli hizmet alanlarında da eğitim düzenleyebilir (m.6/3); eğitim malzemeleri salonda hazır bulunur (m.6/4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kişi başı 3 metrekare\" yanlış; 3,5. \"Başka ilde de eğitim verilebilir\" yanlış; aynı il"
+   ],
+   "dogrusu": [
+    "U şeklinde · en az 20 metrekarelik · kişi başına asgari 3,5 metrekare · müdürlüğün onayı · aynı il sınırları içinde · Genel Müdürlük, müdürlükler, eğitim ve araştırma hastaneleri, üniversitelerin sağlık fakülte ve yüksekokulları, Kızılay Genel Müdürlüğü ve halk eğitim müdürlükleri · asli hizmet alanlarında"
+   ]
+  },
+  {
+   "id": "134-7",
+   "madde": [
+    "7",
+    "8"
+   ],
+   "baslik": "Açma başvurusu ve belgeler",
+   "hukum": "Eğitim merkezi açmak isteyen müdürlüğe başvurur: dilekçe; ticaret şirketiyse Ticaret Sicil Gazetesi örneği; vakıf/dernekse yöneticisince onaylı tüzük/ana sözleşme; mesul müdür ve eğitmenlerin kimlik ve eğitmen yetki belgesi örnekleri; eğitmenlerin çalışma isteği dilekçesi; bütün odaların metrekaresini gösterir kroki; sahibi veya mesul müdür imzalı araç-gereç listesi (Ek-5); eğitim kitabı ve sunum CD'si; yangın tedbiri belgesi (m.7/1); kamu kurumlarında açılacak merkezler yalnız (a), (ç), (d), (e), (f), (g), (ğ), (ı) bentlerindeki belgelerle başvurur (m.7/2); eğitici eğitim merkezi için ek olarak eğitici eğitmenlerinin yetki belgeleri ile ilkyardım uygulamaları kitabı, ilkyardım eğitim becerileri kitabı ve sunum CD'leri; eğitim merkezi bünyesinde açılacaksa mesul müdürlük belgesi, eğitici eğitmenlerinin kimlik ve dilekçesi ve merkezin yetki belgesi örneği eklenir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Başvuru Genel Müdürlüğe yapılır\" yanlış; müdürlüğe"
+   ],
+   "dogrusu": [
+    "müdürlüğe · Ticaret Sicil Gazetesi · tüzük/ana sözleşme · eğitmen yetki belgesi · bütün odaların metrekaresini gösterir kroki · araç-gereç listesi (Ek-5) · yangın tedbiri belgesi · kamu kurumlarında · eğitici eğitim merkezi · ilkyardım eğitim becerileri kitabı"
+   ]
+  },
+  {
+   "id": "134-8",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Merkez kapatma başvurusu",
+   "hukum": "Merkez sahibi veya mesul müdür kapanma dilekçesiyle birlikte müdürlükçe düzenlenmiş tüm belgeleri müdürlüğe teslim eder; müdürlük belgeleri iptal edip kapatmayı yapar ve Genel Müdürlüğe yazılı bildirir; eğitici eğitimi yetki belgesinin iptali için belge aslı müdürlük aracılığıyla Genel Müdürlüğe gönderilir, iptal Genel Müdürlükçe; sınav kâğıtları, denetim formları ve tüm eğitim dokümanları müdürlüğe teslim edilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eğitici eğitimi yetki belgesini müdürlük iptal eder\" yanlış; Genel Müdürlük"
+   ],
+   "dogrusu": [
+    "tüm belgeleri müdürlüğe teslim eder · Genel Müdürlüğe yazılı bildirir · eğitici eğitimi yetki belgesinin iptali için belge aslı müdürlük aracılığıyla Genel Müdürlüğe · Genel Müdürlükçe"
+   ]
+  },
+  {
+   "id": "134-9",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Başvurunun değerlendirilmesi",
+   "hukum": "Başvuru dosyaları 30 iş günü içinde müdürlükçe incelenir (m.10/1); uygun dosyalarda fiziki alan ve araç-gereçler müdürlük denetim ekibince yerinde görülür, ön inceleme raporu (Ek-8c) hazırlanır, eksiklikler yazılı bildirilir ve denetleme formundaki süreler verilir; eğitim merkezi için yetki belgesi (Ek-1a), mesul müdürlük belgesi (Ek-2) ve eğitmen çalışma belgesi (Ek-4a) müdürlükçe; eğitici eğitim merkezi için uygun başvuru ön inceleme raporuyla Genel Müdürlüğe gönderilir, yetki belgesini (Ek-1b) Genel Müdürlük düzenleyip müdürlüğe yollar, mesul müdürlük ve eğitici eğitmeni çalışma belgesini (Ek-4b) müdürlük düzenler (m.10/2); belgeler merkez sahibine veya mesul müdüre imza karşılığında verilir (m.10/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"30 gün\" değil 30 iş günü. \"Eğitici eğitim merkezi yetki belgesini müdürlük düzenler\" yanlış; Genel Müdürlük",
+    "Eğitici eğitim merkezi yetki belgesini il sağlık müdürlüğü düzenler"
+   ],
+   "dogrusu": [
+    "Genel Müdürlük düzenler; eğitim merkezi belgesini müdürlük (m.10/2)"
+   ]
+  },
+  {
+   "id": "134-10",
+   "madde": [
+    "4",
+    "11"
+   ],
+   "baslik": "Müdürlüğün görevleri",
+   "hukum": "Merkezlerin açılış, işleyiş, denetim ve kapanış işlemleri; denetim ekibi görevlendirme; eğitim merkezlerine yetki belgesi düzenleme; eğitici eğitimi katılımcı listelerinin m.4/f niteliklerine uygunluğunu onaylama; sınavlarda her 21 kişiye 1 sınav gözetmen ekibi; gözetmen listesi hazırlayıp sıra ile görevlendirme; özel merkezde eğitmenlik yapanları denetmen ya da gözetmen olarak görevlendirmeme; Bakanlık eğitimleriyle belge almış kamu personeli eğitimcilerinden belge geçerlilik süresince görev yapma taahhütnamesi alma; ilkyardımcı yetki ve kimlik belgesini onaylama; merkez kayıtlarına belge numarası verme (Ek-6a, 6b); eğitmen yetki belgesini onaylama ve güncelleme; eğitim kitabı ve CD'yi onaylama; kapatılan merkezlere kapanmanın tamamlandığını en geç on beş gün içinde resmi yazıyla bildirme (m.11/1); bu görevleri acil sağlık hizmetlerinden sorumlu başkanlık yürütür (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her 7 kişiye 1 gözetmen ekibi\" yanlış; 7, eğitmen oranıdır; gözetmen ekibi 21 kişiye 1",
+    "Sınavlarda her 7 kişiye 1 gözetmen ekibi görevlendirilir"
+   ],
+   "dogrusu": [
+    "21 kişiye 1 (m.11/1-d)"
+   ]
+  },
+  {
+   "id": "134-11",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Sınav gözetmen ekibinin sorumlulukları",
+   "hukum": "Katılımcıları nüfus cüzdanı veya fotoğraflı resmi kimlik kontrolüyle sınava almak; sınav süresini ve kurallarını açıklamak; kurala uymamanın sınavı sonlandıracağını önceden bildirmek; aykırı davranışta sınavı sonlandırıp tutanak tutarak müdürlüğe teslim etmek; teorik sınavın usulüne uygun yapılmasını sağlamak; merkez eğitmenlerince yapılan uygulamalı sınavda gözetmen olarak bulunmak ve sınavı merkez eğitmeniyle birlikte sonuçlandırmak; sınav türüne uygun tutanağı (Ek-7a veya Ek-7b) tutup bir nüshasını merkeze, bir nüshasını müdürlüğe vermek (m.12/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uygulama sınavını yalnız gözetmen sonuçlandırır\" yanlış; merkez eğitmeni ile birlikte"
+   ],
+   "dogrusu": [
+    "nüfus cüzdanı veya fotoğraflı resmi kimlik · sınavı sonlandırıp tutanak · uygulamalı sınavda gözetmen olarak bulunmak ve sınavı merkez eğitmeniyle birlikte sonuçlandırmak · bir nüshasını merkeze, bir nüshasını müdürlüğe"
+   ]
+  },
+  {
+   "id": "134-12",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Gözetmen olma şartı ve gözetmenlikten çıkarılma",
+   "hukum": "Gözetmen ekibinde görev almak için dilekçe veren eğitmenler, müdürlüğün düzenlediği en az 3 yetki belgeli ilkyardım eğitiminde görev aldıktan sonra gözetmenlik yapabilir (m.12/2); müdürlük eğitimlerinde eğitmen olarak görevlendirilen eğitmen/eğitici eğitmeni, bir takvim yılında 3 kez katılmazsa 1 yıl süreyle gözetmenlikten çıkarılır (m.12/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"5 eğitimde görev aldıktan sonra\" yanlış; 3. \"Süresiz çıkarılır\" yanlış; 1 yıl"
+   ],
+   "dogrusu": [
+    "en az 3 yetki belgeli ilkyardım eğitiminde görev aldıktan sonra · bir takvim yılında 3 kez katılmazsa 1 yıl süreyle"
+   ]
+  },
+  {
+   "id": "134-13",
+   "madde": [
+    "13",
+    "14"
+   ],
+   "baslik": "Eğitmen ve katılımcı sayısı",
+   "hukum": "Merkezler ilkyardım eğitimi ve eğitici eğitimi programlarında her 7 katılımcıya bir eğitmen ile çalışır (m.13); ilkyardım eğitimi, eğitici eğitimi ve eğitici eğitmeni eğitimi programlarında katılımcı sayısı en fazla 21 (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Katılımcı sayısı en fazla 20\" yanlış; 21. \"Her 10 katılımcıya bir eğitmen\" yanlış; 7",
+    "Katılımcı sayısı en fazla 20 kişidir",
+    "Her 10 katılımcıya bir eğitmen düşer"
+   ],
+   "dogrusu": [
+    "21 (m.14)",
+    "7 (m.13)"
+   ]
+  },
+  {
+   "id": "134-14",
+   "madde": [
+    "15",
+    "28"
+   ],
+   "baslik": "Mesul müdürün konumu ve temel görevleri",
+   "hukum": "Mesul müdür sadece bir merkezde müdürlük yapabilir; idari işlerden bizzat, eğitim işlerinden eğitmenlerle birlikte sorumlu (m.15/1); müdürlük yaptığı merkezde eğitmenlik de yapabilir (m.15/2) ama başka bir merkezde eğitmenlik yapamaz (m.28/3); görevleri: açılış-işleyiş işlemleri, eğitimlerin standarda uygunluğu ve iç denetim, eğitim planlama, eğitimler sırasında merkezde tam zamanlı bulunma, denetim ve sınavlarda yetkililere eşlik, açılış belgelerinin asıllarını idari odada asılı bulundurma, ilkyardımcı yetki belgelerini eğitmen ile birlikte imzalayıp müdürlük onayına sunma, eğitici eğitimi yetki belgesi uzatma işlemleri, sınavda başarısız olanlara kursa katıldığına dair yazı düzenleme (m.15/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mesul müdür iki merkezde müdürlük yapabilir\" yanlış; tek merkez"
+   ],
+   "dogrusu": [
+    "sadece bir merkezde · idari işlerden bizzat, eğitim işlerinden eğitmenlerle birlikte · eğitmenlik de yapabilir · başka bir merkezde eğitmenlik yapamaz · iç denetim · eğitimler sırasında merkezde tam zamanlı bulunma · açılış belgelerinin asıllarını idari odada asılı bulundurma · eğitmen ile birlikte imzalayıp müdürlük onayına sunma · kursa katıldığına dair yazı"
+   ]
+  },
+  {
+   "id": "134-15",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Mesul müdürün bildirim süreleri",
+   "hukum": "Düzenlenecek eğitimleri ve katılımcı listelerini yazılı olarak en geç bir gün öncesinden müdürlüğe bildirir (m.15/3-d); şirket ortaklarındaki değişiklikleri on beş gün içinde (m.15/3-f); eğitmen, eğitici eğitmeni ve merkez adres değişikliklerini on beş gün içinde (m.15/3-g); çalışması sonlanan eğitimcilerin çalışma izin belgelerini bir hafta içinde iade eder (m.15/3-ğ); merkez kapanırsa on beş gün içinde sınav kâğıtları ve tüm evrakı müdürlüğe, yönetim değişikliğinde yeni yönetime teslim eder (m.15/3-j)",
+   "sinavda_boyle_yazarlar": [
+    "\"Çalışma izin belgesi 15 gün içinde iade edilir\" yanlış; bir hafta"
+   ],
+   "dogrusu": [
+    "yazılı olarak en geç bir gün öncesinden · şirket ortaklarındaki değişiklikleri on beş gün içinde · eğitmen, eğitici eğitmeni ve merkez adres değişikliklerini on beş gün içinde · çalışma izin belgelerini bir hafta içinde · on beş gün içinde"
+   ]
+  },
+  {
+   "id": "134-16",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Kayıt ve sınav kâğıdı saklama süreleri",
+   "hukum": "Mesul müdür düzenlenen eğitimlerin kayıtlarını tutup müdürlüğe gönderir (Ek-6a, 6b, 6c, 6e); kayıtların bir örneğini on yıl saklar (m.15/3-h, ı); sınav kâğıtlarını ilkyardımcı belgesi geçerlilik süresi boyunca saklar ve Genel Müdürlük ile müdürlüğün denetimine açık tutar (m.15/3-i)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sınav kâğıtları 10 yıl saklanır\" yanlış; belge geçerlilik süresi boyunca; 10 yıl kayıtlar içindir"
+   ],
+   "dogrusu": [
+    "on yıl · sınav kâğıtlarını ilkyardımcı belgesi geçerlilik süresi boyunca"
+   ]
+  },
+  {
+   "id": "134-17",
+   "madde": [
+    "16"
+   ],
+   "baslik": "Mesul müdüre vekalet ve yeni mesul müdür",
+   "hukum": "Mesul müdür raporlu veya izinliyse vekalet edecek eğitmenin kimlik bilgileri ve vekalet süresi iki gün içinde müdürlüğe bildirilir (m.16/1); görevi sona ererse yeni mesul müdür görevlendirilmesinin yazılı bildirimi yedi gün içinde yapılır (m.16/2)",
+   "sinavda_boyle_yazarlar": [
+    "İkisini ters çevirirler: vekalet 2, yeni mesul müdür 7"
+   ],
+   "dogrusu": [
+    "iki gün içinde · yedi gün içinde"
+   ]
+  },
+  {
+   "id": "134-18",
+   "madde": [
+    "17",
+    "18"
+   ],
+   "baslik": "Eğitmenlerin görevleri ve öğretim üyesi muafiyeti",
+   "hukum": "Eğitici eğitmeni ve ilkyardım eğitmeni kendi adına düzenlenmiş çalışma belgesiyle çalışır; eğitimlerin standarda uygunluğunu sağlar; aksaklıkları mesul müdüre yazılı bildirir; eğitici eğitmeni ilkyardım eğitmeni yetki belgesini, ilkyardım eğitmeni ilkyardımcı yetki belgesini mesul müdürle birlikte imzalayıp müdürlük onayına sunar (m.17/1, m.18/1); Bakanlığın eğitim ve araştırma hastaneleri ile sağlık alanında eğitim veren fakülte ve yüksekokullarda açılacak merkezlerde eğitmenlik yapacak uzmanlığını almış öğretim üye ve görevlilerinden eğitici eğitmeni / ilkyardım eğitmeni yetki belgesi istenmez (m.17/2, m.18/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Her merkezdeki öğretim üyesinden yetki belgesi istenmez\" yanlış; muafiyet yalnız EAH ve sağlık fakülte/yüksekokullarındaki merkezler için"
+   ],
+   "dogrusu": [
+    "kendi adına düzenlenmiş çalışma belgesiyle · mesul müdüre yazılı · ilkyardım eğitmeni yetki belgesini · ilkyardımcı yetki belgesini · eğitim ve araştırma hastaneleri · fakülte ve yüksekokullarda · uzmanlığını almış öğretim üye ve görevlilerinden · istenmez"
+   ]
+  },
+  {
+   "id": "134-19",
+   "madde": [
+    "19"
+   ],
+   "baslik": "İşyerinde zorunlu ilkyardımcı sayısı",
+   "hukum": "İş sağlığı ve güvenliği kapsamında az tehlikeli işyerinde her 20 çalışan için 1, tehlikeli işyerinde her 15 çalışana kadar 1, çok tehlikeli işyerinde her 10 çalışana kadar 1 ilkyardımcı bulundurmak zorunludur (m.19/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Az tehlikeli işyerinde her 25 çalışana 1\" yanlış; 20",
+    "Az tehlikeli işyerinde her 25 çalışana 1 ilkyardımcı bulundurulur"
+   ],
+   "dogrusu": [
+    "20 (m.19/1)"
+   ]
+  },
+  {
+   "id": "134-20",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Zorunlu kurslar ve öğretmenler",
+   "hukum": "Özel güvenlik ve sürücü kursları gibi ilkyardım eğitiminin zorunlu verildiği kurslarda eğitim bu Yönetmeliğe göre yetki belgesi almış eğitimcilerce verilir (m.19/2); Milli Eğitim Bakanlığı programında ilkyardım eğitimi verecek öğretmenlerin 16 saatlik ilkyardım eğitimi almaları zorunlu (m.19/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öğretmenler 40 saatlik eğitici eğitimi almalıdır\" yanlış; 16 saat"
+   ],
+   "dogrusu": [
+    "bu Yönetmeliğe göre yetki belgesi almış eğitimcilerce · Milli Eğitim Bakanlığı · öğretmenlerin 16 saatlik ilkyardım eğitimi"
+   ]
+  },
+  {
+   "id": "134-21",
+   "madde": [
+    "20"
+   ],
+   "baslik": "Eğitim materyali ve eğitim süreleri",
+   "hukum": "Tüm eğitimlerde Genel Müdürlükçe belirlenen materyal ve yöntemler kullanılır; merkezler materyalleri müdürlük onayından sonra kullanabilir (m.20/1); süreler: ilkyardım eğitimi 16 saat, ilkyardım eğitici eğitimi 40 saat, ilkyardım eğitici eğitmeni eğitimi 40 saat, temel yaşam desteği eğitimi 2 saat, afetlerde ilkyardım eğitimi 4 saat (m.20/2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Temel yaşam desteği eğitimi 4 saat\" yanlış; 2 saat; 4 saat afet eğitimidir",
+    "Temel yaşam desteği eğitimi 4 saattir"
+   ],
+   "dogrusu": [
+    "2 saat; afet eğitimi 4 saat (m.20/2)"
+   ]
+  },
+  {
+   "id": "134-22",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Eğitim konuları",
+   "hukum": "Konular ulusal ve uluslararası standartlara göre Genel Müdürlükçe belirlenir (m.21/1); ilkyardım eğitimi: genel ilkyardım bilgileri, vücut sistemleri, TYD, OED kullanımı, havayolu tıkanıklığı, bilinç bozuklukları, kanamalar, şok ve göğüs ağrısı, yaralanmalar, boğulmalar, kırık-çıkık-burkulma, acil taşıma, böcek sokması-hayvan ısırığı, zehirlenmeler, yanık-donma-sıcak çarpması, göz-kulak-buruna yabancı cisim; TYD ve OED kullanımı eğitimi: erişkin, çocuk ve bebekte TYD; afetlerde ilkyardım: genel bilgiler, TYD, kanamalar, kırık-çıkık-burkulma, acil taşıma; eğitici eğitimi: ilkyardım konularına ek olarak yetişkin eğitimi, iletişim, beceri ve sunum becerisi, küçük grup çalışması, yeterliliğe dayalı değerlendirme vb.; eğitici eğitmeni eğitimi: eğitim programı oluşturma, ihtiyaç belirleme, içerik analizi, kurs modeli (m.21/2); Genel Müdürlük eğitim, konu ve malzeme listesini güncelleyip duyurur (m.21/6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Afetlerde ilkyardım eğitiminde zehirlenmeler de vardır\" yanlış; yok"
+   ],
+   "dogrusu": [
+    "Genel Müdürlükçe · ilkyardım eğitimi · OED kullanımı · TYD ve OED kullanımı eğitimi · erişkin, çocuk ve bebekte TYD · afetlerde ilkyardım · eğitici eğitimi · eğitici eğitmeni eğitimi"
+   ]
+  },
+  {
+   "id": "134-23",
+   "madde": [
+    "21",
+    "23"
+   ],
+   "baslik": "Güncelleme eğitimi",
+   "hukum": "Güncelleme eğitimi, yetki belgesinin geçerlilik süresinin bitiminden önceki 3 ay içinde, alınan eğitimin yarısı süreyle düzenlenir (m.21/4); ilkyardımcı için bu eğitim zorunlu, katılanların belgesi yenilenir, katılmayanın belgesi geçersiz (m.23/1-a); eğitim vermeyen eğitmen ve eğitici eğitmenleri de son üç ayda güncelleme almak zorunda, almayanların belgesi geçersiz (m.23/1-b, c); güncellemeye katılanın belgesi belge geçerlilik tarihinden itibaren geçerlilik süresi kadar uzatılır (m.23/1-ç); mücbir sebep veya olağanüstü hâlde güncelleme yapılamazsa Genel Müdürlük onayıyla engel kalktıktan sonra üç ay içinde yapılır, bu sürede belgeler geçerli kalır (m.23/1-g)",
+   "sinavda_boyle_yazarlar": [
+    "\"Güncelleme, belge bittikten sonraki 3 ayda alınabilir\" yanlış; bitiminden önceki 3 ay",
+    "Güncelleme eğitimi belge süresi bittikten sonraki 3 ay içinde alınır"
+   ],
+   "dogrusu": [
+    "Bitiminden önceki 3 ay içinde (m.21/4, m.23/1-a)"
+   ]
+  },
+  {
+   "id": "134-24",
+   "madde": [
+    "22"
+   ],
+   "baslik": "İlkyardımcı yeterliliği ve 85 puan",
+   "hukum": "İlkyardımcı olacak kişi en az ilkokul veya ilköğretim okulu mezunu (m.22/1); eğitim süresinin tamamına devam zorunlu (m.22/2); başarı için teorik ve uygulamalı sınavların her birinden 100 üzerinden 85 puan; teorikte başarısız olan uygulamalı sınava alınmaz (m.22/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Teorik ve uygulama ortalaması 85 olmalı\" yanlış; her birinden 85. \"En az lise mezunu\" yanlış; ilkokul/ilköğretim",
+    "Teorik ve uygulama sınav ortalaması 85 olmalıdır"
+   ],
+   "dogrusu": [
+    "Her birinden 85; teorikte kalan uygulamaya alınmaz (m.22/3)"
+   ]
+  },
+  {
+   "id": "134-25",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Sınav tutanağı, tekrar sınav ve iki başarısızlık",
+   "hukum": "Sınav kurallarına uymadığı için tutanak tutulan katılımcı ilk sınav hakkından başarısız sayılır (m.22/4); başarısız olanlar bir ay içinde tekrar sınava alınır; iki defa başarısız olana yetki belgesi verilmez, talep ederse merkez kursa katıldığına dair yazı verir; iki sınavda başarısız olan yeniden eğitime katılır (m.22/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"İki kez başarısız olan bir daha eğitime alınmaz\" yanlış; yeniden eğitime katılır. \"Tekrar sınav üç ay içinde\" yanlış; bir ay",
+    "İki kez başarısız olan katılımcı bir daha eğitime alınmaz"
+   ],
+   "dogrusu": [
+    "Yeniden eğitime katılır; belge verilmez (m.22/5)"
+   ]
+  },
+  {
+   "id": "134-26",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Soru havuzu, uygulama sınavı konuları ve sınav zamanı",
+   "hukum": "Teorik sınav soruları Genel Müdürlükçe oluşturulan soru havuzundan müdürlükçe belirlenir (m.22/6); uygulama sınavında temel yaşam desteği, hava yolu tıkanıklığı ve araç içinden yaralı çıkarma mutlaka bulunur, buna ek beceri gerektiren en az 2 konu daha sınav gözetmenince seçilir, beceri rehberleri ve Ek-7a esas alınır (m.22/7); teorik ve uygulamalı sınavlar aynı gün, hafta sonu veya mesai saatleri dışında, müdürlükçe belirlenen tarihlerde (m.22/9); sınavlar eğitimin bittiği tarihi izleyen günden itibaren otuz gün içinde yapılır; mücbir sebep, doğal afet veya tehlikeli salgında müdürlükçe engelin kalkmasından itibaren bir ay uzatılabilir (m.22/10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Uygulama sınavında yalnız TYD zorunludur\" yanlış; TYD + hava yolu tıkanıklığı + araç içinden yaralı çıkarma üçü zorunlu"
+   ],
+   "dogrusu": [
+    "Genel Müdürlükçe oluşturulan soru havuzundan müdürlükçe · temel yaşam desteği, hava yolu tıkanıklığı ve araç içinden yaralı çıkarma mutlaka · en az 2 konu daha sınav gözetmenince · aynı gün · hafta sonu veya mesai saatleri dışında · müdürlükçe belirlenen · otuz gün içinde · bir ay uzatılabilir"
+   ]
+  },
+  {
+   "id": "134-27",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Belge geçerlilik süreleri ve eğitimle yenileme",
+   "hukum": "İlkyardımcı belgesi üç yıl (m.23/1-a); ilkyardım eğitmeni yetki belgesi beş yıl, geçerlilik süresi içinde en az 15 eğitim verdiğini belgeleyenin belgesi güncelleme veya eğitim tekrarı olmadan yenilenir (m.23/1-b); eğitici eğitmeni yetki belgesi beş yıl, en az 5 eğitim verenin belgesi aynı şekilde yenilenir (m.23/1-c); eğitici eğitmeni belgesi sahipleri eğitmen belgesi sahibi sayılır (m.23/1-d)",
+   "sinavda_boyle_yazarlar": [
+    "Sayıları çaprazlarlar: eğitmen 15, eğitici eğitmeni 5. \"İlkyardımcı belgesi 5 yıl\" yanlış; 3 yıl",
+    "İlkyardımcı belgesi 5 yıl geçerlidir",
+    "Eğitici eğitmeni belgesinin güncellemesiz yenilenmesi için 15 eğitim gerekir"
+   ],
+   "dogrusu": [
+    "3 yıl; eğitmen ve eğitici eğitmeni belgeleri 5 yıl (m.23/1)",
+    "5 eğitim; 15 eğitim ilkyardım eğitmeni içindir (m.23/1-b, c)"
+   ]
+  },
+  {
+   "id": "134-28",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Belgeleri kim hazırlar ve onaylar",
+   "hukum": "Ek-3a ve Ek-3c'deki ilkyardımcı belgesi/yetki belgesi merkez veya müdürlük, Ek-3f ve Ek-3g'deki belgeler merkez tarafından hazırlanır; Ek-3b ilkyardımcı kimlik belgesi eğitimi veren merkezce düzenlenir, müdürlükçe onaylanır (m.23/1-e); merkezler kendi hazırladıkları belgede Bakanlık logosu ile birlikte kendi logosunu da kullanabilir (m.23/1-f)",
+   "sinavda_boyle_yazarlar": [
+    "\"Merkez yalnız kendi logosunu kullanır\" yanlış; Bakanlık logosu ile birlikte"
+   ],
+   "dogrusu": [
+    "merkez veya müdürlük · merkez · Ek-3b ilkyardımcı kimlik belgesi eğitimi veren merkezce düzenlenir, müdürlükçe onaylanır · Bakanlık logosu ile birlikte kendi logosunu"
+   ]
+  },
+  {
+   "id": "134-29",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Çalışma saatleri ve eğitim bildirimleri",
+   "hukum": "Merkezler 09.00-21.00 arasında çalışır, çalışma saatlerini belirleyip müdürlüğe bildirir (m.24/1); beyan ettikleri saatlerde Genel Müdürlük ve müdürlük denetimine açık (m.24/2); ilkyardım eğitimlerini en az bir iş günü öncesinden bildirir (m.24/3); eğitici eğitimlerini en az üç iş günü öncesinden bildirip onay alır (m.24/4); eğitim iptalini gerekçesiyle iptal kararı verildiği gün yazılı bildirir (m.24/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"İlkyardım eğitimi için de onay gerekir\" yanlış; onay yalnız eğitici eğitimi için. \"Eğitici eğitmeni eğitimi 5 iş günü önce bildirilir\" yanlış; öyle bir hüküm yok, o eğitimi zaten Genel Müdürlük düzenler (m.5/5)"
+   ],
+   "dogrusu": [
+    "09.00-21.00 · Genel Müdürlük ve müdürlük denetimine açık · ilkyardım eğitimlerini en az bir iş günü · eğitici eğitimlerini en az üç iş günü · onay alır · iptal kararı verildiği gün yazılı"
+   ]
+  },
+  {
+   "id": "134-30",
+   "madde": [
+    "25",
+    "28"
+   ],
+   "baslik": "Ücret tespit komisyonu ve ücretsiz eğitimler",
+   "hukum": "Ek-9'daki ücretleri ücret tespit komisyonu belirler; komisyon: merkezlerin hazır bulunan mesul müdürü veya temsilcisi, il ticaret odasından bir temsilci, acil sağlık hizmetlerinden sorumlu başkan/başkan yardımcısı ve müdürlükte ilkyardım işlerini yürüten eğitmen/eğitici eğitmeni; başkanlık il sağlık müdürü veya görevlendireceği acil sağlık hizmetlerinden sorumlu başkan/yardımcısı; fiyat endeksi, yerel koşullar, emsal ücretler değerlendirilir; kararlar il sağlık müdürünce imzalanıp onay için Genel Müdürlüğe gönderilir, uygun bulunmayan yeniden komisyona döner (m.25/1); komisyon her yılın ocak ayı başından şubat ayı sonuna kadar toplanır, tespit yıllık (m.25/2); süresinde oluşturulamazsa bir önceki yılın ücreti geçerli (m.25/3); sınav ücreti ile gözetmenlere ödenecek ücret Bakanlıkça (m.25/4); Temel Yaşam Desteği ve Afetlerde İlkyardım Eğitimi ücretsiz (m.25/5); merkezler Genel Müdürlükçe onaylanan ücretin üzerinde ücret talep edemez (m.28/2-e)",
+   "sinavda_boyle_yazarlar": [
+    "\"Komisyon mart-nisan aylarında toplanır\" yanlış; ocak-şubat. \"Güncelleme eğitimi ücretsizdir\" yanlış; ücretsiz olan TYD ve afet eğitimleridir"
+   ],
+   "dogrusu": [
+    "ücret tespit komisyonu · mesul müdürü veya temsilcisi · il ticaret odasından bir temsilci · acil sağlık hizmetlerinden sorumlu başkan/başkan yardımcısı · eğitmen/eğitici eğitmeni · il sağlık müdürü veya görevlendireceği acil sağlık hizmetlerinden sorumlu başkan/yardımcısı · il sağlık müdürünce imzalanıp onay için Genel Müdürlüğe · her yılın ocak ayı başından şubat ayı sonuna kadar · yıllık · bir önceki yılın ücreti · sınav ücreti ile gözetmenlere ödenecek ücret Bakanlıkça · Temel Yaşam Desteği ve Afetlerde İlkyardım Eğitimi ücretsiz · Genel Müdürlükçe onaylanan ücretin üzerinde ücret talep edemez"
+   ]
+  },
+  {
+   "id": "134-31",
+   "madde": [
+    "26",
+    "27"
+   ],
+   "baslik": "Kayıt ve denetim",
+   "hukum": "Eğitici eğitmeni kayıtları Genel Müdürlükçe tutulur (m.26); merkezler Genel Müdürlük veya müdürlük denetim ekiplerince denetlenir; olağan denetim müdürlükçe yılda en az 2 kez; olağandışı denetim Genel Müdürlük veya müdürlük talebi, şikâyet veya soruşturma üzerine; denetleme formları Ek-8a, Ek-8b; denetime merkezi temsilen mesul müdür veya vekili katılır ve sonuç raporlarını imzalar (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"Olağan denetim yılda bir kez\" yanlış; en az 2. \"Olağan denetimi Genel Müdürlük yapar\" yanlış; müdürlük",
+    "Olağan denetim yılda en az 1 kez yapılır"
+   ],
+   "dogrusu": [
+    "En az 2 kez, müdürlükçe (m.27/1-a)"
+   ]
+  },
+  {
+   "id": "134-32",
+   "madde": [
+    "28",
+    "30"
+   ],
+   "baslik": "Yasaklar, reklam ve tanıtım",
+   "hukum": "Merkezler müdürlükçe onaylanmış müfredat dışında kaynak kullanamaz; yetki belgesi almadan katılımcı kaydı yapamaz ve eğitime başlayamaz; çalışma belgesi olmayan eğitmen çalıştıramaz; resmi kurum isimlerini ticari isim olarak kullanamaz; tabela ve evrakta yetki belgesindeki isim/unvan dışında isim kullanamaz; onaylı ücretin üzerinde ücret isteyemez; bünyesinde olmayan faaliyetin reklamını veremez; eğitim sırasında salonda eğitim malzemesi dışında malzeme bulunduramaz (m.28/2); mesul müdür başka merkezde eğitmenlik yapamaz (m.28/3); broşür, afiş ve tanıtım videosu müdürlük onayından sonra kullanılır (m.30/1); merkezler, üniversiteler, dernekler, STK'lar ve kamu kurumları mevzuat şartlarını yerine getirip müdürlükten izin alarak ücretsiz TYD eğitimi, halka yönelik özendirici faaliyet ve sosyal sorumluluk projesi yürütebilir (m.30/2); yanıltıcı, paniğe sevk edici ve yanlış yönlendirici reklam yasak (m.30/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yetki belgesi başvurusu yapıldığı anda kayıt alınabilir\" yanlış; belge alınmadıkça kayıt ve eğitim yasak"
+   ],
+   "dogrusu": [
+    "müdürlükçe onaylanmış müfredat dışında kaynak kullanamaz · yetki belgesi almadan katılımcı kaydı yapamaz ve eğitime başlayamaz · çalışma belgesi olmayan eğitmen çalıştıramaz · bünyesinde olmayan faaliyetin reklamını veremez · müdürlük onayından sonra · müdürlükten izin alarak · yanıltıcı, paniğe sevk edici ve yanlış yönlendirici"
+   ]
+  },
+  {
+   "id": "134-33",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Müeyyideler: adreste bulunmayan merkez ve taahhütname",
+   "hukum": "Sahibine ve mesul müdürüne ulaşılamayan, yetki belgesindeki adreste bulunmayan veya başvurusuz kapandığı tespit edilen merkez on beş gün içinde müdürlükçe iki kez denetlenir, faaliyet göstermediği tutanak altına alınır, kapatma başvurusu aranmaksızın sürekli kapatma yapılır ve Genel Müdürlüğe bildirilir (m.29/1); usul ve esaslara ve yasaklara aykırılıkta denetim formundaki (Ek-8a) hükümler uygulanır (m.29/2); Bakanlık eğitimleriyle belge almış kamu personeli eğitimcilerinden belge geçerlilik süresince görev yapma taahhütnamesi alınır; taahhüt süresinden önce kamudan istifa edenden eğitim ücreti alınır (m.29/3)",
+   "sinavda_boyle_yazarlar": [
+    "\"30 gün içinde bir kez denetlenir\" yanlış; 15 gün içinde iki kez"
+   ],
+   "dogrusu": [
+    "on beş gün içinde müdürlükçe iki kez denetlenir · tutanak · kapatma başvurusu aranmaksızın sürekli kapatma · denetim formundaki (Ek-8a) hükümler · taahhütnamesi · taahhüt süresinden önce kamudan istifa edenden eğitim ücreti alınır"
+   ]
+  },
+  {
+   "id": "134-34",
+   "madde": [
+    "1",
+    "2",
+    "3"
+   ],
+   "baslik": "Geçici hükümler: eski sertifikalar, OED eğitimi, Covid",
+   "hukum": "Yönetmelikten önce alınan sertifikalar belgede yazılı süre kadar geçerli; güncellenince Yönetmelik süreleri uygulanır (Geçici m.1); OED eğitimi almamış ilkyardımcı ve eğitmenler 1 yıl içinde, OED tanıtımı, kullanıldığı durumlar ve uygulamasını içeren 2 saatlik OED eğitimi alırsa yetki mevcut belgeye işlenir; başarı için pratik sınavda 100 tam puan gerekir; merkezler 1 yıl içinde OED eğitimi yetki belgesi almak zorunda, belgesi olmayan merkez OED eğitimi düzenleyemez; ücret merkezlerde Ek-9'a göre, sağlık müdürlüklerinde ücretsiz (Geçici m.2); Covid-19 nedeniyle 16/3/2020'den itibaren yapılamayan güncelleme eğitimlerinin tarihleri ve belgelerin geçerliliği Genel Müdürlükçe belirlenir (Geçici m.3)",
+   "sinavda_boyle_yazarlar": [
+    "\"OED pratik sınavında 85 puan yeter\" yanlış; 100 tam puan"
+   ],
+   "dogrusu": [
+    "belgede yazılı süre kadar · 1 yıl içinde · 2 saatlik OED eğitimi · pratik sınavda 100 tam puan · 1 yıl içinde OED eğitimi yetki belgesi · sağlık müdürlüklerinde ücretsiz · 16/3/2020 · Genel Müdürlükçe"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

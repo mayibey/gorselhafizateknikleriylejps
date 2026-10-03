@@ -1,0 +1,814 @@
+{
+ "kanun_id": 86,
+ "ad": "6245 Sayılı Harcırah Kanunu",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\maliye\\pack_86.json",
+ "kartlar": [
+  {
+   "id": "86-0",
+   "madde": [
+    "1"
+   ],
+   "baslik": "Kapsam",
+   "hukum": "Bu Kanuna tabi harcırahı ödeyenler: (a) genel bütçeli daireler, katma (mülhak) ve özel bütçeli idareler (köy bütçeleri hariç) ve bunlara bağlı sabit ve döner sermayeli müesseseler; (b) özel kanunlarla kurulmuş banka ve teşekküller (Denizcilik Bankası TAO, Türkiye Vakıflar Bankası TAO ve Türk Hava Yolları AO hariç); (c) (a) ve (b)'dekilerin sermayesinin yarısından fazlasına sahip olduğu teşekkül ve müesseseler (m.1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Köy bütçelerinden ödenen harcırah da bu Kanuna tabidir\" yanlış; köy bütçeleri hariç",
+    "Köy bütçelerinden ödenen harcırah bu Kanuna tabidir"
+   ],
+   "dogrusu": [
+    "Köy bütçeleri hariç (m.1)"
+   ]
+  },
+  {
+   "id": "86-1",
+   "madde": [
+    "1",
+    "3"
+   ],
+   "baslik": "Harcırah ve kurum tanımı",
+   "hukum": "Harcırah: yol masrafı, gündelik, aile masrafı ve yer değiştirme masrafından birini, birkaçını veya tamamını; kurum: m.1'de sayılan daire, idare, banka, teşekkül ve müesseseler (m.3/a-b)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harcırah yalnız gündelikten ibarettir\" yanlış; dört unsurdan oluşabilir"
+   ],
+   "dogrusu": [
+    "birini, birkaçını veya tamamını"
+   ]
+  },
+  {
+   "id": "86-2",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Memur, hizmetli, aile fertleri",
+   "hukum": "Memur: personel kanunlarına göre aylık alan kimseler (yardımcı hizmetler sınıfı hariç); hizmetli: yardımcı hizmetler sınıfı personeli, yalnız ödenek karşılığı çalışanlar, tarım-orman işçileri ve iş kanunlarına göre işçiler; aile fertleri: harcırahı gerektiren olay sırasında evlilik bağıyla bağlı eşi ile bakmakla yükümlü olduğu usul ve füruu ve erkek ve kız kardeşleri; bagaj: resmî vazifede kullanılabilecek eşya ile yolcunun bu seyahat için ihtiyacı olan ve mutat şekilde taşınabilen şahsi eşyası (m.3/c-f)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yardımcı hizmetler sınıfı personeli memur tanımına girer\" yanlış; hizmetli sayılır"
+   ],
+   "dogrusu": [
+    "aylık alan · yardımcı hizmetler sınıfı hariç · yardımcı hizmetler sınıfı · evlilik bağıyla bağlı eşi · bakmakla yükümlü olduğu usul ve füruu ve erkek ve kız kardeşleri"
+   ]
+  },
+  {
+   "id": "86-3",
+   "madde": [
+    "3"
+   ],
+   "baslik": "Memuriyet mahalli ve başka yer",
+   "hukum": "Memuriyet mahalli: asıl görev yeri veya ikametgâhın bulunduğu şehir-kasabanın belediye sınırları içi ile bunların devamı niteliğinde belediye hizmeti götürülen yerler; büyükşehirlerde il mülki sınırı içinde kalmak kaydıyla görev/ikamet yerinin ilçe belediye sınırı içi ve devamı niteliğindeki yerler ile kurumlarınca sağlanan taşıtlarla gidilip gelinebilen yerler; başka yer: memuriyet mahalli dışı (m.3/g-h)",
+   "sinavda_boyle_yazarlar": [
+    "\"Büyükşehirlerde memuriyet mahalli il mülki sınırlarının tamamıdır\" yanlış; ilçe belediye sınırı esas (il sınırı yalnız üst sınır)"
+   ],
+   "dogrusu": [
+    "belediye sınırları · büyükşehirlerde · ilçe belediye sınırı · kurumlarınca sağlanan taşıtlarla gidilip gelinebilen"
+   ]
+  },
+  {
+   "id": "86-4",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Harcırah verilecek kimseler",
+   "hukum": "Kurum memur ve hizmetlileri, aile fertleri ve fahri çalışanlar; memur/hizmetli olmayıp geçici vazifeyle görevlendirilenler; kadrosuzluk nedeniyle açıkta kalan memurlar; cezaen olmaksızın görevine son verilen hizmetliler; vefatında aile fertleri, çocuklara refakat ettirilecek memur-hizmetliler; hükümlü, tutuklu veya gözetim altındakilerin sevkinde ya da refakatle görevlendirilen erbaş ve erler; millî ve resmî spor temasında sporcu ve idareciler; birlik hâlinde yabancı memleketlere gönderilecek TSK mensupları ve Türkiye'de bıraktıkları aile fertleri; aile ile oturulması yasak bölgelerdeki askerî şahısların aile fertleri; özel hâllerde askerî öğrenciler ile erbaş ve erler (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cezaen görevine son verilen hizmetliye de harcırah verilir\" yanlış; cezaen olmamak şartı var"
+   ],
+   "dogrusu": [
+    "fahri çalışanlar · geçici vazifeyle görevlendirilenler · hükümlü, tutuklu veya gözetim altındakilerin sevkinde ya da refakatle görevlendirilen erbaş ve erler · birlik hâlinde yabancı memleketlere gönderilecek TSK mensupları · aile ile oturulması yasak bölgelerdeki askerî şahısların aile fertleri"
+   ]
+  },
+  {
+   "id": "86-5",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Harcırahın unsurları",
+   "hukum": "Harcırah; yol masrafı, yevmiye, aile masrafı ve yer değiştirme masrafını ihtiva eder; ilgili bunlardan birine, birkaçına veya tamamına müstahak olabilir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Konaklama masrafı harcırahın dört unsurundan biridir\" yanlış; dört unsur yol, yevmiye, aile, yer değiştirme",
+    "Harcırah; yol masrafı, gündelik, konaklama ve yer değiştirme masrafından oluşur"
+   ],
+   "dogrusu": [
+    "Yol masrafı, yevmiye, aile masrafı, yer değiştirme masrafı (m.5)"
+   ]
+  },
+  {
+   "id": "86-6",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Esas alınacak yol ve taşıt",
+   "hukum": "Aksine hüküm yoksa gidip gelmeye en uygun ve kullanılması mutat yol ve taşıt; bu yolda hem muayyen (belirli) tarifeli hem gayrimuayyen tarifeli taşıt varsa muayyen tarifeli esas; yol-taşıt, gündelik ve taşıt ücreti toplamı dikkate alınarak memurun mensup olduğu dairece tespit edilir; başka yol/taşıt zorunluysa masrafın kabulü merkezde ita amiri, taşrada kurumun ita amiri durumundaki kişi veya mahallin en büyük askerî ve mülkî amirinin önceden verilmiş yazılı emrine bağlı; uçak kiralama yalnız seyahat yurt içinde olur ve ilgili Bakan veya misafir yabancı Bakan bizzat katılırsa mümkündür (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "\"Farklı taşıt kullanımı için sonradan alınan sözlü onay yeterlidir\" yanlış; önceden verilmiş yazılı emir"
+   ],
+   "dogrusu": [
+    "gidip gelmeye en uygun ve kullanılması mutat · muayyen (belirli) tarifeli · muayyen tarifeli · memurun mensup olduğu dairece · merkezde ita amiri · mahallin en büyük askerî ve mülkî amirinin önceden verilmiş yazılı emrine · uçak kiralama · yurt içinde · ilgili Bakan veya misafir yabancı Bakan bizzat katılırsa"
+   ]
+  },
+  {
+   "id": "86-7",
+   "madde": [
+    "7"
+   ],
+   "baslik": "Esas alınacak aylık",
+   "hukum": "Memurun fiilen almakta olduğu aylık derecesi (1-4. derece kadrolarda kazanılmış hak derecesi daha düşük olanlarda işgal ettikleri kadro derecesi); hizmetlilerde aylık ücret/ödenek; gündelikle çalışanlarda gündeliğin 30 katına en yakın memur aylığı; bunların harcırahı (ödenek karşılığı çalışanlar hariç) hiçbir şekilde 4. derecedeki memura verilen miktarı geçemez; terfi suretiyle atananların harcırahı terfi ettikleri derece üzerinden (m.7)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gündelikçinin harcırahı gündeliğinin 20 katına en yakın aylık üzerinden hesaplanır\" yanlış; 30 katı"
+   ],
+   "dogrusu": [
+    "fiilen almakta olduğu aylık derecesi · gündelikle çalışanlarda gündeliğin 30 katına en yakın memur aylığı · 4. derecedeki memura verilen miktarı geçemez · terfi suretiyle atananların"
+   ]
+  },
+  {
+   "id": "86-8",
+   "madde": [
+    "8"
+   ],
+   "baslik": "Memur olmayanlar ve askerî öğrenciler",
+   "hukum": "Geçici görevle görevlendirilen memur olmayanlara yol masrafı ve gündelik, bilgi seviyesi, faaliyet alanı ve mahallî şartlar dikkate alınarak 4. dereceye kadar memurlardan birine kıyasen ilgili kurumca takdir edilir; ilgili Bakanlığın teklifi ve Maliye Bakanlığının olumlu görüşüyle daha yükseği verilebilir; sözleşmesinde harcırah belirtilenlere uygulanmaz; rütbe almamış askerî öğrenciler ile JGK veya SGK adına okuyan öğrencilere öğrenim, resmî davet ve mübadele nedeniyle yurt dışında bulundukları sürece teğmen rütbesindeki subayın yurt dışı gündeliği ödenir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "\"Askerî öğrencilere asteğmen gündeliği ödenir\" yanlış; teğmen"
+   ],
+   "dogrusu": [
+    "4. dereceye kadar · ilgili kurumca · ilgili Bakanlığın teklifi ve Maliye Bakanlığının olumlu görüşüyle · rütbe almamış askerî öğrenciler ile JGK veya SGK adına okuyan öğrencilere · teğmen rütbesindeki subayın yurt dışı gündeliği"
+   ]
+  },
+  {
+   "id": "86-9",
+   "madde": [
+    "9"
+   ],
+   "baslik": "Daimi vazife harcırahının başlangıç yeri",
+   "hukum": "Naklen veya tahvilen başka mahalle gönderilenlere, tayin sırasında izinli olarak başka yerde bulunsalar dahi eski memuriyet mahallinden; geçici vazife veya vekâleten bir yerde iken asli görev yeri değişenlere de eski memuriyet mahallinden itibaren verilir (m.9)",
+   "sinavda_boyle_yazarlar": [
+    "\"İzinde bulunduğu yerden hesaplanır\" yanlış; eski memuriyet mahallinden"
+   ],
+   "dogrusu": [
+    "izinli olarak başka yerde bulunsalar dahi eski memuriyet mahallinden · eski memuriyet mahallinden"
+   ]
+  },
+  {
+   "id": "86-10",
+   "madde": [
+    "10"
+   ],
+   "baslik": "Dört unsurun birlikte verildiği hâller",
+   "hukum": "Yol masrafı, yevmiye, aile masrafı ve yer değiştirme masrafı birlikte: yurt içinde veya yurt dışında görevdeyken yurt içi/yurt dışı sürekli bir göreve naklen atanan ya da yabancı ülkedeki memuriyet merkezi değiştirilenlere yeni görev yerine kadar; kadro nedeniyle açıkta kalan veya vekâlet emrine alınan memurlara açık aylıklarını alacakları yere kadar; asilin gelişine kadar geçici olmayıp vekâlet süresi belli olmayan asaleten gönderilen kumandan ve memurlara görev yerine kadar (m.10)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sürekli göreve naklen atanana yalnız yol masrafı ve gündelik verilir\" yanlış; dört unsurun tamamı"
+   ],
+   "dogrusu": [
+    "yurt içi/yurt dışı sürekli bir göreve naklen atanan · yeni görev yerine kadar · vekâlet süresi belli olmayan"
+   ]
+  },
+  {
+   "id": "86-11",
+   "madde": [
+    "12"
+   ],
+   "baslik": "Yolda veya işe başlamadan vefat",
+   "hukum": "Daimi veya geçici görevle gönderilip yolda ya da yeni yerde işe başlamadan vefat edenlerin ölüm mahalline kadar harcırahı hesaplanır, geri alınamayan bilet ücretleri eklenir; istihkak avanstan fazlaysa fark ödenir, noksansa geri alınmaz; ancak geçici görevle yabancı memlekette vefat edenlerde uhdelerinde bırakılacak fark dış yevmiyelerinin 10 günlüğünü geçemez (m.12)",
+   "sinavda_boyle_yazarlar": [
+    "\"Fazla ödenen avans mirasçılardan geri alınır\" yanlış; noksan ise farkı geri alınmaz"
+   ],
+   "dogrusu": [
+    "ölüm mahalline kadar · noksansa geri alınmaz · dış yevmiyelerinin 10 günlüğünü"
+   ]
+  },
+  {
+   "id": "86-12",
+   "madde": [
+    "45",
+    "46",
+    "13"
+   ],
+   "baslik": "Vefatta aile harcırahı",
+   "hukum": "Yurt içinde daimi tayinle giderken yolda veya işe başlamadan vefat eden memurun ailesi birlikteyse ölüm yerinden, değilse ailenin bulunduğu yerden itibaren m.45 esaslarına göre; yabancı memlekete daimi tayinli olup yolda, işe başlamadan veya başladıktan sonra vefat edenin beraberindeki ailesine ölüm yerinden itibaren m.46 esaslarına göre harcırah (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışında görevine başladıktan sonra vefat edenin ailesine harcırah verilmez\" yanlış; verilir (m.46 esasları)"
+   ],
+   "dogrusu": [
+    "ölüm yerinden · ailenin bulunduğu yerden · m.45 · veya başladıktan sonra · m.46"
+   ]
+  },
+  {
+   "id": "86-13",
+   "madde": [
+    "14"
+   ],
+   "baslik": "Geçici (muvakkat) vazife harcırahı",
+   "hukum": "Yol masrafı + yevmiye; ayrıca hamal-bagaj (cins ve adedi beyannamede) ve ikametgâh/görev yeri ile istasyon-iskele-durak arası taşıt masrafı; verilenler: kurum işi için yurt içi/dışı başka yere geçici gönderilenler; kurumca açılan davada sanık veya davalı olarak gönderilip lehine sonuç alanlar; memuriyet merkezi dışındaki göreve vekâleten gönderilenler; açıktan vekâleten gönderilenlere (yalnız gidiş-dönüş); geçici kaza yetkisiyle gönderilenler (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "\"Davada aleyhine sonuç çıkan sanık memura da harcırah ödenir\" yanlış; lehine netice hasıl olanlara"
+   ],
+   "dogrusu": [
+    "geçici gönderilenler · sanık veya davalı · lehine sonuç · vekâleten"
+   ]
+  },
+  {
+   "id": "86-14",
+   "madde": [
+    "33",
+    "15"
+   ],
+   "baslik": "Kıta hâlinde hareket eden birlikler, JGK ve SGK",
+   "hukum": "Kıta hâlinde bir kumanda altında hareket eden askerî birlikler ile JGK ve SGK'ya mensup subay, astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş-er, sivil memur ve hizmetlilere yolda geçen süre için yol masrafı ve yevmiye verilmez; intikal yerinde yeme ve konaklama ihtiyaçları karşılanmayanlara ilk 90 gün tam, takip eden 90 gün 1/2; herhangi birisi karşılanmayanlara ilk 90 gün 1/2, takip eden 90 gün 1/4 gündelik; 180 günü aşan görevlendirmelerde gündelik verilmez; memuriyet mahalli dışındaki yurt içi limanlarda gemide geçirilen günlerde bu hükümlerden yararlanmayanlara yalnız 90 gün için 1/4; bu madde kapsamındakilere (yurt içi limanlarda gemide konaklama imkânı olmayan denizaltı personeli dışında) m.33 konaklama gideri ayrıca ödenmez; hareket kıtanın daimi yer değiştirmesi için ise ayrıca aile ve yer değiştirme masrafı (m.15/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yemek veya konaklamadan yalnız biri karşılanmıyorsa ilk 90 gün tam gündelik\" yanlış; 1/2 (sonraki 90 gün 1/4)",
+    "Kıta hâlinde hareket eden JGK birliğine yolda geçen süre için yevmiye verilir",
+    "180 günü aşan birlik görevlendirmelerinde 1/4 oranında gündelik ödenmeye devam eder"
+   ],
+   "dogrusu": [
+    "Verilmez (m.15)",
+    "Gündelik verilmez (m.15)"
+   ]
+  },
+  {
+   "id": "86-15",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Kıta götürme, teslim-tesellüm, celp-terhis sevki",
+   "hukum": "Bir kıtayı başka yere götürüp asıl birliğine dönen subay, askerî memur ve astsubaylara yalnız dönüş için; teslim-tesellüm için birkaç erle başka yere gönderilenlere gidiş ve dönüş için yol masrafı ve yevmiye; celp ve terhis eratını sevke memur edilen subay, askerî memur ve astsubaylara gidişte yalnız yevmiye, dönüşte yol masrafı ve yevmiye (m.15/2-3)",
+   "sinavda_boyle_yazarlar": [
+    "\"Celp-terhis sevkinde gidişte yol masrafı ve yevmiye birlikte verilir\" yanlış; gidişte yalnız yevmiye"
+   ],
+   "dogrusu": [
+    "yalnız dönüş · gidiş ve dönüş · celp ve terhis eratını sevke · gidişte yalnız yevmiye · dönüşte yol masrafı ve yevmiye"
+   ]
+  },
+  {
+   "id": "86-16",
+   "madde": [
+    "45",
+    "16"
+   ],
+   "baslik": "Aile ile oturulması yasak bölgeler",
+   "hukum": "Bu bölgelerden çıkarılacak veya bu bölgelere atanacak askerî şahısların aile fertlerine (m.45 son fıkrası da dikkate alınarak) beş hâlde aile masrafı ile yer değiştirme masrafı verilir: yasak bölgeden ikamet edilecek yere; yasak yerden yasak olmayan yere atamada ikamet yerinden yeni görev yerine; yasak yerden yine yasak yere atamada eski oturulan yerden yeni ikamet yerine; yasak olmayan yerden yasak yere atamada eski görev yerinden ailenin ikamet yerine; yasak kalkınca eski yasak yere dönüşte (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu hâllerde aile fertlerine yalnız yol masrafı verilir\" yanlış; aile masrafı ve yer değiştirme masrafı"
+   ],
+   "dogrusu": [
+    "aile masrafı ile yer değiştirme masrafı"
+   ]
+  },
+  {
+   "id": "86-17",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Birlik hâlinde yabancı ülkelere gönderilenler",
+   "hukum": "Uluslararası anlaşmalar gereği birlik hâlinde yabancı ülkeye gönderilen TSK, JGK ve SGK mensuplarının harcırah esas ve miktarı Cumhurbaşkanınca tespit edilir; bu durumdayken aile fertlerini Türkiye'de bir yere gönderenlere bir defaya mahsus aile ve yer değiştirme masrafı; hava değişimi için anavatana gelen subay, astsubay, sivil memur ve hizmetlilere geliş-dönüş yol masrafı ve gündelik; aynı maksatla gelen erbaş ve erlerin yol masrafı ve gündeliği Millî Savunma, Maliye ve İçişleri Bakanlıklarınca müştereken; hastalık gereği başka yerde oturması zorunlu olanların aile fertlerine yalnız yol masrafı (m.17/1-4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Birlik hâlinde yurt dışına gidenlerin harcırahını Millî Savunma Bakanlığı tespit eder\" yanlış; Cumhurbaşkanı"
+   ],
+   "dogrusu": [
+    "JGK ve SGK · Cumhurbaşkanınca · bir defaya mahsus · erbaş ve erlerin · Millî Savunma, Maliye ve İçişleri Bakanlıklarınca müştereken"
+   ]
+  },
+  {
+   "id": "86-18",
+   "madde": [
+    "17"
+   ],
+   "baslik": "Tatbikat, açık deniz eğitimi, temsil; erbaş-erlere oranlar",
+   "hukum": "Uluslararası tatbikat-manevra, açık deniz eğitimi veya TSK temsili için yabancı ülkeye gönderilen askerî birlik ve JGK-SGK unsurlarının personeline aylık derecelerine göre (askerî öğrenci ve JGK-SGK adına okuyan öğrencilere teğmen esas) yurt dışı gündeliği; gemiyle gidişte denizde seyir günleri hariç, yalnız yabancı liman günleri için; bu hâller ile eğitim, gemi-uçak-tank ve yedek parça teslim-tesellümü için yabancı ülkeye gönderilen erbaş ve erlere teğmen yurt dışı gündeliğinin 1/3'ü; yurt dışından gemi tedariki için görevlendirilen erbaş-erlere gemilerin tesellümünden itibaren yabancı limanlarda geçen günler için 1/5'i (m.17/5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gemi tedarikinde erbaş ve erlere teğmen gündeliğinin 1/3'ü ödenir\" yanlış; 1/5 (1/3 diğer görevlerde)",
+    "Yabancı ülkeye gönderilen erbaş ve erlere teğmen yurt dışı gündeliğinin yarısı ödenir"
+   ],
+   "dogrusu": [
+    "1/3'ü (gemi tedarikinde 1/5'i) (m.17)"
+   ]
+  },
+  {
+   "id": "86-19",
+   "madde": [
+    "18"
+   ],
+   "baslik": "Ehliyet tespiti, imtihan, hava değişimi",
+   "hukum": "Memur, yardımcı hizmetler personeli ve ödenekle çalışanlardan memuriyet mahalli dışına meslekî ve sıhhi yeterlik tespiti veya imtihan için gönderilenlere gidiş-dönüş yol masrafı ve gündelik ile gidilen yerde en çok 7 gün gündelik; hava değişimi için gönderilenlere gidiş-dönüş yol masrafı ile yalnız yolda geçen süre için gündelik (tedavi bendi 5510 ile mülga) (m.18)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hava değişimi yerinde geçen günler için de gündelik ödenir\" yanlış; yalnız yolda geçen süre"
+   ],
+   "dogrusu": [
+    "meslekî ve sıhhi yeterlik tespiti veya imtihan · en çok 7 gün · hava değişimi · yalnız yolda geçen süre"
+   ]
+  },
+  {
+   "id": "86-20",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Geçici görev yerinde hastalanma",
+   "hukum": "Geçici görev yerinde hastalanıp görev yapamayan memur ve hizmetlilere, görev göremedikleri günlerin en çok 7 günü için yevmiye verilebilir; hastanede yatırılıp tedavi masrafı kurumca ödenirse bu günler için yevmiye verilmez (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hastalık süresince en çok 10 gün yevmiye verilir\" yanlış; 7 gün"
+   ],
+   "dogrusu": [
+    "en çok 7 günü · hastanede yatırılıp · verilmez"
+   ]
+  },
+  {
+   "id": "86-21",
+   "madde": [
+    "21"
+   ],
+   "baslik": "Yatacak yeri olmayan görev yeri",
+   "hukum": "Şehir ve kasaba dışında yatacak yeri bulunmayan ve yatacak yer olan yere taşıtla gidip gelmek zorunlu olan yerlere geçici görevle gönderilenlere, her gün için en yakın köy, kasaba veya şehre kadar gidiş-geliş mutat taşıt ücreti ödenir (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bu durumda yalnız bir defaya mahsus gidiş-dönüş ödenir\" yanlış; her gün için"
+   ],
+   "dogrusu": [
+    "gidiş-geliş mutat taşıt ücreti"
+   ]
+  },
+  {
+   "id": "86-22",
+   "madde": [
+    "22"
+   ],
+   "baslik": "Görev yerini terk zorunluluğu",
+   "hukum": "Harp zaruretleri ve olağanüstü hâller nedeniyle görev yerini terke mecbur olup kurumca gösterilen yere veya en yakın il/ilçe merkezine gidenlere yol masrafı ve gündelik; ailece gelmişlerse ayrıca aile ve yer değiştirme masrafı; dönüşte aynı şekilde; olağanüstü hâllerde Cumhurbaşkanlığının uygun görüşü üzerine kurumlarca veya Dışişleri Bakanlığınca yurt dışından yurt içine çağrılan veya başka yere gönderilen aile fertlerine yalnızca aile masrafı; gerekli hâllerde yer değiştirme masrafına Cumhurbaşkanınca karar verilir (m.22)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışından çağrılan aile fertlerine yer değiştirme masrafı her durumda ödenir\" yanlış; kural olarak yalnız aile masrafı, yer değiştirme Cumhurbaşkanı kararıyla"
+   ],
+   "dogrusu": [
+    "Harp zaruretleri ve olağanüstü hâller · aile ve yer değiştirme masrafı · Cumhurbaşkanlığının uygun görüşü · Dışişleri Bakanlığınca · yalnızca aile masrafı · Cumhurbaşkanınca"
+   ]
+  },
+  {
+   "id": "86-23",
+   "madde": [
+    "23",
+    "33",
+    "24"
+   ],
+   "baslik": "Spor temasları, müfettişlerin ailesi",
+   "hukum": "Yurt içi ve dışı millî ve resmî spor temaslarında sporcu ve idarecilerin yol masrafı ve yevmiyesi Cumhurbaşkanınca tespit edilen esaslara göre (m.23); m.33/b kapsamındaki denetim elemanlarının vazife seyahatlerinde aile fertlerine harcırah verilmez, ancak mıntıkaları değiştirilenlere yeni mıntıka merkezine kadar aile ve yer değiştirme masrafı verilir (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Müfettişlerin her teftiş seyahatinde aile fertlerine harcırah verilir\" yanlış; verilmez"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanınca · vazife seyahatlerinde aile fertlerine harcırah verilmez · mıntıkaları değiştirilenlere"
+   ]
+  },
+  {
+   "id": "86-24",
+   "madde": [
+    "25"
+   ],
+   "baslik": "Başka yerde bırakılan aile",
+   "hukum": "Tayin yerine götürülmeyip ikamet için topluca başka yere gönderilen aileye, yeni memuriyet yerine kadar hesaplanacak tutarı aşmamak ve sonra tayin yerine getirilirken bir şey verilmemek şartıyla bu yere kadar; sonraki tayinlerde de memurun bulunduğu yerden yeni görev yerine kadarki tutarı aşmamak üzere ailenin bulunduğu yerden harcırah verilir (m.25)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aile başka yere gönderilirse gerçek mesafe ne olursa olsun tam ödenir\" yanlış; yeni memuriyet yerine kadarki tutarı aşamaz"
+   ],
+   "dogrusu": [
+    "yeni memuriyet yerine kadar hesaplanacak tutarı aşmamak"
+   ]
+  },
+  {
+   "id": "86-25",
+   "madde": [
+    "26"
+   ],
+   "baslik": "Görevlendirmeden vazgeçilmesi",
+   "hukum": "Harcırah almamış ve hareket etmemişlere bir şey verilmez; daimi görev harcırahı ödendikten sonra vazgeçilirse yer değiştirme masrafını aşmamak şartıyla aylık/ücretin 1/4'ü oranında tazminat + geri alınamayan bilet ücretleri; geçici görev için para ödenmiş olup vazgeçilenlere yalnız geri alınamayan bilet ücretleri; hareket ettikten sonra vazgeçilenlere emrin tebliğ edildiği yere ve oradan asıl görev yerine (veya yeni yere) kadar harcırah + bilet ücretleri (m.26)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tazminat aylığın yarısı oranındadır\" yanlış; 1/4"
+   ],
+   "dogrusu": [
+    "bir şey verilmez · 1/4'ü · tazminat · yalnız geri alınamayan bilet ücretleri"
+   ]
+  },
+  {
+   "id": "86-26",
+   "madde": [
+    "27"
+   ],
+   "baslik": "Yurt içi yol masrafı",
+   "hukum": "Muayyen tarifeli taşıtlarda Kanuna bağlı (1) sayılı cetvelde makam ve aylığa göre gösterilen mevki üzerinden bilet parası; tarifesiz taşıtlarda cetvelin 3 numaralı sütunundaki taşıtlara göre gerçek masraf; Cumhurbaşkanı, TBMM Başkanı, Cumhurbaşkanı yardımcıları, bakanlar ve Genelkurmay Başkanına refakat edenler bu zevatın belirleyeceği mevkide seyahat edebilir (m.27)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt içinde herkes aynı mevkiden bilet alır\" yanlış; (1) sayılı cetvele göre"
+   ],
+   "dogrusu": [
+    "(1) sayılı cetvelde · gerçek masraf"
+   ]
+  },
+  {
+   "id": "86-27",
+   "madde": [
+    "48",
+    "28"
+   ],
+   "baslik": "Memuriyet mahalli içinde yol masrafı",
+   "hukum": "Memuriyet mahalli içinde taşıtla gidilmesi gereken yere görevle gönderilenlere (m.48 kapsamındakiler hariç) mutat taşıta göre gerçek masraf; acele ve zorunlu hâllerde daire amirinin onayı ile mutat dışı taşıtla gidilirse o masraf ödenir (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"Memuriyet mahalli içinde taksi masrafı için mahallin en büyük mülki amirinin onayı gerekir\" yanlış; daire amirinin onayı"
+   ],
+   "dogrusu": [
+    "mutat taşıta göre gerçek masraf · acele ve zorunlu · daire amirinin onayı"
+   ]
+  },
+  {
+   "id": "86-28",
+   "madde": [
+    "29"
+   ],
+   "baslik": "Yurt dışı yol masrafı",
+   "hukum": "Sürekli ve geçici yurt dışı görevlerde ekspres ve yataklı vagon dahil tren, vapur veya uçak bileti + istasyon/liman/terminal ile ikamet yeri arası taşıt ve hamal ücreti; özel otomobille seyahatte (1) sayılı cetvelin 5 sayılı açıklaması; tren ve vapurda aylık derecesi 4 ve daha yukarı olanlara birinci mevki, 4'ten aşağı olanlara ikinci mevki; uçakta TBMM Başkanı, Cumhurbaşkanı yardımcıları ve bakanlar, Anayasa Mahkemesi Başkanı, Cumhurbaşkanlığı Genel Sekreteri, Genelkurmay Başkanı, Kuvvet Komutanları ve Jandarma Genel Komutanı, Emniyet Genel Müdürü, Sahil Güvenlik Komutanı, orgeneral ve oramiraller, yüksek yargı başkanları ve başsavcılar, Sayıştay, Uyuşmazlık Mahkemesi ve Diyanet İşleri Başkanları, Dışişleri Genel Sekreteri, YÖK Başkanı ve merkezdekiler dışındaki büyükelçilere birinci sınıf, diğerlerine turist sınıfı; yol masrafı Türkiye'deki aktarmasız hareket yerinden (sınıra yakın olanlarda en yakın duraktan) hesaplanır, oraya kadar yurt içi hükümleri (m.29)",
+   "sinavda_boyle_yazarlar": [
+    "\"4. derecenin altındaki memur yurt dışı tren yolculuğunda birinci mevkiden yol gideri alır\" yanlış; ikinci mevki"
+   ],
+   "dogrusu": [
+    "ekspres ve yataklı vagon dahil · 4 ve daha yukarı · birinci mevki · ikinci mevki · Kuvvet Komutanları ve Jandarma Genel Komutanı, Emniyet Genel Müdürü, Sahil Güvenlik Komutanı, orgeneral ve oramiraller · birinci sınıf · turist sınıfı · aktarmasız hareket yerinden"
+   ]
+  },
+  {
+   "id": "86-29",
+   "madde": [
+    "30",
+    "31"
+   ],
+   "baslik": "Yemekli bilet, parasız ve indirimli seyahat",
+   "hukum": "Bileti yemeksiz alınamayan taşıtta bilete dahil yemek bedeli yol masrafı sayılır (m.30); kurumlara ait veya kurumlarca kiralanmış taşıtlarda paso, permi veya herhangi bir şekilde parasız seyahat edenlere yol masrafı verilmez; tarifede indirim yapılmışsa yol masrafı fiilen ödenen ücrete göre (m.31)",
+   "sinavda_boyle_yazarlar": [
+    "\"İndirimli bilet alan tam tarife üzerinden yol masrafı alır\" yanlış; fiilen ödediği ücret"
+   ],
+   "dogrusu": [
+    "kurumlarca kiralanmış · paso, permi · parasız · verilmez · fiilen ödenen"
+   ]
+  },
+  {
+   "id": "86-30",
+   "madde": [
+    "32"
+   ],
+   "baslik": "Özel görevli emniyet mensupları",
+   "hukum": "Merkezden aldıkları hususi vazifenin gerektirdiği her türlü taşıttan yararlanır, yol masrafları kullanılan taşıta göre yapılan masraf üzerinden ödenir (m.32)",
+   "sinavda_boyle_yazarlar": [
+    "\"Özel görevli emniyet mensupları yalnız mutat taşıt ücretini alabilir\" yanlış; her türlü taşıt masrafı"
+   ],
+   "dogrusu": [
+    "hususi vazifenin"
+   ]
+  },
+  {
+   "id": "86-31",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Yurt içi gündelik miktarı ve konaklama",
+   "hukum": "Yurt içi gündelikler her yıl bütçe kanunlarıyla tespit olunur; Kanun hükümlerine göre gündelik alanlardan (33/b hariç) yurt içinde yatacak yer için ödediği ücreti belgelendirenlere, belge bedelini aşmamak üzere gündeliklerinin tamamına kadar kısmı ayrıca ödenir (m.33/a, d)",
+   "sinavda_boyle_yazarlar": [
+    "\"Konaklama gideri belgesiz, gündeliğin yarısı olarak ödenir\" yanlış; belgelendirme şartı, gündeliğin tamamına kadar"
+   ],
+   "dogrusu": [
+    "her yıl bütçe kanunlarıyla · yatacak yer için ödediği ücreti belgelendirenlere · gündeliklerinin tamamına kadar"
+   ]
+  },
+  {
+   "id": "86-32",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Denetim elemanlarının gündeliği",
+   "hukum": "Görev, mıntıka veya grup merkezi dışına teftiş-denetim-inceleme-soruşturma için gönderilen Devlet Denetleme Kurulu, Sayıştay denetçileri, TSK Denetleme ve Tetkik Kurulları, JGK ve SGK Denetleme, Teftiş ve Tetkik Başkan ve Üyeleri ile Müfettiş ve Müfettiş Yardımcıları, iç denetçiler, bakanlık müfettişleri vb.: Türkiye düzeyinde yetkililere 1. derece kadrolu memur gündeliğinin 1,3 katı, bölge düzeyinde 1,1 katı, il düzeyinde 0,9 katı; belgelendirilen konaklama gündeliğin tamamına kadar ayrıca; görev mahalli içinde kurumca taşıt sağlanamazsa acil-zorunlu hâllerde taksi, diğer durumlarda mutat taşıt üzerinden yol masrafı, ancak her gün için müstahak oldukları gündeliği aşamaz; zorunlu farklı yol/taşıtta gerçek masraf (m.33/b)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bölge düzeyinde yetkili müfettişe 1,3 kat\" yanlış; Türkiye düzeyi 1,3, bölge 1,1, il 0,9"
+   ],
+   "dogrusu": [
+    "JGK ve SGK Denetleme, Teftiş ve Tetkik Başkan ve Üyeleri ile Müfettiş ve Müfettiş Yardımcıları · Türkiye düzeyinde · 1. derece · 1,3 katı · bölge düzeyinde 1,1 katı · il düzeyinde 0,9 katı · taksi · müstahak oldukları gündeliği aşamaz"
+   ]
+  },
+  {
+   "id": "86-33",
+   "madde": [
+    "33"
+   ],
+   "baslik": "Devlet sanatçıları",
+   "hukum": "Devlet Tiyatroları, Opera ve Balesi, Cumhurbaşkanlığı ve Devlet Senfoni Orkestraları, devlet koroları ve Devlet Halk Dansları Topluluğunun yurt içi sanat faaliyetlerine katılan sanatçı ve görevlilere, karşılanan seyahat ve ikamet giderlerine ilave olarak 2. derece kadrolu memur gündeliğinin 2 katı gündelik (m.33/c)",
+   "sinavda_boyle_yazarlar": [
+    "\"1. derece memur gündeliğinin 2 katı\" yanlış; 2. derece"
+   ],
+   "dogrusu": [
+    "2. derece kadrolu memur gündeliğinin 2 katı"
+   ]
+  },
+  {
+   "id": "86-34",
+   "madde": [
+    "34",
+    "35"
+   ],
+   "baslik": "Yurt dışı gündeliği ve özel merasimler",
+   "hukum": "Yurt dışı gündelik miktarı gidilecek ülkeye, aylık/ücret tutarına ve görevin mahiyetine göre mali yıl itibarıyla Cumhurbaşkanınca tayin olunur; geçici görevde yabancı devlet, uluslararası kuruluş vb. özel anlaşmayla ödeme yaparsa bu ödemeler gündelikten indirilir (m.34); taç giyme ve cenaze gibi özel önemli merasimler için yabancı memlekete gidenlerin yevmiyesi Cumhurbaşkanı kararıyla azami haddin %50'si nispetinde artırılabilir (m.35)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışı gündelikleri bütçe kanunuyla belirlenir\" yanlış; bütçe kanunu yurt içi, Cumhurbaşkanı yurt dışı",
+    "Yurt dışı gündeliklerini her yıl bütçe kanunu belirler"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı (m.34); bütçe kanunu yurt içi gündeliği belirler (m.33)"
+   ]
+  },
+  {
+   "id": "86-35",
+   "madde": [
+    "36",
+    "37"
+   ],
+   "baslik": "Sevk görevli erbaş-erler, kurslar",
+   "hukum": "Hükümlü, tutuklu veya gözetim altındakilerin sevkinde görevlendirilen veya refakatle il sınırları dışına çıkan erbaş ve erlerin gündeliği Millî Savunma, İçişleri ve Maliye Bakanlıklarınca birlikte tespit edilir (m.36); meslekî bilgiyi artırmak için memuriyet mahalli dışındaki kurs veya okullara gönderilenlere geçici görev gündeliği; yurt dışında yabancı taraf ödeme yaparsa indirilir; burs veya aylığı transfer edilerek staj-öğrenim için yurt dışına gönderilenlere bu madde uygulanmaz, kendi kanunları uygulanır (m.37)",
+   "sinavda_boyle_yazarlar": [
+    "\"Tutuklu sevk eden erbaş-erin gündeliğini yalnız İçişleri Bakanlığı belirler\" yanlış; MSB, İçişleri ve Maliye birlikte"
+   ],
+   "dogrusu": [
+    "sevkinde · il sınırları dışına · Millî Savunma, İçişleri ve Maliye Bakanlıklarınca birlikte · kurs veya okullara · geçici görev gündeliği · burs"
+   ]
+  },
+  {
+   "id": "86-36",
+   "madde": [
+    "38"
+   ],
+   "baslik": "Salgın hastalıkla mücadele",
+   "hukum": "Salgın hâlindeki bir hastalıkla mücadele insana bulaşma nedeniyle tehlike arz ediyorsa, mücadeleye katılan memur ve hizmetlilerin yevmiyesini Cumhurbaşkanı iki misline kadar artırabilir (m.38)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sağlık Bakanı yevmiyeyi üç katına kadar artırabilir\" yanlış; Cumhurbaşkanı, iki misline kadar"
+   ],
+   "dogrusu": [
+    "Cumhurbaşkanı iki misline kadar"
+   ]
+  },
+  {
+   "id": "86-37",
+   "madde": [
+    "39"
+   ],
+   "baslik": "Gündelik oranları (memuriyet mahalli dışı)",
+   "hukum": "Resmî görevle memuriyet mahalli içinde bir yere gönderilenlere gündelik verilmez; geçici görevle mahal dışına gönderilip orada ve yolda öğle (saat 13.00) ve akşam (saat 19.00) yemek zamanlarından birini geçirenlere 1/3, ikisini geçirenlere 2/3, geceyi de geçirenlere tam gündelik (m.39)",
+   "sinavda_boyle_yazarlar": [
+    "\"Öğle yemeği saati 12.00 esas alınır\" yanlış; 13.00 (akşam 19.00)",
+    "Memuriyet mahalli içindeki resmî görev için gündelik verilir"
+   ],
+   "dogrusu": [
+    "Verilmez (m.39)"
+   ]
+  },
+  {
+   "id": "86-38",
+   "madde": [
+    "40"
+   ],
+   "baslik": "Yolda kalma (mücbir sebep, hastalık)",
+   "hukum": "Aktarma, karantina, alınan emirle yola devam edememe, yol kapanması gibi mücbir sebeple kalınan her gün için yevmiye verilir; hastalık dahil zati (kişisel) sebeplerle kalınan günler için verilmez; ancak ani ve ağır hastalık veya kusursuz kazada yola devam etmenin hayati tehlike arz ettiği hastane sağlık kurulu raporuyla (yoksa resmî tabip raporuyla) belgelenirse yolculuk yapabilecek hâle gelinceye kadar yevmiye; hastanede yatıp tedavi parası dairesince ödenenlere verilmez (m.40)",
+   "sinavda_boyle_yazarlar": [
+    "\"Hafif hastalık nedeniyle yolda kalınan günler için yevmiye verilir\" yanlış; zati sebeplerde verilmez, yalnız raporlu ani-ağır hastalık/kaza"
+   ],
+   "dogrusu": [
+    "karantina · yol kapanması · zati (kişisel) sebeplerle · ani ve ağır hastalık · hastane sağlık kurulu raporuyla"
+   ]
+  },
+  {
+   "id": "86-39",
+   "madde": [
+    "50",
+    "42"
+   ],
+   "baslik": "Geçici görevde süre sınırı",
+   "hukum": "Görev yerine varıştan itibaren: yurt içinde bir yıllık dönemde aynı yerde, aynı iş için, aynı kişiye 180 günden fazla gündelik verilemez; ilk 90 gün tam, sonraki 90 gün 2/3; yurt dışında ilk 180 gün tam, sonrası 2/3; ara vermeler süreyi veya miktarı artıramaz; uygulanmaz: 33/b denetim elemanları, m.50'deki arazi çalışanları, etüt-inşaat için arazide çalışan mühendis, jeolog vb., Hükümeti temsilen uluslararası konferanslara katılanlar, kalkınmada birinci derecede öncelikli iller ile birinci derece kritik il ve ilçelerde terörle mücadelede operasyonel faaliyetlerde takviye kuvvet olarak geçici görevlendirilen MSB (Genelkurmay ve Kuvvet Komutanlıkları dahil), EGM, JGK ve SGK personeli (m.42)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt içinde ilk 90 günden sonra gündelik yarıya düşer\" yanlış; 2/3'e düşer",
+    "Yurt içi geçici görevde ilk 90 günden sonra gündelik 1/2 oranında ödenir",
+    "Terörle mücadelede takviye kuvvet olarak görevlendirilen JGK personeline 180 gün sınırı uygulanır"
+   ],
+   "dogrusu": [
+    "2/3 (m.42)",
+    "Uygulanmaz (m.42)"
+   ]
+  },
+  {
+   "id": "86-40",
+   "madde": [
+    "43"
+   ],
+   "baslik": "Seyahat günlerinin hesabı",
+   "hukum": "Yevmiye, taşıtın hareket saatinden varış saatine kadar her 24 saat için hesaplanır; 24 saatten az süren seyahat bir gün sayılır; 24 saati aşan kesir tam gün sayılır (m.43)",
+   "sinavda_boyle_yazarlar": [
+    "\"24 saati aşan kesir yarım gün sayılır\" yanlış; tam gün"
+   ],
+   "dogrusu": [
+    "hareket saatinden varış saatine · 24 saat · 24 saatten az · bir gün · tam gün"
+   ]
+  },
+  {
+   "id": "86-41",
+   "madde": [
+    "44"
+   ],
+   "baslik": "Aile masrafı",
+   "hukum": "Aile fertlerinin her biri için memurun müstahak olduğu taşıt ücreti ve gündeliklerinden oluşur; özel taşıt kiralanması zorunlu yerlerde memurla birlikte seyahat eden aile fertleri için ayrıca taşıt ücreti ödenmez (m.44)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aile fertlerine memurun gündeliğinin yarısı ödenir\" yanlış; memurun müstahak olduğu taşıt ücreti ve gündelik kadar"
+   ],
+   "dogrusu": [
+    "taşıt ücreti ve gündeliklerinden · özel taşıt kiralanması"
+   ]
+  },
+  {
+   "id": "86-42",
+   "madde": [
+    "13",
+    "17",
+    "45"
+   ],
+   "baslik": "Yurt içi yer değiştirme masrafı",
+   "hukum": "Memurun kendisi için yurt içi gündeliğinin 20 katı; harcıraha müstahak aile fertlerinin her biri için 10 katı (toplamı 40 katını aşamaz); her kilometre veya denizmili başına yalnız kendisi için gündeliğin %5'i; m.13, 15, 16 ve 17'de aile fertleri memursuz giderse biri memur gibi hesaplanır; eski görev yerinden yeni görev yerine atanan memur/hizmetli eşe (c) bendine (km) göre hesaplanan miktarın yarısı (m.45)",
+   "sinavda_boyle_yazarlar": [
+    "\"Aile fertleri için verilecek miktar yurt içi gündeliğinin 50 katını aşamaz\" yanlış; 40 katı",
+    "Yurt içi yer değiştirmede aile fertleri için miktar gündeliğin 32 katını aşamaz"
+   ],
+   "dogrusu": [
+    "40 katı (yurt dışında 32) (m.45, 46)"
+   ]
+  },
+  {
+   "id": "86-43",
+   "madde": [
+    "46"
+   ],
+   "baslik": "Yurt dışı yer değiştirme masrafı",
+   "hukum": "Memurun kendisi için yurt dışı gündeliğinin 20 katı; aile fertlerinin her biri için 8 katı (toplamı 32 katını aşamaz); her km/denizmili için yalnız kendisi için binde 7; yabancı ülkeden dönüşte (c) bendi (mesafe) kısmı aynı şehirde ikamet eden ve ikisi de memur/hizmetli olan eşlerden yalnız birine ödenir (m.46)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışında aile fertlerinin her biri için yurt dışı gündeliğinin 10 katı\" yanlış; 8 katı (yurt içinde 10)"
+   ],
+   "dogrusu": [
+    "yurt dışı gündeliğinin 20 katı · her biri için 8 katı · 32 katını · binde 7 · aynı şehirde ikamet eden · yalnız birine"
+   ]
+  },
+  {
+   "id": "86-44",
+   "madde": [
+    "47"
+   ],
+   "baslik": "Hesaba esas mesafe",
+   "hukum": "Yurt içinde iki mahal arasındaki mutat, gidip gelmeye elverişli en kısa kara ve deniz yolu; yurt dışında ülke ve bölgelere göre Cumhurbaşkanınca belirlenecek mesafeler (m.47)",
+   "sinavda_boyle_yazarlar": [
+    "\"Yurt dışı mesafeleri Dışişleri Bakanlığı belirler\" yanlış; Cumhurbaşkanı"
+   ],
+   "dogrusu": [
+    "en kısa kara ve deniz yolu · Cumhurbaşkanınca"
+   ]
+  },
+  {
+   "id": "86-45",
+   "madde": [
+    "48"
+   ],
+   "baslik": "Memuriyet mahalli içinde seyyar görevliler",
+   "hukum": "Memuriyet mahalli içinde seyyar çalışan tahsildar, yoklama memuru, mutemet, veznedar, satınalma memuru, tebliğ memuru, posta-evrak dağıtıcısı, takip memuru, mübaşir gibilere gündelik ve yol masrafı verilmez; bunlara kurum taşıtları için fotoğraflı kart verilir; kimlere ve hangi şartlarla verileceği İçişleri, Maliye ve Ulaştırma Bakanlıklarınca müştereken belirlenir (m.48)",
+   "sinavda_boyle_yazarlar": [
+    "\"Mutemede şehir içi görevleri için yol masrafı ödenir\" yanlış; verilmez, kart verilir"
+   ],
+   "dogrusu": [
+    "tahsildar, yoklama memuru, mutemet, veznedar, satınalma memuru, tebliğ memuru, posta-evrak dağıtıcısı, takip memuru, mübaşir · gündelik ve yol masrafı verilmez · fotoğraflı kart · İçişleri, Maliye ve Ulaştırma Bakanlıklarınca müştereken"
+   ]
+  },
+  {
+   "id": "86-46",
+   "madde": [
+    "49"
+   ],
+   "baslik": "Mahal dışında gezici görevliler",
+   "hukum": "Asli görevi gereği memuriyet mahalli dışında belirli görev bölgesinde (il veya bölge sınırı) fiilen gezici çalışanlara gündelik ve (sayılanlar hariç) yol masrafı ödenmez; Maliye Bakanlığınca uygun görülenlere vize edilen cetvellere dayanılarak gezici görev yaptıkları günler için yurt içi gündeliklerinin üçte biri günlük tazminat; takip memuru, gezici sağlık memuru, ebe, orman muhafaza memuru, koruma memuru, posta dağıtıcısı, hat bakıcısı, tahsildar, gezici başöğretmen vb.nin yol masrafı mutat taşıta fiilen ödedikleri miktar üzerinden (m.49)",
+   "sinavda_boyle_yazarlar": [
+    "\"Gezici görevlilere günlük tazminat olarak gündeliğin yarısı ödenir\" yanlış; üçte biri"
+   ],
+   "dogrusu": [
+    "vize edilen cetvellere · yurt içi gündeliklerinin üçte biri günlük tazminat · fiilen ödedikleri"
+   ]
+  },
+  {
+   "id": "86-47",
+   "madde": [
+    "8",
+    "50"
+   ],
+   "baslik": "Arazide fiilen çalışanlar",
+   "hukum": "MSB Harita Genel Müdürlüğü ve Orman Genel Müdürlüğü harita personeli, Deniz Kuvvetleri Seyir, Hidrografi ve Oşinografi Dairesi personeli, ağaçlandırma-amenajman, kadastro-tapulama, toprak komisyonu, maden arama personeline, asıl görevlerinin bulunduğu il (bölge) sınırları içinde arazide fiilen çalıştıkları günler için gündelik yerine bütçe kanunlarında belirlenen miktarda gündelik tazminat; il/bölge dışında görevlendirilirlerse genel hükümlere göre gündelik; memur olmayan komisyon üyeleri ve bilirkişilere m.8/1'e göre gündelik (m.50)",
+   "sinavda_boyle_yazarlar": [
+    "\"Arazi tazminatı miktarını Cumhurbaşkanı belirler\" yanlış; bütçe kanunları"
+   ],
+   "dogrusu": [
+    "bütçe kanunlarında · gündelik tazminat"
+   ]
+  },
+  {
+   "id": "86-48",
+   "madde": [
+    "51"
+   ],
+   "baslik": "Misafirlere refakat",
+   "hukum": "Devletin misafiri veya ziyaretçisi yabancılara refakatle görevlendirilen memurlara, görev emrindeki refakat şekline göre müfredatlı hesap pusulası ile yol, ikamet, yemek, içmek vb. yaptıkları masraf ödenir, başkaca harcırah verilmez; misafirleri karşılamak için başka yere gidenler ve ayrıldıktan sonra dönenlere gidiş-dönüş yol masrafı ve gündelik (m.51)",
+   "sinavda_boyle_yazarlar": [
+    "\"Refakat eden memura masraflarına ek olarak tam gündelik de ödenir\" yanlış; başkaca harcırah verilmez"
+   ],
+   "dogrusu": [
+    "müfredatlı hesap pusulası · yaptıkları masraf · başkaca harcırah verilmez"
+   ]
+  },
+  {
+   "id": "86-49",
+   "madde": [
+    "4",
+    "34",
+    "70"
+   ],
+   "baslik": "Başka kanunlarla harcırah, ulaştırma kurumları",
+   "hukum": "Tebligat Kanunu m.4, Emlak Alım Vergisi, Harçlar Kanunu m.34 ve 70'teki hâllerde hâkim, adliye memuru, tebliğ memuru, akit için giden tapu memuru veya konsolosluk memurlarına ayrıca harcırah verilmez (m.52); TCDD, Devlet Havayolları gibi ulaştırma kuruluşlarının personelinin harcırahı, bu Kanundaki miktarları aşmamak ve genel esaslar dışına çıkmamak şartıyla Maliye ve Ulaştırma Bakanlıklarınca müştereken tespit edilir (m.53)",
+   "sinavda_boyle_yazarlar": [
+    "\"Ulaştırma kuruluşları personeli bu Kanundaki miktarları aşan harcırah alabilir\" yanlış; aşmamak şartı var"
+   ],
+   "dogrusu": [
+    "ayrıca harcırah verilmez · Maliye ve Ulaştırma Bakanlıklarınca müştereken"
+   ]
+  },
+  {
+   "id": "86-50",
+   "madde": [
+    "6",
+    "54",
+    "55"
+   ],
+   "baslik": "Yurt dışı tayinde yol süresi, cenaze nakli",
+   "hukum": "Daimi görevle yabancı memlekete gönderilecek veya yurda çağrılacakların m.6 esaslarına göre izleyecekleri yola göre kaç günde gidip gelecekleri Dışişleri ve Maliye Bakanlıklarınca müştereken hazırlanan cetvelle belirlenir (m.54); yabancı memlekette daimi veya geçici görevde ya da yolda vefat edenlerin cenaze teçhiz-tekfin masrafları ile Hükümetin lüzumu veya ailenin talebi üzerine Türkiye'de herhangi bir yere nakil masrafları kurumlarınca ödenir; yurt içinde yolda veya geçici görev yerinde vefat edenlere de uygulanır (m.55)",
+   "sinavda_boyle_yazarlar": [
+    "\"Cenaze nakil masrafını aile öder, kurum sonradan yarısını karşılar\" yanlış; kurumlarınca ödenir"
+   ],
+   "dogrusu": [
+    "kaç günde · Dışişleri ve Maliye Bakanlıklarınca müştereken · vefat edenlerin · ailenin talebi · kurumlarınca"
+   ]
+  },
+  {
+   "id": "86-51",
+   "madde": [
+    "56"
+   ],
+   "baslik": "Başvuru süresi",
+   "hukum": "Açıkta kalan ve vekâlet emrine alınan memurlara görevlerinden ayrıldıkları; işten el çektirilip vekâlet emrine alınıp men-i muhakeme, beraat veya af alanlara kararın kesinleştiği tarihlerden itibaren 6 ay içinde başvurmaları hâlinde harcırah verilir; mücbir sebepte süre sebebin kalktığı tarihten başlar; süre geçtikten sonra başvuruya harcırah verilmez (m.56)",
+   "sinavda_boyle_yazarlar": [
+    "\"Başvuru süresi 1 yıldır\" yanlış; 6 ay",
+    "Harcırah için başvuru süresi 1 yıldır"
+   ],
+   "dogrusu": [
+    "6 ay (m.56)"
+   ]
+  },
+  {
+   "id": "86-52",
+   "madde": [
+    "52",
+    "57"
+   ],
+   "baslik": "Harcırahın ödendiği bütçe",
+   "hukum": "Harcırah hizmetin ilgili olduğu kurumun bütçesinden ödenir; ceza davalarında m.52'deki masraflar önceden vezneye yatırılamıyorsa sonra mahkûm/haksız çıkan taraftan alınmak üzere Adalet Bakanlığı bütçesinden ödenir; dava-ihtilaf incelemesinde tahkik, keşif, tebliğ için gönderilenlerin harcırahı sonra haksız çıkandan alınmak üzere talep eden veya ödemeye razı olandan alınır (m.57)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harcırah memurun kadrosunun bulunduğu kurumdan her durumda ödenir\" yanlış; hizmetin ilgili olduğu kurum bütçesinden"
+   ],
+   "dogrusu": [
+    "hizmetin ilgili olduğu kurumun bütçesinden · Adalet Bakanlığı bütçesinden"
+   ]
+  },
+  {
+   "id": "86-53",
+   "madde": [
+    "59"
+   ],
+   "baslik": "Ödeme, avans ve mahsup",
+   "hukum": "Harcırah memurun gidişinde ve ailenin naklinde peşin verilir; tam miktar önceden belirlenemiyorsa yetecek kadar avans; harcırahı alıp zati sebeplerle 15 gün içinde hareket etmeyenler parayı derhal iade eder; aile harcırahında beyan kâğıtları esas; daimi görevliler varış tarihinden, geçici görevliler dönüş tarihinden itibaren 1 ay içinde beyannameyi belgeleriyle daire amirine verir (aile önce/sonra giderse süre buna göre); daire amiri vize edip taşrada mahallin en büyük malmemuruna, merkezde ilgili mali mercie verir; fazla masraf ödenir, eksik re'sen geri alınır; belge temin edilemiyorsa sebep yazılı bildirilir; derhal iade edilmeyen paralar ve süresinde mahsup edilmeyen avanslar, faiziyle, aylık-ücret ve haczi kabil istihkakların yarısından hüküm alınmaksızın re'sen kesilir; aksi sabit oluncaya kadar memurun beyanına itibar olunur (m.59)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harcırah beyannamesi 15 gün içinde verilir\" yanlış; 1 ay (15 gün hareket etmeme/iade süresi)"
+   ],
+   "dogrusu": [
+    "peşin · avans · zati sebeplerle 15 gün içinde hareket etmeyenler · derhal iade · 1 ay · daire amirine · mahallin en büyük malmemuruna · re'sen · faiziyle · yarısından · memurun beyanına itibar"
+   ]
+  },
+  {
+   "id": "86-54",
+   "madde": [
+    "60",
+    "61",
+    "64"
+   ],
+   "baslik": "Gerçeğe aykırı beyan, haciz yasağı, ek kanun",
+   "hukum": "İstihkakı artıracak şekilde (maddi hatalar hariç) gerçeğe aykırı beyanname verenlere yetkili disiplin kurullarının kararıyla rütbe veya sınıf indirilmesi veya ihraç cezalarından biri uygulanır; fazla harcırah devlet, özel idare ve belediyelerce 6183 sayılı Amme Alacaklarının Tahsil Usulü Kanununa göre tahsil edilir; idari karar ceza kovuşturmasına engel değildir (m.60); bu Kanuna göre ödenecek istihkaklar borç için haczedilemez (m.61); harcıraha ilişkin hükümler ancak bu Kanuna ek kanunlarda yer alır (m.64)",
+   "sinavda_boyle_yazarlar": [
+    "\"Harcırah istihkakı nafaka dışındaki borçlar için haczedilebilir\" yanlış; borç için haczedilemez",
+    "Harcırah istihkakı borç için haczedilebilir"
+   ],
+   "dogrusu": [
+    "Haczedilemez (m.61)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

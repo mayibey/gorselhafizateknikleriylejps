@@ -1,0 +1,114 @@
+[
+ {
+  "kanun_id": 40,
+  "kart_id": "40-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sürücü belgesi başvurusu parmak izi listesinden çıkarıldı; alınma sebebinin de kaydedildiği iddia edildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sürücü belgesi almak için başvuruda bulunan kişilerin parmak izi alınmaz.”",
+    "“Parmak izinin hangi sebeple alındığı da kimlik bilgileriyle birlikte sisteme kaydedilir.”"
+   ],
+   "dogrusu": [
+    "Polis, sürücü belgesi, silah ruhsatı ve pasaport başvurusunda bulunanların da parmak izini alır (m.5/1)",
+    "Parmak izi kimlik bilgileriyle, ne zaman ve kim tarafından alındığı belirtilerek kaydedilir; alınma sebebi kaydedilmez (m.5/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Silinme süreleri 10/80 yerine 5/50 yapıldı; kolluğun doğrudan bağlantı yetkisi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sisteme kayıtlı parmak izi ve fotoğraflar, kişinin ölümünden itibaren beş yıl ve her hâlde kayıt tarihinden itibaren elli yıl geçtikten sonra silinir.”",
+    "“Kolluk birimleri, kimlik tespiti yapmak amacıyla parmak izi sistemiyle doğrudan bağlantı kuramaz.”"
+   ],
+   "dogrusu": [
+    "Parmak izi kayıtları ölümden itibaren on yıl, her hâlde kayıt tarihinden itibaren seksen yıl sonra silinir (m.5)",
+    "Kolluk birimleri, kimlik tespiti veya olay yeri izini karşılaştırmak amacıyla sistemle doğrudan bağlantı kurabilir (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Gecikmede yetkili makam mülki amirden Cumhuriyet savcısına kaydırıldı (çıkmış soruda cevap mülki idare amiri); mahkeme onayı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaybolan çocuğun bulunması için gecikmesinde sakınca bulunan hâllerde emri Cumhuriyet savcısı verir.”",
+    "“Mülki idare amirinin kayıp çocukla ilgili tedbir kararı mahkeme onayına sunulmaz.”"
+   ],
+   "dogrusu": [
+    "Gecikmesinde sakınca bulunan hâllerde kayıp çocuk tedbiri için emri sulh ceza hâkimi yerine mülki idare amiri verir (m.13/A)",
+    "Mülki idare amirinin kararı derhâl mahkemenin onayına sunulur; mahkeme en geç yirmi dört saat içinde karar verir (m.13/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kelepçe, cop, köpek bedenî kuvvet sayıldı; kademeli artış ilkesi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kelepçe, cop ve polis köpekleri, zor kullanma kapsamında bedenî kuvvet sayılır.”",
+    "“Zor kullanma yetkisi kapsamında bedenî kuvvet, maddî güç ve silah, direnmenin derecesine bakılmaksızın aynı anda kullanılır.”"
+   ],
+   "dogrusu": [
+    "Kelepçe, cop ve polis köpekleri bedenî kuvvet değil, bedenî kuvvetin dışında kullanılan maddî güçtür (m.16/3)",
+    "Bedenî kuvvet, maddî güç ve silah, direnmenin mahiyet ve derecesine göre kademeli olarak artan nispette kullanılır (m.16/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İhtar her hâlde zorunlu gösterildi (çıkmış soru çeldiricisi); toplu kuvvette derece takdiri amirden her görevliye kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Zor kullanmadan önce ilgililere ihtar yapılması her hâlde zorunludur; ihtarsız zor kullanılamaz.”",
+    "“Toplu kuvvet olarak müdahale edilen durumlarda, kullanılacak zorun derecesini her polis kendisi takdir ve tayin eder.”"
+   ],
+   "dogrusu": [
+    "Zor kullanmadan önce ihtar yapılır; ancak direnmenin mahiyeti ve derecesine göre ihtarsız da zor kullanılabilir (m.16/4)",
+    "Toplu kuvvet olarak müdahalede zorun derecesi ve araç-gereçler, müdahale eden kuvvetin amiri tarafından tayin edilir (m.16/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "(c) bendindeki karar/yakalama emri şartı düşürülüp kaçan herkese genişletildi; (b) bendindeki önce bedenî kuvvet ve maddî güç şartı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Polis, hakkında herhangi bir karar bulunmasa da kaçan her kişiyi yakalamak amacıyla silah kullanmaya yetkilidir.”",
+    "“Polis, bedenî kuvvet ve maddî güç kullanmadan da her direniş karşısında doğrudan silah kullanabilir.”"
+   ],
+   "dogrusu": [
+    "Polis kaçan şüpheliye ancak hakkında yakalama, gözaltı, tutuklama veya zorla getirme kararı varsa ya da suçüstü hâlinde silah kullanabilir (m.16/7)",
+    "Polis, bedenî kuvvet ve maddî güçle etkisiz hâle getiremediği direniş karşısında, direnişi kıracak ölçüde silah kullanabilir (m.16/7-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 40,
+  "kart_id": "40-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Uyarı atışı aşaması atlandı; dur çağrısı ihtiyari gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Dur çağrısına uymayarak kaçmaya devam eden kişiye, uyarı atışı yapılmadan doğrudan yakalamaya yönelik ateş edilir.”",
+    "“Polis, hakkında yakalama emri bulunan kaçan kişiyi yakalamak için silah kullanmadan önce dur çağrısında bulunmak zorunda değildir.”"
+   ],
+   "dogrusu": [
+    "Dur çağrısına uymayıp kaçana önce uyarı amacıyla ateş edilebilir; kaçmakta ısrar ederse yakalanmasını sağlayacak ölçüde ateş edilebilir (m.16/8)",
+    "Polis, (c) bendi kapsamında silah kullanmadan önce kişiye duyabileceği şekilde dur çağrısında bulunur (m.16/8)"
+   ]
+  }
+ }
+]

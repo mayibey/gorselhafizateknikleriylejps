@@ -1,0 +1,98 @@
+[
+ {
+  "kanun_id": 47,
+  "kart_id": "47-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İdari karar mercii sulh hukuk mahkemesine kaydırıldı; merkez ilçede yetki validen belediye başkanına kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Taşınmaz mal zilyetliğine yapılan tecavüzün 3091 sayılı Kanuna göre önlenmesine sulh hukuk mahkemesi karar verir.”",
+    "“Taşınmaz mal merkez ilçe sınırları içinde ise tecavüzün önlenmesine belediye başkanı karar verir.”"
+   ],
+   "dogrusu": [
+    "Tecavüzün önlenmesine merkez ilçede vali veya görevlendireceği vali yardımcısı, diğer ilçelerde kaymakam karar verir (m.2)",
+    "Taşınmaz merkez ilçe sınırları içindeyse karar mercii il valisi veya görevlendireceği vali yardımcısıdır (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Köy taşınmazında başvuru hakkı muhtara daraltıldı; vali/kaymakamın re'sen soruşturma yetkisi başvuruya bağlandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Köye ait taşınmaz mallara yapılan tecavüzlerde yetkili makama yalnızca köy muhtarı başvurabilir.”",
+    "“Vali veya kaymakam, kamuya ait taşınmazlara yapılan tecavüzde ancak ilgili idarenin başvurusu üzerine soruşturma yaptırabilir.”"
+   ],
+   "dogrusu": [
+    "Köye ait taşınmazlara yapılan tecavüzlerde köy halkından herhangi biri de yetkili makama başvurabilir (m.3)",
+    "Vali veya kaymakam, kamuya ait taşınmazlara tecavüzü öğrendiğinde soruşturmayı doğrudan doğruya yaptırır ve sonucu karara bağlar (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Devlet/umuma ait taşınmazlara bir yıllık süre uygulandı; altmış günlük öğrenme süresi otuz güne indirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Devletin hüküm ve tasarrufu altındaki yerlere yapılan tecavüzde de tecavüzün oluşundan itibaren bir yıl içinde başvurulmalıdır.”",
+    "“Zilyet, tecavüzü öğrendiği tarihten itibaren otuz gün içinde idari makama başvurmalıdır.”"
+   ],
+   "dogrusu": [
+    "Devletin hüküm ve tasarrufu altındaki yerlerle menfaati umuma ait taşınmazlara yapılan tecavüzlerde süre aranmaz (m.4)",
+    "Zilyet, tecavüzü öğrendiği tarihten itibaren altmış gün ve her hâlde tecavüzden itibaren bir yıl içinde başvurmalıdır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İnfaz icra dairesine ve kesinleşmeye bağlandı; 5 günlük infaz süresi uzatıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tecavüzün önlenmesine ilişkin karar, kesinleştikten sonra tarafın istemi üzerine icra dairesince yerine getirilir.”",
+    "“Karar gereğinin yerine getirilmesi için infaz memuruna, kararın kendisine geldiği tarihten itibaren on beş günlük süre tanınmıştır.”"
+   ],
+   "dogrusu": [
+    "Karar, yetkili amirin görevlendirdiği infaz memurunca taşınmaz yerinde ve o andaki durumuyla zilyedine teslim edilerek yerine getirilir (m.9)",
+    "Karar gereğinin, infaz memuruna geldiği tarihten itibaren en geç 5 gün içinde yerine getirilmesi zorunludur (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Güvenlik kuvvetlerinin emirsiz, kendiliğinden önlem aldığı iddia edildi; emir makamı mülkî amirden savcıya kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“3091 sayılı Kanuna göre yapılan soruşturma ve kararın yerine getirilmesi sırasında güvenlik kuvvetleri, mülkî amirin emri olmaksızın kendiliğinden önlem alır.”",
+    "“Soruşturma ve infaz sırasında güvenlik kuvvetlerinin önlem alması için Cumhuriyet savcısının yazılı emri gerekir.”"
+   ],
+   "dogrusu": [
+    "Güvenlik kuvvetleri soruşturma ve infaz sırasında mahallin en büyük mülkî idare amirinin yazılı emriyle önlem alır (m.9)",
+    "Soruşturma ve infaz sırasında güvenlik kuvvetleri, savcının değil mahallin en büyük mülkî idare amirinin yazılı emriyle önlem alır (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kamu ve özel taşınmaz cezaları yer değiştirildi; birden fazla kişiyle işlemedeki bir kat artırım kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel şahsa ait taşınmaza ikinci kez tecavüz eden kişi altı aydan iki yıla kadar hapis cezası ile cezalandırılır.”",
+    "“İkinci tecavüzün silahsız birden fazla kişi tarafından yapılması hâlinde cezada artırım yapılmaz.”"
+   ],
+   "dogrusu": [
+    "İkinci tecavüzde gerçek veya tüzel kişiye ait taşınmazda üç aydan bir yıla, kamuya ait taşınmazda altı aydan iki yıla kadar hapis verilir (m.15/a)",
+    "İkinci tecavüz silahlı bir kişi veya silahsız olsalar dahi birden fazla kişi tarafından yapılırsa ceza bir kat artırılır (m.15/b)"
+   ]
+  }
+ }
+]

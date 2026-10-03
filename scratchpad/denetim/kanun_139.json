@@ -1,0 +1,102 @@
+{
+ "kanun_id": 139,
+ "ad": "5237 sayılı Türk Ceza Kanunu (sağlık branşı: m.240)",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\tabip\\pack_139.json",
+ "kartlar": [
+  {
+   "id": "139-0",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Suçun tanımı (tek cümle)",
+   "hukum": "Belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan kişi cezalandırılır (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta cümlenin bir parçası eksiltilir (\"satmaktan kaçınan kişi cezalandırılır\" gibi); madde yalnız kaçınmayı değil, kaçınmanın kamu için acil ihtiyaç doğurmasını arar",
+    "Belli bir malı satmaktan kaçınmak tek başına suçun oluşması için yeterlidir"
+   ],
+   "dogrusu": [
+    "Kaçınmanın kamu için acil bir ihtiyacın ortaya çıkmasına neden olması gerekir (m.240/1)"
+   ]
+  },
+  {
+   "id": "139-1",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Fail: herhangi bir kişi",
+   "hukum": "Madde faili \"kişi\" olarak anlatır; kamu görevlisi, tacir, üretici, sağlık mensubu gibi bir sıfat şartı koymaz (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "Sağlık branşı kitapçığında olduğu için \"yalnızca sağlık meslek mensubu işleyebilir\" şıkkı cazip görünür; madde metninde böyle bir sınırlama yoktur",
+    "Bu suç yalnızca kamu görevlisi tarafından işlenebilir"
+   ],
+   "dogrusu": [
+    "Madde \"kişi\" der; herkes işleyebilir (m.240/1)"
+   ]
+  },
+  {
+   "id": "139-2",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Hareket unsuru: belli bir mal veya hizmeti satmaktan kaçınma",
+   "hukum": "Suçun hareketi \"belli bir mal veya hizmeti satmaktan kaçınma\"dır; hem mal hem hizmet satımı kapsamdadır (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Suç yalnız mal satımından kaçınmayla oluşur, hizmetten kaçınma kapsam dışıdır\" → yanlış; madde başlığı ve metni \"mal veya hizmet\" der",
+    "Suç yalnız mal satımından kaçınmayla oluşur; hizmet kapsam dışıdır"
+   ],
+   "dogrusu": [
+    "Mal veya hizmet satımından kaçınma (m.240/1)"
+   ]
+  },
+  {
+   "id": "139-3",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Netice şartı: kamu için acil ihtiyaç",
+   "hukum": "Kaçınma, \"kamu için acil bir ihtiyacın ortaya çıkmasına neden\" olmalıdır (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Bir kişinin acil ihtiyacının doğması yeterlidir\" → yanlış; madde \"kamu için\" acil ihtiyaç arar",
+    "Tek bir kişinin acil ihtiyacının doğması suç için yeterlidir"
+   ],
+   "dogrusu": [
+    "İhtiyaç kamu için olmalıdır (m.240/1)"
+   ]
+  },
+  {
+   "id": "139-4",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Ceza: bir yıldan üç yıla kadar hapis",
+   "hukum": "Fail \"bir yıldan üç yıla kadar hapis cezası ile cezalandırılır\" (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "Şıklarda \"iki yıldan beş yıla\", \"altı aydan iki yıla\", \"üç yıldan yedi yıla\" ve \"adli para cezası\" sıralanır; doğrusu yalnız 1-3 yıl hapistir",
+    "Mal veya hizmet satımından kaçınma suçunun cezası iki yıldan beş yıla kadar hapistir",
+    "Bu suçun cezası adli para cezasıdır"
+   ],
+   "dogrusu": [
+    "Bir yıldan üç yıla kadar hapis (m.240/1)",
+    "Hapis cezası (1-3 yıl); maddede adli para cezası yok (m.240/1)"
+   ]
+  },
+  {
+   "id": "139-5",
+   "madde": [
+    "240"
+   ],
+   "baslik": "Maddede OLMAYAN unsurlar",
+   "hukum": "m.240 metninde fiyatın yüksek belirlenmesi, failin tekerrürü (daha önce mahkûm olması), mağdurun kamu görevlisi olması veya failin tacir olması gibi hiçbir ek şart yer almaz (m.240/1)",
+   "sinavda_boyle_yazarlar": [
+    "\"Malın fiyatının piyasa değerinin üzerinde belirlenmiş olması şarttır\" → yanlış; madde fiyat konusunu hiç düzenlemez, yalnız satmaktan kaçınmayı cezalandırır",
+    "Failin tacir sıfatını taşıması şarttır",
+    "Malın fiyatının piyasa değerinin üzerinde belirlenmiş olması suçun unsurudur"
+   ],
+   "dogrusu": [
+    "Şart değildir; özel sıfat aranmaz (m.240/1)",
+    "Maddede fiyat şartı yoktur; unsur satmaktan kaçınma + kamu için acil ihtiyaçtır (m.240/1)"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}

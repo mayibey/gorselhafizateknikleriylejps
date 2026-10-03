@@ -1,0 +1,185 @@
+{
+ "kanun_id": 50,
+ "ad": "Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik",
+ "resmi_metin_paketi": "D:\\GorselHafizaTeknikleriyleJSPS\\scripts/altin-ozet/paketler\\jandarma\\pack_50.json",
+ "kartlar": [
+  {
+   "id": "50-0",
+   "madde": [
+    "6"
+   ],
+   "baslik": "Kapsamdaki tesisler (m.6)",
+   "hukum": "Otel, motel, han, pansiyon, bekâr odaları, günübirlik kiralanan evler, kamp, kamping, tatil köyü, her türlü özel veya resmî konaklama yerleri (yatılı okul pansiyonları, yetiştirme yurtları, köy odaları dahil), özel sağlık müesseseleri, dinlenme ve huzur evleri, dinî ve hayır kurumlarının sosyal tesislerinde her an ulaşılabilecek bir sorumlu işletici bulunur (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "Şıkta \"orduevi\" konaklama yerleri arasında verilir; kapsam dışıdır",
+    "Orduevi Kimlik Bildirme Kanunu kapsamındadır"
+   ],
+   "dogrusu": [
+    "Kapsam dışı; özel sağlık müessesesi, huzurevi, yurt kapsamda (m.6)"
+   ]
+  },
+  {
+   "id": "50-1",
+   "madde": [
+    "6",
+    "7"
+   ],
+   "baslik": "İşletici kimlik bildirme belgesi",
+   "hukum": "Sorumlu işleticinin kimliği, tesis açılmadan önce sahip/kanunî temsilci/kiracı tarafından iki örnek İşletici Kimlik Bildirme Belgesi (Form 1) ile en yakın yetkili genel kolluk örgütüne verilir; işletici değişirse 24 saat içinde yeni belge verilir (m.6-7)",
+   "sinavda_boyle_yazarlar": [
+    "İşletici değişikliği \"3 gün\" değil 24 saat",
+    "İşletici değişikliği 3 gün içinde bildirilir"
+   ],
+   "dogrusu": [
+    "24 saat (m.7)"
+   ]
+  },
+  {
+   "id": "50-2",
+   "madde": [
+    "6",
+    "8"
+   ],
+   "baslik": "Çalışanların bildirimi — 24 saat / 3 gün",
+   "hukum": "m.6 kapsamındaki tesislerde (otel, pansiyon vb.) çalışanların belgesi 24 saat, diğer ticaret ve sanat amacı güden iş yerlerinde çalışanların belgesi 3 gün içinde kolluğa verilir; köylerdeki iş yerlerinde belge önce muhtara onaylatılır; bildirim elektronik ortamda da yapılabilir, o zaman muhtar onayı aranmaz (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "İkisi çapraz sorulur: otel çalışanı 24 saat, dükkân çalışanı 3 gün",
+    "Otel çalışanı 3 gün içinde bildirilir"
+   ],
+   "dogrusu": [
+    "24 saat; diğer iş yeri 3 gün (m.8)"
+   ]
+  },
+  {
+   "id": "50-3",
+   "madde": [
+    "4"
+   ],
+   "baslik": "Süre tanımları",
+   "hukum": "\"24 saat\" işe başlama/ayrılmanın vuku bulduğu saatten itibaren geçen 24 saati; \"3 gün\" aynı saatten itibaren işlemeye başlayan 72 saati kapsar (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "\"Üç gün = iş günü\" yanlış; 72 saat"
+   ],
+   "dogrusu": [
+    "72 saati"
+   ]
+  },
+  {
+   "id": "50-4",
+   "madde": [
+    "5"
+   ],
+   "baslik": "Kimliğini ispat edemeyen barındırılamaz",
+   "hukum": "Bildirimle yükümlü olanlar, kimliğini nüfus cüzdanı veya diğer resmî geçerli belgeyle ispat edemeyen kişileri tesislerinde barındıramaz, konut ve iş yerinde çalıştıramaz (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sözlü beyanla kayıt yapılabilir\" yanlış"
+   ],
+   "dogrusu": [
+    "barındıramaz · çalıştıramaz"
+   ]
+  },
+  {
+   "id": "50-5",
+   "madde": [
+    "15"
+   ],
+   "baslik": "Misafir bildirimi — 30 günden fazla",
+   "hukum": "Konutlara misafir olarak gelip 30 günden fazla kalacak kişilerin kimlikleri aile reisi (veya yalnız yaşayan kişi) tarafından Form 6'ya yazılır ve 3 gün içinde kolluğa verilir (m.15)",
+   "sinavda_boyle_yazarlar": [
+    "\"15 gün\" ve \"60 gün\" şıkları yanlış; 30 gün",
+    "15 günden fazla kalacak misafir bildirilir"
+   ],
+   "dogrusu": [
+    "30 günden fazla (m.15)"
+   ]
+  },
+  {
+   "id": "50-6",
+   "madde": [
+    "19"
+   ],
+   "baslik": "Sabahçı kahvesi izin belgesi",
+   "hukum": "İskele, istasyon, terminal, garaj, benzin istasyonu gibi yerlerdeki sabahçı kahvesi ve benzeri tesisler, kolluk ile belediye/köy idaresinin olumlu görüşünden sonra mahallin en büyük mülkî amiri tarafından geçici veya sürekli açık tutulabilir; izin belgesi görünür yere asılır; buralarda kalanlar için bildirim yapılmaz (m.19)",
+   "sinavda_boyle_yazarlar": [
+    "\"Sabahçı kahvesinde kalanlar da bildirilir\" yanlış"
+   ],
+   "dogrusu": [
+    "mahallin en büyük mülkî amiri · buralarda kalanlar için bildirim yapılmaz"
+   ]
+  },
+  {
+   "id": "50-7",
+   "madde": [
+    "20"
+   ],
+   "baslik": "İşletici belgesinin alınışı ve saklanması",
+   "hukum": "Kolluk görevlisi, önceki işleticinin belgesiyle isim karşılaştırması yapıp yeni belgenin alınış hanelerini bizzat doldurur, bir örneği saklar, diğerini yükümlüye geri verir, eski belgeyi imha eder; belge örnekleri tesisin çalıştığı süre boyunca tesiste saklanır (m.20)",
+   "sinavda_boyle_yazarlar": [
+    "\"Eski işletici belgesi kollukta saklanır\" yanlış; imha edilir"
+   ],
+   "dogrusu": [
+    "tesiste saklanır"
+   ]
+  },
+  {
+   "id": "50-8",
+   "madde": [
+    "23"
+   ],
+   "baslik": "Konaklama yeri kayıt defteri ve konaklama belgesi",
+   "hukum": "Yatacak yer gösterilen yerli-yabancı herkesin kimliği, geliş-ayrılış tarihleri Konaklama Yeri Kayıt Defteri (Form 7)'ne günü gününe geçirilir; kalan kişi Konaklama Belgesi (Form 8)'ni doldurup imzalar; bilgiler resmî kimlikle karşılaştırılır (m.23)",
+   "sinavda_boyle_yazarlar": [
+    "Form numaraları soruluyor: Form 7 defter, Form 8 belge"
+   ],
+   "dogrusu": [
+    "Konaklama Yeri Kayıt Defteri (Form 7) · Konaklama Belgesi (Form 8)"
+   ]
+  },
+  {
+   "id": "50-9",
+   "madde": [
+    "24"
+   ],
+   "baslik": "Defter onayı ve saklama süreleri",
+   "hukum": "Defter yıllık tutulur, kullanılmadan önce sonu en yakın genel kolluk örgütüne sayfa sayısı belirtilerek onaylatılır; defter 100 sayfadan az olamaz; konaklama belgeleri izleyen yıldan başlayarak 1 yıl, defterler dolduğu yılı izleyen yıldan başlayarak 5 yıl tesiste saklanır; kesin kapanan tesisin defterleri kolluğa verilir (m.24)",
+   "sinavda_boyle_yazarlar": [
+    "\"Defteri noter onaylar\" yanlış; kolluk onaylar. Süreler çapraz sorulur",
+    "Konaklama defteri 1 yıl saklanır"
+   ],
+   "dogrusu": [
+    "Defter 5 yıl, belge 1 yıl (m.24)"
+   ]
+  },
+  {
+   "id": "50-10",
+   "madde": [
+    "28"
+   ],
+   "baslik": "Karakolun 3 ayda bir tarama görevi",
+   "hukum": "Her karakol üç ayda bir ve gerektiğinde sürekli olarak bölgesini tarar; bölge krokisinde veya binalar cetvelinde olmayan yeni/yıkılan yapıları, ilave ve değişiklikleri saptayıp işler; belediyeler mülkî amirin istemesi hâlinde numarataj cetvelini verir (m.28)",
+   "sinavda_boyle_yazarlar": [
+    "\"6 ayda bir\" veya \"yılda bir\" şıkları yanlış; 3 ay",
+    "Karakol bölgesini yılda bir tarar"
+   ],
+   "dogrusu": [
+    "3 ayda bir (m.28)"
+   ]
+  },
+  {
+   "id": "50-11",
+   "madde": [
+    "1",
+    "2"
+   ],
+   "baslik": "Elektronik anlık bildirim ve 5 yıl saklama",
+   "hukum": "Konaklama tesisleri ve işletmeler kayıtlarını bilgisayarda günü gününe tutar ve genel kolluk terminallerine anlık bildirir; kayıtlar kolluk sisteminde 5 yıl saklanır, süre dolunca otomatik silinir; araç kiralama şirketleri de kiralanan araç ve kiralayan kimlik bilgilerini günü gününe tutup kolluğun incelemesine hazır bulundurur, veriler 5 yıl saklanır (Ek m.1-2)",
+   "sinavda_boyle_yazarlar": [
+    "\"Kamu kurumu araç kiralarsa sadece sözleşme ve araç bilgisi girilir\" — kimlik bilgisi girilmez (Ek m.2)"
+   ],
+   "dogrusu": [
+    "anlık · 5 yıl · araç kiralama şirketleri · 5 yıl"
+   ]
+  }
+ ],
+ "eslesmeyen_tuzaklar": []
+}
