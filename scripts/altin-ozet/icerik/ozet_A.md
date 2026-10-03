@@ -469,7 +469,7 @@
 |---|---|---|
 | 4/2 | Genel ilke sayısı | 5 ilke |
 | 5/2 | Açık rıza aranmayan hâl sayısı | 7 hâl |
-| 6/3 | Özel nitelikli verinin işlenebildiği hâl sayısı | 7 hâl (a-g) |
+| 6/3 | Özel nitelikli verinin işlenebildiği hâl sayısı | 8 hâl (a, b, c, ç, d, e, f, g) |
 | 28/1 | Kanunun hiç uygulanmadığı hâl sayısı | 5 hâl (a-d, "c" ve "ç" ayrı) |
 | 28/2 | Kısmen uygulanmayan madde sayısı | 3 madde (m.10, m.11, m.16) |
 | 28/2 | Kısmi istisna hâl sayısı | 4 hâl (a-ç) |
