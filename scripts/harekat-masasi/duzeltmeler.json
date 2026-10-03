@@ -29769,5 +29769,877 @@
     "Taksitlendirme talepleri borcu tebliğ eden birimlere yapılır (m.15)"
    ]
   }
+ },
+ {
+  "kanun_id": 73,
+  "kart_id": "73-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; hüküm m.10 tam metniyle uyumlu, son hal düzgün cümleyle verildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yargılanan uzman erbaşın ücretsiz sağlık hakkına dava açıldığı tarihten itibaren son verilir"
+   ],
+   "dogrusu": [
+    "Mahkûm olanlar ve aile fertlerinin ücretsiz sağlık hakkına kararın kesinleştiği tarihten itibaren son verilir (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 73,
+  "kart_id": "73-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız ikinci yanlışı karşılıyordu; beş aylık intibak süresi tam metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İntibak dönemi altı aydır",
+    "İntibak döneminde ayrılanların peşin ödenen aylığı geri alınmaz"
+   ],
+   "dogrusu": [
+    "İntibak dönemi ilk beş aydır; ayrılanların peşin ödenen aylığının çalışılmayan günlere ait kısmı geri alınır (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 73,
+  "kart_id": "73-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; fesih hâlleri m.12/4 tam metniyle (ç bendi iptal, g bendi ek) uyumlu.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taksirli suçtan otuz günden fazla hapis cezası alan uzman erbaşın sözleşmesi de feshedilir"
+   ],
+   "dogrusu": [
+    "Taksirli suçlar hariç, diğer suçlardan otuz günden fazla hürriyeti bağlayıcı cezaya mahkûm olanların sözleşmesi feshedilir (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 73,
+  "kart_id": "73-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Tekrar alınmaz'; kırmızı kutuda aynı yanlış iki kez vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sözleşmesi feshedilen uzman erbaş belli bir süre geçtikten sonra tekrar TSK'ya alınabilir"
+   ],
+   "dogrusu": [
+    "Her ne sebeple olursa olsun sözleşmesi feshedilerek ilişiği kesilen uzman erbaş tekrar TSK'ya alınmaz (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 73,
+  "kart_id": "73-15",
+  "sorun": "alakasiz_yanlis",
+  "aciklama": "Astsubay nasbedilene ikramiye yanlışı bu kartın hükmünde yok; Doğrusu tek kelimeydi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yargılaması süren uzman erbaşa ikramiye ödenir, mahkûm olursa geri alınır"
+   ],
+   "dogrusu": [
+    "Yargılaması sürene karar kesinleşinceye kadar ikramiye ödenmez; beraat edene ödenir, mahkûm olana ödenmez (m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 137,
+  "kart_id": "137-6",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 'Taksirli hariç' parçası; kırmızı kutuda aynı yanlış iki kez ve açıklama notu vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Taksirli suçtan 40 gün hapis cezası alan uzman erbaşın ilişiği kesilir"
+   ],
+   "dogrusu": [
+    "Taksirli suçlar hariç, diğer suçlardan otuz günden fazla hürriyeti bağlayıcı cezaya mahkûm olan uzman erbaşın ilişiği kesilir (m.12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 77,
+  "kart_id": "77-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; avans 1 ay, kredi 3 ay m.35 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Mutemet, ön ödeme belgelerini avanslarda üç ay, kredilerde bir ay içinde muhasebe yetkilisine verir"
+   ],
+   "dogrusu": [
+    "Mutemet, harcama belgelerini avanslarda bir ay, kredilerde üç ay içinde muhasebe yetkilisine verir ve artanı iade eder (m.35)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 77,
+  "kart_id": "77-12",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu '4 kontrolle sınırlı' parçası; dört kontrol m.61 tam metninden yazıldı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Muhasebe yetkilisi ödemenin yerindeliğini de denetler"
+   ],
+   "dogrusu": [
+    "Muhasebe yetkilisi ödeme aşamasında yalnız imzayı, belgelerin tamlığını, maddi hatayı ve hak sahibinin kimliğini kontrol eder (m.61)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız '%25'; kırmızı kutuda açıklama notu vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bu Kanun kapsamında bağlanan görev malullüğü aylıkları %50 artırılarak ödenir"
+   ],
+   "dogrusu": [
+    "Sosyal güvenlik kurumlarınca bağlanan görev malullüğü aylıkları %25 artırılarak ödenir (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça, kırmızı kutuda açıklama notu vardı; m.4/d tam metniyle uyumlu.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sosyal güvencesi olmayan ve öğrenimi bulunmayanlara görev malullüğü aylığı bağlanmaz"
+   ],
+   "dogrusu": [
+    "Öğrenimi bulunmayanlara ilkokul mezunu gibi giriş derece ve kademesi esas alınarak %25 artırımlı görev malullüğü aylığı bağlanır (m.4/d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; sürelerin birleştirilememesi m.4 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Malullük aylığı bağlanmadan önceki hizmet süreleri sonraki çalışma süreleriyle birleştirilerek yeni aylık bağlanır"
+   ],
+   "dogrusu": [
+    "Malullük aylığı bağlanmadan önceki hizmet süreleri sonraki çalışma süreleriyle hiçbir sebeple birleştirilemez (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-11",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; hüküm m.5'e ait olduğu hâlde madde alanında 5 yoktu.",
+  "duzeltme": {
+   "madde": [
+    "5"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Görevi sona erenler hakkında bu Kanun hiçbir şekilde uygulanmaz"
+   ],
+   "dogrusu": [
+    "Görevi sona erenlerin yaralanma, engellilik veya ölümünün önceki görevden kaynaklandığı belgelenirse m.3 ve m.4 uygulanır (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız MİT yanlışını karşılıyordu; hüküm m.8 ve m.9'a ait.",
+  "duzeltme": {
+   "madde": [
+    "8",
+    "9"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Sosyal güvenlik kurumu %25 fazlalığı kendi kaynağından karşılar",
+    "Bu Kanundan yararlanan MİT mensupları 644 sayılı Kanundaki tazminatları da alır"
+   ],
+   "dogrusu": [
+    "%25 fazlalığı kurumlar öder ve faturası karşılığında Hazineden tahsil eder (m.8)",
+    "Bu Kanundan yararlanan MİT mensupları 644 sayılı Kanundaki tazminatlardan ayrıca yararlanamaz (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 86,
+  "kart_id": "86-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; kırmızı kutuda açıklama notu vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Birlik hâlinde yurt dışına gönderilenlerin harcırah esas ve miktarını Millî Savunma Bakanlığı tespit eder"
+   ],
+   "dogrusu": [
+    "Birlik hâlinde yurt dışına gönderilenlerin harcırah esas ve miktarını Cumhurbaşkanı tespit eder (m.17)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 86,
+  "kart_id": "86-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; 1/3 ve 1/5 oranları m.17/5 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Gemi tedariki için görevlendirilen erbaş ve erlere teğmen yurt dışı gündeliğinin 1/3'ü ödenir",
+    "Yabancı ülkeye gönderilen erbaş ve erlere teğmen yurt dışı gündeliğinin yarısı ödenir"
+   ],
+   "dogrusu": [
+    "Yabancı ülkeye gönderilen erbaş ve erlere teğmen yurt dışı gündeliğinin 1/3'ü, gemi tedarikinde ise 1/5'i ödenir (m.17)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 86,
+  "kart_id": "86-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; 40 kat (yurt içi) ve 32 kat (yurt dışı) m.45-46 metinleriyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yurt içi yer değiştirmede aile fertleri için verilecek miktar gündeliğin 50 katını aşamaz",
+    "Yurt içi yer değiştirmede aile fertleri için miktar gündeliğin 32 katını aşamaz"
+   ],
+   "dogrusu": [
+    "Yurt içinde aile fertleri için verilecek miktar gündeliğin 40 katını aşamaz; 32 kat sınırı yurt dışı içindir (m.45, m.46)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 87,
+  "kart_id": "87-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "Resmî m.3 metnine göre (n), (o), (p), (r) bentleri yanlış eşlenmişti ve 'esaslar Cumhurbaşkanınca' ifadesi metinde yok; istisnalar ceza ve yasaklama hükümleri hariç Kanuna tabi değildir.",
+  "duzeltme": {
+   "hukum": "Kamu hukukuna tabi, kamunun denetimindeki veya kamu kaynağı kullanan kurumların ihalelerinde uygulanacak esas ve usuller (m.1); kapsam: genel bütçe ve özel bütçeli idareler, il özel idareleri, belediyeler ve bağlı döner sermaye-birlik-tüzel kişiler; KİT'ler; sosyal güvenlik kuruluşları, fonlar, kamu görevi verilmiş tüzel kişiler, bağımsız bütçeli kuruluşlar; bunların yarısından fazla sermayesine sahip olduğu kuruluş ve şirketler; 4603 kapsamındaki bankaların yapım ihaleleri; TMSF, 4603 kapsamındaki bankalar (yapım ihaleleri hariç) ve enerji-su-ulaştırma-telekomünikasyon şirketleri kapsam dışı (m.2); istisnalar (m.3): (a) üreticiden tarım-hayvancılık ürünü alımları ve orman köylüleri kooperatiflerinden hizmet; (b) savunma, güvenlik veya istihbarat alanlarıyla ilişkili olduğuna veya gizlilik içinde yürütülmesi gerektiğine Cumhurbaşkanı veya ilgili bakanlıkça karar verilen veya özel güvenlik tedbiri gerektiren veya devlet güvenliğine ilişkin temel menfaatlerin korunmasını gerektiren mal-hizmet-yapım işleri; (c) dış finansmanlı işler, Merkez Bankası banknot vb.; (d) yurt dışı kuruluşların alımları; (e) ceza infaz kurumları işyurtları, MEB üretim okulları, Devlet Malzeme Ofisi, TCDD, TÜBİTAK, Et ve Balık Kurumu, Çay-Kur, MKE monoblok tekerlek vb. kuruluşlardan alımlar; (f) Ar-Ge; (g) KİT'lerin ticari-sınai faaliyetlerinde belli limiti aşmayan alımlar; (h) teşhis-tedaviye yönelik hizmet alımları ve reçeteli ilaç; (i) kültür varlıkları restorasyonu; (j) deniz kirliliğine acil müdahale; (k) vakıf kültür varlıkları; (l) tanık koruma; (m) BOTAŞ doğal gaz alımları; (n) erbaş-erlerin ve askerî malzemenin THY ile taşınması, TRT'nin AA'dan alımları, acil ihtiyaçlar için önceden yapılan anlaşmalar; (o) Enerji ve Tabii Kaynaklar Bakanlığı kuruluşlarının birbirinden alımları; (p) Gençlik ve Spor sportif faaliyet alımları; (r) fakir ailelere kömür yardımı alımları; (s)-(bb) diğer istisnalar; bu işler ceza ve ihalelerden yasaklama hükümleri hariç bu Kanuna tabi değildir (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "İstisna kapsamındaki işlerde ihalelerden yasaklama hükümleri de uygulanmaz"
+   ],
+   "dogrusu": [
+    "İstisna kapsamındaki işler Kanuna tabi değildir; ancak ceza ve ihalelerden yasaklama hükümleri bunlara da uygulanır (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 89,
+  "kart_id": "89-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlışın doğrusu yoktu, kırmızı kutuda açıklama notu vardı; m.4, m.6, m.8 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Toplu göçmen kabulüne Dışişleri Bakanlığı karar verir",
+    "Sınır dışı edilmiş Türk soylular göçmen kabul edilir",
+    "Göçmen Belgesi 5 yıl geçerlidir"
+   ],
+   "dogrusu": [
+    "Toplu göçmenleri Cumhurbaşkanı kararıyla İçişleri Bakanlığı kabul eder; sınır dışı edilmiş Türk soylular göçmen kabul edilmez (m.4, m.6)",
+    "Göçmen Belgesi iki yıl geçerlidir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 93,
+  "kart_id": "93-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Edinemez'; valilik izni yanlışının doğrusu yoktu.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Görevli yabancı uyruklu sivillere bölgeye giriş iznini Genelkurmay Başkanlığı verir",
+    "İkinci derece kara askerî yasak bölgesinde yabancılar taşınmaz mal edinebilir"
+   ],
+   "dogrusu": [
+    "Görevli yabancı sivillere izni garnizon komutanlığının görüşüyle valilik verir; yabancılar bu bölgede taşınmaz mal edinemez (m.9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 94,
+  "kart_id": "94-0",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 'Tabi değil' parçası; m.2 resmî metnine göre belediyelerde yalnız otomobillerle yapılan taşımalar kapsam dışı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Belediye otobüsleriyle yapılan taşımalar da Kanun kapsamı dışındadır",
+    "Jandarma araçlarıyla yapılan taşımalar bu Kanuna tabidir"
+   ],
+   "dogrusu": [
+    "Belediyelerde yalnız otomobillerle yapılan taşımalar kapsam dışıdır; Jandarmaya ait motorlu taşıtlarla yapılan taşımalar da Kanuna tabi değildir (m.2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 94,
+  "kart_id": "94-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu 'Uygulayamaz' parçası; yetkililer m.27 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Rütbeli jandarma personeli her yerde bu Kanundaki idari para cezalarını uygulayabilir",
+    "İl özel idaresi personeli idari para cezası uygulayabilir"
+   ],
+   "dogrusu": [
+    "Rütbeli jandarma yalnız trafik polisinin görev alanı dışında ceza uygular; il özel idaresi personeli yetkililer arasında değildir (m.27)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-14",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu uzun kelime dizisi; ceza tutarları m.36/1-h metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sahte damızlık belgesi düzenleyene at başına 5.000 TL idarî para cezası verilir"
+   ],
+   "dogrusu": [
+    "Sahte belge düzenleyene at başına 100.000 TL, sığır başına 5.000 TL idarî para cezası verilir (m.36/1-h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-15",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutunun ilk satırı doğruyu içeren nottu; Doğrusu parça.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İthal edilen safkan atlar gümrük girişinden itibaren üç ay içinde soy kütüğüne kaydedilir"
+   ],
+   "dogrusu": [
+    "İthal safkan atlar gümrük girişinden itibaren iki ay, Türkiye'de doğan taylar doğumdan itibaren üç ay içinde kaydedilir (m.10/12)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; süreler m.10/13 metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Soy kütüğüne kayıtlı atın don değişikliği bir ay içinde bildirilir"
+   ],
+   "dogrusu": [
+    "Sahip değişikliği bir ay, don değişikliği on iki ay içinde bildirilerek pedigriye işletilir (m.10/13)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-17",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.10/A resmî metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir ilde aynı türden birden fazla ıslah birliği kurulabilir",
+    "Islah birliği Bakanlık onayıyla tüzel kişilik kazanır"
+   ],
+   "dogrusu": [
+    "İl düzeyinde aynı türden yalnız bir ıslah birliği kurulabilir ve birlik ticaret siciline tescille tüzel kişilik kazanır (m.10/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-18",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.10/B resmî metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Birliğin mali genel kurulu dört yılda bir yapılır",
+    "Yönetim kurulu üç yıl için seçilir"
+   ],
+   "dogrusu": [
+    "Mali genel kurul iki yılda bir, olağan genel kurul dört yılda bir yapılır; yönetim kurulu dört yıl için seçilir (m.10/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-19",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.10/Ç resmî metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Aday üyeler genel kurulda oy kullanabilir"
+   ],
+   "dogrusu": [
+    "Aday üyeler genel kurula katılamaz ve oy kullanamaz (m.10/Ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-21",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Ziraat mühendisi yanlışının doğrusu yoktu; kırmızı kutuda açıklama notu vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Veteriner biyolojik ürünlerin onayını eczacılar da alabilir",
+    "Ziraat mühendisi veteriner sağlık ürünü onayı alabilir"
+   ],
+   "dogrusu": [
+    "Veteriner sağlık ürünü onayını kimyager, kimya mühendisi, eczacı veya veteriner hekim alabilir; ziraat mühendisi alamaz (m.12/3)",
+    "Veteriner biyolojik ürün onayını yalnız veteriner hekimler ve veteriner hekim istihdam eden tüzel kişiler alabilir (m.12/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.12/10 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hatalı veteriner biyolojik ürün, hatası giderilirse yeniden piyasaya arz edilebilir"
+   ],
+   "dogrusu": [
+    "Hatası giderilen ürünün yeniden piyasaya arzına yalnız biyolojik ürünler dışındaki veteriner tıbbî ürünlerde izin verilebilir (m.12/10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-42",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu çok uzun kelime dizisi; m.31 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Resmî kontroller en az 30 gün önce yazılı bildirimle yapılır",
+    "Mikrobiyolojik analiz sonucuna da yedi gün içinde itiraz edilebilir"
+   ],
+   "dogrusu": [
+    "Resmî kontroller, ön bildirim gereken hâller dışında habersiz yapılır; mikrobiyolojik incelemelerde analiz sonucuna itiraz edilemez (m.31)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 95,
+  "kart_id": "95-49",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.37/1-e resmî metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Sahte veteriner ilacı üretene yalnız 30.000 TL idarî para cezası verilir"
+   ],
+   "dogrusu": [
+    "Onaylı ürünü taklit ederek sahtesini üretip piyasaya arz edene bir yıldan üç yıla kadar hapis ve bin gün adlî para cezası verilir (m.37/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 96,
+  "kart_id": "96-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; kırmızı kutu iki yanlışı tek satırda açıklama notuyla veriyordu; m.8 resmî metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bir dalda uzman unvanını kullanmak için beş yıl tecrübe yeterlidir",
+    "Yabancı hastaneden alınan ihtisas belgesi tasdik gerekmeden geçerlidir"
+   ],
+   "dogrusu": [
+    "Uzman unvanı için ihtisas vesikası gerekir; yabancı hastane belgesi ancak Türkiye Tıp Fakültesince tasdik edilirse geçerlidir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-2",
+  "sorun": "hukum_hatali",
+  "aciklama": "Tam metne göre mutemet görevlendirme yazıları 'malî yılın ilk ödemesinde' değil 'malî yılın ilk ayında' ödeme belgesiyle verilir; Doğrusu da parçaydı.",
+  "duzeltme": {
+   "hukum": "Ödeme gerçek kişilerde alacaklıya veya vekiline, velisine, vasisine, mutemedine; ölümde varislere; tüzel kişilerde kanuni temsilcilerine veya tayin ettikleri vekillere; kayyım gereken hâllerde kayyıma; tespit belgeleri: vekillere noterce düzenlenmiş vekâletname aslı veya noter onaylı örneği; velilere veli ve çocukların TC kimlik numaraları (mahkemece tayin edilmiş velide mahkeme ilamı); vasilere vasi tayinine ilişkin mahkeme ilamı; varislere veraset ilamı; tüzel kişilerin kanuni temsilcilerine tahsile yetkili olduğunu gösteren belge, bunların tayin ettikleri vekillere sadece noterce düzenlenmiş vekâletname; kayyımlara mahkeme ilamı; resmî kurum alacaklarının tahsili için görevlendirilenlere dairesince verilmiş tatbiki imzalı yetki belgesi; alacağı temellük edenlere noter onaylı alacak temliknamesi; kamu personelinin aylık-ücret gibi düzenli alacaklarının harcama yetkilisince yazılı görevlendirilen mutemetlere ödenmesinde Mutemet Görevlendirme Yazısı (örnek 5); yolluk, tedavi gideri gibi münferit alacaklar ile kamu personeli olmayanların ders-huzur-konferans ücretlerinin mutemetlerine ödenmesinde her ödemeyle ilgili Şahsi Mutemet Dilekçesi (örnek 6); kimliği saklı muhbirlere dairenin görevlendirme yazısı; banka hesabına ödemede alacaklının onaylı yazılı talebi (faturada banka hesap numarası varsa aranmaz); (a)-(f) belgeleri Vekâletname/İlam Kayıt Defterine (örnek 7) kaydedilip muhasebe biriminde dosyada saklanır; her ödemeden önce kontrol; tedavi bedeli iadesinde alındıda belirtilen diğer kişiye vekâletsiz ödeme; Hazine aleyhine sonuçlanan davalarda karşı taraf vekiline ilamda adı yazılıysa vekâletname aranmaz; vekâletten azil muhasebe birimine yazılı bildirilir, deftere kaydedilir; mutemet görevlendirme yazıları malî yılın ilk ayında ödeme belgesiyle muhasebe birimine verilir, mutemet değişirse yeni görevlendirme yazısıyla bildirilir (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "Vasilere yapılacak ödemede veraset ilamı aranır",
+    "Tüzel kişinin vekiline ödemede yetki belgesi de aranır",
+    "Yolluk alacağının mutemede ödenmesinde Mutemet Görevlendirme Yazısı yeterlidir"
+   ],
+   "dogrusu": [
+    "Vasiye ödemede vasi tayinine ilişkin mahkeme ilamı, tüzel kişinin vekiline ödemede yalnız noterce düzenlenmiş vekâletname aranır (m.8)",
+    "Yolluk gibi münferit alacakların mutemede ödenmesinde her ödeme için Şahsi Mutemet Dilekçesi gerekir (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 104,
+  "kart_id": "104-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutu ve Doğrusu parçaydı; yılda bir muayene m.70 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Hidrazin, akü şarj ve uçak yıkama gibi görevlerdeki personel iki yılda bir muayene edilir"
+   ],
+   "dogrusu": [
+    "Hidrazin, akü şarj ve uçak yıkama gibi görevlerdeki personel göreve ilk başlarken ve yılda bir kez muayene edilir (m.70)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 104,
+  "kart_id": "104-23",
+  "sorun": "hukum_hatali",
+  "aciklama": "Resmî m.70/A metnine göre üç yıllık periyodik muayene pilot ve seyrüsefer sınıfı dışındaki İHA pilotu, görev komutanı, faydalı yük işletmeni ve uçuş/yer sistemleri teknisyeni içindir; bakım/aviyonik teknisyenleri kuvvet çizelgesine göre muayene edilir.",
+  "duzeltme": {
+   "hukum": "İHA personeli: İHA pilotu, görev komutanı, faydalı yük işletmeni, yer sistem teknisyeni ve bakım/aviyonik teknisyenidir. Aday/ilk muayene esasları dört yıllık uçucu periyodik muayene esaslarıyla aynıdır; İHA pilotu (pilot ve seyrüsefer sınıfı hariç), görev komutanı, faydalı yük işletmeni ve uçuş/yer sistemleri teknisyeninin periyodik muayenesi her üç yılda bir yapılır, ayrıca her yıl uçuş tabibince kontrol edilirler; pilot ve seyrüsefer sınıfı İHA pilotları kendi sınıflarının muayenelerini yaptırır; bakım/aviyonik teknisyenleri kendi kuvvet çizelgesine göre muayene edilir (m.70/A)",
+   "sinavda_boyle_yazarlar": [
+    "İHA pilotu ve görev komutanının periyodik muayenesi dört yılda bir yapılır",
+    "İHA personeli her yıl yetkili hastanede periyodik muayene olur"
+   ],
+   "dogrusu": [
+    "İHA pilotu ve görev komutanı gibi personelin periyodik muayenesi üç yılda bir yapılır; her yıl yalnız uçuş tabibince kontrol edilirler (m.70/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 105,
+  "kart_id": "105-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu yalnız 'Tek kart'; madde alanındaki 205, 5434 sayılı Kanunun geçici maddesi (kart m.6).",
+  "duzeltme": {
+   "madde": [
+    "6"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Mecburi hizmetini tamamlamadan istifa edene sosyal tesislere günübirlik giriş kartı verilir",
+    "Bir hak sahibi iki statüsü için iki ayrı kart alabilir"
+   ],
+   "dogrusu": [
+    "Mecburi hizmetini tamamlamayan müstafiye sosyal tesis giriş kartı verilmez; hak sahibine asıl statüsüne göre tek kimlik kartı verilir (m.6/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 118,
+  "kart_id": "118-1",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu parça; itiraz kuralı m.10'da olduğu hâlde madde alanında 10 ve 11 yoktu; hüküm resmî metinle uyumlu.",
+  "duzeltme": {
+   "madde": [
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "sinavda_boyle_yazarlar": [
+    "Kamu zararına yapılan itiraz 15 gün içinde sonuçlandırılmazsa kabul edilmiş sayılır"
+   ],
+   "dogrusu": [
+    "Kamu zararına itiraz 15 gün içinde sonuçlandırılır; bu sürede sonuçlandırılmayan başvuru reddedilmiş sayılır (m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 122,
+  "kart_id": "122-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Cari oran yanlışının doğrusu yoktu; 0,75 ve eşik değer kuralı m.27 ve m.33 metinleriyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Bilançoda cari oranın en az 1 olması aranır",
+    "Eşik değerin altındaki mal alımlarında ekonomik ve mali yeterlik belgesi istenebilir"
+   ],
+   "dogrusu": [
+    "Bilançoda cari oran en az 0,75 olmalıdır (m.33)",
+    "Belli istekliler usulü hariç, eşik değerin altındaki mal alımlarında ekonomik ve mali yeterlik belgesi istenemez (m.27)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 125,
+  "kart_id": "125-2",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda aynı yanlış iki kez, Doğrusu parçaydı; m.32-33 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Konsorsiyumda en çok hisseye sahip ortak pilot ortak olarak gösterilir"
+   ],
+   "dogrusu": [
+    "En çok hisseli ortağın pilot ortak olması iş ortaklığına özgüdür; konsorsiyumda koordinatör ortak belirlenir (m.32, m.33)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 125,
+  "kart_id": "125-4",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Kırmızı kutuda tekrar, Doğrusu iki parçaydı; beşte bir ve karne yasağı m.48 ve m.51 metinleriyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "İş denetleme belgesi tam tutarla değerlendirilir",
+    "Müteahhitlik karnesi iş deneyimi olarak kullanılabilir"
+   ],
+   "dogrusu": [
+    "Denetim ve yönetim belgeleri beşte bir oranında değerlendirilir; müteahhitlik karnesi iş deneyimi belgesi olarak kullanılamaz (m.48, m.51)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 125,
+  "kart_id": "125-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yerli avantajı yanlışının doğrusu yoktu; m.56 ve m.63 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Ortakları arasında yabancı bulunan iş ortaklığı yerli istekli fiyat avantajından yararlanır",
+    "Sınır değerin altındaki teklifte kesin teminat teklif fiyatının %6'sıdır"
+   ],
+   "dogrusu": [
+    "Yabancı ortaklı ortak girişimler yerli istekli fiyat avantajından yararlanamaz (m.63)",
+    "Teklif sınır değerin altındaysa kesin teminat yaklaşık maliyetin %9'u, eşit veya üstündeyse teklif fiyatının %6'sıdır (m.56)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-3",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "İlk yanlışın (aynen onaylama zorunluluğu) doğrusu yoktu; kırmızı kutuda açıklama notu vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Genel Müdürlük, müdürlüğün bildirdiği seviyeyi aynen onaylamak zorundadır",
+    "Acil servis seviyesini Genel Müdürlük belirler, müdürlük onaylar"
+   ],
+   "dogrusu": [
+    "Acil servis seviyesini müdürlük belirler; Genel Müdürlük bildirilen seviyeyi aynen veya değiştirerek onaylar (m.5/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-5",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; süreler m.5/5 ve m.6/11 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yeni açılan acil servisin seviye tespiti altı ay içinde yapılır"
+   ],
+   "dogrusu": [
+    "Yeni açılan acil servisin seviye tespiti hizmet başlangıcını takip eden ay içinde yapılır; tescil Genel Müdürlük onayını takip eden ay içinde tamamlanır (m.5/5, m.6/11)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-6",
+  "sorun": "hukum_hatali",
+  "aciklama": "Eski arşivde kesik kalan m.6/12 (2024 eki: müdürlük özellikli hizmetlere göre fiziki mekân kriterine bakmadan seviye değiştirebilir) hükme eklendi; Doğrusu parçaydı.",
+  "duzeltme": {
+   "hukum": "Acil servisler tesisin statüsü, fiziki şartları, tıbbi cihaz-donanım ve asgari ilaç standardı, personel ve yatak sayısı gibi ölçütlerle I., II. ve III. seviye olarak seviyelendirilir; müdürlükçe görevlendirilen tescil komisyonu Ek-5 Acil Servis Seviye Tespit ve Denetim Formuna göre inceler; rapor Ek-1, Ek-2, Ek-3 ve Ek-4 standartlarına istinaden valilik onayı alınarak seviye tescil edilir, tescil edilenler Genel Müdürlüğe bildirilir (m.6/1); seviye tespiti yerinde inceleme ile yapılır; basılı veya SBYS üzerinden elektronik form kullanılabilir; tescil en geç valilik onayını takip eden ay içinde Genel Müdürlüğe iletilir (m.6/4); komisyon Genel Müdürlüğün nihai listesinde olmayan acil servis tespit eder veya değişiklik gerekir derse kendisi tespit yapar, raporda belirtir; müdürlük yeniden değerlendirip nihai karar için Genel Müdürlüğe iletir (m.6/2); müdürlükler kalp merkezi, III. seviye yoğun bakım, inme merkezi, organ nakli merkezi gibi özellikli hizmetleri değerlendirerek fiziki mekân kriterlerine bakılmaksızın acil servis seviyelerini değiştirebilir (m.6/12)",
+   "sinavda_boyle_yazarlar": [
+    "Acil servisler dört seviyeye ayrılır",
+    "Acil servis seviyesinin tescili Genel Müdürlük onayıyla yapılır"
+   ],
+   "dogrusu": [
+    "Acil servisler I., II. ve III. seviye olarak ayrılır; seviye valilik onayıyla tescil edilip Genel Müdürlüğe bildirilir (m.6/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-7",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Oy eşitliği yanlışının doğrusu yoktu; kırmızı kutuda açıklama notu ve tekrar vardı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Tescil komisyonu en az 3 üyeden oluşur",
+    "Tescil komisyonunda oy eşitliğinde karar ertelenir"
+   ],
+   "dogrusu": [
+    "Tescil komisyonu biri başkan en az 5 üyeden oluşur; oy eşitliğinde başkanın taraf olduğu karar geçerlidir (m.6/5, m.6/8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-8",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; m.6/9 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Seviye yükseltme talebi acil servis sorumlu tabibince doğrudan Genel Müdürlüğe yapılır"
+   ],
+   "dogrusu": [
+    "Seviye yükseltme talebini baştabip müdürlüğe resmî yazıyla yapar; başvuru bir ay içinde sonuçlandırılır (m.6/9)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; levha ve 20 metre kuralı m.7/1 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yönlendirme levhası kırmızı zemin üzerine beyaz hilalden oluşur",
+    "Cephedeki ACİL SERVİS tabelası en az 10 metreden okunabilir olmalıdır"
+   ],
+   "dogrusu": [
+    "Levhada beyaz zemin üzerine kırmızı hilal ve koyu mavi ACİL yazısı bulunur; cephe tabelası en az 20 metreden okunmalıdır (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-10",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu kelime dizisi; %8 eğim ve ayrı girişler m.7/1 tam metniyle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Acil servis rampaları en fazla %10 eğimli olur",
+    "Ayaktan hastalar ve ambulans aynı girişi kullanır"
+   ],
+   "dogrusu": [
+    "Rampalar en fazla %8 eğimli olur; ayaktan hasta girişi ile ambulans girişi birbirinden ayrıdır (m.7/1-d, e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-17",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hükümdeki m.12/1-2 atıfları 2022'de yürürlükten kalkan 2009 Tebliğine ait (yürürlükteki Tebliğde m.12 sevk maddesi); hüküm yürürlükteki m.10'a göre yeniden yazıldı.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ],
+   "hukum": "Acil servis hizmeti 24 saat kesintisiz yürütülür (m.10/1); E rolündeki ilçe Devlet hastanelerinde nöbet aile hekimliği mevzuatına göre, özel hastanelerde ilgili mevzuatına göre düzenlenir (m.10/2-3); kadrosunda 5 ve daha fazla acil tıp uzmanı veya çocuk acil tıp yan dal uzmanı bulunan tesislerde acil serviste 24 saat esasına göre bu uzmanlardan en az birinin görev yapması esastır, sayı yeterliyse aynı anda birden çok uzmana nöbet verilir (m.10/4); bu uzmanların sayısı yetersizse tüm uzman tabipler, acil servis sorumlu tabibinin teklifi ve baştabibin onayı ile acil servis nöbetine dahil edilebilir (m.10/5)",
+   "sinavda_boyle_yazarlar": [
+    "Acil tıp uzmanı nöbeti için kadroda en az 3 acil tıp uzmanı yeterlidir",
+    "Diğer uzmanlar acil nöbetine baştabibin teklifi ve müdürlüğün onayıyla dahil edilir"
+   ],
+   "dogrusu": [
+    "Kadrosunda 5 ve daha fazla acil tıp uzmanı bulunan tesislerde acil serviste 24 saat en az biri görev yapar (m.10/4)",
+    "Acil tıp uzmanı yetersizse diğer uzmanlar, acil servis sorumlu tabibinin teklifi ve baştabibin onayıyla nöbete dahil edilir (m.10/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-18",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hükümdeki m.12/3-5 içeriği (yedek nöbetçi listesi, idari uzman nöbeti vb.) yürürlükten kalkan 2009 Tebliğine ait; hüküm yürürlükteki m.10'a göre yeniden yazıldı.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ],
+   "hukum": "Aynı uzmanlık dalından 6 ve üzeri uzman tabip bulunan branşlarda 24 saat kesintisiz her uzmanlık dalı için branş nöbeti düzenlenir; öncelikli branşlar: iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum, çocuk sağlığı ve hastalıkları, anestezi ve reanimasyon, ortopedi ve travmatoloji, kardiyoloji, nöroloji, göğüs hastalıkları, beyin cerrahi, KBB, kalp-damar cerrahisi, göğüs cerrahisi, üroloji, göz, çocuk cerrahisi, plastik cerrahi, enfeksiyon, psikiyatri, dermatoloji, radyoloji, aile hekimliği; uzman sayısı yeterli diğer branşlara baştabip kararıyla nöbet düzenlenebilir (m.10/6); tabip sayısı yeterliyse baştabip müstakil acil branş nöbeti düzenleyebilir; müstakil nöbet tutan tabibe o nöbet günü elektif iş planlarında veya idari birimlerde ek görev verilemez (m.10/7); III. seviye acil servislerde faaliyet izin belgesinde yazılıysa iç hastalıkları, genel cerrahi, kadın hastalıkları ve doğum ile çocuk sağlığı ve hastalıkları branşlarında acil branş nöbeti zorunludur (m.10/14)",
+   "sinavda_boyle_yazarlar": [
+    "Branş nöbeti için aynı daldan 5 uzman yeterlidir",
+    "Müstakil branş nöbetçisine nöbet günü elektif ameliyat verilebilir"
+   ],
+   "dogrusu": [
+    "Branş nöbeti için aynı daldan 6 ve üzeri uzman gerekir; müstakil nöbetçiye o gün elektif iş veya idari görev verilemez (m.10/6-7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-19",
+  "sorun": "hukum_hatali",
+  "aciklama": "Tek uzmanlı branş kuralı ve icapçıyı sorumlu tabibin bizzat davet etmesi (m.12/8-12) yürürlükten kalkan 2009 Tebliğine ait; yürürlükteki m.10/16'ya göre icapçının davetine acil servis tabibi karar verir.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ],
+   "baslik": "Havuz nöbeti, yan dal ve icap nöbeti",
+   "hukum": "Uzman sayısı 6'nın altında olduğu için her dal için branş nöbeti düzenlenemezse klinisyen uzmanlar arasında dahili branş havuz nöbeti ve cerrahi branş havuz nöbeti düzenlenir; bunun için dahili ve cerrahi klinisyen branşların her ikisinde de ayrı ayrı toplam 6 ve üzeri uzman gerekir; havuz nöbeti tutulan hastanelerde nöbetçilerin branşı dışındaki hasta kabulü ve konsültasyon için her branşın acil icapçı tabip nöbet listesi düzenlenir (m.10/8); ana dalda uzman yetersizse yan dal uzmanları ana dal nöbetine dahil edilebilir, ihtiyaçta yan dal icap nöbeti verilebilir, kararı baştabip verir (m.10/9); branş nöbeti yükümlüsü uzmanlardan biri mesai dışı yoğun bakım hizmetleri için baştabipçe görevlendirilebilir (m.10/13); icap nöbetleri hasta yoğunluğu bulunmayan veya tabip sayısı nöbete elverişli olmayan tesis ve klinik branşlar için baştabipçe düzenlenir; icapçının davet edilip edilmeyeceğine acil servis tabibi karar verir, davet kayda alınan acil servis telefonundan hasta adı veya dosya numarası ve gerekçe belirtilerek yapılır; icap süreci takip, yatış veya taburculukla kesin sonuca bağlanır (m.10/16)",
+   "sinavda_boyle_yazarlar": [
+    "Havuz nöbeti için dahili ve cerrahi branşlarda birlikte toplam 6 uzman bulunması yeterlidir",
+    "İcap nöbetçisinin hastaneye çağrılmasına hemşire veya hasta yakını karar verir"
+   ],
+   "dogrusu": [
+    "Havuz nöbeti için dahili ve cerrahi branşların her birinde ayrı ayrı toplam 6 ve üzeri uzman bulunmalıdır (m.10/8)",
+    "İcap nöbetçisinin hastaneye davet edilip edilmeyeceğine acil servis tabibi karar verir (m.10/16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-20",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hükümdeki m.12/6 ('genel hastaneler kapsam dışı tutulur') ve m.12/13 (eğitim hastanesi nöbetleri) yürürlükten kalkan 2009 Tebliğine ait; yürürlükteki m.10/10-12'ye göre yeniden yazıldı.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ],
+   "baslik": "Dal hastanesi nöbetleri ve il geneli görevlendirme",
+   "hukum": "Dal hastanesi bulunan yerlerde ilgili daldaki acil branş nöbeti dal hastanesinde planlanır; genel hastanelerde bu branşlar için hasta yoğunluğu, uzman sayısı ve dal hastanesine uzaklık gözetilerek nöbet düzenlenmeyebilir; dal hastanesi uzmanları ihtiyaç hâlinde genel hastane nöbetine dahil edilebilir; bu planlamayı müdürlük yapar (m.10/10); dal hastanelerinde hizmet alanının gerektirdiği branşlarda 24 saat acil branş nöbeti düzenlenir, uzman yetersizse nöbetin nasıl yürütüleceğine baştabip karar verir (m.10/11); üniversite hastaneleri hariç kamu sağlık tesislerindeki uzman tabipler, yeterli uzman bulunmayan birimlerde il geneli nöbetin sürekliliği için müdürlükçe ilin nüfusu, coğrafi özellikleri ve hastane uzaklığı dikkate alınarak diğer kamu sağlık tesislerine görevlendirilebilir (m.10/12)",
+   "sinavda_boyle_yazarlar": [
+    "Dal hastanesi ile genel hastane arasındaki nöbet planlamasını baştabipler kendi aralarında yapar"
+   ],
+   "dogrusu": [
+    "Dal hastanesi ile genel hastane arasındaki acil nöbet planlamasını il sağlık müdürlüğü yapar (m.10/10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-23",
+  "sorun": "hukum_hatali",
+  "aciklama": "Senet/taahhütname yasağı ve Ek-8 formu (m.14/1-2) yürürlükten kalkan 2009 Tebliğine ait, yürürlükteki Tebliğde bu hüküm yok (m.14 ortak kayıt sistemi); kart m.11/1-2'ye göre yeniden yazıldı.",
+  "duzeltme": {
+   "madde": [
+    "11"
+   ],
+   "baslik": "Kabul yükümlülüğü ve kimliksiz hasta",
+   "hukum": "Tesisler başvuran veya ambulansla getirilen tüm acil vakaları sağlık güvencesi ve ödeme gücüne bakmaksızın kabul etmek, ilk değerlendirme ve gerekli tıbbi müdahaleyi yapmakla yükümlüdür (m.11/1); geçerli kimlik belgesi veya istenen diğer evrakı ibraz edemeyen hastaya acil durumda olduğu kabul edilirse müdahale zorunludur, ilgili mevzuata göre işlem müdahaleden sonra tesis edilir (m.11/2)",
+   "sinavda_boyle_yazarlar": [
+    "Sağlık güvencesi veya ödeme gücü olmayan acil hasta kabul edilmeyebilir",
+    "Geçerli kimlik belgesi olmayan acil hastaya belgeler tamamlanmadan müdahale edilmez"
+   ],
+   "dogrusu": [
+    "Acil vakalar güvence ve ödeme gücüne bakılmadan kabul edilir; kimliksiz hastaya acil durumdaysa müdahale zorunludur (m.11/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-24",
+  "sorun": "hukum_hatali",
+  "aciklama": "Hükümdeki m.14/3 içeriği (24 saat takip, 4/8 saat elektif yatış blokajı) yürürlükten kalkan 2009 Tebliğine ait; yürürlükteki Tebliğde takip süresi yalnız 8 saattir (m.11/3).",
+  "duzeltme": {
+   "madde": [
+    "11"
+   ],
+   "hukum": "Acil serviste hasta takibinin 8 saati geçmemesi esastır; hastalar en geç 8 saat içinde ilgili kliniğe nakledilir; bu sürede kesin tanısı konulamamış veya birden fazla kliniği ilgilendiren hastayı acil servis sorumlu tabibi değerlendirir, gerekirse en uygun klinik veya tabip adına yatışını verir; 8 saati geçen takipler için baştabipliğe ve ilgili kliniklere ulaşan SBYS uyarı ekranı ve raporlama sistemi kurulur; sorumlu tabipçe klinik adına yatırılan hastaları baştabiplik aylık değerlendirir (m.11/3)",
+   "sinavda_boyle_yazarlar": [
+    "Acil serviste hasta takibi 24 saate kadar sürebilir"
+   ],
+   "dogrusu": [
+    "Acil serviste hasta takibi 8 saati geçmemeli, hasta en geç 8 saat içinde ilgili kliniğe nakledilmelidir (m.11/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 135,
+  "kart_id": "135-25",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Yatış reddi yanlışının doğrusu yoktu; kırmızı kutuda açıklama notu ve tekrar vardı; m.11/4 resmî metinle teyit edildi.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "Yatışı verilen hasta en geç 8 saat içinde kliniğe nakledilir",
+    "İlgili klinik uygun görmezse acil tabibinin verdiği yatışı reddedebilir"
+   ],
+   "dogrusu": [
+    "Yatışı verilen hasta uygun yatak varsa en geç 2 saatte kliniğe nakledilir; klinik bu yatışı reddedemez (m.11/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 137,
+  "kart_id": "137-1",
+  "sorun": "hukum_hatali",
+  "aciklama": "Tam metne göre sözleşme imzalanana kadarki hizmetin tamamı mahsup edilir; üçte bir kuralı sözleşmesi sona erenlerin kalan askerliği içindir; kırmızı kutu açıklama notuydu.",
+  "duzeltme": {
+   "hukum": "Kadro görev yerleri her yıl duyurulur; (a) muvazzaflık hizmetini yapmakta olan çavuş-onbaşı-erler ile terhis olanlar (veya Askeralma Kanunu m.42 kapsamında muaf tutulanlar) müracaat yılının ocak ayının ilk günü itibarıyla 27 yaşını bitirmemiş olmak; (b) sözleşmeli erbaş ve erlerden en az 3 yıl görev yapmış olanlar 29 yaşını bitirmemiş olmak ve sıralı üç disiplin amirince \"uzman erbaş olur\" kararlı nitelik belgesi doldurulmak şartıyla müracaat eder; askerliğini yaptığı komutanlıkta uzman erbaş olmak için müracaat edip sınavı kazananlar kalan askerlik süresine bakılmaksızın ilk eğitime tefrik edilir; sözleşme imzalanana kadarki hizmet sürelerinin tamamı askerlik yükümlülüğünden mahsup edilir; sözleşmesi sona erenlerin sözleşme döneminde hizmette geçen sürelerinin üçte biri eksik askerlik süresini karşılıyorsa askerlik yapılmış sayılır, karşılamıyorsa kalan süre erbaş veya er olarak tamamlattırılır (m.4)",
+   "sinavda_boyle_yazarlar": [
+    "Muvazzaflık hizmetindeki veya terhis olmuş adaylar için yaş sınırı 25'tir"
+   ],
+   "dogrusu": [
+    "Muvazzaflıktaki veya terhis olmuş adaylar 27, en az 3 yıl görev yapmış sözleşmeli erbaş ve erler 29 yaşını bitirmemiş olmalıdır (m.4)"
+   ]
+  }
  }
 ]
