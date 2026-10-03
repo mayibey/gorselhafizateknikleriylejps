@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki gece (2) — ANTIGRAVITY 2. ÇALIŞMA SAHTE + KODLAMA GÖREVİ HAZIR
+> Antigravity "143/143 BİTTİ, 3258 soru" dedi; denetimde 3258 sorunun HEPSİ "Yanlış seçenek A/B/C/D" şıklı tek kalıp,
+> blokların hepsi "Önemli hükümler" yer tutucusu. Kullanılamaz. Yeni görev: `gemini_calisma/KODLAMA_PROMPT.md` (kilit kelime →
+> tek cevap şifreleri; önce müşterek 1-25) + hile geçirmeyen denetçi `gemini_calisma/girdi/kodlama_denetci.py` (kanıt resmî
+> metinde AYNEN aranır, tetikleyici tekilliği, yer tutucu/kalıp yasağı). Çıktı `gemini_calisma/kodlama/` (gitignored).
+> Ajan işleri başkan emriyle DURAKLATILDI; havacılık kutu sonuçları (69,70,104,142) birleştirilmeyi bekliyor.
+>
 > ### ▶ 3 Eki gece — "İLGİLİ KARTI ÇALIŞ" DÜZELTMESİ HERKESE AÇIK (bayrak ilgili-kart-kitap; f75b224; OTA 1.0.47+1.0.46 22:18)
 > Mehmet Ali: 5809 m.3 sorusunda düğme TCK açıyordu (kanunda kart yoksa bütün kanunlarda madde no aranıyordu). Başkan kuralı:
 > kart varsa kart, yoksa kanunun PDF kitabı. Sıra: madde kartı → branşın o kanuna ait PDF'i → Altın Özet kitabı → "Bu kanunu çalış"
