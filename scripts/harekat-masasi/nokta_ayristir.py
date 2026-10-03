@@ -66,6 +66,9 @@ def tablo(md, baslik_re):
         if len(diger) < 2: continue
         konu, deger = h[diger[0]], h[diger[-1]]
         madde = h[mi] if mi is not None and mi < len(h) else ''
+        if not madde:   # iki sütunlu tablo (Konu | Değer): madde değerin içindeki "(m.10/14)" atfından alınır → ezber satırı madde bloğuna bağlanır
+            ma = re.search(r'\(m\.\s*((?:Ek|Geçici)\s*\d+|\d+)((?:/[0-9A-Za-zÇĞİÖŞÜçğıöşü\-]+)?)', deger + ' ' + konu)
+            if ma: madde = ma.group(1) + ma.group(2)
         if konu and deger: rows.append([konu, deger, madde])
     return rows
 

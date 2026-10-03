@@ -280,3 +280,13 @@ html,body,button,.kap{touch-action:manipulation}
 .mSorular .acilirOk{transform:rotate(90deg);transition:transform .2s}.mSorular[open] .acilirOk{transform:rotate(-90deg)}
 .mSoru{padding:10px 0;border-top:1px dashed rgba(232,90,79,.35)}.mSoru .yoSoru{font-size:14px}
 .mSenin{margin:6px 0 0;color:#FF8F86;font-size:14px}.mDogru{margin:4px 0 0;color:#8FE3B5;font-size:14px;font-weight:700}.mNeden{margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#DCEBEF}
+
+/* 2. aşama: madde bloğu yazılı içerik */
+.mOz{margin:2px 0 10px;font-size:15px;line-height:1.55;color:#F2EEE4}
+.mAkil{padding:10px 12px;border-radius:12px;background:rgba(243,194,74,.10);border:1px solid rgba(243,194,74,.55);margin-bottom:8px}
+.mAkil small{display:flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:#F8D57A;font-weight:800}.mAkil small svg{width:14px;height:14px}
+.mAkil p{margin:5px 0 0;font-size:14px;line-height:1.5;color:#FFF6DC;font-weight:600}
+.mKaris .mGitN{display:block;width:100%;margin:0 0 6px;padding:8px 12px;border-radius:12px;text-align:left}
+.mKaris .mGitN b{display:block;font-size:13px;color:#F8D57A}
+.mKaris .mGitN small{display:block;margin-top:2px;font-size:12.5px;line-height:1.4;color:#E6EEF1;font-weight:500;letter-spacing:0;text-transform:none}
+.mKaris .mGitN.pasif{border:1px dashed rgba(243,194,74,.4);background:rgba(243,194,74,.04)}

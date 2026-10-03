@@ -129,6 +129,22 @@ def tekrar_ayikla(qs):
         (atilan if es else kalan).append(q)
     return kalan, atilan
 SUZGEC_RAPOR = []
+# 2. AŞAMA madde blokları (başkan, 3 Eki): scripts/harekat-masasi/madde_bloklari/kanun_<id>.json → kanun.bl
+# Her madde: başlık, öz, sınavda nasıl soruluyor, akılda tut, karıştırılanlar. Branşın kapsam listesi varsa dışındaki madde atılır.
+BLOK_DIR = os.path.join(KOK, 'scripts', 'harekat-masasi', 'madde_bloklari')
+def bloklar(lid, g):
+    yol = os.path.join(BLOK_DIR, f'kanun_{lid}.json')
+    if not os.path.exists(yol): return {}
+    kl = kapsam_listesi(lid, g)
+    out = {}
+    for b in json.load(open(yol, encoding='utf-8')):
+        if 'atla' in b or not b.get('oz'): continue
+        m = str(b['madde'])
+        if kl and m.isdigit() and int(m) not in kl: continue
+        out[m] = {'b': b.get('baslik', ''), 'oz': b['oz'], 'so': b.get('sorulur') or [], 'ak': b.get('akilda') or [],
+                  'kr': [{'m': str(x['madde']), 'n': x['neden']} for x in (b.get('karis') or []) if x.get('madde') and x.get('neden')]}
+    return out
+
 def kanun(lid, g, sira):
     b = bul(lid, sira)
     bas, md = b if b else ('', '')
@@ -143,7 +159,7 @@ def kanun(lid, g, sira):
     qs = [q for q in qs if q not in disarida]
     qs, tekrar = tekrar_ayikla(qs)
     if disarida or tekrar: SUZGEC_RAPOR.append((lid, len(disarida), len(tekrar)))
-    return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': qs, 'yildiz': md.count('★')}
+    return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': qs, 'yildiz': md.count('★'), 'bl': bloklar(lid, g)}
 
 def main(slug, hedef):
     brans_laws = brans_kanunlari(slug)

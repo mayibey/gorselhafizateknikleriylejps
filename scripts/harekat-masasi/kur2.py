@@ -150,7 +150,7 @@ if SLUG:
 _v = _json.loads(open(os.path.join(C, veri_ad), encoding='utf-8').read())
 for _k in _v['kanun']:
     _k['q'] = [{'i': q['i'], 'k': '', 's': [], 'd': 0, 'a': '', 'y': q.get('y', ''), 'z': ''} for q in _k['q']]
-    _k['md'] = ''; _k['n'] = []; _k['tz'] = []; _k['sayi'] = []; _k['makam'] = []
+    _k['md'] = ''; _k['n'] = []; _k['tz'] = []; _k['sayi'] = []; _k['makam'] = []; _k['bl'] = {}   # 2. aşama blok metinleri de üyeye özel
 _v['ek'] = {}
 _uc = _json.dumps(_v, ensure_ascii=False).replace('</', '<\\/')
 _doc_uc = doc.replace(veri, _uc, 1)
