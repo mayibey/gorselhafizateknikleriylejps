@@ -33,9 +33,15 @@ KS = json.loads(txt)
 pd = open(os.path.join(KOK, 'src/assets/premium-denemeler.ts'), encoding='utf-8').read()
 a = pd.index('PREMIUM_SORULAR: PremiumSoruHam[] = ') + len('PREMIUM_SORULAR: PremiumSoruHam[] = '); b = pd.index('];', a) + 1
 P = json.loads(pd[a:b])
+# EK SORULAR (3 Eki): check-up'ta karşılığı olmayan Altın Özet noktaları için yazılan sorular (scripts/harekat-masasi/ek_sorular/*.json)
+EK = {}
+for _f in sorted(glob.glob(os.path.join(KOK, 'scripts', 'harekat-masasi', 'ek_sorular', '*.json'))):
+    for _q in json.load(open(_f, encoding='utf-8')):
+        EK.setdefault(int(_q['kanun_id']), []).append({'i': _q['i'], 'k': _q['k'], 's': _q['s'], 'd': _q['d'], 'a': _q['a'], 'y': _q['y'], 'z': _q.get('z', 'orta')})
 def sorular(lid):
     out = [{'i': q['id'], 'k': q['soru'], 's': q['siklar'], 'd': q['dogru'], 'a': q['aciklama'], 'y': q['kaynak'], 'z': q.get('zorluk', 'orta')} for q in KS.get(str(lid), [])]
     out += [{'i': f'P{i}', 'k': p['k'], 's': p['s'], 'd': p['d'], 'a': p['a'], 'y': p['y'], 'z': 'orta'} for i, p in enumerate(P) if p['l'] == lid]
+    out += EK.get(lid, [])
     return out
 
 # Altın Özet bölümleri
@@ -93,6 +99,31 @@ def tr_baslik(s):
     if not s.isupper(): return s
     k = s.replace('I', 'ı').replace('İ', 'i').lower()
     return ' '.join((w[0].replace('i', 'İ').upper() + w[1:]) if w else w for w in k.split(' '))
+# KAPSAM SÜZGECİ (başkan, 3 Eki: "kapsam dışı maddeden soru eksik diye gösterilmesin"): resmî Ek-1 madde listesi
+# (scripts/_emir-madde-kapsam.json; müşterek + branş). Listesi olan kanunda, madde numarası listede olmayan soru atılır.
+EMIR = json.load(open(os.path.join(KOK, 'scripts/_emir-madde-kapsam.json'), encoding='utf-8'))['kapsam']
+def kapsam_listesi(lid, g):
+    t = EMIR.get('müşterek' if g == 'mus' else g, {})
+    v = t.get(str(lid))
+    return set(int(x) for x in v) if v else None
+def madde_no(q):
+    m = re.search(r'm\.\s*(\d+)', q.get('y') or '')
+    return int(m.group(1)) if m else None
+# TEKRAR SÜZGECİ: aynı maddeden, kökü çok benzeyen ve doğru cevabı aynı olan sorulardan ilki kalır.
+def _nk(t): return re.sub(r'[^a-zçğıöşü0-9 ]', ' ', re.sub(r"^.*?(göre|gereğince),?", '', str(t).replace('İ', 'i').replace('I', 'ı').lower())).split()
+def tekrar_ayikla(qs):
+    kalan, atilan = [], []
+    for q in qs:
+        kq = ' '.join(_nk(q['k'])); dq = ' '.join(_nk(q['s'][q['d']] if q['s'] else ''))
+        es = None
+        for r in kalan:
+            if madde_no(r) != madde_no(q): continue
+            dr = ' '.join(_nk(r['s'][r['d']] if r['s'] else ''))
+            if SequenceMatcher(None, kq, ' '.join(_nk(r['k']))).ratio() >= 0.82 and (SequenceMatcher(None, dq, dr).ratio() >= 0.6 or (re.findall(r'\d+', dq) and re.findall(r'\d+', dq) == re.findall(r'\d+', dr))):
+                es = r; break
+        (atilan if es else kalan).append(q)
+    return kalan, atilan
+SUZGEC_RAPOR = []
 def kanun(lid, g, sira):
     b = bul(lid, sira)
     bas, md = b if b else ('', '')
@@ -102,7 +133,12 @@ def kanun(lid, g, sira):
         m = re.search(r'Sınav kapsamı:\s*(.+)$', bas)
         kap = m.group(1).strip() if m else ''
         ad = bas.split('—')[0].strip() or ad      # görünen ad: özet başlığındaki (eski veriyle aynı)
-    return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': sorular(lid), 'yildiz': md.count('★')}
+    qs = sorular(lid); kl = kapsam_listesi(lid, g)
+    disarida = [q for q in qs if kl and madde_no(q) is not None and madde_no(q) not in kl]
+    qs = [q for q in qs if q not in disarida]
+    qs, tekrar = tekrar_ayikla(qs)
+    if disarida or tekrar: SUZGEC_RAPOR.append((lid, len(disarida), len(tekrar)))
+    return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': qs, 'yildiz': md.count('★')}
 
 def main(slug, hedef):
     brans_laws = brans_kanunlari(slug)
@@ -115,6 +151,7 @@ def main(slug, hedef):
     sorusuz = [k['id'] for k in K if not k['q']]
     print(f"{slug}: kanun {len(K)} (müşterek {len(mus_laws)} + branş {len(brans_laws)}) · soru {sum(len(k['q']) for k in K)} · özetsiz {len(ozetsiz)} · sorusuz {sorusuz or '-'}")
     for o in ozetsiz: print('   özetsiz:', o)
+    print('   süzgeç (kanun, kapsam dışı, tekrar):', SUZGEC_RAPOR, '· toplam kapsam dışı', sum(x[1] for x in SUZGEC_RAPOR), '· tekrar', sum(x[2] for x in SUZGEC_RAPOR))
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2])

@@ -507,6 +507,77 @@ html,body,button,.kap{touch-action:manipulation}
 
 .ozKart .tuzakKutu.iyi{margin-top:8px}.ozKart .tuzakKutu.iyi p{font-size:14.5px;line-height:1.55;color:#F2EEE4}.ozKart .ozNd{margin:0 0 4px;color:#DCEBEF}
 
+.ozKart .ozHukum{margin:0 0 4px}.ozKart .tuzakKutu.iyi p+p{margin-top:4px}
+
+/* Check-up analizi: açılır bölümler, madde kartları, aşağı ipucu (30 Eyl) */
+.acilir{margin-top:14px}.acilir>summary{list-style:none;display:flex;align-items:center;gap:8px;cursor:pointer;font-family:var(--baslik);font-size:18px;color:#F8D57A;padding:6px 0;text-shadow:0 1px 6px rgba(0,15,25,.95),0 0 14px rgba(0,15,25,.8);-webkit-tap-highlight-color:transparent}
+.acilir>summary::-webkit-details-marker{display:none}.acilir>summary::marker{content:''}
+.acilir .rozet{font-family:var(--mono);font-size:12px;color:#F8D57A;background:rgba(243,194,74,.16);border:1px solid rgba(243,194,74,.5);border-radius:999px;padding:2px 9px;text-shadow:none}
+.acilir .acilirOk{margin-left:auto;color:#F8D57A;transform:rotate(90deg);transition:transform .2s}.acilir .acilirOk svg{width:18px;height:18px}.acilir[open] .acilirOk{transform:rotate(-90deg)}
+.acilir>.liste{margin-top:6px}
+.mdKart{padding:12px;border-radius:12px;border:1px solid rgba(67,203,218,.3);background:rgba(3,40,60,.55)}
+.mdUst{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:baseline}
+.mdUst .satirAd{font-size:14.5px;line-height:1.3;display:block;-webkit-line-clamp:unset;overflow:visible;color:#fff}
+.mdOlcu{display:flex;align-items:center;gap:10px;margin-top:9px}.mdOlcu .bar{flex:1;min-width:0}.mdOlcu .satirDeger{min-width:0}
+.mdBtnler{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.mdBtn{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:10px;font-weight:800;font-size:13.5px;border:1.5px solid rgba(243,194,74,.6);background:rgba(243,194,74,.12);color:#F8D57A}
+.mdBtn.dolu{background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;border-color:transparent}.mdBtn svg{width:16px;height:16px;flex:none}
+.anaBtn2+.anaBtn2.ikincil{margin-top:10px}
+.asagiIpucu{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(3,30,45,.94);border:1px solid rgba(243,194,74,.65);color:#F8D57A;font-weight:800;font-size:13px;padding:10px 16px;border-radius:999px;display:flex;gap:6px;align-items:center;box-shadow:0 6px 18px rgba(0,0,0,.45);animation:zipla 1.4s ease-in-out infinite;z-index:5;transition:opacity .25s;white-space:nowrap}
+.asagiIpucu .asagiOk{display:inline-flex;transform:rotate(90deg)}.asagiIpucu .asagiOk svg{width:15px;height:15px}
+.asagiIpucu.gizli{opacity:0;pointer-events:none;animation:none}
+@keyframes zipla{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
+.ozKart.vurgu{box-shadow:0 0 0 2px rgba(243,194,74,.9),0 0 22px rgba(243,194,74,.45)}
+.mdBtnler.tek{grid-template-columns:1fr}
+
+.blokEtiket{margin-left:8px;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#F8D57A;border:1px solid rgba(243,194,74,.55);border-radius:999px;padding:2px 8px;white-space:nowrap}
+
+/* ---- Röntgen sayfası (30 Eyl, GPT taslağı) ---- */
+.rxUst{position:relative;text-align:center;padding:6px 0 14px}.rxUst .geriIk{position:absolute;left:0;top:2px}
+.rxBaslik{font-family:var(--baslik);font-weight:700;font-size:clamp(34px,9.5vw,44px);color:#fff;margin:0;line-height:1.1;text-shadow:0 2px 12px rgba(0,20,30,.85)}
+.rxSus{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;color:#F3C24A}.rxSus i{width:26px;height:1px;background:linear-gradient(90deg,transparent,#F3C24A)}.rxSus i+span+i{background:linear-gradient(90deg,#F3C24A,transparent)}.rxSus span{font-size:12px}
+.rxKart{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 16px;align-items:center;padding:18px 16px 16px;border-radius:20px;border:1.5px solid rgba(243,194,74,.6);background:linear-gradient(180deg,rgba(3,40,60,.82),rgba(2,28,44,.9));box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.rxIkon{width:92px;height:92px;border-radius:50%;border:1.5px solid rgba(243,194,74,.7);display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(243,194,74,.14),rgba(3,40,60,0) 70%)}
+.rxIkon::before{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(243,194,74,.25)}
+.rxIkon span{width:54px;height:54px;border-radius:50%;background:rgba(3,47,69,.9);display:grid;place-items:center;color:#F3C24A;box-shadow:0 0 22px rgba(243,194,74,.35)}.rxIkon svg{width:30px;height:30px}
+.rxLbl{display:block;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;color:#F3C24A;font-weight:700}
+.rxSayi{font-family:var(--baslik);font-size:clamp(22px,6.3vw,30px);color:#fff;line-height:1.15;margin:4px 0 6px;white-space:nowrap}.rxSayi b{color:#F8D57A;font-weight:700}
+.rxMetin p{margin:0;font-size:14.5px;line-height:1.5;color:#E6EEF1}
+.rxAyrac{grid-column:1/-1;height:1px;background:linear-gradient(90deg,transparent,rgba(243,194,74,.55),transparent);margin:4px 0 2px}
+.rxTam{grid-column:1/-1}
+.rxListe{grid-column:1/-1;list-style:none;margin:0;padding:0;display:grid;gap:9px}.rxListe li{display:flex;align-items:center;gap:12px;font-size:15px;color:#F2EEE4}
+.rxListe svg{width:22px;height:22px;flex:none;color:#F3C24A;border:1.5px solid rgba(243,194,74,.7);border-radius:50%;padding:3px}
+.rxBtn{width:100%;margin-top:16px;padding:16px 18px;border-radius:16px;background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;font-weight:900;font-size:19px;letter-spacing:1.2px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 8px 24px rgba(243,194,74,.28);flex-wrap:wrap}
+.rxBtn svg{width:24px;height:24px}.rxBtn svg:last-child{margin-left:auto}.rxBtn small{flex-basis:100%;text-align:center;font-weight:600;font-size:12.5px;letter-spacing:0;opacity:.85;margin-top:-4px}
+.rxBtn.ikincil{background:rgba(243,194,74,.1);color:#F8D57A;border:1.5px solid rgba(243,194,74,.6);box-shadow:none;margin-top:10px}
+.rxNot{text-align:center;color:#B9CDD3;font-size:13px;margin:10px 0 0;text-shadow:0 1px 6px rgba(0,15,25,.9)}
+.rxBolum{display:flex;align-items:center;gap:10px;font-family:var(--baslik);font-size:24px;color:#fff;margin:24px 0 12px;text-shadow:0 1px 8px rgba(0,15,25,.9)}.rxBolum svg{width:24px;height:24px;color:#F3C24A}
+.rxSonuclar{display:grid;gap:10px}
+.rxSatir{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;text-align:left;padding:14px 14px;border-radius:16px;border:1px solid rgba(67,203,218,.3);background:rgba(3,40,60,.6)}
+.rxSatir.son{border:1.5px solid rgba(243,194,74,.7);background:linear-gradient(180deg,rgba(243,194,74,.1),rgba(3,40,60,.7))}
+.rxSatirIk{width:50px;height:50px;border-radius:12px;border:1px solid rgba(243,194,74,.5);display:grid;place-items:center;color:#F3C24A}.rxSatirIk svg{width:24px;height:24px}
+.rxSatirMetin{min-width:0}.rxSatirMetin>b{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:17px;color:#fff;line-height:1.25}
+.rxSatirMetin small{display:flex;align-items:center;gap:10px;margin-top:5px;font-size:14px;color:#C9D8DD}.rxSatirMetin small b{color:#F8D57A;font-size:17px}.rxSatirMetin small i{width:1px;height:16px;background:rgba(220,235,239,.35)}
+.rozetHazir{font-style:normal;font-size:12px;font-weight:700;color:#8FE3B5;background:rgba(63,191,127,.14);border:1px solid rgba(63,191,127,.5);border-radius:999px;padding:3px 10px;display:inline-flex;align-items:center;gap:6px}.rozetHazir::before{content:'';width:7px;height:7px;border-radius:50%;background:#3FBF7F}
+.rxSatir .satirOk{color:#DCEBEF}.rxSatir .satirOk svg{width:20px;height:20px}
+@media (max-width:360px){.rxIkon{width:76px;height:76px}.rxSatirMetin>b{font-size:15.5px}}
+
+/* Yanlışlarımın özeti (3 Eki) */
+.yoMadde{margin-top:18px}
+.yoBaslik{display:flex;align-items:center;gap:8px;font-size:16.5px;color:#fff;margin:0 0 8px;text-shadow:0 1px 6px rgba(0,15,25,.9)}.yoBaslik .rozet{margin-left:auto;font-family:var(--mono);font-size:12px;color:#F8D57A;border:1px solid rgba(243,194,74,.5);border-radius:999px;padding:2px 9px}
+.yoKural{padding:10px 12px;border-radius:12px;background:rgba(243,194,74,.1);border:1px solid rgba(243,194,74,.45);margin-bottom:8px}.yoKural small{display:block;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:#F8D57A;font-weight:800}.yoKural p{margin:3px 0 0;font-size:14.5px;line-height:1.5;color:#F2EEE4}
+.yoKart{padding:12px;border-radius:14px;border:1px solid rgba(67,203,218,.3);background:rgba(3,40,60,.6);margin-bottom:10px;display:grid;gap:8px}
+.yoSoru{margin:0;font-size:15px;line-height:1.5;color:#fff;white-space:pre-line}
+.yoKart .tzYanlis p{font-style:normal}
+.yoNeden{font-size:14px;line-height:1.55;color:#DCEBEF;padding:8px 10px;border-left:3px solid rgba(67,203,218,.6);background:rgba(67,203,218,.06);border-radius:0 8px 8px 0}.yoNeden b{color:#9FDCE6}
+
+.vAltin{color:#F8D57A;font-weight:800}.vYesil{color:#8FE3B5;font-weight:800}
+#yOzetAc2{margin-top:12px}
+
+.ezber{display:grid;gap:6px}.ezSatir{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 12px;border-radius:10px;background:rgba(3,40,60,.6);border:1px solid rgba(67,203,218,.25)}.ezKonu{font-size:14px;line-height:1.35;color:#F2EEE4}.ezKonu em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:#9FB8C0;margin-left:4px}.ezDeger{font-size:15px;color:#F8D57A;text-align:right;max-width:46vw}
+
+.asagiLink{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:10px 0 0;padding:9px 12px;border-radius:12px;border:1px dashed rgba(232,90,79,.6);background:rgba(232,90,79,.08);color:#FF8F86;font-weight:800;font-size:13.5px}.asagiLink .asagiOk{display:inline-flex;transform:rotate(90deg)}.asagiLink .asagiOk svg{width:15px;height:15px}
+
 </style>
 <div id="gece" aria-hidden="true"></div>
 <div class="kap">
@@ -516,6 +587,7 @@ html,body,button,.kap{touch-action:manipulation}
 <div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="veri">__VERI__</script>
 <script>
+const BRANS=window.BRANS||{slug:'mebs',ad:'MEBS'}; // hangi branşın sayfası (kur2.py gömer)
 (()=>{
 /* ===== HAREKÂT MERKEZİ v4 — GPT taslağına birebir düzen (29 Eyl). Akış v3 ile aynı:
    Giriş → Röntgen (direkt sorular) → Röntgen Sonucu (Hazırlık, kanun bazında, tip zaafı)
@@ -586,7 +658,11 @@ function birlestir(b){ if(!b||typeof b!=='object')return;
   const hepsi=[...(b.rontgenler||[]),...(K.rontgenler||[])];const g2={};hepsi.forEach(x=>{if(x&&x.ids)g2[x.saat||x.tarih]=x;});K.rontgenler=Object.values(g2).sort((a,b)=>(a.saat||a.tarih).localeCompare(b.saat||b.tarih)).slice(-8);
   if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; }
 try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
+if(K.g!=='mus'&&K.g!==BRANS.slug)K.g='mus'; // başka branşın kaydı / eski 'mebs' değeri
 const RN=()=>window.ReactNativeWebView;
+const PREMIUM=window.MERKEZ_PREMIUM!==false;
+function olay(ad,ayrinti){ try{ if(RN())RN().postMessage(JSON.stringify({tip:'olay',olay:ad,ayrinti:ayrinti||{}})); }catch(e){} }
+function kilit(nerede){ if(PREMIUM){olay(nerede);return false;} olay('kilit',{nerede}); if(RN())RN().postMessage(JSON.stringify({tip:'paywall'})); else toast('Bu bölüm Tam Erişim üyelerine özel.'); return true; }
 let rnZ=null;
 function rnGonder(){ if(!RN())return; clearTimeout(rnZ); try{RN().postMessage(JSON.stringify({tip:'kaydet',veri:K}));}catch(e){} }
 window.merkezFlush=rnGonder; // uygulama arka plana geçince çağırır
@@ -620,6 +696,10 @@ window.merkezGeri=function(){ if(S){aktifKaydet();S=null;} if(YIGIN.length>1){ Y
 })();
 
 /* ---------- ölçüm ---------- */
+// Check-up özeti GÜNCEL soru setine göre: kayıttaki kimliklerden kanunda hâlâ duranlar sayılır (soru çıkarılır/eklenir, kapsam değişir).
+const cuOzet=(k,cu)=>{const var_=new Set(k.q.map(q=>kid(q.i)));const ids=(cu.ids||[]).filter(i=>var_.has(kid(i)));
+  const d=ids.filter(i=>K.tani[kid(i)]===1).length;const n=ids.length;return {d,n,oran:n?d/n:0,kalan:k.q.length-n};};
+const kalanSorular=(k,cu)=>{if(!cu)return k.q;const c=new Set((cu.ids||[]).map(x=>kid(x)));return k.q.filter(q=>!c.has(kid(q.i)));};
 function kanunDurum(k,sadece){
   if(!(sadece instanceof Set))sadece=null; // .map(kanunDurum) indeks geçirir
   let d=0,n=0;const kacan=[];const yanlisQ=[];
@@ -634,7 +714,7 @@ function tipIst(sorular){ // her tip için d/n (verilen sorular)
 }
 const zayifTipler=sorular=>tipIst(sorular).filter(t=>t.n>=2&&t.d/t.n<=.5).sort((a,b)=>a.oran-b.oran);
 function hazirlik(sadece){const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
-function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
+function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);return 'Madde '+m;} // 3 Eki: soru kökünden başlık üretme ("bir karar ilan etmiştir. A, bu karara…" gibi anlamsız çıkıyordu)
 const bar=(oran,renk)=>`<span class="bar"><i style="width:${Math.max(3,Math.round(oran*100))}%;background:${renk}"></i></span>`;
 const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 
@@ -642,7 +722,7 @@ const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 function giris(){
   YIGIN.length=0;POP=false;derinlikBildir();
   document.body.classList.remove('sinavda');document.body.classList.add('giriste');window.scrollTo({top:0});S=null;
-  const g=kalanGun(); const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const g=kalanGun(); const rSoru=rontgenToplam();
   const ozetler=KANUN.filter(k=>K.checkup[k.id]).length;
   const yarimR=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen', yarimC=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup';
   const yarimYazi=a=>`${Object.keys(a.cevap||{}).length}/${a.ids.length}`;
@@ -663,19 +743,28 @@ function giris(){
 function rontgenSayfa(){
   iz(rontgenSayfa);
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
-  const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const rSoru=rontgenToplam(), dk=Math.round(rSoru*0.3);
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen'?K.aktif:null;
   const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
   const H=R=>hazirlik(new Set(R.ids));
-  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Hızlı tarama</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p>Sınav kapsamındaki her kanundan bir soru sorar, sınavda çok soru çıkan kanunlardan iki. Cevapları sonunda görürsün; hangi kanunda ne kadar hazır olduğun kanun kanun ortaya çıkar. <b>Sorular her röntgende değişir</b>, istediğin kadar tekrar çekebilirsin.</p></div></section>
-  ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} soruyu cevapladın, kaldığın yerden sürer</small></button>`:''}
-  <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan röntgen silinir, baştan başlarsın':'her seferinde farklı sorular · yaklaşık '+Math.round(rSoru*0.3)+' dakika'}</small></button>
-  <h3 class="bolumBaslik"><span class="hedefIk">${IK.grafik}</span>Sonuçlarım</h3>
-  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen yaklaşık 12 dakika sürer.</p>'}`;
+  const yc=yarim?Object.keys(yarim.cevap||{}).length:0;
+  $('#ekran').innerHTML=`<div class="rxUst"><button class="geriIk" id="geri">‹</button><h1 class="rxBaslik">Röntgen</h1><div class="rxSus"><i></i><span>✦</span><i></i></div></div>
+  <section class="rxKart">
+    <div class="rxIkon"><span>${IK.buyutec}</span></div>
+    <div class="rxMetin"><span class="rxLbl">Hızlı tarama</span><div class="rxSayi">~<b>${rSoru}</b> soru · ~<b>${dk}</b> dk</div>
+      <p>İlk 40 soru müşterek, son 40 soru branş mevzuatından gelir. Sorular sınav ağırlığına göre dağılır ve her röntgende değişir.</p></div>
+    <div class="rxAyrac"></div>
+    <span class="rxLbl rxTam">Röntgen sonunda görürsün:</span>
+    <ul class="rxListe"><li>${IK.tik}<span>Kanun bazında ne kadar hazırsın</span></li><li>${IK.tik}<span>Hangi soru tiplerinde zorlanıyorsun</span></li><li>${IK.tik}<span>Önce hangi kanuna dönmen gerekiyor</span></li></ul>
+  </section>
+  ${yarim?`<button class="rxBtn" id="devamR">${IK.ok}<span>DEVAM ET</span><small>${yc}/${yarim.ids.length} cevaplandı · kaldığın yerden</small></button>`:''}
+  <button class="rxBtn ${yarim?'ikincil':''}" id="cek">${IK.grafik}<span>${g.length||yarim?'YENİ RÖNTGEN ÇEK':'RÖNTGEN ÇEK'}</span>${IK.ok}</button>
+  <p class="rxNot">Her seferinde farklı soru seti · yaklaşık ${dk} dakika${yarim?' · yeniden çekersen yarım kalan silinir':''}</p>
+  <h3 class="rxBolum">${IK.grafik}<span>Son Röntgenlerin</span></h3>
+  ${g.length?`<section class="rxSonuclar">${g.map((R,i)=>{const h=H(R);return `<button class="rxSatir ${i===0?'son':''}" data-i="${i}"><span class="rxSatirIk">${IK.grafik}</span><span class="rxSatirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}${i===0?'<em class="rozetHazir">Rapor hazır</em>':''}</b><small><span><b>${R.d}</b>/${R.n} doğru</span><i></i>${h!=null?`<span>Hazırlık <b>${h}</b>/100</span>`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:`<p class="kucukNot" style="text-align:center">Henüz röntgen çekmedin. İlk röntgen yaklaşık ${dk} dakika sürer.</p>`}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};$('#cek').onclick=()=>{if(yarim){K.aktif=null;kaydet();}rontgenBaslat();};
   if($('#devamR'))$('#devamR').onclick=aktifDevam;
-  document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
+  document.querySelectorAll('.rxSatir').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
 }
 /* önceki röntgenler */
 function rontgenGecmis(){
@@ -695,10 +784,23 @@ function maddeyeGoreSec(k,adet,haric){
   return out;
 }
 /* ---------- 2. RÖNTGEN ---------- */
-function rontgenBaslat(){
-  const sorular=[];const haric=new Set(Object.keys(K.tani));
-  for(const k of KANUN){const n=w(k.id)>=4?2:1;let s=maddeyeGoreSec(k,n,haric);if(s.length<n)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},n-s.length));sorular.push(...s);}
-  basla(karistir(sorular),'Röntgen',{tani:true,tur:'rontgen'});
+const RONTGEN_BLOK=40; // sınav düzeni: 40 müşterek + 40 branş
+function rontgenDagilim(grup){
+  const ks=KANUN.filter(k=>k.g===grup&&k.q.length);if(!ks.length)return [];
+  const top=ks.reduce((a,k)=>a+w(k.id),0);
+  const pay=ks.map(k=>{const ham=RONTGEN_BLOK*w(k.id)/top;return {k,n:Math.min(Math.floor(ham),k.q.length),kalan:ham-Math.floor(ham)};});
+  let kalan=RONTGEN_BLOK-pay.reduce((a,p)=>a+p.n,0);
+  pay.sort((a,b)=>b.kalan-a.kalan||w(b.k.id)-w(a.k.id));
+  for(let tur=0;kalan>0&&tur<6;tur++){for(const p of pay){if(kalan<=0)break;if(p.n<p.k.q.length){p.n++;kalan--;}}}
+  return pay.filter(p=>p.n>0).map(p=>[p.k,p.n]);
+}
+const rontgenToplam=()=>rontgenDagilim('mus').reduce((a,[,n])=>a+n,0)+rontgenDagilim(BRANS.slug).reduce((a,[,n])=>a+n,0);
+function rontgenBaslat(){ if(kilit('rontgen'))return;
+  const haric=new Set(Object.keys(K.tani));
+  const sec=(k,n)=>{let s=maddeyeGoreSec(k,n,haric);if(s.length<n)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},n-s.length));return s;};
+  const blok=g=>karistir(rontgenDagilim(g).flatMap(([k,n])=>sec(k,n)));
+  const mus=blok('mus');
+  basla([...mus,...blok(BRANS.slug)],'Röntgen',{tani:true,tur:'rontgen',bolum:mus.length});
 }
 function rontgenBitir(){
   let d=0,n=0;
@@ -739,21 +841,21 @@ function checkupListe(){
   const bolumBoyu=k=>k.q.length;
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup'?K.aktif.meta.kanun:null;
   const satir=x=>{const cu=K.checkup[x.k.id];const durum=cu?'tam':yarim===x.k.id?'devam':'yok';
-    const kismi=cu&&cu.n<x.k.q.length;
-    const pill=kismi&&durum==='tam'?[`Kısmi · ${cu.n}/${x.k.q.length}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
+    const oz=cu?cuOzet(x.k,cu):null;const kalanN=cu?kalanSorular(x.k,cu).length:0;const kismi=kalanN>0;
+    const pill=kismi&&durum==='tam'?[`Yeni soru · ${kalanN}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
     const cevaplanan=durum==='devam'?Object.keys(K.aktif.cevap||{}).length:0;
-    const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
+    const oran=cu?oz.oran:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
   <p class="kucukNot" style="text-align:center">Her kanunda o kanundan çıkabilecek bütün sorular sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
   ${KANUN.some(k=>K.checkup[k.id])?`<button class="anaBtn2 ikincil" id="ozetlerim" style="margin:0 0 12px">Özetlerim · ${KANUN.filter(k=>K.checkup[k.id]).length} kanun ${IK.ok}</button>`:""}
-  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
+  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="${BRANS.slug}" aria-pressed="${K.g===BRANS.slug}">Branş (${esc(BRANS.ad)})</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};if($('#ozetlerim'))$('#ozetlerim').onclick=()=>{const ilk=KANUN.find(k=>K.checkup[k.id]);ilk&&ozet(ilk.id,checkupListe,'kayit');};
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();YIGIN.pop();POP=true;checkupListe();});
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;if(yarim===id){aktifDevam();return;}K.checkup[id]?checkupAnaliz(id,checkupListe):checkupBolum(id);});
 }
-function checkupBolum(id,sadeceKalan){
+function checkupBolum(id,sadeceKalan){ if(kilit('checkup'))return;
   // DETAYLI: kanunun TÜM soruları (başkan: "check-up dediğin detaylı olur"); maddelere dağıtılmış sıra, yarım kalırsa devam eder.
   // sadeceKalan: eski (8-12 soruluk) check-up'ı tamamlamak için yalnız cevaplanmamış sorular; sonuç öncekiyle birleşir.
   const k=BYID[id];const cu=K.checkup[id];
@@ -776,35 +878,83 @@ function checkupAnaliz(id,geriHedef){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id],cu=K.checkup[id];if(!cu){checkupBolum(id);return;}
   const sorular=cu.ids.map(i=>TUM[i]).filter(Boolean);
-  const oran=cu.d/cu.n;
+  const oz=cuOzet(k,cu);const oran=oz.oran;
   // madde bazlı: o maddeden çıkan sorular d/n
   const maddeler={};sorular.forEach(q=>{const m=maddeNo(q);if(!m)return;const o=maddeler[m]=maddeler[m]||{d:0,n:0};o.n++;if(K.tani[kid(q.i)]===1)o.d++;});
   const eksik=Object.entries(maddeler).filter(([,o])=>o.d<o.n).sort((a,b)=>a[1].d/a[1].n-b[1].d/b[1].n);
-  const tipler=tipIst(sorular).filter(t=>t.n>=1).sort((a,b)=>(a.oran??1)-(b.oran??1));
+  const tipler=tipIst(sorular).filter(t=>t.n>=1&&t.d<t.n).sort((a,b)=>(a.oran??1)-(b.oran??1));
   const yanlislar=sorular.filter(q=>K.tani[kid(q.i)]===0);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${cu.n<k.q.length?`<p>Bu kanunun ${k.q.length} sorusundan ${cu.n}'i çözüldü.</p>`:''}</div></section>
-  ${cu.n<k.q.length?`<button class="anaBtn2 ikincil" id="kalan" style="margin-top:10px">Kalan ${k.q.length-cu.n} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
-  <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler</h3>
-  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section>
-  <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?</h3>
-  <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,oranRenk(1-hata))}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')||'<p class="kucukNot">Tip ayrımı için yeterli soru yok.</p>'}</section>
-  <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve tuzakları. Özet kaydedildi.</small></button>
-  ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
+  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${oz.d}<small> / ${oz.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${oz.kalan>0?`<p>Bu kanunun ${k.q.length} sorusundan ${oz.n} tanesini çözdün; ${oz.kalan} soru yeni ya da çözülmedi.</p>`:''}</div></section>
+  ${yanlislar.length?`<button class="asagiLink" id="asagiLink">Yanlış yaptığın ${yanlislar.length} soru aşağıda <span class="asagiOk">${IK.sag}</span></button>`:''}
+  ${yanlislar.length?`<button class="anaBtn2" id="yOzetAc">Yanlışlarımın özeti · ${yanlislar.length} soru ${IK.ok}<small>Her yanlışın doğrusu ve nedeni, madde madde</small></button>`:''}
+  <button class="anaBtn2 ${yanlislar.length?'ikincil':''}" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve sınav tuzakları · kayıtlı</small></button>
+  ${kalanSorular(k,cu).length?`<button class="anaBtn2 ikincil" id="kalan">Yeni / kalan ${kalanSorular(k,cu).length} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
+  <button class="anaBtn2 ikincil" id="yenidenUst">Yeniden check-up yap ${IK.ok}<small>bu kanunun bütün sorularıyla baştan</small></button>
+  <details class="acilir" open><summary><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler<span class="rozet">${eksik.length}</span><span class="acilirOk">${IK.sag}</span></summary>
+  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span></div>${k.n.some(n=>n.m.includes(m))||k.g==='mus'?`<div class="mdBtnler tek"><button class="mdBtn dolu" data-ogren="${m}">${IK.kitap}Bu maddeyi öğren</button></div>`:''}</div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
+  ${tipler.length?`<details class="acilir"><summary><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?<span class="rozet">${tipler.length}</span><span class="acilirOk">${IK.sag}</span></summary>
+  <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,'#E85A4F')}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')}</section></details>`:''}
+  ${yanlislar.length?`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>
+  <button class="anaBtn2" id="yOzetAc2">Yanlışlarımın özeti ${IK.ok}<small>Her yanlışın doğrusu ve nedeni, madde madde</small></button>
+`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
+  // "Bu maddeyi öğren": Altın Özet'te bu maddenin kartı varsa oraya; yoksa uygulamadaki konu kartına (yalnız müşterek)
+  document.querySelectorAll('[data-ogren]').forEach(b=>b.onclick=()=>{const m=b.dataset.ogren;
+    if(k.n.some(n=>n.m.includes(m)))ozet(id,()=>checkupAnaliz(id,geriHedef),'bu',m);else kartaGit(k.id,m);});
+  if($('#asagiLink'))$('#asagiLink').onclick=()=>$('#yanlisBaslik').scrollIntoView({behavior:'smooth',block:'start'});
   if($('#kalan'))$('#kalan').onclick=()=>checkupBolum(id,true);
-  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
+  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));if($('#yOzetAc'))$('#yOzetAc').onclick=()=>yanlisOzet(id);if($('#yOzetAc2'))$('#yOzetAc2').onclick=()=>yanlisOzet(id);$('#yeniden').onclick=()=>checkupBolum(id);$('#yenidenUst').onclick=()=>checkupBolum(id);
+}
+function kartaGit(kanunId,m){ if(window.ReactNativeWebView){window.ReactNativeWebView.postMessage(JSON.stringify({tip:'kart',kanun:kanunId,madde:String(m)}));} else toast('Konu kartı uygulamada açılır.'); }
+/* ---------- YANLIŞLARIMIN ÖZETİ ---------- */
+// Vurgu: sayı/süre/oran/madde altın; verilen kelimeler (doğru şık) yeşil. Metin önce kaçırılır, sonra işaretlenir.
+function vurgula(metin,yesil){ let h=esc(metin||'');
+  const kel=[...new Set(String(yesil||'').toLocaleLowerCase('tr').split(/[^a-zçğıöşüâîû0-9]+/).filter(w=>w.length>=5))];
+  const SAYI=/(\d+(?:[.,]\d+)?\s*(?:'?(?:inci|ıncı|üncü|uncu|nci|ncı|ncü|ncu))?\s*(?:gün|ay|yıl|saat|hafta|dakika|kat|lira|TL|yaş|kişi|üye)?(?:ü|ı|i|u|e|a|den|dan|ye|ya)?)/g;
+  // madde atıfları (m.2/B) bütün olarak altın; geri kalan metinde sayı/süre altın
+  h=h.split(/(m\.\s*\d+(?:\/[\wçğıöşüÇĞİÖŞÜ-]+)?|\(\d+\/[\wçğıöşüÇĞİÖŞÜ-]+\))/).map((p,i)=>i%2?'<b class="vAltin">'+p+'</b>':p.replace(SAYI,'<b class="vAltin">$1</b>')).join('');
+  if(kel.length){const re=new RegExp('(^|[^a-zçğıöşüâîû>])('+kel.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')([a-zçğıöşüâîû]*)','gi');
+    h=h.replace(re,(t,a,b,c)=>a+'<b class="vYesil">'+b+c+'</b>');}
+  // makam/onay anahtarları
+  h=h.replace(/(Cumhurbaşkanı(?:nın)? onayı(?:yla|na)?|kanunla|kanun ile|valinin|kaymakamın|İçişleri Bakan(?:ı|lığı)(?:nın)?)/gi,'<b class="vYesil">$1</b>');
+  return h; }
+function yanlisOzet(id){ if(kilit('ozet'))return;
+  iz(()=>yanlisOzet(id));
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
+  const k=BYID[id],cu=K.checkup[id];if(!cu){checkupListe();return;}
+  const ys=cu.ids.map(i=>TUM[i]).filter(q=>q&&K.tani[kid(q.i)]===0);
+  const grup={};ys.forEach(q=>{const m=maddeNo(q)||'?';(grup[m]=grup[m]||[]).push(q);});
+  const sira=Object.keys(grup).sort((a,b)=>(parseInt(a)||9999)-(parseInt(b)||9999));
+  const kural=m=>{const n=k.n.find(n=>n.m.includes(m));return n?n.h:'';};
+  const soruKart=q=>{const c=K.cevap[kid(q.i)];return `<article class="yoKart">
+    <p class="yoSoru">${esc(q.k)}</p>
+    ${c!==undefined?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Senin cevabın</small><p>${HARF[c]}) ${esc(q.s[c])}</p></div></div>`:''}
+    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${HARF[q.d]}) ${vurgula(q.s[q.d])}</p></div></div>
+    ${q.a?`<div class="yoNeden"><b>Neden?</b> ${vurgula(q.a,q.s[q.d])}</div>`:''}</article>`;};
+  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Yanlışlarımın özeti</h2><span></span></div>
+  <p class="ozOzet">${esc(kisa(k))} · ${ys.length} yanlış · ${sira.length} madde</p>
+  ${ys.length?sira.map(m=>`<section class="yoMadde"><h3 class="yoBaslik"><span class="ozNo">${m==='?'?'':'m.'+m}</span>${esc(m==='?'?'Diğer':maddeBaslik(k,m))}<span class="rozet">${grup[m].length}</span></h3>
+    ${kural(m)?`<div class="yoKural"><small>Kural</small><p>${vurgula(kural(m))}</p></div>`:''}
+    ${grup[m].map(soruKart).join('')}</section>`).join(''):'<p class="kucukNot">Bu check-up\'ta yanlışın yok.</p>'}
+  ${ys.length?`<button class="anaBtn2" id="tekrarCoz">Yanlışları tekrar çöz · ${ys.length} soru ${IK.ok}<small>doğru yaptıkların özetten düşer</small></button>`:''}
+  <button class="anaBtn2 ikincil" id="ozetGit">Altın Özeti aç ${IK.ok}</button>`;
+  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupAnaliz(id);};
+  $('#ozetGit').onclick=()=>ozet(id,()=>yanlisOzet(id));
+  if($('#tekrarCoz'))$('#tekrarCoz').onclick=()=>basla(karistir(ys),`${kisa(k)} · yanlışlar`,{tani:true,tur:'tekrar',kanun:id});
 }
 /* ---------- 6. ALTIN ÖZET ---------- */
-function ozet(id,geriHedef,sekme){
+function ozet(id,geriHedef,sekme,hedefM){ if(kilit('ozet'))return;
   iz(()=>ozet(id,geriHedef,sekme));
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id],cu=K.checkup[id];if(!cu){checkupBolum(id);return;}
   sekme=sekme||'bu';
-  const kacan=new Set(cu.kacan);
+  // eksik maddeler GÜNCEL soru setinden (çıkarılan sorunun maddesi eksik sayılmaz)
+  const ozC=cuOzet(k,cu);const kacanL=[...new Set(cu.ids.map(i=>TUM[i]).filter(q=>q&&K.tani[kid(q.i)]===0).map(maddeNo).filter(Boolean))];
+  const kacan=new Set(kacanL);
   const ilgili=n=>n.m.some(m=>kacan.has(m));
-  const noktalar=k.n.filter(ilgili);
-  const tuzaklar=k.tz.filter(z=>z.m.some(m=>kacan.has(m))||cu.kacan.some(m=>new RegExp('(^|[^\\d])'+m+'(/|[^\\d]|$)').test(z.d)));
+  const noktalar=k.n.filter(n=>ilgili(n)||(hedefM&&n.m.includes(hedefM)));
+  const tuzaklar=k.tz.filter(z=>z.m.some(m=>kacan.has(m))||kacanL.some(m=>new RegExp('(^|[^\\d])'+m+'(/|[^\\d]|$)').test(z.d)));
   const takviye=noktalar.length<3?k.n.filter(n=>n.s&&!ilgili(n)).slice(0,6):[];
   const tipler=cu.tipler||[];
   const kayitli=KANUN.filter(x=>K.checkup[x.id]).sort((a,b)=>K.checkup[b.id].tarih.localeCompare(K.checkup[a.id].tarih));
@@ -813,23 +963,38 @@ function ozet(id,geriHedef,sekme){
   const tirnakSil0=t=>String(t).replace(/^[\s"“”']+|[\s"“”']+$/g,'');
   const tzMadde0=z=>z.m[0]||((String(z.d).match(/\((\d+)(?:\/[^)]*)?\)\s*$/)||[])[1])||'';
   const kullanilanTz=new Set();
+  // Kısa özet: kalın anahtar parçalar; yoksa uzun hükmün ilk parçası; o da yoksa başlık
+  const kisaOzet=n=>{ if(n.k)return n.k; const h=String(n.h||''); if(h.length>170){const p=h.split(/;|,\s(?=[a-zçğıöşü])/)[0];return p.length<h.length?p.trim()+' …':h.slice(0,150).trim()+' …';} return n.b; };
   // Madde kartı: hüküm = doğrusu; altında kırmızı "Sınavda böyle yazarlar" (noktanın kendi tuzağı + aynı maddenin yanlış şıkları)
-  const kart=(n,kk)=>{kk=kk||k;const mm=n.m[0];const ekTz=mm?kk.tz.filter(z=>tzMadde0(z)===mm):[];ekTz.forEach(z=>kullanilanTz.add(kk.id+'-tz'+kk.tz.indexOf(z)));
-    const yanlislar=[...new Set([n.t,...ekTz.flatMap(z=>tirnakSil0(z.y).split(/"\s*\/\s*"/).map(tirnakSil0))].filter(Boolean))];
-    return `<article class="ozKart"><div class="ozUst"><span class="ozNo">${mm?'m.'+mm:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}<div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(n.h)}</p></div></div>${yanlislar.length?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${yanlislar.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>`:''}</article>`;};
+  // TUZAK → NOKTA EŞLEŞMESİ (içerikle): aynı maddedeki noktalardan kelime/sayı örtüşmesi en yüksek olana; eşik 2.
+  const tzEsle=kk=>{ if(kk._tzEs)return kk._tzEs; const kel=t=>new Set(String(t||'').toLocaleLowerCase('tr').replace(/[^a-zçğıöşü0-9\-\/ ]/g,' ').split(/\s+/).filter(w=>w.length>=4||/\d/.test(w)));
+    const es={}; kk.tz.forEach((z,zi)=>{if(z.bag){(es[z.bag]=es[z.bag]||[]).push(zi);return;}const m=tzMadde0(z);if(!m)return;const zk=kel(z.d+' '+z.y);let en=null,enP=0;
+      for(const n of kk.n){if(!n.m.includes(m)||n.tzKapat)continue;const nk=kel(n.b+' '+n.h+' '+(n.t||''));let p=0;zk.forEach(w=>{if(nk.has(w))p+=(/\d/.test(w)?2:1);});if(p>enP){enP=p;en=n;}}
+      if(en&&enP>=2)(es[en.i]=es[en.i]||[]).push(zi);}); return kk._tzEs=es; };
+  const parcala=y=>String(y||'').split(/"\s*(?:\/|,|veya|ya da)\s*"/).map(tirnakSil0).filter(Boolean).map(x=>'“'+x+'”');
+  const kart=(n,kk)=>{kk=kk||k;const mm=n.m[0];const ekTz=(tzEsle(kk)[n.i]||[]).map(zi=>kk.tz[zi]);ekTz.forEach(z=>kullanilanTz.add(kk.id+'-tz'+kk.tz.indexOf(z)));
+    const yanlislar=n.yz?n.yz.slice():[...new Set([n.t,...ekTz.flatMap(z=>parcala(z.y))].filter(Boolean))];
+    const dogrular=n.dg?n.dg.slice():[...new Set(ekTz.map(z=>tirnakSil0(z.d)).filter(Boolean))];
+    if(!dogrular.length)dogrular.push(kisaOzet(n));  // tuzak yoksa hükmün anahtar parçaları
+    return `<article class="ozKart" data-m="${mm}"><div class="ozUst"><span class="ozNo">${mm?'m.'+mm:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${yanlislar.length?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${yanlislar.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>`:''}${dogrular.length?`<div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b>${dogrular.map(d=>`<p>${esc(d)}</p>`).join('')}</div></div>`:''}</article>`;};
   const tirnakSil=t=>String(t).replace(/^[\s"“”']+|[\s"“”']+$/g,'');
   const tzMadde=z=>z.m[0]||((String(z.d).match(/\((\d+)(?:\/[^)]*)?\)\s*$/)||[])[1])||'';
-  const tuzakKart=(z,i)=>`<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>Sınavın tuzağı</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>
-    <div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${tirnakSil(z.y).split(/"\s*\/\s*"/).map(x=>`<p>“${esc(tirnakSil(x))}”</p>`).join('')}</div></div>
-    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
-  const tablo=(baslik,rows)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><div class="tabloKap ozTablo"><table>${rows.slice(0,16).map(r=>`<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td></tr>`).join('')}</table></div>`:'';
-  const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${cu.d}/${cu.n} doğru${cu.kacan.length?' · eksik: '+cu.kacan.map(m=>'m.'+m).join(', '):''}</p>
+  // Eşleşmeyen tuzak kartı da üstte madde açıklamasıyla (başkan, 3 Eki: "bunlarda neden üstte açıklama yok"):
+  // aynı maddenin noktası varsa onun başlığı + hükmü; yoksa yalnız madde numarası.
+  const maddeNoktasi=z=>{const m=tzMadde(z);return m?k.n.find(n=>n.m.includes(m)):null;};
+  const tuzakKart=(z,i)=>{const mn=maddeNoktasi(z);return `<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>${esc(mn?mn.b:'Madde '+tzMadde(z))}</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>
+    ${mn?`<p class="ozHukum">${esc(mn.h)}</p>`:''}
+    <div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${parcala(z.y).map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>
+    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;};
+  // Ezber tablosu: konu → DEĞER (altın, büyük) · madde. (3 Eki: değer sütunu eskiden görünmüyordu.)
+  const tablo=(baslik,rows,alt)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><p class="kucukNot">${alt}</p><div class="ezber">${rows.slice(0,20).map(r=>`<div class="ezSatir"><span class="ezKonu">${esc(r[0])}${r[2]?` <em>${esc(/^m\./.test(r[2])?r[2]:'m.'+r[2])}</em>`:''}</span><b class="ezDeger">${esc(r[1])}</b></div>`).join('')}</div>`:'';
+  const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${ozC.d}/${ozC.n} doğru${kacanL.length?' · eksik: '+kacanL.map(m=>'m.'+m).join(', '):''}</p>
     ${tipler.length?`<div class="tuzakKutu bilgi"><span class="tuzakIk">${IK.unlem}</span><div><b>Hata yaptığın soru tipi: ${tipler.map(t=>esc((TIPLER.find(x=>x[0]===t)||[])[1]||t)).join(', ')}</b><p>${tipler.map(t=>esc(TIP_TAVSIYE[t]||'')).join(' ')}</p></div></div>`:''}
     ${noktalar.map(n=>kart(n)).join('')}
     ${tuzaklar.filter(z=>!kullanilanTz.has(k.id+'-tz'+k.tz.indexOf(z))).map(tuzakKart).join('')}
     ${!noktalar.length&&!tuzaklar.length?'<p class="kucukNot">Bu maddeler için özet notu yok. Yanlış yaptığın sorulara check-up analizinden bakabilirsin.</p>':''}
-    ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi):''}
-    ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam):''}
+    ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi,'Sınavda en çok oynanan rakamlar. Sağdaki değeri ezberle.'):''}
+    ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam,'Hangi işi kim yapar? Sınav makamı değiştirerek tuzak kurar.'):''}
     ${takviye.length?`<h3 class="bolumBaslik">Bu kanundan sınavda çıkmış noktalar</h3>${takviye.map(n=>kart(n)).join('')}`:''}
     <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>`;
   const kayitKartlar=[];for(const kk of KANUN){kk.n.forEach(n=>{if(K.kayit[n.i])kayitKartlar.push({k:kk,h:kart(n,kk)});});kk.tz.forEach((z,i)=>{if(K.kayit[kk.id+'-tz'+i])kayitKartlar.push({k:kk,h:tuzakKart(z,i)});});}
@@ -840,6 +1005,7 @@ function ozet(id,geriHedef,sekme){
   ${sekme==='bu'?bu:kayitliHtml+(kayitKartlar.length?eskiKayitliHtml:'')}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};
   document.querySelectorAll('#ozSekme button').forEach(b=>b.onclick=()=>{YIGIN.pop();POP=true;ozet(id,geriHedef,b.dataset.s);});
+  if(hedefM){const h=document.querySelector(`.ozKart[data-m="${hedefM}"]`);if(h){setTimeout(()=>{h.scrollIntoView({behavior:'smooth',block:'start'});h.classList.add('vurgu');},60);}}
   document.querySelectorAll('[data-oz]').forEach(b=>b.onclick=()=>ozet(+b.dataset.oz,geriHedef,'bu'));
   document.querySelectorAll('[data-kaydet]').forEach(b=>b.onclick=()=>{const id=b.dataset.kaydet;if(K.kayit[id])delete K.kayit[id];else K.kayit[id]=true;kaydet();b.classList.toggle('acik',!!K.kayit[id]);b.innerHTML=IK.yerimi+(K.kayit[id]?'Kaydedildi':'Kaydet');toast(K.kayit[id]?'Kaydedildi. Kaydettiklerim sekmesinden ulaşırsın.':'Kayıttan kaldırıldı.');});
   if($('#tumu'))$('#tumu').onclick=()=>ozet(id,geriHedef,'kayit');
@@ -851,7 +1017,7 @@ function kanunListesi(mod){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const ks=KANUN.filter(k=>k.g===K.g);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${mod==='not'?'Konu notları':'Soru bankası'}</h2><span></span></div>
-  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
+  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="${BRANS.slug}" aria-pressed="${K.g===BRANS.slug}">Branş (${esc(BRANS.ad)})</button></div>
   <section class="liste">${ks.map(k=>`<button class="satir cu" data-id="${k.id}"><span class="satirIk">${mod==='not'?IK.kitap:IK.belge}</span><span class="satirMetin"><b>${esc(kisa(k))}</b><small>${mod==='not'?`${k.n.length} nokta · ★ ${k.n.filter(n=>n.s).length} çıkmış`:`${k.q.length} soru`}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   $('#geri').onclick=giris;
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();kanunListesi(mod);});
@@ -871,7 +1037,7 @@ function konuNotu(id){
 /* ---------- SORU MOTORU (cevaplar sonda) ---------- */
 let S=null;
 function aktifKaydet(){if(!S){K.aktif=null;kaydet();return;}K.aktif={ids:S.sorular.map(q=>q.i),ad:S.ad,i:S.i,cevap:S.cevap,meta:S.meta};kaydet();}
-function aktifDevam(){const a=K.aktif;if(!a||!a.ids)return false;const sorular=a.ids.map(id=>TUM[id]).filter(Boolean);if(!sorular.length){K.aktif=null;return false;}
+function aktifDevam(){if(kilit('devam'))return false;const a=K.aktif;if(!a||!a.ids)return false;const sorular=a.ids.map(id=>TUM[id]).filter(Boolean);if(!sorular.length){K.aktif=null;return false;}
   S={sorular,ad:a.ad,i:Math.min(a.i||0,sorular.length-1),cevap:a.cevap||{},meta:a.meta||{}};iz(()=>{if(!aktifDevam())giris();});soruCiz();return true;}
 function basla(sorular,ad,meta){if(!sorular.length){toast('Soru bulunamadı.');return;}S={sorular,ad,i:0,cevap:{},meta:meta||{}};iz(()=>{if(!aktifDevam())giris();});soruCiz();}
 function soruCiz(kaydir=true){
@@ -880,7 +1046,7 @@ function soruCiz(kaydir=true){
   const mod=S.meta.tur==='rontgen'?'Röntgen Modu':S.meta.tur==='checkup'?'Check-up Modu':S.ad;
   $('#ekran').innerHTML=`<div class="sinav">
    <div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(S.meta.tur==='rontgen'?'Röntgen':S.meta.tur==='checkup'?'Check-up':S.ad)}</h2><span></span></div>
-   <div class="ilerleSatir"><div class="ilerle"><span style="width:${(S.i+1)/S.sorular.length*100}%"></span></div><span class="say">${S.i+1} / ${S.sorular.length}</span></div>
+   <div class="ilerleSatir"><div class="ilerle"><span style="width:${(S.i+1)/S.sorular.length*100}%"></span></div><span class="say">${S.i+1} / ${S.sorular.length}</span>${S.meta.bolum?`<span class="blokEtiket">${S.i<S.meta.bolum?'Müşterek':'Branş'}</span>`:''}</div>
    <div class="cipSatir"><span class="cipK">${IK.hedef}${esc(kisa(k))}</span><span class="cipMod">${IK.radar}${esc(mod)}</span></div>
    <article class="kart soru"><div class="soruNo">Soru ${S.i+1}</div>
      <p class="kok">${esc(q.k)}</p>

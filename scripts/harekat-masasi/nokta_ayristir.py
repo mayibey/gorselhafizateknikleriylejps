@@ -50,14 +50,23 @@ def noktalar(md, kid):
     return out
 
 def tablo(md, baslik_re):
+    """Tablo satırları → [konu, değer, madde]. Başlık satırından sütunları tanır (Madde | Ne/Konu | Değer, Konu | Değer | Madde …).
+    3 Eki: eskiden ilk iki sütun alınıyordu → "Madde | Ne | Değer" tablolarında DEĞER hiç görünmüyordu ("1 · İdari kademe sırası")."""
     icerik = bolum(md, baslik_re)
-    rows = []
-    for satir in icerik.split('\n'):
+    rows, bas = [], None
+    for satir in icerik.split(chr(10)):
         if not satir.startswith('|') or set(satir.replace('|', '').strip()) <= set('-: '): continue
         h = [temiz(x) for x in satir.strip('|').split('|')]
-        # başlık satırını atla (Konu | Değer, Madde | Ne, İş | Yetkili …)
-        if len(h) >= 2 and h[0].lower() not in ('konu', 'değer', 'yetkili', 'kavram', 'tanım', 'madde', 'iş', 'işlem', 'belge', 'süre', 'sayı', 'terim'):
-            rows.append([h[0], h[1]])
+        if bas is None:
+            bas = [x.lower() for x in h]
+            if any(x.startswith(('madde', 'konu', 'ne', 'iş', 'yer', 'değer', 'yetkili', 'kavram', 'terim', 'belge', 'süre', 'sayı')) for x in bas): continue
+            bas = []   # başlıksız tablo
+        mi = next((i for i, x in enumerate(bas) if x.startswith('madde')), None) if bas else None
+        diger = [i for i in range(len(h)) if i != mi]
+        if len(diger) < 2: continue
+        konu, deger = h[diger[0]], h[diger[-1]]
+        madde = h[mi] if mi is not None and mi < len(h) else ''
+        if konu and deger: rows.append([konu, deger, madde])
     return rows
 
 def tuzaklar(md):

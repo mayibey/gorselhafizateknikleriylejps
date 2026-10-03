@@ -13,6 +13,10 @@ for s in SLUGLAR:
     satir = r.stdout.strip().split('\n')[0]
     r2 = subprocess.run([sys.executable, os.path.join(KOK, 'nokta_ayristir.py'), v1, v2], capture_output=True, text=True, encoding='utf-8', env=env)
     if r2.returncode: print(r2.stdout, r2.stderr); sys.exit(1)
+    duz = os.path.join(KOK, 'duzeltmeler.json')   # denetim düzeltmeleri (Altın Özet kartları)
+    if os.path.exists(duz):
+        rd = subprocess.run([sys.executable, os.path.join(KOK, 'duzeltme_uygula.py'), v2, duz], capture_output=True, text=True, encoding='utf-8', env=env)
+        if rd.returncode: print(rd.stdout, rd.stderr); sys.exit(1)
     r3 = subprocess.run([sys.executable, os.path.join(KOK, 'kur2.py'), C, s], capture_output=True, text=True, encoding='utf-8', env=env)
     if r3.returncode: print(r3.stdout, r3.stderr); sys.exit(1)
     boy = os.path.getsize(os.path.join(C, f'masa-app-{s}.html')) / 1e6

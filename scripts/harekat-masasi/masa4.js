@@ -107,6 +107,9 @@ window.merkezGeri=function(){ if(S){aktifKaydet();S=null;} if(YIGIN.length>1){ Y
 })();
 
 /* ---------- ölçüm ---------- */
+// Check-up özeti GÜNCEL soru setine göre: kayıttaki kimliklerden kanunda hâlâ duranlar sayılır (soru çıkarılır/eklenir, kapsam değişir).
+const cuOzet=(k,cu)=>{const var_=new Set(k.q.map(q=>kid(q.i)));const ids=(cu.ids||[]).filter(i=>var_.has(kid(i)));
+  const d=ids.filter(i=>K.tani[kid(i)]===1).length;const n=ids.length;return {d,n,oran:n?d/n:0,kalan:k.q.length-n};};
 const kalanSorular=(k,cu)=>{if(!cu)return k.q;const c=new Set((cu.ids||[]).map(x=>kid(x)));return k.q.filter(q=>!c.has(kid(q.i)));};
 function kanunDurum(k,sadece){
   if(!(sadece instanceof Set))sadece=null; // .map(kanunDurum) indeks geçirir
@@ -122,7 +125,7 @@ function tipIst(sorular){ // her tip için d/n (verilen sorular)
 }
 const zayifTipler=sorular=>tipIst(sorular).filter(t=>t.n>=2&&t.d/t.n<=.5).sort((a,b)=>a.oran-b.oran);
 function hazirlik(sadece){const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
-function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
+function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);return 'Madde '+m;} // 3 Eki: soru kökünden başlık üretme ("bir karar ilan etmiştir. A, bu karara…" gibi anlamsız çıkıyordu)
 const bar=(oran,renk)=>`<span class="bar"><i style="width:${Math.max(3,Math.round(oran*100))}%;background:${renk}"></i></span>`;
 const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 
@@ -249,10 +252,10 @@ function checkupListe(){
   const bolumBoyu=k=>k.q.length;
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup'?K.aktif.meta.kanun:null;
   const satir=x=>{const cu=K.checkup[x.k.id];const durum=cu?'tam':yarim===x.k.id?'devam':'yok';
-    const kalanN=cu?kalanSorular(x.k,cu).length:0;const kismi=kalanN>0;
+    const oz=cu?cuOzet(x.k,cu):null;const kalanN=cu?kalanSorular(x.k,cu).length:0;const kismi=kalanN>0;
     const pill=kismi&&durum==='tam'?[`Yeni soru · ${kalanN}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
     const cevaplanan=durum==='devam'?Object.keys(K.aktif.cevap||{}).length:0;
-    const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
+    const oran=cu?oz.oran:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
   <p class="kucukNot" style="text-align:center">Her kanunda o kanundan çıkabilecek bütün sorular sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
@@ -286,45 +289,83 @@ function checkupAnaliz(id,geriHedef){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id],cu=K.checkup[id];if(!cu){checkupBolum(id);return;}
   const sorular=cu.ids.map(i=>TUM[i]).filter(Boolean);
-  const oran=cu.d/cu.n;
+  const oz=cuOzet(k,cu);const oran=oz.oran;
   // madde bazlı: o maddeden çıkan sorular d/n
   const maddeler={};sorular.forEach(q=>{const m=maddeNo(q);if(!m)return;const o=maddeler[m]=maddeler[m]||{d:0,n:0};o.n++;if(K.tani[kid(q.i)]===1)o.d++;});
   const eksik=Object.entries(maddeler).filter(([,o])=>o.d<o.n).sort((a,b)=>a[1].d/a[1].n-b[1].d/b[1].n);
-  const tipler=tipIst(sorular).filter(t=>t.n>=1).sort((a,b)=>(a.oran??1)-(b.oran??1));
+  const tipler=tipIst(sorular).filter(t=>t.n>=1&&t.d<t.n).sort((a,b)=>(a.oran??1)-(b.oran??1));
   const yanlislar=sorular.filter(q=>K.tani[kid(q.i)]===0);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${cu.n<k.q.length?`<p>Bu kanunun ${k.q.length} sorusundan ${cu.n}'i çözüldü.</p>`:''}</div></section>
-  <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve sınav tuzakları · kayıtlı</small></button>
+  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${oz.d}<small> / ${oz.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${oz.kalan>0?`<p>Bu kanunun ${k.q.length} sorusundan ${oz.n} tanesini çözdün; ${oz.kalan} soru yeni ya da çözülmedi.</p>`:''}</div></section>
+  ${yanlislar.length?`<button class="asagiLink" id="asagiLink">Yanlış yaptığın ${yanlislar.length} soru aşağıda <span class="asagiOk">${IK.sag}</span></button>`:''}
+  ${yanlislar.length?`<button class="anaBtn2" id="yOzetAc">Yanlışlarımın özeti · ${yanlislar.length} soru ${IK.ok}<small>Her yanlışın doğrusu ve nedeni, madde madde</small></button>`:''}
+  <button class="anaBtn2 ${yanlislar.length?'ikincil':''}" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve sınav tuzakları · kayıtlı</small></button>
   ${kalanSorular(k,cu).length?`<button class="anaBtn2 ikincil" id="kalan">Yeni / kalan ${kalanSorular(k,cu).length} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
   <button class="anaBtn2 ikincil" id="yenidenUst">Yeniden check-up yap ${IK.ok}<small>bu kanunun bütün sorularıyla baştan</small></button>
   <details class="acilir" open><summary><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler<span class="rozet">${eksik.length}</span><span class="acilirOk">${IK.sag}</span></summary>
-  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span></div><div class="mdBtnler ${k.g==='mus'?'':'tek'}">${k.g==='mus'?`<button class="mdBtn" data-kart="${m}">${IK.kitap}Karta git</button>`:''}<button class="mdBtn dolu" data-ozet="${m}">${IK.belge}Altın özete git</button></div></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
-  <details class="acilir"><summary><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?<span class="rozet">${tipler.filter(t=>t.d<t.n).length}</span><span class="acilirOk">${IK.sag}</span></summary>
-  <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,oranRenk(1-hata))}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')||'<p class="kucukNot">Tip ayrımı için yeterli soru yok.</p>'}</section></details>
+  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span></div>${k.n.some(n=>n.m.includes(m))||k.g==='mus'?`<div class="mdBtnler tek"><button class="mdBtn dolu" data-ogren="${m}">${IK.kitap}Bu maddeyi öğren</button></div>`:''}</div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
+  ${tipler.length?`<details class="acilir"><summary><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?<span class="rozet">${tipler.length}</span><span class="acilirOk">${IK.sag}</span></summary>
+  <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,'#E85A4F')}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')}</section></details>`:''}
   ${yanlislar.length?`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>
-  <button class="asagiIpucu" id="asagiIpucu">Yanlış yaptığın ${yanlislar.length} soru aşağıda <span class="asagiOk">${IK.sag}</span></button>`:''}
+  <button class="anaBtn2" id="yOzetAc2">Yanlışlarımın özeti ${IK.ok}<small>Her yanlışın doğrusu ve nedeni, madde madde</small></button>
+`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
-  document.querySelectorAll('[data-kart]').forEach(b=>b.onclick=()=>kartaGit(k.id,b.dataset.kart));
-  document.querySelectorAll('[data-ozet]').forEach(b=>b.onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef),'bu',b.dataset.ozet));
-  const ip=$('#asagiIpucu');
-  if(ip){ ip.onclick=()=>{$('#yanlisBaslik').scrollIntoView({behavior:'smooth',block:'start'});ip.classList.add('gizli');};
-    const g=()=>{ if(window.scrollY>80){ip.classList.add('gizli');window.removeEventListener('scroll',g);} };
-    window.addEventListener('scroll',g,{passive:true});
-    if(document.documentElement.scrollHeight<=window.innerHeight+120)ip.classList.add('gizli'); }
+  // "Bu maddeyi öğren": Altın Özet'te bu maddenin kartı varsa oraya; yoksa uygulamadaki konu kartına (yalnız müşterek)
+  document.querySelectorAll('[data-ogren]').forEach(b=>b.onclick=()=>{const m=b.dataset.ogren;
+    if(k.n.some(n=>n.m.includes(m)))ozet(id,()=>checkupAnaliz(id,geriHedef),'bu',m);else kartaGit(k.id,m);});
+  if($('#asagiLink'))$('#asagiLink').onclick=()=>$('#yanlisBaslik').scrollIntoView({behavior:'smooth',block:'start'});
   if($('#kalan'))$('#kalan').onclick=()=>checkupBolum(id,true);
-  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);$('#yenidenUst').onclick=()=>checkupBolum(id);
+  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));if($('#yOzetAc'))$('#yOzetAc').onclick=()=>yanlisOzet(id);if($('#yOzetAc2'))$('#yOzetAc2').onclick=()=>yanlisOzet(id);$('#yeniden').onclick=()=>checkupBolum(id);$('#yenidenUst').onclick=()=>checkupBolum(id);
 }
 function kartaGit(kanunId,m){ if(window.ReactNativeWebView){window.ReactNativeWebView.postMessage(JSON.stringify({tip:'kart',kanun:kanunId,madde:String(m)}));} else toast('Konu kartı uygulamada açılır.'); }
+/* ---------- YANLIŞLARIMIN ÖZETİ ---------- */
+// Vurgu: sayı/süre/oran/madde altın; verilen kelimeler (doğru şık) yeşil. Metin önce kaçırılır, sonra işaretlenir.
+function vurgula(metin,yesil){ let h=esc(metin||'');
+  const kel=[...new Set(String(yesil||'').toLocaleLowerCase('tr').split(/[^a-zçğıöşüâîû0-9]+/).filter(w=>w.length>=5))];
+  const SAYI=/(\d+(?:[.,]\d+)?\s*(?:'?(?:inci|ıncı|üncü|uncu|nci|ncı|ncü|ncu))?\s*(?:gün|ay|yıl|saat|hafta|dakika|kat|lira|TL|yaş|kişi|üye)?(?:ü|ı|i|u|e|a|den|dan|ye|ya)?)/g;
+  // madde atıfları (m.2/B) bütün olarak altın; geri kalan metinde sayı/süre altın
+  h=h.split(/(m\.\s*\d+(?:\/[\wçğıöşüÇĞİÖŞÜ-]+)?|\(\d+\/[\wçğıöşüÇĞİÖŞÜ-]+\))/).map((p,i)=>i%2?'<b class="vAltin">'+p+'</b>':p.replace(SAYI,'<b class="vAltin">$1</b>')).join('');
+  if(kel.length){const re=new RegExp('(^|[^a-zçğıöşüâîû>])('+kel.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')([a-zçğıöşüâîû]*)','gi');
+    h=h.replace(re,(t,a,b,c)=>a+'<b class="vYesil">'+b+c+'</b>');}
+  // makam/onay anahtarları
+  h=h.replace(/(Cumhurbaşkanı(?:nın)? onayı(?:yla|na)?|kanunla|kanun ile|valinin|kaymakamın|İçişleri Bakan(?:ı|lığı)(?:nın)?)/gi,'<b class="vYesil">$1</b>');
+  return h; }
+function yanlisOzet(id){ if(kilit('ozet'))return;
+  iz(()=>yanlisOzet(id));
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
+  const k=BYID[id],cu=K.checkup[id];if(!cu){checkupListe();return;}
+  const ys=cu.ids.map(i=>TUM[i]).filter(q=>q&&K.tani[kid(q.i)]===0);
+  const grup={};ys.forEach(q=>{const m=maddeNo(q)||'?';(grup[m]=grup[m]||[]).push(q);});
+  const sira=Object.keys(grup).sort((a,b)=>(parseInt(a)||9999)-(parseInt(b)||9999));
+  const kural=m=>{const n=k.n.find(n=>n.m.includes(m));return n?n.h:'';};
+  const soruKart=q=>{const c=K.cevap[kid(q.i)];return `<article class="yoKart">
+    <p class="yoSoru">${esc(q.k)}</p>
+    ${c!==undefined?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Senin cevabın</small><p>${HARF[c]}) ${esc(q.s[c])}</p></div></div>`:''}
+    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${HARF[q.d]}) ${vurgula(q.s[q.d])}</p></div></div>
+    ${q.a?`<div class="yoNeden"><b>Neden?</b> ${vurgula(q.a,q.s[q.d])}</div>`:''}</article>`;};
+  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Yanlışlarımın özeti</h2><span></span></div>
+  <p class="ozOzet">${esc(kisa(k))} · ${ys.length} yanlış · ${sira.length} madde</p>
+  ${ys.length?sira.map(m=>`<section class="yoMadde"><h3 class="yoBaslik"><span class="ozNo">${m==='?'?'':'m.'+m}</span>${esc(m==='?'?'Diğer':maddeBaslik(k,m))}<span class="rozet">${grup[m].length}</span></h3>
+    ${kural(m)?`<div class="yoKural"><small>Kural</small><p>${vurgula(kural(m))}</p></div>`:''}
+    ${grup[m].map(soruKart).join('')}</section>`).join(''):'<p class="kucukNot">Bu check-up\'ta yanlışın yok.</p>'}
+  ${ys.length?`<button class="anaBtn2" id="tekrarCoz">Yanlışları tekrar çöz · ${ys.length} soru ${IK.ok}<small>doğru yaptıkların özetten düşer</small></button>`:''}
+  <button class="anaBtn2 ikincil" id="ozetGit">Altın Özeti aç ${IK.ok}</button>`;
+  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupAnaliz(id);};
+  $('#ozetGit').onclick=()=>ozet(id,()=>yanlisOzet(id));
+  if($('#tekrarCoz'))$('#tekrarCoz').onclick=()=>basla(karistir(ys),`${kisa(k)} · yanlışlar`,{tani:true,tur:'tekrar',kanun:id});
+}
 /* ---------- 6. ALTIN ÖZET ---------- */
 function ozet(id,geriHedef,sekme,hedefM){ if(kilit('ozet'))return;
   iz(()=>ozet(id,geriHedef,sekme));
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id],cu=K.checkup[id];if(!cu){checkupBolum(id);return;}
   sekme=sekme||'bu';
-  const kacan=new Set(cu.kacan);
+  // eksik maddeler GÜNCEL soru setinden (çıkarılan sorunun maddesi eksik sayılmaz)
+  const ozC=cuOzet(k,cu);const kacanL=[...new Set(cu.ids.map(i=>TUM[i]).filter(q=>q&&K.tani[kid(q.i)]===0).map(maddeNo).filter(Boolean))];
+  const kacan=new Set(kacanL);
   const ilgili=n=>n.m.some(m=>kacan.has(m));
-  const noktalar=k.n.filter(ilgili);
-  const tuzaklar=k.tz.filter(z=>z.m.some(m=>kacan.has(m))||cu.kacan.some(m=>new RegExp('(^|[^\\d])'+m+'(/|[^\\d]|$)').test(z.d)));
+  const noktalar=k.n.filter(n=>ilgili(n)||(hedefM&&n.m.includes(hedefM)));
+  const tuzaklar=k.tz.filter(z=>z.m.some(m=>kacan.has(m))||kacanL.some(m=>new RegExp('(^|[^\\d])'+m+'(/|[^\\d]|$)').test(z.d)));
   const takviye=noktalar.length<3?k.n.filter(n=>n.s&&!ilgili(n)).slice(0,6):[];
   const tipler=cu.tipler||[];
   const kayitli=KANUN.filter(x=>K.checkup[x.id]).sort((a,b)=>K.checkup[b.id].tarih.localeCompare(K.checkup[a.id].tarih));
@@ -336,24 +377,35 @@ function ozet(id,geriHedef,sekme,hedefM){ if(kilit('ozet'))return;
   // Kısa özet: kalın anahtar parçalar; yoksa uzun hükmün ilk parçası; o da yoksa başlık
   const kisaOzet=n=>{ if(n.k)return n.k; const h=String(n.h||''); if(h.length>170){const p=h.split(/;|,\s(?=[a-zçğıöşü])/)[0];return p.length<h.length?p.trim()+' …':h.slice(0,150).trim()+' …';} return n.b; };
   // Madde kartı: hüküm = doğrusu; altında kırmızı "Sınavda böyle yazarlar" (noktanın kendi tuzağı + aynı maddenin yanlış şıkları)
-  const kart=(n,kk)=>{kk=kk||k;const mm=n.m[0];const ekTz=mm?kk.tz.filter(z=>tzMadde0(z)===mm):[];ekTz.forEach(z=>kullanilanTz.add(kk.id+'-tz'+kk.tz.indexOf(z)));
-    const yanlislar=[...new Set([n.t,...ekTz.flatMap(z=>tirnakSil0(z.y).split(/"\s*\/\s*"/).map(tirnakSil0))].filter(Boolean))];
-    const dogrular=[...new Set(ekTz.map(z=>tirnakSil0(z.d)).filter(Boolean))];
+  // TUZAK → NOKTA EŞLEŞMESİ (içerikle): aynı maddedeki noktalardan kelime/sayı örtüşmesi en yüksek olana; eşik 2.
+  const tzEsle=kk=>{ if(kk._tzEs)return kk._tzEs; const kel=t=>new Set(String(t||'').toLocaleLowerCase('tr').replace(/[^a-zçğıöşü0-9\-\/ ]/g,' ').split(/\s+/).filter(w=>w.length>=4||/\d/.test(w)));
+    const es={}; kk.tz.forEach((z,zi)=>{if(z.bag){(es[z.bag]=es[z.bag]||[]).push(zi);return;}const m=tzMadde0(z);if(!m)return;const zk=kel(z.d+' '+z.y);let en=null,enP=0;
+      for(const n of kk.n){if(!n.m.includes(m)||n.tzKapat)continue;const nk=kel(n.b+' '+n.h+' '+(n.t||''));let p=0;zk.forEach(w=>{if(nk.has(w))p+=(/\d/.test(w)?2:1);});if(p>enP){enP=p;en=n;}}
+      if(en&&enP>=2)(es[en.i]=es[en.i]||[]).push(zi);}); return kk._tzEs=es; };
+  const parcala=y=>String(y||'').split(/"\s*(?:\/|,|veya|ya da)\s*"/).map(tirnakSil0).filter(Boolean).map(x=>'“'+x+'”');
+  const kart=(n,kk)=>{kk=kk||k;const mm=n.m[0];const ekTz=(tzEsle(kk)[n.i]||[]).map(zi=>kk.tz[zi]);ekTz.forEach(z=>kullanilanTz.add(kk.id+'-tz'+kk.tz.indexOf(z)));
+    const yanlislar=n.yz?n.yz.slice():[...new Set([n.t,...ekTz.flatMap(z=>parcala(z.y))].filter(Boolean))];
+    const dogrular=n.dg?n.dg.slice():[...new Set(ekTz.map(z=>tirnakSil0(z.d)).filter(Boolean))];
     if(!dogrular.length)dogrular.push(kisaOzet(n));  // tuzak yoksa hükmün anahtar parçaları
     return `<article class="ozKart" data-m="${mm}"><div class="ozUst"><span class="ozNo">${mm?'m.'+mm:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${yanlislar.length?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${yanlislar.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>`:''}${dogrular.length?`<div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b>${dogrular.map(d=>`<p>${esc(d)}</p>`).join('')}</div></div>`:''}</article>`;};
   const tirnakSil=t=>String(t).replace(/^[\s"“”']+|[\s"“”']+$/g,'');
   const tzMadde=z=>z.m[0]||((String(z.d).match(/\((\d+)(?:\/[^)]*)?\)\s*$/)||[])[1])||'';
-  const tuzakKart=(z,i)=>`<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>Sınavın tuzağı</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>
-    <div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${tirnakSil(z.y).split(/"\s*\/\s*"/).map(x=>`<p>“${esc(tirnakSil(x))}”</p>`).join('')}</div></div>
-    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
-  const tablo=(baslik,rows)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><div class="tabloKap ozTablo"><table>${rows.slice(0,16).map(r=>`<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td></tr>`).join('')}</table></div>`:'';
-  const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${cu.d}/${cu.n} doğru${cu.kacan.length?' · eksik: '+cu.kacan.map(m=>'m.'+m).join(', '):''}</p>
+  // Eşleşmeyen tuzak kartı da üstte madde açıklamasıyla (başkan, 3 Eki: "bunlarda neden üstte açıklama yok"):
+  // aynı maddenin noktası varsa onun başlığı + hükmü; yoksa yalnız madde numarası.
+  const maddeNoktasi=z=>{const m=tzMadde(z);return m?k.n.find(n=>n.m.includes(m)):null;};
+  const tuzakKart=(z,i)=>{const mn=maddeNoktasi(z);return `<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>${esc(mn?mn.b:'Madde '+tzMadde(z))}</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>
+    ${mn?`<p class="ozHukum">${esc(mn.h)}</p>`:''}
+    <div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${parcala(z.y).map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>
+    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;};
+  // Ezber tablosu: konu → DEĞER (altın, büyük) · madde. (3 Eki: değer sütunu eskiden görünmüyordu.)
+  const tablo=(baslik,rows,alt)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><p class="kucukNot">${alt}</p><div class="ezber">${rows.slice(0,20).map(r=>`<div class="ezSatir"><span class="ezKonu">${esc(r[0])}${r[2]?` <em>${esc(/^m\./.test(r[2])?r[2]:'m.'+r[2])}</em>`:''}</span><b class="ezDeger">${esc(r[1])}</b></div>`).join('')}</div>`:'';
+  const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${ozC.d}/${ozC.n} doğru${kacanL.length?' · eksik: '+kacanL.map(m=>'m.'+m).join(', '):''}</p>
     ${tipler.length?`<div class="tuzakKutu bilgi"><span class="tuzakIk">${IK.unlem}</span><div><b>Hata yaptığın soru tipi: ${tipler.map(t=>esc((TIPLER.find(x=>x[0]===t)||[])[1]||t)).join(', ')}</b><p>${tipler.map(t=>esc(TIP_TAVSIYE[t]||'')).join(' ')}</p></div></div>`:''}
     ${noktalar.map(n=>kart(n)).join('')}
     ${tuzaklar.filter(z=>!kullanilanTz.has(k.id+'-tz'+k.tz.indexOf(z))).map(tuzakKart).join('')}
     ${!noktalar.length&&!tuzaklar.length?'<p class="kucukNot">Bu maddeler için özet notu yok. Yanlış yaptığın sorulara check-up analizinden bakabilirsin.</p>':''}
-    ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi):''}
-    ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam):''}
+    ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi,'Sınavda en çok oynanan rakamlar. Sağdaki değeri ezberle.'):''}
+    ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam,'Hangi işi kim yapar? Sınav makamı değiştirerek tuzak kurar.'):''}
     ${takviye.length?`<h3 class="bolumBaslik">Bu kanundan sınavda çıkmış noktalar</h3>${takviye.map(n=>kart(n)).join('')}`:''}
     <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>`;
   const kayitKartlar=[];for(const kk of KANUN){kk.n.forEach(n=>{if(K.kayit[n.i])kayitKartlar.push({k:kk,h:kart(n,kk)});});kk.tz.forEach((z,i)=>{if(K.kayit[kk.id+'-tz'+i])kayitKartlar.push({k:kk,h:tuzakKart(z,i)});});}
