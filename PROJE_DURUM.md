@@ -4,6 +4,17 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki akşam — TABLETTE KENDİLİĞİNDEN ÇIKIŞ: TEŞHİS (kod değişmedi, onay bekliyor)
+> Bildirenler: Mehmet Ali Güneş (yalnız iPad), Kasım Tuncer (iOS + Android). Üç neden bulundu:
+> 1. Erişim anahtarı 1 saatte doluyor; tablet uykudan uyanıp internetsizken açılınca yenileme başarısız → Supabase "oturum yok"
+>    döndürüyor (oturumu silmeden) → auth-context bunu çıkış sayıp giriş ekranı gösteriyor. Mehmet Ali'nin 6 öksüz oturumu kanıt.
+> 2. cikisYap → supabase.auth.signOut() varsayılanı GLOBAL: tek-oturum düşürmesi ve elle çıkış, hesabın diğer cihazlarındaki
+>    oturumu da siliyor → o cihaz ≤1 saat sonra mesajsız çıkış.
+> 3. Supabase açılışta geçerli oturum için SIGNED_IN yayıyor → uygulama yeni giriş sanıp hesabı yeniden sahipleniyor.
+> Ölçek (30 gün): Android 49/486, iOS 34/488 kişi geçerli oturumu bırakıp yeniden giriş yapmış (yeniden kurulum dahil).
+> Önerilen düzeltme: ağ hatasında oturumu koru + AppState otomatik yenileme; signOut({scope:'local'}); SIGNED_IN ayrımı;
+> politika kararı: telefon+tablet aynı anda açık kalsın mı. Memory oturum-dusme-tablet-teshis.md. Düzeltme OTA gerektirir.
+>
 > ### ▶ 3 Eki öğleden sonra — LİMİT DOLDU, DEVAM NOKTASI
 > - Yayında: 53 mevzuatın madde blokları (öz/akılda tut/sorulur/karıştırılanlar), kapsam dışı ek-geçici madde soruları
 >   ayıklandı (branş başına 5-39 soru), "Ek m.1" ve ayrı harfli madde ("38/A") artık kendi bloğunda (madde_anahtar.py).
