@@ -21,6 +21,7 @@ const KASITLI_KAPALI = {
   'anlik-guncelleme': '1. KADEME (deneme) — başkan + Kemalettin; 30 sn\'de bir kendiliğinden yeniler. Herkese açmak için bu bayrak DEĞİL, sunucu şalteri kullanılır: uygulama_ayar.anlik_guncelleme_herkes = 1 (nazik kip).',
   'patika-yolculuk': 'Sinematik 3B yolculuk motoru YARIM (ağaç görselleri/doku/ses eksik) — iş durduruldu, bitmeden açılmaz.',
   'ekran-goruntusu-serbest': 'EKRAN GÖRÜNTÜSÜ YASAĞI MUAFİYETİ — sadece başkan + Kemalettin. Herkese açılırsa telifli kart görsellerinin koruması TAMAMEN biter. ASLA yayın listesine ekleme.',
+  'ilgili-kart-kitap': 'İLGİLİ KART / KİTAP (4 Eki 2026, Mehmet Ali: 5809 sorusunda TCK açılıyordu) — kart varsa kart, yoksa kanunun PDF kitabı. ÖNCE BAŞKAN DENEYECEK; yay = uygulama_ayar.ozellik_herkes dizisine "ilgili-kart-kitap".',
   'oturum-koruma': 'OTURUM KORUMA (tablette kendiliğinden çıkış) — 3 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
 };
 

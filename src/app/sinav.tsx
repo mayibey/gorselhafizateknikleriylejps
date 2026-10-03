@@ -16,6 +16,8 @@ import { degerlendirSicil } from '@/lib/sicil-servis';
 import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
+import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import {
   eslesenKartIdleri,
   soruKanunId,
@@ -127,6 +129,27 @@ export default function SinavScreen() {
   // PREMIUM KAPISI: genel deneme → premium şart; kanun sınavı → o kanun erişilebilir olmalı. Erişim
   // yoksa (yükleme bitince) soru+cevap GÖSTERİLMEDEN paywall'a. (Sınav soruları gömülü, tek kapı bu.)
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
+  // İLGİLİ KART / KİTAP bayrağı (önce yalnız başkan) + branşın PDF kitapları (kanuna bağlı olanlar + Altın Özetler).
+  const kartKitapBayrak = useKisiselOzellik('ilgili-kart-kitap');
+  const kitaplarRef = useRef<{ kanun: Map<number, BransKitap>; brans: BransKitap | null; musterek: BransKitap | null } | null>(null);
+  useEffect(() => {
+    if (!kartKitapBayrak) return;
+    let yasiyor = true;
+    void (async () => {
+      const [b, ab, am] = await Promise.all([
+        brans ? bransKitaplari(brans) : Promise.resolve([] as BransKitap[]),
+        brans ? bransKitaplari(`altin_${brans}`) : Promise.resolve([] as BransKitap[]),
+        bransKitaplari('musterek'),
+      ]);
+      if (!yasiyor) return;
+      const kanun = new Map<number, BransKitap>();
+      for (const k of b) if (k.lawId != null && !kanun.has(k.lawId)) kanun.set(k.lawId, k);
+      kitaplarRef.current = { kanun, brans: ab[0] ?? null, musterek: am[0] ?? null };
+    })().catch(() => {});
+    return () => {
+      yasiyor = false;
+    };
+  }, [kartKitapBayrak, brans]);
   const kilitli =
     !uyelikYukleniyor &&
     (genelPremium
@@ -263,7 +286,11 @@ export default function SinavScreen() {
         kartlarRef.current = kartlar;
       }
       if (!kartlar) return;
-      const ids = eslesenKartIdleri(soru.kaynak, kartlar);
+      // İLGİLİ KART bayrağı: kanunu belli sorunun yanlışı yalnız O KANUNUN kartlarını zayıf havuza soksun
+      // (eski kod madde numarasıyla başka kanunun kartını — ör. 5809 m.3 → TCK m.3 — havuza düşürüyordu).
+      const sk = (soru as { lawId?: number }).lawId ?? (genelModu ? null : lawIdNum);
+      const aday = kartKitapBayrak && sk != null ? kartlar.filter((k) => k.law_id === sk) : kartlar;
+      const ids = eslesenKartIdleri(soru.kaynak, aday);
       // Genel deneme (Tatbikat) yanlışı 'genel', Talim (kanun sınavı) yanlışı 'quiz' kaynağıyla
       // düşer → zayıf mevzide "Tatbikat/Talim" etiketi buradan ayrışır (tek havuz, ayrı etiket).
       const kaynakTip = genelModu ? 'genel' : 'quiz';
@@ -286,8 +313,9 @@ export default function SinavScreen() {
    * Artık kart yoksa KANUNUN kendisine gidiliyor; kanunun da kartı yoksa düğme
    * hiç çizilmiyor (ölü düğme kalmasın).
    */
-  function kartHedefi(soru: KartSoru): { lawId: number; kartId?: number } | null {
+  function kartHedefi(soru: KartSoru): { lawId: number; kartId?: number; kitap?: BransKitap } | null {
     const kartlar = kartlarRef.current;
+    if (kartKitapBayrak) return kartHedefiYeni(soru, kartlar);
     if (!kartlar || kartlar.length === 0) return null;
     // Deneme soruları kanun kimliğini ÜSTÜNDE taşır (üreteç yazıyor) → tahmin yok.
     // Kanun talimlerinde zaten ekranın law_id'si var. Kalanlarda metinden çıkarılır.
@@ -306,9 +334,50 @@ export default function SinavScreen() {
     return kart ? { lawId: kart.law_id, kartId: kart.id } : null;
   }
 
+  /**
+   * İLGİLİ KART / KİTAP (4 Eki 2026, bayrak 'ilgili-kart-kitap'; Mehmet Ali: 5809 m.3 sorusunda TCK açılıyordu).
+   * Eski kod sorunun kanununda kart bulamayınca BÜTÜN kanunlarda aynı madde numarasını arayıp başka kanunun
+   * kartını açıyordu. Başkan kuralı: kart varsa ilgili kart, yoksa ilgili kanunun PDF kitabı.
+   * Sıra: (1) o kanundaki madde kartı → (2) branşın o kanuna ait PDF'i → (3) kanunu içeren Altın Özet kitabı
+   * (müşterek / branş) → (4) kanunun kartları varsa "Bu kanunu çalış" → yoksa düğme yok. Kanun bilinmiyorsa eski yol.
+   */
+  function kartHedefiYeni(soru: KartSoru, kartlar: CardWithLaw[] | null): { lawId: number; kartId?: number; kitap?: BransKitap } | null {
+    const liste = kartlar ?? [];
+    const kanunId =
+      (soru as { lawId?: number }).lawId ??
+      (genelModu ? (liste.length ? soruKanunId(soru.soru, soru.kaynak ?? '', liste) : null) : lawIdNum);
+    if (kanunId == null) {
+      if (liste.length === 0) return null;
+      const ids = eslesenKartIdleri(soru.kaynak, liste);
+      const kart = ids.length > 0 ? liste.find((k) => k.id === ids[0]) : undefined;
+      return kart ? { lawId: kart.law_id, kartId: kart.id } : null;
+    }
+    const havuz = liste.filter((k) => k.law_id === kanunId);
+    if (havuz.length > 0) {
+      const ids = eslesenKartIdleri(soru.kaynak, havuz);
+      const kart = ids.length > 0 ? havuz.find((k) => k.id === ids[0]) : undefined;
+      if (kart) return { lawId: kart.law_id, kartId: kart.id };
+    }
+    const kt = kitaplarRef.current;
+    const kanunKitabi = kt?.kanun.get(kanunId);
+    if (kanunKitabi) return { lawId: kanunId, kitap: kanunKitabi };
+    const altin = havuz[0]?.blok === 'müşterek' ? kt?.musterek : kt?.brans;
+    if (altin) return { lawId: kanunId, kitap: altin };
+    return havuz.length > 0 ? { lawId: kanunId } : null;
+  }
+
   function kartaGit(soru: KartSoru) {
     const hedef = kartHedefi(soru);
     if (!hedef) return;
+    if (hedef.kitap) {
+      // PDF kitapları üyelik kapılı (imzalı URL); üye değilse ödeme ekranı.
+      if (!premium) {
+        router.push('/paywall');
+        return;
+      }
+      router.push({ pathname: '/kitap', params: { yol: hedef.kitap.dosyaYolu, baslik: hedef.kitap.baslik } });
+      return;
+    }
     // Başkan (23 Ağu): "deneme ücretsiz olacak ama ilgili karta git deyince, premium
     // değilse ve TCK dışıysa üyelik ekranı gelsin." Kart içeriği ücretli; kapı burada.
     if (!lawErisilebilirSaf(hedef.lawId, premium)) {
@@ -568,7 +637,7 @@ export default function SinavScreen() {
                     onPress={() => kartaGit(soru!)}>
                     <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
                     <AppText variant="etiket" bold color="lacivert">
-                      {kartHedefi(soru!)?.kartId ? 'İlgili kartı çalış' : 'Bu kanunu çalış'}
+                      {kartHedefi(soru!)?.kartId ? 'İlgili kartı çalış' : kartHedefi(soru!)?.kitap ? 'İlgili kitabı aç' : 'Bu kanunu çalış'}
                     </AppText>
                   </Pressable>
                 ) : null}
@@ -697,7 +766,7 @@ function HataKart({
   no: number;
   soru: KartSoru;
   secilen: number;
-  hedef: { lawId: number; kartId?: number } | null;
+  hedef: { lawId: number; kartId?: number; kitap?: BransKitap } | null;
   onKartGit: () => void;
 }) {
   const H = ['A', 'B', 'C', 'D', 'E'];
@@ -729,7 +798,7 @@ function HataKart({
         <Pressable style={({ pressed }) => [styles.kartGitBtn, pressed && styles.pressed]} onPress={onKartGit}>
           <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
           <AppText variant="etiket" bold color="lacivert">
-            {hedef.kartId ? 'İlgili kartı çalış' : 'Bu kanunu çalış'}
+            {hedef.kartId ? 'İlgili kartı çalış' : hedef.kitap ? 'İlgili kitabı aç' : 'Bu kanunu çalış'}
           </AppText>
         </Pressable>
       ) : null}
@@ -762,7 +831,7 @@ function Sonuc({
   belgeHak: boolean;
   katsayi: number;
   onZayif: () => void;
-  kartHedefi: (soru: KartSoru) => { lawId: number; kartId?: number } | null;
+  kartHedefi: (soru: KartSoru) => { lawId: number; kartId?: number; kitap?: BransKitap } | null;
   onTekrar: () => void;
   onBitir: () => void;
   onKartGit: (soru: KartSoru) => void;
