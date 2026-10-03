@@ -33,6 +33,9 @@ Girdideki kartlarda kırmızı kutu bozuk: yanlış cümle yerine bir **açıkla
   tam, düzgün Türkçe cümle; en çok 25 kelime; **sonunda madde atfı** "(m.11/A)". `mevcut_dogrusu` doğru ve uygunsa kullan.
 - Sayılar resmî metindeki gibi. Metinde olmayan sayı, süre, makam yazma.
 - Hüküm (hukum) resmî metne aykırıysa: düzeltmeye `"hukum": "…"` de ekle ve `aciklama`'ya `KART_CELISKI: …` yaz. Değilse hükme dokunma.
+- **Hükme körü körüne güvenme (3 Eki dersi):** her kartta önce hükmü resmî metinle karşılaştır. İstisna kalıplarını dikkatle oku:
+  "X ve Y DIŞINDAKİ teminat sözleşmeleri e-imzayla yapılamaz" = X ve Y e-imzayla YAPILABİLİR (5070 m.5; bir kart bunu tersine
+  yazmıştı ve kırmızı kutu da o yanlış hükme göre kurulmuştu). Kutuyu her zaman resmî metne göre kur.
 - Kartın konusu tuzağa elverişsizse (ör. yalnız tanım ve tuzak üretmek zorlama olacaksa) bile hükmün bir öğesini bozarak yanlış cümle
   kur; çok istisnai durumda `{"kanun_id": .., "kart_id": "..", "atla": "gerekçe"}`.
 - Dil: düzgün, doğal Türkçe. **"kaçırdığın" kelimesini asla kullanma.**

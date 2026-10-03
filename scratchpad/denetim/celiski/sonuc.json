@@ -1,0 +1,942 @@
+[
+ {
+  "kanun_id": 1,
+  "kart_id": "1-47",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.250/4: menfaatin değeri ve mağdurun ekonomik durumuna göre yarısına kadar indirim 'yukarıdaki fıkralara göre verilecek ceza' için, yani icbar, ikna ve hata hâllerinin hepsinde uygulanır; Doğrusu satırı (ve hüküm) indirimi yalnız hatadan yararlanma hâline bağlıyordu.",
+  "duzeltme": {
+   "hukum": "İkna suretiyle irtikâbın kişinin hatasından yararlanarak işlenmesi hâlinde 1 yıldan 3 yıla kadar hapis cezası verilir (m.250/3); irtikâp edilen menfaatin değeri ve mağdurun ekonomik durumu gözetilerek cezanın yarısına kadar indirilmesi ise icbar, ikna ve hata hâllerinin hepsinde uygulanabilir (m.250/4)",
+   "sinavda_boyle_yazarlar": [
+    "“Kişinin hatasından yararlanılarak işlenen irtikâpta üç yıldan beş yıla kadar hapis cezası verilir.”",
+    "“İrtikâpta menfaatin değeri ve mağdurun ekonomik durumu gözetilerek ceza en çok üçte bir oranında indirilebilir.”",
+    "“Menfaatin değeri ve mağdurun ekonomik durumuna göre yapılan indirim yalnız hatadan yararlanma hâlinde uygulanır.”"
+   ],
+   "dogrusu": [
+    "Kişinin hatasından yararlanılarak işlenen irtikâpta 1 yıldan 3 yıla kadar hapis cezası verilir (m.250/3)",
+    "Menfaatin değeri ve mağdurun ekonomik durumu gözetilerek ceza yarısına kadar indirilebilir (m.250/4)",
+    "Menfaatin değerine ve mağdurun ekonomik durumuna göre yapılan indirim icbar, ikna ve hatadan yararlanma hâllerinin hepsinde uygulanabilir (m.250/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 13,
+  "kart_id": "13-16",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.6 ve m.10: 'terörle mücadele sırasında veya bu görevlerden dolayı alıkonulma ya da kaybolma hâli' 6496 sayılı Kanunla yalnız sözleşmeli subayların maddesine (m.6) eklenmiştir; astsubayların m.10'unda yalnız seferberlik, savaş veya silahlı çatışmayı gerektirecek hâl ile savaş hâlleri sayılır. Kart bu sebebi iki maddeye birden bağlıyordu.",
+  "duzeltme": {
+   "hukum": "Sözleşmeli subay (m.6) ve sözleşmeli astsubayların (m.10) sözleşme süreleri seferberlik, savaş veya silahlı çatışmayı gerektirecek hâl ile savaş hâllerinde; Kuvvet Komutanları, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının göstereceği lüzum üzerine, durumun devamı müddetince ilgisine göre Millî Savunma Bakanlığı veya İçişleri Bakanlığının onayıyla talebe bakılmaksızın uzatılabilir. Terörle mücadele sırasında veya bu görevlerden dolayı alıkonulma ya da kaybolma hâli yalnız sözleşmeli subaylar için sayılmıştır; astsubaylarda bu sebep yoktur (m.6, m.10)",
+   "sinavda_boyle_yazarlar": [
+    "“Terörle mücadele sırasında alıkonulma veya kaybolma hâlinde sözleşmeli astsubayların sözleşme süresi de talebe bakılmaksızın uzatılabilir.”",
+    "“Sözleşme sürelerinin talebe bakılmaksızın uzatılmasında onay makamı Genelkurmay Başkanıdır.”"
+   ],
+   "dogrusu": [
+    "Terörle mücadelede alıkonulma veya kaybolma sebebi yalnız sözleşmeli subaylar için sayılmıştır; astsubaylarda bu sebep yoktur (m.6, m.10)",
+    "Talebe bakılmaksızın uzatma, ilgisine göre Millî Savunma Bakanlığı veya İçişleri Bakanlığının onayıyla yapılır (m.6, m.10)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 14,
+  "kart_id": "14-16",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.5: 'banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri' güvenli e-imza ile yapılamaz; yani banka teminat mektupları yasağın dışındadır ve güvenli e-imza ile yapılabilir. Kart tersini söylüyordu (örnek sorular da 'yapılabilir' der).",
+  "duzeltme": {
+   "baslik": "İstisna 2 — dikkat, ters istisna",
+   "hukum": "Banka teminat mektupları, Türkiye'de yerleşik sigorta şirketlerince düzenlenen kefalet senetleri gibi yasağın dışında tutulmuştur; güvenli elektronik imza ile gerçekleştirilebilir. Güvenli e-imza yasağı, kanunların resmî şekle veya özel merasime tabi tuttuğu işlemler ile bunların dışındaki teminat sözleşmeleri içindir (m.5)",
+   "sinavda_boyle_yazarlar": [
+    "“Banka teminat mektupları, güvenli elektronik imza ile gerçekleştirilemeyen işlemler arasında yer alır.”"
+   ],
+   "dogrusu": [
+    "Banka teminat mektupları yasağın dışındadır; güvenli elektronik imza ile gerçekleştirilebilir (m.5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 21,
+  "kart_id": "21-14",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.29/2 hükmüdür (gecikmesinde sakınca bulunan hâllerde m.18, 19, 20 ve 22'deki tedbirleri kolluk amiri alabilir, hâkim onayı 24 saat); m.18'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "29"
+   ]
+  }
+ },
+ {
+  "kanun_id": 22,
+  "kart_id": "22-25",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.15/1: aynı yerdeki göreve atanan 'tebliğ gününü izleyen işgünü içinde' işe başlar; hükümdeki 'tebliğ gününü' kısaltması tebliğ günü işe başlanır gibi okunuyordu.",
+  "duzeltme": {
+   "hukum": "Aynı yerdeki göreve atanan, atama emrinin kendisine tebliğ gününü izleyen işgünü içinde; başka yerdeki göreve atanan, tebliğ tarihinden itibaren onbeş gün içinde o yere hareket edip belli yol süresini izleyen işgünü içinde işe başlamak zorundadır (m.15/1)",
+   "sinavda_boyle_yazarlar": [
+    "“Aynı yerdeki göreve atanan personel, atama emrinin tebliğ edildiği gün işe başlamak zorundadır.”",
+    "“Başka yerdeki göreve atanan personel, atama emrinin tebliğinden itibaren on beş gün içinde yeni görevine başlamak zorundadır.”"
+   ],
+   "dogrusu": [
+    "Aynı yerdeki göreve atanan, atama emrinin tebliğ gününü izleyen işgünü içinde işe başlar (m.15/1-a)",
+    "Başka yere atanan, tebliğden itibaren onbeş gün içinde hareket eder ve yol süresini izleyen işgünü içinde işe başlar (m.15/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 23,
+  "kart_id": "23-36",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.22/5: resmî kaynak ve belgelerden yararlanan eserde izin eseri YAZMADAN önce alınır (b); gizli ve göreve mahsus kitaplardan yararlanılan eserde ise BASIM VE YAYIMDAN önce incelettirilip izin alınır (c). Doğrusu satırı 'bastırmadan değil' diyerek iki durumu karıştırıyordu.",
+  "duzeltme": {
+   "hukum": "Personel siyaset hariç bilimsel, tarihî, iktisadi, içtimai ve edebî konularda makale, kitap, tez ve bildiri yazmakta ve kendi hesabına bastırmakta serbesttir; ancak makamı gereği bildiği resmî kaynak ve belgelerden yararlanarak eser yayımlayacak olan, eserini yazmadan önce ilgisine göre JGK veya SGK'dan izin alır (m.22/5-b); gizli ve göreve mahsus kitaplardan yararlanılarak yazılan eser ise basılıp yayımlanmadan önce silsile yoluyla JGK veya SGK'ya incelettirilir ve izin alınır (m.22/5-c)",
+   "sinavda_boyle_yazarlar": [
+    "“Resmî kaynak ve belgelerden yararlanarak eser yayımlayacak personel, eserini yazdıktan sonra basımdan önce izin alır.”",
+    "“Resmî kaynak ve belgelerden yararlanarak eser yayımlayacak personel, izni bulunduğu ilin valiliğinden alır.”",
+    "“Gizli ve göreve mahsus kitaplardan yararlanılarak yazılan eser için izin, eser yazılmaya başlanmadan önce alınır.”"
+   ],
+   "dogrusu": [
+    "Resmî kaynak ve belgelerden yararlanarak eser yayımlayacak personel, eserini yazmadan önce izin alır (m.22/5-b)",
+    "Resmî kaynaklardan yararlanan eser için izin, ilgisine göre Jandarma Genel Komutanlığından veya Sahil Güvenlik Komutanlığından alınır (m.22/5-b)",
+    "Gizli ve göreve mahsus kitaplardan yararlanılan eser, basılıp yayımlanmadan önce silsile yoluyla incelettirilir ve izin alınır (m.22/5-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 24,
+  "kart_id": "24-12",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.5/1-m: kursiyere 'yıllık mazeret veya mazeret izni' verilebilir (yıllık mazeret izni ayrı bir izin türüdür); hükümdeki 'yıllık, mazeret veya mazeret izni' yazımı kursiyere yıllık izin verilebilir gibi okunuyordu.",
+  "duzeltme": {
+   "hukum": "Kursiyerlere kurs süresince kurs programına göre belirlenen planlı tatiller dışında izin verilmez; geçerli özrü olanlara kurs bitiş tarihini aşmamak kaydıyla kursu veren birim yıllık mazeret izni veya mazeret izni verebilir; verilen her türlü izin personelin birliğine yazılı olarak bildirilir (m.5/1-m)",
+   "sinavda_boyle_yazarlar": [
+    "“Kursiyerlere kurs süresince planlı tatiller dışında hiçbir şekilde izin verilemez.”",
+    "“Kursiyere verilecek mazeret iznini personelin kendi birliği verir.”"
+   ],
+   "dogrusu": [
+    "Geçerli özrü olan kursiyere, kurs bitiş tarihini aşmamak kaydıyla kursu veren birim yıllık mazeret veya mazeret izni verebilir (m.5/1-m)",
+    "Kursiyere izni kursu veren birim verir; verilen her türlü izin personelin birliğine yazılı olarak bildirilir (m.5/1-m)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-2",
+  "sorun": "madde_hatali",
+  "aciklama": "Fıkra atfı kaymış: izin cümlesi m.4/2'dir (m.15/4 muaf listeyi '4 üncü maddenin üçüncü fıkrası' diye anar; 1. fıkra yapım yasağı, 2. fıkra izin, 3. fıkra muaflar, 4. fıkra yivli silah ruhsatı). İçerik doğru.",
+  "duzeltme": {
+   "hukum": "Bunlardan bir sanat veya mesleğin icrası için kullanılması zorunlu olanların yapımına, İçişleri Bakanlığınca çıkarılacak yönetmelikteki kurallara göre izin verilir (m.4/2)",
+   "sinavda_boyle_yazarlar": [
+    "“Meslek için zorunlu yasak aletlerin yapım iznini valilik veya Millî Savunma Bakanlığı verir.”"
+   ],
+   "dogrusu": [
+    "İzin, İçişleri Bakanlığının çıkardığı yönetmelikteki kurallara göre verilir (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-3",
+  "sorun": "madde_hatali",
+  "aciklama": "Fıkra atfı kaymış: Kanuna tabi olmayanlar listesi m.4/3'tür (m.15/4 bu listeyi '4 üncü maddenin üçüncü fıkrası' diye anar). İçerik doğru.",
+  "duzeltme": {
+   "hukum": "Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri, yivsiz tüfekler ve mermileri, ev gereçleri ile tababet, sanayi, tarım, spor aletleri ve bir meslek/sanat icrası için gerekli bıçak, şiş, raspa ve benzerleri bu Kanuna tabi değildir (m.4/3)",
+   "sinavda_boyle_yazarlar": [
+    "“Yivsiz tüfekler 6136 sayılı Kanuna tabidir.”"
+   ],
+   "dogrusu": [
+    "Yivsiz tüfekler ve mermileri ile yalnız sporda kullanılan yivli ateşsiz silahlar bu Kanuna tabi değildir (m.4/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 25,
+  "kart_id": "25-4",
+  "sorun": "madde_hatali",
+  "aciklama": "Fıkra atfı kaymış: av ve sporda kullanılan yivli silahların ruhsata tabi olması m.4/4'tür; kart ayrıca m.7'ye bağlanmıştı (m.7 yalnız atıf yapılan ruhsat maddesi). İçerik doğru.",
+  "duzeltme": {
+   "hukum": "Avda veya sporda kullanılan her nevi ateşli yivli silahlar m.7'ye göre ruhsata tabidir (m.4/4)",
+   "sinavda_boyle_yazarlar": [
+    "“Avda kullanılan yivli silah için ruhsat gerekmez.”"
+   ],
+   "dogrusu": [
+    "Avda veya sporda kullanılan her nevi ateşli yivli silah m.7'ye göre ruhsata tabidir (m.4/4)"
+   ],
+   "madde": [
+    "4"
+   ]
+  }
+ },
+ {
+  "kanun_id": 26,
+  "kart_id": "26-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.102/2: ağır cezalık işlerde tutukluluk en çok iki yıldır; üç yıl (Devlete karşı suçlar ve terör suçlarında beş yıl) uzatma süresinin toplam üst sınırıdır. Doğrusu satırı ('iki yıl, uzatmayla üç yılı geçemez') toplam süreyi üç yıl gibi gösteriyordu.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Ağır ceza mahkemesinin görevine girmeyen işlerde tutukluluk süresi en çok bir yıldır; zorunlu hâllerde bir yıl daha uzatılabilir.”",
+    "“Ağır ceza mahkemesinin görevine giren işlerde tutukluluk süresi, uzatmalar dâhil toplam üç yılı geçemez.”"
+   ],
+   "dogrusu": [
+    "Ağır ceza mahkemesinin görevine girmeyen işlerde tutukluluk en çok bir yıldır; zorunlu hâllerde altı ay daha uzatılabilir (m.102/1)",
+    "Ağır cezalık işlerde tutukluluk en çok iki yıldır; uzatma süresi toplam üç yılı, terör ve Devlete karşı suçlarda beş yılı geçemez (m.102/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 26,
+  "kart_id": "26-40",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.140/3: izleme kararı en çok üç hafta, gerektiğinde bir hafta uzatma; örgüt suçlarında hâkim bu sürelere EK OLARAK her defasında en çok bir hafta, toplam dört haftayı geçmemek üzere uzatabilir; gizli soruşturmacı da görevlendirilmişse süreler bir kat artar. Hüküm toplam izleme süresini dört hafta gibi gösteriyordu.",
+  "duzeltme": {
+   "hukum": "Sayılan suçlarda somut delillere dayanan kuvvetli şüphe varsa ve başka suretle delil elde edilemiyorsa şüpheli veya sanığın kamuya açık yerlerdeki faaliyetleri ve işyeri teknik araçlarla izlenebilir, ses veya görüntü kaydı alınabilir; karar hâkime, gecikmesinde sakınca varsa Cumhuriyet savcısına aittir, savcı kararı 24 saat içinde hâkim onayına sunulur. Karar en çok üç hafta için verilir, gerektiğinde bir hafta daha uzatılabilir; örgüt faaliyeti çerçevesindeki suçlarda hâkim bu sürelere ek olarak her defasında en çok bir hafta, toplam dört haftayı geçmemek üzere uzatabilir; gizli soruşturmacı da görevlendirilmişse bu süreler bir kat artırılır. Bu madde hükümleri kişinin konutunda uygulanamaz (m.140)",
+   "sinavda_boyle_yazarlar": [
+    "“Teknik araçlarla izleme tedbiri, şüphelinin konutunda da uygulanabilir.”",
+    "“Örgüt faaliyeti çerçevesindeki suçlarda teknik araçlarla izleme, bütün uzatmalar dâhil toplam dört haftayı geçemez.”",
+    "“Gecikmesinde sakınca bulunan hâllerde teknik araçlarla izleme kararını kolluk amiri verir.”"
+   ],
+   "dogrusu": [
+    "Teknik araçlarla izleme kişinin konutunda uygulanamaz; yalnız kamuya açık yerlerdeki faaliyetler ve işyeri izlenebilir (m.140/1, m.140/5)",
+    "Örgüt suçlarında hâkim izlemeyi, üç hafta ve bir haftalık uzatmaya ek olarak toplam dört haftayı geçmemek üzere uzatabilir (m.140/3)",
+    "İzleme kararını hâkim, gecikmesinde sakınca varsa Cumhuriyet savcısı verir; savcı kararı 24 saat içinde hâkim onayına sunulur (m.140/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 27,
+  "kart_id": "27-9",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.15 hükmüdür (3 ve 4 üncü maddelerdeki yükümlülüklere aykırılığa idarî para cezası); m.3'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "15"
+   ]
+  }
+ },
+ {
+  "kanun_id": 28,
+  "kart_id": "28-15",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.25 hükmüdür (topluluk içinde suç işleyenleri ve suçluları yakalamak için m.24'teki emir ve ihtarlar gerekmez); m.24'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "25"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-7",
+  "sorun": "eksik_kayit",
+  "aciklama": "Kart m.54/1 (sınır dışı etme kararı alınacaklar) hükmüdür, m.59'a bağlanmıştı. Ayrıca (i) bendindeki 'son karardan sonra Türkiye'de kalma hakkı bulunmayanlar' şartı, (e) bendindeki 'vizesi iptal edilenler', (h) bendindeki 'ihlale teşebbüs edenler' ve (k) bendi (uluslararası kuruluşlarca tanımlanan terör örgütleriyle ilişkili olanlar) hükümde eksikti.",
+  "duzeltme": {
+   "hukum": "Sınır dışı etme kararı alınacaklar: TCK m.59 kapsamında sınır dışı edilmesi gerektiği değerlendirilenler; terör örgütü ya da çıkar amaçlı suç örgütü yöneticisi, üyesi veya destekleyicisi olanlar; giriş, vize ve ikamet işlemlerinde gerçek dışı bilgi ve sahte belge kullananlar; geçimini meşru olmayan yollardan sağlayanlar; kamu düzeni, kamu güvenliği veya kamu sağlığı açısından tehdit oluşturanlar; vize veya vize muafiyeti süresini on günden fazla aşanlar ya da vizesi iptal edilenler; ikamet izni iptal edilenler veya ikamet izni süresini kabul edilebilir gerekçe olmadan on günden fazla ihlal edenler; çalışma izni olmadan çalışanlar; yasal giriş-çıkış hükümlerini ihlal eden ya da ihlale teşebbüs edenler; giriş yasağına rağmen gelenler; uluslararası koruma başvurusu reddedilen, geri çekilen ya da statüsü sona eren veya iptal edilenler gibi, son karardan sonra Türkiye'de kalma hakkı bulunmayanlar; ikamet izni uzatma başvurusu reddedilip on gün içinde çıkmayanlar; uluslararası kurum ve kuruluşlarca tanımlanan terör örgütleriyle ilişkili olduğu değerlendirilenler (m.54/1)",
+   "madde": [
+    "54"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-8",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.55 (sınır dışı etme kararı alınmayacaklar) hükmüdür; m.54'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "55"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-10",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.57/1-2 (yakalama, valiliğe bildirim, 48 saat, idari gözetim) hükmüdür; m.54'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "57"
+   ]
+  }
+ },
+ {
+  "kanun_id": 31,
+  "kart_id": "31-16",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.60/3-c: parası seyahat masrafına yetmeyen yabancının masrafını da Genel Müdürlük karşılar; temel gereksinim tutarı kendisine bırakılır, artanı Hazineye gelir kaydedilir. Doğrusu satırındaki 'Genel Müdürlük ancak hiç parası yoksa öder' yanlıştı; hüküm de bu hâli eksik veriyordu.",
+  "duzeltme": {
+   "hukum": "Geri gönderme merkezlerindeki yabancılar kolluk birimince sınır kapılarına götürülür; merkeze sevk gerekmeyenler Genel Müdürlük taşra teşkilatının koordinesinde kolluk birimlerince götürülür. Seyahat masrafları yabancının kendisince karşılanır: parası yetiyorsa masraf parasından karşılanır, artan kendisine bırakılır; hiç parası yoksa masrafın tamamını Genel Müdürlük karşılar; parası yetmiyorsa masrafı Genel Müdürlük karşılar, parasının temel gereksinim tutarı kendisine bırakılıp artanı Hazineye gelir kaydedilir (parası bu tutarın altındaysa tamamı kendisine bırakılır); masraflar geri ödenmediği sürece yabancının Türkiye'ye girişine izin verilmeyebilir. Pasaportları sınır dışı edilinceye kadar tutulabilir, biletleri paraya çevrilebilir; kalışını veya dönüşünü garanti edenler masrafları ödemekle yükümlüdür; yabancıyı izinsiz çalıştıran işverenin yükümlülüğünde 4817 sayılı Kanunun 21/3 hükmü uygulanır (m.60)",
+   "sinavda_boyle_yazarlar": [
+    "“Sınır dışı edilecek yabancıların seyahat masrafları her hâlde Genel Müdürlükçe karşılanır.”",
+    "“Genel Müdürlük, sınır dışı seyahat masraflarını yalnız yabancının hiç parası yoksa karşılar.”"
+   ],
+   "dogrusu": [
+    "Seyahat masrafları kural olarak yabancının kendisince karşılanır; Genel Müdürlük, parası hiç yoksa ya da yetmiyorsa karşılar (m.60/3)",
+    "Parası yetmeyen yabancının masrafını da Genel Müdürlük karşılar; temel gereksinim tutarı kendisine bırakılır, artanı Hazineye gelir kaydedilir (m.60/3-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 34,
+  "kart_id": "34-13",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.46/2-e (12/2/2026 değişik): sayılanlar dışındaki araçlar ikiden fazla şeritli yolda sağdan ikinci şeridi 'geçme dışında' kullanamaz (e-2) ve 'sola dönme dışında en sağdaki iki şerit dışındaki şeritleri' kullanamaz (e-3). Hükümde 'geçme dışında' istisnası ve e-3 kuralı (örnek soruda sorulan) yoktu; ters yön yasağı da yerleşim dışı bölünmüş yolları kapsar.",
+  "duzeltme": {
+   "hukum": "Trafik sağdan akar; sürücüler gidiş yönüne göre yolun sağından, çok şeritli yollarda hızının gerektirdiği şeritten sürer; en soldaki şeridi sürekli işgal etmez; motosiklet, otomobil, kamyonet, panelvan, minibüs ve otobüs dışındaki araçlar iki şeritli yolda geçme ve dönme dışında sol şeridi, ikiden fazla şeritli yolda geçme dışında sağdan ikinci şeridi, sola dönme dışında da en sağdaki iki şerit dışındaki şeritleri kullanamaz; emniyet şeridi ve banket kaza, arıza, acil yardım, kurtarma, kar mücadelesi, kaza incelemesi, genel güvenlik ve asayiş dışında kullanılamaz; tek yönlü yolda, bölünmüş yolda ve otoyolda ters yönde sürülmez; yaya yolunda araç sürülmez; konvoy veya münferiden diğer araçların geçişini engelleyecek şekilde keyfî durma yasaktır; saldırı amacıyla başka aracı ısrarla takip etmek veya bu amaçla araçtan inmek yasaktır (m.46)",
+   "sinavda_boyle_yazarlar": [
+    "“Sürücüler gidişe ayrılan en soldaki şeridi sürekli olarak kullanabilir.”",
+    "“Kamyonlar ikiden fazla şeridi bulunan yollarda geçme amacıyla da sağdan ikinci şeridi kullanamaz.”",
+    "“Kamyonlar ikiden fazla şeridi bulunan yollarda sola dönmek için dahi en sağdaki iki şerit dışına çıkamaz.”"
+   ],
+   "dogrusu": [
+    "Sürücüler gidişe ayrılan en soldaki şeridi sürekli olarak işgal edemez (m.46/2-d)",
+    "Kamyon gibi araçlar ikiden fazla şeritli yolda sağdan ikinci şeridi geçmek için kullanabilir (m.46/2-e)",
+    "Kamyon gibi araçlar en sağdaki iki şerit dışındaki şeritleri yalnız sola dönerken kullanabilir (m.46/2-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 34,
+  "kart_id": "34-33",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.112 hükmüdür (belge geri alma ve iptalinde sulh ceza mahkemesi; m.51 ve 100 ceza puanında m.6 görevlileri); m.6'ya bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "112"
+   ]
+  }
+ },
+ {
+  "kanun_id": 34,
+  "kart_id": "34-36",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.118 (ceza puanı) hükmüdür; m.36'ya bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "118"
+   ]
+  }
+ },
+ {
+  "kanun_id": 36,
+  "kart_id": "36-15",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.26 (çocuk mahkemesi ve çocuk ağır ceza mahkemesinin görevi) hükmüdür; m.17'ye bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "26"
+   ]
+  }
+ },
+ {
+  "kanun_id": 38,
+  "kart_id": "38-0",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.3/g: güçten düşmüş hayvan tanımı 'bulaşıcı ve salgın hayvan hastalıkları haricinde' kaydıyla başlar (örnek soruda sorulan nokta); hükümde bu kayıt eksikti.",
+  "duzeltme": {
+   "hukum": "Etoloji: bir hayvan türünün doğuştan gelen, kendine özgü davranışlarını inceleyen bilim dalı; ekosistem: canlıların kendi aralarında ve cansız çevreyle ilişkilerini yürüttüğü sistem; evcil hayvan: insan tarafından kültüre alınmış ve eğitilmiş hayvan; sahipsiz hayvan: sahipli hayvanlar dışında kalan evcil hayvan; güçten düşmüş hayvan: bulaşıcı ve salgın hayvan hastalıkları dışında yaşlanma, sakatlanma, yaralanma ve hastalanma gibi nedenlerle fizikî olarak iş yapabilme yeteneğini kaybetmiş binek ve yük hayvanı; yabani hayvan: doğada serbest yaşayan, evcilleştirilmemiş ve kültüre alınmamış omurgalı ve omurgasız hayvan; ev hayvanı: özel ilgi ve refakat amacıyla muhafaza edilen hayvan; sahipli hayvan: sahiplenilen, bakımı, aşıları ve periyodik sağlık kontrolleri yapılan ve Bakanlık veri tabanına kaydedilen ev hayvanı; hayvan bakımevi: Bakanlıktan izinle kurulan, hayvanların sahiplendirilinceye kadar barındırıldığı ve rehabilite edildiği tesis; rehabilitasyon: sahipsiz hayvanların tedavisi, parazit mücadelesi, aşılanması, kısırlaştırılması ve dijital kimliklendirme ile işaretlenmesi; Bakanlık: Tarım ve Orman Bakanlığı (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "“Bir hayvan türünün doğuştan gelen, kendine özgü davranışlarını inceleyen bilim dalı ekolojidir.”",
+    "“Bulaşıcı veya salgın hastalık nedeniyle iş yapamaz hâle gelen binek ve yük hayvanları da güçten düşmüş hayvan sayılır.”"
+   ],
+   "dogrusu": [
+    "Bir hayvan türünün doğuştan gelen, kendine özgü davranışlarını inceleyen bilim dalı etolojidir (m.3/b)",
+    "Güçten düşmüş hayvan tanımına bulaşıcı ve salgın hayvan hastalıkları girmez; yaşlanma, sakatlanma, yaralanma, hastalanma gibi nedenler girer (m.3/g)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 38,
+  "kart_id": "38-9",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.13: yavrulama, gebelik ve süt anneliği dönemlerinde öldürme yasağının istisnaları kanunî istisnalar ile 'tıbbî ve bilimsel gerekçeler' ve gıda amaçlı olmayan önlenemez tehdit içeren acil durumlardır; hükümde tıbbî ve bilimsel gerekçeler yoktu (örnek soruda sorulan nokta). Kart ayrıca m.9'a (deneyler) bağlıydı; içeriği m.12 ve m.13'tür.",
+  "duzeltme": {
+   "hukum": "Kesim; dinî kuralların gerektirdiği özel koşullar dikkate alınarak hayvanı korkutmadan, ürkütmeden, en az acı verecek şekilde, hijyenik kurallara uyularak bir anda ve ehliyetli kişilerce yapılır; kurban kesimine ilişkin hususlar Diyanet İşleri Başkanlığının bağlı olduğu Bakanlıkça çıkarılan yönetmelikle belirlenir (m.12). Bakımevine alınan köpeklerden insan ve hayvanların hayatı ve sağlığı için tehlike teşkil eden ve olumsuz davranışları kontrol edilemeyen, bulaşıcı veya tedavi edilemeyen hastalığı bulunan ya da sahiplenilmesi yasak olanlara 5996 sayılı Kanun m.9/3'teki tedbir uygulanır; yavrulama, gebelik ve süt anneliği dönemlerinde hayvanlar kanunî istisnalar, tıbbî ve bilimsel gerekçeler ile gıda amaçlı olmayan, insan ve çevre sağlığına yönelen önlenemez tehditlerin bulunduğu acil durumlar dışında öldürülemez; öldürme işleminden sorumlu kişi ve kuruluşlar hayvanın ölüsünü usulüne uygun bertaraf eder veya ettirir (m.13)",
+   "sinavda_boyle_yazarlar": [
+    "“Kurban kesimine ilişkin yönetmelik Tarım ve Orman Bakanlığınca çıkarılır.”",
+    "“Yavrulama, gebelik ve süt anneliği dönemlerinde hayvanlar tıbbî ve bilimsel gerekçelerle de öldürülemez.”"
+   ],
+   "dogrusu": [
+    "Kurban kesimine ilişkin yönetmeliği Diyanet İşleri Başkanlığının bağlı olduğu Bakanlık çıkarır (m.12)",
+    "Yavrulama, gebelik ve süt anneliğinde hayvanlar kanunî istisnalar, tıbbî ve bilimsel gerekçeler ve önlenemez tehdit içeren acil durumlar dışında öldürülemez (m.13)"
+   ],
+   "madde": [
+    "12",
+    "13"
+   ]
+  }
+ },
+ {
+  "kanun_id": 39,
+  "kart_id": "39-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.20/e: faaliyet alanını eski hâle getirme yükümlülüğü ÇED süreci tamamlanmadan inşaata başlama ya da faaliyete geçme cezasının ('cezaya konu olan durumlarda') ardından gelir; hüküm bunu ÇED taahhüdüne aykırılığa bağlıyordu. Ayrıca m.20/a-2 cezası katalitik konvertörsüz aracı 'kullanana' değil taşıt sahibine verilir.",
+  "duzeltme": {
+   "hukum": "Egzoz gazı emisyon ölçümü yaptırmayan taşıt sahibine, katalitik konvertör/dizel partikül filtresi olmadan kullanılan taşıtın sahibine, belge olmadan emisyon ölçümü yapan veya belgede tahrifat yapanlara; hava kirliliği yönünden izne tâbi tesisi izinsiz kuran ve işletene, emisyon sınırını aşana; ısıtma kaynaklı kirlilikte toplu ısıtılan konutlarda yöneticiye, ferdî ısıtılanlarda konutu kullanana; hava kirliliğinin ciddi boyuta ulaştığı yerlerde önlem almayana bir kat artırılmış ceza; ÇED süreci tamamlanmadan inşaata başlayana ya da faaliyete geçene proje bedelinin yüzde ikisi oranında ceza ve faaliyet alanını eski hâle getirme yükümlülüğü; ÇED sürecinde verdiği taahhütnameye aykırı davranana her ihlal için ayrı ceza; atık arıtma tesisi kurmayan veya kurup çalıştırmayana yüksek ceza (Marmara havzasında iki kat); gürültü ve titreşimde konut, ulaşım aracı, işyeri ve fabrika-şantiye-eğlence yeri için kademeli ceza; denize petrol, kirli balast, evsel atık su ve katı atık boşaltan tanker ve gemilere groston esasına göre ceza verilir (m.20)"
+  }
+ },
+ {
+  "kanun_id": 39,
+  "kart_id": "39-5",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.26 (adlî nitelikteki cezalar) hükmüdür; m.12'ye bağlanmıştı (m.12 yalnız atıf yapılan bildirim yükümlülüğü). İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "26"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-9",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "Doğrusu satırında atıf m.3/22 yazılmış; fahiş değer artırımı m.3/23'tedir (m.3/22 teşebbüs hükmüdür).",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık suçunun konusu olan eşyanın değeri fahişse verilecek ceza üçte birinden yarısına kadar artırılır.”",
+    "“Kaçakçılık suçunun konusu olan eşyanın değeri pek hafifse verilecek ceza yarısına kadar indirilir.”"
+   ],
+   "dogrusu": [
+    "Eşyanın değeri fahişse ceza yarısından bir katına kadar artırılır (m.3/23)",
+    "Eşyanın değeri hafifse ceza yarısına kadar, pek hafifse üçte birine kadar indirilir (m.3/23)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-20",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.16/1: süre içinde karar verilmezse eşya 'derhal tasfiye edilir' (edilebilir değil); 1 aylık süre 'bozulacak veya tehlikeli eşya' için değil, zarar veya esaslı değer kaybı tehlikesi ya da muhafazanın ciddi külfet oluşturması hâli içindir. Doğrusu satırı ikisini de yanlış veriyordu.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçak şüphesiyle elkonulan eşya hakkında el koyma tarihinden itibaren bir yıl içinde tasfiye kararı verilir.”",
+    "“Süresi içinde tasfiye kararı verilmeyen eşya sahibine iade edilir.”"
+   ],
+   "dogrusu": [
+    "Elkonulan eşya hakkında el koyma tarihinden itibaren 6 ay, zarar tehlikesi veya ciddi muhafaza külfeti varsa 1 ay içinde tasfiye kararı verilir (m.16/1)",
+    "Altı aylık veya bir aylık süre içinde karar verilmezse eşya derhal tasfiye edilir (m.16/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-22",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.18: ilgili gümrük idaresi 'başvurusu üzerine' davaya katılan olarak kabul edilir; Doğrusu satırındaki 'katılma talebi aranmaksızın' yanlıştı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık davalarında gümrük idaresi, katılma başvurusu aranmaksızın davaya kendiliğinden katılan olur.”",
+    "“Kaçakçılık davalarında ilgili gümrük idaresi davada tanık sıfatıyla yer alır.”"
+   ],
+   "dogrusu": [
+    "Mahkeme iddianamenin bir örneğini gümrük idaresine gönderir; gümrük idaresi başvurusu üzerine davaya katılan olarak kabul edilir (m.18)",
+    "İlgili gümrük idaresi, başvurusu üzerine kaçakçılık davasına katılan olarak kabul edilir (m.18)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 41,
+  "kart_id": "41-24",
+  "sorun": "dogrusu_hatali",
+  "aciklama": "m.19/4 yalnız muhbirin kimliğinin (izni yoksa veya ihbar suç oluşturmuyorsa) açıklanamayacağını ve tanık koruma hükümlerinin uygulanacağını söyler; Doğrusu satırındaki 'açıklayan görevli cezalandırılır (m.19-20)' resmî metinde yok. m.20 tutanakları düzenler; kart yanlışlıkla m.20'ye de bağlıydı.",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaçakçılık suçunu ihbar eden muhbirin kimliği, izni aranmaksızın mahkemeye açıklanır.”",
+    "“Kaçakçılığı önlemekle görevliler, operasyon gerektiren olayda göreve başlamadan önce mülkî amirden izin alır.”"
+   ],
+   "dogrusu": [
+    "Muhbirin kimliği izni olmadıkça veya ihbar suç oluşturmadıkça açıklanamaz; muhbir hakkında tanık koruma hükümleri uygulanır (m.19/4)",
+    "Görevliler operasyon gerektiren olayda kanunî görevine başlar ve aynı zamanda mahallin en büyük mülkî amirine bilgi verir (m.19/2)"
+   ],
+   "madde": [
+    "19"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-0",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.2 hükmüdür (haşhaş ekim yerlerini her yıl Cumhurbaşkanı tespit eder, karar en geç 1 Temmuz'a kadar yayımlanır); m.1'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "2"
+   ]
+  }
+ },
+ {
+  "kanun_id": 42,
+  "kart_id": "42-2",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.4 hükmüdür (ekim yapma, tohumun toprağa ekilmesinden hasada kadarki süreç); m.2'ye bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "4"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-2",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.21 hükmüdür (müsadere edilen uyuşturucunun heyet huzurunda imhası); m.20'ye bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "21"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-3",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.23 hükmüdür (kenevir yetiştiriciliği Tarım ve Orman Bakanlığının iznine tabidir); m.21'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "23"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-4",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.23 hükmüdür (izinsiz kenevirin imhası ve masrafın 6183'e göre tahsili); m.21'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "23"
+   ]
+  }
+ },
+ {
+  "kanun_id": 44,
+  "kart_id": "44-5",
+  "sorun": "hukum_hatali",
+  "aciklama": "Başlıktaki '(idari)' yanlış: m.23'e göre izinsiz, izin alanından fazla ya da kayıtlı yer dışında kenevir ekiminin cezası elli günden az olmamak üzere adlî para cezasıdır. Hüküm, kırmızı ve yeşil kutu doğru.",
+  "duzeltme": {
+   "baslik": "İzinsiz / fazla ekim (adlî para cezası)"
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.6/5: ölçüt, kararın Resmî Gazete'de yayımından itibaren bir yıl içinde talep eden devletin soruşturma başlatmamasıdır; 'bilgi vermezse' ya da 'kovuşturma' metinde yok. Talep Değerlendirme Komisyonunca değerlendirilip Cumhurbaşkanınca karara bağlanır (m.6/1).",
+  "duzeltme": {
+   "hukum": "Yabancı devletin malvarlığı dondurma talebi Değerlendirme Komisyonunca değerlendirilir ve Cumhurbaşkanınca karara bağlanır; karşılıklılık ilkesi gözetilir ve talebin gerekçesiyle birlikte gönderilmesi gerekir. Kararın Resmî Gazete'de yayımlandığı tarihten itibaren 1 yıl içinde talep eden devlet soruşturma başlatmazsa karar kaldırılabilir (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "“Yabancı devlet talebiyle verilen dondurma kararı, talep eden devlet altı ay içinde soruşturma başlatmazsa kaldırılabilir.”",
+    "“Yabancı devletin malvarlığı dondurma talebi Adalet Bakanınca karara bağlanır.”"
+   ],
+   "dogrusu": [
+    "Kararın Resmî Gazete'de yayımından itibaren 1 yıl içinde talep eden devlet soruşturma başlatmazsa karar kaldırılabilir (m.6/5)",
+    "Yabancı devletin talebi Değerlendirme Komisyonunca değerlendirilir ve Cumhurbaşkanınca karara bağlanır (m.6/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-7",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.11/1 ve m.12/1 hükmüdür (Resmî Gazete'de yayım, yayımla hukuki sonuç ve tebliğ edilmiş sayılma); m.8 ve m.9'a bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "11",
+    "12"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-8",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart yalnız m.12/3 (30 gün) ve m.12/5 (7 gün) hükmüdür; m.11'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "12"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-9",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.13/1-2: dondurulan malvarlığı üzerinde ortadan kaldırma, tüketme, dönüştürme, transfer, devir, temlik ve sair tasarruflar kural olarak yasaktır; yalnız asgari geçim ya da faaliyetin devamı için m.13/2'de sayılan işlemler Başkanlığın izniyle yapılabilir. Kart 'tasarruf, devir gibi işlemler Başkanlığın izniyle yapılır' diyordu.",
+  "duzeltme": {
+   "baslik": "Yönetim ilgilide, tasarruf yasak; istisnalar izinle",
+   "hukum": "Dondurulan malvarlığının yönetimi ilgili gerçek veya tüzel kişiye aittir; ancak kişi bu malvarlığını ortadan kaldıramaz, tüketemez, dönüştüremez, transfer, devir ve temlik edemez, sair tasarrufta bulunamaz; yalnız kendisinin ve bakmakla yükümlü olduğu yakınlarının asgari geçimi ya da ticari işletme ve tüzel kişinin faaliyetini sürdürmesi için m.13/2'de sayılan işlemler Başkanlığın (MASAK) izniyle yapılabilir (m.13/1-2)",
+   "sinavda_boyle_yazarlar": [
+    "“Malvarlığı dondurulan kişinin malvarlığının yönetimi Başkanlığa geçer.”",
+    "“Malvarlığı dondurulan kişi, Başkanlığa bildirmek şartıyla malvarlığını devir ve temlik edebilir.”"
+   ],
+   "dogrusu": [
+    "Dondurulan malvarlığının yönetimi ilgili gerçek veya tüzel kişiye aittir (m.13/1)",
+    "Dondurulan malvarlığı kural olarak devredilemez, tüketilemez; asgari geçim veya faaliyetin devamı için sayılan işlemler Başkanlık izniyle yapılabilir (m.13/1-2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-10",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.13/3 ve m.13/5 hükmüdür (kamuya zorunlu ödemeler, ödemenin banka hesabına yapılması); m.14'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "13"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-11",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.15/2: malvarlığı dondurulan kişi, kuruluş veya organizasyonlara (ve bunların kontrolündeki ya da adına hareket edenlere) bilerek ve isteyerek fon sağlayan, toplayan ya da finansal hizmet veren cezalandırılır; ceza 1-3 yıl hapis VEYA adlî para cezasıdır. Kart 'dondurulan malvarlığından fon sağlayan' ve yalnız 'hapis' diyordu.",
+  "duzeltme": {
+   "hukum": "Dondurma kararının gereğini yerine getirmeyen veya bunda ihmal ya da gecikme gösterene 6 aydan 2 yıla kadar hapis veya adlî para cezası verilir (m.15/1); malvarlığı dondurulan kişi, kuruluş veya organizasyonların yararına, bunların kontrolündeki kuruluşlara ya da bunların adına veya hesabına hareket edenlere bilerek ve isteyerek fon sağlayan, toplayan ya da finansal hizmet verene 1 yıldan 3 yıla kadar hapis veya adlî para cezası verilir (m.15/2); fail tüzel kişinin organı, temsilcisi ya da faaliyeti çerçevesinde görevliyse tüzel kişiye ayrıca idarî para cezası verilir (m.15/3)",
+   "sinavda_boyle_yazarlar": [
+    "“Malvarlığı dondurulan kişiye bilerek fon sağlayana altı aydan iki yıla kadar hapis veya adlî para cezası verilir.”",
+    "“Dondurma kararının gereğini yerine getirmekte gecikme gösterene bir yıldan üç yıla kadar hapis cezası verilir.”"
+   ],
+   "dogrusu": [
+    "Malvarlığı dondurulan kişi veya kuruluşa bilerek ve isteyerek fon sağlayana 1 yıldan 3 yıla kadar hapis veya adlî para cezası verilir (m.15/2)",
+    "Dondurma kararının gereğini yerine getirmeyen veya bunda ihmal ya da gecikme gösterene 6 aydan 2 yıla kadar hapis veya adlî para cezası verilir (m.15/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-12",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.9/3-4 hükmüdür (Değerlendirme Komisyonu en az beş oyla karar verir, sekretarya Başkanlıkta); m.3 ve m.16'ya bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "9"
+   ]
+  }
+ },
+ {
+  "kanun_id": 45,
+  "kart_id": "45-13",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.8/4 hükmüdür (araştırma işlemleri gizlilik esaslarına uygun yürütülür); m.18'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "8"
+   ]
+  }
+ },
+ {
+  "kanun_id": 46,
+  "kart_id": "46-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.3/a-7: ören yeri tanımı 'bir bütünlük gösteren yer' diye değil, '…dikkate değer, kısmen inşa edilmiş, insan emeği kültür varlıkları ile tabiat varlıklarının birleştiği alanlar' diye biter. Sit tanımının ikinci yarısı (kültür varlıklarının yoğun bulunduğu, önemli tarihî olayların geçtiği yerler ve tabiat özellikleriyle korunması gerekli alanlar) da eksikti.",
+  "duzeltme": {
+   "hukum": "Kültür varlığı: tarih öncesi ve tarihî devirlere ait bilim, kültür, din ve güzel sanatlarla ilgili ya da bu devirlerde sosyal yaşama konu olmuş, bilimsel ve kültürel açıdan özgün değer taşıyan yer üstünde, yer altında veya su altındaki bütün taşınır ve taşınmaz varlıklar; tabiat varlığı: jeolojik devirlerle tarih öncesi ve tarihî devirlere ait olup ender bulunmaları veya özellikleri ve güzellikleri bakımından korunması gerekli yer üstü, yer altı veya su altı değerleri; sit: tarih öncesinden günümüze kadar gelen çeşitli medeniyetlerin ürünü olup yaşadıkları devirlerin sosyal, ekonomik, mimari ve benzeri özelliklerini yansıtan kent ve kent kalıntıları, kültür varlıklarının yoğun bulunduğu, sosyal yaşama konu olmuş veya önemli tarihî olayların geçtiği yerler ve tespit edilmiş tabiat özellikleriyle korunması gerekli alanlar; ören yeri: tarih öncesinden günümüze kadar gelen çeşitli uygarlıkların ürünü olup topoğrafik olarak tanımlanabilecek derecede belirgin ve mütecanis özelliklere sahip, tarihsel, arkeolojik, sanatsal, bilimsel, sosyal veya teknik bakımlardan dikkate değer, kısmen inşa edilmiş, insan emeği kültür varlıkları ile tabiat varlıklarının birleştiği alanlar (m.3)",
+   "sinavda_boyle_yazarlar": [
+    "“Yaşadıkları devrin sosyal, ekonomik ve mimari özelliklerini yansıtan kent ve kent kalıntıları ören yeri olarak tanımlanır.”",
+    "“Ören yeri, yalnız insan emeğiyle inşa edilmiş kültür varlıklarının bulunduğu alanlardır; tabiat varlıkları bu tanıma girmez.”"
+   ],
+   "dogrusu": [
+    "Medeniyetlerin ürünü olup devrinin sosyal, ekonomik, mimari özelliklerini yansıtan kent ve kent kalıntıları sit tanımına girer (m.3/a-3)",
+    "Ören yeri; kısmen inşa edilmiş, insan emeği kültür varlıkları ile tabiat varlıklarının birleştiği alanlardır (m.3/a-7)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 47,
+  "kart_id": "47-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.6: 'Soruşturma en geç 15 gün içinde tamamlanarak karara bağlanır'; başlangıç anı ('başvurudan itibaren') metinde yok. 15 gün kuralı m.6'da olduğundan kart m.6'ya bağlandı (m.6'nın örnek sorusu tam bu kuralı soruyor), yerinde soruşturma kısmı için m.5 ikinci sırada kaldı.",
+  "duzeltme": {
+   "hukum": "Başvuru üzerine karar vermeye yetkili mülkî amir (vali, görevlendireceği vali yardımcısı veya kaymakam) ya da görevlendireceği bir veya birkaç memur yerinde soruşturma yapar (m.5); soruşturma en geç 15 gün içinde tamamlanarak karara bağlanır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "“Taşınmaz mal zilyetliğine tecavüz başvurusunda soruşturma en geç 30 gün içinde tamamlanarak karara bağlanır.”",
+    "“Taşınmaz mal zilyetliğine tecavüz başvurusunda yerinde soruşturmayı yalnız Cumhuriyet savcısı yapabilir.”"
+   ],
+   "dogrusu": [
+    "Soruşturma en geç 15 gün içinde tamamlanarak karara bağlanır (m.6)",
+    "Başvuru üzerine karar vermeye yetkili mülkî amir veya görevlendireceği memurlar yerinde soruşturma yapar (m.5)"
+   ],
+   "madde": [
+    "6",
+    "5"
+   ]
+  }
+ },
+ {
+  "kanun_id": 48,
+  "kart_id": "48-0",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.2/1-d 'özel hukuk kişilerine ait olan lokantalar ile kahvehane, kafeterya, birahane gibi eğlence hizmeti verilen işletmelerde' der; hükümdeki 'kapalı alanları' ve 'nargile içilen yerler' ifadeleri metinde yok. (b) bendi de birden çok kişinin girebileceği özel hukuk binalarının (konutlar hariç) kapalı alanlarıdır.",
+  "duzeltme": {
+   "hukum": "Kamu hizmet binalarının kapalı alanlarında; koridorları dâhil, birden çok kişinin girebileceği özel hukuk kişilerine ait eğitim, sağlık, üretim, ticaret, sosyal, kültürel, spor, eğlence ve benzeri amaçlı binaların (konutlar hariç) kapalı alanlarında; hususi araçların sürücü koltuklarında ve taksi dâhil karayolu, demiryolu, denizyolu ve havayolu toplu taşıma araçlarında; özel hukuk kişilerine ait lokantalar ile kahvehane, kafeterya, birahane gibi eğlence hizmeti verilen işletmelerde tütün ürünü tüketilemez (m.2/1)"
+  }
+ },
+ {
+  "kanun_id": 56,
+  "kart_id": "56-11",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.16 son cümle: el koyma yasağı şüpheli veya sanık ile 'CMK m.45 ve 46'ya göre tanıklıktan çekinebilecek kimseler' arasındaki mektup ve belgeler içindir; hükümdeki 'tanıklıktan çekinebilecek yakınları' ifadesi dardı (m.46 kapsamındakiler de girer).",
+  "duzeltme": {
+   "hukum": "Hakkında arama yapılan kimsenin belge ve kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime aittir; kolluk suçla ilgisi olup olmadığını anlamak için incelemeksizin bakabilir; şüphelenirse ambalajlayıp mühürler, zilyet ya da temsilcisi kendi mührünü koyabilir veya imzasını atabilir; mühür kaldırma ve incelemede zilyet, temsilci, müdafi veya vekil hazır bulunmak üzere çağrılır; suçla ilgisiz belgeler ilgilisine geri verilir; şüpheli veya sanık ile CMK m.45 ve 46'ya göre tanıklıktan çekinebilecek kimseler arasındaki mektup ve belgelere, bu kimselerin nezdinde bulundukça el konulamaz (m.16)"
+  }
+ },
+ {
+  "kanun_id": 62,
+  "kart_id": "62-12",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.43/2 yalnız çalıştırılan kişinin AYRILIŞININ 24 saat içinde kolluğa bildirilmesini yazar; hükümdeki 'işe girişini' ibaresi resmî metinde yok.",
+  "duzeltme": {
+   "hukum": "Her türlü konaklama yeri işleticisi yatacak kişilerin (TC vatandaşı veya yabancı; ücretli-ücretsiz, gündüz-gece) kimlik ve geliş-gidiş kayıtlarını günü gününe tutup kolluk denetimine hazır bulundurur; işletmeci veya mesul müdür sürekli ya da geçici çalıştırılan kişinin ayrılışını, 1774 sayılı Kanun yönetmeliğindeki kimlik bildirme belgesiyle 24 saat içinde bağlı bulunduğu kolluğa bildirir; kolluğa bildirilerek çalıştırılana işletici veya mesul müdür kimlik belgesi verir, belge istendiğinde kolluğa gösterilir (m.43)"
+  }
+ },
+ {
+  "kanun_id": 7,
+  "kart_id": "7-5",
+  "sorun": "madde_hatali",
+  "aciklama": "Madde alanına 3713 m.4'ün atıf yaptığı başka mevzuatın madde numaraları (6831 m.110, Anayasa m.120, 2863 m.68) girilmişti; kart 3713 m.4 (terör suçu sayılan suçlar) hükmüdür. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "4"
+   ]
+  }
+ },
+ {
+  "kanun_id": 6,
+  "kart_id": "6-24",
+  "sorun": "madde_hatali",
+  "aciklama": "Madde alanına m.18'in fıkra numaraları (5, 6, 7) ayrı madde diye girilmişti; kart yalnız m.18 (mülkiyetin kamuya geçirilmesi) hükmüdür. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "18"
+   ]
+  }
+ },
+ {
+  "kanun_id": 59,
+  "kart_id": "59-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.6: 'Bu örnekler Cumhuriyet savcısının huzurunda … derhâl yok edilerek tutanağa geçirilir' cümlesi, hâkimin onaylamadığı (hükümsüz kalan) kararla alınan örnekler içindir; hükümdeki '(işi bitince)' ibaresi metinde yok ve bütün örnekler işi bitince yok edilir gibi okunuyordu.",
+  "duzeltme": {
+   "hukum": "Şüpheli veya sanığın vücudundan kan veya benzeri biyolojik örnekler ile saç, tükürük, tırnak gibi örnekler alınmasına savcı ya da mağdurun istemiyle veya re'sen hâkim/mahkeme, gecikmesinde sakınca bulunan hâllerde savcı karar verir; savcı kararı 24 saat içinde hâkim veya mahkeme onayına sunulur, hâkim 24 saat içinde karar verir; onaylanmayan kararlar hükümsüz kalır, elde edilen deliller kullanılamaz ve bu örnekler savcı huzurunda uygun usulle derhâl yok edilip tutanağa geçirilir; müdahale tabip veya tabip gözetiminde sağlık mesleği mensubunca yapılır; kişinin sağlığına açık ve öngörülebilir zarar tehlikesi bulunmamalıdır; üst sınırı 2 yıldan az hapis gerektiren suçlarda örnek alınamaz; özel kanunlardaki alkol muayenesi ve kan örneği hükümleri saklıdır (m.6)",
+   "sinavda_boyle_yazarlar": [
+    "“Üst sınırı 3 yıldan az hapis cezası gerektiren suçlarda örnek alınamaz.”",
+    "“Hâkimin onaylamadığı kararla alınan örneklerden elde edilen deliller, Cumhuriyet savcısının takdiriyle kullanılabilir.”"
+   ],
+   "dogrusu": [
+    "Üst sınırı 2 yıldan az hapis cezası gerektiren suçlarda kan, saç, tükürük, tırnak gibi örnekler alınamaz (m.6)",
+    "Onaylanmayan kararlar hükümsüz kalır, elde edilen deliller kullanılamaz ve örnekler savcı huzurunda derhâl yok edilir (m.6)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 60,
+  "kart_id": "60-9",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.14/2: ihmal veya istismara uğrayan, uyum sorunu yaşayan ve rehabilitasyona ihtiyacı tespit edilen çocuklar 'rehabilitasyonu sağlanıncaya kadar' diğer çocuklarla aynı ortamda bakılmaz; hükümde bu süre kaydı (ve uyum sorunu yaşayanlar) eksikti, yasak süresizmiş gibi okunuyordu.",
+  "duzeltme": {
+   "hukum": "Bakımından sorumlu kimse görevini yerine getiremiyorsa Aile Bakanlığı il/ilçe müdürlüklerince çocuk resmî veya özel bakım yurduna yerleştirilir ya da koruyucu aile hizmetinden yararlandırılır; ihmal veya istismara uğrayan, psiko-sosyal sorunları nedeniyle uyum sorunu yaşayan ve rehabilitasyona ihtiyacı tespit edilen çocuklar, rehabilitasyonları sağlanıncaya kadar korunma ihtiyacı olan diğer çocuklarla aynı ortamda bakılmaz; kolluk çocuğu ilk sağlık kontrolü yapıldıktan sonra teslim eder; bulaşıcı hastalık tedavisi ve sağlık giderleri Sağlık Bakanlığınca karşılanır; yabancı çocuk için konsoloslukla irtibat sağlanır (m.14)",
+   "sinavda_boyle_yazarlar": [
+    "“Kolluk, bakım tedbiri kararı verilen çocuğu sağlık kontrolü yapılmadan doğrudan il veya ilçe müdürlüğüne teslim eder.”",
+    "“Rehabilitasyona ihtiyacı olan çocuklar, korunma ihtiyacı olan diğer çocuklarla hiçbir zaman aynı ortamda bakılamaz.”"
+   ],
+   "dogrusu": [
+    "Kolluk, bakım tedbiri kararı verilen çocuğu ilk sağlık kontrolü yapıldıktan sonra il veya ilçe müdürlüğüne teslim eder (m.14/4)",
+    "Rehabilitasyona ihtiyacı olan çocuklar, rehabilitasyonları sağlanıncaya kadar diğer çocuklarla aynı ortamda bakılmaz (m.14/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-2",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.8: personel listesi ve mali sorumluluk sigortası poliçeleri 'personelin göreve başladığı tarihten itibaren' 15 gün içinde (geçici veya acil izinlerde müracaat sırasında) valiliğe verilir; hükümdeki 'göreve başlamadan itibaren' ibaresi başlamadan önce gibi okunuyordu.",
+  "duzeltme": {
+   "hukum": "Başvuru valiliğe yapılır; hizmetin konusu, yöntemi, azami personel sayısı, silah ve teçhizatın miktarı ve niteliği belirtilir; valilik incelemesinden sonra komisyon karar verir, kararlar valinin onayına sunulur; başvurular en geç 10 iş günü içinde sonuçlandırılır; genel güvenlikle korunma mümkünse veya kamu hürriyetleri için sakıncalıysa izin verilmez (gerekçeli); talep hâlinde il genelinde verilen kadronun %10'unu aşmayacak geçici personel istihdam izni verilebilir; personel listesi ve mali sorumluluk sigortası poliçelerinin birer sureti personelin göreve başladığı tarihten itibaren 15 gün içinde (geçici veya acil izinlerde müracaat sırasında) valiliğe verilir; işe başlama ve ayrılma bildirimleri 15 gün içinde valiliğe yapılır (m.8)",
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik personelinin listesi ve sigorta poliçeleri, personel göreve başlamadan en az on beş gün önce valiliğe verilir.”",
+    "“Komisyonun özel güvenlik izni verilmesi veya verilmemesi yönündeki kararları İçişleri Bakanının onayına sunulur.”",
+    "“Özel güvenlik izni için yapılan başvurular en geç otuz iş günü içinde sonuçlandırılır.”"
+   ],
+   "dogrusu": [
+    "Personel listesi ve mali sorumluluk sigortası poliçeleri, personelin göreve başladığı tarihten itibaren 15 gün içinde valiliğe verilir (m.8)",
+    "Komisyonun özel güvenlik izni verilmesi ya da verilmemesi yönündeki kararları valinin onayına sunulur (m.8)",
+    "Özel güvenlik izni için yapılan başvurular en geç 10 iş günü içinde sonuçlandırılır (m.8)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-5",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.21: kimlik kartları EGM'ce düzenlenebileceği gibi Bakanlıkça uygun görülecek kamu kurum ve kuruluşları ile kanunla kurulan tüzel kişilere de yaptırılabilir; hüküm yalnız EGM'yi sayıyordu.",
+  "duzeltme": {
+   "hukum": "Kartta ad-soyad ile yönetici ya da silahlı veya silahsız olduğu yazılır; görevli kartı görev alanı ve süresi içinde herkesin görebileceği şekilde yakasında taşır; kayıpta işveren derhal Bakanlığa/valiliğe bildirir; kart, 5 yılda bir yenilenen güvenlik soruşturması ve arşiv araştırması olumlu olur ve yenileme eğitimi sertifikası ibraz edilirse ruhsat harcı alınmaksızın yeniden düzenlenir; kartlar valiliklerin elektronik sistemle gönderdiği bilgilere göre EGM'ce düzenlenebileceği gibi Bakanlıkça uygun görülecek kamu kurum ve kuruluşları ile kanunla kurulan tüzel kişilere de yaptırılabilir; kart adrese posta ile gönderilir (m.21)",
+   "sinavda_boyle_yazarlar": [
+    "“Özel güvenlik kimlik kartı her beş yılda bir ruhsat harcı ödenerek yeniden düzenlenir.”",
+    "“Özel güvenlik kimlik kartlarını yalnız Emniyet Genel Müdürlüğü düzenleyebilir.”"
+   ],
+   "dogrusu": [
+    "Kimlik kartı 5 yılda bir ruhsat harcı alınmaksızın yeniden düzenlenir (m.21)",
+    "Kartlar EGM'ce düzenlenebileceği gibi Bakanlıkça uygun görülen kamu kurumlarına ve kanunla kurulan tüzel kişilere de yaptırılabilir (m.21)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 55,
+  "kart_id": "55-0",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.3 (tanımlar: adli kolluk görevlisi, adli kolluk sorumlusu, en üst dereceli kolluk amiri) hükmüdür; m.7'ye bağlanmıştı (m.7 diğer kolluk birimlerinin adli kolluk yükümlülüğüdür). İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "3"
+   ]
+  }
+ },
+ {
+  "kanun_id": 54,
+  "kart_id": "54-15",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.44 (denetimin kapsamı) ve m.45 (denetim sonucunun izlenmesi) hükmüdür; madde alanındaki 19 ve 20, m.45'in atıf yaptığı 5188 sayılı Kanunun maddeleridir, yönetmeliğin değil. Kırmızı ve yeşil kutu m.45'teki asgari 7 gün süresini sorduğu için m.45 öne alındı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "45",
+    "44"
+   ]
+  }
+ },
+ {
+  "kanun_id": 52,
+  "kart_id": "52-6",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.16 (belediyelerin görevleri) yalnız 'halkın trafik eğitimine katkıda bulunmak üzere çocuk trafik eğitim parkları yapmak ve yapılmasına izin vermek' der; 'parkların esaslarını MEB belirler' bilgisi m.16'da ve elimizdeki resmî metnin hiçbir maddesinde yok. Kart, doğrulanabilen m.16 içeriğine indirildi.",
+  "duzeltme": {
+   "baslik": "Çocuk trafik eğitim parkları — belediye görevi",
+   "hukum": "Belediye trafik hizmet birimleri, halkın trafik eğitimine katkıda bulunmak üzere çocuk trafik eğitim parkları yapar ve yapılmasına izin verir; açık ve kapalı otopark ile alt ve üst geçit yapar, yaptırır, işletir ve işletilmesine izin verir. Belediyeler kendilerine verilen hizmetlerin denetimi dışında trafiği denetleyemez ve hiçbir hâlde trafik suç ve ceza tutanağı düzenleyemez (m.16)",
+   "sinavda_boyle_yazarlar": [
+    "“Belediyeler çocuk trafik eğitim parkı yapamaz, yalnız yapılmasına izin verebilir.”",
+    "“Belediye trafik birimleri, trafik denetimi sırasında trafik suç ve ceza tutanağı düzenleyebilir.”"
+   ],
+   "dogrusu": [
+    "Belediyeler halkın trafik eğitimine katkı için çocuk trafik eğitim parkları yapar ve yapılmasına izin verir (m.16)",
+    "Belediyeler görevli oldukları hizmetlerin denetimi dışında trafiği denetleyemez ve hiçbir hâlde trafik suç ve ceza tutanağı düzenleyemez (m.16)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-3",
+  "sorun": "hukum_hatali",
+  "aciklama": "m.10/b: 3160 sayılı Kanuna göre şehitlik tazminatında yalnız yetkili makam onayı, sakatlık tazminatında ise onay ile sakatlık derecesini gösteren rapor aranır; hüküm raporu şehitliğe de yazıyordu (yalnız bu parça değiştirildi). Madde alanındaki '86' yönetmeliğin değil 3201 sayılı Kanunun maddesidir; çıkarıldı.",
+  "duzeltme": {
+   "hukum": "Aylık: Aylık Bordrosu (örnek 8/8-A) + Personel Bildirimi (örnek 9); ilk atamada atama onayı + işe başlama yazısı; naklen atamada + Personel Nakil Bildirimi (örnek 10), askerî personelde Ayrılış ve Katılış Bildirimi (10/A); terfide terfi onayı (otomatik kademede aranmaz); görevden uzaklaştırmada onay; iadede onay + başlama; açıkta kalınan sürelerin aylığında harcama talimatı; vekâlet ve ikinci görev onayları; malî yılın ilk ayında kıdem aylığına esas hizmet süreleri listesi; TSK, JGK ve SGK okullarından mezunların atama onayları ikinci aya ait ödeme belgesine (m.9); zam-tazminat: yabancı dil tazminatında sınav sonuç belgesi; 3160 uçuş tazminatları (yetkili makam onayı; yıpranmada bakan onayı; şehitlik tazminatında yalnız yetkili makam onayı; sakatlık tazminatında onay + sakatlık derecesini gösterir rapor); 2330 nakdi tazminatta yetkili makamlarca onanmış nakdi tazminat komisyon kararı; sıkıyönetim zammı bordrosu (örnek 11); 657 ek tazminatlarında Başbakan onayı; 2629 ve 926 uçuş-dalış-atlayış tazminatlarında Uçuş, Dalış ve Atlayış Hizmetleri Tazminatı Bordrosu (örnek 12); aylıkla ödenmeyen tazminatlar Çeşitli Ödemeler Bordrosunda (örnek 13) (m.10); Başbakan-bakan ödenekleri Aylık Bordrosuyla (m.11); sosyal yardımlar: evlenme ve aile yardımında Aile Yardımı Bildirimi (örnek 14) (ilk işe girişte, değişiklikte ve nakilde yenilenir); doğum ve ölüm yardımında ilgilinin dilekçesi (ölü doğumda rapor); tayın bedelinde ilgili aya ait tutarın tespitini gösteren yazı (2155); giyecek yardımında yetkili makam onayı + Çeşitli Ödemeler Bordrosu + miktar kararı (m.12); ek çalışma: Çeşitli Ödemeler Bordrosu + ek ders ücreti çizelgesi (örnek 15/15-A) ve onaylar; fazla çalışmada saat ücreti onayı + çizelge; huzur hakkında onay + toplantı listesi; konferansta harcama talimatı + verildiğine dair yazı (m.13); ödül-ikramiye: Çeşitli Ödemeler Bordrosu; 657 ödülünde bakan onayı (ek ödülde Başbakan); 926 ve TSK Ödül Yönetmeliği ödüllerinde değerlendirme kurulu listesi + ödül ödeneğini idare eden makam onayı; kaçakçılık ikramiyelerinde Kaçak Eşya Müsadir İkramiyeleri Cetveli (örnek 16) (bordro aranmaz), harcama talimatı, değer tespit tutanağı, kesinleşmiş mahkeme kararı; silah-mühimmatta sahipli yakalamada ilk dönem savcılık yazısı, ikinci dönem kesinleşmiş karar, sahipsizde zor alım kararı; uyuşturucuda ekspertiz raporu; 3201 m.86 mükâfatında İçişleri Bakanı onaylı seçim komisyonu kararı; 1481 ödüllerinde ödül komisyonu kararı + İçişleri Bakanı onayı; 2863 ikramiyelerinde harcama talimatı + bedel yazısı (m.14); sözleşmeli personel: Aylık Bordrosu + Personel Bildirimi (yurt dışında örnek 18) + işe başlama yazısı + sözleşme (ilk ödemede) (m.15); işçi: Personel Bildirimi + İşçi Hareketleri Onayı (örnek 20) + İşçi Ücret Bordrosu (örnek 19); kıdem tazminatında harcama talimatı, hizmet cetveli, hesap belgesi, askerlik borçlanması, önceki kıdem belgesi, emeklilik belgesi; ihbar tazminatı; toplu sözleşmenin onaylı iki nüshası dönem başında muhasebe birimine (m.16); geçici personel: 30 iş gününü aşmayan vizesiz işçilerde harcama talimatı + İşçi Ücret Bordrosu; 4/c ve çırak-stajyerlerde Çeşitli Ödemeler Bordrosu + puantaj; 3308 primlerinde Aylık Sigorta Primleri Bildirgesi + liste (m.17); er-erbaş: harçlıklarda Er ve Erbaş Harçlıkları Özet Bordrosu (örnek 21); jandarma er-erbaş harçlık ve tayın bedelinin avans olarak ödenmesinde er-erbaş sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı; avans mahsubunda ve kazandan beslenemeyen er-erbaşlar ile ordu hemşire-ebe-hastabakıcı tayın bedellerinde Dağıtım Bordrosu (örnek 22) + tayın bedeli tespit yazısı; dinlenme ve hava değişimi alan er-erbaşta tayın bedeli tespit yazısı + sağlık kurulu raporu (zamanında düzenlenmemişse hekim raporu/taburcu belgesi, sonraki rapor harcama biriminde) (m.18); öğrenci: askerî öğrenci harçlıklarında Askerî Öğrenci Harçlıkları Bordrosu (örnek 23); hava değişimli askerî öğrenci tayın bedelinde tespit yazısı + sağlık kurulu raporu; burs-harçlıkta Öğrenci Giderleri Bordrosu (örnek 24); KYK kredilerinde onaylı liste; kitap-kırtasiye faturaları (okul idaresince onanır); pansiyon cetvelleri; yabancı uyruklu burs bordrosu (örnek 25); yurt dışı öğrenci bordrosu (25/A) + varış belgesi (m.19); tedavi: eczanelere sevk belgesi + reçete (karekodlu; e-reçetede aranmaz) + döküm listesi + fatura, yıllık anlaşma muhasebe biriminde; personelin karşıladığı giderlerde sevk + reçete + fatura (yurt dışı ilaçta fatura yoksa kupür, o da yoksa Sağlık Bakanlığı fiyatı); TEB ithal ilaçları; sağlık kurumlarına sevk + fatura + yatan hastada epikriz; subay-astsubay ve emeklileri ile aileleri için TSK İç Hizmet Yönetmeliği sağlık işleri belgeleri; aile fertlerinde sevk belgesi aranmaz (m.20); cenaze: kurum/belediyece kaldırılırsa fatura; yakınlarınca kaldırılırsa fatura/perakende satış fişi; yurt dışında ölenlerde misyon şefliği onaylı tercümeler; subay-astsubaylarda İç Hizmet Yönetmeliği belgeleri (m.21)",
+   "madde": [
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ]
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-4",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.22/b: denetim elemanlarında kira sözleşmesi yalnız özel şahıslardan ev veya pansiyon kiralanmışsa (ilk ödemede aslı, sonra onaylı örneği), banka makbuzu ise yalnız kira banka hesabına yatırılmışsa aranır; hüküm ikisini koşulsuz yazıyordu (yalnız bu parça değiştirildi).",
+  "duzeltme": {
+   "hukum": "Yurt içi geçici görev: görevlendirme yazısı veya harcama talimatı + Yurtiçi/Yurtdışı Geçici Görev Yolluğu Bildirimi (örnek 27) + yatacak yer faturası; denetim elemanlarında görevlendirme yazısı aranmaz: bildirim + yatacak yer faturası; özel şahıstan ev veya pansiyon kiralanmışsa ilk ödemede kira sözleşmesinin aslı, sonrakilerde onaylı örneği; kira banka hesabına yatırılmışsa ayrıca banka makbuzu (m.22); yurt içi sürekli görev: atamalarda atama onayı, diğer hâllerde harcama talimatı + Sürekli Görev Yolluğu Bildirimi (örnek 28) + resmî mesafe haritasında olmayan yerler için onaylı mesafe cetveli; emekli-terhis yedek subay tazminatlarında yetkili makam onayı (m.23); yolluk karşılığı tazminatlar: seyyar görev tazminatında Çeşitli Ödemeler Bordrosu + mali hizmetler birimince onaylı seyyar görev dağılım listesi; arazi tazminatında bordro; seyahat kartı (tahsildar, mutemet, tebliğ memuru, mübaşir gibi memuriyet mahallinde gezici görev yapanlar) onay + taşıt işleten kurumun faturası + onaylı personel listesi; listeler malî yılın ilk ödemesinde (m.24); yurt dışı geçici görev: görevlendirme/harcama talimatı + örnek 27 + yatacak yer faturası ve onaylı tercümesi (m.25); yurt dışı sürekli görev: atama onayı/harcama talimatı + örnek 28 (m.26); diğer: başka yol/araç zorunluluğunda yetkili makam onayı veya rapor; uçakla seyahatte yolcu bileti (kullanılmayan bilette gerçekleşen ücret belgesi; yabancı heyetlere verilen biletlerde kurumca karşılandığını belirten belge); taksi (belediye hudutları içi hariç) fatura/fiş; avansla yollukta görevlendirme yazısı/harcama talimatı, sürekli görevde atama onayı; sınav-kurs katılım belgesi; 6245 nedeniyle yola devam edememede mülki/askerî merci belgesi; atamadan vazgeçmede onay + tazminat cetveli + biletler; geçici görevden vazgeçmede yazı + biletler; tedavi yolluğunda sevk belgesi (refakat gerekiyorsa belge üzerinde); toplu seyahatlerde Toplu Seyahatler Yolluk Bildirimi (örnek 29) (m.27)"
+  }
+ },
+ {
+  "kanun_id": 143,
+  "kart_id": "143-4",
+  "sorun": "hukum_hatali",
+  "aciklama": "39-4 ile aynı hata (2872 m.20/e): faaliyet alanını eski hâle getirme yükümlülüğü ÇED süreci tamamlanmadan inşaata başlama ya da faaliyete geçme cezasının ardından gelir, ÇED taahhüdüne aykırılığa bağlanmıştı; ayrıca m.20/a-2 cezası katalitik konvertörsüz aracı kullanana değil taşıt sahibine verilir. Hüküm 39-4'ün düzeltilmiş hâliyle aynı yapıldı.",
+  "duzeltme": {
+   "hukum": "Egzoz gazı emisyon ölçümü yaptırmayan taşıt sahibine, katalitik konvertör/dizel partikül filtresi olmadan kullanılan taşıtın sahibine, belge olmadan emisyon ölçümü yapan veya belgede tahrifat yapanlara; hava kirliliği yönünden izne tâbi tesisi izinsiz kuran ve işletene, emisyon sınırını aşana; ısıtma kaynaklı kirlilikte toplu ısıtılan konutlarda yöneticiye, ferdî ısıtılanlarda konutu kullanana; hava kirliliğinin ciddi boyuta ulaştığı yerlerde önlem almayana bir kat artırılmış ceza; ÇED süreci tamamlanmadan inşaata başlayana ya da faaliyete geçene proje bedelinin yüzde ikisi oranında ceza ve faaliyet alanını eski hâle getirme yükümlülüğü; ÇED sürecinde verdiği taahhütnameye aykırı davranana her ihlal için ayrı ceza; atık arıtma tesisi kurmayan veya kurup çalıştırmayana yüksek ceza (Marmara havzasında iki kat); gürültü ve titreşimde konut, ulaşım aracı, işyeri ve fabrika-şantiye-eğlence yeri için kademeli ceza; denize petrol, kirli balast, evsel atık su ve katı atık boşaltan tanker ve gemilere groston esasına göre ceza verilir (m.20)"
+  }
+ },
+ {
+  "kanun_id": 99,
+  "kart_id": "99-7",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.63-69 (ortak ve son hükümler) hükmüdür; madde alanındaki '22', m.63'ün atıf yaptığı 4734 sayılı Kanunun 22/d bendidir. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "63",
+    "64",
+    "65",
+    "66",
+    "67",
+    "68",
+    "69"
+   ]
+  }
+ },
+ {
+  "kanun_id": 143,
+  "kart_id": "143-5",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.26 (adlî nitelikteki cezalar) hükmüdür; m.12'ye bağlanmıştı (39-5 ile aynı). İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "26"
+   ]
+  }
+ },
+ {
+  "kanun_id": 82,
+  "kart_id": "82-16",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart m.10 (yönetmelik, saymanlığın ödemeyi geciktirememesi, engellilik tazminatında 6 derece ve %10 indirim) hükmüdür; m.3'e bağlanmıştı. İçerik doğru.",
+  "duzeltme": {
+   "madde": [
+    "10"
+   ]
+  }
+ },
+ {
+  "kanun_id": 122,
+  "kart_id": "122-1",
+  "sorun": "eksik_kayit",
+  "aciklama": "m.15/5: 21/b-c-f kapsamındaki mal alımlarında sözleşme yapılmaması için malın 'sözleşme YAPMA süresi içinde' teslim edilmesi VE bunun idarece uygun bulunması gerekir; hükümde 'sözleşme süresi içinde teslim' yazıyordu ve idarenin uygun bulma şartı yoktu (yalnız bu parça değiştirildi).",
+  "duzeltme": {
+   "hukum": "İhale usulü 4734 m.18-21'e göre; doküman hazırlanmadan EKAP'ta ihale kaydı, ihale kayıt numarası (m.9); ihale dokümanı: idari şartname, sözleşme tasarısı, teknik şartname; belli isteklilerde ön yeterlik dokümanında sıralama-puanlama ve 5'ten az olmamak üzere liste sayısı; düzenlemeler birbirine aykırı olamaz (m.10); doküman EKAP'ta hazırlanır; tip şartname-sözleşme esas; Türkçe zorunlu (yabancıya açıksa başka dilde de, uyuşmazlıkta Türkçe esas) (m.11); tip idari şartname, \"Diğer Hususlar\" (m.12-13); teknik şartname: verimlilik-fonksiyonellik, rekabeti engellemez, yerli malını engelleyici düzenleme yok; ulusal/uluslararası standart; marka, model, patent, menşei belirtilemez; standart yoksa \"veya dengi\" ifadesiyle marka belirtilebilir; ambalaj-etiket-kılavuz, montaj-servis-yedek parça, prototip, personel düzenlemeleri; ihale ve muayene komisyonlarında tereddüt oluşturmayacak açıklıkta; idarece hazırlanması esas, ihale yetkilisi onayıyla danışmana (m.14); sözleşme tasarısı tip sözleşmeye göre; KİK uygun görüşüyle mutat sözleşmeler; 21/b-c-f alımlarında mal sözleşme yapma süresi içinde teslim edilir ve idarece uygun bulunursa sözleşme yapılması zorunlu değil (m.15); ihale onay belgesi ihale yetkilisine; ön ilanda yalnız yaklaşık maliyet cetveli eklenir, ilan öncesi yeniden onay (m.16); ihale komisyonu: ilan/davet tarihini izleyen en geç 3 gün içinde ihale yetkilisince; tek sayıda, başkan dâhil en az 5 kişi; en az 2'si işin uzmanı, 1'i muhasebe/mali işler personeli; yedek üyeler; idare personelinden, yoksa Kanun kapsamındaki idarelerden; başka adla komisyon kurulamaz; eksiksiz toplanır, çoğunlukla karar, çekimser yok, karşı oy gerekçeli; belge doğrulama isteyebilir (m.17); ihale işlem dosyası: onay belgesi + yaklaşık maliyet, fiyat dışı unsur açıklama belgesi, doküman-zeyilname, ilan-davet, şikâyet ve kararlar, itirazen şikâyet yazışmaları, teklifler, komisyon tutanak-kararları, Kurum payı makbuzu; örneği ilan/daveti izleyen 3 gün içinde komisyon üyelerine (m.18); ilan 4734 m.13'e göre e-formlarla; dokümana uygun; dokümansız ilan yok; sürelerde ilan günü sayılır, ihale günü sayılmaz (m.19); ön ilan: yaklaşık maliyeti eşik değere eşit veya aşan ihaleler için Kamu İhale Bülteninde, yükümlülük getirmez; süre indirimi için ihale ilanı ön ilandan en az 40 gün sonra ve açık/belli istekliler usulüyle; düzeltme ilanı yapılamaz; bir ön ilana bir ihale; ücretsiz (m.20); süre kısaltma: elektronik hazırlanıp gönderilirse 7 gün; EKAP'tan doğrudan erişimde 5 gün (40 günlük davet de); ön ilanla 40 gün en fazla 24 güne (daha fazla kısaltılamaz) (m.21); 4734 m.13-24-25'e aykırı ilan geçersiz; 25 ve 40 günlük ilanlarda 15 gün, diğerlerinde 10 gün içinde düzeltme ilanı (m.22); doküman EKAP'ta görülür, katılım için indirilmesi zorunlu (ortak girişimde biri yeterli); ilansız ihalede yalnız davet edilenler; bedel talep edilemez (m.23); ilandan sonra dokümanda değişiklik yapılmaması esas; zorunluysa tutanakla önceki ilan geçersiz, yeniden ilan; maddi-teknik hata ve eksikliklerde zeyilname (ihaleden en az 10 gün önce EKAP'a ve indirenlere); hata ilanda da varsa düzeltme ilanı; ek süre gerekirse ihale tarihi bir defaya mahsus en fazla 20 gün ertelenir, teklif verenlere geri çekme hakkı; açıklama talebi ihaleden 20 gün öncesine kadar yazılı; açıklama en az 10 gün önce herkese, talep edenin kimliği belirtilmez; şikâyet üzerine düzeltmede 10 günden az kalsa da bir defa daha erteleme (m.24); ihale saatinden önce iptal (gerekçesi hemen ilan), teklifler açılmaksızın iade, hak talebi yok (m.25)"
+  }
+ },
+ {
+  "kanun_id": 122,
+  "kart_id": "122-5",
+  "sorun": "madde_hatali",
+  "aciklama": "Kart yönetmeliğin m.50-68 hükümleridir (ihale dışı bırakılma, katılamayacaklar, teklif, teminat, değerlendirme, sonuçlandırma); madde alanındaki 10, 11, 17, 34 ve 41, metnin atıf yaptığı 4734 sayılı Kanunun maddeleridir; kart bu yüzden yönetmeliğin m.10'una (ihale dokümanı) bağlanmıştı, m.50 öne alındı. Ayrıca m.54/2'deki aynı şart düzeltildi: sözleşme ve kesin teminat, mal 'sözleşme yapma süresi içinde' teslim edilip idarece uygun bulunursa zorunlu değildir (122-1 ile aynı hata; hükümde yalnız bu parça değiştirildi).",
+  "duzeltme": {
+   "madde": [
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "58/B",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63",
+    "64",
+    "65",
+    "66",
+    "67",
+    "68"
+   ],
+   "hukum": "İhale dışı bırakılma (4734 m.10): iflas-tasfiye-konkordato; iflası ilan edilen; kesinleşmiş SGK prim borcu; kesinleşmiş vergi borcu; ihaleden önceki 5 yıl içinde mesleki faaliyetten hüküm giyen; 5 yıl içinde idareye karşı iş/meslek ahlakına aykırı davrandığı ispat edilen; odaca meslekten men edilen; belge vermeyen/yanıltıcı-sahte belge veren; m.11'e rağmen katılan; m.17 yasak fiiller; ihale üzerinde kalandan sözleşmeden önce (a)-(b)-(c)-(ç)-(d)-(f) durumlarında olmadığına dair belgeler (ihale tarihi itibarıyla), ortak girişimde her ortak; SGK prim ve vergi borcu kapsamı Kamu İhale Genel Tebliğinde; tecil edilmiş/taksitlendirilmiş borç ödemeler aksatılmadıkça kesinleşmiş sayılmaz; dava açma süresi geçmemiş tarhiyat kesinleşmiş değil (m.50); katılamayacaklar: yasaklılar, 3713-örgütlü suç-rüşvet hükümlüleri; hileli iflas; ihale yetkilisi ve kurul üyeleri; ihale işlemlerini hazırlayan-yürüten-sonuçlandıran-onaylayanlar; bunların eşleri, üçüncü dereceye kadar kan ve ikinci dereceye kadar kayın hısımları, evlatlıkları ve evlat edinenleri; bunların ortakları ve şirketleri (yönetimde olmadıkları veya %10'undan fazlasına sahip olmadıkları AŞ'ler hariç); Cumhurbaşkanı kararındaki yabancı ülke istekliler; danışmanlık yapan yükleniciler o işin ihalesine, iş yüklenicileri danışmanlık ihalesine katılamaz (ortaklık şirketleri ve yarıdan fazla hisseli şirketleri dâhil); idare bünyesindeki vakıf-dernek-birlik-sandık ve şirketleri; rağmen katılan ihale dışı + geçici teminat gelir, üzerine ihale yapılmışsa teminat gelir + ihale iptal; kamu davası açılanlar yalnız ihale dışı (m.51); teklif mektubu e-formla; birden fazla kalemde birim fiyat mektubu; yazılı, dokümanın kabulü, bedel rakam ve yazıyla, kazıntı-silinti yok, TC/vergi no, imza; ortak girişimde tüm ortaklar; konsorsiyumda kısım bedelleri ayrı; şekle aykırılık esası değiştiren eksiklik, düzeltilemez, değerlendirme dışı (m.52); teklif geçerlilik süresi dokümanda; isteklinin kabulüyle en fazla dokümandaki süre kadar uzatılabilir (m.53); geçici teminat teklif bedelinin %3'ünden az olmamak üzere; kesin teminat ihale bedelinin %6'sı (21/b-c-f'de mal sözleşme yapma süresi içinde teslim edilir ve idarece uygun bulunursa sözleşme ve kesin teminat zorunlu değil); 4734 m.34 değerleri; teminat mektubu e-forma uygun; geçici teminat mektubu geçerlilik tarihi teklif geçerlilik bitiminden itibaren 30 günden az olmamak üzere; kesin teminat süresi kesin kabul ve garanti süresine göre; ortak girimde ortaklardan biri karşılayabilir; haczedilemez, ihtiyati tedbir konulamaz; teyit banka genel müdürlüğü/şubesi/sigorta şirketi/merkezi kuruluş (yazılı teyitte en az 2 yetkili imza); fiyat farkı ve iş artışında %6 ek kesin teminat (hakedişten kesilebilir) (m.54); zarflar alınış sırasına göre; açık ve belli isteklilerde zarflar açılmadan önce, pazarlıkta son yazılı fiyat oturumunda yaklaşık maliyet açıklanır; Zarf Açma ve Belge Kontrol Tutanağı, istekliler ve fiyatlar duyurulur, onaylı suretleri isteyenlere verilmeden oturum kapatılamaz; eksik belge tamamlatılamaz; esası değiştirmeyen bilgi eksikliği yazılı istenir, 2 iş gününden az olmamak üzere süre; tamamlamayan değerlendirme dışı + geçici teminat gelir; sonradan düzenlenen belge ihale tarihindeki durumu göstermeli; birim fiyat cetvelinde aritmetik hata → değerlendirme dışı (m.55); başvurular e-formlarla (m.56-57); aşırı düşük teklif: komisyon diğer tekliflere/yaklaşık maliyete göre tespit eder, reddetmeden önce yazılı açıklama ister; imalat sürecinin ekonomikliği, teknik çözümler-avantajlı koşullar, malın özgünlüğü; yeterli görülmeyen/açıklamayan reddedilir (m.58); elektronik eksiltme açık/belli isteklilerde ilan ve dokümanda belirtilerek fiyat ve/veya fiyat dışı unsurlar üzerinden; aynı anda davet, davet edilmeyenlere gerekçe; davetten 2 iş günü geçmeden başlanamaz; tur sayısı 5'i geçemez, bir turda teklif vermeyen sonraki turlarda veremez; son teklifler geçerli (m.58/B); ekonomik açıdan en avantajlı teklif sadece fiyat veya fiyat + fiyat dışı unsurlar (m.59); fiyat dışı unsurlar: işletme-bakım maliyeti, maliyet etkinliği, verimlilik, kalite, teknik değer; parasal değer/nispi ağırlık idari şartnamede; ekonomik-mali yeterlik ve iş deneyim belgesi fiyat dışı unsur olamaz; marka-model esaslı olamaz; gerekçeli açıklama belgesi onay belgesi ekinde (m.60); yerli malı: eşik değer altında yalnız yerli isteklilere açık düzenlenebilir, yerli malı teklif eden yerli istekliye %15'e kadar fiyat avantajı; tüm isteklilere açık ihalelerde de yerli malı teklif edene %15'e kadar; kısmi teklif zorunlu, her kısım tek mal kalemi (tamamlayıcı kalemler bir kısımda); avantaj diğer isteklilerin bedeline eklenerek uygulanır; orta ve yüksek teknolojili sanayi ürünleri listesindeki mallarda %15 avantaj zorunlu; yerli yazılım %15 zorunlu; yerli malı belgesi Sanayi ve Teknoloji Bakanlığı usulüne göre (m.61); tekliflerin eşitliği (sadece fiyat): idari şartnamede fiyat dışı unsur, yerli malı, iş deneyim belge tutarı (her ihalede zorunlu kriter); öncelik sırası fiyat dışı unsur → yerli malı → iş deneyim tutarı; iş deneyim tutarı fazla olan; iş ortaklığında pilot, konsorsiyumda koordinatör ortağın tutarı; e-eksiltmede kura; fiyat+fiyat dışı unsurlu ihalede eşitlikte fiyatı düşük olan → fiyat dışı unsur önceliği → yerli malı → iş deneyim tutarı; belgesini sunmayan eşit teklif sahibine süre verilir (yerli malı belgesi ihale tarihinden önce düzenlenmiş olmalı); teknolojik ürün deneyim belgesi asgari tutara eşit sayılır (m.62); idare bütün teklifleri reddedip ihaleyi iptalde serbest, gerekçeyle bildirir, yükümlülük yok; belli isteklilerde davet edilecek aday 5'ten az veya teklif veren 3'ten az → iptal (3'ten az teklifte doküman düzeltilip tamamı yeniden davet edilebilir) (m.63); ihale en avantajlı teklif sahibine bırakılır, gerekçeli karar ihale yetkilisine; onaydan önce ihale üzerinde kalan ve ikinci teklif sahibinin yasaklı olup olmadığı Kurumdan teyit, ikisi de yasaklıysa onaylanamaz, iptal; ihale yetkilisi karar tarihini izleyen en geç 5 iş günü içinde onaylar veya gerekçeli iptal eder; onayla geçerli, iptalle hükümsüz; geçici teminat hariç belgeler iade edilmez (asıl/noter onaylı belgeler talep hâlinde, onaylı suret dosyada) (m.64); kesinleşen karar onayı izleyen en geç 3 gün içinde tüm isteklilere komisyon kararıyla birlikte bildirilir; iptal de bildirilir; bildirimden itibaren 21/b-c'de 5 gün, diğerlerinde 10 gün geçmedikçe sözleşme imzalanamaz (m.65); 4734 m.41 sürelerinin bitimini (ön mali kontrol tamamlanmasını) izleyen günden itibaren 3 gün içinde istekliye, tebliği izleyen 10 gün içinde kesin teminatla sözleşme imzalaması bildirilir; yabancı istekliye +12 gün; sözleşmeden önce yasaklılık teyidi; mücbir sebep dışında imzalamayan: geçici teminat gelir + 4734 m.58 yasaklama (m.10 taahhüdüne aykırı belgede yalnız teminat gelir, yasaklama yok) (m.66); imzalamazsa ihale yetkilisi uygun görürse ekonomik açıdan en avantajlı ikinci teklif sahibiyle sözleşme (yasaklılık teyidi + belgeler + kesin teminat); o da imzalamazsa teminatı gelir + m.58 (m.67); ihale sonucu sözleşmeden sonra Kamu İhale Bülteninde yayımlanır, ayrıca gazete-internet (m.68)"
+  }
+ }
+]
