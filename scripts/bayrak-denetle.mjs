@@ -21,6 +21,7 @@ const KASITLI_KAPALI = {
   'anlik-guncelleme': '1. KADEME (deneme) — başkan + Kemalettin; 30 sn\'de bir kendiliğinden yeniler. Herkese açmak için bu bayrak DEĞİL, sunucu şalteri kullanılır: uygulama_ayar.anlik_guncelleme_herkes = 1 (nazik kip).',
   'patika-yolculuk': 'Sinematik 3B yolculuk motoru YARIM (ağaç görselleri/doku/ses eksik) — iş durduruldu, bitmeden açılmaz.',
   'ekran-goruntusu-serbest': 'EKRAN GÖRÜNTÜSÜ YASAĞI MUAFİYETİ — sadece başkan + Kemalettin. Herkese açılırsa telifli kart görsellerinin koruması TAMAMEN biter. ASLA yayın listesine ekleme.',
+  'oturum-koruma': 'OTURUM KORUMA (3 Eki 2026, tablette kendiliğinden çıkış) — ÖNCE BAŞKAN DENEYECEK. "Yay" gelince yeni yayına gerek yok: uygulama_ayar.ozellik_herkes dizisine "oturum-koruma" eklenir (her cihazda bir sonraki açılıştan itibaren).',
 };
 
 function dosyalar(dir) {

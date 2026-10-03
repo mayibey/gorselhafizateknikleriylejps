@@ -6,9 +6,14 @@
  *
  * Hesap silme = 30 günlük YUMUŞAK silme: girişte silme talebi varsa OTOMATİK geri getirilir
  * (reaktiveEdildi=true → UI "hesabın geri geldi" der). bkz. lib/auth.ts + docs/v2.
+ *
+ * OTURUM KORUMA (3 Eki 2026, bayrak 'oturum-koruma'; kapalıyken davranış eskisiyle birebir aynı):
+ * internetsiz açılışta cihazdaki oturum korunur (çıkış sayılmaz), tek-oturum düşürmesi ve çıkış yalnız
+ * bu cihazı kapatır, açılışta geri yüklenen oturum hesabı yeniden sahiplenmez. bkz. lib/oturum-koruma.ts.
  */
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { AppState } from 'react-native';
+import type { AuthChangeEvent, Session } from '@supabase/supabase-js'; // yalnız tip (derlemede silinir)
 
 import {
   cikisYap,
@@ -21,7 +26,22 @@ import {
   silmeTalepTarihiGetir,
   sozlesmeOnayKaydet,
 } from '@/lib/auth';
-import { oturumGecerliMi, oturumSahiplen } from '@/lib/oturum-kilidi';
+import {
+  oturumGecerliMi,
+  oturumKilidiKoruma,
+  oturumSahiplen,
+  sahipOturumKimligi,
+  yerelSahiplikTemizle,
+  yerelSahiplikVarMi,
+} from '@/lib/oturum-kilidi';
+import {
+  depodakiOturumKullanicisi,
+  geciciOturumHatasi,
+  girisNiyetiTaze,
+  girisNiyetiTemizle,
+  jwtOturumKimligi,
+  oturumKorumaAcikMi,
+} from '@/lib/oturum-koruma';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
@@ -77,10 +97,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setProfilTamam(profilTamMi(p));
   }
 
+  // OTURUM KORUMA bayrağı (açılışta bir kez, yerel önbellekten) + çevrimdışı açılış durumu:
+  // oturum cihazda var ama anahtar yenilenemedi → kullanıcı içeride kalır; giriş sonrası işler
+  // (tek-oturum denetimi, bulut senkron, profil) bağlantı gelince yapılır.
+  const korumaRef = useRef(false);
+  const cevrimdisiRef = useRef(false);
+  const girisSonrasiRef = useRef<((yeniGiris: boolean, oturumKimligi?: string | null) => Promise<void>) | null>(null);
+
   // TEK OTURUM ihlali: başka cihaz sahiplenmiş → bu cihazın oturumunu kapat + kullanıcıya söyle.
+  // Koruma açıkken yalnız BU cihaz kapanır (global çıkış, hesabı yeni sahiplenen cihazı da düşürüyordu).
   async function oturumuDusur(): Promise<void> {
     setOturumDustu(true);
-    await cikisYap();
+    if (korumaRef.current) {
+      cevrimdisiRef.current = false;
+      await cikisYap('local');
+      await yerelSahiplikTemizle();
+    } else {
+      await cikisYap();
+    }
     setKullanici(null);
     setProfilTamam(null);
   }
@@ -91,13 +125,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
     const sb = supabase;
+    let yasiyor = true;
     // Girişten sonra: (0) tek-oturum, (1) silme talebi → REAKTİVASYON, (2) bulut senkron, (3) profil.
     // yeniGiris=true → bu cihaz hesabı SAHİPLENİR (diğer cihazlar düşer).
     // yeniGiris=false (oturum geri yükleme) → geçerlilik KONTROL edilir; başka cihaz sahiplendiyse düş.
-    async function girisSonrasi(yeniGiris: boolean) {
+    async function girisSonrasi(yeniGiris: boolean, oturumKimligi?: string | null) {
       if (yeniGiris) {
         setOturumDustu(false);
-        await oturumSahiplen();
+        await oturumSahiplen(oturumKimligi);
       } else if (!(await oturumGecerliMi())) {
         await oturumuDusur();
         return;
@@ -114,20 +149,93 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const p = await profilGetir();
       setProfilTamam(profilTamMi(p));
     }
-    // İlk oturumu oku.
-    void sb.auth.getSession().then(async ({ data }) => {
-      const u = data.session?.user;
+    girisSonrasiRef.current = girisSonrasi;
+
+    // KORUMA: gelen SIGNED_IN gerçek yeni giriş mi, yoksa açılışta geri yüklenen oturum mu?
+    // Yeni giriş = kullanıcı bu cihazda az önce giriş yaptı ya da Supabase oturum kimliği değişti.
+    async function yeniGirisMi(oturumKimligi: string | null): Promise<boolean> {
+      if (girisNiyetiTaze()) return true;
+      const sahip = await sahipOturumKimligi();
+      if (sahip) return !!oturumKimligi && oturumKimligi !== sahip;
+      return !(await yerelSahiplikVarMi()); // bu cihaz hesabı hiç sahiplenmemiş → yeni giriş
+    }
+
+    function olayIsle(olay: AuthChangeEvent, session: Session | null) {
+      const u = session?.user;
+      if (!korumaRef.current) {
+        // ESKİ DAVRANIŞ (bayrak kapalı) — birebir aynı.
+        setKullanici(kullaniciYap(u));
+        if (u && olay === 'SIGNED_IN') void girisSonrasi(true);
+        return;
+      }
+      if (!u) {
+        // Yalnız GERÇEK çıkışta kullanıcıyı düşür. INITIAL_SESSION'ın boş gelmesi geçici bir yenileme
+        // hatası olabilir (internetsiz açılış) → karar açılıştaki getSession + cihazdaki oturumla verilir.
+        if (olay === 'SIGNED_OUT') {
+          cevrimdisiRef.current = false;
+          setKullanici(null);
+          setProfilTamam(null);
+        }
+        return;
+      }
+      setKullanici(kullaniciYap(u));
+      if (olay === 'SIGNED_IN') {
+        const sid = jwtOturumKimligi(session?.access_token);
+        void (async () => {
+          if (await yeniGirisMi(sid)) {
+            girisNiyetiTemizle();
+            cevrimdisiRef.current = false;
+            await girisSonrasi(true, sid);
+          } else if (cevrimdisiRef.current) {
+            cevrimdisiRef.current = false;
+            await girisSonrasi(false);
+          }
+          // Aksi hâlde: açılışta geri yüklenen oturum — denetimi açılış akışı zaten yapıyor, sahiplenme YOK.
+        })();
+      } else if (cevrimdisiRef.current && (olay === 'TOKEN_REFRESHED' || olay === 'INITIAL_SESSION')) {
+        // Bağlantı geldi, anahtar yenilendi → ertelenen giriş sonrası işler (tek-oturum denetimi dahil).
+        cevrimdisiRef.current = false;
+        void girisSonrasi(false);
+      }
+    }
+
+    // Olaylar bayrak okunana kadar (birkaç ms) sırada bekler → her olay doğru kipte işlenir.
+    let bayrakHazir = false;
+    const bekleyen: [AuthChangeEvent, Session | null][] = [];
+    const { data: sub } = sb.auth.onAuthStateChange((olay, session) => {
+      if (!bayrakHazir) {
+        bekleyen.push([olay, session]);
+        return;
+      }
+      olayIsle(olay, session);
+    });
+
+    void (async () => {
+      const koruma = await oturumKorumaAcikMi();
+      korumaRef.current = koruma;
+      oturumKilidiKoruma(koruma);
+      bayrakHazir = true;
+      for (const [o, s] of bekleyen.splice(0)) olayIsle(o, s);
+      // İlk oturumu oku.
+      const { data, error } = await sb.auth.getSession();
+      let u: Parameters<typeof kullaniciYap>[0] = data.session?.user ?? null;
+      if (!u && koruma && geciciOturumHatasi(error)) {
+        // İnternetsiz açılış: anahtar yenilenemedi ama oturum cihazda duruyor → çıkış SAYMA.
+        const d = await depodakiOturumKullanicisi();
+        if (d) {
+          u = d;
+          cevrimdisiRef.current = true;
+        }
+      }
+      if (!yasiyor) return;
       setKullanici(kullaniciYap(u));
       setYukleniyor(false);
-      if (u) await girisSonrasi(false);
-    });
-    // Oturum değişimlerini dinle (giriş/çıkış/yenileme).
-    const { data: sub } = sb.auth.onAuthStateChange((olay, session) => {
-      const u = session?.user;
-      setKullanici(kullaniciYap(u));
-      if (u && olay === 'SIGNED_IN') void girisSonrasi(true);
-    });
-    return () => sub.subscription.unsubscribe();
+      if (u && !cevrimdisiRef.current) await girisSonrasi(false);
+    })();
+    return () => {
+      yasiyor = false;
+      sub.subscription.unsubscribe();
+    };
   }, []);
 
   // Uygulama ÖNE gelince tek-oturum kontrolü: başka cihaz giriş yaptıysa bu cihaz burada düşer.
@@ -138,7 +246,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (durum !== 'active') return;
       void (async () => {
         const { data } = await sb.auth.getSession();
-        if (!data.session) return;
+        if (!data.session) return; // oturum yok ya da (koruma) anahtar hâlâ yenilenemiyor → dokunma
+        if (korumaRef.current && cevrimdisiRef.current) {
+          // Çevrimdışı açılmıştı, şimdi anahtar yenilenebildi → ertelenen işler (denetim dahil).
+          cevrimdisiRef.current = false;
+          setKullanici(kullaniciYap(data.session.user));
+          await girisSonrasiRef.current?.(false);
+          return;
+        }
         if (!(await oturumGecerliMi())) await oturumuDusur();
       })();
     });
@@ -157,14 +272,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   async function cikis(): Promise<void> {
     await senkronKaydet(); // çıkmadan önce son ilerlemeyi buluta yaz
-    await cikisYap();
+    if (korumaRef.current) {
+      cevrimdisiRef.current = false;
+      await cikisYap('local'); // yalnız bu cihaz
+      await yerelSahiplikTemizle(); // bu cihazdaki sonraki giriş YENİ giriş sayılsın
+    } else {
+      await cikisYap();
+    }
     setKullanici(null);
     setProfilTamam(null);
   }
 
   async function hesabiSil(): Promise<void> {
     await hesapSilmeTalebiKur(); // 30 günlük silme işareti
-    await cikisYap();
+    await cikisYap(); // hesap silmede bütün cihazlar kapanır (global)
+    if (korumaRef.current) {
+      cevrimdisiRef.current = false;
+      await yerelSahiplikTemizle();
+    }
     setKullanici(null);
     setProfilTamam(null);
   }

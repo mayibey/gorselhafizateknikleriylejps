@@ -15,6 +15,7 @@ import { AppState } from 'react-native';
 import { kanunErisilebilirSaf, PREMIUM_URUNLERI } from '@/constants/urunler';
 import { abonelikTazele } from '@/lib/uyelik-tazele';
 import { getCihazKimlik } from '@/lib/cihaz-kimlik';
+import { depodakiOturumKullanicisi, geciciOturumHatasi, oturumKorumaAcikMi } from '@/lib/oturum-koruma';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
 /** Aktif bir satın alma hakkı (kart/taç gösterimi için). */
@@ -66,12 +67,23 @@ async function haklariOku(): Promise<OkumaSonuc> {
   if (!supabase) return { durum: 'ok', haklar: { premium: false, liste: [] }, uid: null };
   // getSession YERELDEN okur (ağsız, çıkışta null döner) → "oturum yok"u "çevrimdışı"dan ayırır.
   let oturum;
+  let oturumHata: unknown = null;
   try {
-    oturum = (await supabase.auth.getSession()).data.session;
+    const r = await supabase.auth.getSession();
+    oturum = r.data.session;
+    oturumHata = r.error;
   } catch {
     return { durum: 'offline', uid: null };
   }
-  if (!oturum) return { durum: 'ok', haklar: { premium: false, liste: [] }, uid: null }; // çıkış → premium false
+  if (!oturum) {
+    // OTURUM KORUMA (3 Eki 2026, bayrak 'oturum-koruma'): anahtar internetsizlikten yenilenemediyse oturum
+    // cihazda duruyor → bu çıkış DEĞİL, çevrimdışı. Son bilinen haklar korunur (ödeyen kullanıcı kilide düşmez).
+    if (geciciOturumHatasi(oturumHata) && (await oturumKorumaAcikMi())) {
+      const d = await depodakiOturumKullanicisi();
+      if (d) return { durum: 'offline', uid: d.id };
+    }
+    return { durum: 'ok', haklar: { premium: false, liste: [] }, uid: null }; // çıkış → premium false
+  }
   const uid = oturum.user?.id ?? null;
 
   let { data, error } = await supabase.from('uyelik_haklari').select('urun, tip, bitis');

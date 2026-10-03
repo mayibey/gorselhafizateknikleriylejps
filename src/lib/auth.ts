@@ -9,6 +9,7 @@
 import { Platform } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
+import { girisNiyetiIsaretle } from '@/lib/oturum-koruma';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
 // OAuth/kurtarma dönüş adresi PLATFORMA GÖRE:
@@ -89,6 +90,7 @@ export async function oturumKoduIsle(code: string): Promise<boolean> {
   if (!supabaseHazir || !supabase) return false;
   if (!code || kodIsleniyor || islenenKodlar.has(code)) return false;
   kodIsleniyor = true;
+  girisNiyetiIsaretle(); // gelen SIGNED_IN gerçek yeni giriş → hesabı sahiplenir (oturum koruma)
   try {
     let sonHata: unknown = null;
     // İlk denemeden ÖNCE de kısa bekle (verifier AsyncStorage'a insin) + 5 deneme + ARTAN bekleme
@@ -198,6 +200,7 @@ async function nativeGoogleGiris(): Promise<void> {
 /** Gmail ile giriş. Başarılıysa oturum AsyncStorage'a yazılır (onAuthStateChange tetiklenir). */
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
 
   // NATIVE: kendi client'ımızla native hesap seçici (redirect/WebBrowser YOK → takılma biter).
   // Web'de GoogleSignin çalışmaz → aşağıdaki Supabase OAuth (WebBrowser) akışı kullanılır.
@@ -261,6 +264,7 @@ export async function appleIleGiris(): Promise<void> {
   if (Platform.OS !== 'ios') {
     throw new AppleGirisHatasi('Apple ile giriş yalnızca iPhone/iPad üzerinde kullanılabilir.');
   }
+  girisNiyetiIsaretle();
   const AppleAuthentication = await import('expo-apple-authentication');
   let credential: import('expo-apple-authentication').AppleAuthenticationCredential;
   try {
@@ -297,6 +301,7 @@ export async function appleIleGiris(): Promise<void> {
 /** E-posta + şifre ile giriş. */
 export async function epostaGiris(eposta: string, sifre: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
   const { error } = await supabase.auth.signInWithPassword({ email: eposta.trim(), password: sifre });
   if (error) throw error;
 }
@@ -313,6 +318,7 @@ export async function epostaKayit(
   sifre: string,
 ): Promise<{ dogrulamaGerek: boolean }> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
   const { data, error } = await supabase.auth.signUp({
     email: eposta.trim(),
     password: sifre,
@@ -335,6 +341,7 @@ export async function sifreSifirla(eposta: string): Promise<void> {
 /** Şifre-yenileme linkindeki PKCE kodunu (kurtarma) oturuma çevirir. */
 export async function kurtarmaKoduDegistir(code: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
   const { error } = await supabase.auth.exchangeCodeForSession(code);
   if (error) throw error;
 }
@@ -343,6 +350,7 @@ export async function kurtarmaKoduDegistir(code: string): Promise<void> {
  * yeniSifreBelirle ile yeni şifre konur). Link tıklamaya göre her cihazda şaşmaz çalışır. */
 export async function sifreKoduDogrula(eposta: string, kod: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
   const { error } = await supabase.auth.verifyOtp({
     email: eposta.trim(),
     token: kod.trim(),
@@ -475,10 +483,13 @@ export async function gorevKaydet(g: Partial<Gorev>, beklenenUid: string): Promi
   }
 }
 
-/** Oturumu kapatır. Yapılandırılmamışsa no-op. */
-export async function cikisYap(): Promise<void> {
+/** Oturumu kapatır. Yapılandırılmamışsa no-op.
+ * kapsam 'global' (Supabase varsayılanı) hesabın BÜTÜN cihazlarındaki oturumları siler; 'local' yalnız bu
+ * cihazı kapatır. Oturum koruma açıkken çıkış ve tek-oturum düşürmesi 'local' kullanır (3 Eki 2026: global
+ * çıkış, hesabı yeni sahiplenen cihazı da ≤1 saat sonra mesajsız düşürüyordu). */
+export async function cikisYap(kapsam: 'global' | 'local' = 'global'): Promise<void> {
   if (!supabaseHazir || !supabase) return;
-  await supabase.auth.signOut();
+  await supabase.auth.signOut({ scope: kapsam });
 }
 
 // --- Sözleşme onayı (KVKK kanıtı) — İLK kabul anı profile bir kez yazılır ---
@@ -579,6 +590,7 @@ export async function telefonKodGonder(telefonE164Str: string): Promise<void> {
 /** SMS ile gelen kodu doğrular → oturum açılır (onAuthStateChange tetiklenir). */
 export async function telefonKodDogrula(telefonE164Str: string, kod: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+  girisNiyetiIsaretle();
   const { error } = await supabase.auth.verifyOtp({
     phone: telefonE164Str,
     token: kod.trim(),
