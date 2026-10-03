@@ -91,6 +91,11 @@ def bul(lid, sira):
             if nums & hn: oran += 0.3
             elif oran < 0.72: continue                            # numara desteği yoksa ad çok benzemeli
             if fi == 0 and len(sira) > 1: oran += 0.15            # branşın kendi dosyası
+            # aynı kanunun "Mali Hükümler" / "personel hükümleri" dilimleri: parantezdeki dilim uyuşmalı
+            pk = norm(' '.join(re.findall(r'\((.*?)\)', LAWS[lid]))); bk = norm(baslik)
+            for dil in ('mali', 'personel'):
+                if dil + 'hukum' in pk.replace(' ', ''):
+                    oran += 0.4 if dil + 'hukum' in bk else (-0.4 if ('malihukum' in bk or 'personelhukum' in bk) else 0)
             aday.append((oran, bas, govde))
     aday.sort(key=lambda x: -x[0])
     if aday and aday[0][0] >= 0.6: return aday[0][1], aday[0][2]

@@ -578,6 +578,20 @@ html,body,button,.kap{touch-action:manipulation}
 
 .asagiLink{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:10px 0 0;padding:9px 12px;border-radius:12px;border:1px dashed rgba(232,90,79,.6);background:rgba(232,90,79,.08);color:#FF8F86;font-weight:800;font-size:13.5px}.asagiLink .asagiOk{display:inline-flex;transform:rotate(90deg)}.asagiLink .asagiOk svg{width:15px;height:15px}
 
+/* Check-up analizi üst bölüm (3 Eki sabah): kompakt */
+.anSkor{padding:12px 14px}.anSkor .hzIk{width:54px;height:54px}.anSkor .hzIk svg{width:24px;height:24px}
+.hzYeni{margin-top:8px;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;background:rgba(243,194,74,.16);border:1px solid rgba(243,194,74,.6);color:#F8D57A;font-size:12.5px;font-weight:800}.hzYeni svg{width:14px;height:14px}
+.anUst{display:grid;gap:8px;margin-top:10px}
+.anAna{display:grid;grid-template-columns:42px minmax(0,1fr) 18px;align-items:center;gap:12px;width:100%;padding:11px 14px;border-radius:14px;background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;text-align:left;box-shadow:0 6px 18px rgba(243,194,74,.22)}
+.anAna .anIk{width:42px;height:42px;border-radius:11px;background:rgba(27,20,6,.12);display:grid;place-items:center}.anAna svg{width:21px;height:21px}
+.anAna b{display:block;font-size:16px;font-weight:900;line-height:1.2}.anAna small{display:block;font-size:12.5px;font-weight:600;opacity:.8;margin-top:2px}
+.anIzgara{display:flex;gap:8px}
+.anKutu{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px 6px;border-radius:12px;border:1.5px solid rgba(243,194,74,.5);background:rgba(3,40,60,.55);color:#F8D57A}
+.anKutu svg{width:21px;height:21px}.anKutu b{font-size:13px;font-weight:800;line-height:1.2;text-align:center}
+.anKutu.dolu{background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;border-color:transparent}
+
+.mdKart{padding:10px 12px}.mdOlcu{margin-top:7px}.mdOgren{flex:none;display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border-radius:999px;border:1.5px solid rgba(243,194,74,.6);background:rgba(243,194,74,.1);color:#F8D57A;font-size:12.5px;font-weight:800}.mdOgren svg{width:14px;height:14px}
+
 </style>
 <div id="gece" aria-hidden="true"></div>
 <div class="kap">
@@ -884,15 +898,18 @@ function checkupAnaliz(id,geriHedef){
   const eksik=Object.entries(maddeler).filter(([,o])=>o.d<o.n).sort((a,b)=>a[1].d/a[1].n-b[1].d/b[1].n);
   const tipler=tipIst(sorular).filter(t=>t.n>=1&&t.d<t.n).sort((a,b)=>(a.oran??1)-(b.oran??1));
   const yanlislar=sorular.filter(q=>K.tani[kid(q.i)]===0);
-  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${oz.d}<small> / ${oz.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${oz.kalan>0?`<p>Bu kanunun ${k.q.length} sorusundan ${oz.n} tanesini çözdün; ${oz.kalan} soru yeni ya da çözülmedi.</p>`:''}</div></section>
-  ${yanlislar.length?`<button class="asagiLink" id="asagiLink">Yanlış yaptığın ${yanlislar.length} soru aşağıda <span class="asagiOk">${IK.sag}</span></button>`:''}
-  ${yanlislar.length?`<button class="anaBtn2" id="yOzetAc">Yanlışlarımın özeti · ${yanlislar.length} soru ${IK.ok}<small>Her yanlışın doğrusu ve nedeni, madde madde</small></button>`:''}
-  <button class="anaBtn2 ${yanlislar.length?'ikincil':''}" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve sınav tuzakları · kayıtlı</small></button>
-  ${kalanSorular(k,cu).length?`<button class="anaBtn2 ikincil" id="kalan">Yeni / kalan ${kalanSorular(k,cu).length} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
-  <button class="anaBtn2 ikincil" id="yenidenUst">Yeniden check-up yap ${IK.ok}<small>bu kanunun bütün sorularıyla baştan</small></button>
+  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))}</h2><span></span></div>
+  <section class="hzKart anSkor"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><span class="hzLbl">Check-up sonucu</span><b class="hzSayi kucukSayi">${oz.d}<small> / ${oz.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${kalanSorular(k,cu).length?`<button class="hzYeni" id="kalan">${kalanSorular(k,cu).length} yeni soru · çöz ${IK.sag}</button>`:''}</div></section>
+  <div class="anUst">
+    ${yanlislar.length?`<button class="anAna" id="yOzetAc"><span class="anIk">${IK.belge}</span><span class="anMetin"><b>Yanlışlarımın özeti</b><small>${yanlislar.length} yanlışın doğrusu ve nedeni</small></span><span class="anOk">${IK.sag}</span></button>`:''}
+    <div class="anIzgara">
+      <button class="anKutu ${yanlislar.length?'':'dolu'}" id="ozetAc">${IK.kitap}<b>Altın Özet</b></button>
+      ${yanlislar.length?`<button class="anKutu" id="asagiLink">${IK.hedef}<b>${yanlislar.length} yanlış soru</b></button>`:''}
+      <button class="anKutu" id="yenidenUst">${IK.grafik}<b>Yeniden çöz</b></button>
+    </div>
+  </div>
   <details class="acilir" open><summary><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler<span class="rozet">${eksik.length}</span><span class="acilirOk">${IK.sag}</span></summary>
-  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span></div>${k.n.some(n=>n.m.includes(m))||k.g==='mus'?`<div class="mdBtnler tek"><button class="mdBtn dolu" data-ogren="${m}">${IK.kitap}Bu maddeyi öğren</button></div>`:''}</div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
+  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span>${k.n.some(n=>n.m.includes(m))||k.g==='mus'?`<button class="mdOgren" data-ogren="${m}">${IK.kitap}Öğren</button>`:''}</div></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
   ${tipler.length?`<details class="acilir"><summary><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?<span class="rozet">${tipler.length}</span><span class="acilirOk">${IK.sag}</span></summary>
   <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,'#E85A4F')}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')}</section></details>`:''}
   ${yanlislar.length?`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>
