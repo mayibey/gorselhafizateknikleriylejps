@@ -1464,6 +1464,347 @@
    "kanit": "(1) Emir tüm görevlerin düzenleyicisidir.\n(2) Emirlerin, göreve ilişkin ve mevzuata uygun olması şarttır.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-23-144",
+   "madde": "9",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Tüm görevleri mevzuata uygun",
+   "cevap": "âmir: zamanında, eksiksiz yapar/yaptırır; disiplini tesis eder",
+   "kanit": "MADDE 9 - (1) Tüm görevleri mevzuata uygun, zamanında ve eksiksiz yapar veya yaptırır, disiplini tesis ve idame eder, maiyetini yetiştirir, hal ve hareketlerini takip ve kontrol eder.",
+   "not": "izin talebini gerekçesiz reddetmek görev DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-145",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "adil ve hakkaniyetli hareket",
+   "cevap": "âmir astlarına karşı; hukuk ve adaletten ayrılmaya mazeret yok",
+   "kanit": "(5) Astlarına karşı adil ve hakkaniyetli hareket eder. Hiçbir mazeret, hukuk ve adaletten ayrılmaya gerekçe gösterilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-146",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "öne atılmayı şerefli",
+   "cevap": "âmir: kolaylıkta nefsini sona bırakır, zorlukta öne atılır",
+   "kanit": "(10) Maiyetinin katlandığı her türlü zahmet ve mahrumiyete, fiziki imkân nispetinde beraber katlanır, bir kolaylık çıkınca bunlardan istifade için nefsini sona bırakır ve bir zorluk çıkınca bilâkis öne atılmayı şerefli bir görev kabul eder.",
+   "not": "KOLAYLIKTA SONA, ZORLUKTA ÖNE",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-147",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "mizaçlarını ayrıntılarıyla bilir",
+   "cevap": "âmir maiyetinin isimlerini, hususi vasıflarını, kişilik özelliklerini de bilir",
+   "kanit": "Maiyetindeki personelin isimlerini ve bunların hususi vasıflarını, kişiliklerini oluşturan özelliklerini ve mizaçlarını ayrıntılarıyla bilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-148",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "samimi ve candan olur",
+   "cevap": "âmirin görev dışı münasebeti; görev esnasında daima ciddi",
+   "kanit": "(3) Görev esnasında, maiyeti ile münasebetleri daima ciddi, görev dışındaki münasebet ve görüşmeleri ise samimi ve candan olur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-149",
+   "madde": "8",
+   "tip": "gorev_yetki",
+   "tetikleyici": "değiştirmeden ve eksiksiz olarak",
+   "cevap": "ast usulüne uygun emirleri tam, zamanında yerine getirir; yorum katmaz",
+   "kanit": "MADDE 8 - (1) Ast, âmir ve üstlerine genel görgü ve disiplin kurallarına uygun tam bir saygı göstermekle, resmî kıyafetli olsun veya olmasın âmirlerinin, usulüne uygun emirlerini tam, zamanında, değiştirmeden ve eksiksiz olarak yerine getirmekle, görevini kusursuz icra etmekle ve yapılması kendisince de malum olan görevleri yerine getirmekle, doğru insiyatif kullanmakla ve emrin icrası veya sonuçları ile ilgili olarak görevlendirme yapan âmirine bilgi vermekle yükümlüdür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-150",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "mutlak itaat anlayışıyla",
+   "cevap": "âmirin mevzuata uygun her emri; korku ile değil sevgiyle",
+   "kanit": "(2) Görevini; korku ile değil, sevgi ve üstün görev anlayışı ile icra eder. Âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla, bütün tahammül kuvvetini sarf ederek yapar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-151",
+   "madde": "8",
+   "tip": "yasak",
+   "tetikleyici": "mırıldanmaz, doğru bulmadığını sezdirecek",
+   "cevap": "yasak davranışlar; emirden dolayı âmire mütalaa da yok",
+   "kanit": "(5) Aldığı bir emirden dolayı âmirine mütalâada bulunmaz. Bir emri alırken veya aldıktan sonra mırıldanmaz, doğru bulmadığını sezdirecek hal ve harekette bulunmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-152",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "resmî kıyafetli olması esastır",
+   "cevap": "rütbeli personel ve erler görev sırasında",
+   "kanit": "(2) Rütbeli personel ve erlerin görev sırasında resmî kıyafetli olması esastır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-153",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "her zaman üzerinde bulundurmak",
+   "cevap": "kimlik kartı resmî ve sivil; güvenlik/İKK istisnası dışında",
+   "kanit": "(10) Kimlik kartı, kişinin jandarma veya sahil güvenlik personeli olduğunu gösteren resmî bir belgedir. Personel, güvenlik ve istihbarata karşı koyma gibi çeşitli istisnai durumlar dışında, kimlik kartını resmî ve sivil olarak her zaman üzerinde bulundurmak zorundadır. Yetkili makamlarca talep edilmesi durumunda kimlik kartının gösterilmesi zorunludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-154",
+   "madde": "15",
+   "tip": "yasak",
+   "tetikleyici": "tutuklu veya hükümlü iken",
+   "cevap": "resmî kıyafet giyilmez; görevden uzaklaştırılınca da; tanıklık-bilirkişilik hariç",
+   "kanit": "(8) Rütbeli personel ve erler; tanıklık veya bilirkişilik dışında, adlî yargı makam ve mercilerine çağrıldığında, tutuklu veya hükümlü iken veya görevden uzaklaştırıldıkları süre içerisinde resmî kıyafet giyemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-155",
+   "madde": "14",
+   "tip": "tanim",
+   "tetikleyici": "İznin maksadı",
+   "cevap": "dinlenme, güç toplama, yenilenmiş güçle göreve dönme, şahsi ihtiyaçlar",
+   "kanit": "MADDE 14 - (1) İznin maksadı, personelin dinlenmesi, gücünü toplaması, yenilenmiş güçle göreve tekrar dönmesinin sağlanması ve bazı şahsi ihtiyaçlarını görmesidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-156",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "adresini ve iletişim araçlarını",
+   "cevap": "izne giden personel birlik/kurum âmirine bildirir; ulaşılabilir kalır",
+   "kanit": "(5) İzne giden her personel, ayrılmadan evvel kendi birlik veya kurum âmirine gideceği yerdeki adresini ve iletişim araçlarını bildirmeli, izinden çağrılmayı gerektirecek hallerin varlığı halinde ise kendisini ulaşılabilir kılmalıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-157",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "talep edeceği aylara göre",
+   "cevap": "izinler göreve ve personelin talebine göre önceden planlanır",
+   "kanit": "(2) İzinler; göreve ve mümkün olduğunca personelin talep edeceği aylara göre önceden planlanmalı, olağandışı gelişmeler dışında, planda belirtilen gün ve sürelere sadık kalınmalıdır. İzinlerin tam ve zamanında kullandırılması, âmirlerin komuta yeteneği, beceri ve özgüvenlerinin bir göstergesidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-158",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "hiçbir suretle disiplinden taviz",
+   "cevap": "disiplin JGK, SGK ve Akademinin temelidir",
+   "kanit": "MADDE 7 - (1) Disiplin, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinin temelidir ve hiçbir suretle disiplinden taviz verilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-159",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "en zor zamanlarda bile",
+   "cevap": "disiplin böyle uygulanacak şekilde tesis edilir",
+   "kanit": "(7) Disiplin, en zor zamanlarda bile uygulanacak şekilde tesis edilmelidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-160",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "göreve ilişkin ve mevzuata uygun",
+   "cevap": "emirlerin şartı; emir tüm görevlerin düzenleyicisi",
+   "kanit": "MADDE 10 - (1) Emir tüm görevlerin düzenleyicisidir.\n(2) Emirlerin, göreve ilişkin ve mevzuata uygun olması şarttır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-161",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "net ve anlaşılır olmalıdır",
+   "cevap": "emir; âmirin takip, kontrol, yönlendirme sorumluluğu da var",
+   "kanit": "(9) Emir, net ve anlaşılır olmalıdır. Emrin yapılmasında ve istenilen şekilde başarıya ulaşmasında astın sorumluluğunun yanı sıra, âmirin de emre yönelik takip, kontrol ve olumlu yönde yönlendirme sorumluluğu vardır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-162",
+   "madde": "12",
+   "tip": "tanim",
+   "tetikleyici": "emsalleri arasında ayırt ederek",
+   "cevap": "ödüllendirmenin amacı: teşvik, moral, diğer personele örnek olma",
+   "kanit": "MADDE 12 - (1) Ödüllendirme; görevini, üstün gayret ve başarıyla, etkili ve verimli bir şekilde icra eden personeli ilerleme ve gelişmeye teşvik etmek, moral vermek ve başarılı olanları emsalleri arasında ayırt ederek, diğer personele örnek olmasını sağlamak maksadı ile yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-163",
+   "madde": "12",
+   "tip": "kosul",
+   "tetikleyici": "emsalleri ile kıyaslanması esastır",
+   "cevap": "ödüllendirmede; ödüllenen sayısında aşırıya kaçılmaz",
+   "kanit": "(4) Ödüllendirmede, personelin emsalleri ile kıyaslanması esastır. Ödüllendirilen personel sayısında aşırıya kaçılması ödülün değerini düşürür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-164",
+   "madde": "18",
+   "tip": "sira_usul",
+   "tetikleyici": "üstlerden önce selam vermek",
+   "cevap": "astlar zorunlu; aynı rütbedekiler beklemeden; sivil kıyafet mani değil",
+   "kanit": "(3) Astlar, üstlerden önce selam vermek zorundadır. Aynı rütbede olanlar veya birbirinin rütbesini ayırt edemeyenler birbirini beklemeden selam verirler. Üstler de aynı usul ve esaslarla astlarını ciddiyet içinde ve tam olarak selamlar. Üst veya âmir canlı olarak selamlanır. Sivil kıyafetli olunması selam verilmesine mani değildir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-165",
+   "madde": "18",
+   "tip": "sira_usul",
+   "tetikleyici": "kar başlığı, çelik/fiber başlık",
+   "cevap": "elle selamlama sağ el ile; dar geçitte ast yol verir",
+   "kanit": "(8) Elle selamlama, başta şapka, kayık kep, bere, kar başlığı, çelik/fiber başlık bulunduğunda ve sağ el ile yapılır. Merdiven ve dar geçit gibi yerlerde selamlama, astların durup yol vermesi suretiyle olur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-166",
+   "madde": "23",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kışlaya sokulmasını engeller",
+   "cevap": "kışla komutanı: yasak malzemeler; giriş-çıkış kontrolü; emniyet-disiplin tedbirleri",
+   "kanit": "c) Yasak edilen malzemelerin kışlaya sokulmasını engeller.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-167",
+   "madde": "23",
+   "tip": "gorev_yetki",
+   "tetikleyici": "giriş ve çıkışların kontrollü",
+   "cevap": "kışla komutanının görevi; Devlet malı, paratoner, kantin gelirleri de",
+   "kanit": "ğ) Kışlaya giriş ve çıkışların kontrollü yapılmasını sağlar.\nh) Kışlada bulunan Devlet malının muhafazası için gerekli tedbirlerin alınmasını sağlar.\nı) Paratonerlerin ölçüm ve bakımlarının yaptırılması ve kontrol edilmesini sağlar.\ni) Kantin ve gazino gelirlerinin ihtiyaçlar doğrultusunda ve planlı olarak harcanmasını sağlar.\nj) Kışla gelişim planının hazırlanmasını sağlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-168",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "görev dışı zamanlarda",
+   "cevap": "amaç: personelin uyacağı kurallar, vasıflar, görevlerin icra tarzı",
+   "kanit": "MADDE 1 - (1) Bu Yönetmeliğin amacı; yürütülen görevlerin icrası esnasında ve görev dışı zamanlarda Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisi personelinin uyması gereken kuralları, sahip olması gereken vasıfları ve muhtelif görevlerin icra tarzını belirlemektir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-169",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "karargâh, birlik ve kurumlar",
+   "cevap": "kapsam: JGK, SGK, Akademi ve buralardaki personel; işçiler kendi mevzuatına",
+   "kanit": "MADDE 2 - (1) Bu Yönetmelik, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisindeki karargâh, birlik ve kurumlar ile buralarda görev yapan personeli kapsar.\n(2) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisi emrine verilen 25/6/2019 tarihli ve 7179 sayılı Askeralma Kanununa tabi askerlik yükümlüleri bakımından, bu Yönetmelikte yer almayan hususlarda diğer askerlik yükümlülerinin tabi olduğu mevzuat hükümleri uygulanır.\n(3) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli işçiler kendi mevzuatına tabidir.",
+   "not": "İçişleri sivil memurları kapsam DIŞI",
+   "karistirilan": [
+    {
+     "madde": "15",
+     "fark": "kılık kıyafet: şapkasız dolaşma izni en büyük âmirin alanında"
+    },
+    {
+     "madde": "25",
+     "fark": "nöbet hizmetleri: günlük görev cetveline göre"
+    },
+    {
+     "madde": "26",
+     "fark": "nöbet görevi ihdası"
+    },
+    {
+     "madde": "30",
+     "fark": "moral ve motivasyon faaliyetleri; araç kullanımı"
+    },
+    {
+     "madde": "33",
+     "fark": "yangından korunma yönetmeliği uygulanır"
+    }
+   ]
+  },
+  {
+   "i": "K-23-170",
+   "madde": "5",
+   "tip": "yasak",
+   "tetikleyici": "bağımsızlığını ve bütünlüğünü bozan",
+   "cevap": "personel böyle faaliyette bulunamaz; Devlet menfaatini korur",
+   "kanit": "MADDE 5 - (1) Personel, her durumda Devletin menfaatlerini korumak mecburiyetindedir. Türkiye Cumhuriyeti Anayasasına ve kanunlarına aykırı olan, memleketin bağımsızlığını ve bütünlüğünü bozan, Türkiye Cumhuriyetinin güvenliğini tehlikeye düşüren herhangi bir faaliyette bulunamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-171",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "tam bir adaletle ve zamanında",
+   "cevap": "ceza böyle verilmelidir; faydası diğerlerine ibret olması",
+   "kanit": "(2) Ceza tam bir adaletle ve zamanında verilmelidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-172",
+   "madde": "22",
+   "tip": "yasak",
+   "tetikleyici": "iç ve dış siyaset hakkında",
+   "cevap": "gazete-dergi-internet-sosyal medyada yazı yazamaz; Hükümet ve meslek aleyhine tenkit yok",
+   "kanit": "(4) Personel, gazete ve dergilere, internet ve sosyal medya vasıtalarına iç ve dış siyaset hakkında yazı yazamaz, Hükümet ve meslek aleyhinde tenkitte bulunamaz, gizli olan resmî iş ve tertipleri hakkında yayın yapamaz.",
+   "not": "bilimsel, tarihi, iktisadi, edebi yazı serbest",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-173",
+   "madde": "27",
+   "tip": "kosul",
+   "tetikleyici": "ihtiyaca göre birlik komutanı belirler",
+   "cevap": "hazır kıt’anın zamanı ve kuvveti; sabit on kişi YOK",
+   "kanit": "(3) Hazır kıt’anın teşkil edileceği zaman ve kuvveti ihtiyaca göre birlik komutanı belirler. Bu kıt’anın kuvveti en az üç kişiden birliğin tamamına kadar olabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-174",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "ahlaki ve manevi vasıflar şunlardır",
+   "cevap": "itaat, sebat ve mukavemet, cesaret ve şecaat, sır saklamak, intizam",
+   "kanit": "(4) Her personelde bulunması lazım gelen ahlaki ve manevi vasıflar şunlardır:\na) Cumhuriyete, yurda ve millete karşı sevgi ve bağlılık: Cumhuriyet, yurt ve millete; içerden ve dışardan gelecek her türlü tehlikeyi karşılamak, def etmek ve gerektiğinde bu uğurda hayatını fedadan çekinmemektir.\nb) İtaat: Mevzuat ile emirlerin gösterdiğinden dışarı çıkmamak ve yasak edilen şeyleri yapmamaktır.\nc) Sebat ve mukavemet: Görev yapılırken karşılaşılacak her türlü zorluk ve yokluklara katlanarak ve asla usanç ve yılgınlık göstermeyerek göreve devam ve görevi istenildiği gibi tamamlamaktır.\nç) Cesaret ve şecaat: Tehlikeden asla korkmayarak ve gerektiğinde ölmekten çekinmeyerek iş görmek ve pek yürekli olmaktır.",
+   "not": "tarafsız siyasi tavır listede YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-175",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "Cesaret ve şecaat",
+   "cevap": "tehlikeden korkmamak, gerektiğinde ölmekten çekinmemek, pek yürekli olmak",
+   "kanit": "ç) Cesaret ve şecaat: Tehlikeden asla korkmayarak ve gerektiğinde ölmekten çekinmeyerek iş görmek ve pek yürekli olmaktır.",
+   "not": "korkaklık en büyük affedilmeyecek kusur",
+   "karistirilan": []
   }
  ]
 }

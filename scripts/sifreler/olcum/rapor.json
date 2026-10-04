@@ -1,0 +1,4581 @@
+[
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 21,
+  "lid": 4,
+  "neg": false,
+  "d": "B",
+  "kok": "Tebligat Kanunu'na göre kendisine tebliğ yapılacak kimse imza edecek kadar yazı bilmez veya imza edemeyecek durumda bulunursa ve sol elinin baş parmağı bulunmuyor ise öncelikle hangi parmağı evraka bastırılır?",
+  "sec": {
+   "A": "Sağ elin bütün parmakları",
+   "B": "Sol elin diğer bir parmağı",
+   "C": "Sağ elin işaret parmağı",
+   "D": "Sağ elin baş parmağı",
+   "E": "Sağ elin iki parmağı"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-4-006",
+    "lid": 4,
+    "m": "24",
+    "kel": "sol elinin baş parmağı",
+    "cev": "imza bilmeyene, komşu huzurunda",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 22,
+  "lid": 5,
+  "neg": true,
+  "d": "C",
+  "kok": "İl İdaresi Kanunu'na göre, kendi idarelerine ait idari ve istişari işlerin görüşülmesi durumu hariç olmak üzere, aşağıdakilerden hangisi genel olarak il idare kurulu teşekkülünde yer alan il idare şube başkanları arasında yer almaz?",
+  "sec": {
+   "A": "Defterdar",
+   "B": "İl Milli Eğitim Müdürü",
+   "C": "Gençlik ve Spor İl Müdürü",
+   "D": "Hukuk İşleri Müdürü",
+   "E": "İl Sağlık Müdürü"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-5-025",
+    "lid": 5,
+    "m": "57",
+    "kel": "İl idare kurulu",
+    "cev": "yalnız sivil müdürler; jandarma, emniyet yok",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-5-023",
+    "lid": 5,
+    "m": "57",
+    "kel": "defterdar",
+    "cev": "il idare kurulu",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 23,
+  "lid": 17,
+  "neg": false,
+  "d": "D",
+  "kok": "I. Can ve ırz emniyetini korumak\nII. Devletin güvenliğine karşı işlenen suçların faillerini yakalamak veya delillerini tespit etmek\nIII. Umuma açık yerlerde yapılan her türlü toplantı veya yürüyüşlerde ya da törenlerde bozulan düzeni sağlamak\nIV. Herhangi bir sebeple tıkanmış olan yolların trafiğe açılması için\nV. Kolluk kuvvetlerinin elinden kaçmakta olan şahısların yakalanması\n\nJandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'nin 42. Maddesine göre Jandarma yukarıdakilerden hangi durum ya da durumlarda yetkili amirin sözlü emrini derhal yerine getirir?",
+  "sec": {
+   "A": "Yalnız II",
+   "B": "I ve III",
+   "C": "Yalnız I",
+   "D": "I, II, III, IV, V",
+   "E": "II ve III"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 24,
+  "lid": 17,
+  "neg": false,
+  "d": "E",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre Cumhuriyet Savcısının emir ve talimatı ile soruşturma işlemleri kime yaptırılır?",
+  "sec": {
+   "A": "Belediye Zabıtası",
+   "B": "Jandarma özel harekat birimlerine",
+   "C": "Komando birliklerine",
+   "D": "İdari kolluğa",
+   "E": "Adli kolluğa"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 25,
+  "lid": 13,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Silahlı Kuvvetlerinde istihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre, sözleşmenin yürürlüğe girdiği ay ve günü başlangıç olarak kabul eden ve bu tarihten itibaren geçen her bir yıllık süreye ne ad verilir?",
+  "sec": {
+   "A": "Sözleşme yılı",
+   "B": "Sözleşme süreci",
+   "C": "Sözleşme bitişi",
+   "D": "Sözleşme başlangıcı",
+   "E": "Sözleşme geçişi"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-13-028",
+    "lid": 13,
+    "m": "3",
+    "kel": "yürürlüğe girdiği ay ve günü",
+    "cev": "sözleşme yılı: bu tarihten itibaren geçen her bir yıllık süre",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 2,
+     "B": 1,
+     "C": 1,
+     "D": 1,
+     "E": 1
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 26,
+  "lid": 12,
+  "neg": false,
+  "d": "B",
+  "kok": "7068 sayılı kanuna göre kripto telsiz cihazının ve her türlü kriptolu cihazın kaybını veya çalındığını, idarece kabul edilebilir bir mazereti olmaksızın ilgili birime bildirmemek hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Altı ay kısa süreli durdurma",
+   "B": "Yirmi dört ay uzun süreli durdurma",
+   "C": "Kınama",
+   "D": "On dört ay uzun süreli durdurma",
+   "E": "On ay kısa süreli durdurma"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 27,
+  "lid": 8,
+  "neg": false,
+  "d": "C",
+  "kok": "Olağanüstü Hal kanuna göre, il valisi, ani ve olağanüstü olaylarla karşılaşması halinde veya bölge valisinin göndereceği güçler gelinceye kadar görev yapmak üzere kimden yardım gönderilmesini isteyebilir?",
+  "sec": {
+   "A": "Bölge Müdürlerinden",
+   "B": "Belediye başkanından",
+   "C": "En yakın askeri komutanlıktan",
+   "D": "AFAD başkanlığı",
+   "E": "Kara Kuvvetleri Komutanlığından"
+  },
+  "durum": "şıkta: YANLIŞ işaret",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-8-017",
+    "lid": 8,
+    "m": "22",
+    "kel": "en yakın askeri komutanlıktan",
+    "cev": "il valisi; ani olayda, bölge valisinin güçleri gelene kadar",
+    "yer": "şık",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 28,
+  "lid": 15,
+  "neg": false,
+  "d": "A",
+  "kok": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik çerçevesinde hazırlanan belgelerde, gerekli hallerde yazı alanında harf büyüklüğü en az ne kadar olabilir?",
+  "sec": {
+   "A": "9 punto",
+   "B": "7 punto",
+   "C": "11 punto",
+   "D": "10 punto",
+   "E": "5 punto"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 29,
+  "lid": 5,
+  "neg": false,
+  "d": "D",
+  "kok": "İl İdaresi Kanunu'na göre genel ve özel kolluk amirlerinin birinci derecede sicil amiri kimdir?",
+  "sec": {
+   "A": "Jandarma Genel Komutanı",
+   "B": "Kaymakam",
+   "C": "Karakol Amiri",
+   "D": "Vali",
+   "E": "Emniyet Genel Müdürü"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-5-015",
+    "lid": 5,
+    "m": "18",
+    "kel": "birinci derecede",
+    "cev": "vali, sicil amiri",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 30,
+  "lid": 6,
+  "neg": false,
+  "d": "E",
+  "kok": "Kabahatler Kanunu'na göre mülkiyetin kamuya geçirilmesine ilişkin yerine getirme zamanaşımı ne kadardır?",
+  "sec": {
+   "A": "Üç yıl",
+   "B": "Beş yıl",
+   "C": "Dört yıl",
+   "D": "Yedi yıl",
+   "E": "On yıl"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-6-070",
+    "lid": 6,
+    "m": "21",
+    "kel": "Mülkiyetin kamuya geçirilmesine ilişkin",
+    "cev": "yerine getirme zamanaşımı on yıl",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 31,
+  "lid": 1,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Ceza Kanunu'na göre biri diğerinin unsurunu veya ağırlaştırıcı nedenini oluşturması dolayısıyla tek fiil sayılan suça ne ad verilir?",
+  "sec": {
+   "A": "Bileşik suç",
+   "B": "Zincirleme suç",
+   "C": "Artırımlı suç",
+   "D": "Toplam suç",
+   "E": "Birlikte suç"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-080",
+    "lid": 1,
+    "m": "42",
+    "kel": "ağırlaştırıcı nedenini oluşturması",
+    "cev": "bileşik suç (tanım): biri diğerinin unsuru; tek fiil sayılır",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-1-022",
+    "lid": 1,
+    "m": "42",
+    "kel": "bileşik suç",
+    "cev": "içtima hükümleri uygulanmaz",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 32,
+  "lid": 13,
+  "neg": false,
+  "d": "B",
+  "kok": "Sözleşmeli subay ve astsubay adayları ile sözleşmeli subay ve astsubaylarla ön sözleşmeden sonraki ilk sözleşmeyi yapmaya kuvvet komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında hangi makam yetkilidir?",
+  "sec": {
+   "A": "Personel daire başkanı veya eşidi birim amiri",
+   "B": "Personel Temin Merkezi komutanı veya eşidi birim amiri",
+   "C": "Lojistik daire başkanı veya eşidi birim amiri",
+   "D": "Atama daire başkanı",
+   "E": "Tayin daire başkanı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-16-032",
+    "lid": 16,
+    "m": "31",
+    "kel": "Personel Temin Merkezi Komutanı",
+    "cev": "ön sözleşme ve ilk sözleşmeyi yapar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 33,
+  "lid": 17,
+  "neg": false,
+  "d": "C",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre aşağıdakilerden hangisi umuma açık istirahat ve eğlence yeri olarak kabul edilmez?",
+  "sec": {
+   "A": "Motel",
+   "B": "Sinema",
+   "C": "Düğün salonu",
+   "D": "Kamping",
+   "E": "Kahvehane"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 34,
+  "lid": 2,
+  "neg": false,
+  "d": "D",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre, Jandarma personelinin mülki görevlerinden doğan suçlarında; özel kanunların hükümleri saklı kalmak şartıyla hangi kanun hükümlerine göre işlem yapılır?",
+  "sec": {
+   "A": "5271 sayılı Ceza Muhakemesi Kanunu",
+   "B": "211 sayılı Türk Silahlı Kuvvetleri İç Hizmet Kanunu",
+   "C": "657 sayılı Devlet Memurları Kanunu",
+   "D": "4483 sayılı Memurlar ve Diğer Kamu Görevlilerinin Yargılanması Hakkında Kanun",
+   "E": "2547 sayılı Yükseköğretim Kanunu"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-2-028",
+    "lid": 2,
+    "m": "15",
+    "kel": "mülki görevlerinden doğan suçlarında",
+    "cev": "4483 sayılı Kanun (Memurların Yargılanması)",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 4,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-22-120",
+    "lid": 22,
+    "m": "53",
+    "kel": "mülki görevlerinden doğan suçlarında",
+    "cev": "4483 sayılı Kanun; adli görev suçunda CMK 161 beşinci fıkra",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 2,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 35,
+  "lid": 1,
+  "neg": false,
+  "d": "E",
+  "kok": "Türk Ceza Kanunu'na göre kişinin suça iştirakten sorumlu tutulması için asgari koşul aşağıdakilerden hangisidir?",
+  "sec": {
+   "A": "Suçun tamamlanması",
+   "B": "Suçun planlanması",
+   "C": "Suçun zarar vermesi",
+   "D": "Suçun sonuçlarını doğurması",
+   "E": "Suçun teşebbüs aşamasına varması"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 36,
+  "lid": 13,
+  "neg": false,
+  "d": "A",
+  "kok": "Sözleşmeli subay adayları, ne zaman askeri eğitime alınır?",
+  "sec": {
+   "A": "Ön sözleşmeyi müteakip",
+   "B": "Sözleşme imzalanmasını müteakip",
+   "C": "Sözleşmeli subaylar askeri eğitime tabi tutulmazlar",
+   "D": "Başvuru yapar yapmaz",
+   "E": "Herhangi bir koşul aranmaz"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 37,
+  "lid": 15,
+  "neg": false,
+  "d": "B",
+  "kok": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik çerçevesinde belgeler kural olarak hangi boyut dikkate alınarak hazırlanır?",
+  "sec": {
+   "A": "200x310 mm",
+   "B": "210x297 mm",
+   "C": "125x200 mm",
+   "D": "227/291 mm",
+   "E": "240x320 mm"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 38,
+  "lid": 1,
+  "neg": false,
+  "d": "C",
+  "kok": "Türk Ceza Kanunu'na göre suçun nasıl işleneceği hususunda yol göstermek veya fiilin işlenmesinde kullanılan araçları sağlamak ceza sorumluluğu kapsamında hangi sıfatla değerlendirilir?",
+  "sec": {
+   "A": "Bilinçli taksir",
+   "B": "Fail",
+   "C": "Yardım eden",
+   "D": "Azmettiren",
+   "E": "Olası fail"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-079",
+    "lid": 1,
+    "m": "39",
+    "kel": "hususunda yol göstermek",
+    "cev": "yardım eden; araçları sağlamak da (azmettirme değil)",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 2,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 39,
+  "lid": null,
+  "neg": false,
+  "d": "D",
+  "kok": "Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimse bu fiilini zor kullanarak işler veya bu suretle işlenmesine teşebbüs ederse nasıl cezalandırılır?",
+  "sec": {
+   "A": "Verilecek ceza iki misli artırılır",
+   "B": "Verilecek ceza yarı oranında artırılır",
+   "C": "Verilecek ceza üçte bir oranında artırılır",
+   "D": "Verilecek ceza bir misli artırılır",
+   "E": "Verilecek cezada bir değişiklik olmaz"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-9-002",
+    "lid": 9,
+    "m": "1",
+    "kel": "heykel, büst ve abideleri",
+    "cev": "bir yıldan beş yıla ağır hapis",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-9-010",
+    "lid": 9,
+    "m": "1",
+    "kel": "kabrini tahrip eden",
+    "cev": "bir yıldan beş yıla kadar ağır hapis; kıran, bozan, kirleten",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-9-009",
+    "lid": 9,
+    "m": "2",
+    "kel": "bir misli artırılır",
+    "cev": "heykel/kabir tahribi zor kullanılarak işlenir ya da teşebbüs edilirse",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 40,
+  "lid": null,
+  "neg": false,
+  "d": "E",
+  "kok": "Terör örgütünün; cebir, şiddet veya tehdit içeren yöntemlerini meşru gösterecek veya övecek ya da bu yöntemlere başvurmayı teşvik edecek şekilde propagandasını yapan kişinin temel cezası ve bu fiili basın ve yayın yoluyla işlerse uygulanacak ceza aşağıdakilerden hangisidir?",
+  "sec": {
+   "A": "Üç yıldan beş yıla kadar hapis cezası ve verilecek ceza katı oranında artırılır",
+   "B": "İki yıldan yedi yıla kadar hapis cezası ve verilecek ceza üçte bir oranında artırılır",
+   "C": "Üç yıldan sekiz yıla kadar hapis cezası ve verilecek ceza dörtte bir oranında artırılır",
+   "D": "Beş yıldan on yıla kadar hapis cezası ve verilecek ceza üçte bir oranında artırılır",
+   "E": "Bir yıldan beş yıla kadar hapis cezası ve verilecek ceza yarı oranında artırılır"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-7-010",
+    "lid": 7,
+    "m": "7",
+    "kel": "propagandasını yapan",
+    "cev": "bir yıldan beş yıla kadar hapis; basın-yayınla yarı artırım",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 3,
+     "B": 3,
+     "C": 3,
+     "D": 3,
+     "E": 4
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-9-011",
+    "lid": 9,
+    "m": "1",
+    "kel": "bir yıldan beş yıla",
+    "cev": "heykel, büst, abide, kabir tahribi; hakaret-sövme bir yıldan üç yıla",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 2,
+     "B": 2,
+     "C": 2,
+     "D": 2,
+     "E": 2
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 41,
+  "lid": 7,
+  "neg": false,
+  "d": "A",
+  "kok": "I. Türk Silahlı Kuvvetleri personeli,\nII. Mülki idare amirleri, İstihbarat görevlileri,\nIII. Kolluk görevlileri\nIV. Terörle mücadele amacıyla görevlendirilmiş diğer personel\nV. Terör olaylarından mağdur olan vatandaş\nVI. Terör olaylarından şikayetçi vatandaş\n\nYukarıda yer verilenlerden hangisi ya da hangilerine Terörle Mücadele Kanunu'nun 15. maddesine göre Avukat ücreti ödenir?",
+  "sec": {
+   "A": "I, II, III ve IV",
+   "B": "I ve IV",
+   "C": "IV, V ve VI",
+   "D": "II, III ve IV",
+   "E": "Yalnız I"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 42,
+  "lid": 13,
+  "neg": false,
+  "d": "B",
+  "kok": "I. Türk Silahlı Kuvvetleri Sınıf Okulları/Eğitim Merkezi Komutanlıkları Yönetmeliğinin ilgili hükümleri gereğince, sınıf okullarındaki eğitim ve öğretimde başarısız olmak.\nII. Disiplinsizlik ve ahlaki durum nedeniyle Türk Silahlı Kuvvetlerinde görev yapamayacağı, sıralı sicil üstlerinin düzenleyeceği sicil ve kanaat raporu ile anlaşılmak.\nIII. Yetersizlik nedeniyle kendisinden istifade edilemeyeceği, sıralı sicil üstlerinin düzenleyeceği sicil belgesi ile anlaşılmak.\nIV. Yalan yere yemin suçundan mahkûm olmak\nV. Görevde fiili dokuz yılını doldurmuş ancak on yılını doldurmamış olmak\n\nSözleşmeli subay ve astsubaylara verilen zati tabanca yukarıdaki hangi durum ve durumlarda geri alınır?",
+  "sec": {
+   "A": "III ve V",
+   "B": "I, II, III ve IV",
+   "C": "III, IV ve V",
+   "D": "I, III ve IV",
+   "E": "Yalnız I"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 43,
+  "lid": 14,
+  "neg": false,
+  "d": "C",
+  "kok": "5070 Sayılı Kanuna göre imza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturma amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verilere ne ad verilir?",
+  "sec": {
+   "A": "İmza doğrulama verisi",
+   "B": "İmza doğrulama aracı",
+   "C": "İmza oluşturma verisi",
+   "D": "Zaman damgası",
+   "E": "Elektronik sertifika verisi"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-14-001",
+    "lid": 14,
+    "m": "3",
+    "kel": "kriptografik gizli anahtarlar",
+    "cev": "imza oluşturma verisi",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 2,
+     "B": 1,
+     "C": 3,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-14-003",
+    "lid": 14,
+    "m": "3",
+    "kel": "Zaman damgası",
+    "cev": "zamanın, ESHS tarafından imzayla doğrulanan kaydı",
+    "yer": "şık",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 44,
+  "lid": 15,
+  "neg": false,
+  "d": "D",
+  "kok": "I. Dağıtım başlığı, ek varsa, Ek bölümünden önce yazılır.\nII. Bilgi kısmı dağıtım başlığının hizasına yazılır.\nIII. Gereği kısmı, bilgi kısmının hizasına ve yazı alanının ortasına doğru yazılır.\nIV. Bilgi kısmı yoksa muhatap adları doğrudan \"dağıtım\" başlığının altına yazılır.\n\nResmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik çerçevesinde, dağıtım hakkında yukarıdakilerden hangisi ya da hangileri doğrudur?",
+  "sec": {
+   "A": "I ve II",
+   "B": "I, II ve III",
+   "C": "II ve IV",
+   "D": "Yalnız IV",
+   "E": "Yalnız I"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-15-078",
+    "lid": 15,
+    "m": "19",
+    "kel": "yazı alanının ortasına doğru",
+    "cev": "Bilgi kısmı; Gereği ile aynı satıra",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-15-079",
+    "lid": 15,
+    "m": "19",
+    "kel": "muhatap adları doğrudan",
+    "cev": "Bilgi kısmı yoksa Dağıtım başlığının altına",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 45,
+  "lid": 16,
+  "neg": false,
+  "d": "E",
+  "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliği kapsamında muvazzaflığa geçmek için fiziki yeterlik ve değerlendirme testi sırasında, üç bin metre koşu testinden en az kaç puan almış olmak gerekir?",
+  "sec": {
+   "A": "80",
+   "B": "90",
+   "C": "60",
+   "D": "70",
+   "E": "50"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 46,
+  "lid": 13,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'un 6. Maddesine göre, Sözleşmeli subaylarla imzalanacak sözleşme süresi en az ve en fazla kaç yıl olabilir?",
+  "sec": {
+   "A": "En az üç yıl en fazla dokuz yıl",
+   "B": "En az üç yıl en fazla beş yıl",
+   "C": "En az beş yıl en fazla yedi yıl",
+   "D": "En az bir yıl en fazla üç yıl",
+   "E": "En az altı yıl en fazla oniki yıl"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 47,
+  "lid": null,
+  "neg": false,
+  "d": "B",
+  "kok": "Jandarma amirinden aldığı emri Anayasa, kanun, tüzük ve yönetmelik hükümlerine aykırı görürse yerine getirmez ve bu aykırılığı emri verene bildirir. Ancak, amir emrinde ısrar eder ve bu emrini yazılı olarak tekrar ederse emir yerine getirilir. Bu durumda sorumluluk aşağıdakilerden hangisine aittir?",
+  "sec": {
+   "A": "Emirden etkilenen",
+   "B": "Emri veren",
+   "C": "Emri yerine getiren",
+   "D": "Emre aracılık eden",
+   "E": "Emirden haberdar olan"
+  },
+  "durum": "YANLIŞ işaret",
+  "kok_vurus": [
+   {
+    "i": "K-17-055",
+    "lid": 17,
+    "m": "42",
+    "kel": "yazılı olarak tekrar ederse",
+    "cev": "aykırı emir yerine getirilir; yapan sorumlu olmaz",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-17-144",
+    "lid": 17,
+    "m": "42",
+    "kel": "aykırılığı emri verene bildirir",
+    "cev": "aykırı emir yerine getirilmez; yazılı tekrarda getirilir, sorumlu olmaz",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 48,
+  "lid": 1,
+  "neg": false,
+  "d": "C",
+  "kok": "Türk Ceza Kanunu'na göre görevi nedeniyle zilyedliği kendisine devredilmiş olan veya koruma ve gözetimiyle yükümlü olduğu malı kendisine veya başkasına zimmetine geçiren kamu görevlisine hangi ceza verilir?",
+  "sec": {
+   "A": "2 yıldan 5 yıla kadar",
+   "B": "3 yıldan 7 yıla kadar",
+   "C": "5 yıldan 12 yıla kadar",
+   "D": "7 yıldan 15 yıla kadar",
+   "E": "1 yıldan 3 yıla kadar"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-1-027",
+    "lid": 1,
+    "m": "247",
+    "kel": "zimmetine geçiren",
+    "cev": "beş yıldan oniki yıla kadar hapis",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 2,
+     "B": 2,
+     "C": 2,
+     "D": 2,
+     "E": 2
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 49,
+  "lid": 12,
+  "neg": false,
+  "d": "D",
+  "kok": "7068 sayılı kanuna göre yetkisini veya nüfuzunu kendisine veya başkalarına çıkar sağlamak amacıyla ya da kin veya dostluk gibi nedenlerle kötüye kullanmak fiiline hangi disiplin cezası verilir?",
+  "sec": {
+   "A": "Kamu görevinden çıkarma",
+   "B": "On ay kısa süreli durdurma",
+   "C": "Yirmi dört ay uzun süreli durdurma",
+   "D": "Meslekten çıkarma",
+   "E": "Kınama"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-112",
+    "lid": 12,
+    "m": "8",
+    "kel": "Yetkisini veya nüfuzunu kendisine",
+    "cev": "çıkar/kin-dostlukla kötüye kullanmak: meslekten çıkarma",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 2,
+     "B": 0,
+     "C": 0,
+     "D": 3,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 50,
+  "lid": 11,
+  "neg": false,
+  "d": "E",
+  "kok": "2893 sayılı kanuna göre Türk Bayrağı, yas alameti olarak 10 KASIM'da yarıya çekilir. Yas alameti olmak üzere Bayrağın yarıya çekileceği diğer haller ve zamanı hangi makam tarafından ilan edilir?",
+  "sec": {
+   "A": "Milli Eğitim Müdürlüğü",
+   "B": "Türkiye Büyük Millet Meclisi",
+   "C": "Genel Kurmay Başkanlığı",
+   "D": "İçişleri Bakanlığı",
+   "E": "Cumhurbaşkanlığı"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-11-003",
+    "lid": 11,
+    "m": "4",
+    "kel": "yarıya çekilir",
+    "cev": "10 Kasım; diğer haller Cumhurbaşkanlığınca ilan",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 51,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "(A), (B) ve (C) isimli şahıslar; kamu düzenini bozmak ve devletin anayasal kurumlarını işlevsiz kılmak amacıyla cebir ve şiddet yöntemlerini benimseyen bir örgüt kurmuş, silah temin ederek emir-komuta zinciri içinde hiyerarşik bir yapı oluşturmuşlardır.\n\nBuna göre, söz konusu şahısların cezalandırılmasında öncelikle aşağıdaki suç tiplerinden hangisinin hükümleri uygulanır?",
+  "sec": {
+   "A": "Silahlı örgüt kurma ve yönetme (TCK m. 314)",
+   "B": "Görevi yaptırmamak için direnme (TCK m. 265)",
+   "C": "Halkı kanunlara uymamaya tahrik (TCK m. 217)",
+   "D": "Suç işlemek amacıyla örgüt kurma (TCK m. 220)",
+   "E": "Suç işlemeye alenen tahrik (TCK m. 214)"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 52,
+  "lid": 12,
+  "neg": false,
+  "d": "B",
+  "kok": "7068 Sayılı Kanuna göre kumar oynamak veya oynatmak, kumar oynatanlarla ilişki kurmak fiili hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Aylıktan kesme",
+   "B": "Meslekten çıkarma",
+   "C": "Kınama",
+   "D": "Kamu görevinden çıkarma",
+   "E": "Uyarma"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-113",
+    "lid": 12,
+    "m": "8",
+    "kel": "Kumar oynamak veya oynatmak",
+    "cev": "kumar oynatanlarla ilişki kurmak da: meslekten çıkarma",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 53,
+  "lid": 3,
+  "neg": true,
+  "d": "C",
+  "kok": "Kişisel Verilerin Korunması Kanunu'na göre özel nitelikli kişisel veriler aşağıdakilerden hangisi arasında yer almaz?",
+  "sec": {
+   "A": "Kişilerin cinsel hayatı",
+   "B": "Kişilerin sendika üyeliği",
+   "C": "Kişilerin eğitim durumu",
+   "D": "Kişilerin dini",
+   "E": "Kişileri sağlığı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 54,
+  "lid": 2,
+  "neg": false,
+  "d": "D",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre, Jandarma Genel Komutanlığı fiili kadrolarına atanmış subay, astsubay ve uzman jandarma ve uzman erbaşlara ödenecek fazla çalışma karşılığı asayiş tazminatı oranları, personelin görev yerine göre değişiklikler gösterir. Personelin görev yerine göre asayiş tazminatı, 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığına oranla (ek gösterge dahil) en fazla olacak şekilde kime, hangi oranda ödenebilir?",
+  "sec": {
+   "A": "Komando ve sınır birliklerinde %60/Diğer Karargah, birlik ve kurumlarda %45",
+   "B": "Komando ve sınır birliklerinde %40/Diğer Karargah, birlik ve kurumlarda %25",
+   "C": "Komando ve sınır birliklerinde %43/Diğer Karargah, birlik ve kurumlarda %35",
+   "D": "Komando ve sınır birliklerinde %52/Diğer Karargah, birlik ve kurumlarda %40",
+   "E": "Komando ve sınır birliklerinde %65/Diğer Karargah, birlik ve kurumlarda %50"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-2-040",
+    "lid": 2,
+    "m": "21",
+    "kel": "Komando ve sınır birliklerinde",
+    "cev": "asayiş tazminatı en çok yüzde elli iki",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-2-041",
+    "lid": 2,
+    "m": "21",
+    "kel": "Diğer karargah, birlik ve kurumlarda",
+    "cev": "asayiş tazminatı yüzde kırk",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-23-169",
+    "lid": 23,
+    "m": "2",
+    "kel": "karargâh, birlik ve kurumlar",
+    "cev": "kapsam: JGK, SGK, Akademi ve buralardaki personel; işçiler kendi mevzuatına",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 55,
+  "lid": 6,
+  "neg": false,
+  "d": "E",
+  "kok": "Kabahatler Kanunu'na göre idari yaptırımlarda yerine getirme zamanaşımı süresi ne zaman işlemeye başlar?",
+  "sec": {
+   "A": "Fiil işlendiği tarihten itibaren başlar",
+   "B": "Tebliğ yapılan otuz gün sonra başlar",
+   "C": "Karar tebliğ edildiği andan başlar",
+   "D": "Karar verildiği tarihten başlar",
+   "E": "Kararın kesinleştiği takvim yılını takip eden takvim yılı başından itibaren başlar"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-6-032",
+    "lid": 6,
+    "m": "21",
+    "kel": "Yerine getirme zamanaşımı süresi",
+    "cev": "ellibin+ yedi, yirmibin+ beş, onbin+ dört, az üç yıl",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-6-034",
+    "lid": 6,
+    "m": "21",
+    "kel": "takip eden takvim yılı başından",
+    "cev": "yerine getirme zamanaşımı başlangıcı; kesinleşme yılını izleyen",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 56,
+  "lid": 10,
+  "neg": false,
+  "d": "A",
+  "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun kapsamında gecikmesinde sakınca olan durumlarda mülki amire tanınan bazı koruyucu tedbir kararı yetkilerinin kolluk amiri tarafından kullanılması durumunda kolluk amirince yapılacak işlem aşağıdakilerden hangisidir?",
+  "sec": {
+   "A": "Kararın alınmasını takip eden ilk işgünü içinde mülki amirin onayına sunmalı",
+   "B": "Kararın alınmasını takip eden bir hafta içinde mülki amirin onayına sunmalı",
+   "C": "Kararın alınmasını müteakip yirmi dört saat içinde mülki amirin onayına sunmalı",
+   "D": "Kararın alınmasını takip eden en geç ikinci işgünü içinde mülki amirin onayına sunmalı",
+   "E": "Kararın alınmasını müteakip en geç kırksekiz saat içinde mülki amirin onayına sunmalı"
+  },
+  "durum": "şıkta: YANLIŞ işaret",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-10-028",
+    "lid": 10,
+    "m": "3",
+    "kel": "ilk işgünü içinde mülkî amirin",
+    "cev": "kolluk amirinin koruyucu tedbir evrakı; kırksekiz saatte onaylanmazsa kalkar",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 1,
+     "E": 2
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-2-033",
+    "lid": 2,
+    "m": "15/A",
+    "kel": "yirmi dört saat içinde",
+    "cev": "gecikmesinde sakınca: komutanın yazılı emri, hâkim onayına sunulur",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 1,
+     "E": 1
+    },
+    "ktahmin": "C",
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 57,
+  "lid": 13,
+  "neg": false,
+  "d": "B",
+  "kok": "Sözleşmeli subay veya sözleşmeli astsubay adaylarının ön sözleşmeleri askeri eğitimin bir bölümüne katılmadıkları takdirde süre bitmeden feshedilebilir. Askeri eğitime hangi oranda katılmayan kişilerin ön sözleşmesi idarece feshedilebilir?",
+  "sec": {
+   "A": "Beşte birine",
+   "B": "Üçte birine",
+   "C": "Dörtte birine",
+   "D": "Yüzde kırkbeşine",
+   "E": "Yarısına"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-13-019",
+    "lid": 13,
+    "m": "13",
+    "kel": "üçte birine",
+    "cev": "askeri eğitime katılmama: ön sözleşme feshi; kazayla bir kez tekrar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 58,
+  "lid": 3,
+  "neg": true,
+  "d": "C",
+  "kok": "Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi bu Kanun'un istisnalarından biri değildir?",
+  "sec": {
+   "A": "Kişisel verilerin soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin olarak yargı makamları veya infaz mercileri tarafından işlenmesi",
+   "B": "Kişisel verilerin milli savunmayı, milli güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları tarafından yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi",
+   "C": "Kişisel verilerin milli savunmayı, milli güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliğe aykırı olmamak koşuluyla yazılım firmaları tarafından yazılım geliştirme ve software ürün geliştirmede kullanılması",
+   "D": "Kişisel verilerin, üçüncü kişilere verilmesine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi",
+   "E": "Kişisel verilerin resmi istatistik ile anonim hâle getirilmek suretiyle araştırma, planlama ve istatistik gibi amaçlarla işlenmesi"
+  },
+  "durum": "şıkta: YANLIŞ işaret",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-3-016",
+    "lid": 3,
+    "m": "28",
+    "kel": "konutta yaşayan aile fertleriyle",
+    "cev": "aile içi faaliyet; Kanun kapsamı dışında",
+    "yer": "şık",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 0,
+     "D": 3,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-3-017",
+    "lid": 3,
+    "m": "28",
+    "kel": "önleyici, koruyucu ve istihbari",
+    "cev": "Kanun uygulanmaz; kamu kurumlarının önleyici faaliyeti",
+    "yer": "şık",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-3-035",
+    "lid": 3,
+    "m": "28",
+    "kel": "resmi istatistik ile anonim",
+    "cev": "araştırma, planlama, istatistik amaçlı işleme: Kanun uygulanmaz",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 3
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 59,
+  "lid": 2,
+  "neg": false,
+  "d": "D",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre rütbelerindeki bekleme süresi dolan ya da kadrosuzluk nedenleri ile emekliliğe sevk edilme durumunda olan, ancak hizmetlerine ihtiyaç duyulan albaylar kaç yaşına kadar ve kimin onayıyla görevde bırakılabilirler?",
+  "sec": {
+   "A": "56 yaş/ Genel Kurmay Başkanı onayı",
+   "B": "57 yaş/Milli Savunma Bakanı onayı",
+   "C": "65 yaş/Jandarma Genel Komutanı onayı",
+   "D": "60 yaş/İçişleri Bakanı onayı",
+   "E": "55 yaş/Cumhurbaşkanı onayı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Subay (ortak 21-60)",
+  "no": 60,
+  "lid": null,
+  "neg": false,
+  "d": "E",
+  "kok": "Sözleşmeli astsubaylardan muvazzaf astsubaylığa geçiş için hangi çalışma süresi aralıklarında başvuru yapılabilir?",
+  "sec": {
+   "A": "Yedinci fiili hizmet yılı başından yedinci fiili hizmet yılı sonuna kadar",
+   "B": "Beşinci hizmet yılı başından onbeşinci fiili hizmet yılı bitimine kadar",
+   "C": "İkinci fiili hizmet yılı başından beşinci fiili hizmet yılı başına kadar",
+   "D": "Üçüncü fiili hizmet yılı başından beşinci fiili hizmet yılı bitimine kadar",
+   "E": "Dördüncü fiili hizmet yılı başından onikinci fiili hizmet yılı bitimine kadar"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-13-008",
+    "lid": 13,
+    "m": "7",
+    "kel": "yedinci fiilî hizmet yılı",
+    "cev": "muvazzaf subaylığa başvuru başlangıcı; onikinci yıl sonuna kadar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-13-013",
+    "lid": 13,
+    "m": "11",
+    "kel": "dördüncü fiilî hizmet yılı",
+    "cev": "muvazzaf astsubaylığa başvuru; onikinci yıl sonuna kadar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 21,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Sözleşmeli astsubaylığa başvuracak kişilerden Türk Silahlı Kuvvetlerinde istihdam edilenler ile yedek astsubay ve uzman erbaşların bu görevlerinde aldıkları sicilin, sicil tam notuna oranı en az kaç olmalıdır?",
+  "sec": {
+   "A": "Yüzde seksenbeş",
+   "B": "Yüzde yetmişbeş",
+   "C": "Yüzde yetmiş",
+   "D": "Yüzde doksan",
+   "E": "Yüzde seksen"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 22,
+  "lid": 9,
+  "neg": false,
+  "d": "B",
+  "kok": "Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre, bu Kanunda yazılı suçlar hakkında yapılacak takibata ilişkin doğru olan ifade aşağıdakilerden hangisidir?",
+  "sec": {
+   "A": "Sulh Ceza Hakimi tarafından şikayet üzerine takibat yapılır.",
+   "B": "Cumhuriyet Savcısı tarafından re'sen takibat yapılır.",
+   "C": "Mülki Amir tarafından re'sen takibat yapılır.",
+   "D": "Kolluk personeli tarafından re'sen takibat yapılır.",
+   "E": "Kolluk personeli tarafından şikayet üzerine takibat yapılır."
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-9-006",
+    "lid": 9,
+    "m": "3",
+    "kel": "re'sen takibat",
+    "cev": "Cumhuriyet savcılığı kendiliğinden kovuşturur; şikâyet gerekmez",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 23,
+  "lid": null,
+  "neg": true,
+  "d": "C",
+  "kok": "I. Ölenlerin aylığa müstehak dul ve yetimlerine bağlanacak aylığın toplam tutarı görevde olan emsallerin almakta olduğu aylıklardan az olamaz.\nII. Emekli olanların terör nedeniyle öldürülmeleri halinde ise, dul ve yetimlerine bağlanacak toplam aylık, görevdeki emsallerin almakta olduğu aylıktan az olamaz.\nIII. Yaşamak için gereken hareketleri yapamayacak ve başkasının yardım ve desteğine muhtaç olacak derecede malul olanlar ile ölenlerin dul ve yetimlerine en yüksek devlet memuru aylığı üzerinden 20 yıl hizmet yapmış gibi emekli ikramiyesi ödenir.\nIV. Yurtiçinde veya yurtdışında kamu konutlarından yararlanmakta iken malul olanların kendileri, ölenlerin aylığa müstehak dul ve yetimleri, 9/11/1983 tarihli ve 2946 sayılı Kamu Konutları Kanununda gösterilen özel tahsisli konutlarda oturanlar hariç olmak üzere, herhangi bir kira bedeli alınmaksızın yirmi yıl süreyle kamu konutlarından yararlanmaya devam edebilirler.\n\nKamu görevlilerinden yurtiçinde ve yurtdışında görevlerini ifa ederlerken veya sıfatları kalkmış olsa bile bu görevlerini yapmalarından dolayı terör eylemlerine muhatap olmaları nedeniyle yapılacak yardıma ilişkin yukarıdakilerden hangisi ya da hangileri yanlıştır?",
+  "sec": {
+   "A": "I, II ve IV",
+   "B": "II ve III",
+   "C": "III ve IV",
+   "D": "I ve II",
+   "E": "Yalnız I"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-7-042",
+    "lid": 7,
+    "m": "21",
+    "kel": "kira bedeli alınmaksızın",
+    "cev": "malul kamu görevlisi on yıl kamu konutunda kalmaya devam eder",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 24,
+  "lid": 6,
+  "neg": false,
+  "d": "D",
+  "kok": "Kabahatler Kanununa göre, ellibin Türk Lirasından az idari para cezasını gerektiren kabahatlerde soruşturma zamanaşımı ne kadardır?",
+  "sec": {
+   "A": "On yıl",
+   "B": "Bir yıl",
+   "C": "Beş yıl",
+   "D": "Üç yıl",
+   "E": "Altı ay"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 25,
+  "lid": 2,
+  "neg": false,
+  "d": "E",
+  "kok": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre idaresinden, kanun ve nizam hükümlerinin icrasını sağlamaktan, bunlara dayalı olarak verilen emir ve kararların uygulanmasından kim sorumludur?",
+  "sec": {
+   "A": "İçişleri Bakanı",
+   "B": "İl Güvenlik Komisyonu",
+   "C": "Milli Savunma Bakanı",
+   "D": "Kaymakam",
+   "E": "Jandarma Genel Komutanı"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-2-046",
+    "lid": 2,
+    "m": "6",
+    "kel": "nizam hükümlerinin icrasını",
+    "cev": "Jandarma Genel Komutanı sorumlu; teşkilatın sevk ve idaresinden",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 3
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-2-013",
+    "lid": 2,
+    "m": "10",
+    "kel": "komisyon",
+    "cev": "sınırları belirler; ilçede kaymakam, ilde vali başkanlığında",
+    "yer": "şık",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 26,
+  "lid": 1,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Ceza Kanunu'na göre suçun kanuni tanımında yer alan fiili birlikte gerçekleştiren kişiler her birisi nasıl sorumlu tutulur?",
+  "sec": {
+   "A": "Fail olarak",
+   "B": "Azmettiren olarak",
+   "C": "Taksirli olarak",
+   "D": "Katılan olarak",
+   "E": "Yardım eden olarak"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-077",
+    "lid": 1,
+    "m": "37",
+    "kel": "fiili birlikte gerçekleştiren",
+    "cev": "her biri fail olarak sorumlu (müşterek faillik)",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 27,
+  "lid": 13,
+  "neg": true,
+  "d": "B",
+  "kok": "I. 926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu\nII. 4678 sayılı Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun\nIII. 3466 sayılı Uzman Jandarma Kanunu\nIV. Sözleşmeli Erbaş ve Er Kanunu\nV. 657 sayılı Devlet Memurları Kanunu\n\nYukarıdakilerden hangisi ya da hangileri, 2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'nda hüküm bulunmayan hallerde, nasıp ve terfi statü ve rütbeye göre uygulanacak kanunlardan değildir?",
+  "sec": {
+   "A": "I ve II",
+   "B": "Yalnız V",
+   "C": "I ve III",
+   "D": "Yalnız I",
+   "E": "II, III ve IV"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 28,
+  "lid": 5,
+  "neg": false,
+  "d": "C",
+  "kok": "İl İdaresi Kanunu'na göre jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin il içine munhasır olmak üzere geçici veya sürekli olarak değiştirme yetkisi kime aittir?",
+  "sec": {
+   "A": "İl Jandarma Komutanı",
+   "B": "İl Emniyet Müdürü",
+   "C": "Vali",
+   "D": "Kaymakam",
+   "E": "Jandarma Genel Komutanı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 29,
+  "lid": 11,
+  "neg": false,
+  "d": "D",
+  "kok": "Türk Bayrağı Kanununa göre, kamu kurum ve kuruluşlarında Türk bayrağının çekili bulunduğu süre nasıl belirlenmiştir?",
+  "sec": {
+   "A": "Mesai günleri çekili kalır",
+   "B": "Sadece resmi ziyaretlerde çekili kalır",
+   "C": "Hafta başında çekilir",
+   "D": "Sürekli çekili kalır",
+   "E": "Tatil günleri çekili kalır"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-11-001",
+    "lid": 11,
+    "m": "3",
+    "kel": "sürekli çekili kalır",
+    "cev": "kamu kurum ve kuruluşlarında Türk Bayrağı",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 30,
+  "lid": 13,
+  "neg": false,
+  "d": "E",
+  "kok": "Türk Silâhlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay ve astsubay adaylarından askerî eğitimi başarıyla tamamlayanlar arasında en az kaç yıl hizmet yükümlülüğü getiren sözleşme imzalanır?",
+  "sec": {
+   "A": "Beş",
+   "B": "On",
+   "C": "Dokuz",
+   "D": "Yedi",
+   "E": "Üç"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-13-002",
+    "lid": 13,
+    "m": "3",
+    "kel": "hizmet yükümlülüğü getiren",
+    "cev": "sözleşme: üç yıldan az, dokuz yıldan fazla olmayan",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 31,
+  "lid": 4,
+  "neg": true,
+  "d": "A",
+  "kok": "Tebligat Kanunu'na göre, tebliğ edilecek kişi imza edecek kadar yazı bilmez veya imza edemeyecek durumda bulunursa ve parmak basma işlemine tanık olarak komşularından birisi, muhtar ya da ihtiyar heyetinden biri bulunmaz ise tebliğ memuru tebliğ sırasında hazır bulunmak üzere kimi davet eder?",
+  "sec": {
+   "A": "Bir zabıta memurunu",
+   "B": "Tebligat gönderen kişiyi",
+   "C": "18 yaşını geçmiş iki kişiyi",
+   "D": "Bir Avukatı",
+   "E": "Herhangi bir kişiyi"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-4-017",
+    "lid": 4,
+    "m": "24",
+    "kel": "bir zabıta memurunu",
+    "cev": "okuryazar komşu yoksa; muhtar/ihtiyar heyeti üyesi de davet edilebilir",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 32,
+  "lid": 7,
+  "neg": false,
+  "d": "B",
+  "kok": "I. Nüfus kaydı\nII. Ehliyet\nIII. Evlenme cüzdanı\nIV. Diploma ve benzeri belgelerin değiştirilmesi\nV. Menkul ve gayrimenkul mal varlıklarıyla ilgili hakları\n\nTerörle Mücadele Kanunu'nun 20. Maddesi kapsamında düzenleme yapılacak koruma tedbirleri arasında yukarıdakilerden hangisi ya da hangileri yer alır?",
+  "sec": {
+   "A": "I, II ve V",
+   "B": "I, II, III, IV ve V",
+   "C": "II, III, IV ve V",
+   "D": "II ve IV",
+   "E": "Yalnız III"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 33,
+  "lid": 8,
+  "neg": false,
+  "d": "C",
+  "kok": "Olağanüstü Hal Kanununa göre aşağıdakilerden hangisi Türkiye Büyük Millet Meclisi Cumhurbaşkanının istemi üzerine her defasında olağanüstü hali ne kadar uzatabilir?",
+  "sec": {
+   "A": "Bir ay",
+   "B": "Bir yıl",
+   "C": "Dört ay",
+   "D": "Altmış gün",
+   "E": "Üç ay"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 34,
+  "lid": 2,
+  "neg": false,
+  "d": "D",
+  "kok": "I. Genelge\nII. Kanun\nIII. Cumhurbaşkanlığı Kararnamesi\nIV. Tüzük\nV. Emir\n\nJandarma Teşkilat, Görev ve Yetkileri Kanunu'nun 11. Maddesine göre, Jandarmanın silah kullanma yetkisi yukarıdakilerden hangisi ya da hangileri ile düzenlenir?",
+  "sec": {
+   "A": "I ve III",
+   "B": "IV ve V",
+   "C": "III ve IV",
+   "D": "Yalnız II",
+   "E": "Yalnız I"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 35,
+  "lid": 1,
+  "neg": false,
+  "d": "E",
+  "kok": "Türk Ceza Kanunu'na göre, kişinin öngördüğü neticeyi istememesine karşın, neticenin meydana gelmesi halinde hangi durum söz konusudur?",
+  "sec": {
+   "A": "Kast",
+   "B": "Kaza",
+   "C": "Taksir",
+   "D": "Olası kast",
+   "E": "Bilinçli taksir"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-008",
+    "lid": 1,
+    "m": "22",
+    "kel": "istememesine karşın",
+    "cev": "bilinçli taksir",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 2
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 36,
+  "lid": 2,
+  "neg": false,
+  "d": "A",
+  "kok": "Türkiye Cumhuriyeti Jandarması 2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'nun 3. maddesine göre, nasıl bir kolluk kuvvetidir?",
+  "sec": {
+   "A": "Silahlı genel kolluk kuvvetidir",
+   "B": "Özel idari kolluk kuvvetidir",
+   "C": "Silahsız özel güvenlik kuvvetidir",
+   "D": "Askeri adli kolluk kuvvetidir",
+   "E": "Silahsız genel kolluk kuvvetidir"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-2-001",
+    "lid": 2,
+    "m": "3",
+    "kel": "silahlı genel kolluk kuvvetidir",
+    "cev": "jandarmanın tanımı; emniyet, asayiş, kamu düzeni",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 37,
+  "lid": 16,
+  "neg": false,
+  "d": "B",
+  "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliğine göre, Türk Silahlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay veya sözleşmeli astsubay adayları arasında; askerî eğitime alınmaları konusunda yapılan ve askerî eğitim dönemi başlangıcı ile subaylık veya astsubaylık nasıp kararnamesinin onay tarihine kadar geçecek süreyi kapsayan sözleşmeye ne ad verilir?",
+  "sec": {
+   "A": "Son sözleşme",
+   "B": "Ön sözleşme",
+   "C": "İkinci sözleşme",
+   "D": "Birinci sözleşme",
+   "E": "Sözleşme taslağı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 38,
+  "lid": null,
+  "neg": false,
+  "d": "C",
+  "kok": "Mevzuatta belirlenmiş usul ve kurallara riayet etmeden sözlü, yazılı veya elektronik olarak müracaat veya şikâyette bulunmak hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Aylıktan kesme",
+   "B": "Kısa süreli durdurma",
+   "C": "Kınama",
+   "D": "Uyarma",
+   "E": "Uzun süreli durdurma"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-074",
+    "lid": 12,
+    "m": "8",
+    "kel": "usul ve kurallara riayet etmeden",
+    "cev": "kınama; usulsüz sözlü, yazılı veya elektronik müracaat/şikâyet",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 39,
+  "lid": 12,
+  "neg": false,
+  "d": "D",
+  "kok": "7068 Sayılı Kanuna göre kumar oynamak veya oynatmak, kumar oynatanlarla ilişki kurmak fiili hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Aylıktan kesme",
+   "B": "Uyarma",
+   "C": "Kınama",
+   "D": "Meslekten çıkarma",
+   "E": "Kamu görevinden çıkarma"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-113",
+    "lid": 12,
+    "m": "8",
+    "kel": "Kumar oynamak veya oynatmak",
+    "cev": "kumar oynatanlarla ilişki kurmak da: meslekten çıkarma",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 2,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 40,
+  "lid": 10,
+  "neg": true,
+  "d": "E",
+  "kok": "Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun çerçevesinde mülki amir tarafından verilecek koruyucu tedbir kararları arasında yer almaz?",
+  "sec": {
+   "A": "Psikolojik, meslekî, hukukî ve sosyal bakımdan rehberlik ve danışmanlık hizmeti verilmesi",
+   "B": "Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması",
+   "C": "Geçici maddi yardım yapılması",
+   "D": "Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması",
+   "E": "Kişinin evli olması hâlinde müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi"
+  },
+  "durum": "şıkta: karışık (doğru + yanlış işaret)",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-10-004",
+    "lid": 10,
+    "m": "3",
+    "kel": "geçici maddi yardım",
+    "cev": "mülkî amirin koruyucu tedbiri",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-10-005",
+    "lid": 10,
+    "m": "3",
+    "kel": "Hayatî tehlikesinin bulunması hâlinde",
+    "cev": "mülkî amir geçici koruma; kolluk da gecikmede alabilir",
+    "yer": "şık",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 2,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-10-054",
+    "lid": 10,
+    "m": "3",
+    "kel": "rehberlik ve danışmanlık hizmeti",
+    "cev": "psikolojik, meslekî, hukukî ve sosyal; mülkî amir tedbiri",
+    "yer": "şık",
+    "tahmin": "A",
+    "puan": {
+     "A": 4,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-10-055",
+    "lid": 10,
+    "m": "4",
+    "kel": "ayrı yerleşim yeri belirlenmesi",
+    "cev": "hâkimin koruyucu tedbiri; evli korunan kişi için",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-21-074",
+    "lid": 21,
+    "m": "6",
+    "kel": "rehberlik ve danışmanlık hizmeti verilmesi",
+    "cev": "mülkî amir tedbirleri: barınma, maddi yardım, rehberlik, geçici koruma, kreş",
+    "yer": "şık",
+    "tahmin": "C",
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 3,
+     "D": 2,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": false
+   },
+   {
+    "i": "K-21-075",
+    "lid": 21,
+    "m": "6",
+    "kel": "resen geçici koruma altına alınması",
+    "cev": "hayatî tehlike halinde (mülkî amir; gecikmede kolluk amiri de)",
+    "yer": "şık",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 2,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": false
+   },
+   {
+    "i": "K-21-099",
+    "lid": 21,
+    "m": "12",
+    "kel": "ayrı yerleşim yeri belirlenmesi",
+    "cev": "hâkim koruyucu tedbiri (evli ise); işyeri değişikliği, aile konutu şerhi",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 41,
+  "lid": 15,
+  "neg": false,
+  "d": "A",
+  "kok": "I. Güvenli elektronik imza ile imzalanan süreli belgelerde \"ACELE\" veya \"GÜNLÜDÜR\" ibaresine üstveride ve üst yazı üzerinde yer verilir.\nII. \"ACELE\" ibaresi taşıyan yirmi dört saat içinde cevap verilir.\nIII. \"GÜNLÜDÜR\" ibaresi taşıyan belgeye belirtilen süre içinde cevap verilir.\nIV. Birden fazla sayfalı belgelerde \"ACELE\" veya \"GÜNLÜDÜR\" ibaresine her sayfada belirtilir.\nV. \"KİŞİYE ÖZEL\" ibaresi taşıyan belgenin zarfı açılarak, yetkili birimce doğrudan EBYS'ye ya kurumsal belge kayıt sistemine kaydedilir.\n\nResmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik kapsamında, süreli ve kişiye özel yazışmalar hakkında yukarıdakilerden hangisi ya da hangileri doğrudur?",
+  "sec": {
+   "A": "I ve III",
+   "B": "IV ve V",
+   "C": "II, III, IV ve V",
+   "D": "II ve V",
+   "E": "Yalnız I"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-2-033",
+    "lid": 2,
+    "m": "15/A",
+    "kel": "yirmi dört saat içinde",
+    "cev": "gecikmesinde sakınca: komutanın yazılı emri, hâkim onayına sunulur",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 42,
+  "lid": 2,
+  "neg": false,
+  "d": "B",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre işlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak Jandarma'nın hangi görevleri kapsamında değerlendirilir?",
+  "sec": {
+   "A": "Mülki",
+   "B": "Adli",
+   "C": "İdari",
+   "D": "Askeri",
+   "E": "Mahalli"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-2-007",
+    "lid": 2,
+    "m": "7",
+    "kel": "İşlenmiş suçlarla ilgili",
+    "cev": "adli görev",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 1,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 43,
+  "lid": 13,
+  "neg": false,
+  "d": "C",
+  "kok": "Sözleşmeli subay ve astsubaylardan, sözleşme süresi sonunda kendi istekleriyle sözleşmeleri yenilenmeyenler ile bunların bakmakla yükümlü oldukları aile fertlerinin sağlık hizmetlerinden yararlanmasına ilişkin hangisi doğrudur?",
+  "sec": {
+   "A": "On yıl ve hizmet süresinin yarısını geçmemek üzere yararlanabilirler",
+   "B": "Hizmet süresi kadar ve en fazla on yılı geçmemek üzere yararlanabilirler",
+   "C": "Hizmet süresinin yarısı kadar ve en fazla beş yılı geçmemek üzere yararlanabilirler",
+   "D": "Hizmet süresinin en fazla üç katını geçmemek üzere yararlanabilirler",
+   "E": "Hizmet süresi kadar ve en fazla iki yılı geçmemek üzere yararlanabilirler"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-2-084",
+    "lid": 2,
+    "m": "Ek 3",
+    "kel": "iki yılı geçmemek üzere",
+    "cev": "geçici hastalıkta sıhhi izin sınırı; kanser-verem uzun hastalıkta üç yıl",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 44,
+  "lid": 1,
+  "neg": false,
+  "d": "D",
+  "kok": "Türk Ceza Kanunu'na göre kişi, işlemeyi kastettiği bir suçu elverişli hareketlerle doğrudan doğruya başlayıp da elinde olmayan nedenlerle tamamlayamaz ise sorumluluğu nasıldır?",
+  "sec": {
+   "A": "Kasıtlı suçtan sorumlu tutulur",
+   "B": "Olası kasttan sorumlu tutulur",
+   "C": "Sorumlu tutulmaz",
+   "D": "Teşebbüsten dolayı sorumlu tutulur",
+   "E": "Azmettirmeden sorumlu tutulur"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-011",
+    "lid": 1,
+    "m": "35",
+    "kel": "elinde olmayan nedenlerle",
+    "cev": "teşebbüs",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 45,
+  "lid": 1,
+  "neg": false,
+  "d": "E",
+  "kok": "Türk Ceza Kanunu'na göre kişinin, suçun kanuni tanımındaki unsurların gerçekleşebileceğini öngörmesine rağmen, fiili işlemesi halinde hangi durum söz konusudur?",
+  "sec": {
+   "A": "Neticesi sebebiyle ağırlaşmış suç",
+   "B": "Azmettirme",
+   "C": "Kast",
+   "D": "Taksir",
+   "E": "Olası kast"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-007",
+    "lid": 1,
+    "m": "21",
+    "kel": "öngörmesine rağmen",
+    "cev": "olası kast",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 2
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 46,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Sözleşmeli astsubay kaynaklarını; en az dört yıllık fakülte veya yüksekokulları bitirenlerden düzeltilmemiş nüfus kaydına göre müracaat yapılan yılın ocak ayının ilk günü itibarıyla kaç yaşını bitirmemiş olanlar teşkil eder?",
+  "sec": {
+   "A": "27",
+   "B": "25",
+   "C": "30",
+   "D": "35",
+   "E": "22"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-13-033",
+    "lid": 13,
+    "m": "4",
+    "kel": "en az dört yıllık fakülte",
+    "cev": "sözleşmeli subay kaynağı; yirmiyedi yaş (lisansüstü otuziki); ocak başı ölçüt",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 47,
+  "lid": 7,
+  "neg": true,
+  "d": "B",
+  "kok": "Terörle Mücadele Kanununda yer alan terör tanımı dikkate alındığında, aşağıdakilerden hangisi terörün kullandığı yöntemlerden biri değildir?",
+  "sec": {
+   "A": "Sindirme",
+   "B": "Kandırma",
+   "C": "Korkutma",
+   "D": "Yıldırma",
+   "E": "Tehdit"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 48,
+  "lid": 16,
+  "neg": false,
+  "d": "C",
+  "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliğine göre yaş hesaplamalarında aşağıdakilerden hangisi dikkate alınır?",
+  "sec": {
+   "A": "Düzeltilmiş nüfus kaydı",
+   "B": "Sözleşme tarihi itibariyle bitirilmemiş yaş",
+   "C": "Müracaat yapılan yılın ocak ayının ilk günü itibariyle bitirilmemiş olan yaş",
+   "D": "Ön sözleşme tarihinde bitirilmemiş olan yaş",
+   "E": "Başvuru anındaki gün, ay ve yıl hesabı"
+  },
+  "durum": "şıkta: YANLIŞ işaret",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-16-036",
+    "lid": 16,
+    "m": "5",
+    "kel": "Ocak ayının ilk günü itibariyle",
+    "cev": "yaş hesabı: düzeltilmemiş nüfus kaydı, müracaat yılı (subay yirmi yedi)",
+    "yer": "şık",
+    "tahmin": "A",
+    "puan": {
+     "A": 2,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 49,
+  "lid": 15,
+  "neg": false,
+  "d": "D",
+  "kok": "I. El yazısıyla imzalanan belgelerle\nII. Elektronik belgelerle\nIII. E-imza ile imzalanmış belgelerle\nIV. Elektronik imzalı standart belgelerle\nV. Elektronik imzalı kripto belgelerle\n\nZorunlu haller ve olağanüstü durumlarda resmi yazışmalar yukarıdakilerden hangisi ya da hangileri şeklinde yapılır?",
+  "sec": {
+   "A": "IV ve V",
+   "B": "Yalnız II",
+   "C": "II ve III",
+   "D": "Yalnız I",
+   "E": "III ve V"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 50,
+  "lid": 17,
+  "neg": false,
+  "d": "E",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre ast bir talep ya da yasağın söz, yazı ve sair suretle ifadesine ne ad verilir?",
+  "sec": {
+   "A": "Görev",
+   "B": "Nizam",
+   "C": "İntizam",
+   "D": "Asayiş",
+   "E": "Emir"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-17-106",
+    "lid": 17,
+    "m": "3",
+    "kel": "talep ya da yasağın",
+    "cev": "emir (tanım); söz, yazı ve sair suretle ifadesi",
+    "yer": "kök",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 51,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Sözleşmeli astsubaylardan talepleri doğrultusunda muvazzaf astsubaylığa geçiş için başvurunun, Türk Silahlı Kuvvetlerindeki hizmet süresi hangi aralıkta olmalıdır?",
+  "sec": {
+   "A": "Dördüncü fiili hizmet yılı başından onikinci fiili hizmet yılının bitimine kadar",
+   "B": "Beşinci fiili hizmet yılının sonundan sekizinci fiili hizmet yılının başına kadar",
+   "C": "Üçüncü fiili hizmet yılı başından beşinci fiili hizmet yılının başına kadar",
+   "D": "Onuncu fiili hizmet yılı başından onikinci fiili hizmet yılının başına kadar",
+   "E": "Beşinci fiili hizmet yılının sonundan yedinci fiili hizmet yılının başına kadar"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-13-008",
+    "lid": 13,
+    "m": "7",
+    "kel": "yedinci fiilî hizmet yılı",
+    "cev": "muvazzaf subaylığa başvuru başlangıcı; onikinci yıl sonuna kadar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-13-013",
+    "lid": 13,
+    "m": "11",
+    "kel": "dördüncü fiilî hizmet yılı",
+    "cev": "muvazzaf astsubaylığa başvuru; onikinci yıl sonuna kadar",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 52,
+  "lid": null,
+  "neg": false,
+  "d": "B",
+  "kok": "Lüzum görüldüğü hallerde, Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında her kademedeki personeli geçici olarak görevlendirme yetkisi hangisindedir?",
+  "sec": {
+   "A": "Jandarma Genel Komutanı",
+   "B": "İçişleri Bakanı",
+   "C": "Cumhurbaşkanı",
+   "D": "Milli Savunma Bakanı",
+   "E": "Emniyet Genel Müdürü"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 53,
+  "lid": null,
+  "neg": false,
+  "d": "C",
+  "kok": "Zati demirbaş tabanca veya geçici olarak verilen demirbaş tabancanın üzerinde orijinalliğini bozacak boya, kaplama, gravür veya ciddiyetle bağdaşmayacak şekil, desen, resim ve karakter gibi değişiklikler yapmak hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Aylıktan kesme",
+   "B": "Meslekten çıkarma",
+   "C": "Kınama",
+   "D": "Kamu görevinden çıkarma",
+   "E": "Uyarma"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-020",
+    "lid": 12,
+    "m": "8",
+    "kel": "demirbaş tabancanın üzerinde",
+    "cev": "kınama; demirbaş tabancayı boyamak, gravür",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 54,
+  "lid": 3,
+  "neg": true,
+  "d": "D",
+  "kok": "Aşağıdakilerden hangisi Kişisel Verilerin Korunması Kanunu'nda gösterilen kişisel verilerin işlenmesine ilişkin genel ilkeler arasında yer almaz?",
+  "sec": {
+   "A": "Doğru ve gerektiğinde güncel olma",
+   "B": "Belirli, açık ve meşru amaçlar için işlenme",
+   "C": "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma",
+   "D": "Her durumda süresiz olarak muhafaza edilme",
+   "E": "Hukuka ve dürüstlük kurallarına uygun olma"
+  },
+  "durum": "şıkta: YANLIŞ işaret",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-3-033",
+    "lid": 3,
+    "m": "4",
+    "kel": "Doğru ve gerektiğinde güncel",
+    "cev": "genel ilkeler: hukuk-dürüstlük, belirli-açık-meşru amaç, sınırlı-ölçülü, süreli muhafaza",
+    "yer": "şık",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 3,
+     "C": 2,
+     "D": 1,
+     "E": 2
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 55,
+  "lid": 14,
+  "neg": false,
+  "d": "E",
+  "kok": "Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
+  "sec": {
+   "A": "Elektronik sertifika",
+   "B": "İmza doğrulama verisi",
+   "C": "Elektronik imza",
+   "D": "İmza oluşturma verisi",
+   "E": "Zaman damgası"
+  },
+  "durum": "şıkta: DOĞRU",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-14-003",
+    "lid": 14,
+    "m": "3",
+    "kel": "Zaman damgası",
+    "cev": "zamanın, ESHS tarafından imzayla doğrulanan kaydı",
+    "yer": "şık",
+    "tahmin": "E",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 56,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Sözleşmeli astsubaylardan muvazzaf astsubaylığa geçirilenler, astsubay nasbedildikleri tarihten başlamak üzere kaç yıl hizmet etmedikçe istifa edemezler?",
+  "sec": {
+   "A": "Onbeş",
+   "B": "Yedi",
+   "C": "Beş",
+   "D": "Dokuz",
+   "E": "On"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 57,
+  "lid": 3,
+  "neg": false,
+  "d": "B",
+  "kok": "Kişisel Verilerin Korunması Kanunu'na göre, kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesine ne ad verilir?",
+  "sec": {
+   "A": "Veri güncelleme",
+   "B": "Anonim hâle getirme",
+   "C": "Kamusallaştırma",
+   "D": "Genelleştirme",
+   "E": "Veri karartma"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-3-004",
+    "lid": 3,
+    "m": "3",
+    "kel": "başka verilerle eşleştirilerek dahi",
+    "cev": "anonim hâle getirme",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 3,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 58,
+  "lid": 15,
+  "neg": false,
+  "d": "C",
+  "kok": "Resmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik kapsamında zorunlu hallerde veya olağanüstü durumlarda hazırlanacak belgelerin nüsha sayısı ile ilgili olarak hangisi doğrudur?",
+  "sec": {
+   "A": "Paraflı nüshası hazırlayan idarede kalacak şekilde en az dört nüsha",
+   "B": "Tek nüsha olarak düzenlenir",
+   "C": "Paraflı nüshası hazırlayan idarede kalacak şekilde en az iki nüsha",
+   "D": "Paraflı nüshası dahil olmak üzere en az üç nüsha",
+   "E": "Gizli ve tek nüsha olarak düzenlenir"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-15-008",
+    "lid": 15,
+    "m": "5",
+    "kel": "tek nüsha",
+    "cev": "güvenli e-imzalı belge",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-15-009",
+    "lid": 15,
+    "m": "5",
+    "kel": "en az iki nüsha",
+    "cev": "zorunlu hâl/olağanüstü durum belgesi; paraflı nüsha idarede kalır",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 3,
+     "B": 1,
+     "C": 3,
+     "D": 2,
+     "E": 1
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-6-042",
+    "lid": 6,
+    "m": "27",
+    "kel": "iki nüsha",
+    "cev": "başvuru dilekçesi",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 59,
+  "lid": 5,
+  "neg": false,
+  "d": "D",
+  "kok": "İl İdaresi Kanunu'na göre Valiler ilin genel idaresinden kime karşı sorumludurlar?",
+  "sec": {
+   "A": "Bakanlık genel müdürü",
+   "B": "Bölge valisi",
+   "C": "İçişleri Bakanı",
+   "D": "Cumhurbaşkanı",
+   "E": "Türkiye Büyük Millet Meclisi"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 60,
+  "lid": null,
+  "neg": false,
+  "d": "E",
+  "kok": "İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan indirim yapılması ile ilgili olarak hangisi doğrudur?",
+  "sec": {
+   "A": "Üçte bir oranında indirim yapılır",
+   "B": "%30 indirim yapılır",
+   "C": "Tam miktar ödenir",
+   "D": "Yarı oranında indirim yapılır",
+   "E": "%25 indirim yapılır"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 61,
+  "lid": 17,
+  "neg": false,
+  "d": "A",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre, Jandarma Genel Komutanı kime karşı sorumludur?",
+  "sec": {
+   "A": "Bakana karşı",
+   "B": "Cumhurbaşkanına karşı",
+   "C": "TBMM'ye karşı",
+   "D": "Siyasi makamlara karşı",
+   "E": "Valiye karşı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 62,
+  "lid": 17,
+  "neg": false,
+  "d": "B",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre hangisi Jandarmanın taşra teşkilatı içerisinde yer alır?",
+  "sec": {
+   "A": "Lojistik komutanlığı",
+   "B": "Jandarma komando özel harekat tabur komutanlıkları",
+   "C": "Havacılık filo komutanlığı",
+   "D": "Asayiş başkanlığı",
+   "E": "İstihbarat grup komutanlığı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 63,
+  "lid": 18,
+  "neg": false,
+  "d": "D",
+  "kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik uyarınca kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesine ne ad verilir?",
+  "sec": {
+   "A": "Kişisel verilerin silinmesi",
+   "B": "Kişisel verilerin saklanması",
+   "C": "Kişisel verilerin yok edilmesi",
+   "D": "Kişisel verilerin anonim hale getirilmesi",
+   "E": "Kişisel verilerin iade edilmesi"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-18-003",
+    "lid": 18,
+    "m": "10",
+    "kel": "eşleştirilse dahi",
+    "cev": "anonim hâle getirme",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 2,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 64,
+  "lid": 20,
+  "neg": false,
+  "d": "D",
+  "kok": "2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik kapsamında, Bu Yönetmelik hükümlerine göre av tüfeği taşıma ve bulundurmalarında engel bulunmayanlardan yivsiz tüfek satın alan kişiler, satın alınan tüfeğin en geç hangi süre içerisinde belgenin alındığı makama müracaatla bilgilerini kaydettirmesi zorunludur?",
+  "sec": {
+   "A": "Üç gün",
+   "B": "Yedi gün",
+   "C": "On iş günü",
+   "D": "Bir ay",
+   "E": "İki ay"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-20-017",
+    "lid": 20,
+    "m": "13",
+    "kel": "belgenin alındığı makama müracaatla",
+    "cev": "cins, marka, çap, seri numarası kaydı; en geç bir ay",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 65,
+  "lid": 21,
+  "neg": false,
+  "d": "B",
+  "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliği'ne göre, şiddet uygulayanın, şiddet mağduruna yönelik olarak, güvenliğinden endişe edecek şekilde fiziki veya psikolojik açıdan korku ve çaresizlik duygularına sebep olacak biçimde, içeriği ne olursa olsun fiili, sözlü, yazılı olarak ya da her türlü iletişim aracını kullanarak ve baskı altında tutacak her türlü tutum ve davranışına ne ad verilir?",
+  "sec": {
+   "A": "Psikopati",
+   "B": "Tek taraflı ısrarlı takip",
+   "C": "Çok taraflı takip",
+   "D": "Mobbing",
+   "E": "Mahalle baskısı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-10-034",
+    "lid": 10,
+    "m": "1",
+    "kel": "tek taraflı ısrarlı takip",
+    "cev": "korunanlar: kadınlar, çocuklar, aile bireyleri, ısrarlı takip mağdurları",
+    "yer": "şık",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 66,
+  "lid": null,
+  "neg": true,
+  "d": "A",
+  "kok": "Aşağıdakilerden hangisi Jandarma Genel Komutanlığında bulunan astsubay branşlarından biri değildir?",
+  "sec": {
+   "A": "Öğretmen",
+   "B": "İkmal",
+   "C": "İnsansız hava aracı",
+   "D": "Uçak ve helikopter teknisyeni",
+   "E": "Maliye"
+  },
+  "durum": "şıkta: DOĞRU",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-22-005",
+    "lid": 22,
+    "m": "7",
+    "kel": "Uçak ve helikopter teknisyeni",
+    "cev": "JGK astsubay branşı (subayda Pilot)",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-22-007",
+    "lid": 22,
+    "m": "7",
+    "kel": "İnsansız Hava Aracı",
+    "cev": "JGK subay ve astsubay branşı (2024)",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-22-067",
+    "lid": 22,
+    "m": "7",
+    "kel": "Öğretmen",
+    "cev": "Öğretmen yalnız subay listesinde; Astsubaylar listesinde yok",
+    "yer": "şık",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 67,
+  "lid": 22,
+  "neg": false,
+  "d": "B",
+  "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliğine göre, ilk defa veya yeniden yahut yer değiştirme suretiyle atamalarda, aynı yerdeki görevlere atananlar atama emirlerinin kendilerine tebliğ edildikten sonra ne zaman yeni görevlerine başlamak zorundadırlar?",
+  "sec": {
+   "A": "Tebliğ günü",
+   "B": "Tebliğ gününü izleyen işgünü",
+   "C": "Tebliğ gününü izleyen üç işgünü",
+   "D": "Tebliğ gününü izleyen onbeş gün",
+   "E": "Tebliğ gününü izleyen bir ayın son günü"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-22-016",
+    "lid": 22,
+    "m": "15",
+    "kel": "Aynı yerdeki görevlere atananlar",
+    "cev": "tebliğ gününü izleyen işgünü içinde işe başlar",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 4,
+     "C": 4,
+     "D": 3,
+     "E": 3
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-22-085",
+    "lid": 22,
+    "m": "15",
+    "kel": "yer değiştirme suretiyle atamalarda",
+    "cev": "ilk defa, yeniden, yer değiştirme: Yönetmeliğin atama türleri; yolluk tebliğde",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 1,
+     "E": 1
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 68,
+  "lid": 23,
+  "neg": false,
+  "d": "E",
+  "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmeliğe göre statüler arası hiyerarşiye ilişkin aşağıdakilerden hangisi doğrudur?",
+  "sec": {
+   "A": "Uzman jandarmalar, subayın astı diğer rütbeli personelin üstüdür",
+   "B": "Uzman erbaşlar astsubayın astı uzman jandarmanın üstüdür",
+   "C": "Sözleşmeli erbaşlar askerlik yükümlüsü emsal rütbedeki erbaşlarla eşittir",
+   "D": "Uzman erbaş uzman jandarmanın üstüdür",
+   "E": "Uzman jandarmalar, subay ve astsubayların astı diğer rütbeli personelin üstüdür"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-23-016",
+    "lid": 23,
+    "m": "6",
+    "kel": "subay ve astsubayların astı",
+    "cev": "Uzman jandarma: diğer rütbeli personelin üstü",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 4,
+     "B": 2,
+     "C": 0,
+     "D": 2,
+     "E": 4
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 69,
+  "lid": 23,
+  "neg": false,
+  "d": "A",
+  "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmeliğe göre tüm görevlerin düzenleyicisi olarak belirlenen kavram aşağıdakilerden hangisidir?",
+  "sec": {
+   "A": "Emir",
+   "B": "Ödül",
+   "C": "Ceza",
+   "D": "Mahkeme kararı",
+   "E": "Mantık"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Astsubay (ortak 21-70)",
+  "no": 70,
+  "lid": 24,
+  "neg": false,
+  "d": "C",
+  "kok": "Jandarma Genel Komutanlığı İzin Yönetmeliğine göre, adli makamlara bilirkişi olarak çağrılan personelin görevden ayrı kaldığı süreler hakkında hangisi doğrudur?",
+  "sec": {
+   "A": "Birebir kanuni izinlerinden mahsup edilir",
+   "B": "Kanuni izninde dörtte bir oranında mahsup edilir",
+   "C": "Mahsup edilmez",
+   "D": "Yarı yarıya oranında kanuni izinlerinden mahsup edilir",
+   "E": "Üçte bir oranında kanuni izinlerinden mahsup edilir"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 21,
+  "lid": 11,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Bayrağı Kanunu'na göre, bayrağın çekilmesi veya indirilmesi esnasında veya tören geçişlerinde Bayrak nasıl selamlanır?",
+  "sec": {
+   "A": "Cephe alınarak",
+   "B": "Baş selamı ile sağdan",
+   "C": "Sol yandan",
+   "D": "El ve baş işareti ile sağdan",
+   "E": "El işareti ile soldan"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-11-004",
+    "lid": 11,
+    "m": "5",
+    "kel": "cephe alınarak",
+    "cev": "Bayrak selamlanır; çekilirken, indirilirken, tören geçişinde",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 22,
+  "lid": 9,
+  "neg": false,
+  "d": "B",
+  "kok": "Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'un birinci maddesinde yazılı suçlar basın vasıtasıyla işlenirse, hükmolunacak cezada nasıl bir değişiklik ortaya çıkar?",
+  "sec": {
+   "A": "Ceza aynı şekilde uygulanır",
+   "B": "Yarı nispetinde artırılır",
+   "C": "Yarı nispetinde azaltılır",
+   "D": "Bir misli artırılır",
+   "E": "Üçte bir nispetinde azaltılır"
+  },
+  "durum": "şıkta: kelime var, cevap şık seçmiyor",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-9-009",
+    "lid": 9,
+    "m": "2",
+    "kel": "bir misli artırılır",
+    "cev": "heykel/kabir tahribi zor kullanılarak işlenir ya da teşebbüs edilirse",
+    "yer": "şık",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 23,
+  "lid": 19,
+  "neg": false,
+  "d": "C",
+  "kok": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelikte belirtilen kurum ve kuruluşların kayıtlarında yer alan 4982 sayılı Kanun kapsamındaki her türlü veriye ne ad verilir?",
+  "sec": {
+   "A": "Belge",
+   "B": "Kişisel veri",
+   "C": "Bilgi",
+   "D": "Bulgu",
+   "E": "Veri"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-19-005",
+    "lid": 19,
+    "m": "4",
+    "kel": "kayıtlarında yer alan",
+    "cev": "bilgi (tanım); belge: yazılı, basılı, çoğaltılmış dosya, evrak, film",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 24,
+  "lid": 5,
+  "neg": false,
+  "d": "D",
+  "kok": "İl İdaresi Kanunu'na göre il genel idaresinin başı ve mercii kimdir?",
+  "sec": {
+   "A": "İl Emniyet Müdürü",
+   "B": "İl Jandarma Komutanı",
+   "C": "Kaymakam",
+   "D": "Vali",
+   "E": "Belediye Başkanı"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-5-026",
+    "lid": 5,
+    "m": "4",
+    "kel": "İl genel idaresinin başı",
+    "cev": "vali; il genel idaresinin başı (ilçede kaymakam)",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 25,
+  "lid": null,
+  "neg": false,
+  "d": "E",
+  "kok": "Jandarma birliklerinin, savaş ve seferberlik hallerinde Kuvvet Komutanlıkları emrine girecek bölümleri nasıl belirlenir?",
+  "sec": {
+   "A": "Milli Savunma Bakanlığı Kararıyla",
+   "B": "Kara Kuvvetleri Komutanlığı kararıyla",
+   "C": "Genel Kurmay Başkanlığı Kararıyla",
+   "D": "Türkiye Büyük Millet Meclisi kararıyla",
+   "E": "Cumhurbaşkanı Kararıyla"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 26,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Personelin bulunduğu kademede ilerlemesinin oniki ay süre ile durdurulması hangi disiplin cezasıdır?",
+  "sec": {
+   "A": "Uzun süreli durdurma",
+   "B": "Aylıktan kesme",
+   "C": "Orta süreli durdurma",
+   "D": "Orta vadeli durdurma",
+   "E": "Kısa süreli durdurma"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 27,
+  "lid": 4,
+  "neg": false,
+  "d": "B",
+  "kok": "Tebligat Kanunu'na göre muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran kaç yaşından aşağı olmaması gerekir?",
+  "sec": {
+   "A": "10",
+   "B": "18",
+   "C": "20",
+   "D": "16",
+   "E": "14"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-4-019",
+    "lid": 4,
+    "m": "22",
+    "kel": "görünüşüne nazaran",
+    "cev": "muhatap yerine alacak kişi onsekiz yaşından küçük görünmemeli",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 28,
+  "lid": 7,
+  "neg": false,
+  "d": "C",
+  "kok": "Terörle Mücadele Kanunu'na göre, toplantı ve gösteri yürüyüşü kapsamında olmasa bile terör örgütünün üyesi veya destekçisi olduğunu belli edecek şekilde işleyen kişi, 7. Maddenin 2. fıkrasına göre aşağıdaki fiillerden hangisi ile cezalandırılır?",
+  "sec": {
+   "A": "Ses cihazları ile kayıt yapan",
+   "B": "Örgüt sloganlarını derleyen",
+   "C": "Terör örgütüne ait amblem bulunan üniformayı giyen",
+   "D": "Görüntüleri kaydeden",
+   "E": "Örgüte ait resimleri bulunduran"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 29,
+  "lid": 1,
+  "neg": true,
+  "d": "D",
+  "kok": "\"Kanunun açıkça suç saymadığı bir fiil için kimseye ceza verilemez ve güvenlik tedbiri uygulanamaz\". Burada yer alan ifade Türk Ceza Kanunu'nun hangi temel ilkesinin bir unsurudur?",
+  "sec": {
+   "A": "Islah amacı ilkesi",
+   "B": "Adalet ve kanun önünde eşitlik ilkesi",
+   "C": "Kanunun bağlayıcılığı ilkesi",
+   "D": "Suçta ve cezada kanunîlik ilkesi",
+   "E": "Cezalandırma amacı"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-1-076",
+    "lid": 1,
+    "m": "2",
+    "kel": "açıkça suç saymadığı",
+    "cev": "suçta ve cezada kanunîlik ilkesi; idarenin düzenleyici işlemiyle suç konulamaz",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 4,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 30,
+  "lid": 22,
+  "neg": false,
+  "d": "E",
+  "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği çerçevesinde Bakan ifadesi kullanıldığında, hangi Bakan kastedilmektedir?",
+  "sec": {
+   "A": "Sanayi ve Teknoloji Bakanı",
+   "B": "Dışişleri Bakanı",
+   "C": "Devlet Bakanı",
+   "D": "Milli Savunma Bakanı",
+   "E": "İçişleri Bakanı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 31,
+  "lid": 1,
+  "neg": false,
+  "d": "A",
+  "kok": "Türk Ceza Kanunu'nun bağlayıcılığı hakkında aşağıdaki ifadelerden hangisi doğrudur?",
+  "sec": {
+   "A": "Ceza kanunlarını bilmemek mazeret sayılmaz.",
+   "B": "Ceza Kanunları yalnızca ilgili kanunu kabul edenleri bağlar.",
+   "C": "Ceza Kanunu maddesinin uygulanabilmesi için ilgiliye tebliği gerekir.",
+   "D": "Hangi ceza kanununun uygulanacağı konusunda taraflar arasında anlaşma yapılabilir.",
+   "E": "Ceza Kanunları geriye yürür."
+  },
+  "durum": "şıkta: DOĞRU",
+  "kok_vurus": [],
+  "sik_vurus": [
+   {
+    "i": "K-1-003",
+    "lid": 1,
+    "m": "4",
+    "kel": "bilmemek",
+    "cev": "mazeret sayılmaz",
+    "yer": "şık",
+    "tahmin": "A",
+    "puan": {
+     "A": 2,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 32,
+  "lid": 15,
+  "neg": false,
+  "d": "B",
+  "kok": "Resmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik çerçevesinde güvenli elektronik imza kullanılmayan durumlarda paraf yerine geçecek kaydın elektronik ortamda alınmasına ne ad verilir?",
+  "sec": {
+   "A": "Elektronik imza",
+   "B": "Elektronik onay",
+   "C": "Günlük rapor",
+   "D": "Fiziksel ortam",
+   "E": "Standart dosya planı"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-15-001",
+    "lid": 15,
+    "m": "3",
+    "kel": "paraf yerine geçecek kaydın",
+    "cev": "elektronik onay",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 1,
+     "B": 2,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 33,
+  "lid": 1,
+  "neg": false,
+  "d": "C",
+  "kok": "Aşağıdakilerden hangisi Türk Ceza Kanunu'nun amaçları arasında sayılmamıştır?",
+  "sec": {
+   "A": "Kamu düzenini korumak",
+   "B": "Suç işlenmesini önlemek",
+   "C": "Suçun kamusal etkisini incelemek",
+   "D": "Kamu sağlığını korumak",
+   "E": "Kişi hak ve özgürlüklerini korumak"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 34,
+  "lid": 17,
+  "neg": false,
+  "d": "D",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre; Hukuka uygun ve gerekli önlemlerin alınması sonucu, Devlete, topluma, kişilere, mal ve eşyalara yönelik tehlike, kaza ve sabotajların söz konusu olmadığı bir ortamı, düzensizlik ve karışıklıkların önlendiği, hayatın normal akışının sağlandığı hali, dirlik ve düzenin varlığı konusunda kamuda oluşan yerleşik ve yaygın inanca ne ad verilir?",
+  "sec": {
+   "A": "Huzur",
+   "B": "Kamu yararı",
+   "C": "Milli güvenlik",
+   "D": "Asayiş",
+   "E": "Kamu düzeni"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 35,
+  "lid": 20,
+  "neg": false,
+  "d": "E",
+  "kok": "2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik gereğince, yivsiz tüfek ruhsatname harcı ödenmek şartıyla kaç yıl için yivsiz tüfek ruhsatnamesi düzenlenir?",
+  "sec": {
+   "A": "3",
+   "B": "2",
+   "C": "10",
+   "D": "7",
+   "E": "5"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 36,
+  "lid": 14,
+  "neg": false,
+  "d": "A",
+  "kok": "5070 sayılı Kanuna göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+  "sec": {
+   "A": "Elektronik imza",
+   "B": "Elektronik sertifika",
+   "C": "Zaman damgası",
+   "D": "Kişisel veri",
+   "E": "Kripto"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-14-009",
+    "lid": 14,
+    "m": "3",
+    "kel": "mantıksal bağlantısı bulunan",
+    "cev": "elektronik imza (tanım); kimlik doğrulama amaçlı elektronik veri",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 3,
+     "B": 2,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [
+   {
+    "i": "K-14-003",
+    "lid": 14,
+    "m": "3",
+    "kel": "Zaman damgası",
+    "cev": "zamanın, ESHS tarafından imzayla doğrulanan kaydı",
+    "yer": "şık",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 37,
+  "lid": 3,
+  "neg": false,
+  "d": "B",
+  "kok": "Kişisel Verilerin Korunması Kanunu'na göre, kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiye ne ad verilir?",
+  "sec": {
+   "A": "Kişisel verilerin işlenmesi",
+   "B": "Veri sorumlusu",
+   "C": "İlgili kişi",
+   "D": "Veri kayıt sistemi",
+   "E": "Muhafaza görevlisi"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-3-002",
+    "lid": 3,
+    "m": "3",
+    "kel": "amaçlarını ve vasıtalarını belirleyen",
+    "cev": "veri sorumlusu",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 38,
+  "lid": 21,
+  "neg": false,
+  "d": "C",
+  "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliğine göre, Korunan kişinin kendisi hakkında verilebilecek tedbir kararının anlayabileceği bir biçimde sebepleri, aşamaları ve sonuçları hakkında açıklama yapılarak bilgilendirilmesi ve özgür iradesi ile bu hususların tamamını anlayıp kabul ettiğine dair yazılı beyanına ne ad verilir?",
+  "sec": {
+   "A": "Bilgi fişi",
+   "B": "Bilgilendirme belgesi",
+   "C": "Aydınlatılmış rıza",
+   "D": "Açıklanmış onam",
+   "E": "Açık bilgilendirme"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 39,
+  "lid": 5,
+  "neg": false,
+  "d": "D",
+  "kok": "İl İdaresi Kanunu'na göre, il ve ilçe kurulması, kaldırılması, merkezlerinin belirtilmesi ve adlarının değiştirilmesi, bir ilçenin başka bir ille bağlanması nasıl yapılır?",
+  "sec": {
+   "A": "Seçimle",
+   "B": "Cumhurbaşkanlığı kararı ile",
+   "C": "Yönetmelikle",
+   "D": "Kanunla",
+   "E": "İçişleri Bakanlığı kararı ile"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-5-002",
+    "lid": 5,
+    "m": "2",
+    "kel": "İl ve ilçe kurulması",
+    "cev": "kanun ile",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 40,
+  "lid": 18,
+  "neg": false,
+  "d": "E",
+  "kok": "I. Kişisel veri saklama ve imha politikasının hazırlanma amacı,\nII. Kişisel veri saklama ve imha politikası ile düzenlenen kayıt ortamları,\nIII. Kişisel veri saklama ve imha politikasına konu kişilerin isimleri,\nIV. Kişisel verilerin saklanmasını ve imhasını gerektiren hukuki, teknik ya da diğer sebeplere ilişkin açıklama,\nV. Kişisel verilerin güvenli bir şekilde saklanması ile hukuka aykırı olarak işlenmesi ve erişilmesinin önlenmesi için alınmış teknik ve idari tedbirler,\nVI. Periyodik imha süreleri,\n\nKişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik gereğince kişisel veri saklama ve imha politikasının asgari kapsamı ile ilgili yukarıdakilerden hangisi ya da hangileri doğrudur?",
+  "sec": {
+   "A": "Yalnız I",
+   "B": "II ve III",
+   "C": "I, II ve III",
+   "D": "I, III, V ve VI",
+   "E": "I, II, IV, V ve VI"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 41,
+  "lid": 23,
+  "neg": false,
+  "d": "A",
+  "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmelik kapsamında, görevin yapılması için teşkil edilen ve bir emir komuta altında toplanan taktik ve idari birimlere ne ad verilir?",
+  "sec": {
+   "A": "Birlik",
+   "B": "Alay",
+   "C": "Ofis",
+   "D": "Komuta merkezi",
+   "E": "Daire"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-23-142",
+    "lid": 23,
+    "m": "4",
+    "kel": "bir emir komuta altında toplanan",
+    "cev": "birlik (tanım); taktik ve idari birimler",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 42,
+  "lid": null,
+  "neg": false,
+  "d": "B",
+  "kok": "Kanunun karşılığında idari yaptırım uygulanmasını öngördüğü haksızlığa ne ad verilir?",
+  "sec": {
+   "A": "Kast",
+   "B": "Kabahat",
+   "C": "Yaptırım",
+   "D": "Taksir",
+   "E": "Suç"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 43,
+  "lid": 10,
+  "neg": false,
+  "d": "C",
+  "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre şiddet mağduru ve şiddet uygulayanla aynı haneyi paylaşmasa da aile veya hanede ya da aile mensubu sayılan diğer kişiler arasında meydana gelen her türlü fiziksel, cinsel, psikolojik ve ekonomik şiddete ne ad verilir?",
+  "sec": {
+   "A": "Aile zorbalığı",
+   "B": "Sanal şiddet",
+   "C": "Ev içi şiddet",
+   "D": "Mahalle şiddeti",
+   "E": "Akran zorbalığı"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-10-003",
+    "lid": 10,
+    "m": "2",
+    "kel": "aynı haneyi paylaşmasa da",
+    "cev": "ev içi şiddet; aile mensubu sayılanlar arasında da",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 44,
+  "lid": 1,
+  "neg": false,
+  "d": "D",
+  "kok": "Aşağıdakilerden hangisi Türk Ceza Kanunu'nda Kanun'un amaçlarının gerçekleştirilmesi için düzenlenen hususlar arasında sayılmamıştır?",
+  "sec": {
+   "A": "Ceza sorumluluğunun temel esasları",
+   "B": "Güvenlik tedbirleri",
+   "C": "Cezalar",
+   "D": "Suça iten sebepler",
+   "E": "Suçlar"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 45,
+  "lid": 17,
+  "neg": false,
+  "d": "E",
+  "kok": "I. Komando alay komutanlıkları\nII. İl Jandarma komutanlıkları\nIII. Jandarma Komando özel harekat bölük komutanlıkları\nIV. Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı\nV. Havacılık filo komutanlıkları\n\nJandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre, doğrudan merkeze bağlı olan birim ya da birimler yukarıdakilerden hangisi ya da hangileridir?",
+  "sec": {
+   "A": "II ve IV",
+   "B": "Yalnız I",
+   "C": "I, II ve IV",
+   "D": "I ve III",
+   "E": "IV ve V"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 46,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Personele görevinin icrasında veya hal ve hareketlerinde daha dikkatli olması gerektiğinin yazı ile bildirilmesi hangi disiplin cezasıdır?",
+  "sec": {
+   "A": "Uyarma",
+   "B": "Kısa süreli durdurma",
+   "C": "Uzun süreli durdurma",
+   "D": "Aylıktan kesme",
+   "E": "Kınama"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-12-007",
+    "lid": 12,
+    "m": "7",
+    "kel": "daha dikkatli olması gerektiğinin",
+    "cev": "uyarma cezası (yazı ile)",
+    "yer": "kök",
+    "tahmin": "A",
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 47,
+  "lid": 6,
+  "neg": false,
+  "d": "B",
+  "kok": "Kabahatler karşılığında uygulanacak olan idari yaptırımlar hangileridir?",
+  "sec": {
+   "A": "Yalnız adli para cezası",
+   "B": "İdari para cezası ve idari tedbir",
+   "C": "Ceza ve güvenlik tedbirleri",
+   "D": "Hapis ve adli para cezası",
+   "E": "Yalnız hapis cezası"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-6-071",
+    "lid": 6,
+    "m": "16",
+    "kel": "Kabahatler karşılığında uygulanacak",
+    "cev": "idarî para cezası ve idarî tedbir",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 2,
+     "B": 5,
+     "C": 1,
+     "D": 2,
+     "E": 1
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 48,
+  "lid": 15,
+  "neg": false,
+  "d": "C",
+  "kok": "Resmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik çerçevesinde belgenin hazırlanmasından tasfiyesine kadar olan sürece ne ad verilir?",
+  "sec": {
+   "A": "Arşiv imza",
+   "B": "Kriptografik metod",
+   "C": "Aidiyet zinciri",
+   "D": "İş akış şeması",
+   "E": "Elektronik ortam"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-15-072",
+    "lid": 15,
+    "m": "3",
+    "kel": "hazırlanmasından tasfiyesine kadar",
+    "cev": "aidiyet zinciri (belgenin süreci)",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 2,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 49,
+  "lid": 15,
+  "neg": false,
+  "d": "D",
+  "kok": "Resmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik kapsamında, herhangi bir bireysel işlemin, kurumsal fonksiyonun veya kurumsal işlemin yerine getirilmesi için alınmış ya da idare tarafından hazırlanmış; içerik, ilişki ve formatı ile ait olduğu fonksiyon veya işlem için delil teşkil ederek aidiyet zincirini muhafaza eden, güvenli elektronik imza ya da el yazısıyla imzalanmış ve kayıt altına alınmış her türlü bilgiye ne ad verilir?",
+  "sec": {
+   "A": "Bilgi zinciri",
+   "B": "EBYS",
+   "C": "Varaka",
+   "D": "Belge",
+   "E": "Arşiv imza"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-15-073",
+    "lid": 15,
+    "m": "3",
+    "kel": "delil teşkil ederek aidiyet zincirini",
+    "cev": "belge (tanım); e-imza ya da el yazısıyla imzalanmış kayıtlı bilgi",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 1
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-15-095",
+    "lid": 15,
+    "m": "3",
+    "kel": "kayıt altına alınmış her türlü",
+    "cev": "belge tanımı; e-imza ya da el yazısıyla imzalanmış bilgi",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 1
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 50,
+  "lid": 2,
+  "neg": false,
+  "d": "E",
+  "kok": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre subaylığa ve astsubaylığa ilk nasıp işlemleri hangi makamın onayıyla yapılır?",
+  "sec": {
+   "A": "Jandarma Genel Komutanı",
+   "B": "Genel Kurmay Başkanı",
+   "C": "Cumhurbaşkanı",
+   "D": "Vali",
+   "E": "İçişleri Bakanı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 51,
+  "lid": 22,
+  "neg": false,
+  "d": "A",
+  "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği çerçevesinde, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı teşkilatlarındaki görevlerin yerine getirilebilmesi amacıyla oluşturulan özel yetenek, teknik bilgi ve beceri gerektiren özel hizmet alanlarına ne ad verilir?",
+  "sec": {
+   "A": "İhtisas",
+   "B": "Kuruluş",
+   "C": "Takım",
+   "D": "Branş",
+   "E": "Sınıf"
+  },
+  "durum": "kelime var, cevap şık seçmiyor",
+  "kok_vurus": [
+   {
+    "i": "K-22-065",
+    "lid": 22,
+    "m": "4",
+    "kel": "teknik bilgi ve beceri gerektiren",
+    "cev": "ihtisas: özel hizmet alanı (branş: alt hizmet alanı)",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 1,
+     "B": 0,
+     "C": 0,
+     "D": 1,
+     "E": 0
+    },
+    "ktahmin": "A",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 52,
+  "lid": 2,
+  "neg": false,
+  "d": "B",
+  "kok": "2803 Sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre Jandarma birliklerinin kuruluş ve konuşlarının düzenlenmesinde hangi taksimat esas alınır?",
+  "sec": {
+   "A": "Ordu taksimatı",
+   "B": "Mülki taksimat",
+   "C": "Bölge taksimatı",
+   "D": "Sınır taksimatı",
+   "E": "Kuvvet taksimatı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 53,
+  "lid": 17,
+  "neg": false,
+  "d": "C",
+  "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğine göre, göreve ait bir talep ya da yasağın söz, yazı ve sair suretle ifadesine ne ad verilir?",
+  "sec": {
+   "A": "Yönerge",
+   "B": "Kamu düzeni",
+   "C": "Emir",
+   "D": "Emniyet",
+   "E": "Talimat"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-17-106",
+    "lid": 17,
+    "m": "3",
+    "kel": "talep ya da yasağın",
+    "cev": "emir (tanım); söz, yazı ve sair suretle ifadesi",
+    "yer": "kök",
+    "tahmin": "C",
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 1,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "C",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 54,
+  "lid": 25,
+  "neg": false,
+  "d": "D",
+  "kok": "I. Türk Ceza Kanununun 83 ve 84. maddelerinde düzenlenen kasten öldürme suçları\nII. 6136 sayılı Kanunda tanımlanan suçlar\nIII. 6831 sayılı Orman Kanununun 110. maddesinin dördüncü ve beşinci fıkralarında tanımlanan kasten orman yakma suçları\nIV. 4926 sayılı Kaçakçılıkla Mücadele Kanununda tanımlanan ve para cezasını gerektiren suçlar\nV. 2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanununun 68. maddesinde tanımlanan suç\n\n3713 sayılı Terörle Mücadele Kanunu'nda, bazı suçların terör suçu sayılabilmesi için bunların 1. maddede belirtilen amaçlar doğrultusunda suç işlemek üzere kurulmuş bir terör örgütünün faaliyeti çerçevesinde işlenmesi öngörülmüştür. Buna göre yukarıdakilerden hangisi ya da hangileri, verilen düzenleme kapsamında terör suçu sayılabilecek suçlar arasında yer almaktadır?",
+  "sec": {
+   "A": "II ve IV",
+   "B": "I ve II",
+   "C": "I ve IV",
+   "D": "II, III ve V",
+   "E": "Yalnız I"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": [
+   {
+    "i": "K-7-006",
+    "lid": 7,
+    "m": "4",
+    "kel": "kasten orman yakma",
+    "cev": "orman yakma: örgüt faaliyetinde terör suçu",
+    "yer": "kök",
+    "tahmin": null,
+    "puan": {
+     "A": 0,
+     "B": 0,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": null,
+    "ayni_kanun": false
+   }
+  ]
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 55,
+  "lid": 12,
+  "neg": false,
+  "d": "E",
+  "kok": "7068 Sayılı Kanuna göre kumar oynamak veya oynatmak, kumar oynatanlarla ilişki kurmak fiili hangi disiplin cezasını gerektirir?",
+  "sec": {
+   "A": "Uyarma",
+   "B": "Meslekten çıkarma",
+   "C": "Aylıktan kesme",
+   "D": "Kınama",
+   "E": "Kamu görevinden çıkarma"
+  },
+  "durum": "YANLIŞ işaret",
+  "kok_vurus": [
+   {
+    "i": "K-12-113",
+    "lid": 12,
+    "m": "8",
+    "kel": "Kumar oynamak veya oynatmak",
+    "cev": "kumar oynatanlarla ilişki kurmak da: meslekten çıkarma",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 2,
+     "C": 0,
+     "D": 0,
+     "E": 1
+    },
+    "ktahmin": "E",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 56,
+  "lid": null,
+  "neg": false,
+  "d": "A",
+  "kok": "Jandarma Genel Komutanlığı hangi bakanlığa bağlıdır?",
+  "sec": {
+   "A": "İçişleri Bakanlığı",
+   "B": "Hazine ve Maliye Bakanlığı",
+   "C": "Aile ve Sosyal Politikalar Bakanlığı",
+   "D": "Dışişleri Bakanlığı",
+   "E": "Milli Savunma Bakanlığı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 57,
+  "lid": null,
+  "neg": false,
+  "d": "B",
+  "kok": "Uzman jandarma ve uzman erbaşların nasıp ve terfileri hangi makam tarafından yapılır?",
+  "sec": {
+   "A": "Vali",
+   "B": "Jandarma Genel Komutanlığı",
+   "C": "Kaymakam",
+   "D": "Cumhurbaşkanlığı",
+   "E": "Milli Savunma Bakanlığı"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-2-022",
+    "lid": 2,
+    "m": "13",
+    "kel": "uzman erbaşların nasıp ve terfileri",
+    "cev": "Jandarma Genel Komutanlığınca, özel kanunlarına göre",
+    "yer": "kök",
+    "tahmin": "B",
+    "puan": {
+     "A": 0,
+     "B": 3,
+     "C": 0,
+     "D": 0,
+     "E": 0
+    },
+    "ktahmin": "B",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 58,
+  "lid": 7,
+  "neg": true,
+  "d": "C",
+  "kok": "Terörle Mücadele Kanunu'na göre, aşağıdakilerden hangisi cebir ve şiddet kullanarak terörün başvurduğu yöntemlerden biri değildir?",
+  "sec": {
+   "A": "Yıldırma",
+   "B": "Sindirme",
+   "C": "Kandırma",
+   "D": "Tehdit",
+   "E": "Korkutma"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 59,
+  "lid": 3,
+  "neg": false,
+  "d": "D",
+  "kok": "Kişisel Verilerin Korunması Kanununa göre, belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızaya ne ad verilir?",
+  "sec": {
+   "A": "Geçmiş rıza",
+   "B": "Anonim rıza",
+   "C": "Zımni rıza",
+   "D": "Açık rıza",
+   "E": "Güncel rıza"
+  },
+  "durum": "DOĞRU",
+  "kok_vurus": [
+   {
+    "i": "K-3-001",
+    "lid": 3,
+    "m": "3",
+    "kel": "özgür iradeyle açıklanan",
+    "cev": "açık rıza (tanım)",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 2,
+     "E": 1
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   },
+   {
+    "i": "K-3-026",
+    "lid": 3,
+    "m": "3",
+    "kel": "bilgilendirilmeye dayanan",
+    "cev": "açık rıza: belirli konu + bilgilendirme + özgür irade",
+    "yer": "kök",
+    "tahmin": "D",
+    "puan": {
+     "A": 1,
+     "B": 1,
+     "C": 1,
+     "D": 2,
+     "E": 1
+    },
+    "ktahmin": "D",
+    "ayni_kanun": true
+   }
+  ],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ },
+ {
+  "sinav": "Uzman Erbaş (ortak 21-60)",
+  "no": 60,
+  "lid": 8,
+  "neg": false,
+  "d": "E",
+  "kok": "Olağanüstü Hal Kanunu'na göre olağanüstü hal aşağıdakilerden hangisi tarafından ilan edilebilir?",
+  "sec": {
+   "A": "AFAD Başkanı",
+   "B": "TBMM Başkanı",
+   "C": "Bakanlar Kurulu",
+   "D": "İçişleri Bakanı",
+   "E": "Cumhurbaşkanı"
+  },
+  "durum": "şifre yok",
+  "kok_vurus": [],
+  "sik_vurus": [],
+  "diger_kanun_vurus": []
+ }
+]

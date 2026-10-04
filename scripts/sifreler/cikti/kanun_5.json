@@ -335,6 +335,126 @@
    "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
    "not": "gençlik-spor, emniyet, jandarma listede yok",
    "karistirilan": []
+  },
+  {
+   "i": "K-5-029",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "il idare şube başkanlarıdır",
+   "cevap": "illerdeki bakanlık teşkilatlarının başındakiler; emrindekiler ikinci derecede memur",
+   "kanit": "Bakanlıkların kuruluş mevzuatına göre illerde lüzumu kadar teşkilat bulunur. Bu teşkilatın her birinin başında bulunanlar il idare şube başkanlarıdır. Bunların emri altında çalışanlar ilin ikinci derecede memurlarıdır. Bu teşkilat valinin emri altındadır",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-030",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "Hakimler Kanunu ile İcra",
+   "cevap": "yargıç, savcı, adalet memurları, askeri birlikler valinin emri dışında",
+   "kanit": "Hakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
+   "not": "askerlik daire ve şubeleri de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-031",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "olağan hayatı durduracak",
+   "cevap": "vali on beş günü geçmemek üzere giriş-çıkış, dolaşma, silah kısıtlar",
+   "kanit": "(Ek paragraf: 25/7/2018-7145/1 md.)Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "not": "15 GÜN: VALİ; uymayana m.66 (Kabahatler m.32)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-032",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanlığından ve gerekirse",
+   "cevap": "vali emrindeki kuvvetlerle önleyemezse; en yakın kara-deniz-hava birlik komutanlığından da",
+   "kanit": "İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler.",
+   "not": "hangi makamdan isteneceğini vali takdir eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-033",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "yardım istemi geciktirilmeksizin",
+   "cevap": "vali istedi mi derhal; acilde sözlü, sonra yazılı",
+   "kanit": "Valinin yaptığı yardım istemi geciktirilmeksizin yerine getirilir. Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-034",
+   "madde": "42",
+   "tip": "tanim",
+   "tetikleyici": "en büyük Hükümet memuru",
+   "cevap": "bucak müdürü; bucağın temsilcisi; genel idaresinden sorumlu",
+   "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir. Bu sıfatla;\nA) Bucağın genel idaresinden sorumludur;",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-035",
+   "madde": "42",
+   "tip": "gorev_yetki",
+   "tetikleyici": "bucakta yapılacak törene",
+   "cevap": "bucak müdürü Cumhuriyet Bayramı törenine başkanlık eder, ziyaretleri kabul eder",
+   "kanit": "F) Cumhuriyet Bayramlarında bucakta yapılacak törene başkanlık yapar ve ziyaretleri kabul eyler.",
+   "not": "ilde vali, ilçede kaymakam",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-036",
+   "madde": "43",
+   "tip": "makam",
+   "tetikleyici": "bucak müdürünün emri altındadır",
+   "cevap": "genel ve özel kolluk; emri yerine getirmeye mecbur",
+   "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
+   "not": "bucağın güven ve düzeninden bucak müdürü sorumlu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-037",
+   "madde": "9",
+   "tip": "gorev_yetki",
+   "tetikleyici": "genel emirler çıkarabilir",
+   "cevap": "valiler; mevzuatın verdiği yetkiyi kullanmak için; ilan ederler",
+   "kanit": "Ç) (Değişik: 2/7/2018 – KHK/703/138 md.) Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği yetkiyi kullanmak ve bunların yüklediği ödevleri yerine getirmek\niçin valiler genel emirler çıkarabilir ve bunları ilan ederler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-038",
+   "madde": "31",
+   "tip": "kosul",
+   "tetikleyici": "re'sen verilen cezalar kesindir",
+   "cevap": "kaymakamın uyarma-kınaması; tebliğ tarihinden itibaren sicile geçer",
+   "kanit": "Kaymakamlarca re'sen verilen cezalar kesindir. Bu cezalar tebliğ tarihinden itibaren sicile geçer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-039",
+   "madde": "31",
+   "tip": "makam",
+   "tetikleyici": "keyfiyeti valiye bildirirler",
+   "cevap": "kaymakam askerlik şikâyetine aldığı cevabı yetersiz bulursa",
+   "kanit": "K) Kaymakamlar, halkın askerlik muameleleri hakkındaki müracaat ve şikayetlerini kabul ederler. Askerlik şubelerine ve dairelerine yazarlar. Cevabı kafi görmedikleri takdirde keyfiyeti valiye bildirirler;",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-040",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "illere; iller ilçelere",
+   "cevap": "merkezi idare kuruluşu: il, ilçe, bucak",
+   "kanit": "(Değişik: 12/5/1964-469/1 md.) Türkiye, merkezi idare kuruluşu bakımından coğrafya durumuna, iktisadi şartlara ve kamu hizmetlerinin gereklerine göre illere; iller ilçelere ve ilçeler de bucaklara bölünmüştür.",
+   "not": "coğrafya, iktisadi şartlar, kamu hizmeti gerekleri",
+   "karistirilan": []
   }
  ]
 }

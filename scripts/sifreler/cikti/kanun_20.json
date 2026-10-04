@@ -151,6 +151,136 @@
    "kanit": "j) 18 yaşını bitirmemiş olanlar,\nYukarıdaki fıkranın (a), (b), (c), (d), (e), (f), (g) ve (h) bentleri kapsamına girenler, affa uğramış olsalar veya mahkumiyetleri bütün neticeleriyle birlikte ortadan kalksa yada mahkemelerce verilen karar üzerine adli sicilden silinmiş olsa bile, kendilerine hiçbir suretle bu Yönetmelik kapsamına giren belge ve izinler verilmez.",
    "not": "kısıtlı, kamu hizmetinden yasaklı, akıl hastası da",
    "karistirilan": []
+  },
+  {
+   "i": "K-20-016",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "yivsiz tüfek satın alma belgesi",
+   "cevap": "yivsiz tüfek bu belgeyle alınır; bir ay içerisinde kaydettirilmesi zorunludur",
+   "kanit": "Bu silahları satın almak isteyenler silah imal eden ya da satan kişi ve kuruluşlardan yivsiz tüfek satın alma belgesi ile bu silahları satın alabilir. Bu şekilde satın alınan av tüfeklerinin en geç bir ay içerisinde belgenin alındığı makama müracaatla cins, marka, çap ve seri numarasının kaydettirilmesi zorunludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-017",
+   "madde": "13",
+   "tip": "sure",
+   "tetikleyici": "belgenin alındığı makama müracaatla",
+   "cevap": "cins, marka, çap, seri numarası kaydı; en geç bir ay",
+   "kanit": "Bu şekilde satın alınan av tüfeklerinin en geç bir ay içerisinde belgenin alındığı makama müracaatla cins, marka, çap ve seri numarasının kaydettirilmesi zorunludur.",
+   "not": "satın alma tarihi YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-018",
+   "madde": "13",
+   "tip": "sira_usul",
+   "tetikleyici": "görülerek tespitinin yapılması",
+   "cevap": "tüfeklerin ruhsatname üzerine kaydedilmesi işlemi esnasında esastır",
+   "kanit": "Ruhsatname üzerine tüfeklerin kaydedilmesi işlemi esnasında tüfeklerin görülerek tespitinin yapılması esastır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-019",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "engel bulunmayanlara mahalli mülki",
+   "cevap": "yivsiz tüfek ruhsatnamesi düzenlenir; engeli olana düzenlenmez",
+   "kanit": "(Değişik:RG-22/4/2009-27208) Bu Yönetmelik hükümlerine göre av tüfeği taşıma ve bulundurmalarında engel bulunmayanlara mahalli mülki amirliklerce yivsiz tüfek ruhsatnamesi düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-020",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "kesinleşmiş mahkumiyettir",
+   "cevap": "maddedeki mahkûmiyet; paraya çevrilmiş olsa da hürriyeti bağlayıcı ceza esas",
+   "kanit": "Bu madde de belirtilen mahkumiyet, kesinleşmiş mahkumiyettir. Bu madde hükümlerinin uygulanmasında, mahkemelerce verilen hürriyeti bağlayıcı cezalar, paraya çevrilmiş olsa dahi, hürriyeti bağlayıcı ceza esas alınır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-021",
+   "madde": "14",
+   "tip": "yasak",
+   "tetikleyici": "yapımı alımı, satımı, taşınması",
+   "cevap": "av tüfeği, nişan tabancası, av bıçağı izni ve belgesi verilmez",
+   "kanit": "(Değişik:RG-11/06/1998-23369) Aşağıda belirtilen hallerden birine giren kimselere hiçbir şekilde avda ve sporda kullanılan tüfek, nişan tabancası ve av bıçağı yapımı alımı, satımı, taşınması ve bulundurulması izni ve belgesi verilmez.",
+   "not": "ithalat sayılmamış",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-022",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "taksirli suçlar hariç",
+   "cevap": "ikiden fazla suçtan mahkumiyet engel; taksirli suçlar hariç",
+   "kanit": "d) Ateşli silahla işlenenler ile taksirli suçlar hariç değişik zamanlarda işlediği aynı veya farklı türden ikinden fazla suçtan dolayı hapis veya ağır hapis ve / veya ağır para cezasına mahkum olanlar, e) Ateşli silahla işlenenler ile taksirli suçlar hariç iki yıldan fazla hürriyeti bağlayıcı cezaya mahkum olanlar",
+   "not": "taksirli trafik suçu engel DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-023",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "Akıl hastası veya psikolojik",
+   "cevap": "engel haller: kısıtlı, kamu hizmetinden yasaklı, 18 yaşını bitirmemiş de",
+   "kanit": "ı) Kısıtlı olanlar ile Kamu hizmetinden yasaklılar, i) Akıl hastası veya psikolojik ve nörolojik rahatsızlıkları olanlar, j) 18 yaşını bitirmemiş olanlar,",
+   "not": "24 yaş DEĞİL 18",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-024",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "satıcılık (bayilik) belgesi verilir",
+   "cevap": "3 yıl süreli; valilerce; gerekli belgelerle müracaat edene",
+   "kanit": "Yukarıdaki belgeler ile müracaat eden kişilere, 3 yıl süreli (Örnek 7) deki satıcılık (bayilik) belgesi verilir.",
+   "not": "BAYİLİK 3, RUHSATNAME 5",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-025",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "bedeni ve ruhi bakımdan",
+   "cevap": "bayilik sağlık raporu: silah bulundurma ve satmada sakınca yok",
+   "kanit": "2- Silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan bir sakınca olmadığına dair sağlık raporu,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-026",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "cins, marka, çap (kalibre)",
+   "cevap": "ruhsatname sahibi tüfeklerinin bu bilgilerini ve seri numarasını belgesine işletir",
+   "kanit": "Yivsiz tüfek ruhsatnamesi alan kişiler, sahip oldukları yivsiz av tüfeklerinin cins, marka, çap (kalibre) ve seri numaralarını belgelerine işletmek zorundadır.",
+   "not": "satın alındığı tarih YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-027",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "yivsiz tüfek ruhsatnamesi harcının",
+   "cevap": "5 yıl süreli ruhsatname; valilik/kaymakamlığa dilekçe",
+   "kanit": "ekleyecekleri dilekçeleri ile yerleşim yerinin bağlı bulunduğu valilik veya kaymakamlığına başvurmaları halinde yivsiz tüfek ruhsatnamesi harcının ödenmiş olması kaydıyla, verildiği tarihten geçerli olmak üzere 5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.",
+   "not": "2026 sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-028",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "İki adet fotoğraf",
+   "cevap": "bayilik dilekçesi ekleri: işyeri belgesi, sağlık raporu, sabıka beyanı, taahhütname",
+   "kanit": "1- İşyerinin kendi mülkiyetlerinde bulunduğunu veya kiralandığını kanıtlayan belge, 2- Silah bulundurmasında ve satmasında bedeni ve ruhi bakımdan bir sakınca olmadığına dair sağlık raporu, 3- Sabıka kaydına ilişkin yazılı beyanı, 4- 2521 sayılı Kanun hükümlerine uymayı taahhüt ettiği ve doğacak Kanuni sorumluluğu üstlendiğine dair taahhütname, 5- T.C. Kimlik Numarası beyanı, 6- İki adet fotoğraf.",
+   "not": "noter onaylı ortaklık sözleşmesi YOK",
+   "karistirilan": []
   }
  ]
 }

@@ -4,6 +4,28 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (6) — ŞİFRE AÇIKLARI KANUN KANUN KAPATILDI: 25 müşterek mevzuat 994 → 1.657 satır, şifresiz soru %27 → %9
+> Başkan "Başla aslan" dedi; (5)'teki öncelik sırasıyla 25 kanunun hepsi tek tek elden geçti (ajan yok). Yöntem: her kanun için
+> şifresiz (L0) sorular madde madde döküldü (scripts/sifreler/olcum/acik_dok.py), ilgili maddelerin resmî metni okundu, soru değil
+> dayandığı kural kanıtlı satır olarak yazıldı; satırlar yazıcıya eklendi (scripts/sifreler/yazici/ekle.py), üretildi, denetçiden
+> geçirildi (kodlama_denetci --secme: 25/25 BİTTİ, HATA 0). Kaynak = yazici/kN.py (scratchpad kopyaları eski).
+> Metin onarımı: 7068 m.8 (6000 karakterde kesikti) uygulama kaydındaki tam metinle değiştirildi (kumar vb. meslekten çıkarma
+> fiilleri artık kanıtlanabiliyor), m.25'in sonundaki m.26 ayrıldı; 2803 Ek 1–19 ve Geçici maddeler eklendi (metin_yama.py);
+> kapsam dışı maddelere (7068 m.1-3/25/26, 5442 m.66, TCK fazlası) satır YAZILMADI.
+> Yeniden ölçüm (arsiv_olc.py, havuz 3.617 tekrarsız: 2026 sınavı 109 + kitapçık 671 + arşiv 2.837): şifresiz 331 (%9);
+> 2026 gerçek sınavda 9/109 (%8), kitapçıklarda 81/671 (%12), arşivde 241/2.837 (%8). Kanun bazında kalan açık: 4678 %26,
+> Tebligat %19 (kapsamda yalnız 5 madde var; elektronik/ilanen tebligat soruları kapsam dışı), 6136 %17 (çoğu Yönetmelik sorusu),
+> Bilgi Edinme %15, 6284 Uyg. %14, 2803/2521/Personel %13; en iyi Kabahatler %1, E-İmza %1, Sözleşmeli %2, İzin %2, KVKK %3.
+> Kalan açıkların çoğu metni elimizde olmayan yerler: 5442 m.11 E–J fıkraları (6000 kesik, uygulama kaydı da kısa), 3713 Ek m.2
+> (silah kullanma), kanun etiketi çözülemeyen "m.?" sorular, cevap anahtarı olmayan kitapçık soruları.
+> Sayfalar yenilendi: şifre listesi https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn (1.657 satır), açık raporu
+> https://claude.ai/artifact/4Wpq1yZvUrKjZU3zcn6vVX. Repo kopyaları: scripts/sifreler/cikti/*.json, scripts/sifreler/metin/*.json,
+> olcum/arsiv_ozet_2.md + arsiv_eksikler_2.md. DERSLER: ekle.py satırları repr biçimiyle yazar (sonraki düzeltmelerde o biçimi
+> ara); denetçi "ortak kelime" kuralı yalnız a-z+çğıöşü harflerini sayar → hâkim/adlî/mülkî gibi şapkalı kelimeler ortak kelime
+> olamaz; cevap 10 boşluk-kelimeyi aşmasın (noktalama ayrı kelime sayılmaz, "+" ve ";" sayılır); kanıt aralığı "(...)" içermemeli
+> (6136 Ek 1 metninde var). SIRADAKİ: kalan açıklar için eksik madde metinlerinin temini (5442 m.11 tamamı, 3713 Ek 2); branş
+> mevzuatlarına (26+) şifre yazımı başkan onayıyla.
+>
 > ### ▶ 4 Eki (5) — ŞİFRELER ELİMİZDEKİ TÜM MÜŞTEREK SORULARA UYGULANDI: 3.228 soru, 887 (%27) şifresiz → AÇIK RAPORU
 > Başkan: "hem gerçek sınav soruları hem arşivimizdeki tüm sorulara uygula, eksikleri tespit et". Havuz (tekrarsız 3.228):
 > gerçek sınav 391 (2026 md 109 + 9 çıkmış kitapçık meslek bölümü 282; scripts/veri/cikmis-sinav-sorulari.json, cevapsız, kanun

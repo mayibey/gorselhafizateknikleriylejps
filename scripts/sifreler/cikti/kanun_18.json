@@ -81,6 +81,45 @@
    "kanit": "(4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-18-008",
+   "madde": "8",
+   "tip": "tanim",
+   "tetikleyici": "erişilemez ve tekrar kullanılamaz",
+   "cevap": "silme tanımı: ilgili kullanıcılar için; bir işlemdir",
+   "kanit": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-18-009",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "teknik ve idari tedbirleri almakla",
+   "cevap": "veri sorumlusu yükümlüdür (yok etme)",
+   "kanit": "(2) Veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "silmede de veri sorumlusu tedbir almakla yükümlü; silme ilgili kullanıcı erişimi"
+    },
+    {
+     "madde": "10",
+     "fark": "anonim hale getirmede de veri sorumlusu tedbir almakla yükümlü"
+    }
+   ]
+  },
+  {
+   "i": "K-18-010",
+   "madde": "9",
+   "tip": "tanim",
+   "tetikleyici": "geri getirilemez ve tekrar",
+   "cevap": "yok etme tanımı: hiç kimse erişemez, geri getiremez, kullanamaz",
+   "kanit": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

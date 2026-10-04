@@ -61,6 +61,86 @@
    "kanit": "Bu kanunda yazılı suçlardan dolayı Cumhuriyet savcılıklarınca re'sen takibat yapılır.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-9-007",
+   "madde": "2",
+   "tip": "ceza",
+   "tetikleyici": "iki veya daha fazla kimseler",
+   "cevap": "toplu işlenme; ceza yarı nispetinde artırılır (umumi mahal, basın da)",
+   "kanit": "Birinci maddede yazılı suçlar; iki veya daha fazla kimseler tarafından toplu olarak veya umumi veya umuma açık mahallerde yahut basın vasıtasiyle işlenirse hükmolunacak ceza yarı nispetinde artırılır.",
+   "not": "TOPLU, UMUMA AÇIK, BASIN: YARI",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-008",
+   "madde": "2",
+   "tip": "ceza",
+   "tetikleyici": "umuma açık mahallerde",
+   "cevap": "ceza yarı nispetinde artırılır",
+   "kanit": "Birinci maddede yazılı suçlar; iki veya daha fazla kimseler tarafından toplu olarak veya umumi veya umuma açık mahallerde yahut basın vasıtasiyle işlenirse hükmolunacak ceza yarı nispetinde artırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-009",
+   "madde": "2",
+   "tip": "ceza",
+   "tetikleyici": "bir misli artırılır",
+   "cevap": "heykel/kabir tahribi zor kullanılarak işlenir ya da teşebbüs edilirse",
+   "kanit": "Birinci maddenin ikinci fıkrasında yazılı suçlar zor kullanılarak işlenir veya bu suretle işlenmesine teşebbüs olunursa verilecek ceza bir misli artırılır.",
+   "not": "ZOR KULLANMA: BİR MİSLİ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-010",
+   "madde": "1",
+   "tip": "ceza",
+   "tetikleyici": "kabrini tahrip eden",
+   "cevap": "bir yıldan beş yıla kadar ağır hapis; kıran, bozan, kirleten",
+   "kanit": "Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-011",
+   "madde": "1",
+   "tip": "ceza",
+   "tetikleyici": "bir yıldan beş yıla",
+   "cevap": "heykel, büst, abide, kabir tahribi; hakaret-sövme bir yıldan üç yıla",
+   "kanit": "Atatürk'ün hatırasına alenen hakaret eden veya söven kimse bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.\nAtatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.",
+   "not": "HAKARET 1-3, TAHRİP 1-5",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-012",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "Cumhuriyet savcılıklarınca",
+   "cevap": "re'sen takibat; şikâyete bağlı değil",
+   "kanit": "Bu kanunda yazılı suçlardan dolayı Cumhuriyet savcılıklarınca re'sen takibat yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-013",
+   "madde": "4",
+   "tip": "sure",
+   "tetikleyici": "yayımı tarihinde yürürlüğe",
+   "cevap": "Kanun yayımı tarihinde yürürlüğe girer",
+   "kanit": "Bu kanun yayımı tarihinde yürürlüğe girer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-014",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "Adalet Bakanı yürütür",
+   "cevap": "Kanunu Adalet Bakanı yürütür",
+   "kanit": "Bu kanunu Adalet Bakanı yürütür.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

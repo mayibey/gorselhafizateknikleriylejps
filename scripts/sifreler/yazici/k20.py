@@ -17,5 +17,18 @@ K = [
  ('14','kosul','affa uğramış olsalar','yine belge verilmez; adli sicilden silinse bile','Yukarıdaki fıkranın (a), (b)','belge ve izinler verilmez.',[],'suç olmaktan çıkan fiil hariç'),
  ('14','kosul','paraya çevrilmiş olsa dahi','hürriyeti bağlayıcı ceza esas alınır','Bu madde hükümlerinin uygulanmasında','hürriyeti bağlayıcı ceza esas alınır.',[],'kesinleşmiş mahkûmiyet'),
  ('14','yasak','18 yaşını bitirmemiş olanlar','belge verilmez','j) 18 yaşını','belge ve izinler verilmez.',[],'kısıtlı, kamu hizmetinden yasaklı, akıl hastası da'),
+ ('13', 'kosul', 'yivsiz tüfek satın alma belgesi', 'yivsiz tüfek bu belgeyle alınır; bir ay içerisinde kaydettirilmesi zorunludur', 'Bu silahları satın almak isteyenler', 'kaydettirilmesi zorunludur.', [], ''),
+ ('13', 'sure', 'belgenin alındığı makama müracaatla', 'cins, marka, çap, seri numarası kaydı; en geç bir ay', 'Bu şekilde satın alınan av', 'kaydettirilmesi zorunludur.', [], 'satın alma tarihi YOK'),
+ ('13', 'sira_usul', 'görülerek tespitinin yapılması', 'tüfeklerin ruhsatname üzerine kaydedilmesi işlemi esnasında esastır', 'Ruhsatname üzerine tüfeklerin kaydedilmesi', 'yapılması esastır.', [], ''),
+ ('13', 'kosul', 'engel bulunmayanlara mahalli mülki', 'yivsiz tüfek ruhsatnamesi düzenlenir; engeli olana düzenlenmez', '(Değişik:RG-22/4/2009-27208) Bu Yönetmelik hükümlerine göre av tüfeği', 'yivsiz tüfek ruhsatnamesi düzenlenir.', [], ''),
+ ('14', 'kosul', 'kesinleşmiş mahkumiyettir', 'maddedeki mahkûmiyet; paraya çevrilmiş olsa da hürriyeti bağlayıcı ceza esas', 'Bu madde de belirtilen mahkumiyet', 'hürriyeti bağlayıcı ceza esas alınır.', [], ''),
+ ('14', 'yasak', 'yapımı alımı, satımı, taşınması', 'av tüfeği, nişan tabancası, av bıçağı izni ve belgesi verilmez', '(Değişik:RG-11/06/1998-23369) Aşağıda belirtilen hallerden', 'izni ve belgesi verilmez.', [], 'ithalat sayılmamış'),
+ ('14', 'kosul', 'taksirli suçlar hariç', 'ikiden fazla suçtan mahkumiyet engel; taksirli suçlar hariç', 'd) Ateşli silahla işlenenler ile taksirli', 'hürriyeti bağlayıcı cezaya mahkum olanlar', [], 'taksirli trafik suçu engel DEĞİL'),
+ ('14', 'kosul', 'Akıl hastası veya psikolojik', 'engel haller: kısıtlı, kamu hizmetinden yasaklı, 18 yaşını bitirmemiş de', 'ı) Kısıtlı olanlar', '18 yaşını bitirmemiş olanlar,', [], '24 yaş DEĞİL 18'),
+ ('10', 'sure', 'satıcılık (bayilik) belgesi verilir', '3 yıl süreli; valilerce; gerekli belgelerle müracaat edene', 'Yukarıdaki belgeler ile müracaat eden', 'satıcılık (bayilik) belgesi verilir.', [], 'BAYİLİK 3, RUHSATNAME 5'),
+ ('10', 'kosul', 'bedeni ve ruhi bakımdan', 'bayilik sağlık raporu: silah bulundurma ve satmada sakınca yok', '2- Silah bulundurmasında ve satmasında', 'dair sağlık raporu,', [], ''),
+ ('10', 'kosul', 'cins, marka, çap (kalibre)', 'ruhsatname sahibi tüfeklerinin bu bilgilerini ve seri numarasını belgesine işletir', 'Yivsiz tüfek ruhsatnamesi alan kişiler', 'belgelerine işletmek zorundadır.', [], 'satın alındığı tarih YOK'),
+ ('10', 'sure', 'yivsiz tüfek ruhsatnamesi harcının', '5 yıl süreli ruhsatname; valilik/kaymakamlığa dilekçe', 'ekleyecekleri dilekçeleri ile yerleşim yerinin', '5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.', [], '2026 sınavında soruldu'),
+ ('10', 'sira_usul', 'İki adet fotoğraf', 'bayilik dilekçesi ekleri: işyeri belgesi, sağlık raporu, sabıka beyanı, taahhütname', '1- İşyerinin kendi mülkiyetlerinde', '6- İki adet fotoğraf.', [], 'noter onaylı ortaklık sözleşmesi YOK'),
 ]
 yaz(20, '2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik', K)

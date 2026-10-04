@@ -39,5 +39,12 @@ K = [
  ('32','sure','30 Ağustos','kademe ilerlemesi ve terfi için nasıp tarihi; takvim yılının','Bu personelin subaylık/astsubaylık nasıpları','30 Ağustos’u itibar olunur.',[],'NASIP NE ZAMAN OLURSA OLSUN ZAFER BAYRAMI'),
  ('32','istisna','maaş farkı ödenmez','nasıp düzeltmesinden ötürü','Nasıp düzeltmesinden ötürü','özlük hakları verilmez.',[],'yenileme tarihi için ilk sözleşme tarihi esas'),
  ('5', 'sure', 'Ocak ayının ilk günü itibariyle', 'yaş hesabı: düzeltilmemiş nüfus kaydı, müracaat yılı (subay yirmi yedi)', 'mürâcaat yapılan yılın Ocak ayının', 'otuz iki yaşını bitirmemiş olanlar', [('6', 'subay adayı niteliklerinde aynı kural'), ('9', 'astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört')], 'lisansüstü otuz iki'),
+ ('22', 'kosul', 'sosyal hakları ve sağlık işlemlerinde', 'sözleşme süresince 211 sayılı İç Hizmet Kanununun muvazzaf hükümleri uygulanır', 'MADDE 22 – (Değişik:RG-11/2/2010-27490) Sözleşmeli subay', 'muvazzaf subay ve astsubaylara ilişkin hükümleri uygulanır.', [], '926 DEĞİL 211'),
+ ('13', 'kosul', 'rütbe bekleme süreleri hakkında', '926 sayılı TSK Personel Kanunundaki muvazzaf süreleri uygulanır', 'Madde 13 - Sözleşmeli subayların ve astsubayların rütbe', 'belirlenen süreler uygulanır.', [], 'RÜTBE 926, SAĞLIK 211'),
+ ('8', 'sure', 'on ikinci fiili hizmet yılını', 'muvazzaf subaylığa geçiş: yedinci yıla başlamış, on ikinci yılı bitirmemiş', '1) Yedinci fiili hizmet yılına', 'bitirmemiş olmak.', [('11', 'muvazzaf astsubaylığa geçiş: dördüncü fiili hizmet yılına başlamış olmak')], 'astsubaylıkta dördüncü yıl (m.11)'),
+ ('14', 'sira_usul', 'ilk amirine müracaat eder', 'yenileme dilekçesi sona erme tarihinden 6 ay önce; silsileler yoluyla', 'a) Sözleşmeli subay ve astsubaylardan, sözleşmesini', 'Sahil Güvenlik Komutanlığına gönderilir.', [], 'doğrudan Genelkurmay’a dilekçe YOK'),
+ ('14', 'sure', 'en az 3 ay önce', 'yazılı bildirim yoksa sözleşme kendiliğinden sona erer', 'd) Her sözleşme süresinin sona erme', 'kendiliğinden sona erer.', [], 'DİLEKÇE 6 AY, BİLDİRİM 3 AY'),
+ ('14', 'sure', 'iki katı kadar', 'yurt dışı 6 ay+ öğrenim/staj/kurs: sözleşme bu kadar uzar', 'c) Sözleşmeli subay ve astsubay nasbedildikten', 'geçen süreler kadar uzatılır.', [], 'yurt içi öğrenim: geçen süre kadar'),
+ ('30', 'sira_usul', 'fiziki yetenek, değerlendirme testi', 'aday adayı sınavları: genel kültür-meslek bilgisi, mülakat; yabancı dil YOK', 'Müracaatları kabul edilenler fiziki', 'mülakata tabi tutulurlar.', [], ''),
 ]
 yaz(16, 'Sözleşmeli Subay ve Astsubay Yönetmeliği', K)

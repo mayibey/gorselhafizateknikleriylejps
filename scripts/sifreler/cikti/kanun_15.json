@@ -731,6 +731,326 @@
    "kanit": "c) Belge: Herhangi bir bireysel işlemin, kurumsal fonksiyonun veya kurumsal işlemin yerine getirilmesi için alınmış ya da idare tarafından hazırlanmış; içerik, ilişki ve formatı ile ait olduğu fonksiyon veya işlem için delil teşkil ederek aidiyet zincirini muhafaza eden, güvenli elektronik imza ya da el yazısıyla imzalanmış ve kayıt altına alınmış her türlü bilgiyi,",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-15-074",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "ilk kullanıldığı yerde açık biçimi",
+   "cevap": "kısaltma: önce açık, sonra parantez içinde kısaltılmış biçim",
+   "kanit": "(11) Metin içinde kısaltma kullanılacak ise ifadenin ilk kullanıldığı yerde açık biçimi, sonra parantez içinde kısaltılmış biçimi yazılır (Örnek: Türkiye Büyük Millet Meclisi (TBMM), Kayıtlı Elektronik Posta (KEP)).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-075",
+   "madde": "16",
+   "tip": "tanim",
+   "tetikleyici": "arasındaki kısımdır",
+   "cevap": "metin alanı: Muhatap ya da varsa İlgi ile İmza arası",
+   "kanit": "MADDE 16- (1) Metin alanı, “Muhatap” veya varsa “İlgi” ile “İmza” arasındaki kısımdır.",
+   "not": "İlgi ile metin arası bir satır, İlgi yoksa muhatapla iki satır boşluk",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-076",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "Sayılarda kesirler virgül",
+   "cevap": "virgül (,) ile ayrılır; binlik ayrımı nokta (.) ile",
+   "kanit": "(7) Dört ve dörtten çok haneli sayılar sondan sayılmak üzere üçlü gruplara ayrılarak yazılır ve araya nokta (.) işareti konulur (Örnek: 1.452; 25.126; 326.197). Sayılarda kesirler virgül (,) ile ayrılır (Örnek: 10.545,72).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-077",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "gereğini yerine getirme durumunda",
+   "cevap": "Gereği kısmına; Dağıtım başlığının altına yazılır",
+   "kanit": "(2) Belgenin gereğini yerine getirme durumunda olanlar “Gereği:” kısmına, belgenin içeriği hakkında bilgi sahibi olması istenenler ise “Bilgi:” kısmına yazılır. “Gereği:” kısmı “Dağıtım:” başlığının altına, “Bilgi:” kısmı ise “Gereği:” kısmı ile aynı satıra ve yazı alanının ortasına doğru yazılır. “Bilgi:” kısmı yoksa muhatap adları doğrudan “Dağıtım:” başlığının altına yazılır (Örnek 14).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-078",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "yazı alanının ortasına doğru",
+   "cevap": "Bilgi kısmı; Gereği ile aynı satıra",
+   "kanit": "(2) Belgenin gereğini yerine getirme durumunda olanlar “Gereği:” kısmına, belgenin içeriği hakkında bilgi sahibi olması istenenler ise “Bilgi:” kısmına yazılır. “Gereği:” kısmı “Dağıtım:” başlığının altına, “Bilgi:” kısmı ise “Gereği:” kısmı ile aynı satıra ve yazı alanının ortasına doğru yazılır. “Bilgi:” kısmı yoksa muhatap adları doğrudan “Dağıtım:” başlığının altına yazılır (Örnek 14).",
+   "not": "2026 sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-079",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "muhatap adları doğrudan",
+   "cevap": "Bilgi kısmı yoksa Dağıtım başlığının altına",
+   "kanit": "(2) Belgenin gereğini yerine getirme durumunda olanlar “Gereği:” kısmına, belgenin içeriği hakkında bilgi sahibi olması istenenler ise “Bilgi:” kısmına yazılır. “Gereği:” kısmı “Dağıtım:” başlığının altına, “Bilgi:” kısmı ise “Gereği:” kısmı ile aynı satıra ve yazı alanının ortasına doğru yazılır. “Bilgi:” kısmı yoksa muhatap adları doğrudan “Dağıtım:” başlığının altına yazılır (Örnek 14).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-080",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "ek yoksa imza bölümünden sonra",
+   "cevap": "Dağıtım başlığı; ek varsa Ek bölümünden sonra; sola dayalı",
+   "kanit": "(1) Belgenin birden fazla muhataba gönderilmesi durumunda dağıtım bölümüne yer verilir. “Dağıtım:” başlığı ek varsa “Ek:” bölümünden sonra, ek yoksa imza bölümünden sonra uygun satır boşluğu bırakılarak yazı alanının solundan başlanarak yazılır (Örnek 14).",
+   "not": "EK ÖNCE, DAĞITIM SONRA",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-081",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "bütün kamu kurum ve kuruluşlarını",
+   "cevap": "Yönetmeliğin kapsamı; amaç: yazışma kuralları, hızlı-güvenli alışveriş, uygulama birliği",
+   "kanit": "MADDE 1- (1) Bu Yönetmeliğin amacı; güvenli elektronik imza kullanılarak elektronik ortamda veya el yazısıyla atılan imza ile fiziksel ortamda yapılan resmî yazışmalara ilişkin kuralları belirlemek, bilgi veya belge alışverişini, hızlı ve güvenli bir biçimde yürütmek ve uygulama birliğini sağlamaktır. (2) Bu Yönetmelik, bütün kamu kurum ve kuruluşlarını kapsar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-082",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "uygulama birliğini sağlamaktır",
+   "cevap": "amaç: yazışma kuralları + hızlı, güvenli bilgi-belge alışverişi",
+   "kanit": "MADDE 1- (1) Bu Yönetmeliğin amacı; güvenli elektronik imza kullanılarak elektronik ortamda veya el yazısıyla atılan imza ile fiziksel ortamda yapılan resmî yazışmalara ilişkin kuralları belirlemek, bilgi veya belge alışverişini, hızlı ve güvenli bir biçimde yürütmek ve uygulama birliğini sağlamaktır. (2) Bu Yönetmelik, bütün kamu kurum ve kuruluşlarını kapsar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-083",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "elektronik ortamda muhatapları ile paylaşılır",
+   "cevap": "kural: resmî yazışma e-imzalı belgeyle elektronik ortamda; elektronik saklanır",
+   "kanit": "MADDE 4- (1) Kamu kurum ve kuruluşlarınca resmî yazışmalar, elektronik ortamda e-Yazışma Teknik Rehberi’ne uygun olarak hazırlanan ve güvenli elektronik imza ile imzalanan belgelerle yapılır. Bu belgeler, elektronik ortamda muhatapları ile paylaşılır ve elektronik ortamda saklanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-084",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "el yazısıyla imzalanan belgelerle yapılır",
+   "cevap": "zorunlu hâllerde veya olağanüstü durumlarda; fiziksel ortam şartları",
+   "kanit": "(2) Zorunlu hâllerde veya olağanüstü durumlarda resmî yazışmalar, el yazısıyla imzalanan belgelerle yapılır. Bu belgelerin gönderilmesi ve saklanması fiziksel ortam şartlarına göre gerçekleştirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-085",
+   "madde": "10",
+   "tip": "tanim",
+   "tetikleyici": "Başlık (antet)",
+   "cevap": "belgeyi gönderen idarenin adı; yazı alanının üstüne ortalanır",
+   "kanit": "MADDE 10- (1) Başlık (antet), belgeyi gönderen idarenin adının belirtildiği bölümdür. (2) Başlık, belgenin yazı alanının üst kısmına ortalanarak yazılır.",
+   "not": "gönderilen değil GÖNDEREN",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-086",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "ikinci satıra idarenin adı büyük",
+   "cevap": "T.C. ilk satır; birim adı üçüncü satıra ilk harfleri büyük",
+   "kanit": "(2) Başlık, belgenin yazı alanının üst kısmına ortalanarak yazılır. İlk satıra “T.C.” kısaltması, ikinci satıra idarenin adı büyük harflerle, üçüncü satıra birimin adı ilk harfleri büyük diğerleri küçük harflerle ortalanarak yazılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-087",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "5442 sayılı İl İdaresi Kanunu",
+   "cevap": "il ve ilçe teşkilatı başlıkları buna uygun yazılır",
+   "kanit": "(3) İdarelerin il ve ilçe teşkilatlarında kullanılan başlıklar, 10/6/1949 tarihli ve 5442 sayılı İl İdaresi Kanunu hükümlerine uygun olarak, ilk satıra “T.C.” kısaltması, ikinci satıra bağlı olunan mülki idarenin adı büyük harflerle, üçüncü satıra ilgili birimin adı ilk harfleri büyük diğerleri küçük harflerle ortalanarak yazılır. Dış temsilciliklerde başlıklar, il ve ilçe teşkilatında olduğu gibi yazılır (Örnek 2).",
+   "not": "dış temsilcilikler de il/ilçe gibi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-088",
+   "madde": "12",
+   "tip": "sira_usul",
+   "tetikleyici": "gün, ay, yıl olarak rakamla",
+   "cevap": "tarih: sayı ile aynı satırda, yazı alanının en sağında",
+   "kanit": "MADDE 12- (1) Tarih; sayı ile aynı satırda olmak üzere yazı alanının en sağında gün, ay, yıl olarak rakamla ve aralarına nokta işareti “.” konularak yazılır (Örnek 3).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-089",
+   "madde": "12",
+   "tip": "sira_usul",
+   "tetikleyici": "yıl ise dört haneli",
+   "cevap": "gün ve ay iki haneli; ay harfle yazılırsa işaret konmaz",
+   "kanit": "Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.09.2019). Ay adları, harfle de yazılabilir. Bu durumda gün, ay ve yıl arasına herhangi bir işaret konulmaz",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-090",
+   "madde": "13",
+   "tip": "sira_usul",
+   "tetikleyici": "yan başlığının bir alt satırına",
+   "cevap": "Konu yan başlığı, Sayı yan başlığının hemen altına",
+   "kanit": "MADDE 13- (1) “Konu:” yan başlığı, “Sayı:” yan başlığının bir alt satırına yazılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-091",
+   "madde": "13",
+   "tip": "sira_usul",
+   "tetikleyici": "dikey orta hizasını geçmeyecek",
+   "cevap": "konu; kelimelerin baş harfleri büyük, sonunda noktalama yok",
+   "kanit": "Belgenin konusu, yazı alanının dikey orta hizasını geçmeyecek biçimde kelimelerin baş harfleri büyük olarak ve sonuna herhangi bir noktalama işareti konulmaksızın yazılır (Örnek 3).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-092",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "gönderici, konu, tarih, sayı",
+   "cevap": "üstveri tanımı (belgeyi tanımlayan tüm bilgiler)",
+   "kanit": "p) Üstveri: Bir belgeyi tanımlayan gönderici, konu, tarih, sayı ve benzeri tüm bilgileri,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-093",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "uzun süreli elektrik kesintileri",
+   "cevap": "olağanüstü durum tanımı; güvenlik zafiyeti, donanım-yazılım sorunu, EBYS çalışmaz",
+   "kanit": "n) Olağanüstü durum: Gerçekleşmesi hâlinde devleti veya kurumları olumsuz etkileyerek güvenlik zafiyeti oluşturabilecek veya uzun süreli elektrik kesintileri, donanım ve yazılım sorunları gibi teknik gerekçelerle EBYS’nin uzun süreli olarak çalışmamasından dolayı belgenin fiziksel ortamda hazırlanması gereken durumları,",
+   "not": "mevzuat gereği fiziksel hazırlama = zorunlu hâl (ayrı tanım)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-094",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "özel hükümlere göre belgenin",
+   "cevap": "zorunlu hâl tanımı (mevzuat gereği fiziksel hazırlanan belge)",
+   "kanit": "t) Zorunlu hâl: İlgili mevzuattaki özel hükümlere göre belgenin fiziksel ortamda hazırlanması gereken hâlleri,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-095",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "kayıt altına alınmış her türlü",
+   "cevap": "belge tanımı; e-imza ya da el yazısıyla imzalanmış bilgi",
+   "kanit": "c) Belge: Herhangi bir bireysel işlemin, kurumsal fonksiyonun veya kurumsal işlemin yerine getirilmesi için alınmış ya da idare tarafından hazırlanmış; içerik, ilişki ve formatı ile ait olduğu fonksiyon veya işlem için delil teşkil ederek aidiyet zincirini muhafaza eden, güvenli elektronik imza ya da el yazısıyla imzalanmış ve kayıt altına alınmış her türlü bilgiyi,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-096",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "tercihen kurumsal logo",
+   "cevap": "idareler logo kullanabilir (zorunlu değil); en fazla iki logo",
+   "kanit": "MADDE 9- (1) İdareler, tercihen kurumsal logo kullanabilir. Logo, tek kullanıldığında belgenin en üst orta kısmında “T.C.” ibaresini ortalayacak şekilde veya “Başlık” alanını ortalayacak şekilde belgenin üst sol kısmında yer alır (Örnek 1). Belge üzerinde iki ayrı logo kullanıldığında ise “Başlık” alanını ortalayacak şekilde hiyerarşi yönünden üst olan idareye ait logo solda, alt olan idareye ait logo sağda kullanılır. Bir kavram veya etkinlik gibi hususlarla ilgili logo kullanılmak istendiğinde, “Başlık” alanını ortalayacak şekilde idareye ait olan logo solda; diğer logo sağda kullanılır. Belge üzerinde en fazla iki logo kullanılabilir (Örnek 1).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-097",
+   "madde": "15",
+   "tip": "sira_usul",
+   "tetikleyici": "ilginin sonuna nokta",
+   "cevap": "ilgi ibaresi tarihli ve sayılı; sonuna nokta (.) konulur",
+   "kanit": "ibaresi kullanılır ve ilginin sonuna nokta (.) işareti konulur (Örnek 7).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-098",
+   "madde": "18",
+   "tip": "sira_usul",
+   "tetikleyici": "Belgede ek olması hâlinde",
+   "cevap": "Ek: başlığı imza bölümünden sonra, yazı alanının solundan",
+   "kanit": "MADDE 18- (1) Belgede ek olması hâlinde “Ek:” başlığı imza bölümünden sonra uygun satır boşluğu bırakılarak ve yazı alanının solundan başlanarak yazılır.",
+   "not": "olur belgesinde oluru alınan makamın imzasından sonra",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-099",
+   "madde": "25",
+   "tip": "kosul",
+   "tetikleyici": "ve üstü gizlilik dereceli",
+   "cevap": "fiziksel ortamda işlem görür; Hizmete Özel elektronik",
+   "kanit": "(2) “Özel” ve üstü gizlilik dereceli belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemler ilgili mevzuatta belirtilen hükümlere uygun olarak fiziksel ortamda gerçekleştirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-100",
+   "madde": "28",
+   "tip": "kosul",
+   "tetikleyici": "belge görüntüsü üzerinde yer alan",
+   "cevap": "tarih-sayı ile üstveri arasında fark olamaz",
+   "kanit": "(3) Elektronik ortamda güvenli elektronik imza ile imzalanan belgenin üstveri elemanları, belgenin ayrılmaz bir bütünüdür. Tarih ve sayı gibi belge görüntüsü üzerinde yer alan bilgiler ile üstveride yer alan bilgiler arasında fark olamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-101",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "yetki verilmiş üçüncü bir taraf",
+   "cevap": "e-imzalı belge gönderme-alma; kayıt altına alınarak; esas usul",
+   "kanit": "MADDE 30- (1) Güvenli elektronik imza ile imzalanan belgelerin gönderilmesi ve alınması işlemlerinin, elektronik ortamda ilgili mevzuatla yetki verilmiş üçüncü bir taraf aracılığıyla kayıt altına alınarak yapılması esastır.",
+   "not": "anlaşmayla başka iletim mekanizması da olabilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-102",
+   "madde": "36",
+   "tip": "makam",
+   "tetikleyici": "tereddütleri gidermeye",
+   "cevap": "Cumhurbaşkanlığı İdari İşler Başkanlığı yetkili; eğitim stratejisi de",
+   "kanit": "(3) Bu Yönetmelik ile ilgili eğitim stratejilerini belirlemeye ve koordinasyonu sağlamaya, ortaya çıkabilecek tereddütleri gidermeye ve gerektiğinde uygulamaya yönelik esasları düzenlemeye Cumhurbaşkanlığı İdari İşler Başkanlığı yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-103",
+   "madde": "7",
+   "tip": "sayi_oran",
+   "tetikleyici": "Times New Roman",
+   "cevap": "12 punto; Arial 11; en az 9, iletişim bilgisi 8",
+   "kanit": "MADDE 7- (1) Hazırlanan belgelerde “Times New Roman” veya “Arial” yazı tipi normal yazı stilinde kullanılır. Harf büyüklüğünün Times New Roman için 12 punto, Arial için 11 punto olması esastır. Ancak gerekli hâllerde yazı alanında harf büyüklüğü 9 puntoya, iletişim bilgileri kısmında ise 8 puntoya kadar düşürülebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-104",
+   "madde": "17",
+   "tip": "sira_usul",
+   "tetikleyici": "imza yetkisi devredilen makam",
+   "cevap": "yetki devri: ikinci satıra “Bakan a.”, “Genel Müdür a.” gibi",
+   "kanit": "(9) Belgeyi imza yetkisi devredilen makam imzaladığında, imzalayanın adı ve soyadı birinci satıra, yetki devreden makamı gösteren “Bakan a.”, “İdari İşler Başkanı a.”, “Vali a.”, “Belediye Başkanı a.” “Başkan a.” “Genel Müdür a.” veya “Rektör a.” biçimindeki ibare ikinci satıra, imzalayan makamın unvanı ise üçüncü satıra yazılır (Örnek 10).",
+   "not": "vekâlette V.",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-105",
+   "madde": "11",
+   "tip": "sira_usul",
+   "tetikleyici": "kurumsal belge kayıt sisteminden kayıt",
+   "cevap": "olağanüstü durumda sayı: O ön eki; sonra EBYS’ye kaydedilir",
+   "kanit": "(3) Olağanüstü durumlarda belge, fiziksel ortam esaslarına uygun olarak hazırlanır ve belgeye yetkili birim tarafından kurumsal belge kayıt sisteminden kayıt numarası alınır (Örnek: O-67915368-952.02.05-10). EBYS’ye erişim sağlandığında ise belge ve üstveri bilgileri EBYS’ye kaydedilir.",
+   "not": "E elektronik, Z zorunlu hâl, O olağanüstü",
+   "karistirilan": []
   }
  ]
 }

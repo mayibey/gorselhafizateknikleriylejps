@@ -646,6 +646,415 @@
    "kanit": "(1) Bakanlık, gerekli görmesi hâlinde kadın, çocuk ve aile bireylerine yönelik olarak uygulanan şiddet veya şiddet tehlikesi\ndolayısıyla açılan ve herhangi bir şekilde haberdar olduğu idarî, cezaî, hukukî her tür davaya ve çekişmesiz yargıya müdahil olarak katılabilir.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-21-065",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "özgürlüğün keyfî engellenmesini",
+   "cevap": "şiddet (tanım): fiziksel, cinsel, psikolojik, ekonomik zarar; tehdit ve baskı",
+   "kanit": "m) Şiddet: Kişinin, fiziksel, cinsel, psikolojik veya ekonomik açıdan zarar görmesiyle veya acı çekmesiyle sonuçlanan veya sonuçlanması\nmuhtemel hareketleri, buna yönelik tehdit ve baskıyı ya da özgürlüğün keyfî engellenmesini de içeren, toplumsal, kamusal veya özel alanda meydana\ngelen fiziksel, cinsel, psikolojik, sözlü veya ekonomik her türlü tutum ve davranışı,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-066",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "jandarma ve sahil güvenlik birimlerini",
+   "cevap": "kolluk (tanım): polis, jandarma, sahil güvenlik; gümrük muhafaza dâhil değil",
+   "kanit": "h) Kolluk: Polis, jandarma ve sahil güvenlik birimlerini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-067",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Aile mahkemesi hâkimini",
+   "cevap": "Yönetmelikteki Hâkim (sulh ceza değil)",
+   "kanit": "e) Hâkim: Aile mahkemesi hâkimini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-068",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "üçüncü kişiler tarafından ilgili makam",
+   "cevap": "ihbar (şikâyet: mağdurun kendisinin müracaatı)",
+   "kanit": "g) İhbar ve şikâyet: İhbar, üçüncü kişiler tarafından ilgili makam veya mercilere olayın yazılı, sözlü veya başka bir suretle bildirilmesini; şikâyet,\nşiddet mağdurunun şiddet veya şiddet tehlikesi halinde ilgili makam veya mercilere müracaat etmesini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-069",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "komutanını/amirini",
+   "cevap": "kolluk amiri: yerleşim yeri/bulunduğu/uygulama yerindeki yetkili kolluk birimi amiri",
+   "kanit": "ı) Kolluk amiri: Hakkında tedbir kararı verilen kişilerin yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yerdeki Jandarma Genel\nKomutanlığı, Emniyet Genel Müdürlüğü ve Sahil Güvenlik Komutanlığı tarafından atamalarındaki usule göre konu ile yetkili ve görevli kolluk biriminin\nkomutanını/amirini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-070",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "herkes durumu yazılı, sözlü",
+   "cevap": "şiddet veya tehlikesini ilgili makamlara ihbar edebilir",
+   "kanit": "(1) Kişinin, şiddete uğraması veya şiddete uğrama tehlikesi altında bulunması halinde herkes durumu yazılı, sözlü veya başka bir\nsuretle ilgili makam ve mercilere ihbar edebilir.",
+   "not": "kamu kurumları ve meslek kuruluşları için zorunluluk",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-071",
+   "madde": "4",
+   "tip": "sira_usul",
+   "tetikleyici": "Müdürlük veya ŞÖNİM’e yapılan",
+   "cevap": "şikâyet-ihbar gecikmeksizin kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime",
+   "kanit": "(4) Müdürlük veya ŞÖNİM’e yapılan şikâyet ve ihbarlar, bunlar tarafından olayın özelliğine göre, kolluğa, mülki amire, Cumhuriyet başsavcılığına\nveya hâkime gecikmeksizin bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-072",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "evrakın bir örneğini ivedilikle",
+   "cevap": "Cumhuriyet başsavcılığı ihbar-şikâyeti hâkime veya mülki amire gönderir (tedbir için)",
+   "kanit": "(2) Cumhuriyet başsavcılığı, yapılan ihbar ve şikâyet üzerine evrakın bir örneğini ivedilikle olayın niteliğine göre uygulanabilecek olan koruyucu\nveya önleyici tedbir hakkında karar verilmek üzere hâkime veya mülki amire gönderir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-073",
+   "madde": "5",
+   "tip": "sira_usul",
+   "tetikleyici": "ivedilikle ŞÖNİM’e bildirilir",
+   "cevap": "hâkim veya mülki amirin verdiği kararlar",
+   "kanit": "(4) Hâkim veya mülki amir tarafından verilen kararlar ivedilikle ŞÖNİM’e bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-074",
+   "madde": "6",
+   "tip": "tanim",
+   "tetikleyici": "rehberlik ve danışmanlık hizmeti verilmesi",
+   "cevap": "mülkî amir tedbirleri: barınma, maddi yardım, rehberlik, geçici koruma, kreş",
+   "kanit": "a) Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması,\n b) Diğer kanunlar kapsamında yapılacak yardımlar saklı kalmak üzere, geçici maddi yardım yapılması,\n c) Psikolojik, meslekî, hukukî ve sosyal bakımdan rehberlik ve danışmanlık hizmeti verilmesi,\n ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması,\n d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki\naylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek\nşartıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
+   "not": "aile konutu şerhi, işyeri değişikliği HÂKİM tedbiri",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-075",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "resen geçici koruma altına alınması",
+   "cevap": "hayatî tehlike halinde (mülkî amir; gecikmede kolluk amiri de)",
+   "kanit": "ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-076",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "koordinasyon ŞÖNİM tarafından sağlanır",
+   "cevap": "ŞÖNİM sağlar: destek, iş bulma, hukuki rehberlik hizmetlerinde koordinasyon",
+   "kanit": "(3) Bu hizmetlerin yerine getirilmesinde koordinasyon ŞÖNİM tarafından sağlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-077",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "geçici koruma altına alma tedbiri",
+   "cevap": "mülkî amir verir; gecikmede kolluk amiri (hayati tehlike)",
+   "kanit": "(1) Mülkî amir veya gecikmesinde sakınca bulunan hallerde kolluk amiri tarafından, olayın niteliği, şikâyet ve ihbar göz önünde\nbulundurularak şiddet mağdurunun hayati tehlikesinin bulunması halinde ilgilinin talebi üzerine veya resen geçici koruma altına alma tedbiri verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-078",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "tutanağa geçirilir ve tebliğ edilir",
+   "cevap": "geçici koruma kararının kapsamı, telefonlar, kolluğun sorumlulukları korunan kişiye açıklanır",
+   "kanit": "(4) Korunan kişiye, geçici koruma kararının kapsam ve içeriği, şiddet veya şiddete uğrama tehlikesinin varlığı halinde arayabileceği telefon\nnumaraları, kolluğun sorumlulukları, hangi durumlarda kolluğa bilgi vermesi gerektiği, hangi kolluk biriminin geçici koruma hizmetinden sorumlu olduğu\nve benzeri hususlar, kolluk tarafından açıklanarak tutanağa geçirilir ve tebliğ edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-079",
+   "madde": "17",
+   "tip": "tanim",
+   "tetikleyici": "derhâl uzaklaştırılması ve müşterek konutun",
+   "cevap": "hâkim önleyici tedbiri; müşterek konut korunan kişiye tahsis",
+   "kanit": "b) Müşterek konuttan veya bulunduğu yerden derhâl uzaklaştırılması ve müşterek konutun korunan kişiye tahsis edilmesi.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-080",
+   "madde": "17",
+   "tip": "tanim",
+   "tetikleyici": "hakaret, aşağılama veya küçük düşürmeyi",
+   "cevap": "önleyici tedbirler: hakaret yasağı, uzaklaştırma, yaklaşmama, rahatsız etmeme, silah teslimi",
+   "kanit": "a) Şiddet mağduruna yönelik olarak şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmaması.\n b) Müşterek konuttan veya bulunduğu yerden derhâl uzaklaştırılması ve müşterek konutun korunan kişiye tahsis edilmesi.\n c) Korunan kişilere, bu kişilerin bulundukları konuta, okula ve işyerine yaklaşmaması.\n ç) Çocuklarla ilgili daha önce verilmiş bir kişisel ilişki kurma kararı varsa, kişisel ilişkinin refakatçi eşliğinde kurulması, kişisel ilişkinin sınırlanması\nya da tümüyle kaldırılması.\n d) Gerekli görülmesi hâlinde korunan kişinin, şiddete uğramamış olsa bile yakınlarına, tanıklarına ve kişisel ilişki kurulmasına ilişkin hâller saklı\nkalmak üzere çocuklarına yaklaşmaması.\n e) Korunan kişinin şahsi eşyalarına ve ev eşyalarına zarar vermemesi.\n f) Korunan kişiyi iletişim araçlarıyla veya sair surette rahatsız etmemesi.\n g) Bulundurulması veya taşınmasına kanunen izin verilen silahları kolluğa teslim etmesi.\n ğ) Silah taşıması zorunlu olan bir kamu görevi ifa etse bile bu görevi nedeniyle zimmetinde bulunan silahı kurumuna teslim etmesi.\n h) Korunan kişilerin bulundukları yerlerde alkol ya da uyuşturucu veya uyarıcı madde kullanmaması ya da bu maddelerin etkisinde iken korunan\nkişilere ve bunların bulundukları yerlere yaklaşmaması, bağımlılığının olması hâlinde, hastaneye yatmak dâhil, muayene ve tedavisinin sağlanması.",
+   "not": "aile konutu şerhi, işyeri değişikliği KORUYUCU tedbir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-081",
+   "madde": "17",
+   "tip": "kosul",
+   "tetikleyici": "zimmetinde bulunan silahı kurumuna",
+   "cevap": "silah taşıması zorunlu kamu görevlisi şiddet uygulayan; önleyici tedbir",
+   "kanit": "ğ) Silah taşıması zorunlu olan bir kamu görevi ifa etse bile bu görevi nedeniyle zimmetinde bulunan silahı kurumuna teslim etmesi.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "26",
+     "fark": "silahın kurum amirine teslimi ve iadesi usulü"
+    }
+   ]
+  },
+  {
+   "i": "K-21-082",
+   "madde": "29",
+   "tip": "sure",
+   "tetikleyici": "kırk sekiz saat içinde onaylanmayan",
+   "cevap": "kolluk amirinin aldığı barınma/geçici koruma tedbiri; mülkî amir onayı",
+   "kanit": "(1) Mülkî amir tarafından alınabilecek barınma yeri sağlanmasına ve geçici koruma altına alınmasına ilişkin tedbirler,\ngecikmesinde sakınca bulunan hâllerde ilgili kolluk amirince de alınabilir. Kolluk amiri, evrakı en geç tedbirin alındığı tarihi takip eden ilk işgünü içinde\nmülkî amirin onayına sunar. Mülkî amir tarafından kırk sekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-083",
+   "madde": "30",
+   "tip": "makam",
+   "tetikleyici": "en kolay ulaşılabilecek yer",
+   "cevap": "tedbir kararı talep yeri: hâkim, mülkî amir, kolluk",
+   "kanit": "Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluktan talep edilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-084",
+   "madde": "30",
+   "tip": "sure",
+   "tetikleyici": "ilk defasında en çok",
+   "cevap": "tedbir kararı süresi; tehlike sürerse süre/şekil değiştirilebilir, aynen devam",
+   "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir. Ancak şiddet veya şiddet uygulanma tehlikesinin devam edeceğinin anlaşılması\nhâlinde, resen, korunan kişinin, müdürlük, ŞÖNİM veya kolluk görevlilerinin talebi üzerine, tedbirlerin süresinin veya şeklinin değiştirilmesine ya da\naynen devam etmesine karar verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-085",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "geciktirilmeksizin verilir",
+   "cevap": "önleyici tedbir kararı; koruyucu tedbirde delil-belge aranmaz",
+   "kanit": "(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz. Önleyici tedbir kararı, geciktirilmeksizin\nverilir. Kararın verilmesi, Kanunun amacını gerçekleştirmeyi tehlikeye sokabilecek şekilde geciktirilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-086",
+   "madde": "34",
+   "tip": "sure",
+   "tetikleyici": "bir hafta içinde verilir",
+   "cevap": "itiraz üzerine aile mahkemesi kararı; kesin; duruşmasız",
+   "kanit": "(7) Karar bir hafta içinde verilir. İtiraz üzerine verilen karar kesindir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "33",
+     "fark": "mülki amir kararına itirazda da bir hafta"
+    }
+   ]
+  },
+  {
+   "i": "K-21-087",
+   "madde": "37",
+   "tip": "yasak",
+   "tetikleyici": "ses ve görüntü kaydı alınamaz",
+   "cevap": "teknik araçla tedbir takibinde; kişiler dinlenemez, izlenemez (hâkim karar verir)",
+   "kanit": "(1) Hâkim, tedbir kararlarının uygulanmasında teknik araç ve yöntemler kullanılmasına karar verebilir. Ancak, teknik araçlar\nkullanılmak suretiyle, kişilerin ses ve görüntü kaydı alınamaz, kişiler dinlenemez ve izlenemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-088",
+   "madde": "38",
+   "tip": "sira_usul",
+   "tetikleyici": "tutulan tutanak Cumhuriyet başsavcılığına",
+   "cevap": "kolluk ihlali tespit edince başsavcılığa; mahkeme tespitinde resen zorlama hapsi",
+   "kanit": "(1) Tedbir kararlarının ihlal edildiğinin kolluk tarafından tespit edilmesi halinde tutulan tutanak Cumhuriyet başsavcılığına iletilir.\nBu tutanak Cumhuriyet başsavcılığı tarafından ivedilikle aile mahkemesine gönderilir. Tedbir kararlarının ihlal edildiğinin aile mahkemesince tespit\nedilmesi halinde ise başka bir işleme gerek kalmaksızın resen zorlama hapsine ilişkin karar verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-089",
+   "madde": "38",
+   "tip": "ceza",
+   "tetikleyici": "üç günden on güne kadar",
+   "cevap": "zorlama hapsi (tedbire aykırılık); tekrarında onbeş-otuz gün; altı ayı geçemez",
+   "kanit": "hâkim tarafından üç günden on güne kadar zorlama hapsine tâbi tutulmasına karar verilir.\n (6) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş\ngünden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-090",
+   "madde": "40",
+   "tip": "makam",
+   "tetikleyici": "kurumlararası ve sivil toplum kuruluşları",
+   "cevap": "koordinasyon Bakanlık tarafından; kurumlar tedbir kararlarını ivedilikle yerine getirir",
+   "kanit": "(1) Kanun hükümlerinin yerine getirilmesinde kurumlararası ve sivil toplum kuruluşları ile koordinasyon Bakanlık tarafından\ngerçekleştirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-091",
+   "madde": "41",
+   "tip": "kosul",
+   "tetikleyici": "kadın erkek eşitliği konusunda eğitim",
+   "cevap": "kamu kurumları personelini Bakanlığın koordine ettiği eğitim programlarına katılmasını sağlar",
+   "kanit": "(1) Kanunun etkin bir biçimde uygulanması amacıyla tüm kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek\nkuruluşları, personel ve üyelerinin Bakanlığın hazırlayıp koordine edeceği, kadının insan hakları ile kadın erkek eşitliği konusunda eğitim programlarına\nkatılmasını sağlar.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "36",
+     "fark": "ŞÖNİM personeline verilecek eğitim"
+    }
+   ]
+  },
+  {
+   "i": "K-21-092",
+   "madde": "41",
+   "tip": "kosul",
+   "tetikleyici": "mezun oldukları tarihte",
+   "cevap": "sosyal sorumluluk projelerine katılan öğrencilere sertifika (Bakanlık + MEB/YÖK)",
+   "kanit": "(3) Ortaöğretim öğrencileri ile yükseköğrenim öğrencileri, Bakanlığın görev alanına giren konularda sosyal sorumluluk projeleri oluşturmada ya\nda mevcut projelerin içerisinde yer alma konularında teşvik edilir. Bu öğrencilere mezun oldukları tarihte Bakanlık ile Milli Eğitim Bakanlığı ya da\nYükseköğretim Kurumu tarafından hazırlanan bir sertifika verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-093",
+   "madde": "42",
+   "tip": "sure",
+   "tetikleyici": "bir ay içinde ödenmesi hususu",
+   "cevap": "geçici maddi yardım rücusu şiddet uygulayana tebliğ; ödenmezse 6183 takibi",
+   "kanit": "(1) Geçici maddi yardımlar için yapılan ödemelerin tahsili için, ödeme tutarı, ödemenin yapılacağı yer ile tebliğ tarihinden itibaren\nbir ay içinde ödenmesi hususu şiddet uygulayana tebliğ edilir. Ödemenin süresinde yapılmaması halinde bu tutar, 21/7/1953 tarihli ve 6183 sayılı Amme\nAlacaklarının Tahsil Usulü Hakkında Kanun hükümlerine göre ilgili vergi dairesi tarafından takip ve tahsil edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-094",
+   "madde": "43",
+   "tip": "sira_usul",
+   "tetikleyici": "kararın bir örneği, resen",
+   "cevap": "nafaka kararı icra müdürlüğüne gönderilir (alacaklı/borçlu yerleşim yeri)",
+   "kanit": "(1) Kanun hükümlerine göre nafakaya karar verilmesi hâlinde, kararın bir örneği, resen nafaka alacaklısının veya borçlusunun\nyerleşim yeri icra müdürlüğüne gönderilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-095",
+   "madde": "44",
+   "tip": "kosul",
+   "tetikleyici": "genel sağlık sigortası kapsamında karşılanır",
+   "cevap": "korunan kişinin sağlık giderleri; GSS'siz gelir testi olmadan sigortalı sayılır",
+   "kanit": "(1) Korunan kişinin sağlık giderleri, genel sağlık sigortası kapsamında karşılanır. Ancak Kanun hükümlerine göre hakkında\nkoruyucu tedbir kararı verilen kişilerden genel sağlık sigortalısı olmayan ve genel sağlık sigortalısının bakmakla yükümlü olduğu kişi kapsamına da\ngirmeyen veya genel sağlık sigortası prim borcu sebebiyle fiilen genel sağlık sigortasından yararlanamayan ya da diğer mevzuat hükümleri gereğince\ntedavi yardımından yararlanma hakkı bulunmayanlar, bu hâllerin devamı süresince, 31/5/2006 tarihli ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık\nSigortası Kanununun 60 ıncı maddesinin birinci fıkrasının (c) bendinin (1) numaralı alt bendi kapsamında, gelir testine tabî tutulmaksızın genel sağlık\nsigortalısı sayılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-096",
+   "madde": "45",
+   "tip": "istisna",
+   "tetikleyici": "veraset ve intikal vergisinden",
+   "cevap": "Kanun m.17 ödemeleri gelir vergisinden de müstesna; kâğıtlar damga vergisinden",
+   "kanit": "(2) Kanunun 17 nci maddesi uyarınca yapılan ödemeler, gelir vergisi ile veraset ve intikal vergisinden, bu ödemeler için düzenlenen kâğıtlar ise\ndamga vergisinden müstesnadır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "geçici maddi yardım ödemelerinde vergi istisnası"
+    }
+   ]
+  },
+  {
+   "i": "K-21-097",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "beraberindeki çocukları, aile bireylerini",
+   "cevap": "korunan kişi: tedbir kapsamındaki mağdur + çocukları, aile bireyleri",
+   "kanit": "j) Korunan kişi: Tedbir kararı kapsamında korunan şiddet mağdurunu ve varsa beraberindeki çocukları, aile bireylerini ve tek taraflı",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-098",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "niteliğine göre mülki amire",
+   "cevap": "gecikmesinde sakınca: kolluğun aldığı koruyucu/önleyici tedbir onaya sunulur",
+   "kanit": "sakınca bulunan hallerde Kanun kapsamında almış olduğu koruyucu ve önleyici tedbirleri onaylanmak üzere tedbirin niteliğine göre mülki amire veya\nhâkime sunar.",
+   "not": "koruyucu → mülki amir, önleyici → hâkim",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-099",
+   "madde": "12",
+   "tip": "tanim",
+   "tetikleyici": "ayrı yerleşim yeri belirlenmesi",
+   "cevap": "hâkim koruyucu tedbiri (evli ise); işyeri değişikliği, aile konutu şerhi",
+   "kanit": "b) Kişinin evli olması hâlinde müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi.\n c) 22/11/2001 tarihli ve 4721 sayılı Türk Medenî Kanunundaki şartların varlığı hâlinde ve korunan kişinin talebi üzerine tapu kütüğüne aile konutu\nşerhi konulması.\n ç) Korunan kişi bakımından hayatî tehlikenin bulunması ve bu tehlikenin önlenmesi için diğer tedbirlerin yeterli olmayacağının anlaşılması hâlinde\nve ilgilinin aydınlatılmış rızasına dayalı olarak 27/12/2007 tarihli ve 5726 sayılı Tanık Koruma Kanununa göre kimlik ve ilgili diğer bilgi ve belgelerinin",
+   "not": "silah teslimi ÖNLEYİCİ tedbir (m.17)",
+   "karistirilan": [
+    {
+     "madde": "13",
+     "fark": "işyeri değişikliği uygulama maddesi"
+    },
+    {
+     "madde": "14",
+     "fark": "ayrı yerleşim yeri uygulama maddesi, nüfus"
+    }
+   ]
+  },
+  {
+   "i": "K-21-100",
+   "madde": "17",
+   "tip": "kosul",
+   "tetikleyici": "talep edilmese dahi tedbir nafakasına",
+   "cevap": "hâkim hükmedebilir; şiddet uygulayan ailenin geçimini sağlıyorsa (TMK nafakası yoksa)",
+   "kanit": "(3) Şiddet uygulayan, aynı zamanda ailenin geçimini sağlayan veya katkıda bulunan kişi ise hâkim, Türk Medeni Kanunu hükümlerine göre\nnafakaya hükmedilmemiş olması kaydıyla, şiddet mağdurunun yaşam düzeyini göz önünde bulundurarak talep edilmese dahi tedbir nafakasına",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-101",
+   "madde": "29",
+   "tip": "sure",
+   "tetikleyici": "dört saat içinde onaylanmayan",
+   "cevap": "kolluk amirinin aldığı önleyici tedbir hâkimce onaylanmazsa kendiliğinden kalkar",
+   "kanit": "tarafından yirmi dört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+   "not": "koruyucu tedbirde mülkî amir, kırk sekiz saat",
+   "karistirilan": []
+  },
+  {
+   "i": "K-21-102",
+   "madde": "43",
+   "tip": "istisna",
+   "tetikleyici": "Ayrıca harç ve benzeri",
+   "cevap": "nafaka tahsilinde harç ve masraf yok; posta gideri suçüstü ödeneğinden",
+   "kanit": "suçüstü ödeneğinden karşılanır. Ayrıca harç\nve benzeri hiçbir ad altında masraf alınmaz.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

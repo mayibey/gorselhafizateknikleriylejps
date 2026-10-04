@@ -40,5 +40,17 @@ K = [
  ('4', 'makam', 'İl genel idaresinin başı', 'vali; il genel idaresinin başı (ilçede kaymakam)', 'İl genel idaresinin başı', 'mercii validir.', [('27', 'ilçe genel idaresinin başı kaymakam')], ''),
  ('9', 'makam', 'ilin genel idaresinden Cumhurbaşkanına', "valiler sorumlu; bakanlar valiye doğrudan emir verir", 'Valiler, ilin genel idaresinden', 'emir ve talimat verirler.', [], ''),
  ('57', 'tanim', 'hukuk işleri müdürü, defterdar', 'il idare kurulu; milli eğitim, bayındırlık, sağlık, tarım, veteriner müdürleri', 'İl idare kurulu, valinin başkanlığı', 'vali muavinini görevlendirebilir.', [], 'gençlik-spor, emniyet, jandarma listede yok'),
+ ('4', 'tanim', 'il idare şube başkanlarıdır', 'illerdeki bakanlık teşkilatlarının başındakiler; emrindekiler ikinci derecede memur', 'Bakanlıkların kuruluş mevzuatına göre', 'Bu teşkilat valinin emri altındadır', [], ''),
+ ('4', 'istisna', 'Hakimler Kanunu ile İcra', 'yargıç, savcı, adalet memurları, askeri birlikler valinin emri dışında', 'Hakimler Kanunu ile İcra ve İflas', 'bu madde hükmünden müstesnadır.', [], 'askerlik daire ve şubeleri de'),
+ ('11', 'sure', 'olağan hayatı durduracak', 'vali on beş günü geçmemek üzere giriş-çıkış, dolaşma, silah kısıtlar', '(Ek paragraf: 25/7/2018-7145/1 md.)Vali, kamu düzeni', 'taşınması ve naklini yasaklayabilir.', [], '15 GÜN: VALİ; uymayana m.66 (Kabahatler m.32)'),
+ ('11', 'makam', 'İçişleri Bakanlığından ve gerekirse', 'vali emrindeki kuvvetlerle önleyemezse; en yakın kara-deniz-hava birlik komutanlığından da', 'İçişleri Bakanlığından ve gerekirse', 'müracaat ederek yardım isterler.', [], 'hangi makamdan isteneceğini vali takdir eder'),
+ ('11', 'sure', 'yardım istemi geciktirilmeksizin', 'vali istedi mi derhal; acilde sözlü, sonra yazılı', 'Valinin yaptığı yardım istemi', 'sözlü olarak yapılabilir.', [], ''),
+ ('42', 'tanim', 'en büyük Hükümet memuru', 'bucak müdürü; bucağın temsilcisi; genel idaresinden sorumlu', 'Bucak müdürü, bucakta en büyük', 'Bucağın genel idaresinden sorumludur;', [], ''),
+ ('42', 'gorev_yetki', 'bucakta yapılacak törene', 'bucak müdürü Cumhuriyet Bayramı törenine başkanlık eder, ziyaretleri kabul eder', 'F) Cumhuriyet Bayramlarında bucakta', 'ziyaretleri kabul eyler.', [], 'ilde vali, ilçede kaymakam'),
+ ('43', 'makam', 'bucak müdürünün emri altındadır', 'genel ve özel kolluk; emri yerine getirmeye mecbur', 'Bucağın güven ve düzeninin', 'yerine getirmeye mecburdurlar.', [], 'bucağın güven ve düzeninden bucak müdürü sorumlu'),
+ ('9', 'gorev_yetki', 'genel emirler çıkarabilir', 'valiler; mevzuatın verdiği yetkiyi kullanmak için; ilan ederler', 'Ç) (Değişik: 2/7/2018 – KHK/703/138 md.) Kanun, Cumhurbaşkanlığı kararnamesi', 'ilan ederler.', [], ''),
+ ('31', 'kosul', "re'sen verilen cezalar kesindir", 'kaymakamın uyarma-kınaması; tebliğ tarihinden itibaren sicile geçer', "Kaymakamlarca re'sen verilen", 'sicile geçer.', [], ''),
+ ('31', 'makam', 'keyfiyeti valiye bildirirler', 'kaymakam askerlik şikâyetine aldığı cevabı yetersiz bulursa', 'K) Kaymakamlar, halkın askerlik', 'keyfiyeti valiye bildirirler;', [], ''),
+ ('1', 'tanim', 'illere; iller ilçelere', 'merkezi idare kuruluşu: il, ilçe, bucak', '(Değişik: 12/5/1964-469/1 md.) Türkiye, merkezi idare', 'bucaklara bölünmüştür.', [], 'coğrafya, iktisadi şartlar, kamu hizmeti gerekleri'),
 ]
 yaz(5, '5442 sayılı İl İdaresi Kanunu', K)

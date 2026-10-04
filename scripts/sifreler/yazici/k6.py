@@ -66,5 +66,12 @@ K = [
  ('43','ceza','görünür bir şekilde taşıyan','elli TL, kolluk; yasak olmayan silah, ruhsatsız','(1) Yetkili makamlardan ruhsat','idarî para cezası verilir.',[],'park, meydan, cadde, sokak'),
  ('43/A','ceza','iki katından az olamaz','tüzel kişiye idarî para cezası; menfaatin iki katından az olamaz','Ancak idari para cezası','iki katından az olamaz.',[],'organ/temsilcinin tüzel kişi yararına işlediği katalog suç; onbin TL–elli milyon TL; yargılayan mahkeme yetkili'),
  ('43/B','ceza','bildirim yükümlülüğü yerine getirilmediği','sahte para; bankaya Cumhuriyet savcısı bin–beşbin TL','bildirim yükümlülüğü yerine getirilmediği','idarî para cezası verilir.',[('43b','metinde aynı maddenin ikinci kaydı')],''),
+ ('3', 'kosul', 'mülkiyetin kamuya geçirilmesi yaptırımını', 'Kanunun diğer genel hükümleri bu fiillerin tümüne uygulanır', 'b) Diğer genel hükümleri', 'uygulanır.', [], 'kanun yolu hükümleri: diğer kanunlarda aksine hüküm yoksa'),
+ ('18', 'kosul', 'kanunda açık hüküm bulunan hallerde', 'mülkiyetin kamuya geçirilmesine ancak böyle karar verilir', '(1) Kabahatin konusunu oluşturan', 'karar verilebilir.', [], 'kaim değer için de olabilir; ayrıca para cezası şart değil'),
+ ('20', 'kosul', 'aynı zamanda suç oluşturması', 'suça ilişkin dava zamanaşımı hükümleri uygulanır', '(5) Kabahati oluşturan fiilin', 'dava zamanaşımı hükümleri uygulanır.', [], ''),
+ ('42', 'kosul', 'Aynı içerikteki afiş ve ilânlar', 'tek fiil sayılır', 'Aynı içerikteki afiş', 'tek fiil sayılır.', [], ''),
+ ('41', 'ceza', 'özgü yerler dışına atan', 'evsel atık: idarî para cezası; derhal giderirse ceza verilmeyebilir', '(1) Evsel atık ve artıkları', 'idarî para cezası verilir', [], 'belediye sınırı içinde zabıta, dışında kolluk karar verir'),
+ ('21', 'sure', 'Mülkiyetin kamuya geçirilmesine ilişkin', 'yerine getirme zamanaşımı on yıl', '(3) Mülkiyetin kamuya geçirilmesine', 'on yıldır.', [('18', 'mülkiyetin kamuya geçirilmesi kararı: kanunda açık hüküm şart'), ('27', 'idarî yaptırım kararına karşı başvuru yolu düzenlenir')], '2026 sınavında soruldu'),
+ ('16', 'tanim', 'Kabahatler karşılığında uygulanacak', 'idarî para cezası ve idarî tedbir', '(1) Kabahatler karşılığında uygulanacak', 'idarî tedbirlerden ibarettir.', [], '2026 sınavında soruldu'),
 ]
 yaz(6, '5326 sayılı Kabahatler Kanunu', K)

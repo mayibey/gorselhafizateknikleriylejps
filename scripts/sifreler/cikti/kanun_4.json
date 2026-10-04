@@ -91,6 +91,126 @@
    "kanit": "Sol elinin baş parmağı bulunmıyan kimsenin, aynı elinin diğer bir parmağı ve sol eli yoksa sağ elinin baş parmağı ve bu da mevcut değilse diğer parmaklarından biri bastırılır.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-4-010",
+   "madde": "21",
+   "tip": "sira_usul",
+   "tetikleyici": "tebellüğden imtina ederse",
+   "cevap": "evrak muhtar/ihtiyar heyeti üyesi ya da zabıtaya imza karşılığı",
+   "kanit": "Kendisine tebligat yapılacak kimse veya yukarıdaki maddeler mucibince tebligat yapılabilecek kimselerden hiçbiri gösterilen adreste bulunmaz veya tebellüğden imtina ederse, tebliğ memuru tebliğ olunacak evrakı, o yerin muhtar veya ihtiyar heyeti azasından birine veyahut zabıta amir veya memurlarına imza mukabilinde teslim eder",
+   "not": "imtina = evrakı almayı reddetme; adreste bulunmama da aynı usul",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-011",
+   "madde": "21",
+   "tip": "sira_usul",
+   "tetikleyici": "imza mukabilinde teslim eder",
+   "cevap": "muhtar, ihtiyar heyeti üyesi ya da zabıta amir/memuruna",
+   "kanit": "tebliğ memuru tebliğ olunacak evrakı, o yerin muhtar veya ihtiyar heyeti azasından birine veyahut zabıta amir veya memurlarına imza mukabilinde teslim eder",
+   "not": "herhangi bir komşuya teslim YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-012",
+   "madde": "21",
+   "tip": "sira_usul",
+   "tetikleyici": "binanın kapısına yapıştırmakla",
+   "cevap": "ihbarname kapıya; bulunmama halinde en yakın komşuya/yöneticiye/kapıcıya haber",
+   "kanit": "ihbarnameyi gösterilen adresteki binanın kapısına yapıştırmakla beraber, adreste bulunmama halinde tebliğ olunacak şahsa keyfiyetin haber verilmesini de mümkün",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-013",
+   "madde": "21",
+   "tip": "sira_usul",
+   "tetikleyici": "en yakın komşularından birine",
+   "cevap": "adreste bulunmama haberi; varsa yönetici veya kapıcıya da",
+   "kanit": "oldukça en yakın komşularından birine, varsa yönetici veya kapıcıya da bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-014",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "ayrı bir tarife ile",
+   "cevap": "PTT Genel Müdürlüğü ücretleri kendisi tespit eder",
+   "kanit": "Posta ve Telgraf Teşkilatı Genel Müdürlüğünin bu Kanuna göre yapacağı işlerden dolayı alacağı ücretler, bu işletme tarafından ayrı bir tarife ile tespit ve tayin edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-015",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "yapacağı işlerden dolayı alacağı ücretler",
+   "cevap": "PTT işletmesi ayrı bir tarife ile belirler",
+   "kanit": "Posta ve Telgraf Teşkilatı Genel Müdürlüğünin bu Kanuna göre yapacağı işlerden dolayı alacağı ücretler, bu işletme tarafından ayrı bir tarife ile tespit ve tayin edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-016",
+   "madde": "24",
+   "tip": "sira_usul",
+   "tetikleyici": "tebliğ mazbatasında tasrih edilir",
+   "cevap": "parmak basma hallerinde; hazır bulunan şahsa da imza ettirilir",
+   "kanit": "Yukardaki fıkralarda yazılı hallerde keyfiyet, tebliğ mazbatasında tasrih edilir ve hazır bulunan şahsa da imza ettirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-017",
+   "madde": "24",
+   "tip": "sira_usul",
+   "tetikleyici": "bir zabıta memurunu",
+   "cevap": "okuryazar komşu yoksa; muhtar/ihtiyar heyeti üyesi de davet edilebilir",
+   "kanit": "Okur yazar bir komşu bulunmaz veya bulunan komşu imzadan imtina ederse, tebliğ memuru o mahalle veya köyün muhtar veya ihtiyar heyeti azasından birini veyahut bir zabıta memurunu, tebliğ sırasında hazır bulunmak üzere davet eder ve tebligat bunların huzurunda yapılır.",
+   "not": "2026 sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-018",
+   "madde": "24",
+   "tip": "sira_usul",
+   "tetikleyici": "komşularından bir kişi huzurunda",
+   "cevap": "imza bilmeyene sol elinin baş parmağı bastırılarak tebliğ",
+   "kanit": "Kendisine tebliğ yapılacak kimse imza edecek kadar yazı bilmez veya imza edemiyecek durumda bulunursa, komşularından bir kişi huzurunda sol elinin baş parmağı bastırılmak suretiyle tebliğ yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-019",
+   "madde": "22",
+   "tip": "kosul",
+   "tetikleyici": "görünüşüne nazaran",
+   "cevap": "muhatap yerine alacak kişi onsekiz yaşından küçük görünmemeli",
+   "kanit": "Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran onsekiz yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması lazımdır.",
+   "not": "kimlik değil görünüş; bariz ehliyetsiz olmamalı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-020",
+   "madde": "2",
+   "tip": "makam",
+   "tetikleyici": "mahalli mülkiye amirinin emriyle",
+   "cevap": "zabıta tebligat yapar; tehirinde zarar umulan işlerde",
+   "kanit": "Diğer kanunlarda özel hüküm bulunması halinde veya tehirinde zarar umulan işlerde veya aynı yerde bulunan 1 inci maddede yazılı daire ve müesseseler arasında veya bu daire ve müesseselerde bulunan şahıslara yapılacak tebligat, kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla yaptırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-4-021",
+   "madde": "2",
+   "tip": "istisna",
+   "tetikleyici": "hazırlık tahkikatına taallük eden",
+   "cevap": "zor kullanma ve hazırlık tahkikatı görevleri zabıtada; hükümler mahfuz",
+   "kanit": "Zor kullanılmasını gerektiren veya hazırlık tahkikatına taallük eden vazifelerini zabıta tarafından yapılacağına dair olan hükümlerle bu kanunun ikinci babında yazılı hususi hükümler mahfuzdur.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }
