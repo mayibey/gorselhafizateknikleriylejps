@@ -4,587 +4,726 @@
  "kodlar": [
   {
    "i": "K-10-001",
-   "madde": "2",
+   "madde": "1",
    "tip": "tanim",
-   "tetikleyici": "Aile mahkemesi hâkimini",
-   "cevap": "Kanundaki hâkim",
-   "kanit": "c) Hâkim: Aile mahkemesi hâkimini,",
-   "not": "",
-   "karistirilan": []
+   "tetikleyici": "amacı",
+   "cevap": "kadın, çocuk, aile bireyi, ısrarlı takip mağduru; tehlikesi olan da",
+   "kanit": "(1) Bu Kanunun amacı; şiddete uğrayan veya şiddete uğrama tehlikesi bulunan kadınların, çocukların, aile bireylerinin ve tek taraflı ısrarlı takip mağduru olan kişilerin korunması ve bu kişilere yönelik şiddetin önlenmesi amacıyla alınacak tedbirlere ilişkin usul ve esasları düzenlemektir.",
+   "not": "komşuluk, kamu düzeni yok",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "tedbir, Kanunun amacını tehlikeye sokacak şekilde geciktirilemez"
+    }
+   ]
   },
   {
    "i": "K-10-002",
-   "madde": "2",
-   "tip": "tanim",
-   "tetikleyici": "yedi gün yirmidört saat",
-   "cevap": "Şiddet önleme ve izleme merkezleri (ŞÖNİM)",
-   "kanit": "f) Şiddet önleme ve izleme merkezleri: Şiddetin önlenmesi ile koruyucu ve önleyici tedbirlerin etkin olarak uygulanmasına yönelik destek ve izleme hizmetlerinin verildiği, çalışmalarını yedi gün yirmidört saat esası ile yürüten merkezleri,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-003",
-   "madde": "2",
-   "tip": "tanim",
-   "tetikleyici": "aynı haneyi paylaşmasa da",
-   "cevap": "ev içi şiddet; aile mensubu sayılanlar arasında da",
-   "kanit": "b) Ev içi şiddet: Şiddet mağduru ve şiddet uygulayanla aynı haneyi paylaşmasa da aile veya hanede ya da aile mensubu sayılan diğer kişiler arasında meydana gelen her türlü fiziksel, cinsel, psikolojik ve ekonomik şiddeti,",
-   "not": "fiziksel, cinsel, psikolojik, ekonomik",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-004",
-   "madde": "3",
-   "tip": "makam",
-   "tetikleyici": "geçici maddi yardım",
-   "cevap": "mülkî amirin koruyucu tedbiri",
-   "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere mülkî amir tarafından karar verilebilir: a) Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması. b) Diğer kanunlar kapsamında yapılacak yardımlar saklı kalmak üzere, geçici maddi yardım yapılması.",
-   "not": "barınma, rehberlik-danışmanlık, geçici koruma, kreş de mülkî amir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-005",
-   "madde": "3",
-   "tip": "makam",
-   "tetikleyici": "Hayatî tehlikesinin bulunması hâlinde",
-   "cevap": "mülkî amir geçici koruma; kolluk da gecikmede alabilir",
-   "kanit": "ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması.",
-   "not": "talep üzerine ya da resen",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-006",
-   "madde": "3",
-   "tip": "sure",
-   "tetikleyici": "kreş imkânının",
-   "cevap": "mülkî amir; çocuklu korunan kişiye dört ay, çalışıyorsa iki ay",
-   "kanit": "d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki aylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek kaydıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
-   "not": "aylık net asgari ücretin yarısını geçmemek üzere",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-007",
-   "madde": "3",
-   "tip": "sure",
-   "tetikleyici": "kırksekiz saat içinde onaylanmayan",
-   "cevap": "kolluğun aldığı koruyucu tedbir kalkar; mülkî amir onayı",
-   "kanit": "(2) Gecikmesinde sakınca bulunan hâllerde birinci fıkranın (a) ve (ç) bentlerinde yer alan tedbirler, ilgili kolluk amirlerince de alınabilir. Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde mülkî amirin onayına sunar. Mülkî amir tarafından kırksekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
-   "not": "MÜLKİ AMİR KIRK SEKİZ, HÂKİM YİRMİ DÖRT; evrak ilk işgünü onaya",
-   "karistirilan": [
-    {
-     "madde": "5",
-     "fark": "önleyici tedbirde hâkim onayı yirmidört saat"
-    }
-   ]
-  },
-  {
-   "i": "K-10-008",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "İşyerinin değiştirilmesi",
-   "cevap": "hâkimin koruyucu tedbiri",
-   "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir: a) İşyerinin değiştirilmesi. b) Kişinin evli olması hâlinde müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi.",
-   "not": "ayrı yerleşim yeri de hâkim",
-   "karistirilan": [
-    {
-     "madde": "10",
-     "fark": "işyeri değişikliği kararını kişinin tabi olduğu mevzuata göre yetkili merci uygular"
-    }
-   ]
-  },
-  {
-   "i": "K-10-009",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "aile konutu şerhi",
-   "cevap": "hâkim; TMK şartları ve korunan kişinin talebi",
-   "kanit": "c) 22/11/2001 tarihli ve 4721 sayılı Türk Medenî Kanunundaki şartların varlığı hâlinde ve korunan kişinin talebi üzerine tapu kütüğüne aile konutu şerhi konulması.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-010",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "Tanık Koruma Kanunu",
-   "cevap": "hâkim; kimlik değişikliği, aydınlatılmış rıza",
-   "kanit": "ç) Korunan kişi bakımından hayatî tehlikenin bulunması ve bu tehlikenin önlenmesi için diğer tedbirlerin yeterli olmayacağının anlaşılması hâlinde ve ilgilinin aydınlatılmış rızasına dayalı olarak 27/12/2007 tarihli ve 5726 sayılı Tanık Koruma Kanunu hükümlerine göre kimlik ve ilgili diğer bilgi ve belgelerinin değiştirilmesi.",
-   "not": "diğer tedbirler yetersizse",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-011",
-   "madde": "5",
-   "tip": "makam",
-   "tetikleyici": "derhâl uzaklaştırılması",
-   "cevap": "hâkimin önleyici tedbiri; konut korunan kişiye tahsis",
-   "kanit": "b) Müşterek konuttan veya bulunduğu yerden derhâl uzaklaştırılması ve müşterek konutun korunan kişiye tahsis edilmesi.",
-   "not": "EVİ TERK EDEN MAĞDUR DEĞİL, ŞİDDET UYGULAYAN",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-012",
-   "madde": "5",
-   "tip": "kosul",
-   "tetikleyici": "zimmetinde bulunan silahı",
-   "cevap": "kamu görevlisi de kurumuna teslim eder (önleyici tedbir)",
-   "kanit": "ğ) Silah taşıması zorunlu olan bir kamu görevi ifa etse bile bu görevi nedeniyle zimmetinde bulunan silahı kurumuna teslim etmesi.",
-   "not": "ruhsatlı silahlar kolluğa teslim",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-013",
-   "madde": "5",
-   "tip": "sure",
-   "tetikleyici": "yirmidört saat içinde onaylanmayan",
-   "cevap": "kolluğun aldığı önleyici tedbir kalkar; hâkim onayı",
-   "kanit": "(2) Gecikmesinde sakınca bulunan hâllerde birinci fıkranın (a), (b), (c) ve (d) bentlerinde yer alan tedbirler, ilgili kolluk amirlerince de alınabilir. Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde hâkimin onayına sunar. Hâkim tarafından yirmidört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "3",
-     "fark": "koruyucu tedbirde mülkî amir onayı kırksekiz saat"
-    }
-   ]
-  },
-  {
-   "i": "K-10-014",
-   "madde": "5",
-   "tip": "kosul",
-   "tetikleyici": "talep edilmese dahi tedbir nafakasına",
-   "cevap": "hâkim hükmedebilir; şiddet uygulayan geçimi sağlıyorsa",
-   "kanit": "(4) Şiddet uygulayan, aynı zamanda ailenin geçimini sağlayan yahut katkıda bulunan kişi ise 4721 sayılı Kanun hükümlerine göre nafakaya hükmedilmemiş olması kaydıyla hâkim, şiddet mağdurunun yaşam düzeyini göz önünde bulundurarak talep edilmese dahi tedbir nafakasına hükmedebilir.",
-   "not": "TMK nafakası yoksa",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-015",
-   "madde": "7",
-   "tip": "kosul",
-   "tetikleyici": "herkes bu durumu",
-   "cevap": "ihbar edebilir; kamu görevlisi gecikmeksizin işlem yapar",
-   "kanit": "(1) Şiddet veya şiddet uygulanma tehlikesinin varlığı hâlinde herkes bu durumu resmi makam veya mercilere ihbar edebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-016",
-   "madde": "8",
-   "tip": "sure",
-   "tetikleyici": "en çok altı ay için",
-   "cevap": "tedbir kararı süresi; uzatılabilir, değiştirilebilir",
-   "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir.",
-   "not": "talep: ilgili, Bakanlık, kolluk, Cumhuriyet savcısı",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-017",
-   "madde": "8",
-   "tip": "kosul",
-   "tetikleyici": "delil veya belge aranmaz",
-   "cevap": "koruyucu tedbir kararı için",
-   "kanit": "(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz.",
-   "not": "önleyici tedbir geciktirilmeksizin verilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-018",
-   "madde": "8",
-   "tip": "sira_usul",
-   "tetikleyici": "sadece korunan kişiye tebliğ",
-   "cevap": "tedbir talebinin reddi kararı",
-   "kanit": "Tedbir talebinin reddine ilişkin karar ise sadece korunan kişiye tebliğ edilir.",
-   "not": "tedbir kararı iki tarafa da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-019",
-   "madde": "8",
-   "tip": "sira_usul",
-   "tetikleyici": "zorlama hapsinin uygulanacağı ihtarı",
-   "cevap": "tebliğ ve tefhimde yapılır",
-   "kanit": "(5) Tedbir kararının tefhim ve tebliğ işlemlerinde, tedbir kararına aykırılık hâlinde şiddet uygulayan hakkında zorlama hapsinin uygulanacağı ihtarı yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-020",
-   "madde": "9",
-   "tip": "sure",
-   "tetikleyici": "aile mahkemesine itiraz edilebilir",
-   "cevap": "tedbir kararına; tefhim/tebliğden iki hafta",
-   "kanit": "(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-021",
-   "madde": "9",
-   "tip": "sure",
-   "tetikleyici": "İtiraz mercii kararını bir hafta",
-   "cevap": "verir; itiraz üzerine karar kesin",
-   "kanit": "(3) İtiraz mercii kararını bir hafta içinde verir. İtiraz üzerine verilen kararlar kesindir.",
-   "not": "İTİRAZ İKİ HAFTA, KARAR BİR HAFTA",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-022",
-   "madde": "10",
-   "tip": "kosul",
-   "tetikleyici": "engel teşkil etmez",
-   "cevap": "tedbir kararının tebliğ edilmemesi uygulamayı engellemez",
-   "kanit": "(5) Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-023",
-   "madde": "10",
-   "tip": "makam",
-   "tetikleyici": "kolluk birimi görevli ve yetkilidir",
-   "cevap": "tedbirin uygulanması; yerleşim yeri ya da tedbirin uygulanacağı yer",
-   "kanit": "(3) Korunan kişinin geçici koruma altına alınmasına ilişkin koruyucu tedbir kararı ile şiddet uygulayan hakkında verilen önleyici tedbir kararlarının yerine getirilmesinden, hakkında koruyucu veya önleyici tedbir kararı verilen kişilerin yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi görevli ve yetkilidir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-024",
-   "madde": "12",
-   "tip": "yasak",
-   "tetikleyici": "ses ve görüntüleri dinlenemez",
-   "cevap": "teknik takipte yasak; hâkim kararıyla teknik araç kullanılabilir",
-   "kanit": "(1) Bu Kanun hükümlerine göre verilen tedbir kararlarının uygulanmasında hâkim kararı ile teknik araç ve yöntemler kullanılabilir. Ancak, bu suretle, kişilerin ses ve görüntüleri dinlenemez, izlenemez ve kayda alınamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-025",
-   "madde": "13",
-   "tip": "ceza",
-   "tetikleyici": "fiili bir suç oluştursa bile",
-   "cevap": "zorlama hapsi üç günden on güne; hâkim kararıyla",
-   "kanit": "(1) Bu Kanun hükümlerine göre hakkında tedbir kararı verilen şiddet uygulayan, bu kararın gereklerine aykırı hareket etmesi hâlinde, fiili bir suç oluştursa bile ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim kararıyla üç günden on güne kadar zorlama hapsine tabi tutulur.",
-   "not": "tedbire aykırılık",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-026",
-   "madde": "13",
-   "tip": "ceza",
-   "tetikleyici": "onbeş günden otuz güne",
-   "cevap": "tekrarında zorlama hapsi; toplam altı ayı geçemez",
-   "kanit": "(2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez.",
-   "not": "İLK 3-10 GÜN, TEKRAR 15-30, TOPLAM 6 AY",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-027",
-   "madde": "13",
-   "tip": "makam",
-   "tetikleyici": "Zorlama hapsine ilişkin kararlar",
-   "cevap": "Cumhuriyet başsavcılığınca yerine getirilir",
-   "kanit": "(3) Zorlama hapsine ilişkin kararlar, Cumhuriyet başsavcılığınca yerine getirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-028",
-   "madde": "3",
-   "tip": "sure",
-   "tetikleyici": "ilk işgünü içinde mülkî amirin",
-   "cevap": "kolluk amirinin koruyucu tedbir evrakı; kırksekiz saatte onaylanmazsa kalkar",
-   "kanit": "Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde mülkî amirin onayına sunar. Mülkî amir tarafından kırksekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-029",
-   "madde": "8",
-   "tip": "sira_usul",
-   "tetikleyici": "Cumhuriyet savcısının başvurusu üzerine",
-   "cevap": "tedbir kararı: ilgilinin talebi, Bakanlık, kolluk ya da savcı başvurusuyla",
-   "kanit": "(1) Tedbir kararı, ilgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir. Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden talep edilebilir.",
-   "not": "muhtar, sivil toplum örgütü YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-030",
-   "madde": "8",
-   "tip": "sira_usul",
-   "tetikleyici": "en çabuk ve en kolay",
-   "cevap": "ulaşılabilecek yer hâkimi, mülkî amir ya da kolluk biriminden talep",
-   "kanit": "(1) Tedbir kararı, ilgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir. Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden talep edilebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-031",
-   "madde": "8",
-   "tip": "sure",
-   "tetikleyici": "Tedbir kararı ilk defasında",
-   "cevap": "en çok altı ay; sonra süre/şekil değiştirilebilir, kaldırılabilir, devam eder",
-   "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir. Ancak şiddet veya şiddet uygulanma tehlikesinin devam edeceğinin anlaşıldığı hâllerde, resen, korunan kişinin ya da Bakanlık veya kolluk görevlilerinin talebi üzerine tedbirlerin süresinin veya şeklinin değiştirilmesine, bu tedbirlerin kaldırılmasına veya aynen devam etmesine karar verilebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-032",
-   "madde": "8",
-   "tip": "sure",
-   "tetikleyici": "geciktirilmeksizin verilir",
-   "cevap": "önleyici tedbir kararı; koruyucu tedbirde delil aranmaz",
-   "kanit": "(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz. Önleyici tedbir kararı, geciktirilmeksizin verilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-033",
-   "madde": "8",
-   "tip": "kosul",
-   "tetikleyici": "tüm resmi kayıtlarda gizli tutulur",
-   "cevap": "kimlik, adres ve koruma için önemli bilgiler; tebligata ayrı adres",
-   "kanit": "(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte talep üzerine veya resen, korunan kişi ve diğer aile bireylerinin kimlik bilgileri veya kimliğini ortaya çıkarabilecek bilgileri ve adresleri ile korumanın etkinliği bakımından önem taşıyan diğer bilgileri, tüm resmi kayıtlarda gizli tutulur. Yapılacak tebligatlara ilişkin ayrı bir adres tespit edilir.",
-   "not": "ifşa edene TCK; şiddet uygulayanın adli sicili gizlilik kapsamında YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-034",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "tek taraflı ısrarlı takip",
-   "cevap": "korunanlar: kadınlar, çocuklar, aile bireyleri, ısrarlı takip mağdurları",
-   "kanit": "(1) Bu Kanunun amacı; şiddete uğrayan veya şiddete uğrama tehlikesi bulunan kadınların, çocukların, aile bireylerinin ve tek taraflı ısrarlı takip mağduru olan kişilerin korunması ve bu kişilere yönelik şiddetin önlenmesi amacıyla alınacak tedbirlere ilişkin usul ve esasları düzenlemektir.",
-   "not": "şiddete uğrama tehlikesi bulunanlar da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-035",
    "madde": "1",
    "tip": "kosul",
-   "tetikleyici": "ayrımcılık olarak yorumlanamaz",
-   "cevap": "kadınları cinsiyete dayalı şiddetten koruyan özel tedbirler",
+   "tetikleyici": "cinsiyete dayalı şiddet",
+   "cevap": "özel tedbirler ayrımcılık sayılmaz",
    "kanit": "ç) Bu Kanun kapsamında kadınlara yönelik cinsiyete dayalı şiddeti önleyen ve kadınları cinsiyete dayalı şiddetten koruyan özel tedbirler ayrımcılık olarak yorumlanamaz.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-10-036",
+   "i": "K-10-003",
    "madde": "1",
    "tip": "kosul",
-   "tetikleyici": "kadın erkek eşitliğine duyarlı",
-   "cevap": "temel ilke: insan haklarına dayalı, sosyal devlet, adil, etkili, süratli",
-   "kanit": "b) Şiddet mağdurlarına verilecek destek ve hizmetlerin sunulmasında temel insan haklarına dayalı, kadın erkek eşitliğine duyarlı, sosyal devlet ilkesine uygun, adil, etkili ve süratli bir usul izlenir.",
-   "not": "",
+   "tetikleyici": "temel ilke",
+   "cevap": "Anayasa ve uluslararası sözleşmeler; eşitlik, sosyal devlet, adil, süratli",
+   "kanit": "(2) Bu Kanunun uygulanmasında ve gereken hizmetlerin sunulmasında aşağıdaki temel ilkelere uyulur: a) Türkiye Cumhuriyeti Anayasası ile Türkiye’nin taraf olduğu uluslararası sözleşmeler, özellikle Kadınlara Yönelik Şiddet ve Aile İçi Şiddetin Önlenmesi ve Bunlarla Mücadeleye İlişkin Avrupa Konseyi Sözleşmesi ve yürürlükteki diğer kanuni düzenlemeler esas alınır. b) Şiddet mağdurlarına verilecek destek ve hizmetlerin sunulmasında temel insan haklarına dayalı, kadın erkek eşitliğine duyarlı, sosyal devlet ilkesine uygun, adil, etkili ve süratli bir usul izlenir.",
+   "not": "yalnız Anayasa değil; İstanbul Sözleşmesi",
    "karistirilan": []
   },
   {
-   "i": "K-10-037",
-   "madde": "1",
-   "tip": "kosul",
-   "tetikleyici": "Avrupa Konseyi Sözleşmesi",
-   "cevap": "Anayasa ve taraf olunan uluslararası sözleşmeler esas alınır",
-   "kanit": "a) Türkiye Cumhuriyeti Anayasası ile Türkiye’nin taraf olduğu uluslararası sözleşmeler, özellikle Kadınlara Yönelik Şiddet ve Aile İçi Şiddetin Önlenmesi ve Bunlarla Mücadeleye İlişkin Avrupa Konseyi Sözleşmesi ve yürürlükteki diğer kanuni düzenlemeler esas alınır.",
-   "not": "yalnız Anayasa değil",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-038",
+   "i": "K-10-004",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "Aile ve Sosyal Politikalar Bakanlığını",
-   "cevap": "Bakanlık tanımı; Aile ve Sosyal Politikalar",
+   "tetikleyici": "Bakanlık:",
+   "cevap": "Aile ve Sosyal Politikalar Bakanlığı",
    "kanit": "a) Bakanlık: Aile ve Sosyal Politikalar Bakanlığını,",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-10-039",
+   "i": "K-10-005",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "özgürlüğün keyfî engellenmesini",
-   "cevap": "şiddet tanımı: fiziksel, cinsel, psikolojik, sözlü, ekonomik; tehdit-baskı dahil",
+   "tetikleyici": "aynı haneyi paylaşmasa da",
+   "cevap": "ev içi şiddet",
+   "kanit": "b) Ev içi şiddet: Şiddet mağduru ve şiddet uygulayanla aynı haneyi paylaşmasa da aile veya hanede ya da aile mensubu sayılan diğer kişiler arasında meydana gelen her türlü fiziksel, cinsel, psikolojik ve ekonomik şiddeti,",
+   "not": "fiziksel, cinsel, psikolojik, ekonomik",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-006",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "hâkimini",
+   "cevap": "aile mahkemesi",
+   "kanit": "c) Hâkim: Aile mahkemesi hâkimini,",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "9",
+     "fark": "itirazda aynı hâkimse en yakın asliye hukuka"
+    }
+   ]
+  },
+  {
+   "i": "K-10-007",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "sonuçlanması muhtemel",
+   "cevap": "fiziksel, cinsel, psikolojik, ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli",
    "kanit": "d) Şiddet: Kişinin, fiziksel, cinsel, psikolojik veya ekonomik açıdan zarar görmesiyle veya acı çekmesiyle sonuçlanan veya sonuçlanması muhtemel hareketleri, buna yönelik tehdit ve baskıyı ya da özgürlüğün keyfî engellenmesini de içeren, toplumsal, kamusal veya özel alanda meydana gelen fiziksel, cinsel, psikolojik, sözlü veya ekonomik her türlü tutum ve davranışı,",
-   "not": "dinî şiddet, mesleki başarı azalması tanımda YOK",
+   "not": "dinî şiddet, meslekî başarı azalması yok",
    "karistirilan": []
   },
   {
-   "i": "K-10-040",
+   "i": "K-10-008",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "kolluk görevlileri ve mülkî amirler",
-   "cevap": "tedbir kararı tanımı: hâkim de verir; istem üzerine veya resen",
-   "kanit": "ğ) Tedbir kararı: Bu Kanun kapsamında, şiddet mağdurları ve şiddet uygulayanlar hakkında hâkim, kolluk görevlileri ve mülkî amirler tarafından, istem üzerine veya resen verilecek tedbir kararlarını,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-041",
-   "madde": "2",
-   "tip": "tanim",
-   "tetikleyici": "kalma tehlikesi bulunan kişiyi",
-   "cevap": "şiddet mağduru tanımı; dolaylı maruz kalan ve etkilenen de",
+   "tetikleyici": "Şiddet mağduru:",
+   "cevap": "doğrudan ya da dolaylı maruz kalan, etkilenen; tehlikesi olan da",
    "kanit": "e) Şiddet mağduru: Bu Kanunda şiddet olarak tanımlanan tutum ve davranışlara doğrudan ya da dolaylı olarak maruz kalan veya kalma tehlikesi bulunan kişiyi ve şiddetten etkilenen veya etkilenme tehlikesi bulunan kişileri,",
-   "not": "tanımlar: Bakanlık, ev içi şiddet, hâkim, kadına yönelik şiddet, şiddet, mağdur, ŞÖNİM, uygulayan, tedbir kararı; Cumhuriyet başsavcılığı YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-042",
-   "madde": "5",
-   "tip": "makam",
-   "tetikleyici": "önleyici tedbirlerden birine",
-   "cevap": "hâkim karar verir (şiddet uygulayana); kolluk amiri gecikmede a,b,c,d",
-   "kanit": "(1) Şiddet uygulayanlarla ilgili olarak aşağıdaki önleyici tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir:",
-   "not": "mülkî amir önleyici tedbir VEREMEZ",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-043",
-   "madde": "5",
-   "tip": "makam",
-   "tetikleyici": "söz ve davranışlarda bulunmaması",
-   "cevap": "önleyici tedbir (a): şiddet tehdidi, hakaret, aşağılama, küçük düşürme",
-   "kanit": "a) Şiddet mağduruna yönelik olarak şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmaması.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-10-044",
-   "madde": "5",
-   "tip": "makam",
-   "tetikleyici": "konuta, okula ve işyerine yaklaşmaması",
-   "cevap": "hâkimin önleyici tedbiri; korunan kişilere ve bulundukları yerlere",
-   "kanit": "c) Korunan kişilere, bu kişilerin bulundukları konuta, okula ve işyerine yaklaşmaması.",
-   "not": "yakınlarına, tanıklarına, çocuklarına yaklaşmama da (d)",
-   "karistirilan": []
+   "i": "K-10-009",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "izleme merkezleri",
+   "cevap": "yedi gün yirmi dört saat",
+   "kanit": "f) Şiddet önleme ve izleme merkezleri: Şiddetin önlenmesi ile koruyucu ve önleyici tedbirlerin etkin olarak uygulanmasına yönelik destek ve izleme hizmetlerinin verildiği, çalışmalarını yedi gün yirmidört saat esası ile yürüten merkezleri,",
+   "not": "ŞÖNİM",
+   "karistirilan": [
+    {
+     "madde": "13",
+     "fark": "m.13 metninin sonunda sonraki bölüm başlığı yer alır"
+    }
+   ]
   },
   {
-   "i": "K-10-045",
-   "madde": "5",
-   "tip": "makam",
-   "tetikleyici": "alkol ya da uyuşturucu",
-   "cevap": "korunan kişilerin bulunduğu yerlerde kullanmama; bağımlıysa tedavi (hastane dahil)",
-   "kanit": "h) Korunan kişilerin bulundukları yerlerde alkol ya da uyuşturucu veya uyarıcı madde kullanmaması ya da bu maddelerin etkisinde iken korunan kişilere ve bunların bulundukları yerlere yaklaşmaması, bağımlılığının olması hâlinde, hastaneye yatmak dâhil, muayene ve tedavisinin sağlanması.",
+   "i": "K-10-010",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "koruyucu ve önleyici",
+   "cevap": "koruyucu korunan kişiye, önleyici şiddet uygulayana",
+   "kanit": "f) Şiddet önleme ve izleme merkezleri: Şiddetin önlenmesi ile koruyucu ve önleyici tedbirlerin etkin olarak uygulanmasına yönelik destek ve izleme hizmetlerinin verildiği, çalışmalarını yedi gün yirmidört saat esası ile yürüten merkezleri,",
    "not": "",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "korunan kişi için mülkî amirin koruyucu tedbirleri"
+    },
+    {
+     "madde": "5",
+     "fark": "şiddet uygulayan için hâkimin önleyici tedbirleri"
+    }
+   ]
+  },
+  {
+   "i": "K-10-011",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "Şiddet uygulayan:",
+   "cevap": "tehlikesi olan da",
+   "kanit": "g) Şiddet uygulayan: Bu Kanunda şiddet olarak tanımlanan tutum ve davranışları uygulayan veya uygulama tehlikesi bulunan kişileri,",
+   "not": "fiilen uygulayan ya da uygulama tehlikesi bulunan",
    "karistirilan": []
   },
   {
-   "i": "K-10-046",
-   "madde": "13",
-   "tip": "ceza",
-   "tetikleyici": "üç günden on güne kadar",
-   "cevap": "ilk aykırılıkta zorlama hapsi; hâkim kararıyla",
-   "kanit": "(1) Bu Kanun hükümlerine göre hakkında tedbir kararı verilen şiddet uygulayan, bu kararın gereklerine aykırı hareket etmesi hâlinde, fiili bir suç oluştursa bile ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim kararıyla üç günden on güne kadar zorlama hapsine tabi tutulur.",
-   "not": "",
+   "i": "K-10-012",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "istem üzerine veya resen",
+   "cevap": "hâkim, kolluk görevlileri ve mülkî amirler",
+   "kanit": "ğ) Tedbir kararı: Bu Kanun kapsamında, şiddet mağdurları ve şiddet uygulayanlar hakkında hâkim, kolluk görevlileri ve mülkî amirler tarafından, istem üzerine veya resen verilecek tedbir kararlarını,",
+   "not": "Cumhuriyet başsavcılığı tanımlarda yok",
    "karistirilan": []
   },
   {
-   "i": "K-10-047",
-   "madde": "13",
-   "tip": "ceza",
-   "tetikleyici": "aykırılığın her tekrarında",
-   "cevap": "zorlama hapsi onbeş günden otuz güne; toplam altı ay",
-   "kanit": "(2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-048",
-   "madde": "13",
-   "tip": "ceza",
-   "tetikleyici": "toplam süresi altı ayı geçemez",
-   "cevap": "zorlama hapsi; tekrarında onbeş günden otuz güne",
-   "kanit": "(2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-049",
-   "madde": "13",
-   "tip": "makam",
-   "tetikleyici": "il ve ilçe müdürlüklerine bildirilir",
-   "cevap": "zorlama hapsi kararları Bakanlığın müdürlüklerine; başsavcılık yerine getirir",
-   "kanit": "(3) Zorlama hapsine ilişkin kararlar, Cumhuriyet başsavcılığınca yerine getirilir. Bu kararlar Bakanlığın ilgili il ve ilçe müdürlüklerine bildirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-050",
-   "madde": "9",
-   "tip": "sure",
-   "tetikleyici": "iki hafta içinde",
-   "cevap": "tedbir kararına itiraz; tefhim/tebliğden itibaren; aile mahkemesine",
-   "kanit": "(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-051",
-   "madde": "9",
-   "tip": "kosul",
-   "tetikleyici": "İtiraz üzerine verilen kararlar",
-   "cevap": "kesindir; itiraz mercii bir hafta içinde karar verir",
-   "kanit": "(3) İtiraz mercii kararını bir hafta içinde verir. İtiraz üzerine verilen kararlar kesindir.",
-   "not": "temyiz, istinaf YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-052",
-   "madde": "9",
-   "tip": "makam",
-   "tetikleyici": "tek dairesi bulunması hâlinde",
-   "cevap": "itiraz dosyası asliye hukuk mahkemesine; çok daireliyse izleyen daireye",
-   "kanit": "(2) Hâkim tarafından verilen tedbir kararlarına itiraz üzerine dosya, o yerde aile mahkemesinin birden fazla dairesinin bulunması hâlinde, numara olarak kendisini izleyen daireye, son numaralı daire için birinci daireye, o yerde aile mahkemesinin tek dairesi bulunması hâlinde asliye hukuk mahkemesine, aile mahkemesi hâkimi ile asliye hukuk mahkemesi hâkiminin aynı hâkim olması hâlinde ise en yakın asliye hukuk mahkemesine gecikmeksizin gönderilir.",
-   "not": "aynı hâkimse en yakın asliye hukuk",
-   "karistirilan": []
-  },
-  {
-   "i": "K-10-053",
+   "i": "K-10-013",
    "madde": "3",
    "tip": "makam",
-   "tetikleyici": "uygun görülecek benzer tedbirlere",
-   "cevap": "mülkî amir koruyucu tedbirde; hâkim koruyucu ve önleyicide de",
+   "tetikleyici": "mülkî amir tarafından",
+   "cevap": "barınma, maddi yardım, rehberlik, geçici koruma, kreş; işyeri-yerleşim hâkimde",
+   "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere mülkî amir tarafından karar verilebilir: a) Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması. b) Diğer kanunlar kapsamında yapılacak yardımlar saklı kalmak üzere, geçici maddi yardım yapılması. c) Psikolojik, meslekî, hukukî ve sosyal bakımdan rehberlik ve danışmanlık hizmeti verilmesi. ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması. d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki aylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek kaydıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "2",
+     "fark": "m.2 metninin sonunda sonraki maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-014",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "kolluk amiri",
+   "cevap": "evrak ilk işgünü; mülkî amir kırksekiz, hâkim yirmidört saat",
+   "kanit": "(2) Gecikmesinde sakınca bulunan hâllerde birinci fıkranın (a) ve (ç) bentlerinde yer alan tedbirler, ilgili kolluk amirlerince de alınabilir. Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde mülkî amirin onayına sunar. Mülkî amir tarafından kırksekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+   "not": "KORUYUCU: barınma ve geçici koruma; onaylanmazsa kendiliğinden kalkar",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "önleyici tedbirde hâkim onayı yirmidört saat"
+    },
+    {
+     "madde": "10",
+     "fark": "kolluk amirince verilen tedbirde kişi Bakanlık müdürlüğüne ulaştırılır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-015",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "kreş",
+   "cevap": "dört ay, çalışana iki ay; asgari ücretin yarısını geçmez",
+   "kanit": "d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki aylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek kaydıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
+   "not": "on altı yaş üstü asgari ücret",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-016",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "çalışma yaşamına",
+   "cevap": "kreş imkânı (mülkî amir)",
+   "kanit": "d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki aylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek kaydıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-017",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "geçici koruma altına",
+   "cevap": "hayatî tehlike bulunması",
+   "kanit": "ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması.",
+   "not": "talep üzerine ya da resen",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "geçici koruma kararını kolluk uygular"
+    }
+   ]
+  },
+  {
+   "i": "K-10-018",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "uygun görülecek",
+   "cevap": "benzer tedbirler de (birine, birkaçına)",
    "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere mülkî amir tarafından karar verilebilir:",
    "not": "",
    "karistirilan": [
     {
      "madde": "4",
-     "fark": "hâkimin koruyucu tedbirleri: işyeri, ayrı yerleşim yeri, aile konutu şerhi, kimlik değişikliği"
+     "fark": "hâkimin koruyucu tedbirlerinde de benzer tedbir"
     },
     {
      "madde": "5",
-     "fark": "hâkimin önleyici tedbirleri: uzaklaştırma, yaklaşmama, silah teslimi, nafaka"
+     "fark": "hâkimin önleyici tedbirlerinde de benzer tedbir"
     }
    ]
   },
   {
-   "i": "K-10-054",
+   "i": "K-10-019",
    "madde": "3",
    "tip": "makam",
-   "tetikleyici": "rehberlik ve danışmanlık hizmeti",
-   "cevap": "psikolojik, meslekî, hukukî ve sosyal; mülkî amir tedbiri",
+   "tetikleyici": "rehberlik ve danışmanlık",
+   "cevap": "psikolojik, meslekî, hukukî, sosyal",
    "kanit": "c) Psikolojik, meslekî, hukukî ve sosyal bakımdan rehberlik ve danışmanlık hizmeti verilmesi.",
+   "not": "mülkî amir tedbiri",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-020",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "geçici maddi yardım",
+   "cevap": "diğer kanunlardaki yardımlar saklı",
+   "kanit": "b) Diğer kanunlar kapsamında yapılacak yardımlar saklı kalmak üzere, geçici maddi yardım yapılması.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-10-055",
+   "i": "K-10-021",
    "madde": "4",
    "tip": "makam",
-   "tetikleyici": "ayrı yerleşim yeri belirlenmesi",
-   "cevap": "hâkimin koruyucu tedbiri; evli korunan kişi için",
+   "tetikleyici": "hâkim tarafından",
+   "cevap": "koruyucu: işyeri, ayrı yerleşim, konut şerhi, kimlik; önleyici: uzaklaştırma",
+   "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir:",
+   "not": "barınma ve geçici koruma mülkî amirde",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "hâkimin önleyici tedbirleri şiddet uygulayana"
+    },
+    {
+     "madde": "9",
+     "fark": "hâkim kararlarına itiraz aile mahkemesine"
+    },
+    {
+     "madde": "3",
+     "fark": "m.3 metninin sonunda sonraki maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-022",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "işyerinin değiştirilmesi",
+   "cevap": "hâkimin koruyucu tedbiri; korunan kişiye yönelik",
+   "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir: a) İşyerinin değiştirilmesi.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "işyeri değişikliğini kişinin mevzuatındaki yetkili merci uygular"
+    }
+   ]
+  },
+  {
+   "i": "K-10-023",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "müşterek yerleşim yerinden",
+   "cevap": "ayrı yerleşim yeri (hâkim)",
    "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir: a) İşyerinin değiştirilmesi. b) Kişinin evli olması hâlinde müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi.",
+   "not": "evli korunan kişi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-024",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "aile konutu şerhi",
+   "cevap": "hâkim; Medenî Kanun şartı ve korunanın talebi",
+   "kanit": "c) 22/11/2001 tarihli ve 4721 sayılı Türk Medenî Kanunundaki şartların varlığı hâlinde ve korunan kişinin talebi üzerine tapu kütüğüne aile konutu şerhi konulması.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-025",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "kimlik ve ilgili",
+   "cevap": "hayatî tehlike + diğer tedbir yetersiz + aydınlatılmış rıza",
+   "kanit": "ç) Korunan kişi bakımından hayatî tehlikenin bulunması ve bu tehlikenin önlenmesi için diğer tedbirlerin yeterli olmayacağının anlaşılması hâlinde ve ilgilinin aydınlatılmış rızasına dayalı olarak 27/12/2007 tarihli ve 5726 sayılı Tanık Koruma Kanunu hükümlerine göre kimlik ve ilgili diğer bilgi ve belgelerinin değiştirilmesi.",
+   "not": "Tanık Koruma Kanununa göre",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-026",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "önleyici tedbir",
+   "cevap": "yalnız hâkim; kolluk gecikmede yalnız a-b-c-d (söz, uzaklaştırma, yaklaşmama)",
+   "kanit": "(1) Şiddet uygulayanlarla ilgili olarak aşağıdaki önleyici tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir:",
+   "not": "mülkî amir önleyici tedbir veremez",
+   "karistirilan": [
+    {
+     "madde": "2",
+     "fark": "tanımlarda koruyucu ve önleyici tedbirler"
+    },
+    {
+     "madde": "8",
+     "fark": "önleyici tedbir geciktirilmeksizin verilir"
+    },
+    {
+     "madde": "10",
+     "fark": "önleyici tedbiri kolluk birimi uygular"
+    },
+    {
+     "madde": "4",
+     "fark": "m.4 metninin sonunda sonraki maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-027",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "şiddet tehdidi, hakaret",
+   "cevap": "bulunmaması (önleyici, hâkim)",
+   "kanit": "a) Şiddet mağduruna yönelik olarak şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmaması.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-028",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "uzaklaştırıl",
+   "cevap": "müşterek konut korunan kişiye tahsis",
+   "kanit": "b) Müşterek konuttan veya bulunduğu yerden derhâl uzaklaştırılması ve müşterek konutun korunan kişiye tahsis edilmesi.",
+   "not": "evden çıkan uygulayan, mağdur değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-029",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "bulundukları konuta",
+   "cevap": "okula ve işyerine yaklaşmaz",
+   "kanit": "c) Korunan kişilere, bu kişilerin bulundukları konuta, okula ve işyerine yaklaşmaması.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-030",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "tanıklarına",
+   "cevap": "şiddete uğramasa da yakın, tanık, çocuklara yaklaşmama",
+   "kanit": "d) Gerekli görülmesi hâlinde korunan kişinin, şiddete uğramamış olsa bile yakınlarına, tanıklarına ve kişisel ilişki kurulmasına ilişkin hâller saklı kalmak üzere çocuklarına yaklaşmaması.",
+   "not": "kişisel ilişki hâlleri saklı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-031",
+   "madde": "5",
+   "tip": "kosul",
+   "tetikleyici": "kamu görevi",
+   "cevap": "zimmetindeki silahı kurumuna teslim",
+   "kanit": "ğ) Silah taşıması zorunlu olan bir kamu görevi ifa etse bile bu görevi nedeniyle zimmetinde bulunan silahı kurumuna teslim etmesi.",
+   "not": "ruhsatlı silahlar kolluğa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-032",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "alkol ya da uyuşturucu",
+   "cevap": "korunanın yanında kullanmama; bağımlıysa hastane dahil tedavi",
+   "kanit": "h) Korunan kişilerin bulundukları yerlerde alkol ya da uyuşturucu veya uyarıcı madde kullanmaması ya da bu maddelerin etkisinde iken korunan kişilere ve bunların bulundukları yerlere yaklaşmaması, bağımlılığının olması hâlinde, hastaneye yatmak dâhil, muayene ve tedavisinin sağlanması.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-033",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "Çocuk Koruma Kanunu",
+   "cevap": "hâkim velayet, kayyım, nafaka, kişisel ilişkiye de karar verir",
+   "kanit": "(3) Bu Kanunda belirtilen tedbirlerle birlikte hâkim, 3/7/2005 tarihli ve 5395 sayılı Çocuk Koruma Kanununda yer alan koruyucu ve destekleyici tedbirler ile 4721 sayılı Kanun hükümlerine göre velayet, kayyım, nafaka ve kişisel ilişki kurulması hususlarında karar vermeye yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-034",
+   "madde": "5",
+   "tip": "kosul",
+   "tetikleyici": "tedbir nafaka",
+   "cevap": "talep olmasa da; geçimi sağlayan şiddet uygulayandan",
+   "kanit": "(4) Şiddet uygulayan, aynı zamanda ailenin geçimini sağlayan yahut katkıda bulunan kişi ise 4721 sayılı Kanun hükümlerine göre nafakaya hükmedilmemiş olması kaydıyla hâkim, şiddet mağdurunun yaşam düzeyini göz önünde bulundurarak talep edilmese dahi tedbir nafakasına hükmedebilir.",
+   "not": "Medenî Kanuna göre nafaka yoksa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-035",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "denetimli serbestlik",
+   "cevap": "koruma ve infaz tedbirlerine ilişkin hükümler saklı",
+   "kanit": "(1) Kişinin silah bulundurması, uyuşturucu veya uyarıcı madde kullanmasının suç oluşturması dolayısıyla ya da fiilinin başka bir suç oluşturması nedeniyle; a) Soruşturma ve kovuşturma evresinde koruma tedbirlerine veya denetimli serbestlik tedbirlerine, b) Mahkûmiyet hâlinde ceza veya güvenlik tedbirlerinin infazına ve bu çerçevede uygulanabilecek olan denetimli serbestlik tedbirlerine, ilişkin kanun hükümleri saklıdır.",
+   "not": "silah, uyuşturucu suç oluşturuyorsa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-036",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "resmi makam veya mercilere",
+   "cevap": "herkes ihbar eder; görevli gecikmeksizin işlem yapar",
+   "kanit": "(1) Şiddet veya şiddet uygulanma tehlikesinin varlığı hâlinde herkes bu durumu resmi makam veya mercilere ihbar edebilir. İhbarı alan kamu görevlileri bu Kanun kapsamındaki görevlerini gecikmeksizin yerine getirmek ve uygulanması gereken diğer tedbirlere ilişkin olarak yetkilileri haberdar etmekle yükümlüdür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-037",
+   "madde": "8",
+   "tip": "sira_usul",
+   "tetikleyici": "başvurusu üzerine",
+   "cevap": "ilgili, Bakanlık, kolluk, Cumhuriyet savcısı; muhtar yok",
+   "kanit": "(1) Tedbir kararı, ilgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir. Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden talep edilebilir.",
+   "not": "en kolay ulaşılan hâkim, mülkî amir ya da kolluktan istenir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-038",
+   "madde": "8",
+   "tip": "sira_usul",
+   "tetikleyici": "en kolay ulaşılabilecek",
+   "cevap": "yer hâkimi, mülkî amir ya da kolluk birimi",
+   "kanit": "(1) Tedbir kararı, ilgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir. Tedbir kararları en çabuk ve en kolay ulaşılabilecek yer hâkiminden, mülkî amirden ya da kolluk biriminden talep edilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-039",
+   "madde": "8",
+   "tip": "sure",
+   "tetikleyici": "ilk defasında",
+   "cevap": "en çok altı ay",
+   "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-040",
+   "madde": "8",
+   "tip": "sure",
+   "tetikleyici": "devam edeceğinin",
+   "cevap": "resen ya da korunan kişi, Bakanlık, kolluk talebiyle",
+   "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir. Ancak şiddet veya şiddet uygulanma tehlikesinin devam edeceğinin anlaşıldığı hâllerde, resen, korunan kişinin ya da Bakanlık veya kolluk görevlilerinin talebi üzerine tedbirlerin süresinin veya şeklinin değiştirilmesine, bu tedbirlerin kaldırılmasına veya aynen devam etmesine karar verilebilir.",
+   "not": "süre-şekil değişir, kaldırılır, devam eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-041",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "Koruyucu tedbir",
+   "cevap": "delil veya belge aranmaz; önleyici geciktirilmeksizin",
+   "kanit": "(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz. Önleyici tedbir kararı, geciktirilmeksizin verilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "hâkimin koruyucu tedbirleri"
+    },
+    {
+     "madde": "10",
+     "fark": "geçici koruma kararını kolluk uygular"
+    },
+    {
+     "madde": "2",
+     "fark": "m.2 metninin sonunda sonraki maddenin başlığı yer alır"
+    },
+    {
+     "madde": "3",
+     "fark": "m.3 metninin sonunda sonraki maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-042",
+   "madde": "8",
+   "tip": "sure",
+   "tetikleyici": "Önleyici tedbir kararı",
+   "cevap": "geciktirilmeksizin verilir",
+   "kanit": "(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz. Önleyici tedbir kararı, geciktirilmeksizin verilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "önleyici tedbiri kolluk birimi uygular"
+    }
+   ]
+  },
+  {
+   "i": "K-10-043",
+   "madde": "8",
+   "tip": "sira_usul",
+   "tetikleyici": "reddine ilişkin karar",
+   "cevap": "sadece korunan kişiye tebliğ",
+   "kanit": "Tedbir talebinin reddine ilişkin karar ise sadece korunan kişiye tebliğ edilir.",
+   "not": "tedbir kararı iki tarafa",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "başvurunun kabul ya da reddi Bakanlık müdürlüğüne bildirilir"
+    }
+   ]
+  },
+  {
+   "i": "K-10-044",
+   "madde": "8",
+   "tip": "sira_usul",
+   "tetikleyici": "tefhim ve tebliğ",
+   "cevap": "aykırılıkta zorlama hapsi ihtarı",
+   "kanit": "(5) Tedbir kararının tefhim ve tebliğ işlemlerinde, tedbir kararına aykırılık hâlinde şiddet uygulayan hakkında zorlama hapsinin uygulanacağı ihtarı yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-045",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "gizli tutul",
+   "cevap": "korunan ve aile bireylerinin kimlik-adres bilgisi; tebligata ayrı adres",
+   "kanit": "(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte talep üzerine veya resen, korunan kişi ve diğer aile bireylerinin kimlik bilgileri veya kimliğini ortaya çıkarabilecek bilgileri ve adresleri ile korumanın etkinliği bakımından önem taşıyan diğer bilgileri, tüm resmi kayıtlarda gizli tutulur. Yapılacak tebligatlara ilişkin ayrı bir adres tespit edilir.",
+   "not": "adli sicil yok; ifşaya TCK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-046",
+   "madde": "9",
+   "tip": "sure",
+   "tetikleyici": "itiraz",
+   "cevap": "iki hafta, aile mahkemesine; merci bir haftada karar verir, kesin",
+   "kanit": "(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir. (2) Hâkim tarafından verilen tedbir kararlarına itiraz üzerine dosya, o yerde aile mahkemesinin birden fazla dairesinin bulunması hâlinde, numara olarak kendisini izleyen daireye, son numaralı daire için birinci daireye, o yerde aile mahkemesinin tek dairesi bulunması hâlinde asliye hukuk mahkemesine, aile mahkemesi hâkimi ile asliye hukuk mahkemesi hâkiminin aynı hâkim olması hâlinde ise en yakın asliye hukuk mahkemesine gecikmeksizin gönderilir. (3) İtiraz mercii kararını bir hafta içinde verir. İtiraz üzerine verilen kararlar kesindir.",
+   "not": "İTİRAZ 2 HAFTA · KARAR 1 HAFTA · temyiz yok",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "m.8 metninin sonunda bu maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-047",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "daire",
+   "cevap": "izleyen daireye; sonuncuysa birinciye; tek daire asliye hukuka",
+   "kanit": "(2) Hâkim tarafından verilen tedbir kararlarına itiraz üzerine dosya, o yerde aile mahkemesinin birden fazla dairesinin bulunması hâlinde, numara olarak kendisini izleyen daireye, son numaralı daire için birinci daireye, o yerde aile mahkemesinin tek dairesi bulunması hâlinde asliye hukuk mahkemesine, aile mahkemesi hâkimi ile asliye hukuk mahkemesi hâkiminin aynı hâkim olması hâlinde ise en yakın asliye hukuk mahkemesine gecikmeksizin gönderilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-048",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "aynı hâkim",
+   "cevap": "en yakın asliye hukuk mahkemesi",
+   "kanit": "(2) Hâkim tarafından verilen tedbir kararlarına itiraz üzerine dosya, o yerde aile mahkemesinin birden fazla dairesinin bulunması hâlinde, numara olarak kendisini izleyen daireye, son numaralı daire için birinci daireye, o yerde aile mahkemesinin tek dairesi bulunması hâlinde asliye hukuk mahkemesine, aile mahkemesi hâkimi ile asliye hukuk mahkemesi hâkiminin aynı hâkim olması hâlinde ise en yakın asliye hukuk mahkemesine gecikmeksizin gönderilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-049",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "en seri vasıtalarla",
+   "cevap": "Bakanlık il-ilçe müdürlükleri, savcılık ya da kolluk",
+   "kanit": "(1) Bu Kanun hükümlerine göre alınan tedbir kararları, Bakanlığın ilgili il ve ilçe müdürlükleri ile verilen kararın niteliğine göre Cumhuriyet başsavcılığına veya kolluğa en seri vasıtalarla bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-050",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "yerine getirilmesinden",
+   "cevap": "yerleşim yeri, bulunduğu ya da tedbir yeri kolluk birimi",
+   "kanit": "(3) Korunan kişinin geçici koruma altına alınmasına ilişkin koruyucu tedbir kararı ile şiddet uygulayan hakkında verilen önleyici tedbir kararlarının yerine getirilmesinden, hakkında koruyucu veya önleyici tedbir kararı verilen kişilerin yerleşim yeri veya bulunduğu ya da tedbirin uygulanacağı yer kolluk birimi görevli ve yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-051",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "tebliğ edilmemesi",
+   "cevap": "uygulamaya engel değil",
+   "kanit": "(5) Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-052",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "Barınma yerlerinin yetersiz",
+   "cevap": "kamu sosyal tesis, yurt; mülkî amir, acelede kolluk talebiyle",
+   "kanit": "(6) Hakkında barınma yeri sağlanmasına karar verilen kişiler, Bakanlığa ait veya Bakanlığın gözetim ve denetimi altında bulunan yerlere yerleştirilir. Barınma yerlerinin yetersiz kaldığı hâllerde korunan kişiler; mülkî amirin, acele hâllerde kolluğun veya Bakanlığın talebi üzerine kamu kurum ve kuruluşlarına ait sosyal tesis, yurt veya benzeri yerlerde geçici olarak barındırılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-053",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "İşyerinin değiştirilmesi yönündeki",
+   "cevap": "kişinin tabi olduğu mevzuata göre yetkili merci uygular",
+   "kanit": "(7) İşyerinin değiştirilmesi yönündeki tedbir kararı, kişinin tabi olduğu ilgili mevzuat hükümlerine göre yetkili merci veya kişi tarafından yerine getirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-054",
+   "madde": "11",
+   "tip": "kosul",
+   "tetikleyici": "Kolluk görevleri",
+   "cevap": "kadın-çocuk hakları ve eşitlik eğitimi almış yeterli personel",
+   "kanit": "(1) Kolluk görevleri, kolluğun merkez ve taşra teşkilâtında bu Kanunda belirtilen hizmetlerle ilgili olarak, çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış ve ilgili kolluk birimlerince belirlenmiş olan yeteri kadar personel tarafından yerine getirilir.",
+   "not": "yalnız kadın personel şartı yok",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "m.10 metninin sonunda bu maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-055",
+   "madde": "12",
+   "tip": "yasak",
+   "tetikleyici": "teknik araç",
+   "cevap": "hâkim kararıyla; ses-görüntü dinlenemez, izlenemez, kaydedilemez",
+   "kanit": "(1) Bu Kanun hükümlerine göre verilen tedbir kararlarının uygulanmasında hâkim kararı ile teknik araç ve yöntemler kullanılabilir. Ancak, bu suretle, kişilerin ses ve görüntüleri dinlenemez, izlenemez ve kayda alınamaz.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-10-056",
-   "madde": "11",
-   "tip": "kosul",
-   "tetikleyici": "kadın erkek eşitliği konusunda eğitim",
-   "cevap": "kolluk görevlerini bu eğitimi almış, belirlenmiş yeterli personel yapar",
-   "kanit": "(1) Kolluk görevleri, kolluğun merkez ve taşra teşkilâtında bu Kanunda belirtilen hizmetlerle ilgili olarak, çocuk ve kadının insan hakları ile kadın erkek eşitliği konusunda eğitim almış ve ilgili kolluk birimlerince belirlenmiş olan yeteri kadar personel tarafından yerine getirilir.",
-   "not": "yalnız kadın personel şartı YOK",
-   "karistirilan": []
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "aykırı",
+   "cevap": "ilk üç-on gün; tekrarında onbeş-otuz; toplam altı ay zorlama hapsi",
+   "kanit": "(1) Bu Kanun hükümlerine göre hakkında tedbir kararı verilen şiddet uygulayan, bu kararın gereklerine aykırı hareket etmesi hâlinde, fiili bir suç oluştursa bile ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim kararıyla üç günden on güne kadar zorlama hapsine tabi tutulur. (2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez.",
+   "not": "fiil suç olsa bile; hâkim kararıyla",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "tebliğde zorlama hapsi ihtarı yapılır"
+    },
+    {
+     "madde": "12",
+     "fark": "m.12 metninin sonunda bu maddenin başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-10-057",
+   "madde": "13",
+   "tip": "makam",
+   "tetikleyici": "ilçe müdürlüklerine",
+   "cevap": "Bakanlığın müdürlüklerine; yerine getiren başsavcılık",
+   "kanit": "(3) Zorlama hapsine ilişkin kararlar, Cumhuriyet başsavcılığınca yerine getirilir. Bu kararlar Bakanlığın ilgili il ve ilçe müdürlüklerine bildirilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "tedbir kararları da Bakanlık il-ilçe müdürlüklerine bildirilir"
+    }
+   ]
+  },
+  {
+   "i": "K-10-058",
+   "madde": "13",
+   "tip": "makam",
+   "tetikleyici": "zorlama hapsi",
+   "cevap": "toplam altı ay; Cumhuriyet başsavcılığı yerine getirir",
+   "kanit": "(2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez. (3) Zorlama hapsine ilişkin kararlar, Cumhuriyet başsavcılığınca yerine getirilir. Bu kararlar Bakanlığın ilgili il ve ilçe müdürlüklerine bildirilir.",
+   "not": "infaz hâkimliği değil",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "tebliğde zorlama hapsi ihtarı yapılır"
+    }
+   ]
   }
  ]
 }
