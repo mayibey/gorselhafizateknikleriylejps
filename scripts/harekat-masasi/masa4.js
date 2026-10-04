@@ -70,10 +70,13 @@ function birlestir(b){ if(!b||typeof b!=='object')return;
   K.tani=Object.assign({},bt,K.tani);K.cevap=Object.assign({},bc,K.cevap);K.checkup=Object.assign({},b.checkup||{},K.checkup||{});K.kayit=Object.assign({},b.kayit||{},K.kayit||{});
   if(!K.rontgen||(b.rontgen&&b.rontgen.tarih>K.rontgen.tarih))K.rontgen=b.rontgen||K.rontgen;
   const hepsi=[...(b.rontgenler||[]),...(K.rontgenler||[])];const g2={};hepsi.forEach(x=>{if(x&&x.ids)g2[x.saat||x.tarih]=x;});K.rontgenler=Object.values(g2).sort((a,b)=>(a.saat||a.tarih).localeCompare(b.saat||b.tarih)).slice(-8);
-  if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; }
+  if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; if(Array.isArray(b.ozel))K.ozel=b.ozel; }
 try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
 if(K.g!=='mus'&&K.g!==BRANS.slug)K.g='mus'; // başka branşın kaydı / eski 'mebs' değeri
 const RN=()=>window.ReactNativeWebView;
+// Yeni özellik önce yalnız sunucu kaydında ozel:[ad] olana açılır; herkese açmak için ad YAYIN'a eklenir.
+const YAYIN=[];
+const acik=ad=>YAYIN.includes(ad)||(Array.isArray(K.ozel)&&K.ozel.includes(ad));
 const PREMIUM=window.MERKEZ_PREMIUM!==false;
 function olay(ad,ayrinti){ try{ if(RN())RN().postMessage(JSON.stringify({tip:'olay',olay:ad,ayrinti:ayrinti||{}})); }catch(e){} }
 function kilit(nerede){ if(PREMIUM){olay(nerede);return false;} olay('kilit',{nerede}); if(RN())RN().postMessage(JSON.stringify({tip:'paywall'})); else toast('Bu bölüm Tam Erişim üyelerine özel.'); return true; }
@@ -219,7 +222,8 @@ function rontgenBaslat(){ if(kilit('rontgen'))return;
 function rontgenBitir(){
   let d=0,n=0;
   S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[kid(q.i)]=v;K.cevap[kid(q.i)]=S.cevap[i];n++;d+=v;}});
-  K.rontgen={tarih:bugun(),d,n,ids:S.sorular.map(q=>q.i),saat:new Date().toISOString()};K.rontgenler=(K.rontgenler||[]).concat([K.rontgen]).slice(-8);K.aktif=null;kaydet();S=null;YIGIN.pop();rontgenSonuc();
+  const c={};S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined)c[q.i]=S.cevap[i];});
+  K.rontgen={tarih:bugun(),d,n,ids:S.sorular.map(q=>q.i),c,saat:new Date().toISOString()};K.rontgenler=(K.rontgenler||[]).concat([K.rontgen]).slice(-8);K.aktif=null;kaydet();S=null;YIGIN.pop();rontgenSonuc();
 }
 /* ---------- 3. RÖNTGEN SONUCU ---------- */
 function rontgenSonuc(Rsec,geriHedef){
@@ -233,19 +237,38 @@ function rontgenSonuc(Rsec,geriHedef){
   const cumle=H>=75?'Durumun iyi. Birkaç kanunda küçük eksiklerin var.':H>=50?'Genel durumun iyi, ancak bazı temel alanlarda eksiğin var.':H>=30?'Birçok kanunda eksiğin var. Sınavda en çok soru çıkan kanunlardan başla.':'Temel henüz oturmamış. Kritik kanunları check-up ile tek tek kapat.';
   const tipler=tipIst(sorular).filter(t=>t.id!=='bosluk'&&t.id!=='onculu'||t.n>=2).slice(0,4);
   const ilkEksik=ks.find(x=>x.durum==='kritik'||x.durum==='zayif'||x.durum==='orta');
+  const yb=acik('rontgen-yanlis')&&PREMIUM?rontgenYanlislar(R,sorular):null;
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
   <p class="ozOzet" style="text-align:center">${tarihYaz(R.tarih)} · ${R.d}/${R.n} doğru</p>
+  ${yb&&yb.ys.length?`<button class="anaBtn2" id="yanlisGit">Yanlışlarım · ${yb.ys.length} soru ${IK.ok}<small>ne işaretledin, doğrusu ne, neden</small></button>`:''}
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
   <h3 class="bolumBaslik">Kanun bazında analiz</h3>
   <section class="liste">${ks.map(x=>`<div class="satir kb"><span class="satirAd">${esc(kisa(x.k))}</span><span></span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span>${x.durum!=='hazir'?`<span class="kbBtn">${K.checkup[x.k.id]?`<button class="btn kucuk" data-oz="${x.k.id}">Özeti aç</button>`:''}<button class="btn kucuk ana" data-cu="${x.k.id}">${K.checkup[x.k.id]?'Yeniden check-up':'Check-up yap'} ${IK.ok}</button></span>`:''}</div>`).join('')}</section>
   <h3 class="bolumBaslik">Soru tipi zaafı</h3>
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
+  ${yb?yb.html:''}
   ${ilkEksik?`<button class="anaBtn2" id="eksikBasla">Eksiklerime göre başla ${IK.ok}<small>${esc(kisa(ilkEksik.k))} check-up · 8-12 soru</small></button>`:''}
   <div class="altLinkler"><button id="yenile">Röntgeni yenile</button></div>`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())rontgenSayfa();};$('#yenile').onclick=rontgenBaslat;
   document.querySelectorAll('[data-cu]').forEach(b=>b.onclick=()=>checkupBolum(+b.dataset.cu));
   document.querySelectorAll('[data-oz]').forEach(b=>b.onclick=()=>ozet(+b.dataset.oz,()=>rontgenSonuc(R)));
   if(ilkEksik)$('#eksikBasla').onclick=()=>checkupBolum(ilkEksik.k.id);
+  if($('#yanlisGit'))$('#yanlisGit').onclick=()=>$('#yanlisBaslik').scrollIntoView({behavior:'smooth',block:'start'});
+  if($('#yTekrar'))$('#yTekrar').onclick=()=>basla(karistir(yb.ys),'Röntgen · yanlışlar',{tani:true,tur:'tekrar'});
+}
+// Röntgende yanlış yapılan sorular, kanun kanun. Yeni röntgen kendi cevabını (R.c) saklar; eski röntgende son verilen cevap gösterilir.
+function rontgenYanlislar(R,sorular){
+  const eski=!R.c;
+  const sec=q=>eski?K.cevap[kid(q.i)]:R.c[q.i];
+  const ys=sorular.filter(q=>eski?K.tani[kid(q.i)]===0:(R.c[q.i]!==undefined&&R.c[q.i]!==q.d));
+  if(!ys.length)return {ys,html:`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın soru yok</h3>`};
+  const grup=[];ys.forEach(q=>{let g=grup.find(x=>x.l===q.l);if(!g){g={l:q.l,q:[]};grup.push(g);}g.q.push(q);});
+  const kart=(q,i)=>{const c=sec(q);return `<details class="ySoru"><summary><span class="satirNo">${esc(mEt(maddeNo(q)||'')||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${c!==undefined&&c!==q.d?`<p class="ySenin">Senin cevabın: ${HARF[c]}) ${esc(q.s[c])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p>${q.a?`<p>${esc(q.a)}</p>`:''}</div></details>`;};
+  const html=`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${ys.length})</h3>
+  ${eski?'<p class="kucukNot">Bu röntgen eski: işaretlediğin şık yerine bu soruya en son verdiğin cevap gösteriliyor.</p>':''}
+  ${grup.map(g=>`<p class="ozOzet">${esc(BYID[g.l]?kisa(BYID[g.l]):'')} · ${g.q.length} yanlış</p><section class="liste yanlisKartlar">${g.q.map(kart).join('')}</section>`).join('')}
+  <button class="anaBtn2" id="yTekrar">Yanlışları tekrar çöz · ${ys.length} soru ${IK.ok}<small>sonunda kaçını düzelttiğini görürsün</small></button>`;
+  return {ys,html};
 }
 /* ---------- 4. CHECK-UP LİSTESİ ---------- */
 function checkupListe(){

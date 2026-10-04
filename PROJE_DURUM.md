@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki — RÖNTGEN SONUCUNDA YANLIŞ SORULAR (Mehmet Ali: "röntgenden sonra yanlışları göremiyorum") — ÖNCE YALNIZ BAŞKAN
+> masa4.js: Röntgen Sonucu'na "Yanlışlarım · N soru" düğmesi + kanun kanun yanlış sorular (senin cevabın / doğrusu / açıklama)
+> + "Yanlışları tekrar çöz". Yeni röntgen kendi cevaplarını saklar (R.c); eski röntgende son verilen cevap gösterilir (notla).
+> KİŞİYE ÖZEL AÇMA (sayfa kullanıcıyı bilmez, OTA'sız yol): merkez_ilerleme.veri.ozel = ["rontgen-yanlis"] (başkanın satırına
+> yazıldı); sayfa acik(ad) = YAYIN listesinde ya da K.ozel'de. HERKESE AÇMAK: masa4.js `const YAYIN=[]` → ["rontgen-yanlis"],
+> kur + yükle. Sayfalar 16/16 yüklendi. Ayrıca KİLİT KELİME ŞİFRELERİ: müşterek 25 mevzuat, 1.522 şifre (5 ajan, kodlama_denetci
+> HATA 0), artifact https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn. Antigravity 3. çıktı da sahte → kodlama_REDDEDILEN_4eki.
+> Not: check-up "Yanlışları tekrar çöz" altyazısı "doğru yaptıkların özetten düşer" diyor ama serbestBitir K.tani'ye yazmıyor (düzeltilmedi).
+>
 > ### ▶ 3 Eki gece (2) — ANTIGRAVITY 2. ÇALIŞMA SAHTE + KODLAMA GÖREVİ HAZIR
 > Antigravity "143/143 BİTTİ, 3258 soru" dedi; denetimde 3258 sorunun HEPSİ "Yanlış seçenek A/B/C/D" şıklı tek kalıp,
 > blokların hepsi "Önemli hükümler" yer tutucusu. Kullanılamaz. Yeni görev: `gemini_calisma/KODLAMA_PROMPT.md` (kilit kelime →
