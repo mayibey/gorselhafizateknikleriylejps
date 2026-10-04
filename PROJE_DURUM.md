@@ -4,6 +4,21 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (9) — ŞİFRE KURALI KESİNLEŞTİ: SOL = SORU KÖKÜNDE ARANACAK KELİME, SAĞ = DOĞRU ŞIKTA ARANACAK KELİME
+> Başkan: "Bucak görünce Cumhurbaşkanı'nı yapıştır… Sol taraf soru kökünde arayacağı, sağ taraf cevapta arayacağı, mantık bu."
+> Yeni ölçüm `scripts/sifreler/olcum/kok_sik_olc.py <arsiv_dir>` (havuz_sonuc.json üstünde, cevaplı 2.946 soru): DÜZ = bir satırın
+> kelimesi kökte geçiyor VE cevabı doğru şıkla ortak kelime taşıyor; TERS = çevrilince çözer; YOK. Sayı sözcükleri rakama çevrilir
+> (onsekiz=18). MEVCUT 1.652 SATIRLA: toplam DÜZ %16 · TERS %14 · YOK %68 (2026 gerçek sınav: DÜZ %39). Yani eldeki satırlar
+> çoğunlukla "kuralı anlat" biçiminde, başkanın istediği "kök→şık" biçiminde değil → KANUN KANUN YENİDEN YAZIM gerek.
+> PİLOT Tebligat (61 cevaplı soru): 21 → 24 satır, her satır kök ipucu → şık ipucu (aynı hüküm için birden çok kök ipucu olabilir,
+> ör. "tehirinde zarar umulan", "diğer kanunlarda özel hüküm", "mülkiye amirinin emriyle" → zabıta). DÜZ %26 → %63, TERS %5 → %6,
+> YOK %69 → %29 (kalanlar: "hangisi DEĞİLDİR", "Kanun esas olarak neyi düzenler" gibi meta sorular + paraphrase).
+> Sayfa yenilendi (1.660 satır). SIRADAKİ (başkan onayı bekleniyor): aynı yöntemle 24 kanun; her kanun için cevaplı soruların
+> kök/şık dökümünden gidilir (kok_sik_olc'ye --dokum eklenebilir), her kanun sonunda DÜZ yüzdesi raporlanır.
+> GERİ BİLDİRİM (4 Eki): Özge (jandarma asb, Android 1.0.46) 2 bildirim: 5607 Kaçakçılık m.9 kartı ve özet kartında "ses sona
+> doğru / 13. saniyeden sonra gidiyor". Dosyalar sunucuda SAĞLAM (78,5 s ve 89,9 s mp3, sona kadar ses var) → dosya değil
+> çalma sorunu (17 Ağu'daki indir-sonra-çal düzeltmesi 1.0.44+'ta var; özet sayfasının oynatıcısı ayrıca incelenmeli). Açık iş.
+>
 > ### ▶ 4 Eki (8) — KİTAPTA ARAMA (Altın Özet / PDF görüntüleyici 🔍) — bayrak kitap-ara, ÖNCE BAŞKAN+KEMALETTİN, OTA 1.0.47+1.0.46
 > Başkan: "Altın özette ara özelliği yokmuş hemen ekle". PDF görüntüleyici (scripts/pdf-viewer-uret.mjs → src/assets/pdf-viewer.ts,
 > Cursor node ile üretildi) araç çubuğuna 🔍: üstte arama çubuğu, metin pdf.js getTextContent ile sayfa sayfa çıkarılır (ilk aramada
