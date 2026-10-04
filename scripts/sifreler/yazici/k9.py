@@ -1,20 +1,28 @@
-# 5816 Atatürk Aleyhine İşlenen Suçlar — kelime → cevap
+# 5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun — kelime → cevap
+# KURAL (başkan, 4 Eki 2026): SOL = soru KÖKÜNDE göreceğin ifade, SAĞ = doğru ŞIKTA arayacağın kelime.
+# Sorulardan geriye doğru yazıldı (49 cevaplı soru); kanıt resmî metin. Kapsam: tüm maddeler (m.1-5).
+# Tuzak çiftleri: HATIRAYA hakaret-sövme 1-3 yıl HAPİS · HEYKEL-büst-abide-KABİR tahribi 1-5 yıl AĞIR hapis ·
+#                 toplu (iki+), umuma açık yer, basın → YARI nispetinde · ZOR kullanma (teşebbüs de) → BİR MİSLİ (yalnız anıt suçunda) ·
+#                 takibat Cumhuriyet savcılığınca RE'SEN (şikâyet gerekmez).
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
- ('1','ceza','alenen hakaret eden','bir yıldan üç yıla kadar hapis','Atatürk\'ün hatırasına','cezalandırılır.',[],'sövme de'),
- ('1','ceza','heykel, büst ve abideleri','bir yıldan beş yıla ağır hapis','Atatürk\'ü temsil eden','ağır hapis cezası verilir.',[],'kabrini tahrip, kırma, bozma, kirletme de'),
- ('1','ceza','teşvik eden','asıl fail gibi cezalandırılır','Yukarki fıkralarda','asıl fail gibi cezalandırılır.',[],''),
- ('2','ceza','basın vasıtasiyle','ceza yarı nispetinde artırılır','Birinci maddede yazılı suçlar','yarı nispetinde artırılır.',[],'iki veya daha fazla kişi toplu olarak, umuma açık yerde de yarı'),
- ('2','ceza','zor kullanılarak','tahripte ceza bir misli artırılır','Birinci maddenin ikinci fıkrasında','bir misli artırılır.',[],'teşebbüs de'),
- ('3','sira_usul','re\'sen takibat','Cumhuriyet savcılığı kendiliğinden kovuşturur; şikâyet gerekmez','Bu kanunda yazılı','re\'sen takibat yapılır.',[],''),
- ('2', 'ceza', 'iki veya daha fazla kimseler', 'toplu işlenme; ceza yarı nispetinde artırılır (umumi mahal, basın da)', 'Birinci maddede yazılı suçlar; iki', 'yarı nispetinde artırılır.', [], 'TOPLU, UMUMA AÇIK, BASIN: YARI'),
- ('2', 'ceza', 'umuma açık mahallerde', 'ceza yarı nispetinde artırılır', 'Birinci maddede yazılı suçlar; iki', 'yarı nispetinde artırılır.', [], ''),
- ('2', 'ceza', 'bir misli artırılır', 'heykel/kabir tahribi zor kullanılarak işlenir ya da teşebbüs edilirse', 'Birinci maddenin ikinci fıkrasında yazılı suçlar zor', 'bir misli artırılır.', [], 'ZOR KULLANMA: BİR MİSLİ'),
- ('1', 'ceza', 'kabrini tahrip eden', 'bir yıldan beş yıla kadar ağır hapis; kıran, bozan, kirleten', "Atatürk'ü temsil eden heykel", 'ağır hapis cezası verilir.', [], ''),
- ('1', 'ceza', 'bir yıldan beş yıla', 'heykel, büst, abide, kabir tahribi; hakaret-sövme bir yıldan üç yıla', "Atatürk'ün hatırasına alenen", 'ağır hapis cezası verilir.', [], 'HAKARET 1-3, TAHRİP 1-5'),
- ('3', 'makam', 'Cumhuriyet savcılıklarınca', "re'sen takibat; şikâyete bağlı değil", 'Bu kanunda yazılı suçlardan', "re'sen takibat yapılır.", [], ''),
- ('4', 'sure', 'yayımı tarihinde yürürlüğe', 'Kanun yayımı tarihinde yürürlüğe girer', 'Bu kanun yayımı', 'yürürlüğe girer.', [], ''),
- ('5', 'makam', 'Adalet Bakanı yürütür', 'Kanunu Adalet Bakanı yürütür', 'Bu kanunu Adalet', 'Bakanı yürütür.', [], ''),
+ # m.1 — suçlar ve cezalar
+ ('1','ceza','hatırasına','alenen hakaret-sövme: bir-üç yıl hapis',"Atatürk'ün hatırasına alenen",'hapis cezası ile cezalandırılır.',[],'anıt tahribi ise bir-beş yıl ağır hapis'),
+ ('1','ceza','heykel','büst-abide-kabir; tahrip-kırma-bozma-kirletme: bir-beş yıl ağır hapis; çalma yok',"Atatürk'ü temsil eden heykel",'ağır hapis cezası verilir.',[],'hatıraya hakaret ise bir-üç yıl hapis'),
+ ('1','ceza','kabri','tahrip, kirletme: bir-beş yıl ağır hapis',"Atatürk'ü temsil eden heykel",'ağır hapis cezası verilir.',[],'heykel, büst, abide için de aynı'),
+ ('1','ceza','teşvik','asıl fail gibi; iki fıkra için de','Yukarki fıkralarda','asıl fail gibi cezalandırılır.',[],'daha hafif değil'),
+
+ # m.2 — ağırlaştırıcı hâller
+ ('2','ceza','yarı nispet','toplu, umuma açık yer, basın; gece, tek kişi yok','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'zor kullanmada ise bir misli'),
+ ('2','ceza','basın','yarı nispetinde artar','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'toplu ve umuma açık yerde de aynı'),
+ ('2','ceza','toplu','iki veya daha fazla kişi; yarı nispetinde','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
+ ('2','ceza','umuma açık','yarı nispetinde (umumi yer de)','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
+ ('2','ceza','zor kullan','bir misli artar; teşebbüste de; yalnız anıt suçunda','Birinci maddenin ikinci fıkrasında','bir misli artırılır.',[],'heykel-büst-abide-kabir suçunda; hatıraya hakarette yok'),
+
+ # m.3-5 — takibat, yürürlük, yürütme
+ ('3','sira_usul','takib',"Cumhuriyet savcılığınca re'sen; şikâyet gerekmez",'Bu kanunda yazılı suçlardan','takibat yapılır.',[],'soruşturma usulü; mağdurun şikâyeti beklenmez'),
+ ('4','sure','yürürlüğe gir','yayımı tarihinde','Bu kanun yayımı','yürürlüğe girer.',[],''),
+ ('5','makam','yürüt','Adalet Bakanı','Bu kanunu','Adalet Bakanı yürütür.',[],''),
 ]
 yaz(9, '5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun', K)
