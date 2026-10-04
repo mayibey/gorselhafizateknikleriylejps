@@ -1,24 +1,36 @@
-# Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Yönetmelik — kelime → cevap
+# Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik — kelime → cevap
+# KURAL (başkan, 4 Eki 2026): SOL = soru KÖKÜNDE göreceğin ifade, SAĞ = doğru ŞIKTA arayacağın kelime.
+# Sorulardan geriye doğru yazıldı (49 cevaplı soru); kanıt resmî metin. Kapsam: m.2-5.
+# Tuzak çiftleri: mahalli idarelerde KÖYLER HARİÇ · Merkez Bankası ve üniversiteler DAHİL, İMKB 864 ile ÇIKARILDI ·
+#                 BİLGİ = kayıttaki veri / BELGE = veri taşıyıcısı · erişimde ÖNCE KOPYA · hak HERKESİN ·
+#                 yabancı: ilgi + karşılıklılık, başvuru TÜRKÇE; ülkeleri DIŞİŞLERİ ilan eder.
+# Not: "bilgi edinme, esas ve usul" yönetmeliğin adında, yani her kökte geçer; satırlarda ayırt edici kelime seçildi.
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
- ('2','istisna','köyler hariç','mahalli idareler kapsamda, köyler değil','Madde 2 - Bu Yönetmelik; merkezi','faaliyetlerinde uygulanır.',[],'Merkez Bankası, üniversiteler, meslek kuruluşları kapsamda'),
- ('4','tanim','kopyasının verilmesini','erişim; kopya olmazsa aslını inceleme, not alma','e) Bilgi veya belgeye erişim','izin verilmesini,',[],'içeriğini görme ya da işitme de'),
- ('5','kosul','karşılıklılık ilkesi','yabancılar; kendileriyle ilgili bilgi, Türkçe başvuru','Türkiye\'de ikamet eden yabancılar','Türkçe olarak yapılır.',[],'yabancı tüzel kişi: faaliyet alanıyla ilgili'),
- ('5','makam','Dışişleri Bakanlığınca Resmi Gazetede','karşılıklılık ülkeleri ilan edilir','Karşılıklılık ilkesi kapsamında bulunan','ilan edilir.',[],''),
- ('4', 'tanim', 'kayıtlarında yer alan', 'bilgi (tanım); belge: yazılı, basılı, çoğaltılmış dosya, evrak, film', 'c) Bilgi: Kurum ve kuruluşların', 'dosya, evrak, kitap', [], ''),
- ('2', 'kosul', 'T.C. Merkez Bankası ve üniversiteler', 'kapsamda açıkça sayılı; kamu tüzel kişiliğini haiz kurumlar', 'Madde 2 - Bu Yönetmelik; merkezi idare', 'meslek kuruluşlarının faaliyetlerinde uygulanır.', [], ''),
- ('2', 'kosul', 'bağlı, ilgili veya ilişkili', 'merkezi idare kamu idarelerinin bu kuruluşları da kapsamda', 'Madde 2 - Bu Yönetmelik; merkezi idare', 'meslek kuruluşlarının faaliyetlerinde uygulanır.', [], ''),
- ('2', 'kosul', 'enstitü, teşebbüs, teşekkül, fon', 'kamu tüzel kişiliği haiz kuruluş adları (ve sair); vakıf sayılmamış', 'Madde 2 - Bu Yönetmelik; merkezi idare', 'meslek kuruluşlarının faaliyetlerinde uygulanır.', [], ''),
- ('2', 'kosul', 'birlik veya şirketlerinin', 'mahalli idarelerin bağlı-ilgili kuruluşları ile birlikte kapsamda; köyler hariç', 'Madde 2 - Bu Yönetmelik; merkezi idare', 'meslek kuruluşlarının faaliyetlerinde uygulanır.', [], ''),
- ('2', 'kosul', 'kamu kurumu niteliğindeki meslek kuruluşlarının', 'faaliyetleri bakımından Yönetmelik kapsamında', 'Madde 2 - Bu Yönetmelik; merkezi idare', 'meslek kuruluşlarının faaliyetlerinde uygulanır.', [], ''),
- ('2', 'kosul', 'madde metninden çıkarılmıştır', '“, İMKB” ibaresi 864 sayılı Cumhurbaşkanı Kararı ile', '(1) [Dipnot (1) 10/4/2019 tarihli', 'madde metninden çıkarılmıştır.]', [], ''),
- ('3', 'tanim', '31 inci maddesi uyarınca', '4982 sayılı Bilgi Edinme Hakkı Kanunu; dayanak', 'Madde 3 - Bu Yönetmelik, 9/10/2003', '31 inci maddesi uyarınca hazırlanmıştır.', [], ''),
- ('5', 'kosul', 'Herkes, Kanun ve bu Yönetmelikte', 'bilgi edinme hakkına sahiptir; yaş, vatandaşlık, sıfat şartı yok', 'Madde 5 - Herkes', 'bilgi edinme hakkına sahiptir.', [], ''),
- ('5', 'kosul', 'başvurular Türkçe olarak yapılır', 'yabancıların başvurusu; uluslararası sözleşmelerden doğan haklar saklı', 'Bu kapsamdaki başvurular Türkçe', 'hak ve yükümlülükleri saklıdır.', [], ''),
- ('4', 'tanim', 'başvuran gerçek ve tüzel kişileri', 'başvuru sahibi tanımı', 'b) Başvuru sahibi', 'gerçek ve tüzel kişileri,', [], ''),
- ('4', 'tanim', 'teyp ve video kaseti', 'belge tanımı: dosya, evrak, kroki, film, fotoğraf, harita, elektronik kayıt', 'd) Belge', 'haber ve veri taşıyıcılarını,', [], 'kayda geçmemiş sözlü açıklama belge DEĞİL'),
- ('4', 'tanim', 'Bilgi Edinme Değerlendirme Kurulunu', 'Kurul tanımı; Yönetmelikte yedi kavram tanımlı; veri sorumlusu YOK', 'f) Kurul', 'Bilgi Edinme Değerlendirme Kurulunu,', [], 'kurum ve kuruluş, başvuru sahibi, bilgi, belge, erişim, Kurul, Kanun'),
- ('4', 'tanim', 'her türlü veriyi', 'bilgi tanımı (kurum kayıtlarındaki, Kanun kapsamındaki veri)', 'c) Bilgi', 'her türlü veriyi,', [], ''),
+ # m.2 — kapsam
+ ('2','istisna','mahalli idare','köyler hariç; bağlı-ilgili kuruluş, birlik ve şirketleri dahil','Madde 2 - Bu Yönetmelik;','faaliyetlerinde uygulanır.',[],'özel bankalar, özel hukuk tüzel kişileri kapsamda değil'),
+ ('2','kosul','merkezi idare','bağlı, ilgili veya ilişkili kuruluşlarıyla','Madde 2 - Bu Yönetmelik; merkezi idare','ilişkili kuruluşlarının,',[],''),
+ ('2','kosul','Merkez Bankası','üniversitelerle dahil; aradaki İMKB 864 ile çıkarıldı','Madde 2 - Bu Yönetmelik;','madde metninden çıkarılmıştır.',[],'kamu tüzel kişiliğini haiz kuruluşlar arasında'),
+ ('2','kosul','üniversiteler','Merkez Bankası ile dahil','T.C. Merkez Bankası ve üniversiteler','faaliyetlerinde uygulanır.',[],''),
+ ('2','tanim','İMKB','864 sayılı Cumhurbaşkanı Kararıyla çıkarıldı','[Dipnot (1)','madde metninden çıkarılmıştır.',[],''),
+ ('2','kosul','kamu tüzel kişiliği','enstitü, teşebbüs, teşekkül, fon ve sair ad; vakıf yok','kamu tüzel kişiliğini haiz','bütün kamu kurum ve kuruluşlarının',[],''),
+ ('2','kosul','meslek kuruluş','faaliyetlerinde uygulanır; dahil','ve kamu kurumu niteliğindeki meslek','faaliyetlerinde uygulanır.',[],'kamu kurumu niteliğindeki meslek kuruluşları'),
+
+ # m.3 — dayanak
+ ('3','tanim','hazırlanmıştır','4982 sayılı Kanunun 31. maddesi','Madde 3 - Bu Yönetmelik,','uyarınca hazırlanmıştır.',[],'9/10/2003 tarihli Bilgi Edinme Hakkı Kanunu'),
+
+ # m.4 — tanımlar
+ ('4','tanim','her türlü veri','bilgi; belge ise veri taşıyıcısı','c) Bilgi:','her türlü veriyi,',[],'kurum kayıtlarındaki veri'),
+ ('4','tanim','veri taşıyıcı','belge; bilgi ise kayıttaki veri','d) Belge:','veri taşıyıcılarını,',[],''),
+ ('4','tanim','Belge:','yazılı-basılı evrak, film, fotoğraf, harita, elektronik kayıt; sözlü açıklama değil','d) Belge:','veri taşıyıcılarını,',[],'dosya, kitap, kroki, plan, teyp ve video kaseti de'),
+ ('4','sira_usul','erişim','önce kopya; mümkün değilse aslını inceleme, not, görme-işitme','e) Bilgi veya belgeye erişim:','işitmesine izin verilmesini,',[],'kopya mümkünken yalnız inceletmek yanlış'),
+ ('4','tanim','Başvuru sahibi:','başvuran gerçek ve tüzel kişiler','b) Başvuru sahibi:','gerçek ve tüzel kişileri,',[],''),
+
+ # m.5 — hak sahipleri
+ ('5','kosul','sahiptir','herkes; yaş-sıfat şartı yok','Madde 5 - Herkes,','bilgi edinme hakkına sahiptir.',[],'reşit olmayan da başvurabilir'),
+ ('5','kosul','yabancı','kendisi-faaliyetiyle ilgili + karşılıklılık; başvuru Türkçe',"Türkiye'de ikamet eden yabancılar",'Türkçe olarak yapılır.',[],'ikamet eden yabancı ve faaliyetteki yabancı tüzel kişi; kendi dilinde başvuru yok'),
+ ('5','makam','karşılıklılık','ülkeleri Dışişleri Bakanlığı Resmî Gazete’de ilan eder','Karşılıklılık ilkesi kapsamında bulunan','Resmi Gazetede ilan edilir.',[],''),
+ ('5','kosul','uluslararası sözleşme','hak ve yükümlülükler saklıdır',"Türkiye'nin taraf olduğu",'yükümlülükleri saklıdır.',[],'Yönetmelik karşısında ortadan kalkmaz'),
 ]
 yaz(19, 'Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik', K)
