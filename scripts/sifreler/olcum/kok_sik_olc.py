@@ -5,29 +5,8 @@
 import json, glob, re, sys, collections
 sys.stdout.reconfigure(encoding='utf-8')
 A = sys.argv[1]; KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
-def norm(s): return re.sub(r'\s+', ' ', re.sub(r'[^a-z0-9çğıöşüâîû ]', ' ', (s or '').replace('İ', 'i').replace('I', 'ı').lower())).strip()
-BIRLER = {'bir':1,'iki':2,'üç':3,'dört':4,'beş':5,'altı':6,'yedi':7,'sekiz':8,'dokuz':9}
-ONLAR = {'on':10,'yirmi':20,'otuz':30,'kırk':40,'elli':50,'altmış':60,'yetmiş':70,'seksen':80,'doksan':90}
-def sayi_tok(words):
-    """Türkçe sayı sözcüklerini rakama çevirir: 'onsekiz' / 'on sekiz' → '18', 'yirmi' → '20', 'beş' → '5' (ölçüm için)."""
-    out, i = [], 0
-    while i < len(words):
-        w = words[i]; v = None
-        if w in ONLAR:
-            v = ONLAR[w]
-            if i + 1 < len(words) and words[i + 1] in BIRLER: v += BIRLER[words[i + 1]]; i += 1
-        elif w in BIRLER: v = BIRLER[w]
-        else:
-            for o, ov in ONLAR.items():
-                if w.startswith(o) and w[len(o):] in BIRLER: v = ov + BIRLER[w[len(o):]]; break
-        out.append(str(v) if v is not None else w); i += 1
-    return out
-def tok(s): return [w for w in sayi_tok(norm(s).split()) if len(w) >= 4 or w.isdigit()]
-def kes(w): return w[:5] if len(w) > 5 else w   # ek toleransı: ilk 5 harf
-def icinde(kel, metin): return norm(kel) in norm(metin)
-def kesisir(cev, metin):
-    mt = set(kes(w) for w in tok(metin))
-    return any(kes(w) in mt for w in tok(cev))
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
+from eslesme import norm, tok, kes, icinde, kesisir
 S = {}
 for f in glob.glob(f'{KOK}/gemini_calisma/kodlama_secme/kanun_*.json'):
     d = json.load(open(f, encoding='utf-8')); S[d['id']] = [(k['tetikleyici'], k['cevap'], k.get('i')) for k in d['kodlar']]
