@@ -106,5 +106,9 @@ K = [
  ('78','makam','Jandarma Müzesinde','mevcut sancaklar muhafaza edilir','MADDE 78- (1) Jandarma Genel Komutanlığı merkez ve taşra teşkilatlarındaki mevcut','muhafaza edilir.',[],''),
  ('80','sure','otuz günü geçmemek üzere','PVSK m.8 halinde işyeri faaliyetten men; mülki idare amiri','“2559 sayılı Kanunun 8 inci','faaliyetten men edilir.',[],'İşyeri Açma ve Çalışma Ruhsatları Yönetmeliği m.39'),
  ('80','sure','mühürlemek suretiyle','yetkili idare üç işgünü içinde uygular; uygulamazsa kolluk re\'sen','Yetkili idare en geç üç işgünü','yetkili idareye bilgi verilir.”',[],''),
+ ('3', 'tanim', 'yerleşik ve yaygın inancı', 'asayiş (tanım); dirlik ve düzenin varlığı konusunda kamuda oluşan', 'dirlik ve düzenin varlığı konusunda', 'yerleşik ve yaygın inancı,', [], ''),
+ ('3', 'tanim', 'talep ya da yasağın', 'emir (tanım); söz, yazı ve sair suretle ifadesi', 'ç) Emir: Göreve ait', 'sair suretle ifadesini,', [], ''),
+ ('19', 'tanim', 'gazino, pavyon, meyhane, bar', 'umuma açık istirahat-eğlence yeri: konaklama, içkili yer, sinema-kahvehane-kıraathane, oyun yeri', 'otel, motel, pansiyon, kamping', 'sinema, kahvehane ve kıraathane;', [], 'düğün salonu listede yok'),
+ ('42', 'kosul', 'sözlü emirler derhal yerine getirilir', 'sayılan acele hallerde; yazılı istenemez; sorumluluk emri verene aittir', 'ı) Umuma açık yerlerde yapılan her türlü toplantı', 'sorumluluk emri verene aittir.', [], 'haller: can-ırz emniyeti, devlet güvenliği suçları, toplantı-yürüyüş düzeni, tıkanmış yol, kaçanın yakalanması'),
 ]
 yaz(17, 'Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği', K)

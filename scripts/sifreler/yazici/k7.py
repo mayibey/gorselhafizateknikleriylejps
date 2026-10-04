@@ -32,5 +32,7 @@ K = [
  ('21','sure','on yıl süreyle kamu konutlarından','kira alınmadan; yurtdışı özel tahsisli bir yıl','Yurtiçinde veya yurtdışında kamu konutlarından','yararlanmaya devam edebilirler.',[],'konuttan çıkana on yıl kira yardımı'),
  ('21','kosul','tanıtım kartlarını','kamu hastanelerinde muayene ve tedavi','Malûl olanlar ile ölenlerin dul','muayene ve tedavi edilirler.',[],''),
  ('22','makam','Dayanışmayı Teşvik Fonundan','terörden zarar gören vatandaşa öncelikle yardım; şehit çocuğunun öğrenim masrafı','Terör eylemlerinden dolayı','öğrenim masrafları karşılanır.',[],'yaralıların tedavisi Devletçe'),
+ ('1', 'tanim', 'korkutma, yıldırma, sindirme veya tehdit', 'terör yöntemleri (cebir ve şiddet kullanarak; baskı da)', 'Terör; cebir ve şiddet kullanarak', 'bölünmez bütünlüğünü bozmak,', [('7', 'örgüt kuran, yöneten, üye: TCK 314')], '"kandırma" yöntemler arasında yok'),
+ ('15', 'kosul', 'Terörle mücadelede görev alan', 'TSK personeli, mülki idare amirleri, istihbarat-kolluk görevlileri, diğer görevli personel', 'Terörle mücadelede görev alan Türk Silahlı', 'en fazla üç avukatın', [], 'avukat ücreti bunlara ödenir; mağdur vatandaşa değil'),
 ]
 yaz(7, '3713 sayılı Terörle Mücadele Kanunu', K)

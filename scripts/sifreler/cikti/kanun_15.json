@@ -701,6 +701,36 @@
    "kanit": "(1) Cumhurbaşkanlığı İdari İşler Başkanlığınca, bu Yönetmeliğin uygulama birliğinin sağlanması ve idari işleyişin verimli yürütülebilmesi amacıyla “Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik Kılavuzu” hazırlanır ve duyurulur.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-15-071",
+   "madde": "6",
+   "tip": "sayi_oran",
+   "tetikleyici": "A4 (210x297 mm)",
+   "cevap": "belge boyutu; ekler farklı form ve ebatta olabilir",
+   "kanit": "MADDE 6- (1) Belgeler, A4 (210x297 mm) boyutu dikkate alınarak hazırlanır. (2) Belge ekleri farklı form, format veya ebatlarda hazırlanabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-072",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "hazırlanmasından tasfiyesine kadar",
+   "cevap": "aidiyet zinciri (belgenin süreci)",
+   "kanit": "a) Aidiyet zinciri: Belgenin hazırlanmasından tasfiyesine kadar olan sürecini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-073",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "delil teşkil ederek aidiyet zincirini",
+   "cevap": "belge (tanım); e-imza ya da el yazısıyla imzalanmış kayıtlı bilgi",
+   "kanit": "c) Belge: Herhangi bir bireysel işlemin, kurumsal fonksiyonun veya kurumsal işlemin yerine getirilmesi için alınmış ya da idare tarafından hazırlanmış; içerik, ilişki ve formatı ile ait olduğu fonksiyon veya işlem için delil teşkil ederek aidiyet zincirini muhafaza eden, güvenli elektronik imza ya da el yazısıyla imzalanmış ve kayıt altına alınmış her türlü bilgiyi,",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

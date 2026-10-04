@@ -37,5 +37,8 @@ K = [
  ('58','makam','malmüdürü','ilçe idare kurulu','İlçe idare kurulu','veterinerden teşekkül eder.',
   [('57','il idare kurulunda defterdar var')],'tahrirat kâtibi, Hükümet hekimi de'),
  ('57','istisna','İl idare kurulu','yalnız sivil müdürler; jandarma, emniyet yok','İl idare kurulu','tarım ve veteriner müdürlerinden teşekkül',[],'sınavın klasik tuzağı: kolluk amiri kurulda yok'),
+ ('4', 'makam', 'İl genel idaresinin başı', 'vali; il genel idaresinin başı (ilçede kaymakam)', 'İl genel idaresinin başı', 'mercii validir.', [('27', 'ilçe genel idaresinin başı kaymakam')], ''),
+ ('9', 'makam', 'ilin genel idaresinden Cumhurbaşkanına', "valiler sorumlu; bakanlar valiye doğrudan emir verir", 'Valiler, ilin genel idaresinden', 'emir ve talimat verirler.', [], ''),
+ ('57', 'tanim', 'hukuk işleri müdürü, defterdar', 'il idare kurulu; milli eğitim, bayındırlık, sağlık, tarım, veteriner müdürleri', 'İl idare kurulu, valinin başkanlığı', 'vali muavinini görevlendirebilir.', [], 'gençlik-spor, emniyet, jandarma listede yok'),
 ]
 yaz(5, '5442 sayılı İl İdaresi Kanunu', K)

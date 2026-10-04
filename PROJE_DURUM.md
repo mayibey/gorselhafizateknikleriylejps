@@ -4,6 +4,25 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (4) — ŞİFRELER GERÇEK SINAV SORULARINA UYGULANDI: %62 → düzeltme + 37 ekleme → aynı sorularda %91
+> Başkan "anahtar kelimeleri sorulara uygula, kaçı doğru çıkıyor" dedi. Test seti: Eylül 2026 sınavlarının müşterek blokları
+> (scratchpad/Subay_Jandarma_100_Soru.md 21-60, Astsubay_MEBS_100_Soru.md 21-70, Uzman_Erbas_100_Soru.md 21-60) = 130 soru.
+> Betikler: scripts/sifreler/olcum/olc.py (kelime soruda/şıkta aynen var mı + cevap hangi şıkkı gösteriyor; otomatik ölçüm KABA,
+> yalnız ön eleme) → dokum.py (soru başına kesin vuruş + en yakın 4 şifre; dokum_*.md) → ELLE değerlendirme (her soru okundu).
+> ÖNCE (994 satır): çözüyor 81 (%62; 37 kelime aynen + 44 bilgi var), kısmi 12, şifre yok 32, sorunlu 5.
+> Yakalanan kusurlar: K-22-016 YANLIŞTI ("tebliğ günü işe başlar" → doğrusu "tebliğ gününü izleyen işgünü"; kanıt yarım kesilmişti,
+> sınav bunu sordu) · 6284 m.3 "ilk işgünü içinde mülkî amir onayı" eksikti (48 saat şıkkı tuzaktı) · K-2-018 657 satırı karıştırıcıydı
+> (JHS özlük işleri; rütbeli nasıp-terfi 926/4678/3466/3269/6191) · vali Cumhurbaşkanına karşı sorumlu, Öğretmen=subay branşı eksikti.
+> SONRA: düzeltmeler + sınavın sorduğu 37 kanıtlı satır eklendi (yama.py; TCK amaç/kanunîlik/fail/iştirak/yardım eden/bileşik suç,
+> 2803 mülki taksimat/JGK sorumluluk/silah yetkisi/statü kanunları, KVKK özel nitelikli liste, 5442 il idare kurulu üyeleri, 3713
+> yöntemler + avukat ücreti kimlere, 5070 e-imza tanımı, Resmî Yazışma A4/aidiyet zinciri/belge, Jandarma Yön. asayiş/emir/umuma açık
+> yerler/m.42 halleri, Hizmet Esasları birlik/emir, Personel Yön. ihtisas/Bakan/Öğretmen, yaş hesabı Ocak, Tebligat diğer parmak, Bilgi
+> Edinme bilgi-belge). Toplam 1.031 satır, denetçi HATA 0. Aynı 130 soruda: çözüyor 118 (%91), kısmi 4, yok 8. DİKKAT: %91 aynı
+> sorular üzerinde ölçüldü (sınava göre tamamlama); genelleme ölçüsü %62'dir — taze set (2024 MEBS kitapçığı müşterek 50) ile tekrar ölçülmeli.
+> Kalan 8 açık: 7068 fiil→ceza (kumar 3 sınavda da soruldu; kripto cihaz kaybı; yetki-nüfuz) → resmi_metin kanun_12 m.8 KESİK (6000
+> karakter), tam metin gelince eklenecek; 4678 zati tabanca geri alma + KV silme yön. m.6 KAPSAM DIŞI; Resmî Yazışma dağıtım kuralları.
+> Sayfa v4: https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn. KANONİK KAYNAK artık scripts/sifreler/yazici (scratchpad kopyaları bayat).
+>
 > ### ▶ 4 Eki (3) — KİLİT KELİME ŞİFRELERİ: MÜŞTEREK 25 MEVZUAT BİTTİ (994 satır, denetçi HATA 0) + REPO'YA ALINDI
 > Başkan "sen müştereği bitir" dedi → 25 müşterek mevzuatın tamamı kelime → cevap biçiminde elle yazıldı, kanun kanun
 > (ajan yok). Satır sayıları: TCK 73 · 2803 44 · KVKK 19 · Tebligat 8 · 5442 25 · Kabahatler 64 · 3713 30 · OHAL 19 · 5816 6 ·

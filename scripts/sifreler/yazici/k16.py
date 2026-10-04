@@ -38,5 +38,6 @@ K = [
  ('31','makam','Tayin/Atama Daire Başkanı','müteakip sözleşmeleri yapar','(Ek fıkra:RG-19/6/2013-28682)Müteakip sözleşmeleri','eşidi birim amiridir.',[],''),
  ('32','sure','30 Ağustos','kademe ilerlemesi ve terfi için nasıp tarihi; takvim yılının','Bu personelin subaylık/astsubaylık nasıpları','30 Ağustos’u itibar olunur.',[],'NASIP NE ZAMAN OLURSA OLSUN ZAFER BAYRAMI'),
  ('32','istisna','maaş farkı ödenmez','nasıp düzeltmesinden ötürü','Nasıp düzeltmesinden ötürü','özlük hakları verilmez.',[],'yenileme tarihi için ilk sözleşme tarihi esas'),
+ ('5', 'sure', 'Ocak ayının ilk günü itibariyle', 'yaş hesabı: düzeltilmemiş nüfus kaydı, müracaat yılı (subay yirmi yedi)', 'mürâcaat yapılan yılın Ocak ayının', 'otuz iki yaşını bitirmemiş olanlar', [('6', 'subay adayı niteliklerinde aynı kural'), ('9', 'astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört')], 'lisansüstü otuz iki'),
 ]
 yaz(16, 'Sözleşmeli Subay ve Astsubay Yönetmeliği', K)

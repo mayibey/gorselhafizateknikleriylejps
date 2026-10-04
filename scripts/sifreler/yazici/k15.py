@@ -72,5 +72,8 @@ K = [
  ('34','sira_usul','tekit yazısı','süresinde cevap verilmeyen belge için muhataba','(1) Belgeye süresi içinde','tekit yazısı yazılabilir (Örnek 24).',[],''),
  ('35','istisna','süreli belgeler hariç','Yönetmeliğe aykırı yazı devam ederse gerekçeyle iade','Söz konusu durumun devam etmesi','iade edilebilir.',[],'önce muhatap uyarılır'),
  ('36','makam','Yönetmelik Kılavuzu','Cumhurbaşkanlığı İdari İşler Başkanlığı hazırlar; tereddütleri de giderir','(1) Cumhurbaşkanlığı İdari İşler Başkanlığınca, bu Yönetmeliğin uygulama','hazırlanır ve duyurulur.',[],''),
+ ('6', 'sayi_oran', 'A4 (210x297 mm)', 'belge boyutu; ekler farklı form ve ebatta olabilir', 'MADDE 6- (1) Belgeler, A4', 'farklı form, format veya ebatlarda hazırlanabilir.', [], ''),
+ ('3', 'tanim', 'hazırlanmasından tasfiyesine kadar', 'aidiyet zinciri (belgenin süreci)', 'a) Aidiyet zinciri: Belgenin', 'tasfiyesine kadar olan sürecini,', [], ''),
+ ('3', 'tanim', 'delil teşkil ederek aidiyet zincirini', 'belge (tanım); e-imza ya da el yazısıyla imzalanmış kayıtlı bilgi', 'c) Belge: Herhangi bir bireysel', 'kayıt altına alınmış her türlü bilgiyi,', [], ''),
 ]
 yaz(15, 'Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik', K)

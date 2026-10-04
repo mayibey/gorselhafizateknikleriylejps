@@ -19,7 +19,7 @@ K = [
  ('10','makam','birbirlerinin sorumluluk sahalarında','mahalli mülki amir geçici görevlendirir','Jandarma veya Emniyet Teşkilatı, kendi','görevlendirilebilirler.',[],'yetersiz kalma halinde'),
  ('12','makam','il valilerine devredebilir','İçişleri Bakanı, geçici personel görevlendirme yetkisini','Lüzum görüldüğü hallerde','il valilerine devredebilir.',[],'EGM, Sahil Güvenlik, Jandarma arası'),
  ('12','makam','bedelsiz olarak devredebilirler','silah, taşıt, taşınmaz; İçişleri Bakanı onayıyla','Ayrıca, İçişleri Bakanının onayıyla','bedelsiz olarak devredebilirler.',[],''),
- ('13','kosul','bu Kanunda hüküm bulunmayan hallerde','657 sayılı Devlet Memurları Kanunu','Jandarma Hizmetleri Sınıfı personelinin','657 sayılı Devlet Memurları Kanunu uygulanır.',[],'nasıp, terfi, aylık → 926 / 4678 / 3466 / 3269 / 6191'),
+ ('13','kosul','bu Kanunda hüküm bulunmayan hallerde','Jandarma Hizmetleri Sınıfı özlük işleri; 657 (rütbelilerin nasıp-terfisi değil)','Jandarma Hizmetleri Sınıfı personelinin','657 sayılı Devlet Memurları Kanunu uygulanır.',[],'nasıp, terfi, aylık → 926 / 4678 / 3466 / 3269 / 6191'),
  ('13','sure','60 yaşına','albaylar; generaller 65; İçişleri Bakanı onayıyla görevde kalır','Rütbelerindeki bekleme süresinin','görevde bırakılabilirler.',[],'hizmetine ihtiyaç duyulanlar'),
  ('13','makam','kadrosuzluk tazminatı','albay ve üstü, bekleme süresi dolmadan Cumhurbaşkanı onayıyla emekli','İlgili personel, personel kaynağı','emekliye sevk edilebilir.',[],''),
  ('13','makam','Subaylığa ve astsubaylığa nasıp','İçişleri Bakanlığının onayıyla','Subaylığa ve astsubaylığa nasıp','İçişleri Bakanlığının onayıyla yapılır.',[],''),
@@ -46,5 +46,9 @@ K = [
  ('21','istisna','vergi ve kesinti yapılmaz','asayiş tazminatından; yalnız damga vergisi','Bu tazminattan damga','kesinti yapılmaz.',[],''),
  ('24','makam','Cumhurbaşkanınca yürürlüğe konulan yönetmelikle','Kanunun uygulama yönetmeliği: teşkilat, terfi, kılık-kıyafet','Bu Kanunla münhasıran','yönetmelikle düzenlenir.',[],''),
  ('Geçici','sayi_oran','rütbe yaş hadleri','teğmen-üsteğmen 49, yüzbaşı 55, binbaşı 56, yarbay 57, albay 60','astsubaylıktan subaylığa geçenlerin','Yaş Haddi 49 55 56 57 60',[],'astsubaylıktan subaylığa geçenler (geçici madde 12)'),
+ ('5', 'kosul', 'mülki taksimat esas alınır', 'jandarma birliklerinin kuruluş ve konuşlarının düzenlenmesinde; geçici bölge teşkilatı kurulabilir', 'Jandarma birliklerinin kuruluş ve konuşlarının', 'bölge teşkilatı da kurulabilir.', [], ''),
+ ('6', 'makam', 'nizam hükümlerinin icrasını', 'Jandarma Genel Komutanı sorumlu; teşkilatın sevk ve idaresinden', 'Jandarma Genel Komutanı, Teşkilatın sevk', 'uygulanmasından sorumludur.', [], ''),
+ ('11', 'kosul', 'silah kullanma yetkisine sahiptir', 'jandarma, kanunlarda öngörülen (görevin gereği olarak)', 'Jandarma, kendisine verilen görevlerin ifası', 'silah kullanma yetkisine sahiptir.', [], 'yönetmelik/genelge/emirle değil, kanunla'),
+ ('13', 'kosul', 'statü ve rütbelerine göre', 'nasıp-terfi, mali-sosyal haklar: 926, 4678, 3466, 3269, 6191 sayılı kanunlar', 'Ancak, nasıp ve terfi, aylık', 'tabi personel hakkındaki hükümler uygulanır.', [], '657 bu listede yok (o, Jandarma Hizmetleri Sınıfı için)'),
 ]
 yaz(2, '2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu', K)

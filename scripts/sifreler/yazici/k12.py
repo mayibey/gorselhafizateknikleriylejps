@@ -75,5 +75,6 @@ K = [
  ('33','sure','takip eden aybaşında','aylıktan kesme uygulanır (kesinleşme sonrası)','(2) Aylıktan kesme cezası, kesinleşme','aybaşında uygulanır.',[],''),
  ('33','makam','Devlet Personel Başkanlığına','meslekten/memurluktan çıkarma cezaları ayrıca bildirilir','(3) Verilen disiplin cezaları','Devlet Personel Başkanlığına bildirilir.',[],''),
  ('34','kosul','uzun süreli durdurma cezası gibi','657\'deki kademe ilerlemesinin durdurulması','(2) 657 sayılı Kanundaki','telakki edilir ve uygulanır.',[],'boşlukta 657 disiplin hükümleri'),
+ ('8', 'ceza', 'usul ve kurallara riayet etmeden', 'kınama; usulsüz sözlü, yazılı veya elektronik müracaat/şikâyet', '(2) Kınama cezasını gerektiren fiiller', 'müracaat veya şikâyette bulunmak.', [], ''),
 ]
 yaz(12, "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun", K)

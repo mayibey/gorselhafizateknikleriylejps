@@ -157,8 +157,8 @@
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "Aynı yerdeki görevlere atananlar",
-   "cevap": "tebliğ günü işe başlar",
-   "kanit": "a) Aynı yerdeki görevlere atananlar atama emirlerinin kendilerine tebliğ gününü,",
+   "cevap": "tebliğ gününü izleyen işgünü içinde işe başlar",
+   "kanit": "a) Aynı yerdeki görevlere atananlar atama emirlerinin kendilerine tebliğ gününü,\nb) Başka yerdeki görevlere atananlar, atama emirlerinin kendilerine tebliğ tarihinden itibaren onbeş gün içerisinde o yere hareket ederek belli yol süresini, izleyen işgünü içinde işe başlamak zorundadırlar.",
    "not": "AYNI YER AYNI GÜN",
    "karistirilan": []
   },
@@ -644,6 +644,36 @@
    "tetikleyici": "sosyal tesislerden yararlanmayı",
    "cevap": "kimlik kartı düzenlemesi; İçişleri–MSB protokolü",
    "kanit": "(2) Kimlik kartlarının Türk Silahlı Kuvvetlerine bağlı sosyal tesislerden yararlanmayı sağlayacak şekilde düzenlemesine ilişkin hususlar Bakanlık ile Millî Savunma Bakanlığı arasında yapılan bir protokol ile belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-065",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "teknik bilgi ve beceri gerektiren",
+   "cevap": "ihtisas: özel hizmet alanı (branş: alt hizmet alanı)",
+   "kanit": "ğ) İhtisas: Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı teşkilatlarındaki görevlerin yerine getirilebilmesi amacıyla oluşturulan özel yetenek, teknik bilgi ve beceri gerektiren özel hizmet alanlarını,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-066",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "Bakan: İçişleri Bakanını",
+   "cevap": "Personel Yönetmeliğinde Bakan = İçişleri Bakanı",
+   "kanit": "c) Bakan: İçişleri Bakanını,\nç) Bakanlık: İçişleri Bakanlığını,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-067",
+   "madde": "7",
+   "tip": "tanim",
+   "tetikleyici": "Öğretmen",
+   "cevap": "Öğretmen yalnız subay listesinde; Astsubaylar listesinde yok",
+   "kanit": "11) Maliye 12) Öğretmen 13) Bando 14) Tabip 15) Eczacı 16) Diş tabibi 17) Sağlık 18) (Ek:RG-28/5/2020) Hukuk 19) (Ek:RG-16/1/2024) İnsansız Hava Aracı b) Astsubaylar 1) Jandarma",
    "not": "",
    "karistirilan": []
   }

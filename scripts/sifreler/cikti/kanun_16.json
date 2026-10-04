@@ -435,6 +435,25 @@
    "kanit": "Nasıp düzeltmesinden ötürü maaş, maaş farkı ödenmez ve diğer özlük hakları verilmez.",
    "not": "yenileme tarihi için ilk sözleşme tarihi esas",
    "karistirilan": []
+  },
+  {
+   "i": "K-16-036",
+   "madde": "5",
+   "tip": "sure",
+   "tetikleyici": "Ocak ayının ilk günü itibariyle",
+   "cevap": "yaş hesabı: düzeltilmemiş nüfus kaydı, müracaat yılı (subay yirmi yedi)",
+   "kanit": "mürâcaat yapılan yılın Ocak ayının ilk günü itibariyle yirmi yedi yaşını, lisansüstü eğitimini tamamlamış olanlardan otuz iki yaşını bitirmemiş olanlar",
+   "not": "lisansüstü otuz iki",
+   "karistirilan": [
+    {
+     "madde": "6",
+     "fark": "subay adayı niteliklerinde aynı kural"
+    },
+    {
+     "madde": "9",
+     "fark": "astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört"
+    }
+   ]
   }
  ]
 }

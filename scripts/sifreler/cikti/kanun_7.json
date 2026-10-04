@@ -311,6 +311,31 @@
    "kanit": "Terör eylemlerinden dolayı yaralananların tedavileri Devlet tarafından yapılır. Zarar gören, can ve mal kaybına uğrayan vatandaşlara, Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonundan öncelikle yardım yapılır. Bu fondan ilk ve orta öğrenim çağındaki şehit çocuklarının öğrenim masrafları karşılanır.",
    "not": "yaralıların tedavisi Devletçe",
    "karistirilan": []
+  },
+  {
+   "i": "K-7-031",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "korkutma, yıldırma, sindirme veya tehdit",
+   "cevap": "terör yöntemleri (cebir ve şiddet kullanarak; baskı da)",
+   "kanit": "Terör; cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit yöntemlerinden biriyle, Anayasada belirtilen Cumhuriyetin niteliklerini, siyasî, hukukî, sosyal, laik, ekonomik düzeni değiştirmek, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü bozmak,",
+   "not": "\"kandırma\" yöntemler arasında yok",
+   "karistirilan": [
+    {
+     "madde": "7",
+     "fark": "örgüt kuran, yöneten, üye: TCK 314"
+    }
+   ]
+  },
+  {
+   "i": "K-7-032",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "Terörle mücadelede görev alan",
+   "cevap": "TSK personeli, mülki idare amirleri, istihbarat-kolluk görevlileri, diğer görevli personel",
+   "kanit": "Terörle mücadelede görev alan Türk Silahlı Kuvvetleri personeli, mülki idare amirleri, istihbarat ve kolluk görevlileri ile bu amaçla görevlendirilmiş diğer personelin, bu görevlerinin ifasından doğduğu iddia edilen suçlardan dolayı yapılan soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın",
+   "not": "avukat ücreti bunlara ödenir; mağdur vatandaşa değil",
+   "karistirilan": []
   }
  ]
 }

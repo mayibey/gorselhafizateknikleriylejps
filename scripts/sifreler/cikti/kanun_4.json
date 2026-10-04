@@ -81,6 +81,16 @@
    "kanit": "Okur yazar bir komşu bulunmaz veya bulunan komşu imzadan imtina ederse, tebliğ memuru o mahalle veya köyün muhtar veya ihtiyar heyeti azasından birini veyahut bir zabıta memurunu, tebliğ sırasında hazır bulunmak üzere davet eder ve tebligat bunların huzurunda yapılır.",
    "not": "komşu yoksa ya da imzadan kaçınırsa",
    "karistirilan": []
+  },
+  {
+   "i": "K-4-009",
+   "madde": "24",
+   "tip": "sira_usul",
+   "tetikleyici": "aynı elinin diğer bir parmağı",
+   "cevap": "sol baş parmağı yoksa; el yoksa sağ elinin baş parmağı",
+   "kanit": "Sol elinin baş parmağı bulunmıyan kimsenin, aynı elinin diğer bir parmağı ve sol eli yoksa sağ elinin baş parmağı ve bu da mevcut değilse diğer parmaklarından biri bastırılır.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

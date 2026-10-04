@@ -196,6 +196,26 @@
    "kanit": "c) Kişisel veri işlemenin kanunun verdiği yetkiye dayanılarak görevli ve yetkili kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarınca, denetleme veya düzenleme görevlerinin yürütülmesi ile disiplin soruşturma veya kovuşturması için gerekli olması.",
    "not": "suç önleme/soruşturma, alenileştirilmiş veri, bütçe-vergi de",
    "karistirilan": []
+  },
+  {
+   "i": "K-3-020",
+   "madde": "6",
+   "tip": "tanim",
+   "tetikleyici": "sendika üyeliği, sağlığı",
+   "cevap": "özel nitelikli; ırk, etnik köken, siyasi düşünce, inanç, din, kılık-kıyafet",
+   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
+   "not": "eğitim durumu listede YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-021",
+   "madde": "6",
+   "tip": "tanim",
+   "tetikleyici": "ceza mahkûmiyeti ve güvenlik tedbirleriyle",
+   "cevap": "özel nitelikli; sağlık, cinsel hayat, dernek-vakıf-sendika üyeliği, biyometrik, genetik",
+   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
+   "not": "",
+   "karistirilan": []
   }
  ]
 }

@@ -10,5 +10,6 @@ K = [
  ('5','kosul','elle atılan imza ile aynı','güvenli e-imza; aynı hukukî sonuç','Güvenli elektronik imza, elle','aynı hukukî sonucu doğurur.',[],''),
  ('5','yasak','özel bir merasime','güvenli e-imza ile yapılamaz','Kanunların resmî şekle','gerçekleştirilemez.',[],'resmî şekle tabi işlemler ve teminat sözleşmeleri de yapılamaz'),
  ('5','istisna','banka teminat mektupları','e-imza ile YAPILABİLİR; teminat yasağının istisnası','Kanunların resmî şekle','gerçekleştirilemez.',[],'sigorta şirketi kefalet senetleri de yapılabilir'),
+ ('3', 'tanim', 'mantıksal bağlantısı bulunan', 'elektronik imza (tanım); kimlik doğrulama amaçlı elektronik veri', 'b) Elektronik imza: Başka bir elektronik', 'kullanılan elektronik veriyi,', [], ''),
 ]
 yaz(14, '5070 sayılı Elektronik İmza Kanunu', K)

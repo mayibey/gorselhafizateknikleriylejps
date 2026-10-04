@@ -81,5 +81,12 @@ K = [
  ('323','ceza','düşmanla anlaşma neticesi','müebbet hapis','(3) Fiil, düşmanla','verilir.',[],''),
  ('324','ceza','seferberlikle','sulh zamanında ihmal; altı aydan üç yıla','(1) Sulh zamanında','verilir.',[],''),
  ('325','ceza','akademik derece','savaş hâlindeki devletten kabul; bir yıldan üç yıla','(1) Türkiye ile savaş','verilir.',[],'şeref, unvan, nişan, maaş da'),
+ ('1', 'tanim', 'suç işlenmesini önlemektir', 'amaç listesi: hak-özgürlük, kamu düzeni, hukuk devleti, sağlık-çevre, toplum barışı', '(1) Ceza Kanununun amacı', 'suç işlenmesini önlemektir.', [], 'sınav: "amaçları arasında sayılmayan" sorusu'),
+ ('1', 'tanim', 'türleri düzenlenmiştir', 'düzenlenenler: ceza sorumluluğu esasları, suçlar, ceza ve güvenlik tedbirleri', 'Kanunda, bu amacın gerçekleştirilmesi', 'türleri düzenlenmiştir.', [], '"suça iten sebepler" listede yok'),
+ ('2', 'tanim', 'açıkça suç saymadığı', 'suçta ve cezada kanunîlik ilkesi; idarenin düzenleyici işlemiyle suç konulamaz', '(1) Kanunun açıkça suç saymadığı', 'suç ve ceza konulamaz.', [], ''),
+ ('37', 'kosul', 'fiili birlikte gerçekleştiren', 'her biri fail olarak sorumlu (müşterek faillik)', '(1) Suçun kanuni tanımında yer alan fiili birlikte', 'fail olarak sorumlu olur.', [], ''),
+ ('40', 'kosul', 'en azından teşebbüs aşamasına', 'iştirakten sorumluluk için suçun varmış olması gerekir', '(3) Suça iştirakten dolayı', 'varmış olması gerekir.', [], ''),
+ ('39', 'tanim', 'hususunda yol göstermek', 'yardım eden; araçları sağlamak da (azmettirme değil)', 'b) Suçun nasıl işleneceği hususunda', 'araçları sağlamak.', [], ''),
+ ('42', 'tanim', 'ağırlaştırıcı nedenini oluşturması', 'bileşik suç (tanım): biri diğerinin unsuru; tek fiil sayılır', '(1) Biri diğerinin unsurunu', 'bileşik suç denir.', [], ''),
 ]
 yaz(1, '5237 sayılı Türk Ceza Kanunu', K)

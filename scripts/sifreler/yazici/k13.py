@@ -29,5 +29,6 @@ K = [
  ('16','sure','en çok on yılı','idarece yenilenmeyenlerin sağlık hakkı; hizmet süresi kadar','a) Kendi kusurları olmaksızın','en çok on yılı,',[],''),
  ('16','sure','en çok beş yılı','kendi isteğiyle yenilemeyenler; hizmetin yarısı kadar','b) Sözleşme süresi sonunda kendi','en çok beş yılı,',[],'İDARE YENİLEMEDİ ON, KENDİ İSTEMEDİ BEŞ'),
  ('16','sure','oniki ayı geçmemek üzere tedavi','sağlıktan sözleşmesi bitenlere net maaşın üçte ikisi yardım','Sözleşmeleri sağlık nedeniyle sona erenlerden','kurumlarınca ödeme yapılır.',[],''),
+ ('3', 'tanim', 'yürürlüğe girdiği ay ve günü', 'sözleşme yılı: bu tarihten itibaren geçen her bir yıllık süre', 'Sözleşme yılı: Sözleşmenin yürürlüğe', 'her bir yıllık süreyi,', [], ''),
 ]
 yaz(13, "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun", K)

@@ -143,5 +143,7 @@ K = [
  ('32','kosul','Türkiye Afet Müdahale Planı','diğer afet işleri; Afet ve Acil Durum Müdahale Hizmetleri Yönetmeliği','(3) Afet ve acil durumlara ilişkin','Planı esaslarına göre yürütülür.',[],''),
  ('33','kosul','Binaların Yangından Korunması Hakkında Yönetmelik','yangın tedbirleri bu Yönetmelik ve ilgili Yönerge esaslarına göre','MADDE 33 - (1) Karargâh, birlik','Yönerge esaslarına göre yürütülür.',[],''),
  ('34','sure','onaylandığı tarihte yürürlüğe','Yönetmelik onay tarihinde yürürlüğe girer; Bakan yürütür','MADDE 34 - (1) Bu Yönetmelik onaylandığı','yürürlüğe girer.',[],''),
+ ('4', 'tanim', 'bir emir komuta altında toplanan', 'birlik (tanım); taktik ve idari birimler', 'e) Birlik: Görevin yapılması', 'taktik ve idari birimleri,', [], ''),
+ ('10', 'tanim', 'tüm görevlerin düzenleyicisidir', 'emir; göreve ilişkin ve mevzuata uygun olması şart', '(1) Emir tüm görevlerin', 'mevzuata uygun olması şarttır.', [], ''),
 ]
 yaz(23, 'Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği', K)

@@ -29,5 +29,6 @@ K = [
  ('13','ceza','fiili bir suç oluştursa bile','zorlama hapsi üç günden on güne; hâkim kararıyla','(1) Bu Kanun hükümlerine göre hakkında tedbir','zorlama hapsine tabi tutulur.',[],'tedbire aykırılık'),
  ('13','ceza','onbeş günden otuz güne','tekrarında zorlama hapsi; toplam altı ayı geçemez','(2) Tedbir kararının gereklerine','altı ayı geçemez.',[],'İLK 3-10 GÜN, TEKRAR 15-30, TOPLAM 6 AY'),
  ('13','makam','Zorlama hapsine ilişkin kararlar','Cumhuriyet başsavcılığınca yerine getirilir','(3) Zorlama hapsine','yerine getirilir.',[],''),
+ ('3', 'sure', 'ilk işgünü içinde mülkî amirin', 'kolluk amirinin koruyucu tedbir evrakı; kırksekiz saatte onaylanmazsa kalkar', 'Kolluk amiri evrakı en geç', 'kendiliğinden kalkar.', [], ''),
 ]
 yaz(10, '6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun', K)

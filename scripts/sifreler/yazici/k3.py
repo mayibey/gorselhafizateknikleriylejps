@@ -21,5 +21,7 @@ K = [
  ('28','istisna','önleyici, koruyucu ve istihbari','Kanun uygulanmaz; kamu kurumlarının önleyici faaliyeti','ç) Kişisel verilerin millî savunmayı','istihbari faaliyetler kapsamında işlenmesi.',[],'millî savunma, güvenlik, kamu düzeni, ekonomik güvenlik'),
  ('28','istisna','talep etme hakkı hariç','kısmi istisnada tazminat hakkı kalır; aydınlatma, haklar, sicil uygulanmaz','(2) Bu Kanunun amacına','aşağıdaki hâllerde uygulanmaz:',[],'m.10, 11, 16'),
  ('28','istisna','disiplin soruşturma veya kovuşturması','denetleme, düzenleme, disiplin: aydınlatma ve haklar kısmen uygulanmaz','c) Kişisel veri işlemenin kanunun','kovuşturması için gerekli olması.',[],'suç önleme/soruşturma, alenileştirilmiş veri, bütçe-vergi de'),
+ ('6', 'tanim', 'sendika üyeliği, sağlığı', 'özel nitelikli; ırk, etnik köken, siyasi düşünce, inanç, din, kılık-kıyafet', '(1) Kişilerin ırkı, etnik kökeni', 'özel nitelikli kişisel veridir.', [], 'eğitim durumu listede YOK'),
+ ('6', 'tanim', 'ceza mahkûmiyeti ve güvenlik tedbirleriyle', 'özel nitelikli; sağlık, cinsel hayat, dernek-vakıf-sendika üyeliği, biyometrik, genetik', '(1) Kişilerin ırkı, etnik kökeni', 'özel nitelikli kişisel veridir.', [], ''),
 ]
 yaz(3, '6698 sayılı Kişisel Verilerin Korunması Kanunu', K)

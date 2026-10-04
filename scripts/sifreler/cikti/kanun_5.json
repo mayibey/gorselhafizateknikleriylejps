@@ -300,6 +300,41 @@
    "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül",
    "not": "sınavın klasik tuzağı: kolluk amiri kurulda yok",
    "karistirilan": []
+  },
+  {
+   "i": "K-5-026",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "İl genel idaresinin başı",
+   "cevap": "vali; il genel idaresinin başı (ilçede kaymakam)",
+   "kanit": "İl genel idaresinin başı ve mercii validir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "27",
+     "fark": "ilçe genel idaresinin başı kaymakam"
+    }
+   ]
+  },
+  {
+   "i": "K-5-027",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "ilin genel idaresinden Cumhurbaşkanına",
+   "cevap": "valiler sorumlu; bakanlar valiye doğrudan emir verir",
+   "kanit": "Valiler, ilin genel idaresinden Cumhurbaşkanına karşı sorumludur. Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işleri için valilere re'sen emir ve talimat verirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-028",
+   "madde": "57",
+   "tip": "tanim",
+   "tetikleyici": "hukuk işleri müdürü, defterdar",
+   "cevap": "il idare kurulu; milli eğitim, bayındırlık, sağlık, tarım, veteriner müdürleri",
+   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
+   "not": "gençlik-spor, emniyet, jandarma listede yok",
+   "karistirilan": []
   }
  ]
 }

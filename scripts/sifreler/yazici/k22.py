@@ -17,7 +17,7 @@ K = [
  ('11','sira_usul','kura ile yapılır','ilk görev yeri ataması; branş ve ihtisasa göre','MADDE 11- (1) Öğrenimlerini','kura ile yapılır.',[],''),
  ('12','yasak','evlenmeden önceki nüfusa kayıtlı','o ilçeye atanmaz; nüfusu bir milyonu aşan ilçeler hariç','(2) Personel, belediye sınırları','ilçelere atanmaz.',[],'kendisinin ve eşinin'),
  ('14','sure','Mayıs ve Ekim','genel atama dönemi; Bakanlık başka zaman da belirleyebilir','(2) Genel atamalar, her yılın','önceden duyurulabilir.',[],''),
- ('15','sure','Aynı yerdeki görevlere atananlar','tebliğ günü işe başlar','a) Aynı yerdeki görevlere','tebliğ gününü,',[],'AYNI YER AYNI GÜN'),
+ ('15','sure','Aynı yerdeki görevlere atananlar','tebliğ gününü izleyen işgünü içinde işe başlar','a) Aynı yerdeki görevlere','işe başlamak zorundadırlar.',[],'AYNI YER AYNI GÜN'),
  ('15','sure','Başka yerdeki görevlere atananlar','tebliğden onbeş gün içinde hareket; yol süresi; izleyen işgünü başlar','b) Başka yerdeki görevlere','işe başlamak zorundadırlar.',[],'savaş ve OHAL\'de süre kısaltılabilir'),
  ('15','sure','hiçbir şekilde bir ayı geçemez','sayman, mal sorumlusu, mutemedin devir süresi','b) Hesaplarını, yerlerine','tarihinde başlar.',[],'süre devrin bitiminde başlar'),
  ('15','sure','amire ulaşmasından itibaren','atama emri en geç on gün içinde tebliğ edilir','(4) Atama emrinde aksi','ilgilisine tebliğ edilir.',[],''),
@@ -66,5 +66,8 @@ K = [
  ('58','kosul','müfreze usulü ile','beslenemeyen erbaş-ere tayın bedeli (5668, 2155)','MADDE 58- (1) Görevlerinin niteliği','kapsamında ödenir.',[],''),
  ('60','sira_usul','üstlerden evvel selam vermeye','astlar mecbur; aynı rütbedekiler beklemeden selamlaşır','(2) Selamlama her yerde','selamını alırlar.',[],''),
  ('61','makam','sosyal tesislerden yararlanmayı','kimlik kartı düzenlemesi; İçişleri–MSB protokolü','(2) Kimlik kartlarının Türk Silahlı','protokol ile belirlenir.',[],''),
+ ('4', 'tanim', 'teknik bilgi ve beceri gerektiren', 'ihtisas: özel hizmet alanı (branş: alt hizmet alanı)', 'ğ) İhtisas: Jandarma Genel Komutanlığı', 'özel hizmet alanlarını,', [], ''),
+ ('4', 'tanim', 'Bakan: İçişleri Bakanını', 'Personel Yönetmeliğinde Bakan = İçişleri Bakanı', 'c) Bakan: İçişleri Bakanını', 'ç) Bakanlık: İçişleri Bakanlığını,', [], ''),
+ ('7', 'tanim', 'Öğretmen', 'Öğretmen yalnız subay listesinde; Astsubaylar listesinde yok', '11) Maliye 12) Öğretmen', 'b) Astsubaylar 1) Jandarma', [], ''),
 ]
 yaz(22, 'Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği', K)

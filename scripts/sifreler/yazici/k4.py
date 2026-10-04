@@ -10,5 +10,6 @@ K = [
  ('24','sira_usul','sol elinin baş parmağı','imza bilmeyene, komşu huzurunda','Kendisine tebliğ yapılacak kimse imza','bastırılmak suretiyle tebliğ yapılır.',[],'sol baş parmak yoksa aynı elin diğer parmağı, sol el yoksa sağ baş parmak'),
  ('24','istisna','iki eli de yoksa','tebliğ evrakı kendisine verilir','Tebliğ yapılacak kimsenin iki eli','kendisine verilir.',[],''),
  ('24','sira_usul','Okur yazar bir komşu','muhtar, ihtiyar heyeti üyesi ya da zabıta huzurunda','Okur yazar bir komşu','bunların huzurunda yapılır.',[],'komşu yoksa ya da imzadan kaçınırsa'),
+ ('24', 'sira_usul', 'aynı elinin diğer bir parmağı', 'sol baş parmağı yoksa; el yoksa sağ elinin baş parmağı', 'Sol elinin baş parmağı bulunmıyan', 'diğer parmaklarından biri bastırılır.', [], ''),
 ]
 yaz(4, '7201 sayılı Tebligat Kanunu', K)
