@@ -6,390 +6,408 @@
    "i": "K-3-001",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "özgür iradeyle açıklanan",
-   "cevap": "açık rıza (tanım)",
+   "tetikleyici": "Açık rıza:",
+   "cevap": "bilgilendirilmeye dayanan; belirli konu, özgür irade",
    "kanit": "a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı,",
-   "not": "belirli konu + bilgilendirme + özgür irade",
+   "not": "üç unsur birlikte",
    "karistirilan": []
   },
   {
    "i": "K-3-002",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "amaçlarını ve vasıtalarını belirleyen",
-   "cevap": "veri sorumlusu",
-   "kanit": "ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi,",
-   "not": "kayıt sisteminin kurulmasından sorumlu",
-   "karistirilan": [
-    {
-     "madde": "3",
-     "fark": "veri işleyen: sorumlunun yetkisiyle onun adına işleyen"
-    }
-   ]
+   "tetikleyici": "özgür iradeyle açıklanan",
+   "cevap": "açık rıza",
+   "kanit": "a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı,",
+   "not": "zımni, geçmiş, güncel rıza diye tanım yok",
+   "karistirilan": []
   },
   {
    "i": "K-3-003",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "onun adına kişisel verileri işleyen",
-   "cevap": "veri işleyen",
-   "kanit": "ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,",
-   "not": "",
+   "tetikleyici": "Anonim hâle getirme:",
+   "cevap": "gerçek kişiyle ilişkilendirilemez; eşleştirilse dahi",
+   "kanit": "b) Anonim hâle getirme: Kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesini,",
+   "not": "başka verilerle eşleştirilerek dahi kimlik bulunamaz",
    "karistirilan": []
   },
   {
    "i": "K-3-004",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "başka verilerle eşleştirilerek dahi",
+   "tetikleyici": "başka verilerle eşleştiril",
    "cevap": "anonim hâle getirme",
    "kanit": "b) Anonim hâle getirme: Kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesini,",
-   "not": "kimlikle ilişkilendirilemez",
+   "not": "veri karartma, genelleştirme diye tanım yok",
    "karistirilan": []
   },
   {
    "i": "K-3-005",
-   "madde": "4",
-   "tip": "kosul",
-   "tetikleyici": "ilkelere uyulması zorunludur",
-   "cevap": "dürüstlük, doğru-güncel, belirli-açık-meşru amaç, sınırlı-ölçülü, gerekli süre",
-   "kanit": "(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma. b) Doğru ve gerektiğinde güncel olma. c) Belirli, açık ve meşru amaçlar için işlenme. ç) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma. d) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme.",
-   "not": "beş genel ilke",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "İlgili kişi:",
+   "cevap": "gerçek kişi; tüzel değil",
+   "kanit": "ç) İlgili kişi: Kişisel verisi işlenen gerçek kişiyi,",
+   "not": "kişisel verisi işlenen gerçek kişi",
    "karistirilan": []
   },
   {
    "i": "K-3-006",
-   "madde": "5",
-   "tip": "istisna",
-   "tetikleyici": "açık rızası aranmaksızın",
-   "cevap": "kanun, fiili imkânsızlık, sözleşme, hukuki yükümlülük, alenileştirme, hak, meşru menfaat",
-   "kanit": "(2) Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür: a) Kanunlarda açıkça öngörülmesi. b) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması. c) Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması. ç) Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması. d) İlgili kişinin kendisi tarafından alenileştirilmiş olması. e) Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması. f) İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması.",
-   "not": "yedi hal",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Kişisel veri:",
+   "cevap": "her türlü bilgi; gerçek kişi",
+   "kanit": "d) Kişisel veri: Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgiyi,",
+   "not": "kimliği belirli veya belirlenebilir gerçek kişiye ilişkin; tüzel kişi bilgisi değil",
    "karistirilan": []
   },
   {
    "i": "K-3-007",
-   "madde": "5",
-   "tip": "istisna",
-   "tetikleyici": "kendisi tarafından alenileştirilmiş olması",
-   "cevap": "alenileştirilmiş veri: açık rıza aranmaz",
-   "kanit": "d) İlgili kişinin kendisi tarafından alenileştirilmiş olması.",
-   "not": "",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Kişisel verilerin işlenmesi:",
+   "cevap": "otomatik ya da kayıt sistemiyle her türlü işlem",
+   "kanit": "e) Kişisel verilerin işlenmesi: Kişisel verilerin tamamen veya kısmen otomatik olan ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla elde edilmesi, kaydedilmesi, depolanması, muhafaza edilmesi, değiştirilmesi, yeniden düzenlenmesi, açıklanması, aktarılması, devralınması, elde edilebilir hâle getirilmesi, sınıflandırılması ya da kullanılmasının engellenmesi gibi veriler üzerinde gerçekleştirilen her türlü işlemi,",
+   "not": "otomatik olmayan yol da girer; elde etme, kaydetme, depolama, aktarma, sınıflandırma",
    "karistirilan": []
   },
   {
    "i": "K-3-008",
-   "madde": "5",
-   "tip": "istisna",
-   "tetikleyici": "meşru menfaatleri",
-   "cevap": "açık rıza aranmaz; temel haklara zarar vermemek kaydıyla",
-   "kanit": "f) İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması.",
-   "not": "veri sorumlusunun meşru menfaati",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Kurul:",
+   "cevap": "Koruma Kurulu",
+   "kanit": "f) Kurul: Kişisel Verileri Koruma Kurulunu,",
+   "not": "tam adı Kişisel Verileri Koruma Kurulu",
    "karistirilan": []
   },
   {
    "i": "K-3-009",
-   "madde": "6",
+   "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "kılık ve kıyafeti",
-   "cevap": "özel nitelikli kişisel veri",
-   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
-   "not": "ırk, etnik köken, siyasi düşünce, inanç, din, dernek-vakıf-sendika üyeliği, sağlık, cinsel hayat, ceza mahkûmiyeti",
+   "tetikleyici": "Kurum:",
+   "cevap": "Koruma Kurumu",
+   "kanit": "g) Kurum: Kişisel Verileri Koruma Kurumunu,",
+   "not": "tam adı Kişisel Verileri Koruma Kurumu; Başkan = Kurum Başkanı",
    "karistirilan": []
   },
   {
    "i": "K-3-010",
-   "madde": "6",
+   "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "biyometrik ve genetik",
-   "cevap": "özel nitelikli kişisel veri",
-   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
-   "not": "",
+   "tetikleyici": "Veri işleyen:",
+   "cevap": "onun adına, verdiği yetkiyle işler",
+   "kanit": "ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,",
+   "not": "veri sorumlusunun yetkisiyle; gerçek veya tüzel kişi",
    "karistirilan": []
   },
   {
    "i": "K-3-011",
-   "madde": "6",
-   "tip": "yasak",
-   "tetikleyici": "işlenmesi yasaktır",
-   "cevap": "özel nitelikli veri; ancak sayılan hallerde mümkün",
-   "kanit": "(3) (Değişik:2/3/2024-7499/33 md.) Özel nitelikli kişisel verilerin işlenmesi yasaktır.",
-   "not": "açık rıza, kanun, fiili imkânsızlık, alenileştirme, hak, sağlık (sır saklayanlar), istihdam-sosyal güvenlik, vakıf-dernek üyeleri",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-012",
-   "madde": "6",
-   "tip": "istisna",
-   "tetikleyici": "Sır saklama yükümlülüğü altında",
-   "cevap": "sağlık verisi işlenebilir: koruyucu hekimlik, teşhis, tedavi",
-   "kanit": "e) Sır saklama yükümlülüğü altında bulunan kişiler veya yetkili kurum ve kuruluşlarca, kamu sağlığının korunması, koruyucu hekimlik, tıbbi teşhis, tedavi ve bakım hizmetlerinin yürütülmesi ile sağlık hizmetlerinin planlanması, yönetimi ve finansmanı amacıyla gerekli olması,",
-   "not": "sağlık hizmetlerinin planlanması, finansmanı da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-013",
-   "madde": "6",
-   "tip": "istisna",
-   "tetikleyici": "kâr amacı gütmeyen",
-   "cevap": "vakıf, dernek: üyelerine yönelik özel veri işleyebilir",
-   "kanit": "g) Siyasi, felsefi, dini veya sendikal amaçlarla kurulan vakıf, dernek ve diğer kâr amacı gütmeyen kuruluş ya da oluşumların, tâbi oldukları mevzuata ve amaçlarına uygun olmak, faaliyet alanlarıyla sınırlı olmak ve üçüncü kişilere açıklanmamak kaydıyla; mevcut veya eski üyelerine ve mensuplarına veyahut bu kuruluş ve oluşumlarla düzenli olarak temasta olan kişilere yönelik olması,",
-   "not": "üçüncü kişilere açıklanmamak kaydıyla",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-014",
-   "madde": "6",
-   "tip": "makam",
-   "tetikleyici": "yeterli önlemlerin",
-   "cevap": "Kurul belirler; özel nitelikli veri için",
-   "kanit": "(4) Özel nitelikli kişisel verilerin işlenmesinde, ayrıca Kurul tarafından belirlenen yeterli önlemlerin alınması şarttır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-015",
-   "madde": "7",
-   "tip": "kosul",
-   "tetikleyici": "sebeplerin ortadan kalkması",
-   "cevap": "silinir, yok edilir veya anonim hâle getirilir",
-   "kanit": "(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.",
-   "not": "resen ya da ilgili kişinin talebiyle; veri sorumlusu",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-016",
-   "madde": "28",
-   "tip": "istisna",
-   "tetikleyici": "konutta yaşayan aile fertleriyle",
-   "cevap": "aile içi faaliyet; Kanun kapsamı dışında",
-   "kanit": "konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi.",
-   "not": "üçüncü kişiye verilmemek kaydıyla",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-017",
-   "madde": "28",
-   "tip": "istisna",
-   "tetikleyici": "önleyici, koruyucu ve istihbari",
-   "cevap": "Kanun uygulanmaz; kamu kurumlarının önleyici faaliyeti",
-   "kanit": "ç) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları tarafından yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi.",
-   "not": "millî savunma, güvenlik, kamu düzeni, ekonomik güvenlik",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-018",
-   "madde": "28",
-   "tip": "istisna",
-   "tetikleyici": "talep etme hakkı hariç",
-   "cevap": "kısmi istisnada tazminat hakkı kalır; aydınlatma, haklar, sicil uygulanmaz",
-   "kanit": "(2) Bu Kanunun amacına ve temel ilkelerine uygun ve orantılı olmak kaydıyla veri sorumlusunun aydınlatma yükümlülüğünü düzenleyen 10 uncu, zararın giderilmesini talep etme hakkı hariç, ilgili kişinin haklarını düzenleyen 11 inci ve Veri Sorumluları Siciline kayıt yükümlülüğünü düzenleyen 16 ncı maddeleri aşağıdaki hâllerde uygulanmaz:",
-   "not": "m.10, 11, 16",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-019",
-   "madde": "28",
-   "tip": "istisna",
-   "tetikleyici": "disiplin soruşturma veya kovuşturması",
-   "cevap": "denetleme, düzenleme, disiplin: aydınlatma ve haklar kısmen uygulanmaz",
-   "kanit": "c) Kişisel veri işlemenin kanunun verdiği yetkiye dayanılarak görevli ve yetkili kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarınca, denetleme veya düzenleme görevlerinin yürütülmesi ile disiplin soruşturma veya kovuşturması için gerekli olması.",
-   "not": "suç önleme/soruşturma, alenileştirilmiş veri, bütçe-vergi de",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-020",
-   "madde": "6",
-   "tip": "tanim",
-   "tetikleyici": "sendika üyeliği, sağlığı",
-   "cevap": "özel nitelikli; ırk, etnik köken, siyasi düşünce, inanç, din, kılık-kıyafet",
-   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
-   "not": "eğitim durumu listede YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-021",
-   "madde": "6",
-   "tip": "tanim",
-   "tetikleyici": "ceza mahkûmiyeti ve güvenlik tedbirleriyle",
-   "cevap": "özel nitelikli; sağlık, cinsel hayat, dernek-vakıf-sendika üyeliği, biyometrik, genetik",
-   "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-022",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Kişisel verisi işlenen gerçek kişiyi",
-   "cevap": "ilgili kişi tanımı",
-   "kanit": "ç) İlgili kişi: Kişisel verisi işlenen gerçek kişiyi,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-023",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "belirlenebilir gerçek kişiye ilişkin",
-   "cevap": "kişisel veri tanımı: her türlü bilgi; tüzel kişi YOK",
-   "kanit": "d) Kişisel veri: Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgiyi,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-024",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "veri kayıt sisteminin parçası",
-   "cevap": "kişisel verilerin işlenmesi tanımı: otomatik ya da otomatik olmayan yollarla",
-   "kanit": "e) Kişisel verilerin işlenmesi: Kişisel verilerin tamamen veya kısmen otomatik olan ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla elde edilmesi, kaydedilmesi, depolanması, muhafaza edilmesi, değiştirilmesi, yeniden düzenlenmesi, açıklanması, aktarılması, devralınması, elde edilebilir hâle getirilmesi, sınıflandırılması ya da kullanılmasının engellenmesi gibi veriler üzerinde gerçekleştirilen her türlü işlemi,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-025",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "Kişisel Verileri Koruma Kurulunu",
-   "cevap": "Kurul tanımı; Kurum = Kişisel Verileri Koruma Kurumunu",
-   "kanit": "f) Kurul: Kişisel Verileri Koruma Kurulunu, g) Kurum: Kişisel Verileri Koruma Kurumunu,",
-   "not": "veri ihlali bildirimi tanımlarda YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-026",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "bilgilendirilmeye dayanan",
-   "cevap": "açık rıza: belirli konu + bilgilendirme + özgür irade",
-   "kanit": "a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-027",
-   "madde": "5",
-   "tip": "kosul",
-   "tetikleyici": "açık rızası olmaksızın işlenemez",
-   "cevap": "kural; aşağıdaki şartlardan birinin varlığında rıza aranmaz (yedi hâl)",
-   "kanit": "(1) Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez. (2) Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür:",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-028",
-   "madde": "5",
-   "tip": "istisna",
-   "tetikleyici": "sözleşmenin kurulması veya ifasıyla",
-   "cevap": "taraflara ait verilerin işlenmesi gerekli ise rıza aranmaz",
-   "kanit": "c) Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-029",
-   "madde": "5",
-   "tip": "istisna",
-   "tetikleyici": "Fiili imkânsızlık nedeniyle",
-   "cevap": "rızasını açıklayamayan kişinin hayatı/beden bütünlüğü için zorunluysa rıza aranmaz",
-   "kanit": "b) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması.",
-   "not": "",
+   "tetikleyici": "verdiği yetki",
+   "cevap": "veri işleyen",
+   "kanit": "ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,",
+   "not": "bordroyu talimatla işleyen muhasebe firması = veri işleyen",
    "karistirilan": [
     {
-     "madde": "6",
-     "fark": "özel nitelikli veride de fiili imkânsızlık istisnası var"
+     "madde": "28",
+     "fark": "m.28/2-c: kanunun verdiği yetkiyle kamu kurumlarının denetleme ve disiplin işi"
     }
    ]
   },
   {
-   "i": "K-3-030",
+   "i": "K-3-012",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Veri sorumlusu:",
+   "cevap": "amaç-vasıta belirler; sistemi kurar-yönetir",
+   "kanit": "ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi,",
+   "not": "veri işleyen ise onun verdiği yetkiyle, onun adına işler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-013",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "amaçlarını ve vasıtalarını",
+   "cevap": "veri sorumlusu",
+   "kanit": "ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi,",
+   "not": "kayıt sistemini kurar ve yönetir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-014",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Veri kayıt sistemi:",
+   "cevap": "kriterlere göre yapılandırılmış sistem",
+   "kanit": "h) Veri kayıt sistemi: Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemini,",
+   "not": "tanımlarda Veri Sorumluları Sicili ve veri ihlali bildirimi YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-015",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "ilkeler",
+   "cevap": "hukuk-dürüstlük, doğru-güncel, meşru-amaç, sınırlı-ölçülü, gerekli-süre-muhafaza; açık rıza değil",
+   "kanit": "(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma. b) Doğru ve gerektiğinde güncel olma. c) Belirli, açık ve meşru amaçlar için işlenme. ç) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma. d) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme.",
+   "not": "beş ilke; süresiz muhafaza, sürekli saklama ilke DEĞİL; açık rıza m.5 işleme şartıdır",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "m.3 metninin sonunda m.4 başlığı “Genel ilkeler” yer alır"
+    },
+    {
+     "madde": "28",
+     "fark": "m.28/2: Kanunun amacına ve temel ilkelerine uygun olma kaydı"
+    }
+   ]
+  },
+  {
+   "i": "K-3-016",
+   "madde": "4",
+   "tip": "sayi_oran",
+   "tetikleyici": "uyulması zorunlu",
+   "cevap": "beş ilke",
+   "kanit": "(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma. b) Doğru ve gerektiğinde güncel olma. c) Belirli, açık ve meşru amaçlar için işlenme. ç) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma. d) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme.",
+   "not": "her hâlde açık rıza alınması ilke sayılmaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-017",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "uygun olarak işlenebilir",
+   "cevap": "bu Kanun ve diğer kanunlar",
+   "kanit": "(1) Kişisel veriler, ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir.",
+   "not": "öngörülen usul ve esaslara uygun; yalnız bu Kanun değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-018",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "açık rıza",
+   "cevap": "yedi: kanun, fiili-imkânsızlık, sözleşme, hukuki-yükümlülük, alenileştirme, hak-tesisi, meşru-menfaat",
+   "kanit": "(2) Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür: a) Kanunlarda açıkça öngörülmesi. b) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması. c) Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması. ç) Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması. d) İlgili kişinin kendisi tarafından alenileştirilmiş olması. e) Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması. f) İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması.",
+   "not": "kural rızasız işlenemez; özel nitelikli veride SEKİZ hâl, orada sözleşme ve meşru menfaat yok",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "m.3/a: açık rızanın tanımı; belirli konu, bilgilendirme, özgür irade"
+    },
+    {
+     "madde": "6",
+     "fark": "m.6/3: özel nitelikli veride sekiz hâl; ilki açık rıza"
+    }
+   ]
+  },
+  {
+   "i": "K-3-019",
+   "madde": "5",
+   "tip": "kosul",
+   "tetikleyici": "olmaksızın işlenemez",
+   "cevap": "açık rızası (kural)",
+   "kanit": "(1) Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez.",
+   "not": "istisnası ikinci fıkradaki yedi hâl",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-020",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "rızasını açıklaya",
+   "cevap": "fiili imkânsızlık; hayatı-beden bütünlüğü korunması",
+   "kanit": "b) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması.",
+   "not": "kendisinin ya da başkasının; baygın hasta, rızasına geçerlilik tanınmayan kişi",
+   "karistirilan": [
+    {
+     "madde": "6",
+     "fark": "m.6/3-c: özel nitelikli veride de aynı fiili imkânsızlık hâli"
+    }
+   ]
+  },
+  {
+   "i": "K-3-021",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "kurulması veya ifası",
+   "cevap": "sözleşme; taraflarına ait veri",
+   "kanit": "c) Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması.",
+   "not": "doğrudan doğruya ilgili olmak kaydıyla; sipariş-kargo örneği",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-022",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "meşru menfaat",
+   "cevap": "temel hak-özgürlüklere zarar vermemek",
+   "kanit": "f) İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması.",
+   "not": "özel nitelikli veride meşru menfaat hâli YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-023",
    "madde": "6",
    "tip": "tanim",
-   "tetikleyici": "sağlığı, cinsel hayatı",
-   "cevap": "özel nitelikli kişisel veri: ırk, din, mezhep, kılık-kıyafet, biyometrik, genetik",
+   "tetikleyici": "özel nitelikli kişisel veri",
+   "cevap": "ırk-etnik, siyasi-felsefi, din-mezhep, kılık, dernek-sendika, sağlık-cinsel, ceza, biyometrik-genetik; eğitim-adres yok",
    "kanit": "(1) Kişilerin ırkı, etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veridir.",
-   "not": "telefon, e-posta, doğum yeri özel nitelikli DEĞİL",
+   "not": "parmak izi = biyometrik; vakıf üyeliği, güvenlik tedbiri de; telefon, e-posta, eğitim durumu, ev adresi DEĞİL",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "m.5 metninin sonunda m.6 başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-3-024",
+   "madde": "6",
+   "tip": "yasak",
+   "tetikleyici": "özel nitelikli kişisel verilerin",
+   "cevap": "yasak; sekiz hâlde mümkün; Kurul’un yeterli önlemi şart; meşru-menfaat yok",
+   "kanit": "(3) (Değişik:2/3/2024-7499/33 md.) Özel nitelikli kişisel verilerin işlenmesi yasaktır. Ancak bu verilerin işlenmesi;\na) İlgili kişinin açık rızasının olması, b) Kanunlarda açıkça öngörülmesi, c) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin, kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması, ç) İlgili kişinin alenileştirdiği kişisel verilere ilişkin ve alenileştirme iradesine uygun olması, d) Bir hakkın tesisi, kullanılması veya korunması için zorunlu olması, e) Sır saklama yükümlülüğü altında bulunan kişiler veya yetkili kurum ve kuruluşlarca, kamu sağlığının korunması, koruyucu hekimlik, tıbbi teşhis, tedavi ve bakım hizmetlerinin yürütülmesi ile sağlık hizmetlerinin planlanması, yönetimi ve finansmanı amacıyla gerekli olması, f) İstihdam, iş sağlığı ve güvenliği, sosyal güvenlik, sosyal hizmetler ve sosyal yardım alanlarındaki hukuki yükümlülüklerin yerine getirilmesi için zorunlu olması, g) Siyasi, felsefi, dini veya sendikal amaçlarla kurulan vakıf, dernek ve diğer kâr amacı gütmeyen kuruluş ya da oluşumların, tâbi oldukları mevzuata ve amaçlarına uygun olmak, faaliyet alanlarıyla sınırlı olmak ve üçüncü kişilere açıklanmamak kaydıyla; mevcut veya eski üyelerine ve mensuplarına veyahut bu kuruluş ve oluşumlarla düzenli olarak temasta olan kişilere yönelik olması, halinde mümkündür. (4) Özel nitelikli kişisel verilerin işlenmesinde, ayrıca Kurul tarafından belirlenen yeterli önlemlerin alınması şarttır.",
+   "not": "genel veride YEDİ hâl; ikinci fıkra 7499 ile mülga",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "m.5 metninin sonunda m.6 başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-3-025",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "koruyucu hekimlik",
+   "cevap": "sır saklayanlar veya yetkili kurumlar",
+   "kanit": "e) Sır saklama yükümlülüğü altında bulunan kişiler veya yetkili kurum ve kuruluşlarca, kamu sağlığının korunması, koruyucu hekimlik, tıbbi teşhis, tedavi ve bakım hizmetlerinin yürütülmesi ile sağlık hizmetlerinin planlanması, yönetimi ve finansmanı amacıyla gerekli olması,",
+   "not": "kamu sağlığı, teşhis, tedavi, bakım; sağlık hizmeti planlama-finansman",
    "karistirilan": []
+  },
+  {
+   "i": "K-3-026",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "kâr amacı gütmeyen",
+   "cevap": "üyelere; üçüncü kişilere açıklanmamak kaydıyla",
+   "kanit": "g) Siyasi, felsefi, dini veya sendikal amaçlarla kurulan vakıf, dernek ve diğer kâr amacı gütmeyen kuruluş ya da oluşumların, tâbi oldukları mevzuata ve amaçlarına uygun olmak, faaliyet alanlarıyla sınırlı olmak ve üçüncü kişilere açıklanmamak kaydıyla; mevcut veya eski üyelerine ve mensuplarına veyahut bu kuruluş ve oluşumlarla düzenli olarak temasta olan kişilere yönelik olması,",
+   "not": "mevcut-eski üye ve düzenli temastakiler; faaliyet alanıyla sınırlı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-027",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "gerektiren",
+   "cevap": "silinir, yok edilir, anonimleştirilir; resen de",
+   "kanit": "(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.",
+   "not": "veri sorumlusu yapar; resen veya ilgili kişinin talebiyle",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-028",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "silinir, yok edilir",
+   "cevap": "işlenmesini gerektiren sebepler ortadan kalkınca",
+   "kanit": "(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.",
+   "not": "hukuka uygun işlenmiş olsa bile",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-029",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "diğer kanunlarda yer alan",
+   "cevap": "saklıdır",
+   "kanit": "(2) Kişisel verilerin silinmesi, yok edilmesi veya anonim hâle getirilmesine ilişkin diğer kanunlarda yer alan hükümler saklıdır.",
+   "not": "silme, yok etme, anonim hâle getirmeye dair hükümler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-3-030",
+   "madde": "7",
+   "tip": "makam",
+   "tetikleyici": "usul ve esaslar",
+   "cevap": "yönetmelikle",
+   "kanit": "(3) Kişisel verilerin silinmesine, yok edilmesine veya anonim hâle getirilmesine ilişkin usul ve esaslar yönetmelikle düzenlenir.",
+   "not": "silme, yok etme, anonim hâle getirme usulü",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "m.4/1: bu Kanun ve diğer kanunlardaki usul ve esaslara uygun işleme"
+    }
+   ]
   },
   {
    "i": "K-3-031",
-   "madde": "6",
+   "madde": "28",
    "tip": "istisna",
-   "tetikleyici": "açık rızasının olması",
-   "cevap": "özel nitelikli veri işleme hâllerinden ilki; toplam sekiz hâl",
-   "kanit": "(3) (Değişik:2/3/2024-7499/33 md.) Özel nitelikli kişisel verilerin işlenmesi yasaktır. Ancak bu verilerin işlenmesi;\na) İlgili kişinin açık rızasının olması,",
-   "not": "GENEL VERİ 7 HÂL, ÖZEL NİTELİKLİ 8 HÂL",
-   "karistirilan": []
+   "tetikleyici": "hükümleri",
+   "cevap": "hiç uygulanmaz: aile, istatistik, sanat-bilim, istihbari, yargı; suç-önlenmesi kısmi",
+   "kanit": "(1) Bu Kanun hükümleri aşağıdaki hâllerde uygulanmaz:",
+   "not": "tam istisna beş hâl; suç önleme, aleni veri, denetim-disiplin, bütçe-vergi kısmi istisna",
+   "karistirilan": [
+    {
+     "madde": "7",
+     "fark": "m.7/1: bu Kanun ve diğer kanun hükümlerine uygun işlenmiş veri"
+    }
+   ]
   },
   {
    "i": "K-3-032",
-   "madde": "4",
-   "tip": "kosul",
-   "tetikleyici": "öngörülen usul ve esaslara",
-   "cevap": "kişisel veriler ancak bu Kanun ve diğer kanunlardaki usulle işlenir",
-   "kanit": "(1) Kişisel veriler, ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir.",
-   "not": "",
+   "madde": "28",
+   "tip": "istisna",
+   "tetikleyici": "önleyici, koruyucu",
+   "cevap": "tam istisna; Kanun hiç uygulanmaz",
+   "kanit": "ç) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları tarafından yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi.",
+   "not": "kanunla görevli kamu kurumunun millî güvenlik, istihbarat faaliyeti",
    "karistirilan": []
   },
   {
    "i": "K-3-033",
-   "madde": "4",
-   "tip": "kosul",
-   "tetikleyici": "Doğru ve gerektiğinde güncel",
-   "cevap": "genel ilkeler: hukuk-dürüstlük, belirli-açık-meşru amaç, sınırlı-ölçülü, süreli muhafaza",
-   "kanit": "(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma. b) Doğru ve gerektiğinde güncel olma. c) Belirli, açık ve meşru amaçlar için işlenme. ç) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma. d) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme.",
-   "not": "2026 sınavında soruldu: süresiz muhafaza ilke DEĞİL",
+   "madde": "28",
+   "tip": "istisna",
+   "tetikleyici": "veri güvenliği",
+   "cevap": "aile içi: Kanun uygulanmaz; üçüncü kişiye verilmezse",
+   "kanit": "a) Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle",
+   "not": "gerçek kişinin kendisi veya aynı konutta yaşayan aile fertleriyle ilgili faaliyet (telefon rehberi)",
    "karistirilan": []
   },
   {
    "i": "K-3-034",
    "madde": "28",
    "tip": "istisna",
-   "tetikleyici": "aşağıdaki hâllerde uygulanmaz",
-   "cevap": "tam istisna: aile içi faaliyet, resmi istatistik-anonim, sanat-bilim-ifade, istihbari, yargı",
-   "kanit": "(1) Bu Kanun hükümleri aşağıdaki hâllerde uygulanmaz: a) Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı\n8 28/11/2017 tarihli ve 7061 sayılı Kanunun 119 uncu maddesiyle bu fıkrada yer alan “diğer kamu görevlileri kurumlarının muvafakati” ibaresinden sonra gelmek üzere “, hâkimler ve savcılar ise kendilerinin muvafakati” ibaresi eklenmiştir.\nkonutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi. b) Kişisel verilerin resmi istatistik ile anonim hâle getirilmek suretiyle araştırma,\nplanlama ve istatistik gibi amaçlarla işlenmesi. c) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini,\nekonomik güvenliği, özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla, sanat, tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi.\nç) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları tarafından yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi.\nd) Kişisel verilerin soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin olarak yargı makamları veya infaz mercileri tarafından işlenmesi.",
-   "not": "",
+   "tetikleyici": "ifade özgürlüğü",
+   "cevap": "ihlal etmemek, suç teşkil etmemek kaydıyla",
+   "kanit": "c) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini,\nekonomik güvenliği, özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla, sanat, tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi.",
+   "not": "sanat, tarih, edebiyat, bilim; millî güvenlik, kamu düzeni, özel hayat, kişilik hakları",
    "karistirilan": []
   },
   {
    "i": "K-3-035",
    "madde": "28",
    "tip": "istisna",
-   "tetikleyici": "resmi istatistik ile anonim",
-   "cevap": "araştırma, planlama, istatistik amaçlı işleme: Kanun uygulanmaz",
-   "kanit": "b) Kişisel verilerin resmi istatistik ile anonim hâle getirilmek suretiyle araştırma,\nplanlama ve istatistik gibi amaçlarla işlenmesi.",
-   "not": "",
+   "tetikleyici": "suç işlenmesinin önlenmesi",
+   "cevap": "kısmi: aydınlatma, haklar, sicil yok; zarar giderme kalır",
+   "kanit": "(2) Bu Kanunun amacına ve temel ilkelerine uygun ve orantılı olmak kaydıyla veri sorumlusunun aydınlatma yükümlülüğünü düzenleyen 10 uncu, zararın giderilmesini talep etme hakkı hariç, ilgili kişinin haklarını düzenleyen 11 inci ve Veri Sorumluları Siciline kayıt yükümlülüğünü düzenleyen 16 ncı maddeleri aşağıdaki hâllerde uygulanmaz:\na) Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması.",
+   "not": "m.10, m.11 (zararın giderilmesi hakkı hariç) ve m.16 uygulanmaz",
    "karistirilan": []
   },
   {
    "i": "K-3-036",
    "madde": "28",
    "tip": "istisna",
-   "tetikleyici": "ifade özgürlüğü kapsamında",
-   "cevap": "sanat, tarih, edebiyat, bilim amaçlı işleme; özel hayat ihlal edilmemeli",
-   "kanit": "c) Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini,\nekonomik güvenliği, özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla, sanat, tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-037",
-   "madde": "7",
-   "tip": "kosul",
-   "tetikleyici": "hükümler saklıdır",
-   "cevap": "silme/yok etme/anonimleştirmeye ilişkin diğer kanun hükümleri; usul yönetmelikle",
-   "kanit": "(2) Kişisel verilerin silinmesi, yok edilmesi veya anonim hâle getirilmesine ilişkin diğer kanunlarda yer alan hükümler saklıdır. (3) Kişisel verilerin silinmesine, yok edilmesine veya anonim hâle getirilmesine ilişkin usul ve esaslar yönetmelikle düzenlenir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-038",
-   "madde": "7",
-   "tip": "makam",
-   "tetikleyici": "usul ve esaslar yönetmelikle düzenlenir",
-   "cevap": "kişisel verilerin silinmesi, yok edilmesi, anonim hâle getirilmesi",
-   "kanit": "(2) Kişisel verilerin silinmesi, yok edilmesi veya anonim hâle getirilmesine ilişkin diğer kanunlarda yer alan hükümler saklıdır. (3) Kişisel verilerin silinmesine, yok edilmesine veya anonim hâle getirilmesine ilişkin usul ve esaslar yönetmelikle düzenlenir.",
-   "not": "",
+   "tetikleyici": "aydınlatma yükümlülüğü",
+   "cevap": "kısmi: suç önleme, aleni veri, denetim-disiplin, bütçe-vergi",
+   "kanit": "(2) Bu Kanunun amacına ve temel ilkelerine uygun ve orantılı olmak kaydıyla veri sorumlusunun aydınlatma yükümlülüğünü düzenleyen 10 uncu, zararın giderilmesini talep etme hakkı hariç, ilgili kişinin haklarını düzenleyen 11 inci ve Veri Sorumluları Siciline kayıt yükümlülüğünü düzenleyen 16 ncı maddeleri aşağıdaki hâllerde uygulanmaz:\na) Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması.\nb) İlgili kişinin kendisi tarafından alenileştirilmiş kişisel verilerin işlenmesi. c) Kişisel veri işlemenin kanunun verdiği yetkiye dayanılarak görevli ve yetkili kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarınca, denetleme veya düzenleme görevlerinin yürütülmesi ile disiplin soruşturma veya kovuşturması için gerekli olması. ç) Kişisel veri işlemenin bütçe, vergi ve mali konulara ilişkin olarak Devletin ekonomik ve mali çıkarlarının korunması için gerekli olması.",
+   "not": "amaca ve temel ilkelere uygun ve orantılı olmak kaydıyla",
    "karistirilan": []
   }
  ]
