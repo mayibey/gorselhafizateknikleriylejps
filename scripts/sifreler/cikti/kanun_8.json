@@ -4,398 +4,423 @@
  "kodlar": [
   {
    "i": "K-8-001",
-   "madde": "3",
-   "tip": "sure",
-   "tetikleyici": "altı ayı geçmemek üzere",
-   "cevap": "olağanüstü hal ilanı; en çok altı ay; Cumhurbaşkanı, MGK görüşüyle",
-   "kanit": "Yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.",
-   "not": "sebepler: afet, salgın, ağır ekonomik bunalım (a); yaygın şiddet (b)",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "Kanunun amacı",
+   "cevap": "ilan usulleri ve uygulanacak hükümler",
+   "kanit": "Bu Kanunun amacı, a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması, Durumlarında olağanüstü hal ilan edilmesi ve usulleriyle olağanüstü hallerde uygulanacak hükümleri belirlemektir.",
+   "not": "OHAL ilanı, usulleri ve OHAL’de uygulanacak hükümler",
    "karistirilan": []
   },
   {
    "i": "K-8-002",
-   "madde": "3",
-   "tip": "sure",
-   "tetikleyici": "dört ayı geçmemek üzere",
-   "cevap": "TBMM, Cumhurbaşkanının istemiyle uzatır",
-   "kanit": "Olağanüstü hal kararı Resmi Gazete'de yayımlanır ve hemen Türkiye Büyük Millet Meclisinin onayına sunulur. Türkiye Büyük Millet Meclisi tatilde ise derhal toplantıya çağrılır. Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
-   "not": "İLAN ALTI, UZATMA DÖRT; Meclis süreyi değiştirebilir, kaldırabilir",
-   "karistirilan": []
+   "madde": "1",
+   "tip": "kosul",
+   "tetikleyici": "durumlar",
+   "cevap": "(a) afet, salgın, ekonomik bunalım; (b) yaygın şiddet; savaş yok",
+   "kanit": "a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması, Durumlarında olağanüstü hal ilan edilmesi",
+   "not": "seferberlik, savaş, dış tehdit OHAL sebebi sayılmaz",
+   "karistirilan": [
+    {
+     "madde": "2",
+     "fark": "m.2: kamu görevlilerinin durumlarındaki değişiklikler kapsamda"
+    }
+   ]
   },
   {
    "i": "K-8-003",
-   "madde": "3",
-   "tip": "sira_usul",
-   "tetikleyici": "Türkiye Büyük Millet Meclisinin onayına",
-   "cevap": "OHAL kararı RG'de yayımlanır; tatildeyse Meclis derhal toplanır",
-   "kanit": "Olağanüstü hal kararı Resmi Gazete'de yayımlanır ve hemen Türkiye Büyük Millet Meclisinin onayına sunulur. Türkiye Büyük Millet Meclisi tatilde ise derhal toplantıya çağrılır. Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
-   "not": "",
-   "karistirilan": []
+   "madde": "1",
+   "tip": "kosul",
+   "tetikleyici": "salgın hastalık",
+   "cevap": "(a) bendi; afet ve ekonomik bunalım da",
+   "kanit": "a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım,",
+   "not": "deprem, sel = tabii afet",
+   "karistirilan": [
+    {
+     "madde": "2",
+     "fark": "m.2: para, mal, çalışma yükümlülüğü yalnız bu hâllerde"
+    },
+    {
+     "madde": "3",
+     "fark": "m.3/a: Cumhurbaşkanı bu sebeplerle ilan eder"
+    },
+    {
+     "madde": "9",
+     "fark": "m.9: afet ve salgın OHAL’inde alınacak tedbirler"
+    }
+   ]
   },
   {
    "i": "K-8-004",
-   "madde": "3",
-   "tip": "makam",
-   "tetikleyici": "Milli Güvenlik Kurulunun görüşünü",
-   "cevap": "ilan öncesi; şiddet (b) halinde uzatma-kaldırmada da",
-   "kanit": "Cumhurbaşkanı, olağanüstü halin bu maddenin birinci fıkrasının (b) bendi gereğince ilanından sonra; süreyi uzatmaya, kapsamını değiştirmeye veya olağanüstü hali kaldırmaya ilişkin hususlarda da karar almadan önce Milli Güvenlik Kurulunun görüşünü alır.",
-   "not": "",
+   "madde": "2",
+   "tip": "kosul",
+   "tetikleyici": "para, mal",
+   "cevap": "çalışma dahil; yalnız afet, salgın, bunalım OHAL’inde",
+   "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri",
+   "not": "şiddet (b) OHAL’inde para, mal, çalışma yükümlülüğü YOK",
    "karistirilan": []
   },
   {
    "i": "K-8-005",
-   "madde": "3",
-   "tip": "sira_usul",
-   "tetikleyici": "Türkiye radyo ve televizyonuyla",
-   "cevap": "OHAL kararının sebebi, bölgesi, süresi ilan edilir",
-   "kanit": "Olağanüstü hal kararının hangi sebeplerle alındığı, bölgesi ve süresi, Türkiye radyo ve televizyonuyla ve Cumhurbaşkanınca gerekli görülen hallerde diğer araçlarla ilan edilir.",
-   "not": "",
+   "madde": "2",
+   "tip": "kosul",
+   "tetikleyici": "her türü için",
+   "cevap": "hak sınırlama, tedbir, görevli, yönetim usulü; para-mal değil",
+   "kanit": "olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
+   "not": "seçim zamanı, vergi muafiyeti kapsamda yok",
    "karistirilan": []
   },
   {
    "i": "K-8-006",
-   "madde": "9",
-   "tip": "gorev_yetki",
-   "tetikleyici": "öğrenime ara vermek",
-   "cevap": "afet ve salgın OHAL tedbiri; öğrenci yurtlarını kapatma da",
-   "kanit": "b) Resmi ve özel her derecedeki öğretim ve eğitim kurumlarında öğrenime ara vermek ve öğrenci yurtlarını süreli veya süresiz olarak kapatmak,",
-   "not": "m.9 tedbirleri şiddet OHAL'inde de alınabilir",
+   "madde": "2",
+   "tip": "kosul",
+   "tetikleyici": "nasıl sınırlan",
+   "cevap": "OHAL’in her türü için ayrı ayrı geçerli",
+   "kanit": "olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
+   "not": "temel hak ve hürriyetlerin sınırlanması veya durdurulması",
    "karistirilan": []
   },
   {
    "i": "K-8-007",
-   "madde": "9",
+   "madde": "2",
    "tip": "gorev_yetki",
-   "tetikleyici": "yıllık izinlerini sınırlamak",
-   "cevap": "OHAL hizmetinde görevli personel; afet-salgın tedbiri",
-   "kanit": "d) Bölgede olağanüstü hal hizmetlerinin yürütülmesi ile görevli personelin yıllık izinlerini sınırlamak veya kaldırmak,",
+   "tetikleyici": "kamu hizmeti görevlileri",
+   "cevap": "yetkiler ve durumlarındaki değişiklikler",
+   "kanit": "kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-8-008",
-   "madde": "9",
-   "tip": "gorev_yetki",
-   "tetikleyici": "Tehlike arz eden binaları yıkmak",
-   "cevap": "afet/salgın tedbiri; sağlığa zararlı gıdayı imha",
-   "kanit": "f) Tehlike arz eden binaları yıkmak; sağlığı tehdit ettiği tespit olunan taşınır ve taşınmaz mallar ile sağlığa zararlı gıda maddelerini ve mahsullerini imha etmek,",
-   "not": "",
-   "karistirilan": []
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "ilan",
+   "cevap": "Cumhurbaşkanı; en çok altı ay",
+   "kanit": "Cumhurbaşkanı:1 a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinden birinin veya birden fazlasının görülmesi durumunda, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması hallerinde, Milli Güvenlik Kurulunun görüşünü de aldıktan sonra;\n1 2/7/2018 tarihli ve 700 sayılı KHK’nin 84 üncü maddesiyle, bu fıkrada yer alan “Cumhurbaşkanının başkanlığında toplanan Bakanlar Kurulu” ibaresi “Cumhurbaşkanı” değiştirilmiştir.\nYurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.",
+   "not": "Milli Güvenlik Kurulu görüşünü alarak; eskiden Bakanlar Kurulu",
+   "karistirilan": [
+    {
+     "madde": "1",
+     "fark": "m.1: OHAL ilan edilmesi sebepleri ve amaç"
+    },
+    {
+     "madde": "2",
+     "fark": "m.2: ilan edilen OHAL’de yükümlülükler ve kapsam"
+    },
+    {
+     "madde": "9",
+     "fark": "m.9: afet ve salgın OHAL’i ilanında tedbirler"
+    },
+    {
+     "madde": "11",
+     "fark": "m.11: şiddet OHAL’i ilanında ek tedbirler"
+    },
+    {
+     "madde": "22",
+     "fark": "m.22: OHAL ilan edilen ilde valinin yardım istemi"
+    },
+    {
+     "madde": "23",
+     "fark": "m.23: OHAL ilanından sonra silah kullanma yetkisi"
+    }
+   ]
   },
   {
    "i": "K-8-009",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "Sokağa çıkmayı sınırlamak",
-   "cevap": "şiddet OHAL'inde ek tedbir; sokağa çıkma yasağı",
-   "kanit": "a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
-   "not": "m.11: yalnız (b) bendi (şiddet) OHAL'inde",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "görüşünü",
+   "cevap": "Milli Güvenlik Kurulu",
+   "kanit": "b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması hallerinde, Milli Güvenlik Kurulunun görüşünü de aldıktan sonra;",
+   "not": "ilan kararından önce Cumhurbaşkanı alır",
    "karistirilan": []
   },
   {
    "i": "K-8-010",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "kimlik belirleyici belge taşıma mecburiyeti",
-   "cevap": "şiddet OHAL'i; bölge sakinleri ve bölgeye girenler",
-   "kanit": "d) Olağanüstü hal ilan edilen bölge sakinleri ile bu bölgeye hariçten girecek kişiler için kimlik belirleyici belge taşıma mecburiyeti koymak,",
-   "not": "",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "kapsamını değiştir",
+   "cevap": "Milli Güvenlik Kurulu görüşü; (b) şiddet OHAL’inde",
+   "kanit": "Cumhurbaşkanı, olağanüstü halin bu maddenin birinci fıkrasının (b) bendi gereğince ilanından sonra; süreyi uzatmaya, kapsamını değiştirmeye veya olağanüstü hali kaldırmaya ilişkin hususlarda da karar almadan önce Milli Güvenlik Kurulunun görüşünü alır.",
+   "not": "süreyi uzatma ve kaldırmada da; bu kural yalnız (b) bendi için yazılı",
    "karistirilan": []
   },
   {
    "i": "K-8-011",
-   "madde": "11",
-   "tip": "yasak",
-   "tetikleyici": "Ruhsatlı da olsa her nevi",
-   "cevap": "şiddet OHAL'inde nakli yasaklanabilir",
-   "kanit": "i) Ruhsatlı da olsa her nevi silah ve mermilerin taşınmasını veya naklini yasaklamak,",
-   "not": "5442 m.11'de vali de on beş gün için yasaklayabilir",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "uzat",
+   "cevap": "dört ay; Meclis, Cumhurbaşkanı istemiyle",
+   "kanit": "Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
+   "not": "her defasında; İLAN ALTI, UZATMA DÖRT",
    "karistirilan": []
   },
   {
    "i": "K-8-012",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "işçi çıkartmalarını",
-   "cevap": "üç ayı aşmamak üzere izne bağlama, erteleme",
-   "kanit": "n) (Ek: 14/11/1984 - 3076/1 md.) İşçinin isteği, ahlak ve iyi niyet kurallarına uymayan haller, sağlık sebepleri, normal emeklilik ve belirli süresinin bitişi nedeniyle hizmet aktinin sona ermesi veya feshi dışında kalan hallerde işçi çıkartmalarını işverenin de durumunu dikkate alarak üç aylık bir süreyi aşmamak kaydıyla izne bağlamak veya ertelemek,",
-   "not": "",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "süresini değiştir",
+   "cevap": "Meclis (TBMM)",
+   "kanit": "Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
+   "not": "kaldırma yetkisi de Meclisin",
    "karistirilan": []
   },
   {
    "i": "K-8-013",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "Dernek faaliyetlerini",
-   "cevap": "her dernek için ayrı karar; üç ayı geçmemek üzere durdurma",
-   "kanit": "o) (Ek: 14/11/1984 - 3076/1 md.) Dernek faaliyetlerini; her dernek hakkında ayrı karar almak ve üç ayı geçmemek kaydıyla durdurmak,",
-   "not": "",
+   "madde": "3",
+   "tip": "sira_usul",
+   "tetikleyici": "Resmi Gazete",
+   "cevap": "yayımlanır; hemen Meclisin onayına sunulur",
+   "kanit": "Olağanüstü hal kararı Resmi Gazete'de yayımlanır ve hemen Türkiye Büyük Millet Meclisinin onayına sunulur.",
+   "not": "Meclis onayı olmadan süresiz yürürlük YOK",
    "karistirilan": []
   },
   {
    "i": "K-8-014",
-   "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "Hükümetin müsaadesi tahtında",
-   "cevap": "OHAL'de sınır ötesi harekât; valinin talebi, Genelkurmay kanalı",
-   "kanit": "p) (Ek: 25/7/1986 - KHK - 259/2 md.; değiştirilerek kabul: 3/9/1986 - 3310/2 md.) Anayasanın 121 inci maddesine göre, olağanüstü halin ilanına veya devamına sebep olan hallerin Türkiye Cumhuriyeti sınırları ve mücavir yurt bölgelerimiz üzerinde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda, ilgili komşu ülke ile Türkiye Cumhuriyeti Hükümeti arasında varılacak mutabakat çerçevesinde, valinin talebi üzerine ilgili komutan, eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Hükümetin müsaadesi tahtında, ihtiyaca göre, Kara, Hava veya Deniz Kuvvetleri unsurları ile mahdut hedefli sınır ötesi harekat planlayıp icra etmek.",
-   "not": "komşu ülkeyle mutabakat; 5442 m.11'de \"Cumhurbaşkanının müsaadesi\"",
+   "madde": "3",
+   "tip": "sira_usul",
+   "tetikleyici": "tatilde",
+   "cevap": "derhal toplantıya çağrılır",
+   "kanit": "Türkiye Büyük Millet Meclisi tatilde ise derhal toplantıya çağrılır.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-8-015",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "bağlı oldukları bölge valisine",
-   "cevap": "il valisi, kolluk yetmezse başvurur (şiddet OHAL'i)",
-   "kanit": "Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar. Yardım üzerine gönderilen kolluk kuvvetleri il valisinin emrine girer.",
-   "not": "afet OHAL'inde vali mevcut yetkileriyle yardım ister",
+   "madde": "3",
+   "tip": "sira_usul",
+   "tetikleyici": "sebeplerle alındığı",
+   "cevap": "Türkiye radyo ve televizyonuyla; gerekirse diğer araçlarla",
+   "kanit": "Olağanüstü hal kararının hangi sebeplerle alındığı, bölgesi ve süresi, Türkiye radyo ve televizyonuyla ve Cumhurbaşkanınca gerekli görülen hallerde diğer araçlarla ilan edilir.",
+   "not": "sebep, bölge ve süre ilan edilir; diğer araçlara Cumhurbaşkanı karar verir",
    "karistirilan": []
   },
   {
    "i": "K-8-016",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "il valisinin emrine girer",
-   "cevap": "yardım üzerine gönderilen kolluk",
-   "kanit": "Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar. Yardım üzerine gönderilen kolluk kuvvetleri il valisinin emrine girer.",
-   "not": "",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "bütününde",
+   "cevap": "bölgesinde ya da tüm yurtta",
+   "kanit": "Yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.",
+   "not": "yalnız bir bölgede ilan şartı yok",
    "karistirilan": []
   },
   {
    "i": "K-8-017",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "en yakın askeri komutanlıktan",
-   "cevap": "il valisi; ani olayda, bölge valisinin güçleri gelene kadar",
-   "kanit": "İl valisi, ani ve olağanüstü olaylarla karşılaşması halinde veya bölge valisinin göndereceği güçler gelinceye kadar görev yapmak üzere en yakın askeri komutanlıktan yardım gönderilmesini isteyebilir.",
-   "not": "bölge valisine ve İçişleri Bakanlığına bildirir",
-   "karistirilan": []
+   "madde": "9",
+   "tip": "gorev_yetki",
+   "tetikleyici": "tedbir",
+   "cevap": "afet-salgında: öğrenime ara, bina yıkma; sokağa çıkma, silah, dernek yok",
+   "kanit": "Tabii afet ve tehlikeli salgın hastalıklar sebebiyle olağanüstü hal ilanında, olağanüstü hal ilanını gerektiren hususlar gözönünde bulundurularak aşağıda yazılı tedbirler alınabilir: a) Bölgenin belirli yerlerinde yerleşimi yasaklamak, belirli yerleşim yerlerine girişi ve buralardan çıkışı sınırlamak, belli yerleşim yerlerini boşaltmak veya başka yerlere nakletmek, b) Resmi ve özel her derecedeki öğretim ve eğitim kurumlarında öğrenime ara vermek ve öğrenci yurtlarını süreli veya süresiz olarak kapatmak, c) Gazino, lokanta, birahane, meyhane, lokal, taverna, diskotek, bar, dansing, sinema, tiyatro ve benzeri eğlence yerleri ile kulüp vesair oyun salonlarını, otel, motel, kamping, tatil köyü ve benzeri konaklama tesislerini denetlemek ve bunların açılma ve kapanma zamanını tayin etmek, sınırlamak, gerektiğinde kapatmak ve bu yerleri olağanüstü halin icaplarına göre kullanmak, d) Bölgede olağanüstü hal hizmetlerinin yürütülmesi ile görevli personelin yıllık izinlerini sınırlamak veya kaldırmak, e) Bölge sınırları içerisindeki tüm haberleşme araç ve gereçlerinden yararlanmak ve gerektiğinde bu amaçla geçici olarak bunlara elkoymak, f) Tehlike arz eden binaları yıkmak; sağlığı tehdit ettiği tespit olunan taşınır ve taşınmaz mallar ile sağlığa zararlı gıda maddelerini ve mahsullerini imha etmek,",
+   "not": "yerleşimi yasaklama-boşaltma, eğlence yeri denetimi, personel izni, haberleşmeye elkoyma, gıda kontrolü de",
+   "karistirilan": [
+    {
+     "madde": "2",
+     "fark": "m.2: halin gerektirdiği tedbirlerin nasıl alınacağı kapsamda"
+    },
+    {
+     "madde": "11",
+     "fark": "m.11: şiddet OHAL’inde m.9’a ek tedbirler; sokağa çıkma, silah, dernek orada"
+    },
+    {
+     "madde": "22",
+     "fark": "m.22/b: valinin aldığı tedbirleri kolluk uygulayamazsa bölge valisi"
+    }
+   ]
   },
   {
    "i": "K-8-018",
-   "madde": "23",
+   "madde": "9",
    "tip": "gorev_yetki",
-   "tetikleyici": "doğruca ve duraksamadan hedefe ateş",
-   "cevap": "teslim ol emrine uyulmaz, silahla karşılık, meşru müdafaa",
-   "kanit": "Olağanüstü halin, bu Kanunun 3 üncü maddesinin (b) bendi gereğince ilan edilmesi halinde, silah kullanma yetkisini sahip bulunan güvenlik kuvvetlerinin teslim ol emrine itaat edilmemesi veya silahla mukabeleye yeltenilmesi veya güvenlik kuvvetlerinin meşru müdafaa durumuna düşmeleri halinde görevli güvenlik kuvvetleri mensupları doğruca ve duraksamadan hedefe ateş edebilirler.",
-   "not": "yalnız şiddet (b) OHAL'inde",
+   "tetikleyici": "deniz ve hava",
+   "cevap": "ulaştırma araçlarının giriş-çıkışı kayıtlanır, yasaklanır",
+   "kanit": "j) Kara, deniz ve hava trafik düzenine ilişkin tedbirleri almak, ulaştırma araçlarının bölgeye giriş ve çıkışlarını kayıtlamak veya yasaklamak.",
+   "not": "trafik düzenine ilişkin tedbirler",
    "karistirilan": []
   },
   {
    "i": "K-8-019",
-   "madde": "23",
-   "tip": "sira_usul",
-   "tetikleyici": "tutuksuz yapılır",
-   "cevap": "silah kullanan personelin soruşturması",
-   "kanit": "Silah kullanan bütün personel hakkında 211 sayılı Türk Silahlı Kuvvetleri İç Hizmet Kanununun 87 nci maddesinin V ve VI ncı fıkraları hükümleri ile 1481 sayılı Asayişe Müessir Bazı Fiillerin Önlenmesi Hakkındaki Kanunun 3 üncü maddesi hükümleri uygulanır. Ayrıca haklarındaki soruşturma işlemi tutuksuz yapılır.",
-   "not": "İç Hizmet K. m.87 ve 1481 sayılı Kanun m.3 uygulanır",
-   "karistirilan": []
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kamu düzeni",
+   "cevap": "ek: sokağa çıkma, toplantı, silah, dernek, basın; çalışma yükümlülüğü yok",
+   "kanit": "Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince olağanüstü hal ilanında; genel güvenlik, asayiş ve kamu düzenini korumak, şiddet olaylarının yaygınlaşmasını önlemek amacıyla 9 uncu maddede öngörülen tedbirlere ek olarak aşağıdaki tedbirler de alınabilir: a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
+   "not": "m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir, ek tedbir değil",
+   "karistirilan": [
+    {
+     "madde": "1",
+     "fark": "m.1/b: kamu düzeninin ciddi bozulması OHAL sebebi"
+    },
+    {
+     "madde": "3",
+     "fark": "m.3/b: aynı sebeple Cumhurbaşkanı ilan eder"
+    }
+   ]
   },
   {
    "i": "K-8-020",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "para, mal ve çalışma yükümlülükleri",
-   "cevap": "yalnız tabii afet, salgın, ağır ekonomik bunalım OHAL’inde",
-   "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri ile olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
-   "not": "şiddet (b) OHAL’inde para-mal-çalışma yükümlülüğü YOK",
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Sokağa çıkma",
+   "cevap": "yalnız şiddet (b) OHAL’inde; afet OHAL’inde yok",
+   "kanit": "Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince olağanüstü hal ilanında; genel güvenlik, asayiş ve kamu düzenini korumak, şiddet olaylarının yaygınlaşmasını önlemek amacıyla 9 uncu maddede öngörülen tedbirlere ek olarak aşağıdaki tedbirler de alınabilir: a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
+   "not": "sınırlama veya yasaklama",
    "karistirilan": []
   },
   {
    "i": "K-8-021",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "her türü için ayrı ayrı",
-   "cevap": "temel hak sınırlaması, tedbirler, görevli yetkileri, yönetim usulleri",
-   "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri ile olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
-   "not": "",
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "gösteri yürüyüş",
+   "cevap": "yalnız şiddet (b) OHAL’inde: yasaklama, erteleme, izne bağlama",
+   "kanit": "m) Kapalı ve açık yerlerde yapılacak toplantı ve gösteri yürüyüşlerini yasaklamak, ertelemek, izne bağlamak veya toplantı ve gösteri yürüyüşlerinin yapılacağı yer ve zamanı tayin, tespit ve tahsis etmek, izne bağladığı her türlü toplantıyı izletmek, gözetim altında tutmak veya gerekiyorsa dağıtmak,",
+   "not": "yer ve zaman tayini, izletme, dağıtma da",
    "karistirilan": []
   },
   {
    "i": "K-8-022",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "kamu hizmeti görevlilerine ne gibi",
-   "cevap": "yetkiler verileceği; durumlarında ne gibi değişiklikler yapılacağı",
-   "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri ile olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
-   "not": "",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "Dernek faaliyet",
+   "cevap": "üç ay; her dernek için ayrı karar",
+   "kanit": "o) (Ek: 14/11/1984 - 3076/1 md.) Dernek faaliyetlerini; her dernek hakkında ayrı karar almak ve üç ayı geçmemek kaydıyla durdurmak,",
+   "not": "yalnız şiddet (b) OHAL’inde",
    "karistirilan": []
   },
   {
    "i": "K-8-023",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "olağanüstü yönetim usullerine",
-   "cevap": "Kanun kapsamındaki son konu; OHAL dönemi idari yönetim usulleri",
-   "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri ile olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
-   "not": "seçimlerin ertelenmesi, vergi muafiyeti kapsamda YOK",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "işçi çıkart",
+   "cevap": "üç ay; izne bağlama veya erteleme",
+   "kanit": "n) (Ek: 14/11/1984 - 3076/1 md.) İşçinin isteği, ahlak ve iyi niyet kurallarına uymayan haller, sağlık sebepleri, normal emeklilik ve belirli süresinin bitişi nedeniyle hizmet aktinin sona ermesi veya feshi dışında kalan hallerde işçi çıkartmalarını işverenin de durumunu dikkate alarak üç aylık bir süreyi aşmamak kaydıyla izne bağlamak veya ertelemek,",
+   "not": "işçinin isteği, ahlak, sağlık, emeklilik, süre bitimi hariç",
    "karistirilan": []
   },
   {
    "i": "K-8-024",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "Bu Kanunun amacı",
-   "cevap": "OHAL ilanı, usulleri ve OHAL’de uygulanacak hükümleri belirlemek",
-   "kanit": "Bu Kanunun amacı, a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması, Durumlarında olağanüstü hal ilan edilmesi ve usulleriyle olağanüstü hallerde uygulanacak hükümleri belirlemektir.",
-   "not": "sebepler: (a) afet, salgın, ağır ekonomik bunalım; (b) yaygın şiddet, kamu düzeninin bozulması; dış tehdit, savaş, seferberlik YOK",
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kimlik belirleyici",
+   "cevap": "bölge sakinleri ve hariçten girenler (d bendi)",
+   "kanit": "d) Olağanüstü hal ilan edilen bölge sakinleri ile bu bölgeye hariçten girecek kişiler için kimlik belirleyici belge taşıma mecburiyeti koymak,",
+   "not": "belge taşıma mecburiyeti",
    "karistirilan": []
   },
   {
    "i": "K-8-025",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "yaygın şiddet hareketlerine ait",
-   "cevap": "OHAL sebebi (b): ciddi belirtiler ya da kamu düzeninin bozulması",
-   "kanit": "b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması,",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "3",
-     "fark": "m.3 ilan usulü: Cumhurbaşkanı MGK görüşüyle altı ayı geçmemek üzere ilan eder"
-    }
-   ]
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "sınır ötesi",
+   "cevap": "valinin talebi; ilgili komutan icra eder; Genelkurmay kanalı, Hükümet müsaadesi",
+   "kanit": "p) (Ek: 25/7/1986 - KHK - 259/2 md.; değiştirilerek kabul: 3/9/1986 - 3310/2 md.) Anayasanın 121 inci maddesine göre, olağanüstü halin ilanına veya devamına sebep olan hallerin Türkiye Cumhuriyeti sınırları ve mücavir yurt bölgelerimiz üzerinde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda, ilgili komşu ülke ile Türkiye Cumhuriyeti Hükümeti arasında varılacak mutabakat çerçevesinde, valinin talebi üzerine ilgili komutan, eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Hükümetin müsaadesi tahtında, ihtiyaca göre, Kara, Hava veya Deniz Kuvvetleri unsurları ile mahdut hedefli sınır ötesi harekat planlayıp icra etmek.",
+   "not": "komşu ülkeyle mutabakat; mahdut hedefli; vali emir vermez",
+   "karistirilan": []
   },
   {
    "i": "K-8-026",
    "madde": "22",
    "tip": "makam",
-   "tetikleyici": "emrindeki kolluk kuvvetleri ile",
-   "cevap": "şiddet OHAL’inde vali önce bunlarla önler; yetmezse bölge valisi",
-   "kanit": "b) İllerinde bu Kanunun 3 üncü maddesinin (b) bendi gereğince olağanüstü hal ilan edilen il valileri çıkabilecek toplumsal olaylarla meydana gelen olayları, emrindeki kolluk kuvvetleri ile önlemeye ve bastırmaya çalışırlar. Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar.",
-   "not": "",
+   "tetikleyici": "ani ve olağanüstü",
+   "cevap": "en yakın askeri komutanlıktan yardım",
+   "kanit": "İl valisi, ani ve olağanüstü olaylarla karşılaşması halinde veya bölge valisinin göndereceği güçler gelinceye kadar görev yapmak üzere en yakın askeri komutanlıktan yardım gönderilmesini isteyebilir.",
+   "not": "bölge valisinin güçleri gelene kadar",
    "karistirilan": []
   },
   {
    "i": "K-8-027",
    "madde": "22",
    "tip": "makam",
-   "tetikleyici": "bölge valisi ve İçişleri Bakanlığına",
-   "cevap": "il valisi askeri yardım istediğini bildirir",
+   "tetikleyici": "bildirir",
+   "cevap": "bölge valisi ve İçişleri Bakanlığına",
    "kanit": "İl valisi ayrıca bu durumu bölge valisi ve İçişleri Bakanlığına bildirir.",
-   "not": "",
+   "not": "askerî yardım istediğini",
    "karistirilan": []
   },
   {
    "i": "K-8-028",
    "madde": "22",
-   "tip": "sure",
-   "tetikleyici": "gecikmeksizin yerine getirilir",
-   "cevap": "il valisinin yardım istekleri; ilgililerce",
-   "kanit": "İl valisinin yukarıda açıklanan istekleri, ilgililerce gecikmeksizin yerine getirilir.",
-   "not": "",
+   "tip": "makam",
+   "tetikleyici": "olayları önle",
+   "cevap": "önce emrindeki kolluk; yetmezse bölge valisi",
+   "kanit": "b) İllerinde bu Kanunun 3 üncü maddesinin (b) bendi gereğince olağanüstü hal ilan edilen il valileri çıkabilecek toplumsal olaylarla meydana gelen olayları, emrindeki kolluk kuvvetleri ile önlemeye ve bastırmaya çalışırlar. Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar.",
+   "not": "ani olayda en yakın askerî komutanlık",
    "karistirilan": []
   },
   {
    "i": "K-8-029",
    "madde": "22",
    "tip": "makam",
-   "tetikleyici": "il valilerince yerine getirilir",
-   "cevap": "askeri yardımda bölge valisinin görev ve yetkileri (m.21 usulü)",
-   "kanit": "İl valisinin askeri birliklerden yardım istemesi halinde 21 inci madde hükümleri uygulanır. Bu halde, bölge valisine ait görev ve yetkiler, il valilerince yerine getirilir.",
-   "not": "",
+   "tetikleyici": "emrindeki kolluk",
+   "cevap": "yetmezse bağlı olduğu bölge valisine",
+   "kanit": "b) İllerinde bu Kanunun 3 üncü maddesinin (b) bendi gereğince olağanüstü hal ilan edilen il valileri çıkabilecek toplumsal olaylarla meydana gelen olayları, emrindeki kolluk kuvvetleri ile önlemeye ve bastırmaya çalışırlar. Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar.",
+   "not": "gönderilen kolluk il valisinin emrine girer",
    "karistirilan": []
   },
   {
    "i": "K-8-030",
    "madde": "22",
    "tip": "makam",
-   "tetikleyici": "mevcut kanunların kendilerine verdiği yetkileri",
-   "cevap": "afet OHAL’inde (a) vali yardım istemini böyle yapar",
-   "kanit": "a) İllerinde bu Kanunun 3 üncü maddesinin birinci fıkrasının (a) bendi gereğince olağanüstü hal ilan edilen il valileri, bu konularda mevcut kanunların kendilerine verdiği yetkileri kullanarak yardım isteminde bulunurlar.",
-   "not": "HEM a HEM b, FARKLI USUL",
+   "tetikleyici": "yardım istem",
+   "cevap": "afette mevcut yetkiler; şiddette kolluk, bölge valisi, askeri",
+   "kanit": "a) İllerinde bu Kanunun 3 üncü maddesinin birinci fıkrasının (a) bendi gereğince olağanüstü hal ilan edilen il valileri, bu konularda mevcut kanunların kendilerine verdiği yetkileri kullanarak yardım isteminde bulunurlar. b) İllerinde bu Kanunun 3 üncü maddesinin (b) bendi gereğince olağanüstü hal ilan edilen il valileri çıkabilecek toplumsal olaylarla meydana gelen olayları, emrindeki kolluk kuvvetleri ile önlemeye ve bastırmaya çalışırlar. Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar.",
+   "not": "(a) ve (b) için ayrı usul",
    "karistirilan": []
   },
   {
    "i": "K-8-031",
-   "madde": "3",
+   "madde": "22",
    "tip": "sure",
-   "tetikleyici": "süreyi uzatabilir veya olağanüstü hali",
-   "cevap": "TBMM; Cumhurbaşkanı istemiyle her defasında en çok dört ay",
-   "kanit": "Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
-   "not": "",
+   "tetikleyici": "istekleri",
+   "cevap": "gecikmeksizin yerine getirilir",
+   "kanit": "İl valisinin yukarıda açıklanan istekleri, ilgililerce gecikmeksizin yerine getirilir.",
+   "not": "ilgililerce",
    "karistirilan": []
   },
   {
    "i": "K-8-032",
-   "madde": "3",
+   "madde": "22",
    "tip": "makam",
-   "tetikleyici": "olağanüstü hal ilan edebilir",
-   "cevap": "Cumhurbaşkanı ilan eder; Milli Güvenlik Kurulu görüşü alınır",
-   "kanit": "Cumhurbaşkanı:1 a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinden birinin veya birden fazlasının görülmesi durumunda, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması hallerinde, Milli Güvenlik Kurulunun görüşünü de aldıktan sonra;\n1 2/7/2018 tarihli ve 700 sayılı KHK’nin 84 üncü maddesiyle, bu fıkrada yer alan “Cumhurbaşkanının başkanlığında toplanan Bakanlar Kurulu” ibaresi “Cumhurbaşkanı” değiştirilmiştir.\nYurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.",
-   "not": "2026 sınavında soruldu; eskiden Bakanlar Kurulu",
+   "tetikleyici": "görev ve yetkiler",
+   "cevap": "il valisi (askeri yardım isteyince)",
+   "kanit": "İl valisinin askeri birliklerden yardım istemesi halinde 21 inci madde hükümleri uygulanır. Bu halde, bölge valisine ait görev ve yetkiler, il valilerince yerine getirilir.",
+   "not": "bölge valisine ait görev ve yetkiler; m.21 uygulanır",
    "karistirilan": []
   },
   {
    "i": "K-8-033",
-   "madde": "11",
+   "madde": "23",
    "tip": "gorev_yetki",
-   "tetikleyici": "toplantı ve gösteri yürüyüşlerini yasaklamak",
-   "cevap": "şiddet OHAL’inde ek tedbir; ertelemek, izne bağlamak da mümkün",
-   "kanit": "m) Kapalı ve açık yerlerde yapılacak toplantı ve gösteri yürüyüşlerini yasaklamak, ertelemek, izne bağlamak veya toplantı ve gösteri yürüyüşlerinin yapılacağı yer ve zamanı tayin, tespit ve tahsis etmek, izne bağladığı her türlü toplantıyı izletmek, gözetim altında tutmak veya gerekiyorsa dağıtmak,",
-   "not": "afet OHAL’inde bu tedbir yok",
+   "tetikleyici": "teslim ol",
+   "cevap": "doğruca ve duraksamadan hedefe ateş; yalnız (b) OHAL’inde",
+   "kanit": "Olağanüstü halin, bu Kanunun 3 üncü maddesinin (b) bendi gereğince ilan edilmesi halinde, silah kullanma yetkisini sahip bulunan güvenlik kuvvetlerinin teslim ol emrine itaat edilmemesi veya silahla mukabeleye yeltenilmesi veya güvenlik kuvvetlerinin meşru müdafaa durumuna düşmeleri halinde görevli güvenlik kuvvetleri mensupları doğruca ve duraksamadan hedefe ateş edebilirler.",
+   "not": "silahla karşılık veya meşru müdafaa hâlinde de",
    "karistirilan": []
   },
   {
    "i": "K-8-034",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "radyoaktif maddeler",
-   "cevap": "bulundurma, hazırlama, yapma, nakli izne bağlanır ya da yasaklanır",
-   "kanit": "j) Her türlü cephaneler, bombalar, tahrip maddeleri, patlayıcı maddeler, radyoaktif maddeler veya yakıcı, aşındırıcı, yaralayıcı eczalar veya diğer her türlü zehirler ve boğucu gazlar veya benzeri maddelerin bulundurulmasını, hazırlanmasını, yapılmasını veya naklini izne bağlamak veya yasaklamak ve bunlar ile bunların hazırlanmasına veya yapılmasına yarayan eşya, alet veya araçların teslimini istemek veya toplatmak,",
-   "not": "cephane, bomba, patlayıcı, zehir, boğucu gaz da",
+   "madde": "23",
+   "tip": "sira_usul",
+   "tetikleyici": "soruşturma",
+   "cevap": "tutuksuz yapılır",
+   "kanit": "Ayrıca haklarındaki soruşturma işlemi tutuksuz yapılır.",
+   "not": "İç Hizmet K. m.87 ve 1481 sayılı K. m.3 uygulanır",
    "karistirilan": []
   },
   {
    "i": "K-8-035",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "ses ve görüntü bantlarını",
-   "cevap": "her türlü yayımı denetlemek, kayıtlamak, yasaklamak (şiddet OHAL’i)",
-   "kanit": "f) Söz, yazı, resmi, film, plak, ses ve görüntü bantlarını ve sesle yapılan her türlü yayımı denetlemek, gerektiğinde kayıtlamak veya yasaklamak,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-036",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "Gazete, dergi, broşür, kitap",
-   "cevap": "yasaklamak veya izne bağlamak; yasaklanan matbuayı toplatmak",
-   "kanit": "e) Gazete, dergi, broşür, kitap, el ve duvar ilanı ve benzerlerinin basılmasını, çoğaltılmasını, yayımlanmasını ve dağıtılmasını, bunlardan olağanüstü hal bölgesi dışında basılmış veya çoğaltılmış olanların bölgeye sokulmasını ve dağıtılmasını yasaklamak veya izne bağlamak; basılması ve neşri yasaklanan kitap, dergi, gazete, broşür, afiş ve benzeri matbuayı toplatmak,",
-   "not": "seçimlerin ertelenmesi tedbirler arasında YOK",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-037",
-   "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "valinin talebi üzerine ilgili komutan",
-   "cevap": "mahdut hedefli sınır ötesi harekât; Genelkurmay kanalı, Hükümet müsaadesi",
-   "kanit": "valinin talebi üzerine ilgili komutan, eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Hükümetin müsaadesi tahtında, ihtiyaca göre, Kara, Hava veya Deniz Kuvvetleri unsurları ile mahdut hedefli sınır ötesi harekat planlayıp icra etmek.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-038",
-   "madde": "9",
-   "tip": "gorev_yetki",
-   "tetikleyici": "salgın hastalıklar sebebiyle olağanüstü",
-   "cevap": "afet-salgın tedbirleri: yerleşimi yasaklamak, boşaltmak, eğitime ara, elkoymak",
-   "kanit": "Tabii afet ve tehlikeli salgın hastalıklar sebebiyle olağanüstü hal ilanında, olağanüstü hal ilanını gerektiren hususlar gözönünde bulundurularak aşağıda yazılı tedbirler alınabilir: a) Bölgenin belirli yerlerinde yerleşimi yasaklamak, belirli yerleşim yerlerine girişi ve buralardan çıkışı sınırlamak, belli yerleşim yerlerini boşaltmak veya başka yerlere nakletmek,",
-   "not": "m.9 tedbirleri şiddet OHAL’inde de alınabilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-039",
    "madde": "23",
    "tip": "gorev_yetki",
-   "tetikleyici": "silah kullanma yetkisini haizdirler",
-   "cevap": "kolluk, özel kolluk, TSK; kanunlardaki silah kullanma şartlarından biri oluşunca",
+   "tetikleyici": "silah kullanma yetkisi",
+   "cevap": "kanunlardaki silah kullanma şartlarından biri gerçekleşince",
    "kanit": "Olağanüstü hal ilanından sonra kolluk kuvvetleri ile kendilerine görev verilen özel kolluk kuvvetleri ve silahlı kuvvetler mensupları, görevlerini yerine getirirken kanunlarda silah kullanmayı icap ettiren hal ve şartlardan herhangi birinin tahakkuku halinde, silah kullanma yetkisini haizdirler.",
-   "not": "ön izin YOK",
-   "karistirilan": []
+   "not": "kolluk, özel kolluk ve silahlı kuvvetler",
+   "karistirilan": [
+    {
+     "madde": "22",
+     "fark": "m.22 metninin sonunda m.23 başlığı yer alır"
+    }
+   ]
   }
  ]
 }
