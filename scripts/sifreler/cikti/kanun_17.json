@@ -4,21 +4,21 @@
  "kodlar": [
   {
    "i": "K-17-001",
-   "madde": "3",
+   "madde": "1",
    "tip": "tanim",
-   "tetikleyici": "ilçelerde kaymakamı",
-   "cevap": "mülki amir tanımı",
-   "kanit": "l) Mülki amir: İllerde vali, ilçelerde kaymakamı,",
-   "not": "illerde vali",
+   "tetikleyici": "Yönetmeliğin amacı",
+   "cevap": "teşkilat, görev-yetki-sorumluluk, makamlarla ilişki, işbirliği, komuta-kontrol",
+   "kanit": "MADDE 1- (1) Bu Yönetmeliğin amacı; jandarmanın teşkilat, görev, yetki ve sorumluluklarını, diğer makamlarla ilişkilerini, birlikte çalışma ve işbirliği esasları dahil komuta ve kontrol ilişkilerini düzenlemektir.",
+   "not": "özlük hakları amaç DEĞİL",
    "karistirilan": []
   },
   {
    "i": "K-17-002",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "Jandarma hizmet merkezi",
-   "cevap": "mülki amirin onayıyla geçici kurulan jandarma birimi",
-   "kanit": "ğ) Jandarma hizmet merkezi: İhtiyaç üzerine mülki amirin onayı ile emniyet ve asayiş ile kamu düzeninin korunması amacıyla geçici olarak teşkil edilen jandarma birimini,",
+   "madde": "2",
+   "tip": "kosul",
+   "tetikleyici": "dayanılarak",
+   "cevap": "2803 sayılı Jandarma Kanunu m.24",
+   "kanit": "MADDE 2- (1) Bu Yönetmelik, 10/3/1983 tarihli ve 2803 sayılı Jandarma Teşkilat, Görev ve\nYetkileri Kanununun 24 üncü maddesine dayanılarak hazırlanmıştır.",
    "not": "",
    "karistirilan": []
   },
@@ -26,1804 +26,2186 @@
    "i": "K-17-003",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Genel Komutanlığının ihtiyatını oluşturmak",
-   "cevap": "jandarma komando birlikleri; Bakanlıkça konuşlandırılır",
-   "kanit": "ı) Jandarma komando birlikleri: Jandarma Genel Komutanlığının ihtiyatını oluşturmak üzere gerektiğinde mahalli jandarma birliklerinin gücü dışına çıkan toplumsal olaylara müdahale etmek ve terörle mücadele faaliyetlerini yürütmek amacıyla Bakanlıkça gerek görülen yerlerde konuşlandırılan birlikleri,",
-   "not": "mahalli birliklerin gücünü aşan toplumsal olay, terörle mücadele",
+   "tetikleyici": "hayatın normal akışı",
+   "cevap": "asayiş",
+   "kanit": "a) Asayiş: Hukuka uygun ve gerekli önlemlerin alınması sonucu, Devlete, topluma, kişilere, mal ve eşyalara yönelik tehlike, kaza ve sabotajların söz konusu olmadığı bir ortamı, düzensizlik ve karışıklıkların önlendiği, hayatın normal akışının sağlandığı hali, dirlik ve düzenin varlığı konusunda kamuda oluşan yerleşik ve yaygın inancı,",
+   "not": "emniyet = önlemlerin tümü; asayiş = huzurlu hal ve yaygın inanç; 2026 Uzman sınavında soruldu",
    "karistirilan": []
   },
   {
    "i": "K-17-004",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "takip ve tenkil harekatını",
-   "cevap": "jandarma asayiş komando birlikleri; il jandarma komutanlığını takviye",
-   "kanit": "g) Jandarma asayiş komando birlikleri: Gerektiğinde bağlı olduğu il jandarma komutanlığının diğer birliklerini takviye etmek, her türlü toplumsal olaylara süratle müdahale etmek, terörle mücadele faaliyetlerini yürütmek, takip ve tenkil harekatını yürütmek amacıyla Bakanlıkça gerek görülecek yerlerde konuşlandırılan genel kolluk birliklerini,",
-   "not": "",
+   "tetikleyici": "önlemlerin tümü",
+   "cevap": "emniyet",
+   "kanit": "d) Emniyet: Devlete, topluma, kişilere, mal ve eşyalara yönelik tehlike, kaza ve sabotajları önlemek için alınan hukuka uygun önlemlerin tümünü ve bu önlemlerin alınmış bulunduğu hali,",
+   "not": "asayiş = bu önlemler sonucu oluşan hal",
    "karistirilan": []
   },
   {
    "i": "K-17-005",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "Jandarma Genel Komutanı, Bakana karşı",
-   "cevap": "Jandarma Genel Komutanı",
-   "kanit": "MADDE 4- (1) Jandarma Genel Komutanlığı Bakanlığa bağlıdır. Jandarma Genel Komutanı, Bakana karşı sorumludur.",
-   "not": "JGK İçişleri Bakanlığına bağlı",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "talep ya da yasağın",
+   "cevap": "emir",
+   "kanit": "ç) Emir: Göreve ait bir talep ya da yasağın söz, yazı ve sair suretle ifadesini,",
+   "not": "söz, yazı ve sair suretle ifade",
    "karistirilan": []
   },
   {
    "i": "K-17-006",
-   "madde": "5",
+   "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Doğrudan merkeze bağlı birimler",
-   "cevap": "asayiş kolordu, komando tugay, JÖAK, eğitim kurumları, havacılık grup/filo",
-   "kanit": "c) Doğrudan merkeze bağlı birimler şunlardır:\n1) Jandarma asayiş kolordu komutanlıkları.\n2) Eğitim ve öğretim birim ve kurumları.\n3) Komando tugay komutanlıkları.\n4) Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı (JÖAK).\n5) Havacılık grup/filo komutanlıkları.",
-   "not": "",
+   "tetikleyici": "amir tarafından verilen emir",
+   "cevap": "görev",
+   "kanit": "f) Görev: Mevzuat gereğince yapılması ya da yapılmaması öngörülen hususlar ile amir tarafından verilen emirleri,",
+   "not": "mevzuatla öngörülen hususlar da",
    "karistirilan": []
   },
   {
    "i": "K-17-007",
-   "madde": "5",
+   "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Taşra teşkilatı şunlardır",
-   "cevap": "bölge, il, ilçe komutanlıkları; komando alay/tabur/bölük; JÖH tabur",
-   "kanit": "b) Taşra teşkilatı şunlardır:\n1) Jandarma bölge komutanlıkları.\n2) İl jandarma komutanlıkları.\n3) İlçe jandarma komutanlıkları.\n4) Komando alay/tabur/bölük komutanlıkları.\n5) Jandarma komando özel harekat tabur komutanlıkları.\n6) Asayiş komando bölük komutanlıkları.",
-   "not": "asayiş komando bölük de taşra",
+   "tetikleyici": "Kamu düzeni:",
+   "cevap": "emniyet-asayiş, huzur-sükun, genel sağlık-ahlak; ekonomik istikrar DEĞİL",
+   "kanit": "i) Kamu düzeni: Emniyet ve asayiş, huzur ve sükun, genel sağlık ve genel ahlak unsurlarından oluşan, hak ve hürriyetlerin tam olarak kullanımına elverişli ortamı,",
+   "not": "hak ve hürriyetlerin tam kullanımına elverişli ortam",
    "karistirilan": []
   },
   {
    "i": "K-17-008",
-   "madde": "6",
-   "tip": "makam",
-   "tetikleyici": "Bakan onayı ile kurulabilir",
-   "cevap": "her düzeydeki jandarma birliği",
-   "kanit": "Her düzeydeki jandarma birlikleri Bakan onayı ile kurulabilir.",
-   "not": "konuş düzeninde mülki taksimat esas",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-009",
-   "madde": "6",
-   "tip": "makam",
-   "tetikleyici": "karakolların konuş yerleri",
-   "cevap": "Bakan onayı; sorumluluk bölgeleri vali onayı",
-   "kanit": "(7) Karakolların sorumluluk bölgeleri il jandarma komutanının önerisi üzerine valinin onayı, karakolların konuş yerleri ise Bakan onayı ile belirlenir. Geçici asayiş karakolları ile jandarma hizmet merkezleri, il jandarma komutanının önerisi üzerine valinin onayıyla teşkil edilir.",
-   "not": "KARAKOL BÖLGESİ = VALİ, KARAKOL YERİ = BAKAN; geçici karakol/hizmet merkezi vali onayı",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-010",
-   "madde": "6",
-   "tip": "makam",
-   "tetikleyici": "kuvvet tasarrufu yoluyla",
-   "cevap": "geçici karakol kuvveti; il jandarma komutanlığınca",
-   "kanit": "Geçici karakolların kuvveti il jandarma komutanlığınca kuvvet tasarrufu yoluyla sağlanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-011",
-   "madde": "6",
+   "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "il merkez jandarma komutanlığı",
-   "cevap": "merkez ilçe jandarma komutanlığı; özel adı yoksa il adıyla",
-   "kanit": "Merkez ilçelerde kurulan ilçe jandarma komutanlıkları; il merkez jandarma komutanlığı olarak ve merkez ilçenin özel bir adı yoksa o ilin adıyla adlandırılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-012",
-   "madde": "7",
-   "tip": "makam",
-   "tetikleyici": "Bakanın kararıyla bir il",
-   "cevap": "il/ilçenin tamamı polis ya da jandarma alanı",
-   "kanit": "Bakanın kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-013",
-   "madde": "8",
-   "tip": "gorev_yetki",
-   "tetikleyici": "arama kurtarma görevlerini",
-   "cevap": "mülki görev (yönetmelikte); trafik, kritik tesis koruma da",
-   "kanit": "a) Mülki görevler: Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumlarının dış korumalarını sağlamak, trafik hizmetlerini yürütmek, arama kurtarma görevlerini yapmak, hassas ve kritik öneme sahip tesislerin korunmasına ilişkin önlemleri ilgili kuruluşlarla işbirliği içinde sağlamak, bu fıkranın (b) ve (c) bentlerinde belirtilen görevler dışında kalan ve mevzuat hükümlerinin icrası ile bunlara dayalı emir ve kararlarla jandarmaya verilen görevleri yapmak.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-014",
-   "madde": "9",
-   "tip": "kosul",
-   "tetikleyici": "kendiliğinden olaya elkoyması",
-   "cevap": "özel kolluk alanında; o yer jandarmanın görev alanı sayılır",
-   "kanit": "c) Özel kolluk kuruluşlarının sorumluluk alanına giren konularda, bu kuruluş ve kuvvetlerin yokluğundan ötürü meydana gelen ihlal ya da suçlar nedeniyle, jandarmanın görevlendirilmesi ya da kendiliğinden olaya elkoyması mümkündür. Bu gibi durumlarda jandarmanın görev yaptığı o yer, jandarmanın görev alanı sayılır.",
-   "not": "polis teşkilatı kurulmamış yerde de",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-015",
-   "madde": "10",
-   "tip": "makam",
-   "tetikleyici": "kesin olarak çözümlenir",
-   "cevap": "kolluk birimleri arası sorumluluk alanı anlaşmazlığı; mülki amir",
-   "kanit": "(4) Sorumluluk alanlarının sınırlarının belirlenmesinde kolluk birimleri arasındaki anlaşmazlıklar, mülki amir tarafından kesin olarak çözümlenir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-016",
-   "madde": "10",
-   "tip": "sure",
-   "tetikleyici": "devir ve teslim ile ilgili",
-   "cevap": "en geç üç ay içinde tamamlanır",
-   "kanit": "(5) Sorumluluk alanını belirleyen karar doğrultusunda devir ve teslim ile ilgili işlemler en geç üç ay içerisinde tamamlanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-017",
-   "madde": "13",
-   "tip": "kosul",
-   "tetikleyici": "Kişisel koruma ve kollama",
-   "cevap": "mevzuat hükmü ya da mülki amir emriyle; esas genel koruma",
-   "kanit": "Kişisel koruma ve kollama ancak, mevzuatta özel hüküm bulunması durumunda veya özel nitelik taşıyan durumlarda yetkili mülki amirin emriyle yerine getirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-018",
-   "madde": "14",
-   "tip": "sira_usul",
-   "tetikleyici": "Yangının nedenlerini",
-   "cevap": "jandarma saptar; tutanak mülki amire ve savcılığa",
-   "kanit": "Yangının nedenlerini, diğer olayların yol açtığı zararları ve kurtarılan nesnelerin cins ve miktarını saptar. Olayla ilgili olarak düzenlenen tutanağın bir örneğini mülki amire, bir diğer örneğini de Cumhuriyet savcılığına verir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-019",
-   "madde": "15",
-   "tip": "kosul",
-   "tetikleyici": "akıl hastalarının",
-   "cevap": "polis olmayan yerde yalnız saldırıya engel; sevkten sorumlu değil",
-   "kanit": "(3) Polis teşkilatı olmayan yerlerde sevkleri gerekli görülen akıl hastalarının başkalarına saldırma ihtimali varsa sevkten sorumlu olmamak ve yalnızca saldırıya engel olmak amacıyla sevk görevi jandarma tarafından yerine getirilir. Ancak 2803 sayılı Kanun çerçevesinde bir il veya ilçenin tamamında jandarmanın görevli olduğu durumlarda sevk görevi de jandarmaya aittir.",
-   "not": "il/ilçenin tamamı jandarmaysa sevk de jandarmanın",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-020",
-   "madde": "18",
-   "tip": "gorev_yetki",
-   "tetikleyici": "denetim kesintisiz sürdürülür",
-   "cevap": "silah ve av tüfeği izin belgesi işlemleri; jandarma yürütür",
-   "kanit": "(1) Sorumluluk alanında olmak kaydıyla aşağıdaki işlemler jandarma tarafından yürütülür.\na) 21/3/1991 tarihli ve 91/1779 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik uyarınca valiler tarafından verilecek izin belgesine ilişkin işlemler.\nb) 10/3/1982 tarihli ve 17629 sayılı Resmi Gazetede yayımlanan 2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik uyarınca verilecek izin belgelerine ilişkin işlemler.\n(2) Bu maddedeki görevler çerçevesinde, denetim kesintisiz sürdürülür.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-021",
-   "madde": "19",
-   "tip": "sure",
-   "tetikleyici": "yedi gün içinde verir",
-   "cevap": "jandarma görüşü; umuma açık yer ruhsatı için",
-   "kanit": "Jandarma görüşünü genel güvenlik ve asayiş açısından yedi gün içinde verir.",
-   "not": "izinsiz açılan yer kapatılır",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-022",
-   "madde": "19",
-   "tip": "makam",
-   "tetikleyici": "il özel idareleri tarafından verilir",
-   "cevap": "belediye ve mücavir alan dışındaki umuma açık yerlerin ruhsatı",
-   "kanit": "(3) Jandarma sorumluluk alanında, umuma açık istirahat ve eğlence yerlerinin ruhsatı jandarmanın görüşü alındıktan sonra belediye ve mücavir alan sınırları içinde belediyeler; bu alanların dışında il özel idareleri tarafından verilir.",
-   "not": "belediye sınırı içinde belediye",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-023",
-   "madde": "19",
-   "tip": "sira_usul",
-   "tetikleyici": "kat’i delil elde edilmesi",
-   "cevap": "kumar, uyuşturucu, fuhuş yeri vb. mülki amire bildirilir",
-   "kanit": "(4) Jandarma tarafından kat’i delil elde edilmesi halinde;\na) Kumar oynanan umumi ve umuma açık yerler ile her çeşit özel ve resmi kurum ve kuruluşlara ait lokaller,\nb) Mevzuata aykırı bir şekilde uyuşturucu madde imal edilen, satılan, kullanılan, bulundurulan yerler,\nc) Mevzuata aykırı faaliyet gösteren genelevler, birleşme yerleri ve fuhuş yapılan evler ve yerler,\nç) Devletin ülkesi ve milletiyle bölünmez bütünlüğüne, Anayasal düzenine, genel güvenliğe ve genel ahlaka zararı dokunacak oyun oynatılan, temsil verilen, film veya video bant gösterilen yerler ile internet üzerinden yapılan yayınlara izin verilen yerler,\nd) Derneklere, sendikalara, loca ve kulüplere, kamu kurumu niteliğindeki meslek kuruluşları ile benzeri kurum ve kuruluşlara ait ve yalnız üyelerinin yararlanması için açılan lokallerden, birden fazla denetim sonunda ve yazılı ihtara rağmen, mevzuata aykırı faaliyet göstererek umuma açık yer durumuna geldiği tespit edilenler,\ne) Her türlü denize elverişli araçla günübirlik tur düzenleyen veya her türlü mal ve hizmet satanlardan, müşteriye faaliyetlerini duyururken veya müşteri kabul ederken çevreyi veya müşteriyi rahatsız edecek yöntemler kullananlar, gereği yapılmak üzere mülki amire bildirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-024",
-   "madde": "20",
-   "tip": "makam",
-   "tetikleyici": "İnternet Toplu Kullanım Sağlayıcıları",
-   "cevap": "açma-kapatma mülki amir emriyle; jandarma güvenlik yönünden denetler",
-   "kanit": "MADDE 20- (1) 1/11/2007 tarihli ve 26687 sayılı Resmi Gazetede yayımlanan İnternet Toplu Kullanım Sağlayıcıları Hakkında Yönetmelik kapsamındaki işyerlerinin açılması, izin alınmadan açıldığı tespit edilen işyerlerinin kapatılması, işyerlerinin uyması gereken kurallara uyulmasının sağlanması mülki amirin emriyle yapılır. Jandarma bu işyerlerini genel güvenlik ve asayiş yönünden denetler ve denetleme sonuçlarını gereği yapılmak üzere mülki amire bildirir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-025",
-   "madde": "21",
-   "tip": "sure",
-   "tetikleyici": "saat yirmidörtten sonra",
-   "cevap": "civarı rahatsız eden gürültü jandarmaca men edilir; Kabahatler",
-   "kanit": "MADDE 21- (1) Mesken içinde ve dışında saat yirmidörtten sonra her ne suretle olursa olsun civar halkının rahat ve huzurunu bozacak surette gürültü yapanlar jandarma tarafından menolunur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-026",
-   "madde": "21",
-   "tip": "sure",
-   "tetikleyici": "kırksekiz saat önce mülki amire",
-   "cevap": "düğün, nişan, konser, panayır bildirimi",
-   "kanit": "(2) Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda kamu düzeninin korunmasına yönelik tedbirlerin alınmasına imkân sağlamak için ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-027",
-   "madde": "22",
-   "tip": "sira_usul",
-   "tetikleyici": "teslim almaktan kaçındıklarında",
-   "cevap": "kanuni temsilci; jandarma tutanak tutar, kanuni işlem",
-   "kanit": "(2) Yardıma muhtaçların, kimsesiz çocukların, düşkün durumda bulunanların kanuni temsilcileri bunları teslim almaktan kaçındıklarında, durum jandarma tarafından bir tutanakla saptanır ve kanuni işlem yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-028",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "Sosyal Politikalar Bakanlığı yetkililerine",
-   "cevap": "korunmaya muhtaç kişiler bildirilir",
-   "kanit": "(3) Jandarma, 5237 sayılı Kanun ve 24/5/1983 tarihli ve 2828 sayılı Sosyal Hizmetler Kanununa göre korunmaya, bakıma, yardıma ihtiyacı olan aile, çocuk, engelli ve yaşlılar ile sosyal hizmetlere ihtiyacı olan diğer kişileri Aile ve Sosyal Politikalar Bakanlığı yetkililerine bildirmek ve bu kişilere ilişkin incelemelerde söz konusu Bakanlık yetkilileri ile işbirliği içinde bulunmakla görevlidir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-029",
-   "madde": "23",
-   "tip": "gorev_yetki",
-   "tetikleyici": "jandarmaya haber verir, yitebilecek delilleri",
-   "cevap": "özel kolluk, jandarmanın görevine giren olayda el koyar",
-   "kanit": "MADDE 23- (1) Özel kolluk, jandarmanın görevine giren bir olayla karşılaştığında, mevzuatta başka bir hüküm yoksa olaya elkoyar, jandarmaya haber verir, yitebilecek delilleri toplar, kaybolmasını önler, olay yerini korur ve olayla ilgili eylemcileri yakalar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-030",
-   "madde": "23",
-   "tip": "sira_usul",
-   "tetikleyici": "özel güvenlik teşkilatına devredilir",
-   "cevap": "özel kolluk yokken jandarmanın yaptığı işlem ve soruşturmalar",
-   "kanit": "Mevzuatta aykırı bir hüküm bulunmadıkça yapılan işlem ve soruşturmaları sonuçlandırmak üzere bütün bilgi ve belgeler özel kolluk veya özel güvenlik teşkilatına devredilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-031",
-   "madde": "23",
-   "tip": "makam",
-   "tetikleyici": "onayıyla bu yerlerden bilgi",
-   "cevap": "işyerlerindeki çalışanların kimlik ve nitelikleri",
-   "kanit": "Jandarma, bu yerlerde bulunan ve çalışanların kimlik ve nitelikleri hakkında mülki amirin onayıyla bu yerlerden bilgi isteyebilir. İstenilen bilgiler hemen verilir.",
-   "not": "işyeri denetimi de mülki amirin emri/onayıyla",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-032",
-   "madde": "24",
-   "tip": "yasak",
-   "tetikleyici": "infaz koruma memurluğu görevlerinde",
-   "cevap": "jandarma hiçbir şekilde kullanılamaz",
-   "kanit": "(3) Jandarma hiçbir şekilde ceza infaz kurumlarının iç işlerinde ve infaz koruma memurluğu görevlerinde kullanılamaz.",
-   "not": "dış koruma jandarmanın",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-033",
-   "madde": "24",
-   "tip": "kosul",
-   "tetikleyici": "infaz koruma memurlarının başvurusu",
-   "cevap": "içerideki kargaşaya jandarma müdahale eder; müdür/vekili de",
-   "kanit": "Ceza infaz kurumlarının içinde burada görevli olanlarca bastırılamayacak genel bir hareket ve kargaşa meydana geldiğinde ceza infaz kurumlarının müdürü veya vekili veya infaz koruma memurlarının başvurusu üzerine jandarma olaya müdahale ederek sükûnu sağlar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-034",
-   "madde": "24",
-   "tip": "yasak",
-   "tetikleyici": "jandarma muhafazasında olmadıkça",
-   "cevap": "izinsiz hiçbir tutuklu/hükümlü dışarı gönderilemez",
-   "kanit": "(5) Ceza infaz kurumlarının yetkili amir ve memurlarınca verilmiş izin ve jandarma muhafazasında olmadıkça bu yerlerden hiçbir tutuklu ve hükümlü dışarıya gönderilemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-035",
-   "madde": "25",
-   "tip": "sira_usul",
-   "tetikleyici": "inzibat aletleri",
-   "cevap": "savcı, hâkim, mahkeme önünde çıkarılır; çıkışta tekrar takılabilir",
-   "kanit": "(3) Hükümlü ve tutuklular Cumhuriyet savcısının, hakimin ya da mahkemenin önüne götürüldüğünde, inzibat aletleri takılmış ise çıkarılır ve bağlı olmayarak girmeleri sağlanır. Bu yerlerden çıkışta inzibat aletleri ilgili mevzuat kapsamında tekrar takılabilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-036",
-   "madde": "25",
-   "tip": "makam",
-   "tetikleyici": "muhafız devriyenin kuvvetini",
-   "cevap": "jandarma komutanı saptar; liste infaz müdüründen yazıyla",
-   "kanit": "MADDE 25- (1) Soruşturma ve duruşmalar için adli mercilere götürülecek tutuklu ve hükümlülerin isim listesi, infaz kurum müdürü tarafından, koruma görevini yürüten jandarma komutanına yazı ile bildirir. Jandarma komutanı muhafız devriyenin kuvvetini saptayarak hükümlü ve tutukluları istenilen yer ve zamanda hazır bulundurur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-037",
-   "madde": "26",
-   "tip": "kosul",
-   "tetikleyici": "yazılı istemi üzerine",
-   "cevap": "kurumlar arası sevk; jandarma götürür",
-   "kanit": "MADDE 26- (1) Bir ceza infaz kurumundan diğer bir ceza infaz kurumuna gönderilmesi gereken tutuklu ve hükümlüler, kanunen yetkili makamın yazılı istemi üzerine, jandarma kuvvetlerince istenilen yere götürülürler.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-038",
-   "madde": "27",
-   "tip": "yasak",
-   "tetikleyici": "hizmet araçları sevklerde kullanılmaz",
-   "cevap": "jandarmanın araçları; esas ceza infaz kurumu araçları",
-   "kanit": "(3) Jandarmaya ait hizmet araçları sevklerde kullanılmaz.",
-   "not": "yoksa kamu kitle ulaşımı; özel taşıt yok; uçak olabilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-039",
-   "madde": "27",
-   "tip": "kosul",
-   "tetikleyici": "özel bir bölüm ayrılması",
-   "cevap": "kamu kitle ulaşım aracıyla sevkte zorunlu",
-   "kanit": "Kamuya ait kitle ulaşım araçlarıyla sevk sırasında ilgili kamu kurumlarınca özel bir bölüm ayrılması zorunludur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-040",
-   "madde": "28",
-   "tip": "sira_usul",
-   "tetikleyici": "alındı belgesi",
-   "cevap": "teslim alınan para/eşya için tutuklu-hükümlüye verilir; sevk pusulasına",
-   "kanit": "Teslim alınan nesnelerin cins ve miktarlarını gösterir bir alındı belgesi, tutuklu ve hükümlülere verilir. Yapılan işlem sevk pusulasına yazılır.",
-   "not": "",
+   "tetikleyici": "huzur ve sükun",
+   "cevap": "kamu düzeni",
+   "kanit": "i) Kamu düzeni: Emniyet ve asayiş, huzur ve sükun, genel sağlık ve genel ahlak unsurlarından oluşan, hak ve hürriyetlerin tam olarak kullanımına elverişli ortamı,",
+   "not": "emniyet-asayiş, huzur-sükun, genel sağlık, genel ahlak",
    "karistirilan": [
     {
-     "madde": "65",
-     "fark": "polis/sahil güvenlik el koyduğu nesneyi jandarmaya alındı belgesiyle teslim eder"
+     "madde": "11",
+     "fark": "kamunun huzur-sükununu bozan eylemlere jandarma engel olur"
     }
    ]
   },
   {
-   "i": "K-17-041",
-   "madde": "28",
-   "tip": "kosul",
-   "tetikleyici": "doktor raporuyla saptandığında",
-   "cevap": "sevke engel sağlık durumu: sevk yapılmaz, makama yazı",
-   "kanit": "(3) Sağlık açısından sevke engel bir durumun varlığı doktor raporuyla saptandığında sevk yapılmaz. Durum ilgili makama yazıyla bildirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-042",
-   "madde": "29",
-   "tip": "yasak",
-   "tetikleyici": "birlikte sevk edilemez",
-   "cevap": "erkek ve kadın tutuklu; iştirak halinde suç ve yakınlar hariç",
-   "kanit": "MADDE 29- (1) İştirak halinde suç işlemiş olanlar ile kanunen önemli ilişki sayılacak derecede yakınlığı olanlar dışında; erkek ve kadın tutuklu ya da hükümlüler, birlikte sevk edilemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-043",
-   "madde": "29",
-   "tip": "kosul",
-   "tetikleyici": "kadın ceza infaz koruma görevlisi",
-   "cevap": "sevk edilen kadın tutuklu-hükümlüye verilir",
-   "kanit": "(2) Sevk edilen tutuklu ve hükümlünün kadın olması durumunda, kadın ceza infaz koruma görevlisi verilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-044",
-   "madde": "30",
-   "tip": "sira_usul",
-   "tetikleyici": "yolda hastalandığında",
-   "cevap": "en yakın hekimli jandarma birliğine; devam edemezse savcı talimatıyla cezaevine",
-   "kanit": "MADDE 30- (1) Sevk ve nakil sırasında tutuklu ya da hükümlü yolda hastalandığında hekim ya da sağlık kuruluşu bulunan en yakın jandarma birliğine kadar götürülerek muayene ve tedavileri yaptırılır. Bu gibilerin yola devam edemeyecekleri hekim muayenesi ile anlaşıldığında; iyileştikten sonra usulüne uygun biçimde sevk edilmek üzere, bütün eşya ve evrakı ile birlikte Cumhuriyet savcısının talimatıyla belirlenecek ceza ve tutukevine teslim edilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-045",
-   "madde": "31",
-   "tip": "sira_usul",
-   "tetikleyici": "birisi öldüğünde",
-   "cevap": "en yakın jandarma birliğine, oradan savcılığa; devriye komutanı tutanak",
-   "kanit": "MADDE 31- (1) Sevk ve nakil sırasında tutuklu ya da hükümlülerden birisi öldüğünde durum en elverişli haberleşme aracı ile en yakın jandarma birliği komutanlığına ve bu komutanlıkça da o yerin Cumhuriyet savcılığına bildirilir. Bu konuda devriye komutanının düzenleyeceği tutanak ilgili makama verilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-046",
-   "madde": "32",
-   "tip": "gorev_yetki",
-   "tetikleyici": "silah kullanılacağı ihtar edilir",
-   "cevap": "isyan/firar hazırlığında devriye komutanı; başka çare yoksa silah",
-   "kanit": "MADDE 32- (1) Sevk ve nakil sırasında tutuklu veya hükümlülerin isyan ya da firar hazırlığı içinde olduklarından kuşkulanıldığında, sevke görevli devriye komutanı tarafından, böyle bir harekete kalkıştıklarında silah kullanılacağı ihtar edilir. Bu ihtara uymayarak firara teşebbüs etmeleri durumunda firarın başka şekilde önlenmesine imkân bulunmazsa silah kullanılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-047",
-   "madde": "32",
-   "tip": "makam",
-   "tetikleyici": "sevke devam edip edemeyeceklerini",
-   "cevap": "Cumhuriyet savcısı belirler; jandarma tutuklanırsa o yer jandarması",
-   "kanit": "(3) Bu gibi durumlarda diğer tutuklu ve hükümlülerle sevkle görevli jandarmaların sevke devam edip edemeyeceklerini Cumhuriyet savcısı belirler. Jandarmaların tutuklanması ya da soruşturmanın uzaması durumunda sevk işlemi o yer jandarması tarafından yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-048",
-   "madde": "33",
-   "tip": "sira_usul",
-   "tetikleyici": "gündüz varılacak biçimde",
-   "cevap": "sevk hareketi; konaklama cezaevi, emniyet odası, karakol, köy odası",
-   "kanit": "MADDE 33- (1) Sevk ve nakillerde, gidilecek yere gündüz varılacak biçimde hareket edilir. Zorunluluk nedeniyle konaklamak durumunda kalınırsa tutuklu ve hükümlülerin geceyi yol üzerinde bulunan il ya da ilçe merkezlerindeki ceza infaz kurumlarında, zorunluluk varsa jandarma birimlerinin emniyet odalarında geçirmeleri sağlanır. Belde ve köylerde jandarma karakolunda, karakol yoksa köy odasında, belediye hizmet binasında konaklamaya uygun bir odada gerekli önlemler alınarak kalınabilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-049",
-   "madde": "35",
-   "tip": "kosul",
-   "tetikleyici": "özel yerleri ilgili kuruluşlarca",
-   "cevap": "hastanede tutuklu için; jandarma görüşüyle önceden hazır",
-   "kanit": "(2) Sağlık kurumlarında önceden, jandarmanın görüşü alınarak tutuklu ve hükümlülerin iyileştirilmeleri sırasında konabilecekleri özel yerleri ilgili kuruluşlarca hazırlanır ve her an hizmete hazır ve bakımlı bulundurulur.",
-   "not": "hastanede muhafaza jandarmanın",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-050",
-   "madde": "36",
-   "tip": "makam",
-   "tetikleyici": "Adalet Bakanlığınca düzenlenen",
-   "cevap": "tutuklu çalıştırmada muhafaza jandarma; diğer kurumlarda infaz kurumu personeli",
-   "kanit": "MADDE 36- (1) Adalet Bakanlığınca düzenlenen, tutuklu ve hükümlü çalıştırma faaliyetleri sırasında, tutuklu ve hükümlülerin muhafazası jandarma tarafından sağlanır.\n(2) Kanunlarda ve 20/3/2006 tarihli ve 2006/10218 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Ceza İnfaz Kurumlarının Yönetimi ile Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Tüzükte öngörülen diğer kamu kurum ve kuruluşlarınca düzenlenen tutuklu ve hükümlü çalıştırma faaliyetleri sırasında ise, muhafaza görevi ceza infaz kurumlarının kendi yönetimi ve personelince yürütülür.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-051",
-   "madde": "38",
-   "tip": "makam",
-   "tetikleyici": "haricindeki hizmetlerde, üstlerinin emrindedir",
-   "cevap": "adli kolluk; adli görevde Cumhuriyet savcısının",
-   "kanit": "(2) Soruşturma işlemleri, Cumhuriyet savcısının emir ve talimatları doğrultusunda adli kolluğa yaptırılır. Adli kolluk görevlileri, Cumhuriyet savcısının adli görevlere ilişkin emirlerini yerine getirir. Adli kolluk, adli görevlerin haricindeki hizmetlerde, üstlerinin emrindedir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-052",
-   "madde": "40",
-   "tip": "makam",
-   "tetikleyici": "yeme, içme ve nakil masrafları",
-   "cevap": "gözaltındakinin adli makama kadar; JGK bütçesinden",
-   "kanit": "MADDE 40- (1) Gözaltına alınan şahısların sadece adli makamlar önüne çıkarılıncaya kadarki yeme, içme ve nakil masrafları ile sevkin Jandarma Genel Komutanlığına ait taşıtlarla gerçekleştirilmesi durumunda, söz konusu taşıta ait yakıt ve benzeri masraflar Jandarma Genel Komutanlığı bütçesinden ödenir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-053",
-   "madde": "41",
-   "tip": "kosul",
-   "tetikleyici": "2941 sayılı Seferberlik",
-   "cevap": "seferberlik ve savaşta jandarma bu kanunla verilen görevleri yapar",
-   "kanit": "Jandarma, seferberlik ve savaş halinde, 4/11/1983 tarihli ve 2941 sayılı Seferberlik ve Savaş Hali Kanunu ile verilen görevleri yapar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-054",
-   "madde": "42",
-   "tip": "gorev_yetki",
-   "tetikleyici": "polisin sahip olduğu yetki",
-   "cevap": "jandarma görevde aynı yetkilere sahip (PVSK, CMK)",
-   "kanit": "Jandarma bu görevlerini yerine getirirken polisin sahip olduğu yetki ve sorumluluklara sahiptir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-055",
-   "madde": "42",
-   "tip": "kosul",
-   "tetikleyici": "yazılı olarak tekrar ederse",
-   "cevap": "aykırı emir yerine getirilir; yapan sorumlu olmaz",
-   "kanit": "(2) Jandarma amirinden aldığı emri Anayasa, kanun, tüzük ve yönetmelik hükümlerine aykırı görürse yerine getirmez ve bu aykırılığı emri verene bildirir. Ancak, amir emrinde ısrar eder ve bu emrini yazılı olarak tekrar ederse emir yerine getirilir. Bu halde, emri yerine getiren sorumlu olmaz. Konusu suç teşkil eden emir hiçbir suretle yerine getirilmez. Yerine getirenler sorumluluktan kurtulamaz.",
-   "not": "AYKIRI EMİR: BİLDİR; YAZILI ISRAR = YAP",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-056",
-   "madde": "42",
-   "tip": "yasak",
-   "tetikleyici": "Konusu suç teşkil eden emir",
-   "cevap": "hiçbir suretle yerine getirilmez; yapan sorumlu",
-   "kanit": "(2) Jandarma amirinden aldığı emri Anayasa, kanun, tüzük ve yönetmelik hükümlerine aykırı görürse yerine getirmez ve bu aykırılığı emri verene bildirir. Ancak, amir emrinde ısrar eder ve bu emrini yazılı olarak tekrar ederse emir yerine getirilir. Bu halde, emri yerine getiren sorumlu olmaz. Konusu suç teşkil eden emir hiçbir suretle yerine getirilmez. Yerine getirenler sorumluluktan kurtulamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-057",
-   "madde": "42",
-   "tip": "sira_usul",
-   "tetikleyici": "yazılı olarak verilmesi istenilemez",
-   "cevap": "sayılan acele hallerde sözlü emir; sorumluluk emri verene",
-   "kanit": "j) Kanunlarda istisnai olarak kolluğun sözlü emirle yapmaya mecbur tutulduğu haller için, yetkili amir tarafından verilecek sözlü emirler derhal yerine getirilir. Bu emirlerin yazılı olarak verilmesi istenilemez. Bu hallerde emrin yerine getirilmesinden doğabilecek sorumluluk emri verene aittir.",
-   "not": "can-ırz-mal, kaçan şahıs, afet, yol açma, kanunsuz toplantı dağıtma…",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-058",
-   "madde": "44",
-   "tip": "gorev_yetki",
-   "tetikleyici": "zor kullanarak karşı koyanlar",
-   "cevap": "jandarma yakalar; Cumhuriyet savcısına derhal bilgi",
-   "kanit": "(2) Görevini yaptığı sırada jandarmaya direnen veya zor kullanarak karşı koyanlar jandarma tarafından yakalanır. Yakalanan kişi ve olay hakkında Cumhuriyet savcısına derhal bilgi verilerek emri doğrultusunda işlem yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-059",
-   "madde": "45",
-   "tip": "yasak",
-   "tetikleyici": "veli ve vasileri olsa bile",
-   "cevap": "onsekiz yaşını doldurmamış küçükler içkili yere, kıraathaneye, internet salonuna giremez",
-   "kanit": "(3) Jandarma; bar, pavyon, gazino, meyhane gibi içkili yerler ile kıraathane, internet salonu ve oyun oynatılan benzeri yerlere yanlarında veli ve vasileri olsa bile onsekiz yaşını doldurmamış küçüklerin girmesini engeller.",
-   "not": "belgeli turizm işletmeleri hariç; izne bağlı yerlerde çalıştırma da yasak",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-060",
-   "madde": "45",
-   "tip": "gorev_yetki",
-   "tetikleyici": "herhangi bir şikâyet olmasa bile",
-   "cevap": "genel ahlaka aykırı davranış, sarkıntılık, müstehcen yayın engellenir",
-   "kanit": "c) Genel ahlaka aykırı mahiyette her türlü sesli ve görüntülü eserleri, kaydedildiği materyale bakılmaksızın üreten ve satanları, herhangi bir şikâyet olmasa bile engeller, davranışlarının devamını durdurarak yasaklar ve gerekli kanuni işlemleri yapar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-061",
-   "madde": "46",
-   "tip": "kosul",
-   "tetikleyici": "makul bir sebebin bulunması",
-   "cevap": "durdurma yetkisi şartı; süreklilik ve keyfilik yasak",
-   "kanit": "(2) Durdurma yetkisinin kullanılabilmesi için jandarmanın tecrübesine ve içinde bulunulan durumdan edindiği izlenime dayanan makul bir sebebin bulunması gerekir. Süreklilik arz edecek, fiili durum ve keyfilik oluşturacak şekilde durdurma işlemi yapılamaz.",
-   "not": "durdurma sebebi bildirilir; süre zorunlu süreyi aşamaz",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-062",
-   "madde": "46",
-   "tip": "yasak",
-   "tetikleyici": "elbisenin çıkarılması",
-   "cevap": "durdurmada istenemez; aracın görünmeyen bölümünü açma da",
-   "kanit": "Bu amaçla kişinin üzerindeki elbisenin çıkarılması veya aracın dışarıdan bakıldığında içerisi görünmeyen bölümlerinin açılması istenemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-063",
-   "madde": "46",
-   "tip": "makam",
-   "tetikleyici": "görevlendireceği kolluk amirinin yazılı",
-   "cevap": "durdurulanın üstünü/aracını arama emri; acele sözlü, yirmidört saatte hâkim onayı",
-   "kanit": "Ancak el ile dıştan kontrol hariç, kişinin üstü ve eşyası ile aracının dışarıdan bakıldığında içerisi görünmeyen bölümlerinin aranması, Bakanlık tarafından belirlenen esaslar dahilinde mülki amirin görevlendireceği kolluk amirinin yazılı, acele hallerde sonradan yazıyla teyit edilmek üzere sözlü emriyle yapılabilir. Kolluk amirinin kararı yirmidört saat içinde görevli hakimin onayına sunulur.",
-   "not": "mülki amirin görevlendirdiği kolluk amiri; araç aramasında belge verilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-064",
-   "madde": "46",
-   "tip": "sira_usul",
-   "tetikleyici": "jandarma olduğunu belirleyen belgeyi",
-   "cevap": "belgeyi gösterdikten sonra kimliğini sorabilir",
-   "kanit": "(8) Jandarma, görevini yerine getirirken kendisinin jandarma olduğunu belirleyen belgeyi gösterdikten sonra kişilere kimliğini sorabilir.",
-   "not": "kimliği belirlenemeyen tutulur, savcıya haber",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-065",
-   "madde": "46",
-   "tip": "sira_usul",
-   "tetikleyici": "fotoğraf ve parmak izi",
-   "cevap": "nüfusa kayıtsız kimliği belirlenemeyen kişi kayda alınır",
-   "kanit": "(10) Nüfusa kayıtlı olmadığı için kimliği tespit edilemeyen kişilerin nüfusa kayıtlarının temini için gerekli işlemler yapıldıktan sonra, ilgili mevzuatına göre fotoğraf ve parmak izi tespit edilerek kayda alınır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-066",
-   "madde": "47",
-   "tip": "makam",
-   "tetikleyici": "mülki amirin vereceği yazılı emirle",
-   "cevap": "önleme araması; gecikmesinde sakınca varsa (asıl: sulh ceza hâkimi)",
-   "kanit": "MADDE 47- (1) Jandarma, tehlikenin veya suç işlenmesinin önlenmesi amacıyla usulüne göre verilmiş sulh ceza hakiminin kararı veya bu sebeplere bağlı olarak gecikmesinde sakınca bulunan hallerde mülki amirin vereceği yazılı emirle kişilerin üstlerini, araçlarını, özel kağıtlarını ve eşyasını arar; alınması gereken tedbirleri alır, suç delillerini koruma altına alarak 5271 sayılı Kanun hükümlerine göre gerekli işlemleri yapar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-067",
-   "madde": "47",
-   "tip": "yasak",
-   "tetikleyici": "kamuya açık olmayan işyerlerinde",
-   "cevap": "önleme araması yapılamaz; konut, yerleşim yeri de",
-   "kanit": "(5) Konutta, yerleşim yerinde ve kamuya açık olmayan işyerlerinde ve eklentilerinde önleme araması yapılamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-068",
-   "madde": "47",
-   "tip": "kosul",
-   "tetikleyici": "sakınca bulunan hal var sayılır",
-   "cevap": "spor karşılaşması, miting, konser, festival, ani topluluk",
-   "kanit": "(6) Spor karşılaşması, miting, konser, festival, toplantı ve gösteri yürüyüşünün düzenlendiği veya aniden toplulukların oluştuğu hallerde gecikmesinde sakınca bulunan hal var sayılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-069",
-   "madde": "47",
-   "tip": "gorev_yetki",
-   "tetikleyici": "emir veya karar olmasına bakılmaksızın",
-   "cevap": "jandarmanın koruduğu bina/tesise girenlerin üstü-aracı aranır; kimlik ibrazı zorunlu",
-   "kanit": "(7) Jandarma, tehlikenin önlenmesi veya bertaraf edilmesi amacıyla güvenliğini sağladığı bina ve tesislere gelenlerin; herhangi bir emir veya karar olmasına bakılmaksızın üstünü, aracını ve eşyasını teknik cihazlarla, gerektiğinde el ile kontrol etmeye ve aramaya yetkilidir. Bu yerlere girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-070",
-   "madde": "47",
-   "tip": "kosul",
-   "tetikleyici": "İdarecilerinin talebiyle",
-   "cevap": "yükseköğretim kurumlarının içinde önleme araması",
-   "kanit": "ç) İdarecilerinin talebiyle ve mevzuatta yer alan usul ve şartlara uygun olarak yükseköğretim kurumlarının içinde, bunların yakın çevreleri ile giriş ve çıkışlarında.",
-   "not": "toplantı yeri, genel kurul çevresi, umuma açık yer, toplu taşıma da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-071",
-   "madde": "48",
-   "tip": "gorev_yetki",
-   "tetikleyici": "boğulma gibi büyük tehlikelerin",
-   "cevap": "konut ve işyerine girilebilir (acele hal)",
-   "kanit": "MADDE 48- (1) Jandarma;\na) İmdat istenmesi veya yangın, su baskını ve boğulma gibi büyük tehlikelerin haber verilmesi veya görülmesi hallerinde bu tehlikelerden kişileri kurtarmak amacıyla,\nb) Bir suçun işlenmesine veya işlenmekte olan bir suçun devamına engel olmak için, konutlara, işyerlerine ve eklentilerine girebilir.",
-   "not": "suçun işlenmesini/devamını engellemek için de",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-072",
-   "madde": "50",
-   "tip": "gorev_yetki",
-   "tetikleyici": "yeri ve zamanına bakılmaksızın",
-   "cevap": "jandarma suçla karşılaşınca el koyar; delili yetkili kolluğa teslim",
-   "kanit": "MADDE 50- (1) Jandarma, sorumluluk alanı içinde hizmet branşı, yeri ve zamanına bakılmaksızın, bir suçla karşılaştığında olaya elkoymak, suçu önlemek, şüpheli ve suç delillerini tespit, muhafaza ve yetkili kolluğa teslim etmekle görevli ve yetkilidir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-073",
-   "madde": "52",
-   "tip": "makam",
-   "tetikleyici": "üst yöneticiye verilen",
-   "cevap": "Jandarma Genel Komutanı (5018 Kamu Malî Yönetimi)",
-   "kanit": "f) 10/12/2003 tarihli ve 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu ile diğer mevzuat hükümleri ile üst yöneticiye verilen görev, yetki ve sorumlulukları yerine getirmek.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-074",
-   "madde": "53",
-   "tip": "makam",
-   "tetikleyici": "bulunmadığı zamanlarda vekalet etmek",
-   "cevap": "jandarma genel komutan yardımcıları",
-   "kanit": "b) Jandarma Genel Komutanının bulunmadığı zamanlarda vekalet etmek ve yetkilerini kullanmak.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-075",
-   "madde": "54",
-   "tip": "makam",
-   "tetikleyici": "iller arasında kuvvet kaydırması",
-   "cevap": "bölge komutanı; konuşlu olduğu ilin valisinin onayıyla",
-   "kanit": "MADDE 54- (1) Jandarma bölge komutanları, emniyet ve asayiş hizmetlerinin daha etkili yürütülmesi amacıyla sorumluluk alanında il jandarma komutanlıkları arasında koordinasyon ve işbirliğini sağlamak, ihtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak, kontrol ve denetimini sağlamak, personelin özlük işlemlerini yürütmek; bölge komutanlığının konuşlu olduğu ilin valisinin onayıyla; terörle mücadele kapsamında operasyonları planlamak, sevk ve idare etmek, iller arasında kuvvet kaydırması yapmakla görevlidir.",
-   "not": "terör operasyonlarını da o valinin onayıyla planlar",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-076",
-   "madde": "54",
-   "tip": "makam",
-   "tetikleyici": "faaliyette bulunulan ilin valisine",
-   "cevap": "bölge komutanı operasyonel faaliyette ona karşı da sorumlu",
-   "kanit": "Bölge komutanı bu görevlerinin ifasından ve yetkilerin kullanılmasından, operasyonel faaliyetlerde faaliyette bulunulan ilin valisine karşı sorumluluğu saklı kalmak kaydıyla, bölge komutanlığının konuşlu olduğu ilin valisine karşı sorumludur.",
-   "not": "il ve ilçe jandarma komutanlıklarına emir verebilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-077",
-   "madde": "56",
-   "tip": "makam",
-   "tetikleyici": "kaymakam tarafından verilen görevlerin",
-   "cevap": "ilçe jandarma komutanı takip ve kontrol eder",
-   "kanit": "d) Kanunlarla ve kaymakam tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.",
-   "not": "il jandarma komutanı: vali",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-078",
-   "madde": "57",
-   "tip": "makam",
-   "tetikleyici": "ilçe jandarma komutanı tarafından verilen",
-   "cevap": "karakol komutanı takip eder; vali → il J.K.",
-   "kanit": "d) Kanunlarla ve ilçe jandarma komutanı tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-079",
-   "madde": "58",
-   "tip": "makam",
-   "tetikleyici": "en üst amiridir ve teşkilatı",
-   "cevap": "Bakan; JGK Bakana karşı sorumlu",
-   "kanit": "Bakan, jandarma teşkilatının en üst amiridir ve teşkilatı idare eder.",
-   "not": "bölge komutanı valiye, il-ilçe komutanı mülki amire bağlı",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-080",
-   "madde": "58",
-   "tip": "makam",
-   "tetikleyici": "doğrudan emir verme yetkisine",
-   "cevap": "mülki amirler ve adli makamlar; diğer makamlar mülki amire başvurur",
-   "kanit": "(3) Mülki amirler ile adli makamlar mevzuat hükümlerine uygun olarak jandarma komutanlarına ve diğer jandarma personeline doğrudan emir verme yetkisine sahiptir. Diğer makamlar jandarmaya görev olarak verilmesini istedikleri konunun kanuni dayanaklarını belirterek o yerin mülki amirine başvurur. Mülki amir, talebi mevzuata ve ihtiyaca uygunluk yönünden değerlendirir ve uygun bulduğunda, görevin ifasını emreder.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-081",
-   "madde": "58",
-   "tip": "makam",
-   "tetikleyici": "araç ve gereçlerin seçimi",
-   "cevap": "jandarma komutanına ait; mülki amir yetersizlikte başka kurumdan sağlar",
-   "kanit": "(7) Jandarma birimlerinin üstlendikleri görevin yapılmasında kullanacakları araç ve gereçlerin seçimi kendi komutanlarına aittir. Mülki amirler özellik taşıyan ve yetersiz kalınan durumlarda gereken araç ve gereçleri diğer kamu kurum ve kuruluşlarından sağlayarak jandarmanın hizmetine verebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-082",
-   "madde": "59",
-   "tip": "sira_usul",
-   "tetikleyici": "vakit geçirmeksizin mülki amire",
-   "cevap": "suç, afet, salgın, propaganda bilgileri; suçla ilgili olanlar savcılığa da",
-   "kanit": "MADDE 59- (1) Jandarma; bölgelerindeki her türlü suçları ve sonuçlarını, ülkenin emniyet ve asayişini bozan ya da bozacak olan olayları, yangın, su baskını gibi afetleri, haber aldıkları salgın ve bulaşıcı hastalıkları, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü, nitelikleri Anayasada gösterilen Cumhuriyeti yıkmaya, sarsmaya ve bölmeye yönelik propagandalar konusunda edindikleri bilgileri, il veya ilçenin asayiş veya güvenliğini etkileyecek mahiyetteki kovuşturma ve soruşturmaları, vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak bildirir. Suçla ilgili görülen olaylar aynı zamanda Cumhuriyet savcılığına da bildirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-083",
-   "madde": "60",
-   "tip": "yasak",
-   "tetikleyici": "resen muhabere edemez",
-   "cevap": "JGK merkez ve taşra teşkilatı birbiriyle (teknik/lojistik/özlük hariç)",
-   "kanit": "MADDE 60- (1) Jandarma Genel Komutanlığı merkez ve taşra teşkilatları birbirleriyle; mahalli vakalar hakkında malumat istemek ve teknik, muhasebe, lojistik ve özlük konularına dair işlemler haricinde resen muhabere edemez ve yazışma yapamaz.",
-   "not": "yazışma Bakanlık ve mülki amir aracılığıyla",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-084",
-   "madde": "60",
-   "tip": "sira_usul",
-   "tetikleyici": "her halükarda valilikler aracılığıyla",
-   "cevap": "hak-yükümlülük doğuran, irade beyanı niteliğindeki yazışmalar",
-   "kanit": "Hak ve yükümlülük doğuran ve Bakanlık ya da Jandarma Genel Komutanlığı adına irade beyanı niteliği taşıyan yazışmalar, her halükarda valilikler aracılığıyla yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-085",
-   "madde": "60",
-   "tip": "makam",
-   "tetikleyici": "vali imzasıyla gönderilir",
-   "cevap": "Bakanlığa asayiş raporu; il jandarma komutanlığı hazırlar",
-   "kanit": "(4) Bakanlığa gönderilecek asayiş raporlarından jandarmanın sorumluluk alanında meydana gelen olaylara ait bulunanlar, il jandarma komutanlığınca hazırlanır ve vali imzasıyla gönderilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-086",
-   "madde": "60",
-   "tip": "sayi_oran",
-   "tetikleyici": "beş örnek olarak birleştirilip",
-   "cevap": "emniyet-asayiş istatistikleri emniyet müdürlüğünce; iki örneği Bakanlığa",
-   "kanit": "(5) Emniyet ve asayiş görevlerine ait aylık ve yıllık istatistikler jandarma, sahil güvenlik ve emniyet sorumluluk alanları için ait olduğu makamlarca hazırlandıktan ve emniyet müdürlüğünce beş örnek olarak birleştirilip il jandarma komutanı ve il emniyet müdürü ile teşkilatı olan yerlerde sahil güvenlik bölge veya grup komutanı tarafından parafe edildikten sonra, iki örneği vali imzasıyla Bakanlığa sunulur.",
-   "not": "il J.K., emniyet müdürü, SG komutanı parafe eder",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-087",
-   "madde": "63",
-   "tip": "sure",
-   "tetikleyici": "yediemin otoparkına",
-   "cevap": "icra talebiyle yakalanan araç; üç işgünü içinde icra müdürlüğüne bildirim",
-   "kanit": "MADDE 63- (1) İcra müdürlüklerinin talebi üzerine kolluk kuvvetleri tarafından yakalanan araçlar, en yakın yediemin otoparkına teslim edilerek en geç üç işgünü içinde en yakın icra müdürlüğüne teslim alınması için bildirimde bulunulur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-088",
-   "madde": "65",
-   "tip": "yasak",
-   "tetikleyici": "olay yerinde soruşturma yapamaz",
-   "cevap": "jandarma alanında suçla karşılaşan polis/sahil güvenlik; delilleri korur, haber verir",
-   "kanit": "MADDE 65- (1) Jandarma sorumluluk alanında herhangi bir suçla karşılaşan sahil güvenlik veya polis, olaya müdahale etmek ve jandarmaya da haber vermek, jandarmanın istemi üzerine gerekli yardımı yapmakla yükümlüdür. Bu gibi durumlarda, sahil güvenlik ve polis, jandarma gelinceye kadar olay yerinde soruşturma yapamaz, durumu olduğu gibi koruyarak delillerin kaybolmaması için gereken önlemleri alır. Sahil güvenlik veya polis, olay yerinde elkoydukları nesneleri gelen jandarmaya bir alındı belgesiyle teslim eder, jandarmanın makul bir sürede gelememesi durumunda Cumhuriyet savcısına haber verir ve talimatına göre hareket eder.",
-   "not": "jandarma gelemezse savcıya haber",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-089",
-   "madde": "65",
-   "tip": "makam",
-   "tetikleyici": "hangi kolluk kuvvetine ait olduğu",
-   "cevap": "ortak operasyonda komuta-sevk-idare; mülki amir belirler",
-   "kanit": "(6) Jandarma, sahil güvenlik ve polisin birlikte çalışmalarına gerek duyulan durumlarda, operasyona katılan birimlerin komuta, sevk ve idaresinin hangi kolluk kuvvetine ait olduğu mülki amir tarafından belirlenir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-090",
-   "madde": "66",
-   "tip": "makam",
-   "tetikleyici": "uluslararası kuruluşlara üye olabilir",
-   "cevap": "JGK; Bakan onayı ile",
-   "kanit": "(3) Jandarma Genel Komutanlığı, Bakan onayı ile uluslararası kuruluşlara üye olabilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-091",
-   "madde": "66",
-   "tip": "sure",
-   "tetikleyici": "dış ilişkiler uygulama planı",
-   "cevap": "yıllık; Dışişleri görüşü, İçişleri Bakanlığı onayı",
-   "kanit": "MADDE 66- (1) Jandarma Genel Komutanlığı yurtdışında icra edilen faaliyetlere dış ilişkiler uygulama planı kapsamında iştirak eder. Bu plan yıllık olarak hazırlanır, Dışişleri Bakanlığının görüşü alınarak Bakanlıkça onaylanır.",
-   "not": "plan dışı faaliyete ayrıca Bakanlık onayı",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-092",
-   "madde": "67",
-   "tip": "makam",
-   "tetikleyici": "Mülkiye Teftiş Kurulu Başkanlığı",
-   "cevap": "Bakan adına jandarma birimlerini denetler; illerde vali, ilçelerde kaymakam",
-   "kanit": "MADDE 67- (1) Bakan her kademedeki jandarma birimini denetler veya Bakan adına bu denetim Mülkiye Teftiş Kurulu Başkanlığı tarafından yerine getirilir. Bu denetim illerde vali ve ilçelerde kaymakamlar tarafından yapılır.",
-   "not": "JGK adına Teftiş Kurulu ve İç Denetim",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-093",
-   "madde": "68",
-   "tip": "makam",
-   "tetikleyici": "kadro tavanını aşmamak üzere",
-   "cevap": "yıl içi kadro değişikliği Bakan onayıyla; kadrolar bütçe kanunuyla",
-   "kanit": "Yıl içinde ihtiyaç duyulan kadro değişikliklerinde kadro tavanını aşmamak üzere Bakandan onay alınır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-094",
-   "madde": "70",
-   "tip": "makam",
-   "tetikleyici": "değişik kılık ve kıyafetle",
-   "cevap": "mülki amir ya da il jandarma komutanı izniyle; gizli takip",
-   "kanit": "Ancak suç ve suçluların gizli olarak takibi, yakalanması ve istihbarat, kaçakçılık ve terörle mücadele hizmetleri için gerek görüldüğünde mülki amirin veya il jandarma komutanının izni ile görevin icap ettirdiği değişik kılık ve kıyafetle de hizmet yürütülebilir.",
-   "not": "kaçakçılık ve terörle mücadelede de; esas resmi kıyafet",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-095",
-   "madde": "71",
-   "tip": "sure",
-   "tetikleyici": "hiç bir zaman süreklilik taşımaz",
-   "cevap": "geçici görevlendirme; sonuç alınınca döner; mülki amir onayı",
-   "kanit": "Bu görev hiç bir zaman süreklilik taşımaz, istenen sonuç alındığında yardıma gelen kuvvet kendi görevine döner.\n(2) Bu madde kapsamındaki görevlendirmeler mülki amirin onayı ile yapılır.",
-   "not": "jandarma, sahil güvenlik, emniyet birbirinin alanında",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-096",
-   "madde": "72",
-   "tip": "gorev_yetki",
-   "tetikleyici": "sorumluluk alanı ile sınırlı değildir",
-   "cevap": "merkezden/iller arası görevlendirilen ekiplerin kolluk yetkisi; mahallin mülki amirine bilgi",
-   "kanit": "(2) Görevlendirilen ekiplerin kolluk yetkilerini kullanması, jandarma sorumluluk alanı ile sınırlı değildir. Bu ekipler görev yaptıkları mahallin mülki amirine bilgi vermek zorunda olup görevin ifası sırasında mahallin mülki amirine karşı da sorumludur.",
-   "not": "Bakanlıkça ya da vali talebiyle; iller arası valiliklerce",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-097",
-   "madde": "74",
-   "tip": "sure",
-   "tetikleyici": "en yakın askerlik şubesine getirilirler",
-   "cevap": "yakalanan yoklama kaçağı/bakaya; en geç yirmidört saat",
-   "kanit": "Yakalanarak muhafaza altına alınan yükümlüler, vakit geçirmeksizin ve en geç yirmidört saat içerisinde en yakın askerlik şubesine getirilirler. Askerlik şubesince teslim alınamayan yükümlüler, jandarma tarafından hazırlanan tutanağa istinaden derhal serbest bırakılırlar.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-098",
-   "madde": "74",
-   "tip": "kosul",
-   "tetikleyici": "derhal serbest bırakılırlar",
-   "cevap": "askerlik şubesince teslim alınamayan yükümlü; jandarma tutanağıyla",
-   "kanit": "Yakalanarak muhafaza altına alınan yükümlüler, vakit geçirmeksizin ve en geç yirmidört saat içerisinde en yakın askerlik şubesine getirilirler. Askerlik şubesince teslim alınamayan yükümlüler, jandarma tarafından hazırlanan tutanağa istinaden derhal serbest bırakılırlar.",
-   "not": "firar/izin tecavüzünde yakalama kararı varsa aranır",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-099",
-   "madde": "75",
-   "tip": "makam",
-   "tetikleyici": "koruma ve müdahale harekat planı",
-   "cevap": "jandarma hazırlar; planlar mülki amir onayıyla yürürlüğe girer",
-   "kanit": "MADDE 75- (1) Jandarma birimleri, emniyet ve asayiş ile kamu düzeninin korunmasını sağlamak ve olaylara etkili biçimde müdahale edebilmek amacıyla suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekat planı hazırlar.\n(2) Anayasada öngörülen olağanüstü hallerle ilgili olarak hazırlanacak planlar, mevzuata uygun ve birinci fıkrada belirtilen planlarla uyumlu olarak hazırlanır.\n(3) Planlar, mülki amirin onayı ile yürürlüğe konulur.",
-   "not": "suç önleme/müdahale planı, doğal afet-yardım planı da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-100",
-   "madde": "76",
-   "tip": "sure",
-   "tetikleyici": "stratejik hedef planı",
-   "cevap": "beş yıllık; Bakan onayı; iki yılda bir gözden geçirilir",
-   "kanit": "MADDE 76- (1) Jandarma teşkilatının personel, araç, gereç, mühimmat, taşınır ve taşınmazları ile hizmetlerinin ve görevlerinin geliştirilmesi ve ihtiyaçlarının önceden tespiti ve hedeflerinin belirlenmesi için hazırlanan ve beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur. Bu plan en az iki yılda bir gözden geçirilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-101",
-   "madde": "77",
-   "tip": "yasak",
-   "tetikleyici": "hiçbir tebligat işlemi jandarmaya",
-   "cevap": "mevzuatta belirtilmeyen; görev olarak verilemez",
-   "kanit": "Mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez ve jandarma tarafından yerine getirilemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-102",
-   "madde": "78",
-   "tip": "makam",
-   "tetikleyici": "Jandarma Müzesinde",
-   "cevap": "mevcut sancaklar muhafaza edilir",
-   "kanit": "MADDE 78- (1) Jandarma Genel Komutanlığı merkez ve taşra teşkilatlarındaki mevcut sancaklar Jandarma Müzesinde muhafaza edilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-103",
-   "madde": "80",
-   "tip": "sure",
-   "tetikleyici": "otuz günü geçmemek üzere",
-   "cevap": "PVSK m.8 halinde işyeri faaliyetten men; mülki idare amiri",
-   "kanit": "“2559 sayılı Kanunun 8 inci maddesinde sayılan hususların tespiti halinde belirtilen işyerleri otuz günü geçmemek üzere geçici süreyle; bu işyerlerinin mevzuat hükümlerine aykırı olarak ruhsatsız işletildiğinin tespiti halinde ise süresiz olarak ya da ruhsat alıncaya kadar mahallin en büyük mülki idare amiri tarafından faaliyetten men edilir.",
-   "not": "İşyeri Açma ve Çalışma Ruhsatları Yönetmeliği m.39",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-104",
-   "madde": "80",
-   "tip": "sure",
-   "tetikleyici": "mühürlemek suretiyle",
-   "cevap": "yetkili idare üç işgünü içinde uygular; uygulamazsa kolluk re'sen",
-   "kanit": "Yetkili idare en geç üç işgünü içinde faaliyetten men’e ilişkin kararı işyerini mühürlemek suretiyle uygulayarak buna ilişkin tutanağın bir suretini ilgili mülki makama gönderir. Yetkili idare, işyerinin faaliyetten men’ine ilişkin kararı süresinde uygulamazsa, sorumluluğu yetkili idareye ait olmak üzere kapatma kararı kolluk güçleri tarafından re’sen uygulanır ve yetkili idareye bilgi verilir.”",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-105",
+   "i": "K-17-009",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "yerleşik ve yaygın inancı",
-   "cevap": "asayiş (tanım); dirlik ve düzenin varlığı konusunda kamuda oluşan",
-   "kanit": "dirlik ve düzenin varlığı konusunda kamuda oluşan yerleşik ve yaygın inancı,",
-   "not": "",
+   "tetikleyici": "yerleşik ve yaygın",
+   "cevap": "asayiş",
+   "kanit": "a) Asayiş: Hukuka uygun ve gerekli önlemlerin alınması sonucu, Devlete, topluma, kişilere, mal ve eşyalara yönelik tehlike, kaza ve sabotajların söz konusu olmadığı bir ortamı, düzensizlik ve karışıklıkların önlendiği, hayatın normal akışının sağlandığı hali, dirlik ve düzenin varlığı konusunda kamuda oluşan yerleşik ve yaygın inancı,",
+   "not": "dirlik ve düzenin varlığı konusunda",
    "karistirilan": []
   },
   {
-   "i": "K-17-106",
+   "i": "K-17-010",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "talep ya da yasağın",
-   "cevap": "emir (tanım); söz, yazı ve sair suretle ifadesi",
-   "kanit": "ç) Emir: Göreve ait bir talep ya da yasağın söz, yazı ve sair suretle ifadesini,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-107",
-   "madde": "19",
-   "tip": "tanim",
-   "tetikleyici": "gazino, pavyon, meyhane, bar",
-   "cevap": "umuma açık istirahat-eğlence yeri: konaklama, içkili yer, sinema-kahvehane-kıraathane, oyun yeri",
-   "kanit": "otel, motel, pansiyon, kamping ve benzeri konaklama yerleri; gazino, pavyon, meyhane, bar, birahane, içkili lokanta, taverna ve benzeri içkili yerler; sinema, kahvehane ve kıraathane;",
-   "not": "düğün salonu listede yok",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-108",
-   "madde": "42",
-   "tip": "kosul",
-   "tetikleyici": "sözlü emirler derhal yerine getirilir",
-   "cevap": "sayılan acele hallerde; yazılı istenemez; sorumluluk emri verene aittir",
-   "kanit": "ı) Umuma açık yerlerde yapılan her türlü toplantı veya yürüyüşlerde ya da törenlerde bozulan düzeni sağlamak için,\ni) Herhangi bir sebeple tıkanmış olan yolların trafiğe açılması için,\nj) Kanunlarda istisnai olarak kolluğun sözlü emirle yapmaya mecbur tutulduğu haller için, yetkili amir tarafından verilecek sözlü emirler derhal yerine getirilir. Bu emirlerin yazılı olarak verilmesi istenilemez. Bu hallerde emrin yerine getirilmesinden doğabilecek sorumluluk emri verene aittir.",
-   "not": "haller: can-ırz emniyeti, devlet güvenliği suçları, toplantı-yürüyüş düzeni, tıkanmış yol, kaçanın yakalanması",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-109",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "komuta ve kontrol ilişkilerini düzenlemektir",
-   "cevap": "Yönetmeliğin amacı: teşkilat, görev-yetki-sorumluluk, diğer makamlarla ilişkiler, işbirliği",
-   "kanit": "MADDE 1- (1) Bu Yönetmeliğin amacı; jandarmanın teşkilat, görev, yetki ve sorumluluklarını, diğer makamlarla ilişkilerini, birlikte çalışma ve işbirliği esasları dahil komuta ve kontrol ilişkilerini düzenlemektir.",
-   "not": "özlük hakları amaç kapsamında değil",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-110",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "24 üncü maddesine dayanılarak",
-   "cevap": "Jandarma Yönetmeliğinin dayanağı: 2803 sayılı Kanun m.24",
-   "kanit": "MADDE 2- (1) Bu Yönetmelik, 10/3/1983 tarihli ve 2803 sayılı Jandarma Teşkilat, Görev ve\nYetkileri Kanununun 24 üncü maddesine dayanılarak hazırlanmıştır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-111",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "önlemlerin alınmış bulunduğu hali",
-   "cevap": "emniyet (tanım): tehlike, kaza, sabotajları önleyen önlemlerin tümü",
-   "kanit": "d) Emniyet: Devlete, topluma, kişilere, mal ve eşyalara yönelik tehlike, kaza ve sabotajları önlemek için alınan hukuka uygun önlemlerin tümünü ve bu önlemlerin alınmış bulunduğu hali,",
-   "not": "asayiş = bu önlemler sonucu oluşan hal hakkındaki yerleşik inanç",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-112",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "huzur ve sükun, genel sağlık",
-   "cevap": "kamu düzeni unsurları: emniyet-asayiş, huzur-sükun, genel sağlık, genel ahlak",
-   "kanit": "i) Kamu düzeni: Emniyet ve asayiş, huzur ve sükun, genel sağlık ve genel ahlak unsurlarından oluşan, hak ve hürriyetlerin tam olarak kullanımına elverişli ortamı,",
-   "not": "ekonomik istikrar listede yok",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-113",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "silah kullanma yetkisini haiz",
-   "cevap": "genel kolluk: Bakanlığa bağlı, silah kullanma yetkisini haiz üç teşkilat",
+   "tetikleyici": "Genel kolluk:",
+   "cevap": "Bakanlığa bağlı jandarma, SG, polis; özel kanun DEĞİL",
    "kanit": "e) Genel kolluk: Kamu düzeninin korunmasını sağlayan, mevzuatla verilen görevleri yerine getiren ve silah kullanma yetkisini haiz Bakanlığa bağlı jandarma, sahil güvenlik ve polisi,",
-   "not": "\"özel kanunla kurulmuş olmak\" genel kolluk unsuru değil",
+   "not": "silah kullanma yetkili; özel kanunla kurulmak özel kolluğun unsuru; orman muhafaza gibi diğerleri genel kolluk DEĞİL",
    "karistirilan": []
   },
   {
-   "i": "K-17-114",
+   "i": "K-17-011",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "özel kanunlar çerçevesinde kurulup",
-   "cevap": "özel kolluk: jandarma, sahil güvenlik, polis dışındaki; kendi alanında güvenlik",
+   "tetikleyici": "Özel kolluk:",
+   "cevap": "özel kanunla kurulan; jandarma, SG, polis dışı",
    "kanit": "m) Özel kolluk: Devlet ve yetkili diğer kamu tüzel kişilerince, özel kanunlar çerçevesinde kurulup teşkilatlandırılan, kendi görev alanında güvenliği sağlamak amacı taşıyan ve jandarma, sahil güvenlik ve polis dışındaki kolluk birimlerini, ifade eder.",
-   "not": "",
+   "not": "kendi görev alanında güvenlik",
    "karistirilan": []
   },
   {
-   "i": "K-17-115",
+   "i": "K-17-012",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "zilyedinin rızası bulunmadıkça",
-   "cevap": "kapalı yerler: konut, işyeri, eklentileri; çit-parmaklık-duvarla çevrili yerler",
+   "tetikleyici": "Kapalı yerler:",
+   "cevap": "konut, işyeri, eklenti; çit-duvarla çevrili; açık meydan DEĞİL",
    "kanit": "j) Kapalı yerler: Konut, işyerleri ve eklentileri ile bunların dışında olsa bile zilyedinin rızası bulunmadıkça girilmemesi gerektiğini belirtir şekilde etrafı çit, parmaklık, duvar ve benzeri engellerle çevrili yerleri (depo, ardiye, geçici yatma yerleri, deniz araçlarında şahsi maksatla kullanılan kamara ve oda benzeri alanları),",
-   "not": "umuma açık meydan kapalı yer değil",
+   "not": "depo, ardiye, gemide kamara da",
    "karistirilan": []
   },
   {
-   "i": "K-17-116",
+   "i": "K-17-013",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "İllerde vali, ilçelerde kaymakamı",
-   "cevap": "mülki amir (tanım)",
+   "tetikleyici": "Mülki amir:",
+   "cevap": "illerde vali, ilçelerde kaymakam",
    "kanit": "l) Mülki amir: İllerde vali, ilçelerde kaymakamı,",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-117",
+   "i": "K-17-014",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "hizmet barınma, eğitim, tatbikat",
-   "cevap": "konuş (tanım): birlik ve kurumların bulunduğu yer",
-   "kanit": "k) Konuş: Birlik ve kurumların, hizmet barınma, eğitim, tatbikat ve harekata hazırlanma bakımından bulunduğu yeri,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-118",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "teşkil edilen jandarma birimini",
-   "cevap": "jandarma hizmet merkezi; ihtiyaç üzerine mülki amirin onayı",
+   "tetikleyici": "Jandarma hizmet merkezi",
+   "cevap": "mülki amir onayıyla geçici birim",
    "kanit": "ğ) Jandarma hizmet merkezi: İhtiyaç üzerine mülki amirin onayı ile emniyet ve asayiş ile kamu düzeninin korunması amacıyla geçici olarak teşkil edilen jandarma birimini,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-119",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "Jandarma Kriminal Daire Başkanlığı",
-   "cevap": "jandarma kriminal birimleri: JKDB, laboratuvar amirlikleri, OYİT, patlayıcı imha timleri",
-   "kanit": "h) Jandarma kriminal birimleri: Jandarma Kriminal Daire Başkanlığı (JKDB), Jandarma kriminal laboratuvar amirlikleri, olay yeri inceleme timleri (OYİT), patlayıcı madde imha timleri ile kriminal alanda görev yapacak diğer özel maksatlı (felaket kurbanlarını kimliklendirme ve benzeri) timleri,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-120",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "hususlar ile amir tarafından verilen",
-   "cevap": "görev (tanım): mevzuatla öngörülen + amir tarafından verilen emirler",
-   "kanit": "f) Görev: Mevzuat gereğince yapılması ya da yapılmaması öngörülen hususlar ile amir tarafından verilen emirleri,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-121",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "Bakana karşı sorumludur",
-   "cevap": "Jandarma Genel Komutanı; JGK Bakanlığa bağlı",
-   "kanit": "MADDE 4- (1) Jandarma Genel Komutanlığı Bakanlığa bağlıdır. Jandarma Genel Komutanı, Bakana karşı sorumludur.",
    "not": "",
    "karistirilan": [
     {
-     "madde": "58",
-     "fark": "çalışma esasları: JGK sevk ve idareden Bakana sorumlu"
-    },
-    {
-     "madde": "52",
-     "fark": "JGK görevleri maddesinde de Bakana karşı sorumlu"
+     "madde": "6",
+     "fark": "geçici asayiş karakolu ve hizmet merkezi: il J.K. önerisi, vali onayı"
     }
    ]
   },
   {
-   "i": "K-17-122",
+   "i": "K-17-015",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "ihtiyatını oluşturmak",
+   "cevap": "jandarma komando birlikleri",
+   "kanit": "ı) Jandarma komando birlikleri: Jandarma Genel Komutanlığının ihtiyatını oluşturmak üzere gerektiğinde mahalli jandarma birliklerinin gücü dışına çıkan toplumsal olaylara müdahale etmek ve terörle mücadele faaliyetlerini yürütmek amacıyla Bakanlıkça gerek görülen yerlerde konuşlandırılan birlikleri,",
+   "not": "mahalli birliklerin gücünü aşan olay, terörle mücadele; Bakanlıkça konuşlandırılır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-016",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "takip ve tenkil",
+   "cevap": "jandarma asayiş komando birlikleri",
+   "kanit": "g) Jandarma asayiş komando birlikleri: Gerektiğinde bağlı olduğu il jandarma komutanlığının diğer birliklerini takviye etmek, her türlü toplumsal olaylara süratle müdahale etmek, terörle mücadele faaliyetlerini yürütmek, takip ve tenkil harekatını yürütmek amacıyla Bakanlıkça gerek görülecek yerlerde konuşlandırılan genel kolluk birliklerini,",
+   "not": "il jandarma komutanlığını takviye eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-017",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Jandarma kriminal birimleri",
+   "cevap": "JKDB, laboratuvar, OYİT, patlayıcı imha timi",
+   "kanit": "h) Jandarma kriminal birimleri: Jandarma Kriminal Daire Başkanlığı (JKDB), Jandarma kriminal laboratuvar amirlikleri, olay yeri inceleme timleri (OYİT), patlayıcı madde imha timleri ile kriminal alanda görev yapacak diğer özel maksatlı (felaket kurbanlarını kimliklendirme ve benzeri) timleri,",
+   "not": "felaket kurbanı kimliklendirme timi de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-018",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "harekata hazırlanma",
+   "cevap": "konuş",
+   "kanit": "k) Konuş: Birlik ve kurumların, hizmet barınma, eğitim, tatbikat ve harekata hazırlanma bakımından bulunduğu yeri,",
+   "not": "barınma, eğitim, tatbikat yeri",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-019",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "bağlıdır",
+   "cevap": "Bakanlığa; Genel Komutan Bakana sorumlu",
+   "kanit": "MADDE 4- (1) Jandarma Genel Komutanlığı Bakanlığa bağlıdır. Jandarma Genel Komutanı, Bakana karşı sorumludur.",
+   "not": "İçişleri Bakanlığı",
+   "karistirilan": [
+    {
+     "madde": "58",
+     "fark": "çalışma esaslarında da JGK Bakanlığa bağlı, Bakan en üst amir"
+    }
+   ]
+  },
+  {
+   "i": "K-17-020",
+   "madde": "5",
+   "tip": "tanim",
+   "tetikleyici": "taşra teşkilatı",
+   "cevap": "bölge, il, ilçe; komando alay-tabur-bölük; JÖH tabur; asayiş komando bölük",
+   "kanit": "b) Taşra teşkilatı şunlardır:\n1) Jandarma bölge komutanlıkları.\n2) İl jandarma komutanlıkları.\n3) İlçe jandarma komutanlıkları.\n4) Komando alay/tabur/bölük komutanlıkları.\n5) Jandarma komando özel harekat tabur komutanlıkları.\n6) Asayiş komando bölük komutanlıkları.",
+   "not": "JÖH = jandarma komando özel harekat; Asayiş Başkanlığı, Lojistik K., İstihbarat Grup K. MERKEZ teşkilatı; Astsubay sınavında soruldu",
+   "karistirilan": [
+    {
+     "madde": "60",
+     "fark": "merkez-taşra birbiriyle Bakanlık ve mülki amir aracılığıyla yazışır"
+    },
+    {
+     "madde": "72",
+     "fark": "merkez veya taşra teşkilatından ekip görevlendirilir"
+    },
+    {
+     "madde": "78",
+     "fark": "merkez-taşradaki sancaklar Jandarma Müzesinde"
+    }
+   ]
+  },
+  {
+   "i": "K-17-021",
+   "madde": "5",
+   "tip": "tanim",
+   "tetikleyici": "merkeze bağlı",
+   "cevap": "asayiş kolordu, eğitim kurumları, komando tugay, JÖAK, havacılık grup-filo",
+   "kanit": "c) Doğrudan merkeze bağlı birimler şunlardır:\n1) Jandarma asayiş kolordu komutanlıkları.\n2) Eğitim ve öğretim birim ve kurumları.\n3) Komando tugay komutanlıkları.\n4) Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı (JÖAK).\n5) Havacılık grup/filo komutanlıkları.",
+   "not": "JÖAK = Komando Özel Asayiş ve Kurtarma Tugay; 2026 Uzman sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-022",
+   "madde": "5",
+   "tip": "tanim",
+   "tetikleyici": "Merkez teşkilatı",
+   "cevap": "başkanlıklar, Lojistik K., İstihbarat Okul-Grup, Personel Temin, Denetleme, Destek Kıtaları",
+   "kanit": "a) Merkez teşkilatı şunlardır:\n1) Hukuk Hizmetleri Başkanlığı.\n2) Mali Hizmetler Birimi Başkanlığı.\n3) İç Denetim Birimi Başkanlığı.\n4) Teftiş Kurulu Başkanlığı.\n5) Asayiş Başkanlığı.\n6) Personel Başkanlığı.\n7) İstihbarat Başkanlığı.\n8) Muhabere Elektronik Bilgi Sistemleri Başkanlığı.\n9) Kriminal Daire Başkanlığı.\n10) Havacılık Daire Başkanlığı.\n11) Stratejik Gelişim ve Dış İlişkiler Dairesi Başkanlığı.\n12) Eğitim ve Öğretim Daire Başkanlığı.\n13) İstihbarat Okul Komutanlığı.\n14) İstihbarat Grup Komutanlığı.\n15) Personel Temin Merkez Komutanlığı.\n16) Lojistik Komutanlığı.\n17) Denetleme Grubu.\n18) Destek Kıtaları Komutanlığı.\n19) Sosyal tesisler birimleri.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "60",
+     "fark": "merkez-taşra yazışması Bakanlık ve mülki amir aracılığıyla"
+    }
+   ]
+  },
+  {
+   "i": "K-17-023",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "konuşlarının düzenlenmesinde",
+   "cevap": "mülki taksimat esas",
+   "kanit": "MADDE 6- (1) Jandarma birimlerinin konuşlarının düzenlenmesinde, mülki taksimat esas alınır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-024",
    "madde": "6",
    "tip": "makam",
-   "tetikleyici": "Bakan onayı ile kurulabilir",
-   "cevap": "her düzeydeki jandarma birlikleri (konuş: mülki taksimat)",
+   "tetikleyici": "her düzeydeki jandarma birlikleri",
+   "cevap": "Bakan onayı ile kurulur",
    "kanit": "Her düzeydeki jandarma birlikleri Bakan onayı ile kurulabilir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-123",
+   "i": "K-17-025",
    "madde": "6",
    "tip": "makam",
-   "tetikleyici": "birden çok ili içine alan",
-   "cevap": "geçici jandarma bölge komutanlığı; konuşlu olduğu ilin valisine karşı sorumlu",
+   "tetikleyici": "birden çok ili",
+   "cevap": "geçici bölge komutanlığı; konuşlu il valisine sorumlu",
    "kanit": "(2) Sevk ve idare ihtiyaçları ile hizmette verim ve etkinliğin sağlanması amacıyla geçici olarak birden çok ili içine alan jandarma bölge komutanlığı kurulabilir. Bölge komutanı bölge teşkilatının konuşlu olduğu ilin valisine karşı sorumlu olarak görev yapar.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-124",
+   "i": "K-17-026",
+   "madde": "6",
+   "tip": "makam",
+   "tetikleyici": "Karakolların sorumluluk bölgeleri",
+   "cevap": "vali onayı; konuş yeri Bakan onayı",
+   "kanit": "(7) Karakolların sorumluluk bölgeleri il jandarma komutanının önerisi üzerine valinin onayı, karakolların konuş yerleri ise Bakan onayı ile belirlenir.",
+   "not": "il jandarma komutanı önerir; KARAKOL BÖLGESİ = VALİ, KARAKOL YERİ = BAKAN",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-027",
+   "madde": "6",
+   "tip": "makam",
+   "tetikleyici": "Geçici asayiş karakolları",
+   "cevap": "il J.K. önerisi, vali onayı",
+   "kanit": "Geçici asayiş karakolları ile jandarma hizmet merkezleri, il jandarma komutanının önerisi üzerine valinin onayıyla teşkil edilir.",
+   "not": "jandarma hizmet merkezleri de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-028",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "Karakol sorumluluk bölgesinin belirlenmesinde",
-   "cevap": "emniyet-asayiş, suç analizleri, coğrafya-ekonomi, yerleşim, nüfus, ulaşım, sosyal-kültürel",
+   "cevap": "asayiş, suç analizi, coğrafya, yerleşim, nüfus, ulaşım; personel sayısı DEĞİL",
    "kanit": "Karakol sorumluluk bölgesinin belirlenmesinde aşağıdaki hususlar gözönünde tutulur.\na) Emniyet ve asayiş durumu.\nb) Suç oranları, suç haritaları gibi benzeri suç analizlerinin sonuçları.\nc) İlçenin coğrafi durumu, ekonomik şartlar ve kamu hizmetlerinin gerekleri.\nç) Yerleşim alanlarının durumu.\nd) Nüfus yoğunluğu.\ne) Ulaşım durumu.\nf) Sosyal ve kültürel gelişimi ve benzeri özellikler.",
-   "not": "karakoldaki personel sayısı listede yok",
+   "not": "ekonomik şartlar, kamu hizmeti gerekleri, sosyal-kültürel gelişim de var",
    "karistirilan": []
   },
   {
-   "i": "K-17-125",
+   "i": "K-17-029",
    "madde": "6",
    "tip": "makam",
-   "tetikleyici": "konuş yerleri ise Bakan onayı",
-   "cevap": "karakol sorumluluk bölgesi: vali onayı; konuş yeri: Bakan onayı",
-   "kanit": "(7) Karakolların sorumluluk bölgeleri il jandarma komutanının önerisi üzerine valinin onayı, karakolların konuş yerleri ise Bakan onayı ile belirlenir. Geçici asayiş karakolları ile jandarma hizmet merkezleri, il jandarma komutanının önerisi üzerine valinin onayıyla teşkil edilir.",
-   "not": "il jandarma komutanı önerir; geçici asayiş karakolu ve hizmet merkezi vali onayı",
+   "tetikleyici": "kuvvet tasarrufu",
+   "cevap": "geçici karakol kuvveti il J.K.’nca",
+   "kanit": "Geçici karakolların kuvveti il jandarma komutanlığınca kuvvet tasarrufu yoluyla sağlanır.",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-126",
+   "i": "K-17-030",
+   "madde": "6",
+   "tip": "tanim",
+   "tetikleyici": "il merkez jandarma komutanlığı",
+   "cevap": "merkez ilçe; özel adı yoksa il adıyla",
+   "kanit": "Merkez ilçelerde kurulan ilçe jandarma komutanlıkları; il merkez jandarma komutanlığı olarak ve merkez ilçenin özel bir adı yoksa o ilin adıyla adlandırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-031",
    "madde": "7",
    "tip": "tanim",
-   "tetikleyici": "görev alanının dışı olup",
-   "cevap": "jandarmanın görev alanı: belediye sınırı dışı; polis-sahil güvenlik bulunmayan yerler",
-   "kanit": "MADDE 7- (1) Jandarmanın genel olarak görev ve sorumluluk alanı, polis ve sahil güvenlik teşkilatının görev alanının dışı olup, bu alanlar il ve ilçe belediye sınırları dışında kalan ya da polis ve sahil güvenlik teşkilatı bulunmayan yerlerdir. Ancak, belediye sınırları içinde olmakla birlikte, hizmet gerekleri bakımından uygun görülen yerler, jandarmanın görev ve sorumluluk alanı olarak belirlenebilir.",
-   "not": "Bakan kararıyla il/ilçenin tamamı tek kolluğa",
+   "tetikleyici": "genel olarak görev",
+   "cevap": "belediye sınırı dışı; polis-SG olmayan yer",
+   "kanit": "MADDE 7- (1) Jandarmanın genel olarak görev ve sorumluluk alanı, polis ve sahil güvenlik teşkilatının görev alanının dışı olup, bu alanlar il ve ilçe belediye sınırları dışında kalan ya da polis ve sahil güvenlik teşkilatı bulunmayan yerlerdir.",
+   "not": "hizmet gereği belediye içinde de belirlenebilir",
    "karistirilan": []
   },
   {
-   "i": "K-17-127",
+   "i": "K-17-032",
+   "madde": "7",
+   "tip": "makam",
+   "tetikleyici": "Bakanın kararıyla",
+   "cevap": "il-ilçenin tamamı polis ya da jandarma alanı",
+   "kanit": "Bakanın kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.",
+   "not": "sulh ceza hâkimi, il sınır komisyonu DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-033",
    "madde": "8",
-   "tip": "tanim",
-   "tetikleyici": "ceza infaz kurumlarının dış korumalarını",
-   "cevap": "mülki görev (iç güvenlik değil); trafik, arama kurtarma, kritik tesis",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Mülki görevler:",
+   "cevap": "asayiş, kaçakçılık, suç önleme, dış koruma, trafik; işlenmiş suç DEĞİL",
    "kanit": "a) Mülki görevler: Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumlarının dış korumalarını sağlamak, trafik hizmetlerini yürütmek, arama kurtarma görevlerini yapmak, hassas ve kritik öneme sahip tesislerin korunmasına ilişkin önlemleri ilgili kuruluşlarla işbirliği içinde sağlamak, bu fıkranın (b) ve (c) bentlerinde belirtilen görevler dışında kalan ve mevzuat hükümlerinin icrası ile bunlara dayalı emir ve kararlarla jandarmaya verilen görevleri yapmak.",
-   "not": "",
+   "not": "cezaevi dış koruması, arama kurtarma, kritik tesis koruma da mülki; işlenmiş suç işlemleri ADLİ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-034",
+   "madde": "8",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Adli görevler:",
+   "cevap": "işlenmiş suçlarla ilgili işlemler",
+   "kanit": "b) Adli görevler: İşlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak ve bunlara ilişkin adli hizmetleri yerine getirmek.",
+   "not": "suç önleme tedbiri MÜLKİ görev",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-035",
+   "madde": "8",
+   "tip": "gorev_yetki",
+   "tetikleyici": "askeri görev",
+   "cevap": "seferberlik-savaşta kuvvet komutanlıkları emrinde; illerde vali onayı",
+   "kanit": "c) Askeri görevler: Seferberlik ve savaş hallerinde Bakanlar Kurulunun uygun gördüğü bölümleriyle kuvvet komutanlıkları emrinde görev icra etmek ile Genelkurmay Başkanının talebi üzerine Bakanın, illerde ise garnizon komutanının talebi ve valinin onayıyla verilen askeri görevleri icra etmek.",
+   "not": "Genelkurmay talebiyle Bakan; illerde garnizon komutanı talebi + vali onayı",
    "karistirilan": [
     {
-     "madde": "11",
-     "fark": "mülki görev esasları: dış koruma + sevk-nakil muhafaza"
+     "madde": "41",
+     "fark": "askeri görevler maddesi: garnizon talebi + vali onayı; Genelkurmay talebi + Bakan"
+    },
+    {
+     "madde": "69",
+     "fark": "askeri görev verilen birliğin ihtiyacını MSB karşılar"
     }
    ]
   },
   {
-   "i": "K-17-128",
+   "i": "K-17-036",
    "madde": "8",
-   "tip": "makam",
-   "tetikleyici": "Bakanlar Kurulunun uygun gördüğü bölümleriyle",
-   "cevap": "askeri görev: seferberlik ve savaşta kuvvet komutanlıkları emrinde",
-   "kanit": "c) Askeri görevler: Seferberlik ve savaş hallerinde Bakanlar Kurulunun uygun gördüğü bölümleriyle kuvvet komutanlıkları emrinde görev icra etmek ile Genelkurmay Başkanının talebi üzerine Bakanın, illerde ise garnizon komutanının talebi ve valinin onayıyla verilen askeri görevleri icra etmek.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-129",
-   "madde": "8",
-   "tip": "kosul",
-   "tetikleyici": "öngörülmeyen hiçbir görev jandarmadan",
-   "cevap": "mevzuat ve yetkili makam emirleri dışında istenemez",
+   "tip": "yasak",
+   "tetikleyici": "öngörülmeyen",
+   "cevap": "hiçbir görev istenemez",
    "kanit": "(2) Kanunlar ve diğer mevzuat hükümleri ile bunlara dayalı olarak yetkili makamlarca verilen emir ve kararlarda öngörülmeyen hiçbir görev jandarmadan istenemez.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-130",
-   "madde": "10",
-   "tip": "makam",
-   "tetikleyici": "görevlendireceği vali yardımcısı başkanlığında",
-   "cevap": "sorumluluk alanı komisyonu: illerde vali/yardımcısı, ilçelerde kaymakam; jandarma-emniyet temsilcileri",
-   "kanit": "(2) Birinci fıkrada belirlenen esaslara göre; il ve ilçelerdeki jandarma ve polis sorumluluk alanlarının sınırları, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katılacağı bir komisyon tarafından belirlenir. Komisyon, vali veya kaymakamın çağrısı üzerine toplanır.",
+   "i": "K-17-037",
+   "madde": "8",
+   "tip": "yasak",
+   "tetikleyici": "Görev sınırı",
+   "cevap": "mevzuatta öngörülmeyen görev istenemez",
+   "kanit": "Görev sınırı\nMADDE 8- (1) Jandarmanın görevleri şunlardır:\na) Mülki görevler: Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumlarının dış korumalarını sağlamak, trafik hizmetlerini yürütmek, arama kurtarma görevlerini yapmak, hassas ve kritik öneme sahip tesislerin korunmasına ilişkin önlemleri ilgili kuruluşlarla işbirliği içinde sağlamak, bu fıkranın (b) ve (c) bentlerinde belirtilen görevler dışında kalan ve mevzuat hükümlerinin icrası ile bunlara dayalı emir ve kararlarla jandarmaya verilen görevleri yapmak.\nb) Adli görevler: İşlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak ve bunlara ilişkin adli hizmetleri yerine getirmek.\nc) Askeri görevler: Seferberlik ve savaş hallerinde Bakanlar Kurulunun uygun gördüğü bölümleriyle kuvvet komutanlıkları emrinde görev icra etmek ile Genelkurmay Başkanının talebi üzerine Bakanın, illerde ise garnizon komutanının talebi ve valinin onayıyla verilen askeri görevleri icra etmek.\n(2) Kanunlar ve diğer mevzuat hükümleri ile bunlara dayalı olarak yetkili makamlarca verilen emir ve kararlarda öngörülmeyen hiçbir görev jandarmadan istenemez.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-131",
-   "madde": "10",
-   "tip": "sure",
-   "tetikleyici": "en geç üç ay içerisinde",
-   "cevap": "belediye değişikliğinde sorumluluk alanları yeniden düzenlenir; devir-teslim de üç ay",
-   "kanit": "değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.\n(3) Komisyon tarafından alınan kararlar İçişleri Bakanının onayıyla yürürlüğe girer. Belirlenen sorumluluk alanlarının sınırları karara eklenen bir harita veya kroki üzerinde gösterilir.(1)\n(4) Sorumluluk alanlarının sınırlarının belirlenmesinde kolluk birimleri arasındaki anlaşmazlıklar, mülki amir tarafından kesin olarak çözümlenir.\n(5) Sorumluluk alanını belirleyen karar doğrultusunda devir ve teslim ile ilgili işlemler en geç üç ay içerisinde tamamlanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-132",
-   "madde": "10",
-   "tip": "makam",
-   "tetikleyici": "İçişleri Bakanının onayıyla yürürlüğe",
-   "cevap": "komisyon kararları; sınırlar harita/kroki; anlaşmazlığı mülki amir kesin çözer",
-   "kanit": "(3) Komisyon tarafından alınan kararlar İçişleri Bakanının onayıyla yürürlüğe girer. Belirlenen sorumluluk alanlarının sınırları karara eklenen bir harita veya kroki üzerinde gösterilir.(1)\n(4) Sorumluluk alanlarının sınırlarının belirlenmesinde kolluk birimleri arasındaki anlaşmazlıklar, mülki amir tarafından kesin olarak çözümlenir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-133",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "Halkın can, ırz ve malını",
-   "cevap": "jandarma korur (mülki görevlerin esasları ilk bendi)",
-   "kanit": "MADDE 11- (1) Jandarma;\na) Halkın can, ırz ve malını korur.",
-   "not": "",
+   "i": "K-17-038",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "sorumluluk alanı dışında",
+   "cevap": "polis teşkilatı yoksa; özel kolluk alanı ya da yokluğu",
+   "kanit": "MADDE 9- (1) Jandarma sorumluluk alanı dışında olmakla birlikte;\na) Polis teşkilatı kurulmamış olması nedeniyle,\nb) Özel kolluk kuruluşlarının sorumluluk alanına giren yerlerde, jandarmayı ilgilendiren ihlal ya da suç işlenmesi nedeniyle,\nc) Özel kolluk kuruluşlarının sorumluluk alanına giren konularda, bu kuruluş ve kuvvetlerin yokluğundan ötürü meydana gelen ihlal ya da suçlar nedeniyle, jandarmanın görevlendirilmesi ya da kendiliğinden olaya elkoyması mümkündür. Bu gibi durumlarda jandarmanın görev yaptığı o yer, jandarmanın görev alanı sayılır.",
+   "not": "kurumun iç güvenliğini sürekli devretmesi sebep DEĞİL",
    "karistirilan": [
     {
-     "madde": "13",
-     "fark": "can, ırz ve malın korunmasına ilişkin görevler maddesi"
+     "madde": "43",
+     "fark": "polis alanı dışında jandarma trafiği düzenler"
     }
    ]
   },
   {
-   "i": "K-17-134",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "konut dokunulmazlığını korur",
-   "cevap": "asayişi, kamunun ve kişilerin güvenliğini ve (mülki görev esası)",
-   "kanit": "c) Asayişi, kamunun ve kişilerin güvenliğini ve konut dokunulmazlığını korur.",
+   "i": "K-17-039",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "kendiliğinden",
+   "cevap": "o yer jandarmanın görev alanı sayılır",
+   "kanit": "c) Özel kolluk kuruluşlarının sorumluluk alanına giren konularda, bu kuruluş ve kuvvetlerin yokluğundan ötürü meydana gelen ihlal ya da suçlar nedeniyle, jandarmanın görevlendirilmesi ya da kendiliğinden olaya elkoyması mümkündür. Bu gibi durumlarda jandarmanın görev yaptığı o yer, jandarmanın görev alanı sayılır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-135",
+   "i": "K-17-040",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "geçici olarak koruma",
+   "cevap": "mülki amirin yetkisi saklı",
+   "kanit": "(2) Kamu ve özel hukuk tüzel kişilerine ait kurum ve kuruluşların, kendi tesis ve yapılarının iç güvenliğinin sağlanması, bu kurum ve kuruluşlarca kendi mevzuatına göre yürütülür. Özel hallerde, geçici olarak koruma ve kollama görevi verilmesi hususunda mülki amirin yetkisi saklıdır.",
+   "not": "iç güvenliği kurumun kendisi sağlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-041",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "komisyon",
+   "cevap": "vali-vali yardımcısı başkanlığında; kararı Bakan onaylar",
+   "kanit": "(2) Birinci fıkrada belirlenen esaslara göre; il ve ilçelerdeki jandarma ve polis sorumluluk alanlarının sınırları, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katılacağı bir komisyon tarafından belirlenir. Komisyon, vali veya kaymakamın çağrısı üzerine toplanır. Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.\n(3) Komisyon tarafından alınan kararlar İçişleri Bakanının onayıyla yürürlüğe girer. Belirlenen sorumluluk alanlarının sınırları karara eklenen bir harita veya kroki üzerinde gösterilir.",
+   "not": "ilçede kaymakam başkan; jandarma-emniyet temsilcileri üye; çağrıyı vali-kaymakam yapar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-042",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "sınırlarda değişiklik",
+   "cevap": "üç ay içinde yeniden düzenlenir",
+   "kanit": "Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.",
+   "not": "devir-teslim de en geç üç ay",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-043",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "anlaşmazlık",
+   "cevap": "mülki amir kesin çözer",
+   "kanit": "(4) Sorumluluk alanlarının sınırlarının belirlenmesinde kolluk birimleri arasındaki anlaşmazlıklar, mülki amir tarafından kesin olarak çözümlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-044",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "devir ve teslim",
+   "cevap": "en geç üç ay içerisinde",
+   "kanit": "(5) Sorumluluk alanını belirleyen karar doğrultusunda devir ve teslim ile ilgili işlemler en geç üç ay içerisinde tamamlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-045",
    "madde": "11",
    "tip": "gorev_yetki",
-   "tetikleyici": "kimsesizlere ve yabancılara yardım",
-   "cevap": "jandarma yardım eder: yardım isteyenler, korunmaya muhtaç çocuklar, engelli, hasta",
+   "tetikleyici": "halkın",
+   "cevap": "can, ırz ve malını korur",
+   "kanit": "a) Halkın can, ırz ve malını korur.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "13",
+     "fark": "can-ırz-malda esas genel koruma; kişisel koruma mülki amir emriyle"
+    },
+    {
+     "madde": "21",
+     "fark": "civar halkını rahatsız eden gürültü saat yirmi dörtten sonra men"
+    },
+    {
+     "madde": "47",
+     "fark": "halkın topluca bulunduğu yerde önleme araması"
+    }
+   ]
+  },
+  {
+   "i": "K-17-046",
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "yardım eder",
+   "cevap": "yardım isteyen, muhtaç çocuk, engelli, hasta, yaşlı, kimsesiz, yabancı",
    "kanit": "e) Yardım isteyenlere, korunmaya muhtaç çocuklarla yardım gereken küçüklere, engelli, hasta, yaşlı kimselerle, düşkün ya da kimsesizlere ve yabancılara yardım eder.",
-   "not": "yaşlı, düşkün, kimsesiz, yabancı da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-136",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "Her türlü kaçakçılığa engel olur",
-   "cevap": "kaçakçılığa engel olmak mülki görev esası (hakemlik yapmak yok)",
-   "kanit": "f) Her türlü kaçakçılığa engel olur.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-137",
+   "i": "K-17-047",
    "madde": "11",
    "tip": "gorev_yetki",
-   "tetikleyici": "sevk ve nakilleriyle muhafazalarını",
-   "cevap": "tutuklu ve hükümlülerin; ceza infaz kurumlarının dış koruması (mülki görev)",
-   "kanit": "g) Ceza infaz kurumlarının dış korumalarını sağlayıcı önlemleri alır, tutuklu ve hükümlülerin sevk ve nakilleriyle muhafazalarını sağlar.",
+   "tetikleyici": "Mülki görevlerin esasları",
+   "cevap": "can-ırz-mal, suç önleme, kaçakçılık, cezaevi DIŞ koruma, trafik, istihbarat",
+   "kanit": "Mülki görevlerin esasları\nMADDE 11- (1) Jandarma;\na) Halkın can, ırz ve malını korur.\nb) Suç işlenmesini önlemek ve kamu düzenini sağlamak için gerekli önlemleri alır.\nc) Asayişi, kamunun ve kişilerin güvenliğini ve konut dokunulmazlığını korur.\nç) Anayasada ve kanunlarda düzenlenen hak ve hürriyetlerin güvenli şekilde kullanılması için gerekli önlemleri alır.\nd) Kamunun huzur ve sükûnunu bozan, kanunlara aykırı eylemlere engel olur.\ne) Yardım isteyenlere, korunmaya muhtaç çocuklarla yardım gereken küçüklere, engelli, hasta, yaşlı kimselerle, düşkün ya da kimsesizlere ve yabancılara yardım eder.\nf) Her türlü kaçakçılığa engel olur.\ng) Ceza infaz kurumlarının dış korumalarını sağlayıcı önlemleri alır, tutuklu ve hükümlülerin sevk ve nakilleriyle muhafazalarını sağlar.\nğ) Emniyet ve asayişin sağlanması, suçların ortaya çıkarılması, işlenmiş suçlarda faillerin tespiti ve yakalanması maksadıyla istihbarat toplar, diğer istihbarat ve kolluk birimleri ile işbirliği yapar, bilgi paylaşır.\nh) Suçların önlenmesi maksadıyla diğer kolluk birimleri, kamu kurumları, üniversiteler ve sivil toplum kuruluşları ile işbirliği yapar ve projeler yürütür.\nı) Trafik hizmetlerini yürütür, meydana gelen trafik kazalarıyla ilgili işlemleri yapar.",
+   "not": "cezaevi iç güvenliği, hakemlik DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-048",
+   "madde": "12",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Önleyici kolluk",
+   "cevap": "devriye ile aksatmadan",
+   "kanit": "b) Önleyici kolluk görevini, kendi görev bölgesinde devriye görevi yaparak aksatmadan yürütmek.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-138",
-   "madde": "11",
-   "tip": "gorev_yetki",
-   "tetikleyici": "üniversiteler ve sivil toplum kuruluşları",
-   "cevap": "suçların önlenmesi için işbirliği ve projeler (mülki görev esası)",
-   "kanit": "h) Suçların önlenmesi maksadıyla diğer kolluk birimleri, kamu kurumları, üniversiteler ve sivil toplum kuruluşları ile işbirliği yapar ve projeler yürütür.",
-   "not": "",
+   "i": "K-17-049",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "Kişisel koruma ve kollama",
+   "cevap": "mevzuatta özel hüküm ya da mülki amir emri",
+   "kanit": "Kişisel koruma ve kollama ancak, mevzuatta özel hüküm bulunması durumunda veya özel nitelik taşıyan durumlarda yetkili mülki amirin emriyle yerine getirilir.",
+   "not": "esas genel ve koruyucu önlem",
    "karistirilan": []
   },
   {
-   "i": "K-17-139",
+   "i": "K-17-050",
+   "madde": "14",
+   "tip": "sira_usul",
+   "tetikleyici": "tutanağın",
+   "cevap": "mülki amire ve Cumhuriyet savcılığına",
+   "kanit": "Olayla ilgili olarak düzenlenen tutanağın bir örneğini mülki amire, bir diğer örneğini de Cumhuriyet savcılığına verir.",
+   "not": "yangın, sel, deprem; amirlere ve ilgililere haber verir, olay yerine gider",
+   "karistirilan": [
+    {
+     "madde": "80",
+     "fark": "mühürleme tutanağının sureti mülki makama"
+    }
+   ]
+  },
+  {
+   "i": "K-17-051",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "akıl hastalarının",
+   "cevap": "polis yoksa yalnız saldırıya engel",
+   "kanit": "(3) Polis teşkilatı olmayan yerlerde sevkleri gerekli görülen akıl hastalarının başkalarına saldırma ihtimali varsa sevkten sorumlu olmamak ve yalnızca saldırıya engel olmak amacıyla sevk görevi jandarma tarafından yerine getirilir. Ancak 2803 sayılı Kanun çerçevesinde bir il veya ilçenin tamamında jandarmanın görevli olduğu durumlarda sevk görevi de jandarmaya aittir.",
+   "not": "sevkten sorumlu DEĞİL; il-ilçenin tamamı jandarmadaysa sevk de jandarmanın",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-052",
+   "madde": "15",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kuduz",
+   "cevap": "sağlık kuruluşuna ivedilikle bildirir",
+   "kanit": "(2) Jandarma kendi görev alanındaki kuduz hayvanları ya da bu hayvanlar tarafından ısırılmış kimseleri ilgili sağlık kuruluşlarına ivedilikle bildirmek, bu kuruluşlarca uygulanacak gözetim ve ayırma işlerinde, herhangi bir saldırı ihtimaline karşı usulüne uygun tarzda iletilen yardım istemlerini yerine getirmekle de yükümlüdür.",
+   "not": "gözetim-ayırmada yardım istemini yerine getirir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-053",
    "madde": "16",
    "tip": "gorev_yetki",
-   "tetikleyici": "aile hayatının gizliliğini korumakla",
-   "cevap": "konut dokunulmazlığına ilişkin görevler başlığı altında (jandarma yükümlü)",
-   "kanit": "Konut dokunulmazlığına ilişkin görevler\nMADDE 16- (1) Konut dokunulmazlığını sağlamak amacıyla jandarma kendi görev ve sorumluluk alanı içinde;\na) Genel kollama ve koruma önlemleri alarak konutları korumakla,\nb) Konut dokunulmazlığı ve konutta oturanların kişisel güvenliklerinin ihlal edileceği hakkında bilgi olduğu durumlarda, mevzuata uygun olarak mülki amirce verilen emir üzerine, o bölgedeki güvenlik önlemlerini artırmakla,\nc) Özel hayatın ve aile hayatının gizliliğini korumakla, yükümlüdür.",
-   "not": "hak ve hürriyetler başlığı değil",
+   "tetikleyici": "aile hayatının gizliliğini",
+   "cevap": "konut dokunulmazlığı görevleri",
+   "kanit": "Konut dokunulmazlığına ilişkin görevler\nMADDE 16- (1) Konut dokunulmazlığını sağlamak amacıyla jandarma kendi görev ve sorumluluk alanı içinde;\na) Genel kollama ve koruma önlemleri alarak konutları korumakla,\nb) Konut dokunulmazlığı ve konutta oturanların kişisel güvenliklerinin ihlal edileceği hakkında bilgi olduğu durumlarda, mevzuata uygun olarak mülki amirce verilen emir üzerine, o bölgedeki güvenlik önlemlerini artırmakla,\nc) Özel hayatın ve aile hayatının gizliliğini korumakla,",
+   "not": "hak ve hürriyetler başlığı DEĞİL",
    "karistirilan": []
   },
   {
-   "i": "K-17-140",
-   "madde": "32",
-   "tip": "kosul",
-   "tetikleyici": "başka şekilde önlenmesine imkân",
-   "cevap": "sevkte ihtara rağmen firara teşebbüs; silah kullanılır",
-   "kanit": "Bu ihtara uymayarak firara teşebbüs etmeleri durumunda firarın başka şekilde önlenmesine imkân bulunmazsa silah kullanılır.",
+   "i": "K-17-054",
+   "madde": "17",
+   "tip": "gorev_yetki",
+   "tetikleyici": "korkusuz ve güvenlik içinde",
+   "cevap": "hak ve hürriyetlerin korunması",
+   "kanit": "Hak ve hürriyetlerin korunmasına ilişkin görevler\nMADDE 17- (1) Jandarma; kişilerin Anayasada ve kanunlarda düzenlenen hak ve hürriyetlerini korkusuz ve güvenlik içinde kullanmaları için gerekli önlemleri alır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-141",
-   "madde": "39",
+   "i": "K-17-055",
+   "madde": "18",
+   "tip": "gorev_yetki",
+   "tetikleyici": "denetim kesintisiz",
+   "cevap": "silah-bıçak ve av tüfeği izin belgesi işlemleri",
+   "kanit": "(1) Sorumluluk alanında olmak kaydıyla aşağıdaki işlemler jandarma tarafından yürütülür.\na) 21/3/1991 tarihli ve 91/1779 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik uyarınca valiler tarafından verilecek izin belgesine ilişkin işlemler.\nb) 10/3/1982 tarihli ve 17629 sayılı Resmi Gazetede yayımlanan 2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik uyarınca verilecek izin belgelerine ilişkin işlemler.\n(2) Bu maddedeki görevler çerçevesinde, denetim kesintisiz sürdürülür.",
+   "not": "silah izin belgesini vali verir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-056",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "umuma açık istirahat",
+   "cevap": "konaklama, içkili yer, sinema-kahvehane, oyun-internet salonu; düğün salonu DEĞİL",
+   "kanit": "MADDE 19- (1) Kişilerin tek tek veya toplu olarak eğlenmesi, dinlenmesi veya konaklaması için açılan otel, motel, pansiyon, kamping ve benzeri konaklama yerleri; gazino, pavyon, meyhane, bar, birahane, içkili lokanta, taverna ve benzeri içkili yerler; sinema, kahvehane ve kıraathane; kumar ve kazanç kastı olmamak şartıyla adı ne olursa olsun bilgi ve maharet artırıcı veya zeka geliştirici nitelikteki elektronik oyun alet ve makinelerinin, video ve televizyon oyunlarının içerisinde bulunduğu elektronik oyun yerleri; internet salonları ve benzeri yerler umuma açık istirahat ve eğlence yeri sayılır. Düğün salonlarının dışındaki eğlenme maksadıyla toplanma yapılan ticari yerler de umuma açık istirahat ve eğlence yeri sayılır.",
+   "not": "taşıtlarda bu faaliyet varsa o da sayılır; 2026 Subay sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-057",
+   "madde": "19",
+   "tip": "sure",
+   "tetikleyici": "görüşünü",
+   "cevap": "yedi gün içinde",
+   "kanit": "Jandarma görüşünü genel güvenlik ve asayiş açısından yedi gün içinde verir.",
+   "not": "ruhsatı belediye, dışında il özel idaresi verir; izinsiz açılan kapatılır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-058",
+   "madde": "19",
    "tip": "makam",
-   "tetikleyici": "adli amirlerin talimatlarına göre",
-   "cevap": "adli görevlerde hareket (soruşturma-kovuşturma CMK usulü)",
-   "kanit": "Adli görevler bakımından ilgili mevzuat ve adli amirlerin talimatlarına göre hareket edilir.",
+   "tetikleyici": "ruhsatı",
+   "cevap": "belediye; dışında il özel idaresi",
+   "kanit": "(3) Jandarma sorumluluk alanında, umuma açık istirahat ve eğlence yerlerinin ruhsatı jandarmanın görüşü alındıktan sonra belediye ve mücavir alan sınırları içinde belediyeler; bu alanların dışında il özel idareleri tarafından verilir.",
+   "not": "jandarmanın görüşü alınır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-059",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "kat’i delil",
+   "cevap": "mülki amire bildirilir",
+   "kanit": "(4) Jandarma tarafından kat’i delil elde edilmesi halinde;\na) Kumar oynanan umumi ve umuma açık yerler ile her çeşit özel ve resmi kurum ve kuruluşlara ait lokaller,\nb) Mevzuata aykırı bir şekilde uyuşturucu madde imal edilen, satılan, kullanılan, bulundurulan yerler,\nc) Mevzuata aykırı faaliyet gösteren genelevler, birleşme yerleri ve fuhuş yapılan evler ve yerler,\nç) Devletin ülkesi ve milletiyle bölünmez bütünlüğüne, Anayasal düzenine, genel güvenliğe ve genel ahlaka zararı dokunacak oyun oynatılan, temsil verilen, film veya video bant gösterilen yerler ile internet üzerinden yapılan yayınlara izin verilen yerler,\nd) Derneklere, sendikalara, loca ve kulüplere, kamu kurumu niteliğindeki meslek kuruluşları ile benzeri kurum ve kuruluşlara ait ve yalnız üyelerinin yararlanması için açılan lokallerden, birden fazla denetim sonunda ve yazılı ihtara rağmen, mevzuata aykırı faaliyet göstererek umuma açık yer durumuna geldiği tespit edilenler,\ne) Her türlü denize elverişli araçla günübirlik tur düzenleyen veya her türlü mal ve hizmet satanlardan, müşteriye faaliyetlerini duyururken veya müşteri kabul ederken çevreyi veya müşteriyi rahatsız edecek yöntemler kullananlar, gereği yapılmak üzere mülki amire bildirilir.",
+   "not": "kumar, uyuşturucu, fuhuş yeri vb.",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-060",
+   "madde": "20",
+   "tip": "makam",
+   "tetikleyici": "İnternet Toplu Kullanım",
+   "cevap": "açma-kapatma mülki amir emriyle; jandarma denetler",
+   "kanit": "MADDE 20- (1) 1/11/2007 tarihli ve 26687 sayılı Resmi Gazetede yayımlanan İnternet Toplu Kullanım Sağlayıcıları Hakkında Yönetmelik kapsamındaki işyerlerinin açılması, izin alınmadan açıldığı tespit edilen işyerlerinin kapatılması, işyerlerinin uyması gereken kurallara uyulmasının sağlanması mülki amirin emriyle yapılır. Jandarma bu işyerlerini genel güvenlik ve asayiş yönünden denetler ve denetleme sonuçlarını gereği yapılmak üzere mülki amire bildirir.",
+   "not": "genel güvenlik ve asayiş yönünden",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-061",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "gürültü",
+   "cevap": "saat yirmi dört sonrası",
+   "kanit": "MADDE 21- (1) Mesken içinde ve dışında saat yirmidörtten sonra her ne suretle olursa olsun civar halkının rahat ve huzurunu bozacak surette gürültü yapanlar jandarma tarafından menolunur.",
+   "not": "civar halkının huzurunu bozan; Kabahatler K. ve TCK uygulanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-062",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "Düğün, nişan",
+   "cevap": "kırk sekiz saat önce mülki amire",
+   "kanit": "(2) Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda kamu düzeninin korunmasına yönelik tedbirlerin alınmasına imkân sağlamak için ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır.",
+   "not": "konser, panayır, festival de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-063",
+   "madde": "22",
+   "tip": "gorev_yetki",
+   "tetikleyici": "imdat isteyen",
+   "cevap": "herkese yardım; yol soranlara bilgi",
+   "kanit": "a) Bir tehlike karşısında bulunan ve imdat isteyen herkese yardım etmek.\nb) Yolda hastalanan, kazaya uğrayan ve ulaşmak istediği yere gitmeye gücü bulunmayan kimselere uygun bir ulaşım aracı sağlamak, bunları ilgili sağlık kuruluşuna göndermek ya da sağlık personeli bulmak, ailelerine haber vermek ve gerekli hallerde refakat etmek.\nc) Ulaşım araçlarına yetişemeyenlere ya da bu araçların çeşitli nedenlerle hareket edememesi durumunda yolundan kalan, dolayısıyla gidecek yeri olmayan ya da kendisine uygun bir yer sağlamaktan yoksun olanlara uygun bir yer bulunmasını sağlamak.\nç) Oturduğu yeri bildirme gücü bulunmayan düşkün durumdaki kimselerin ya da çocukların kanuni temsilcilerini bulmak ve bunları kanuni temsilcilerine teslim etmek, kanuni temsilcileri olmayanları ise ilgili sosyal yardım kuruluşlarına ya da belediyelere teslim etmek.\nd) Bir yer ya da yol sormak için başvuranlara gereken bilgiyi vermek.",
+   "not": "yolda kalana yer, hastaya araç bulur",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-064",
+   "madde": "22",
+   "tip": "sira_usul",
+   "tetikleyici": "teslim almaktan kaçın",
+   "cevap": "jandarma tutanakla saptar, kanuni işlem",
+   "kanit": "(2) Yardıma muhtaçların, kimsesiz çocukların, düşkün durumda bulunanların kanuni temsilcileri bunları teslim almaktan kaçındıklarında, durum jandarma tarafından bir tutanakla saptanır ve kanuni işlem yapılır.",
+   "not": "kanuni temsilci",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-065",
+   "madde": "22",
+   "tip": "gorev_yetki",
+   "tetikleyici": "ısrarlı takip",
+   "cevap": "6284 kapsamında koruma; mülki amire bildirim",
+   "kanit": "(4) Jandarma; 8/3/2012 tarihli ve 6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun çerçevesinde, sorumluluk alanında, şiddete uğrayan veya şiddete uğrama tehlikesi altında bulunan kadınların, çocukların, aile bireylerinin ve tek taraflı ısrarlı takip mağduru olan kişilerin korunması ve bu kişilere yönelik şiddetin önlenmesi amacıyla alınacak tedbirlere ilişkin görevleri yapar ve yetkileri kullanır. Jandarma, bu hususlara ilişkin gecikmeksizin mülki amir ve yetkili mercilere bildirimde bulunmakla görevlidir.",
+   "not": "şiddete uğrayan kadın, çocuk, aile bireyleri",
+   "karistirilan": [
+    {
+     "madde": "42",
+     "fark": "aykırı emirde amir yazılı ısrar ederse emir yapılır"
+    }
+   ]
+  },
+  {
+   "i": "K-17-066",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "korunmaya, bakıma",
+   "cevap": "Aile ve Sosyal Politikalar Bakanlığına bildirir",
+   "kanit": "(3) Jandarma, 5237 sayılı Kanun ve 24/5/1983 tarihli ve 2828 sayılı Sosyal Hizmetler Kanununa göre korunmaya, bakıma, yardıma ihtiyacı olan aile, çocuk, engelli ve yaşlılar ile sosyal hizmetlere ihtiyacı olan diğer kişileri Aile ve Sosyal Politikalar Bakanlığı yetkililerine bildirmek ve bu kişilere ilişkin incelemelerde söz konusu Bakanlık yetkilileri ile işbirliği içinde bulunmakla görevlidir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-142",
+   "i": "K-17-067",
+   "madde": "23",
+   "tip": "gorev_yetki",
+   "tetikleyici": "jandarmanın görevine giren",
+   "cevap": "özel kolluk el koyar, haber verir, delili korur, yakalar",
+   "kanit": "(1) Özel kolluk, jandarmanın görevine giren bir olayla karşılaştığında, mevzuatta başka bir hüküm yoksa olaya elkoyar, jandarmaya haber verir, yitebilecek delilleri toplar, kaybolmasını önler, olay yerini korur ve olayla ilgili eylemcileri yakalar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-068",
+   "madde": "23",
+   "tip": "sira_usul",
+   "tetikleyici": "personelinin bulunmadığı",
+   "cevap": "jandarma yetkilerini kullanır; dosyayı onlara devreder",
+   "kanit": "(3) Özel kolluk veya özel güvenlik teşkilatı personelinin bulunmadığı durumlarda, jandarma, kendi görev ve sorumluluk alanı içinde olmak kaydıyla, bunlara ait yetkileri kullanır ve görevleri yürütür. Bu konuda kanunlara aykırı hareketlerin önlenmesi ve işlenmiş olan bir suçta 5271 sayılı Kanun ile diğer kanunlarda öngörülen acele tedbirlerin alınması jandarmanın görevidir. Mevzuatta aykırı bir hüküm bulunmadıkça yapılan işlem ve soruşturmaları sonuçlandırmak üzere bütün bilgi ve belgeler özel kolluk veya özel güvenlik teşkilatına devredilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-069",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "mülki amirin emri veya onayıyla",
+   "cevap": "işyeri çalışanlarının kimlik-nitelik bilgisi istenir",
+   "kanit": "(4) Jandarma, kendi görev ve sorumluluk alanında, mülki amirin emri veya onayıyla; Devlete, il özel idaresine, belediye ve köylere ait olan veya bunlara bağlı bulunan veya bunların gözetim ve denetimi altında iş gören daire ve müesseselerle diğer bütün gerçek ve tüzel kişiler tarafından işletilen mali, ticari, sınai ve iktisadi müesseseler, işletmeler, ambarlar, depolar ve sair uzman, fen adamı, teknisyen, işçi gibi personel bulunduran yerleri gözetim ve denetimi altında bulundurur. Jandarma, bu yerlerde bulunan ve çalışanların kimlik ve nitelikleri hakkında mülki amirin onayıyla bu yerlerden bilgi isteyebilir. İstenilen bilgiler hemen verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-070",
+   "madde": "24",
+   "tip": "gorev_yetki",
+   "tetikleyici": "dış korunması",
+   "cevap": "jandarmaya ait",
+   "kanit": "MADDE 24- (1) Ceza infaz kurumlarının dış korunması jandarmaya aittir. Bu yerlerde görev alacak birimlerin teşkilat, konuş ve kuruluşu ceza infaz kurumlarının özellikleri dikkate alınarak jandarmanın kendi kuruluş ve kadrolarında gösterilir.",
+   "not": "tutuklu-hükümlünün kaçmasını önler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-071",
+   "madde": "24",
+   "tip": "yasak",
+   "tetikleyici": "infaz koruma memurluğu",
+   "cevap": "jandarma hiçbir şekilde kullanılamaz",
+   "kanit": "(3) Jandarma hiçbir şekilde ceza infaz kurumlarının iç işlerinde ve infaz koruma memurluğu görevlerinde kullanılamaz.",
+   "not": "cezaevi iç işlerinde de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-072",
+   "madde": "24",
+   "tip": "kosul",
+   "tetikleyici": "genel bir hareket ve kargaşa",
+   "cevap": "müdür ya da memur başvurusuyla jandarma müdahale",
+   "kanit": "Ceza infaz kurumlarının içinde burada görevli olanlarca bastırılamayacak genel bir hareket ve kargaşa meydana geldiğinde ceza infaz kurumlarının müdürü veya vekili veya infaz koruma memurlarının başvurusu üzerine jandarma olaya müdahale ederek sükûnu sağlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-073",
+   "madde": "24",
+   "tip": "yasak",
+   "tetikleyici": "görüşmeleri ve ilişki kurmaları",
+   "cevap": "jandarmaya yasak",
+   "kanit": "Jandarmaların hükümlü ve tutuklularla görüşmeleri ve ilişki kurmaları, ceza infaz kurumlarının içindeki iş ve işlemlere karışmaları yasaktır.",
+   "not": "cezaevi içindeki işlere karışmak da yasak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-074",
+   "madde": "24",
+   "tip": "yasak",
+   "tetikleyici": "girmesi yasak olan silah",
+   "cevap": "sokulmasına jandarma engel olur",
+   "kanit": "(4) Jandarma ceza infaz kurumlarına girmesi yasak olan silah, alet ve eşyanın bu yerlere sokulmasına engel olur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-075",
+   "madde": "24",
+   "tip": "yasak",
+   "tetikleyici": "jandarma muhafazasında olmadıkça",
+   "cevap": "hiçbir tutuklu dışarı gönderilemez",
+   "kanit": "(5) Ceza infaz kurumlarının yetkili amir ve memurlarınca verilmiş izin ve jandarma muhafazasında olmadıkça bu yerlerden hiçbir tutuklu ve hükümlü dışarıya gönderilemez.",
+   "not": "yetkili izni de şart",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-076",
+   "madde": "25",
+   "tip": "makam",
+   "tetikleyici": "muhafız devriyenin kuvvetini",
+   "cevap": "jandarma komutanı saptar",
+   "kanit": "MADDE 25- (1) Soruşturma ve duruşmalar için adli mercilere götürülecek tutuklu ve hükümlülerin isim listesi, infaz kurum müdürü tarafından, koruma görevini yürüten jandarma komutanına yazı ile bildirir. Jandarma komutanı muhafız devriyenin kuvvetini saptayarak hükümlü ve tutukluları istenilen yer ve zamanda hazır bulundurur.",
+   "not": "isim listesini infaz kurum müdürü yazıyla bildirir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-077",
+   "madde": "25",
+   "tip": "yasak",
+   "tetikleyici": "başkalarıyla görüşmelerine",
+   "cevap": "izin verilmez",
+   "kanit": "(2) Hükümlü ve tutukluların gerek yolda gerek adliyede başkalarıyla görüşmelerine ve bir şey alıp vermelerine izin verilmez.",
+   "not": "bir şey alıp vermek de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-078",
+   "madde": "25",
+   "tip": "sira_usul",
+   "tetikleyici": "inzibat aletleri",
+   "cevap": "savcı-hâkim önünde çıkarılır; çıkışta takılabilir",
+   "kanit": "(3) Hükümlü ve tutuklular Cumhuriyet savcısının, hakimin ya da mahkemenin önüne götürüldüğünde, inzibat aletleri takılmış ise çıkarılır ve bağlı olmayarak girmeleri sağlanır. Bu yerlerden çıkışta inzibat aletleri ilgili mevzuat kapsamında tekrar takılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-079",
+   "madde": "26",
+   "tip": "kosul",
+   "tetikleyici": "gönderilmesi gereken",
+   "cevap": "yetkili makamın yazılı istemi; jandarma götürür",
+   "kanit": "MADDE 26- (1) Bir ceza infaz kurumundan diğer bir ceza infaz kurumuna gönderilmesi gereken tutuklu ve hükümlüler, kanunen yetkili makamın yazılı istemi üzerine, jandarma kuvvetlerince istenilen yere götürülürler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-080",
+   "madde": "27",
+   "tip": "kosul",
+   "tetikleyici": "sevk ve nakillerinin",
+   "cevap": "ceza infaz kurumu araçları; yoksa kamu toplu taşıma",
+   "kanit": "MADDE 27- (1) Hükümlü ve tutukluların sevk ve nakillerinin bu iş için ayrılmış olan ceza infaz kurumu araçlarıyla yapılması esastır. Bu gibi araçların bulunmaması ya da sevk ve naklen bu araçlarla yapılamaması durumunda; öncelikle kamuya ait kitle ulaşım araçlarından ya da diğer toplu taşıma araçlarından yararlanılır. Kamuya ait kitle ulaşım araçlarıyla sevk sırasında ilgili kamu kurumlarınca özel bir bölüm ayrılması zorunludur. Sağlık mazereti bulunanlar ile zorunlu haller dışında özel taşıtlarla sevk yoluna gidilemez.",
+   "not": "kamu aracında özel bölüm zorunlu; ihtiyaçta uçak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-081",
+   "madde": "27",
+   "tip": "yasak",
+   "tetikleyici": "hizmet araçları",
+   "cevap": "sevklerde kullanılmaz",
+   "kanit": "(3) Jandarmaya ait hizmet araçları sevklerde kullanılmaz.",
+   "not": "jandarmanın araçları",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-082",
+   "madde": "27",
+   "tip": "kosul",
+   "tetikleyici": "özel taşıt",
+   "cevap": "sağlık mazereti, zorunlu hal dışında yok",
+   "kanit": "Sağlık mazereti bulunanlar ile zorunlu haller dışında özel taşıtlarla sevk yoluna gidilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-083",
+   "madde": "28",
+   "tip": "sira_usul",
+   "tetikleyici": "alındı belgesi",
+   "cevap": "alınan para-eşya için tutukluya verilir",
+   "kanit": "Teslim alınan nesnelerin cins ve miktarlarını gösterir bir alındı belgesi, tutuklu ve hükümlülere verilir. Yapılan işlem sevk pusulasına yazılır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "65",
+     "fark": "polis/SG el koyduğu nesneyi jandarmaya alındı belgesiyle teslim eder"
+    }
+   ]
+  },
+  {
+   "i": "K-17-084",
+   "madde": "28",
+   "tip": "kosul",
+   "tetikleyici": "doktor raporuyla",
+   "cevap": "sevk yapılmaz, makama yazı",
+   "kanit": "(3) Sağlık açısından sevke engel bir durumun varlığı doktor raporuyla saptandığında sevk yapılmaz. Durum ilgili makama yazıyla bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-085",
+   "madde": "29",
+   "tip": "kosul",
+   "tetikleyici": "kadın olması",
+   "cevap": "kadın ceza infaz koruma görevlisi verilir",
+   "kanit": "(2) Sevk edilen tutuklu ve hükümlünün kadın olması durumunda, kadın ceza infaz koruma görevlisi verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-086",
+   "madde": "29",
+   "tip": "yasak",
+   "tetikleyici": "birlikte sevk",
+   "cevap": "kadın-erkek olmaz; iştirak ve yakınlar hariç",
+   "kanit": "MADDE 29- (1) İştirak halinde suç işlemiş olanlar ile kanunen önemli ilişki sayılacak derecede yakınlığı olanlar dışında; erkek ve kadın tutuklu ya da hükümlüler, birlikte sevk edilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-087",
+   "madde": "30",
+   "tip": "sira_usul",
+   "tetikleyici": "yolda hastalan",
+   "cevap": "en yakın hekimli birlik; devam edemezse savcı talimatıyla cezaevine",
+   "kanit": "MADDE 30- (1) Sevk ve nakil sırasında tutuklu ya da hükümlü yolda hastalandığında hekim ya da sağlık kuruluşu bulunan en yakın jandarma birliğine kadar götürülerek muayene ve tedavileri yaptırılır. Bu gibilerin yola devam edemeyecekleri hekim muayenesi ile anlaşıldığında; iyileştikten sonra usulüne uygun biçimde sevk edilmek üzere, bütün eşya ve evrakı ile birlikte Cumhuriyet savcısının talimatıyla belirlenecek ceza ve tutukevine teslim edilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "22",
+     "fark": "yolda hastalanan yolcuya araç bulur, sağlık kuruluşuna gönderir"
+    }
+   ]
+  },
+  {
+   "i": "K-17-088",
+   "madde": "31",
+   "tip": "sira_usul",
+   "tetikleyici": "birisi öldüğünde",
+   "cevap": "en yakın jandarma birliği, oradan savcılık; devriye komutanı tutanak",
+   "kanit": "MADDE 31- (1) Sevk ve nakil sırasında tutuklu ya da hükümlülerden birisi öldüğünde durum en elverişli haberleşme aracı ile en yakın jandarma birliği komutanlığına ve bu komutanlıkça da o yerin Cumhuriyet savcılığına bildirilir. Bu konuda devriye komutanının düzenleyeceği tutanak ilgili makama verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-089",
+   "madde": "32",
+   "tip": "gorev_yetki",
+   "tetikleyici": "firar hazırlığı",
+   "cevap": "önce ihtar; uymaz ve başka çare yoksa silah",
+   "kanit": "MADDE 32- (1) Sevk ve nakil sırasında tutuklu veya hükümlülerin isyan ya da firar hazırlığı içinde olduklarından kuşkulanıldığında, sevke görevli devriye komutanı tarafından, böyle bir harekete kalkıştıklarında silah kullanılacağı ihtar edilir. Bu ihtara uymayarak firara teşebbüs etmeleri durumunda firarın başka şekilde önlenmesine imkân bulunmazsa silah kullanılır.",
+   "not": "ihtarı devriye komutanı yapar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-090",
+   "madde": "32",
+   "tip": "sira_usul",
+   "tetikleyici": "yaralandığında veya öldüğünde",
+   "cevap": "en yakın jandarma komutanlığı, oradan savcılık",
+   "kanit": "(2) Silah kullanma sonunda tutuklu ya da hükümlülerden birisi yaralandığında veya öldüğünde durum en elverişli haberleşme aracı ile en yakın jandarma komutanlığına ve bu komutanlıkça da o yerin Cumhuriyet savcılığına bildirilir. İlgili jandarma birim komutanının vereceği emre göre hareket edilir. Yaralının iyileştirilmesi için önlem alınır ve durum bir tutanakla saptanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-091",
+   "madde": "32",
+   "tip": "gorev_yetki",
+   "tetikleyici": "başka şekilde önlenmesine",
+   "cevap": "silah kullanılır",
+   "kanit": "Bu ihtara uymayarak firara teşebbüs etmeleri durumunda firarın başka şekilde önlenmesine imkân bulunmazsa silah kullanılır.",
+   "not": "önce ihtar edilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-092",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "sevke devam edip edemeyeceklerini",
+   "cevap": "Cumhuriyet savcısı belirler",
+   "kanit": "(3) Bu gibi durumlarda diğer tutuklu ve hükümlülerle sevkle görevli jandarmaların sevke devam edip edemeyeceklerini Cumhuriyet savcısı belirler. Jandarmaların tutuklanması ya da soruşturmanın uzaması durumunda sevk işlemi o yer jandarması tarafından yapılır.",
+   "not": "jandarma tutuklanırsa sevki o yer jandarması yapar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-093",
+   "madde": "33",
+   "tip": "sira_usul",
+   "tetikleyici": "varılacak biçimde",
+   "cevap": "gündüz",
+   "kanit": "MADDE 33- (1) Sevk ve nakillerde, gidilecek yere gündüz varılacak biçimde hareket edilir.",
+   "not": "gece DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-094",
+   "madde": "33",
+   "tip": "sira_usul",
+   "tetikleyici": "konaklamak durumunda",
+   "cevap": "cezaevi; zorunlulukta emniyet odası; köyde karakol-köy odası",
+   "kanit": "Zorunluluk nedeniyle konaklamak durumunda kalınırsa tutuklu ve hükümlülerin geceyi yol üzerinde bulunan il ya da ilçe merkezlerindeki ceza infaz kurumlarında, zorunluluk varsa jandarma birimlerinin emniyet odalarında geçirmeleri sağlanır. Belde ve köylerde jandarma karakolunda, karakol yoksa köy odasında, belediye hizmet binasında konaklamaya uygun bir odada gerekli önlemler alınarak kalınabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-095",
+   "madde": "34",
+   "tip": "kosul",
+   "tetikleyici": "kaçmalarını önlemek",
+   "cevap": "sağlığa zarar vermeyen bütün önlemler",
+   "kanit": "MADDE 34- (1) Tutuklu ve hükümlülerin sevk ve nakli sırasında kaçmalarını önlemek için sağlığa zarar vermeyecek gerekli bütün önlemler alınır. Sevkten önce sevk yapılacak yerin jandarma komutanlığına bilgi verilerek kendi yönünden gerekli önlemleri alması sağlanır.",
+   "not": "gidilecek yerin jandarmasına önceden bilgi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-096",
+   "madde": "35",
+   "tip": "gorev_yetki",
+   "tetikleyici": "revirlerinde",
+   "cevap": "iyileştirme esas; diğer sağlık kurumunda muhafaza jandarmanın",
+   "kanit": "MADDE 35- (1) Tutuklu ve hükümlülerden, hastalananların ceza infaz kurumlarının kendi revirlerinde iyileştirilmeleri esastır. Zorunlu durumlarda diğer sağlık kurumlarına sevk edilenlerin, bu yerlerde muhafazası jandarma tarafından sağlanır.",
+   "not": "özel yerler jandarma görüşüyle önceden hazırlanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-097",
+   "madde": "36",
+   "tip": "makam",
+   "tetikleyici": "Adalet Bakanlığınca düzenlenen",
+   "cevap": "çalıştırmada muhafaza jandarma; diğer kurumlarınkinde cezaevi personeli",
+   "kanit": "MADDE 36- (1) Adalet Bakanlığınca düzenlenen, tutuklu ve hükümlü çalıştırma faaliyetleri sırasında, tutuklu ve hükümlülerin muhafazası jandarma tarafından sağlanır.\n(2) Kanunlarda ve 20/3/2006 tarihli ve 2006/10218 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Ceza İnfaz Kurumlarının Yönetimi ile Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Tüzükte öngörülen diğer kamu kurum ve kuruluşlarınca düzenlenen tutuklu ve hükümlü çalıştırma faaliyetleri sırasında ise, muhafaza görevi ceza infaz kurumlarının kendi yönetimi ve personelince yürütülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-098",
+   "madde": "37",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Diğer mülki görevler",
+   "cevap": "mülki amirin karar ve emirlerini uygular",
+   "kanit": "Diğer mülki görevler\nMADDE 37- (1) Jandarma, kanunların verdiği yetkiye dayanarak huzur ve güvenliğin, kişi dokunulmazlığının, kamu esenliğinin sağlanması ve suç işlenmesinin önlenmesi amacıyla mülki amirlerin verdiği karar ve emirleri uygular.",
+   "not": "huzur, kişi dokunulmazlığı, kamu esenliği, suç önleme amacıyla",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-099",
+   "madde": "38",
+   "tip": "makam",
+   "tetikleyici": "Soruşturma işlemleri",
+   "cevap": "adli kolluğa",
+   "kanit": "(2) Soruşturma işlemleri, Cumhuriyet savcısının emir ve talimatları doğrultusunda adli kolluğa yaptırılır.",
+   "not": "Cumhuriyet savcısının emir ve talimatıyla; 2026 Subay sınavında soruldu",
+   "karistirilan": [
+    {
+     "madde": "61",
+     "fark": "jandarma CMK soruşturma görevlerini yapar, mülki amire bilgi verir"
+    }
+   ]
+  },
+  {
+   "i": "K-17-100",
+   "madde": "38",
+   "tip": "makam",
+   "tetikleyici": "haricindeki hizmetlerde",
+   "cevap": "üstlerinin emrinde",
+   "kanit": "Adli kolluk, adli görevlerin haricindeki hizmetlerde, üstlerinin emrindedir.",
+   "not": "adli görevde savcının emrinde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-101",
+   "madde": "39",
+   "tip": "kosul",
+   "tetikleyici": "soruşturulması ve kovuşturulması",
+   "cevap": "5271 sayılı CMK",
+   "kanit": "MADDE 39- (1) Ceza muhakemesine ilişkin olarak suçların soruşturulması ve kovuşturulmasına ilişkin hususlar, 5271 sayılı Kanunda öngörülen usul ve esaslara göre yürütülür.",
+   "not": "adli amirlerin talimatına göre hareket",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-102",
    "madde": "40",
    "tip": "makam",
-   "tetikleyici": "yakıt ve benzeri masraflar",
-   "cevap": "gözaltı sevki JGK taşıtıyla ise JGK bütçesinden; yeme-içme-nakil masrafı da",
+   "tetikleyici": "yeme, içme ve nakil",
+   "cevap": "JGK bütçesinden",
    "kanit": "MADDE 40- (1) Gözaltına alınan şahısların sadece adli makamlar önüne çıkarılıncaya kadarki yeme, içme ve nakil masrafları ile sevkin Jandarma Genel Komutanlığına ait taşıtlarla gerçekleştirilmesi durumunda, söz konusu taşıta ait yakıt ve benzeri masraflar Jandarma Genel Komutanlığı bütçesinden ödenir.",
    "not": "yalnız adli makam önüne çıkarılıncaya kadar",
    "karistirilan": []
   },
   {
-   "i": "K-17-143",
+   "i": "K-17-103",
+   "madde": "40",
+   "tip": "makam",
+   "tetikleyici": "yakıt ve benzeri",
+   "cevap": "JGK bütçesinden",
+   "kanit": "MADDE 40- (1) Gözaltına alınan şahısların sadece adli makamlar önüne çıkarılıncaya kadarki yeme, içme ve nakil masrafları ile sevkin Jandarma Genel Komutanlığına ait taşıtlarla gerçekleştirilmesi durumunda, söz konusu taşıta ait yakıt ve benzeri masraflar Jandarma Genel Komutanlığı bütçesinden ödenir.",
+   "not": "sevk JGK taşıtıyla yapılırsa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-104",
    "madde": "41",
    "tip": "makam",
-   "tetikleyici": "talep etmesi halinde valinin",
-   "cevap": "illerde jandarmaya askeri görev; Genelkurmay talebiyle Bakan (kapsamı Genelkurmay+Bakanlık belirler)",
+   "tetikleyici": "belirlenecek bölümleriyle",
+   "cevap": "kuvvet komutanlıkları emrine girer",
+   "kanit": "MADDE 41- (1) Jandarma birlikleri; seferberlik ve savaş hallerinde, Bakanlar Kurulu kararıyla belirlenecek bölümleriyle kuvvet komutanlıkları emrine girer, kalan bölümüyle normal görevlerine devam eder.",
+   "not": "Bakanlar Kurulu kararıyla belirlenen bölümler; kalanı normal görevde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-105",
+   "madde": "41",
+   "tip": "kosul",
+   "tetikleyici": "seferberlik ve savaş halinde",
+   "cevap": "2941 sayılı Seferberlik ve Savaş Hali Kanunu",
+   "kanit": "Jandarma, seferberlik ve savaş halinde, 4/11/1983 tarihli ve 2941 sayılı Seferberlik ve Savaş Hali Kanunu ile verilen görevleri yapar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-106",
+   "madde": "41",
+   "tip": "makam",
+   "tetikleyici": "garnizon komutan",
+   "cevap": "vali onayı",
    "kanit": "(2) Jandarma birlikleri; Genelkurmay Başkanlığının talebi üzerine Bakanın, illerde ise garnizon komutanının talep etmesi halinde valinin onayıyla kendilerine verilen askeri görevleri de yapar. Bu görevlerin kapsamı, niteliği ve yerine getirilme esasları Genelkurmay Başkanlığı ve Bakanlıkça belirlenir.",
+   "not": "onaysız doğrudan görev DEĞİL",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "askeri görev tanımında da illerde garnizon talebi + vali onayı"
+    }
+   ]
+  },
+  {
+   "i": "K-17-107",
+   "madde": "41",
+   "tip": "makam",
+   "tetikleyici": "Genelkurmay Başkanlığının talebi",
+   "cevap": "Bakanın onayı",
+   "kanit": "(2) Jandarma birlikleri; Genelkurmay Başkanlığının talebi üzerine Bakanın, illerde ise garnizon komutanının talep etmesi halinde valinin onayıyla kendilerine verilen askeri görevleri de yapar. Bu görevlerin kapsamı, niteliği ve yerine getirilme esasları Genelkurmay Başkanlığı ve Bakanlıkça belirlenir.",
+   "not": "görevin kapsamını Genelkurmay ve Bakanlık belirler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-108",
+   "madde": "42",
+   "tip": "gorev_yetki",
+   "tetikleyici": "sahip olduğu yetki",
+   "cevap": "polisin yetki ve sorumlulukları",
+   "kanit": "Jandarma bu görevlerini yerine getirirken polisin sahip olduğu yetki ve sorumluluklara sahiptir.",
+   "not": "PVSK, CMK, 2803 uygulanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-109",
+   "madde": "42",
+   "tip": "kosul",
+   "tetikleyici": "aykırı görürse",
+   "cevap": "yerine getirmez, emri verene bildirir",
+   "kanit": "(2) Jandarma amirinden aldığı emri Anayasa, kanun, tüzük ve yönetmelik hükümlerine aykırı görürse yerine getirmez ve bu aykırılığı emri verene bildirir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-144",
+   "i": "K-17-110",
    "madde": "42",
    "tip": "kosul",
-   "tetikleyici": "aykırılığı emri verene bildirir",
-   "cevap": "aykırı emir yerine getirilmez; yazılı tekrarda getirilir, sorumlu olmaz",
-   "kanit": "(2) Jandarma amirinden aldığı emri Anayasa, kanun, tüzük ve yönetmelik hükümlerine aykırı görürse yerine getirmez ve bu aykırılığı emri verene bildirir. Ancak, amir emrinde ısrar eder ve bu emrini yazılı olarak tekrar ederse emir yerine getirilir. Bu halde, emri yerine getiren sorumlu olmaz.",
-   "not": "konusu suç olan emir hiçbir surette",
+   "tetikleyici": "ısrar",
+   "cevap": "yazılı tekrar ederse yapılır; yapan sorumlu olmaz",
+   "kanit": "Ancak, amir emrinde ısrar eder ve bu emrini yazılı olarak tekrar ederse emir yerine getirilir. Bu halde, emri yerine getiren sorumlu olmaz.",
+   "not": "AYKIRI EMİR: BİLDİR; YAZILI ISRAR = YAP",
+   "karistirilan": [
+    {
+     "madde": "22",
+     "fark": "ısrarlı takip mağduruna 6284 koruması"
+    }
+   ]
+  },
+  {
+   "i": "K-17-111",
+   "madde": "42",
+   "tip": "yasak",
+   "tetikleyici": "suç teşkil eden",
+   "cevap": "hiçbir suretle yapılmaz; yapan sorumlu",
+   "kanit": "Konusu suç teşkil eden emir hiçbir suretle yerine getirilmez. Yerine getirenler sorumluluktan kurtulamaz.",
+   "not": "yazılı tekrar da meşrulaştırmaz",
    "karistirilan": []
   },
   {
-   "i": "K-17-145",
+   "i": "K-17-112",
    "madde": "42",
    "tip": "kosul",
-   "tetikleyici": "mal emniyetini korumak için",
-   "cevap": "can, ırz, mal emniyetini korumak: sözlü emir derhal yerine getirilir",
-   "kanit": "a) Can, ırz veya mal emniyetini korumak için,",
+   "tetikleyici": "sözlü emirler",
+   "cevap": "derhal yapılır; yazılı istenemez; sorumluluk verende",
+   "kanit": "yetkili amir tarafından verilecek sözlü emirler derhal yerine getirilir. Bu emirlerin yazılı olarak verilmesi istenilemez. Bu hallerde emrin yerine getirilmesinden doğabilecek sorumluluk emri verene aittir.",
+   "not": "can-ırz-mal, devlet güvenliği, kaçanı yakalama, suçun devamını önleme, arama, kanunsuz toplantı, afet, tören düzeni, tıkalı yol; 2026 Subay sınavında soruldu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-113",
+   "madde": "43",
+   "tip": "gorev_yetki",
+   "tetikleyici": "trafiği düzenlemeye",
+   "cevap": "polis alanı dışında; trafik suçlarına el koyar",
+   "kanit": "b) Polisin sorumluluk alanı dışında kalan yerlerde 18/7/1997 tarihli ve 23053 sayılı Resmi Gazetede yayımlanan Karayolları Trafik Yönetmeliğinde belirtilen esas ve şartlara uygun olarak trafiği düzenlemeye ve trafik suçlarına elkoymaya,",
+   "not": "Karayolları Trafik Yönetmeliğine göre",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-114",
+   "madde": "44",
+   "tip": "gorev_yetki",
+   "tetikleyici": "uyarır",
+   "cevap": "yasak ihlalini ve suçun devamını önlemek için",
+   "kanit": "MADDE 44- (1) Jandarma, mevzuat hükümlerine göre bir yasağın ihlalini ve bir suçun devamını önlemek için uyarır ve uyarıya riayet edilmesini ister.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-146",
-   "madde": "42",
-   "tip": "kosul",
-   "tetikleyici": "işlenmesine veya devamına mani olmak",
-   "cevap": "sözlü emir hali: işlenmekte suçun devamına engel (ehliyet iptali yok)",
-   "kanit": "f) İşlenmekte olan bir suçun işlenmesine veya devamına mani olmak için,",
+   "i": "K-17-115",
+   "madde": "44",
+   "tip": "gorev_yetki",
+   "tetikleyici": "zor kullanarak karşı koyan",
+   "cevap": "yakalanır; savcıya derhal bilgi",
+   "kanit": "(2) Görevini yaptığı sırada jandarmaya direnen veya zor kullanarak karşı koyanlar jandarma tarafından yakalanır. Yakalanan kişi ve olay hakkında Cumhuriyet savcısına derhal bilgi verilerek emri doğrultusunda işlem yapılır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-147",
-   "madde": "42",
-   "tip": "kosul",
-   "tetikleyici": "Kanunsuz toplantı veya kanunsuz yürüyüşleri",
-   "cevap": "sözlü emir derhal yerine getirilir hali (dağıtmak, failleri yakalamak)",
-   "kanit": "ğ) Kanunsuz toplantı veya kanunsuz yürüyüşleri dağıtmak veya failleri yakalamak için,",
-   "not": "",
+   "i": "K-17-116",
+   "madde": "45",
+   "tip": "yasak",
+   "tetikleyici": "veli ve vasileri olsa bile",
+   "cevap": "onsekiz yaş altı giremez",
+   "kanit": "(3) Jandarma; bar, pavyon, gazino, meyhane gibi içkili yerler ile kıraathane, internet salonu ve oyun oynatılan benzeri yerlere yanlarında veli ve vasileri olsa bile onsekiz yaşını doldurmamış küçüklerin girmesini engeller.",
+   "not": "içkili yer, kıraathane, internet salonu, oyun yeri; belgeli turizm işletmesi hariç",
    "karistirilan": []
   },
   {
-   "i": "K-17-148",
+   "i": "K-17-117",
+   "madde": "45",
+   "tip": "yasak",
+   "tetikleyici": "küçüklerin çalıştırılması",
+   "cevap": "izne bağlı eğlence-içki yerinde engellenir",
+   "kanit": "(2) Kanuni istisnalar saklı kalmak üzere eğlence, oyun, içki ve benzeri amaçlı umuma açık ve açılması izne bağlı olan yerlerde onsekiz yaşından küçüklerin çalıştırılmasını engeller.",
+   "not": "onsekiz yaşından küçükler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-118",
+   "madde": "45",
+   "tip": "gorev_yetki",
+   "tetikleyici": "şikâyet olmasa bile",
+   "cevap": "genel ahlaka aykırılık, sarkıntılık engellenir",
+   "kanit": "c) Genel ahlaka aykırı mahiyette her türlü sesli ve görüntülü eserleri, kaydedildiği materyale bakılmaksızın üreten ve satanları, herhangi bir şikâyet olmasa bile engeller, davranışlarının devamını durdurarak yasaklar ve gerekli kanuni işlemleri yapar.",
+   "not": "müstehcen eser üreten-satan da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-119",
    "madde": "46",
    "tip": "gorev_yetki",
-   "tetikleyici": "zorla getirme kararı verilmiş olan",
-   "cevap": "durdurma amaçları: suç-kabahat önleme, kaçan fail, yakalama emri, tehlike önleme",
+   "tetikleyici": "durdurabilir",
+   "cevap": "suç-kabahat önleme, kaçan fail, yakalama emri, tehlike önleme",
    "kanit": "MADDE 46- (1) Jandarma, kişileri ve araçları;\na) Bir suç veya kabahatin işlenmesini önlemek,\nb) Suç işlendikten sonra kaçan faillerin yakalanmasını sağlamak, işlenen suç veya kabahatlerin faillerinin kimliklerini tespit etmek,\nc) Hakkında yakalama emri ya da zorla getirme kararı verilmiş olan kişileri tespit etmek,\nç) Kişilerin hayatı, vücut bütünlüğü veya malvarlığı bakımından ya da topluma yönelik mevcut veya muhtemel bir tehlikeyi önlemek, amacıyla durdurabilir.",
-   "not": "idari para cezası tahsili durdurma amacı değil",
+   "not": "para cezası tahsili amaç DEĞİL",
    "karistirilan": []
   },
   {
-   "i": "K-17-149",
+   "i": "K-17-120",
    "madde": "46",
    "tip": "kosul",
-   "tetikleyici": "makul bir sebebin bulunması",
-   "cevap": "durdurma yetkisi şartı; süreklilik ve keyfilik oluşturacak durdurma yapılamaz",
+   "tetikleyici": "durdurma yetkisi",
+   "cevap": "makul sebep (tecrübe ve izlenim)",
    "kanit": "(2) Durdurma yetkisinin kullanılabilmesi için jandarmanın tecrübesine ve içinde bulunulan durumdan edindiği izlenime dayanan makul bir sebebin bulunması gerekir. Süreklilik arz edecek, fiili durum ve keyfilik oluşturacak şekilde durdurma işlemi yapılamaz.",
-   "not": "",
+   "not": "süreklilik ve keyfilik yasak",
    "karistirilan": []
   },
   {
-   "i": "K-17-150",
+   "i": "K-17-121",
    "madde": "46",
-   "tip": "kosul",
-   "tetikleyici": "elbisenin çıkarılması veya aracın",
-   "cevap": "istenemez (el ile dıştan kontrol hariç); arama kolluk amirinin emriyle",
-   "kanit": "Bu amaçla kişinin üzerindeki elbisenin çıkarılması veya aracın dışarıdan bakıldığında içerisi görünmeyen bölümlerinin açılması istenemez. Ancak el ile dıştan kontrol hariç, kişinin üstü ve eşyası ile aracının dışarıdan bakıldığında içerisi görünmeyen bölümlerinin aranması, Bakanlık tarafından belirlenen esaslar dahilinde mülki amirin görevlendireceği kolluk amirinin yazılı, acele hallerde sonradan yazıyla teyit edilmek üzere sözlü emriyle yapılabilir.",
-   "not": "",
+   "tip": "sure",
+   "tetikleyici": "Durdurma süresi",
+   "cevap": "zorunlu süreyi aşamaz",
+   "kanit": "(4) Durdurma süresi, durdurma sebebine esas teşkil eden işlemin gerçekleştirilmesi için zorunlu olan süreden fazla olamaz.",
+   "not": "sebep kalkınca ayrılmaya izin",
    "karistirilan": []
   },
   {
-   "i": "K-17-151",
+   "i": "K-17-122",
    "madde": "46",
-   "tip": "kosul",
-   "tetikleyici": "arama gerekçesini de içeren",
-   "cevap": "araç araması yapılan kişiye verilir",
+   "tip": "yasak",
+   "tetikleyici": "elbise",
+   "cevap": "çıkarılması istenemez; el ile dıştan kontrol",
+   "kanit": "Bu amaçla kişinin üzerindeki elbisenin çıkarılması veya aracın dışarıdan bakıldığında içerisi görünmeyen bölümlerinin açılması istenemez.",
+   "not": "aracın içi görünmeyen bölümü de açtırılamaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-123",
+   "madde": "46",
+   "tip": "makam",
+   "tetikleyici": "kolluk amirinin",
+   "cevap": "yirmi dört saatte hâkim onayı",
+   "kanit": "Ancak el ile dıştan kontrol hariç, kişinin üstü ve eşyası ile aracının dışarıdan bakıldığında içerisi görünmeyen bölümlerinin aranması, Bakanlık tarafından belirlenen esaslar dahilinde mülki amirin görevlendireceği kolluk amirinin yazılı, acele hallerde sonradan yazıyla teyit edilmek üzere sözlü emriyle yapılabilir. Kolluk amirinin kararı yirmidört saat içinde görevli hakimin onayına sunulur.",
+   "not": "üst-eşya-araç araması mülki amirin görevlendirdiği kolluk amirinin yazılı emriyle; acelede sözlü",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-124",
+   "madde": "46",
+   "tip": "sira_usul",
+   "tetikleyici": "araç aramalarına",
+   "cevap": "arama gerekçesini içeren belge verilir",
    "kanit": "Bu fıkra kapsamında yapılan araç aramalarına ilişkin olarak kişiye, arama gerekçesini de içeren bir belge verilir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-152",
+   "i": "K-17-125",
    "madde": "46",
    "tip": "sira_usul",
-   "tetikleyici": "jandarma olduğunu belirleyen belgeyi",
-   "cevap": "gösterdikten sonra kimlik sorabilir; kimliğini ispat için kolaylık gösterilir",
+   "tetikleyici": "jandarma olduğunu belirleyen",
+   "cevap": "belgeyi gösterip kimlik sorar",
    "kanit": "(8) Jandarma, görevini yerine getirirken kendisinin jandarma olduğunu belirleyen belgeyi gösterdikten sonra kişilere kimliğini sorabilir. Bu kişilere kimliğini ispatlamaları hususunda gerekli kolaylık gösterilir.",
+   "not": "kimliğini ispat için kolaylık gösterilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-126",
+   "madde": "46",
+   "tip": "sira_usul",
+   "tetikleyici": "kimliği belirlenemeyen",
+   "cevap": "tutulur, derhal savcıya haber",
+   "kanit": "(9) Kişilerin kimliğini ispatlayan belgesinin bulunmaması, açıklamada bulunmaktan kaçınması veya gerçeğe aykırı beyanda bulunması dolayısıyla ya da sair surette kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-153",
+   "i": "K-17-127",
    "madde": "46",
    "tip": "sira_usul",
-   "tetikleyici": "sair surette kimliği belirlenemeyen kişi",
-   "cevap": "tutularak derhal Cumhuriyet savcısı haberdar edilir",
-   "kanit": "(9) Kişilerin kimliğini ispatlayan belgesinin bulunmaması, açıklamada bulunmaktan kaçınması veya gerçeğe aykırı beyanda bulunması dolayısıyla ya da sair surette kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir.",
-   "not": "nüfusa kayıtsız: fotoğraf-parmak izi; yabancı: Pasaport K., YUKK",
+   "tetikleyici": "Nüfusa kayıtlı olmadığı",
+   "cevap": "fotoğraf ve parmak izi kaydı",
+   "kanit": "(10) Nüfusa kayıtlı olmadığı için kimliği tespit edilemeyen kişilerin nüfusa kayıtlarının temini için gerekli işlemler yapıldıktan sonra, ilgili mevzuatına göre fotoğraf ve parmak izi tespit edilerek kayda alınır.",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-154",
+   "i": "K-17-128",
+   "madde": "46",
+   "tip": "sira_usul",
+   "tetikleyici": "yabancı olduğunun",
+   "cevap": "Pasaport Kanunu ve YUKK",
+   "kanit": "(11) Kimliği tespit edilemeyen kişinin yabancı olduğunun anlaşılması halinde, 15/7/1950 tarihli ve 5682 sayılı Pasaport Kanunu ile 4/4/2013 tarihli ve 6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu hükümlerine göre işlem yapılır.",
+   "not": "6458 Yabancılar ve Uluslararası Koruma K.",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-129",
+   "madde": "47",
+   "tip": "makam",
+   "tetikleyici": "önleme araması",
+   "cevap": "sulh ceza hâkimi kararı; gecikmede mülki amir yazılı emri",
+   "kanit": "Önleme araması\nMADDE 47- (1) Jandarma, tehlikenin veya suç işlenmesinin önlenmesi amacıyla usulüne göre verilmiş sulh ceza hakiminin kararı veya bu sebeplere bağlı olarak gecikmesinde sakınca bulunan hallerde mülki amirin vereceği yazılı emirle kişilerin üstlerini, araçlarını, özel kağıtlarını ve eşyasını arar; alınması gereken tedbirleri alır, suç delillerini koruma altına alarak 5271 sayılı Kanun hükümlerine göre gerekli işlemleri yapar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-130",
    "madde": "47",
    "tip": "kosul",
-   "tetikleyici": "Konusu ve kapsamı",
-   "cevap": "önleme araması kararında: sebep, konu-kapsam, yer, zaman-süre; personel adı yok",
+   "tetikleyici": "talep yazısında",
+   "cevap": "makul sebeplerin gerekçesi",
+   "kanit": "(2) Arama talep yazısında, arama için makul sebeplerin oluştuğunun gerekçeleriyle birlikte gösterilmesi gerekir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-131",
+   "madde": "47",
+   "tip": "kosul",
+   "tetikleyici": "kararında veya emrinde",
+   "cevap": "sebep, konu-kapsam, yer, zaman-süre; personel adı DEĞİL",
    "kanit": "(3) Arama kararında veya emrinde aşağıdaki hususlar belirtilir.\na) Sebebi.\nb) Konusu ve kapsamı.\nc) Yapılacağı yer.\nç) Yapılacağı zaman ve geçerli olacağı süre.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-155",
+   "i": "K-17-132",
    "madde": "47",
    "tip": "kosul",
-   "tetikleyici": "Halkın topluca bulunduğu veya toplanabileceği",
-   "cevap": "önleme araması yerleri: toplantı-gösteri yeri, yükseköğretim kurumu, umumi yer, taşıtlar",
-   "kanit": "c) Halkın topluca bulunduğu veya toplanabileceği yerlerde.\nç) İdarecilerinin talebiyle ve mevzuatta yer alan usul ve şartlara uygun olarak yükseköğretim kurumlarının içinde, bunların yakın çevreleri ile giriş ve çıkışlarında.\nd) Umumi veya umuma açık yerlerde.\ne) Her türlü toplu taşıma araçları ile seyir halindeki taşıtlarda.",
-   "not": "genel kurul toplantısı çevresi de; AVM çevresi sayılmıyor",
+   "tetikleyici": "İdarecilerinin talebiyle",
+   "cevap": "üniversite içinde önleme araması",
+   "kanit": "ç) İdarecilerinin talebiyle ve mevzuatta yer alan usul ve şartlara uygun olarak yükseköğretim kurumlarının içinde, bunların yakın çevreleri ile giriş ve çıkışlarında.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-133",
+   "madde": "47",
+   "tip": "yasak",
+   "tetikleyici": "yapılamaz",
+   "cevap": "konut, yerleşim yeri, kamuya açık olmayan işyeri",
+   "kanit": "(5) Konutta, yerleşim yerinde ve kamuya açık olmayan işyerlerinde ve eklentilerinde önleme araması yapılamaz.",
+   "not": "eklentileri de; yapılabilir: toplantı-gösteri yeri, genel kurul çevresi, halkın toplandığı yer, üniversite, umuma açık yer, toplu taşıma-taşıt",
+   "karistirilan": [
+    {
+     "madde": "46",
+     "fark": "keyfi, sürekli durdurma da yapılamaz"
+    }
+   ]
+  },
+  {
+   "i": "K-17-134",
+   "madde": "47",
+   "tip": "kosul",
+   "tetikleyici": "aniden toplulukların",
+   "cevap": "gecikmesinde sakınca var sayılır",
+   "kanit": "(6) Spor karşılaşması, miting, konser, festival, toplantı ve gösteri yürüyüşünün düzenlendiği veya aniden toplulukların oluştuğu hallerde gecikmesinde sakınca bulunan hal var sayılır.",
+   "not": "spor, miting, konser, festival, gösteri",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-135",
+   "madde": "47",
+   "tip": "gorev_yetki",
+   "tetikleyici": "güvenliğini sağladığı bina",
+   "cevap": "emir-karar olmadan aranır; kimlik sorulmadan ibraz",
+   "kanit": "(7) Jandarma, tehlikenin önlenmesi veya bertaraf edilmesi amacıyla güvenliğini sağladığı bina ve tesislere gelenlerin; herhangi bir emir veya karar olmasına bakılmaksızın üstünü, aracını ve eşyasını teknik cihazlarla, gerektiğinde el ile kontrol etmeye ve aramaya yetkilidir. Bu yerlere girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır.",
+   "not": "teknik cihazla, gerektiğinde el ile",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-136",
+   "madde": "47",
+   "tip": "sira_usul",
+   "tetikleyici": "Önleme aramasının sonucu",
+   "cevap": "karar-emir veren makama tutanakla",
+   "kanit": "(8) Önleme aramasının sonucu, arama kararı veya emri veren merci ya da makama bir tutanakla bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-137",
+   "madde": "48",
+   "tip": "gorev_yetki",
+   "tetikleyici": "imdat",
+   "cevap": "konuta, işyerine girebilir",
+   "kanit": "MADDE 48- (1) Jandarma;\na) İmdat istenmesi veya yangın, su baskını ve boğulma gibi büyük tehlikelerin haber verilmesi veya görülmesi hallerinde bu tehlikelerden kişileri kurtarmak amacıyla,\nb) Bir suçun işlenmesine veya işlenmekte olan bir suçun devamına engel olmak için, konutlara, işyerlerine ve eklentilerine girebilir.",
+   "not": "yangın, su baskını, boğulma da; karar-emir gerekmez",
+   "karistirilan": [
+    {
+     "madde": "22",
+     "fark": "imdat isteyen herkese yardım"
+    }
+   ]
+  },
+  {
+   "i": "K-17-138",
+   "madde": "48",
+   "tip": "gorev_yetki",
+   "tetikleyici": "girebilir",
+   "cevap": "imdat, yangın, su baskını, boğulma; suçun işlenmesi-devamını önleme",
+   "kanit": "MADDE 48- (1) Jandarma;\na) İmdat istenmesi veya yangın, su baskını ve boğulma gibi büyük tehlikelerin haber verilmesi veya görülmesi hallerinde bu tehlikelerden kişileri kurtarmak amacıyla,\nb) Bir suçun işlenmesine veya işlenmekte olan bir suçun devamına engel olmak için, konutlara, işyerlerine ve eklentilerine girebilir.",
+   "not": "kira uyuşmazlığı DEĞİL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-139",
+   "madde": "49",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Silah kullanma yetkisi",
+   "cevap": "ilgili mevzuatına göre",
+   "kanit": "Silah kullanma yetkisi\nMADDE 49- (1) Jandarma, ilgili mevzuatına göre silah kullanma yetkisine sahiptir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "genel kolluk tanımında: silah kullanma yetkili"
+    }
+   ]
+  },
+  {
+   "i": "K-17-140",
+   "madde": "50",
+   "tip": "gorev_yetki",
+   "tetikleyici": "yeri ve zamanına bakılmaksızın",
+   "cevap": "suça el koyar, delili yetkili kolluğa teslim",
+   "kanit": "MADDE 50- (1) Jandarma, sorumluluk alanı içinde hizmet branşı, yeri ve zamanına bakılmaksızın, bir suçla karşılaştığında olaya elkoymak, suçu önlemek, şüpheli ve suç delillerini tespit, muhafaza ve yetkili kolluğa teslim etmekle görevli ve yetkilidir.",
+   "not": "hizmet branşına da bakılmaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-141",
+   "madde": "51",
+   "tip": "gorev_yetki",
+   "tetikleyici": "diğer mevzuatta yer alan",
+   "cevap": "mülki görev yetkilerini kullanır",
+   "kanit": "MADDE 51- (1) Jandarma bu Yönetmelikte belirtilen görev ve yetkileri dışında, diğer mevzuatta yer alan mülki görevlere ilişkin yetkileri kullanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-142",
+   "madde": "52",
+   "tip": "makam",
+   "tetikleyici": "Jandarma Genel Komutanı;",
+   "cevap": "Bakana karşı sorumlu",
+   "kanit": "(3) Jandarma Genel Komutanı; teşkilatın sevk ve idaresinden, mevzuat hükümlerinin yürütülmesini sağlamaktan, bunlara dayanan emir ve kararları uygulamaktan Bakana karşı sorumludur.",
+   "not": "sevk-idare, mevzuatın yürütülmesi, emirlerin uygulanmasından; Astsubay sınavında soruldu",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "bağlılık maddesinde de Genel Komutan Bakana sorumlu"
+    }
+   ]
+  },
+  {
+   "i": "K-17-143",
+   "madde": "52",
+   "tip": "makam",
+   "tetikleyici": "üst yöneticiye verilen",
+   "cevap": "Jandarma Genel Komutanı",
+   "kanit": "(2) Jandarma Genel Komutanının görev, yetki ve sorumlulukları şunlardır:\na) Jandarmanın mesleki eğitim ve öğretim yönünden yetiştirilmesini sağlamak.\nb) Hizmet ve işlemlerin düzenlenmesini ve yürütülmesini sağlamak.\nc) Personelin özlük işlerinin mevzuat hükümlerine göre yürütülmesini sağlamak, bunlardan yetkili olmadıklarını ilgili makamlara önermek.\nç) Jandarma teşkilatını denetlemek ya da denetletmek.\nd) Disiplini sağlamak için gerekli önlemleri almak.\ne) Seferberlik ve savaş hallerinde kuvvet komutanlıkları emrine girecek jandarma birimlerini eğitim yönünden hazırlamak.\nf) 10/12/2003 tarihli ve 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu ile diğer mevzuat hükümleri ile üst yöneticiye verilen görev, yetki ve sorumlulukları yerine getirmek.",
+   "not": "5018 Kamu Mali Yönetimi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-144",
+   "madde": "53",
+   "tip": "makam",
+   "tetikleyici": "bulunmadığı zamanlarda",
+   "cevap": "genel komutan yardımcısı vekalet eder",
+   "kanit": "b) Jandarma Genel Komutanının bulunmadığı zamanlarda vekalet etmek ve yetkilerini kullanmak.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-145",
+   "madde": "54",
+   "tip": "makam",
+   "tetikleyici": "Bölge komutanı",
+   "cevap": "konuşlu olduğu ilin valisine sorumlu",
+   "kanit": "Bölge komutanı bu görevlerinin ifasından ve yetkilerin kullanılmasından, operasyonel faaliyetlerde faaliyette bulunulan ilin valisine karşı sorumluluğu saklı kalmak kaydıyla, bölge komutanlığının konuşlu olduğu ilin valisine karşı sorumludur.",
+   "not": "operasyonda faaliyet gösterilen ilin valisine de; il-ilçe komutanlıklarına emir verebilir",
+   "karistirilan": [
+    {
+     "madde": "6",
+     "fark": "geçici bölge komutanlığı da konuşlu il valisine sorumlu"
+    }
+   ]
+  },
+  {
+   "i": "K-17-146",
+   "madde": "54",
+   "tip": "makam",
+   "tetikleyici": "kuvvet kaydırması",
+   "cevap": "konuşlu il valisinin onayıyla",
+   "kanit": "MADDE 54- (1) Jandarma bölge komutanları, emniyet ve asayiş hizmetlerinin daha etkili yürütülmesi amacıyla sorumluluk alanında il jandarma komutanlıkları arasında koordinasyon ve işbirliğini sağlamak, ihtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak, kontrol ve denetimini sağlamak, personelin özlük işlemlerini yürütmek; bölge komutanlığının konuşlu olduğu ilin valisinin onayıyla; terörle mücadele kapsamında operasyonları planlamak, sevk ve idare etmek, iller arasında kuvvet kaydırması yapmakla görevlidir.",
+   "not": "terör operasyonu planlama da; diğer valilerle koordinasyonu bu vali sağlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-147",
+   "madde": "55",
+   "tip": "makam",
+   "tetikleyici": "vali tarafından verilen",
+   "cevap": "il J.K. takip ve kontrol eder",
+   "kanit": "ç) Kanunlarla ve vali tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "56",
+     "fark": "kaymakamın verdiğini ilçe J.K."
+    },
+    {
+     "madde": "57",
+     "fark": "ilçe J.K.’nın verdiğini karakol komutanı"
+    }
+   ]
+  },
+  {
+   "i": "K-17-148",
+   "madde": "55",
+   "tip": "makam",
+   "tetikleyici": "Komutanın yokluğunda",
+   "cevap": "komutan yardımcısı aynı yetkileri taşır",
+   "kanit": "(3) İl jandarma komutan yardımcıları, kendi birimlerini sevk ve idare eder, birimlerinin eğitiminden, disiplininden, özlük işlemlerinden sorumludur. Komutan tarafından verilen görevleri yapar. Komutanın yokluğunda aynı yetkileri taşır ve görevlerini yerine getirir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "56",
+     "fark": "ilçe komutan yardımcısı da yoklukta aynı yetkiler"
+    }
+   ]
+  },
+  {
+   "i": "K-17-149",
+   "madde": "56",
+   "tip": "makam",
+   "tetikleyici": "kaymakam tarafından verilen",
+   "cevap": "ilçe J.K. takip eder",
+   "kanit": "d) Kanunlarla ve kaymakam tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-150",
+   "madde": "57",
+   "tip": "makam",
+   "tetikleyici": "ilçe jandarma komutanı tarafından",
+   "cevap": "karakol komutanı takip eder",
+   "kanit": "d) Kanunlarla ve ilçe jandarma komutanı tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-151",
+   "madde": "57",
+   "tip": "gorev_yetki",
+   "tetikleyici": "karakol komutanlarının",
+   "cevap": "tedbir, öneri, adli, denetim, yetiştirme, disiplin, özlük",
+   "kanit": "(2) Jandarma karakol komutanlarının görev, yetki ve sorumlulukları şunlardır:\na) Emniyet ve asayişi sağlamak için alınan tedbir ve kararları uygulamak.\nb) Emniyet ve asayişi sağlamaya yönelik alınması gereken tedbirlere ilişkin önerilerde bulunmak.\nc) Adli görevleri ifa etmek.\nç) Görev ve işlemlerin tam, doğru ve zamanında yapılmasını sağlamak, denetlemek; yanlış ve eksikliklerin nedenlerini inceleyerek gidermek, gerektiğinde soruşturma yapmak,\nd) Kanunlarla ve ilçe jandarma komutanı tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.\ne) Astlarını kanunlarda verilen görevleri yönünden yetiştirmek.\nf) Disiplini sağlamak.\ng) Personelin özlük işlemlerini yürütmek.",
+   "not": "lojistik-teknik destek planlama karakol komutanında YOK (il-ilçe komutanında var)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-152",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "doğrudan emir",
+   "cevap": "yalnız mülki amir ve adli makam; diğerleri mülki amire başvurur",
+   "kanit": "(3) Mülki amirler ile adli makamlar mevzuat hükümlerine uygun olarak jandarma komutanlarına ve diğer jandarma personeline doğrudan emir verme yetkisine sahiptir. Diğer makamlar jandarmaya görev olarak verilmesini istedikleri konunun kanuni dayanaklarını belirterek o yerin mülki amirine başvurur. Mülki amir, talebi mevzuata ve ihtiyaca uygunluk yönünden değerlendirir ve uygun bulduğunda, görevin ifasını emreder.",
+   "not": "belediye başkanı doğrudan emir veremez",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-153",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "Bakan, jandarma teşkilatı",
+   "cevap": "en üst amir; teşkilatı idare eder",
+   "kanit": "Bakan, jandarma teşkilatının en üst amiridir ve teşkilatı idare eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-154",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "il ve ilçe jandarma komutanları",
+   "cevap": "mülki amirlere bağlı ve sorumlu",
+   "kanit": "(2) Jandarma bölge komutanları konuşlu olduğu ilin valisine, il ve ilçe jandarma komutanları ise mülki amirlere bağlı ve sorumlu olarak görev yapar.",
+   "not": "bölge komutanı konuşlu il valisine",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-155",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "doğrudan doğruya sorumlu",
+   "cevap": "mülki amir; jandarma aracılığıyla",
+   "kanit": "(5) Emniyet ve asayiş görevlerinden doğrudan doğruya sorumlu olan mülki amir, bu görevlerin yürütülmesini jandarmanın sorumluluk alanında, jandarma aracılığıyla sağlar.",
+   "not": "emniyet ve asayişten",
    "karistirilan": []
   },
   {
    "i": "K-17-156",
-   "madde": "47",
-   "tip": "yasak",
-   "tetikleyici": "kamuya açık olmayan işyerlerinde",
-   "cevap": "önleme araması yapılamaz (konut, yerleşim yeri, eklentiler de)",
-   "kanit": "(5) Konutta, yerleşim yerinde ve kamuya açık olmayan işyerlerinde ve eklentilerinde önleme araması yapılamaz.",
-   "not": "",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "her kademedeki amir",
+   "cevap": "mülki amirlere karşı sorumlu",
+   "kanit": "(6) Jandarma birimlerindeki her kademedeki amir ve personel, görevlerini kanunlara uygun yürütmekten ve yetkilerini amaca uygun bir tarzda kullanmaktan, mülki amirlere karşı sorumludur.",
+   "not": "görevleri kanuna uygun yürütmekten",
    "karistirilan": []
   },
   {
    "i": "K-17-157",
-   "madde": "47",
-   "tip": "kosul",
-   "tetikleyici": "aniden toplulukların oluştuğu hallerde",
-   "cevap": "gecikmesinde sakınca var sayılır (spor, miting, konser, festival, gösteri)",
-   "kanit": "(6) Spor karşılaşması, miting, konser, festival, toplantı ve gösteri yürüyüşünün düzenlendiği veya aniden toplulukların oluştuğu hallerde gecikmesinde sakınca bulunan hal var sayılır.",
-   "not": "",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "araç ve gereçlerin seçimi",
+   "cevap": "kendi komutanlarına ait",
+   "kanit": "(7) Jandarma birimlerinin üstlendikleri görevin yapılmasında kullanacakları araç ve gereçlerin seçimi kendi komutanlarına aittir. Mülki amirler özellik taşıyan ve yetersiz kalınan durumlarda gereken araç ve gereçleri diğer kamu kurum ve kuruluşlarından sağlayarak jandarmanın hizmetine verebilir.",
+   "not": "yetersizlikte mülki amir başka kurumdan sağlar",
    "karistirilan": []
   },
   {
    "i": "K-17-158",
-   "madde": "47",
-   "tip": "kosul",
-   "tetikleyici": "kimliklerini sorulmaksızın ibraz etmek",
-   "cevap": "jandarmanın güvenliğini sağladığı bina ve tesislere girenler; emir/karar olmadan arama",
-   "kanit": "(7) Jandarma, tehlikenin önlenmesi veya bertaraf edilmesi amacıyla güvenliğini sağladığı bina ve tesislere gelenlerin; herhangi bir emir veya karar olmasına bakılmaksızın üstünü, aracını ve eşyasını teknik cihazlarla, gerektiğinde el ile kontrol etmeye ve aramaya yetkilidir. Bu yerlere girmek isteyenler kimliklerini sorulmaksızın ibraz etmek zorundadır.",
-   "not": "",
-   "karistirilan": []
+   "madde": "59",
+   "tip": "sira_usul",
+   "tetikleyici": "vakit geçirmeksizin",
+   "cevap": "mülki amire sözlü-yazılı; suçsa savcılığa da",
+   "kanit": "MADDE 59- (1) Jandarma; bölgelerindeki her türlü suçları ve sonuçlarını, ülkenin emniyet ve asayişini bozan ya da bozacak olan olayları, yangın, su baskını gibi afetleri, haber aldıkları salgın ve bulaşıcı hastalıkları, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü, nitelikleri Anayasada gösterilen Cumhuriyeti yıkmaya, sarsmaya ve bölmeye yönelik propagandalar konusunda edindikleri bilgileri, il veya ilçenin asayiş veya güvenliğini etkileyecek mahiyetteki kovuşturma ve soruşturmaları, vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak bildirir. Suçla ilgili görülen olaylar aynı zamanda Cumhuriyet savcılığına da bildirilir.",
+   "not": "suç, asayiş olayı, afet, salgın, propaganda; basit alacak-verecek DEĞİL",
+   "karistirilan": [
+    {
+     "madde": "74",
+     "fark": "yakalanan yoklama kaçağı vakit geçirmeksizin askerlik şubesine"
+    }
+   ]
   },
   {
    "i": "K-17-159",
-   "madde": "48",
-   "tip": "gorev_yetki",
-   "tetikleyici": "boğulma gibi büyük tehlikelerin",
-   "cevap": "acele halde girme: imdat, yangın, su baskını; suçun devamına engel",
-   "kanit": "a) İmdat istenmesi veya yangın, su baskını ve boğulma gibi büyük tehlikelerin haber verilmesi veya görülmesi hallerinde bu tehlikelerden kişileri kurtarmak amacıyla,\nb) Bir suçun işlenmesine veya işlenmekte olan bir suçun devamına engel olmak için, konutlara, işyerlerine ve eklentilerine girebilir.",
-   "not": "kira uyuşmazlığı girme sebebi değil",
+   "madde": "59",
+   "tip": "sira_usul",
+   "tetikleyici": "afetleri",
+   "cevap": "vakit geçirmeksizin mülki amire, sözlü-yazılı",
+   "kanit": "MADDE 59- (1) Jandarma; bölgelerindeki her türlü suçları ve sonuçlarını, ülkenin emniyet ve asayişini bozan ya da bozacak olan olayları, yangın, su baskını gibi afetleri, haber aldıkları salgın ve bulaşıcı hastalıkları, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü, nitelikleri Anayasada gösterilen Cumhuriyeti yıkmaya, sarsmaya ve bölmeye yönelik propagandalar konusunda edindikleri bilgileri, il veya ilçenin asayiş veya güvenliğini etkileyecek mahiyetteki kovuşturma ve soruşturmaları, vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak bildirir. Suçla ilgili görülen olaylar aynı zamanda Cumhuriyet savcılığına da bildirilir.",
+   "not": "suç olayları savcılığa da",
    "karistirilan": []
   },
   {
    "i": "K-17-160",
-   "madde": "54",
-   "tip": "makam",
-   "tetikleyici": "ilin valisine karşı sorumludur",
-   "cevap": "bölge komutanı (operasyonel faaliyette o ilin valisine karşı da)",
-   "kanit": "Bölge komutanı bu görevlerinin ifasından ve yetkilerin kullanılmasından, operasyonel faaliyetlerde faaliyette bulunulan ilin valisine karşı sorumluluğu saklı kalmak kaydıyla, bölge komutanlığının konuşlu olduğu ilin valisine karşı sorumludur.",
-   "not": "",
+   "madde": "60",
+   "tip": "sira_usul",
+   "tetikleyici": "Taşra teşkilatının merkez",
+   "cevap": "Bakanlık ve mülki amirler aracılığıyla",
+   "kanit": "MADDE 60- (1) Jandarma Genel Komutanlığı merkez ve taşra teşkilatları birbirleriyle; mahalli vakalar hakkında malumat istemek ve teknik, muhasebe, lojistik ve özlük konularına dair işlemler haricinde resen muhabere edemez ve yazışma yapamaz. Taşra teşkilatının merkez teşkilatıyla, merkez teşkilatının taşra teşkilatıyla yapacağı yazışmalar Bakanlık ve mülki amirler aracılığı ile yapılır.",
+   "not": "resen yazışma yok; teknik, muhasebe, lojistik, özlük hariç",
    "karistirilan": []
   },
   {
    "i": "K-17-161",
-   "madde": "55",
-   "tip": "tanim",
-   "tetikleyici": "il jandarma teşkilatının komutanıdır",
-   "cevap": "il jandarma komutanı; görevleri: tedbir, denetim, disiplin, özlük, lojistik, adli",
-   "kanit": "MADDE 55- (1) İl jandarma komutanları, il jandarma teşkilatının komutanıdır.\n(2) İl jandarma komutanlarının görev, yetki ve sorumlulukları şunlardır:\na) Emniyet ve asayişi sağlamak için alınan tedbir ve kararları uygulamak, icra edilen adli faaliyetlerin koordinasyon ve takibini yapmak.\nb) Emniyet ve asayişi sağlamaya yönelik alınması gereken tedbirlere ilişkin önerilerde bulunmak.\nc) Görev ve işlemlerin tam, doğru ve zamanında yapılmasını sağlamak, denetlemek, yanlış ve eksiklikleri gidermek, gerektiğinde soruşturma yapmak.\nç) Kanunlarla ve vali tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.\nd) Astlarını kanunlarda verilen görevleri yönünden yetiştirmek.\ne) Disiplini sağlamak.\nf) Personelin özlük işlemlerini yürütmek.\ng) İhtiyaç duyulan lojistik ve teknik destek faaliyetlerini planlamak, kontrol ve denetimini sağlamak.\nğ) Adli görevleri ifa etmek.",
-   "not": "komutan yardımcısı yokluğunda aynı yetkiler",
+   "madde": "60",
+   "tip": "sira_usul",
+   "tetikleyici": "hak ve yükümlülük doğuran",
+   "cevap": "valilikler aracılığıyla",
+   "kanit": "Hak ve yükümlülük doğuran ve Bakanlık ya da Jandarma Genel Komutanlığı adına irade beyanı niteliği taşıyan yazışmalar, her halükarda valilikler aracılığıyla yapılır.",
+   "not": "irade beyanı niteliğindeki yazışma",
    "karistirilan": []
   },
   {
    "i": "K-17-162",
-   "madde": "57",
-   "tip": "gorev_yetki",
-   "tetikleyici": "karakolun komutanıdır",
-   "cevap": "karakol komutanı görevleri: tedbir, adli, denetim, yetiştirme, disiplin, özlük",
-   "kanit": "MADDE 57- (1) Jandarma karakol komutanları, karakolun komutanıdır.\n(2) Jandarma karakol komutanlarının görev, yetki ve sorumlulukları şunlardır:\na) Emniyet ve asayişi sağlamak için alınan tedbir ve kararları uygulamak.\nb) Emniyet ve asayişi sağlamaya yönelik alınması gereken tedbirlere ilişkin önerilerde bulunmak.\nc) Adli görevleri ifa etmek.\nç) Görev ve işlemlerin tam, doğru ve zamanında yapılmasını sağlamak, denetlemek; yanlış ve eksikliklerin nedenlerini inceleyerek gidermek, gerektiğinde soruşturma yapmak,\nd) Kanunlarla ve ilçe jandarma komutanı tarafından verilen görevlerin yapılıp yapılmadığını takip ve kontrol etmek, sonuçlarını bildirmek.\ne) Astlarını kanunlarda verilen görevleri yönünden yetiştirmek.\nf) Disiplini sağlamak.\ng) Personelin özlük işlemlerini yürütmek.",
-   "not": "lojistik-teknik destek planlama il/bölge komutanının",
+   "madde": "60",
+   "tip": "sira_usul",
+   "tetikleyici": "yazı işleri",
+   "cevap": "sorumluluk alanına göre jandarma ya da emniyette",
+   "kanit": "(2) İl ve ilçelerde jandarmanın sorumluluk alanındaki emniyet ve asayiş hizmetlerine ilişkin bütün yazı işleri jandarma komutanlıklarında; emniyetin sorumluluk alanındakiler ise emniyet makamlarında yürütülür ve dosyalanır.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-163",
-   "madde": "58",
-   "tip": "makam",
-   "tetikleyici": "mülki amirlere bağlı ve sorumlu",
-   "cevap": "il ve ilçe jandarma komutanları; bölge komutanı konuşlu il valisine",
-   "kanit": "(2) Jandarma bölge komutanları konuşlu olduğu ilin valisine, il ve ilçe jandarma komutanları ise mülki amirlere bağlı ve sorumlu olarak görev yapar.",
+   "madde": "60",
+   "tip": "sira_usul",
+   "tetikleyici": "emir ve tebligat",
+   "cevap": "jandarma hazırlar, mülki amir imzalar",
+   "kanit": "(3) Emniyet ve asayiş görevlerinden jandarmayı ilgilendiren ve jandarmanın sorumluluk alanında yapılan işlere ilişkin her türlü emir ve tebligat, mülki amirin emirlerine göre, jandarma komutanlıklarınca hazırlanarak mülki amir imzasıyla gereken yerlere gönderilir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-164",
-   "madde": "58",
+   "madde": "60",
    "tip": "makam",
-   "tetikleyici": "doğrudan emir verme yetkisine",
-   "cevap": "mülki amirler ve adli makamlar; diğer makamlar mülki amire başvurur",
-   "kanit": "(3) Mülki amirler ile adli makamlar mevzuat hükümlerine uygun olarak jandarma komutanlarına ve diğer jandarma personeline doğrudan emir verme yetkisine sahiptir. Diğer makamlar jandarmaya görev olarak verilmesini istedikleri konunun kanuni dayanaklarını belirterek o yerin mülki amirine başvurur. Mülki amir, talebi mevzuata ve ihtiyaca uygunluk yönünden değerlendirir ve uygun bulduğunda, görevin ifasını emreder.",
+   "tetikleyici": "asayiş raporlarından",
+   "cevap": "il J.K. hazırlar, vali imzalar",
+   "kanit": "(4) Bakanlığa gönderilecek asayiş raporlarından jandarmanın sorumluluk alanında meydana gelen olaylara ait bulunanlar, il jandarma komutanlığınca hazırlanır ve vali imzasıyla gönderilir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-165",
-   "madde": "58",
-   "tip": "kosul",
-   "tetikleyici": "seçimi kendi komutanlarına aittir",
-   "cevap": "jandarma birimlerinin; mülki amir yetersizlikte diğer kurumlardan sağlayabilir",
-   "kanit": "(7) Jandarma birimlerinin üstlendikleri görevin yapılmasında kullanacakları araç ve gereçlerin seçimi kendi komutanlarına aittir. Mülki amirler özellik taşıyan ve yetersiz kalınan durumlarda gereken araç ve gereçleri diğer kamu kurum ve kuruluşlarından sağlayarak jandarmanın hizmetine verebilir.",
-   "not": "",
+   "madde": "60",
+   "tip": "sayi_oran",
+   "tetikleyici": "istatistikler",
+   "cevap": "emniyet müdürlüğü beş örnek birleştirir; iki örnek vali imzasıyla Bakanlığa",
+   "kanit": "(5) Emniyet ve asayiş görevlerine ait aylık ve yıllık istatistikler jandarma, sahil güvenlik ve emniyet sorumluluk alanları için ait olduğu makamlarca hazırlandıktan ve emniyet müdürlüğünce beş örnek olarak birleştirilip il jandarma komutanı ve il emniyet müdürü ile teşkilatı olan yerlerde sahil güvenlik bölge veya grup komutanı tarafından parafe edildikten sonra, iki örneği vali imzasıyla Bakanlığa sunulur.",
+   "not": "aylık ve yıllık; il J.K., emniyet müdürü, SG komutanı parafe eder; üç örnek ilde kalır",
    "karistirilan": []
   },
   {
    "i": "K-17-166",
-   "madde": "59",
+   "madde": "61",
    "tip": "makam",
-   "tetikleyici": "vakit geçirmeksizin mülki amire",
-   "cevap": "suçlar, asayişi bozan olaylar, afetler, salgınlar bildirilir; suç olayları savcılığa",
-   "kanit": "MADDE 59- (1) Jandarma; bölgelerindeki her türlü suçları ve sonuçlarını, ülkenin emniyet ve asayişini bozan ya da bozacak olan olayları, yangın, su baskını gibi afetleri, haber aldıkları salgın ve bulaşıcı hastalıkları, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü, nitelikleri Anayasada gösterilen Cumhuriyeti yıkmaya, sarsmaya ve bölmeye yönelik propagandalar konusunda edindikleri bilgileri, il veya ilçenin asayiş veya güvenliğini etkileyecek mahiyetteki kovuşturma ve soruşturmaları, vakit geçirmeksizin mülki amire sözlü ya da yazılı olarak bildirir. Suçla ilgili görülen olaylar aynı zamanda Cumhuriyet savcılığına da bildirilir.",
-   "not": "",
+   "tetikleyici": "genel hayatın akışını",
+   "cevap": "mülki amire bilgi verir",
+   "kanit": "MADDE 61- (1) Jandarma, 5271 sayılı Kanun ve diğer mevzuatta yazılı soruşturma işlemlerine ilişkin görevleri yerine getirir, il ve ilçenin emniyet ve asayişini, genel hayatın akışını ilgilendiren olaylarda mülki amire bilgi verir.",
+   "not": "soruşturma işlemleri CMK’ya göre",
    "karistirilan": []
   },
   {
    "i": "K-17-167",
-   "madde": "61",
-   "tip": "makam",
-   "tetikleyici": "genel hayatın akışını ilgilendiren olaylarda",
-   "cevap": "jandarma mülki amire bilgi verir (soruşturma işlemleri CMK)",
-   "kanit": "MADDE 61- (1) Jandarma, 5271 sayılı Kanun ve diğer mevzuatta yazılı soruşturma işlemlerine ilişkin görevleri yerine getirir, il ve ilçenin emniyet ve asayişini, genel hayatın akışını ilgilendiren olaylarda mülki amire bilgi verir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-168",
    "madde": "62",
    "tip": "kosul",
-   "tetikleyici": "Adlî Kolluk Yönetmeliğine göre yürütülür",
-   "cevap": "adli kolluk makamlarıyla işbirliği",
+   "tetikleyici": "Adli kolluk makamları ile işbirliği",
+   "cevap": "Adlî Kolluk Yönetmeliği",
    "kanit": "MADDE 62- (1) Adli kolluk makamları ile işbirliği Adlî Kolluk Yönetmeliğine göre yürütülür.",
    "not": "",
    "karistirilan": []
   },
   {
+   "i": "K-17-168",
+   "madde": "63",
+   "tip": "sure",
+   "tetikleyici": "İcra müdürlüklerinin talebi",
+   "cevap": "yediemin otoparkı; üç işgünü içinde bildirim",
+   "kanit": "MADDE 63- (1) İcra müdürlüklerinin talebi üzerine kolluk kuvvetleri tarafından yakalanan araçlar, en yakın yediemin otoparkına teslim edilerek en geç üç işgünü içinde en yakın icra müdürlüğüne teslim alınması için bildirimde bulunulur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
    "i": "K-17-169",
-   "madde": "65",
-   "tip": "kosul",
-   "tetikleyici": "Zorunlu durumlarda, jandarma da",
-   "cevap": "polis/sahil güvenlik alanında olay yerini korur, haber verir (birinci fıkra)",
-   "kanit": "(2) Zorunlu durumlarda, jandarma da sahil güvenlik veya polis sorumluluk alanında birinci fıkradaki hükümlere uygun olarak hareket eder.",
+   "madde": "64",
+   "tip": "makam",
+   "tetikleyici": "askeri makamlarla ilişkisi",
+   "cevap": "8 ve 41. maddelerle sınırlı",
+   "kanit": "MADDE 64- (1) Jandarmanın askeri makamlarla ilişkisi 8 inci ve 41 inci maddelerde belirtilen hallerle sınırlıdır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-170",
-   "madde": "71",
-   "tip": "makam",
-   "tetikleyici": "görevlendirmeler mülki amirin onayı ile",
-   "cevap": "jandarma-sahil güvenlik-emniyet birbirinin alanında geçici görev; yetersiz kalma şartı",
-   "kanit": "(2) Bu madde kapsamındaki görevlendirmeler mülki amirin onayı ile yapılır.",
-   "not": "",
-   "karistirilan": []
+   "madde": "65",
+   "tip": "yasak",
+   "tetikleyici": "suçla karşılaş",
+   "cevap": "müdahale, haber; jandarma gelene dek soruşturma yapmaz, korur",
+   "kanit": "MADDE 65- (1) Jandarma sorumluluk alanında herhangi bir suçla karşılaşan sahil güvenlik veya polis, olaya müdahale etmek ve jandarmaya da haber vermek, jandarmanın istemi üzerine gerekli yardımı yapmakla yükümlüdür. Bu gibi durumlarda, sahil güvenlik ve polis, jandarma gelinceye kadar olay yerinde soruşturma yapamaz, durumu olduğu gibi koruyarak delillerin kaybolmaması için gereken önlemleri alır. Sahil güvenlik veya polis, olay yerinde elkoydukları nesneleri gelen jandarmaya bir alındı belgesiyle teslim eder, jandarmanın makul bir sürede gelememesi durumunda Cumhuriyet savcısına haber verir ve talimatına göre hareket eder.",
+   "not": "el koyduğu nesneyi alındı belgesiyle teslim; jandarma gelemezse savcıya haber",
+   "karistirilan": [
+    {
+     "madde": "50",
+     "fark": "jandarma her yerde suça el koyar, delili yetkili kolluğa teslim eder"
+    }
+   ]
   },
   {
    "i": "K-17-171",
-   "madde": "71",
+   "madde": "65",
    "tip": "kosul",
-   "tetikleyici": "süreklilik taşımaz",
-   "cevap": "geçici görevlendirme; sonuç alınınca yardıma gelen kuvvet kendi görevine döner",
-   "kanit": "Bu görev hiç bir zaman süreklilik taşımaz, istenen sonuç alındığında yardıma gelen kuvvet kendi görevine döner.",
+   "tetikleyici": "Zorunlu durumlarda, jandarma da",
+   "cevap": "polis alanında aynı kurala uyar",
+   "kanit": "(2) Zorunlu durumlarda, jandarma da sahil güvenlik veya polis sorumluluk alanında birinci fıkradaki hükümlere uygun olarak hareket eder.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-172",
-   "madde": "72",
-   "tip": "makam",
-   "tetikleyici": "Bakanlıkça doğrudan veya ilgili valinin",
-   "cevap": "merkez/taşra ekipler: kamu düzeni, kaçakçılık, uyuşturucu olayları; iller arası valilikler",
-   "kanit": "a) Bakanlıkça doğrudan veya ilgili valinin talebi üzerine merkez veya taşra teşkilatından ekipler görevlendirilebilir.",
+   "madde": "65",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Faillerin belirlenmesi",
+   "cevap": "üç kolluk birbirine yardımla yükümlü",
+   "kanit": "(3) Faillerin belirlenmesi ve yakalanması konularında, jandarma, sahil güvenlik ve polis kendi sorumluluk alanlarında birbirlerine gerekli yardımı yapmakla yükümlüdür.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-173",
-   "madde": "72",
+   "madde": "65",
    "tip": "makam",
-   "tetikleyici": "mahallin mülki amirine bilgi vermek",
-   "cevap": "merkezden/iller arası görevlendirilen ekipler; yetkileri jandarma alanıyla sınırlı değil",
-   "kanit": "Bu ekipler görev yaptıkları mahallin mülki amirine bilgi vermek zorunda olup görevin ifası sırasında mahallin mülki amirine karşı da sorumludur.",
-   "not": "",
+   "tetikleyici": "hangi kolluk kuvvetine",
+   "cevap": "mülki amir belirler",
+   "kanit": "(6) Jandarma, sahil güvenlik ve polisin birlikte çalışmalarına gerek duyulan durumlarda, operasyona katılan birimlerin komuta, sevk ve idaresinin hangi kolluk kuvvetine ait olduğu mülki amir tarafından belirlenir.",
+   "not": "ortak operasyonda komuta, sevk ve idare",
    "karistirilan": []
   },
   {
    "i": "K-17-174",
-   "madde": "73",
+   "madde": "66",
    "tip": "makam",
-   "tetikleyici": "geçici olarak tahsis edebilirler",
-   "cevap": "JGK-SG-EGM silah, taşıt, taşınmazlarını birbirine; Bakanın onayı; bedelsiz devir de",
-   "kanit": "MADDE 73- (1) Bakanın onayı ile; Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ve Emniyet Genel Müdürlüğü silah, mühimmat, teçhizat, taşıt ve diğer taşınırları ile taşınmazlarını birbirlerine geçici olarak tahsis edebilirler veya bedelsiz olarak devredebilirler.",
-   "not": "",
+   "tetikleyici": "dış ilişkiler uygulama planı",
+   "cevap": "yıllık; Dışişleri görüşü, Bakanlık onayı",
+   "kanit": "MADDE 66- (1) Jandarma Genel Komutanlığı yurtdışında icra edilen faaliyetlere dış ilişkiler uygulama planı kapsamında iştirak eder. Bu plan yıllık olarak hazırlanır, Dışişleri Bakanlığının görüşü alınarak Bakanlıkça onaylanır. Yıllık planda yer almayan, ancak icrasına ihtiyaç duyulan plan dışı faaliyetlerin onayı Bakanlıktan ayrıca alınır.",
+   "not": "plan dışı faaliyete ayrıca Bakanlık onayı",
    "karistirilan": []
   },
   {
    "i": "K-17-175",
-   "madde": "74",
-   "tip": "sira_usul",
-   "tetikleyici": "en yakın askerlik şubesine getirilirler",
-   "cevap": "yoklama kaçağı-bakaya yakalanınca askerlik şubesine; şube almazsa tutanakla serbest",
-   "kanit": "Yakalanarak muhafaza altına alınan yükümlüler, vakit geçirmeksizin ve en geç yirmidört saat içerisinde en yakın askerlik şubesine getirilirler. Askerlik şubesince teslim alınamayan yükümlüler, jandarma tarafından hazırlanan tutanağa istinaden derhal serbest bırakılırlar.",
-   "not": "en geç yirmidört saat içinde",
+   "madde": "66",
+   "tip": "makam",
+   "tetikleyici": "uluslararası kuruluşlara",
+   "cevap": "Bakan onayıyla üye olabilir",
+   "kanit": "(3) Jandarma Genel Komutanlığı, Bakan onayı ile uluslararası kuruluşlara üye olabilir.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-17-176",
-   "madde": "74",
+   "madde": "67",
    "tip": "makam",
-   "tetikleyici": "ele geçirilinceye kadar jandarma",
-   "cevap": "firar, izin/hava değişimi tecavüzünde yakalama kararı olanlar; adli makam talimatıyla",
-   "kanit": "(2) Firar, izin veya hava değişimi tecavüzünde olan yükümlülerden haklarında adli makamlarca çıkarılmış yakalama kararları olanlar, ele geçirilinceye kadar jandarma tarafından aranır. Yakalananlar hakkında ilgili adli makamın talimatı doğrultusunda işlem yapılır.",
-   "not": "",
-   "karistirilan": []
+   "tetikleyici": "denetle",
+   "cevap": "Bakan, Mülkiye Teftiş, vali, kaymakam, Genel Komutan; belediye başkanı DEĞİL",
+   "kanit": "MADDE 67- (1) Bakan her kademedeki jandarma birimini denetler veya Bakan adına bu denetim Mülkiye Teftiş Kurulu Başkanlığı tarafından yerine getirilir. Bu denetim illerde vali ve ilçelerde kaymakamlar tarafından yapılır.\n(2) Jandarma Genel Komutanı tüm jandarma birimlerini kendi görevleri ile ilgili denetler. Teftiş Kurulu Başkanlığı, İç Denetim Birimi Başkanlığı ile denetleme birimleri Jandarma Genel Komutanı adına teftiş ve denetleme yapar. Jandarma birimleri sıralı amirler tarafından da denetlenir.",
+   "not": "sıralı amirler de; Genel Komutan adına Teftiş Kurulu, İç Denetim",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "Denetleme Grubu merkez teşkilatında"
+    },
+    {
+     "madde": "19",
+     "fark": "umuma açık yerleri jandarma denetler"
+    },
+    {
+     "madde": "20",
+     "fark": "internet salonlarını jandarma denetler"
+    },
+    {
+     "madde": "52",
+     "fark": "Genel Komutan teşkilatı denetler-denetletir"
+    },
+    {
+     "madde": "53",
+     "fark": "yardımcı Genel Komutanın emriyle denetler"
+    },
+    {
+     "madde": "55",
+     "fark": "il J.K. görev ve işlemleri denetler"
+    },
+    {
+     "madde": "56",
+     "fark": "ilçe J.K. görev ve işlemleri denetler"
+    },
+    {
+     "madde": "57",
+     "fark": "karakol komutanı görev ve işlemleri denetler"
+    }
+   ]
   },
   {
    "i": "K-17-177",
-   "madde": "75",
-   "tip": "tanim",
-   "tetikleyici": "suçlara müdahale planı",
-   "cevap": "jandarma planları: doğal afet ve yardım; koruma ve müdahale harekât",
-   "kanit": "(1) Jandarma birimleri, emniyet ve asayiş ile kamu düzeninin korunmasını sağlamak ve olaylara etkili biçimde müdahale edebilmek amacıyla suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekat planı hazırlar.",
-   "not": "",
+   "madde": "68",
+   "tip": "makam",
+   "tetikleyici": "kadro tavanını",
+   "cevap": "yıl içi değişiklik Bakan onayıyla",
+   "kanit": "Yıl içinde ihtiyaç duyulan kadro değişikliklerinde kadro tavanını aşmamak üzere Bakandan onay alınır.",
+   "not": "kadrolar her yıl bütçe kanunuyla onaylanır",
    "karistirilan": []
   },
   {
    "i": "K-17-178",
-   "madde": "75",
-   "tip": "makam",
-   "tetikleyici": "mülki amirin onayı ile yürürlüğe",
-   "cevap": "emniyet-asayiş planları; birer örneği JGK'ya gönderilir, ilgili birimlerde saklanır",
-   "kanit": "(3) Planlar, mülki amirin onayı ile yürürlüğe konulur.\n(4) Planların birer örneği; mülki amirlikler, jandarma, sahil güvenlik ve polisin ilgili birimlerinde saklanır ve Jandarma Genel Komutanlığına gönderilir.",
-   "not": "",
+   "madde": "69",
+   "tip": "kosul",
+   "tetikleyici": "Savunma Sanayi Destekleme Fonundan",
+   "cevap": "TSK usulüyle yararlanır",
+   "kanit": "Ancak Jandarma Genel Komutanlığı, Savunma Sanayi Destekleme Fonundan Türk Silahlı Kuvvetlerinin tabi olduğu usul ve esaslar dahilinde yararlanır.",
+   "not": "ihtiyaçlar kendi bütçesinden; Bakanlık MSB’ye doğrudan teklif eder",
    "karistirilan": []
   },
   {
    "i": "K-17-179",
+   "madde": "69",
+   "tip": "makam",
+   "tetikleyici": "sefer stokları",
+   "cevap": "Millî Savunma Bakanlığı karşılar",
+   "kanit": "(3) Seferberlik ve savaş hallerinde kuvvet komutanlıkları emrine girecek veya Bakan ya da valilerce askeri görev verilen jandarma birliklerinin her türlü ihtiyacı (sefer stokları dahil) emrine gireceği kuvvet komutanlıklarının standartlarına uygun olarak Millî Savunma Bakanlığınca karşılanır.",
+   "not": "kuvvet emrine girecek ya da askeri görev verilen birliklerin",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-180",
+   "madde": "70",
+   "tip": "makam",
+   "tetikleyici": "değişik kılık",
+   "cevap": "mülki amir ya da il J.K. izni",
+   "kanit": "Ancak suç ve suçluların gizli olarak takibi, yakalanması ve istihbarat, kaçakçılık ve terörle mücadele hizmetleri için gerek görüldüğünde mülki amirin veya il jandarma komutanının izni ile görevin icap ettirdiği değişik kılık ve kıyafetle de hizmet yürütülebilir.",
+   "not": "resmi kıyafet esas; gizli takip, istihbarat, kaçakçılık, terör",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-181",
+   "madde": "70",
+   "tip": "makam",
+   "tetikleyici": "farklı tertiplenme",
+   "cevap": "mülki amir onayıyla",
+   "kanit": "(2) Mülki amirin onayı ile görevlendirilecek birimler farklı tertiplenme ile göreve gönderilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-182",
+   "madde": "71",
+   "tip": "makam",
+   "tetikleyici": "birbirlerinin sorumluluk alanlarında",
+   "cevap": "yetersiz kalırsa, mülki amir onayıyla, süreksiz",
+   "kanit": "MADDE 71- (1) Jandarma, sahil güvenlik ve emniyet teşkilatı kendi sorumluluk alanlarındaki görevlerini, kendi kuvvetleriyle yerine getirmek zorundadır. Ancak, jandarma, sahil güvenlik ve emniyet teşkilatı, kendi sorumluluk alanında yetersiz kaldıkları takdirde ya da gelişmekte olan olayların değerlendirilmesinde yetersiz kalacakları anlaşıldığında; geçici bir süre için birbirlerinin sorumluluk alanlarında görevlendirilebilirler. Bu görev hiç bir zaman süreklilik taşımaz, istenen sonuç alındığında yardıma gelen kuvvet kendi görevine döner.\n(2) Bu madde kapsamındaki görevlendirmeler mülki amirin onayı ile yapılır.",
+   "not": "sonuç alınınca kendi görevine döner",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-183",
+   "madde": "72",
+   "tip": "gorev_yetki",
+   "tetikleyici": "görevlendirilen ekipler",
+   "cevap": "jandarma alanıyla sınırlı değil; mahallin mülki amirine bilgi",
+   "kanit": "(2) Görevlendirilen ekiplerin kolluk yetkilerini kullanması, jandarma sorumluluk alanı ile sınırlı değildir. Bu ekipler görev yaptıkları mahallin mülki amirine bilgi vermek zorunda olup görevin ifası sırasında mahallin mülki amirine karşı da sorumludur.",
+   "not": "Bakanlıkça ya da vali talebiyle; iller arası valiliklerce",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-184",
+   "madde": "72",
+   "tip": "makam",
+   "tetikleyici": "önemli olayları",
+   "cevap": "Bakanlık doğrudan ya da vali talebiyle ekip görevlendirir",
+   "kanit": "MADDE 72- (1) Kamu düzeni ve güvenliği, kaçakçılık ve uyuşturucu maddelerle ilgili önemli olayları takip etmek, gerekiyorsa müdahale ederek soruşturmasını yapmak üzere;\na) Bakanlıkça doğrudan veya ilgili valinin talebi üzerine merkez veya taşra teşkilatından ekipler görevlendirilebilir.",
+   "not": "kamu düzeni, kaçakçılık, uyuşturucu",
+   "karistirilan": [
+    {
+     "madde": "59",
+     "fark": "suç ve diğer önemli olaylar vakit geçirmeksizin mülki amire bildirilir"
+    }
+   ]
+  },
+  {
+   "i": "K-17-185",
+   "madde": "73",
+   "tip": "makam",
+   "tetikleyici": "tahsis",
+   "cevap": "Bakanın onayı",
+   "kanit": "MADDE 73- (1) Bakanın onayı ile; Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ve Emniyet Genel Müdürlüğü silah, mühimmat, teçhizat, taşıt ve diğer taşınırları ile taşınmazlarını birbirlerine geçici olarak tahsis edebilirler veya bedelsiz olarak devredebilirler.",
+   "not": "JGK, SGK, EGM silah-taşıt-taşınmaz; bedelsiz devir de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-186",
+   "madde": "74",
+   "tip": "sure",
+   "tetikleyici": "yoklama kaçağı",
+   "cevap": "en geç yirmi dört saatte askerlik şubesine",
+   "kanit": "Yoklama kaçağı, bakaya, firar, izin ve hava değişimi süresini geçirenlere uygulanacak işlem\nMADDE 74- (1) Yoklama kaçakları ve bakayalar, askerlik ödevlerini yerine getirmek maksadıyla yakalanmaları için Millî Savunma Bakanlığınca Bakanlığa, askerlik şubelerince de mülki amire bildirilirler. Yakalanarak muhafaza altına alınan yükümlüler, vakit geçirmeksizin ve en geç yirmidört saat içerisinde en yakın askerlik şubesine getirilirler.",
+   "not": "vakit geçirmeksizin; bakaya da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-187",
+   "madde": "74",
+   "tip": "makam",
+   "tetikleyici": "yakalanmaları için",
+   "cevap": "MSB Bakanlığa, askerlik şubesi mülki amire bildirir",
+   "kanit": "(1) Yoklama kaçakları ve bakayalar, askerlik ödevlerini yerine getirmek maksadıyla yakalanmaları için Millî Savunma Bakanlığınca Bakanlığa, askerlik şubelerince de mülki amire bildirilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-188",
+   "madde": "74",
+   "tip": "kosul",
+   "tetikleyici": "teslim alınamayan",
+   "cevap": "tutanakla derhal serbest",
+   "kanit": "Askerlik şubesince teslim alınamayan yükümlüler, jandarma tarafından hazırlanan tutanağa istinaden derhal serbest bırakılırlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-189",
+   "madde": "74",
+   "tip": "makam",
+   "tetikleyici": "Firar, izin veya hava değişimi",
+   "cevap": "yakalama kararı varsa jandarma arar",
+   "kanit": "(2) Firar, izin veya hava değişimi tecavüzünde olan yükümlülerden haklarında adli makamlarca çıkarılmış yakalama kararları olanlar, ele geçirilinceye kadar jandarma tarafından aranır. Yakalananlar hakkında ilgili adli makamın talimatı doğrultusunda işlem yapılır.",
+   "not": "adli makam talimatıyla işlem",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-190",
+   "madde": "75",
+   "tip": "tanim",
+   "tetikleyici": "Emniyet ve asayiş planları",
+   "cevap": "suç önleme-müdahale, doğal afet-yardım, koruma-müdahale harekât",
+   "kanit": "Emniyet ve asayiş planları\nMADDE 75- (1) Jandarma birimleri, emniyet ve asayiş ile kamu düzeninin korunmasını sağlamak ve olaylara etkili biçimde müdahale edebilmek amacıyla suçları önleme ve suçlara müdahale planı, doğal afet ve yardım planı ile koruma ve müdahale harekat planı hazırlar.",
+   "not": "stratejik hedef planı bu maddede DEĞİL (m.76)",
+   "karistirilan": [
+    {
+     "madde": "23",
+     "fark": "işyeri gözetim usulü emniyet ve asayiş planlarında düzenlenir"
+    }
+   ]
+  },
+  {
+   "i": "K-17-191",
+   "madde": "75",
+   "tip": "makam",
+   "tetikleyici": "Planlar",
+   "cevap": "mülki amir onayıyla yürürlüğe; örneği JGK’ya",
+   "kanit": "(3) Planlar, mülki amirin onayı ile yürürlüğe konulur.\n(4) Planların birer örneği; mülki amirlikler, jandarma, sahil güvenlik ve polisin ilgili birimlerinde saklanır ve Jandarma Genel Komutanlığına gönderilir.",
+   "not": "mülki amirlik, jandarma, SG, polis birimlerinde saklanır",
+   "karistirilan": [
+    {
+     "madde": "23",
+     "fark": "işyeri gözetim usulü emniyet ve asayiş planlarında"
+    },
+    {
+     "madde": "53",
+     "fark": "genel komutan yardımcısı gelişim planlarını hazırlar"
+    }
+   ]
+  },
+  {
+   "i": "K-17-192",
+   "madde": "76",
+   "tip": "sure",
+   "tetikleyici": "stratejik hedef planı",
+   "cevap": "beş yıllık, Bakan onayı, iki yılda bir gözden geçirme",
+   "kanit": "Stratejik hedef planı\nMADDE 76- (1) Jandarma teşkilatının personel, araç, gereç, mühimmat, taşınır ve taşınmazları ile hizmetlerinin ve görevlerinin geliştirilmesi ve ihtiyaçlarının önceden tespiti ve hedeflerinin belirlenmesi için hazırlanan ve beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur. Bu plan en az iki yılda bir gözden geçirilir.",
+   "not": "en az iki yılda bir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-193",
+   "madde": "77",
+   "tip": "yasak",
+   "tetikleyici": "tebligat",
+   "cevap": "Tebligat Kanunu; mevzuatta yoksa jandarmaya verilemez",
+   "kanit": "MADDE 77- (1) Tebligat 11/2/1959 tarihli ve 7201 sayılı Tebligat Kanunu hükümlerine göre yapılır. Mevzuatta belirtilmeyen hiçbir tebligat işlemi jandarmaya görev olarak verilemez ve jandarma tarafından yerine getirilemez.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "60",
+     "fark": "emir ve tebligatı jandarma hazırlar, mülki amir imzalar"
+    }
+   ]
+  },
+  {
+   "i": "K-17-194",
+   "madde": "78",
+   "tip": "makam",
+   "tetikleyici": "sancaklar",
+   "cevap": "Jandarma Müzesinde muhafaza",
+   "kanit": "MADDE 78- (1) Jandarma Genel Komutanlığı merkez ve taşra teşkilatlarındaki mevcut sancaklar Jandarma Müzesinde muhafaza edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-195",
+   "madde": "79",
+   "tip": "makam",
+   "tetikleyici": "düzenleyici işlemler",
+   "cevap": "Bakanlık yürürlüğe koyar",
+   "kanit": "MADDE 79- (1) Bu Yönetmeliğin uygulanmasını sağlamak üzere hazırlanan yönetmelikler ve diğer düzenleyici işlemler Bakanlık tarafından yürürlüğe konulur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-196",
    "madde": "80",
    "tip": "kosul",
-   "tetikleyici": "83/7362 sayılı Bakanlar Kurulu Kararı",
-   "cevap": "eski Jandarma Teşkilatı Görev ve Yetkileri Yönetmeliği (1983) yürürlükten kaldırıldı",
+   "tetikleyici": "83/7362",
+   "cevap": "Bakanlar Kurulu Kararı; eski yönetmelik kaldırıldı",
    "kanit": "MADDE 80- (1) 3/11/1983 tarihli ve 83/7362 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Jandarma Teşkilatı Görev ve Yetkileri Yönetmeliği yürürlükten kaldırılmıştır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-180",
+   "i": "K-17-197",
+   "madde": "80",
+   "tip": "sure",
+   "tetikleyici": "8 inci maddesinde sayılan",
+   "cevap": "otuz güne kadar faaliyetten men",
+   "kanit": "“2559 sayılı Kanunun 8 inci maddesinde sayılan hususların tespiti halinde belirtilen işyerleri otuz günü geçmemek üzere geçici süreyle; bu işyerlerinin mevzuat hükümlerine aykırı olarak ruhsatsız işletildiğinin tespiti halinde ise süresiz olarak ya da ruhsat alıncaya kadar mahallin en büyük mülki idare amiri tarafından faaliyetten men edilir.",
+   "not": "ruhsatsızsa süresiz; mahallin en büyük mülki idare amiri",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-198",
+   "madde": "80",
+   "tip": "sure",
+   "tetikleyici": "mühürle",
+   "cevap": "yetkili idare üç işgünü içinde; yapmazsa kolluk resen",
+   "kanit": "Yetkili idare en geç üç işgünü içinde faaliyetten men’e ilişkin kararı işyerini mühürlemek suretiyle uygulayarak buna ilişkin tutanağın bir suretini ilgili mülki makama gönderir. Yetkili idare, işyerinin faaliyetten men’ine ilişkin kararı süresinde uygulamazsa, sorumluluğu yetkili idareye ait olmak üzere kapatma kararı kolluk güçleri tarafından re’sen uygulanır ve yetkili idareye bilgi verilir.”",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-17-199",
+   "madde": "81",
+   "tip": "sure",
+   "tetikleyici": "yürürlüğe girer",
+   "cevap": "yayımı tarihinde",
+   "kanit": "MADDE 81- (1) Bu Yönetmelik yayımı tarihinde yürürlüğe girer.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "komisyon kararı İçişleri Bakanı onayıyla yürürlüğe girer"
+    }
+   ]
+  },
+  {
+   "i": "K-17-200",
    "madde": "82",
    "tip": "makam",
-   "tetikleyici": "hükümlerini Cumhurbaşkanı yürütür",
-   "cevap": "Yönetmelik hükümlerini Cumhurbaşkanı yürütür (eskiden Bakanlar Kurulu)",
+   "tetikleyici": "Yönetmelik hükümlerini",
+   "cevap": "Cumhurbaşkanı yürütür",
    "kanit": "MADDE 82- (1) Bu Yönetmelik hükümlerini Cumhurbaşkanı yürütür.",
-   "not": "",
+   "not": "eskiden Bakanlar Kurulu",
    "karistirilan": []
   }
  ]
