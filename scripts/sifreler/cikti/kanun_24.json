@@ -1,0 +1,116 @@
+{
+ "id": 24,
+ "ad": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+ "kodlar": [
+  {
+   "i": "K-24-001",
+   "madde": "5",
+   "tip": "tanim",
+   "tetikleyici": "Sıhhi izinler",
+   "cevap": "izin türlerinden; yıllık, mazeret, sıhhi, yurt dışı",
+   "kanit": "a) Personele verilecek izinler şunlardır:\n1) Yıllık izin.\n2) Mazeret izinleri.\n3) Sıhhi izinler.\n4) Yurt dışı izinleri.",
+   "not": "dört tür",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-002",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "kanuni izinlerinden mahsup edilmez",
+   "cevap": "adli makama şüpheli, sanık, tanık, mağdur, bilirkişi çağrısı",
+   "kanit": "d) Adli makamlara şüpheli, sanık, tanık, mağdur veya bilirkişi olarak çağrılan personelin görevden ayrı kaldığı süreler kanuni izinlerinden mahsup edilmez.",
+   "not": "amir, çağrı ve yol süresine göre gönderir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-003",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "vekâlet edenler",
+   "cevap": "vekâlet ettikleri kadronun izin yetkisine sahip",
+   "kanit": "e) İzin vermeye yetkili amirlerin yerine vekâlet edenler, vekâlet ettikleri kadronun izin verme yetkisine sahiptir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-004",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "izinli sayılır",
+   "cevap": "milletlerarası spor müsabakası ve hazırlığına katılan",
+   "kanit": "f) 21/5/1986 tarihli ve 3289 sayılı Gençlik ve Spor Hizmetleri Kanununun 29 uncu maddesi uyarınca milletlerarası seviyede yurt içi ve yurt dışı spor müsabakaları ve bunların hazırlık çalışmalarına katılacak personel, organizasyonun devamı süresince izinli sayılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-005",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "izinden geriye çağrılabilir",
+   "cevap": "asgari yıllık izin planını onaylayan makam; yazılı ya da sözlü",
+   "kanit": "ğ) Görev ve hizmet ihtiyacının gerektirdiği durumlarda, asgari yıllık izin planlamasını onaylayan makam tarafından personel izinden geriye çağrılabilir. Personelin izinden çağrılması, yazılı veya sözlü olarak yapılabilir.",
+   "not": "sonradan görevlendirme yazısı; dönüş ve gidiş masrafı Harcırah Kanununa göre ödenir; savaş ve OHAL'de de çağrılabilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-006",
+   "madde": "5",
+   "tip": "sure",
+   "tetikleyici": "günün başlangıç saatidir",
+   "cevap": "izinlerin başlangıç ve bitiş saati",
+   "kanit": "h) İzinlerin başlangıç ve bitiş saati günün başlangıç saatidir.",
+   "not": "istisnai durumda yetkili amir farklı saat belirleyebilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-007",
+   "madde": "5",
+   "tip": "sure",
+   "tetikleyici": "48 saat içerisinde",
+   "cevap": "yurda dönme kararı tebliğ edilen izinli personel döner",
+   "kanit": "i) Yurt dışında izinde bulunup, yurda dönme kararı kendisine tebliğ edilen personel, 48 saat içerisinde, en kısa yoldan ve en seri vasıta ile dönüşe geçer.",
+   "not": "en kısa yol, en seri vasıta; mücbir sebeple uzatılabilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-008",
+   "madde": "5",
+   "tip": "yasak",
+   "tetikleyici": "ilin dışına izinsiz çıkamaz",
+   "cevap": "personel; hafta sonu il dışı izni kanuni izinden düşmez",
+   "kanit": "j) Personel görev yaptığı ilin dışına izinsiz çıkamaz. Hafta sonu, yılbaşı, ulusal, resmi ve dini bayramlarda veya kamu kurum ve kuruluşlarının idari izinli sayıldığı günlerde personelin talebi üzerine hizmet ve görev ihtiyaçlarını aksatmayacak şekilde ve hizmet bölgesinin görev şartları da göz önünde bulundurularak 6 ncı maddenin birinci fıkrasının (ğ) bendinde belirtilen oranlarda dikkate alınmak suretiyle il dışına izin verilebilir. Bu izinler kanuni izinlerden mahsup edilmez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-009",
+   "madde": "5",
+   "tip": "yasak",
+   "tetikleyici": "Kursiyerlere",
+   "cevap": "planlı tatiller dışında izin verilmez",
+   "kanit": "m) Kursiyerlere, kursların devamı süresince kurs programına göre belirlenen planlı tatiller dışında izin verilmez.",
+   "not": "geçerli özrü olana kursu veren birim mazeret izni verebilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-010",
+   "madde": "20",
+   "tip": "yasak",
+   "tetikleyici": "silahını götüremez",
+   "cevap": "seyahatle yurt dışına giden; şahsi, zati, miri",
+   "kanit": "d) Zorunlu olmadıkça üniforma giyemez. e) Seyahat maksadıyla yurt dışına giden personel şahsi, zati ve miri silahını götüremez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-24-011",
+   "madde": "20",
+   "tip": "yasak",
+   "tetikleyici": "Zorunlu olmadıkça üniforma giyemez",
+   "cevap": "yurt dışında izinli personel",
+   "kanit": "d) Zorunlu olmadıkça üniforma giyemez. e) Seyahat maksadıyla yurt dışına giden personel şahsi, zati ve miri silahını götüremez.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

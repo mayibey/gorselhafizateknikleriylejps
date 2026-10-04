@@ -1,0 +1,1449 @@
+{
+ "id": 23,
+ "ad": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+ "kodlar": [
+  {
+   "i": "K-23-001",
+   "madde": "2",
+   "tip": "istisna",
+   "tetikleyici": "işçiler kendi mevzuatına tabidir",
+   "cevap": "işçiler Yönetmelik kapsamı dışında",
+   "kanit": "görevli işçiler kendi mevzuatına tabidir.",
+   "not": "askerlik yükümlüleri: eksik hususlarda diğer yükümlülerin mevzuatı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-002",
+   "madde": "3",
+   "tip": "sayi_oran",
+   "tetikleyici": "24’üncü maddesine",
+   "cevap": "dayanak 2803 sayılı Kanun m.24 ve 2692 sayılı Kanun m.23",
+   "kanit": "Bu Yönetmelik, 10/3/1983 tarihli ve 2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanununun 24’üncü maddesine ve 9/7/1982 tarihli ve 2692 sayılı Sahil Güvenlik Komutanlığı Kanununun 23’üncü maddesine dayanılarak hazırlanmıştır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-003",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "kuruluş yönünden bağlı olunan",
+   "cevap": "Âmir; ayrıca âmir olarak yetkilendirilmiş diğer personel",
+   "kanit": "a) Âmir: Kadro ve kuruluş yönünden bağlı olunan kimse ile âmir olarak yetkilendirilmiş olan diğer personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-004",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "Rütbe veya kıdemce küçük",
+   "cevap": "Ast (Üst: rütbe veya kıdemce büyük)",
+   "kanit": "b) Ast: Rütbe veya kıdemce küçük olan personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-005",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "astının ve üstünün hukukuna riayeti",
+   "cevap": "Disiplin tanımı; mevzuata ve âmirlere mutlak itaat ile",
+   "kanit": "g) Disiplin: Mevzuat hükümlerine ve âmirlere mutlak bir itaat ile astının ve üstünün hukukuna riayeti,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-006",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "söz, yazı ve sair surette",
+   "cevap": "Emir tanımı; göreve ilişkin fiilin yapılması veya yapılmaması asta bildirilir",
+   "kanit": "ğ) Emir: Göreve ilişkin bir fiilin yapılmasının veya yapılmamasının söz, yazı ve sair surette asta bildirilmesini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-007",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "yeterlik bakımından üstünlük sırasını",
+   "cevap": "Kıdem (aynı nasıplılar arasında)",
+   "kanit": "m) Kıdem: Belli bir rütbeye nasıp tarihinden itibaren, o rütbede görev süreleri veya aynı nasıplılar arasında yeterlik bakımından üstünlük sırasını,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-008",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "bekleme süresinin başlama tarihini",
+   "cevap": "Nasıp (yeni rütbenin normal bekleme süresi)",
+   "kanit": "u) Nasıp: İlk rütbeye veya bir rütbeden sonraki rütbeye terfide yeni rütbenin normal bekleme süresinin başlama tarihini,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-009",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "duruşu ve dış görünüşünü",
+   "cevap": "Kılık (Kıyafet = giyim ve kuşam)",
+   "kanit": "n) Kılık: Personelin duruşu ve dış görünüşünü,\no) Kışla: Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında personelin barındırıldığı ve görev yaptığı tek bir bina veya toplu halde bulunan muhtelif binalar ile bunların müştemilatından olan diğer binalar ve araziyi,\nö) Kıyafet: Giyim ve kuşamı,",
+   "not": "KILIK DURUŞ, KIYAFET GİYİM",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-010",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "komutası altındaki personeli",
+   "cevap": "Maiyet (âmirin emir ve komutası altındakiler)",
+   "kanit": "s) Maiyet: Âmirin emir ve komutası altındaki personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-011",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "geçici olarak personelin kullanımına",
+   "cevap": "Tahsis: belli bir görev için geçici kullanım (İstihkak: sarf yetkisi)",
+   "kanit": "dd) Tahsis: Belli bir görevin icrası amacıyla giyecek ve teçhizatın geçici olarak personelin kullanımına verilmesini,",
+   "not": "istihkak = sarfına yetki verilen giyecek/teçhizatın cins ve miktarı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-012",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "Nizamiye/Lumbarağzı",
+   "cevap": "giriş-çıkış kontrol ve emniyet tesisi; belirli sayıda kuvvet",
+   "kanit": "ü) Nizamiye/Lumbarağzı: Karargâh, birlik veya kurumların giriş ve çıkışlarının kontrol altına alınması ve emniyetinin sağlanması amacıyla, bünyesinde belirli sayıda kuvvet ihtiva eden tesisi,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-013",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "sekiz kademeli çavuşa kadar",
+   "cevap": "uzman jandarma rütbe aralığı (3466 sayılı Kanun)",
+   "kanit": "gg) Uzman jandarma: 28/5/1988 tarihli ve 3466 sayılı Uzman Jandarma Kanunu kapsamında temin edilmiş ve eğitimlerini başarı ile bitirmiş uzman jandarma çavuştan uzman jandarma sekiz kademeli çavuşa kadar rütbeyi haiz şahısları,",
+   "not": "uzman erbaş: 3269; uzman onbaşı ve uzman çavuş",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-014",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "erler ile işçiler hariç",
+   "cevap": "Devlet memuru tanımı (rütbeliler, yedekler, erler dışında kalanlar)",
+   "kanit": "f) Devlet memuru: Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve er, 7179 sayılı Kanuna tabi yedek subay, yedek astsubay, erbaş ve erler ile işçiler hariç diğer personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-015",
+   "madde": "5",
+   "tip": "sira_usul",
+   "tetikleyici": "ant içerek göreve başlar",
+   "cevap": "yetkili âmirlerin huzurunda; tören usulü yönerge ile",
+   "kanit": "Personel, yetkili âmirlerin huzurunda mevzuatta belirtildiği şekilde ant içerek göreve başlar. Ant içme töreninin icrasına yönelik hususlar yönerge ile düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-016",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "subay ve astsubayların astı",
+   "cevap": "Uzman jandarma: diğer rütbeli personelin üstü",
+   "kanit": "(3) Uzman jandarmalar, subay ve astsubayların astı, diğer rütbeli personelin üstüdür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-017",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "emsal rütbedeki sözleşmeli erbaşların",
+   "cevap": "Uzman erbaş onların üstü (subay, astsubay, uzman jandarmanın astı)",
+   "kanit": "(4) Uzman erbaşlar, subay, astsubay ve uzman jandarmaların astı, emsal rütbedeki sözleşmeli erbaşların ve 7179 sayılı Kanuna göre askerlik yükümlüsü olan emsal rütbedeki erbaşların üstüdür.",
+   "not": "yükümlü emsal erbaşların da üstü",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-018",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "emsal rütbedeki uzman erbaşların astı",
+   "cevap": "Sözleşmeli erbaş; yükümlü emsal erbaşların üstü",
+   "kanit": "(5) Sözleşmeli erbaşlar, subay, astsubay, uzman jandarma ve emsal rütbedeki uzman erbaşların astı, 7179 sayılı Kanuna göre askerlik yükümlüsü olan emsal rütbedeki erbaşların üstüdür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-019",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "amir-maiyet ilişkisi vardır",
+   "cevap": "Devlet memuru–rütbeli personel: astlık-üstlük yok",
+   "kanit": "(6) Devlet memurları ile rütbeli personel arasında bir astlık-üstlük ilişkisi bulunmamakla birlikte devlet memurları ile rütbeli personel arasında amir-maiyet ilişkisi vardır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "devlet memurları esas duruşa geçmez"
+    },
+    {
+     "madde": "18",
+     "fark": "devlet memurları selamlamadan muaf"
+    }
+   ]
+  },
+  {
+   "i": "K-23-020",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "disiplinden taviz verilemez",
+   "cevap": "Disiplin teşkilatın temelidir; hiçbir suretle",
+   "kanit": "Disiplin, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinin temelidir ve hiçbir suretle disiplinden taviz verilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-021",
+   "madde": "7",
+   "tip": "gorev_yetki",
+   "tetikleyici": "hep birlikte itaatsizlik veya mukavemet",
+   "cevap": "halleri gören her üst emir ve komuta işini üzerine alır",
+   "kanit": "(5) Herhangi bir karargâh, birlik veya kurumda birden fazla personel, bir üst veya âmire hep birlikte itaatsizlik veya mukavemet ederse veya bu eylemlerden biri veya birkaçını yapmak için ittifak ederse; düzeni temin etmek ve disiplinsizliğin önünü almak için bu halleri gören her üst emir ve komuta işini üzerine almak ile yükümlüdür.",
+   "not": "yükümlülük (yetki değil)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-022",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "öncelikle bilgi, yetenek",
+   "cevap": "sevk ve idarede otorite; yüksek bir karakter ile sağlanır",
+   "kanit": "(10) Sevk ve idarede otoritenin, öncelikle bilgi, yetenek ve yüksek bir karakter ile sağlanması esastır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-023",
+   "madde": "8",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kıyafetli olsun veya olmasın",
+   "cevap": "âmirlerin usulüne uygun emirlerini tam, zamanında, değiştirmeden yerine getirir",
+   "kanit": "resmî kıyafetli olsun veya olmasın âmirlerinin, usulüne uygun emirlerini tam, zamanında, değiştirmeden ve eksiksiz olarak yerine getirmekle",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-024",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "korku ile değil",
+   "cevap": "görev sevgi ve üstün görev anlayışı ile icra edilir",
+   "kanit": "(2) Görevini; korku ile değil, sevgi ve üstün görev anlayışı ile icra eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-025",
+   "madde": "8",
+   "tip": "yasak",
+   "tetikleyici": "âmirine mütalâada bulunmaz",
+   "cevap": "ast, aldığı bir emirden dolayı; mırıldanmaz, doğru bulmadığını sezdirmez",
+   "kanit": "(5) Aldığı bir emirden dolayı âmirine mütalâada bulunmaz. Bir emri alırken veya aldıktan sonra mırıldanmaz, doğru bulmadığını sezdirecek hal ve harekette bulunmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-026",
+   "madde": "8",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Âmirinin yokluğunda",
+   "cevap": "âmirin yerini tutabilmek için onun görevini de öğrenir",
+   "kanit": "Âmirinin yokluğunda, âmirin yerini tutabilmek için onun görevini de iyice öğrenmeye çalışır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-027",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "maiyete yüklenen görevleri yapar",
+   "cevap": "Devlet memurları da astın görevlerini yapar",
+   "kanit": "(14) Devlet memurları bu maddede maiyete yüklenen görevleri yapar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-028",
+   "madde": "9",
+   "tip": "yasak",
+   "tetikleyici": "hususi bir menfaat",
+   "cevap": "âmir maiyetinden böyle hiçbir talepte bulunmaz; gerektiğinde disiplin cezası verir",
+   "kanit": "(4) Maiyetinden hususi bir menfaat temin edecek hiçbir talepte bulunmaz. Maiyetini disiplini bozan fiil ve hareketlerinden dolayı ikaz ve ıslah eder. Gerektiğinde mevzuat dâhilinde disiplin cezası verir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-029",
+   "madde": "9",
+   "tip": "yasak",
+   "tetikleyici": "mecbur kalmadıkça müdahalede bulunmaz",
+   "cevap": "âmir; maiyetine görevini icra esnasında (âmirin görevleri)",
+   "kanit": "(8) Maiyetine görevini icra esnasında mecbur kalmadıkça müdahalede bulunmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-030",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "nefsini sona bırakır",
+   "cevap": "âmir; bir kolaylık çıkınca; zorlukta öne atılmak şerefli görev",
+   "kanit": "(10) Maiyetinin katlandığı her türlü zahmet ve mahrumiyete, fiziki imkân nispetinde beraber katlanır, bir kolaylık çıkınca bunlardan istifade için nefsini sona bırakır ve bir zorluk çıkınca bilâkis öne atılmayı şerefli bir görev kabul eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-031",
+   "madde": "9",
+   "tip": "yasak",
+   "tetikleyici": "gerekçesiz takdir hakkı",
+   "cevap": "âmir ödül veya ceza ile ilgili olarak kullanmaz",
+   "kanit": "(11) Ödül veya ceza ile ilgili olarak gerekçesiz takdir hakkı kullanmaz, her konuyu etraflıca değerlendirir, ölçülü, adaletli ve hakkaniyetli davranır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-032",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "yazı ile yinelerse",
+   "cevap": "emir yerine getirilir; sorumluluk emri verene; üst âmire bildirilir",
+   "kanit": "(3) Ast emri; Anayasa ve mevzuat hükümlerine aykırı görürse, yerine getirmez ve bu aykırılığı o emri verene bildirilir. Ancak, âmir emrinde ısrar ederse ve bu emrini yazı ile yinelerse, emir yerine getirilir. Emrin yerine getirilmesinden doğacak sorumluluk emri verene aittir. Ancak, durum emri veren âmirin bir üst âmirine bildirilir.",
+   "not": "mevzuata aykırı emir: önce yerine getirilmez, aykırılık emri verene bildirilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-033",
+   "madde": "10",
+   "tip": "yasak",
+   "tetikleyici": "Konusu suç teşkil eden emir",
+   "cevap": "hiçbir surette yerine getirilmez; yapan sorumluluktan kurtulamaz",
+   "kanit": "(4) Konusu suç teşkil eden emir hiçbir surette yerine getirilmez; yerine getiren kimse sorumluluktan kurtulamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-034",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "verilme takdiri",
+   "cevap": "emrin yazılı, sözlü veya sair usulle verilmesi âmire aittir",
+   "kanit": "(5) Emrin yazılı, sözlü veya sair usullerle verilme takdiri, âmire aittir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-035",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "kurum kimliği ile tanıtır",
+   "cevap": "emir resmî veya sivil kıyafetli verilebilir; âmir gerektiğinde kendini",
+   "kanit": "(6) Emir, resmî veya sivil kıyafetli olarak verilebilir. Âmir, gerektiği takdirde, emir verdiği personele kendini kurum kimliği ile tanıtır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "18",
+     "fark": "sivil üst kimlik kartını ibraz edince selam"
+    }
+   ]
+  },
+  {
+   "i": "K-23-036",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "atlanan kademelere",
+   "cevap": "acele halde silsile dışı emir; emri veren âmir bilgi verir",
+   "kanit": "(7) Emirler, kural olarak birbirine bağlı âmirler tarafından, silsile ile verilir. Ancak, acele ve zorunlu hallerde bu sıraya riayet edilmeden de emir verilebilir. Bu takdirde emri veren âmir, atlanan kademelere en kısa zamanda bilgi verir. Böyle bir emri alan maiyet de âmirini haberdar eder.",
+   "not": "maiyet de kendi âmirini haberdar eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-037",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "muhalif ikinci bir emir",
+   "cevap": "ikinci emri veren âmire önceki emir bildirilir; ısrarda ikincisi yapılır",
+   "kanit": "(8) Bir âmirin verdiği emir yapılırken daha büyük bir âmirden önceki emre muhalif ikinci bir emir daha alınacak olursa, ikinci emri veren âmire önceki emir bildirilir. Eğer önceki emre muhalif emir veren âmir kendi emrinin yapılmasında ısrar ederse, bu âmirin emri yapılır ve ilk emri veren âmire en kısa zamanda bilgi verilir.",
+   "not": "ilk emri veren âmire bilgi verilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-038",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "Emirde kararlılık esastır",
+   "cevap": "verilen emir mecburi sebepler oluşmadıkça değiştirilemez veya yok sayılamaz",
+   "kanit": "(11) Emirde kararlılık esastır. Verilen emir, mecburi sebepler oluşmadıkça veya gerekliliği ortadan kalkmadıkça değiştirilemez veya yok sayılamaz. Bu davranış, âmirin kararsızlığını gösterir ve ast üzerinde itibarsızlık yaratır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-039",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "emri yeni duruma uygun",
+   "cevap": "ast sorumluluğu üzerine alarak değiştirerek yapabilir (âmirden yeni emir alınamıyorsa)",
+   "kanit": "ast sorumluluğu üzerine alarak emri yeni duruma uygun bir şekilde değiştirerek yapabilir ve ilk fırsatta emri yerine getirilmeyen veya kısmen yerine getirilen âmire bilgi verilir.",
+   "not": "büyük tehlike/ağır zarar/bilinmeyen husus; ilk fırsatta bilgi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-040",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "nazik bir dille",
+   "cevap": "üst âmir, emri iptal gereğini emri veren âmire izah eder",
+   "kanit": "(14) Emri veren âmirin üst âmirleri, emri değiştirme veya iptal etme gereği duyar ise, bu hususu, emri veren âmire nazik bir dille izah eder ve tatmin edici bir gerekçe sunar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-041",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "son kontrol yapılır",
+   "cevap": "emri yerine getiren tarafından; sonra âmire bilgi verilir",
+   "kanit": "Verilen emrin yerine getirilmesini müteakip, emri yerine getiren tarafından son kontrol yapılır ve âmire bilgi verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-042",
+   "madde": "10",
+   "tip": "sira_usul",
+   "tetikleyici": "birleştirilerek verilir",
+   "cevap": "birbiri ile bağlantılı emirler; işgücü israfını önlemek için",
+   "kanit": "(18) Birbiri ile bağlantılı olabilecek emirler, zaman ve işgücü israfına sebebiyet verilmemesi maksadıyla, uygun bir şekilde birleştirilerek verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-043",
+   "madde": "11",
+   "tip": "yasak",
+   "tetikleyici": "toplu olarak söz veya yazı",
+   "cevap": "aynı konuda toplu müracaat yasak; her biri ayrı ayrı",
+   "kanit": "(2) Personelin, aynı konu ve şahısla ilgili, toplu olarak söz veya yazı ile müracaatı yasaktır. Aynı olay birden fazla personelin şikâyetine sebep veya konu olursa bunların her biri ayrı ayrı veya yalnız başına şikâyet hakkını kullanabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-044",
+   "madde": "11",
+   "tip": "ceza",
+   "tetikleyici": "yüzüne karşı kendisini şikâyet",
+   "cevap": "âmirin; cezayı muciptir (dedikodu yapmak da)",
+   "kanit": "(4) Âmirin yüzüne karşı kendisini şikâyet etmek, âmirinden şikâyetçi olacağını söyleyerek dedikodu yapmak cezayı muciptir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-045",
+   "madde": "11",
+   "tip": "sira_usul",
+   "tetikleyici": "bizzat şikâyeti neticelendirirler",
+   "cevap": "şikâyeti incelemeye yetkili âmirler; kararı şikâyetçiye tebliğ ederler",
+   "kanit": "(3) Şikâyetleri incelemeye yetkili olan âmirler, bizzat şikâyeti neticelendirirler. Daha yukarıdaki âmirlerin karar ve hükümlerine lüzum gösteren şikâyetleri onlara bildirirler ve alacakları hüküm ve kararları şikâyetçiye tebliğ ederler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-046",
+   "madde": "11",
+   "tip": "kosul",
+   "tetikleyici": "Şikâyet ve Müracaatları Hakkında Yönetmelik",
+   "cevap": "bu maddede hüküm bulunmayan hallerde uygulanır (8/5743 sayılı BKK)",
+   "kanit": "(5) Bu maddede hüküm bulunmayan hallerde, 28/11/1982 tarihli ve 8/5743 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Devlet Memurlarının Şikâyet ve Müracaatları Hakkında Yönetmelik hükümleri uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-047",
+   "madde": "12",
+   "tip": "yasak",
+   "tetikleyici": "görevini vaktinde yapmıştır",
+   "cevap": "bu gerekçeyle ödül dağıtmak, ödüllendirmede aşırıya kaçmaktır",
+   "kanit": "Bu sebeple, “görevini yapmıştır, görevini vaktinde yapmıştır.” gibi ödül dağıtmak, ödüllendirmede aşırıya kaçmaktır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-048",
+   "madde": "12",
+   "tip": "sira_usul",
+   "tetikleyici": "mesai arkadaşlarının huzurunda",
+   "cevap": "ödüller mümkün olduğunca orada verilir; teşvik edici sözler",
+   "kanit": "(6) Ödüller, mümkün olduğunca personelin mesai arkadaşlarının huzurunda verilir ve diğer personeli de başarıya teşvik edici sözler söylenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-049",
+   "madde": "12",
+   "tip": "kosul",
+   "tetikleyici": "değerlendirme notundan bağımsız",
+   "cevap": "ödül sistemi disiplin cezaları ile değerlendirme notundan bağımsız çalışır",
+   "kanit": "(7) Ödül sistemi, disiplinle ilgili yaptırım ve cezalar ile değerlendirme notundan bağımsız çalışır. Personel ödüllendirilirken, sadece ödüllendirilmeye gerekçe olan durum içinde değerlendirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-050",
+   "madde": "12",
+   "tip": "yasak",
+   "tetikleyici": "daha büyük ödül tekliflerinde",
+   "cevap": "başarı derecesine orantısız büyük ödül teklifi yapılmaz",
+   "kanit": "(8) Başarının derecesi dikkate alınmadan ve teklif edilen ödülle orantılı olmayan daha büyük ödül tekliflerinde bulunulmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-051",
+   "madde": "12",
+   "tip": "makam",
+   "tetikleyici": "Ödül çeşitleri",
+   "cevap": "Bakanlıkça yürürlüğe konulan yönetmelikle belirlenir",
+   "kanit": "(9) Ödül çeşitleri, personelin ödüllendirilmesi ve diğer hususlar, Bakanlıkça yürürlüğe konulan yönetmelikle belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-052",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "diğerlerine ibret olmasındadır",
+   "cevap": "cezanın fayda ve tesiri; tam adaletle ve zamanında verilir",
+   "kanit": "Cezanın, disiplinin tesisi bakımından fayda ve tesiri, suçluyu uyarmak ve maddeten zarar vermekten ziyade diğerlerine ibret olmasındadır.\n(2) Ceza tam bir adaletle ve zamanında verilmelidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-053",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "7068 sayılı Genel Kolluk Disiplin",
+   "cevap": "disiplin cezası gerektiren haller ve tatbik şekli bu Kanunda",
+   "kanit": "(3) Disiplin cezası verilmesini gerektiren haller ve bunun tatbik şekli, 31/1/2018 tarihli ve 7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun Hükmünde Kararnamenin Kabul Edilmesine Dair Kanunda yazılı olduğu gibidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-054",
+   "madde": "14",
+   "tip": "yasak",
+   "tetikleyici": "gönüllü olarak feragat",
+   "cevap": "âmir, izin hakkından vazgeçmeye yönelik tavır, davranış ve imada bulunmaz",
+   "kanit": "(3) Âmir, açıkça olmasa da, personelin izin hakkından gönüllü olarak feragat etmesine yönelik tavır, davranış ve imada bulunmamalıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-055",
+   "madde": "14",
+   "tip": "sure",
+   "tetikleyici": "İzin yılı",
+   "cevap": "her senenin ilk ayından itibaren başlar",
+   "kanit": "(6) İzin yılı, her senenin ilk ayından itibaren başlar ve izin süre ve sıraları ona göre düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-056",
+   "madde": "14",
+   "tip": "makam",
+   "tetikleyici": "kendi inisiyatiflerine",
+   "cevap": "izinleri yetkili âmir kullandırır; daha büyük âmirler almaz",
+   "kanit": "(4) İzinler yetkili âmir tarafından kullandırılmalı, bu tasarruf daha büyük âmirlerce kendi inisiyatiflerine alınmamalıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-057",
+   "madde": "14",
+   "tip": "gorev_yetki",
+   "tetikleyici": "izinden çağrılmayı gerektirecek",
+   "cevap": "izne giden, adresini ve iletişim araçlarını âmirine bildirir; ulaşılabilir kalır",
+   "kanit": "(5) İzne giden her personel, ayrılmadan evvel kendi birlik veya kurum âmirine gideceği yerdeki adresini ve iletişim araçlarını bildirmeli, izinden çağrılmayı gerektirecek hallerin varlığı halinde ise kendisini ulaşılabilir kılmalıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-058",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "komuta yeteneği, beceri",
+   "cevap": "izinlerin tam ve zamanında kullandırılması âmirin göstergesidir",
+   "kanit": "İzinlerin tam ve zamanında kullandırılması, âmirlerin komuta yeteneği, beceri ve özgüvenlerinin bir göstergesidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-059",
+   "madde": "15",
+   "tip": "istisna",
+   "tetikleyici": "tanıklık veya bilirkişilik dışında",
+   "cevap": "adlî yargı makamlarına çağrılınca resmî kıyafet giyilmez; tutuklu/hükümlü de",
+   "kanit": "(8) Rütbeli personel ve erler; tanıklık veya bilirkişilik dışında, adlî yargı makam ve mercilerine çağrıldığında, tutuklu veya hükümlü iken veya görevden uzaklaştırıldıkları süre içerisinde resmî kıyafet giyemez.",
+   "not": "görevden uzaklaştırılanlar da giyemez",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-060",
+   "madde": "15",
+   "tip": "yasak",
+   "tetikleyici": "sakız çiğnenmez, poşet taşınmaz",
+   "cevap": "resmî kıyafetle; şapka çıkarılmaz, kol kola girilmez, eller cepte dolaşılmaz",
+   "kanit": "b) Resmî kıyafet ile sakız çiğnenmez, poşet taşınmaz, şapka çıkarılmaz, kol kola girilmez, el ele tutuşulmaz, ağızda sigara veya eller cepte dolaşılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-061",
+   "madde": "15",
+   "tip": "istisna",
+   "tetikleyici": "nişan, evlilik ve devre yüzüğü",
+   "cevap": "resmî kıyafetle bunlar dışında yüzük, bileklik ve kolye kullanılmaz",
+   "kanit": "ç) Resmî kıyafet ile nişan, evlilik ve devre yüzüğü dışında yüzük, bileklik ve kolye kullanılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-062",
+   "madde": "15",
+   "tip": "istisna",
+   "tetikleyici": "Hak sahibi olunmayan",
+   "cevap": "şerit, rozet ve bröve takılmaz (mevzuata uymayanlar da)",
+   "kanit": "Hak sahibi olunmayan veya mevzuatta belirtilen özelliklere uymayan şerit rozet ve bröveler takılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-063",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "örgü başlık giyilmesi zorunludur",
+   "cevap": "bina ve müştemilatı ile araç dışında şapka, kep, bere de",
+   "kanit": "e) Bina ve müştemilatı ile araç dışında, görevin özelliğine göre şapka, kep, bere veya örgü başlık giyilmesi zorunludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-064",
+   "madde": "15",
+   "tip": "makam",
+   "tetikleyici": "şapkasız olarak dolaşılabilir",
+   "cevap": "karargâh, birlik ve kurumlarda en büyük âmirin müsaade ettiği alanlarda",
+   "kanit": "Karargâh, birlik ve kurumlarda, en büyük âmirin müsaade ettiği alanlarda şapkasız olarak dolaşılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-065",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "Araç içinde resmî kıyafetli",
+   "cevap": "yolculukta şapka çıkarılabilir; araç içinde birlik ve beraberlik esastır",
+   "kanit": "f) Araç içinde resmî kıyafetli olarak yolculuk yaparken şapka çıkarılabilir. Bu konuda araç içerisinde birlik ve beraberlik esastır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-066",
+   "madde": "15",
+   "tip": "yasak",
+   "tetikleyici": "işaretler sökülse dahi",
+   "cevap": "resmî kıyafet sivil kıyafete dönüştürülemez; resmî pantolon sivil gömlekle giyilemez",
+   "kanit": "ı) Üzerindeki işaretler sökülse dahi, resmî kıyafetler sivil kıyafete dönüştürülerek kullanılamaz; resmî pantolon, sivil gömlek, kazak, ceket gibi giyeceklerle birlikte giyilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-067",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "göze görünmeyecek şekilde",
+   "cevap": "rütbeli personel görev dışında sivil elbise ile tabancasını taşıyabilir",
+   "kanit": "j) Rütbeli personel görev dışında da sivil elbise ile tabancalarını göze görünmeyecek şekilde taşıyabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-068",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "koyu renk ve sade desenlerde",
+   "cevap": "resmî kıyafetle çantalar; yalnız sol elde taşınabilir",
+   "kanit": "k) Resmi kıyafet ile sadece koyu renk ve sade desenlerde çantalar sol elde taşınabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-069",
+   "madde": "15",
+   "tip": "istisna",
+   "tetikleyici": "resmî kıyafet rengindeki başörtüleri",
+   "cevap": "kadın rütbeli personel (yüzü kapatmayacak); bunun dışında sivil giysi giyemez",
+   "kanit": "l) Kadın rütbeli personel yüzünü kapatmayacak şekilde başlarına taktıkları resmî kıyafet rengindeki başörtüleri hariç, resmî kıyafetlerinin içerisine ve üzerine sivil giysi, sivil palto, pardösü ve benzeri kıyafetler giyemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-070",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "hamileliğini belgelediği takdirde",
+   "cevap": "kadın rütbeli personel sivil kıyafet ile görev yapabilir",
+   "kanit": "m) Kadın rütbeli personel, hamileliğini belgelediği takdirde sivil kıyafet ile görev yapabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-071",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "ilişiği kesildiği tarihten",
+   "cevap": "emeklilik, çekilme vb. ile; resmî kıyafetini çıkarmaya mecburdur",
+   "kanit": "o) Rütbeli personel ve erler; emeklilik, çekilme veya herhangi bir nedenle Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığından ilişiği kesildiği tarihten itibaren resmî kıyafetini çıkarmaya mecburdur.",
+   "not": "eskimiş resmî kıyafet başkasına verilmez",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-072",
+   "madde": "15",
+   "tip": "yasak",
+   "tetikleyici": "favori, sakal ve bıyık",
+   "cevap": "bırakılmaz (mevzuatta düzenlenen haller hariç); sadelik esastır",
+   "kanit": "ö) El, yüz ve saç tuvaletlerinde sadelik esastır. Mevzuatta düzenlenen haller hariç olmak üzere favori, sakal ve bıyık bırakılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-073",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "omuz hizasını geçmez",
+   "cevap": "kadın rütbeli personel kısa saçlı ise; uzun saçlı ise toplar",
+   "kanit": "Kadın rütbeli personel, uzun saçlı ise dağınık olmayacak şekilde saçlarını toplar, kısa saçlı ise saç uzunlukları omuz hizasını geçmez.",
+   "not": "erkek: saç şapka/bere içinden taşmaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-074",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "istihbarata karşı koyma",
+   "cevap": "kimlik kartı bu gibi istisnalar dışında her zaman üzerinde bulundurulur",
+   "kanit": "(10) Kimlik kartı, kişinin jandarma veya sahil güvenlik personeli olduğunu gösteren resmî bir belgedir. Personel, güvenlik ve istihbarata karşı koyma gibi çeşitli istisnai durumlar dışında, kimlik kartını resmî ve sivil olarak her zaman üzerinde bulundurmak zorundadır. Yetkili makamlarca talep edilmesi durumunda kimlik kartının gösterilmesi zorunludur.",
+   "not": "yetkili makam isteyince gösterilmesi zorunlu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-075",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "her sabah sakal",
+   "cevap": "erkek personel sakal tıraşı her sabah; saç tıraşı gerekli zamanlarda",
+   "kanit": "(6) Erkek personel her sabah sakal ve gerekli zamanlarda saç tıraşı olur. Personel hiçbir zaman güçsüz, yorgun ve bitkin bir görüntü sergilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-076",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "Kılık ve Kıyafetine Dair Yönetmelik",
+   "cevap": "Devlet memurlarının kılık kıyafeti bu Yönetmeliğe tabi (16/7/1982)",
+   "kanit": "(12) Devlet memurları hakkında, 16/7/1982 tarihli Kamu Kurum ve Kuruluşlarında Çalışan Personelin Kılık ve Kıyafetine Dair Yönetmelik hükümleri uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-077",
+   "madde": "16",
+   "tip": "kosul",
+   "tetikleyici": "Devlet töresine göre",
+   "cevap": "kamu kurum ve kuruluşlarının âmirlerine teamüllere göre hitap edilir",
+   "kanit": "(2) Personel; kamu kurum ve kuruluşlarının âmirleri ile diğer personeline, teamüller ve Devlet töresine göre hitap eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-078",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "emir, broşür vb.",
+   "cevap": "görgü ve nezaket ayrıntıları; her teşkilat ayrı ayrı hazırlar",
+   "kanit": "Buna ilişkin ayrıntılar her teşkilatın ayrı ayrı hazırlayacakları emir, broşür vb. ile yayımlanır. Mesleki görgü ve nezaket kurallarına aykırı tavır ve davranışlarda bulunan personel hakkında disiplin işlemi uygulanır.",
+   "not": "aykırı davranana disiplin işlemi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-079",
+   "madde": "17",
+   "tip": "kosul",
+   "tetikleyici": "otur veya rahat komutunu",
+   "cevap": "âmir vermeden esas duruş bozulmaz; âmir gelince derhal ayağa kalkılır",
+   "kanit": "(2) Âmir veya üst, astın veya astların bulunduğu yere gelir ise derhal ayağa kalkılır ve esas duruşa geçilir. Âmir otur veya rahat komutunu vermeden esas duruş bozulmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-080",
+   "madde": "17",
+   "tip": "kosul",
+   "tetikleyici": "yerinde dönüşle cephe",
+   "cevap": "âmir yan tarafta ise; konuşurken baş çevrilmez, esas duruşa geçilir",
+   "kanit": "(4) Âmir veya üst ile konuşurken hemen esas duruşa geçilir, baş çevrilmez ve âmir yan tarafta ise yerinde dönüşle cephe âmir veya üste çevrilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-081",
+   "madde": "17",
+   "tip": "yasak",
+   "tetikleyici": "el ve kol sallanmaz",
+   "cevap": "esas duruşta konuşmak gerekiyorsa; vücut bükülmez, sessiz kalınır",
+   "kanit": "(5) Esas duruşta sessiz kalınır ve aksi emredilmedikçe kımıldanılmaz. Konuşulması gerekiyorsa el ve kol sallanmaz, vücut bükülmez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-082",
+   "madde": "17",
+   "tip": "istisna",
+   "tetikleyici": "esas duruşa geçmez",
+   "cevap": "Devlet memurları; amirleri karşısında saygılı duruş zorunlu",
+   "kanit": "(7) Devlet memurları esas duruşa geçmez. Ancak amirleri karşısında saygılı bir duruş sergilemek zorundadır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "18",
+     "fark": "selamlamadan da muaf, saygılı duruş"
+    },
+    {
+     "madde": "6",
+     "fark": "astlık-üstlük yok, amir-maiyet var"
+    }
+   ]
+  },
+  {
+   "i": "K-23-083",
+   "madde": "18",
+   "tip": "tanim",
+   "tetikleyici": "Küçüğün büyüğü selamlaması",
+   "cevap": "saygının; büyüğün küçüğü sevginin; aynı seviye nezaket ve muhabbetin",
+   "kanit": "Küçüğün büyüğü selamlaması saygının, büyüğün küçüğü selamlaması sevginin, aynı seviyede olanların birbirini selamlaması ise nezaket ve muhabbetin belirtisidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-084",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "ayrılanların kalanları",
+   "cevap": "selamlamada temel kural: astın üstünü, gelenlerin mevcut olanları selamlaması",
+   "kanit": "Selamlamada temel kural; astın üstünü, ayrılanların kalanları, gelenlerin mevcut olanları selamlamasıdır. Üst veya âmir selamlamayı bitirmeden ast selamlamayı bitiremez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-085",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "selamlamayı bitirmeden",
+   "cevap": "üst veya âmir bitirmeden ast selamlamayı bitiremez",
+   "kanit": "Selamlamada temel kural; astın üstünü, ayrılanların kalanları, gelenlerin mevcut olanları selamlamasıdır. Üst veya âmir selamlamayı bitirmeden ast selamlamayı bitiremez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-086",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "Sivil kıyafetli olunması",
+   "cevap": "sivil de olsa selam verilir (mani değil)",
+   "kanit": "Sivil kıyafetli olunması selam verilmesine mani değildir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-087",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "görmemek mazeret teşkil etmez",
+   "cevap": "selamlama gecikmiş bile olsa yapılır",
+   "kanit": "(5) Selamlama gecikmiş bile olsa yapılır, görmemek mazeret teşkil etmez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-088",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "kimlik kartını ibraz ederek",
+   "cevap": "sivil âmir veya üst; derhal esas duruşa geçilip selam verilir",
+   "kanit": "Âmir veya üst sivil dahi olsa, tanınıyorsa veyahut kimlik kartını ibraz ederek kendini tanıtmışsa, derhal esas duruşa geçilip selam verilir ve gerekli saygı gösterilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "emir veren âmir kurum kimliğiyle tanıtır"
+    }
+   ]
+  },
+  {
+   "i": "K-23-089",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "başla takip yapılır",
+   "cevap": "âmir veya üst selâmlanırken; selamlanan şahsın gözüne canlı bakılır",
+   "kanit": "(7) Âmir veya üst selâmlanırken başla takip yapılır. Selâmlama esnasında, selamlanan şahsın gözüne canlı bir şekilde bakılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-090",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "sağ el ile yapılır",
+   "cevap": "elle selamlama; başta şapka, kayık kep, bere, çelik başlık varken",
+   "kanit": "(8) Elle selamlama, başta şapka, kayık kep, bere, kar başlığı, çelik/fiber başlık bulunduğunda ve sağ el ile yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-091",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "durup yol vermesi",
+   "cevap": "merdiven ve dar geçit gibi yerlerde selamlama; astlar",
+   "kanit": "Merdiven ve dar geçit gibi yerlerde selamlama, astların durup yol vermesi suretiyle olur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-092",
+   "madde": "18",
+   "tip": "istisna",
+   "tetikleyici": "eldiven ile selâmlama",
+   "cevap": "tören birliklerindeki rütbeli personel ve erler hariç yapılmaz",
+   "kanit": "(9) Tören birliklerinde bulunan rütbeli personel ve erler haricinde eldiven ile selâmlama yapılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-093",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "cephe selamı verilir",
+   "cevap": "Cumhurbaşkanına, sancağa, yabancı devlet başkanlarına ve sancaklarına, cenazeye",
+   "kanit": "(10) Cumhurbaşkanına, sancağa ve yabancı devlet başkanları ile sancaklarına ve cenazeye karşı cephe selamı verilir.",
+   "not": "bayrak çekilir/indirilirken de cephe alınarak selamlanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-094",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "açık yerde şapkalı",
+   "cevap": "milli marş çalınırken saygı duruşu; kapalı yerlerde şapkasız",
+   "kanit": "(11) Rütbeli personel ve erler, milli marş çalınır veya söylenirken, açık yerde şapkalı, kapalı yerlerde şapkasız olarak, cephesini marşın çalındığı yöne dönerek saygı duruşunda bulunur.",
+   "not": "cephe marşın çalındığı yöne",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-095",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "araç forsu veya flamasının",
+   "cevap": "görülmesi halinde selamlama yapılır; özel araç kullanan üstlere de selam",
+   "kanit": "(13) Resmî araçlardaki rütbeli personelin tanınması, araç forsu veya flamasının görülmesi halinde selamlama yapılır. Özel araç kullanan üstlere selam verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-096",
+   "madde": "18",
+   "tip": "istisna",
+   "tetikleyici": "Araç süren rütbeli",
+   "cevap": "selamlama yapmaz; astın selamına araçta en kıdemli karşılık verir",
+   "kanit": "Araç süren rütbeli personel ve erler selamlama yapmaz. Araçta bulunan diğer rütbeli personel ve erler üst ve âmirlerini selamlar. Bir astın selamına araçta iken en kıdemli karşılık verir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-097",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "başı açık girilir",
+   "cevap": "konferans salonu, gazino, kütüphane, yemekhane; karşılık beklenmeden içeridekiler selamlanır",
+   "kanit": "(14) Konferans salonu, gazino, kütüphane, dershane, yemekhane gibi yerlere başı açık girilir ve karşılık beklenmeden içeride bulunanlar selamlanır. Çıkarken de aynı selamlama yapılır. Servis araçları içinde de aynı kurallar geçerlidir.",
+   "not": "servis araçlarında da aynı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-098",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "Şehit na’şını taşıyan",
+   "cevap": "hava nakil araçlarının iniş ve kalkışında hazır bulunanlarca selamlama",
+   "kanit": "(15) Şehit na’şını taşıyan hava nakil araçlarının alanlara iniş ve kalkışında, hazır bulunanlarca selamlama yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-099",
+   "madde": "18",
+   "tip": "istisna",
+   "tetikleyici": "selamlama ile ilgili hususlardan muaftır",
+   "cevap": "Devlet memurları; amirlerine karşı saygılı duruşunu muhafaza eder",
+   "kanit": "(16) Devlet memurları selamlama ile ilgili hususlardan muaftır. Ancak, amirlerine karşı saygılı duruşunu muhafaza etmekle mükelleftir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "esas duruşa geçmez, saygılı duruş"
+    }
+   ]
+  },
+  {
+   "i": "K-23-100",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "en büyük ve affedilmeyecek kusurdur",
+   "cevap": "Korkaklık; cesaret ve şecaat vasfı",
+   "kanit": "ç) Cesaret ve şecaat: Tehlikeden asla korkmayarak ve gerektiğinde ölmekten çekinmeyerek iş görmek ve pek yürekli olmaktır. Korkaklık; personel için en büyük ve affedilmeyecek kusurdur. Nefsini zarardan ve tehlikeden korumak için görevi bırakarak savuşmak veya ihmal etmek namus ve onura leke getirir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-101",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "muntazam işleyen bir saat",
+   "cevap": "İntizam severlik vasfı (görevi dakikası dakikasına)",
+   "kanit": "j) İntizam severlik: Personel, görevini muntazam işleyen bir saat gibi dakikası dakikasına yapmayı adet haline getirmelidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-102",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "kardeşten ileri olduğunu",
+   "cevap": "İyi geçinmek; arkadaşın kabahatini örtbas etmek teşkilata fenalıktır",
+   "kanit": "f) İyi geçinmek: Bütün mesai arkadaşlarının kardeşten ileri olduğunu ve gerektiğinde aynı ülkü için bir arada kanlarını dökeceklerini düşünerek birbirlerini yürekten sevmek, birbirlerinin onurlarına saygı göstermek, edep ve terbiyeye uymayan işlerden, şakalardan kaçınmak ve daima mertçe hareket etmektir. Personel, arkadaşının keder ve sevincine ortak olmalı ve gerektiğinde ona öğüt vererek ahlâksızlıktan ve her türlü tehlikeden korumalıdır. Arkadaşını fena yola sürüklemenin, kabahatini örtbas etmeye çalışmanın teşkilatına fenalık etmek demek olduğunu her personel bilmelidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-103",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "kendisini dinlemekte olduklarını",
+   "cevap": "Sır saklamak; görev hususlarında hiç kimseye sır vermemek",
+   "kanit": "ğ) Sır saklamak: Personel, her yerde kötü niyetlilerin bulunacağını ve kendisini dinlemekte olduklarını kabul edip, görev ve göreve ait hususlarda hiç kimseye sır vermemelidir. Hiçbir yerde mesleğine ilişkin sözler sarf etmemeli, her hangi bir şeyi büyüterek ve ekleyerek yayıp dağıtmaktan sakınmalı ve hiç bir zaman doğruluktan ayrılmamalıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-104",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "gösterdiğinden dışarı çıkmamak",
+   "cevap": "İtaat (yasak edilen şeyleri yapmamak)",
+   "kanit": "b) İtaat: Mevzuat ile emirlerin gösterdiğinden dışarı çıkmamak ve yasak edilen şeyleri yapmamaktır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-105",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "Başka milletten kolluk",
+   "cevap": "Temsil ve tanıtım vasfı (iyi geçinmek, yüksek değeri tanıtmak)",
+   "kanit": "k) Temsil ve tanıtım: Başka milletten kolluk veya askeri personel ile bir arada bulunulduğu zaman, onlarla iyi geçinmek ve yüksek değerini onlara da tanıtacak bir arkadaşlık yapmak, teşkilatların temsil ve tanıtım mahiyetindeki görevidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-106",
+   "madde": "19",
+   "tip": "tanim",
+   "tetikleyici": "bir vücut gibi çalışmaktır",
+   "cevap": "Emel ve fikir birliği; genelin menfaati şahsi menfaatten üstün",
+   "kanit": "h) Emel ve fikir birliği: Cumhuriyetin ve milletin korunması uğrunda bir vücut gibi çalışmaktır. Bu, teşkilatların en kıymetli özelliklerindendir. Emelde ve fikirde birlik genelin menfaatinin şahsi menfaatten daha üstün, aziz olduğunu takdir ederek sağlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-107",
+   "madde": "19",
+   "tip": "kosul",
+   "tetikleyici": "mesai saatleri dışında da",
+   "cevap": "personel, teşkilatının bir personeli olduğu bilinciyle hareket eder",
+   "kanit": "(2) Personel, resmî sıfatının gerektirdiği itibar ve güvene layık olduğunu, görev içindeki ve görev dışındaki davranışlarıyla gösterir ve mesai saatleri dışında da teşkilatının bir personeli olduğu bilinciyle hareket eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-108",
+   "madde": "20",
+   "tip": "gorev_yetki",
+   "tetikleyici": "hastalandığında durumunu âmirine",
+   "cevap": "personel bildirmekle yükümlü; âmir de maiyetinin sağlığını yakinen takip eder",
+   "kanit": "personel sağlığını korumakla ve hastalandığında durumunu âmirine bildirmekle, her kademedeki âmirler de, maiyetinin sağlığı ile ilgili hususları yakinen takip ve gerekli tedbirleri almakla yükümlüdür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-109",
+   "madde": "21",
+   "tip": "yasak",
+   "tetikleyici": "satamaz, kiralayamaz veya istifadesine",
+   "cevap": "emanet devlet malı kimseye; kalkışanı duyan âmirine derhal haber verir",
+   "kanit": "a) Devlet tarafından bedelsiz ve emanet olarak kendisine verilen her çeşit Devlet malını hiç bir surette kimseye satamaz, kiralayamaz veya istifadesine sunamaz. Böyle bir iş yapmaya kalkışanları duyar veya bilirse âmirine derhal haber verir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-110",
+   "madde": "21",
+   "tip": "yasak",
+   "tetikleyici": "kendiliğinden ilâveler ve değişiklikler",
+   "cevap": "kendisine verilen eşyanın şeklinde yapamaz",
+   "kanit": "b) Kendisine verilen eşyanın şekillerinde kendiliğinden ilâveler ve değişiklikler yapamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-111",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "illerde valiler ve Bakanın",
+   "cevap": "basına bilgi ancak onlar ve Bakanın yetkili kılacağı görevli verir",
+   "kanit": "Bu konuda gerekli bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-112",
+   "madde": "22",
+   "tip": "yasak",
+   "tetikleyici": "topluca bildiri dağıtamaz",
+   "cevap": "personel tek başına veya topluca; basına demeç veremez",
+   "kanit": "Personel, tek başına veya topluca bildiri dağıtamaz, kamu görevleri hakkında basına, haber ajanslarına, radyo ve televizyon kurumlarına veya diğer iletişim kanallarına bilgi, yazı ve demeç veremez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-113",
+   "madde": "22",
+   "tip": "yasak",
+   "tetikleyici": "mesul müdürü, yazarı",
+   "cevap": "personel hiçbir basın yayın organının, internet vasıtasının olamaz",
+   "kanit": "(3) Personel, hiç bir basın ve yayın organının, internet vasıtasının ve diğer iletişim kanallarının mesul müdürü, yazarı veya haber vericisi olamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-114",
+   "madde": "22",
+   "tip": "istisna",
+   "tetikleyici": "siyaset hariç olmak üzere",
+   "cevap": "bilimsel, tarihi, iktisadi, içtimai, edebi makale ve kitap yazmak serbest",
+   "kanit": "(5) Personel, siyaset hariç olmak üzere, özellikle bilimsel, tarihi, iktisadi, içtimai, edebi bir zemin üzerinde gazete ve dergilere makaleler göndermekte ve aynı konularda kitap, tez, bildiri yazmak ve kendi hesabına bastırmakta serbesttir.",
+   "not": "siyaset hakkında yazı yazamaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-115",
+   "madde": "22",
+   "tip": "kosul",
+   "tetikleyici": "ışığında yazılmıştır",
+   "cevap": "resmî kaynaktan yararlanan eser; yazmadan evvel Komutanlıktan izin alınır",
+   "kanit": "b) Yalnız mesleki makam ve mevkii itibariyle kendisince malûm olan resmî kaynak ve belgelerden yararlanmak suretiyle eser yayımlamak isteyenler, eserini yazmadan evvel ilgisine göre Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığından izin almalıdır. Bu gibi eserlerin “resmî kaynak ve belgeler ışığında yazılmıştır.” kaydını içerip içermeyeceğini de ilgisine göre Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı belirler.",
+   "not": "kaydın konulup konulmayacağını Komutanlık belirler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-116",
+   "madde": "22",
+   "tip": "kosul",
+   "tetikleyici": "göreve mahsus kitaplardan",
+   "cevap": "bunlardan yararlanan eser basılmadan evvel silsile ile incelettirilir; izin alınır",
+   "kanit": "c) Yayımlanacak kitap veya makaleler gizli ve göreve mahsus kitaplardan istifade suretiyle yazılmış bulunuyorsa, bunun basılması ve yayımından evvel sahibi, silsileler yolu ile ilgisine göre Jandarma Genel Komutanlığına veya Sahil Güvenlik Komutanlığına başvurarak eser veya makalesini incelettirir ve yayımlanması için izin alır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-117",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "en kıdemli birlik komutanı",
+   "cevap": "kışla komutanıdır (birden fazla birliğin aynı kışlada bulunduğu yer)",
+   "kanit": "MADDE 23 - (1) Birden fazla birliğin aynı kışla içinde bulunduğu yerlerde en kıdemli birlik komutanı, karargâh veya kurum âmiri kışla komutanıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-118",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "kışla emniyet subayı",
+   "cevap": "bir subay, yoksa tecrübeli bir astsubay görevlendirilir",
+   "kanit": "Emniyet tedbirlerinin tespiti, idamesi ve kontrollerinin yapılması amacıyla bir subay veya subay bulunmadığı durumlarda tecrübeli bir astsubay kışla emniyet subayı olarak görevlendirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-119",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "en kıdemli kışla komutanınca",
+   "cevap": "aynı belediye mücavir alanında birden fazla kışla; planlar tek elden",
+   "kanit": "(3) Aynı belediye mücavir alanı içinde, birden fazla kışlanın bulunması durumunda, birlik emniyet planı, takviye planı, yangından korunma planı ve disiplinin muhafazası gibi hususlar, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı için ayrı ayrı olmak üzere, en kıdemli kışla komutanınca bir bütünlük içinde ele alınarak tek elden tespit ve takip edilir.",
+   "not": "JGK ve SGK için ayrı ayrı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-120",
+   "madde": "23",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Paratonerlerin ölçüm ve bakımlarının",
+   "cevap": "kışla komutanının görevi; yaptırılması ve kontrolünü sağlar",
+   "kanit": "ı) Paratonerlerin ölçüm ve bakımlarının yaptırılması ve kontrol edilmesini sağlar.",
+   "not": "içme suyu analizi, ilaçlama, hijyen denetimi de kışla komutanı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-121",
+   "madde": "23",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Kışla gelişim planının",
+   "cevap": "hazırlanmasını kışla komutanı sağlar",
+   "kanit": "j) Kışla gelişim planının hazırlanmasını sağlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-122",
+   "madde": "24",
+   "tip": "sure",
+   "tetikleyici": "genel olarak 40 saattir",
+   "cevap": "rütbeli personelin haftalık çalışma süresi (göreve çağrılmaya engel değil)",
+   "kanit": "uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-123",
+   "madde": "24",
+   "tip": "makam",
+   "tetikleyici": "yirmi dört saatinde devamlılık",
+   "cevap": "çalışma saat ve şekillerini birlik komutanları veya birim âmirleri belirler",
+   "kanit": "(2) Günün yirmi dört saatinde devamlılık gösteren görevlerde çalışan rütbeli personelin çalışma saat ve şekilleri birlik komutanları veya birim âmirlerince belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-124",
+   "madde": "24",
+   "tip": "kosul",
+   "tetikleyici": "nöbete ilişkin hükümler saklıdır",
+   "cevap": "nöbetçi ve görevli olmayan rütbeli personel mesai bitiminde ayrılabilir",
+   "kanit": "(3) Nöbetçi ve görevli olmayan veya kendisine ayrıca özel bir görev verilmeyen subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmalar günlük mesai veya eğitimin bitiminde görev yerinden ayrılabilir. Ancak nöbete ilişkin hükümler saklıdır. Görevin bulunmayı gerektirdiği yerden izinsiz hiçbir rütbeli personel ve er gündüz ve gece ayrılamaz.",
+   "not": "görev yerinden izinsiz ayrılma yok",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-125",
+   "madde": "25",
+   "tip": "makam",
+   "tetikleyici": "günlük görev cetveline göre",
+   "cevap": "kışlada kalanların yoklamasını nöbetçi heyeti alır",
+   "kanit": "(3) Kışlada kalan rütbeli personel ve erlerin yoklamaları, nöbetçi heyeti tarafından günlük görev cetveline göre alınır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-126",
+   "madde": "25",
+   "tip": "kosul",
+   "tetikleyici": "toplu takdim alınabilir",
+   "cevap": "kılık, kıyafet, teçhizat kontrolü, müşterek emir tebliği için; âmir belirler",
+   "kanit": "(2) Rütbeli personel ve erlerin kılık, kıyafet, malzeme ve teçhizatının kontrolü, eğitim ve disiplin düzeylerinin tespiti, müşterek emirlerin tebliği gibi amaçlarla, âmir tarafından belirlenecek yer ve zamanlarda toplu takdim alınabilir veya içtima edilebilir. Toplu takdimin icrası ilgili mevzuat esaslarına göre yürütülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-127",
+   "madde": "25",
+   "tip": "makam",
+   "tetikleyici": "nöbetçi âmirinin emri",
+   "cevap": "gereken hallerde onun emriyle de yoklama alınabilir",
+   "kanit": "(4) Gereken hâllerde birlik komutanı, karargâh ve kurum âmirleri ile nöbetçi âmirinin emri ile de yoklama alınabilir.",
+   "not": "birlik komutanı, karargâh ve kurum âmirleri de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-128",
+   "madde": "26",
+   "tip": "tanim",
+   "tetikleyici": "nöbet görevi ihdas edilir",
+   "cevap": "müşterek görevlerin belli bir sıra ve süreyle yapılması maksadıyla",
+   "kanit": "belli bir sıra ve süreyle; personel tarafından yerine getirilmesini sağlamak maksadıyla nöbet görevi ihdas edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-129",
+   "madde": "27",
+   "tip": "sayi_oran",
+   "tetikleyici": "en az üç kişiden",
+   "cevap": "hazır kıt’a kuvveti; birliğin tamamına kadar; birlik komutanı belirler",
+   "kanit": "(3) Hazır kıt’anın teşkil edileceği zaman ve kuvveti ihtiyaca göre birlik komutanı belirler. Bu kıt’anın kuvveti en az üç kişiden birliğin tamamına kadar olabilir. Hazır kıt’a komutanı, görevlendirilen birliğin büyüklüğüne bağlı olarak subay, astsubay, uzman jandarma veya uzman erbaş olabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-130",
+   "madde": "27",
+   "tip": "makam",
+   "tetikleyici": "uzman jandarma veya uzman erbaş",
+   "cevap": "hazır kıt’a komutanı; birliğin büyüklüğüne bağlı (subay, astsubay da)",
+   "kanit": "(3) Hazır kıt’anın teşkil edileceği zaman ve kuvveti ihtiyaca göre birlik komutanı belirler. Bu kıt’anın kuvveti en az üç kişiden birliğin tamamına kadar olabilir. Hazır kıt’a komutanı, görevlendirilen birliğin büyüklüğüne bağlı olarak subay, astsubay, uzman jandarma veya uzman erbaş olabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-131",
+   "madde": "27",
+   "tip": "makam",
+   "tetikleyici": "uyuyup uyumayacağı",
+   "cevap": "hazır kıt’anın; çıkaran birlik komutanı emreder",
+   "kanit": "(2) Hazır kıt'a kendisine gösterilen yerde gece dahi tam teçhizatlı, silahlı ve giyimli olarak harekete hazır bulunur. Hazır kıt'anın uyuyup uyumayacağı, çıkaran birlik komutanı tarafından emredilir.",
+   "not": "gece dahi tam teçhizatlı, silahlı hazır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-132",
+   "madde": "29",
+   "tip": "tanim",
+   "tetikleyici": "dayanıklı tüketim malları hariç",
+   "cevap": "kantinlerin amacı; zaruri ihtiyaçlar daha ucuza ve kolay",
+   "kanit": "dayanıklı tüketim malları hariç zaruri ihtiyaçlarının daha ucuza ve kolaylıkla sağlanmasını temin maksadıyla",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-133",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "seyir istikametleri değiştirilmemek",
+   "cevap": "servis araçlarından aileler ancak boş yer varsa; bu şartla",
+   "kanit": "(2) Servis araçlarından, ancak boş yer bulunduğu takdirde ve seyir istikametleri değiştirilmemek şartı ile personelin aileleri de istifade edebilir.",
+   "not": "hasta/cenaze aracından da boş yerde yararlanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-134",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "sivil moral ekipleri",
+   "cevap": "savaşta ve olağanüstü hallerde harekât bölgesine nakil araçlarından yararlandırılır",
+   "kanit": "(3) Savaşta ve olağanüstü hallerde, izinli personel ve görevin gerektirdiği diğer işlerde görevlendirilecek personel ile sivil moral ekipleri, harekât bölgesi ve harekâtla ilgili diğer bölgelere gidiş ve dönüşlerinde nakil araçlarından yararlandırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-135",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "hava araçlarından faydalanabilir",
+   "cevap": "terörle mücadele bölgesinde yol güvenliği yoksa aileler de; boş yer",
+   "kanit": "(4) Terörle mücadele harekâtı yürütülen bölgelerde, yol güvenliğinin sağlanamadığı veya tehdit varlığının değerlendirildiği durumlarda, zorunlu ve acil hallerde emniyet açısından hava ulaştırma araçları ile ulaşım sağlanan bölgelerdeki personelin aileleri de boş yer bulunduğu takdirde ve seyir istikametleri değiştirilmemek şartı ile hava araçlarından faydalanabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-136",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "en son gittiği yerden",
+   "cevap": "tarifeli araç işlemeyen yere tayin; aile ve eşya resmî araçla",
+   "kanit": "(7) Gündelik ve belirli tarifeli umumi araçların işlemediği bölgelere tayin edilen personelin zatî eşyaları ile ailesi, efradı ve kendisi umumi araçların en son gittiği yerden, görev yerine kadar resmî araç ile götürülüp, getirilebilir. Bu husus ilgili komutanlıkça düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-137",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "en büyük mülki âmirine haber",
+   "cevap": "birlik komutanları afet ve acil durumları bildirmekle sorumludur",
+   "kanit": "MADDE 32 - (1) Birlik komutanları, meydana gelen afet ve acil durumları mahallin en büyük mülki âmirine haber vermekten sorumludurlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-138",
+   "madde": "32",
+   "tip": "sira_usul",
+   "tetikleyici": "üstlerinden emir beklemeksizin",
+   "cevap": "vali veya kaymakamın istediği yardımı birlik komutanı yapar; Komutanlığa haber",
+   "kanit": "(2) Afet bölgelerinde veya civarında bulunan birlik komutanları, vali veya kaymakamlar tarafından istenilecek yardımları üstlerinden emir beklemeksizin ve gecikmeksizin yerine getirirler ve en kısa zamanda sıralı amirleri ile ilgisine göre Jandarma Genel Komutanlığına veya Sahil Güvenlik Komutanlığına haber verirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-139",
+   "madde": "32",
+   "tip": "kosul",
+   "tetikleyici": "Türkiye Afet Müdahale Planı",
+   "cevap": "diğer afet işleri; Afet ve Acil Durum Müdahale Hizmetleri Yönetmeliği",
+   "kanit": "(3) Afet ve acil durumlara ilişkin diğer tüm faaliyetler, 26/8/2013 tarihli ve 2013/5703 sayılı Afet ve Acil Durum Müdahale Hizmetleri Yönetmeliği ile Türkiye Afet Müdahale Planı esaslarına göre yürütülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-140",
+   "madde": "33",
+   "tip": "kosul",
+   "tetikleyici": "Binaların Yangından Korunması Hakkında Yönetmelik",
+   "cevap": "yangın tedbirleri bu Yönetmelik ve ilgili Yönerge esaslarına göre",
+   "kanit": "MADDE 33 - (1) Karargâh, birlik ve kurumlardaki her türlü bina, tesis ile bunların içinde ve dışındaki, her cins ikmal maddelerinin yangına karşı korunması ve yangının meydana gelmesi halinde genişlemesine meydan verilmeyerek can ve mal kayıplarının önlenmesi veya azaltılması konusunda alınması gereken tedbirler ve bu tedbirlerin uygulama yöntemleri 27/11/2007 tarihli ve 2007/12937 sayılı Binaların Yangından Korunması Hakkında Yönetmelik ve ilgili Yönerge esaslarına göre yürütülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-23-141",
+   "madde": "34",
+   "tip": "sure",
+   "tetikleyici": "onaylandığı tarihte yürürlüğe",
+   "cevap": "Yönetmelik onay tarihinde yürürlüğe girer; Bakan yürütür",
+   "kanit": "MADDE 34 - (1) Bu Yönetmelik onaylandığı tarihte yürürlüğe girer.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+<title>Kilit Kelime Şifreleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@500;600;700;800&display=swap">
+<style>
+:root{
+  --zemin:#F7F3EA; --kart:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+  --metin:#1B2A4A; --soluk:#6E6047; --krom:#0B1F3A; --krom2:#173B6B;
+  --altin:#C9A227; --altinkoyu:#B88917; --altinyuzey:#F3E7C1; --kirmizi:#C00000;
+  --vurgu:#FFF1C9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --zemin:#0C1729; --kart:#13223A; --kenar:#25385A; --ayirici:#1C2D4A;
+    --metin:#EFE7D8; --soluk:#B5A88E; --krom:#08121F; --krom2:#9DB8E0;
+    --altin:#D9B444; --altinkoyu:#E3C25C; --altinyuzey:#3A3119; --kirmizi:#FF6B6B;
+    --vurgu:#4A3D14;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --zemin:#0C1729; --kart:#13223A; --kenar:#25385A; --ayirici:#1C2D4A;
+  --metin:#EFE7D8; --soluk:#B5A88E; --krom:#08121F; --krom2:#9DB8E0;
+  --altin:#D9B444; --altinkoyu:#E3C25C; --altinyuzey:#3A3119; --kirmizi:#FF6B6B;
+  --vurgu:#4A3D14;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{background:var(--zemin);color:var(--metin);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.45}
+.sar{max-width:760px;margin:0 auto;padding-inline:16px}
+.ust{background:var(--krom);color:#F7F3EA;padding-block:26px 20px}
+.ust h1{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:clamp(28px,6vw,38px);line-height:1.1;margin:0 0 8px;text-wrap:balance}
+.ust p{margin:0;color:#D8CDB6;max-width:60ch}
+.ust .ornek{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:700}
+.ust .ornek .tt{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:3px 10px;border-radius:6px}
+.ust .ornek .ok{color:var(--altin)}
+.ust .sayac{margin-top:12px;font-size:13px;color:#BFB49C;font-variant-numeric:tabular-nums}
+.arac{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--zemin);border-bottom:1px solid var(--kenar);padding-block:10px}
+.arac .sar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.arac input[type=search],.arac select{font:inherit;color:var(--metin);background:var(--kart);border:1px solid var(--kenar);border-radius:8px;padding:8px 11px;min-width:0}
+.arac input[type=search]{flex:1 1 200px}
+.arac select{flex:1 1 200px;max-width:100%}
+.anahtar{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;cursor:pointer;user-select:none;padding:7px 11px;border:1px solid var(--kenar);border-radius:8px;background:var(--kart)}
+.anahtar input{accent-color:var(--altinkoyu);width:16px;height:16px}
+input:focus-visible,select:focus-visible,.anahtar:focus-within,.satir:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+main{padding-block:14px 60px}
+.kanun{margin-bottom:30px}
+.kanun h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:21px;line-height:1.25;margin:0 0 2px;text-wrap:balance}
+.kanun .alt{color:var(--soluk);font-size:13px;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.tablo{background:var(--kart);border:1px solid var(--kenar);border-radius:10px;overflow:hidden}
+.satir{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:4px 12px;padding:10px 12px;border-top:1px solid var(--ayirici);cursor:pointer;min-width:0}
+.satir:first-child{border-top:0}
+.satir:hover{background:color-mix(in srgb,var(--vurgu) 35%,transparent)}
+.kel{font-weight:800;overflow-wrap:anywhere}
+.kel mark{background:var(--vurgu);color:inherit;padding:0 4px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.kel small{display:block;font-weight:500;color:var(--soluk);font-size:12px;margin-top:2px;font-variant-numeric:tabular-nums}
+.cev{font-weight:700;overflow-wrap:anywhere}
+.cev small{display:block;font-weight:500;color:var(--soluk);font-size:12.5px;margin-top:2px}
+.detay{grid-column:1/-1;display:none;font-size:13.5px;color:var(--soluk);border-left:2px solid var(--altin);padding-left:10px;margin-top:4px}
+.satir.acik .detay{display:grid;gap:6px}
+.detay .kanit{font-style:italic;max-width:70ch}
+.detay .kanit b{font-style:normal;color:var(--metin);background:var(--vurgu);padding:0 2px;border-radius:3px}
+.detay ul{margin:0;padding-left:16px}
+body.ezber .cev{filter:blur(7px);user-select:none;transition:filter .15s}
+body.ezber .satir.acik .cev{filter:none}
+@media (prefers-reduced-motion:reduce){body.ezber .cev{transition:none}}
+.bos{color:var(--soluk);padding:30px 0;text-align:center}
+.not{color:var(--soluk);font-size:12.5px;max-width:70ch;margin-top:26px;border-top:1px solid var(--kenar);padding-top:12px}
+@media (max-width:420px){.satir{grid-template-columns:1fr}.satir .cev{padding-left:10px;border-left:2px solid var(--ayirici)}}
+</style>
+
+<header class="ust">
+  <div class="sar">
+    <h1>Kilit Kelime Şifreleri</h1>
+    <p>Soruda soldaki kelimeyi gördün mü, cevap sağdaki. Her satırın dayanağı resmî kanun metni; satıra dokununca açılır.</p>
+    <div class="ornek"><span class="tt">bucak</span><span class="ok">→</span><span>Cumhurbaşkanı onayı</span></div>
+    <div class="sayac" id="sayac"></div>
+  </div>
+</header>
+
+<div class="arac">
+  <div class="sar">
+    <input type="search" id="ara" placeholder="Kelime ara: bucak, çapı, 8 gün…" aria-label="Kelime ara">
+    <select id="kanun" aria-label="Mevzuat seç"><option value="">Bütün mevzuat</option></select>
+    <label class="anahtar"><input type="checkbox" id="ezber"> Ezber modu</label>
+  </div>
+</div>
+
+<main class="sar" id="liste"></main>
+
+<script>
+const VERI = /*VERI*/[];
+const GRUP = {'müşterek':'Müşterek',jandarma:'Jandarma',mebs:'MEBS',havacilik:'Havacılık',personel:'Personel'};
+const kk = s => (s||'').toLocaleLowerCase('tr');
+const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = id => document.getElementById(id);
+const toplam = VERI.reduce((a,k)=>a+k.satirlar.length,0);
+$('sayac').textContent = `${VERI.length} mevzuat · ${toplam} kelime · kanun kanun büyüyor`;
+for (const k of VERI){ const o=document.createElement('option'); o.value=k.id; o.textContent=k.ad; $('kanun').appendChild(o); }
+const mEt = m => /^\d/.test(m) ? 'm.'+m : m;
+function isaretle(kanit, kel){
+  const i = kk(kanit).indexOf(kk(kel));
+  if (i<0) return esc(kanit);
+  return esc(kanit.slice(0,i)) + '<b>' + esc(kanit.slice(i,i+kel.length)) + '</b>' + esc(kanit.slice(i+kel.length));
+}
+function satir(s){
+  const kar = s.x.length ? `<ul>${s.x.map(([m,f])=>`<li>${mEt(m)}: ${esc(f)}</li>`).join('')}</ul>` : '';
+  return `<div class="satir" tabindex="0" role="button" aria-expanded="false">
+    <div class="kel"><mark>${esc(s.g)}</mark><small>${mEt(s.m)}</small></div>
+    <div class="cev">${esc(s.c)}${s.n?`<small>${esc(s.n)}</small>`:''}</div>
+    <div class="detay"><div class="kanit">“${isaretle(s.k,s.g)}”</div>${kar}</div>
+  </div>`;
+}
+function ciz(){
+  const q = kk($('ara').value.trim()), kid = $('kanun').value;
+  let html='', n=0, sonGrup=null;
+  for (const k of VERI){
+    if (kid && String(k.id)!==kid) continue;
+    const ss = k.satirlar.filter(s => !q || kk(s.g+' '+s.c+' '+s.n+' '+s.k+' m.'+s.m).includes(q));
+    if (!ss.length) continue;
+    n += ss.length;
+    html += `<section class="kanun"><h2>${esc(k.ad)}</h2><div class="alt">${GRUP[k.grup]||esc(k.grup)} · ${ss.length} kelime</div><div class="tablo">${ss.map(satir).join('')}</div></section>`;
+  }
+  $('liste').innerHTML = (html || '<p class="bos">Bu aramaya uyan kelime yok.</p>')
+    + '<p class="not">Ezber modunda cevaplar bulanık görünür; önce kendin hatırla, sonra satıra dokunup aç. Liste kanun kanun eklenir; önce müşterek mevzuat.</p>';
+}
+$('ara').addEventListener('input', ciz);
+$('kanun').addEventListener('change', ()=>{ ciz(); window.scrollTo({top:0}); });
+$('ezber').addEventListener('change', e=>{ document.body.classList.toggle('ezber', e.target.checked); try{localStorage.setItem('ezber', e.target.checked?'1':'0')}catch(_){} });
+function ac(el){ el.classList.toggle('acik'); el.setAttribute('aria-expanded', el.classList.contains('acik')); }
+$('liste').addEventListener('click', e=>{ const s=e.target.closest('.satir'); if (s) ac(s); });
+$('liste').addEventListener('keydown', e=>{ if ((e.key==='Enter'||e.key===' ') && e.target.classList.contains('satir')){ e.preventDefault(); ac(e.target); } });
+try{ if(localStorage.getItem('ezber')==='1'){ $('ezber').checked=true; document.body.classList.add('ezber'); } }catch(_){}
+ciz();
+</script>

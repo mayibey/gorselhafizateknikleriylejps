@@ -1,0 +1,461 @@
+{
+ "id": 25,
+ "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+ "kodlar": [
+  {
+   "i": "K-25-001",
+   "madde": "2",
+   "tip": "istisna",
+   "tetikleyici": "armağan edilenlerin",
+   "cevap": "resmî görevle yurt dışında; gümrük vergisiz yurda sokulur",
+   "kanit": "B) Resmi görevle yurt dışına giden kişilerden, gittikleri yabancı ülkenin devlet veya hükümet başkanları ya da hükümet üyeleri yahut genelkurmay başkanları veya kuvvet komutanları tarafından veya hükümetleri adına, kendilerine silah ve mermi armağan edilenlerin, (silahın ve merminin armağan olarak verildiğinin belgelenmesi koşulu ile ve gümrük vergi ve resmi ödenmeksizin)",
+   "not": "devlet/hükümet başkanı, genelkurmay başkanı, kuvvet komutanı armağanı; belgelenmeli",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-002",
+   "madde": "2",
+   "tip": "istisna",
+   "tetikleyici": "tek bir silaha mahsus",
+   "cevap": "dış temsilcilikte elçi, konsolos, subay, güvenlik memuru",
+   "kanit": "C) Memuriyetleri devamınca bir defaya ve tek bir silaha mahsus olmak üzere, dış temsilciliklerimizde elçi sınıfından olanlar ile konsolosların ve daimi görevlerde bulunan subaylarla güvenlik memurlarının, Getirdikleri silah ve mermisinin yurda sokulmasına izin verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-003",
+   "madde": "2",
+   "tip": "istisna",
+   "tetikleyici": "kıta ile gönderilen",
+   "cevap": "kimlik kartındaki silah için yurda girişte izin aranmaz",
+   "kanit": "Yurt dışına kıta ile gönderilen subay ve astsubayların kimlik kartlarında kayıtlı silahları için yurda girişlerinde izin şartı aranmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-004",
+   "madde": "4",
+   "tip": "yasak",
+   "tetikleyici": "sustalı çakı",
+   "cevap": "yapımı yasak alet (m.4)",
+   "kanit": "Ülke içinde kama, hançer, saldırma, şişli baston, sustalı çakı, pala,kılıç, kasatura, süngü, sivri uçlu ve oluklu bıçaklar, topuz, topuzlu kamçı, boğma teli veya zinciri, muşta ile salt saldırı ve savunmada kullanılmak üzere özel nitelikteki benzeri aletlerin yapımı yasaktır.",
+   "not": "kama, hançer, pala, kılıç, kasatura, süngü, topuz, muşta, boğma teli; meslek için İçişleri yönetmeliğiyle izin",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-005",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "bu Kanun hükümlerine tabi değildir",
+   "cevap": "yivsiz tüfek, spor silahı, meslek aletleri Kanuna tabi değil",
+   "kanit": "Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri ile yivsiz tüfekler ve mermilerinin, ev gereçlerinden olan veya tababet, sanayi, tarım, spor için kullanılan aletlerle bir meslek veya sanatın icrası için gerekli bıçak, şiş, raspa ve benzerlerinin kullanılması bu Kanun hükümlerine tabi değildir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-006",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "ateşli yivli silahlar",
+   "cevap": "avda-sporda bile m.7 ruhsatına tabi",
+   "kanit": "Avda veya sporda kullanılan her nevi ateşli yivli silahlar bu Kanunun 7 nci maddesine göre ruhsata tabidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-007",
+   "madde": "6",
+   "tip": "sure",
+   "tetikleyici": "beş yıl için geçerlidir",
+   "cevap": "taşıma ve bulundurma ruhsatları; yenileme harcıyla",
+   "kanit": "Bu Kanun kapsamına giren silahlar için verilen taşıma ve bulundurma ruhsatları yenileme harcı alınmak şartı ile beş yıl için geçerlidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-008",
+   "madde": "6",
+   "tip": "sure",
+   "tetikleyici": "altı ay içerisinde ruhsatını yeniletmeyenlerin",
+   "cevap": "ruhsat iptal; üçbin TL ödeyerek yeniden alınabilir (mülki amir)",
+   "kanit": "Ruhsatların veriliş sebeplerinin ortadan kalkması halinde ruhsat sahibi durumu ruhsatı veren makama altı ay içinde bildirmekle yükümlüdür. Aksine hareket edenler ile süresi dolduğu halde altı ay içerisinde ruhsatını yeniletmeyenlerin ruhsatları iptal edilir. Ancak, gerekli şartları haiz olan kişilere üçbin Türk Lirası idari para cezası ödemeleri kaydıyla tekrar ruhsat verilebilir. Bu fıkra hükmüne göre idari para cezası vermeye mülki amir yetkilidir.",
+   "not": "ruhsat sebebi kalkınca altı ayda bildirme yükümlülüğü",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-009",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "süre kaydı aranmaz",
+   "cevap": "Cumhurbaşkanı, bakanlar, TBMM üyeleri, komutanlar, gaziler, şehit yakını",
+   "kanit": "Ancak, Cumhurbaşkanı, Başbakan, Cumhurbaşkanı yardımcıları, bakanlar, Genelkurmay Başkanı, Hükümet Üyeleri, Türkiye Büyük Millet Meclisi Üyeleri, Kuvvet Komutanları, Jandarma Genel Komutanı, Cumhurbaşkanlığı Genel Sekreteri, Türkiye Büyük Millet Meclisi Genel Sekreteri, Başbakanlık ile İçişleri Bakanlığı müsteşarları, Savunma Sanayii Geliştirme ve Destekleme İdaresi Müsteşarı, Emniyet Genel Müdürü, Sahil Güvenlik Komutanı, Cumhurbaşkanlığı Genel Sekreter yardımcıları, Türkiye Büyük Millet Meclisi Genel Sekreter yardımcıları ve bu görevlerde bulunmuş olanların, gazilerin ve 7 nci maddenin üçüncü fıkrasında belirtilen şehitlerin ve gazilerin ana, baba, eş ve çocuklarına intikal eden veya intikal eden yoksa edinecekleri ruhsatlarında süre kaydı aranmaz.",
+   "not": "armağan silahlarda da süre kaydı yok",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-010",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "mermiler için ayrıca ruhsat aranmaz",
+   "cevap": "ruhsata bağlı silahın mermileri",
+   "kanit": "Ruhsata bağlanmış silahlara ait yerli ve yabancı menşeli mermiler için ayrıca ruhsat aranmaz. Bu ruhsatlar mermiler için de geçerlidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-011",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "Ek 1 inci maddede sayılan",
+   "cevap": "taşıma ruhsatı buralarda geçersiz; nereden verilmiş olursa olsun",
+   "kanit": "Silah taşıma ruhsatları nereden verilmiş olursa olsun Ek 1 inci maddede sayılan yerler dışında geçerlidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-012",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "ayrı ayrı taşıma ruhsatı",
+   "cevap": "birden fazla silahı olana, isteği halinde",
+   "kanit": "Birden fazla silaha sahip olanlardan bu Kanun Hükümlerine göre, durumları silah taşımaya uygun olanlara istekleri halinde, mevcut silahlarının hepsi için ayrı ayrı taşıma ruhsatı verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-013",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "mecburi hizmetini tamamlayarak istifa",
+   "cevap": "emekli gibi silah taşıyabilir (subay, astsubay, uzman jandarma)",
+   "kanit": "emekli subay, astsubay, uzman jandarma ve uzman erbaşlar ile mecburi hizmetini tamamlayarak istifa etmek suretiyle Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığından ayrılan subay, astsubay ve uzman jandarmalar ile en az on yıl görev yapıp sözleşmelerinin uzatılmaması sonucu veya kendi isteğiyle Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığından ayrılan uzman erbaşlar ile en az on yıl görev yapmış olmak kaydıyla istifa etmek veya kurum değiştirmek suretiyle Emniyet Genel Müdürlüğünden ayrılan emniyet hizmetleri sınıfı personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-014",
+   "madde": "7",
+   "tip": "sure",
+   "tetikleyici": "on yıl görev yapıp",
+   "cevap": "sözleşmesi uzatılmayan/ayrılan uzman erbaş; emniyetten ayrılan da on yıl",
+   "kanit": "emekli subay, astsubay, uzman jandarma ve uzman erbaşlar ile mecburi hizmetini tamamlayarak istifa etmek suretiyle Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığından ayrılan subay, astsubay ve uzman jandarmalar ile en az on yıl görev yapıp sözleşmelerinin uzatılmaması sonucu veya kendi isteğiyle Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığından ayrılan uzman erbaşlar ile en az on yıl görev yapmış olmak kaydıyla istifa etmek veya kurum değiştirmek suretiyle Emniyet Genel Müdürlüğünden ayrılan emniyet hizmetleri sınıfı personeli,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-015",
+   "madde": "7",
+   "tip": "istisna",
+   "tetikleyici": "Devlet memurluğundan çıkarılanlar hariç",
+   "cevap": "7068 disiplin cezasıyla çıkarılan emekli silah taşıyamaz",
+   "kanit": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun Hükmünde Kararnamenin Kabul Edilmesine Dair Kanun gereğince meslekten veya Devlet memurluğundan çıkarılanlar hariç olmak üzere;",
+   "not": "tart, ihraç, rütbe geri alma, ayırma işlemi de hariç",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-016",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "Orman muhafaza memurları",
+   "cevap": "orman bölge şefleri de; emekli olanlar taşıyabilir",
+   "kanit": "h) Orman muhafaza memurları ve orman bölge şeflerinden, emekli olanlar.",
+   "not": "emekli vali, kaymakam, hâkim-savcı, emniyet, MİT, büyükelçi, infaz koruma de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-017",
+   "madde": "7",
+   "tip": "makam",
+   "tetikleyici": "valiler tarafından verilecek izin vesikasını",
+   "cevap": "Cumhurbaşkanı yönetmeliğindeki esaslara göre; taşıma hakkı",
+   "kanit": "5. Cumhurbaşkanınca çıkarılan yönetmelikte belirlenecek esaslara göre valiler tarafından verilecek izin vesikasını alanlar,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-018",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "köy veya mahalle muhtarlığı",
+   "cevap": "en az bir dönem yapmış olan taşıyabilir; terör irtibatı hariç",
+   "kanit": "7. Yapılan soruşturma sonucu veya kesinleşmiş yargı kararı üzerine görevine son verilenler ile terör örgütlerine veya (İptal ibare: Anayasa Mahkemesinin 3/6/2021 tarihli ve E.:2020/9; K.:2021/37 sayılı Kararı ile) (…) Devletin milli güvenliğine karşı faaliyette bulunduğuna karar verilen yapı, oluşum veya gruplara üyeliği, mensubiyeti veya iltisakı yahut bunlarla irtibatı olanlar hariç olmak üzere, en az bir dönem köy veya mahalle muhtarlığı ya da belediye başkanlığı yapmış bulunanlar, taşıyabilirler veya mesken ya da işyerinde bulundurabilirler.",
+   "not": "belediye başkanlığı da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-019",
+   "madde": "7",
+   "tip": "sayi_oran",
+   "tetikleyici": "en fazla bir adet silahın",
+   "cevap": "6 ve 7 nci bentlerdeki kişilerin (korucu, muhtar) edinecekleri",
+   "kanit": "Birinci fıkranın (1), (2), (3) ve (4) numaralı bentlerinde sayılan kişilere ait silahların, (6) ve (7) numaralı bentlerde sayılan kişilerin edinecekleri en fazla bir adet silahın,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-020",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "izin belgesi yerine geçer",
+   "cevap": "Kuvvet/EGM/SGK/JGK kayıtlı emekli belgesi",
+   "kanit": "Birinci fıkranın (4) numaralı bendinin (A) alt bendinden istifade edenler ilgili Kuvvet Komutanlıkları, Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı veya Jandarma Genel Komutanlığının kayıtlarına geçmek ve bu makamlarca verilen belgelere işlenmek şartıyla ateşli silah taşıyabilirler veya bulundurabilirler. Bu şekilde düzenlenen belgeler, taşıma veya bulundurma izin belgesi yerine geçer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-021",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "toplu silah aranması",
+   "cevap": "Cumhurbaşkanı kararıyla valiler; halka taşıma izni de",
+   "kanit": "Lüzum görülen mıntakalarda Cumhurbaşkanı karariyle valiler tarafından halka silah bulundurma ve taşıma müsaadesi verilebileceği gibi toplu silah aranması da yapılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-022",
+   "madde": "9",
+   "tip": "yasak",
+   "tetikleyici": "muvakkaten de olsa başkalarına veremezler",
+   "cevap": "ruhsatlı silah; ruhsatsıza satılamaz da",
+   "kanit": "Ateşli silah taşımak müsaadesini haiz olanlar, bu silahları resmi ruhsatı haiz bulunanlardan başkasına satamıyacakları gibi muvakkaten de olsa başkalarına veremezler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-023",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "intihar ve intihara teşebbüs",
+   "cevap": "silahın ihmaliyle; vesika geri alınır, bir daha verilmez",
+   "kanit": "Silah bulundurma ve taşıma ruhsatını haiz olan kimsenin bu silahla suç işlemesi veya silahın muhafazasındaki ihmal ve kusurlu neticesi başkaları tarafından bir suç işlenmesi veya intihar ve intihara teşebbüs edilmesi hallerinde silah vesikası geriye alınır ve bir daha silah bulundurma ve taşıma izni verilmez.",
+   "not": "silahla suç işlemek de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-024",
+   "madde": "9",
+   "tip": "kosul",
+   "tetikleyici": "İkinci kez silahı çalınan",
+   "cevap": "yeni müracaatta tek silah izni",
+   "kanit": "İkinci kez silahı çalınan veya silahını ikinci kez kaybedenlere, yeni silah müracaatlarında tek bir silah için taşıma veya bulundurma izni verilebilir.",
+   "not": "kaybeden de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-025",
+   "madde": "9",
+   "tip": "sure",
+   "tetikleyici": "Üçüncü kez silahı çalınan",
+   "cevap": "vesika geri; beş yıl izin yok; sonra tek silah",
+   "kanit": "Üçüncü kez silahı çalınan veya silahını üçüncü kez kaybedenlerin silah vesikası geri alınır ve bu kişilere fiil tarihinden itibaren beş yıl geçmedikçe silah bulundurma ve taşıma izni verilmez.",
+   "not": "İKİNCİ KAYIP TEK SİLAH, ÜÇÜNCÜ KAYIP BEŞ YIL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-026",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "tutanak karşılığı Milli Savunma",
+   "cevap": "zoralımına karar verilen, ele geçirilen silah ve mermiler",
+   "kanit": "Mahkemelerce zoralımına karar verilen veya güvenlik kuvvetlerince herhangi bir şekilde ele geçirilen ateşli silahlarla mermiler ve bıçaklar bir tutanak karşılığı Milli Savunma Bakanlığı emrine verilir.",
+   "not": "öncelik MSB, JGK, EGM, MİT, Gümrük Muhafaza; MKE aracılığıyla satış",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-027",
+   "madde": "10",
+   "tip": "sayi_oran",
+   "tetikleyici": "bedellerinin yarısı",
+   "cevap": "polisler zati tabancayı yarı bedelle; öncelik hakkı",
+   "kanit": "Emniyet Genel Müdürlüğünce zati silah edinmelerine izin verilen polisler, bu silahlardan, tabanca niteliğinde olanlarını, takdir olunan bedellerinin yarısı bir bedelle ve bir adet olarak satın almada, öncelik hakkına sahiptirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-028",
+   "madde": "11",
+   "tip": "kosul",
+   "tetikleyici": "üstte taşımaya cevaz vermez",
+   "cevap": "antika silah izni; yalnız bulundurma ve nakil",
+   "kanit": "Antika olan ateşli silahlarla bıçaklar için verilen izin bunların yalnız sahibine bırakılmasına veya nakline müsaadeyi tazammun edip üstte taşımaya cevaz vermez.",
+   "not": "hatıra ve antika silaha bulundurma izni zorunlu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-029",
+   "madde": "11",
+   "tip": "istisna",
+   "tetikleyici": "kılıç, meç ve benzeri",
+   "cevap": "görev nedeniyle verilen; izin belgesi aranmaz",
+   "kanit": "Ancak, görevleri nedeniyle Devletçe verilen veya kendilerince bu amaçla temin edilen ve bu görevleri sona erdikten sonra meskenlerinde kalan veya kanuni yakınlarına intikal eden kılıç, meç ve benzeri aletler için izin belgesi aranmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-030",
+   "madde": "11",
+   "tip": "kosul",
+   "tetikleyici": "izin vesikalarıyla birlikte satışı serbesttir",
+   "cevap": "antika silah ve bıçaklar",
+   "kanit": "Antika olan ateşli silahlarla bıçakların izin vesikalarıyla birlikte satışı serbesttir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-031",
+   "madde": "11",
+   "tip": "tanim",
+   "tetikleyici": "artık imal edilmeyen",
+   "cevap": "antika silah tanımı",
+   "kanit": "Antika silah deyimi; eskiden kalma, değerli belli bir özelliği olan, benzerlerine az rastlanan ve artık imal edilmeyen ateşli, ateşsiz silah ve bıçakları ifade eder.",
+   "not": "hatıra silah: devlet başkanı/hükümet/genelkurmay hediyesi, İstiklal Savaşı silahları",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-032",
+   "madde": "12",
+   "tip": "ceza",
+   "tetikleyici": "ülkeye sokar veya sokmaya kalkışır",
+   "cevap": "silah/mermi; beş yıldan oniki yıla + beşyüz–beşbin gün APC",
+   "kanit": "Her kim bu Kanunun kapsamına giren ateşli silahları, bunlara ait mermileri veya bunlara ait namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaları ülkeye sokar veya sokmaya kalkışır veya bunların ülkeye sokulmasına aracılık eder veya bunları 29/6/2004 tarihli ve 5201 sayılı Harp Araç ve Gereçleri ile Silâh, Mühimmat ve Patlayıcı Madde Üreten Sanayi Kuruluşlarının Denetimi Hakkında Kanun hükümleri dışında ülkede yapar veya bu suretle ülkeye sokulmuş ve ülkede yapılmış olan ateşli silahları veya mermileri ya da namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaları bir yerden diğer bir yere taşır veya yollar veya taşımaya bilerek aracılık eder, satar veya satmaya aracılık ederse veya bu amaçla bulundurursa beş yıldan oniki yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezasıyla cezalandırılır.",
+   "not": "imal, nakil, satış, bu amaçla bulundurma da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-033",
+   "madde": "12",
+   "tip": "ceza",
+   "tetikleyici": "daha çok kişinin birlikte",
+   "cevap": "silahta sekiz yıldan onbeş yıla + bin–onbin gün",
+   "kanit": "Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında iki veya daha çok kişinin birlikte işlemeleri halinde, failler hakkında sekiz yıldan onbeş yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasına hükmolunur.",
+   "not": "örgüt faaliyetinde bir kat artırım",
+   "karistirilan": [
+    {
+     "madde": "14",
+     "fark": "bıçak suçunda iki kişi: ceza bir kat artar"
+    }
+   ]
+  },
+  {
+   "i": "K-25-034",
+   "madde": "12",
+   "tip": "ceza",
+   "tetikleyici": "susturuculu veya hedef noktalayıcı",
+   "cevap": "cezalar yarı oranında artırılır; miktar vahimse de",
+   "kanit": "Ateşli silahın tüfek veya seri ateşli kısa sürede çok sayıda ve etkili biçimde mermi atabilen tam otomatik, dürbünlü, susturuculu veya hedef noktalayıcı aparat takılı tabanca veya bu fıkrada sayılanların benzerleri olması ya da bu niteliği taşımayan ateşli silahlar veya her türlü mermilerin veya namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaların miktar bakımından vahim olması halinde yukarıdaki fıkralarda yazılı cezalar yarı oranında artırılarak hükmolunur.",
+   "not": "tam otomatik, dürbünlü, tüfek de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-035",
+   "madde": "12",
+   "tip": "ceza",
+   "tetikleyici": "Kurusıkı tabir edilen",
+   "cevap": "dönüştürme = üretim; vahim değilse üçte birden yarısına indirim",
+   "kanit": "Kurusıkı tabir edilen ses veya gaz fişeği ya da benzerlerini atabilen silahı, teknik özelliklerinde değişiklik yaparak bu Kanun hükümlerine tabi silah haline dönüştürmek eylemi, 5201 sayılı Kanun hükümleri dışında yapılmış üretim olarak kabul edilir ve bu madde hükümlerine göre cezalandırılır. Dönüştürülen silahın sayı ve nitelik bakımından vahim olmaması halinde verilecek ceza üçte birinden yarısına kadar indirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-036",
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "satın alan veya taşıyanlar",
+   "cevap": "ruhsatsız silah; iki yıldan dört yıla + yüz–beşyüz gün",
+   "kanit": "Bu Kanun hükümlerine aykırı olarak ateşli silahları, bunlara ait mermileri veya bunlara ait namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaları ya da ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.",
+   "not": "vahim ya da nitelikli: beş yıldan sekiz yıla",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-037",
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "ev veya işyerinde bulundurulması",
+   "cevap": "bir adet silah + mutat mermi: bir yıldan üç yıla",
+   "kanit": "Bu Kanunun 12 nci maddesinin dördüncü fıkrasında sayılanlar dışındaki ateşli silahın bir adet olması ve mutat sayıdaki mermilerinin veya namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaların ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-038",
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "takdir edilmemesi durumunda",
+   "cevap": "pek az mermi: altı aya kadar hapis + otuz–beşyüz gün",
+   "kanit": "takdir edilmemesi durumunda hükmolunacak ceza altı aya kadar hapis ve otuz günden beşyüz güne kadar adlî para cezasıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-039",
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "Nakil izin belgesi almaksızın",
+   "cevap": "onbin–yirmibeşbin TL idari para cezası; mülki idare amiri",
+   "kanit": "Nakil izin belgesi almaksızın, bulundurma izni verilen silahını mesken veya işyeri değişikliği nedeniyle nakledenler hakkında onbin Türk Lirasından yirmibeşbin Türk Lirasına kadar idari para cezasına hükmolunur.",
+   "not": "ruhsatlandırma yükümlülüğüne aykırılıkta da aynı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-040",
+   "madde": "14",
+   "tip": "ceza",
+   "tetikleyici": "ikiyüz günden az olmamak",
+   "cevap": "yasak bıçak imal/ithal/nakil; iki yıldan beş yıla hapis",
+   "kanit": "Her kim, bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya başkaca aletler yahut benzerlerini ülkeye sokar, sokmaya kalkışır veya bunların ülkeye sokulmasına aracılık eder veya bunları ülkede yapar veya bir yerden diğer bir yere taşır veya yollar veya taşımaya aracılık ederse iki yıldan beş yıla kadar hapis ve ikiyüz günden az olmamak üzere adlî para cezası ile cezalandırılır.",
+   "not": "azlıkta yarıya kadar indirim",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-041",
+   "madde": "14",
+   "tip": "ceza",
+   "tetikleyici": "teşekkül kuranlar",
+   "cevap": "bıçak suçunda beş yıldan on yıla + bin–onbin gün",
+   "kanit": "Birinci fıkradaki eylemleri işlemek amacı ile teşekkül kuranlar ile yönetenler veya teşekküle mensup olanlar tarafından sözü geçen fıkrada yazılı suçlar işlenirse failler hakkında beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasına hükmolunur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-042",
+   "madde": "15",
+   "tip": "ceza",
+   "tetikleyici": "yirmibeş günden az olmamak",
+   "cevap": "yasak bıçak satma, alma, taşıma: altı aydan bir yıla",
+   "kanit": "Bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya diğer aletleri veya benzerlerini satanlar, satmaya aracılık edenler, satın alanlar, taşıyanlar veya bulunduranlar hakkında altı aydan bir yıla kadar hapis ve yirmibeş günden az olmamak üzere adlî para cezasına hükmolunur.",
+   "not": "vahimse yarıdan bir katına artırım",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-043",
+   "madde": "15",
+   "tip": "ceza",
+   "tetikleyici": "sırf saldırıda kullanmak amacıyla",
+   "cevap": "üç aya kadar hapis ya da adlî para cezası",
+   "kanit": "Bu Kanunun 4 üncü maddesinin üçüncü fıkrasında yazılı olan yivli ve yivsiz silahlarla bıçak ve diğer aletleri, hal ve şartlara göre sırf saldırıda kullanmak amacıyla taşıyanlar, üç aya kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "not": "izinli bıçak, yivsiz tüfek bile",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-044",
+   "madde": "16",
+   "tip": "istisna",
+   "tetikleyici": "1918 Sayılı Kanun",
+   "cevap": "Kaçakçılığın Men ve Takibi Kanunu bu suçlarda uygulanmaz",
+   "kanit": "Bu Kanunun kapsamına giren suçlarda Kaçakçılığın Men ve Takibine Dair 1918 Sayılı Kanun hükümleri uygulanmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-045",
+   "madde": "Geçici",
+   "tip": "sure",
+   "tetikleyici": "90 gün içinde",
+   "cevap": "korucular silahı teslim ederse takibat yok; valiler harçsız ruhsat",
+   "kanit": "mülki amirlerce gönüllü korucu olarak tespit edilen kişiler ile halen geçici köy korucusu olarak görev yapanlar bu Kanunun yürürlüğe girdiği tarihten itibaren 90 gün içinde ellerinde bulundurdukları tabanca, makineli tabanca veya hafif makineli tüfek sınıfından silahları mülki makamlara teslim ettikleri takdirde haklarında takibat yapılmaz ve isteyenlere yukarıda belirtilen tabanca ve tüfek sınıfından birer adet olmak üzere ve harçsız olarak menşelerine bakılmaksızın valilerce taşıma veya bulundurma ruhsatı düzenlenebilir.",
+   "not": "geçici madde 9; devir, hibe, satış yasak",
+   "karistirilan": []
+  }
+ ]
+}

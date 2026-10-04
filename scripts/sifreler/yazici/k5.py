@@ -1,0 +1,41 @@
+# 5442 İl İdaresi Kanunu — kelime → cevap (başkan onaylı biçim, 4 Eki 2026)
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ortak import yaz
+K = [
+ # madde, tip, KELİME, CEVAP, kanıt başı, kanıt sonu, karıştırılan[(madde, fark)], not
+ ('2','makam','Bucak kurulması','Cumhurbaşkanı onayı','B) Bucak kurulması','Cumhurbaşkanı onayı ile',
+  [('2','il ve ilçe kurulması kanun ile')],'il–ilçe → kanun'),
+ ('2','makam','İl ve ilçe kurulması','kanun ile','A) İl ve ilçe kurulması','kanun ile',[],'kurma, kaldırma, ad, ilçenin başka ile bağlanması'),
+ ('2','makam','il ilçe ve bucak sınırlarının','Cumhurbaşkanı onayı','B) Bucak kurulması','Cumhurbaşkanı onayı ile',[],'il sınırı bile kanunla değil'),
+ ('2','makam','köy adlarının','İçişleri Bakanlığı','Ç) Köy ve kasabaların','İçişleri Bakanlığının tasvibiyle yapılır.',[],'köylerin birleşmesi, ayrılması, bucak değiştirmesi de'),
+ ('2','makam','Yeniden köy kurulması','Bayındırlık ve Sağlık bakanlıklarının görüşü','C) Yeniden köy kurulması','mütalaası alınmak suretiyle',[],''),
+ ('4','istisna','askerlik daire ve şubeleri','valinin emri dışında','Bu teşkilat valinin emri altındadır','bu madde hükmünden müstesnadır.',[],'yargıç, savcı, askerî birlik de'),
+ ('9','tanim','Cumhurbaşkanının temsilcisi','vali','Vali, ilde Cumhurbaşkanının','idari yürütme vasıtasıdır.',
+  [('27','kaymakam yalnız idari yürütme vasıtası'),('42','bucak müdürü: en büyük Hükümet memuru ve temsilcisi')],'kaymakam yalnız "idari yürütme vasıtası"'),
+ ('11','sure','on beş gün','vali: giriş-çıkış, dolaşma, araç kısıtı','on beş günü geçmemek üzere','naklini yasaklayabilir.',[],''),
+ ('11','yasak','ruhsatlı da olsa','silah ve mermi taşıma yasağı, vali koyar','ruhsatlı da olsa her çeşit silah','naklini yasaklayabilir.',[],''),
+ ('11','makam','vali tarafından yerleri değiştirilebilir','il içinde kolluğun yerini vali kendisi değiştirir','Ç) Jandarma, polis','Bakanlıklarına bilgi verir.',
+  [('32','kaymakam valinin tasvibiyle değiştirir')],'kaymakam → valinin tasvibiyle'),
+ ('11','makam','çapı','askerî birliğin komutanı belirler','Olayların niteliğine göre','vali tarafından belirlenir.',[],'görevde kalış süresi → vali'),
+ ('11','sira_usul','sözlü olarak','acil yardım istemi; sonra yazıya dökülür','Acil durumlarda bu istek','sözlü olarak yapılabilir.',[],''),
+ ('11','makam','en kıdemli komutanı','asker + jandarma/polis birlikte görevde komuta','Ancak, bu askeri birliğin','en kıdemli komutanı tarafından üstlenilir.',[],''),
+ ('11','makam','sınır ötesi','valinin talebi, Genelkurmay kanalı, Cumhurbaşkanı müsaadesi','Olayların sınır illerinde','planlayıp icra edebilir.',[],'komşu ülkenin mutabakatı da şart'),
+ ('18','makam','birinci derecede','vali, sicil amiri','Valiler, vali muavini ile','ikinci derecede sicil amiridirler.',[],'kaymakam, şube başkanı, kolluk amiri için; diğer memura ikinci derece'),
+ ('31','sira_usul','olağanüstü hallerde','kaymakam bakanlıklarla doğrudan yazışır','Ancak olağanüstü hallerde','valiye bilgi verirler;',[],'valiye bilgi verir'),
+ ('31','kosul','işten el çektirebilir','şube başkanı: valinin muvafakatiyle','D) Kaymakam, denetlemesi','işten el çektirebilir.',[],'diğer memur → re\'sen'),
+ ('31','ceza','uyarma, kınama','kaymakam verir; kesin, sicile geçer','Kaymakam, ilçenin idare şube başkanlariyle','sicile geçer.',
+  [('42','bucak müdürü yalnız uyarma')],'bucak müdürü yalnız uyarma'),
+ ('31','makam','takdirname','kaymakam verir','Kaymakam, ilçe memurlarına','takdirnamede verebilir.',
+  [('42','bucak müdürü takdirnameyi yalnız teklif eder')],'bucak müdürü yalnız teklif eder'),
+ ('31','sure','8 güne kadar','kaymakamın şube başkanına acele izni','J) Kaymakam, ilçe idare şube başkanlarına','bir aya kadar izin verebilir.',[],'bir ay → tayini kendine ait memura'),
+ ('32','sira_usul','olağanüstü ve ani olaylar','kaymakam valiye bilgi verip yardım ister','E) (Değişik: 19/2/1980-2261/3 md.) Kaymakam','komutanlara da haber verir;',
+  [('11','vali İçişleri Bakanlığından ve askerî birlikten doğrudan ister')],'askere yalnız haber verir'),
+ ('42','ceza','uyarma cezası verir','bucak müdürü; yalnız uyarma, kesin','E) (Değişik: 12/5/1964-469/1 md.) Müdür','sicile geçer.',
+  [('31','kaymakam uyarma ve kınama verir')],'daha ağırı için vali/kaymakama teklif'),
+ ('57','makam','defterdar','il idare kurulu','İl idare kurulu','vali muavinini görevlendirebilir.',
+  [('58','ilçe idare kurulunda malmüdürü var')],'hukuk işleri müdürü de; vali ya da vali muavini başkan'),
+ ('58','makam','malmüdürü','ilçe idare kurulu','İlçe idare kurulu','veterinerden teşekkül eder.',
+  [('57','il idare kurulunda defterdar var')],'tahrirat kâtibi, Hükümet hekimi de'),
+ ('57','istisna','İl idare kurulu','yalnız sivil müdürler; jandarma, emniyet yok','İl idare kurulu','tarım ve veteriner müdürlerinden teşekkül',[],'sınavın klasik tuzağı: kolluk amiri kurulda yok'),
+]
+yaz(5, '5442 sayılı İl İdaresi Kanunu', K)

@@ -1,0 +1,66 @@
+{
+ "id": 9,
+ "ad": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun",
+ "kodlar": [
+  {
+   "i": "K-9-001",
+   "madde": "1",
+   "tip": "ceza",
+   "tetikleyici": "alenen hakaret eden",
+   "cevap": "bir yıldan üç yıla kadar hapis",
+   "kanit": "Atatürk'ün hatırasına alenen hakaret eden veya söven kimse bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+   "not": "sövme de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-002",
+   "madde": "1",
+   "tip": "ceza",
+   "tetikleyici": "heykel, büst ve abideleri",
+   "cevap": "bir yıldan beş yıla ağır hapis",
+   "kanit": "Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.",
+   "not": "kabrini tahrip, kırma, bozma, kirletme de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-003",
+   "madde": "1",
+   "tip": "ceza",
+   "tetikleyici": "teşvik eden",
+   "cevap": "asıl fail gibi cezalandırılır",
+   "kanit": "Yukarki fıkralarda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-004",
+   "madde": "2",
+   "tip": "ceza",
+   "tetikleyici": "basın vasıtasiyle",
+   "cevap": "ceza yarı nispetinde artırılır",
+   "kanit": "Birinci maddede yazılı suçlar; iki veya daha fazla kimseler tarafından toplu olarak veya umumi veya umuma açık mahallerde yahut basın vasıtasiyle işlenirse hükmolunacak ceza yarı nispetinde artırılır.",
+   "not": "iki veya daha fazla kişi toplu olarak, umuma açık yerde de yarı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-005",
+   "madde": "2",
+   "tip": "ceza",
+   "tetikleyici": "zor kullanılarak",
+   "cevap": "tahripte ceza bir misli artırılır",
+   "kanit": "Birinci maddenin ikinci fıkrasında yazılı suçlar zor kullanılarak işlenir veya bu suretle işlenmesine teşebbüs olunursa verilecek ceza bir misli artırılır.",
+   "not": "teşebbüs de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-9-006",
+   "madde": "3",
+   "tip": "sira_usul",
+   "tetikleyici": "re'sen takibat",
+   "cevap": "Cumhuriyet savcılığı kendiliğinden kovuşturur; şikâyet gerekmez",
+   "kanit": "Bu kanunda yazılı suçlardan dolayı Cumhuriyet savcılıklarınca re'sen takibat yapılır.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

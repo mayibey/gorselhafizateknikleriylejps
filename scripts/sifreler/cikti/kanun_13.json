@@ -1,0 +1,306 @@
+{
+ "id": 13,
+ "ad": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun",
+ "kodlar": [
+  {
+   "i": "K-13-001",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "nasıp onayı tarihine kadar",
+   "cevap": "ön sözleşme; askerî eğitime alınma",
+   "kanit": "a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme: Türk Silâhlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay veya sözleşmeli astsubay adayları arasında; askerî eğitime alınmaları konusunda yapılan ve askerî eğitim dönemi başlangıcı ile subaylık veya astsubaylık nasıp onayı tarihine kadar geçecek süreyi kapsayan sözleşmeyi,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-002",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "hizmet yükümlülüğü getiren",
+   "cevap": "sözleşme: üç yıldan az, dokuz yıldan fazla olmayan",
+   "kanit": "b) Sözleşme : Türk Silâhlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay ve astsubay adaylarından askerî eğitimi başarıyla tamamlayanlar arasında yapılan ve üç yıldan az, dokuz yıldan fazla olmamak üzere hizmet yükümlülüğü getiren, örneğine göre hazırlanmış olan yazılı bir belgeyi,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-003",
+   "madde": "4",
+   "tip": "sure",
+   "tetikleyici": "otuziki yaşını",
+   "cevap": "lisansüstü mezunu sözleşmeli subay adayı yaş sınırı; lisans yirmiyedi",
+   "kanit": "Sözleşmeli subay kaynaklarını; en az dört yıllık fakülte veya yüksekokulları bitirenlerden düzeltilmemiş nüfus kaydına göre müracaat yapılan yılın ocak ayının ilk günü itibarıyla yirmiyedi yaşını, lisansüstü eğitimini tamamlamış olanlardan otuziki yaşını bitirmemiş olanlar teşkil eder.",
+   "not": "ocak ayının ilk günü; düzeltilmemiş nüfus kaydı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-004",
+   "madde": "4",
+   "tip": "sayi_oran",
+   "tetikleyici": "% 85 veya daha üstünde",
+   "cevap": "TSK'da/yedek subaylıkta sicil şartı",
+   "kanit": "Türk Silahlı Kuvvetlerinde istihdam edilenler ile yedek subay ve yedek astsubay olarak askerlik hizmetini yapanlar veya yapmakta olanların bu görevlerinde aldıkları sicilin, sicil tam notunun % 85 veya daha üstünde olması şarttır.",
+   "not": "sıralı üstlerden olumlu nitelik belgesi de",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "sözleşmeli astsubayda da aynı % 85 şartı"
+    }
+   ]
+  },
+  {
+   "i": "K-13-005",
+   "madde": "4",
+   "tip": "yasak",
+   "tetikleyici": "Askeri hakim sınıfına",
+   "cevap": "sözleşmeli subay alınmaz",
+   "kanit": "Askeri hakim sınıfına, sözleşmeli subay statüsünde personel alınmaz.",
+   "not": "TSK'dan ilişiği kesilenler de alınmaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-006",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "teğmen rütbesine nasbedilirler",
+   "cevap": "askerî eğitimi başarıyla bitiren sözleşmeli subay adayı",
+   "kanit": "Madde 6 – Sözleşmeli subay adayları ön sözleşme yapılarak askerî eğitime alınırlar. Bu eğitimi başarı ile tamamlayanlardan yönetmelikte belirtilen şartları taşıyanlarla sözleşme yapılır ve bu kişiler teğmen rütbesine nasbedilirler.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "astsubay adayı: astsubay çavuş"
+    }
+   ]
+  },
+  {
+   "i": "K-13-007",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "talebe bakılmaksızın uzatılabilir",
+   "cevap": "seferberlik, savaş, alıkonulma; MSB ya da İçişleri onayı",
+   "kanit": "Sözleşme süreleri; terörle mücadele sırasında veya bu görevlerden dolayı alıkonulma ya da kaybolma hâli ve (…)3 seferberlik, savaş veya silahlı çatışmayı gerektirecek hal ile savaş hallerinde Kuvvet Komutanları, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının göstereceği lüzum üzerine, durumun devamı müddetince ilgisine göre Milli Savunma Bakanlığı veya İçişleri Bakanlığının onayı ile talebe bakılmaksızın uzatılabilir.",
+   "not": "Kuvvet, JGK, SGK komutanının lüzum göstermesiyle",
+   "karistirilan": [
+    {
+     "madde": "10",
+     "fark": "sözleşmeli astsubayda aynı kural"
+    }
+   ]
+  },
+  {
+   "i": "K-13-008",
+   "madde": "7",
+   "tip": "sure",
+   "tetikleyici": "yedinci fiilî hizmet yılı",
+   "cevap": "muvazzaf subaylığa başvuru başlangıcı; onikinci yıl sonuna kadar",
+   "kanit": "Muvazzaf subaylığa geçiş için, Türk Silâhlı Kuvvetlerindeki yedinci fiilî hizmet yılı başından itibaren onikinci fiilî hizmet yılının bitimine kadar başvuru yapılabilir. Bu şekilde muvazzaf subaylığa geçirilenler; subay nasbedildikleri tarihten başlamak üzere onbeş yıl hizmet etmedikçe istifa edemezler.",
+   "not": "SUBAY YEDİDE, ASTSUBAY DÖRTTE BAŞVURUR",
+   "karistirilan": [
+    {
+     "madde": "11",
+     "fark": "astsubay dördüncü yıldan başvurur"
+    }
+   ]
+  },
+  {
+   "i": "K-13-009",
+   "madde": "7",
+   "tip": "sure",
+   "tetikleyici": "onbeş yıl hizmet etmedikçe istifa",
+   "cevap": "muvazzaf subaylığa geçenler",
+   "kanit": "Muvazzaf subaylığa geçiş için, Türk Silâhlı Kuvvetlerindeki yedinci fiilî hizmet yılı başından itibaren onikinci fiilî hizmet yılının bitimine kadar başvuru yapılabilir. Bu şekilde muvazzaf subaylığa geçirilenler; subay nasbedildikleri tarihten başlamak üzere onbeş yıl hizmet etmedikçe istifa edemezler.",
+   "not": "yaş şartı uygulanmaz",
+   "karistirilan": [
+    {
+     "madde": "11",
+     "fark": "astsubaylıkta da onbeş yıl"
+    }
+   ]
+  },
+  {
+   "i": "K-13-010",
+   "madde": "8",
+   "tip": "sure",
+   "tetikleyici": "yirmidört yaşını",
+   "cevap": "dört yıldan az yükseköğrenimli astsubay adayı; dört yıl+ yirmiyedi",
+   "kanit": "(Değişik birinci fıkra: 26/6/2012-6336/21 md.) Sözleşmeli astsubay kaynaklarını; (…)8 fakülte, yüksekokul veya meslek yüksekokullarını bitirenlerden düzeltilmemiş nüfus kaydına göre müracaat yapılan yılın ocak ayının ilk günü itibarıyla dört yıl veya daha fazla süreli yükseköğrenimi bitirenler için yirmiyedi yaşını, dört yıldan daha az süreli yükseköğrenimi bitirenler için yirmidört yaşını bitirmemiş olanlardan ve aynı şartları haiz uzman erbaşlardan, Yönetmelikte belirtilen diğer şartları haiz bulunanlar teşkil eder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-011",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "aynı şartları haiz uzman erbaşlardan",
+   "cevap": "sözleşmeli astsubay kaynağı",
+   "kanit": "(Değişik birinci fıkra: 26/6/2012-6336/21 md.) Sözleşmeli astsubay kaynaklarını; (…)8 fakülte, yüksekokul veya meslek yüksekokullarını bitirenlerden düzeltilmemiş nüfus kaydına göre müracaat yapılan yılın ocak ayının ilk günü itibarıyla dört yıl veya daha fazla süreli yükseköğrenimi bitirenler için yirmiyedi yaşını, dört yıldan daha az süreli yükseköğrenimi bitirenler için yirmidört yaşını bitirmemiş olanlardan ve aynı şartları haiz uzman erbaşlardan, Yönetmelikte belirtilen diğer şartları haiz bulunanlar teşkil eder.",
+   "not": "kısa dönem/erbaş-er terhisliler de olabilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-012",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "astsubay çavuş rütbesine",
+   "cevap": "eğitimi bitiren sözleşmeli astsubay adayı",
+   "kanit": "Madde 10 – Sözleşmeli astsubay adayları, ön sözleşme yapılarak askerî eğitime alınırlar. Bu eğitimi başarı ile tamamlayanlardan yönetmelikte belirtilen şartları taşıyanlarla sözleşme yapılır ve bu kişiler astsubay çavuş rütbesine nasbedilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-013",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "dördüncü fiilî hizmet yılı",
+   "cevap": "muvazzaf astsubaylığa başvuru; onikinci yıl sonuna kadar",
+   "kanit": "Muvazzaf astsubaylığa geçiş için, Türk Silâhlı Kuvvetlerindeki dördüncü fiilî hizmet yılı başından itibaren onikinci fiilî hizmet yılının bitimine kadar başvuru yapılabilir. Bu şekilde muvazzaf astsubaylığa geçirilenler; astsubay nasbedildikleri tarihten başlamak üzere onbeş yıl hizmet etmedikçe istifa edemezler.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "7",
+     "fark": "subay yedinci yıldan"
+    }
+   ]
+  },
+  {
+   "i": "K-13-014",
+   "madde": "12",
+   "tip": "sure",
+   "tetikleyici": "en az üç ay önce",
+   "cevap": "sözleşme yenileme bildirimi; yoksa kendiliğinden sona erer",
+   "kanit": "Her sözleşme süresinin sona erme tarihinden en az üç ay önce taraflar sözleşmeyi yenileyeceklerine dair yazılı bildirimde bulunmadıkları takdirde, sözleşme kendiliğinden sona erer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-015",
+   "madde": "12",
+   "tip": "yasak",
+   "tetikleyici": "tek taraflı olarak fesh edemezler",
+   "cevap": "sözleşmeli subay/astsubay, süre dolmadan",
+   "kanit": "Sözleşmeli subay veya astsubaylar, sözleşme süreleri sona ermeden sözleşmelerini tek taraflı olarak fesh edemezler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-016",
+   "madde": "12",
+   "tip": "sure",
+   "tetikleyici": "iki katı kadar",
+   "cevap": "yurt dışı altı ay+ öğrenim/kurs: sözleşme uzar",
+   "kanit": "Subay veya astsubay nasbedildikten sonra; yabancı memleketlere altı ay veya daha uzun süreli öğrenim, staj, kurs, ihtisas veya görgü ve bilgilerini artırmak maksadıyla gidenlerin sözleşme süreleri, gidiş ve dönüş tarihleri arasında geçen sürenin iki katı kadar; Türk Silâhlı Kuvvetleri hesabına yurt içindeki fakülte veya yüksekokullarda öğrenim yapanlarla, meslekleriyle ilgili ihtisas yapanların sözleşme süreleri ise, buralarda geçen süreler kadar uzatılır.",
+   "not": "yurt içi TSK hesabına öğrenim: geçen süre kadar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-017",
+   "madde": "12",
+   "tip": "sure",
+   "tetikleyici": "sürelerin yarısı kadar uzatılır",
+   "cevap": "yurt içi tıp/diş uzmanlığı, doktora",
+   "kanit": "hekimliğinde veya eczacılıkta doktora eğitimini bitirenlerin sözleşme süreleri, buralarda geçen sürelerin yarısı kadar uzatılır.",
+   "not": "YURT DIŞI İKİ KAT, YURT İÇİ BİR KAT, UZMANLIK YARIM",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-018",
+   "madde": "12",
+   "tip": "istisna",
+   "tetikleyici": "devlet hizmet yükümlülüğüne tâbi olmazlar",
+   "cevap": "sözleşmeli tabip subaylar (sözleşmesi feshedilenler hariç)",
+   "kanit": "Sözleşme süresi sona ermeden sözleşmesi fesih edilenler hariç olmak üzere, sözleşmeli tabip subaylar devlet hizmet yükümlülüğüne tâbi olmazlar. Bunlardan tıpta uzmanlık sınavını kazananlar; kıt’a, kurum ve karargahlarda üç yıllık hizmetini tamamladıktan sonra uzmanlık eğitimine başlayabilirler.",
+   "not": "TUS kazanan üç yıl kıt'a hizmetinden sonra uzmanlığa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-019",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "üçte birine",
+   "cevap": "askeri eğitime katılmama: ön sözleşme feshi; kazayla bir kez tekrar",
+   "kanit": "d) Askeri eğitimin üçte birine çeşitli nedenlerle katılmamak. Bunlardan; görevlerini icra ederken veya görevleri dolayısıyla bir saldırıya veya kazaya uğrayan ya da bir meslek hastalığına yakalanma neticesinde askeri eğitimin üçte birine devam etmeyerek başarısız kabul edilenler, bir kez olmak üzere sonraki dönemde açılacak askeri eğitime planlanırlar. Sonraki dönemde istekli olmaları, aranan sağlık ve diğer niteliklerini korumaları halinde yeniden ön sözleşme yapılarak eğitime alınırlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-020",
+   "madde": "13",
+   "tip": "ceza",
+   "tetikleyici": "bir ay ve daha fazla",
+   "cevap": "hürriyeti bağlayıcı ceza: sözleşme feshi (taksirli hariç)",
+   "kanit": "e) Taksirli suçlar hariç olmak üzere adli veya askeri mahkemeler tarafından bir ay ve daha fazla süreli hürriyeti bağlayıcı bir cezaya mahkum olmak.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-021",
+   "madde": "13",
+   "tip": "sayi_oran",
+   "tetikleyici": "toplam sekiz defa",
+   "cevap": "iki amirden bir yılda: fesih; otuz gün oda hapsi de",
+   "kanit": "f) (Değişik: 31/1/2013-6413/45 md.) Son olarak verilen de dahil olmak üzere, kararın kesinleştiği tarihten itibaren geriye doğru son bir yıl içinde toplamda otuz gün ve daha fazla oda hapsi veya hizmet yerini terk etmeme cezasına mahkum olmak veya en son aldığı disiplin cezasından geriye doğru son bir yıl içinde en az iki disiplin amirinden toplam sekiz defa veya daha fazla disiplin cezası almak.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-022",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "Milli Savunma Bakanlığınca uygun görülmemek",
+   "cevap": "yabancıyla evlilik: sözleşme feshi",
+   "kanit": "ı) Yabancı uyruklu kişilerle yapılan evliliklerde, evlilikleri ilgili mevzuatta belirtilen esaslar dahilinde Milli Savunma Bakanlığınca uygun görülmemek ve çeşitli nedenlerle Türk vatandaşlığını kaybetmek veya Türk vatandaşlığından çıkarılmak.",
+   "not": "vatandaşlık kaybı da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-023",
+   "madde": "13",
+   "tip": "sure",
+   "tetikleyici": "doksan günü geçmek",
+   "cevap": "bir sözleşme yılında sıhhi izin: fesih (kaza, kanser vb. hariç)",
+   "kanit": "hariç olmak kaydıyla, bir sözleşme yılı içinde alınan hava değişimi, istirahat ve benzeri sıhhi izin süresi toplamı doksan günü geçmek.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-024",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "rütbe verilmeksizin bir üst dereceye",
+   "cevap": "subay onbeşinci, astsubay onsekizinci yılda; sicil yüzde altmış",
+   "kanit": "Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler:\na) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak. b) Bulunduğu derecede en az üç yılını ve bu derecenin üçüncü kademesinde bir yılını tamamlamış olmak.",
+   "not": "derecede üç yıl, üçüncü kademede bir yıl",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-025",
+   "madde": "16",
+   "tip": "sure",
+   "tetikleyici": "en çok on yılı",
+   "cevap": "idarece yenilenmeyenlerin sağlık hakkı; hizmet süresi kadar",
+   "kanit": "a) Kendi kusurları olmaksızın idare tarafından sözleşmeleri yenilenmeyenler ile sözleşme süresi içinde vefat, bir yıl içerisinde Kanunda belirtilen süreden daha fazla hava değişimi/istirahat/benzeri sıhhi izin süresini geçirme, bulunduğu kadronun kaldırılması, istihdam edildiği kadronun sağlık niteliğini kaybetme nedeniyle sözleşmeleri sona erenler ve bunların bakmakla yükümlü oldukları aile fertlerinin, Türk Silâhlı Kuvvetlerinde sözleşmeli subay ve sözleşmeli astsubay olarak hizmet edilen süre kadar ve en çok on yılı,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-026",
+   "madde": "16",
+   "tip": "sure",
+   "tetikleyici": "en çok beş yılı",
+   "cevap": "kendi isteğiyle yenilemeyenler; hizmetin yarısı kadar",
+   "kanit": "b) Sözleşme süresi sonunda kendi istekleriyle sözleşmeleri yenilenmeyenler ile bunların bakmakla yükümlü oldukları aile fertlerinin ise Türk Silahlı Kuvvetlerinde sözleşmeli subay ve sözleşmeli astsubay olarak hizmet edilen sürenin yarısı kadar ve en çok beş yılı,",
+   "not": "İDARE YENİLEMEDİ ON, KENDİ İSTEMEDİ BEŞ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-13-027",
+   "madde": "16",
+   "tip": "sure",
+   "tetikleyici": "oniki ayı geçmemek üzere tedavi",
+   "cevap": "sağlıktan sözleşmesi bitenlere net maaşın üçte ikisi yardım",
+   "kanit": "Sözleşmeleri sağlık nedeniyle sona erenlerden; sözleşmelerinin sona ermesine neden olan sıhhi arızalarının tedavisine devam edilenlere, sözleşme sona erme tarihinden başlamak şartıyla oniki ayı geçmemek üzere tedavi süresince, görevdeki emsallerinin almış oldukları net maaşların (27/6/1989 tarihli ve 375 sayılı Kanun Hükmünde Kararnamenin 28 inci maddesinde belirtilen ek tazminatlar ile 14/7/1964 tarihli ve 500 sayılı Kanuna göre ödenen tazminat ve yabancı dil tazminatı hariç) 2/3'ü oranında, her ay sağlık yardımı olarak, kurumlarınca ödeme yapılır.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

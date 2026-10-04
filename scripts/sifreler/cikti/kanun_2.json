@@ -1,0 +1,446 @@
+{
+ "id": 2,
+ "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+ "kodlar": [
+  {
+   "i": "K-2-001",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "silahlı genel kolluk kuvvetidir",
+   "cevap": "jandarmanın tanımı; emniyet, asayiş, kamu düzeni",
+   "kanit": "Türkiye Cumhuriyeti Jandarması, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan ve diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getiren silahlı genel kolluk kuvvetidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-002",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanlığına bağlıdır",
+   "cevap": "Jandarma Genel Komutanlığı",
+   "kanit": "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-003",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "konuş yerleri",
+   "cevap": "İçişleri Bakanlığınca düzenlenir",
+   "kanit": "Jandarma Genel Komutanlığının kuruluş ve kadrolarıyla konuş yerleri, İçişleri Bakanlığınca düzenlenir. Ancak seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek birliklerin kuruluş ve kadrolarıyla konuş yerlerinin düzenlenmesinde Genelkurmay Başkanlığının görüşü alınır.",
+   "not": "seferberlik ve savaşta Kuvvet emrine girecek birlikler için Genelkurmay görüşü; mülki taksimat esas",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-004",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "Bölge komutanı",
+   "cevap": "konuşlu olduğu ilin valisine karşı sorumlu",
+   "kanit": "Bölge komutanı, bölge teşkilatının konuşlu bulunduğu ilin valisine karşı sorumlu olarak görev yapar.",
+   "not": "bölge teşkilatı geçici, birden çok il",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-005",
+   "madde": "7",
+   "tip": "gorev_yetki",
+   "tetikleyici": "dış korunmalarını",
+   "cevap": "mülki görev",
+   "kanit": "a) Mülki görevleri; Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumları ve tutukevlerinin dış korunmalarını yapmak,",
+   "not": "ceza infaz kurumu ve tutukevi dış koruması",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-006",
+   "madde": "7",
+   "tip": "gorev_yetki",
+   "tetikleyici": "kaçakçılığı men, takip ve tahkik",
+   "cevap": "mülki görev",
+   "kanit": "a) Mülki görevleri; Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumları ve tutukevlerinin dış korunmalarını yapmak,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-007",
+   "madde": "7",
+   "tip": "gorev_yetki",
+   "tetikleyici": "İşlenmiş suçlarla ilgili",
+   "cevap": "adli görev",
+   "kanit": "b) Adli görevleri; İşlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak ve bunlara ilişkin adli hizmetleri yerine getirmek.",
+   "not": "askeri görev: kanun ve CB kararnamesiyle verilen askeri hizmet",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-008",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "Kuvvet Komutanlıkları emrine girer",
+   "cevap": "seferberlik ve savaşta, Cumhurbaşkanı kararıyla belirlenen bölümleriyle",
+   "kanit": "Jandarma birlikleri; seferberlik ve savaş hallerinde, Cumhurbaşkanı kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer, kalan bölümüyle normal görevlerine devam eder.",
+   "not": "kalan bölüm normal görevine devam eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-009",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "garnizon komutanının talep etmesi",
+   "cevap": "valinin onayıyla askeri görev",
+   "kanit": "Ayrıca, Jandarma birlikleri; Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının, illerde ise garnizon komutanının talep etmesi halinde valinin onayıyla kendilerine verilen askeri görevleri de yaparlar.",
+   "not": "Genelkurmay talep ederse İçişleri Bakanı onayı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-010",
+   "madde": "9",
+   "tip": "yasak",
+   "tetikleyici": "hiçbir görev jandarmadan istenemez",
+   "cevap": "kanun, nizam, emir ve kararların öngörmediği",
+   "kanit": "Kanun ve nizamlar ile bunlara dayalı olarak verilen emir ve kararların öngörmediği hiçbir görev jandarmadan istenemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-011",
+   "madde": "10",
+   "tip": "gorev_yetki",
+   "tetikleyici": "polis teşkilatı bulunmayan yerlerdir",
+   "cevap": "jandarma görev alanı",
+   "kanit": "Jandarmanın genel olarak görev ve sorumluluk alanı; Polis görev sahası dışı olup, bu alanlar il ve ilçe belediye hudutları haricinde kalan veya polis teşkilatı bulunmayan yerlerdir.",
+   "not": "il ve ilçe belediye hudutları dışı da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-012",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "bir il veya ilçenin tamamı",
+   "cevap": "İçişleri Bakanının kararıyla polis ya da jandarma alanı",
+   "kanit": "İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-013",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "komisyon",
+   "cevap": "sınırları belirler; ilçede kaymakam, ilde vali başkanlığında",
+   "kanit": "İl ve ilçelerdeki jandarma ve polis sorumluluk alanlarının sınırları, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katılacağı bir komisyon tarafından belirlenir.",
+   "not": "jandarma ve emniyet temsilcileri; karar İçişleri Bakanı onayıyla yürürlüğe girer",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-014",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "en geç üç ay içerisinde",
+   "cevap": "belediye sınırı değişince sorumluluk alanı yeniden düzenlenir",
+   "kanit": "Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-015",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "birbirlerinin sorumluluk sahalarında",
+   "cevap": "mahalli mülki amir geçici görevlendirir",
+   "kanit": "Jandarma veya Emniyet Teşkilatı, kendi sorumluluk sahasında yetersiz kaldıkları veya\nkalacaklarının değerlendirilmesi halinde, mahalli mülki amirler tarafından birbirlerinin sorumluluk sahalarında geçici olarak görevlendirilebilirler.",
+   "not": "yetersiz kalma halinde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-016",
+   "madde": "12",
+   "tip": "makam",
+   "tetikleyici": "il valilerine devredebilir",
+   "cevap": "İçişleri Bakanı, geçici personel görevlendirme yetkisini",
+   "kanit": "Lüzum görüldüğü hallerde İçişleri Bakanı tarafından, Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında her kademedeki personel, geçici olarak görevlendirilebilir. İçişleri Bakanı bu yetkisini il valilerine devredebilir.",
+   "not": "EGM, Sahil Güvenlik, Jandarma arası",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-017",
+   "madde": "12",
+   "tip": "makam",
+   "tetikleyici": "bedelsiz olarak devredebilirler",
+   "cevap": "silah, taşıt, taşınmaz; İçişleri Bakanı onayıyla",
+   "kanit": "Ayrıca, İçişleri Bakanının onayıyla; Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı silah, mühimmat, teçhizat, taşıt ve diğer taşınırları ile taşınmazlarını birbirlerine geçici olarak tahsis edebilirler veya bedelsiz olarak devredebilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-018",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "bu Kanunda hüküm bulunmayan hallerde",
+   "cevap": "657 sayılı Devlet Memurları Kanunu",
+   "kanit": "Jandarma Hizmetleri Sınıfı personelinin her türlü özlük işlerinde, bu Kanunda hüküm bulunmayan hallerde, 14/7/1965 tarihli ve 657 sayılı Devlet Memurları Kanunu uygulanır.",
+   "not": "nasıp, terfi, aylık → 926 / 4678 / 3466 / 3269 / 6191",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-019",
+   "madde": "13",
+   "tip": "sure",
+   "tetikleyici": "60 yaşına",
+   "cevap": "albaylar; generaller 65; İçişleri Bakanı onayıyla görevde kalır",
+   "kanit": "Rütbelerindeki bekleme süresinin dolması ya da kadrosuzluk nedenleri ile emekliliğe sevk edilme durumunda olan, ancak hizmetlerine ihtiyaç duyulan albaylar 60 yaşına, generaller ise 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilirler.",
+   "not": "hizmetine ihtiyaç duyulanlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-020",
+   "madde": "13",
+   "tip": "makam",
+   "tetikleyici": "kadrosuzluk tazminatı",
+   "cevap": "albay ve üstü, bekleme süresi dolmadan Cumhurbaşkanı onayıyla emekli",
+   "kanit": "İlgili personel, personel kaynağı planlaması, iç güvenlik politikaları ve gelişen güvenlik ihtiyaçlarına göre albay ve üstü rütbelerde bekleme süreleri dolmadan kadrosuzluk tazminatı ödenmek suretiyle Cumhurbaşkanı onayı ile emekliye sevk edilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-021",
+   "madde": "13",
+   "tip": "makam",
+   "tetikleyici": "Subaylığa ve astsubaylığa nasıp",
+   "cevap": "İçişleri Bakanlığının onayıyla",
+   "kanit": "Subaylığa ve astsubaylığa nasıp (…)8 işlemleri, İçişleri Bakanlığının onayıyla yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-022",
+   "madde": "13",
+   "tip": "makam",
+   "tetikleyici": "uzman erbaşların nasıp ve terfileri",
+   "cevap": "Jandarma Genel Komutanlığınca, özel kanunlarına göre",
+   "kanit": "Uzman jandarma ve uzman erbaşların nasıp ve terfileri Jandarma Genel Komutanlığınca özel kanunlarına göre yapılır.",
+   "not": "uzman jandarma da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-023",
+   "madde": "13/A",
+   "tip": "makam",
+   "tetikleyici": "yükseköğretim kurumu olarak",
+   "cevap": "Akademi, İçişleri Bakanlığına bağlı; giderleri JGK bütçesinden",
+   "kanit": "yükseköğretim kurumu olarak İçişleri Bakanlığına bağlı Jandarma ve Sahil Güvenlik Akademisi kurulmuştur. Akademinin ihtiyaçları Jandarma Genel Komutanlığı bütçesinden karşılanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-024",
+   "madde": "13/A",
+   "tip": "makam",
+   "tetikleyici": "Akademi Başkanı",
+   "cevap": "İçişleri Bakanı atar; general, amiral, albay ya da profesör",
+   "kanit": "Akademi Başkanı, en az yüksek lisans düzeyinde akademik kariyere sahip Jandarma veya Sahil Güvenlik Hizmetleri Sınıfından general, amiral veya albaylar ya da yükseköğretim kurumlarının profesör öğretim üyeleri arasından İçişleri Bakanı tarafından atanır. Akademi Başkanına yardımcı olmak üzere albaylar veya öğretim üyeleri arasından İçişleri Bakanı tarafından en fazla dört başkan yardımcısı atanır.",
+   "not": "en az yüksek lisans; en fazla dört yardımcı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-025",
+   "madde": "13/A",
+   "tip": "sayi_oran",
+   "tetikleyici": "haftada yirmi",
+   "cevap": "ders ücreti sınırı; yılda üç yüz altmış saat",
+   "kanit": "Akademide ücret karşılığı ders vermek üzere görevlendirilen Bakanlık personeli ve diğer kişilere, haftada yirmi, bir takvim yılında üç yüz altmış saati aşmamak ve 2914 sayılı Kanunun 11 inci maddesinde öngörülen azami ek ders ücretlerini geçmemek kaydıyla, Maliye Bakanlığının uygun görüşü üzerine Bakanlık tarafından belirlenen miktar, esas ve usuller çerçevesinde ders ücreti ödenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-026",
+   "madde": "14",
+   "tip": "makam",
+   "tetikleyici": "dışında kalanlar İçişleri Bakanınca yapılır",
+   "cevap": "atama; general, bölge ve il komutanı hariç",
+   "kanit": "Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.",
+   "not": "JGK, yardımcıları, generaller, bölge ve il komutanı dışındakiler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-027",
+   "madde": "14",
+   "tip": "makam",
+   "tetikleyici": "valilik emrine atanır",
+   "cevap": "nokta ataması yapılmayanlar; il içi yer değişikliği vali yapar",
+   "kanit": "Nokta ataması yapılmayan subay, astsubay ve uzman jandarmalar valilik emrine atanır ve bunların istihdam yerleri, il içi yer değiştirmeleri vali tarafından yapılır.",
+   "not": "subay, astsubay, uzman jandarma",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-028",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "mülki görevlerinden doğan suçlarında",
+   "cevap": "4483 sayılı Kanun (Memurların Yargılanması)",
+   "kanit": "b) Jandarma personelinin mülki görevlerinden doğan suçlarında; özel kanunların hükümleri saklı kalmak şartıyla 2/12/1999 tarihli ve 4483 sayılı Memurlar ve Diğer Kamu Görevlilerinin Yargılanması Hakkında Kanun hükümlerine göre işlem yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-029",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "Adli görevlerinden doğan suçlarda",
+   "cevap": "CMK 161 inci maddesinin beşinci fıkrası",
+   "kanit": "c) Adli görevlerinden doğan suçlarda; 4/12/2004 tarihli ve 5271 sayılı Ceza Muhakemesi Kanununun 161 inci maddesinin beşinci fıkrası hükmü uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-030",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "askeri görev verildiği",
+   "cevap": "askeri birlik personelini yargılayan mahkeme",
+   "kanit": "Jandarma personeline askeri görev verildiği\n\ntakdirde bu görevlerden doğan suçların muhakemesi, Jandarma personelinin emrine verildiği askeri birlik personelini muhakeme etmekle görevli ve yetkili olan mahkemede görülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-031",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "kişisel suçlarında",
+   "cevap": "genel hükümler",
+   "kanit": "e) Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-032",
+   "madde": "15",
+   "tip": "ceza",
+   "tetikleyici": "daha fazla süreyle hapis",
+   "cevap": "ilişik kesilir; İçişleri Bakanının onayıyla",
+   "kanit": "Ertelenmiş, seçenek yaptırımlara çevrilmiş, hükmün açıklanmasının geri bırakılmasına karar verilmiş, affa uğramış veya 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 53 üncü maddesinde belirtilen süreler geçmiş olsa bile; Devletin güvenliğine karşı suçlar, Anayasal düzene ve bu düzenin işleyişine karşı suçlar, milli savunmaya karşı suçlar, Devlet sırlarına karşı suçlar ve casusluk, zimmet, irtikâp, rüşvet, iftira, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat karıştırma, edimin ifasına fesat karıştırma, suçtan kaynaklanan malvarlığı değerlerini aklama veya kaçakçılık suçlarından ya da kasten işlenen bir suçtan dolayı bir yıl veya daha fazla süreyle hapis cezasına mahkûm olan Jandarma Genel Komutanlığında görevli subay, astsubay ve uzman jandarmaların Komutanlıkla ilişikleri İçişleri Bakanının onayı ile kesilir.",
+   "not": "kasten suçtan bir yıl ve üstü hapis; affa uğrasa, ertelense, HAGB olsa bile; sayılan katalog suçlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-033",
+   "madde": "15/A",
+   "tip": "sure",
+   "tetikleyici": "yirmi dört saat içinde",
+   "cevap": "gecikmesinde sakınca: komutanın yazılı emri, hâkim onayına sunulur",
+   "kanit": "Tehlikenin veya suç işlenmesinin önlenmesi amacıyla usulüne göre verilmiş sulh ceza hâkimi kararı veya bu sebeplere bağlı olarak gecikmesinde sakınca bulunan hâllerde yirmi dört saat içinde görevli hâkimin onayına sunulması şartıyla birlik komutanının veya kurum amirinin yazılı emri (İptal ibare: Anayasa Mahkemesi’nin 30/6/2022 tarihli ve E.: 2018/137, K.: 2022/86 sayılı Kararı ile.) üzerine, jandarma hizmet binaları ve eklentilerinde, askerlik yükümlülüğünü yerine getiren erbaş ve erlerin üstü, özel kâğıtları ve eşyası aranır, gerekli tedbirler alınır, suç delilleri koruma altına alınarak 5271 sayılı Kanun hükümlerine göre gerekli işlemler yapılır.",
+   "not": "asıl kural sulh ceza hâkimi kararı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-034",
+   "madde": "15/A",
+   "tip": "kosul",
+   "tetikleyici": "erbaş ve erlerin üstü",
+   "cevap": "jandarma hizmet binalarında aranır; sulh ceza hâkimi kararı",
+   "kanit": "Tehlikenin veya suç işlenmesinin önlenmesi amacıyla usulüne göre verilmiş sulh ceza hâkimi kararı veya bu sebeplere bağlı olarak gecikmesinde sakınca bulunan hâllerde yirmi dört saat içinde görevli hâkimin onayına sunulması şartıyla birlik komutanının veya kurum amirinin yazılı emri (İptal ibare: Anayasa Mahkemesi’nin 30/6/2022 tarihli ve E.: 2018/137, K.: 2022/86 sayılı Kararı ile.) üzerine, jandarma hizmet binaları ve eklentilerinde, askerlik yükümlülüğünü yerine getiren erbaş ve erlerin üstü, özel kâğıtları ve eşyası aranır, gerekli tedbirler alınır, suç delilleri koruma altına alınarak 5271 sayılı Kanun hükümlerine göre gerekli işlemler yapılır.",
+   "not": "özel kâğıtları ve eşyası da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-035",
+   "madde": "15/A",
+   "tip": "yasak",
+   "tetikleyici": "Konutta ve yerleşim yerinde",
+   "cevap": "önleme araması yapılamaz",
+   "kanit": "Konutta ve yerleşim yerinde ve eklentilerinde önleme araması yapılamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-036",
+   "madde": "18",
+   "tip": "makam",
+   "tetikleyici": "bütçesinden ayrı olarak düzenlenir",
+   "cevap": "JGK bütçesi; İçişleri Bakanlığı bünyesinde",
+   "kanit": "Jandarma Genel Komutanlığının bütçesi, İçişleri Bakanlığının bünyesinde ve bu Bakanlığın bütçesinden ayrı olarak düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-037",
+   "madde": "19",
+   "tip": "makam",
+   "tetikleyici": "sefer stokları dahil",
+   "cevap": "Kuvvet emrine giren birliklerin ihtiyacı Milli Savunma Bakanlığınca",
+   "kanit": "Seferberlik ve savaş hallerinde Kuvvet Komutanlıkları emrine girecek veya İçişleri Bakanı ya da valilerce askeri görev verilen jandarma birliklerinin her türlü ihtiyacı (sefer stokları dahil) emrine gireceği Kuvvet Komutanlıklarının standartlarına uygun olarak Milli Savunma Bakanlığınca sağlanır.",
+   "not": "normalde JGK kendi bütçesinden",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-038",
+   "madde": "19",
+   "tip": "kosul",
+   "tetikleyici": "Savunma Sanayi Destekleme Fonundan",
+   "cevap": "TSK'nın tabi olduğu usulle yararlanır",
+   "kanit": "Ancak Jandarma Genel Komutanlığı, Savunma Sanayi Destekleme Fonundan Türk Silahlı Kuvvetlerinin tabi olduğu usul ve esaslar dahilinde yararlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-039",
+   "madde": "19",
+   "tip": "kosul",
+   "tetikleyici": "ihtiyaç fazlası ve standart dışı",
+   "cevap": "4645 sayılı Kanun (EGM) hükümlerine göre devir",
+   "kanit": "Jandarma Genel Komutanlığının ihtiyaç fazlası ve standart dışı malzemelerinin bedelli veya bedelsiz devir işlemleri 12/4/2001 tarihli ve 4645 sayılı Emniyet Genel Müdürlüğüne Ait Araç, Gereç, Mal ve Malzemenin Satış, Hibe, Hek ve Hurda Durum ve İşlemleri ile Hizmet Satışına Dair Kanun hükümlerine göre yürütülür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-040",
+   "madde": "21",
+   "tip": "sayi_oran",
+   "tetikleyici": "Komando ve sınır birliklerinde",
+   "cevap": "asayiş tazminatı en çok yüzde elli iki",
+   "kanit": "Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.",
+   "not": "diğer birliklerde yüzde kırk; metindeki \",20\" ve \",21\" dipnot numarasıdır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-041",
+   "madde": "21",
+   "tip": "sayi_oran",
+   "tetikleyici": "Diğer karargah, birlik ve kurumlarda",
+   "cevap": "asayiş tazminatı yüzde kırk",
+   "kanit": "Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.",
+   "not": "en yüksek Devlet memuru aylığının; İçişleri Bakanlığı usulüyle",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-042",
+   "madde": "21",
+   "tip": "istisna",
+   "tetikleyici": "vergi ve kesinti yapılmaz",
+   "cevap": "asayiş tazminatından; yalnız damga vergisi",
+   "kanit": "Bu tazminattan damga vergisi hariç herhangi bir vergi ve kesinti yapılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-043",
+   "madde": "24",
+   "tip": "makam",
+   "tetikleyici": "Cumhurbaşkanınca yürürlüğe konulan yönetmelikle",
+   "cevap": "Kanunun uygulama yönetmeliği: teşkilat, terfi, kılık-kıyafet",
+   "kanit": "Bu Kanunla münhasıran yönetmelik çıkarılması öngörülen hususların yanısıra jandarmanın teşkilat, görev, yetki ve sorumlulukları, diğer makamlarla ilişkileri, birlikte çalışma ve işbirliği esasları dahil komuta ve kontrol ilişkileri ile Jandarma (…)23 personelinin terfi işleri, değerlendirme, ödüllendirme, kılık ve kıyafet ve Kanunun uygulanmasına ilişkin diğer hususlar; Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-044",
+   "madde": "Geçici",
+   "tip": "sayi_oran",
+   "tetikleyici": "rütbe yaş hadleri",
+   "cevap": "teğmen-üsteğmen 49, yüzbaşı 55, binbaşı 56, yarbay 57, albay 60",
+   "kanit": "astsubaylıktan subaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\n\nRütbe Teğmen, Üsteğmen Yüzbaşı Binbaşı Yarbay Albay\n\nYaş Haddi 49 55 56 57 60",
+   "not": "astsubaylıktan subaylığa geçenler (geçici madde 12)",
+   "karistirilan": []
+  }
+ ]
+}

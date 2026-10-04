@@ -1,0 +1,36 @@
+# 3713 Terörle Mücadele Kanunu — kelime → cevap
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ortak import yaz
+K = [
+ ('1','tanim','örgüte mensup kişi veya kişiler','terör tanımı; örgüt unsuru şart','Terör; cebir ve şiddet','suç teşkil eden eylemlerdir.',[],'cebir ve şiddet; baskı, korkutma, yıldırma, sindirme, tehdit'),
+ ('2','tanim','amaçlanan suçu işlemese dahi','terör suçlusu; örgüt mensubu','Birinci maddede belirlenen','terör suçlusudur.',[],''),
+ ('2','tanim','örgüt adına suç işleyenler','terör suçlusu sayılır; mensup olmasa da','Terör örgütüne mensup olmasa dahi','terör suçlusu sayılır',[],''),
+ ('3','tanim','terör suçlarıdır','TCK 302, 307, 309, 311-315, 320, 310 (birinci fıkra)','26/9/2004 tarihli','terör suçlarıdır.',[('4','m.4 suçları ancak örgüt faaliyetinde terör suçu sayılır')],'mutlak terör suçları'),
+ ('4','kosul','terör suçu sayılır','örgüt faaliyeti çerçevesinde işlenirse; başlı başına değil','Aşağıdaki suçlar 1 inci maddede','terör suçu sayılır:',[('3','m.3 suçları her halde terör suçudur')],''),
+ ('4','kosul','kasten orman yakma','orman yakma: örgüt faaliyetinde terör suçu','c) 31/8/1956','kasten orman yakma suçları.',[],'6831 Orman Kanunu m.110/4-5'),
+ ('4','kosul','hapis cezasını gerektiren suçlar','Kaçakçılıkla Mücadele Kanunu suçları; örgüt faaliyetinde terör suçu','ç) 10/7/2003','hapis cezasını gerektiren suçlar.',[],'6136 silah suçları da'),
+ ('4','kosul','ilanına neden olan olaylara','OHAL bölgesinde; olağanüstü halin ilanına neden olan olaylara ilişkin','d) Anayasanın 120 nci','olaylara ilişkin suçlar.',[],''),
+ ('7','suc_adi','faaliyetini düzenleyenler','örgüt yöneticisi olarak cezalandırılır','Örgütün faaliyetini düzenleyenler','yöneticisi olarak cezalandırılır.',[],'kuran, yöneten, üye: TCK 314'),
+ ('7','ceza','propagandasını yapan','bir yıldan beş yıla kadar hapis; basın-yayınla yarı artırım','Terör örgütünün; cebir','yarı oranında artırılır.',[],'cebir, şiddet, tehdit yöntemlerini meşru gösterme, övme, teşvik'),
+ ('7','ceza','bin günden beş bin güne','yayın sorumlularına adli para cezası','Ayrıca, basın ve yayın organlarının','adli para cezasına hükmolunur.',[],'suça iştirak etmemiş olsalar da'),
+ ('7','istisna','Haber verme sınırlarını aşmayan','suç oluşturmaz; eleştiri de','Haber verme sınırlarını','suç oluşturmaz.',[],''),
+ ('7','suc_adi','Slogan atılması','propaganda gibi cezalandırılır; amblem taşıma, üniforma da','b) Toplantı ve gösteri yürüyüşü sırasında','üniformanın giyilmesi.',[],'toplantı sırasında olmasa da'),
+ ('7','ceza','yüzünü tamamen veya kısmen kapatanlar','üç yıldan beş yıla; silahla alt sınır dört yıl','Terör örgütünün propagandasına dönüştürülen','dört yıldan az olamaz.',[],'propagandaya dönüşen toplantıda'),
+ ('7','ceza','öğrenci yurtlarında','propaganda cezası iki katı; dernek, vakıf, parti, okul binasında da','kuruluşlarına veya bunların yan','iki katı hükmolunur.',[],''),
+ ('7','istisna','üye olmamakla birlikte örgüt adına','ayrıca örgüt üyeliği (314 üçüncü fıkra) cezası verilmez','Terör örgütüne üye olmamakla','ayrıca ceza verilmez.',[],'propaganda, 6/2 suçu, 2911 m.28/1 toplantı suçu'),
+ ('8','ceza','nüfuz kötüye kullanılmak suretiyle','terör suçlarında ceza yarı oranında artırılır','Nitelikli hal Madde 8/A','yarı oranında artırılır.',[],'kamu görevinin nüfuzu (m.8/A)'),
+ ('8','kosul','60 ıncı maddesine göre','tüzel kişiye güvenlik tedbiri','Tüzel kişilerin sorumluluğu Madde 8/B','güvenlik tedbirlerine hükmolunur.',[],'m.8/B'),
+ ('15','makam','en fazla üç avukatın','ücreti kurum bütçesinden ödenir; terörle mücadele görevinden doğan suç iddiası','Terörle mücadelede görev alan','ödenekten karşılanır.',[],'mağdur, şikâyetçi, davalı, davacı personelin bir avukatı'),
+ ('15','makam','davacı konumunda olan personelin','avukat ücreti ilgili Bakanın onayına tabi','Ancak davacı konumunda','ilgili Bakanın onayına tabidir.',[],'usul: MSB ve İçişleri müşterek yönetmelik'),
+ ('19','kosul','para ödülü','iştirak etmemiş olmak koşuluyla; İçişleri Bakanlığı yönetmeliği','İşlenişine iştirak etmemiş','para ödülü verilebilir.',[],'suçun ortaya çıkarılması, delil, fail yakalanmasına yardım'),
+ ('20','kosul','estetik cerrahi yoluyla','koruma tedbiri; nüfus kaydı, ehliyet, diploma değişikliği de','Bu koruma tedbirleri; talep halinde estetik','düzenleme yapılır.',[],'koruma tedbirleri Devletçe; yönetmelik Cumhurbaşkanınca'),
+ ('20','gorev_yetki','taarruzu savmak için silah kullanmaya','ayrılmış olsa da yetkili; kendisi, eşi, çocukları','Yukarıda sayılanlardan kamu görevlileri','silah kullanmaya yetkilidirler.',[],''),
+ ('20','sure','şerh kendiliğinden terkin edilir','iki yıl içinde ihtiyati haciz/tedbir kararı ibraz edilmezse','Kovuşturmaya yer olmadığına dair','şerh kendiliğinden terkin edilir.',[],'m.20/A: zararın tazmini için taşınmaz ve araçlara şerh'),
+ ('20','sira_usul','tirajı ellibinin üzerinde','adresi bulunmayan davalıya gazete ilanıyla tebliğ','davalının adres kayıt sisteminde','ilan edilir.',[],'bir ay içinde adres bildirmezse yokluğunda yargılama'),
+ ('21','kosul','2330 sayılı Nakdi Tazminat','terör eylemine muhatap kamu görevlisi; yaralanan, engelli, ölen','kamu görevlilerinden yurtiçinde','hükümleri uygulanır.',[],'sıfatı kalkmış olsa bile'),
+ ('21','sayi_oran','30 yıl hizmet yapmış gibi','emekli ikramiyesi; malul ve ölenlerin dul-yetimine','Yaşamak için gereken hareketleri','emekli ikramiyesi ödenir.',[],'bakıma muhtaç malul: en yüksek devlet memuru aylığı üzerinden'),
+ ('21','sure','on yıl süreyle kamu konutlarından','kira alınmadan; yurtdışı özel tahsisli bir yıl','Yurtiçinde veya yurtdışında kamu konutlarından','yararlanmaya devam edebilirler.',[],'konuttan çıkana on yıl kira yardımı'),
+ ('21','kosul','tanıtım kartlarını','kamu hastanelerinde muayene ve tedavi','Malûl olanlar ile ölenlerin dul','muayene ve tedavi edilirler.',[],''),
+ ('22','makam','Dayanışmayı Teşvik Fonundan','terörden zarar gören vatandaşa öncelikle yardım; şehit çocuğunun öğrenim masrafı','Terör eylemlerinden dolayı','öğrenim masrafları karşılanır.',[],'yaralıların tedavisi Devletçe'),
+]
+yaz(7, '3713 sayılı Terörle Mücadele Kanunu', K)

@@ -1,0 +1,706 @@
+{
+ "id": 15,
+ "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+ "kodlar": [
+  {
+   "i": "K-15-001",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "paraf yerine geçecek kaydın",
+   "cevap": "elektronik onay",
+   "kanit": "e) Elektronik onay: Güvenli elektronik imza kullanılmayan durumlarda paraf yerine geçecek kaydın elektronik ortamda alınmasını,",
+   "not": "güvenli e-imza kullanılmayan durumlarda",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-002",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "ek veya ekleri hariç kısmını",
+   "cevap": "üst yazı",
+   "kanit": "r) Üst yazı: Belgenin, varsa ek veya ekleri hariç kısmını,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-003",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Devlet Arşivleri Başkanlığı tarafından yayımlanan",
+   "cevap": "standart dosya planı",
+   "kanit": "ö) Standart dosya planı: Kurumsal işlemler ve bu işlemler sonucunda oluşturulan veya alınan belgelerin üretim yerleri ile olan ilişkisi belirtilerek konu veya fonksiyon esasına göre dosyalanmasını sağlamak amacıyla geliştirilen ve Devlet Arşivleri Başkanlığı tarafından yayımlanan sınıflama şemasını,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-004",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "periyodik olarak alınan zaman damgası",
+   "cevap": "arşiv imza",
+   "kanit": "b) Arşiv imza: Kriptografik metodların zaman içerisinde koruyucu özelliğini yitirmesine karşı, periyodik olarak alınan zaman damgası ile korunan elektronik imzayı,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-005",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Çok Gizli",
+   "cevap": "kurumsal belge kayıt sistemiyle sayı alınır (EBYS dışı)",
+   "kanit": "m) Kurumsal belge kayıt sistemi: Mevzuatı sebebiyle EBYS kullanamayan idare tarafından ya da “Çok Gizli” nitelikteki belgeler ile olağanüstü durumlarda hazırlanan belgelere sayı almak için kullanılan defter ve benzeri fiziksel veya EBYS harici tutulan elektronik kaydı,",
+   "not": "EBYS kullanamayan idare ve olağanüstü durum belgeleri de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-006",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Dijital Dönüşüm Ofisi Başkanlığı tarafından",
+   "cevap": "DETSİS",
+   "kanit": "ç) Devlet Teşkilatı Merkezi Kayıt Sistemi (DETSİS): Dijital Dönüşüm Ofisi Başkanlığı tarafından yürütülen ve idarelerin merkez, taşra ve yurt dışı teşkilatındaki birimlerinin Türkiye Cumhuriyeti Devlet Teşkilatı Numarası ile tanımlandığı sistemi,",
+   "not": "e-Yazışma Teknik Rehberi de DDO yayımlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-007",
+   "madde": "4",
+   "tip": "yasak",
+   "tetikleyici": "çıktısı alınarak el yazısıyla",
+   "cevap": "imzalanmaz ve fiziksel ortamda saklanmaz",
+   "kanit": "Ayrıca güvenli elektronik imza ile imzalanan belgeler, çıktısı alınarak el yazısıyla atılan imza ile imzalanmaz ve fiziksel ortamda saklanmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-008",
+   "madde": "5",
+   "tip": "sayi_oran",
+   "tetikleyici": "tek nüsha",
+   "cevap": "güvenli e-imzalı belge",
+   "kanit": "(1) Elektronik ortamda güvenli elektronik imza ile imzalanan belgeler tek nüsha olarak hazırlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-009",
+   "madde": "5",
+   "tip": "sayi_oran",
+   "tetikleyici": "en az iki nüsha",
+   "cevap": "zorunlu hâl/olağanüstü durum belgesi; paraflı nüsha idarede kalır",
+   "kanit": "(2) Zorunlu hâllerde veya olağanüstü durumlarda hazırlanacak belgeler, paraflı nüshası hazırlayan idarede kalacak şekilde en az iki nüsha olarak düzenlenir.",
+   "not": "E-İMZA TEK, KÂĞIT İKİ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-010",
+   "madde": "6",
+   "tip": "sira_usul",
+   "tetikleyici": "kâğıdın bir yüzü kullanılır",
+   "cevap": "fiziksel üst yazı; eklerde iki yüz olabilir",
+   "kanit": "(3) Zorunlu hâllerde veya olağanüstü durumlarda hazırlanacak belgelerin üst yazıları için kâğıdın bir yüzü kullanılır.",
+   "not": "A4",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-011",
+   "madde": "7",
+   "tip": "sayi_oran",
+   "tetikleyici": "Arial için 11 punto",
+   "cevap": "Times New Roman 12; en az 9, iletişimde 8",
+   "kanit": "(1) Hazırlanan belgelerde “Times New Roman” veya “Arial” yazı tipi normal yazı stilinde kullanılır. Harf büyüklüğünün Times New Roman için 12 punto, Arial için 11 punto olması esastır. Ancak gerekli hâllerde yazı alanında harf büyüklüğü 9 puntoya, iletişim bilgileri kısmında ise 8 puntoya kadar düşürülebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-012",
+   "madde": "8",
+   "tip": "sayi_oran",
+   "tetikleyici": "1,5 cm",
+   "cevap": "yazı alanı üst, sol, sağ boşluk; logoda üst 0,5",
+   "kanit": "(1) Belgenin yazı alanı sayfanın üst, sol ve sağ kenarından 1,5 cm boşluk bırakılarak düzenlenir. İdare, logo kullanmak istediğinde sayfanın üst boşluğu 0,5 cm olarak düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-013",
+   "madde": "9",
+   "tip": "sayi_oran",
+   "tetikleyici": "en fazla iki logo",
+   "cevap": "üst idare logosu solda, alt sağda",
+   "kanit": "Belge üzerinde iki ayrı logo kullanıldığında ise “Başlık” alanını ortalayacak şekilde hiyerarşi yönünden üst olan idareye ait logo solda, alt olan idareye ait logo sağda kullanılır. Bir kavram veya etkinlik gibi hususlarla ilgili logo kullanılmak istendiğinde, “Başlık” alanını ortalayacak şekilde idareye ait olan logo solda; diğer logo sağda kullanılır. Belge üzerinde en fazla iki logo kullanılabilir (Örnek 1).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-014",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "DETSİS’te yer alan başlık kayıtları",
+   "cevap": "başlık yazımında esas alınır",
+   "kanit": "(6) Başlığın yazımında DETSİS’te yer alan başlık kayıtları esas alınır.",
+   "not": "T.C. / idare adı BÜYÜK / birim adı ilk harfler büyük",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-015",
+   "madde": "11",
+   "tip": "tanim",
+   "tetikleyici": "zorunlu hâller için",
+   "cevap": "sayıda Z; elektronik E, olağanüstü O",
+   "kanit": "“Sayı:” sırasıyla; belgenin hazırlanma süreçlerini ifade eden elektronik ortam için “E”, zorunlu hâller için “Z” veya olağanüstü durumlar için “O” ibarelerinden uygun olanı, DETSİS’te belirtilen Türkiye Cumhuriyeti Devlet Teşkilatı Numarası, standart dosya planı kodu ile kayıt numarasından oluşur ve bunların arasına kısa çizgi işareti (-) konulur (Örnek 3).",
+   "not": "E/Z/O – DETSİS no – dosya planı kodu – kayıt no",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-016",
+   "madde": "11",
+   "tip": "sira_usul",
+   "tetikleyici": "kısa çizgi işareti",
+   "cevap": "sayı bölümleri arasına (-)",
+   "kanit": "“Sayı:” sırasıyla; belgenin hazırlanma süreçlerini ifade eden elektronik ortam için “E”, zorunlu hâller için “Z” veya olağanüstü durumlar için “O” ibarelerinden uygun olanı, DETSİS’te belirtilen Türkiye Cumhuriyeti Devlet Teşkilatı Numarası, standart dosya planı kodu ile kayıt numarasından oluşur ve bunların arasına kısa çizgi işareti (-) konulur (Örnek 3).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-017",
+   "madde": "11",
+   "tip": "kosul",
+   "tetikleyici": "kayıt numarasının eşsiz olması",
+   "cevap": "EBYS/kurumsal kayıt sisteminde zorunlu",
+   "kanit": "İdarece kullanılan EBYS veya kurumsal belge kayıt sistemi içerisinde her bir belgenin hazırlanma sürecine göre kayıt numarasının eşsiz olması zorunludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-018",
+   "madde": "12",
+   "tip": "tanim",
+   "tetikleyici": "zaman damgasındaki tarih bilgisi",
+   "cevap": "e-imzalı belgenin tarihi (son yetkilinin imzası)",
+   "kanit": "(2) Belgenin en son yetkili tarafından güvenli elektronik imza ile imzalandığı zamanı gösteren zaman damgasındaki tarih bilgisi, belge tarihi olarak esas alınır ve tarih bilgisi üstveri alanında yer alır.",
+   "not": "gün.ay.yıl rakamla; ay harfle yazılırsa işaret yok",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-019",
+   "madde": "12",
+   "tip": "istisna",
+   "tetikleyici": "metnin bitiminde yer alabilir",
+   "cevap": "tutanak, rapor, tebliğ-tebellüğ belgesinde tarih",
+   "kanit": "(4) Tutanak, rapor, tebliğ-tebellüğ belgesi ve benzeri belgelerde tarih, metnin bitiminde yer alabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-020",
+   "madde": "13",
+   "tip": "sira_usul",
+   "tetikleyici": "herhangi bir noktalama işareti konulmaksızın",
+   "cevap": "konu; kelime baş harfleri büyük; dikey ortayı geçmez",
+   "kanit": "Belgenin konusu, yazı alanının dikey orta hizasını geçmeyecek biçimde kelimelerin baş harfleri büyük olarak ve sonuna herhangi bir noktalama işareti konulmaksızın yazılır (Örnek 3).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-021",
+   "madde": "14",
+   "tip": "sira_usul",
+   "tetikleyici": "yönelme hâl eklerinden",
+   "cevap": "muhatap idare adı büyük harflerle + yönelme eki",
+   "kanit": "(2) Muhatabın idare veya özel hukuk tüzel kişisi olması durumunda, adı büyük harflerle ve sonuna yönelme hâl eklerinden uygun olanı getirilerek yazılır.",
+   "not": "birim adı parantez içinde alt satıra",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-022",
+   "madde": "14",
+   "tip": "sira_usul",
+   "tetikleyici": "DAĞITIM YERLERİNE",
+   "cevap": "birden fazla muhataba dağıtımlı belge",
+   "kanit": "(6) Birden fazla muhataba iletilecek dağıtımlı belgelerin muhatap bölümüne “DAĞITIM YERLERİNE” ibaresi yazılır (Örnek 15, 16).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-023",
+   "madde": "14",
+   "tip": "sira_usul",
+   "tetikleyici": "Sayın",
+   "cevap": "gerçek kişi muhatap; adı ilk harf büyük, soyadı büyük",
+   "kanit": "Muhatap gerçek kişi ise muhatap bölümüne “Sayın” ibaresinden sonra muhatabın adı ilk harfi büyük diğerleri küçük harflerle, soyadı ise büyük harflerle yazılır (Örnek 5).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-024",
+   "madde": "15",
+   "tip": "sira_usul",
+   "tetikleyici": "önceki tarihli olandan başlanarak",
+   "cevap": "ilgiler tarih sırasıyla; küçük harf ve kapama parantez",
+   "kanit": "(5) İlginin birden fazla olması durumunda, belgeler önceki tarihli olandan başlanarak tarih sırasına göre sıralanır. Sıralamada, Türk alfabesinde yer alan bütün küçük harfler, kendilerinden sonra kapama parantez işareti “)” konularak kullanılır (Örnek 7).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-025",
+   "madde": "15",
+   "tip": "istisna",
+   "tetikleyici": "idare adı belirtilmez",
+   "cevap": "ilgi tutulan belge muhatabın kendi belgesiyse",
+   "kanit": "Ancak ilgi tutulan belgenin, muhatap idarenin daha önce gönderdiği bir belge veya muhatap idareye daha önce gönderilen bir belge olması durumunda idare adı belirtilmez (Örnek 7).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-026",
+   "madde": "15",
+   "tip": "sira_usul",
+   "tetikleyici": "İsimsiz ve tarihsiz başvuru",
+   "cevap": "gerçek kişi ve tarih bilgisi olmayan dilekçe ilgisi",
+   "kanit": "(10) Gerçek kişi ve tarih bilgisi bulunmayan başvuru/dilekçe ilgi tutulmak istendiğinde, ilgi bölümü “İsimsiz ve tarihsiz başvuru/dilekçe.” biçiminde yazılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-027",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "alt makamlara",
+   "cevap": "rica ederim; üst ve aynı düzeye arz ederim",
+   "kanit": "a) Yazışma yapan makamlar arasındaki hiyerarşi yönünden alt makamlara “… rica ederim.”, üst ve aynı düzeydeki makamlara “… arz ederim.” ibaresiyle bitirilir.",
+   "not": "ASTA RİCA, ÜSTE VE EŞİTE ARZ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-028",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "arz ve rica ederim",
+   "cevap": "üst, aynı düzey ve alt makamlara birlikte dağıtım",
+   "kanit": "b) Üst, aynı düzey ve alt makamlara birlikte dağıtımlı olarak yapılan yazışmalar “… arz ve rica ederim.” veya “… arz/rica ederim.” ibaresiyle bitirilir.",
+   "not": "arz/rica ederim de olur",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-029",
+   "madde": "16",
+   "tip": "istisna",
+   "tetikleyici": "Cumhurbaşkanlığı İdari İşler Başkanı tarafından",
+   "cevap": "bakanlıklarla yazışmada Rica ederim",
+   "kanit": "ç) 1 sayılı Cumhurbaşkanlığı Kararnamesinin 6 ncı maddesi gereğince bakanlıklarla yapılan yazışmalar, Cumhurbaşkanlığı İdari İşler Başkanı tarafından veya adına imzalandığında “Rica ederim.” ibaresiyle bitirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-030",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "Saygılarımla",
+   "cevap": "gerçek kişi muhataba bitiş; İyi dileklerimle, Bilgilerinize sunulur da",
+   "kanit": "e) Muhatabı gerçek kişi olan yazışmalar “Saygılarımla.”, “İyi dileklerimle.” veya “Bilgilerinize sunulur.” ibareleriyle bitirilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-031",
+   "madde": "16",
+   "tip": "sayi_oran",
+   "tetikleyici": "1,25 cm",
+   "cevap": "paragraf girintisi; iki yana hizalı; paragraf arası boşluk yok",
+   "kanit": "(4) Paragrafa 1,25 cm içeriden başlanır ve metin iki yana hizalanır. Paragraflar arasında satır boşluğu bırakılmaz (Örnek 8).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-032",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "üçlü gruplara ayrılarak",
+   "cevap": "dört ve çok haneli sayılar; nokta ile; kesirler virgülle",
+   "kanit": "(7) Dört ve dörtten çok haneli sayılar sondan sayılmak üzere üçlü gruplara ayrılarak yazılır ve araya nokta (.) işareti konulur (Örnek: 1.452; 25.126; 326.197). Sayılarda kesirler virgül (,) ile ayrılır (Örnek: 10.545,72).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-033",
+   "madde": "16",
+   "tip": "sira_usul",
+   "tetikleyici": "sadece ilk sayfada",
+   "cevap": "çok sayfalı üst yazıda sayı-tarih-konu-muhatap-ilgi; imza ve ekler son sayfada",
+   "kanit": "(5) Birden fazla sayfa tutan üst yazılarda sayı, tarih, konu, muhatap ve ilgi bilgilerine sadece ilk sayfada; imza, ek ve dağıtım bilgilerine ise sadece son sayfada yer verilir (Örnek 9).",
+   "not": "iletişim ve doğrulama bilgisi her sayfada",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-034",
+   "madde": "17",
+   "tip": "sayi_oran",
+   "tetikleyici": "iki ilâ dört satır",
+   "cevap": "metin bitimi ile imza arası boşluk",
+   "kanit": "(1) Metnin bitiminden itibaren iki ilâ dört satır boşluk bırakılarak, belgeyi imzalayacak olan makam sahibinin adına, soyadına ve bunların altında unvanına, yazı alanının en sağında ortalanarak yer verilir (Örnek 9).",
+   "not": "ad-soyad-unvan yazı alanının en sağında ortalı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-035",
+   "madde": "17",
+   "tip": "sira_usul",
+   "tetikleyici": "mavi renkli kalemle",
+   "cevap": "el yazısı imza (zorunlu hâl); paraf da mavi",
+   "kanit": "El yazısıyla atılan imza, kaybolmayacak ve kâğıda işlemesini sağlayacak mavi renkli kalemle atılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-036",
+   "madde": "17",
+   "tip": "makam",
+   "tetikleyici": "bakan veya ilgili bakan yardımcısı",
+   "cevap": "bakanlıkların Cumhurbaşkanlığı ile yazışmasını imzalar",
+   "kanit": "(8) Bakanlıklar ile bunlara bağlı, ilgili ve ilişkili kurum ve kuruluşların Cumhurbaşkanlığı ile yapacakları yazışmalar, belgenin mahiyeti ve aciliyet durumu değerlendirilerek bakan veya ilgili bakan yardımcısı tarafından imzalanır.",
+   "not": "CB'ye bağlı kurumlarda en üst yönetici",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-037",
+   "madde": "17",
+   "tip": "sira_usul",
+   "tetikleyici": "yetki devreden makamı gösteren",
+   "cevap": "ikinci satıra “Bakan a.”, “Vali a.”; iç yazışmada kullanılmaz",
+   "kanit": "(9) Belgeyi imza yetkisi devredilen makam imzaladığında, imzalayanın adı ve soyadı birinci satıra, yetki devreden makamı gösteren “Bakan a.”, “İdari İşler Başkanı a.”, “Vali a.”, “Belediye Başkanı a.” “Başkan a.” “Genel Müdür a.” veya “Rektör a.” biçimindeki ibare ikinci satıra, imzalayan makamın unvanı ise üçüncü satıra yazılır (Örnek 10). İdare birimleri arasındaki iç yazışmalarda yetki devredenin unvanı kullanılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-038",
+   "madde": "17",
+   "tip": "sira_usul",
+   "tetikleyici": "Belge vekâleten imzalandığında",
+   "cevap": "ikinci satıra “Genel Müdür V.” gibi",
+   "kanit": "(10) Belge vekâleten imzalandığında, imzalayanın adı ve soyadı birinci satıra, vekâlet olunan makam “Genel Müdür V.”, “Başkan V.”, “Belediye Başkan V.” “Rektör V.” veya “Dekan V.” biçiminde ikinci satıra yazılır (Örnek 10).",
+   "not": "YETKİ DEVRİ a., VEKÂLET V.",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-039",
+   "madde": "17",
+   "tip": "sira_usul",
+   "tetikleyici": "imzası sağda yer alır",
+   "cevap": "iki yetkilide üst unvan sağda; ikiden fazlada en üst solda",
+   "kanit": "(11) Belgenin iki yetkili tarafından imzalanması durumunda üst unvan sahibinin adı, soyadı, unvanı ve imzası sağda yer alır. Belgenin ikiden fazla yetkili tarafından imzalanması durumunda en üst unvan sahibinin adı, soyadı, unvanı ve imzası en solda olmak üzere yetkililer unvan sırasına göre soldan sağa doğru sıralanır (Örnek 11).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-040",
+   "madde": "17",
+   "tip": "yasak",
+   "tetikleyici": "ibareye, şekle veya ifadeye",
+   "cevap": "e-imzalı belgede imzalandığına dair işaret konmaz",
+   "kanit": "Elektronik ortamda yapılan yazışmalarda, yetkili makamın ad ve soyad bilgilerinin üzerinde belgenin güvenli elektronik imza ile imzalandığına dair herhangi bir ibareye, şekle veya ifadeye yer verilmez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-041",
+   "madde": "18",
+   "tip": "sira_usul",
+   "tetikleyici": "EK LİSTESİ",
+   "cevap": "ek listesi sığmazsa ayrı sayfa; üst yazıda Ek: Ek Listesi",
+   "kanit": "(4) Ek listesi yazı alanına sığmayacak kadar uzunsa ayrı bir sayfada, “EK LİSTESİ” başlığı altında yazılır ve üst yazıda “Ek: Ek Listesi” şeklinde gösterilir (Örnek 13).",
+   "not": "ek numarası sağ üst köşede EK-1, EK-2",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-042",
+   "madde": "18",
+   "tip": "sira_usul",
+   "tetikleyici": "Ek konulmadı",
+   "cevap": "ekler muhataba gönderilmediğinde",
+   "kanit": "(5) Belge eklerinin muhataba gönderilmediği durumlarda “Ek konulmadı”",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-043",
+   "madde": "19",
+   "tip": "sira_usul",
+   "tetikleyici": "bilgi sahibi olması istenenler",
+   "cevap": "Dağıtım: Bilgi kısmı; gereğini yapacaklar Gereği kısmı",
+   "kanit": "(2) Belgenin gereğini yerine getirme durumunda olanlar “Gereği:” kısmına, belgenin içeriği hakkında bilgi sahibi olması istenenler ise “Bilgi:” kısmına yazılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-044",
+   "madde": "20",
+   "tip": "sira_usul",
+   "tetikleyici": "Uygun görüşle arz ederim",
+   "cevap": "olura katılan ara makam ibaresi",
+   "kanit": "(4) Oluru teklif eden birim ile olur alınan makam arasında başka makamlar varsa bunlar olura katılabilir. Teklif eden birim yetkilisinin imza bölümü ile “OLUR” ibaresinin bulunduğu bölüm arasına uygun boşluk bırakılarak yazı alanının solunda yer alacak şekilde “Uygun görüşle arz ederim.” ibaresi yazılır",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-045",
+   "madde": "20",
+   "tip": "sira_usul",
+   "tetikleyici": "“OLUR” ibaresinin alt satırına",
+   "cevap": "ortaya büyük harfle; olur makamının imza tarihi belge tarihi",
+   "kanit": "(2) Belge, olur için makama sunulurken imza bölümünden sonra uygun boş satır bırakılarak yazı alanının ortasına büyük harflerle “OLUR” yazılır. “OLUR” ibaresinin alt satırına imzalayanın adı ilk harfi büyük diğerleri küçük, soyadı büyük ve bir alt satıra unvanı ilk harfleri büyük diğerleri küçük harflerle ortalanarak yazılır. Oluru alınan makamın güvenli elektronik imza ile oluşturduğu imzaya ait tarih bilgisi, belge tarihi olarak esas alınır ve 12 nci maddenin birinci fıkrasında belirtilen alanda belge görüntüsü üzerinde gösterilir (Örnek 17).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-046",
+   "madde": "21",
+   "tip": "kosul",
+   "tetikleyici": "paraf bilgileri paylaşılmaz",
+   "cevap": "belge muhataba iletildiğinde; üstveride tutulur",
+   "kanit": "Belge muhataba iletildiğinde, belgeye ait paraf bilgileri paylaşılmaz.",
+   "not": "elektronik paraf: e-imza ya da elektronik onay",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-047",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "günlük olarak zaman damgasıyla",
+   "cevap": "EBYS günlük raporları damgalanır; saklama süresi belgeden kısa olamaz",
+   "kanit": "Günlük raporlar, günlük olarak zaman damgasıyla damgalanır ve günlük raporlarının saklama süresi ilişkili olduğu belgelerin saklama süresinden daha kısa olamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-048",
+   "madde": "22",
+   "tip": "sira_usul",
+   "tetikleyici": "“Koordinasyon” seçimi yapılır",
+   "cevap": "işbirliğiyle hazırlanan belgede paraf hiyerarşisinden sonra",
+   "kanit": "(1) İdare içinde birden fazla birimin iş birliği ile hazırlanan ve yetkili makamın imzasına sunulan belgelerde, belgeyi hazırlayan birime ait paraf hiyerarşisinden sonra “Koordinasyon” seçimi yapılır ve iş birliğine dâhil olan ilgililerin unvanları, adları ve soyadları belirtilir (Örnek 20).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-049",
+   "madde": "23",
+   "tip": "sira_usul",
+   "tetikleyici": "karekod",
+   "cevap": "iletişim bilgileri alanının en sağında; doğrulama e-Devlet üzerinden",
+   "kanit": "Belge doğrulama bilgilerini içeren “belge doğrulama kodu” ikinci satırda, “karekod” ise “İletişim bilgileri” alanının en sağ kısmında yer alır (Örnek 21). (2) Belge doğrulama işlemi, doğrulama kodu ve karekod ile Dijital Türkiye (e-Devlet) üzerinden sağlanır.",
+   "not": "\"Bu belge, güvenli elektronik imza ile imzalanmıştır.\" ibaresi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-050",
+   "madde": "24",
+   "tip": "sira_usul",
+   "tetikleyici": "bilgi alınacak kişinin",
+   "cevap": "iletişim bilgilerinin sağında; solda idarenin adresi, KEP",
+   "kanit": "(1) İletişim bilgileri; solda belgeyi gönderen idarenin adresini, posta kodunu, telefonunu, faks numarasını, e-posta adresini, kayıtlı elektronik posta (KEP) adresini ve internet adresini; sağda bilgi alınacak kişinin adını, soyadını, unvanını ve telefon numarasını içerecek şekilde sayfa sonuna yazılır ve çizgi ile ayrılır (Örnek 21).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-051",
+   "madde": "25",
+   "tip": "kosul",
+   "tetikleyici": "“Hizmete Özel” gizlilik derecesi",
+   "cevap": "elektronik ortamda işlem görür; Özel ve üstü fiziksel",
+   "kanit": "(1) “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir. (2) “Özel” ve üstü gizlilik dereceli belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemler ilgili mevzuatta belirtilen hükümlere uygun olarak fiziksel ortamda gerçekleştirilir.",
+   "not": "HİZMETE ÖZEL E-ORTAM, ÖZEL VE ÜSTÜ KÂĞIT",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-052",
+   "madde": "25",
+   "tip": "makam",
+   "tetikleyici": "gizlilik derecesinin belirlenmesinden sorumludur",
+   "cevap": "belgenin imzacısı olan yetkili makam",
+   "kanit": "(3) Belgenin imzacısı olan yetkili makam, belgeye ait gizlilik derecesinin belirlenmesinden sorumludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-053",
+   "madde": "26",
+   "tip": "sure",
+   "tetikleyici": "“ACELE” ibaresi taşıyan belgeye",
+   "cevap": "derhâl ve süratle cevap; GÜNLÜDÜR belirtilen sürede",
+   "kanit": "(2) “ACELE” ibaresi taşıyan belgeye derhâl ve süratle; “GÜNLÜDÜR” ibaresi taşıyan belgeye belirtilen süre içinde cevap verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-054",
+   "madde": "26",
+   "tip": "sira_usul",
+   "tetikleyici": "kırmızı renkli olarak",
+   "cevap": "ACELE/GÜNLÜDÜR sağ üst köşede; yalnız birinci sayfada",
+   "kanit": "(3) Elektronik ortamda veya zorunlu hâllerde ya da olağanüstü durumlarda hazırlanan süreli belgelerde “ACELE” veya “GÜNLÜDÜR” ibaresi yazı alanının sağ üst köşesinde kırmızı renkli olarak belirtilir (Örnek 19/A, 19/B). Birden fazla sayfalı belgelerde “ACELE” veya “GÜNLÜDÜR” ibaresi sadece birinci sayfada belirtilir (Örnek 9).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-055",
+   "madde": "26",
+   "tip": "sira_usul",
+   "tetikleyici": "zarfı açılmadan",
+   "cevap": "KİŞİYE ÖZEL belge; zarf bilgileri kaydedilir, ilgilisine teslim",
+   "kanit": "(5) “KİŞİYE ÖZEL” ibaresi taşıyan belgenin zarfı açılmadan zarf üzerinde yer alan bilgiler, yetkili birimce EBYS’ye veya kurumsal belge kayıt sistemine kaydedilir ve ilgilisine teslim edilir. “KİŞİYE ÖZEL” ibaresi taşıyan belge üzerinde yalnızca ilgili kişi tasarruf hakkına sahiptir ve ilgilinin talebi ile EBYS’ye kaydedilir.",
+   "not": "yalnız ilgili tasarruf eder",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-056",
+   "madde": "27",
+   "tip": "sira_usul",
+   "tetikleyici": "kaçıncısı olduğunu gösterecek",
+   "cevap": "sayfa numarası; iletişim bilgilerinin altında, ortada",
+   "kanit": "(1) Birden fazla sayfa tutan belgelere sayfa numarası verilir. Sayfa numarası, iletişim bilgilerinin altında ve sayfanın ortasında, toplam sayfa sayısının kaçıncısı olduğunu gösterecek şekilde belirtilir (Örnek 9).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-057",
+   "madde": "28",
+   "tip": "kosul",
+   "tetikleyici": "ayrılmaz bir bütünüdür",
+   "cevap": "e-imzalı belgenin üstverisi; tarih-sayı görüntüyle aynı olmalı",
+   "kanit": "(3) Elektronik ortamda güvenli elektronik imza ile imzalanan belgenin üstveri elemanları, belgenin ayrılmaz bir bütünüdür. Tarih ve sayı gibi belge görüntüsü üzerinde yer alan bilgiler ile üstveride yer alan bilgiler arasında fark olamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-058",
+   "madde": "29",
+   "tip": "sira_usul",
+   "tetikleyici": "ASLI GİBİDİR",
+   "cevap": "fiziksel belge örneği; yetkili görevli imzalar; asıl gibi kabul",
+   "kanit": "(2) Zorunlu hâllerde veya olağanüstü durumlarda ya da bu Yönetmeliğin yürürlüğe girdiği tarihten önce fiziksel ortamda hazırlanan bir belgeden örnek çıkartılması hâlinde, çoğaltılan belgenin uygun bir yerine “ASLI GİBİDİR” ibaresi konulur ve yetkilendirilmiş görevli tarafından ad, soyad, unvan ve tarih belirtilmek suretiyle imzalanır. Bu şekilde çoğaltılan belge, asıl belge gibi kabul edilir.",
+   "not": "e-imzalı belge çoğaltması: yetkili görevli çıktı alır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-059",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "reddetme hakkına sahiptir",
+   "cevap": "Rehbere uygun olmayan belge; ikinci iş günü sonuna kadar bildirim",
+   "kanit": "(4) İdare, başka bir idareden kendisine resmî yazışma kapsamında iletilen ve e-Yazışma Teknik Rehberi’nde tanımlanan kurallara uygun şekilde hazırlanmamış bir belgeyi reddetme hakkına sahiptir. Bu durumda, kendisine iletilen belgeyi reddeden idare, gönderen idareye bu durumu sebepleriyle birlikte belgenin kendisine ulaştığı tarihi takip eden ikinci iş gününün sonuna kadar bildirir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-060",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "açılmış, içeriğine erişilmiş",
+   "cevap": "şifreli belge; idare bildirimde bulunmazsa kabul edilmiş sayılır",
+   "kanit": "İdarenin bildirimde bulunmaması hâlinde, gönderilen şifreli belge açılmış, içeriğine erişilmiş ve bu belgenin e- Yazışma Teknik Rehberi’ne uygun şekilde hazırlandığı kabul edilmiş sayılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-061",
+   "madde": "30",
+   "tip": "sira_usul",
+   "tetikleyici": "DETSİS üzerinden paylaşılır",
+   "cevap": "idarelerin elektronik şifreleme sertifikaları",
+   "kanit": "İdareler için oluşturulan elektronik şifreleme sertifikaları DETSİS üzerinden paylaşılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-062",
+   "madde": "31",
+   "tip": "sira_usul",
+   "tetikleyici": "zarfın sol üst köşesine",
+   "cevap": "gönderen idarenin başlığı, tarih-sayı; muhatap zarfın ortasına",
+   "kanit": "(2) Belge zarflanarak muhatabına iletildiğinde başlık bilgisi, ihtiyaç duyulması hâlinde gönderen idarenin adres bilgisi, belgenin tarihi ve sayısı zarfın sol üst köşesine; muhatabın adı ve adres bilgisi zarfın ortasına kısaltma kullanılmadan yazılır. Varsa süre ve kişiye özel bilgisi (ACELE, GÜNLÜDÜR, KİŞİYE ÖZEL), üstte olmak üzere, zarfın sağ üst köşesinde kırmızı renkli büyük harflerle belirtilir (Örnek 22).",
+   "not": "ACELE, GÜNLÜDÜR, KİŞİYE ÖZEL zarfın sağ üstünde kırmızı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-063",
+   "madde": "31",
+   "tip": "istisna",
+   "tetikleyici": "işleme alınmasına engel değildir",
+   "cevap": "dilekçenin arz ederim ile bitmemesi, rica ederim denmesi",
+   "kanit": "(7) Kişiler tarafından idareye yazılan dilekçelerin; “… arz ederim.” şeklinde bitirilmemesi veya “… rica ederim.” ibaresiyle ya da başka ibarelerle bitirilmesi dilekçenin işleme alınmasına engel değildir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-064",
+   "madde": "31",
+   "tip": "istisna",
+   "tetikleyici": "Kodlu veya Kriptolu Haberleşme",
+   "cevap": "yetkili idareler gizlilik dereceli belgeyi e-imzayla elektronik gönderebilir",
+   "kanit": "Ancak 23/10/2010 tarihli ve 27738 sayılı Resmî Gazete’de yayımlanan “Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik”in 2 nci maddesinde yetkili kılınan idareler, gizlilik dereceli belgeleri gerekli güvenlik tedbirlerini almak şartıyla güvenli elektronik imza ile imzalayarak elektronik ortamda da gönderebilir.",
+   "not": "kural: Hizmete Özel dışı gizlilik dereceli belge fiziksel gönderilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-065",
+   "madde": "32",
+   "tip": "sira_usul",
+   "tetikleyici": "gönderene iade edilir",
+   "cevap": "fiziksel gelen, muhatabı olmayan, asıl muhatabı anlaşılamayan belge",
+   "kanit": "(2) İdareye muhatabı olmadığı hâlde fiziksel ortamda gelen bir belgenin asıl muhatabı anlaşılamıyorsa gönderene iade edilir.",
+   "not": "asıl muhatap belliyse ona gönderilir, gönderene bilgi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-066",
+   "madde": "33",
+   "tip": "sure",
+   "tetikleyici": "en geç beş iş günü",
+   "cevap": "süre belirtilmeyen belge talebi",
+   "kanit": "İdareler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla süre belirtilmeyen belge taleplerini, talebin kendilerine ulaşmasından itibaren en geç beş iş günü; süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.",
+   "not": "BELGE BEŞ, GÖRÜŞ ON BEŞ İŞ GÜNÜ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-067",
+   "madde": "33",
+   "tip": "sure",
+   "tetikleyici": "on beş iş günü içinde",
+   "cevap": "süre belirtilmeyen bilgi ve görüş talebi",
+   "kanit": "İdareler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla süre belirtilmeyen belge taleplerini, talebin kendilerine ulaşmasından itibaren en geç beş iş günü; süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.",
+   "not": "talep tarihi: EBYS giriş kaydı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-068",
+   "madde": "34",
+   "tip": "sira_usul",
+   "tetikleyici": "tekit yazısı",
+   "cevap": "süresinde cevap verilmeyen belge için muhataba",
+   "kanit": "(1) Belgeye süresi içinde cevap verilmemesi durumunda muhataba tekit yazısı yazılabilir (Örnek 24).",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-069",
+   "madde": "35",
+   "tip": "istisna",
+   "tetikleyici": "süreli belgeler hariç",
+   "cevap": "Yönetmeliğe aykırı yazı devam ederse gerekçeyle iade",
+   "kanit": "Söz konusu durumun devam etmesi hâlinde, süreli belgeler hariç müteakip belgeler gerekçesi belirtilerek iade edilebilir.",
+   "not": "önce muhatap uyarılır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-070",
+   "madde": "36",
+   "tip": "makam",
+   "tetikleyici": "Yönetmelik Kılavuzu",
+   "cevap": "Cumhurbaşkanlığı İdari İşler Başkanlığı hazırlar; tereddütleri de giderir",
+   "kanit": "(1) Cumhurbaşkanlığı İdari İşler Başkanlığınca, bu Yönetmeliğin uygulama birliğinin sağlanması ve idari işleyişin verimli yürütülebilmesi amacıyla “Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik Kılavuzu” hazırlanır ve duyurulur.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

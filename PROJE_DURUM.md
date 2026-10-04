@@ -4,6 +4,20 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (3) — KİLİT KELİME ŞİFRELERİ: MÜŞTEREK 25 MEVZUAT BİTTİ (994 satır, denetçi HATA 0) + REPO'YA ALINDI
+> Başkan "sen müştereği bitir" dedi → 25 müşterek mevzuatın tamamı kelime → cevap biçiminde elle yazıldı, kanun kanun
+> (ajan yok). Satır sayıları: TCK 73 · 2803 44 · KVKK 19 · Tebligat 8 · 5442 25 · Kabahatler 64 · 3713 30 · OHAL 19 · 5816 6 ·
+> 6284 K. 27 · Bayrak 11 · 7068 73 · 4678 27 · e-imza 8 · Resmî Yazışma 70 · Sözleşmeli Sb/Astsb Yön. 35 · Jandarma Yön. 104 ·
+> KV silme 7 · Bilgi edinme yön. 4 · 2521 yön. 15 · 6284 Uyg. Yön. 64 · Personel Yön. 64 · Hizmet Esasları Yön. 141 · İzin yön. 11 ·
+> 6136 45. Her satır: kelime kanıtta aynen, kanıt resmî metinden kesilmiş, sayılar kanıtta var (kodlama_denetci --secme).
+> Sayfa yeniden yayınlandı (v3): https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn (yalnız başkana açık; kanun seç, ara, ezber modu).
+> REPO'YA ALINDI (gemini_calisma gitignored, scratchpad uçucu): scripts/sifreler/yazici/k<id>.py + ortak.py (satırların kaynağı),
+> scripts/sifreler/cikti/kanun_<id>.json (üretilen 25 dosya), scripts/sifreler/sayfa/uret.py + sablon.html (sayfa üreteci),
+> scripts/sifreler/kodlama_denetci.py (denetçi kopyası). Betiklerin içindeki yollar hâlâ gemini_calisma'ya bakar (çalışma dizini);
+> repo'daki kopya YEDEK + kaynak. Yeniden üretmek: python scripts/sifreler/yazici/kN.py → denetçi --secme --kanun N → sayfa/uret.py.
+> SIRADAKİ (başkan isterse): branş mevzuatı aynı biçimde (öncelik: jandarma → mebs → havacılık → personel, memory
+> brans-oncelik-uye-sayisi); şifreleri uygulamaya/Merkez'e koyma kararı başkanda. BEKLEYEN: 'rontgen-yanlis' için "yay".
+>
 > ### ▶ 4 Eki (2) — KİLİT KELİME ŞİFRELERİ: BİÇİM DEĞİŞTİ, KANUN KANUN
 > Başkan 1.522'lik ham seti ("her maddeye zorlama slogan") ve 5442 seçmesini beğenmedi; onayladığı biçim: **soruda görülen
 > kelime → cevap** (slogan yok; "bucak → Cumhurbaşkanı onayı"). Toplu ajan YASAK, kanun kanun elle. Dosyalar:

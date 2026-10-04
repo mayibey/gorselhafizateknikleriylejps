@@ -1,0 +1,121 @@
+{
+ "id": 11,
+ "ad": "2893 sayılı Türk Bayrağı Kanunu",
+ "kodlar": [
+  {
+   "i": "K-11-001",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "sürekli çekili kalır",
+   "cevap": "kamu kurum ve kuruluşlarında Türk Bayrağı",
+   "kanit": "(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-002",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "yetkili amirler sorumludur",
+   "cevap": "bayrak törenlerinden, o mahaldeki",
+   "kanit": "Bayrak çekilirken ve indirilirken tören yapılır. Bayrak törenlerinin gereken biçimde yapılmasından o mahaldeki yetkili amirler sorumludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-003",
+   "madde": "4",
+   "tip": "sure",
+   "tetikleyici": "yarıya çekilir",
+   "cevap": "10 Kasım; diğer haller Cumhurbaşkanlığınca ilan",
+   "kanit": "Türk Bayrağı, yas alameti olarak 10 KASIM'da yarıya çekilir. Yas alameti olmak üzere Bayrağın yarıya çekileceği diğer haller ve zamanı Cumhurbaşkanlığınca ilan edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-004",
+   "madde": "5",
+   "tip": "sira_usul",
+   "tetikleyici": "cephe alınarak",
+   "cevap": "Bayrak selamlanır; çekilirken, indirilirken, tören geçişinde",
+   "kanit": "Çekilmesi ve indirilmesi esnasında veya tören geçişlerinde Bayrak, cephe alınarak selamlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-005",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "tabutlarına",
+   "cevap": "Cumhurbaşkanlığı yapmış kişiler, şehitler, yönetmelikteki asker-sivil",
+   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
+   "not": "açılışta Atatürk heykellerine de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-006",
+   "madde": "6",
+   "tip": "istisna",
+   "tetikleyici": "resmi yemin törenlerinde",
+   "cevap": "masaya örtülebilir; başka amaçla serilemez",
+   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "7",
+     "fark": "yemin töreni dışında masaya, kürsüye serilemez"
+    }
+   ]
+  },
+  {
+   "i": "K-11-007",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "uniforma şeklinde giyilemez",
+   "cevap": "Bayrak giyilemez",
+   "kanit": "Elbise veya uniforma şeklinde giyilemez.",
+   "not": "oturulan, basılan yere konulamaz; yırtık, soluk kullanılamaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-008",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "esas veya fon teşkil edecek",
+   "cevap": "parti, dernek, vakıf amblem ve flamasında kullanılamaz",
+   "kanit": "Hiçbir siyasi parti, teşekkül, dernek, vakıf ve yönetmelikte belirlenecek kamu kurum ve kuruluşları dışında kalan kurum ve kuruluşun amblem, flama, sembol ve benzerlerinin ön veya arka yüzünde esas veya fon teşkil edecek şekilde kullanılamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-009",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "toplatılır",
+   "cevap": "yönetmeliğe aykırı bayraklar; mahallin yetkili amiri",
+   "kanit": "Bu Kanuna ve çıkarılacak yönetmeliğe aykırı olarak Bayrak yapmak, satmak ve kullanmak yasaktır. Bu yasağa aykırı olarak yapılan Bayraklar o mahallin yetkili amirlerince toplatılır.",
+   "not": "aykırı bayrak yapmak, satmak, kullanmak yasak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-010",
+   "madde": "8",
+   "tip": "ceza",
+   "tetikleyici": "fiilleri suç oluşturmadığı takdirde",
+   "cevap": "mülki amir; Kabahatler Kanunu m.32 idarî para cezası",
+   "kanit": "Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-011",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "diğer esaslar, Cumhurbaşkanınca",
+   "cevap": "Bayrak Kanunu'nun yönetmelikte düzenlenen hususları",
+   "kanit": "Bu Kanunun ilgili maddelerinde yönetmelikte düzenleneceği belirtilen hususlar ile kanunun uygulanmasına ilişkin diğer esaslar, Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

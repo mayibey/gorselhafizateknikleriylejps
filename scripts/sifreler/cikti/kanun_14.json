@@ -1,0 +1,91 @@
+{
+ "id": 14,
+ "ad": "5070 sayılı Elektronik İmza Kanunu",
+ "kodlar": [
+  {
+   "i": "K-14-001",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "kriptografik gizli anahtarlar",
+   "cevap": "imza oluşturma verisi",
+   "kanit": "d) İmza oluşturma verisi: İmza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturma amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri,",
+   "not": "bir eşi daha olmayan şifreler",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "doğrulama verisi: açık anahtar"
+    }
+   ]
+  },
+  {
+   "i": "K-14-002",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "kriptografik açık anahtarlar",
+   "cevap": "imza doğrulama verisi",
+   "kanit": "f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-003",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "Zaman damgası",
+   "cevap": "zamanın, ESHS tarafından imzayla doğrulanan kaydı",
+   "kanit": "h) Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,",
+   "not": "üretildiği, değiştirildiği, gönderildiği, alındığı zaman",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-004",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "aracını kullanan gerçek kişiyi",
+   "cevap": "imza sahibi: yalnız gerçek kişi",
+   "kanit": "c) İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-005",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "Münhasıran imza sahibine bağlı",
+   "cevap": "güvenli e-imza unsuru (dört unsurdan biri)",
+   "kanit": "Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır.",
+   "not": "sadece sahibinin tasarrufundaki araç; nitelikli sertifika; sonradan değişikliğin tespiti",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-006",
+   "madde": "5",
+   "tip": "kosul",
+   "tetikleyici": "elle atılan imza ile aynı",
+   "cevap": "güvenli e-imza; aynı hukukî sonuç",
+   "kanit": "Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-007",
+   "madde": "5",
+   "tip": "yasak",
+   "tetikleyici": "özel bir merasime",
+   "cevap": "güvenli e-imza ile yapılamaz",
+   "kanit": "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.",
+   "not": "resmî şekle tabi işlemler ve teminat sözleşmeleri de yapılamaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-14-008",
+   "madde": "5",
+   "tip": "istisna",
+   "tetikleyici": "banka teminat mektupları",
+   "cevap": "e-imza ile YAPILABİLİR; teminat yasağının istisnası",
+   "kanit": "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.",
+   "not": "sigorta şirketi kefalet senetleri de yapılabilir",
+   "karistirilan": []
+  }
+ ]
+}

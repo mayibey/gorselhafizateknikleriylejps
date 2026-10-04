@@ -1,0 +1,651 @@
+{
+ "id": 22,
+ "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+ "kodlar": [
+  {
+   "i": "K-22-001",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "temsil ettiği mevkii",
+   "cevap": "makam (tanım)",
+   "kanit": "i) Makam: Her amirin kuruluş ve kadrolarında temsil ettiği mevkii,",
+   "not": "MAKAM = KOLTUK, AMİR = KOLTUKTAKİ",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-002",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "rütbe veya kıdem büyüklüğünü",
+   "cevap": "üst: makam, rütbe ya da kıdem büyüklüğü",
+   "kanit": "k) Üst: Makam, rütbe veya kıdem büyüklüğünü,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-003",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "inha eden makamı",
+   "cevap": "müşterek kararla atananda atamaya yetkili amir",
+   "kanit": "b) Atamaya yetkili amir: Atama usul ve esaslarını belirleyen mevzuat hükümleriyle atama yetkisi tanınan veya bu konuda usulüne göre yetki devri yapılan personeli, müşterek kararla atanan personel bakımından ise inha eden makamı,",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-004",
+   "madde": "5",
+   "tip": "makam",
+   "tetikleyici": "insan gücü planına",
+   "cevap": "personel ihtiyacı; JGK/SGK hazırlar, Bakanlık onaylar",
+   "kanit": "(4) Personel ihtiyacı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından ayrı ayrı hazırlanarak Bakanlık tarafından onaylanan insan gücü planına göre karşılanır.",
+   "not": "kaynak: Akademi ve eğitim komutanlıkları",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-005",
+   "madde": "7",
+   "tip": "tanim",
+   "tetikleyici": "Uçak ve helikopter teknisyeni",
+   "cevap": "JGK astsubay branşı (subayda Pilot)",
+   "kanit": "b) Astsubaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Uçak ve helikopter teknisyeni",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-006",
+   "madde": "7",
+   "tip": "tanim",
+   "tetikleyici": "Bilgi teknolojileri",
+   "cevap": "Sahil Güvenlik astsubay branşı",
+   "kanit": "b) Astsubaylar 1) Güverte 2) Makine 3) İkmal 4) Uçak bakım 5) İdari 6) Bilgi teknolojileri",
+   "not": "SG astsubay: güverte, makine, ikmal, uçak bakım, idari",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-007",
+   "madde": "7",
+   "tip": "tanim",
+   "tetikleyici": "İnsansız Hava Aracı",
+   "cevap": "JGK subay ve astsubay branşı (2024)",
+   "kanit": "(1) Jandarma Genel Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Pilot 5) İkmal 6) Bakım 7) Personel 8) Kimyager 9) Veteriner hekim 10) Mühendis 11) Maliye 12) Öğretmen 13) Bando 14) Tabip 15) Eczacı 16) Diş tabibi 17) Sağlık 18) (Ek:RG-28/5/2020) Hukuk 19) (Ek:RG-16/1/2024) İnsansız Hava Aracı",
+   "not": "Hukuk branşı 2020",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-008",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "branş belirleme kurul kararı",
+   "cevap": "branş değişikliği; sağlık, uçuştan ayrılma, ikinci tahsil, kadro değişikliği",
+   "kanit": "(2) Personelin branşları; sağlık durumu, uçuştan ayrılma, özel hizmet niteliğini kaybetme, ikinci bir tahsil, yeterlilik değişikliği, kuruluş ve kadro değişikliği sebebiyle branşların değişmesi ve yeni bir branş kurulması durumunda kurumun ihtiyaçları doğrultusunda branş belirleme kurul kararı ile değiştirilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-009",
+   "madde": "9",
+   "tip": "sira_usul",
+   "tetikleyici": "Çekimser oy kullanılamaz",
+   "cevap": "branş belirleme kurulu; üye tam sayısı, oyçokluğu, eşitlikte başkan tarafı",
+   "kanit": "(2) Branş belirleme kurulları üye tam sayısı ile toplanır ve oyçokluğu ile karar alırlar. Çekimser oy kullanılamaz. Oyların eşitliği durumunda başkanın bulunduğu taraf çoğunluk sayılır. İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının, ilk branş belirleme ve branş değişikliğine ilişkin branş belirleme kurullarının kararları ise ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayı ile kesinleşir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-010",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "Akademisi Başkanının",
+   "cevap": "ilk branş belirleme kurulu kararını onaylar; değişiklikleri JGK/SGK",
+   "kanit": "(2) Branş belirleme kurulları üye tam sayısı ile toplanır ve oyçokluğu ile karar alırlar. Çekimser oy kullanılamaz. Oyların eşitliği durumunda başkanın bulunduğu taraf çoğunluk sayılır. İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının, ilk branş belirleme ve branş değişikliğine ilişkin branş belirleme kurullarının kararları ise ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayı ile kesinleşir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-011",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "temayüz etmiş astsubaylar",
+   "cevap": "subay kadrolarına atanabilir; astları değerlendirmede rütbe şartı yok",
+   "kanit": "(7) İhtiyaç duyulması halinde subay kadrolarına, liyakat esas alınarak emsalleri arasında temayüz etmiş astsubaylar atanabilir. Bu şekilde atanan astsubaylar için astları hakkında değerlendirme işlemi yapabilmek için rütbe şartı aranmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-012",
+   "madde": "10",
+   "tip": "istisna",
+   "tetikleyici": "kritik ve kilit kadrolar",
+   "cevap": "puanlama sisteminden hariç; Bakanlık belirler",
+   "kanit": "(4) Bakanlık tarafından belirlenecek kritik ve kilit kadrolar hariç olmak üzere yapılan atamalarda, aynı branş ve/veya ihtisasa sahip personelden aynı ili tercih edenlerin atamasında 12 nci maddedeki esaslar ve varsa puanlama sistemi de gözönünde bulundurulabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-013",
+   "madde": "11",
+   "tip": "sira_usul",
+   "tetikleyici": "kura ile yapılır",
+   "cevap": "ilk görev yeri ataması; branş ve ihtisasa göre",
+   "kanit": "MADDE 11- (1) Öğrenimlerini, temel kurslarını ve/veya stajlarını başarı ile bitiren personelin ilk görev yerlerine atanmaları branş ve ihtisasına göre kura ile yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-014",
+   "madde": "12",
+   "tip": "yasak",
+   "tetikleyici": "evlenmeden önceki nüfusa kayıtlı",
+   "cevap": "o ilçeye atanmaz; nüfusu bir milyonu aşan ilçeler hariç",
+   "kanit": "(2) Personel, belediye sınırları içindeki nüfusu 1.000.000’u aşan ilçeler hariç, kendileri ve eşlerinin evlenmeden önceki nüfusa kayıtlı olduğu ilçelere atanmaz.",
+   "not": "kendisinin ve eşinin",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-015",
+   "madde": "14",
+   "tip": "sure",
+   "tetikleyici": "Mayıs ve Ekim",
+   "cevap": "genel atama dönemi; Bakanlık başka zaman da belirleyebilir",
+   "kanit": "(2) Genel atamalar, her yılın Mayıs ve Ekim (dâhil) ayları arasında yapılır. Bu atamalar, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından önceden duyurulabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-016",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "Aynı yerdeki görevlere atananlar",
+   "cevap": "tebliğ günü işe başlar",
+   "kanit": "a) Aynı yerdeki görevlere atananlar atama emirlerinin kendilerine tebliğ gününü,",
+   "not": "AYNI YER AYNI GÜN",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-017",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "Başka yerdeki görevlere atananlar",
+   "cevap": "tebliğden onbeş gün içinde hareket; yol süresi; izleyen işgünü başlar",
+   "kanit": "b) Başka yerdeki görevlere atananlar, atama emirlerinin kendilerine tebliğ tarihinden itibaren onbeş gün içerisinde o yere hareket ederek belli yol süresini, izleyen işgünü içinde işe başlamak zorundadırlar.",
+   "not": "savaş ve OHAL'de süre kısaltılabilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-018",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "hiçbir şekilde bir ayı geçemez",
+   "cevap": "sayman, mal sorumlusu, mutemedin devir süresi",
+   "kanit": "b) Hesaplarını, yerlerine gelenlere devir zorunda bulunan sayman, mal sorumlusu, hesap sorumlusu, muhasebe yetkilisi ve mutemetler için devrin sona ermesi (Bu süre hiçbir şekilde bir ayı geçemez.), tarihinde başlar.",
+   "not": "süre devrin bitiminde başlar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-019",
+   "madde": "15",
+   "tip": "sure",
+   "tetikleyici": "amire ulaşmasından itibaren",
+   "cevap": "atama emri en geç on gün içinde tebliğ edilir",
+   "kanit": "(4) Atama emrinde aksi belirlenmedikçe atama emrinin amire ulaşmasından itibaren en geç on gün içerisinde ilgilisine tebliğ edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-020",
+   "madde": "15",
+   "tip": "sira_usul",
+   "tetikleyici": "gıyaplarında evrak üzerinden",
+   "cevap": "izinli, raporlu, tutuklu, uzaklaştırılmış personelin ilişik kesme ve katılışı",
+   "kanit": "(5) Atamaya tabi tutulan personelin izinli, raporlu, tutuklu, görevden uzaklaştırılmış, göreve gelmemiş olması veya hastanede yatması tebligata engel olmaz. Bu personelin ilişik kesme işlemleri, ilgisine göre Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca uygun görülmesi durumunda, personelin atamalı bulundukları kurum amirliklerince gıyaplarında evrak üzerinden yapılır ve ilişik kesme belgeleri yeni görev yerine gönderilir. Bunların yeni görevlerine katılışları da gıyaplarında evrak üzerinden yapılır ve özlük hakları yeni birlikleri tarafından ödenmeye başlanır.",
+   "not": "tebligata engel değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-021",
+   "madde": "16",
+   "tip": "makam",
+   "tetikleyici": "kendi kurumunun bütçesinden karşılanır",
+   "cevap": "geçici görevlendirilen kolluk personelinin aylığı",
+   "kanit": "(2) Birinci fıkraya göre görevlendirilen personelin;\na) Aylık ve diğer mali haklar ile sosyal hakları kendi kurumunun bütçesinden karşılanır.",
+   "not": "görevlendirme Bakan; valiye devredebilir; disiplin soruşturması fiilen görevli kurumda",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-022",
+   "madde": "19",
+   "tip": "yasak",
+   "tetikleyici": "siyasi partiye üye olamaz",
+   "cevap": "personel; ayrım yapamaz, siyasi beyan-eylemde bulunamaz",
+   "kanit": "MADDE 19- (1) Personel siyasi partiye üye olamaz, herhangi bir siyasi parti, kişi veya zümrenin yararını veya zararını hedef tutan bir davranışta bulunamaz; görevlerini yerine getirirken dil, ırk, cinsiyet, siyasi düşünce, felsefi inanç, din ve mezhep gibi ayırım yapamaz; hiçbir şekilde siyasi ve ideolojik amaçlı beyanda ve eylemde bulunamaz ve bu eylemlere katılamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-023",
+   "madde": "21",
+   "tip": "yasak",
+   "tetikleyici": "hediyesini kabul edemez",
+   "cevap": "amir, maiyetindekinden; borç da alamaz, menfaat isteyemez",
+   "kanit": "(3) Amir, maiyetindeki personele kanunlara aykırı emir veremez ve maiyetindeki personel ile astı olan personelden hususi bir menfaat temin edecek bir talepte bulunamaz, hediyesini kabul edemez ve borç alamaz.",
+   "not": "kanunlara aykırı emir de veremez",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-024",
+   "madde": "23",
+   "tip": "kosul",
+   "tetikleyici": "rayiç bedeli üzerinden",
+   "cevap": "kasıt, kusur, ihmalle idareye verilen zarar personelce ödenir",
+   "kanit": "(2) Personelin kasıt, kusur, ihmal veya tedbirsizliği sonucu idare zarara uğratılmışsa, bu zararın ilgili personel tarafından rayiç bedeli üzerinden ödenmesi esastır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-025",
+   "madde": "24",
+   "tip": "kosul",
+   "tetikleyici": "ilgili kurum aleyhine dava açarlar",
+   "cevap": "kamu görevinden zarar gören kişi; personele değil; kurumun rücu hakkı",
+   "kanit": "MADDE 24- (1) Kişiler kamu hukukuna tabi görevlerle ilgili olarak uğradıkları zararlardan dolayı bu görevleri yerine getiren personel aleyhine değil, ilgili kurum aleyhine dava açarlar. Ancak, Devlet dairelerine tevdi veya bu dairelerce tahsil veya muhafaza edilen para ve para hükmündeki değerli kâğıtların ilgili personel tarafından zimmete geçirilmesi halinde, zimmete geçirilen miktar, cezai takibat sonucu beklenmeden Hazine tarafından hak sahibine ödenir. Kurumun, genel hükümlere göre sorumlu personele rücu hakkı saklıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-026",
+   "madde": "24",
+   "tip": "kosul",
+   "tetikleyici": "cezai takibat sonucu beklenmeden",
+   "cevap": "zimmete geçirilen parayı Hazine hak sahibine öder",
+   "kanit": "MADDE 24- (1) Kişiler kamu hukukuna tabi görevlerle ilgili olarak uğradıkları zararlardan dolayı bu görevleri yerine getiren personel aleyhine değil, ilgili kurum aleyhine dava açarlar. Ancak, Devlet dairelerine tevdi veya bu dairelerce tahsil veya muhafaza edilen para ve para hükmündeki değerli kâğıtların ilgili personel tarafından zimmete geçirilmesi halinde, zimmete geçirilen miktar, cezai takibat sonucu beklenmeden Hazine tarafından hak sahibine ödenir. Kurumun, genel hükümlere göre sorumlu personele rücu hakkı saklıdır.",
+   "not": "ZİMMETİ HAZİNE BEKLEMEDEN ÖDER",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-027",
+   "madde": "24",
+   "tip": "kosul",
+   "tetikleyici": "Avrupa İnsan Hakları Mahkemesince",
+   "cevap": "işkence tazminatı ödenirse sorumlu personele rücu",
+   "kanit": "(2) İşkence ya da zalimane, gayri insani veya haysiyet kırıcı muamele suçları nedeniyle Avrupa İnsan Hakları Mahkemesince verilen kararlar sonucunda Devletçe ödenen tazminatlardan dolayı sorumlu personele rücu edilmesi hakkında da birinci fıkra hükmü uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-028",
+   "madde": "25",
+   "tip": "yasak",
+   "tetikleyici": "basına, haber ajanslarına",
+   "cevap": "personel bilgi/demeç veremez; valiler ve Bakanın yetkilendirdiği verir",
+   "kanit": "MADDE 25- (1) Personel, kamu görevleri hakkında basına, haber ajanslarına veya radyo ve televizyon kurumlarına bilgi veya demeç veremez. Bu konuda gerekli bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-029",
+   "madde": "26",
+   "tip": "kosul",
+   "tetikleyici": "mirasçılarına da şamildir",
+   "cevap": "resmî belge, araç, gereci iade zorunluluğu",
+   "kanit": "(2) Personel görevleri icabı kendilerine teslim edilen resmi belge, araç ve gereçleri görevleri sona erdiği zaman iade etmek zorundadır. Bu zorunluluk personelin mirasçılarına da şamildir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-030",
+   "madde": "29",
+   "tip": "kosul",
+   "tetikleyici": "görevine son verilmez",
+   "cevap": "güvenlik hakkı; aylık ve hakları alınamaz",
+   "kanit": "MADDE 29- (1) Kanunlarda yazılı haller dışında personelin görevine son verilmez, aylık ve başka hakları elinden alınamaz.",
+   "not": "kanunda yazılı haller dışında",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-031",
+   "madde": "30",
+   "tip": "sure",
+   "tetikleyici": "Temmuz ve Ağustos ayları içinde",
+   "cevap": "emeklilik talebi dönemi; kabul bir aydan fazla gecikmez",
+   "kanit": "(2) Personel, emeklilik taleplerini Ocak ve Şubat ayları ile Temmuz ve Ağustos ayları içinde iletebilir. Emeklilik talebinin kabulü, müracaat tarihinden itibaren bir aydan fazla geciktirilemez. Bu aylar dışındaki emeklilik talepleri, ilgili kurumların hizmet gerekleri itibarıyla uygun görmesi halinde kabul edilebilir.",
+   "not": "Ocak-Şubat da; dışındaki talep hizmet gereğine göre",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "çekilme talebi de aynı aylarda"
+    }
+   ]
+  },
+  {
+   "i": "K-22-032",
+   "madde": "31",
+   "tip": "sure",
+   "tetikleyici": "çekilme taleplerini",
+   "cevap": "Ocak-Şubat, Temmuz-Ağustos; kabul bir ayda; mecburi hizmet saklı",
+   "kanit": "(3) Personel çekilme taleplerini Ocak ve Şubat ayları ile Temmuz ve Ağustos ayları içinde iletebilir. Çekilme talebinin kabulü, müracaat tarihinden itibaren bir aydan fazla geciktirilemez. Bu aylar dışındaki çekilme talepleri, ilgili kurumların hizmet gerekleri itibarıyla uygun görmesi halinde kabul edilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-033",
+   "madde": "32",
+   "tip": "sira_usul",
+   "tetikleyici": "şikâyet edilen amirler atlanarak",
+   "cevap": "en yakın amirden başlayarak silsile yoluyla; söz veya yazıyla",
+   "kanit": "(2) Müracaat ve şikâyetler söz veya yazı ile en yakın amirden başlayarak silsile yolu ile şikâyet edilen amirler atlanarak yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-034",
+   "madde": "33",
+   "tip": "kosul",
+   "tetikleyici": "uydurma bir suç isnadı",
+   "cevap": "isnat sabit olmazsa amir/vali savcılıktan kamu davası ister",
+   "kanit": "(1) Personel hakkındaki ihbar ve şikâyetler, garaz veya mücerret hakaret için, uydurma bir suç isnadı suretiyle yapıldığı ve soruşturma veya yargılamanın tabi olduğu kanuni işlem sonucunda bu isnat sabit olmadığı takdirde, merkezde bu personelin en büyük amiri, illerde valiler, isnatta bulunanlar hakkında kamu davası açılmasını Cumhuriyet savcılığından ister.",
+   "not": "garaz ya da hakaret amaçlı ihbar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-035",
+   "madde": "36",
+   "tip": "yasak",
+   "tetikleyici": "greve karar vermeleri",
+   "cevap": "yasak; propaganda, katılma, destekleme de",
+   "kanit": "MADDE 36- (1) Personelin greve karar vermeleri, grev tertiplemeleri, ilan etmeleri, bu yolda propaganda yapmaları yasaktır.\n(2) Personel, herhangi bir greve veya grev teşebbüsüne katılamaz, grevi destekleyemez veya teşvik edemez.",
+   "not": "toplu görevden çekilme de yasak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-036",
+   "madde": "37",
+   "tip": "sure",
+   "tetikleyici": "bağlı oldukları kuruma bildirmekle",
+   "cevap": "eşi/çocuğu ticaret yapıyorsa onbeş gün içinde",
+   "kanit": "(3) Eşleri, reşit olmayan veya mahcur olan çocukları, yasaklanan faaliyetlerde bulunan personel, bu durumu onbeş gün içinde bağlı oldukları kuruma bildirmekle yükümlüdürler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-037",
+   "madde": "37",
+   "tip": "istisna",
+   "tetikleyici": "tüketim kooperatifleri",
+   "cevap": "yönetim-denetim kurulu üyeliği ticaret yasağı dışında",
+   "kanit": "(2) Personelin üyesi oldukları yapı, kalkınma ve tüketim kooperatifleri, kamu kurumu niteliğindeki meslek kuruluşları ve kanunla kurulmuş yardım sandıklarının yönetim, denetim ve disiplin kurulları üyelikleri ile özel kanunlarda belirtilen görevler bu yasaklamanın dışındadır.",
+   "not": "yapı ve kalkınma kooperatifi, meslek kuruluşu, yardım sandığı da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-038",
+   "madde": "38",
+   "tip": "makam",
+   "tetikleyici": "Kamu Görevlileri Etik Kurulu",
+   "cevap": "hediye yasağının kapsamı bu kurul kararlarıyla",
+   "kanit": "(2) Hediye alma yasağının kapsamı ve uygulanacak diğer hususlarda Kamu Görevlileri Etik Kurulu kararları çerçevesinde uygulama yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-039",
+   "madde": "40",
+   "tip": "yasak",
+   "tetikleyici": "657 sayılı Kanuna tabi kurumlarda",
+   "cevap": "ikinci görev verilemez; Devlet bankaları, KİT'ler de; hakem-bilirkişi ücreti saklı",
+   "kanit": "MADDE 40- (1) Personele;\na) 657 sayılı Kanuna tabi kurumlarda,\nb) Sermayesinin tamamı Devlet tarafından verilmek suretiyle kurulan iktisadi kurumlar ile sermayesinin yarısından fazlası Devlete ait bankalarda,\nc) Özel kanunlarla veya özel kanunların verdiği yetkiye dayanılarak kurulan banka ve kuruluşlarda,\nç) Yukarıdaki bentlerde yazılı idare, kuruluş ve bankalar tarafından sermayelerinin yarısından fazlasına katılmak suretiyle kurulan kuruluşlarla bunların aynı oranda katılmaları ile vücut bulan kurumlarda, ikinci görev verilemez; bu kurumlardan her ne ad ile olursa olsun ödeme yapılamaz ve yarar sağlanamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-040",
+   "madde": "41",
+   "tip": "makam",
+   "tetikleyici": "Bakanın yazılı izni",
+   "cevap": "gizli bilgi açıklamak için; görevden ayrılmış olsa da",
+   "kanit": "(2) Personel, kamu hizmetleri ile ilgili gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-041",
+   "madde": "42",
+   "tip": "sure",
+   "tetikleyici": "yirmidört saati geçemez",
+   "cevap": "nöbet süresi",
+   "kanit": "(2) Nöbet, kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-042",
+   "madde": "42",
+   "tip": "istisna",
+   "tetikleyici": "doğumdan sonraki iki yıl",
+   "cevap": "kadın memura gece nöbeti/vardiyası verilemez (rapor varsa hamilelikte de)",
+   "kanit": "Ancak kadın memurlara; tabip raporlarında belirtilmesi halinde hamilelik boyunca ve doğumdan sonraki iki yıl süreyle gece nöbeti ve gece vardiyası görevi verilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-043",
+   "madde": "42",
+   "tip": "istisna",
+   "tetikleyici": "isteği dışında gece nöbeti",
+   "cevap": "engelli memura verilemez",
+   "kanit": "Engelli memurlara da isteği dışında gece nöbeti ve gece vardiyası görevi verilemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-044",
+   "madde": "42",
+   "tip": "sira_usul",
+   "tetikleyici": "bir tanesi tutturulur",
+   "cevap": "mazeretle girilmeyen nöbetlerden, mazeret kalkınca",
+   "kanit": "(3) Kendisine nöbet hizmeti sırası gelen bir rütbe sahibinin mazeretinin meydana gelmesi halinde o gün için nöbete girmemesi kurum amiri tarafından uygun görülürse, nöbet kendisinden sonra gelene tevdi edilir. Durum nöbet alacak olana en kısa zamanda bildirilir. Mazeret kalktığında geçmiş nöbetlerinden bir tanesi tutturulur.",
+   "not": "nöbet sonrakine devredilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-045",
+   "madde": "43",
+   "tip": "sure",
+   "tetikleyici": "izleyen yıl içinde verilebilir",
+   "cevap": "zorunlu nedenle kullanılamayan yıllık izin",
+   "kanit": "MADDE 43- (1) Yıllık izinlerin senesi içinde kullanılması esastır. Ancak zorunlu nedenlerle yıllık planlı izinlerini kısmen veya tamamen kullanamayanların izinleri, izleyen yıl içinde verilebilir.",
+   "not": "esas: senesi içinde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-046",
+   "madde": "44",
+   "tip": "makam",
+   "tetikleyici": "Jandarma bölge komutanları için konuşlu",
+   "cevap": "izin: konuşlu bulunduğu ilin valisi",
+   "kanit": "1) Jandarma Genel Komutanı için Bakan,\n2) Jandarma genel komutanı yardımcıları için Jandarma Genel Komutanı,\n3) Merkez ve doğrudan merkeze bağlı birlik komutanları ve birim amirleri için Jandarma Genel Komutanı veya yetki devri yapacağı jandarma genel komutanı yardımcısı,\n4) Jandarma bölge komutanları için konuşlu bulunduğu ilin valisi,\n5) İl ve ilçe jandarma komutanlıklarında tüm personel için vali ve kaymakamlar,\n6) Diğer personel için birinci amirler, tarafından verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-047",
+   "madde": "44",
+   "tip": "makam",
+   "tetikleyici": "personel için vali ve kaymakamlar",
+   "cevap": "il ve ilçe jandarma komutanlıklarında yıllık ve mazeret izni",
+   "kanit": "1) Jandarma Genel Komutanı için Bakan,\n2) Jandarma genel komutanı yardımcıları için Jandarma Genel Komutanı,\n3) Merkez ve doğrudan merkeze bağlı birlik komutanları ve birim amirleri için Jandarma Genel Komutanı veya yetki devri yapacağı jandarma genel komutanı yardımcısı,\n4) Jandarma bölge komutanları için konuşlu bulunduğu ilin valisi,\n5) İl ve ilçe jandarma komutanlıklarında tüm personel için vali ve kaymakamlar,\n6) Diğer personel için birinci amirler, tarafından verilir.",
+   "not": "diğer personele birinci amir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-048",
+   "madde": "44",
+   "tip": "makam",
+   "tetikleyici": "Jandarma Genel Komutanı için Bakan",
+   "cevap": "izin; yardımcıları için JGK; Akademi Başkanı için de Bakan",
+   "kanit": "1) Jandarma Genel Komutanı için Bakan,\n2) Jandarma genel komutanı yardımcıları için Jandarma Genel Komutanı,\n3) Merkez ve doğrudan merkeze bağlı birlik komutanları ve birim amirleri için Jandarma Genel Komutanı veya yetki devri yapacağı jandarma genel komutanı yardımcısı,\n4) Jandarma bölge komutanları için konuşlu bulunduğu ilin valisi,\n5) İl ve ilçe jandarma komutanlıklarında tüm personel için vali ve kaymakamlar,\n6) Diğer personel için birinci amirler, tarafından verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-049",
+   "madde": "45",
+   "tip": "sure",
+   "tetikleyici": "yılda en az bir kez",
+   "cevap": "değerlendirme yapılır; atama, terfi, ödülde dikkate alınır",
+   "kanit": "(4) Değerlendirme yılda en az bir kez yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-050",
+   "madde": "46",
+   "tip": "tanim",
+   "tetikleyici": "şerit rozet, bröve ve madalyadır",
+   "cevap": "ödül türleri; başarı, üstün başarı, takdir belgesi de",
+   "kanit": "(4) Bu Yönetmelik kapsamında verilen ödüller; başarı belgesi, üstün başarı belgesi, takdir belgesi, şerit rozet, bröve ve madalyadır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-051",
+   "madde": "46",
+   "tip": "kosul",
+   "tetikleyici": "cezalardan bağımsız çalışır",
+   "cevap": "ödül sistemi",
+   "kanit": "(3) Ödül sistemi, disiplinle ilgili yaptırım ve cezalardan bağımsız çalışır, personel ödüllendirilirken sadece ödüllendirmeye gerekçe olan durum içinde değerlendirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-052",
+   "madde": "47",
+   "tip": "sayi_oran",
+   "tetikleyici": "Üç defa başarı belgesi",
+   "cevap": "üstün başarı belgesi verilir",
+   "kanit": "(2) Görevli oldukları kurumlarda olağanüstü gayret ve çalışmaları ile emsallerine göre başarılı görev yapmak suretiyle; kamu kaynağında önemli ölçüde tasarruf sağlanmasında, kamu zararının oluşmasının önlenmesinde ve önlenemez kamu zararlarının önemli ölçüde azaltılmasında, kamusal fayda ve gelirlerin beklenenin üzerinde artırılmasında veya sunulan hizmetlerin etkinlik ve kalitesinin yükseltilmesinde somut olaylara ve verilere dayalı olarak katkı sağladıkları tespit edilen personele, merkezde Bakan, illerde valiler, ilçelerde kaymakamlar tarafından başarı belgesi verilebilir. Üç defa başarı belgesi alanlara üstün başarı belgesi verilir.",
+   "not": "ÜÇ BAŞARI = BİR ÜSTÜN BAŞARI",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-053",
+   "madde": "47",
+   "tip": "makam",
+   "tetikleyici": "ilçelerde kaymakamlar tarafından başarı belgesi",
+   "cevap": "başarı belgesi: merkezde Bakan, illerde vali, ilçede kaymakam",
+   "kanit": "(2) Görevli oldukları kurumlarda olağanüstü gayret ve çalışmaları ile emsallerine göre başarılı görev yapmak suretiyle; kamu kaynağında önemli ölçüde tasarruf sağlanmasında, kamu zararının oluşmasının önlenmesinde ve önlenemez kamu zararlarının önemli ölçüde azaltılmasında, kamusal fayda ve gelirlerin beklenenin üzerinde artırılmasında veya sunulan hizmetlerin etkinlik ve kalitesinin yükseltilmesinde somut olaylara ve verilere dayalı olarak katkı sağladıkları tespit edilen personele, merkezde Bakan, illerde valiler, ilçelerde kaymakamlar tarafından başarı belgesi verilebilir. Üç defa başarı belgesi alanlara üstün başarı belgesi verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-054",
+   "madde": "47",
+   "tip": "makam",
+   "tetikleyici": "takdir belgesi ile ödüllendirilir",
+   "cevap": "amirleri tarafından; görevini eksiksiz yapan",
+   "kanit": "MADDE 47- (1) Personel, görevlerini eksiksiz yerine getirdiğinde, moralini yükseltmek, mükemmel hizmete teşvik etmek ve emsallerine örnek olması maksadıyla amirleri tarafından takdir belgesi ile ödüllendirilir.",
+   "not": "TAKDİR AMİRDEN, BAŞARI BAKAN/VALİ/KAYMAKAMDAN",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-055",
+   "madde": "50",
+   "tip": "makam",
+   "tetikleyici": "üstün cesaret ve feragat madalyası",
+   "cevap": "Bakan verir; hayatını tehlikeye atarak görev",
+   "kanit": "MADDE 50- (1) Kendisine tevdi edilen görevleri fiilen hayatını tehlikeye atarak üstün bir cesaret ve feragatle yerine getirdiği tespit edilen personele üstün cesaret ve feragat madalyası Bakan tarafından verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-056",
+   "madde": "51",
+   "tip": "makam",
+   "tetikleyici": "ihtiyati bir tedbirdir",
+   "cevap": "görevden uzaklaştırma; yetkili: atamaya yetkili amir, Bakanlık müfettişi, vali, kaymakam",
+   "kanit": "MADDE 51- (1) Görevden uzaklaştırma Devlet kamu hizmetlerinin gerektirdiği hallerde, görevi başında kalmasında sakınca görülecek personel hakkında alınan ihtiyati bir tedbirdir. Görevden uzaklaştırma hususunda 657 sayılı Kanunda belirtilen usul ve esaslara uyulur. MADDE 52- (1) Görevden uzaklaştırmaya yetkililer şunlardır: a) Atamaya yetkili amirler. b) Bakanlık müfettişleri. c) İllerde valiler. ç) İlçelerde kaymakamlar.",
+   "not": "657 usulü; vali/kaymakam tedbiri kuruma derhal bildirilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-057",
+   "madde": "53",
+   "tip": "kosul",
+   "tetikleyici": "353 sayılı Askeri Mahkemeler",
+   "cevap": "askeri görevden doğan suçlarda (jandarma/SG hizmetleri sınıfı)",
+   "kanit": "ç) Jandarma hizmetleri ve sahil güvenlik hizmetleri sınıfları personeline askeri görev verildiği takdirde bu görevlerden doğan suçlarda 25/10/1963 tarihli ve 353 sayılı Askeri Mahkemeler Kuruluşu ve Yargılama Usulü Kanunu hükümleri uygulanır. Bu suçların muhakemesi jandarma hizmetleri ve sahil güvenlik hizmetleri sınıfları personeli emrine verildiği askeri birlik personelini muhakeme etmekle görevli ve yetkili olan askeri mahkemede görülür.",
+   "not": "mülki görev suçu 4483; adli görev CMK 161/5; kişisel suç genel hükümler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-058",
+   "madde": "55",
+   "tip": "istisna",
+   "tetikleyici": "hamileliğini belgelediği takdirde",
+   "cevap": "üniformalı kadın personel sivil kıyafetle görev yapabilir",
+   "kanit": "e) Resmi üniformalı olarak görev yapan kadın personel, hamileliğini belgelediği takdirde resmi kıyafet yerine sivil kıyafet ile görev yapabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-059",
+   "madde": "55",
+   "tip": "yasak",
+   "tetikleyici": "eskimiş dahi olsa",
+   "cevap": "resmi üniforma personel dışına verilemez, giydirilemez",
+   "kanit": "c) Resmi üniformalar eskimiş dahi olsa personel dışındaki kişiler tarafından giyilemez ve bu kişilere verilemez.",
+   "not": "ilişiği kesilen üniformayı çıkarır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-060",
+   "madde": "55",
+   "tip": "kosul",
+   "tetikleyici": "kravat takmış olarak",
+   "cevap": "sivil elbiseyle çalışanlar; mülki amir izni hariç",
+   "kanit": "d) Sivil elbise ile çalışanlar, mülki amir tarafından mevsim veya görev gereği başka türlü giyime izin verilen haller dışında, elbise ve gömlek giymiş ve kravat takmış olarak görevde bulunmak zorundadırlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-061",
+   "madde": "57",
+   "tip": "makam",
+   "tetikleyici": "peşin olarak ödenir",
+   "cevap": "sevk/refakatte il dışına çıkan erbaş-er yolluğu; görevlendiren makam",
+   "kanit": "MADDE 57- (1) Hükümlü, tutuklu ya da gözetim altında bulundurulanların ve kıt’a ve kurumlardan kaçan ya da izin ve hava değişimi için verilmiş olan süreyi geçiren er ve erbaşlardan askerlik şubelerince gözetim altında kıt’alarına sevk edilmek üzere jandarmaya veya sahil güvenliğe teslim edilenlerin, sevkinde ya da refakatinde görevlendirilerek görevli olduğu il sınırları dışına çıkan jandarma ile sahil güvenlik erbaş ve erlerinin müstahak oldukları yollukları, 10/2/1954 tarihli ve 6245 sayılı Harcırah Kanununun 4 üncü maddesinin birinci fıkrasının (6) numaralı bendine göre görevlendiren makamlarca peşin olarak ödenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-062",
+   "madde": "58",
+   "tip": "kosul",
+   "tetikleyici": "müfreze usulü ile",
+   "cevap": "beslenemeyen erbaş-ere tayın bedeli (5668, 2155)",
+   "kanit": "MADDE 58- (1) Görevlerinin niteliği gereği kazandan (ya da müfreze usulü ile) beslenemeyen jandarma ile sahil güvenlik erbaş ve erlerinin tayın bedelleri, 24/5/2007 tarihli ve 5668 sayılı Türk Silahlı Kuvvetleri Besleme Kanununa ekli günlük yemek bedeli ölçüt tablosunda gösterilen gıda maddelerinin fiyatlandırılması ile 22/6/1978 tarihli ve 2155 sayılı Bazı Kamu Personeline Tayın Bedeli Verilmesi Hakkında Kanun kapsamında ödenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-063",
+   "madde": "60",
+   "tip": "sira_usul",
+   "tetikleyici": "üstlerden evvel selam vermeye",
+   "cevap": "astlar mecbur; aynı rütbedekiler beklemeden selamlaşır",
+   "kanit": "(2) Selamlama her yerde ve her zaman yapılır. Astlar, üstlerden evvel selam vermeye mecburdurlar. Aynı rütbede olanlar veya birbirinin rütbesini ayırt edemeyenler birbirini beklemeden selamlarlar. Üstler aynı usul ve esaslarla astlarının selamını alırlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-22-064",
+   "madde": "61",
+   "tip": "makam",
+   "tetikleyici": "sosyal tesislerden yararlanmayı",
+   "cevap": "kimlik kartı düzenlemesi; İçişleri–MSB protokolü",
+   "kanit": "(2) Kimlik kartlarının Türk Silahlı Kuvvetlerine bağlı sosyal tesislerden yararlanmayı sağlayacak şekilde düzenlemesine ilişkin hususlar Bakanlık ile Millî Savunma Bakanlığı arasında yapılan bir protokol ile belirlenir.",
+   "not": "",
+   "karistirilan": []
+  }
+ ]
+}

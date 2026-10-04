@@ -1,0 +1,316 @@
+{
+ "id": 7,
+ "ad": "3713 sayılı Terörle Mücadele Kanunu",
+ "kodlar": [
+  {
+   "i": "K-7-001",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "örgüte mensup kişi veya kişiler",
+   "cevap": "terör tanımı; örgüt unsuru şart",
+   "kanit": "Terör; cebir ve şiddet kullanarak; baskı, korkutma, yıldırma, sindirme veya tehdit yöntemlerinden biriyle, Anayasada belirtilen Cumhuriyetin niteliklerini, siyasî, hukukî, sosyal, laik, ekonomik düzeni değiştirmek, Devletin ülkesi ve milletiyle bölünmez bütünlüğünü bozmak, Türk Devletinin ve Cumhuriyetin varlığını tehlikeye düşürmek, Devlet otoritesini zaafa uğratmak veya yıkmak veya ele geçirmek, temel hak ve hürriyetleri yok etmek, Devletin iç ve dış güvenliğini, kamu düzenini veya genel sağlığı bozmak amacıyla bir örgüte mensup kişi veya kişiler tarafından girişilecek her türlü suç teşkil eden eylemlerdir.",
+   "not": "cebir ve şiddet; baskı, korkutma, yıldırma, sindirme, tehdit",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-002",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "amaçlanan suçu işlemese dahi",
+   "cevap": "terör suçlusu; örgüt mensubu",
+   "kanit": "Birinci maddede belirlenen amaçlara ulaşmak için meydana getirilmiş örgütlerin mensubu olup da, bu amaçlar doğrultusunda diğerleri ile beraber veya tek başına suç işleyen veya amaçlanan suçu işlemese dahi örgütlerin mensubu olan kişi terör suçlusudur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-003",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "örgüt adına suç işleyenler",
+   "cevap": "terör suçlusu sayılır; mensup olmasa da",
+   "kanit": "Terör örgütüne mensup olmasa dahi örgüt adına suç işleyenler de terör suçlusu sayılır",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-004",
+   "madde": "3",
+   "tip": "tanim",
+   "tetikleyici": "terör suçlarıdır",
+   "cevap": "TCK 302, 307, 309, 311-315, 320, 310 (birinci fıkra)",
+   "kanit": "26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar, terör suçlarıdır.",
+   "not": "mutlak terör suçları",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "m.4 suçları ancak örgüt faaliyetinde terör suçu sayılır"
+    }
+   ]
+  },
+  {
+   "i": "K-7-005",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "terör suçu sayılır",
+   "cevap": "örgüt faaliyeti çerçevesinde işlenirse; başlı başına değil",
+   "kanit": "Aşağıdaki suçlar 1 inci maddede belirtilen amaçlar doğrultusunda suç işlemek üzere kurulmuş bir terör örgütünün faaliyeti çerçevesinde işlendiği takdirde, terör suçu sayılır:",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "m.3 suçları her halde terör suçudur"
+    }
+   ]
+  },
+  {
+   "i": "K-7-006",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "kasten orman yakma",
+   "cevap": "orman yakma: örgüt faaliyetinde terör suçu",
+   "kanit": "c) 31/8/1956 tarihli ve 6831 sayılı Orman Kanununun 110 uncu maddesinin dördüncü ve beşinci fıkralarında tanımlanan kasten orman yakma suçları.",
+   "not": "6831 Orman Kanunu m.110/4-5",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-007",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "hapis cezasını gerektiren suçlar",
+   "cevap": "Kaçakçılıkla Mücadele Kanunu suçları; örgüt faaliyetinde terör suçu",
+   "kanit": "ç) 10/7/2003 tarihli ve 4926 sayılı Kaçakçılıkla Mücadele Kanununda tanımlanan ve hapis cezasını gerektiren suçlar.",
+   "not": "6136 silah suçları da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-008",
+   "madde": "4",
+   "tip": "kosul",
+   "tetikleyici": "ilanına neden olan olaylara",
+   "cevap": "OHAL bölgesinde; olağanüstü halin ilanına neden olan olaylara ilişkin",
+   "kanit": "d) Anayasanın 120 nci maddesi gereğince olağanüstü hal ilan edilen bölgelerde, olağanüstü halin ilanına neden olan olaylara ilişkin suçlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-009",
+   "madde": "7",
+   "tip": "suc_adi",
+   "tetikleyici": "faaliyetini düzenleyenler",
+   "cevap": "örgüt yöneticisi olarak cezalandırılır",
+   "kanit": "Örgütün faaliyetini düzenleyenler de örgütün yöneticisi olarak cezalandırılır.",
+   "not": "kuran, yöneten, üye: TCK 314",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-010",
+   "madde": "7",
+   "tip": "ceza",
+   "tetikleyici": "propagandasını yapan",
+   "cevap": "bir yıldan beş yıla kadar hapis; basın-yayınla yarı artırım",
+   "kanit": "Terör örgütünün; cebir, şiddet veya tehdit içeren yöntemlerini meşru gösterecek veya övecek ya da bu yöntemlere başvurmayı teşvik edecek şekilde propagandasını yapan kişi, bir yıldan beş yıla kadar hapis cezası ile cezalandırılır. Bu suçun basın ve yayın yolu ile işlenmesi hâlinde, verilecek ceza yarı oranında artırılır.",
+   "not": "cebir, şiddet, tehdit yöntemlerini meşru gösterme, övme, teşvik",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-011",
+   "madde": "7",
+   "tip": "ceza",
+   "tetikleyici": "bin günden beş bin güne",
+   "cevap": "yayın sorumlularına adli para cezası",
+   "kanit": "Ayrıca, basın ve yayın organlarının suçun işlenmesine iştirak etmemiş olan yayın sorumluları hakkında da bin günden beş bin güne kadar adli para cezasına hükmolunur.",
+   "not": "suça iştirak etmemiş olsalar da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-012",
+   "madde": "7",
+   "tip": "istisna",
+   "tetikleyici": "Haber verme sınırlarını aşmayan",
+   "cevap": "suç oluşturmaz; eleştiri de",
+   "kanit": "Haber verme sınırlarını aşmayan veya eleştiri amacıyla yapılan düşünce açıklamaları suç oluşturmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-013",
+   "madde": "7",
+   "tip": "suc_adi",
+   "tetikleyici": "Slogan atılması",
+   "cevap": "propaganda gibi cezalandırılır; amblem taşıma, üniforma da",
+   "kanit": "b) Toplantı ve gösteri yürüyüşü sırasında gerçekleşmese dahi, terör örgütünün üyesi veya destekçisi olduğunu belli edecek şekilde; 1. Örgüte ait amblem, resim veya işaretlerin asılması ya da taşınması, 2. Slogan atılması, 3. Ses cihazları ile yayın yapılması, 4. Terör örgütüne ait amblem, resim veya işaretlerin üzerinde bulunduğu üniformanın giyilmesi.",
+   "not": "toplantı sırasında olmasa da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-014",
+   "madde": "7",
+   "tip": "ceza",
+   "tetikleyici": "yüzünü tamamen veya kısmen kapatanlar",
+   "cevap": "üç yıldan beş yıla; silahla alt sınır dört yıl",
+   "kanit": "Terör örgütünün propagandasına dönüştürülen toplantı ve gösteri yürüyüşlerinde, kimliklerini gizlemek amacıyla yüzünü tamamen veya kısmen kapatanlar üç yıldan beş yıla kadar hapis cezasıyla cezalandırılır. Bu suçu işleyenlerin cebir ve şiddete başvurmaları ya da her türlü silah, molotof ve benzeri patlayıcı, yakıcı ya da yaralayıcı maddeler bulundurmaları veya kullanmaları hâlinde verilecek cezanın alt sınırı dört yıldan az olamaz.",
+   "not": "propagandaya dönüşen toplantıda",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-015",
+   "madde": "7",
+   "tip": "ceza",
+   "tetikleyici": "öğrenci yurtlarında",
+   "cevap": "propaganda cezası iki katı; dernek, vakıf, parti, okul binasında da",
+   "kanit": "kuruluşlarına veya bunların yan kuruluşlarına ait bina, lokal, büro veya eklentilerinde veya öğretim kurumlarında veya öğrenci yurtlarında veya bunların eklentilerinde işlenmesi halinde bu fıkradaki cezanın iki katı hükmolunur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-016",
+   "madde": "7",
+   "tip": "istisna",
+   "tetikleyici": "üye olmamakla birlikte örgüt adına",
+   "cevap": "ayrıca örgüt üyeliği (314 üçüncü fıkra) cezası verilmez",
+   "kanit": "Terör örgütüne üye olmamakla birlikte örgüt adına; a) İkinci fıkrada tanımlanan suçu, b) 6 ncı maddenin ikinci fıkrasında tanımlanan suçu, c) 6/10/1983 tarihli ve 2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanununun 28 inci maddesinin birinci fıkrasında tanımlanan kanuna aykırı toplantı ve gösteri yürüyüşüne katılma suçunu, işleyenler hakkında, 5237 sayılı Kanunun 314 üncü maddesinin üçüncü fıkrasında tanımlanan suçtan dolayı ayrıca ceza verilmez.",
+   "not": "propaganda, 6/2 suçu, 2911 m.28/1 toplantı suçu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-017",
+   "madde": "8",
+   "tip": "ceza",
+   "tetikleyici": "nüfuz kötüye kullanılmak suretiyle",
+   "cevap": "terör suçlarında ceza yarı oranında artırılır",
+   "kanit": "Nitelikli hal Madde 8/A- (Ek: 29/6/2006-5532/7 md.) Bu Kanun kapsamına giren suçların kamu görevinin sağladığı nüfuz kötüye kullanılmak suretiyle işlenmesi halinde, verilecek ceza yarı oranında artırılır.",
+   "not": "kamu görevinin nüfuzu (m.8/A)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-018",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "60 ıncı maddesine göre",
+   "cevap": "tüzel kişiye güvenlik tedbiri",
+   "kanit": "Tüzel kişilerin sorumluluğu Madde 8/B- (Ek: 29/6/2006-5532/7 md.) Bu Kanun kapsamına giren suçların bir tüzel kişinin faaliyeti çerçevesinde işlenmesi halinde, Türk Ceza Kanununun 60 ıncı maddesine göre bunlara özgü güvenlik tedbirlerine hükmolunur.",
+   "not": "m.8/B",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-019",
+   "madde": "15",
+   "tip": "makam",
+   "tetikleyici": "en fazla üç avukatın",
+   "cevap": "ücreti kurum bütçesinden ödenir; terörle mücadele görevinden doğan suç iddiası",
+   "kanit": "Terörle mücadelede görev alan Türk Silahlı Kuvvetleri personeli, mülki idare amirleri, istihbarat ve kolluk görevlileri ile bu amaçla görevlendirilmiş diğer personelin, bu görevlerinin ifasından doğduğu iddia edilen suçlardan dolayı yapılan soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir avukatın ücreti ödenir ve bunlara avukatlık ücret tarifesine bağlı olmaksızın yapılacak ödemeler, ilgili kuruluşların bütçelerine konulacak ödenekten karşılanır.",
+   "not": "mağdur, şikâyetçi, davalı, davacı personelin bir avukatı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-020",
+   "madde": "15",
+   "tip": "makam",
+   "tetikleyici": "davacı konumunda olan personelin",
+   "cevap": "avukat ücreti ilgili Bakanın onayına tabi",
+   "kanit": "Ancak davacı konumunda olan personelin seçeceği bir avukata ücret ödenmesi, ilgili Bakanın onayına tabidir.",
+   "not": "usul: MSB ve İçişleri müşterek yönetmelik",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-021",
+   "madde": "19",
+   "tip": "kosul",
+   "tetikleyici": "para ödülü",
+   "cevap": "iştirak etmemiş olmak koşuluyla; İçişleri Bakanlığı yönetmeliği",
+   "kanit": "İşlenişine iştirak etmemiş olmak koşuluyla bu Kanun kapsamına giren suçun ortaya çıkarılmasına veya delillerin ele geçirilmesine ya da suç faillerinin yakalanabilmesine yardımcı olanlara veya yerlerini yahut kimliklerini bildirenlere para ödülü verilebilir.",
+   "not": "suçun ortaya çıkarılması, delil, fail yakalanmasına yardım",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-022",
+   "madde": "20",
+   "tip": "kosul",
+   "tetikleyici": "estetik cerrahi yoluyla",
+   "cevap": "koruma tedbiri; nüfus kaydı, ehliyet, diploma değişikliği de",
+   "kanit": "Bu koruma tedbirleri; talep halinde estetik cerrahi yoluyla fizyolojik görünümün değiştirilmesi dahil, nüfus kaydı, ehliyet, evlenme cüzdanı, diploma ve benzeri belgelerin değiştirilmesi, askerlik işleminin düzenlenmesi, menkul ve gayrimenkul mal varlıklarıyla ilgili hakları, sosyal güvenlik ve diğer hakların korunması gibi hususlarda düzenleme yapılır.",
+   "not": "koruma tedbirleri Devletçe; yönetmelik Cumhurbaşkanınca",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-023",
+   "madde": "20",
+   "tip": "gorev_yetki",
+   "tetikleyici": "taarruzu savmak için silah kullanmaya",
+   "cevap": "ayrılmış olsa da yetkili; kendisi, eşi, çocukları",
+   "kanit": "Yukarıda sayılanlardan kamu görevlileri, görevlerinden ayrılmış olsalar dahi terör suçluları tarafından kendilerine veya eş ve çocuklarının canına vuku bulan bir taarruzu savmak için silah kullanmaya yetkilidirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-024",
+   "madde": "20",
+   "tip": "sure",
+   "tetikleyici": "şerh kendiliğinden terkin edilir",
+   "cevap": "iki yıl içinde ihtiyati haciz/tedbir kararı ibraz edilmezse",
+   "kanit": "Kovuşturmaya yer olmadığına dair kararın kesinleşmesi halinde veya şerhin konulduğu tarihten itibaren iki yıl içinde, şerhin devamı yönünde hukuk mahkemesinden verilmiş ihtiyati haciz veya ihtiyati tedbir kararı ibraz edilmediği takdirde şerh kendiliğinden terkin edilir.",
+   "not": "m.20/A: zararın tazmini için taşınmaz ve araçlara şerh",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-025",
+   "madde": "20",
+   "tip": "sira_usul",
+   "tetikleyici": "tirajı ellibinin üzerinde",
+   "cevap": "adresi bulunmayan davalıya gazete ilanıyla tebliğ",
+   "kanit": "davalının adres kayıt sisteminde adresinin bulunmaması veya bulunup da tebligata elverişli olmaması halinde, mahkemece, dava dilekçesinin özeti tirajı ellibinin üzerinde olan ve yurt düzeyinde dağıtımı yapılan gazetelerden biri vasıtasıyla ilan edilir.",
+   "not": "bir ay içinde adres bildirmezse yokluğunda yargılama",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-026",
+   "madde": "21",
+   "tip": "kosul",
+   "tetikleyici": "2330 sayılı Nakdi Tazminat",
+   "cevap": "terör eylemine muhatap kamu görevlisi; yaralanan, engelli, ölen",
+   "kanit": "kamu görevlilerinden yurtiçinde ve yurtdışında görevlerini ifa ederlerken veya sıfatları kalkmış olsa bile bu görevlerini yapmalarından dolayı terör eylemlerine muhatap olarak yaralanan, engelli hâle gelen, ölen veya öldürülenler hakkında 2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun hükümleri uygulanır.",
+   "not": "sıfatı kalkmış olsa bile",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-027",
+   "madde": "21",
+   "tip": "sayi_oran",
+   "tetikleyici": "30 yıl hizmet yapmış gibi",
+   "cevap": "emekli ikramiyesi; malul ve ölenlerin dul-yetimine",
+   "kanit": "Yaşamak için gereken hareketleri yapamayacak ve başkasının yardım ve desteğine muhtaç olacak derecede malül olanlar ile ölenlerin dul ve yetimlerine en yüksek devlet memuru aylığı üzerinden, diğerlerine mevcut aylıkları üzerinden, 30 yıl hizmet yapmış gibi emekli ikramiyesi ödenir.",
+   "not": "bakıma muhtaç malul: en yüksek devlet memuru aylığı üzerinden",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-028",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "on yıl süreyle kamu konutlarından",
+   "cevap": "kira alınmadan; yurtdışı özel tahsisli bir yıl",
+   "kanit": "Yurtiçinde veya yurtdışında kamu konutlarından yararlanmakta iken malul olanların kendileri, ölenlerin aylığa müstehak dul ve yetimleri, 9/11/1983 tarihli ve 2946 sayılı Kamu Konutları Kanununda gösterilen özel tahsisli konutlarda oturanlar hariç olmak üzere, herhangi bir kira bedeli alınmaksızın on yıl süreyle kamu konutlarından yararlanmaya devam edebilirler.",
+   "not": "konuttan çıkana on yıl kira yardımı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-029",
+   "madde": "21",
+   "tip": "kosul",
+   "tetikleyici": "tanıtım kartlarını",
+   "cevap": "kamu hastanelerinde muayene ve tedavi",
+   "kanit": "Malûl olanlar ile ölenlerin dul ve yetimleri, Türkiye Cumhuriyeti Emekli Sandığınca kendilerine verilen tanıtım kartlarını ibraz etmeleri durumunda, kamu kurum ve kuruluşlarına ait bütün hastanelerde muayene ve tedavi edilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-7-030",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "Dayanışmayı Teşvik Fonundan",
+   "cevap": "terörden zarar gören vatandaşa öncelikle yardım; şehit çocuğunun öğrenim masrafı",
+   "kanit": "Terör eylemlerinden dolayı yaralananların tedavileri Devlet tarafından yapılır. Zarar gören, can ve mal kaybına uğrayan vatandaşlara, Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonundan öncelikle yardım yapılır. Bu fondan ilk ve orta öğrenim çağındaki şehit çocuklarının öğrenim masrafları karşılanır.",
+   "not": "yaralıların tedavisi Devletçe",
+   "karistirilan": []
+  }
+ ]
+}
