@@ -542,6 +542,8 @@ function ileri(){
 function serbestBitir(){
   YIGIN.pop();iz(()=>giris());
   document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  // 'Yanlışları tekrar çöz' (tani:true): yeni cevaplar ilerlemeye yazılır → doğru yapılanlar yanlış/eksik listesinden düşer.
+  if(S.meta.tani&&acik('rontgen-yanlis'))S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){K.tani[kid(q.i)]=S.cevap[i]===q.d?1:0;K.cevap[kid(q.i)]=S.cevap[i];}});
   const n=S.sorular.length,dg=S.sorular.filter((q,i)=>S.cevap[i]===q.d).length;const yanlislar=S.sorular.map((q,i)=>[q,i]).filter(([q,i])=>S.cevap[i]!==q.d);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(S.ad)}</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${dg}<small> / ${n} doğru</small></b><div class="tipAltSatir">${bar(dg/n,oranRenk(dg/n))}<span class="tipYuzde">%${Math.round(dg/n*100)}</span></div></div></section>
