@@ -4,256 +4,281 @@
  "kodlar": [
   {
    "i": "K-11-001",
-   "madde": "3",
-   "tip": "kosul",
-   "tetikleyici": "sürekli çekili kalır",
-   "cevap": "kamu kurum ve kuruluşlarında Türk Bayrağı",
-   "kanit": "(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır.",
-   "not": "",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "amacı",
+   "cevap": "üç: şekli, yapımı, korunması",
+   "kanit": "Bu Kanunun amacı Türk Bayrağının şekli, yapımı ve korunması ile ilgili esas ve usulleri belirlemektir.",
+   "not": "esas ve usulleri belirlemek",
    "karistirilan": []
   },
   {
    "i": "K-11-002",
-   "madde": "3",
-   "tip": "makam",
-   "tetikleyici": "yetkili amirler sorumludur",
-   "cevap": "bayrak törenlerinden, o mahaldeki",
-   "kanit": "Bayrak çekilirken ve indirilirken tören yapılır. Bayrak törenlerinin gereken biçimde yapılmasından o mahaldeki yetkili amirler sorumludur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-003",
-   "madde": "4",
-   "tip": "sure",
-   "tetikleyici": "yarıya çekilir",
-   "cevap": "10 Kasım; diğer haller Cumhurbaşkanlığınca ilan",
-   "kanit": "Türk Bayrağı, yas alameti olarak 10 KASIM'da yarıya çekilir. Yas alameti olmak üzere Bayrağın yarıya çekileceği diğer haller ve zamanı Cumhurbaşkanlığınca ilan edilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-004",
-   "madde": "5",
-   "tip": "sira_usul",
-   "tetikleyici": "cephe alınarak",
-   "cevap": "Bayrak selamlanır; çekilirken, indirilirken, tören geçişinde",
-   "kanit": "Çekilmesi ve indirilmesi esnasında veya tören geçişlerinde Bayrak, cephe alınarak selamlanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-005",
-   "madde": "6",
-   "tip": "kosul",
-   "tetikleyici": "tabutlarına",
-   "cevap": "Cumhurbaşkanlığı yapmış kişiler, şehitler, yönetmelikteki asker-sivil",
-   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
-   "not": "açılışta Atatürk heykellerine de",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-006",
-   "madde": "6",
-   "tip": "istisna",
-   "tetikleyici": "resmi yemin törenlerinde",
-   "cevap": "masaya örtülebilir; başka amaçla serilemez",
-   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "7",
-     "fark": "yemin töreni dışında masaya, kürsüye serilemez"
-    }
-   ]
-  },
-  {
-   "i": "K-11-007",
-   "madde": "7",
-   "tip": "yasak",
-   "tetikleyici": "uniforma şeklinde giyilemez",
-   "cevap": "Bayrak giyilemez",
-   "kanit": "Elbise veya uniforma şeklinde giyilemez.",
-   "not": "oturulan, basılan yere konulamaz; yırtık, soluk kullanılamaz",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-008",
-   "madde": "7",
-   "tip": "yasak",
-   "tetikleyici": "esas veya fon teşkil edecek",
-   "cevap": "parti, dernek, vakıf amblem ve flamasında kullanılamaz",
-   "kanit": "Hiçbir siyasi parti, teşekkül, dernek, vakıf ve yönetmelikte belirlenecek kamu kurum ve kuruluşları dışında kalan kurum ve kuruluşun amblem, flama, sembol ve benzerlerinin ön veya arka yüzünde esas veya fon teşkil edecek şekilde kullanılamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-009",
-   "madde": "8",
-   "tip": "makam",
-   "tetikleyici": "toplatılır",
-   "cevap": "yönetmeliğe aykırı bayraklar; mahallin yetkili amiri",
-   "kanit": "Bu Kanuna ve çıkarılacak yönetmeliğe aykırı olarak Bayrak yapmak, satmak ve kullanmak yasaktır. Bu yasağa aykırı olarak yapılan Bayraklar o mahallin yetkili amirlerince toplatılır.",
-   "not": "aykırı bayrak yapmak, satmak, kullanmak yasak",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-010",
-   "madde": "8",
-   "tip": "ceza",
-   "tetikleyici": "fiilleri suç oluşturmadığı takdirde",
-   "cevap": "mülki amir; Kabahatler Kanunu m.32 idarî para cezası",
-   "kanit": "Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-011",
-   "madde": "9",
-   "tip": "makam",
-   "tetikleyici": "diğer esaslar, Cumhurbaşkanınca",
-   "cevap": "Bayrak Kanunu'nun yönetmelikte düzenlenen hususları",
-   "kanit": "Bu Kanunun ilgili maddelerinde yönetmelikte düzenleneceği belirtilen hususlar ile kanunun uygulanmasına ilişkin diğer esaslar, Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-012",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "ekli cetvelde gösterilen",
-   "cevap": "Türk Bayrağı tanımı: şekil ve oranlar cetvelde; beyaz ay-yıldızlı albayrak",
+   "tetikleyici": "şekil ve oran",
+   "cevap": "ekli cetveldeki; beyaz ay-yıldızlı albayrak",
    "kanit": "Türk Bayrağı, bu Kanuna ekli cetvelde gösterilen şekil ve oranlarda olmak kaydıyla beyaz ay - yıldızlı albayraktır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-11-013",
+   "i": "K-11-003",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "flama, flandra ve fors",
-   "cevap": "özel bayraklar: sembolik bayrak, özel işaret de; standartları yönetmelikte",
-   "kanit": "Bayrak ile özel bayrakların (sembolik bayrak, özel işaret, flama, flandra ve fors) standartları, hangi kumaş ve maddelerden yapılacağı yönetmelikte gösterilir",
-   "not": "arma, sancak özel bayraklardan DEĞİL",
+   "tetikleyici": "özel bayrak",
+   "cevap": "sembolik bayrak, özel işaret, flama, flandra, fors; yönetmelikte; sancak-arma yok",
+   "kanit": "Bayrak ile özel bayrakların (sembolik bayrak, özel işaret, flama, flandra ve fors) standartları, hangi kumaş ve maddelerden yapılacağı yönetmelikte gösterilir.",
+   "not": "standartları ve kumaşı yönetmelikte",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-004",
+   "madde": "3",
+   "tip": "sure",
+   "tetikleyici": "kamu kurum",
+   "cevap": "sürekli çekili kalır",
+   "kanit": "(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır.",
+   "not": "yalnız mesai saatinde değil",
+   "karistirilan": [
+    {
+     "madde": "7",
+     "fark": "m.7: yönetmelikte belirlenecek kamu kurumları dışındakiler amblemde kullanamaz"
+    }
+   ]
+  },
+  {
+   "i": "K-11-005",
+   "madde": "3",
+   "tip": "makam",
+   "tetikleyici": "gereken biçimde",
+   "cevap": "o mahaldeki yetkili amirler",
+   "kanit": "Bayrak törenlerinin gereken biçimde yapılmasından o mahaldeki yetkili amirler sorumludur.",
+   "not": "tören sorumluluğu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-006",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "takıl",
+   "cevap": "kurum, temsilcilik, deniz vasıtası; yetkili aracı; konut yok",
+   "kanit": "Bayrak, kamu kurum ve kuruluşlarıyla yurt dışı temsilciliklerine ve kamu kuruluşlarıyla gerçek ve tüzelkişilerin deniz vasıtalarına çekilir. Yurt içinde ve yurt dışında yetkililerin araçlarına takılır.",
+   "not": "kamu kurumu ve yurt dışı temsilciliğe, kamu ve kişilerin deniz vasıtasına çekilir; yetkililerin aracına takılır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-007",
+   "madde": "3",
+   "tip": "sira_usul",
+   "tetikleyici": "indirilirken",
+   "cevap": "tören yapılır; usulü yönetmelikte",
+   "kanit": "Bayrak çekilirken ve indirilirken tören yapılır.",
+   "not": "selamlama ise m.5: cephe alınarak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-008",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "yarıya",
+   "cevap": "yas: 10 Kasım; diğer hâlleri Cumhurbaşkanlığı ilan eder",
+   "kanit": "Türk Bayrağı, yas alameti olarak 10 KASIM'da yarıya çekilir. Yas alameti olmak üzere Bayrağın yarıya çekileceği diğer haller ve zamanı Cumhurbaşkanlığınca ilan edilir.",
+   "not": "eskiden Başbakanlık",
+   "karistirilan": [
+    {
+     "madde": "3",
+     "fark": "m.3 metninin sonunda m.4 başlığı “Bayrağın Yarıya Çekilmesi” yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-11-009",
+   "madde": "5",
+   "tip": "sira_usul",
+   "tetikleyici": "selam",
+   "cevap": "cephe alınarak",
+   "kanit": "Çekilmesi ve indirilmesi esnasında veya tören geçişlerinde Bayrak, cephe alınarak selamlanır.",
+   "not": "çekme, indirme ve tören geçişlerinde",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "m.4 metninin sonunda m.5 başlığı “Bayrağın Selamlanması” yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-11-010",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "örtül",
+   "cevap": "Cumhurbaşkanı-şehit tabutu, açılışta Atatürk heykeli, yeminde masalara; kürsüye yok",
+   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
+   "not": "yönetmelikte belirlenen asker ve sivillerin tabutu da; sporcu omzu, iş insanı tabutu yok",
+   "karistirilan": [
+    {
+     "madde": "5",
+     "fark": "m.5 metninin sonunda m.6 başlığı “Bayrağın Örtülebileceği Yerler” yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-11-011",
+   "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "adetler",
+   "cevap": "diğer kullanılma şekli yönetmelikte",
+   "kanit": "Ayrıca milli orf ve adetler göz önünde tutularak Bayrağın diğer kullanılma şekil ve yeri yönetmelikte gösterilir.",
+   "not": "millî örf ve âdetler gözetilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-012",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "kullanılamaz",
+   "cevap": "yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk",
+   "kanit": "Türk Bayrağı, yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk veya layık olduğu manevi değeri zedeleyecek herhangi bir şekilde kullanılamaz.",
+   "not": "manevi değeri zedeleyecek şekilde de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-013",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "serilemez",
+   "cevap": "masalara, kürsülere; resmi yemin töreni hariç",
+   "kanit": "Resmi yemin törenleri dışında her ne maksatla olursa olsun, masalara kürsülere, örtü olarak serilemez.",
+   "not": "yemin töreninde masaya örtülebilir (m.6)",
    "karistirilan": []
   },
   {
    "i": "K-11-014",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "hangi kumaş ve maddelerden",
-   "cevap": "yönetmelikte gösterilir (bayrak ve özel bayrakların standartları)",
-   "kanit": "Bayrak ile özel bayrakların (sembolik bayrak, özel işaret, flama, flandra ve fors) standartları, hangi kumaş ve maddelerden yapılacağı yönetmelikte gösterilir",
-   "not": "",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "benzeri eşya",
+   "cevap": "Bayrağın şekli yapılamaz; elbise-üniforma olarak giyilemez",
+   "kanit": "Oturulan veya ayakla basılan yerlere konulamaz. Bu yerlere ve benzeri eşyaya Bayrağın şekli yapılamaz. Elbise veya uniforma şeklinde giyilemez.",
+   "not": "oturulan, ayakla basılan yere konulamaz",
    "karistirilan": []
   },
   {
    "i": "K-11-015",
-   "madde": "6",
-   "tip": "kosul",
-   "tetikleyici": "ATATÜRK heykellerine",
-   "cevap": "açılış törenlerinde Bayrak örtülebilir; yemin töreninde masalara",
-   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
-   "not": "kürsüye, protokol masasına örtü YOK",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "hakaret",
+   "cevap": "sözle, yazıyla, hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz",
+   "kanit": "Türk Bayrağına sözle, yazı veya hareketle veya herhangi bir şekilde hakaret edilemez, saygısızlıkta bulunulamaz. Bayrak yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz.",
+   "not": "saygısızlık da yasak",
    "karistirilan": []
   },
   {
    "i": "K-11-016",
-   "madde": "6",
-   "tip": "kosul",
-   "tetikleyici": "diğer kullanılma şekil ve yeri",
-   "cevap": "yönetmelikte gösterilir; millî örf ve âdetler gözetilerek",
-   "kanit": "Ayrıca milli orf ve adetler göz önünde tutularak Bayrağın diğer kullanılma şekil ve yeri yönetmelikte gösterilir.",
-   "not": "",
+   "madde": "7",
+   "tip": "yasak",
+   "tetikleyici": "amblem",
+   "cevap": "parti, dernek, vakıf amblem-flamasında esas-fon olamaz",
+   "kanit": "Hiçbir siyasi parti, teşekkül, dernek, vakıf ve yönetmelikte belirlenecek kamu kurum ve kuruluşları dışında kalan kurum ve kuruluşun amblem, flama, sembol ve benzerlerinin ön veya arka yüzünde esas veya fon teşkil edecek şekilde kullanılamaz.",
+   "not": "yönetmelikte belirlenen kamu kurumları hariç",
    "karistirilan": []
   },
   {
    "i": "K-11-017",
-   "madde": "6",
-   "tip": "kosul",
-   "tetikleyici": "Cumhurbaşkanlığı yapmış kişilerin",
-   "cevap": "cenazede tabuta Bayrak: şehitler, yönetmelikteki asker ve sivil kişiler de",
-   "kanit": "Türk Bayrağı, Cumhurbaşkanlığı yapmış kişilerin, şehitlerin ve yönetmelikte belirlenecek asker ve sivil kişilerin cenaze törenlerinde bunların tabutlarına, açılış törenlerinde ATATÜRK heykellerine veya resmi yemin törenlerinde masalara örtülebilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-018",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "şekli, yapımı ve korunması",
-   "cevap": "Kanunun amacı: bu üç konudaki esas ve usuller",
-   "kanit": "Bu Kanunun amacı Türk Bayrağının şekli, yapımı ve korunması ile ilgili esas ve usulleri belirlemektir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-019",
-   "madde": "3",
-   "tip": "kosul",
-   "tetikleyici": "deniz vasıtalarına çekilir",
-   "cevap": "kamu kurumları, yurt dışı temsilcilikleri, gerçek-tüzel kişilerin deniz araçları",
-   "kanit": "Bayrak, kamu kurum ve kuruluşlarıyla yurt dışı temsilciliklerine ve kamu kuruluşlarıyla gerçek ve tüzelkişilerin deniz vasıtalarına çekilir.",
-   "not": "özel konutlar sayılmamış",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-020",
-   "madde": "3",
-   "tip": "kosul",
-   "tetikleyici": "yetkililerin araçlarına takılır",
-   "cevap": "yurt içinde ve yurt dışında; çekilir-indirilirken tören yapılır",
-   "kanit": "Yurt içinde ve yurt dışında yetkililerin araçlarına takılır. Bayrak çekilirken ve indirilirken tören yapılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-021",
    "madde": "7",
-   "tip": "yasak",
-   "tetikleyici": "yırtık, sökük, yamalı, delik",
-   "cevap": "kirli, soluk, buruşuk; manevi değeri zedeleyecek şekilde kullanılamaz",
-   "kanit": "Türk Bayrağı, yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk veya layık olduğu manevi değeri zedeleyecek herhangi bir şekilde kullanılamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-022",
-   "madde": "7",
-   "tip": "yasak",
-   "tetikleyici": "yırtılamaz, yakılamaz, yere atılamaz",
-   "cevap": "gerekli özen gösterilmeden kullanılamaz; onarım yasağı yok",
-   "kanit": "Bayrak yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-11-023",
-   "madde": "7",
-   "tip": "gorev_yetki",
-   "tetikleyici": "yetkililerce derhal önlenir",
-   "cevap": "Kanuna/yönetmeliğe aykırı fiiller; gerekli soruşturma yapılır",
+   "tip": "makam",
+   "tetikleyici": "aykırı fiiller",
+   "cevap": "yetkililerce derhal önlenir, soruşturma yapılır",
    "kanit": "Bu Kanuna ve yönetmeliğe aykırı fiiller yetkililerce derhal önlenir ve gerekli soruşturma yapılır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-11-024",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "altı ay sonra yürürlüğe",
-   "cevap": "Kanun yayımı tarihinden altı ay sonra yürürlüğe girer",
-   "kanit": "Bu Kanun yayımı tarihinden altı ay sonra yürürlüğe girer.",
-   "not": "",
+   "i": "K-11-018",
+   "madde": "8",
+   "tip": "yasak",
+   "tetikleyici": "satmak",
+   "cevap": "yasak; aykırı Bayrak yetkili amirce toplatılır",
+   "kanit": "(Değişik: 23/1/2008-5728/421 md.) Bu Kanuna ve çıkarılacak yönetmeliğe aykırı olarak Bayrak yapmak, satmak ve kullanmak yasaktır. Bu yasağa aykırı olarak yapılan Bayraklar o mahallin yetkili amirlerince toplatılır.",
+   "not": "yapmak, satmak, kullanmak",
    "karistirilan": []
   },
   {
-   "i": "K-11-025",
+   "i": "K-11-019",
    "madde": "8",
    "tip": "makam",
-   "tetikleyici": "mahalli mülki amir tarafından",
-   "cevap": "Kabahatler Kanunu m.32 idarî para cezası (fiil suç değilse)",
+   "tetikleyici": "yapılan Bayrak",
+   "cevap": "o mahallin yetkili amirlerince toplatılır",
+   "kanit": "Bu yasağa aykırı olarak yapılan Bayraklar o mahallin yetkili amirlerince toplatılır.",
+   "not": "para cezasını ise mülki amir verir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-020",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "para ceza",
+   "cevap": "mahalli mülki amir verir; Kabahatler m.32",
    "kanit": "Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.",
+   "not": "fiil suç oluşturmuyorsa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-021",
+   "madde": "8",
+   "tip": "ceza",
+   "tetikleyici": "suç oluşturmadığı",
+   "cevap": "mülki amirce idari para cezası",
+   "kanit": "Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.",
+   "not": "toplatmayı ise yetkili amir yapar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-022",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "uygulanmasına ilişkin",
+   "cevap": "Cumhurbaşkanınca çıkarılan yönetmelik",
+   "kanit": "Bu Kanunun ilgili maddelerinde yönetmelikte düzenleneceği belirtilen hususlar ile kanunun uygulanmasına ilişkin diğer esaslar, Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir",
+   "not": "eskiden tüzük",
+   "karistirilan": []
+  },
+  {
+   "i": "K-11-023",
+   "madde": "10",
+   "tip": "tanim",
+   "tetikleyici": "yürürlükten kaldır",
+   "cevap": "1936 tarihli 2994 sayılı eski Bayrak Kanunu",
+   "kanit": "29 Mayıs 1936 Tarih ve 2994 Sayılı Türk Bayrağı Kanunu yürürlükten kaldırılmıştır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "9",
+     "fark": "m.9 metninin sonunda m.10 başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-11-024",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "yürürlüğe gir",
+   "cevap": "yayımından altı ay sonra",
+   "kanit": "Bu Kanun yayımı tarihinden altı ay sonra yürürlüğe girer.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "12",
+     "fark": "m.12 metninin sonunda değişikliklerin yürürlük tablosu yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-11-025",
+   "madde": "12",
+   "tip": "makam",
+   "tetikleyici": "yürütür",
+   "cevap": "Bakanlar Kurulu",
+   "kanit": "Bu Kanun hükümlerini Bakanlar Kurulu yürütür.",
    "not": "",
    "karistirilan": []
   }
