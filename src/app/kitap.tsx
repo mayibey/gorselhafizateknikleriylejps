@@ -14,6 +14,7 @@ import { Palette, Spacing } from '@/constants/theme';
 import { KILIT_AKTIF } from '@/constants/urunler';
 import { kitapNotlari, kitapNotuKaydet } from '@/lib/brans-kitap';
 import { imzaliUrller } from '@/lib/imzali-url';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { bytesToB64 } from '@/lib/sifreleme';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -41,6 +42,9 @@ export default function KitapScreen() {
   // başkan onayıyla 25 Eyl'de herkese. Kitap kenardan kenara (800 px sınırı ve kenar boşluğu yok), sayfa
   // cihaz yoğunluğunda + yakınlaştırınca yeniden çizilir; tam ekran düğmesi başlığı/durum/araç çubuğunu gizler.
   const yeni = true;
+  // KİTAPTA ARAMA (4 Eki 2026, kullanıcı: "Altın Özet'te ara özelliği yok"): görüntüleyicide 🔍 + sarı
+  // işaretleme. Bayrak `kitap-ara`: önce başkan+Kemalettin (ozellik_kisi); "yay" → ozellik_herkes (build gerekmez).
+  const ara = useKisiselOzellik('kitap-ara');
   const [tam, setTam] = useState(false);
   const tamDegistir = useCallback((a: boolean) => {
     setTam(a);
@@ -88,7 +92,7 @@ export default function KitapScreen() {
   const yuklenince = useCallback(() => {
     const b64 = pdfB64.current;
     if (!b64) return;
-    if (yeni) web.current?.injectJavaScript('window.AYAR = { net: true, genis: true }; true;');
+    if (yeni) web.current?.injectJavaScript(`window.AYAR = { net: true, genis: true, ara: ${ara ? 'true' : 'false'} }; true;`);
     // PDF'i parça parça ver (tek dev injectJavaScript büyük kitapta takılıyordu), sonra başlat.
     for (let i = 0; i < b64.length; i += PARCA) {
       web.current?.injectJavaScript(`window.parcaEkle(${JSON.stringify(b64.slice(i, i + PARCA))}); true;`);
@@ -96,7 +100,13 @@ export default function KitapScreen() {
     web.current?.injectJavaScript(
       `window.baslat(null, ${JSON.stringify(notlar.current)}, ${JSON.stringify(yol ?? '')}, ${baslangicSayfa.current}); true;`,
     );
-  }, [yol, yeni]);
+  }, [yol, yeni, ara]);
+
+  // Bayrak kitap açıldıktan sonra gelirse (sunucu cevabı gecikti) arama düğmesini sonradan kur.
+  useEffect(() => {
+    if (ara && durum === 'hazir')
+      web.current?.injectJavaScript('window.AYAR = window.AYAR || {}; window.AYAR.ara = true; window.aramaKur && window.aramaKur(); true;');
+  }, [ara, durum]);
 
   const mesaj = useCallback(
     (e: WebViewMessageEvent) => {

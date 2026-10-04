@@ -4,6 +4,19 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (8) — KİTAPTA ARAMA (Altın Özet / PDF görüntüleyici 🔍) — bayrak kitap-ara, ÖNCE BAŞKAN+KEMALETTİN, OTA 1.0.47+1.0.46
+> Başkan: "Altın özette ara özelliği yokmuş hemen ekle". PDF görüntüleyici (scripts/pdf-viewer-uret.mjs → src/assets/pdf-viewer.ts,
+> Cursor node ile üretildi) araç çubuğuna 🔍: üstte arama çubuğu, metin pdf.js getTextContent ile sayfa sayfa çıkarılır (ilk aramada
+> "Aranıyor n/N", sonra önbellek), Türkçe harf duyarsız, eşleşen yerler sayfaya yüzde konumlu sarı kutuyla işaretlenir (zoomda
+> ölçeklenir), ▲▼ eşleşen sayfalar arasında gezer, "x / y sayfa · s.N". kitap.tsx: `useKisiselOzellik('kitap-ara')` → WebView'e
+> `AYAR.ara`; bayrak sonradan gelirse düğme sonradan kurulur. Sunucu: ozellik_kisi'ye başkan+Kemalettin için "kitap-ara" eklendi.
+> OTA production: 1.0.47 (grup 9a2f460f) + 1.0.46 (grup 8ef1d6bb); diğerleri kod uykuda. HERKESE AÇMAK ("yay"): ozellik_herkes
+> dizisine "kitap-ara" ekle (build/OTA gerekmez; bayrak-denetle KASITLI_KAPALI'da kayıtlı). tsc 0 hata.
+> Yan bulgu: scripts/bayrak-denetle.mjs 3 Eki'den beri SÖZDİZİMİ HATALIYDI ('ilgili-kart-kitap' açıklamasındaki kesme işareti
+> "YAYIN_BAYRAKLARI'na" dizgiyi kesiyordu) → denetim hiç çalışmamış; düzeltildi, şimdi 13 bayrak / 5 yayında / 0 unutulmuş.
+> Ayrıca şifre sayfası: liste artık üretimde HAZIR BASILI (uret.py) + yazdırma CSS'i → artifact'ı HTML dışa aktarınca eksik
+> çıkma sorunu kapandı (betik çalışmasa da 1.652 satır sayfada); dosya başkana gönderildi.
+>
 > ### ▶ 4 Eki (7) — RÖNTGEN YANLIŞLARI HERKESE AÇIK: başkan "Yay oğlum" dedi (16:52) → masa4.js YAYIN=['rontgen-yanlis']
 > hepsini_kur (16 branş, scratchpad calisma) → yukle_sayfalar.sh: 16/16 + varsayılan 200/200; sunucudaki masa-mebs/jandarma/
 > ücretsiz/masa.html'de bayrak doğrulandı (grep). OTA yok; kullanıcı Merkez'i kapat-aç yapınca gelir (sayfa önbellekten yenilenir).

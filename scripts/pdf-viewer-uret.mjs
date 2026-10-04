@@ -46,6 +46,7 @@ window.parcaEkle = function(s){ parcalar.push(s); };
 window.baslat = function(b64, kayitli, yol, baslangic){
   dosyaYolu = yol||''; notlar = kayitli||{};
   AYAR = window.AYAR||{}; if(AYAR.genis) document.body.classList.add('genis');
+  if(AYAR.ara) window.aramaKur(); // kitapta arama (bayraklı)
   if(!b64){ b64 = parcalar.join(''); parcalar=[]; }
   var bin = atob(b64), arr = new Uint8Array(bin.length);
   for (var i=0;i<bin.length;i++) arr[i]=bin.charCodeAt(i);
@@ -235,6 +236,77 @@ function aracSec(a){ arac=a; document.body.dataset.arac=a;
   if(a==='pan'){ bx.style.display='none'; } else { bx.style.display=''; bx.value=boyut[a]||3; }
   document.getElementById('renkler').style.display=(a==='silgi'||a==='pan')?'none':''; // silgi/gez'de renk gereksiz
 }
+// KİTAPTA ARAMA (4 Eki 2026, kullanıcı: "Altın Özet'te ara özelliği yok"): RN AYAR.ara verince araç çubuğuna 🔍
+// eklenir. Metin pdf.js'ten sayfa sayfa çıkarılır (ilk aramada, ilerleme gösterilir, sonra önbellekte), eşleşen
+// yerler sarı kutuyla işaretlenir, ▲▼ ile eşleşen sayfalar arasında gezilir. Türkçe büyük/küçük harfe duyarsız.
+var metinler={}, aramaSonuc=[], aramaIdx=-1, aramaQ='', aramaIsi=0;
+function trk(s){ return (s||'').replace(/İ/g,'i').replace(/I/g,'ı').toLocaleLowerCase('tr'); }
+function metinAl(n){
+  if(metinler[n]) return Promise.resolve(metinler[n]);
+  return pdfDoc.getPage(n).then(function(page){
+    return page.getTextContent().then(function(tc){
+      var taban=page.getViewport({scale:1}), kutu=[];
+      tc.items.forEach(function(it){ if(!it.str) return;
+        var tx=pdfjsLib.Util.transform(taban.transform, it.transform);
+        var h=Math.hypot(tx[2],tx[3])||10, w=(it.width||0);
+        // Sayfaya göre yüzde konum: yakınlaştırma/yeniden çizimde kutu sayfayla birlikte ölçeklenir.
+        kutu.push({s:it.str, l:tx[4]/taban.width, t:(tx[5]-h*0.82)/taban.height, w:w/taban.width, h:h/taban.height});
+      });
+      metinler[n]={kutu:kutu, metin:trk(kutu.map(function(k){ return k.s; }).join(' '))};
+      return metinler[n];
+    });
+  }).catch(function(){ metinler[n]={kutu:[], metin:''}; return metinler[n]; });
+}
+function vurguTemizle(){ Array.prototype.slice.call(document.querySelectorAll('.vurgu')).forEach(function(d){ d.remove(); }); }
+function vurgula(n){
+  var m=metinler[n], wrap=sayfaKutular[n]; if(!m||!wrap||!aramaQ) return;
+  m.kutu.forEach(function(k){
+    var s=trk(k.s), i=s.indexOf(aramaQ);
+    while(i>=0){ // satır içinde yaklaşık konum: harf sayısına orantılı
+      var d=document.createElement('div'); d.className='vurgu';
+      var orn=s.length||1, l=k.l+k.w*(i/orn), w=Math.max(k.w*(aramaQ.length/orn), 0.004);
+      d.style.left=(l*100)+'%'; d.style.top=(k.t*100)+'%'; d.style.width=(w*100)+'%'; d.style.height=(k.h*1.15*100)+'%';
+      wrap.appendChild(d); i=s.indexOf(aramaQ, i+aramaQ.length);
+    }
+  });
+}
+function aramaBilgi(t){ var e=document.getElementById('arabilgi'); if(e) e.textContent=t; }
+function aramaGit(idx){
+  if(!aramaSonuc.length) return;
+  aramaIdx=(idx+aramaSonuc.length)%aramaSonuc.length;
+  var n=aramaSonuc[aramaIdx]; vurguTemizle(); vurgula(n);
+  aramaBilgi((aramaIdx+1)+' / '+aramaSonuc.length+' sayfa · s.'+n);
+  window.scrollTo(0, sayfaKutular[n].offsetTop-4);
+}
+function araYap(){
+  var inp=document.getElementById('arainp'), q=trk((inp.value||'').trim());
+  vurguTemizle(); aramaSonuc=[]; aramaIdx=-1; aramaQ=q;
+  if(q.length<2){ aramaBilgi(q?'En az 2 harf':''); return; }
+  var isi=++aramaIsi, n=1;
+  function adim(){
+    if(isi!==aramaIsi) return; // yeni arama başladı, eskisini bırak
+    if(n>toplamSayfa){ aramaBilgi(aramaSonuc.length?'':'Bulunamadı'); if(aramaSonuc.length) aramaGit(0); return; }
+    if(!metinler[n]) aramaBilgi('Aranıyor… '+n+' / '+toplamSayfa);
+    metinAl(n).then(function(m){ if(isi!==aramaIsi) return; if(m.metin.indexOf(q)>=0) aramaSonuc.push(n); n++; adim(); });
+  }
+  adim();
+}
+window.aramaKur = function(){
+  if(document.getElementById('arabtn') || !document.getElementById('arac')) return;
+  var b=document.createElement('button'); b.textContent='🔍'; b.title='Kitapta ara'; b.className='arac'; b.id='arabtn';
+  b.onclick=function(){
+    var acik=document.body.classList.toggle('aramada');
+    if(acik) setTimeout(function(){ document.getElementById('arainp').focus(); }, 50); else vurguTemizle();
+  };
+  document.getElementById('arac').appendChild(b);
+  var inp=document.getElementById('arainp');
+  inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault();
+    if(aramaQ && aramaQ===trk(inp.value.trim()) && aramaSonuc.length) aramaGit(aramaIdx+1); else araYap(); } });
+  inp.addEventListener('search', araYap);
+  document.getElementById('araonce').onclick=function(){ aramaGit(aramaIdx-1); };
+  document.getElementById('arasonra').onclick=function(){ aramaGit(aramaIdx+1); };
+  document.getElementById('arakapat').onclick=function(){ document.body.classList.remove('aramada'); vurguTemizle(); };
+};
 window.addEventListener('DOMContentLoaded', function(){
   pagesEl=document.getElementById('pages');
   document.addEventListener('pointerdown', function(e){ sonPen = e.pointerType==='pen'; if(sonPen) kalemGoruldu(); }, true);
@@ -281,7 +353,16 @@ const HTML = `<!doctype html><html><head>
   body.genis .sayfa{max-width:none;}
   body.tam #cubuk{display:none;} body.tam #pages{padding-bottom:6px;}
   #renkler{display:flex;gap:6px;} .renk{width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ccc;}
+  /* Kitapta arama çubuğu (üstte, yalnız açıkken) + eşleşme kutuları (sayfayla birlikte ölçeklenir). */
+  #arabar{display:none;position:fixed;left:0;right:0;top:0;z-index:5;gap:6px;align-items:center;padding:6px 8px;
+    background:rgba(255,252,245,.97);border-bottom:1px solid #e7dcc7;}
+  body.aramada #arabar{display:flex;} body.aramada #pages{padding-top:54px;}
+  #arabar input{flex:1;min-width:0;font-size:16px;padding:7px 9px;border:1px solid #e7dcc7;border-radius:8px;background:#fff;}
+  #arabar button{width:36px;height:34px;border:1px solid #e7dcc7;background:#fff;border-radius:8px;font-size:15px;flex:none;}
+  #arabilgi{font:12px/1.2 Arial,sans-serif;color:#6e6047;white-space:nowrap;max-width:30vw;overflow:hidden;text-overflow:ellipsis;}
+  .vurgu{position:absolute;background:rgba(255,213,0,.45);border-radius:2px;pointer-events:none;mix-blend-mode:multiply;}
 </style></head><body>
+<div id="arabar"><input id="arainp" type="search" placeholder="Kitapta ara…" enterkeyhint="search" autocomplete="off"><span id="arabilgi"></span><button id="araonce" title="Önceki">▲</button><button id="arasonra" title="Sonraki">▼</button><button id="arakapat" title="Kapat">✕</button></div>
 <div id="pages"></div>
 <div id="cubuk"><div id="arac" style="display:flex;gap:8px"></div><input id="boyut" type="range" min="1" max="48" value="3" style="display:none"><div id="renkler"></div></div>
 <script id="wsrc" type="text/plain">${pdfWorker}</script>

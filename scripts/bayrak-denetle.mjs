@@ -16,12 +16,13 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
+  'kitap-ara': 'KİTAPTA ARAMA (Altın Özet / PDF görüntüleyici 🔍, 4 Eki 2026, kullanıcı isteği) — önce başkan+Kemalettin (ozellik_kisi); "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir, build gerekmez.',
   'eksik-tarama': 'Harekât Merkezi (Röntgen/Check-up/Altın Özet) — 30 Eyl 2026 HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes), premium kapılı. Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'karma-deneme': 'Karma genel denemeler (5x100) — ÖNCE BAŞKAN KONTROL EDECEK (23 Ağu). Onay gelince yeni yayına gerek yok: uygulama_ayar.ozellik_herkes dizisine "karma-deneme" eklenir.',
   'anlik-guncelleme': '1. KADEME (deneme) — başkan + Kemalettin; 30 sn\'de bir kendiliğinden yeniler. Herkese açmak için bu bayrak DEĞİL, sunucu şalteri kullanılır: uygulama_ayar.anlik_guncelleme_herkes = 1 (nazik kip).',
   'patika-yolculuk': 'Sinematik 3B yolculuk motoru YARIM (ağaç görselleri/doku/ses eksik) — iş durduruldu, bitmeden açılmaz.',
   'ekran-goruntusu-serbest': 'EKRAN GÖRÜNTÜSÜ YASAĞI MUAFİYETİ — sadece başkan + Kemalettin. Herkese açılırsa telifli kart görsellerinin koruması TAMAMEN biter. ASLA yayın listesine ekleme.',
-  'ilgili-kart-kitap': 'İLGİLİ KART / KİTAP (4 Eki 2026, Mehmet Ali: 5809 sorusunda TCK açılıyordu) — kart varsa kart, yoksa kanunun PDF kitabı. 3 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI'na alınabilir.',
+  'ilgili-kart-kitap': 'İLGİLİ KART / KİTAP (4 Eki 2026, Mehmet Ali: 5809 sorusunda TCK açılıyordu) — kart varsa kart, yoksa kanunun PDF kitabı. 3 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'oturum-koruma': 'OTURUM KORUMA (tablette kendiliğinden çıkış) — 3 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
 };
 

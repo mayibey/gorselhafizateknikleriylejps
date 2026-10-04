@@ -68,6 +68,8 @@ body.ezber .satir.acik .cev{filter:none}
 .bos{color:var(--soluk);padding:30px 0;text-align:center}
 .not{color:var(--soluk);font-size:12.5px;max-width:70ch;margin-top:26px;border-top:1px solid var(--kenar);padding-top:12px}
 @media (max-width:420px){.satir{grid-template-columns:1fr}.satir .cev{padding-left:10px;border-left:2px solid var(--ayirici)}}
+/* Yazdırma / dışa aktarma: araç çubuğu gizli, her satırın kanıtı açık, ezber bulanıklığı yok. */
+@media print{.arac,.ust .ornek{display:none}.detay{display:grid!important;gap:6px}body.ezber .cev{filter:none}.satir{break-inside:avoid}.ust{color:#000;background:#fff}.ust p,.ust .sayac{color:#333}}
 </style>
 
 <header class="ust">
@@ -87,7 +89,8 @@ body.ezber .satir.acik .cev{filter:none}
   </div>
 </div>
 
-<main class="sar" id="liste"></main>
+<!-- Liste üretim sırasında Python'la HAZIR basılır (dışa aktarma/yazdırma betiksiz de tam çıksın); betik yalnız süzgeçte yeniden çizer. -->
+<main class="sar" id="liste"><!--LISTE--></main>
 
 <script>
 const VERI = /*VERI*/[];
@@ -132,5 +135,6 @@ function ac(el){ el.classList.toggle('acik'); el.setAttribute('aria-expanded', e
 $('liste').addEventListener('click', e=>{ const s=e.target.closest('.satir'); if (s) ac(s); });
 $('liste').addEventListener('keydown', e=>{ if ((e.key==='Enter'||e.key===' ') && e.target.classList.contains('satir')){ e.preventDefault(); ac(e.target); } });
 try{ if(localStorage.getItem('ezber')==='1'){ $('ezber').checked=true; document.body.classList.add('ezber'); } }catch(_){}
-ciz();
+// Açılışta liste zaten hazır basılı; yalnız süzgeç/arama değişince yeniden çizilir.
+if ($('ara').value.trim() || $('kanun').value) ciz();
 </script>
