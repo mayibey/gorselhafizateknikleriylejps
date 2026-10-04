@@ -1,48 +1,65 @@
-# 3713 Terörle Mücadele Kanunu — kelime → cevap
+# 3713 sayılı Terörle Mücadele Kanunu — kelime → cevap
+# KURAL (başkan, 4 Eki 2026): SOL = soru KÖKÜNDE göreceğin ifade, SAĞ = doğru ŞIKTA arayacağın kelime.
+# Sorulardan geriye doğru yazıldı (79 cevaplı soru + kitapçık kökleri); kanıt resmî metin. Kapsam: m.1-4, 7, 8, 15, 19-22.
+# Tuzak çiftleri: m.3 suçları DOĞRUDAN terör suçu · m.4 suçları ancak ÖRGÜT FAALİYETİ çerçevesinde (orman yakma KASTEN) ·
+#                 propaganda 1-5 yıl, basın-yayınla yarı artar, okul-yurt-dernekte iki kat · yüz kapatma 3-5 yıl, molotofla alt sınır 4 ·
+#                 vatandaşa SOSYAL YARDIMLAŞMA FONU (m.22) · kamu görevlisine 2330 NAKDİ TAZMİNAT, 30 yıl ikramiye, 10 yıl konut (m.21).
+# Not: bankadaki "teslim ol / doğrudan ve duraksamadan hedefe" soruları Ek madde 2'den; Emir kapsamında olmadığı için satır yazılmadı.
+# Not: m.21 metni 6000 karakterde kesik; (h) bendinin sonrası yok.
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
- ('1','tanim','örgüte mensup kişi veya kişiler','terör tanımı; örgüt unsuru şart','Terör; cebir ve şiddet','suç teşkil eden eylemlerdir.',[],'cebir ve şiddet; baskı, korkutma, yıldırma, sindirme, tehdit'),
- ('2','tanim','amaçlanan suçu işlemese dahi','terör suçlusu; örgüt mensubu','Birinci maddede belirlenen','terör suçlusudur.',[],''),
- ('2','tanim','örgüt adına suç işleyenler','terör suçlusu sayılır; mensup olmasa da','Terör örgütüne mensup olmasa dahi','terör suçlusu sayılır',[],''),
- ('3','tanim','terör suçlarıdır','TCK 302, 307, 309, 311-315, 320, 310 (birinci fıkra)','26/9/2004 tarihli','terör suçlarıdır.',[('4','m.4 suçları ancak örgüt faaliyetinde terör suçu sayılır')],'mutlak terör suçları'),
- ('4','kosul','terör suçu sayılır','örgüt faaliyeti çerçevesinde işlenirse; başlı başına değil','Aşağıdaki suçlar 1 inci maddede','terör suçu sayılır:',[('3','m.3 suçları her halde terör suçudur')],''),
- ('4','kosul','kasten orman yakma','orman yakma: örgüt faaliyetinde terör suçu','c) 31/8/1956','kasten orman yakma suçları.',[],'6831 Orman Kanunu m.110/4-5'),
- ('4','kosul','hapis cezasını gerektiren suçlar','Kaçakçılıkla Mücadele Kanunu suçları; örgüt faaliyetinde terör suçu','ç) 10/7/2003','hapis cezasını gerektiren suçlar.',[],'6136 silah suçları da'),
- ('4','kosul','ilanına neden olan olaylara','OHAL bölgesinde; olağanüstü halin ilanına neden olan olaylara ilişkin','d) Anayasanın 120 nci','olaylara ilişkin suçlar.',[],''),
- ('7','suc_adi','faaliyetini düzenleyenler','örgüt yöneticisi olarak cezalandırılır','Örgütün faaliyetini düzenleyenler','yöneticisi olarak cezalandırılır.',[],'kuran, yöneten, üye: TCK 314'),
- ('7','ceza','propagandasını yapan','bir yıldan beş yıla kadar hapis; basın-yayınla yarı artırım','Terör örgütünün; cebir','yarı oranında artırılır.',[],'cebir, şiddet, tehdit yöntemlerini meşru gösterme, övme, teşvik'),
- ('7','ceza','bin günden beş bin güne','yayın sorumlularına adli para cezası','Ayrıca, basın ve yayın organlarının','adli para cezasına hükmolunur.',[],'suça iştirak etmemiş olsalar da'),
- ('7','istisna','Haber verme sınırlarını aşmayan','suç oluşturmaz; eleştiri de','Haber verme sınırlarını','suç oluşturmaz.',[],''),
- ('7','suc_adi','Slogan atılması','propaganda gibi cezalandırılır; amblem taşıma, üniforma da','b) Toplantı ve gösteri yürüyüşü sırasında','üniformanın giyilmesi.',[],'toplantı sırasında olmasa da'),
- ('7','ceza','yüzünü tamamen veya kısmen kapatanlar','üç yıldan beş yıla; silahla alt sınır dört yıl','Terör örgütünün propagandasına dönüştürülen','dört yıldan az olamaz.',[],'propagandaya dönüşen toplantıda'),
- ('7','ceza','öğrenci yurtlarında','propaganda cezası iki katı; dernek, vakıf, parti, okul binasında da','kuruluşlarına veya bunların yan','iki katı hükmolunur.',[],''),
- ('7','istisna','üye olmamakla birlikte örgüt adına','ayrıca örgüt üyeliği (314 üçüncü fıkra) cezası verilmez','Terör örgütüne üye olmamakla','ayrıca ceza verilmez.',[],'propaganda, 6/2 suçu, 2911 m.28/1 toplantı suçu'),
- ('8','ceza','nüfuz kötüye kullanılmak suretiyle','terör suçlarında ceza yarı oranında artırılır','Nitelikli hal Madde 8/A','yarı oranında artırılır.',[],'kamu görevinin nüfuzu (m.8/A)'),
- ('8','kosul','60 ıncı maddesine göre','tüzel kişiye güvenlik tedbiri','Tüzel kişilerin sorumluluğu Madde 8/B','güvenlik tedbirlerine hükmolunur.',[],'m.8/B'),
- ('15','makam','en fazla üç avukatın','ücreti kurum bütçesinden ödenir; terörle mücadele görevinden doğan suç iddiası','Terörle mücadelede görev alan','ödenekten karşılanır.',[],'mağdur, şikâyetçi, davalı, davacı personelin bir avukatı'),
- ('15','makam','davacı konumunda olan personelin','avukat ücreti ilgili Bakanın onayına tabi','Ancak davacı konumunda','ilgili Bakanın onayına tabidir.',[],'usul: MSB ve İçişleri müşterek yönetmelik'),
- ('19','kosul','para ödülü','iştirak etmemiş olmak koşuluyla; İçişleri Bakanlığı yönetmeliği','İşlenişine iştirak etmemiş','para ödülü verilebilir.',[],'suçun ortaya çıkarılması, delil, fail yakalanmasına yardım'),
- ('20','kosul','estetik cerrahi yoluyla','koruma tedbiri; nüfus kaydı, ehliyet, diploma değişikliği de','Bu koruma tedbirleri; talep halinde estetik','düzenleme yapılır.',[],'koruma tedbirleri Devletçe; yönetmelik Cumhurbaşkanınca'),
- ('20','gorev_yetki','taarruzu savmak için silah kullanmaya','ayrılmış olsa da yetkili; kendisi, eşi, çocukları','Yukarıda sayılanlardan kamu görevlileri','silah kullanmaya yetkilidirler.',[],''),
- ('20','sure','şerh kendiliğinden terkin edilir','iki yıl içinde ihtiyati haciz/tedbir kararı ibraz edilmezse','Kovuşturmaya yer olmadığına dair','şerh kendiliğinden terkin edilir.',[],'m.20/A: zararın tazmini için taşınmaz ve araçlara şerh'),
- ('20','sira_usul','tirajı ellibinin üzerinde','adresi bulunmayan davalıya gazete ilanıyla tebliğ','davalının adres kayıt sisteminde','ilan edilir.',[],'bir ay içinde adres bildirmezse yokluğunda yargılama'),
- ('21','kosul','2330 sayılı Nakdi Tazminat','terör eylemine muhatap kamu görevlisi; yaralanan, engelli, ölen','kamu görevlilerinden yurtiçinde','hükümleri uygulanır.',[],'sıfatı kalkmış olsa bile'),
- ('21','sayi_oran','30 yıl hizmet yapmış gibi','emekli ikramiyesi; malul ve ölenlerin dul-yetimine','Yaşamak için gereken hareketleri','emekli ikramiyesi ödenir.',[],'bakıma muhtaç malul: en yüksek devlet memuru aylığı üzerinden'),
- ('21','sure','on yıl süreyle kamu konutlarından','kira alınmadan; yurtdışı özel tahsisli bir yıl','Yurtiçinde veya yurtdışında kamu konutlarından','yararlanmaya devam edebilirler.',[],'konuttan çıkana on yıl kira yardımı'),
- ('21','kosul','tanıtım kartlarını','kamu hastanelerinde muayene ve tedavi','Malûl olanlar ile ölenlerin dul','muayene ve tedavi edilirler.',[],''),
- ('22','makam','Dayanışmayı Teşvik Fonundan','terörden zarar gören vatandaşa öncelikle yardım; şehit çocuğunun öğrenim masrafı','Terör eylemlerinden dolayı','öğrenim masrafları karşılanır.',[],'yaralıların tedavisi Devletçe'),
- ('1', 'tanim', 'korkutma, yıldırma, sindirme veya tehdit', 'terör yöntemleri (cebir ve şiddet kullanarak; baskı da)', 'Terör; cebir ve şiddet kullanarak', 'bölünmez bütünlüğünü bozmak,', [('7', 'örgüt kuran, yöneten, üye: TCK 314')], '"kandırma" yöntemler arasında yok'),
- ('15', 'kosul', 'Terörle mücadelede görev alan', 'TSK personeli, mülki idare amirleri, istihbarat-kolluk görevlileri, diğer görevli personel', 'Terörle mücadelede görev alan Türk Silahlı', 'en fazla üç avukatın', [], 'avukat ücreti bunlara ödenir; mağdur vatandaşa değil'),
- ('1', 'tanim', 'genel sağlığı bozmak amacıyla', 'amaçlar: iç ve dış güvenliği, kamu düzenini, genel sağlığı bozmak', 'Devlet otoritesini zaafa uğratmak', 'suç teşkil eden eylemlerdir.', [], 'diplomatik ilişkileri sona erdirmek, şirket itibarı YOK'),
- ('1', 'tanim', 'hürriyetleri yok etmek', 'terör tanımındaki amaçlardan; Devlet otoritesini zaafa uğratmak, yıkmak, ele geçirmek', 'Devlet otoritesini zaafa uğratmak', 'suç teşkil eden eylemlerdir.', [], ''),
- ('7', 'ceza', 'dört yıldan az olamaz', 'yüz kapatan + cebir/şiddet ya da silah-molotof: cezanın alt sınırı', 'suçu işleyenlerin cebir ve şiddete', 'dört yıldan az olamaz.', [], 'yüz kapatma temel ceza üç yıldan beş yıla'),
- ('7', 'ceza', 'basın ve yayın yolu ile', 'propaganda cezası yarı oranında artırılır; yayın sorumlusuna bin–beş bin gün', 'Terör örgütünün; cebir, şiddet veya tehdit içeren', 'yarı oranında artırılır.', [], 'temel ceza bir yıldan beş yıla'),
- ('22', 'makam', 'Fon Kurulunca tespit edilir', 'yardımın kapsam ve ölçüsü; mahalli yetkililerin belirlediği miktarı aşmaz', 'Yardımın kapsam ve', 'Fon Kurulunca tespit edilir.', [], ''),
- ('22', 'kosul', 'tedavileri Devlet tarafından yapılır', 'terör eyleminde yaralananlar; zarar görene Fondan öncelikle yardım', '(Değişik: 13/11/1995 - 4131/2 md.) Terör eylemlerinden dolayı', 'öncelikle yardım yapılır.', [], 'şehit çocuklarının ilk-orta öğrenim masrafı da Fondan'),
- ('15', 'makam', 'müştereken çıkarılacak yönetmelikle', 'avukat ücreti ödeme usulü: Millî Savunma ve İçişleri bakanlıkları', 'Avukatların ücretlerinin ödenmesine', 'müştereken çıkarılacak yönetmelikle düzenlenir.', [], ''),
- ('20', 'makam', 'Cumhurbaşkanınca çıkarılacak bir yönetmelik', 'koruma tedbirlerinin esas ve usulleri böyle belirlenir', 'tedbirleriyle ilgili esas ve usûller', 'bir yönetmelik ile belirlenir.', [], ''),
- ('20', 'kosul', 'nüfus kaydı, ehliyet, evlenme cüzdanı', 'koruma tedbirleri: belge değiştirme, askerlik, mal varlığı, sosyal güvenlik hakları', 'Bu koruma tedbirleri; talep halinde', 'hususlarda düzenleme yapılır.', [], '2026 sınavında soruldu; estetik cerrahi de'),
- ('21', 'sure', 'kira bedeli alınmaksızın', 'malul kamu görevlisi on yıl kamu konutunda kalmaya devam eder', 'Yurtiçinde veya yurtdışında kamu konutlarından yararlanmakta', 'yararlanmaya devam edebilirler.', [], 'konuttan çıkana on yıl kira yardımı'),
+ # m.1 — terör tanımı
+ ('1','tanim','yöntem','biriyle yeter: baskı, korkutma, yıldırma, sindirme, tehdit; kandırma yok','(Değişik birinci fıkra: 15/7/2003-4928/20 md.) Terör;','tehdit yöntemlerinden biriyle,',[('7','m.7: örgüt kurma ve propagandada da cebir, şiddet, tehdit yöntemleri geçer')],'cebir ve şiddet kullanarak; beş yöntemden birinin kullanılması yeterli'),
+ ('1','tanim','eylem','örgüte mensup kişi veya kişilerce','amacıyla bir örgüte mensup','suç teşkil eden eylemlerdir.',[('21','m.21: terör eylemine muhatap kamu görevlisine 2330 uygulanır'),('22','m.22: terör eyleminden zarar gören vatandaşa Fon yardımı')],'her türlü suç teşkil eden eylem; amaçlar: Cumhuriyetin nitelikleri, bölünmez bütünlük, Devlet otoritesi, temel haklar, iç-dış güvenlik, genel sağlık'),
+
+ # m.2 — terör suçlusu
+ ('2','tanim','terör suçlusu','mensup: suç işlemese de; mensup değil: örgüt adına işlerse','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[('1','m.1 metninin sonunda m.2 başlığı “Terör suçlusu” yer alır')],'tek başına ya da beraber suç işleyen mensup da'),
+ ('2','tanim','örgüt adına','mensup olmasa da terör suçlusu sayılır','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[('7','m.7 son fıkra: üye olmayan örgüt adına propaganda vb. işlerse 314/3’ten ayrıca ceza yok')],''),
+ ('2','tanim','amaçlanan suç','işlemese de örgüt mensubu terör suçlusudur','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[],'örgütlerin mensubu olmak yeter'),
+
+ # m.3 ve m.4 — terör suçları
+ ('3','tanim','yazılı suç','302, 307, 309, 311-315, 320; doğrudan terör suçu','(Değişik: 29/6/2006-5532/2 md.) 26/9/2004','terör suçlarıdır.',[],'TCK maddeleri; 310’un birinci fıkrası da; örgüt faaliyeti şartı aranmaz; 304 yok'),
+ ('4','kosul','terör suçu sayıl','örgüt faaliyeti çerçevesinde; kasten orman yakma, kaçakçılık da','(Değişik: 29/6/2006-5532/3 md.) Aşağıdaki suçlar','terör suçu sayılır:',[],'TCK’daki birçok suç, 6136 silah suçları, KASTEN orman yakma, hapisli kaçakçılık, OHAL bölgesi olayları, 2863 m.68; taksirle orman yakma YOK'),
+
+ # m.7 — örgüt, propaganda, yüz kapatma
+ ('7','ceza','yöneticisi olarak','faaliyeti düzenleyenler; TCK 314','(Değişik: 29/6/2006-5532/6 md.) Cebir ve şiddet','örgütün yöneticisi olarak cezalandırılır.',[],'kuran, yöneten, üye TCK 314’e göre'),
+ ('7','ceza','propagandasını yapan','bir-beş yıl hapis','(Değişik ikinci fıkra: 11/4/2013-6459/8 md.) Terör örgütünün;','hapis cezası ile cezalandırılır.',[],'yöntemleri meşru gösteren, öven, teşvik eden'),
+ ('7','ceza','basın ve yayın','yarı oranında artar; yayın sorumlusuna bin-beşbin gün adli para','Bu suçun basın ve yayın yolu ile','adli para cezasına hükmolunur.',[],'yayın sorumlusu suça iştirak etmemiş olsa da'),
+ ('7','kosul','haber verme sınır','suç oluşturmaz; eleştiri amaçlı da','(Ek cümle:17/10/2019-7188/13 md.) Haber verme','suç oluşturmaz.',[],'düşünce açıklaması'),
+ ('7','ceza','destekçisi','amblem asma-taşıma, slogan, ses cihazı, amblemli üniforma','b) Toplantı ve gösteri yürüyüşü sırasında','üniformanın giyilmesi.',[],'toplantı sırasında olmasa da; propaganda cezası uygulanır'),
+ ('7','ceza','yüzünü','üç-beş yıl hapis','(Ek fıkra: 27/3/2015-6638/10 md.) Terör örgütünün propagandasına','hapis cezasıyla cezalandırılır.',[],'propagandaya dönüşen toplantıda kimliğini gizlemek için tamamen veya kısmen kapatan'),
+ ('7','ceza','molotof','alt sınır dört yıldan az olamaz','Bu suçu işleyenlerin cebir ve şiddete','dört yıldan az olamaz.',[],'yüz kapatan cebir-şiddet kullanır ya da silah, patlayıcı bulundurursa'),
+ ('7','ceza','öğrenci yurt','cezanın iki katı','kuruluşlarına veya bunların yan kuruluşlarına','cezanın iki katı hükmolunur.',[],'dernek, vakıf, siyasi parti, işçi-meslek kuruluşu binası, öğretim kurumu da'),
+
+ # m.8/A-8/B — nitelikli hal, tüzel kişi
+ ('8','ceza','nüfuz','yarı oranında artırılır','Nitelikli hal Madde 8/A-','yarı oranında artırılır.',[],'kamu görevinin sağladığı nüfuzu kötüye kullanma'),
+ ('8','ceza','tüzel kişi','özgü güvenlik tedbirleri (TCK 60)','Tüzel kişilerin sorumluluğu Madde 8/B-','güvenlik tedbirlerine hükmolunur.',[('20','m.20/A: gerçek veya tüzel kişilerin zararının tazmini için şerh')],'tüzel kişinin faaliyeti çerçevesinde işlenirse'),
+
+ # m.15 — avukat ücreti
+ ('15','sayi_oran','avukat','üç; mağdur-davalı personele bir; vatandaşa yok; davacıda Bakan onayı','(Değişik: 29/6/2006-5532/11 md.) Terörle mücadelede','ilgili Bakanın onayına tabidir.',[('20','m.20/A: tazminat davası reddinde davacı aleyhine maktu avukatlık ücreti')],'TSK personeli, mülki idare amiri, istihbarat, kolluk, görevlendirilen personel; tarifeye bağlı değil; tanığa yok'),
+ ('15','makam','ödenmesine ilişkin','Milli Savunma ve İçişleri müşterek yönetmeliği','Avukatların ücretlerinin ödenmesine','yönetmelikle düzenlenir.',[],'ödeme kurum bütçesindeki ödenekten'),
+
+ # m.19 — para ödülü
+ ('19','kosul','para ödülü','işlenişine iştirak etmemişe verilebilir; İçişleri yönetmeliği','(Değişik:18/10/2018-7148/28 md.) İşlenişine','yönetmelikle belirlenir.',[],'verilebilir = takdiri; miktar ve usul İçişleri Bakanlığı yönetmeliğiyle'),
+ ('19','kosul','kimliklerini bildiren','para ödülü verilebilir','(Değişik:18/10/2018-7148/28 md.) İşlenişine','yönetmelikle belirlenir.',[],'suçu ortaya çıkaran, delil ele geçirten, yakalanmasına yardım eden de'),
+
+ # m.20 — koruma tedbirleri
+ ('20','makam','koruma tedbir','Devlet alır; görevliler, açık hedef olanlar; esas-usul Cumhurbaşkanınca','(Değişik: 29/6/2006-5532/14 md.) Terörle mücadelede görev veren','Cumhurbaşkanınca çıkarılacak bir yönetmelik ile belirlenir.',[('19','m.19 metninin sonunda m.20 başlığı “Koruma tedbirleri” yer alır')],'adli, istihbari, idari, askeri görevliler, kolluk, görevden ayrılanlar; araç-gereç Adalet ve İçişleri temin eder'),
+ ('20','kosul','talep hal','estetik cerrahi, nüfus, ehliyet, diploma değişikliği','Bu koruma tedbirleri; talep halinde','hususlarda düzenleme yapılır.',[],'evlenme cüzdanı, askerlik, mal varlığı, sosyal güvenlik hakları da'),
+ ('20','gorev_yetki','ayrılmış','kendisi, eş ve çocuklarının canına taarruzda silah kullanabilir','Yukarıda sayılanlardan kamu görevlileri','silah kullanmaya yetkilidirler.',[],'görevden ayrılmış olsa da; terör suçlularının taarruzunu savmak için'),
+
+ # m.21 — terör mağduru kamu görevlisi
+ ('21','kosul','engelli','2330 sayılı Nakdi Tazminat Kanunu','kamu görevlilerinden yurtiçinde','Kanun hükümleri uygulanır.',[],'yaralanan, ölen, öldürülen de; sıfatı kalkmış olsa da'),
+ ('21','sure','ikramiye','30 yıl hizmet yapmış gibi','a) (Değişik: 28/2/1995 - 4082/6 md.)','emekli ikramiyesi ödenir.',[],'ağır malul ve ölenin dul-yetimine en yüksek devlet memuru aylığı üzerinden'),
+ ('21','sure','kamu konut','on yıl kirasız; özel tahsisli hariç','b) (Değişik birinci ve ikinci cümle','yararlanmaya devam edebilirler.',[],'malul ve ölenin dul-yetimi; konutta oturmayana on yıl kira yardımı'),
+ ('21','kosul','tanıtım kart','bütün kamu hastanelerinde muayene-tedavi','e) (Ek: 28/2/1995 - 4082/6 md.; Değişik: 29/6/2006-5532/15 md.)','muayene ve tedavi edilirler.',[],'Emekli Sandığının verdiği kart; malul ve dul-yetim'),
+
+ # m.22 — terörden zarar gören vatandaş
+ ('22','makam','yaralananların','Devlet tarafından tedavi','(Değişik: 13/11/1995 - 4131/2 md.) Terör eylemlerinden','Devlet tarafından yapılır.',[],''),
+ ('22','makam','öncelikle','Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonu','Zarar gören, can ve mal kaybına','öncelikle yardım yapılır.',[('20','m.20: savcı ve hâkimin korunma talepleri öncelikle yerine getirilir')],'vatandaşa; kamu görevlisine 2330 Nakdi Tazminat (m.21)'),
+ ('22','kosul','Sosyal Yardımlaşma','vatandaşa öncelikli yardım; şehit çocuğu öğrenimi; ikramiye değil','Zarar gören, can ve mal kaybına','öğrenim masrafları karşılanır.',[],'30 yıl ikramiye ve konut m.21’de, kamu görevlisine'),
+ ('22','kosul','öğrenim','şehit çocuklarının masrafı; yükseköğretim değil','Bu fondan ilk ve orta','öğrenim masrafları karşılanır.',[],'ilk ve orta öğrenim çağındakiler'),
+ ('22','makam','kapsam ve ölçü','Fon Kurulu tespit eder','Yardımın kapsam ve ölçüsü','Fon Kurulunca tespit edilir.',[],'Fonun mahalli yetkililerince belirlenen miktarı aşmamak kaydıyla'),
 ]
 yaz(7, '3713 sayılı Terörle Mücadele Kanunu', K)
