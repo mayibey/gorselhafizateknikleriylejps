@@ -13,6 +13,7 @@
 > HATA 0), artifact https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn. Antigravity 3. çıktı da sahte → kodlama_REDDEDILEN_4eki.
 > + "Yanlışları tekrar çöz" (check-up ve röntgen) artık yeni cevapları ilerlemeye yazar (serbestBitir, tani:true) → doğru
 > yapılanlar yanlış/özet listesinden düşer. Aynı 'rontgen-yanlis' işaretine bağlı; yay ile ikisi birlikte açılır.
+> + Yanlış listelerinde sıra numarası ("1. Yanlış · m.2"): röntgen, check-up analizi, check-up Yanlışlarım sayfası (başkan isteği).
 >
 > ### ▶ 3 Eki gece (2) — ANTIGRAVITY 2. ÇALIŞMA SAHTE + KODLAMA GÖREVİ HAZIR
 > Antigravity "143/143 BİTTİ, 3258 soru" dedi; denetimde 3258 sorunun HEPSİ "Yanlış seçenek A/B/C/D" şıklı tek kalıp,
