@@ -2,7 +2,41 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (2) — BOT DALKAVUKLUK KİLİDİ (jsps-community-bot 8b8f832 + 6ef347a + 923096e, VPS'te CANLI)
+> Vaka (4 Eki 17:59, Savaş Yılmaz): uygulamanın sonuç ekranını atıp "cevap yanlış işaretlenmiş ama cevabım doğru cevapla aynı"
+> yazdı. İki şık TEK KELİMEYLE ayrılıyordu (A "mahalli idare" / B "merkezi idare", 5442 m.1 → doğrusu B, uygulama doğru).
+> Bot "Doğru cevap: B" dediği hâlde aynı cevapta "tamamen haklısın" + "sistemde yanlış işaretlenmiş, Hata Bildir'den ilet" yazdı;
+> başkan da "bot A diyor" sandı. Sebep: prompts.ts "Kullanıcı notu BAĞLAYICIDIR" kuralı iddiayı da bağlayıcı sandırıyordu;
+> öz-denetim de "Kullanıcı notunu uygula" diyordu; OCR "yalnız soru + şık" talimatıyla "Senin cevabın / Doğru" etiketlerini atıyordu.
+> Başkan: "Savaşa düzeltme gönderme, botun aptallığını gider" → gruba mesaj YOK. Düzeltme: (1) OCR etiketleri korur (qa.ts + borc.ts
+> OCR_ETIKET), (2) talimat: not yalnız üslup için bağlayıcı, iddia itirazdır; yeni "UYGULAMA SONUÇ EKRANI İTİRAZI" kuralı (iki şık
+> kelime kelime karşılaştırılır, fark söylenir, uygulama doğruysa "haklısın / yanlış işaretlenmiş / Hata Bildir" YASAK; etiket
+> yoksa ilk şık kullanıcının, ikinci şık uygulamanın), (3) öz-denetim bu çelişkiyi net hata sayar, (4) KOD KİLİDİ: kullanıcı
+> uygulamanın işaretlemesine itiraz ediyorsa cevap her zaman sıkı talimatla resmî metne göre yeniden üretilir. İlk sürüm kalıba
+> bakıyordu; VPS denemesinde "anahtarda karışıklık olmuş olabilir" kalıba uymadı → 2. turda koşulsuz yapıldı.
+> Ölçüm: son 7 günün 27 qa_kayit'inde kilit yalnız bu vakada tetiklenirdi. VPS'te ayrı kopyada (/tmp, DB kopyası) denendi:
+> etiketsiz ve etiketli metinde "Senin şıkkında mahalli, doğru şıkta merkezi… uygulamanın cevabı doğru"; haklı itiraz (etiketler
+> ters) → "Haklısın komutan… Hata/Öneri Bildir". tsc 0 hata (Cursor node). Deploy: git pull + pm2 restart, "BOT ÇALIŞIYOR".
+> Not: yerelde better-sqlite3 başka node sürümüyle derli (D:\node.exe silik) → bot testleri VPS'te ayrı kopyada yapılmalı.
+>
+> ### ▶ 5 Eki (1) — ŞİFRE YENİDEN YAZIMI 25/25 TAMAM: kök→şık DÜZ %16 → %74 (2026 gerçek sınav %39 → %81)
+> Başkan: "tüm kanunları kontrol et… sol taraf soru kökünde, sağ taraf cevapta aranacak". 25 müşterek mevzuatın şifreleri kanun
+> kanun (toplu ajan YOK) sorulardan geriye yazıldı; her satırın kanıtı resmî metin, denetçi (kodlama_denetci --secme) 25/25 BİTTİ.
+> 1.995 satır. kok_sik_olc (2.946 cevaplı soru): DÜZ 2.207 (%74) · TERS 103 (%3) · YOK 636 (%21); gerçek sınav 2026: 89/109 (%81).
+> Kanun bazında DÜZ (önce → sonra): TCK 40→65 · 2803 16→81 · KVKK 12→81 · Tebligat 26→63 · İl İdaresi 16→68 · Kabahatler 23→80 ·
+> 3713 22→75 · OHAL 9→81 · 5816 28→73 · 6284 16→85 · Bayrak 17→75 · 7068 9→61 · 4678 11→82 · E-imza 25→71 · Resmî Yazışma 16→81 ·
+> Sözleşmeli Yön. 9→86 · JTGY Yön. 15→74 · KV silme 15→60 · Bilgi Edinme 8→75 · 2521 Yön. 12→72 · 6284 Uyg. Yön. 14→73 ·
+> Personel Yön. 11→75 · Hizmet Esasları 7→70 · İzin Yön. 13→71 · 6136 21→75.
+> Kalan %21 büyük ölçüde: Romen rakamlı/öncüllü sorular, kökünde ipucu olmayan "hangisi değildir/doğrudur" soruları, cevabı tek
+> harf/3 harfli kelime olan sorular (ölçülemez), yönetmelik adının her kökte geçtiği tanım soruları (KV silme, Bilgi Edinme).
+> Bulgular: (a) 3713 bankasında 7 soru ("teslim ol", "doğrudan ve duraksamadan hedefe") EK MADDE 2'den — Emir kapsamı 1,2,3,4,7,8,
+> 15,19,20,21,22 olduğu için satır yazılmadı (bankada kapsam dışı soru var). (b) KVKK m.28/1-a resmî metnine başka kanuna ait
+> dipnot karışmış (7061 sayılı K., hâkim-savcı muvafakati) → kanıtlar dipnottan önce kesildi. (c) Cevap anahtarı hataları:
+> 24-D-022 yanlış, 24-D-076 büyük olasılıkla yanlış (m.50 madalya esasları JGK-SGK yönetmelikleriyle). Commit'ler "Sifre yeniden
+> yazim N/24" (9b90105 … c9f1402). Sayfalar yenilendi: Kilit Kelime Şifreleri (MebRKHX3h5dJprFnxPRTnn, v9) · Şifre Açıkları
+> (4Wpq1yZvUrKjZU3zcn6vVX, v3). Açık iş: Özge'nin özet/m.9 kartı ses kesilmesi (dokunulmadı).
 >
 > ### ▶ 4 Eki (9) — ŞİFRE KURALI KESİNLEŞTİ: SOL = SORU KÖKÜNDE ARANACAK KELİME, SAĞ = DOĞRU ŞIKTA ARANACAK KELİME
 > Başkan: "Bucak görünce Cumhurbaşkanı'nı yapıştır… Sol taraf soru kökünde arayacağı, sağ taraf cevapta arayacağı, mantık bu."
