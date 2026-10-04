@@ -6,119 +6,94 @@
    "i": "K-18-001",
    "madde": "8",
    "tip": "tanim",
-   "tetikleyici": "ilgili kullanıcılar için",
-   "cevap": "silme: erişilemez ve tekrar kullanılamaz",
+   "tetikleyici": "erişi",
+   "cevap": "silinmesi: ilgili kullanıcılar; yok edilmesi: hiç kimse",
    "kanit": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
-   "not": "",
+   "not": "silmede geri getirilemezlik şartı yok",
    "karistirilan": [
     {
      "madde": "9",
-     "fark": "yok etme: hiç kimse erişemez, geri getirilemez"
+     "fark": "m.9 yok etme: hiç kimse tarafından erişilemez, geri getirilemez"
     }
    ]
   },
   {
    "i": "K-18-002",
-   "madde": "9",
+   "madde": "8",
    "tip": "tanim",
-   "tetikleyici": "hiç kimse tarafından",
-   "cevap": "yok etme: geri getirilemez",
-   "kanit": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "8",
-     "fark": "silme: yalnız ilgili kullanıcılar için erişilemez"
-    }
-   ]
+   "tetikleyici": "ilgili kullanıcı",
+   "cevap": "silinmesi: erişilemez, tekrar kullanılamaz; hiç kimse için yok edilmesi",
+   "kanit": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+   "not": "yedekte teknik olarak dursa da kullanıcıya kapalıysa silme",
+   "karistirilan": []
   },
   {
    "i": "K-18-003",
-   "madde": "10",
+   "madde": "9",
    "tip": "tanim",
-   "tetikleyici": "eşleştirilse dahi",
-   "cevap": "anonim hâle getirme",
-   "kanit": "(1) Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir.",
-   "not": "kimliği belirli kişiyle ilişkilendirilemez",
+   "tetikleyici": "hiç kimse",
+   "cevap": "geri getirilemez; yok edilmesi",
+   "kanit": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+   "not": "erişilemez + geri getirilemez + tekrar kullanılamaz, üçü birlikte; diski parçalamak gibi",
    "karistirilan": []
   },
   {
    "i": "K-18-004",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "ilk periyodik imha işleminde",
-   "cevap": "imha politikası olan sorumlu bu zamanda siler",
-   "kanit": "(1) Kişisel veri saklama ve imha politikası hazırlamış olan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir.",
-   "not": "",
-   "karistirilan": []
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "teknik ve idari",
+   "cevap": "veri sorumlusu",
+   "kanit": "(2) Veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür.",
+   "not": "her türlü teknik ve idari tedbir",
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "m.8: silmede de tedbiri veri sorumlusu alır"
+    },
+    {
+     "madde": "10",
+     "fark": "m.10: anonim hale getirmede de tedbiri veri sorumlusu alır"
+    }
+   ]
   },
   {
    "i": "K-18-005",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "altı ayı geçemez",
-   "cevap": "periyodik imha aralığı",
-   "kanit": "(2) Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez.",
-   "not": "politikada belirlenir",
+   "madde": "10",
+   "tip": "tanim",
+   "tetikleyici": "eşleştirilse dahi",
+   "cevap": "anonim hale getirme; kimliği belirli-belirlenebilir gerçek kişiyle ilişkilendirilemez",
+   "kanit": "(1) Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir.",
+   "not": "veri kullanılmaya devam edebilir; geri döndürme tekniğiyle dahi ilişkilendirilemez",
    "karistirilan": []
   },
   {
    "i": "K-18-006",
    "madde": "11",
    "tip": "sure",
-   "tetikleyici": "üç ay içinde",
-   "cevap": "imha politikası olmayan veri sorumlusu siler",
-   "kanit": "(3) Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden üç ay içinde, kişisel verileri siler, yok eder veya anonim hale getirir.",
-   "not": "POLİTİKASI OLAN: ilk periyodik imha (en çok altı ay) · OLMAYAN: üç ay",
+   "tetikleyici": "periyodik imha",
+   "cevap": "her hâlde altı ayı geçemez; veri sorumlusu politikada belirler",
+   "kanit": "(2) Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez.",
+   "not": "politikası olan, yükümlülüğü takip eden ilk periyodik imhada siler",
    "karistirilan": []
   },
   {
    "i": "K-18-007",
    "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "süreleri kısaltabilir",
-   "cevap": "Kurul; telafisi güç zarar ve açık hukuka aykırılıkta",
-   "kanit": "(4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir.",
-   "not": "",
+   "tip": "sure",
+   "tetikleyici": "yükümlülüğü olmayan",
+   "cevap": "üç ay içinde; politikası olan: ilk periyodik imhada",
+   "kanit": "(3) Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden üç ay içinde, kişisel verileri siler, yok eder veya anonim hale getirir.",
+   "not": "saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu",
    "karistirilan": []
   },
   {
    "i": "K-18-008",
-   "madde": "8",
-   "tip": "tanim",
-   "tetikleyici": "erişilemez ve tekrar kullanılamaz",
-   "cevap": "silme tanımı: ilgili kullanıcılar için; bir işlemdir",
-   "kanit": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-18-009",
-   "madde": "9",
+   "madde": "11",
    "tip": "makam",
-   "tetikleyici": "teknik ve idari tedbirleri almakla",
-   "cevap": "veri sorumlusu yükümlüdür (yok etme)",
-   "kanit": "(2) Veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "8",
-     "fark": "silmede de veri sorumlusu tedbir almakla yükümlü; silme ilgili kullanıcı erişimi"
-    },
-    {
-     "madde": "10",
-     "fark": "anonim hale getirmede de veri sorumlusu tedbir almakla yükümlü"
-    }
-   ]
-  },
-  {
-   "i": "K-18-010",
-   "madde": "9",
-   "tip": "tanim",
-   "tetikleyici": "geri getirilemez ve tekrar",
-   "cevap": "yok etme tanımı: hiç kimse erişemez, geri getiremez, kullanamaz",
-   "kanit": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
-   "not": "",
+   "tetikleyici": "kısalt",
+   "cevap": "Kurul; telafisi güç-imkânsız zarar ve açık hukuka aykırılık",
+   "kanit": "(4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir.",
+   "not": "Kişisel Verileri Koruma Kurulu",
    "karistirilan": []
   }
  ]

@@ -1,16 +1,27 @@
-# Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Yönetmeliği — kelime → cevap
+# Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik — kelime → cevap
+# KURAL (başkan, 4 Eki 2026): SOL = soru KÖKÜNDE göreceğin ifade, SAĞ = doğru ŞIKTA arayacağın kelime.
+# Sorulardan geriye doğru yazıldı (40 cevaplı soru); kanıt resmî metin. Kapsam: m.8-11.
+# Tuzak çiftleri: SİLME = İLGİLİ KULLANICILAR için erişilemez · YOK ETME = HİÇ KİMSE için erişilemez + GERİ GETİRİLEMEZ ·
+#                 ANONİM = eşleştirilse dahi kimlikle ilişkilendirilemez · periyodik imha en çok ALTI ay · politikası olmayan ÜÇ ay ·
+#                 süreleri KURUL kısaltır.
+# Not: "silinmesi, yok edilmesi, anonim hale getirilmesi" yönetmeliğin adında, yani her kökte geçer; tanım satırlarında ayırt edici kelime seçildi.
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
- ('8','tanim','ilgili kullanıcılar için','silme: erişilemez ve tekrar kullanılamaz','(1)Kişisel verilerin silinmesi','hale getirilmesi işlemidir.',[('9','yok etme: hiç kimse erişemez, geri getirilemez')],''),
- ('9','tanim','hiç kimse tarafından','yok etme: geri getirilemez','(1) Kişisel verilerin yok edilmesi','hale getirilmesi işlemidir.',[('8','silme: yalnız ilgili kullanıcılar için erişilemez')],''),
- ('10','tanim','eşleştirilse dahi','anonim hâle getirme','(1) Kişisel verilerin anonim','hale getirilmesidir.',[],'kimliği belirli kişiyle ilişkilendirilemez'),
- ('11','sure','ilk periyodik imha işleminde','imha politikası olan sorumlu bu zamanda siler','(1) Kişisel veri saklama','anonim hale getirir.',[],''),
- ('11','sure','altı ayı geçemez','periyodik imha aralığı','(2) Periyodik imhanın','altı ayı geçemez.',[],'politikada belirlenir'),
- ('11','sure','üç ay içinde','imha politikası olmayan veri sorumlusu siler','(3) Kişisel veri saklama','anonim hale getirir.',[],'POLİTİKASI OLAN: ilk periyodik imha (en çok altı ay) · OLMAYAN: üç ay'),
- ('11','makam','süreleri kısaltabilir','Kurul; telafisi güç zarar ve açık hukuka aykırılıkta','(4) Kurul','süreleri kısaltabilir.',[],''),
- ('8', 'tanim', 'erişilemez ve tekrar kullanılamaz', 'silme tanımı: ilgili kullanıcılar için; bir işlemdir', '(1)Kişisel verilerin silinmesi', 'hale getirilmesi işlemidir.', [], ''),
- ('9', 'makam', 'teknik ve idari tedbirleri almakla', 'veri sorumlusu yükümlüdür (yok etme)', '(2) Veri sorumlusu, kişisel verilerin yok edilmesiyle', 'tedbirleri almakla yükümlüdür.', [('8', 'silmede de veri sorumlusu tedbir almakla yükümlü; silme ilgili kullanıcı erişimi'), ('10', 'anonim hale getirmede de veri sorumlusu tedbir almakla yükümlü')], ''),
- ('9', 'tanim', 'geri getirilemez ve tekrar', 'yok etme tanımı: hiç kimse erişemez, geri getiremez, kullanamaz', '(1) Kişisel verilerin yok edilmesi', 'hale getirilmesi işlemidir.', [], ''),
+ # m.8 — silme
+ ('8','tanim','erişi','silinmesi: ilgili kullanıcılar; yok edilmesi: hiç kimse','(1)Kişisel verilerin silinmesi','kullanılamaz hale getirilmesi işlemidir.',[('9','m.9 yok etme: hiç kimse tarafından erişilemez, geri getirilemez')],'silmede geri getirilemezlik şartı yok'),
+ ('8','tanim','ilgili kullanıcı','silinmesi: erişilemez, tekrar kullanılamaz; hiç kimse için yok edilmesi','(1)Kişisel verilerin silinmesi','kullanılamaz hale getirilmesi işlemidir.',[],'yedekte teknik olarak dursa da kullanıcıya kapalıysa silme'),
+
+ # m.9 — yok etme
+ ('9','tanim','hiç kimse','geri getirilemez; yok edilmesi','(1) Kişisel verilerin yok edilmesi','kullanılamaz hale getirilmesi işlemidir.',[],'erişilemez + geri getirilemez + tekrar kullanılamaz, üçü birlikte; diski parçalamak gibi'),
+ ('9','makam','teknik ve idari','veri sorumlusu','(2) Veri sorumlusu, kişisel verilerin yok edilmesiyle','almakla yükümlüdür.',[('8','m.8: silmede de tedbiri veri sorumlusu alır'),('10','m.10: anonim hale getirmede de tedbiri veri sorumlusu alır')],'her türlü teknik ve idari tedbir'),
+
+ # m.10 — anonim hale getirme
+ ('10','tanim','eşleştirilse dahi','anonim hale getirme; kimliği belirli-belirlenebilir gerçek kişiyle ilişkilendirilemez','(1) Kişisel verilerin anonim hale getirilmesi','ilişkilendirilemeyecek hale getirilmesidir.',[],'veri kullanılmaya devam edebilir; geri döndürme tekniğiyle dahi ilişkilendirilemez'),
+
+ # m.11 — resen imha süreleri
+ ('11','sure','periyodik imha','her hâlde altı ayı geçemez; veri sorumlusu politikada belirler','(2) Periyodik imhanın','altı ayı geçemez.',[],'politikası olan, yükümlülüğü takip eden ilk periyodik imhada siler'),
+ ('11','sure','yükümlülüğü olmayan','üç ay içinde; politikası olan: ilk periyodik imhada','(3) Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan','anonim hale getirir.',[],'saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu'),
+ ('11','makam','kısalt','Kurul; telafisi güç-imkânsız zarar ve açık hukuka aykırılık','(4) Kurul, telafisi güç','süreleri kısaltabilir.',[],'Kişisel Verileri Koruma Kurulu'),
 ]
 yaz(18, 'Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik', K)
