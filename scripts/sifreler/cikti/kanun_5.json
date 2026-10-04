@@ -4,47 +4,42 @@
  "kodlar": [
   {
    "i": "K-5-001",
-   "madde": "2",
-   "tip": "makam",
-   "tetikleyici": "Bucak kurulması",
-   "cevap": "Cumhurbaşkanı onayı",
-   "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile",
-   "not": "il–ilçe → kanun",
-   "karistirilan": [
-    {
-     "madde": "2",
-     "fark": "il ve ilçe kurulması kanun ile"
-    }
-   ]
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "Türkiye",
+   "cevap": "il → ilçe → bucak; coğrafya, iktisadi şart, kamu hizmeti",
+   "kanit": "(Değişik: 12/5/1964-469/1 md.) Türkiye, merkezi idare kuruluşu bakımından coğrafya durumuna, iktisadi şartlara ve kamu hizmetlerinin gereklerine göre illere; iller ilçelere ve ilçeler de bucaklara bölünmüştür.",
+   "not": "merkezi idare kuruluşu bakımından",
+   "karistirilan": []
   },
   {
    "i": "K-5-002",
    "madde": "2",
    "tip": "makam",
    "tetikleyici": "İl ve ilçe kurulması",
-   "cevap": "kanun ile",
-   "kanit": "A) İl ve ilçe kurulması, kaldırılması, merkezlerinin belirtilmesi, adlarının değiştirilmesi, bir ilçenin başka bir il'e bağlanması kanun ile",
-   "not": "kurma, kaldırma, ad, ilçenin başka ile bağlanması",
+   "cevap": "kanunla; ilçenin başka ile bağlanması da",
+   "kanit": "A) İl ve ilçe kurulması, kaldırılması, merkezlerinin belirtilmesi, adlarının değiştirilmesi, bir ilçenin başka bir il'e bağlanması kanun ile;",
+   "not": "İL-İLÇE KANUN · BUCAK-SINIR CB ONAYI · KÖY KURMA MÜTALAA · KÖY ADI İÇİŞLERİ",
    "karistirilan": []
   },
   {
    "i": "K-5-003",
    "madde": "2",
    "tip": "makam",
-   "tetikleyici": "il ilçe ve bucak sınırlarının",
-   "cevap": "Cumhurbaşkanı onayı",
-   "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile",
-   "not": "il sınırı bile kanunla değil",
+   "tetikleyici": "Bucak kurulması",
+   "cevap": "Cumhurbaşkanı onayı; il-ilçe sınırı, köyün başka ilçeye bağlanması da",
+   "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile;",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-004",
    "madde": "2",
    "tip": "makam",
-   "tetikleyici": "köy adlarının",
-   "cevap": "İçişleri Bakanlığı",
-   "kanit": "Ç) Köy ve kasabaların aynı ilçe içinde bir bucaktan başka bir bucağa bağlanması, köy adlarının değiştirilmesi, köylerin birleştirilmesi ve ayrılması, bir köy, mahalle veya semtin o köyden ayrılıp başka bir köy ile birleştirilmesi İçişleri Bakanlığının tasvibiyle yapılır.",
-   "not": "köylerin birleşmesi, ayrılması, bucak değiştirmesi de",
+   "tetikleyici": "Cumhurbaşkanı onayı",
+   "cevap": "bucak, sınır, köy-kasaba bağlama; ilçeyi ile bağlama kanunla",
+   "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile;",
+   "not": "mühim mevki ve tabii arazi adları da",
    "karistirilan": []
   },
   {
@@ -52,68 +47,302 @@
    "madde": "2",
    "tip": "makam",
    "tetikleyici": "Yeniden köy kurulması",
-   "cevap": "Bayındırlık ve Sağlık bakanlıklarının görüşü",
-   "kanit": "C) Yeniden köy kurulması veya yerinin değiştirilmesi Bayındırlık ve Sağlık ve Sosyal Yardım Bakanlıklarının mütalaası alınmak suretiyle",
+   "cevap": "Bayındırlık ve Sağlık bakanlıklarının mütalaası",
+   "kanit": "C) Yeniden köy kurulması veya yerinin değiştirilmesi Bayındırlık ve Sağlık ve Sosyal Yardım Bakanlıklarının mütalaası alınmak suretiyle;",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-006",
-   "madde": "4",
-   "tip": "istisna",
-   "tetikleyici": "askerlik daire ve şubeleri",
-   "cevap": "valinin emri dışında",
-   "kanit": "Bu teşkilat valinin emri altındadır.5\nHakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
-   "not": "yargıç, savcı, askerî birlik de",
+   "madde": "2",
+   "tip": "makam",
+   "tetikleyici": "köy adlarının",
+   "cevap": "İçişleri Bakanlığının tasvibi; köy birleştirme-ayırma da",
+   "kanit": "Ç) Köy ve kasabaların aynı ilçe içinde bir bucaktan başka bir bucağa bağlanması, köy adlarının değiştirilmesi, köylerin birleştirilmesi ve ayrılması, bir köy, mahalle veya semtin o köyden ayrılıp başka bir köy ile birleştirilmesi İçişleri Bakanlığının tasvibiyle yapılır.",
+   "not": "aynı ilçede bucak değiştirme de",
    "karistirilan": []
   },
   {
    "i": "K-5-007",
-   "madde": "9",
-   "tip": "tanim",
-   "tetikleyici": "Cumhurbaşkanının temsilcisi",
-   "cevap": "vali",
-   "kanit": "Vali, ilde Cumhurbaşkanının temsilcisi ve idari yürütme vasıtasıdır.",
-   "not": "kaymakam yalnız \"idari yürütme vasıtası\"",
-   "karistirilan": [
-    {
-     "madde": "27",
-     "fark": "kaymakam yalnız idari yürütme vasıtası"
-    },
-    {
-     "madde": "42",
-     "fark": "bucak müdürü: en büyük Hükümet memuru ve temsilcisi"
-    }
-   ]
-  },
-  {
-   "i": "K-5-008",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "on beş gün",
-   "cevap": "vali: giriş-çıkış, dolaşma, araç kısıtı",
-   "kanit": "on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "madde": "2",
+   "tip": "sira_usul",
+   "tetikleyici": "merkez yapılan",
+   "cevap": "şehir, kasaba ya da köyün adı; tarihî ad da olabilir",
+   "kanit": "E) İllere, ilçelere, bucaklara, merkez yapılan şehir, kasaba veya köyün adı verilir. Şu\nKadar ki, bunların coğrafi veya tarihi bir sanı varsa o da isim olarak verilebilir.",
    "not": "",
    "karistirilan": []
   },
   {
+   "i": "K-5-008",
+   "madde": "4",
+   "tip": "makam",
+   "tetikleyici": "İl genel idaresinin başı",
+   "cevap": "vali (ilçede kaymakam)",
+   "kanit": "İl genel idaresinin başı ve mercii validir.",
+   "not": "mercii de vali",
+   "karistirilan": []
+  },
+  {
    "i": "K-5-009",
-   "madde": "11",
-   "tip": "yasak",
-   "tetikleyici": "ruhsatlı da olsa",
-   "cevap": "silah ve mermi taşıma yasağı, vali koyar",
-   "kanit": "ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "madde": "4",
+   "tip": "tanim",
+   "tetikleyici": "başında bulunanlar",
+   "cevap": "il idare şube başkanları; emrindekiler ikinci derece memur",
+   "kanit": "Bakanlıkların kuruluş mevzuatına göre illerde lüzumu kadar teşkilat bulunur. Bu teşkilatın her birinin başında bulunanlar il idare şube başkanlarıdır. Bunların emri altında çalışanlar ilin ikinci derecede memurlarıdır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-010",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "valinin emri",
+   "cevap": "bakanlık il teşkilatı; yargıç, savcı, askerî birlik hariç",
+   "kanit": "Bu teşkilat valinin emri altındadır.5\nHakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
+   "not": "il millî eğitim müdürü emrinde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-011",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "müstesna",
+   "cevap": "yargıç, savcı, askerî birlik, askerlik şubesi; şube başkanı DEĞİL",
+   "kanit": "Hakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
+   "not": "askerî fabrika ve müesseseler de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-012",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "yargıç, Cumhuriyet savcısı",
+   "cevap": "Hakimler Kanunu ve İcra-İflas Kanunu",
+   "kanit": "Hakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
+   "not": "adalet memurları da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-013",
+   "madde": "4",
+   "tip": "istisna",
+   "tetikleyici": "Hakim",
+   "cevap": "yargı mensubu; valinin emrinden müstesna",
+   "kanit": "Hakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
+   "not": "vali talimat veremez",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-014",
+   "madde": "9",
+   "tip": "tanim",
+   "tetikleyici": "idari yürütme vasıtası",
+   "cevap": "Cumhurbaşkanının; ilde vali temsilci, ilçede kaymakam",
+   "kanit": "Vali, ilde Cumhurbaşkanının temsilcisi ve idari yürütme vasıtasıdır.",
+   "not": "vali hem temsilci hem yürütme vasıtası",
+   "karistirilan": [
+    {
+     "madde": "27",
+     "fark": "kaymakam: ilçede Cumhurbaşkanının idari yürütme vasıtası"
+    }
+   ]
+  },
+  {
+   "i": "K-5-015",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "ilin genel idaresinden",
+   "cevap": "Cumhurbaşkanına karşı sorumlu",
+   "kanit": "Valiler, ilin genel idaresinden Cumhurbaşkanına karşı sorumludur.",
+   "not": "İçişleri Bakanına değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-016",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "re'sen",
+   "cevap": "bakanlar ve CB yardımcıları valiye doğrudan emir verir",
+   "kanit": "Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işleri için valilere re'sen emir ve talimat verirler.",
+   "not": "yalnız İçişleri Bakanı değil",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "kaymakamın re'sen verdiği uyarma-kınama kesin"
+    }
+   ]
+  },
+  {
+   "i": "K-5-017",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "mevzuatın verdiği yetkiyi",
+   "cevap": "valiler genel emir çıkarır (kaymakam değil)",
+   "kanit": "Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği yetkiyi kullanmak ve bunların yüklediği ödevleri yerine getirmek\niçin valiler genel emirler çıkarabilir ve bunları ilan ederler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-018",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "imza yetkisi",
+   "cevap": "hesabat ve teknik işlerde şube başkanına",
+   "kanit": "Ancak valiler hesabata ve teknik hususlara ait işlerde idare şube başkanlarına vali adına imza yetkisi verebilirler.",
+   "not": "vali adına imza",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-019",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "teftiş",
+   "cevap": "adli ve askerî teşkilat hariç hepsini denetler",
+   "kanit": "D) Vali, dördüncü maddenin son fıkrasında belirtilen adli ve askeri teşkilat dışında\nkalan bütün Devlet daire, müessese ve işletmelerini, özel işyerlerini, özel idare, belediye köy idareleriyle bunlara bağlı tekmil müesseseleri denetler, teftiş eder.\nBu denetleme ve teftişi Bakanlık veya genel müdürlük müfettişleriyle veya bu dairelerin amir ve memurlariyle de yaptırabilir.",
+   "not": "müfettişlere de yaptırabilir",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "kaymakam da adli-askerî hariç denetler"
+    },
+    {
+     "madde": "42",
+     "fark": "bucak teşkilatı bucak müdürünün gözetim ve teftişinde"
+    }
+   ]
+  },
+  {
+   "i": "K-5-020",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "ilin her yönden",
+   "cevap": "vali sorumlu (ilçede kaymakam)",
+   "kanit": "E) İlin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten sorumludur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-021",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "teşkilatı veya görevli memuru",
+   "cevap": "yakın ilgili şube/daire başkanından ister; yapılması mecburi",
+   "kanit": "F) Vali, ilde teşkilatı veya görevli memuru bulunmıyan işlerin yürütülmesini, bu işlerin görülmesiyle yakın ilgisi bulunan her hangi bir idare şube veya daire başkanından istiyebilir. Bu suretle verilen işlerin yapılması mecburidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-022",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "fen kollarına",
+   "cevap": "asli vazifeye halel getirmeden; ilgili Bakanlığa bilgi",
+   "kanit": "G) Vali, il içindeki idare ve müesseselerde çalışan uzman veya fen kollarına dahil memur ve müstahdemlerden asli vazifelerine halel getirmemek şartiyle ilin genel ve mahalli hizmetlerine müteallik işlerin görülmesini istiyebilir. Bu memurlar verilen işleri yapmakla ödevlidirler. Vali, keyfiyetten ilgili Bakanlığa ve tüzelkişiliği haiz genel müdürlüğe bilgi verir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "kaymakam valiliğe teklif ederek ister"
+    }
+   ]
+  },
+  {
+   "i": "K-5-023",
+   "madde": "9",
+   "tip": "makam",
+   "tetikleyici": "Cumhuriyet Bayram",
+   "cevap": "ilde vali, ilçede kaymakam, bucakta bucak müdürü",
+   "kanit": "K) Vali, Cumhuriyet Bayramında ilde yapılacak resmi törenlere başkanlık yapar ve tebrikleri kabul eder.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "ilçede kaymakam başkanlık eder"
+    },
+    {
+     "madde": "42",
+     "fark": "bucakta bucak müdürü başkanlık eder"
+    }
+   ]
+  },
+  {
+   "i": "K-5-024",
    "madde": "11",
    "tip": "makam",
-   "tetikleyici": "vali tarafından yerleri değiştirilebilir",
-   "cevap": "il içinde kolluğun yerini vali kendisi değiştirir",
+   "tetikleyici": "il sınırları içinde",
+   "cevap": "bütün kolluğun amiri; emri derhal yerine getirilir",
+   "kanit": "A) Vali, il sınırları içinde bulunan genel ve özel bütün kolluk kuvvet ve teşkilatının amiridir. Suç işlenmesini önlemek, kamu düzen ve güvenini korumak için gereken tedbirleri alır. Bu maksatla Devletin genel ve özel kolluk kuvvetlerini istihdam eder, bu teşkilat amir ve memurları vali tarafından verilen emirleri derhal yerine getirmekle yükümlüdür.",
+   "not": "genel ve özel kolluk",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-025",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "kıyı emniyeti",
+   "cevap": "vali sağlar ve yürütür (ilçede kaymakam)",
+   "kanit": "B) Memleketin sınır ve kıyı emniyetini ve sınır ve kıyı emniyetiyle ilgili bütün işleri, yürürlükte bulunan hükümlere göre sağlar ve yürütür.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "32",
+     "fark": "ilçede kaymakam sağlar ve yürütür"
+    }
+   ]
+  },
+  {
+   "i": "K-5-026",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "önleyici kolluk",
+   "cevap": "valinin görevi; huzur, güvenlik, kişi dokunulmazlığı",
+   "kanit": "C) İl sınırları içinde huzur ve güvenliğin, kişi dokunulmazlığının, tasarrufa müteaallik emniyetin, kamu esenliğinin sağlanması ve önleyici kolluk yetkisi valinin ödev ve görevlerindendir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "32",
+     "fark": "ilçede önleyici kolluk kaymakamın görevi"
+    }
+   ]
+  },
+  {
+   "i": "K-5-027",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "on beş günü geçmemek",
+   "cevap": "giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı",
+   "kanit": "Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "not": "yalnız vali (kaymakam değil); ruhsatlı silah da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-028",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "olağan hayatı durduracak",
+   "cevap": "en çok on beş gün; yalnız vali (kaymakam değil)",
+   "kanit": "Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-029",
+   "madde": "11",
+   "tip": "sure",
+   "tetikleyici": "dolaşma",
+   "cevap": "vali en çok on beş gün kısıtlar",
+   "kanit": "Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-030",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "il içine munhasır",
+   "cevap": "vali değiştirir; kaymakam ancak valinin tasvibiyle",
    "kanit": "Ç) Jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin il içine munhasır olmak üzere geçici veya sürekli olarak vali tarafından yerleri değiştirilebilir ve bundan hemen İçişleri, Gümrük ve Tekel Bakanlıklarına bilgi verir.",
-   "not": "kaymakam → valinin tasvibiyle",
+   "not": "İçişleri ve Gümrük-Tekel’e bilgi",
    "karistirilan": [
     {
      "madde": "32",
@@ -122,339 +351,428 @@
    ]
   },
   {
-   "i": "K-5-011",
-   "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "çapı",
-   "cevap": "askerî birliğin komutanı belirler",
-   "kanit": "Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir.",
-   "not": "görevde kalış süresi → vali",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-012",
-   "madde": "11",
-   "tip": "sira_usul",
-   "tetikleyici": "sözlü olarak",
-   "cevap": "acil yardım istemi; sonra yazıya dökülür",
-   "kanit": "Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-013",
-   "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "en kıdemli komutanı",
-   "cevap": "asker + jandarma/polis birlikte görevde komuta",
-   "kanit": "Ancak, bu askeri birliğin belirli görevleri jandarma ya da polis ile birlikte yapması halinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-014",
-   "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "sınır ötesi",
-   "cevap": "valinin talebi, Genelkurmay kanalı, Cumhurbaşkanı müsaadesi",
-   "kanit": "Olayların sınır illerinde veya bu illere mücavir bölgelerde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda valinin talebi üzerine ilgili komutan eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Cumhurbaşkanının müsaadesi tahtında, ihtiyaca göre kara, hava, deniz kuvvetleri ve Jandarma Genel Komutanlığı unsurları ile komşu ülkelerin mutabakatı alınmak suretiyle mahdut hedefli sınır ötesi harekat planlayıp icra edebilir.",
-   "not": "komşu ülkenin mutabakatı da şart",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-015",
-   "madde": "18",
-   "tip": "makam",
-   "tetikleyici": "birinci derecede",
-   "cevap": "vali, sicil amiri",
-   "kanit": "Valiler, vali muavini ile kaymakamların, il idare şube başkanlarının ve il ve bölge muhakemat müdürlerinin, genel ve özel kolluk amirlerinin birinci derecede, diğer memurların ikinci derecede sicil amiridirler.",
-   "not": "kaymakam, şube başkanı, kolluk amiri için; diğer memura ikinci derece",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-016",
-   "madde": "31",
-   "tip": "sira_usul",
-   "tetikleyici": "olağanüstü hallerde",
-   "cevap": "kaymakam bakanlıklarla doğrudan yazışır",
-   "kanit": "Ancak olağanüstü hallerde kaymakamlar İçişleri Bakanlığı ve diğer Bakanlıklarla muhabere edebilirler ve bu muhaberelerden valiye bilgi verirler;",
-   "not": "valiye bilgi verir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-017",
-   "madde": "31",
-   "tip": "kosul",
-   "tetikleyici": "işten el çektirebilir",
-   "cevap": "şube başkanı: valinin muvafakatiyle",
-   "kanit": "D) Kaymakam, denetlemesi sırasında iş başında kalmalarında mahzur gördüğü ilçe idare şube başkanlarını valinin muvafakatiyle, diğer memur ve müstahdemleri re'sen sorumluluğu altında işten el çektirebilir.",
-   "not": "diğer memur → re'sen",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-018",
-   "madde": "31",
-   "tip": "ceza",
-   "tetikleyici": "uyarma, kınama",
-   "cevap": "kaymakam verir; kesin, sicile geçer",
-   "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.\nKaymakamlarca re'sen verilen cezalar kesindir. Bu cezalar tebliğ tarihinden itibaren sicile geçer.",
-   "not": "bucak müdürü yalnız uyarma",
-   "karistirilan": [
-    {
-     "madde": "42",
-     "fark": "bucak müdürü yalnız uyarma"
-    }
-   ]
-  },
-  {
-   "i": "K-5-019",
-   "madde": "31",
-   "tip": "makam",
-   "tetikleyici": "takdirname",
-   "cevap": "kaymakam verir",
-   "kanit": "Kaymakam, ilçe memurlarına takdirnamede verebilir.",
-   "not": "bucak müdürü yalnız teklif eder",
-   "karistirilan": [
-    {
-     "madde": "42",
-     "fark": "bucak müdürü takdirnameyi yalnız teklif eder"
-    }
-   ]
-  },
-  {
-   "i": "K-5-020",
-   "madde": "31",
-   "tip": "sure",
-   "tetikleyici": "8 güne kadar",
-   "cevap": "kaymakamın şube başkanına acele izni",
-   "kanit": "J) Kaymakam, ilçe idare şube başkanlarına acele hallerde (8 güne kadar) ve tayini kendisine ait memurlara, Memurlar Kanunundaki yıllık izin, süresine mahsup edilmek üzere bir aya kadar izin verebilir.",
-   "not": "bir ay → tayini kendine ait memura",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-021",
-   "madde": "32",
-   "tip": "sira_usul",
-   "tetikleyici": "olağanüstü ve ani olaylar",
-   "cevap": "kaymakam valiye bilgi verip yardım ister",
-   "kanit": "E) (Değişik: 19/2/1980-2261/3 md.) Kaymakam, ilçe çevresinde çıkabilecek olayların emrindeki kolluk kuvvetleriyle önlenmesine olanak bulunmayacağı kanısına varır veya ilçe içindeki kolluk kuvetleriyle önlenemeyecek olağanüstü ve ani olaylar karşısında kalırsa hemen valiye bilgi vererek yardım ister ve en yakın askeri (Kara, Deniz ve Hava) komutanlara da haber verir;",
-   "not": "askere yalnız haber verir",
-   "karistirilan": [
-    {
-     "madde": "11",
-     "fark": "vali İçişleri Bakanlığından ve askerî birlikten doğrudan ister"
-    }
-   ]
-  },
-  {
-   "i": "K-5-022",
-   "madde": "42",
-   "tip": "ceza",
-   "tetikleyici": "uyarma cezası verir",
-   "cevap": "bucak müdürü; yalnız uyarma, kesin",
-   "kanit": "E) (Değişik: 12/5/1964-469/1 md.) Müdür,4 üncü maddenin son fıkrasında belirtilen adli ve askeri teşkilat dışında kalan, gözetim ve teftişi altında bulunan bucak teşkilatına dahil daire ve müesseselerin amir ve memurları ile genel ve özel kolluk amir ve memurlarına Memurin Kanunundaki usulüne göre savunmalarını aldıktan sonra uyarma cezası verir ve uygular. Bu ceza kesindir ve tebliğ tarihinden itibaren sicile geçer.",
-   "not": "daha ağırı için vali/kaymakama teklif",
-   "karistirilan": [
-    {
-     "madde": "31",
-     "fark": "kaymakam uyarma ve kınama verir"
-    }
-   ]
-  },
-  {
-   "i": "K-5-023",
-   "madde": "57",
-   "tip": "makam",
-   "tetikleyici": "defterdar",
-   "cevap": "il idare kurulu",
-   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
-   "not": "hukuk işleri müdürü de; vali ya da vali muavini başkan",
-   "karistirilan": [
-    {
-     "madde": "58",
-     "fark": "ilçe idare kurulunda malmüdürü var"
-    }
-   ]
-  },
-  {
-   "i": "K-5-024",
-   "madde": "58",
-   "tip": "makam",
-   "tetikleyici": "malmüdürü",
-   "cevap": "ilçe idare kurulu",
-   "kanit": "İlçe idare kurulu, kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi, milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder.",
-   "not": "tahrirat kâtibi, Hükümet hekimi de",
-   "karistirilan": [
-    {
-     "madde": "57",
-     "fark": "il idare kurulunda defterdar var"
-    }
-   ]
-  },
-  {
-   "i": "K-5-025",
-   "madde": "57",
-   "tip": "istisna",
-   "tetikleyici": "İl idare kurulu",
-   "cevap": "yalnız sivil müdürler; jandarma, emniyet yok",
-   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül",
-   "not": "sınavın klasik tuzağı: kolluk amiri kurulda yok",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-026",
-   "madde": "4",
-   "tip": "makam",
-   "tetikleyici": "İl genel idaresinin başı",
-   "cevap": "vali; il genel idaresinin başı (ilçede kaymakam)",
-   "kanit": "İl genel idaresinin başı ve mercii validir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "27",
-     "fark": "ilçe genel idaresinin başı kaymakam"
-    }
-   ]
-  },
-  {
-   "i": "K-5-027",
-   "madde": "9",
-   "tip": "makam",
-   "tetikleyici": "ilin genel idaresinden Cumhurbaşkanına",
-   "cevap": "valiler sorumlu; bakanlar valiye doğrudan emir verir",
-   "kanit": "Valiler, ilin genel idaresinden Cumhurbaşkanına karşı sorumludur. Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işleri için valilere re'sen emir ve talimat verirler.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-028",
-   "madde": "57",
-   "tip": "tanim",
-   "tetikleyici": "hukuk işleri müdürü, defterdar",
-   "cevap": "il idare kurulu; milli eğitim, bayındırlık, sağlık, tarım, veteriner müdürleri",
-   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
-   "not": "gençlik-spor, emniyet, jandarma listede yok",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-029",
-   "madde": "4",
-   "tip": "tanim",
-   "tetikleyici": "il idare şube başkanlarıdır",
-   "cevap": "illerdeki bakanlık teşkilatlarının başındakiler; emrindekiler ikinci derecede memur",
-   "kanit": "Bakanlıkların kuruluş mevzuatına göre illerde lüzumu kadar teşkilat bulunur. Bu teşkilatın her birinin başında bulunanlar il idare şube başkanlarıdır. Bunların emri altında çalışanlar ilin ikinci derecede memurlarıdır. Bu teşkilat valinin emri altındadır",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-030",
-   "madde": "4",
-   "tip": "istisna",
-   "tetikleyici": "Hakimler Kanunu ile İcra",
-   "cevap": "yargıç, savcı, adalet memurları, askeri birlikler valinin emri dışında",
-   "kanit": "Hakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
-   "not": "askerlik daire ve şubeleri de",
-   "karistirilan": []
-  },
-  {
    "i": "K-5-031",
    "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "olağan hayatı durduracak",
-   "cevap": "vali on beş günü geçmemek üzere giriş-çıkış, dolaşma, silah kısıtlar",
-   "kanit": "(Ek paragraf: 25/7/2018-7145/1 md.)Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
-   "not": "15 GÜN: VALİ; uymayana m.66 (Kabahatler m.32)",
+   "tip": "makam",
+   "tetikleyici": "önleyemedi",
+   "cevap": "İçişleri Bakanlığı + en yakın kara-deniz-hava birliği",
+   "kanit": "Valiler, ilde çıkabilecek veya çıkan olayların, emrindeki kuvvetlerle önlenmesini mümkün görmedikleri veya önleyemedikleri; aldıkları tedbirlerin bu kuvvetlerle uygulanmasını mümkün görmedikleri veya uygulayamadıkları takdirde, diğer illerin kolluk kuvvetleriyle bu iş için tahsis edilen diğer kuvvetlerden yararlanmak amacıyla, İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler.",
+   "not": "hangisinden isteneceğini vali takdir eder",
    "karistirilan": []
   },
   {
    "i": "K-5-032",
    "madde": "11",
-   "tip": "makam",
-   "tetikleyici": "İçişleri Bakanlığından ve gerekirse",
-   "cevap": "vali emrindeki kuvvetlerle önleyemezse; en yakın kara-deniz-hava birlik komutanlığından da",
-   "kanit": "İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler.",
-   "not": "hangi makamdan isteneceğini vali takdir eder",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-033",
-   "madde": "11",
-   "tip": "sure",
-   "tetikleyici": "yardım istemi geciktirilmeksizin",
-   "cevap": "vali istedi mi derhal; acilde sözlü, sonra yazılı",
+   "tip": "sira_usul",
+   "tetikleyici": "acil",
+   "cevap": "sözlü, sonra yazılı; geciktirilmeden yerine getirilir",
    "kanit": "Valinin yaptığı yardım istemi geciktirilmeksizin yerine getirilir. Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir.",
    "not": "",
    "karistirilan": []
   },
   {
+   "i": "K-5-033",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "kuvvetin çapı",
+   "cevap": "birlik komutanı belirler; görevde kalış süresini vali",
+   "kanit": "Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir.",
+   "not": "ikisi de koordineli",
+   "karistirilan": []
+  },
+  {
    "i": "K-5-034",
-   "madde": "42",
-   "tip": "tanim",
-   "tetikleyici": "en büyük Hükümet memuru",
-   "cevap": "bucak müdürü; bucağın temsilcisi; genel idaresinden sorumlu",
-   "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir. Bu sıfatla;\nA) Bucağın genel idaresinden sorumludur;",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "işbirliği ve koordinasyon",
+   "cevap": "birlik komutanının görüşüyle vali tespit eder",
+   "kanit": "Güvenlik kuvvetleri ile yardıma gelen askeri kuvvet arasında işbirliği ve koordinasyon, yardıma gelen askeri birliğin komutanının da görüşü alınarak vali tarafından tespit edilir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-035",
-   "madde": "42",
-   "tip": "gorev_yetki",
-   "tetikleyici": "bucakta yapılacak törene",
-   "cevap": "bucak müdürü Cumhuriyet Bayramı törenine başkanlık eder, ziyaretleri kabul eder",
-   "kanit": "F) Cumhuriyet Bayramlarında bucakta yapılacak törene başkanlık yapar ve ziyaretleri kabul eyler.",
-   "not": "ilde vali, ilçede kaymakam",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "komuta, sevk ve idare",
+   "cevap": "askerî birliklerin en kıdemli komutanı",
+   "kanit": "Ancak, bu askeri birliğin belirli görevleri jandarma ya da polis ile birlikte yapması halinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir.",
+   "not": "jandarma ya da polisle birlikte görevde",
    "karistirilan": []
   },
   {
    "i": "K-5-036",
-   "madde": "43",
+   "madde": "11",
    "tip": "makam",
-   "tetikleyici": "bucak müdürünün emri altındadır",
-   "cevap": "genel ve özel kolluk; emri yerine getirmeye mecbur",
-   "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
-   "not": "bucağın güven ve düzeninden bucak müdürü sorumlu",
+   "tetikleyici": "Birden fazla ili",
+   "cevap": "Cumhurbaşkanı esasları; İçişleri Bakanı bir valiyi görevlendirir",
+   "kanit": "Birden fazla ili içine alan olaylarda ilgili valilerin isteği üzerine aynı veya farklı askeri birlik komutanlarından kuvvet tahsis edilmesi durumunda iller veya kuvvetler arasında işbirliği, koordinasyon, kuvvet kaydırması, emir komuta ilişkileri ve gerekli görülen diğer hususlar yukarıda belirtilen hükümler çerçevesinde Cumhurbaşkanı tarafından belirlenecek esaslara göre yürütülür. Bu esasların uygulanmasında, işbirliği ve koordinasyon sağlamak amacıyla gerekli görülen hallerde İçişleri Bakanı ilgili valilerden birini geçici olarak görevlendirir.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-037",
-   "madde": "9",
-   "tip": "gorev_yetki",
-   "tetikleyici": "genel emirler çıkarabilir",
-   "cevap": "valiler; mevzuatın verdiği yetkiyi kullanmak için; ilan ederler",
-   "kanit": "Ç) (Değişik: 2/7/2018 – KHK/703/138 md.) Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği yetkiyi kullanmak ve bunların yüklediği ödevleri yerine getirmek\niçin valiler genel emirler çıkarabilir ve bunları ilan ederler.",
-   "not": "",
+   "madde": "11",
+   "tip": "makam",
+   "tetikleyici": "sınır ötesi",
+   "cevap": "valinin talebi; Genelkurmay kanalı; Cumhurbaşkanı müsaadesi",
+   "kanit": "Olayların sınır illerinde veya bu illere mücavir bölgelerde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda valinin talebi üzerine ilgili komutan eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Cumhurbaşkanının müsaadesi tahtında, ihtiyaca göre kara, hava, deniz kuvvetleri ve Jandarma Genel Komutanlığı unsurları ile komşu ülkelerin mutabakatı alınmak suretiyle mahdut hedefli sınır ötesi harekat planlayıp icra edebilir.",
+   "not": "komşu ülkenin mutabakatı da",
    "karistirilan": []
   },
   {
    "i": "K-5-038",
-   "madde": "31",
-   "tip": "kosul",
-   "tetikleyici": "re'sen verilen cezalar kesindir",
-   "cevap": "kaymakamın uyarma-kınaması; tebliğ tarihinden itibaren sicile geçer",
-   "kanit": "Kaymakamlarca re'sen verilen cezalar kesindir. Bu cezalar tebliğ tarihinden itibaren sicile geçer.",
-   "not": "",
+   "madde": "18",
+   "tip": "makam",
+   "tetikleyici": "sicil amir",
+   "cevap": "validen birinci: kaymakam, muavin, şube başkanı, kolluk amiri; diğerine ikinci",
+   "kanit": "Valiler, vali muavini ile kaymakamların, il idare şube başkanlarının ve il ve bölge muhakemat müdürlerinin, genel ve özel kolluk amirlerinin birinci derecede, diğer memurların ikinci derecede sicil amiridirler.",
+   "not": "muhakemat müdürü de birinci; bucak müdürü listede yok",
    "karistirilan": []
   },
   {
    "i": "K-5-039",
-   "madde": "31",
+   "madde": "27",
    "tip": "makam",
-   "tetikleyici": "keyfiyeti valiye bildirirler",
-   "cevap": "kaymakam askerlik şikâyetine aldığı cevabı yetersiz bulursa",
-   "kanit": "K) Kaymakamlar, halkın askerlik muameleleri hakkındaki müracaat ve şikayetlerini kabul ederler. Askerlik şubelerine ve dairelerine yazarlar. Cevabı kafi görmedikleri takdirde keyfiyeti valiye bildirirler;",
+   "tetikleyici": "İlçe genel idaresinin başı",
+   "cevap": "kaymakam (ilde vali)",
+   "kanit": "İlçe genel idaresinin başı ve mercii kaymakamdır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-5-040",
-   "madde": "1",
-   "tip": "tanim",
-   "tetikleyici": "illere; iller ilçelere",
-   "cevap": "merkezi idare kuruluşu: il, ilçe, bucak",
-   "kanit": "(Değişik: 12/5/1964-469/1 md.) Türkiye, merkezi idare kuruluşu bakımından coğrafya durumuna, iktisadi şartlara ve kamu hizmetlerinin gereklerine göre illere; iller ilçelere ve ilçeler de bucaklara bölünmüştür.",
-   "not": "coğrafya, iktisadi şartlar, kamu hizmeti gerekleri",
+   "madde": "27",
+   "tip": "makam",
+   "tetikleyici": "İlçenin genel idaresinden",
+   "cevap": "kaymakam sorumlu",
+   "kanit": "İlçenin genel idaresinden kaymakam sorumludur.",
+   "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-5-041",
+   "madde": "27",
+   "tip": "istisna",
+   "tetikleyici": "kaymakamın emri",
+   "cevap": "ilçe teşkilatı; adli ve askerî hariç",
+   "kanit": "Bu teşkilat (Dördüncü maddenin son fıkrasında belirtilen adli ve askeri teşkilat hariç) kaymakamın emri altındadır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-042",
+   "madde": "31",
+   "tip": "ceza",
+   "tetikleyici": "aldıktan sonra",
+   "cevap": "kaymakam: uyarma, kınama; bucak müdürü: yalnız uyarma",
+   "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.",
+   "not": "KAYMAKAM UYARMA-KINAMA · BUCAK MÜDÜRÜ YALNIZ UYARMA",
+   "karistirilan": [
+    {
+     "madde": "42",
+     "fark": "bucak müdürü savunma alıp yalnız uyarma verir"
+    }
+   ]
+  },
+  {
+   "i": "K-5-043",
+   "madde": "31",
+   "tip": "ceza",
+   "tetikleyici": "disiplin ceza",
+   "cevap": "bucak müdürü yalnız uyarma; kaymakam uyarma-kınama; ağırı teklif",
+   "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "42",
+     "fark": "bucak müdürü yalnız uyarma verir"
+    }
+   ]
+  },
+  {
+   "i": "K-5-044",
+   "madde": "31",
+   "tip": "ceza",
+   "tetikleyici": "ikinci derecedeki memur",
+   "cevap": "genel ve özel kolluk amir ve memurlarına da",
+   "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.",
+   "not": "şube başkanlarına da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-045",
+   "madde": "31",
+   "tip": "ceza",
+   "tetikleyici": "re'sen verilen",
+   "cevap": "kesin; tebliğden itibaren sicile geçer",
+   "kanit": "Kaymakamlarca re'sen verilen cezalar kesindir. Bu cezalar tebliğ tarihinden itibaren sicile geçer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-046",
+   "madde": "31",
+   "tip": "makam",
+   "tetikleyici": "takdirname",
+   "cevap": "kaymakam verebilir; bucak müdürü yalnız teklif eder",
+   "kanit": "Kaymakam, ilçe memurlarına takdirnamede verebilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "42",
+     "fark": "bucak müdürü takdirname için teklif eder"
+    }
+   ]
+  },
+  {
+   "i": "K-5-047",
+   "madde": "31",
+   "tip": "sure",
+   "tetikleyici": "acele hâllerde",
+   "cevap": "8 güne kadar; kendi memuruna bir ay",
+   "kanit": "J) Kaymakam, ilçe idare şube başkanlarına acele hallerde (8 güne kadar) ve tayini kendisine ait memurlara, Memurlar Kanunundaki yıllık izin, süresine mahsup edilmek üzere bir aya kadar izin verebilir.",
+   "not": "şube başkanına izin",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-048",
+   "madde": "31",
+   "tip": "sure",
+   "tetikleyici": "tayini kendisine ait",
+   "cevap": "bir aya kadar (yıllık izinden)",
+   "kanit": "J) Kaymakam, ilçe idare şube başkanlarına acele hallerde (8 güne kadar) ve tayini kendisine ait memurlara, Memurlar Kanunundaki yıllık izin, süresine mahsup edilmek üzere bir aya kadar izin verebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-049",
+   "madde": "31",
+   "tip": "sira_usul",
+   "tetikleyici": "askerlik muameleleri",
+   "cevap": "kaymakam şubeye yazar; yetersizse valiye bildirir",
+   "kanit": "K) Kaymakamlar, halkın askerlik muameleleri hakkındaki müracaat ve şikayetlerini kabul ederler. Askerlik şubelerine ve dairelerine yazarlar. Cevabı kafi görmedikleri takdirde keyfiyeti valiye bildirirler;",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-050",
+   "madde": "31",
+   "tip": "sira_usul",
+   "tetikleyici": "olağanüstü hallerde",
+   "cevap": "kaymakam bakanlıklarla yazışır; valiye bilgi verir",
+   "kanit": "Ancak olağanüstü hallerde kaymakamlar İçişleri Bakanlığı ve diğer Bakanlıklarla muhabere edebilirler ve bu muhaberelerden valiye bilgi verirler;",
+   "not": "normalde yalnız valiyle yazışır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-051",
+   "madde": "31",
+   "tip": "kosul",
+   "tetikleyici": "işten el çektirebilir",
+   "cevap": "şube başkanını valinin muvafakatiyle; diğerini re’sen",
+   "kanit": "D) Kaymakam, denetlemesi sırasında iş başında kalmalarında mahzur gördüğü ilçe idare şube başkanlarını valinin muvafakatiyle, diğer memur ve müstahdemleri re'sen sorumluluğu altında işten el çektirebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-052",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "ilçe sınırları içinde",
+   "cevap": "kaymakam bütün kolluğun amiri",
+   "kanit": "A) Kaymakam, ilçe sınırları içinde bulunan genel ve özel kolluk kuvvet ve teşkilatının amiridir;\nB) Suç işlenmesini önlemek, kamu düzen ve güvenini korumak için gereken tedbirleri alır. Bu maksatla Devletin genel ve özel kolluk kuvvetlerini istihdam eder. Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuat ile Cumhurbaşkanınca alınmış bulunan karar ve tedbirlerin yürütülmesi için emirler verir. Bu teşkilat amir ve memurları kaymakam tarafından verilen emirleri derhal yerine getirmekle ödevlidir;",
+   "not": "önleyici kolluk da kaymakamda",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-053",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "kaymakam tarafından verilen",
+   "cevap": "derhal yerine getirilir",
+   "kanit": "Bu teşkilat amir ve memurları kaymakam tarafından verilen emirleri derhal yerine getirmekle ödevlidir;",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-054",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "kolluk kuvvetleri mensuplarının",
+   "cevap": "valinin tasvibiyle (kaymakam)",
+   "kanit": "D) Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli olarak yerlerini değiştirebilir;",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-055",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "sürekli olarak",
+   "cevap": "kaymakam valinin tasvibiyle; vali doğrudan",
+   "kanit": "D) Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli olarak yerlerini değiştirebilir;",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "11",
+     "fark": "vali il içinde doğrudan değiştirir, bakanlıklara bilgi verir"
+    }
+   ]
+  },
+  {
+   "i": "K-5-056",
+   "madde": "32",
+   "tip": "sira_usul",
+   "tetikleyici": "olağanüstü ve ani olaylar",
+   "cevap": "valiye bilgi verip yardım ister; askere haber verir",
+   "kanit": "Kaymakam, ilçe çevresinde çıkabilecek olayların emrindeki kolluk kuvvetleriyle önlenmesine olanak bulunmayacağı kanısına varır veya ilçe içindeki kolluk kuvetleriyle önlenemeyecek olağanüstü ve ani olaylar karşısında kalırsa hemen valiye bilgi vererek yardım ister ve en yakın askeri (Kara, Deniz ve Hava) komutanlara da haber verir;",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "11",
+     "fark": "vali İçişleri ve askerî birlikten doğrudan ister"
+    }
+   ]
+  },
+  {
+   "i": "K-5-057",
+   "madde": "32",
+   "tip": "makam",
+   "tetikleyici": "kimlik ve nitelikleri",
+   "cevap": "kaymakam bilgi ister; hemen verilir",
+   "kanit": "Buralarda bulunan veya çalışanların kimlik ve nitelikleri hakkında kaymakamlar bu yerlerden bilgi istiyebilir, istenilen bilgiler hemen verilir.",
+   "not": "işyerleri kaymakamın gözetiminde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-058",
+   "madde": "42",
+   "tip": "tanim",
+   "tetikleyici": "Bucak müdürü,",
+   "cevap": "en büyük Hükümet memuru; yalnız uyarma; kolluk emre mecbur",
+   "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir.",
+   "not": "bucağın genel idaresinden sorumlu",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-059",
+   "madde": "42",
+   "tip": "tanim",
+   "tetikleyici": "en büyük Hükümet memuru",
+   "cevap": "bucak müdürü",
+   "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir.",
+   "not": "ilde vali, ilçede kaymakam",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-060",
+   "madde": "42",
+   "tip": "ceza",
+   "tetikleyici": "uyarma cezası",
+   "cevap": "önce savunma; kesin, sicile geçer",
+   "kanit": "Memurin Kanunundaki usulüne göre savunmalarını aldıktan sonra uyarma cezası verir ve uygular. Bu ceza kesindir ve tebliğ tarihinden itibaren sicile geçer.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-061",
+   "madde": "42",
+   "tip": "ceza",
+   "tetikleyici": "Daha ağır disiplin",
+   "cevap": "vali ve kaymakama teklif (takdirname de)",
+   "kanit": "Daha ağır disiplin cezaIarı ile takdirname verilmesini gerektiren hallerde vali ve kaymakama tekliflerde bulunur.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "31",
+     "fark": "kaymakam ağır ceza için özel kanuna göre teklif eder"
+    }
+   ]
+  },
+  {
+   "i": "K-5-062",
+   "madde": "43",
+   "tip": "makam",
+   "tetikleyici": "güven ve düzeninin",
+   "cevap": "bucak müdürü sorumlu; kolluk emre mecbur",
+   "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-063",
+   "madde": "43",
+   "tip": "makam",
+   "tetikleyici": "kolluk kuvvetleri bucak",
+   "cevap": "müdürün emri altında; emri yerine getirmeye mecbur",
+   "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-5-064",
+   "madde": "43",
+   "tip": "makam",
+   "tetikleyici": "Suç işlenmesini önle",
+   "cevap": "gereken tedbirleri alır ve uygular",
+   "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "11",
+     "fark": "vali de suçu önlemek için tedbir alır"
+    },
+    {
+     "madde": "32",
+     "fark": "kaymakam da suçu önlemek için tedbir alır"
+    }
+   ]
+  },
+  {
+   "i": "K-5-065",
+   "madde": "57",
+   "tip": "makam",
+   "tetikleyici": "il idare kurul",
+   "cevap": "vali; hukuk, defterdar, eğitim, bayındırlık, sağlık, tarım, veteriner; malmüdürü ilçede",
+   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
+   "not": "jandarma ve emniyet kurulda yok",
+   "karistirilan": [
+    {
+     "madde": "58",
+     "fark": "ilçe kurulunda malmüdürü, başkan kaymakam"
+    }
+   ]
+  },
+  {
+   "i": "K-5-066",
+   "madde": "57",
+   "tip": "makam",
+   "tetikleyici": "vali muavini",
+   "cevap": "kurul başkanlığına vali görevlendirebilir",
+   "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "18",
+     "fark": "vali muavininin birinci sicil amiri vali"
+    }
+   ]
+  },
+  {
+   "i": "K-5-067",
+   "madde": "58",
+   "tip": "makam",
+   "tetikleyici": "ilçe idare kurul",
+   "cevap": "kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar ilde",
+   "kanit": "İlçe idare kurulu, kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi, milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder.",
+   "not": "emniyet müdürü kurulda yok",
+   "karistirilan": [
+    {
+     "madde": "57",
+     "fark": "il kurulunda defterdar, başkan vali"
+    }
+   ]
   }
  ]
 }
