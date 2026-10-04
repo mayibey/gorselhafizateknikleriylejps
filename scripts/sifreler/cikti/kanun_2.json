@@ -130,7 +130,12 @@
    "cevap": "sınırları belirler; ilçede kaymakam, ilde vali başkanlığında",
    "kanit": "İl ve ilçelerdeki jandarma ve polis sorumluluk alanlarının sınırları, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katılacağı bir komisyon tarafından belirlenir.",
    "not": "jandarma ve emniyet temsilcileri; karar İçişleri Bakanı onayıyla yürürlüğe girer",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "Ek 5",
+     "fark": "dinleme denetim raporu TBMM komisyonuna sunulur"
+    }
+   ]
   },
   {
    "i": "K-2-014",
@@ -190,7 +195,12 @@
    "cevap": "albaylar; generaller 65; İçişleri Bakanı onayıyla görevde kalır",
    "kanit": "Rütbelerindeki bekleme süresinin dolması ya da kadrosuzluk nedenleri ile emekliliğe sevk edilme durumunda olan, ancak hizmetlerine ihtiyaç duyulan albaylar 60 yaşına, generaller ise 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilirler.",
    "not": "hizmetine ihtiyaç duyulanlar",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "Ek 18",
+     "fark": "kıdemli başçavuş yaş haddi uzatma"
+    }
+   ]
   },
   {
    "i": "K-2-020",
@@ -440,7 +450,16 @@
    "cevap": "teğmen-üsteğmen 49, yüzbaşı 55, binbaşı 56, yarbay 57, albay 60",
    "kanit": "astsubaylıktan subaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\n\nRütbe Teğmen, Üsteğmen Yüzbaşı Binbaşı Yarbay Albay\n\nYaş Haddi 49 55 56 57 60",
    "not": "astsubaylıktan subaylığa geçenler (geçici madde 12)",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "Ek 16",
+     "fark": "uzman jandarmadan geçen astsubay hadleri"
+    },
+    {
+     "madde": "Geçici 12",
+     "fark": "astsubaylıktan subaylığa geçenlerin hadleri"
+    }
+   ]
   },
   {
    "i": "K-2-045",
@@ -480,6 +499,826 @@
    "cevap": "nasıp-terfi, mali-sosyal haklar: 926, 4678, 3466, 3269, 6191 sayılı kanunlar",
    "kanit": "Ancak, nasıp ve terfi, aylık ve diğer mali ve sosyal haklar bakımından statü ve rütbelerine göre 27/7/1967 tarihli ve 926 sayılı Türk Silâhlı Kuvvetleri Personel Kanunu, 13/6/2001 tarihli ve 4678 sayılı Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, 28/5/1988 tarihli ve 3466 sayılı Uzman\n\nJandarma Kanunu, 18/3/1986 tarihli ve 3269 sayılı Uzman Erbaş Kanunu ile 10/3/2011 tarihli ve 6191 sayılı Sözleşmeli Erbaş ve Er Kanununa tabi personel hakkındaki hükümler uygulanır.",
    "not": "657 bu listede yok (o, Jandarma Hizmetleri Sınıfı için)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-049",
+   "madde": "1",
+   "tip": "tanim",
+   "tetikleyici": "teşkilat ve konuşa ait esas",
+   "cevap": "görev, yetki ve sorumluluk; bağlılık ve ilişkiler; teşkilat ve konuş",
+   "kanit": "Madde 1 – Bu Kanun, Türkiye Cumhuriyeti Jandarma Teşkilatının görev, yetki ve sorumluluklarına, hizmetin gerektirdiği bağlılık ve ilişkilere, teşkilat ve konuşa ait esas ve usulleri düzenler.",
+   "not": "\"özel hukuk sözleşmeleri\" Kanunun konusu değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-050",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "karargah, birlik ve kurumlar ile",
+   "cevap": "Kanunun kapsamı; buralarda hizmet gören personel ve faaliyetler",
+   "kanit": "Madde 2 – Bu Kanun, Jandarma Teşkilatındaki karargah, birlik ve kurumlar ile buralarda hizmet gören personeli ve bunlarla ilgili faaliyet ve esasları kapsar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-051",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "garnizon komutanının talep etmesi halinde",
+   "cevap": "illerde valinin onayıyla askeri görev; Genelkurmay talebiyle İçişleri Bakanı",
+   "kanit": "Ayrıca, Jandarma birlikleri; Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının, illerde ise garnizon komutanının talep etmesi halinde valinin onayıyla kendilerine verilen askeri görevleri de yaparlar.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-052",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "hizmet gerekleri bakımından uygun görülen",
+   "cevap": "belediye içinde jandarma alanı olabilir; il/ilçe tamamı İçişleri Bakanı kararıyla",
+   "kanit": "Ancak, belediye sınırları içinde olmakla birlikte hizmet gerekleri bakımından uygun görülen yerler, jandarmanın görev ve sorumluluk alanı olarak tespit edilebilir. (Ek cümle: 25/7/2016-KHK-668/11 md.; Aynen kabul: 8/11/2016-6755/11 md.) İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-053",
+   "madde": "10",
+   "tip": "sure",
+   "tetikleyici": "en geç üç ay içerisinde",
+   "cevap": "belediye kurulması/kaldırılması/sınır değişikliğinde sorumluluk alanları yeniden düzenlenir",
+   "kanit": "Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-054",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanının onayıyla yürürlüğe",
+   "cevap": "sorumluluk alanı komisyon kararları; sınırlar harita veya kroki üzerinde",
+   "kanit": "Komisyon tarafından alınan kararlar İçişleri Bakanının onayıyla yürürlüğe girer. Belirlenen sorumluluk alanlarının sınırları karara eklenen bir harita veya kroki üzerinde gösterilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-055",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "mahalli mülki amirler tarafından",
+   "cevap": "jandarma/emniyet birbirinin sahasında geçici görevlendirme (yetersiz kalınca)",
+   "kanit": "Jandarma veya Emniyet Teşkilatı, kendi sorumluluk sahasında yetersiz kaldıkları veya\nkalacaklarının değerlendirilmesi halinde, mahalli mülki amirler tarafından birbirlerinin sorumluluk sahalarında geçici olarak görevlendirilebilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-056",
+   "madde": "10",
+   "tip": "kosul",
+   "tetikleyici": "işbirliği ve koordinasyon esasları",
+   "cevap": "jandarmanın diğer güvenlik kuvvetleriyle; emir komuta ilişkileri yönetmelikle",
+   "kanit": "Jandarmanın diğer güvenlik kuvvetleriyle işbirliği ve koordinasyon esasları ve emir komuta ilişkileri yönetmelikle belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-057",
+   "madde": "12",
+   "tip": "kosul",
+   "tetikleyici": "bedelsiz olarak devredebilirler",
+   "cevap": "EGM, SG, JGK silah-araç-taşınmazları İçişleri Bakanı onayıyla; geçici tahsis de",
+   "kanit": "Ayrıca, İçişleri Bakanının onayıyla; Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı silah, mühimmat, teçhizat, taşıt ve diğer taşınırları ile taşınmazlarını birbirlerine geçici olarak tahsis edebilirler veya bedelsiz olarak devredebilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-058",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "çarşı ve mahalle bekçileri hakkında",
+   "cevap": "Emniyet'teki emsal bekçilerin mali ve sosyal hakları uygulanır (JHS'de)",
+   "kanit": "Jandarma Hizmetleri Sınıfında yer alan çarşı ve mahalle bekçileri hakkında, Emniyet Hizmetleri Sınıfında yer alan emsali çarşı ve mahalle bekçilerinin mali ve sosyal hakları aynı usul ve esaslar çerçevesinde uygulanır. Bunlar hakkında birinci fıkranın ikinci cümlesi uygulanmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-059",
+   "madde": "13",
+   "tip": "istisna",
+   "tetikleyici": "inha, seçim, görüş alma",
+   "cevap": "İçişleri dışındaki mercilere verilmiş yetkiler JGK personeli için uygulanmaz",
+   "kanit": "Nasıp ve terfi yetkilerinin kullanılmasıyla ilgili olan; 926 sayılı Kanun ve diğer kanunlarla, İçişleri Bakanlığı dışında, başka mercilere verilmiş inha, seçim, görüş alma ve benzeri yetkilere dair hükümler Jandarma Genel Komutanlığı personeli bakımından uygulanmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-060",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "205 sayılı Ordu Yardımlaşma Kurumu",
+   "cevap": "JGK personeline TSK karşılığı rütbe-kıdemle OYAK Kanunu uygulanır",
+   "kanit": "Jandarma Genel Komutanlığı personeli hakkında, Türk Silahlı Kuvvetlerinde karşılığı olan rütbe ve kıdem üzerinden aynı şartlarla, 3/1/1961 tarihli ve 205 sayılı Ordu Yardımlaşma Kurumu Kanunu uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-061",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "4857 sayılı İş Kanunu",
+   "cevap": "işçilerin işe alınma, izin, sicil, ödül, fesih; toplu iş sözleşmesi",
+   "kanit": "İşçilerin işe alınma, işyeri değişikliği, yükselme, izin, sicil, ödül ve hizmet akdinin feshi işlemleri 22/5/2003 tarihli ve 4857 sayılı İş Kanunu ile varsa geçerli bulunan toplu iş sözleşmesi hükümlerine göre yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-062",
+   "madde": "13",
+   "tip": "kosul",
+   "tetikleyici": "Arşiv Araştırması Kanununa göre",
+   "cevap": "JGK hesabına ve Akademide eğitim göreceklere güvenlik soruşturması",
+   "kanit": "Jandarma Genel Komutanlığı nam ve hesabına eğitim-öğrenim görecekler ile Jandarma ve Sahil Güvenlik Akademisi ve buna bağlı eğitimöğretim kurumlarında eğitim-öğrenim görecekler hakkında Güvenlik Soruşturması ve Arşiv Araştırması Kanununa göre güvenlik soruşturması ve arşiv araştırması yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-063",
+   "madde": "14",
+   "tip": "makam",
+   "tetikleyici": "il jandarma komutanları dışında kalanlar",
+   "cevap": "atamaları İçişleri Bakanınca (JGK, yardımcıları, generaller, bölge/il komutanları hariç)",
+   "kanit": "Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-064",
+   "madde": "14",
+   "tip": "makam",
+   "tetikleyici": "nokta atamasına tabi tutulabilir",
+   "cevap": "özel eğitimli personel; nokta ataması yapılmayanlar valilik emrine atanır",
+   "kanit": "İhtisaslaşma gereği olarak özel eğitim görmüş personel nokta atamasına tabi tutulabilir. Nokta ataması yapılmayan subay, astsubay ve uzman jandarmalar valilik emrine atanır ve bunların istihdam yerleri, il içi yer değiştirmeleri vali tarafından yapılır.",
+   "not": "il içi yer değiştirme vali",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-065",
+   "madde": "19",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanlığınca belirlenecek standartlara",
+   "cevap": "ikmal ihtiyaçları, silah mühimmat kendi bütçesinden; SSDF'den TSK usulüyle yararlanır",
+   "kanit": "Jandarma Genel Komutanlığı ikmal hizmetleriyle faaliyetlerine ait her türlü ihtiyacını ve silah ve mühimmatını İçişleri Bakanlığınca belirlenecek standartlara uygun olarak kendi bütçesinden karşılar. Ancak Jandarma Genel Komutanlığı, Savunma Sanayi Destekleme Fonundan Türk Silahlı Kuvvetlerinin tabi olduğu usul ve esaslar dahilinde yararlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-066",
+   "madde": "19",
+   "tip": "kosul",
+   "tetikleyici": "muafiyet ve istisna hükümleri",
+   "cevap": "MSB-TSK gümrük, vergi, resim, harç, ardiye muafiyetleri JGK hakkında uygulanır",
+   "kanit": "Bütçe kanunları ve diğer kanunlarla Milli Savunma Bakanlığı ile Türk Silahlı Kuvvetlerine tanınan gümrük, her türlü vergi, resim, harç ve ardiye ücretlerine ilişkin muafiyet ve istisna hükümleri Jandarma Genel Komutanlığı hakkında da uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-067",
+   "madde": "20",
+   "tip": "kosul",
+   "tetikleyici": "genel ve özel düzenleme getiren",
+   "cevap": "özlük hakları: 926, 657 ve diğer kanunlarla verilen haklardan yararlanır",
+   "kanit": "Madde 20 – Jandarma Genel Komutanlığı personeli; bu Kanunla getirilen hakların yanısıra, özlük hakları bakımından, 926 sayılı “Türk Silahlı Kuvvetleri Personel Kanunu”, 657 sayılı “Devlet Memurları Kanunu” ile genel ve özel düzenleme getiren diğer kanunlarla verilen haklardan da yararlanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-068",
+   "madde": "21",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanlığınca belirlenecek usul",
+   "cevap": "asayiş tazminatı ödeme usulü; damga vergisi hariç kesinti yapılmaz",
+   "kanit": "geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir. Bu tazminattan damga vergisi hariç herhangi bir vergi ve kesinti yapılmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-069",
+   "madde": "24",
+   "tip": "makam",
+   "tetikleyici": "Cumhurbaşkanınca yürürlüğe konulan yönetmelikle",
+   "cevap": "teşkilat, görev, yetki, komuta-kontrol, terfi, değerlendirme, ödül, kılık-kıyafet düzenlenir",
+   "kanit": "Bu Kanunla münhasıran yönetmelik çıkarılması öngörülen hususların yanısıra jandarmanın teşkilat, görev, yetki ve sorumlulukları, diğer makamlarla ilişkileri, birlikte çalışma ve işbirliği esasları dahil komuta ve kontrol ilişkileri ile Jandarma (…)23 personelinin terfi işleri, değerlendirme, ödüllendirme, kılık ve kıyafet ve Kanunun uygulanmasına ilişkin diğer hususlar; Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-070",
+   "madde": "15/A",
+   "tip": "makam",
+   "tetikleyici": "birlik komutanının veya kurum amirinin",
+   "cevap": "erbaş-er araması: gecikmede yazılı emri; yirmi dört saatte hâkim onayı",
+   "kanit": "birlik komutanının veya kurum amirinin yazılı emri (İptal ibare: Anayasa Mahkemesi’nin 30/6/2022 tarihli ve E.: 2018/137, K.: 2022/86 sayılı Kararı ile.) üzerine, jandarma hizmet binaları ve eklentilerinde, askerlik yükümlülüğünü yerine getiren erbaş ve erlerin üstü, özel kâğıtları ve eşyası aranır, gerekli tedbirler alınır, suç delilleri koruma altına alınarak 5271 sayılı Kanun hükümlerine göre gerekli işlemler yapılır.",
+   "not": "asıl: sulh ceza hâkimi kararı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-071",
+   "madde": "15/A",
+   "tip": "kosul",
+   "tetikleyici": "sebebi, konusu ve kapsamı",
+   "cevap": "arama kararında: yer, zaman, geçerli süre yazılır (personel adı yok)",
+   "kanit": "Arama kararında veya emrinde; aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre belirtilir. Aramanın sonucu, arama kararı veya emri veren merci veya makama bir tutanakla bildirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-072",
+   "madde": "15/A",
+   "tip": "yasak",
+   "tetikleyici": "önleme araması yapılamaz",
+   "cevap": "konutta ve yerleşim yerinde ve eklentilerinde (erbaş-er araması)",
+   "kanit": "Konutta ve yerleşim yerinde ve eklentilerinde önleme araması yapılamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-073",
+   "madde": "Ek 1",
+   "tip": "makam",
+   "tetikleyici": "denetlenir ve teftiş edilir",
+   "cevap": "eylem-işlemlerini İçişleri Bakanlığı, mülki idare amirleri, kendi amirleri denetler",
+   "kanit": "eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-074",
+   "madde": "Ek 2",
+   "tip": "makam",
+   "tetikleyici": "kaymakamın değerlendirmesi alınarak il valisi",
+   "cevap": "ilçe jandarma komutanının değerlendirme raporu (il ve merkez ilçe: vali)",
+   "kanit": "İl jandarma komutanı ile merkez ilçe jandarma komutanı hakkında il valisince, ilçe jandarma komutanı hakkında kaymakamın değerlendirmesi alınarak il valisi tarafından her yıl sonunda söz konusu kişilerin (…) görevleri ile ilgili olarak değerlendirme raporu düzenlenir. Değerlendirme raporları; personelin terfi, ödüllendirme, atama ve yer değiştirmesinde dikkate alınır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-075",
+   "madde": "Ek 2",
+   "tip": "makam",
+   "tetikleyici": "içeriği ve düzenlenme esasları",
+   "cevap": "değerlendirme raporları: İçişleri Bakanlığı yönetmeliği; terfi-ödül-atama-yer değiştirmede dikkate alınır",
+   "kanit": "Değerlendirme raporları; personelin terfi, ödüllendirme, atama ve yer değiştirmesinde dikkate alınır. Değerlendirme raporlarının içeriği ve düzenlenme esasları, (…) İçişleri Bakanlığı tarafından çıkarılan yönetmelikle düzenlenir.",
+   "not": "MSB değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-076",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "otuz gün yıllık izin",
+   "cevap": "her yıl, yol hariç; ayrıca onbeş güne kadar mazeret izni",
+   "kanit": "a) Personelin her yıl otuz gün yıllık izin hakkı vardır. Bu müddete yol dâhil değildir. Ayrıca, kısa süreli mazeretlerde kullanılmak üzere on beş güne kadar yıllık mazeret izni verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-077",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "toplam altmış günü geçemez",
+   "cevap": "zorunlu nedenle kullanılamayan yıllık izin müteakip sene; birikim sınırı",
+   "kanit": "ç) Yıllık izinlerin senesi içinde kullanılması esastır. Ancak hizmet, alıkonulma, esaret ve sair zorunlu nedenlerle yıllık izinlerini kısmen veya tamamen kullanamayanların izinleri, müteakip sene içinde verilebilir. Bu müddet hiçbir suretle toplam altmış günü geçemez.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-078",
+   "madde": "Ek 3",
+   "tip": "makam",
+   "tetikleyici": "izinden geriye çağrılabilir",
+   "cevap": "yıllık izin planlamasını onaylayan makam (görev ve hizmet ihtiyacı)",
+   "kanit": "d) Görev ve hizmet ihtiyacının gerektirdiği durumlarda, asgari yıllık izin planlamasını onaylayan makam tarafından personel izinden geriye çağrılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-079",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "yedi güne kadar mazeret",
+   "cevap": "kendisinin veya çocuğunun evlenmesi; doğum-ölüm hallerinde on güne kadar",
+   "kanit": "a) Eşinin doğum yapması, eşinin ölümü, çocuğunun ölümü, kendisinin veya eşinin ana, baba veya kardeşinin ölümü hallerinin her birinde isteği üzerine on güne kadar; kendisinin veya çocuğunun evlenmesi halinde isteği üzerine yedi güne kadar mazeret izni verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-080",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "otuz güne kadar mazeret izni",
+   "cevap": "yangın, deprem, su baskını gibi olağanüstü mazeret; bir yıl içinde",
+   "kanit": "b) Yangın, deprem, su baskını gibi olağanüstü bir mazeret dolayısıyla bir yıl içinde otuz güne kadar mazeret izni verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-081",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "radyoaktif ışınlarla çalışan personele",
+   "cevap": "her yıl yıllık izinden ayrı bir aylık izin",
+   "kanit": "c) Hizmetleri sırasında radyoaktif ışınlarla çalışan personele her yıl, yıllık izinlerinden ayrı olarak, bir aylık izin verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-082",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "üç aya kadar izin verilebilir",
+   "cevap": "yakının ağır kaza/uzun hastalığı; bir katına uzatılır; altı ay aylıksız",
+   "kanit": "d) Bakmakla yükümlü olduğu veya refakat etmediği takdirde hayatı tehlikeye girecek anne, baba, eş ve çocukları ile kardeşlerinden birinin ağır bir kaza geçirmesi veya tedavisi uzun süren önemli bir hastalığa tutulmuş olması hâllerinde, bu hâllerin sağlık kurulu raporuyla belgelendirilmesi şartıyla, istekleri üzerine, aylık ve özlük hakları korunarak üç aya kadar izin verilebilir. Gerektiğinde bu süre bir katına kadar uzatılır. Bu sürenin bitimini müteakip istekleri üzerine ayrıca altı aya kadar aylıksız izin verilebilir. Bu bent hükmü aynı kişi ve aynı vakaya dayalı olarak bir defaya mahsus uygulanır.",
+   "not": "sağlık kurulu raporu şart; aynı vakada bir defa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-083",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "toptan veya bölümler hâlinde",
+   "cevap": "yüzde 70 engelli çocuk hastalanınca ana/babadan birine on gün",
+   "kanit": "e) En az yüzde 70 oranında engelli ya da süreğen hastalığı olan çocuğunun (çocuğun evli olması durumunda eşinin de en az yüzde 70 oranında engelli olması kaydıyla) hastalanması hâlinde hastalık raporuna dayalı olarak ana veya babadan sadece biri tarafından kullanılması kaydıyla bir yıl içinde toptan veya bölümler hâlinde on güne kadar mazeret izni verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-084",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "iki yılı geçmemek üzere",
+   "cevap": "geçici hastalıkta sıhhi izin sınırı; kanser-verem uzun hastalıkta üç yıl",
+   "kanit": "a) Hizmet yapamayacak şekilde hastalanan personelin hastalığı geçici ise veya geçici olup sekel bırakan hastalıklardan ise, hastanelerde geçen teşhis ve tedavi süreleri hariç, ay ve gün hesabı ile her bir hastalığı için toplam olarak ve fiilen iki yılı geçmemek üzere, nekahet tedavisi, istirahat ve hava değişimi işlemine tabi tutulur. Bu gibiler hakkında raporlar sağlık kurulunca verilir. Sözleşmeli subay ve sözleşmeli astsubaylar için 4678 sayılı Kanun, uzman erbaşlar için 3269 sayılı Kanundaki sağlık durumları nedeniyle sözleşme fesih hükümleri saklıdır. b) Kanser, her türlü kötü huylu tümör, verem, kronik böbrek yetmezliği ile akıl ve ruh hastalıkları gibi uzun süreli bir tedaviye ihtiyaç gösteren hastalığa yakalananlar, sağlık kurulları raporlarında gösterilecek lüzum üzerine, toplam olarak ve fiilen üç yılı geçmemek şartı ile tedavi, istirahat veya hava değişimine tabi tutulabilirler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-085",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "toplam yirmi dört hafta",
+   "cevap": "doğum izni: önce sekiz, sonra on altı hafta; çoğulda +iki",
+   "kanit": "ç) Kadın personele doğum yapmasından önce sekiz hafta ve doğum yaptığı tarihten itibaren on altı hafta olmak üzere toplam yirmi dört hafta süre ile aylıklı izin verilir. Çoğul gebelik halinde, doğum öncesi sekiz haftalık izin süresine iki hafta süre eklenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-086",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "günde üç saat",
+   "cevap": "süt izni ilk altı ay; sonraki altı ay bir buçuk",
+   "kanit": "Doğum yapan personele çocuklarını emzirmeleri için aylıklı izin süresinin bitim tarihinden itibaren ilk altı ayda günde üç saat, ikinci altı ayda günde bir buçuk saat süt izni verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-087",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "Meslekî bilgi ve görgüsünü artırmak",
+   "cevap": "yurt dışı izni bir yıla; öğrenim süresince; mazerette üç ay",
+   "kanit": "a) İçişleri Bakanlığınca; 1) Öğrenim için öğrenim süresi kadar, 2) Meslekî bilgi ve görgüsünü artırmak maksadıyla bir yıla kadar, 3) Seminer, müşahede gezisi ve ziyaretler için lüzumlu görülen süre kadar, 4) Mazeret dolayısıyla yıllık izinle birlikte üç aya kadar, 5) Seyahat maksadıyla yurt dışına gidecek personele, bu maddenin birinci fıkrasında belirtilen yıllık izin süresi kadar, yurt dışı izni verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-088",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "dört yıla kadar aylıklı izin",
+   "cevap": "yabancı emsal kurumlarda hizmet için İçişleri Bakanlığınca",
+   "kanit": "a) Yabancı memleketlerin emsal kurum ve kuruluşlarında hizmet yapmak üzere gönderileceklere İçişleri Bakanlığınca dört yıla kadar aylıklı izin verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-089",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "beş yıla kadar aylıksız izin",
+   "cevap": "yabancı memleket/uluslararası kuruluşta görev; İçişleri Bakanlığı onayı",
+   "kanit": "b) Yabancı bir memlekette veya uluslararası kuruluşlarda görev alacaklara İçişleri Bakanlığının onayı ile beş yıla kadar aylıksız izin verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-090",
+   "madde": "Ek 3",
+   "tip": "sure",
+   "tetikleyici": "beş yıla kadar aylıklı izin",
+   "cevap": "BM barış gücünde görevlendirilenlere Cumhurbaşkanı kararıyla",
+   "kanit": "barış gücünde görevlendirilenlere Cumhurbaşkanı kararı ile beş yıla kadar aylıklı izin verilebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-091",
+   "madde": "Ek 3",
+   "tip": "istisna",
+   "tetikleyici": "diğer kanunlarda düzenlenen izin hükümleri",
+   "cevap": "jandarma personeline uygulanmaz; izin usulü İçişleri Bakanlığı yönetmeliği",
+   "kanit": "için bu Kanun dışında diğer kanunlarda düzenlenen izin hükümleri uygulanmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-092",
+   "madde": "Ek 4",
+   "tip": "makam",
+   "tetikleyici": "yeme, içme ihtiyaçlarına ve nakillerine",
+   "cevap": "gözaltına alınanların masrafları JGK bütçesine konulacak ödenekle",
+   "kanit": "Gözaltına alınanların yeme, içme ihtiyaçlarına ve nakillerine ait masraflar Jandarma Genel Komutanlığı bütçesine konulacak ödenekle karşılanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-093",
+   "madde": "Ek 5",
+   "tip": "makam",
+   "tetikleyici": "veya istihbarat başkanının yazılı emriyle",
+   "cevap": "önleyici dinleme emri; yirmidört saatte hâkime; karar kırk sekiz saatte",
+   "kanit": "hâkim kararı veya gecikmesinde sakınca bulunan hallerde Jandarma Genel Komutanı veya istihbarat başkanının yazılı emriyle, telekomünikasyon yoluyla yapılan iletişimi tespit edebilir, dinleyebilir, sinyal bilgilerini değerlendirebilir, kayda alabilir. Gecikmesinde sakınca bulunan hallerde verilen yazılı emir, yirmidört saat içinde yetkili ve görevli hâkimin onayına sunulur. Hâkim, kararını en geç kırk sekiz saat içinde verir.",
+   "not": "yalnız kendi sorumluluk alanında; CMK 250 suçları (casusluk hariç)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-094",
+   "madde": "Ek 5",
+   "tip": "makam",
+   "tetikleyici": "Ankara ağır ceza mahkemesi üyesidir",
+   "cevap": "önleyici dinlemede yetkili ve görevli hâkim",
+   "kanit": "Yetkili ve görevli hâkim, Ankara ağır ceza mahkemesi üyesidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-095",
+   "madde": "Ek 5",
+   "tip": "sure",
+   "tetikleyici": "en fazla üç defa uzatılabilir",
+   "cevap": "dinleme kararı üç ay; üçer ay; terör örgütünde müteaddit defalar",
+   "kanit": "Kararlar, en fazla üç ay için verilebilir; bu süre aynı usûlle üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir. Ancak, terör örgütünün faaliyeti çerçevesinde devam eden tehlikelere ilişkin olarak gerekli görülmesi halinde, hâkim üç aydan fazla olmamak üzere sürenin müteaddit defalar uzatılmasına karar verebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-096",
+   "madde": "Ek 5",
+   "tip": "sure",
+   "tetikleyici": "on gün içinde yok edilir",
+   "cevap": "dinleme kayıtları (tedbir bitince veya onaylanmayınca); tutanakla tespit",
+   "kanit": "Uygulanan tedbirin sona ermesi halinde, dinlemenin içeriğine ilişkin kayıtlar en geç on gün içinde yok edilir; durum bir tutanakla tespit olunur ve bu tutanak denetimde ibraz edilmek üzere muhafaza edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-097",
+   "madde": "Ek 5",
+   "tip": "kosul",
+   "tetikleyici": "Cumhuriyet savcılarınca doğrudan soruşturma",
+   "cevap": "dinleme kayıtlarının gizliliğini ihlal edenler; görev sırasında işlense bile",
+   "kanit": "Bu madde hükümlerine göre yürütülen faaliyetler çerçevesinde elde edilen kayıtlar, birinci fıkrada belirtilen amaçlar dışında kullanılamaz. Elde edilen bilgi ve kayıtların saklanmasında ve korunmasında gizlilik ilkesi geçerlidir. Bu fıkra hükümlerine aykırı hareket edenler hakkında, görev sırasında veya görevden dolayı işlenmiş olsa bile Cumhuriyet savcılarınca doğrudan soruşturma yapılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-098",
+   "madde": "Ek 5",
+   "tip": "sure",
+   "tetikleyici": "yılda en az bir defa",
+   "cevap": "dinleme denetimi: sıralı kurum amirleri, mülki idare amirleri, JGK-bakanlık teftiş",
+   "kanit": "Bu maddede yer alan faaliyetlerin denetimi; sıralı kurum amirleri, mülki idare amirleri, Jandarma Genel Komutanlığı ve ilgili bakanlığın teftiş elemanları tarafından yılda en az bir defa yapılır. Bu faaliyetler Cumhurbaşkanlığınca görevlendirilen denetim elemanları tarafından da denetlenebilir. Bu kapsamda yapılan denetimlerin sonuçları bir rapor hâlinde Türkiye Büyük Millet Meclisi Güvenlik ve İstihbarat Komisyonuna sunulur.",
+   "not": "Sayıştay sayılmıyor; rapor TBMM Güvenlik ve İstihbarat Komisyonuna",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-099",
+   "madde": "Ek 5",
+   "tip": "makam",
+   "tetikleyici": "İstihbarat Başkanlığı görevlilerince yerine getirilir",
+   "cevap": "dinleme hâkim kararları ve yazılı emirler; başlangıç-bitiş tutanakla",
+   "kanit": "Hâkim kararları ve yazılı emirler, Jandarma Genel Komutanlığı İstihbarat Başkanlığı görevlilerince yerine getirilir. İşlemin başladığı ve bitirildiği tarih ve saat ile işlemi yapanın kimliği bir tutanakla saptanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-100",
+   "madde": "Ek 5",
+   "tip": "makam",
+   "tetikleyici": "Cumhurbaşkanınca çıkarılan yönetmelikle",
+   "cevap": "önleyici dinleme maddesinin uygulanmasına ilişkin esas ve usuller",
+   "kanit": "Bu maddenin uygulanmasına ilişkin esas ve usûller, Cumhurbaşkanınca çıkarılan yönetmelikle düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-101",
+   "madde": "Ek 6",
+   "tip": "makam",
+   "tetikleyici": "Komutanına veya valilere devredebilir",
+   "cevap": "İçişleri Bakanı yetkilerinin bir kısmını; sınırları yazılı olarak açıkça",
+   "kanit": "İçişleri Bakanı, bu Kanundaki yetkilerinden bir kısmını gerektiğinde sınırlarını yazılı olarak açıkça belirlemek şartıyla ilgisine göre Jandarma Genel Komutanına veya valilere devredebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-102",
+   "madde": "Ek 7",
+   "tip": "kosul",
+   "tetikleyici": "aykırı hükümler bulunması halinde",
+   "cevap": "diğer kanunlardaki aykırı hükümlere karşı bu Kanun hükümleri uygulanır",
+   "kanit": "Diğer kanunlarda bu Kanuna aykırı hükümler bulunması halinde bu Kanun hükümleri uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-103",
+   "madde": "Ek 7",
+   "tip": "makam",
+   "tetikleyici": "tereddütleri gidermeye",
+   "cevap": "İçişleri Bakanlığı yetkili; yeni ihtiyaçlarda düzenleme yapmaya Cumhurbaşkanı",
+   "kanit": "Bu Kanunun uygulanmasıyla ilgili tereddütleri gidermeye ve bu yönde düzenleyici ve yönlendirici işlemler yapmaya İçişleri Bakanlığı yetkilidir.\nBu Kanunda bu maddeyi ihdas eden Kanun ile yapılan düzenlemeler sebebiyle teşkilat, personel, eğitim ve diğer hususlarla ilgili olarak yeni ihtiyaçların ortaya çıkması halinde, buna ilişkin düzenleme yapmaya Cumhurbaşkanı yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-104",
+   "madde": "Ek 8",
+   "tip": "tanim",
+   "tetikleyici": "moral eğitim merkezleri ve kantinler",
+   "cevap": "JGK kurabileceği tesisler: vardiya yatakhanesi, eğitim-kongre merkezi, sosyal tesis, gazino",
+   "kanit": "Jandarma Genel Komutanlığı, vardiya yatakhaneleri, eğitim ve kongre merkezleri, sosyal tesisler, gazinolar, moral eğitim merkezleri ve kantinler kurabilir.",
+   "not": "konut sitesi sayılmıyor",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-105",
+   "madde": "Ek 8",
+   "tip": "sayi_oran",
+   "tetikleyici": "aylık gayrisafi hasılatının %1'i",
+   "cevap": "özel/yerel/kış eğitim merkezleri, birlik dışı kantinler; her ay genel bütçeye",
+   "kanit": "Özel, yerel ve kış eğitim merkezleri ile birlik dışındaki kantinlerin aylık gayrisafi hasılatının %1'i her ay genel bütçeye gelir kaydedilmek üzere ilgili muhasebe birimine yatırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-106",
+   "madde": "Ek 9",
+   "tip": "sayi_oran",
+   "tetikleyici": "iki katından beş katına kadar",
+   "cevap": "yüksek hizmet görenlere aylıklarının; büyük yararlık: altı katından yirmidört katına",
+   "kanit": "a) Ülkenin güvenlik ve esenliği, Devletin çıkarları ve kişilerin can, ırz ve mallarını korumada yüksek hizmetleri görülenler, fiilen almakta oldukları aylık tutarlarının iki katından beş katına kadar,\nb) Olağanüstü durumlarda yaşamını ortaya koyarak büyük yararlıklar gösterenler, fiilen almakta oldukları aylık tutarlarının altı katından yirmidört katına kadar,\npara verilerek ödüllendirilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-107",
+   "madde": "Ek 9",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanı tarafından aşağıda isimleri",
+   "cevap": "madalyalar: Üstün Cesaret ve Feragat, Şeref, Üstün Hizmet",
+   "kanit": "Jandarma Genel Komutanlığı personelinden kendisine tevdi edilen görevleri cesaret, feragat, kahramanlık veya üstün başarı ile yerine getirenlere İçişleri Bakanı tarafından aşağıda isimleri yazılı madalyalar verilebilir:\na) Jandarma Üstün Cesaret ve Feragat Madalyası,\nb) Jandarma Şeref Madalyası,\nc) Jandarma Üstün Hizmet Madalyası.",
+   "not": "cesaret, feragat, kahramanlık, üstün başarı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-108",
+   "madde": "Ek 9",
+   "tip": "makam",
+   "tetikleyici": "İçişleri Bakanlığınca tasvip ve tescil",
+   "cevap": "başka devletlerin madalya ve nişanları ondan sonra takılabilir",
+   "kanit": "Başka devletlerce tevcih edilen madalya ve nişanlar ile bunlara ait rozet ve minyatürler, İçişleri Bakanlığınca tasvip ve tescil edildikten sonra takılabilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-109",
+   "madde": "Ek 11",
+   "tip": "kosul",
+   "tetikleyici": "kusurun derecesine göre durumunun uygun",
+   "cevap": "görevden dolayı sanık olan personelin avukat ücreti JGK bütçesinden",
+   "kanit": "karargâh personeli dahil sanık durumuna düşen personelin vekalet verdiği avukatın ücreti, olayın mahiyetine ve kusurun derecesine göre durumunun uygun görülmesi halinde Jandarma Genel Komutanlığı bütçesine konulan ödenekten karşılanır.",
+   "not": "karargâh personeli dâhil; \"her hâlde\" değil, uygun görülürse",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-110",
+   "madde": "Ek 11",
+   "tip": "makam",
+   "tetikleyici": "Avukat tutma ve ücret",
+   "cevap": "İçişleri Bakanlığı yönetmeliği; adli yardıma esas görevlerin sınırı da",
+   "kanit": "Avukat tutma ve ücret ödeme usul ve esasları ile adli yardıma esas olan görevlerin mahiyeti ve sınırları İçişleri Bakanlığı tarafından yönetmelikle düzenlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-111",
+   "madde": "Ek 12",
+   "tip": "sure",
+   "tetikleyici": "kıdemli üstçavuşluk rütbe yaş haddi",
+   "cevap": "sözleşmeliden muvazzaf astsubaylığa geçiş üst sınırı; subayda yüzbaşılık yaş haddi",
+   "kanit": "Jandarma Genel Komutanlığına mensup sözleşmeli subay ve astsubaylar için muvazzaf subay ve astsubaylığa geçişte belirlenen üst sınır, subaylar için yüzbaşılık rütbe yaş haddi, astsubaylar için astsubay kıdemli üstçavuşluk rütbe yaş haddi şeklinde uygulanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-112",
+   "madde": "Ek 13",
+   "tip": "sure",
+   "tetikleyici": "yirmiyedi yaşını bitirmemiş",
+   "cevap": "JGK uzman erbaş adayı; müracaat yılının ocak ayının ilk günü",
+   "kanit": "Jandarma Genel Komutanlığında istihdam edilecek uzman erbaş adaylarının müracaat yapılan yılın ocak ayının ilk günü itibarıyla yirmiyedi yaşını bitirmemiş olması gerekir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-113",
+   "madde": "Ek 13",
+   "tip": "sure",
+   "tetikleyici": "beş yıllık sözleşme yapılır",
+   "cevap": "askerliğe başlamadan uzman erbaş olana; askerlik işlemleri ertelenir",
+   "kanit": "Muvazzaf askerlik yükümlülüğüne başlamadan Jandarma Genel Komutanlığında uzman erbaşlığa kabul edilenler ile beş yıllık sözleşme yapılır ve her türlü askerlik işlemleri ertelenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-114",
+   "madde": "Ek 13",
+   "tip": "sure",
+   "tetikleyici": "üç yıllık hizmet süresini tamamlayanlar",
+   "cevap": "askerlik hizmetini yerine getirmiş sayılır; süre fiilen göreve başlayınca başlar",
+   "kanit": "Birinci fıkra kapsamındakilerden, Jandarma Genel Komutanlığında üç yıllık hizmet süresini tamamlayanlar askerlik hizmetini yerine getirmiş sayılır. Bu yükümlüler ile ilgili bilgiler, İçişleri Bakanlığınca Millî Savunma Bakanlığına bildirilir.\nÜç yıllık süre, fiilen göreve başlanılan tarihte başlar. Üç yıllık süreyi tamamlamadan hangi nedenle olursa olsun Jandarma Genel Komutanlığından ilişiği kesilen personel askerlik hizmetini yerine getirir.",
+   "not": "üç yıl dolmadan ayrılan askerlik yapar",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-115",
+   "madde": "Ek 14",
+   "tip": "sure",
+   "tetikleyici": "fiilen on beş yıldır",
+   "cevap": "muvazzaf subay/astsubay mecburi hizmeti; statü değiştirende ilk statü tarihinden",
+   "kanit": "a) Muvazzaf subay veya astsubayların mecburi hizmetleri, subay veya astsubay nasbedildikleri tarihten itibaren fiilen on beş yıldır. Statü değiştirerek subaylığa geçirilenlerin mecburi hizmet süreleri Jandarma Genel Komutanlığındaki ilk statülerine nasbedildikleri veya ilk sözleşmelerinin onaylandığı tarihten itibaren on beş yıldır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-116",
+   "madde": "Ek 14",
+   "tip": "sure",
+   "tetikleyici": "sürelerin yarısı kadar uzatılır",
+   "cevap": "tıp/diş uzmanlık, doktora: yükümlülük yarısı kadar uzar (lisans: süre kadar)",
+   "kanit": "b) Subay veya astsubay nasbedildikten sonra Jandarma Genel Komutanlığı hesabına yurt içindeki fakülte ve yüksekokullarda lisans veya lisansüstü öğrenim yapanların yükümlülükleri, buralarda geçen süreler kadar uzatılır.\nc) Jandarma Genel Komutanlığı hesabına yurt içinde tıp veya diş hekimliğinde uzmanlık ya da yan dal uzmanlık eğitimi ile Jandarma Genel Komutanlığı hesabına yurt içinde tıpta, diş hekimliğinde veya eczacılıkta doktora eğitimini bitirenlerin yükümlülükleri, buralarda geçen sürelerin yarısı kadar uzatılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-117",
+   "madde": "Ek 14",
+   "tip": "sure",
+   "tetikleyici": "altı yıl uzatılır",
+   "cevap": "pilotaj bitirenin yükümlülüğü; yurt dışına altı ay+ gidenin iki katı",
+   "kanit": "d) Pilotaj eğitimini (pilot adaylarına verilen uçuş eğitimini) bitirenlerin yükümlülükleri altı yıl uzatılır.\ne) Yabancı memleketlere altı ay veya daha fazla süre ile öğrenim, staj, kurs, ihtisas veya görgü ve bilgilerini artırmak maksadıyla gidenlerin yükümlülükleri, masrafların ödenme şekline bakılmaksızın, gidiş ve dönüş tarihleri arasında geçen sürenin iki katı kadar uzatılır.",
+   "not": "statü değişikliği uzatan sebep değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-118",
+   "madde": "Ek 14",
+   "tip": "ceza",
+   "tetikleyici": "masraflarının iki katını",
+   "cevap": "mecburi hizmette istifa edenin tazminatı; disiplinle çıkarılan dört katı",
+   "kanit": "Durumları birinci fıkra hükümlerine uyanlardan mecburi hizmetle yükümlü olduğu süre içinde istifa edenler veya sağlık sebebi hariç her ne suretle olursa olsun ilişiği kesilenler, Jandarma Genel Komutanlığı tarafından belirlenen; öğrenci, subay ve/veya astsubay nasbedildikten sonra kendilerine yapılan öğrenim, eğitim ve yetiştirme masraflarının iki katını, 15 inci madde kapsamında ilişiği kesilenler ile 31/1/2018 tarihli ve 7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun Hükmünde Kararnamenin Kabul Edilmesine Dair Kanun kapsamında meslekten veya Devlet memurluğundan çıkarılanlar ise belirlenen masrafların dört katını yükümlülük sürelerinin eksik kalan kısmı ile orantılı olarak kanuni faizi ile birlikte tazminat olarak öderler.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-119",
+   "madde": "Ek 15",
+   "tip": "istisna",
+   "tetikleyici": "ücret veya katılım payı alınmaz",
+   "cevap": "birlik envanterindeki ilaçla tedavide personelden alınmaz (terör, sınır ötesi, üs)",
+   "kanit": "Teröristle mücadele ve sınır ötesi operasyonlar, uluslararası barışı destekleme kapsamındaki faaliyetler, üs bölgeleri gibi görevli bulunulan yer ya da görev koşulları itibarıyla reçete edilen ilaçların eczanelerden temin edilerek hasta/yaralı personele ulaştırılmasının güç olduğu, ikinci ve üçüncü basamak sağlık teşkillerine sevklerin emniyetli şekilde ve zamanında yapılamadığı hallerde, birlik/kurum envanterindeki mevcut ilaç ve tıbbi sarf malzemesi personel tedavisinde kullanılabilir. Bu kapsamda kullanılan ilaç ve tıbbi sarf malzemesi için personelden herhangi bir ücret veya katılım payı alınmaz.",
+   "not": "garnizon rutin poliklinik kapsamda değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-120",
+   "madde": "Ek 16",
+   "tip": "sure",
+   "tetikleyici": "kıdemli çavuş: 43",
+   "cevap": "yaş haddi (uzman jandarmalıktan astsubaylığa geçen çavuş/kıdemli çavuş)",
+   "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-121",
+   "madde": "Ek 16",
+   "tip": "sure",
+   "tetikleyici": "kıdemli üstçavuş: 52",
+   "cevap": "yaş haddi (uzman jandarmalıktan geçen üstçavuş/kıdemli üstçavuş)",
+   "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-122",
+   "madde": "Ek 16",
+   "tip": "sure",
+   "tetikleyici": "Astsubay başçavuş: 54",
+   "cevap": "yaş haddi (uzman jandarmalıktan geçen başçavuş)",
+   "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-123",
+   "madde": "Ek 16",
+   "tip": "sure",
+   "tetikleyici": "kıdemli başçavuş: 55",
+   "cevap": "yaş haddi (uzman jandarmalıktan geçen kıdemli başçavuş)",
+   "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-124",
+   "madde": "Ek 17",
+   "tip": "kosul",
+   "tetikleyici": "derece ve kademe ilerlemeleri yapılmaz",
+   "cevap": "uzman erbaş: görevden uzaklaştırma kalksa da yargılaması sürüyorsa; usul yönetmelikle",
+   "kanit": "Bunlar ile hakkındaki görevden uzaklaştırma veya tutuklanma tedbiri ortadan kaldırılmasına rağmen yargılamaları veya adli/idari soruşturmaları devam edenlerin terfi, derece ve kademe ilerlemeleri yapılmaz, bu işlemlerin ne şekilde yapılacağı yönetmelikle belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-125",
+   "madde": "Ek 18",
+   "tip": "sayi_oran",
+   "tetikleyici": "%90'ının (dâhil) üzerinde",
+   "cevap": "kıdemli başçavuş yaş haddini 60'a uzatma şartı (sicil); İçişleri Bakanı",
+   "kanit": "Emsalleri arasında temayüz etmiş, hizmetine ihtiyaç duyulduğu tespit edilen ve sicil notu ortalaması, sicil tam notunun %90'ının (dâhil) üzerinde olan istekli astsubay kıdemli başçavuşların yaş haddi, Jandarma Genel Komutanlığının teklifi üzerine veya resen İçişleri Bakanı tarafından 60 yaşına kadar uzatılabilir.",
+   "not": "\"5 yıl rütbede bulunma\" şartı yok",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-126",
+   "madde": "Ek 19",
+   "tip": "tanim",
+   "tetikleyici": "Jandarma Asayiş Vakfı",
+   "cevap": "emniyet-asayiş hizmetlerini güçlendirmek için kurulan vakıf; 5072 sayılı Kanun kapsamında",
+   "kanit": "Jandarma Genel Komutanlığının emniyet ve asayişe yönelik hizmetleri açısından güçlendirilmesi ve her yönüyle ileri düzeye yükseltilebilmesi amacıyla kurulan ve vakıf senedi 6/9/1997 tarihli ve 23102 sayılı Resmî Gazete'de ilan edilen Jandarma Asayiş Vakfı, 22/1/2004 tarihli ve 5072 sayılı Dernek ve Vakıfların Kamu Kurum ve Kuruluşları ile İlişkilerine Dair Kanunun 1 inci maddesinin ikinci fıkrası kapsamındaki vakıflara ilişkin hükümlere tabidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-127",
+   "madde": "Geçici 5",
+   "tip": "sure",
+   "tetikleyici": "üç yıl süreyle karşılanır",
+   "cevap": "er-erbaş ihtiyacını MSB karşılar; Cumhurbaşkanı uzatabilir; giderler JGK bütçesinden",
+   "kanit": "Jandarma Genel Komutanlığının er ve erbaş ile askerlik yükümlüsü ihtiyacı, 21/6/1927 tarihli ve 1111 sayılı Askerlik Kanunu hükümleri çerçevesinde Milli Savunma Bakanlığı tarafından üç yıl süreyle karşılanır. Ancak Cumhurbaşkanı kararıyla; bu süre uzatılabilir. Bu suretle Jandarma Genel Komutanlığı emrine verilen er ve erbaşlar ile askerlik yükümlüleri hakkında, diğer er ve erbaşlar ile askerlik yükümlülerinin tabi olduğu hükümler uygulanır. Bunların giderleri Jandarma Genel Komutanlığı bütçesinden karşılanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-128",
+   "madde": "Geçici 1",
+   "tip": "kosul",
+   "tetikleyici": "Jandarma Teşkilat ve Vazife Tüzüğü",
+   "cevap": "yönetmelikler çıkana kadar Kanuna aykırı olmayan hükümleri uygulanır",
+   "kanit": "Bu Kanunun 24 üncü maddesiyle çıkarılması öngörülen yönetmelikler yürürlüğe girinceye kadar, 1 Aralık 1937 gün ve 2/7756 sayılı Kararname ile yürürlüğe konulmuş olan \\\"Jandarma Teşkilat ve Vazife Tüzüğü\\\" ile ek ve değişikliklerinin bu Kanuna aykırı olmayan hükümlerinin uygulanmasına devam edilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-129",
+   "madde": "Geçici 3",
+   "tip": "kosul",
+   "tetikleyici": "yeterli polis bulunmaması nedeniyle",
+   "cevap": "jandarmanın polis sahasındaki görevi devam eder; polis arttıkça EGM'ye devir",
+   "kanit": "Bu Kanunun yürürlüğe girdiği tarihte, yeterli polis bulunmaması nedeniyle jandarmanın polis sahalarındaki görev ve sorumluluğu devam eder. Polis miktarına bağlı olarak jandarma bu sahaları Emniyet Genel Müdürlüğüne devreder.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-130",
+   "madde": "Geçici 7",
+   "tip": "makam",
+   "tetikleyici": "yabancı ülkeler ile eğitim",
+   "cevap": "devam eden faaliyetleri İçişleri Bakanlığı yürütür (anlaşma ve protokol esasları)",
+   "kanit": "Jandarma Genel Komutanlığının halihazırda devam eden yabancı ülkeler ile eğitim ve işbirliği faaliyetleri askeri eğitim işbirliği anlaşmaları ve protokollerinde belirtilen esaslara göre İçişleri Bakanlığı tarafından yürütülür.",
+   "not": "",
    "karistirilan": []
   }
  ]

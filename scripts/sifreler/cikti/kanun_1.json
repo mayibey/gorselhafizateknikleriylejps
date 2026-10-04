@@ -826,6 +826,369 @@
    "kanit": "(1) Biri diğerinin unsurunu veya ağırlaştırıcı nedenini oluşturması dolayısıyla tek fiil sayılan suça bileşik suç denir.",
    "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-1-081",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "işlenen fiilin ağırlığıyla orantılı",
+   "cevap": "ceza ve güvenlik tedbiri bununla orantılı hükmolunur",
+   "kanit": "(1) Suç işleyen kişi hakkında işlenen fiilin ağırlığıyla orantılı ceza ve güvenlik tedbirine hükmolunur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-082",
+   "madde": "3",
+   "tip": "yasak",
+   "tetikleyici": "hiçbir kimseye ayrıcalık tanınamaz",
+   "cevap": "ayrım yasağı: ırk, dil, din, mezhep, milliyet, renk, cinsiyet, köken",
+   "kanit": "(2) Ceza Kanununun uygulamasında kişiler arasında ırk, dil, din, mezhep, milliyet, renk, cinsiyet, siyasal veya diğer fikir yahut düşünceleri, felsefi inanç, milli veya sosyal köken, doğum, ekonomik ve diğer toplumsal konumları yönünden ayrım yapılamaz ve hiçbir kimseye ayrıcalık tanınamaz.",
+   "not": "listede ayrıca fikir-düşünce, felsefi inanç, ekonomik-toplumsal konum var; meslek/sendika YOK",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-083",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "neticenin Türkiye'de gerçekleşmesi",
+   "cevap": "suç Türkiye'de işlenmiş sayılır (fiilin kısmen işlenmesi de yeter)",
+   "kanit": "Fiilin kısmen veya tamamen Türkiye'de işlenmesi veya neticenin Türkiye'de gerçekleşmesi halinde suç, Türkiye'de işlenmiş sayılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-084",
+   "madde": "20",
+   "tip": "kosul",
+   "tetikleyici": "Ceza sorumluluğu şahsidir",
+   "cevap": "kimse başkasının fiilinden dolayı sorumlu tutulamaz",
+   "kanit": "(1) Ceza sorumluluğu şahsidir. Kimse başkasının fiilinden dolayı sorumlu tutulamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-085",
+   "madde": "21",
+   "tip": "tanim",
+   "tetikleyici": "bilerek ve istenerek gerçekleştirilmesidir",
+   "cevap": "kast (suçun kanuni tanımındaki unsurların); suçun oluşması kasta bağlı",
+   "kanit": "(1) Suçun oluşması kastın varlığına bağlıdır. Kast, suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-086",
+   "madde": "21",
+   "tip": "ceza",
+   "tetikleyici": "üçte birden yarısına kadar indirilir",
+   "cevap": "olası kastta temel ceza; müebbet yerine yirmi-yirmibeş yıl hapis",
+   "kanit": "Bu halde, ağırlaştırılmış müebbet hapis cezasını gerektiren suçlarda müebbet hapis cezasına, müebbet hapis cezasını gerektiren suçlarda yirmi yıldan yirmibeş yıla kadar hapis cezasına hükmolunur; diğer suçlarda ise temel ceza üçte birden yarısına kadar indirilir.",
+   "not": "ağırlaştırılmış müebbet yerine müebbet",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-087",
+   "madde": "22",
+   "tip": "ceza",
+   "tetikleyici": "üçte birden yarısına kadar artırılır",
+   "cevap": "bilinçli taksirde taksirli suçun cezası (indirim değil artırım)",
+   "kanit": "(3) Kişinin öngördüğü neticeyi istememesine karşın, neticenin meydana gelmesi halinde bilinçli taksir vardır; bu halde taksirli suça ilişkin ceza üçte birden yarısına kadar artırılır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "37",
+     "fark": "dolaylı fail: kusur yeteneği olmayanı kullanınca aynı artırım"
+    },
+    {
+     "madde": "38",
+     "fark": "azmettirme: altsoy-üstsoy nüfuzuyla aynı artırım"
+    },
+    {
+     "madde": "252",
+     "fark": "rüşvet: yargı görevlisi, hakem, bilirkişi, noter aynı artırım"
+    }
+   ]
+  },
+  {
+   "i": "K-1-088",
+   "madde": "22",
+   "tip": "kosul",
+   "tetikleyici": "herkes kendi kusurundan dolayı",
+   "cevap": "birden fazla kişinin taksirle işlediği suçta ceza kusura göre ayrı",
+   "kanit": "(5) Birden fazla kişinin taksirle işlediği suçlarda, herkes kendi kusurundan dolayı sorumlu olur. Her failin cezası kusuruna göre ayrı ayrı belirlenir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-089",
+   "madde": "36",
+   "tip": "kosul",
+   "tetikleyici": "neticenin gerçekleşmesini önlerse",
+   "cevap": "gönüllü vazgeçme: teşebbüsten ceza yok; tamam olan kısım suçsa cezalandırılır",
+   "kanit": "(1) Fail, suçun icra hareketlerinden gönüllü vazgeçer veya kendi çabalarıyla suçun tamamlanmasını veya neticenin gerçekleşmesini önlerse, teşebbüsten dolayı cezalandırılmaz; fakat tamam olan kısım esasen bir suç oluşturduğu takdirde, sadece o suça ait ceza ile cezalandırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-090",
+   "madde": "39",
+   "tip": "ceza",
+   "tetikleyici": "on yıldan onbeş yıla",
+   "cevap": "yardım eden: müebbet yerine; ağırlaştırılmış müebbet yerine onbeş-yirmi yıl",
+   "kanit": "(1) Suçun işlenmesine yardım eden kişiye, işlenen suçun ağırlaştırılmış müebbet hapis cezasını gerektirmesi halinde, onbeş yıldan yirmi yıla; müebbet hapis cezasını gerektirmesi halinde, on yıldan onbeş yıla kadar hapis cezası verilir. Diğer hallerde cezanın yarısı indirilir. Ancak, bu durumda verilecek ceza sekiz yılı geçemez.",
+   "not": "diğer hallerde yarısı indirilir, sekiz yılı geçemez",
+   "karistirilan": [
+    {
+     "madde": "322",
+     "fark": "savaşta yükümlülükte hile yapana on-onbeş yıl"
+    }
+   ]
+  },
+  {
+   "i": "K-1-091",
+   "madde": "45",
+   "tip": "tanim",
+   "tetikleyici": "hapis ve adlî para cezalarıdır",
+   "cevap": "suç karşılığı cezalar (güvenlik tedbiri ceza türü değil)",
+   "kanit": "(1) Suç karşılığında uygulanan yaptırım olarak cezalar, hapis ve adlî para cezalarıdır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-092",
+   "madde": "248",
+   "tip": "ceza",
+   "tetikleyici": "üçte ikisi indirilir",
+   "cevap": "zimmet etkin pişmanlığı: soruşturma başlamadan iade/tazmin",
+   "kanit": "(1) Soruşturma başlamadan önce, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın üçte ikisi indirilir. (2) Kovuşturma başlamadan önce, gönüllü olarak, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın yarısı indirilir. Etkin pişmanlığın hükümden önce gerçekleşmesi halinde, verilecek cezanın üçte biri indirilir.",
+   "not": "kovuşturma başlamadan yarısı; hükümden önce üçte biri; \"dörtte üç\" yok",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-093",
+   "madde": "250",
+   "tip": "ceza",
+   "tetikleyici": "ikna eden kamu görevlisi",
+   "cevap": "ikna suretiyle irtikâp: üç yıldan beş yıla kadar hapis",
+   "kanit": "(2) Görevinin sağladığı güveni kötüye kullanmak suretiyle gerçekleştirdiği hileli davranışlarla, kendisine veya başkasına yarar sağlanmasına veya bu yolda vaatte bulunulmasına bir kimseyi ikna eden kamu görevlisi, üç yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-094",
+   "madde": "250",
+   "tip": "ceza",
+   "tetikleyici": "hatasından yararlanarak işlenmiş",
+   "cevap": "irtikâp (ikna suretiyle); bir yıldan üç yıla kadar hapis",
+   "kanit": "(3) İkinci fıkrada tanımlanan suçun kişinin hatasından yararlanarak işlenmiş olması halinde, bir yıldan üç yıla kadar hapis cezasına hükmolunur.",
+   "not": "menfaat değeri ve mağdurun durumu: yarısına kadar indirilebilir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-095",
+   "madde": "254",
+   "tip": "istisna",
+   "tetikleyici": "pişmanlık duyarak durumdan yetkili",
+   "cevap": "rüşvet veren: resmî makamlar öğrenmeden haber verirse ceza yok",
+   "kanit": "Rüşvet veren veya bu konuda kamu görevlisiyle anlaşmaya varan kişinin, durum resmi makamlarca öğrenilmeden önce, pişmanlık duyarak durumdan yetkili makamları haberdar etmesi halinde, hakkında rüşvet suçundan dolayı cezaya hükmolunmaz.",
+   "not": "iştirak eden diğer kişiler için de aynı; yabancı kamu görevlisine rüşvette uygulanmaz",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-096",
+   "madde": "255",
+   "tip": "suc_adi",
+   "tetikleyici": "nüfuz sahibi olduğundan bahisle",
+   "cevap": "nüfuz ticareti; iki yıldan beş yıla kadar hapis, adli para",
+   "kanit": "(1) Kamu görevlisi üzerinde nüfuz sahibi olduğundan bahisle, haksız bir işin gördürülmesi amacıyla girişimde bulunması için, doğrudan veya aracılar vasıtasıyla, kendisine veya bir başkasına menfaat temin eden kişi, iki yıldan beş yıla kadar hapis ve beşbin güne kadar adli para cezası ile cezalandırılır.",
+   "not": "fail kamu görevlisi olmak zorunda değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-097",
+   "madde": "255",
+   "tip": "ceza",
+   "tetikleyici": "Kişinin kamu görevlisi olması halinde",
+   "cevap": "nüfuz ticaretinde hapis cezası yarı oranında artırılır",
+   "kanit": "Kişinin kamu görevlisi olması halinde, verilecek hapis cezası yarı oranında artırılır.",
+   "not": "işini gördüren (menfaat sağlayan) bir yıldan üç yıla",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-098",
+   "madde": "255",
+   "tip": "ceza",
+   "tetikleyici": "kabul edilmemesi hallerinde",
+   "cevap": "nüfuz ticareti teklif/talep reddedilirse ceza yarı oranında indirilir (hükmolunmaz değil)",
+   "kanit": "(3) Birinci fıkrada belirtilen amaç doğrultusunda menfaat talebinde bulunulması ve fakat bunun kabul edilmemesi ya da menfaat teklif veya vaadinde bulunulması ve fakat bunun kabul edilmemesi hallerinde, birinci fıkra hükmüne göre verilecek ceza yarı oranında indirilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "252",
+     "fark": "rüşvet teklif veya talebi reddedilirse de yarı indirim"
+    }
+   ]
+  },
+  {
+   "i": "K-1-099",
+   "madde": "255",
+   "tip": "kosul",
+   "tetikleyici": "aracılık eden kişi, müşterek fail",
+   "cevap": "nüfuz ticaretine aracılık eden müşterek fail; aynı ceza",
+   "kanit": "(4) Nüfuz ticareti suçuna aracılık eden kişi, müşterek fail olarak, birinci fıkrada belirtilen ceza ile cezalandırılır.",
+   "not": "anlaşmaya varılması bile tamamlanmış suç gibi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-100",
+   "madde": "260",
+   "tip": "ceza",
+   "tetikleyici": "görevlerine gelmeyen",
+   "cevap": "toplu görev terki: üç aydan bir yıla kadar hapis; yavaşlatan",
+   "kanit": "(1) Hukuka aykırı olarak ve toplu biçimde, görevlerini terk eden, görevlerine gelmeyen, görevlerini geçici de olsa kısmen veya tamamen yapmayan veya yavaşlatan kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-101",
+   "madde": "260",
+   "tip": "istisna",
+   "tetikleyici": "üçten fazla olmaması halinde",
+   "cevap": "toplu görev terkinde cezaya hükmolunmaz (üç kişiye kadar)",
+   "kanit": "Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-102",
+   "madde": "260",
+   "tip": "istisna",
+   "tetikleyici": "geçici ve kısa süreli",
+   "cevap": "mesleki-sosyal haklar için, hizmeti aksatmadan; indirim ya da ceza verilmeyebilir",
+   "kanit": "(2) Kamu görevlilerinin mesleki ve sosyal hakları ile ilgili olarak, hizmeti aksatmayacak biçimde, geçici ve kısa süreli iş bırakmaları veya yavaşlatmaları halinde, verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-103",
+   "madde": "261",
+   "tip": "ceza",
+   "tetikleyici": "zorla tasarrufta bulunan",
+   "cevap": "kamu görevlisi kişilerin malları üzerinde; altı aydan iki yıla hapis",
+   "kanit": "(1) İlgili kanunlarda belirlenen koşullara aykırı olduğunu bilerek, kişilerin taşınır veya taşınmaz malları üzerinde, karşılık ödenmek suretiyle de olsa, zorla tasarrufta bulunan kamu görevlisi, fiil daha ağır cezayı gerektiren bir suç oluşturmadığı takdirde, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+   "not": "karşılık ödense de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-104",
+   "madde": "262",
+   "tip": "suc_adi",
+   "tetikleyici": "kanun ve nizamlara aykırı olarak",
+   "cevap": "kamu görevinin usulsüz üstlenilmesi; üç aydan iki yıla kadar hapis",
+   "kanit": "(1) Bir kamu görevini, kanun ve nizamlara aykırı olarak yerine getirmeye teşebbüs eden veya terk emri kendisine bildirilmiş olduğu halde görevi sürdüren kimseye üç aydan iki yıla kadar hapis cezası verilir.",
+   "not": "terk emri bildirildiği halde görevi sürdüren de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-105",
+   "madde": "264",
+   "tip": "ceza",
+   "tetikleyici": "resmi elbisesini yetkisi olmaksızın",
+   "cevap": "üç aydan bir yıla kadar hapis; hakkı olmayan nişan-madalya da",
+   "kanit": "(1) Bir rütbe veya kamu görevinin veya mesleğin, resmi elbisesini yetkisi olmaksızın alenen ve başkalarını yanıltacak şekilde giyen veya hakkı olmayan nişan veya madalyaları takan kimseye üç aydan bir yıla kadar hapis cezası verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-106",
+   "madde": "264",
+   "tip": "ceza",
+   "tetikleyici": "Elbisenin sağlayacağı kolaylık",
+   "cevap": "o elbiseyle suç işlenirse giyme cezası üçte biri artırılır",
+   "kanit": "(2) Elbisenin sağlayacağı kolaylık ve olanaklardan yararlanarak bir suç işlenirse, yalnız bu fiilden ötürü yukarıdaki fıkrada belirtilen cezalar üçte biri oranında artırılarak hükmolunur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-107",
+   "madde": "265",
+   "tip": "ceza",
+   "tetikleyici": "yargı görevi yapan kişilere karşı",
+   "cevap": "direnme: iki yıldan dört yıla kadar hapis",
+   "kanit": "(2) Suçun yargı görevi yapan kişilere karşı işlenmesi halinde, iki yıldan dört yıla kadar hapis cezasına hükmolunur.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-108",
+   "madde": "265",
+   "tip": "ceza",
+   "tetikleyici": "tanınmayacak bir hale koyması",
+   "cevap": "direnme: ceza üçte biri artırılır; birden fazla kişiyle de",
+   "kanit": "(3) Suçun, kişinin kendisini tanınmayacak bir hale koyması suretiyle veya birden fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza üçte biri oranında artırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-109",
+   "madde": "265",
+   "tip": "ceza",
+   "tetikleyici": "korkutucu güçten yararlanılarak",
+   "cevap": "direnme silahla ya da örgüt gücüyle: ceza yarı oranında artırılır",
+   "kanit": "(4) Suçun, silahla ya da var olan veya var sayılan suç örgütlerinin oluşturdukları korkutucu güçten yararlanılarak işlenmesi halinde, yukarıdaki fıkralara göre verilecek ceza yarı oranında artırılır.",
+   "not": "\"örgüte yarar sağlama maksadı\" artıran hal değil",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-110",
+   "madde": "266",
+   "tip": "ceza",
+   "tetikleyici": "araç ve gereçleri bir suçun",
+   "cevap": "görevi gereği elindeki araçla suç işleyen görevli: üçte biri artırım",
+   "kanit": "(1) Görevi gereği olarak elinde bulundurduğu araç ve gereçleri bir suçun işlenmesi sırasında kullanan kamu görevlisi hakkında, ilgili suçun tanımında kamu görevlisi sıfatı esasen göz önünde bulundurulmamış ise, verilecek ceza üçte biri oranında artırılır.",
+   "not": "suç tanımında kamu görevlisi sıfatı esasen göz önünde bulundurulmamışsa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-111",
+   "madde": "317",
+   "tip": "ceza",
+   "tetikleyici": "komutanlığı terk etmeleri için",
+   "cevap": "emre uymayan komutana da müebbet hapis (askeri komutanlıkların gasbı)",
+   "kanit": "(1) Kanunen yetkili olmadıkları veya Devlet tarafından memur edilmedikleri halde, bir asker kıtasının veya donanmasının veya savaş gemisinin veya savaş hava filosunun veya bir kale veya müstahkem mevkiin veya bir askerî üssün veya tesisin, bir liman veya şehrin komutasını alanlara müebbet hapis cezası verilir. (2) Kanunen yetkili olmaları veya Devlet tarafından görevlendirilmeleri suretiyle yukarıda gösterilen yerlerin komutanı bulunanlardan, yetkili makamlarca komutanlığı terk etmeleri için verilen emirlere uymayanlara da aynı ceza verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-112",
+   "madde": "318",
+   "tip": "ceza",
+   "tetikleyici": "firara sevk edecek",
+   "cevap": "askerlikten soğutma: altı aydan iki yıla hapis; basın-yayınla yarısı artırım",
+   "kanit": "Askerlik hizmetini yapanları firara sevk edecek veya askerlik hizmetine katılacak olanları bu hizmeti yapmaktan vazgeçirecek şekilde teşvik veya telkinde bulunanlara altı aydan iki yıla kadar hapis cezası verilir. (2) Fiil, basın ve yayın yolu ile işlenirse ceza yarısı oranında artırılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-113",
+   "madde": "320",
+   "tip": "ceza",
+   "tetikleyici": "vatandaşlardan asker yazan",
+   "cevap": "yabancıya asker yazma: üç-altı yıl; askerlik çağındakiler varsa üçte biri",
+   "kanit": "(1) Hükûmetin izni olmaksızın bir yabancı veya yabancı Devlet hizmetinde veya bunların lehinde çalışmak üzere Ülke içinde vatandaşlardan asker yazan veya vatandaşları silahlandıran kimseye üç yıldan altı yıla kadar hapis cezası verilir. (2) Asker yazılanlar veya silahlandırılanlar arasından asker veya askerlik çağında olanlar varsa ceza üçte biri oranında artırılır.",
+   "not": "hizmeti kabul edene bir yıldan üç yıla",
+   "karistirilan": []
+  },
+  {
+   "i": "K-1-114",
+   "madde": "322",
+   "tip": "ceza",
+   "tetikleyici": "taksirden ileri gelmişse",
+   "cevap": "savaşta sözleşme yükümlülüğünü yerine getirmeme: cezanın dörtte üçüne kadarı indirilebilir",
+   "kanit": "(2) Yükümlülüklerin kısmen veya tamamen yerine getirilmemesi taksirden ileri gelmişse, cezanın dörtte üçüne kadarı indirilebilir.",
+   "not": "kasten: üç yıldan on yıla; hile: on yıldan onbeş yıla",
+   "karistirilan": []
   }
  ]
 }

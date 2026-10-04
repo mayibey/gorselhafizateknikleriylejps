@@ -1,0 +1,808 @@
+{
+ "kanun_id": 1,
+ "ad": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam)",
+ "kapsam_maddeler_birlesik": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "8",
+  "20",
+  "21",
+  "22",
+  "23",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "247",
+  "248",
+  "249",
+  "250",
+  "251",
+  "252",
+  "253",
+  "254",
+  "255",
+  "256",
+  "257",
+  "258",
+  "259",
+  "260",
+  "261",
+  "262",
+  "264",
+  "265",
+  "266",
+  "317",
+  "318",
+  "319",
+  "320",
+  "321",
+  "322",
+  "323",
+  "324",
+  "325"
+ ],
+ "not": "kapsamda=true maddelerden soru sorulur; diğerleri yalnız bağlam/karıştırılan için.",
+ "maddeler": [
+  {
+   "no": "1",
+   "metin": "(1) Ceza Kanununun amacı; kişi hak ve özgürlüklerini, kamu düzen ve güvenliğini, hukuk devletini, kamu sağlığını ve çevreyi, toplum barışını korumak, suç işlenmesini önlemektir. Kanunda, bu amacın gerçekleştirilmesi için ceza sorumluluğunun temel esasları ile suçlar, ceza ve güvenlik tedbirlerinin türleri düzenlenmiştir.",
+   "kapsamda": true
+  },
+  {
+   "no": "2",
+   "metin": "(1) Kanunun açıkça suç saymadığı bir fiil için kimseye ceza verilemez ve güvenlik tedbiri uygulanamaz. Kanunda yazılı cezalardan ve güvenlik tedbirlerinden başka bir ceza ve güvenlik tedbirine hükmolunamaz. (2) İdarenin düzenleyici işlemleriyle suç ve ceza konulamaz. (3) Kanunların suç ve ceza içeren hükümlerinin uygulanmasında kıyas yapılamaz. Suç ve ceza içeren hükümler, kıyasa yol açacak biçimde geniş yorumlanamaz.",
+   "kapsamda": true
+  },
+  {
+   "no": "3",
+   "metin": "(1) Suç işleyen kişi hakkında işlenen fiilin ağırlığıyla orantılı ceza ve güvenlik tedbirine hükmolunur. (2) Ceza Kanununun uygulamasında kişiler arasında ırk, dil, din, mezhep, milliyet, renk, cinsiyet, siyasal veya diğer fikir yahut düşünceleri, felsefi inanç, milli veya sosyal köken, doğum, ekonomik ve diğer toplumsal konumları yönünden ayrım yapılamaz ve hiçbir kimseye ayrıcalık tanınamaz.",
+   "kapsamda": true
+  },
+  {
+   "no": "4",
+   "metin": "(1) Ceza kanunlarını bilmemek mazeret sayılmaz. (2) (Mülga : 29/6/2005 – 5377/1 md.)",
+   "kapsamda": true
+  },
+  {
+   "no": "5",
+   "metin": "(1) Bu Kanunun genel hükümleri, özel ceza kanunları ve ceza içeren kanunlardaki suçlar hakkında da uygulanır.",
+   "kapsamda": true
+  },
+  {
+   "no": "8",
+   "metin": "(1) Türkiye'de işlenen suçlar hakkında Türk kanunları uygulanır. Fiilin kısmen veya tamamen Türkiye'de işlenmesi veya neticenin Türkiye'de gerçekleşmesi halinde suç, Türkiye'de işlenmiş sayılır. (2) Suç; a) Türk kara ve hava sahaları ile Türk karasularında, b) Açık denizde ve bunun üzerindeki hava sahasında, Türk deniz ve hava araçlarında veya bu araçlarla, c) Türk deniz ve hava savaş araçlarında veya bu araçlarla, d) Türkiye'nin kıt'a sahanlığında veya münhasır ekonomik bölgesinde tesis edilmiş sabit platformlarda veya bunlara karşı, işlendiğinde Türkiye'de işlenmiş sayılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "20",
+   "metin": "(1) Ceza sorumluluğu şahsidir. Kimse başkasının fiilinden dolayı sorumlu tutulamaz. (2) Tüzel kişiler hakkında ceza yaptırımı uygulanamaz. Ancak, suç dolayısıyla kanunda öngörülen güvenlik tedbiri niteliğindeki yaptırımlar saklıdır.",
+   "kapsamda": true
+  },
+  {
+   "no": "21",
+   "metin": "(1) Suçun oluşması kastın varlığına bağlıdır. Kast, suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir. (2) Kişinin, suçun kanuni tanımındaki unsurların gerçekleşebileceğini öngörmesine rağmen, fiili işlemesi halinde olası kast vardır. Bu halde, ağırlaştırılmış müebbet hapis cezasını gerektiren suçlarda müebbet hapis cezasına, müebbet hapis cezasını gerektiren suçlarda yirmi yıldan yirmibeş yıla kadar hapis cezasına hükmolunur; diğer suçlarda ise temel ceza üçte birden yarısına kadar indirilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "22",
+   "metin": "(1) Taksirle işlenen fiiller, kanunun açıkça belirttiği hallerde cezalandırılır. (2) Taksir, dikkat ve özen yükümlülüğüne aykırılık dolayısıyla, bir davranışın suçun kanuni tanımında belirtilen neticesi öngörülmeyerek gerçekleştirilmesidir. (3) Kişinin öngördüğü neticeyi istememesine karşın, neticenin meydana gelmesi halinde bilinçli taksir vardır; bu halde taksirli suça ilişkin ceza üçte birden yarısına kadar artırılır. (4) Taksirle işlenen suçtan dolayı verilecek olan ceza failin kusuruna göre belirlenir. (5) Birden fazla kişinin taksirle işlediği suçlarda, herkes kendi kusurundan dolayı sorumlu olur. Her failin cezası kusuruna göre ayrı ayrı belirlenir. (6) Taksirli hareket sonucu neden olunan netice, münhasıran failin kişisel ve ailevi durumu bakımından, artık bir cezanın hükmedilmesini gereksiz kılacak derecede mağdur olmasına yol açmışsa ceza verilmez; bilinçli taksir halinde verilecek ceza yarıdan altıda bire kadar indirilebilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "23",
+   "metin": "(1) Bir fiilin, kastedilenden daha ağır veya başka bir neticenin oluşumuna sebebiyet vermesi halinde, kişinin bundan dolayı sorumlu tutulabilmesi için bu netice bakımından en azından taksirle hareket etmesi gerekir.",
+   "kapsamda": true
+  },
+  {
+   "no": "35",
+   "metin": "(1) Kişi, işlemeyi kastettiği bir suçu elverişli hareketlerle doğrudan doğruya icraya başlayıp da elinde olmayan nedenlerle tamamlayamaz ise teşebbüsten dolayı sorumlu tutulur. (2) Suça teşebbüs halinde fail, meydana gelen zarar veya tehlikenin ağırlığına göre, ağırlaştırılmış müebbet hapis cezası yerine ondört yıldan yirmibir yıla kadar, müebbet hapis cezası yerine on yıldan onsekiz yıla kadar hapis cezası ile cezalandırılır. Diğer hallerde verilecek cezanın dörtte birinden dörtte üçüne kadarı indirilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "36",
+   "metin": "(1) Fail, suçun icra hareketlerinden gönüllü vazgeçer veya kendi çabalarıyla suçun tamamlanmasını veya neticenin gerçekleşmesini önlerse, teşebbüsten dolayı cezalandırılmaz; fakat tamam olan kısım esasen bir suç oluşturduğu takdirde, sadece o suça ait ceza ile cezalandırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "37",
+   "metin": "(1) Suçun kanuni tanımında yer alan fiili birlikte gerçekleştiren kişilerden her biri, fail olarak sorumlu olur. (2) Suçun işlenmesinde bir başkasını araç olarak kullanan kişi de fail olarak sorumlu tutulur. Kusur yeteneği olmayanları suçun işlenmesinde araç olarak kullanan kişinin cezası, üçte birden yarısına kadar artırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "38",
+   "metin": "(1) Başkasını suç işlemeye azmettiren kişi, işlenen suçun cezası ile cezalandırılır. (2) Üstsoy ve altsoy ilişkisinden doğan nüfuz kullanılmak suretiyle suça azmettirme halinde, azmettirenin cezası üçte birden yarısına kadar artırılır. Çocukların suça azmettirilmesi halinde, bu fıkra hükmüne göre cezanın artırılabilmesi için üstsoy ve altsoy ilişkisinin varlığı aranmaz. (3) Azmettirenin belli olmaması halinde, kim olduğunun ortaya çıkmasını sağlayan fail veya diğer suç ortağı hakkında ağırlaştırılmış müebbet hapis cezası yerine yirmi yıldan yirmibeş yıla kadar, müebbet hapis cezası yerine onbeş yıldan yirmi yıla kadar hapis cezasına hükmolunabilir. Diğer hallerde verilecek cezada, üçte bir oranında indirim yapılabilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "39",
+   "metin": "(1) Suçun işlenmesine yardım eden kişiye, işlenen suçun ağırlaştırılmış müebbet hapis cezasını gerektirmesi halinde, onbeş yıldan yirmi yıla; müebbet hapis cezasını gerektirmesi halinde, on yıldan onbeş yıla kadar hapis cezası verilir. Diğer hallerde cezanın yarısı indirilir. Ancak, bu durumda verilecek ceza sekiz yılı geçemez. (2) Aşağıdaki hallerde kişi işlenen suçtan dolayı yardım eden sıfatıyla sorumlu olur: a) Suç işlemeye teşvik etmek veya suç işleme kararını kuvvetlendirmek veya fiilin işlenmesinden sonra yardımda bulunacağını vaat etmek. b) Suçun nasıl işleneceği hususunda yol göstermek veya fiilin işlenmesinde kullanılan araçları sağlamak. c) Suçun işlenmesinden önce veya işlenmesi sırasında yardımda bulunarak icrasını kolaylaştırmak.",
+   "kapsamda": true
+  },
+  {
+   "no": "40",
+   "metin": "(1) Suça iştirak için kasten ve hukuka aykırı işlenmiş bir fiilin varlığı yeterlidir. Suçun işlenişine iştirak eden her kişi, diğerinin cezalandırılmasını önleyen kişisel nedenler göz önünde bulundurulmaksızın kendi kusurlu fiiline göre cezalandırılır. (2) Özgü suçlarda, ancak özel faillik niteliğini taşıyan kişi fail olabilir. Bu suçların işlenişine iştirak eden diğer kişiler ise azmettiren veya yardım eden olarak sorumlu tutulur. (3) Suça iştirakten dolayı sorumlu tutulabilmek için ilgili suçun en azından teşebbüs aşamasına varmış olması gerekir.",
+   "kapsamda": true
+  },
+  {
+   "no": "41",
+   "metin": "(1) İştirak halinde işlenen suçlarda, sadece gönüllü vazgeçen suç ortağı, gönüllü vazgeçme hükümlerinden yararlanır. (2) Suçun; a) Gönüllü vazgeçenin gösterdiği gayreti dışında başka bir sebeple işlenmemiş olması, b) Gönüllü vazgeçenin bütün gayretine rağmen işlenmiş olması, Hallerinde de gönüllü vazgeçme hükümleri uygulanır.",
+   "kapsamda": true
+  },
+  {
+   "no": "42",
+   "metin": "(1) Biri diğerinin unsurunu veya ağırlaştırıcı nedenini oluşturması dolayısıyla tek fiil sayılan suça bileşik suç denir. Bu tür suçlarda içtima hükümleri uygulanmaz.",
+   "kapsamda": true
+  },
+  {
+   "no": "43",
+   "metin": "(1) Bir suç işleme kararının icrası kapsamında, değişik zamanlarda bir kişiye karşı aynı suçun birden fazla işlenmesi durumunda, bir cezaya hükmedilir. Ancak bu ceza, dörtte birinden dörtte üçüne kadar artırılır. Bir suçun temel şekli ile daha ağır veya daha az cezayı gerektiren nitelikli şekilleri, aynı suç sayılır. (Ek cümle: 29/6/2005 – 5377/6 md.) Mağduru belli bir kişi olmayan suçlarda da bu fıkra hükmü uygulanır. (2) Aynı suçun birden fazla kişiye karşı tek bir fiille işlenmesi durumunda da, birinci fıkra hükmü uygulanır. (3) Kasten öldürme, kasten yaralama, işkence ve yağma suçlarında bu madde hükümleri uygulanmaz.",
+   "kapsamda": true
+  },
+  {
+   "no": "44",
+   "metin": "(1) İşlediği bir fiil ile birden fazla farklı suçun oluşmasına sebebiyet veren kişi, bunlardan en ağır cezayı gerektiren suçtan dolayı cezalandırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "45",
+   "metin": "(1) Suç karşılığında uygulanan yaptırım olarak cezalar, hapis ve adlî para cezalarıdır.",
+   "kapsamda": true
+  },
+  {
+   "no": "247",
+   "metin": "(1) Görevi nedeniyle zilyedliği kendisine devredilmiş olan veya koruma ve gözetimiyle yükümlü olduğu malı kendisinin veya başkasının zimmetine geçiren kamu görevlisi, beş yıldan oniki yıla kadar hapis cezası ile cezalandırılır. (2) Suçun, zimmetin açığa çıkmamasını sağlamaya yönelik hileli davranışlarla işlenmesi halinde, verilecek ceza yarı oranında artırılır. (3) Zimmet suçunun, malın geçici bir süre kullanıldıktan sonra iade edilmek üzere işlenmesi halinde, verilecek ceza yarı oranına kadar indirilebilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "248",
+   "metin": "(1) Soruşturma başlamadan önce, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın üçte ikisi indirilir. (2) Kovuşturma başlamadan önce, gönüllü olarak, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın yarısı indirilir. Etkin pişmanlığın hükümden önce gerçekleşmesi halinde, verilecek cezanın üçte biri indirilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "249",
+   "metin": "(1) Zimmet suçunun konusunu oluşturan malın değerinin azlığı nedeniyle, verilecek ceza üçte birden yarıya kadar indirilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "250",
+   "metin": "(1) (Değişik: 2/7/2012-6352/86 md.) Görevinin sağladığı nüfuzu kötüye kullanmak suretiyle kendisine veya başkasına yarar sağlanmasına veya bu yolda vaatte bulunulmasına bir kimseyi icbar eden kamu görevlisi, beş yıldan on yıla kadar hapis cezası ile cezalandırılır. Kamu görevlisinin haksız tutum ve davranışları karşısında, kişinin haklı bir işinin gereği gibi, hiç veya en azından vaktinde görülmeyeceği endişesiyle, kendisini mecbur hissederek, kamu görevlisine veya yönlendireceği kişiye menfaat temin etmiş olması halinde, icbarın varlığı kabul edilir. (2) Görevinin sağladığı güveni kötüye kullanmak suretiyle gerçekleştirdiği hileli davranışlarla, kendisine veya başkasına yarar sağlanmasına veya bu yolda vaatte bulunulmasına bir kimseyi ikna eden kamu görevlisi, üç yıldan beş yıla kadar hapis cezası ile cezalandırılır. (3) İkinci fıkrada tanımlanan suçun kişinin hatasından yararlanarak işlenmiş olması halinde, bir yıldan üç yıla kadar hapis cezasına hükmolunur. (4) (Ek: 2/7/2012-6352/86 md.) İrtikap edilen menfaatin değeri ve mağdurun ekonomik durumu göz önünde bulundurularak, yukarıdaki fıkralara göre verilecek ceza yarısına kadar indirilebilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "251",
+   "metin": "(1) Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur. (2) Denetim görevini ihmal ederek, zimmet veya irtikap suçunun işlenmesine imkan sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "252",
+   "metin": "(Değişik: 2/7/2012-6352/87 md.) (1) Görevinin ifasıyla ilgili bir işi yapması veya yapmaması için, doğrudan veya aracılar vasıtasıyla, bir kamu görevlisine veya göstereceği bir başka kişiye menfaat sağlayan kişi, dört yıldan oniki yıla kadar hapis cezası ile cezalandırılır. (2) Görevinin ifasıyla ilgili bir işi yapması veya yapmaması için, doğrudan veya aracılar vasıtasıyla, kendisine veya göstereceği bir başka kişiye menfaat sağlayan kamu görevlisi de birinci fıkrada belirtilen ceza ile cezalandırılır. (3) Rüşvet konusunda anlaşmaya varılması halinde, suç tamamlanmış gibi cezaya hükmolunur. (4) Kamu görevlisinin rüşvet talebinde bulunması ve fakat bunun kişi tarafından kabul edilmemesi ya da kişinin kamu görevlisine menfaat temini konusunda teklif veya vaatte bulunması ve fakat bunun kamu görevlisi tarafından kabul edilmemesi hâllerinde fail hakkında, birinci ve ikinci fıkra hükümlerine göre verilecek ceza yarı oranında indirilir. (5) Rüşvet teklif veya talebinin karşı tarafa iletilmesi, rüşvet anlaşmasının sağlanması veya rüşvetin temini hususlarında aracılık eden kişi, kamu görevlisi sıfatını taşıyıp taşımadığına bakılmaksızın, müşterek fail olarak cezalandırılır. (6) Rüşvet ilişkisinde dolaylı olarak kendisine menfaat sağlanan üçüncü kişi veya tüzel kişinin menfaati kabul eden yetkilisi, kamu görevlisi sıfatını taşıyıp taşımadığına bakılmaksızın, müşterek fail olarak cezalandırılır. (7) Rüşvet alan veya talebinde bulunan ya da bu konuda anlaşmaya varan kişinin; yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir olması halinde, verilecek ceza üçte birden yarısına kadar artırılır. (8) Bu madde hükümleri; a) Kamu kurumu niteliğindeki meslek kuruluşları, b) Kamu kurum veya kuruluşlarının ya da kamu kurumu niteliğindeki meslek kuruluşlarının iştirakiyle kurulmuş şirketler, c) Kamu kurum veya kuruluşlarının ya da kamu kurumu niteliğindeki meslek kuruluşlarının bünyesinde faaliyet icra eden vakıflar, d) Kamu yararına çalışan dernekler, e) Kooperatifler, f) Halka açık anonim şirketler, adına hareket eden kişilere, kamu görevlisi sıfatını taşıyıp taşımadıklarına bakılmaksızın, görevlerinin ifasıyla ilgili bir işin yapılması veya yapılmaması amacıyla doğrudan veya aracılar vasıtasıyla, menfaat temin, teklif veya vaat edilmesi; bu kişiler tarafından talep veya kabul edilmesi; bunlara aracılık edilmesi; bu ilişki dolayısıyla bir başkasına menfaat temin edilmesi halinde de uygulanır. (9) Bu madde hükümleri; a) Yabancı bir devlette seçilmiş veya atanmış olan kamu görevlilerine, b) Uluslararası veya uluslarüstü mahkemelerde ya da yabancı devlet mahkemelerinde görev yapan hâkimlere, jüri üyelerine veya diğer görevlilere, c) Uluslararası veya uluslarüstü parlamento üyelerine, d) Kamu kurumu ya da kamu işletmeleri de dahil olmak üzere, yabancı bir ülke için kamusal bir faaliyet yürüten kişilere, e) Bir hukuki uyuşmazlığın çözümü amacıyla başvurulan tahkim usulü çerçevesinde görevlendirilen vatandaş veya yabancı hakemlere, f) Uluslararası bir anlaşmaya dayalı olarak kurulan uluslararası veya uluslarüstüörgütlerin görevlilerine veya temsilcilerine, görevlerinin ifasıyla ilgili bir işin yapılması veya yapılmaması ya da uluslararası ticari işlemler nedeniyle bir işin veya haksız bir yararın elde edilmesi yahut muhafazası amacıyla; doğrudan veya aracılar vasıtasıyla, menfaat temin, teklif veya vaat edilmesi ya da bunlar tarafından talep veya kabul edilmesi halinde de uygulanır. (10) Dokuzuncu fıkra kapsamına giren rüşvet suçunun yurt dışında yabancı tarafından işlenmekle birlikte; a) Türkiye’nin, b) Türkiye’deki bir kamu kurumunun, c) Türk kanunlarına göre kurulmuş bir özel hukuk tüzel kişisinin, d) Türk vatandaşının, tarafı olduğu bir uyuşmazlık ya da bu kurum veya kişilerle ilgili bir işlemin yapılması veya yapılmaması için işlenmesi halinde, rüşvet veren, teklif veya vaat eden; rüşvet alan, talep eden, teklif veya vaadini kabul eden; bunlara aracılık eden; rüşvet ilişkisi dolayısıyla kendisine menfaat temin edilen kişiler hakkında, Türkiye’de bulundukları takdirde, resen soruşturma ve kovuşturma yapılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "253",
+   "metin": "(1) Rüşvet suçunun işlenmesi suretiyle yararına haksız menfaat sağlanan tüzel kişiler hakkında bunlara özgü güvenlik tedbirlerine hükmolunur.",
+   "kapsamda": true
+  },
+  {
+   "no": "254",
+   "metin": "(1) (Değişik: 2/7/2012-6352/88 md.) Rüşvet alan kişinin, durum resmi makamlarca öğrenilmeden önce, rüşvet konusu şeyi soruşturmaya yetkili makamlara aynen teslim etmesi halinde, hakkında rüşvet suçundan dolayı cezaya hükmolunmaz. Rüşvet alma konusunda başkasıyla anlaşan kamu görevlisinin durum resmi makamlarca öğrenilmeden önce durumu yetkili makamlara haber vermesi halinde de hakkında bu suçtan dolayı cezaya hükmolunmaz. (2) (Değişik: 2/7/2012-6352/88 md.) Rüşvet veren veya bu konuda kamu görevlisiyle anlaşmaya varan kişinin, durum resmi makamlarca öğrenilmeden önce, pişmanlık duyarak durumdan yetkili makamları haberdar etmesi halinde, hakkında rüşvet suçundan dolayı cezaya hükmolunmaz. (3) (Değişik: 2/7/2012-6352/88 md.) Rüşvet suçuna iştirak eden diğer kişilerin, durum resmi makamlarca öğrenilmeden önce, pişmanlık duyarak durumdan yetkili makamları haberdar etmesi halinde, hakkında bu suçtan dolayı cezaya hükmolunmaz. (4) (Ek: 26/6/2009 – 5918/4 md.) Bu madde hükümleri, yabancı kamu görevlilerine rüşvet veren kişilere uygulanmaz.",
+   "kapsamda": true
+  },
+  {
+   "no": "255",
+   "metin": "(Değişik: 2/7/2012-6352/89 md.) (1) Kamu görevlisi üzerinde nüfuz sahibi olduğundan bahisle, haksız bir işin gördürülmesi amacıyla girişimde bulunması için, doğrudan veya aracılar vasıtasıyla, kendisine veya bir başkasına menfaat temin eden kişi, iki yıldan beş yıla kadar hapis ve beşbin güne kadar adli para cezası ile cezalandırılır. Kişinin kamu görevlisi olması halinde, verilecek hapis cezası yarı oranında artırılır. İşinin gördürülmesi karşılığında veya gördürüleceği beklentisiyle menfaat sağlayan kişi ise, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. (2) Menfaat temini konusunda anlaşmaya varılması halinde dahi, suç tamamlanmış gibi cezaya hükmolunur. (3) Birinci fıkrada belirtilen amaç doğrultusunda menfaat talebinde bulunulması ve fakat bunun kabul edilmemesi ya da menfaat teklif veya vaadinde bulunulması ve fakat bunun kabul edilmemesi hallerinde, birinci fıkra hükmüne göre verilecek ceza yarı oranında indirilir. (4) Nüfuz ticareti suçuna aracılık eden kişi, müşterek fail olarak, birinci fıkrada belirtilen ceza ile cezalandırılır. (5) Nüfuz ticareti ilişkisinde dolaylı olarak kendisine menfaat sağlanan üçüncü gerçek kişi veya tüzel kişinin menfaati kabul eden yetkilileri, müşterek fail olarak, birinci fıkrada belirtilen ceza ile cezalandırılır. (6) İşin gördürülmesi amacıyla girişimde bulunmanın müstakil bir suç oluşturduğu hallerde kişiler ayrıca bu suç nedeniyle cezalandırılır. (7) Bu madde hükümleri, 252 nci maddenin dokuzuncu fıkrasında sayılan kişiler üzerinde nüfuz ticareti yapılması halinde de uygulanır. Bu kişiler hakkında, Türkiye’de bulunmaları halinde, vatandaş veya yabancı olduklarına bakılmaksızın, resen soruşturma ve kovuşturma yapılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "256",
+   "metin": "(1) Zor kullanma yetkisine sahip kamu görevlisinin, görevini yaptığı sırada, kişilere karşı görevinin gerektirdiği ölçünün dışında kuvvet kullanması halinde, kasten yaralama suçuna ilişkin hükümler uygulanır.",
+   "kapsamda": true
+  },
+  {
+   "no": "257",
+   "metin": "(1) Kanunda ayrıca suç olarak tanımlanan haller dışında, görevinin gereklerine aykırı hareket etmek suretiyle, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır. (2) Kanunda ayrıca suç olarak tanımlanan haller dışında, görevinin gereklerini yapmakta ihmal veya gecikme göstererek, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, üç aydan bir yıla kadar hapis cezası ile cezalandırılır. (3) (Mülga: 2/7/2012-6352/105 md.)",
+   "kapsamda": true
+  },
+  {
+   "no": "258",
+   "metin": "(1) Görevi nedeniyle kendisine verilen veya aynı nedenle bilgi edindiği ve gizli kalması gereken belgeleri, kararları ve emirleri ve diğer tebligatı açıklayan veya yayınlayan veya ne suretle olursa olsun başkalarının bilgi edinmesini kolaylaştıran kamu görevlisine, bir yıldan dört yıla kadar hapis cezası verilir. (2) Kamu görevlisi sıfatı sona erdikten sonra, birinci fıkrada yazılı fiilleri işleyen kimseye de aynı ceza verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "259",
+   "metin": "(1) Yürüttüğü görevin sağladığı nüfuzdan yararlanarak, bir başkasına mal veya hizmet satmaya çalışan kamu görevlisi, altı aya kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "260",
+   "metin": "(1) Hukuka aykırı olarak ve toplu biçimde, görevlerini terk eden, görevlerine gelmeyen, görevlerini geçici de olsa kısmen veya tamamen yapmayan veya yavaşlatan kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir. Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz. (2) Kamu görevlilerinin mesleki ve sosyal hakları ile ilgili olarak, hizmeti aksatmayacak biçimde, geçici ve kısa süreli iş bırakmaları veya yavaşlatmaları halinde, verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "261",
+   "metin": "(1) İlgili kanunlarda belirlenen koşullara aykırı olduğunu bilerek, kişilerin taşınır veya taşınmaz malları üzerinde, karşılık ödenmek suretiyle de olsa, zorla tasarrufta bulunan kamu görevlisi, fiil daha ağır cezayı gerektiren bir suç oluşturmadığı takdirde, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "262",
+   "metin": "(1) Bir kamu görevini, kanun ve nizamlara aykırı olarak yerine getirmeye teşebbüs eden veya terk emri kendisine bildirilmiş olduğu halde görevi sürdüren kimseye üç aydan iki yıla kadar hapis cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "264",
+   "metin": "(1) Bir rütbe veya kamu görevinin veya mesleğin, resmi elbisesini yetkisi olmaksızın alenen ve başkalarını yanıltacak şekilde giyen veya hakkı olmayan nişan veya madalyaları takan kimseye üç aydan bir yıla kadar hapis cezası verilir. (2) Elbisenin sağlayacağı kolaylık ve olanaklardan yararlanarak bir suç işlenirse, yalnız bu fiilden ötürü yukarıdaki fıkrada belirtilen cezalar üçte biri oranında artırılarak hükmolunur.",
+   "kapsamda": true
+  },
+  {
+   "no": "265",
+   "metin": "(1) Kamu görevlisine karşı görevini yapmasını engellemek amacıyla, cebir veya tehdit kullanan kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır. (2) Suçun yargı görevi yapan kişilere karşı işlenmesi halinde, iki yıldan dört yıla kadar hapis cezasına hükmolunur. (3) Suçun, kişinin kendisini tanınmayacak bir hale koyması suretiyle veya birden fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza üçte biri oranında artırılır. (4) Suçun, silahla ya da var olan veya var sayılan suç örgütlerinin oluşturdukları korkutucu güçten yararlanılarak işlenmesi halinde, yukarıdaki fıkralara göre verilecek ceza yarı oranında artırılır. (5) Bu suçun işlenmesi sırasında kasten yaralama suçunun neticesi sebebiyle ağırlaşmış hallerinin gerçekleşmesi durumunda, ayrıca kasten yaralama suçuna ilişkin hükümler uygulanır.",
+   "kapsamda": true
+  },
+  {
+   "no": "266",
+   "metin": "(1) Görevi gereği olarak elinde bulundurduğu araç ve gereçleri bir suçun işlenmesi sırasında kullanan kamu görevlisi hakkında, ilgili suçun tanımında kamu görevlisi sıfatı esasen göz önünde bulundurulmamış ise, verilecek ceza üçte biri oranında artırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "317",
+   "metin": "(1) Kanunen yetkili olmadıkları veya Devlet tarafından memur edilmedikleri halde, bir asker kıtasının veya donanmasının veya savaş gemisinin veya savaş hava filosunun veya bir kale veya müstahkem mevkiin veya bir askerî üssün veya tesisin, bir liman veya şehrin komutasını alanlara müebbet hapis cezası verilir. (2) Kanunen yetkili olmaları veya Devlet tarafından görevlendirilmeleri suretiyle yukarıda gösterilen yerlerin komutanı bulunanlardan, yetkili makamlarca komutanlığı terk etmeleri için verilen emirlere uymayanlara da aynı ceza verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "318",
+   "metin": "(1) (Değişik: 11/4/2013-6459/13 md.) Askerlik hizmetini yapanları firara sevk edecek veya askerlik hizmetine katılacak olanları bu hizmeti yapmaktan vazgeçirecek şekilde teşvik veya telkinde bulunanlara altı aydan iki yıla kadar hapis cezası verilir. (2) Fiil, basın ve yayın yolu ile işlenirse ceza yarısı oranında artırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "319",
+   "metin": "(1) Askerleri veya askerî idareye bağlı olarak görev yapan diğer kişileri kanunlara karşı itaatsizliğe veya yeminlerini bozmaya veya askerî disiplini veya askerlik hizmetine ilişkin görevlerini ihlale yönelten ve tahrik edenler ile kanunlara, yeminlere veya disiplin veya diğer görevlere aykırı hareketleri askerler önünde öven veya iyi gördüğünü söyleyen kimselere, bir yıldan üç yıla kadar hapis cezası verilir. (2) Fiil, aleni olarak işlenmişse iki yıldan beş yıla kadar hapis cezası verilir. (3) Fiil, savaş zamanında işlenmiş ise ceza bir katı oranında artırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "320",
+   "metin": "(1) Hükûmetin izni olmaksızın bir yabancı veya yabancı Devlet hizmetinde veya bunların lehinde çalışmak üzere Ülke içinde vatandaşlardan asker yazan veya vatandaşları silahlandıran kimseye üç yıldan altı yıla kadar hapis cezası verilir. (2) Asker yazılanlar veya silahlandırılanlar arasından asker veya askerlik çağında olanlar varsa ceza üçte biri oranında artırılır. (3) Birinci fıkradaki hizmeti kabul eden kimseye bir yıldan üç yıla kadar hapis cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "321",
+   "metin": "(1) Savaş zamanında Devletin yetkili makam ve mercilerinin emir veya kararlarına bilerek aykırı harekette bulunan kimseye bir yıldan altı yıla kadar hapis cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "322",
+   "metin": "(1) Savaş zamanında, Devletin silahlı kuvvetlerinin veya halkın ihtiyaçları için Devlet veya bir kamu kuruluşu veya kamu hizmetleri yapan veya kamu ihtiyaçlarını sağlayan bir kuruluş ile iş yapmak veya eşya vermek üzere yaptıkları sözleşmedeki yükümlülükleri kısmen veya tamamen yerine getirmeyen kimseye üç yıldan on yıla kadar hapis ve onbin güne kadar adlî para cezası verilir. (2) Yükümlülüklerin kısmen veya tamamen yerine getirilmemesi taksirden ileri gelmişse, cezanın dörtte üçüne kadarı indirilebilir. (3) Yükümlülüğün kısmen veya tamamen yerine getirilmemesine asıl yükümlüler ile aralarında sözleşme bulunan aracılar veya bunların temsilcileri neden olmuşsa, bunlar hakkında da aynı cezalar uygulanır. (4) Savaş zamanında yükümlülüklerin yerine getirilmesinde hile yapan yukarıdaki fıkralarda yazılı kişilere on yıldan onbeş yıla kadar hapis ve onbin güne kadar adlî para cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "323",
+   "metin": "(1) Savaş sırasında kamunun endişe ve heyecan duymasına neden olacak veya halkın maneviyatını sarsacak veya düşman karşısında ülkenin direncini azaltacak şekilde asılsız veya abartılmış veya özel maksada dayalı havadis veya haber yayan veya nakleden veya temel milli yararlara zarar verebilecek herhangi bir faaliyette bulunan kimseye beş yıldan on yıla kadar hapis cezası verilir. (2) Eğer fiil; a) Propagandayla, b) Askerlere yönelik olarak, c) Bir yabancı ile anlaşma neticesi, İşlenmişse, verilecek ceza on yıldan yirmi yıla kadar hapistir. (3) Fiil, düşmanla anlaşma neticesi işlenmişse müebbet hapis cezası verilir. (4) Savaş zamanında düşman karşısında milletin direncini tehlikeyle karşı karşıya bırakacak şekilde yabancı paraların değerini düşürmeye veya itibarı amme kağıtlarının değeri üzerinde etki yapmaya yönelik hareketlerde bulunan kimseye beş yıldan on yıla kadar hapis ve üçbin güne kadar adlî para cezası verilir. (5) Dördüncü fıkrada yazılı fiil, bir yabancı ile anlaşma sonucu işlenmişse ceza yarısı; düşmanla anlaşma sonucu işlenmiş ise bir katı oranında artırılır.",
+   "kapsamda": true
+  },
+  {
+   "no": "324",
+   "metin": "(1) Sulh zamanında seferberlikle ilgili görevlerini ihmal eden veya geciktiren kamu görevlisine altı aydan üç yıla kadar hapis cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "325",
+   "metin": "(1) Türkiye ile savaş halinde bulunan bir devletten akademik derece veya şeref, unvan, nişan ve diğer fahri rütbe veya bunlara ait maaş veya başka yararlar kabul eden vatandaşa bir yıldan üç yıla kadar hapis cezası verilir.",
+   "kapsamda": true
+  },
+  {
+   "no": "Geçici",
+   "metin": "(Ek: 11/4/2013-6459/14 md.) (1) Bu maddeyi ihdas eden Kanunla, bu Kanunun 235 inci maddesinde yapılan değişiklik sebebiyle görülmekte olan davalarda görevsizlik kararı verilemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "102",
+   "metin": "Cinsel davranışla vücut dokunulmazlığını ihlal → şikâyete bağlı 5–10 yıl; sarkıntılık düzeyinde 2–5 yıl. (2) Organ veya sair cisim sokulması → en az 12 yıl (eşe karşı şikâyete bağlı). (3) Nitelikli haller (savunamayacak kişi, kamu görevi/hizmet nüfuzu, 3. dereceye kadar hısım/üvey-evlatlık, silahla/birden fazla kişi, toplu yaşam ortamı kolaylığı) → ceza yarı oranında artar. (4) Cebir/şiddet ağır yaralama neticesi → ayrıca yaralama hükümleri. (5) Ölüm/bitkisel hayat → ağırlaştırılmış müebbet. *(Kaynak satır 893-920)*",
+   "kapsamda": false
+  },
+  {
+   "no": "103",
+   "metin": "Çocuğu cinsel istismar → 8–15 yıl; sarkıntılık → 3–8 yıl. 12 yaşını tamamlamamış mağdurda ceza istismarda ≥10 yıl, sarkıntılıkta ≥5 yıl. (2) Organ/sair cisim sokma → ≥16 yıl; 12 yaş altı → ≥18 yıl. İstismar tanımı: 15 yaşını bitirmemiş veya algısı gelişmemiş çocuğa karşı her türlü cinsel davranış (rıza aranmaz); diğer çocuklarda cebir/tehdit/hile/iradeyi etkileyen neden gerekir. (3) Nitelikli haller (birden fazla kişi, toplu yaşam, hısım/üvey, vasi-eğitici-bakıcı-koruyucu/sağlık görevlisi, kamu/hizmet nüfuzu) → ½ artar. (4) cebir/tehdit/silah → ½ artar. (6) Ölüm/bitkisel hayat → ağırlaştırılmış müebbet. *(Kaynak satır 923-969)*",
+   "kapsamda": false
+  },
+  {
+   "no": "104",
+   "metin": "Cebir-tehdit-hile OLMAKSIZIN 15 yaşını bitirmiş çocukla cinsel ilişki → şikâyet üzerine 2–5 yıl. (2) Mağdurla evlenme yasağı bulunan kişi işlerse → şikâyet aranmaz, 10–15 yıl. (3) Evlat edinme öncesi bakımı üstlenen/koruyucu aile işlerse → şikâyet aranmaz, ikinci fıkra cezası. *(Cebir/tehdit/hile varsa veya 15 yaş altıysa m.103 uygulanır.)* *(Kaynak satır 972-984)*",
+   "kapsamda": false
+  },
+  {
+   "no": "105",
+   "metin": "Bir kimseyi cinsel amaçlı (temassız) taciz → şikâyet üzerine 3 ay–2 yıl hapis veya adli para; çocuğa karşı 6 ay–3 yıl. (2) Nitelikli haller (kamu/hizmet/aile içi ilişki, vasi-eğitici-bakıcı-koruyucu/sağlık görevlisi, aynı işyeri, posta/elektronik haberleşme, teşhir) → ceza ½ artar; mağdur işi/okulu/ailesini bırakmak zorunda kalmışsa ceza 1 yıldan az olamaz. *(Vücuda dokunma olursa m.102.)* *(Kaynak satır 987-1005)*",
+   "kapsamda": false
+  },
+  {
+   "no": "106",
+   "metin": "Kişinin/yakınının hayatına, vücut veya cinsel dokunulmazlığına saldırı tehdidi → 6 ay–2 yıl (kadına karşı alt sınır 9 aydan az olamaz). Malvarlığına büyük zarar veya sair kötülük tehdidi → şikâyete bağlı, 2–6 ay hapis veya adli para. (2) Silahla, kendini tanınmaz hale koyarak/imzasız mektup/özel işaret, birden fazla kişi, suç örgütünün korkutucu gücüyle → 2–7 yıl. (3) Tehdit amacıyla öldürme/yaralama/mala zarar işlenirse ayrıca ceza. *(Kaynak satır 1009-1029)*",
+   "kapsamda": false
+  },
+  {
+   "no": "107",
+   "metin": "Hakkı olan veya yükümlü olduğu bir şeyi yapacağından/yapmayacağından bahisle, bir kimseyi kanuna aykırı/yükümlü olmadığı bir şeyi yapmaya-yapmamaya ya da haksız çıkar sağlamaya zorlama → 1–3 yıl hapis + 5.000 güne kadar adli para. (2) Kişinin şeref/saygınlığına zarar verecek hususların açıklanacağı/isnat edileceği tehdidi de şantajdır (aynı ceza). *(Kaynak satır 1032-1041)*",
+   "kapsamda": false
+  },
+  {
+   "no": "108",
+   "metin": "Bir şeyi yapması/yapmaması ya da yapılmasına müsaade etmesi için bir kişiye karşı cebir (fiziksel zor) kullanılması → kasten yaralama suçundan verilecek ceza üçte birinden yarısına kadar artırılarak hükmolunur (cebrin ayrı sabit cezası yoktur). *(Tehditten farkı: tehdit söz/gelecek, cebir fiziksel zor/şimdi.)* *(Kaynak satır 1044-1048)*",
+   "kapsamda": false
+  },
+  {
+   "no": "109",
+   "metin": "Bir kimseyi hukuka aykırı olarak gitme/kalma hürriyetinden yoksun bırakma → 1–5 yıl. (2) Fiili işlemek için/sırasında cebir, tehdit veya hile → 2–7 yıl. (3) Silahla, birden fazla kişi, kamu görevi nedeniyle, kamu nüfuzunu kötüye kullanma, üstsoy-altsoy-eş/boşandığı eş, çocuğa ya da savunamayacak kişiye karşı → ceza bir kat artar. (4) Mağdurun önemli ekonomik kaybı → ayrıca 1.000 güne kadar adli para. (5) Cinsel amaçla işlenirse ceza ½ artar. (m.110 Etkin pişmanlık): Soruşturmaya başlanmadan önce, mağdurun şahsına zarar dokunmaksızın onu kendiliğinden güvenli yerde serbest bırakırsa ceza ⅔'e kadar indirilir. *(Kaynak satır 1051-1080)*",
+   "kapsamda": false
+  },
+  {
+   "no": "112",
+   "metin": "m.111 Tehdit/şantaj/cebir/hürriyetten yoksun kılmadan yarar sağlayan tüzel kişilere güvenlik tedbiri. m.112 Cebir/tehdit ya da hukuka aykırı davranışla eğitim-öğretim hakkının engellenmesi → 2-5 yıl. m.113 Kamu hizmetlerinden yararlanma hakkının engellenmesi → 2-5 yıl (konu sağlık hizmeti ise 1/6'ya kadar artar). m.114 Cebir/tehditle siyasi hakları engelleme → 1-3 yıl; parti faaliyetini engelleme → 2-5 yıl. m.115 İnanç/düşünce/kanaat hürriyetini engelleme → 1-3 yıl (dini ibadet/ayin engellemede de aynı). *(Kaynak satır 1084-1144)*",
+   "kapsamda": false
+  },
+  {
+   "no": "116",
+   "metin": "Bir kimsenin konutuna/eklentilerine rızaya aykırı girme veya rıza ile girip çıkmama → şikâyete bağlı 6 ay–2 yıl. (2) Açık rıza gerektiren işyeri ve eklentilerinde → şikâyete bağlı 6 ay–1 yıl hapis veya adli para. (3) Aile bireyleri veya ortak kullananlardan birinin (meşru amaçlı) rızası varsa suç oluşmaz. (4) Cebir/tehditle veya gece vakti → 1–3 yıl. *(Kaynak satır 1147-1163)*",
+   "kapsamda": false
+  },
+  {
+   "no": "117",
+   "metin": "Cebir/tehdit ya da hukuka aykırı davranışla iş ve çalışma hürriyetini ihlal → şikâyete bağlı 6 ay–2 yıl hapis veya adli para. (2) Çaresizlik/kimsesizlik/bağlılığı sömürerek ücretsiz veya orantısız düşük ücretle çalıştırma ya da insan onuruyla bağdaşmaz koşullara tabi kılma → 6 ay–3 yıl + en az 100 gün adli para. (3) Bu duruma düşürmek üzere tedarik/sevk/nakil → aynı ceza. (4) Cebir/tehditle ücret-koşul anlaşmasına zorlama veya işi durdurma → 6 ay–3 yıl. (m.119 Ortak nitelikli): m.112-117 (eğitim, kamu hizmeti, siyasi/inanç hürriyeti, konut dokunulmazlığı, iş ve çalışma hürriyeti) suçları silahla, kimliği gizleyerek/imzasız mektup-özel işaret, birden fazla kişi, suç örgütü gücüyle, kamu nüfuzu kötüye kullanılarak işlenirse ceza bir kat artar; bu suçlar sırasında kasten yaralamanın ağır neticesi → ayrıca yaralama hükümleri. *(Tehdit/şantaj m.119 kapsamında DEĞİL.)* *(Kaynak satır 1166-1214)*",
+   "kapsamda": false
+  },
+  {
+   "no": "118",
+   "metin": "Bir sendikaya üye olmaya/olmamaya, faaliyetlerine katılmaya/katılmamaya ya da sendikadan/görevinden ayrılmaya cebir/tehditle zorlama → 6 ay-2 yıl. (2) Cebir/tehdit ya da hukuka aykırı davranışla sendika faaliyetini engelleme → 1-3 yıl. *(Kaynak satır 1187-1195)*",
+   "kapsamda": false
+  },
+  {
+   "no": "120",
+   "metin": "Hukuka aykırı olarak bir kimsenin üstünü veya eşyasını arayan kamu görevlisine → 3 ay–1 yıl hapis. (Özgü suç: fail yalnız kamu görevlisidir; arama yetkisi/kararı olmaksızın yapılan arama suç oluşturur.) *(Kaynak satır 1217-1219)*",
+   "kapsamda": false
+  },
+  {
+   "no": "121",
+   "metin": "m.121 Kişinin bir hakkı kullanmak için yetkili makama verdiği dilekçenin hukuki neden olmaksızın kabul edilmemesi → 6 aya kadar hapis. m.124 (1) Kişiler arasındaki haberleşmenin hukuka aykırı engellenmesi → 6 ay-2 yıl hapis veya adlî para. (2) Kamu kurumları arasındaki haberleşmeyi engelleme → 1-5 yıl. (3) Basın-yayın organının yayınını engelleme → 1-5 yıl. *(Kaynak satır 1222-1274)*",
+   "kapsamda": false
+  },
+  {
+   "no": "122",
+   "metin": "(Değişik: 2/3/2014-6529/15 md.) Dil, ırk, milliyet, renk, cinsiyet, engellilik, siyasi düşünce, felsefi inanç, din veya mezhep farklılığından kaynaklanan nefret nedeniyle; (a) kamuya arz edilmiş taşınır/taşınmaz malın bir kişiye satılmasını, devrini veya kiraya verilmesini, (b) bir kişinin kamuya arz edilmiş belli bir hizmetten yararlanmasını, (c) bir kişinin işe alınmasını, (d) bir kişinin olağan bir ekonomik etkinlikte bulunmasını engelleyen kimseye → 1 yıldan 3 yıla kadar hapis. *(Kaynak satır 1228-1240)*",
+   "kapsamda": false
+  },
+  {
+   "no": "123",
+   "metin": "m.123 Sırf huzur ve sükûnunu bozmak maksadıyla bir kimseye ısrarla telefon, gürültü ya da aynı maksatla hukuka aykırı davranış → mağdurun şikâyeti üzerine 3 ay-1 yıl. m.123/A (Ek:12/5/2022-7406) Israrla fiziken takip ya da haberleşme/iletişim araçları, bilişim sistemleri veya üçüncü kişilerle temas kurmaya çalışarak ciddi huzursuzluk/güvenlik endişesi oluşturma → 6 ay-2 yıl. (2) Çocuğa/ayrılık-boşandığı eşe; okul-iş-konut değiştirtme/bıraktırma; uzaklaştırma tedbirli fail → 1-3 yıl. (3) Şikâyete bağlı. *(Kaynak satır 1241-1264)*",
+   "kapsamda": false
+  },
+  {
+   "no": "125",
+   "metin": "(1) Bir kimseye onur, şeref ve saygınlığını rencide edebilecek nitelikte somut bir fiil veya olgu isnat eden (...) veya sövmek suretiyle bir kimsenin onur, şeref ve saygınlığına saldıran kişi, üç aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır. Mağdurun gıyabında hakaretin cezalandırılabilmesi için fiilin en az üç kişiyle ihtilat ederek işlenmesi gerekir. (2) Fiilin, mağduru muhatap alan sesli, yazılı veya görüntülü bir iletiyle işlenmesi halinde, yukarıdaki fıkrada belirtilen cezaya hükmolunur. (3) Hakaret suçunun; a) Kamu görevlisine karşı görevinden dolayı, b) Dini, siyasi, sosyal, felsefi inanç (...) dolayı, c) Kişinin mensup bulunduğu dine göre kutsal sayılan değerlerden bahisle, İşlenmesi halinde, cezanın alt sınırı bir yıldan az olamaz. (4) Hakaretin alenen işlenmesi halinde ceza altıda biri oranında artırılır. (5) Kurul hâlinde çalışan kamu görevlilerine görevlerinden dolayı hakaret edilmesi hâlinde suç, kurulu oluşturan üyelere karşı işlenmiş sayılır (...).",
+   "kapsamda": false
+  },
+  {
+   "no": "126",
+   "metin": "(1) Hakaret suçunun işlenmesinde mağdurun ismi açıkça belirtilmemiş veya isnat üstü kapalı geçiştirilmiş olsa bile, eğer niteliğinde ve mağdurun şahsına yönelik bulunduğunda duraksanmayacak bir durum varsa, hem ismi belirtilmiş ve hem de hakaret açıklanmış sayılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "127",
+   "metin": "(1) İsnat edilen ve suç oluşturan fiilin ispat edilmiş olması halinde kişiye ceza verilmez. Bu suç nedeniyle hakaret edilen hakkında kesinleşmiş bir mahkûmiyet kararı verilmesi halinde, isnat ispatlanmış sayılır. Bunun dışındaki hallerde isnadın ispat isteminin kabulü, ancak isnat olunan fiilin doğru olup olmadığının anlaşılmasında kamu yararı bulunmasına veya şikayetçinin ispata razı olmasına bağlıdır. (2) İspat edilmiş fiilinden söz edilerek kişiye hakaret edilmesi halinde, cezaya hükmedilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "128",
+   "metin": "(1) Yargı mercileri veya idari makamlar nezdinde yapılan yazılı veya sözlü başvuru, iddia ve savunmalar kapsamında, kişilerle ilgili olarak somut isnadlarda ya da olumsuz değerlendirmelerde bulunulması halinde, ceza verilmez. Ancak, bunun için isnat ve değerlendirmelerin, gerçek ve somut vakıalara dayanması ve uyuşmazlıkla bağlantılı olması gerekir.",
+   "kapsamda": false
+  },
+  {
+   "no": "129",
+   "metin": "(1) Hakaret suçunun haksız bir fiile tepki olarak işlenmesi halinde, verilecek ceza üçte birine kadar indirilebileceği gibi, ceza vermekten de vazgeçilebilir. (2) Bu suçun, kasten yaralama suçuna tepki olarak işlenmesi halinde, kişiye ceza verilmez. (3) Hakaret suçunun karşılıklı olarak işlenmesi halinde, olayın mahiyetine göre, taraflardan her ikisi veya biri hakkında verilecek ceza üçte birine kadar indirilebileceği gibi, ceza vermekten de vazgeçilebilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "130",
+   "metin": "(1) Bir kimsenin öldükten sonra hatırasına en az üç kişiyle ihtilat ederek hakaret eden kişi, üç aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır. Ceza, hakaretin alenen işlenmesi halinde, altıda biri oranında artırılır. (2) Bir ölünün kısmen veya tamamen ceset veya kemiklerini alan veya ceset veya kemikler hakkında tahkir edici fiillerde bulunan kişi, üç aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "132",
+   "metin": "(1) Kişiler arasındaki haberleşmenin gizliliğini ihlal eden kimse, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. Bu gizlilik ihlali haberleşme içeriklerinin kaydı suretiyle gerçekleşirse, verilecek ceza bir kat artırılır. (2) Kişiler arasındaki haberleşme içeriklerini hukuka aykırı olarak ifşa eden kimse, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. (3) Kendisiyle yapılan haberleşmelerin içeriğini diğer tarafın rızası olmaksızın hukuka aykırı olarak alenen ifşa eden kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. İfşa edilen bu verilerin basın ve yayın yoluyla yayımlanması halinde de aynı cezaya hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "133",
+   "metin": "(1) Kişiler arasındaki aleni olmayan konuşmaları, taraflardan herhangi birinin rızası olmaksızın bir aletle dinleyen veya bunları bir ses alma cihazı ile kaydeden kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. (2) Katıldığı aleni olmayan bir söyleşiyi, diğer konuşanların rızası olmadan ses alma cihazı ile kayda alan kişi, altı aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır. (3) Kişiler arasındaki aleni olmayan konuşmaların kaydedilmesi suretiyle elde edilen verileri hukuka aykırı olarak ifşa eden kişi, iki yıldan beş yıla kadar hapis ve dörtbin güne kadar adlî para cezası ile cezalandırılır. İfşa edilen bu verilerin basın ve yayın yoluyla yayımlanması halinde de aynı cezaya hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "134",
+   "metin": "(1) Kişilerin özel hayatının gizliliğini ihlal eden kimse, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. Gizliliğin görüntü veya seslerin kayda alınması suretiyle ihlal edilmesi halinde, verilecek ceza bir kat artırılır. (2) Kişilerin özel hayatına ilişkin görüntü veya sesleri hukuka aykırı olarak ifşa eden kimse iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. İfşa edilen bu verilerin basın ve yayın yoluyla yayımlanması halinde de aynı cezaya hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "135",
+   "metin": "**m.135** (1) Hukuka aykırı olarak kişisel verileri kaydeden kimseye bir yıldan üç yıla kadar hapis cezası verilir. (2) Kişisel verinin, kişilerin siyasi, felsefi veya dini görüşlerine, ırki kökenlerine; (...) cinsel yaşamlarına, sağlık durumlarına veya sendikal bağlantılarına ilişkin olması durumunda (...) ceza yarı oranında artırılır. — **m.136** (1) Kişisel verileri, hukuka aykırı olarak bir başkasına veren, yayan veya ele geçiren kişi, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır. (2) Suçun konusunun, Ceza Muhakemesi Kanununun 236 ncı maddesinin beşinci ve altıncı fıkraları uyarınca kayda alınan beyan ve görüntüler olması durumunda verilecek ceza bir kat artırılır. — **m.138** (1) Kanunların belirlediği sürelerin geçmiş olmasına karşın verileri sistem içinde yok etmekle yükümlü olanlara görevlerini yerine getirmediklerinde bir yıldan iki yıla kadar hapis cezası verilir. (2) Suçun konusunun Ceza Muhakemesi Kanunu hükümlerine göre ortadan kaldırılması veya yok edilmesi gereken veri olması hâlinde verilecek ceza bir kat artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "141",
+   "metin": "**m.141** (1) Zilyedinin rızası olmadan başkasına ait taşınır bir malı, kendisine veya başkasına bir yarar sağlamak maksadıyla bulunduğu yerden alan kimseye bir yıldan üç yıla kadar hapis cezası verilir. — **m.142** (1) Hırsızlık suçunun; kamu kurumlarında/ibadete ayrılmış yerlerde bulunan eşya, ulaşım aracı içindeki eşya, afet için hazırlanan eşya, açıkta bırakılmış eşya hakkında işlenmesi hâlinde **üç yıldan yedi yıla** kadar hapis. (2) Suçun; malını koruyamayacak durumdakine/ölmüşten yararlanarak, kapkaç/özel beceriyle, doğal afet-kargaşadan yararlanarak, taklit anahtar/aletle kilit açarak, bilişim sistemiyle, resmî sıfat takınarak, hayvan hakkında, kilitli/bina içinde muhafaza altındaki eşya hakkında işlenmesi hâlinde **beş yıldan on yıla** kadar hapis (...). (3) Sıvı/gaz enerji ve tesisleri hakkında işlenmesi hâlinde **beş yıldan oniki yıla** kadar hapis (...). — **m.143** (1) Hırsızlık suçunun gece vakti işlenmesi halinde, verilecek ceza yarı oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "144",
+   "metin": "**m.144** (1) Hırsızlık suçunun; paydaş/elbirliği ile malik olunan mal üzerinde veya bir hukuki ilişkiye dayanan alacağı tahsil amacıyla işlenmesi halinde, şikayet üzerine, fail hakkında iki aydan bir yıla kadar hapis veya adlî para cezasına hükmolunur. — **m.145** (1) Hırsızlık suçunun konusunu oluşturan malın değerinin azlığı nedeniyle, verilecek cezada indirim yapılabileceği gibi, suçun işleniş şekli ve özellikleri de göz önünde bulundurularak, ceza vermekten de vazgeçilebilir. — **m.146** (1) Hırsızlık suçunun, malın geçici bir süre kullanılıp zilyedine iade edilmek üzere işlenmesi halinde, şikayet üzerine, verilecek ceza yarı oranına kadar indirilir. Ancak malın suç işlemek için kullanılmış olması halinde bu hüküm uygulanmaz. — **m.147** (1) Hırsızlık suçunun ağır ve acil bir ihtiyacı karşılamak için işlenmesi halinde, olayın özelliğine göre, verilecek cezada indirim yapılabileceği gibi, ceza vermekten de vazgeçilebilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "148",
+   "metin": "(1) Bir başkasını, kendisinin veya yakınının hayatına, vücut veya cinsel dokunulmazlığına yönelik bir saldırı gerçekleştireceğinden ya da malvarlığı itibarıyla büyük bir zarara uğratacağından bahisle tehdit ederek veya cebir kullanarak, bir malı teslime veya malın alınmasına karşı koymamaya mecbur kılan kişi, altı yıldan on yıla kadar hapis cezası ile cezalandırılır. (2) Cebir veya tehdit kullanılarak mağdurun (…) bir senedi (…) vermeye (…) mecbur edilmesi halinde de aynı ceza verilir. (3) Mağdurun, herhangi bir vasıta ile kendisini bilmeyecek ve savunamayacak hale getirilmesi de, yağma suçunda cebir sayılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "149",
+   "metin": "(1) Yağma suçunun; a) Silahla, b) Kişinin kendisini tanınmayacak bir hale koyması suretiyle, c) Birden fazla kişi tarafından birlikte, d) Yol kesmek suretiyle ya da konutta, işyerinde veya bunların eklentilerinde, e) Beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye karşı, f) Var olan veya var sayılan suç örgütlerinin (…) korkutucu güçten yararlanılarak, g) Suç örgütüne yarar sağlamak maksadıyla, h) Gece vaktinde, İşlenmesi halinde, fail hakkında on yıldan onbeş yıla kadar hapis cezasına hükmolunur. (2) Yağma sırasında kasten yaralamanın neticesi sebebiyle ağırlaşmış halleri gerçekleşirse, ayrıca kasten yaralama hükümleri uygulanır.",
+   "kapsamda": false
+  },
+  {
+   "no": "150",
+   "metin": "(1) Kişinin bir hukuki ilişkiye dayanan alacağını tahsil amacıyla tehdit veya cebir kullanması halinde, ancak tehdit veya kasten yaralama suçuna ilişkin hükümler uygulanır. (2) Yağma suçunun konusunu oluşturan malın değerinin azlığı nedeniyle, verilecek ceza üçte birden yarıya kadar indirilebilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "151",
+   "metin": "(1) Başkasının taşınır veya taşınmaz malını kısmen veya tamamen yıkan, tahrip eden, yok eden, bozan, kullanılamaz hale getiren veya kirleten kişi, mağdurun şikayeti üzerine, dört aydan üç yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "152",
+   "metin": "(1) Mala zarar verme suçunun; a) Kamuya ait/kamu hizmetine tahsis edilmiş yer-bina-tesis-eşya hakkında, b) Felaketlere karşı korunmaya tahsis edilmiş eşya/tesis hakkında, c) (…) dikili ağaç-fidan-bağ çubuğu hakkında, d) Sulama-içme suyu-afet tesisleri hakkında, e-f) Sendika/siyasi parti/meslek kuruluşu malları hakkında, g) Görevinden ötürü öç almak amacıyla kamu görevlisinin zararına, İşlenmesi halinde, bir yıldan dört yıla kadar hapis cezasına hükmolunur. (2) Yakarak, yakıcı/patlayıcı madde ile; sel-çığ-taşkına neden olarak; radyasyon/nükleer-biyolojik-kimyasal silahla işlenirse ceza bir katına kadar artırılır. (3) Haberleşme-enerji-demiryolu-havayolu kamu hizmetinin aksaması halinde ceza yarısından iki katına kadar artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "153",
+   "metin": "(1) İbadethanelere, eklentilerine, buralardaki eşyaya, mezarlara, üzerindeki yapılara, mezarlıklardaki tesislere (…) yıkmak, bozmak veya kırmak suretiyle zarar veren kişi, bir yıldan dört yıla kadar hapis cezası ile cezalandırılır. (2) Bu yerleri ve yapıları kirleten kişi, üç aydan bir yıla kadar hapis veya adlî para cezası ile cezalandırılır. (3) Fiillerin ilgili dini inanışı benimseyen toplum kesimini tahkir maksadıyla işlenmesi halinde, ceza üçte biri oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "155",
+   "metin": "(1) Başkasına ait olup da, muhafaza etmek veya belirli bir şekilde kullanmak üzere zilyedliği kendisine devredilmiş olan mal üzerinde, kendisinin veya başkasının yararına olarak, zilyedliğin devri amacı dışında tasarrufta bulunan veya bu devir olgusunu inkar eden kişi, şikayet üzerine, altı aydan iki yıla kadar hapis ve adlî para cezası ile cezalandırılır. (2) Suçun, meslek ve sanat, ticaret veya hizmet ilişkisinin ya da (…) başkasının mallarını idare etmek yetkisinin gereği olarak tevdi ve teslim edilmiş eşya hakkında işlenmesi halinde, bir yıldan yedi yıla kadar hapis ve üçbin güne kadar adlî para cezasına hükmolunur. (3) Suçun konusunun motorlu kara, deniz veya hava taşıtı olması halinde (…) ceza bir kat artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "156",
+   "metin": "(1) Bedelsiz kalmış bir senedi kullanan kimseye, şikayet üzerine, altı aydan iki yıla kadar hapis ve adlî para cezası verilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "157",
+   "metin": "(1) Hileli davranışlarla bir kimseyi aldatıp, onun veya başkasının zararına olarak, kendisine veya başkasına bir yarar sağlayan kişiye bir yıldan beş yıla kadar hapis ve beşbin güne kadar adlî para cezası verilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "158",
+   "metin": "(1) Dolandırıcılık suçunun; a) Dinî inanç ve duyguların istismarı, b) Tehlikeli durum/zor şartlardan yararlanma, c) Algılama zayıflığından yararlanma, d) Kamu kurumu/parti/vakıf/derneğin araç kılınması, e) Kamu kurumlarının zararına, f) Bilişim sistemi/banka-kredi kurumunun araç kılınması, g) Basın-yayın kolaylığından yararlanma, h) Tacir/şirket yöneticisi (…) ticari faaliyet sırasında, i) Serbest meslek sahibinin mesleğine duyulan güveni kötüye kullanması, j) Hak etmediği krediyi açtırma, k) Sigorta bedelini alma maksadıyla, l) Kendini kamu görevlisi/banka çalışanı olarak tanıtma suretiyle işlenmesi halinde, üç yıldan on yıla kadar hapis ve beşbin güne kadar adlî para cezası. Ancak (e),(f),(j),(k),(l) hâllerinde hapsin alt sınırı dört yıldan, adli para suçtan elde edilen menfaatin iki katından az olamaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "159",
+   "metin": "(1) Dolandırıcılığın, bir hukuki ilişkiye dayanan alacağı tahsil amacıyla işlenmesi halinde, şikayet üzerine, altı aydan bir yıla kadar hapis veya adlî para cezasına hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "160",
+   "metin": "(1) Kaybedilmiş olması nedeniyle malikinin zilyedliğinden çıkmış olan ya da hata sonucu ele geçirilen eşya üzerinde, iade etmeksizin veya yetkili mercileri durumdan haberdar etmeksizin, malik gibi tasarrufta bulunan kişi, şikayet üzerine, bir yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "163",
+   "metin": "(1) Otomatlar aracılığı ile sunulan ve bedeli ödendiği takdirde yararlanılabilen bir hizmetten ödeme yapmadan yararlanan kişi, iki aydan altı aya kadar hapis veya adlî para cezası. (2) Telefon hatları/frekanslarından veya elektromanyetik dalgalarla yapılan şifreli/şifresiz yayınlardan sahibinin/zilyedinin rızası olmadan yararlanan kişi, altı aydan iki yıla kadar hapis veya adlî para cezası. (3) Abonelik esasına göre yararlanılan elektrik, su veya doğal gazın sahibinin rızası olmaksızın ve tüketim miktarının belirlenmesini engelleyecek şekilde tüketilmesi halinde, bir yıldan üç yıla kadar hapis cezası.",
+   "kapsamda": false
+  },
+  {
+   "no": "168",
+   "metin": "(1) Hırsızlık, mala zarar verme, güveni kötüye kullanma, dolandırıcılık, hileli iflâs, taksirli iflâs (…) suçları tamamlandıktan sonra ve fakat bu nedenle hakkında kovuşturma başlamadan önce, failin, azmettirenin veya yardım edenin bizzat pişmanlık göstererek mağdurun uğradığı zararı aynen geri verme veya tazmin suretiyle tamamen gidermesi halinde, verilecek cezanın üçte ikisine kadarı indirilir. (2) Etkin pişmanlığın kovuşturma başladıktan sonra ve fakat hüküm verilmezden önce gösterilmesi halinde, verilecek cezanın yarısına kadarı indirilir. (3) Yağma suçundan dolayı etkin pişmanlık gösteren kişiye verilecek cezanın, birinci fıkraya giren hallerde yarısına, ikinci fıkraya giren hallerde üçte birine kadarı indirilir. (4) Kısmen geri verme/tazmin halinde, ayrıca mağdurun rızası aranır.",
+   "kapsamda": false
+  },
+  {
+   "no": "170",
+   "metin": "(1) Kişilerin hayatı, sağlığı veya malvarlığı bakımından tehlikeli olacak biçimde ya da kişilerde korku, kaygı veya panik yaratabilecek tarzda; a) Yangın çıkaran, b) Bina çökmesine, toprak kaymasına, çığ düşmesine, sel veya taşkına neden olan, c) Silahla ateş eden veya patlayıcı madde kullanan, kişi, bir yıldan beş yıla kadar hapis cezası ile cezalandırılır. (…) Suçun ses ve gaz fişeği atabilen silahla ateş etmek suretiyle işlenmesi halinde kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır. (2) (…) suçun kişilerin toplu olarak bulundukları yerlerde işlenmesi halinde, verilecek ceza yarı oranında artırılır. (3) Yangın, bina çökmesi, toprak kayması, çığ düşmesi, sel veya taşkın tehlikesine neden olan kişi, üç aydan bir yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "174",
+   "metin": "(1) Yetkili makamlardan gerekli izni almaksızın, patlayıcı, yakıcı, aşındırıcı, yaralayıcı, boğucu, zehirleyici, sürekli hastalığa yol açıcı nükleer, radyoaktif, kimyasal, biyolojik maddeyi imal, ithal veya ihraç eden, ülke içinde bir yerden diğer bir yere nakleden, muhafaza eden, satan, satın alan veya işleyen kişi, dört yıldan sekiz yıla kadar hapis ve beşbin güne kadar adlî para cezası ile cezalandırılır. (…) (2) Bu fiillerin suç işlemek için teşkil edilmiş bir örgütün faaliyeti çerçevesinde işlenmesi halinde, verilecek ceza bir kat artırılır. (3) Önemsiz tür ve miktarda patlayıcı maddeyi satın alan, kabul eden veya bulunduran kişi hakkında, kullanılış amacı gözetilerek, bir yıla kadar hapis cezasına hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "179",
+   "metin": "(1) Kara, deniz, hava veya demiryolu ulaşımının güven içinde akışını sağlamak için konulmuş her türlü işareti değiştirerek, kullanılamaz hale getirerek, konuldukları yerden kaldırarak, yanlış işaretler vererek, geçiş, varış, kalkış veya iniş yolları üzerine bir şey koyarak ya da teknik işletim sistemine müdahale ederek, başkalarının hayatı, sağlığı veya malvarlığı bakımından bir tehlikeye neden olan kişiye bir yıldan altı yıla kadar hapis cezası verilir. (2) Kara, deniz, hava veya demiryolu ulaşım araçlarını kişilerin hayat, sağlık veya malvarlığı açısından tehlikeli olabilecek şekilde sevk ve idare eden kişi, dört aydan iki yıla kadar hapis cezası ile cezalandırılır. (3) Alkol veya uyuşturucu madde etkisiyle ya da başka bir nedenle emniyetli bir şekilde araç sevk ve idare edemeyecek halde olmasına rağmen araç kullanan kişi altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "188",
+   "metin": "(1) Uyuşturucu veya uyarıcı maddeleri ruhsatsız veya ruhsata aykırı olarak imal, ithal veya ihraç eden kişi, yirmi yıldan otuz yıla kadar hapis ve ikibin günden yirmibin güne kadar adlî para cezası ile cezalandırılır. (…) (3) Uyuşturucu veya uyarıcı maddeleri ruhsatsız veya ruhsata aykırı olarak ülke içinde satan, satışa arz eden, başkalarına veren, sevk eden, nakleden, depolayan, satın alan, kabul eden, bulunduran kişi, on yıldan az olmamak üzere hapis ve bin günden yirmibin güne kadar adlî para cezası ile cezalandırılır. Ancak, uyuşturucu veya uyarıcı madde verilen veya satılan kişinin çocuk olması hâlinde, veren veya satan kişiye verilecek hapis cezası on beş yıldan az olamaz. (4) (…) a) Maddelerin eroin, kokain, morfin, bazmorfin, sentetik kannabinoid, sentetik katinon, sentetik opioid ve türevleri veya amfetamin ve türevleri olması, b) Üçüncü fıkradaki fiillerin; okul, yurt, hastane, kışla veya ibadethane gibi (…) toplu bulunulan bina ve tesisler (…) sınırlarına iki yüz metreden yakın mesafe içindeki (…) yerlerde işlenmesi, hâlinde verilecek ceza yarı oranında artırılır. (5) (…) suçların, üç veya daha fazla kişi tarafından birlikte işlenmesi hâlinde verilecek ceza yarı oranında, suç işlemek için teşkil edilmiş bir örgütün faaliyeti çerçevesinde işlenmesi hâlinde, verilecek ceza bir kat artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "190",
+   "metin": "(1) Uyuşturucu veya uyarıcı madde kullanılmasını kolaylaştırmak için; a) Özel yer, donanım veya malzeme sağlayan, b) Kullananların yakalanmalarını zorlaştıracak önlemler alan, c) Kullanma yöntemleri konusunda başkalarına bilgi veren, kişi, beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezası ile cezalandırılır. (2) Uyuşturucu veya uyarıcı madde kullanılmasını alenen özendiren veya bu nitelikte yayın yapan kişi, beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "191",
+   "metin": "(1) Kullanmak için uyuşturucu veya uyarıcı madde satın alan, kabul eden veya bulunduran ya da uyuşturucu veya uyarıcı madde kullanan kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. (2) Bu suçtan dolayı başlatılan soruşturmada şüpheli hakkında (…) beş yıl süreyle kamu davasının açılmasının ertelenmesine karar verilir. (…) (3) Erteleme süresi zarfında şüpheli hakkında asgari bir yıl süreyle denetimli serbestlik tedbiri uygulanır. (…) (10) Birinci fıkradaki fiillerin; okul, yurt, hastane, kışla veya ibadethane gibi (…) sınırlarına iki yüz metreden yakın mesafe içindeki (…) yerlerde işlenmesi hâlinde verilecek ceza yarı oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "197",
+   "metin": "(1) Memlekette veya yabancı ülkelerde kanunen tedavülde bulunan parayı, sahte olarak üreten, ülkeye sokan, nakleden, muhafaza eden veya tedavüle koyan kişi, iki yıldan oniki yıla kadar hapis ve onbin güne kadar adlî para cezası ile cezalandırılır. (2) Sahte parayı bilerek kabul eden kişi, bir yıldan üç yıla kadar hapis ve adlî para cezası ile cezalandırılır. (3) Sahteliğini bilmeden kabul ettiği parayı bu niteliğini bilerek tedavüle koyan kişi, üç aydan bir yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "204",
+   "metin": "(1) Bir resmi belgeyi sahte olarak düzenleyen, gerçek bir resmi belgeyi başkalarını aldatacak şekilde değiştiren veya sahte resmi belgeyi kullanan kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. (2) Görevi gereği düzenlemeye yetkili olduğu resmi bir belgeyi sahte olarak düzenleyen, gerçek bir belgeyi başkalarını aldatacak şekilde değiştiren, gerçeğe aykırı olarak belge düzenleyen veya sahte resmi belgeyi kullanan kamu görevlisi üç yıldan sekiz yıla kadar hapis cezası ile cezalandırılır. (3) Resmi belgenin, kanun hükmü gereği sahteliği sabit oluncaya kadar geçerli olan belge niteliğinde olması halinde, verilecek ceza yarısı oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "206",
+   "metin": "(1) Bir resmi belgeyi düzenlemek yetkisine sahip olan kamu görevlisine yalan beyanda bulunan kişi, üç aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "207",
+   "metin": "(1) Bir özel belgeyi sahte olarak düzenleyen veya gerçek bir özel belgeyi başkalarını aldatacak şekilde değiştiren ve kullanan kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. (2) Bir sahte özel belgeyi bu özelliğini bilerek kullanan kişi de yukarıdaki fıkra hükmüne göre cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "220",
+   "metin": "(1) Kanunun suç saydığı fiilleri işlemek amacıyla örgüt kuranlar veya yönetenler, örgütün yapısı, sahip bulunduğu üye sayısı ile araç ve gereç bakımından amaç suçları işlemeye elverişli olması halinde, beş yıldan on yıla kadar hapis cezası ile cezalandırılır. Ancak, örgütün varlığı için üye sayısının en az üç kişi olması gerekir. (2) Suç işlemek amacıyla kurulmuş olan örgüte üye olanlar, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır. (3) Örgütün silahlı olması halinde, yukarıdaki fıkralara göre verilecek ceza yarısı oranında artırılır. (4) Örgütün faaliyeti çerçevesinde suç işlenmesi halinde, ayrıca bu suçlardan dolayı da cezaya hükmolunur. (5) (…) Örgütün faaliyeti çerçevesinde işlenen suçlarda çocukların araç olarak kullanılması halinde, örgüt yöneticilerine verilecek ceza yarısından bir katına kadar artırılır. (…) (7) Örgüt içindeki hiyerarşik yapıya dahil olmamakla birlikte, örgüte bilerek ve isteyerek yardım eden kişi, örgüt üyesi olarak cezalandırılır. (…) (8) Örgütün cebir, şiddet veya tehdit içeren yöntemlerini meşru gösterecek veya övecek ya da bu yöntemlere başvurmayı teşvik edecek şekilde propagandasını yapan kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır. Bu suçun basın ve yayın yolu ile işlenmesi halinde, verilecek ceza yarı oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "226",
+   "metin": "(1) a) Bir çocuğa müstehcen görüntü, yazı veya sözleri içeren ürünleri veren ya da bunların içeriğini gösteren, okuyan, okutan veya dinleten, b) Bunların içeriklerini çocukların girebileceği veya görebileceği yerlerde ya da alenen gösteren (…), c-d-e-f) (…) Kişi, altı aydan iki yıla kadar hapis ve adlî para cezası ile cezalandırılır. (2) Müstehcen görüntü, yazı veya sözleri basın ve yayın yolu ile yayınlayan veya yayınlanmasına aracılık eden kişi altı aydan üç yıla kadar hapis ve beşbin güne kadar adlî para cezası ile cezalandırılır. (3) Müstehcen (…) ürünlerin üretiminde çocukları, temsili çocuk görüntülerini veya çocuk gibi görünen kişileri kullanan kişi, beş yıldan on yıla kadar hapis ve beşbin güne kadar adlî para cezası ile cezalandırılır. (…) (7) Bu madde hükümleri, bilimsel eserlerle; üçüncü fıkra hariç olmak ve çocuklara ulaşması engellenmek koşuluyla, sanatsal ve edebi değeri olan eserler hakkında uygulanmaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "227",
+   "metin": "(1) Çocuğu fuhşa teşvik eden, bunun yolunu kolaylaştıran, bu maksatla tedarik eden veya barındıran ya da çocuğun fuhşuna aracılık eden kişi, dört yıldan on yıla kadar hapis ve beşbin güne kadar adlî para cezası ile cezalandırılır. Bu suçun işlenişine yönelik hazırlık hareketleri de tamamlanmış suç gibi cezalandırılır. (2) Bir kimseyi fuhşa teşvik eden, bunun yolunu kolaylaştıran ya da fuhuş için aracılık eden veya yer temin eden kişi, iki yıldan dört yıla kadar hapis ve üçbin güne kadar adlî para cezası ile cezalandırılır. (…) (4) Cebir veya tehdit kullanarak, hile ile ya da çaresizliğinden yararlanarak bir kimseyi fuhşa sevk eden veya fuhuş yapmasını sağlayan kişi hakkında yukarıdaki fıkralara göre verilecek ceza yarısından iki katına kadar artırılır. (5) Yukarıdaki fıkralarda tanımlanan suçların eş, üstsoy, kayın üstsoy, kardeş, evlat edinen, vasi, eğitici, öğretici, bakıcı, koruma ve gözetim yükümlülüğü bulunan diğer kişiler tarafından ya da kamu görevi veya hizmet ilişkisinin sağladığı nüfuz kötüye kullanılmak suretiyle işlenmesi halinde, verilecek ceza yarı oranında artırılır. (…) (8) Fuhşa sürüklenen kişi, tedaviye veya psikolojik terapiye tâbi tutulabilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "24",
+   "metin": "(1) Kanunun hükmünü yerine getiren kimseye ceza verilmez. (2) Yetkili bir merciden verilip, yerine getirilmesi görev gereği zorunlu olan bir emri uygulayan sorumlu olmaz. (3) Konusu suç teşkil eden emir hiçbir surette yerine getirilemez. Aksi takdirde yerine getiren ile emri veren sorumlu olur. (4) Emrin, hukuka uygunluğunun denetlenmesinin kanun tarafından engellendiği hallerde, yerine getirilmesinden emri veren sorumlu olur.",
+   "kapsamda": false
+  },
+  {
+   "no": "25",
+   "metin": "(1) Gerek kendisine ve gerek başkasına ait bir hakka yönelmiş, gerçekleşen, gerçekleşmesi veya tekrarı muhakkak olan haksız bir saldırıyı o anda hal ve koşullara göre saldırı ile orantılı biçimde defetmek zorunluluğu ile işlenen fiillerden dolayı faile ceza verilmez. (2) ...bilerek neden olmadığı ve başka suretle korunmak olanağı bulunmayan ağır ve muhakkak bir tehlikeden kurtulmak veya başkasını kurtarmak zorunluluğu ile ve tehlikenin ağırlığı ile konu ve kullanılan vasıta arasında orantı bulunmak koşulu ile işlenen fiillerden dolayı faile ceza verilmez.",
+   "kapsamda": false
+  },
+  {
+   "no": "26",
+   "metin": "(1) Hakkını kullanan kimseye ceza verilmez. (2) Kişinin üzerinde mutlak surette tasarruf edebileceği bir hakkına ilişkin olmak üzere, açıkladığı rızası çerçevesinde işlenen fiilden dolayı kimseye ceza verilmez.",
+   "kapsamda": false
+  },
+  {
+   "no": "267",
+   "metin": "(1) Yetkili makamlara ihbar veya şikayette bulunarak ya da basın ve yayın yoluyla, işlemediğini bildiği halde, hakkında soruşturma ve kovuşturma başlatılmasını ya da idari bir yaptırım uygulanmasını sağlamak için bir kimseye hukuka aykırı bir fiil isnat eden kişi, bir yıldan dört yıla kadar hapis cezası ile cezalandırılır. (2) Fiilin maddî eser ve delillerini uydurarak iftirada bulunulması halinde, ceza yarı oranında artırılır. ... [m.268: işlediği suç nedeniyle kendisi hakkında soruşturmayı engellemek için BAŞKASINA AİT KİMLİĞİ kullanan kimse, iftira hükümlerine göre cezalandırılır.]",
+   "kapsamda": false
+  },
+  {
+   "no": "271",
+   "metin": "(1) İşlenmediğini bildiği bir suçu, yetkili makamlara işlenmiş gibi ihbar eden ya da işlenmeyen bir suçun delil veya emarelerini soruşturma yapılmasını sağlayacak biçimde uyduran kimseye üç yıla kadar hapis cezası verilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "272",
+   "metin": "(1) Hukuka aykırı bir fiil nedeniyle başlatılan bir soruşturma kapsamında tanık dinlemeye yetkili kişi veya kurul önünde gerçeğe aykırı olarak tanıklık yapan kimseye, dört aydan bir yıla kadar hapis cezası verilir. (2) Mahkeme huzurunda ya da yemin ettirerek tanık dinlemeye kanunen yetkili kişi veya kurul önünde gerçeğe aykırı olarak tanıklık yapan kimseye bir yıldan üç yıla kadar hapis cezası verilir. (3) Üç yıldan fazla hapis cezasını gerektiren bir suçun soruşturma veya kovuşturması kapsamında yalan tanıklık yapan kişi hakkında iki yıldan dört yıla kadar...",
+   "kapsamda": false
+  },
+  {
+   "no": "277",
+   "metin": "(1) Görülmekte olan bir davada (...) gerçeğin ortaya çıkmasını engellemek veya bir haksızlık oluşturmak amacıyla...bir karar vermesi veya bir işlem tesis etmesi ya da beyanda bulunması için, yargı görevi yapanı, bilirkişiyi veya tanığı hukuka aykırı olarak etkilemeye teşebbüs eden kişi, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır. Teşebbüs iltimas derecesini geçmediği takdirde verilecek ceza altı aydan iki yıla kadardır.",
+   "kapsamda": false
+  },
+  {
+   "no": "278",
+   "metin": "(1) İşlenmekte olan bir suçu yetkili makamlara bildirmeyen kişi, bir yıla kadar hapis cezası ile cezalandırılır. (2) İşlenmiş olmakla birlikte, sebebiyet verdiği neticelerin sınırlandırılması halen mümkün bulunan bir suçu yetkili makamlara bildirmeyen kişi, yukarıdaki fıkra hükmüne göre cezalandırılır. (3) Mağdurun onbeş yaşını bitirmemiş bir çocuk, bedensel veya ruhsal bakımdan engelli olan ya da hamileliği nedeniyle kendisini savunamayacak durumda bulunan kimse olması halinde...ceza, yarı oranında artırılır. (4) Tanıklıktan çekinebilecek olan kişiler bakımından cezaya hükmolunmaz...",
+   "kapsamda": false
+  },
+  {
+   "no": "279",
+   "metin": "(1) Kamu adına soruşturma ve kovuşturmayı gerektiren bir suçun işlendiğini göreviyle bağlantılı olarak öğrenip de yetkili makamlara bildirimde bulunmayı ihmal eden veya bu hususta gecikme gösteren kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır. (2) Suçun, adlî kolluk görevini yapan kişi tarafından işlenmesi halinde, yukarıdaki fıkraya göre verilecek ceza yarı oranında artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "28",
+   "metin": "(1) Karşı koyamayacağı veya kurtulamayacağı cebir ve şiddet veya muhakkak ve ağır bir korkutma veya tehdit sonucu suç işleyen kimseye ceza verilmez. Bu gibi hallerde cebir ve şiddet, korkutma ve tehdidi kullanan kişi suçun faili sayılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "280",
+   "metin": "(1) Görevini yaptığı sırada bir suçun işlendiği yönünde bir belirti ile karşılaşmasına rağmen, durumu yetkili makamlara bildirmeyen veya bu hususta gecikme gösteren sağlık mesleği mensubu, bir yıla kadar hapis cezası ile cezalandırılır. (2) Sağlık mesleği mensubu deyiminden tabip, diş tabibi, eczacı, ebe, hemşire ve sağlık hizmeti veren diğer kişiler anlaşılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "281",
+   "metin": "(1) Gerçeğin meydana çıkmasını engellemek amacıyla, bir suçun delillerini yok eden, silen, gizleyen, değiştiren veya bozan kişi, altı aydan beş yıla kadar hapis cezası ile cezalandırılır. Kendi işlediği veya işlenişine iştirak ettiği suçla ilgili olarak kişiye bu fıkra hükmüne göre ceza verilmez. (2) Bu suçun kamu görevlisi tarafından göreviyle bağlantılı olarak işlenmesi halinde, verilecek ceza yarı oranında artırılır. (3) İlişkin olduğu suç nedeniyle hüküm verilmeden önce gizlenen delilleri mahkemeye teslim eden kişi hakkında...verilecek cezanın beşte dördü indirilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "282",
+   "metin": "(1) Alt sınırı altı ay veya daha fazla hapis cezasını gerektiren bir suçtan kaynaklanan malvarlığı değerlerini, yurt dışına çıkaran veya bunların gayrimeşru kaynağını gizlemek veya meşru bir yolla elde edildiği konusunda kanaat uyandırmak maksadıyla, çeşitli işlemlere tâbi tutan kişi, üç yıldan yedi yıla kadar hapis ve yirmibin güne kadar adlî para cezası ile cezalandırılır. (2) ...bu suçun konusunu oluşturan malvarlığı değerini, bu özelliğini bilerek satın alan, kabul eden, bulunduran veya kullanan kişi iki yıldan beş yıla kadar...",
+   "kapsamda": false
+  },
+  {
+   "no": "283",
+   "metin": "(1) Suç işleyen bir kişiye araştırma, yakalanma, tutuklanma veya hükmün infazından kurtulması için imkan sağlayan kimse, altı aydan beş yıla kadar hapis cezası ile cezalandırılır. (2) Bu suçun kamu görevlisi tarafından göreviyle bağlantılı olarak işlenmesi halinde, verilecek ceza yarı oranında artırılır. (3) Bu suçun üstsoy, altsoy, eş, kardeş veya diğer suç ortağı tarafından işlenmesi halinde, cezaya hükmolunmaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "289",
+   "metin": "(1) Muhafaza edilmek üzere kendisine resmen teslim olunan rehinli veya hacizli veya herhangi bir nedenle elkonulmuş olan mal üzerinde teslim amacı dışında tasarrufta bulunan kişi, üç aydan iki yıla kadar hapis ve üç bin güne kadar adlî para cezası ile cezalandırılır. Kişinin bu malın sahibi olması halinde, verilecek ceza yarı oranında indirilir. ... (4) Bir suça ilişkin soruşturma veya kovuşturma kapsamında elkonulan eşyayı amacı dışında kullanan kimse, bir yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "29",
+   "metin": "(1) Haksız bir fiilin meydana getirdiği hiddet veya şiddetli elemin etkisi altında suç işleyen kimseye, ağırlaştırılmış müebbet hapis cezası yerine onsekiz yıldan yirmidört yıla ve müebbet hapis cezası yerine oniki yıldan onsekiz yıla kadar hapis cezası verilir. Diğer hallerde verilecek cezanın dörtte birinden dörtte üçüne kadarı indirilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "299",
+   "metin": "(1) Cumhurbaşkanına hakaret eden kişi, bir yıldan dört yıla kadar hapis cezası ile cezalandırılır. (2) Suçun alenen işlenmesi hâlinde, verilecek ceza altıda biri oranında artırılır. (3) Bu suçtan dolayı kovuşturma yapılması, Adalet Bakanının iznine bağlıdır.",
+   "kapsamda": false
+  },
+  {
+   "no": "301",
+   "metin": "(1) Türk Milletini, Türkiye Cumhuriyeti Devletini, Türkiye Büyük Millet Meclisini, Türkiye Cumhuriyeti Hükümetini ve Devletin yargı organlarını alenen aşağılayan kişi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır. (2) Devletin askerî veya emniyet teşkilatını alenen aşağılayan kişi, birinci fıkra hükmüne göre cezalandırılır. (3) Eleştiri amacıyla yapılan düşünce açıklamaları suç oluşturmaz. (4) Bu suçtan dolayı soruşturma yapılması, Adalet Bakanının iznine bağlıdır.",
+   "kapsamda": false
+  },
+  {
+   "no": "31",
+   "metin": "(1) Fiili işlediği sırada oniki yaşını doldurmamış olan çocukların ceza sorumluluğu yoktur. ...ceza kovuşturması yapılamaz; ancak, çocuklara özgü güvenlik tedbirleri uygulanabilir. (2) ...oniki yaşını doldurmuş olup da onbeş yaşını doldurmamış olanların...algılayamaması veya...yeteneğinin yeterince gelişmemiş olması hâlinde ceza sorumluluğu yoktur...varlığı hâlinde...diğer cezaların yarısı indirilir... (3) ...onbeş yaşını doldurmuş olup da onsekiz yaşını doldurmamış olan kişiler hakkında...diğer cezaların üçte biri indirilir...",
+   "kapsamda": false
+  },
+  {
+   "no": "314",
+   "metin": "(1) Bu kısmın dördüncü ve beşinci bölümlerinde yer alan suçları işlemek amacıyla, silahlı örgüt kuran veya yöneten kişi, on yıldan onbeş yıla kadar hapis cezası ile cezalandırılır. (2) Birinci fıkrada tanımlanan örgüte üye olanlara, beş yıldan on yıla kadar hapis cezası verilir. ... [m.315 silah sağlama: örgütün amaçlarını bilerek silah üreten, satın alan, ülkeye sokan, nakleden veya depolayan kişi 10-15 yıl.] [KARŞILAŞTIR — m.220 adi suç örgütü: kuran/yöneten 5-10 yıl, üye 2-5 yıl; örgüt silahlıysa ceza yarı artar; üye sayısı en az 3 kişi. m.314 ise Devletin güvenliğine/anayasal düzene karşı suçlar için kurulan silahlı (terör) örgütü olup cezası ağırdır.]",
+   "kapsamda": false
+  },
+  {
+   "no": "32",
+   "metin": "(1) Akıl hastalığı nedeniyle, işlediği fiilin hukuki anlam ve sonuçlarını algılayamayan veya bu fiille ilgili olarak davranışlarını yönlendirme yeteneği önemli derecede azalmış olan kişiye ceza verilmez. Ancak, bu kişiler hakkında güvenlik tedbirine hükmolunur. (2) Birinci fıkrada yazılı derecede olmamakla birlikte...yeteneği azalmış olan kişiye, ağırlaştırılmış müebbet hapis cezası yerine yirmibeş yıl, müebbet hapis cezası yerine yirmi yıl hapis cezası verilir. Diğer hallerde verilecek ceza, altıda birden fazla olmamak üzere indirilebilir...",
+   "kapsamda": false
+  },
+  {
+   "no": "33",
+   "metin": "(1) Bu Kanunun, fiili işlediği sırada oniki yaşını doldurmamış olan çocuklara ilişkin hükümleri, onbeş yaşını doldurmamış olan sağır ve dilsizler hakkında; oniki yaşını doldurmuş olup da onbeş yaşını doldurmamış olanlara ilişkin hükümleri, onbeş yaşını doldurmuş olup da onsekiz yaşını doldurmamış olan sağır ve dilsizler hakkında; onbeş yaşını doldurmuş olup da onsekiz yaşını doldurmamış olanlara ilişkin hükümleri, onsekiz yaşını doldurmuş olup da yirmibir yaşını doldurmamış olan sağır ve dilsizler hakkında da uygulanır.",
+   "kapsamda": false
+  },
+  {
+   "no": "34",
+   "metin": "(1) Geçici bir nedenle ya da irade dışı alınan alkol veya uyuşturucu madde etkisiyle, işlediği fiilin hukuki anlam ve sonuçlarını algılayamayan veya...yeteneği önemli derecede azalmış olan kişiye ceza verilmez. (2) İradi olarak alınan alkol veya uyuşturucu madde etkisinde suç işleyen kişi hakkında birinci fıkra hükmü uygulanmaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "6",
+   "metin": "(1) Ceza kanunlarının uygulanmasında; ... c) Kamu görevlisi deyiminden; kamusal faaliyetin yürütülmesine atama veya seçilme yoluyla ya da herhangi bir surette sürekli, süreli veya geçici olarak katılan kişi, ... e) Gece vakti deyiminden; güneşin batmasından bir saat sonra başlayan ve doğmasından bir saat evvele kadar devam eden zaman süresi, f) Silah deyiminden; 1. Ateşli silahlar, 2. Patlayıcı maddeler, 3. ...her türlü kesici, delici veya bereleyici alet, 4. fiilen saldırı ve savunmada kullanılmaya elverişli diğer şeyler, 5. ...nükleer, radyoaktif, kimyasal, biyolojik maddeler, ... anlaşılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "73",
+   "metin": "(1) Soruşturulması ve kovuşturulması şikayete bağlı olan suç hakkında yetkili kimse altı ay içinde şikayette bulunmadığı takdirde soruşturma ve kovuşturma yapılamaz. (2) ...bu süre, şikayet hakkı olan kişinin fiili ve failin kim olduğunu bildiği veya öğrendiği günden başlar. (Ek 2024) ...hakaret suçu bakımından şikâyet süresi, fiilin gerçekleştiği tarihten itibaren İKİ YILI geçemez. (3) Şikayet hakkı olan birkaç kişiden birisi altı aylık süreyi geçirirse bundan dolayı diğerlerinin hakları düşmez. (4) ...suçtan zarar gören kişinin vazgeçmesi davayı düşürür... (5) İştirak halinde suç işlemiş sanıklardan biri hakkındaki şikayetten vazgeçme, diğerlerini de kapsar. (6) Kanunda aksi yazılı olmadıkça, vazgeçme onu KABUL ETMEYEN sanığı etkilemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "76",
+   "metin": "Madde 76- (1) Bir planın icrası suretiyle, milli, etnik, ırki veya dini bir grubun tamamen veya kısmen yokedilmesi maksadıyla, bu grupların üyelerine karşı; kasten öldürme, bedensel/ruhsal bütünlüğe ağır zarar, yok edici koşullara zorlama, doğuma engel tedbirler, çocukları zorla başka gruba nakletme fiillerinden birinin işlenmesi soykırımdır. (2) Faile ağırlaştırılmış müebbet verilir. (3) Tüzel kişiler hakkında güvenlik tedbiri. (4) Zamanaşımı işlemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "77",
+   "metin": "Madde 77- (1) Kasten öldürme, yaralama, işkence/eziyet/köleleştirme, hürriyetten yoksun kılma, bilimsel deneye tabi kılma, cinsel saldırı/çocukların cinsel istismarı, zorla hamile bırakma, zorla fuhşa sevketme fiillerinin siyasal, felsefi, ırki veya dini saiklerle toplumun bir kesimine karşı bir plan doğrultusunda sistemli olarak işlenmesi insanlığa karşı suçtur. (2) Öldürme → ağ. müebbet; diğer bentler → 8 yıldan az olmamak üzere hapis. (4) Zamanaşımı işlemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "78",
+   "metin": "Madde 78- (1) Yukarıdaki maddelerde (soykırım/insanlığa karşı suçlar) yazılı suçları işlemek maksadıyla örgüt kuran veya yöneten kişi on yıldan onbeş yıla; üye olanlar beş yıldan on yıla kadar hapisle cezalandırılır. (3) Zamanaşımı işlemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "79",
+   "metin": "Madde 79- (1) Doğrudan/dolaylı maddi menfaat için yasal olmayan yollardan bir yabancıyı ülkeye sokan/kalmasına imkan sağlayan ya da Türk vatandaşı/yabancının yurt dışına çıkmasına imkan sağlayan kişi beş yıldan sekiz yıla kadar hapis ve bin günden onbin güne kadar adlî para. Teşebbüs tamamlanmış gibi cezalandırılır. (2) Hayatı tehlikeye sokma/onur kırıcı → yarısından 2/3'e; (3) birden fazla kişi → yarıya, örgütle → yarısından bir katına artar.",
+   "kapsamda": false
+  },
+  {
+   "no": "80",
+   "metin": "Madde 80- (1) Zorla çalıştırma, hizmet ettirme, fuhuş yaptırma, esarete tâbi kılma ya da organlarının verilmesini sağlama maksadıyla; tehdit, baskı, cebir, şiddet, nüfuzu kötüye kullanma, kandırma veya çaresizlikten yararlanarak rıza elde etme suretiyle kişileri ülkeye sokan/çıkaran/tedarik eden/kaçıran/nakleden/barındıran kişiye sekiz yıldan oniki yıla kadar hapis ve onbin güne kadar adlî para. (2) Mağdurun rızası geçersizdir. (3) 18 yaşını doldurmamışlarda bu maksatlarla tedarik/nakil/barındırma yeterlidir (cebir vb. aranmaz).",
+   "kapsamda": false
+  },
+  {
+   "no": "81",
+   "metin": "Madde 81- (1) Bir insanı kasten öldüren kişi, müebbet hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "82",
+   "metin": "Madde 82- (1) Kasten öldürme suçunun;\na) Tasarlayarak,\nb) Canavarca hisle veya eziyet çektirerek,\nc) Yangın, su baskını, tahrip, batırma veya bombalama ya da nükleer, biyolojik veya kimyasal silah kullanmak suretiyle,\nd) Üstsoy veya altsoydan birine ya da eş, boşandığı eş veya kardeşe karşı,\ne) Çocuğa ya da beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye karşı,\nf) (Değişik:12/5/2022-7406/2 md.) Kadına karşı,\ng) Kişinin yerine getirdiği kamu görevi nedeniyle,\nh) Bir suçu gizlemek, delillerini ortadan kaldırmak veya işlenmesini kolaylaştırmak ya da yakalanmamak amacıyla,\ni) (Ek:29/6/2005 - 5377/9 md.) Bir suçu işleyememekten dolayı duyduğu infialle,\nj) Kan gütme saikiyle,\nk) Töre saikiyle,\nİşlenmesi halinde, kişi ağırlaştırılmış müebbet hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "83",
+   "metin": "Madde 83- (1) Kişinin yükümlü olduğu belli bir icrai davranışı gerçekleştirmemesi dolayısıyla meydana gelen ölüm neticesinden sorumlu tutulabilmesi için, bu neticenin oluşumuna sebebiyet veren yükümlülük ihmalinin icrai davranışa eşdeğer olması gerekir.\n(2) İhmali ve icrai davranışın eşdeğer kabul edilebilmesi için, kişinin;\na) Belli bir icrai davranışta bulunmak hususunda kanuni düzenlemelerden veya sözleşmeden kaynaklanan bir yükümlülüğünün bulunması,\nb) Önceden gerçekleştirdiği davranışın başkalarının hayatı ile ilgili olarak tehlikeli bir durum oluşturması,\ngerekir.\n(3) Belli bir yükümlülüğün ihmali ile ölüme neden olan kişi hakkında, temel ceza olarak, ağırlaştırılmış müebbet hapis cezası yerine yirmi yıldan yirmibeş yıla kadar, müebbet hapis cezası yerine onbeş yıldan yirmi yıla kadar, diğer hallerde ise on yıldan onbeş yıla kadar hapis cezasına hükmolunabileceği gibi, cezada indirim de yapılmayabilir.",
+   "kapsamda": false
+  },
+  {
+   "no": "84",
+   "metin": "Madde 84- (1) Başkasını intihara azmettiren, teşvik eden, başkasının intihar kararını kuvvetlendiren ya da başkasının intiharına herhangi bir şekilde yardım eden kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.\n(2) İntiharın gerçekleşmesi durumunda, kişi dört yıldan on yıla kadar hapis cezası ile cezalandırılır.\n(3) Başkalarını intihara alenen teşvik eden kişi, üç yıldan sekiz yıla kadar hapis cezası ile cezalandırılır. (Mülga ikinci cümle: 29/6/2005 – 5377/10 md.)\n(4) İşlediği fiilin anlam ve sonuçlarını algılama yeteneği gelişmemiş olan veya ortadan kaldırılan kişileri intihara sevk edenlerle cebir veya tehdit kullanmak suretiyle kişileri intihara mecbur edenler, kasten öldürme suçundan sorumlu tutulurlar.",
+   "kapsamda": false
+  },
+  {
+   "no": "85",
+   "metin": "Madde 85- (1) Taksirle bir insanın ölümüne neden olan kişi, iki yıldan altı yıla kadar hapis cezası ile cezalandırılır.\n(2) Fiil, birden fazla insanın ölümüne ya da bir veya birden fazla kişinin ölümü ile birlikte bir veya birden fazla kişinin yaralanmasına neden olmuş ise, kişi iki yıldan onbeş yıla kadar hapis cezası ile cezalandırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "86",
+   "metin": "Madde 86- (1) Kasten başkasının vücuduna acı veren veya sağlığının ya da algılama yeteneğinin bozulmasına neden olan kişi, bir yıl altı aydan üç yıla kadar hapis cezası ile cezalandırılır.\n(2) (Ek fıkra: 31/3/2005 – 5328/4 md.) Kasten yaralama fiilinin kişi üzerindeki etkisinin basit bir tıbbî müdahaleyle giderilebilecek ölçüde hafif olması hâlinde, mağdurun şikâyeti üzerine, altı aydan bir yıl altı aya kadar hapis veya adlî para cezasına hükmolunur. (Ek cümle:12/5/2022-7406/3 md.) Suçun kadına karşı işlenmesi hâlinde cezanın alt sınırı dokuz aydan az olamaz.\n(3) Kasten yaralama suçunun;\na) Üstsoya, altsoya, eşe, boşandığı eşe veya kardeşe karşı,\nb) Beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye karşı,\nc) Kişinin yerine getirdiği kamu görevi nedeniyle,\nd) Kamu görevlisinin sahip bulunduğu nüfuz kötüye kullanılmak suretiyle,\ne) Silahla,\nf) (Ek:14/4/2020-7242/11 md.) Canavarca hisle,\nİşlenmesi halinde, şikâyet aranmaksızın, verilecek ceza yarı oranında, (f) bendi bakımından ise bir kat artırılır.",
+   "kapsamda": false
+  },
+  {
+   "no": "87",
+   "metin": "Madde 87- (1) Kasten yaralama fiili, mağdurun;\na) Duyularından veya organlarından birinin işlevinin sürekli zayıflamasına,\nb) Konuşmasında sürekli zorluğa,\nc) Yüzünde sabit ize,\nd) Yaşamını tehlikeye sokan bir duruma,\ne) Gebe bir kadına karşı işlenip de çocuğunun vaktinden önce doğmasına,\nNeden olmuşsa, yukarıdaki maddeye göre belirlenen ceza, bir kat artırılır. Ancak, verilecek ceza, birinci fıkraya giren hallerde dört yıldan, üçüncü fıkraya giren hallerde altı yıldan az olamaz.\n(2) Kasten yaralama fiili, mağdurun;\na) İyileşmesi olanağı bulunmayan bir hastalığa veya bitkisel hayata girmesine,\nb) Duyularından veya organlarından birinin işlevinin yitirilmesine,\nc) Konuşma ya da çocuk yapma yeteneklerinin kaybolmasına,\nd) Yüzünün sürekli değişikliğine,\ne) Gebe bir kadına karşı işlenip de çocuğunun düşmesine,\nNeden olmuşsa, yukarıdaki maddeye göre belirlenen ceza, iki kat artırılır. Ancak, verilecek ceza, birinci fıkraya giren hallerde altı yıldan, üçüncü fıkraya giren hallerde dokuz yıldan az olamaz.\n(3) (Değişik: 6/12/2006 – 5560/4 md.) Kasten yaralamanın vücutta kemik kırılmasına veya çıkığına neden olması halinde, yukarıdaki maddeye göre belirlenen ceza, kırık veya çıkığın hayat fonksiyonlarındaki etkisine göre, yarısına kadar artırılır.\n(4) Kasten yaralama sonucunda ölüm meydana gelmişse, yukarıdaki maddenin birinci fıkrasına giren hallerde on yıldan ondört yıla kadar, üçüncü fıkrasına giren hallerde ise ondört yıldan onsekiz yıla kadar hapis cezasına hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "88",
+   "metin": "Madde 88- (1) Kasten yaralamanın ihmali davranışla işlenmesi halinde, verilecek ceza üçte ikisine kadar indirilebilir. Bu hükmün uygulanmasında kasten öldürmenin ihmali davranışla işlenmesine ilişkin koşullar göz önünde bulundurulur.",
+   "kapsamda": false
+  },
+  {
+   "no": "89",
+   "metin": "Madde 89- (1) Taksirle başkasının vücuduna acı veren veya sağlığının ya da algılama yeteneğinin bozulmasına neden olan kişi, dört aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır.\n(2) Taksirle yaralama fiili, mağdurun;\na) Duyularından veya organlarından birinin işlevinin sürekli zayıflamasına,\nb) Vücudunda kemik kırılmasına,\nc) Konuşmasında sürekli zorluğa,\nd) Yüzünde sabit ize,\ne) Yaşamını tehlikeye sokan bir duruma,\nf) Gebe bir kadının çocuğunun vaktinden önce doğmasına,\nNeden olmuşsa, birinci fıkraya göre belirlenen ceza, yarısı oranında artırılır.\n(3) Taksirle yaralama fiili, mağdurun;\na) İyileşmesi olanağı bulunmayan bir hastalığa veya bitkisel hayata girmesine,\nb) Duyularından veya organlarından birinin işlevinin yitirilmesine,\nc) Konuşma ya da çocuk yapma yeteneklerinin kaybolmasına,\nd) Yüzünün sürekli değişikliğine,\ne) Gebe bir kadının çocuğunun düşmesine,\nNeden olmuşsa, birinci fıkraya göre belirlenen ceza, bir kat artırılır.\n(4) Fiilin birden fazla kişinin yaralanmasına neden olması halinde, dokuz aydan beş yıla kadar hapis cezasına hükmolunur.\n(5) (Değişik: 6/12/2006 – 5560/5 md.) Taksirle yaralama suçunun soruşturulması ve kovuşturulması şikâyete bağlıdır. Ancak, birinci fıkra kapsamına giren yaralama hariç, suçun bilinçli taksirle işlenmesi halinde şikâyet aranmaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "90",
+   "metin": "Madde 90- (1) İnsan üzerinde bilimsel deney yapan kişi 1-3 yıl. (Rızaya dayalı, izinli, önce insan dışı/hayvanda denenmiş, kalıcı zarar vermeyen, yazılı rızalı deney ceza sorumluluğu gerektirmez.) (4) Rıza olmaksızın tedavi amaçlı deneme 1 yıla kadar. — Madde 91- (1) Rızaya dayanmadan organ alma 5-9 yıl, doku 2-5 yıl. (2) Ölüden organ/doku 1 yıla kadar. (3) Satan/aracı → birinci fıkra cezası. (4) Örgütle 8-15 yıl + 10.000 gün adlî para. — Madde 92- (Zorunluluk hali) Organ/dokusunu satanın sosyal-ekonomik koşulları → indirim ya da ceza vermekten vazgeçilebilir. — Madde 93- (Etkin pişmanlık) Satan kişi resmî makamlar haber almadan haber verirse cezaya hükmolunmaz.",
+   "kapsamda": false
+  },
+  {
+   "no": "94",
+   "metin": "Madde 94- (1) Bir kişiye karşı insan onuruyla bağdaşmayan ve bedensel veya ruhsal yönden acı çekmesine, algılama veya irade yeteneğinin etkilenmesine, aşağılanmasına yol açacak davranışları gerçekleştiren kamu görevlisi hakkında üç yıldan oniki yıla kadar hapis cezasına hükmolunur. (Ek cümle:12/5/2022-7406/4 md.) Suçun kadına karşı işlenmesi hâlinde cezanın alt sınırı beş yıldan az olamaz.\n(2) Suçun;\na) Çocuğa, beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye ya da gebe kadına karşı,\nb) Avukata veya diğer kamu görevlisine karşı görevi dolayısıyla,\nİşlenmesi halinde, sekiz yıldan onbeş yıla kadar hapis cezasına hükmolunur.\n(3) Fiilin cinsel yönden taciz şeklinde gerçekleşmesi halinde, on yıldan onbeş yıla kadar hapis cezasına hükmolunur.\n(4) Bu suçun işlenişine iştirak eden diğer kişiler de kamu görevlisi gibi cezalandırılır.\n(5) Bu suçun ihmali davranışla işlenmesi halinde, verilecek cezada bu nedenle indirim yapılmaz.\n(6) (Ek: 11/4/2013-6459/9 md.) Bu suçtan dolayı zamanaşımı işlemez.",
+   "kapsamda": false
+  },
+  {
+   "no": "95",
+   "metin": "Madde 95- (1) İşkence fiilleri, mağdurun;\na) Duyularından veya organlarından birinin işlevinin sürekli zayıflamasına,\nb) Konuşmasında sürekli zorluğa,\nc) Yüzünde sabit ize,\nd) Yaşamını tehlikeye sokan bir duruma,\ne) Gebe bir kadına karşı işlenip de çocuğunun vaktinden önce doğmasına,\nNeden olmuşsa, yukarıdaki maddeye göre belirlenen ceza, yarı oranında artırılır.\n(2) İşkence fiilleri, mağdurun;\na) İyileşmesi olanağı bulunmayan bir hastalığa veya bitkisel hayata girmesine,\nb) Duyularından veya organlarından birinin işlevinin yitirilmesine,\nc) Konuşma ya da çocuk yapma yeteneklerinin kaybolmasına,\nd) Yüzünün sürekli değişikliğine,\ne) Gebe bir kadına karşı işlenip de çocuğunun düşmesine,\nNeden olmuşsa, yukarıdaki maddeye göre belirlenen ceza, bir kat artırılır.\n(3) İşkence fiillerinin vücutta kemik kırılmasına neden olması halinde, kırığın hayat fonksiyonlarındaki etkisine göre sekiz yıldan onbeş yıla kadar hapis cezasına hükmolunur.\n(4) İşkence sonucunda ölüm meydana gelmişse, ağırlaştırılmış müebbet hapis cezasına hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "96",
+   "metin": "Madde 96- (1) Bir kimsenin eziyet çekmesine yol açacak davranışları gerçekleştiren kişi hakkında iki yıldan beş yıla kadar hapis cezasına hükmolunur. (Ek cümle:12/5/2022-7406/5 md.) Suçun kadına karşı işlenmesi hâlinde cezanın alt sınırı iki yıl altı aydan az olamaz.\n(2) Yukarıdaki fıkra kapsamına giren fiillerin;\na) Çocuğa, beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye ya da gebe kadına karşı,\nb) Üstsoy veya altsoya, babalık veya analığa ya da eşe veya boşandığı eşe karşı,\nİşlenmesi halinde, kişi hakkında üç yıldan sekiz yıla kadar hapis cezasına hükmolunur.",
+   "kapsamda": false
+  },
+  {
+   "no": "97",
+   "metin": "Madde 97- (1) Yaşı veya hastalığı dolayısıyla kendini idare edemeyecek durumda olan ve bu nedenle koruma ve gözetim yükümlülüğü altında bulunan bir kimseyi kendi haline terk eden kişi üç aydan iki yıla kadar hapis. (2) Terk dolayısıyla mağdur hastalanmış, yaralanmış veya ölmüşse neticesi sebebiyle ağırlaşmış suç hükümleri.\nMadde 98- (1) Yaşı, hastalığı veya yaralanması dolayısıyla ya da başka nedenle kendini idare edemeyecek durumdaki kimseye hal ve koşulların elverdiği ölçüde yardım etmeyen ya da durumu makamlara bildirmeyen kişi bir yıla kadar hapis veya adlî para. (2) Ölüm durumunda bir yıldan üç yıla kadar hapis.",
+   "kapsamda": false
+  },
+  {
+   "no": "99",
+   "metin": "Madde 99- (1) Rızası olmaksızın bir kadının çocuğunu düşürten kişi beş yıldan on yıla kadar. (2) Tıbbi zorunluluk yokken, rızaya dayalı olsa bile gebelik süresi on haftadan fazla olan kadının çocuğunu düşürten iki yıldan dört yıla; rıza gösteren kadın bir yıla kadar. (3-4) Kadının sağlığına zarar/ölüm hallerinde ceza artar. — Madde 100- (1) Gebelik süresi on haftadan fazla olan kadın çocuğunu isteyerek düşürürse bir yıla kadar hapis veya adlî para. — Madde 101- (1) Bir erkek/kadını rızası olmaksızın kısırlaştıran üç yıldan altı yıla kadar; yetkisiz kişi yaparsa ceza 1/3 artar. (2) Rızaya dayalı olsa bile yetkisiz kişi yaparsa bir yıldan üç yıla kadar.",
+   "kapsamda": false
+  }
+ ]
+}

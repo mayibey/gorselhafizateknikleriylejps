@@ -1,0 +1,38 @@
+{
+ "kanun_id": 14,
+ "ad": "5070 sayılı Elektronik İmza Kanunu",
+ "kapsam_maddeler_birlesik": [
+  "2",
+  "3",
+  "4",
+  "5"
+ ],
+ "not": "kapsamda=true maddelerden soru sorulur; diğerleri yalnız bağlam/karıştırılan için.",
+ "maddeler": [
+  {
+   "no": "2",
+   "metin": "Bu Kanun, elektronik imzanın hukukî yapısını, elektronik sertifika hizmet sağlayıcılarının faaliyetlerini ve her alanda elektronik imzanın kullanımına ilişkin işlemleri kapsar.\nTanımlar",
+   "kapsamda": true
+  },
+  {
+   "no": "3",
+   "metin": "Bu Kanunda geçen; a) Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları, b) Elektronik imza: Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriyi, c) İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi, d) İmza oluşturma verisi: İmza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturma amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri, e) İmza oluşturma aracı: Elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını, f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri, g) İmza doğrulama aracı: Elektronik imzayı doğrulamak amacıyla imza doğrulama verisini kullanan yazılım veya donanım aracını, h) Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,\n1 5/11/2008 tarihli ve 5809 sayılı Elektronik Haberleşme Kanununun 65 inci maddesinin üçüncü fıkrasında “Diğer mevzuatta geçen “Telekomünikasyon Kurumu” ibaresinden “Kurum”; “Telekomünikasyon Kurulu” ibaresinden de “Kurul” anlaşılır.” hükmü yer almaktadır.\nı) Elektronik sertifika: İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kaydı,\nj) Kurum: Telekomünikasyon Kurumunu, ifade eder.\nİKİNCİ KISIM Güvenli Elektronik İmza ve Sertifika Hizmetleri\nBİRİNCİ BÖLÜM Güvenli Elektronik İmza, Güvenli Elektronik İmza\nOluşturma ve Doğrulama Araçları Güvenli elektronik imza",
+   "kapsamda": true
+  },
+  {
+   "no": "4",
+   "metin": "Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır.\nGüvenli elektronik imzanın hukukî sonucu ve uygulama alanı",
+   "kapsamda": true
+  },
+  {
+   "no": "5",
+   "metin": "Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur. Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.23\nGüvenli elektronik imza oluşturma araçları",
+   "kapsamda": true
+  },
+  {
+   "no": "Ek",
+   "metin": "(Ek:28/1/2021-7263/15 md.) İnternet sitesi kimlik doğrulama sertifikası, bir internet sitesi ile bu sitenin sahibi olan gerçek veya tüzel kişinin bilgilerini birbirine bağlayan elektronik kayıttır. Benzer altyapıyı kullanan diğer elektronik sertifikalar, elektronik veriyi şifreleme veya verinin bütünlüğünü, inkâr edilemezliğini ve kaynağını belirleme gibi amaçlarla kullanılmak üzere elektronik sertifika hizmet sağlayıcıları tarafından açık anahtar altyapısı vasıtasıyla üretilen sertifikalardır. Kanunlarda yer alan elektronik imzaya ilişkin hükümler, kıyasen internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Elektronik sertifika hizmet sağlayıcılarının kanunlarda yer alan elektronik imza ile ilgili hak, yetki ve yükümlülükleri, internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Bu yükümlülüklere aykırı hareket eden elektronik sertifika hizmet sağlayıcıları hakkında 18 inci maddede belirtilen idari para cezaları uygulanır.\nYürürlük",
+   "kapsamda": false
+  }
+ ]
+}
