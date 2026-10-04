@@ -267,7 +267,7 @@ function rontgenYanlislar(R,sorular){
   const kart=q=>{const c=sec(q);return `<details class="ySoru"><summary><span class="satirNo"><b class="ySira">${no.get(q.i)}. Yanlış</b>${maddeNo(q)?' · '+esc(mEt(maddeNo(q))):''}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${c!==undefined&&c!==q.d?`<p class="ySenin">Senin cevabın: ${HARF[c]}) ${esc(q.s[c])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p>${q.a?`<p>${esc(q.a)}</p>`:''}</div></details>`;};
   const html=`<h3 class="bolumBaslik" id="yanlisBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${ys.length})</h3>
   ${eski?'<p class="kucukNot">Bu röntgen eski: işaretlediğin şık yerine bu soruya en son verdiğin cevap gösteriliyor.</p>':''}
-  ${grup.map(g=>`<p class="ozOzet">${esc(BYID[g.l]?kisa(BYID[g.l]):'')} · ${g.q.length} yanlış</p><section class="liste yanlisKartlar">${g.q.map(kart).join('')}</section>`).join('')}
+  ${grup.map(g=>`<h4 class="yGrup">${esc(BYID[g.l]?kisa(BYID[g.l]):'')}<span>${g.q.length} yanlış</span></h4><section class="liste yanlisKartlar">${g.q.map(kart).join('')}</section>`).join('')}
   <button class="anaBtn2" id="yTekrar">Yanlışları tekrar çöz · ${ys.length} soru ${IK.ok}<small>sonunda kaçını düzelttiğini görürsün</small></button>`;
   return {ys,html};
 }

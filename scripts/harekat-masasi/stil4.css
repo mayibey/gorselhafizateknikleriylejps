@@ -293,3 +293,5 @@ html,body,button,.kap{touch-action:manipulation}
 
 .ySira{font-weight:800;color:#F8D57A;font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .yoKart .ySira{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em}
+.yGrup{font-family:var(--govde);font-weight:700;font-size:15px;line-height:1.35;color:#F2EEE4;margin:16px 0 8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;text-wrap:balance}
+.yGrup span{font-size:12.5px;font-weight:600;color:#FF8F86;white-space:nowrap}
