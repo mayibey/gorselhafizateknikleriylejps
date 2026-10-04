@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (7) — RÖNTGEN YANLIŞLARI HERKESE AÇIK: başkan "Yay oğlum" dedi (16:52) → masa4.js YAYIN=['rontgen-yanlis']
+> hepsini_kur (16 branş, scratchpad calisma) → yukle_sayfalar.sh: 16/16 + varsayılan 200/200; sunucudaki masa-mebs/jandarma/
+> ücretsiz/masa.html'de bayrak doğrulandı (grep). OTA yok; kullanıcı Merkez'i kapat-aç yapınca gelir (sayfa önbellekten yenilenir).
+> Açılanlar: Röntgen Sonucu "Yanlışlarım · N soru" + kanun kanun yanlış listesi + "Yanlışları tekrar çöz" (check-up ve röntgen;
+> yeni cevaplar ilerlemeye yazılır) + sıra numaraları. Geri alma: YAYIN=[] → kur + yükle. (Başkanın merkez_ilerleme.veri.ozel
+> kaydı duruyor, zararsız.) sablon2.html kur2'nin ürettiği iskelet (üretilen dosya; masa4.js kaynaktır).
+>
 > ### ▶ 4 Eki (6) — ŞİFRE AÇIKLARI KANUN KANUN KAPATILDI: 25 müşterek mevzuat 994 → 1.657 satır, şifresiz soru %27 → %9
 > Başkan "Başla aslan" dedi; (5)'teki öncelik sırasıyla 25 kanunun hepsi tek tek elden geçti (ajan yok). Yöntem: her kanun için
 > şifresiz (L0) sorular madde madde döküldü (scripts/sifreler/olcum/acik_dok.py), ilgili maddelerin resmî metni okundu, soru değil

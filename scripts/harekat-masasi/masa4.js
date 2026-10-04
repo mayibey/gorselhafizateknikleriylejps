@@ -75,7 +75,7 @@ try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
 if(K.g!=='mus'&&K.g!==BRANS.slug)K.g='mus'; // başka branşın kaydı / eski 'mebs' değeri
 const RN=()=>window.ReactNativeWebView;
 // Yeni özellik önce yalnız sunucu kaydında ozel:[ad] olana açılır; herkese açmak için ad YAYIN'a eklenir.
-const YAYIN=[];
+const YAYIN=['rontgen-yanlis']; // 4 Eki 2026: başkan "yay" dedi → herkese açık
 const acik=ad=>YAYIN.includes(ad)||(Array.isArray(K.ozel)&&K.ozel.includes(ad));
 const PREMIUM=window.MERKEZ_PREMIUM!==false;
 function olay(ad,ayrinti){ try{ if(RN())RN().postMessage(JSON.stringify({tip:'olay',olay:ad,ayrinti:ayrinti||{}})); }catch(e){} }
