@@ -1,34 +1,39 @@
 # Jandarma Genel Komutanlığı İzin Yönetmeliği — kelime → cevap
+# KURAL (başkan, 4 Eki 2026): SOL = soru KÖKÜNDE göreceğin ifade, SAĞ = doğru ŞIKTA arayacağın kelime.
+# Sorulardan geriye doğru yazıldı (95 cevaplı soru); kanıt resmî metin. Kapsam: m.5 (genel esaslar) ve m.20 (yurt dışında uyulacak hususlar).
+# Tuzak çiftleri: dört izin (yıllık, mazeret, sıhhi, yurt dışı; ödül izni yok) · yurda dönüş 48 saat, en kısa yol + en SERİ vasıta (ekonomik değil) ·
+#                 uyarıcı bilgiyi BİRLİK amirliği verir / esasları JGK belirler · silah (şahsi, zati, miri) götürülmez; üniforma zorunlu olmadıkça giyilmez.
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
- ('5','tanim','Sıhhi izinler','izin türlerinden; yıllık, mazeret, sıhhi, yurt dışı','a) Personele verilecek izinler','4) Yurt dışı izinleri.',[],'dört tür'),
- ('5','istisna','kanuni izinlerinden mahsup edilmez','adli makama şüpheli, sanık, tanık, mağdur, bilirkişi çağrısı','d) Adli makamlara','mahsup edilmez.',[],'amir, çağrı ve yol süresine göre gönderir'),
- ('5','makam','vekâlet edenler','vekâlet ettikleri kadronun izin yetkisine sahip','e) İzin vermeye yetkili','yetkisine sahiptir.',[],''),
- ('5','istisna','izinli sayılır','milletlerarası spor müsabakası ve hazırlığına katılan','f) 21/5/1986','izinli sayılır.',[],''),
- ('5','makam','izinden geriye çağrılabilir','asgari yıllık izin planını onaylayan makam; yazılı ya da sözlü','ğ) Görev ve hizmet ihtiyacının','yazılı veya sözlü olarak yapılabilir.',[],'sonradan görevlendirme yazısı; dönüş ve gidiş masrafı Harcırah Kanununa göre ödenir; savaş ve OHAL\'de de çağrılabilir'),
- ('5','sure','günün başlangıç saatidir','izinlerin başlangıç ve bitiş saati','h) İzinlerin başlangıç','günün başlangıç saatidir.',[],'istisnai durumda yetkili amir farklı saat belirleyebilir'),
- ('5','sure','48 saat içerisinde','yurda dönme kararı tebliğ edilen izinli personel döner','i) Yurt dışında izinde','dönüşe geçer.',[],'en kısa yol, en seri vasıta; mücbir sebeple uzatılabilir'),
- ('5','yasak','ilin dışına izinsiz çıkamaz','personel; hafta sonu il dışı izni kanuni izinden düşmez','j) Personel görev yaptığı','mahsup edilmez.',[],''),
- ('5','yasak','Kursiyerlere','planlı tatiller dışında izin verilmez','m) Kursiyerlere','izin verilmez.',[],'geçerli özrü olana kursu veren birim mazeret izni verebilir'),
- ('20','yasak','silahını götüremez','seyahatle yurt dışına giden; şahsi, zati, miri','d) Zorunlu olmadıkça','silahını götüremez.',[],''),
- ('20','yasak','Zorunlu olmadıkça üniforma giyemez','yurt dışında izinli personel','d) Zorunlu olmadıkça','silahını götüremez.',[],''),
- ('20', 'kosul', 'Türk Jandarmasına yaraşır', 'yurt dışındaki izinli personel resmî-özel hayatını böyle düzenler; milletin temsilcisi', 'MADDE 20- (1) İzinli olarak yurt dışında', 'yaraşır bir şekilde düzenlemek zorundadır.', [], ''),
- ('20', 'kosul', 'subay, sözleşmeli subay, astsubay', 'yurt dışı izin kuralları: sözleşmeli astsubay, uzman jandarma, uzman erbaş', 'MADDE 20- (1) İzinli olarak yurt dışında', 'yaraşır bir şekilde düzenlemek zorundadır.', [], 'sivil memur, er-erbaş YOK'),
- ('20', 'kosul', 'meslekî vakar ve ananeyi', 'TSK, SGK ve yabancı askeri-kolluk personeline karşı tavırda muhafaza', 'b) Yurt dışındaki Türk Silahlı Kuvvetleri', 'vakar ve ananeyi muhafaza eder.', [], ''),
- ('20', 'kosul', 'Yabancılarla temasta daha titiz', 'resmî ve özel hayatta olumsuz olaya sebebiyet vermemek için özen', 'c) Yabancılarla temasta', 'özen gösterir.', [], ''),
- ('20', 'kosul', 'meslekî şerefe uygun', 'mevzuat ve malî imkânlarına göre uygun bir meskende yaşamak zorunda', 'ç) Mevzuat ve malî imkânlarına', 'meslekî şerefe uygun bir şekilde yaşamak', [], ''),
- ('20', 'makam', 'istihbarata karşı koyma ve koruyucu', 'birlik/karargâh/kurum amirlikleri uyarıcı bilgi verir; JGK esaslarına uyulur', '(2) Yurt dışına izinli gidecek personele', 'koruyucu güvenlik esaslarına uyar.', [], ''),
- ('20', 'makam', 'bağlı bulunduğu birlik, karargâh', 'yurt dışına izinli gidecek personele uyarıcı bilgiyi bunlar verir', '(2) Yurt dışına izinli gidecek personele', 'uyarıcı bilgiler verilir.', [], ''),
- ('20', 'makam', 'Jandarma Genel Komutanlığınca belirlenen', 'İKK ve koruyucu güvenlik esasları; izinli personel uyar', '(3) İzinli olarak yurt dışında bulunan personel', 'koruyucu güvenlik esaslarına uyar.', [], ''),
- ('5', 'tanim', 'izinler şunlardır', 'izin türleri dört: yıllık, mazeret, sıhhi, yurt dışı', 'a) Personele verilecek izinler şunlardır', '4) Yurt dışı izinleri.', [], ''),
- ('5', 'kosul', 'genel esaslar dâhilinde yürütülür', 'personelin izin işlemleri; özlük işlemlerinin yapıldığı makamlarca', 'MADDE 5- (1) Personelin izin işlemleri', 'makamlarca yürütülür.', [], ''),
- ('5', 'makam', 'özlük işlemlerinin yerine getirildiği', 'her türlü izin işlemini bu makamlar yürütür', 'ç) Personelin her türlü izin', 'makamlarca yürütülür.', [], ''),
- ('5', 'sure', 'en seri vasıta ile', 'dönme kararı tebliğ edilen personel 48 saatte en kısa yoldan', 'i) Yurt dışında izinde bulunup', 'bu süre uzatılabilir.', [], 'mücbir sebeple uzar'),
- ('5', 'kosul', '2803 sayılı Kanunun ek 3', 'savaş ve olağanüstü hallerde izin süreleri kısaltılır/kaldırılır', 'g) Savaş ve olağanüstü hallerde', 'izinden geriye çağrılabilir.', [], ''),
- ('5', 'sira_usul', 'merkezi personel bilgi sisteminin', 'kullanılan izinler buraya işlenir; belgeler birlik ve sayısal özlük dosyasında', 'c) Personelin kullandığı izinler', 'özlük dosyalarında muhafaza edilir.', [], ''),
- ('5', 'sira_usul', 'ayrılış/katılış belgelerinin', 'atamayla ayrılan personelin o yılki izin bilgisi buraya yazılır, onaylanır', 'b) Atama ile birliğinden ayrılan', 'yazılır ve onaylanır.', [], ''),
- ('5', 'ceza', 'izin sıra çizelgelerine aykırı', 'yasal işlem: süresinde dönmeyen, gerçeğe aykırı beyan, çizelgeye aykırı', 'ı) İzinden süresi içinde dönmeyenler', 'yasal işlem yapılır.', [], ''),
- ('5', 'sira_usul', 'görevlendirme yazısı ile yazılı', 'izinden çağırma sözlü olsa da yazıya dökülür; sureti özlük dosyalarında', 'Personelin izinden çağrılması, yazılı veya sözlü', 'birlik ve sayısal özlük dosyalarında', [], 'dönüş ve tekrar gidiş masrafı Harcırah Kanununa göre ödenir'),
+ # m.5 — genel esaslar
+ ('5','tanim','verilecek izin','dört: yıllık, mazeret, sıhhi, yurt dışı; ödül, hizmet-içi yok','a) Personele verilecek izinler şunlardır:','4) Yurt dışı izinleri.',[],'sayım sırası: 1 yıllık, 2 mazeret, 3 sıhhi, 4 yurt dışı'),
+ ('5','kosul','adli makam','şüpheli, sanık, tanık, mağdur, bilirkişi: mahsup edilmez','d) Adli makamlara','kanuni izinlerinden mahsup edilmez.',[],'amir çağrı ve yol süresini dikkate alarak gönderir'),
+ ('5','kosul','mahsup','edilmez: bayram il dışı izni; adli çağrı süresi de','Hafta sonu, yılbaşı','kanuni izinlerden mahsup edilmez.',[],'adli çağrı için d) bendi; il dışı izin için j) bendi'),
+ ('5','sure','dönüş','48 saat; en kısa yol, en seri vasıta','i) Yurt dışında izinde bulunup','süre uzatılabilir.',[],'yurda dönme kararı tebliğ edilince; mücbir sebeple uzar; ekonomik vasıta değil'),
+ ('5','kosul','olağanüstü hal','kısaltılır-kaldırılır, izinden geriye çağrılır; 2803 ek 3','g) Savaş ve olağanüstü hallerde','personel izinden geriye çağrılabilir.',[],'savaşta da'),
+ ('5','makam','hizmet ihtiyacı','planlamayı onaylayan makam; yazılı-sözlü; masraf Harcırah’tan','ğ) Görev ve hizmet ihtiyacının','kendisine ödenir.',[],'asgari yıllık izin planlamasını onaylayan makam; sözlü çağrı da görevlendirme yazısıyla yazılıya geçer'),
+ ('5','sure','bitiş saati','günün başlangıç saati; istisnada amir belirler','h) İzinlerin başlangıç ve bitiş saati','farklı bir saat olarak belirlenebilir.',[],'emniyet-asayiş, ulaşım, hava şartı gibi istisnalar'),
+ ('5','yasak','kurs','izin verilmez; planlı tatil, geçerli özür hariç','m) Kursiyerlere','birliğine yazılı olarak bildirilir.',[],'özürlüye kurs bitişini aşmadan kursu veren birim izin verir'),
+ ('5','yasak','görev yaptığı il','dışına izinsiz çıkamaz; bayram-tatilde izinle çıkabilir','j) Personel görev yaptığı ilin dışına','kanuni izinlerden mahsup edilmez.',[],'bayram-tatil il dışı izni kanuni izinden düşülmez'),
+ ('5','makam','her türlü izin işlem','özlük işlemlerini yürüten makamlar','ç) Personelin her türlü izin işlemleri','makamlarca yürütülür.',[],''),
+ ('5','sira_usul','kullandığı izin','merkezi personel bilgi sistemi; birlik ve sayısal özlük dosyası','c) Personelin kullandığı izinler','özlük dosyalarında muhafaza edilir.',[],'izin belgeleri dosyada saklanır'),
+ ('5','sira_usul','atama ile','ayrılış/katılış belgesine izin bilgisi yazılır','b) Atama ile birliğinden','yazılır ve onaylanır.',[],'bulunulan yıl içinde izin kullanıp kullanmadığı, süre ve tarihler'),
+ ('5','kosul','izin belgesinde','her zaman ulaşılabilecek iletişim vasıtası ve adres','l) Personel her zaman','izin belgesinde belirtmek zorundadır.',[],''),
+ ('5','ceza','yasal işlem','süresinde dönmeyen, gerçeğe aykırı beyan, çizelgeye aykırı','ı) İzinden süresi içinde','yasal işlem yapılır.',[],'mazeretsiz veya müsaadesiz izin sıra çizelgesine aykırılık'),
+ ('5','makam','vekâlet','izin verme yetkisine sahip','e) İzin vermeye yetkili','izin verme yetkisine sahiptir.',[],'vekâlet ettiği kadronun yetkisi'),
+ ('5','kosul','spor müsabaka','organizasyon süresince izinli sayılır','f) 21/5/1986','izinli sayılır.',[],'milletlerarası seviye, yurt içi ve yurt dışı; hazırlık çalışmaları da'),
+
+ # m.20 — izinli olarak yurt dışında uyulacak hususlar
+ ('20','kosul','özel hayat','milletimizin ve Jandarmanın temsilcisi; Jandarmaya yaraşır','a) Milletimizin ve Jandarma','düzenlemek zorundadır.',[],'subay, sözleşmeli subay, astsubay, sözleşmeli astsubay, uzman jandarma, uzman erbaş; sivil memur ve er yok'),
+ ('20','kosul','tavır ve hareket','TSK, Sahil Güvenlik, yabancı asker-kolluğa karşı meslekî vakar ve anane','b) Yurt dışındaki Türk Silahlı Kuvvetleri','ananeyi muhafaza eder.',[],''),
+ ('20','kosul','yabancılarla temas','daha titiz-dikkatli; olumsuz olaya sebebiyet vermemek','c) Yabancılarla temasta','özen gösterir.',[],'resmî ve özel hayatta'),
+ ('20','kosul','mesken','mevzuat ve malî imkâna göre; meslekî şerefe uygun','ç) Mevzuat ve malî','yaşamak zorundadır.',[],''),
+ ('20','kosul','malî imkân','uygun meskende, meslekî şerefe uygun yaşar','ç) Mevzuat ve malî','yaşamak zorundadır.',[],''),
+ ('20','yasak','üniforma','zorunlu olmadıkça giyemez','d) Zorunlu olmadıkça','üniforma giyemez.',[],'resmî temasta her zaman giyme zorunluluğu YOK'),
+ ('20','yasak','seyahat','şahsi, zati, miri silah götüremez','e) Seyahat maksadıyla','silahını götüremez.',[],'kişisel güvenlik için de götüremez'),
+ ('20','makam','uyarıcı bilgi','birlik-karargâh-kurum amirlikleri verir; konu: hareket tarzı, istihbarata karşı koyma','(2) Yurt dışına izinli gidecek','uyarıcı bilgiler verilir.',[],'koruyucu güvenlik önlemleri de'),
+ ('20','makam','istihbarata karşı koyma','esasları Jandarma Genel Komutanlığı belirler; uymak zorunlu','(3) İzinli olarak yurt dışında','güvenlik esaslarına uyar.',[],'bilgiyi birlik verir, esası JGK belirler'),
+ ('20','kosul','Komutanlığınca belirlenen','istihbarata karşı koyma, koruyucu güvenlik esasları','(3) İzinli olarak yurt dışında','güvenlik esaslarına uyar.',[],''),
 ]
 yaz(24, 'Jandarma Genel Komutanlığı İzin Yönetmeliği', K)
