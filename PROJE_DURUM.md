@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (2) — KİLİT KELİME ŞİFRELERİ: BİÇİM DEĞİŞTİ, KANUN KANUN
+> Başkan 1.522'lik ham seti ("her maddeye zorlama slogan") ve 5442 seçmesini beğenmedi; onayladığı biçim: **soruda görülen
+> kelime → cevap** (slogan yok; "bucak → Cumhurbaşkanı onayı"). Toplu ajan YASAK, kanun kanun elle. Dosyalar:
+> gemini_calisma/kodlama_secme/kanun_<id>.json (tetikleyici=kelime, cevap, kanit resmî metinden aynen, not, karistirilan);
+> denetçi `kodlama_denetci.py --secme`; yazıcı betikler oturum scratchpad/secme/k<id>.py (ortak.py). Biten: 5442 (25 satır),
+> TCK müşterek (73 satır). Sayfa: https://claude.ai/artifact/MebRKHX3h5dJprFnxPRTnn (yalnız başkana açık). Sıradaki: 2803, 7068…
+> NOT: gemini_calisma gitignored; biçim oturunca kodlama_secme repo'ya (scripts/harekat-masasi/kilit_kelime/) taşınacak.
+>
 > ### ▶ 4 Eki — RÖNTGEN SONUCUNDA YANLIŞ SORULAR (Mehmet Ali: "röntgenden sonra yanlışları göremiyorum") — ÖNCE YALNIZ BAŞKAN
 > masa4.js: Röntgen Sonucu'na "Yanlışlarım · N soru" düğmesi + kanun kanun yanlış sorular (senin cevabın / doğrusu / açıklama)
 > + "Yanlışları tekrar çöz". Yeni röntgen kendi cevaplarını saklar (R.c); eski röntgende son verilen cevap gösterilir (notla).
