@@ -4,6 +4,20 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 4 Eki (5) — ŞİFRELER ELİMİZDEKİ TÜM MÜŞTEREK SORULARA UYGULANDI: 3.228 soru, 887 (%27) şifresiz → AÇIK RAPORU
+> Başkan: "hem gerçek sınav soruları hem arşivimizdeki tüm sorulara uygula, eksikleri tespit et". Havuz (tekrarsız 3.228):
+> gerçek sınav 391 (2026 md 109 + 9 çıkmış kitapçık meslek bölümü 282; scripts/veri/cikmis-sinav-sorulari.json, cevapsız, kanun
+> etiketi kökten regex) + arşiv 2.837 (kart-sorulari 672 + duello 1.662 + premium 194 + ek_sorular 309; genel denemeler kart/duello
+> seçkisi olduğu için alınmadı). Betik: scripts/sifreler/olcum/arsiv_olc.py (L2 kelime aynen / L1 ilgili şifre / L0 yok; 2026 setine
+> karşı kalibre: elle "çözer" denenlerin %15'ini L0 sayıyor → gerçek açık biraz daha küçük) → rapor_uret.py → sayfa
+> https://claude.ai/artifact/4Wpq1yZvUrKjZU3zcn6vVX (kanun tablosu + madde madde eksik sorular, süzgeç/arama).
+> SONUÇ: şifresiz 887/3.228 (%27); gerçek sınavda 98/391 (%25); arşivde 789/2.837 (%28). Kanun bazında en kötü: 2521 yön. %62,
+> Bilgi Edinme yön. %45, OHAL %44, Tebligat %43, Jandarma Yön. %39, 6284 Uyg. Yön. %38, İzin yön. %38 (m.20 26 soru), 6136 %37,
+> 4678 %36; en iyi: Sözleşmeli Yön. %4, Kabahatler %7, KV silme %11, 5442 %12. ÖNCELİK (gerçek sınav açığı ×3 + arşiv): TCK (58,
+> gerçek 22) → 2803 (96) → Jandarma Yön. (74) → Personel Yön. (60) → 6284 Uyg. Yön. (51) → 7068 (52) → 4678 (41) → 6136 (49) → Tebligat
+> (32) → OHAL (40) → 6284 K. (42) → Resmî Yazışma (34). SIRADAKİ İŞ (başkan onayı): açıkları kanun kanun kapatmak (madde metninden
+> kanıtlı satır; eksik sorunun kendisi değil, dayandığı kural yazılır); 7068 m.8 tam metni temin edilmeli (kumar vb.).
+>
 > ### ▶ 4 Eki (4) — ŞİFRELER GERÇEK SINAV SORULARINA UYGULANDI: %62 → düzeltme + 37 ekleme → aynı sorularda %91
 > Başkan "anahtar kelimeleri sorulara uygula, kaçı doğru çıkıyor" dedi. Test seti: Eylül 2026 sınavlarının müşterek blokları
 > (scratchpad/Subay_Jandarma_100_Soru.md 21-60, Astsubay_MEBS_100_Soru.md 21-70, Uzman_Erbas_100_Soru.md 21-60) = 130 soru.
