@@ -12,6 +12,8 @@
 > `AYAR.ara`; bayrak sonradan gelirse düğme sonradan kurulur. Sunucu: ozellik_kisi'ye başkan+Kemalettin için "kitap-ara" eklendi.
 > OTA production: 1.0.47 (grup 9a2f460f) + 1.0.46 (grup 8ef1d6bb); diğerleri kod uykuda. HERKESE AÇMAK ("yay"): ozellik_herkes
 > dizisine "kitap-ara" ekle (build/OTA gerekmez; bayrak-denetle KASITLI_KAPALI'da kayıtlı). tsc 0 hata.
+> → 4 Eki 19:05 başkan "Yay test ettim" → ozellik_herkes'e "kitap-ara" eklendi, anon anahtarla okundu: HERKESE AÇIK (1.0.46 ve
+> 1.0.47 çalışma sürümlerinde; eski sürümlere OTA basılmadı). Geri alma: diziden çıkar.
 > Yan bulgu: scripts/bayrak-denetle.mjs 3 Eki'den beri SÖZDİZİMİ HATALIYDI ('ilgili-kart-kitap' açıklamasındaki kesme işareti
 > "YAYIN_BAYRAKLARI'na" dizgiyi kesiyordu) → denetim hiç çalışmamış; düzeltildi, şimdi 13 bayrak / 5 yayında / 0 unutulmuş.
 > Ayrıca şifre sayfası: liste artık üretimde HAZIR BASILI (uret.py) + yazdırma CSS'i → artifact'ı HTML dışa aktarınca eksik
