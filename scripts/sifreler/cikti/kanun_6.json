@@ -4,727 +4,508 @@
  "kodlar": [
   {
    "i": "K-6-001",
-   "madde": "2",
+   "madde": "1",
    "tip": "tanim",
-   "tetikleyici": "öngördüğü haksızlık",
-   "cevap": "kabahat (tanım)",
-   "kanit": "(1) Kabahat deyiminden; kanunun, karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık anlaşılır.",
-   "not": "karşılığında idarî yaptırım öngörülen haksızlık",
-   "karistirilan": []
+   "tetikleyici": "amacı",
+   "cevap": "toplum düzeni, genel ahlak, genel sağlık, çevre, ekonomik düzen",
+   "kanit": "(1) Bu Kanunda; toplum düzenini, genel ahlâkı, genel sağlığı, çevreyi ve ekonomik düzeni korumak amacıyla;",
+   "not": "millî güvenlik sayılmaz",
+   "karistirilan": [
+    {
+     "madde": "32",
+     "fark": "emre aykırılık: kamu düzeni, genel sağlık amacıyla verilen emir"
+    },
+    {
+     "madde": "42/A",
+     "fark": "112’yi meşgul etmek amacıyla arama"
+    },
+    {
+     "madde": "42a",
+     "fark": "112’yi meşgul etmek amacıyla arama"
+    }
+   ]
   },
   {
    "i": "K-6-002",
-   "madde": "3",
-   "tip": "kosul",
-   "tetikleyici": "aksine hüküm bulunmaması halinde",
-   "cevap": "kanun yolu hükümleri; genel hükümler para cezası gerektiren tüm fiillere",
-   "kanit": "(1) Bu Kanunun; a) İdarî yaptırım kararlarına karşı kanun yoluna ilişkin hükümleri, diğer kanunlarda aksine hüküm bulunmaması halinde, b) Diğer genel hükümleri, idarî para cezası veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında, uygulanır.",
-   "not": "",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "Kabahat deyiminden",
+   "cevap": "idarî yaptırım öngörülen haksızlık",
+   "kanit": "(1) Kabahat deyiminden; kanunun, karşılığında idarî yaptırım uygulanmasını öngördüğü haksızlık anlaşılır.",
+   "not": "suçta yargılama ve ceza",
    "karistirilan": []
   },
   {
    "i": "K-6-003",
-   "madde": "4",
+   "madde": "3",
    "tip": "kosul",
-   "tetikleyici": "düzenleyici işlemleriyle de doldurulabilir",
-   "cevap": "kabahat tanımının içeriği (suçta yasak)",
-   "kanit": "(1) Hangi fiillerin kabahat oluşturduğu, kanunda açıkça tanımlanabileceği gibi; kanunun kapsam ve koşulları bakımından belirlediği çerçeve hükmün içeriği, idarenin genel ve düzenleyici işlemleriyle de doldurulabilir.",
-   "not": "TCK m.2: suç ve ceza düzenleyici işlemle konulamaz",
+   "tetikleyici": "kanun yoluna ilişkin hükümler",
+   "cevap": "diğer kanunlarda aksine hüküm yoksa",
+   "kanit": "(1) Bu Kanunun; a) İdarî yaptırım kararlarına karşı kanun yoluna ilişkin hükümleri, diğer kanunlarda aksine hüküm bulunmaması halinde,",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-004",
-   "madde": "4",
+   "madde": "3",
    "tip": "kosul",
-   "tetikleyici": "ancak kanunla belirlenebilir",
-   "cevap": "yaptırımın türü, süresi, miktarı",
-   "kanit": "(2) Kabahat karşılığı olan yaptırımların türü, süresi ve miktarı, ancak kanunla belirlenebilir.",
+   "tetikleyici": "Diğer genel hükümleri",
+   "cevap": "para cezası ya da mülkiyetin kamuya geçirilmesi gerektiren tüm fiiller",
+   "kanit": "b) Diğer genel hükümleri, idarî para cezası veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında, uygulanır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-005",
-   "madde": "5",
+   "madde": "4",
    "tip": "kosul",
-   "tetikleyici": "derhal uygulama kuralı",
-   "cevap": "yaptırım kararlarının yerine getirilmesinde (zaman bakımından)",
-   "kanit": "Ancak, kabahatler karşılığında öngörülen idarî yaptırımlara ilişkin kararların yerine getirilmesi bakımından derhal uygulama kuralı geçerlidir.",
-   "not": "TCK'nın zaman kuralları kabahatte de uygulanır",
+   "tetikleyici": "türü, süresi ve miktarı",
+   "cevap": "ancak kanunla belirlenir",
+   "kanit": "(2) Kabahat karşılığı olan yaptırımların türü, süresi ve miktarı, ancak kanunla belirlenebilir.",
+   "not": "fiilin tanımı düzenleyici işlemle doldurulabilir",
    "karistirilan": []
   },
   {
    "i": "K-6-006",
-   "madde": "5",
+   "madde": "4",
    "tip": "kosul",
-   "tetikleyici": "Neticenin oluştuğu zaman",
-   "cevap": "dikkate alınmaz; davranış anı esas",
-   "kanit": "(2) Kabahat, failin icraî veya ihmali davranışı gerçekleştirdiği zaman işlenmiş sayılır. Neticenin oluştuğu zaman, bu bakımdan dikkate alınmaz.",
-   "not": "",
+   "tetikleyici": "çerçeve hükmün içeriği",
+   "cevap": "idarenin genel ve düzenleyici işlemleri",
+   "kanit": "(1) Hangi fiillerin kabahat oluşturduğu, kanunda açıkça tanımlanabileceği gibi; kanunun kapsam ve koşulları bakımından belirlediği çerçeve hükmün içeriği, idarenin genel ve düzenleyici işlemleriyle de doldurulabilir.",
+   "not": "suçta bu yol kapalı",
    "karistirilan": []
   },
   {
    "i": "K-6-007",
-   "madde": "7",
+   "madde": "4",
    "tip": "kosul",
-   "tetikleyici": "hukukî yükümlülüğün varlığı gereklidir",
-   "cevap": "ihmali davranışla kabahat için",
-   "kanit": "(1) Kabahat, icraî veya ihmali davranışla işlenebilir. İhmali davranışla işlenmiş kabahatin varlığı için kişi açısından belli bir icraî davranışta bulunma hususunda hukukî yükümlülüğün varlığı gereklidir.",
+   "tetikleyici": "kabahat oluşturduğu",
+   "cevap": "kanunda açıkça ya da çerçeve hüküm + düzenleyici işlem",
+   "kanit": "(1) Hangi fiillerin kabahat oluşturduğu, kanunda açıkça tanımlanabileceği gibi; kanunun kapsam ve koşulları bakımından belirlediği çerçeve hükmün içeriği, idarenin genel ve düzenleyici işlemleriyle de doldurulabilir.",
    "not": "",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "24",
+     "fark": "kovuşturmada fiil kabahat çıkarsa mahkeme karar verir"
+    }
+   ]
   },
   {
    "i": "K-6-008",
-   "madde": "8",
+   "madde": "5",
    "tip": "kosul",
-   "tetikleyici": "tüzel kişi hakkında da",
-   "cevap": "organ veya temsilcinin kabahatinden idarî yaptırım uygulanabilir",
-   "kanit": "(1) Organ veya temsilcilik görevi yapan ya da organ veya temsilci olmamakla birlikte, tüzel kişinin faaliyeti çerçevesinde görev üstlenen kişinin bu görevi kapsamında işlemiş bulunduğu kabahatten dolayı tüzel kişi hakkında da idarî yaptırım uygulanabilir.",
-   "not": "",
+   "tetikleyici": "zaman bakımından uygulamaya",
+   "cevap": "TCK hükümleri kabahatte de uygulanır",
+   "kanit": "(1) 5237 sayılı Türk Ceza Kanununun zaman bakımından uygulamaya ilişkin hükümleri kabahatler bakımından da uygulanır.",
+   "not": "yaptırımın yerine getirilmesinde derhal uygulama",
    "karistirilan": []
   },
   {
    "i": "K-6-009",
-   "madde": "8",
+   "madde": "5",
    "tip": "kosul",
-   "tetikleyici": "iş sahibi kişi hakkında da",
-   "cevap": "çalışanın kabahatinden işverene de yaptırım",
-   "kanit": "Gerçek kişiye ait bir işte çalışan kişinin bu faaliyeti çerçevesinde işlemiş bulunduğu kabahatten dolayı, iş sahibi kişi hakkında da idarî yaptırım uygulanabilir.",
+   "tetikleyici": "yerine getirilmesi bakımından",
+   "cevap": "derhal uygulama kuralı",
+   "kanit": "Ancak, kabahatler karşılığında öngörülen idarî yaptırımlara ilişkin kararların yerine getirilmesi bakımından derhal uygulama kuralı geçerlidir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-010",
-   "madde": "9",
+   "madde": "5",
    "tip": "kosul",
-   "tetikleyici": "hem kasten hem de taksirle",
-   "cevap": "kabahat işlenebilir; TCK'da taksir açıkça yazılmalı",
-   "kanit": "(1) Kabahatler, kanunda açıkça hüküm bulunmayan hallerde, hem kasten hem de taksirle işlenebilir.",
-   "not": "",
+   "tetikleyici": "işlenmiş sayılır",
+   "cevap": "davranış anı; netice zamanı önemsiz",
+   "kanit": "(2) Kabahat, failin icraî veya ihmali davranışı gerçekleştirdiği zaman işlenmiş sayılır. Neticenin oluştuğu zaman, bu bakımdan dikkate alınmaz.",
+   "not": "icraî ya da ihmali davranışın yapıldığı an",
    "karistirilan": []
   },
   {
    "i": "K-6-011",
-   "madde": "11",
-   "tip": "istisna",
-   "tetikleyici": "onbeş yaşını doldurmamış",
-   "cevap": "çocuğa idarî para cezası yok",
-   "kanit": "(1) Fiili işlediği sırada onbeş yaşını doldurmamış çocuk hakkında idarî para cezası uygulanamaz.",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "işlenebilir",
+   "cevap": "icraî veya ihmali; hem kasten hem taksirle",
+   "kanit": "(1) Kabahat, icraî veya ihmali davranışla işlenebilir.",
    "not": "",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "9",
+     "fark": "kanunda açık hüküm yoksa kasten ve taksirle işlenebilir"
+    },
+    {
+     "madde": "15",
+     "fark": "kesintisiz fiille işlenebilen kabahat tek sayılır"
+    }
+   ]
   },
   {
    "i": "K-6-012",
-   "madde": "11",
-   "tip": "istisna",
-   "tetikleyici": "Akıl hastalığı",
-   "cevap": "idarî para cezası uygulanmaz",
-   "kanit": "(2) Akıl hastalığı nedeniyle, işlediği fiilin hukukî anlam ve sonuçlarını algılayamayan veya bu fiille ilgili olarak davranışlarını yönlendirme yeteneği önemli derecede azalmış olan kişi hakkında idarî para cezası uygulanmaz.",
-   "not": "algılama ya da yönlendirme yeteneği önemli derecede azalmış",
+   "madde": "7",
+   "tip": "kosul",
+   "tetikleyici": "İhmali davranışla işlenmiş",
+   "cevap": "icraî davranışta bulunma hukukî yükümlülüğü",
+   "kanit": "İhmali davranışla işlenmiş kabahatin varlığı için kişi açısından belli bir icraî davranışta bulunma hususunda hukukî yükümlülüğün varlığı gereklidir.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-013",
-   "madde": "13",
-   "tip": "istisna",
-   "tetikleyici": "Kabahate teşebbüs",
-   "cevap": "cezalandırılmaz; kanunda açık hüküm varsa TCK teşebbüs hükümleri",
-   "kanit": "(1) Kabahate teşebbüs cezalandırılmaz. Ancak, teşebbüsün de cezalandırılabileceğine dair ilgili kanunda hüküm bulunan haller saklıdır. Bu durumda, Türk Ceza Kanununun suça teşebbüse ve gönüllü vazgeçmeye ilişkin hükümleri, kabahatler bakımından da uygulanır.",
-   "not": "",
+   "madde": "8",
+   "tip": "kosul",
+   "tetikleyici": "temsilcilik görevi yapan",
+   "cevap": "tüzel kişi hakkında da yaptırım",
+   "kanit": "(1) Organ veya temsilcilik görevi yapan ya da organ veya temsilci olmamakla birlikte, tüzel kişinin faaliyeti çerçevesinde görev üstlenen kişinin bu görevi kapsamında işlemiş bulunduğu kabahatten dolayı tüzel kişi hakkında da idarî yaptırım uygulanabilir.",
+   "not": "tüzel kişinin faaliyeti çerçevesinde görev üstlenen de",
    "karistirilan": []
   },
   {
    "i": "K-6-014",
-   "madde": "14",
+   "madde": "8",
    "tip": "kosul",
-   "tetikleyici": "her biri hakkında, fail olarak",
-   "cevap": "iştirakte herkes fail; idarî para cezası",
-   "kanit": "(1) Kabahatin işlenişine birden fazla kişinin iştirak etmesi halinde bu kişilerin her biri hakkında, fail olarak idarî para cezası verilir.",
+   "tetikleyici": "Temsilci sıfatıyla",
+   "cevap": "temsil edilen gerçek kişiye de yaptırım",
+   "kanit": "(2) Temsilci sıfatıyla hareket eden kişinin bu sıfatla bağlantılı olarak işlemiş bulunduğu kabahatten dolayı temsil edilen gerçek kişi hakkında da idarî yaptırım uygulanabilir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-015",
-   "madde": "14",
+   "madde": "8",
    "tip": "kosul",
-   "tetikleyici": "niteliği taşımayan kişi hakkında da",
-   "cevap": "fail olarak idarî para cezası; TCK özgü suçun tersi",
-   "kanit": "(2) Özel faillik niteliğinin arandığı durumlarda, kabahate iştirak eden ve bu niteliği taşımayan kişi hakkında da fail olarak idarî para cezası verilir.",
-   "not": "TCK m.40: özgü suçta sıfatsız kişi fail olamaz",
+   "tetikleyici": "gerçek kişiye ait",
+   "cevap": "iş sahibi hakkında da yaptırım",
+   "kanit": "Gerçek kişiye ait bir işte çalışan kişinin bu faaliyeti çerçevesinde işlemiş bulunduğu kabahatten dolayı, iş sahibi kişi hakkında da idarî yaptırım uygulanabilir.",
+   "not": "çalışanın faaliyeti çerçevesinde",
    "karistirilan": []
   },
   {
    "i": "K-6-016",
-   "madde": "15",
+   "madde": "8",
    "tip": "kosul",
-   "tetikleyici": "en ağır idarî para cezası",
-   "cevap": "bir fiille birden fazla kabahat",
-   "kanit": "(1) Bir fiil ile birden fazla kabahatin işlenmesi halinde bu kabahatlere ilişkin tanımlarda sadece idarî para cezası öngörülmüşse, en ağır idarî para cezası verilir.",
-   "not": "başka idarî yaptırımlar varsa her biri uygulanır",
+   "tetikleyici": "Birinci ve ikinci fıkra hükümleri",
+   "cevap": "dayanak işlem hukuken geçersiz olsa da uygulanır",
+   "kanit": "(4) Birinci ve ikinci fıkra hükümleri, organ veya temsilcilik ya da hizmet ilişkisinin dayanağını oluşturan işlemin hukuken geçerli olmaması halinde de uygulanır.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-017",
-   "madde": "15",
+   "madde": "9",
    "tip": "kosul",
-   "tetikleyici": "Kesintisiz fiille",
-   "cevap": "karar verilinceye kadar tek fiil sayılır",
-   "kanit": "Kesintisiz fiille işlenebilen kabahatlerde, bu nedenle idarî yaptırım kararı verilinceye kadar fiil tek sayılır.",
-   "not": "aynı kabahat birden fazla işlenirse her biri için ayrı ceza",
+   "tetikleyici": "açıkça hüküm bulunmayan",
+   "cevap": "hem kasten hem de taksirle",
+   "kanit": "(1) Kabahatler, kanunda açıkça hüküm bulunmayan hallerde, hem kasten hem de taksirle işlenebilir.",
+   "not": "suçta taksir ancak kanunda yazılıysa",
    "karistirilan": []
   },
   {
    "i": "K-6-018",
-   "madde": "15",
-   "tip": "kosul",
-   "tetikleyici": "hem kabahat hem de suç",
-   "cevap": "sadece suçtan yaptırım; uygulanamazsa kabahat",
-   "kanit": "(3) Bir fiil hem kabahat hem de suç olarak tanımlanmış ise, sadece suçtan dolayı yaptırım uygulanabilir. Ancak, suçtan dolayı yaptırım uygulanamayan hallerde kabahat dolayısıyla yaptırım uygulanır.",
+   "madde": "11",
+   "tip": "istisna",
+   "tetikleyici": "Fiili işlediği sırada",
+   "cevap": "onbeş yaş altına idarî para cezası uygulanamaz",
+   "kanit": "(1) Fiili işlediği sırada onbeş yaşını doldurmamış çocuk hakkında idarî para cezası uygulanamaz.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-019",
-   "madde": "16",
-   "tip": "tanim",
-   "tetikleyici": "idarî tedbirlerden ibarettir",
-   "cevap": "idarî yaptırım türleri: para cezası ve idarî tedbirler",
-   "kanit": "(1) Kabahatler karşılığında uygulanacak olan idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir.\n(2) İdarî tedbirler, mülkiyetin kamuya geçirilmesi ve ilgili kanunlarda yer alan diğer tedbirlerdir.",
-   "not": "tedbir: mülkiyetin kamuya geçirilmesi vb.",
+   "madde": "11",
+   "tip": "istisna",
+   "tetikleyici": "Akıl hastalığı",
+   "cevap": "algılama/yönlendirme yeteneği azalmış; onbeş yaş ayrı fıkra",
+   "kanit": "(2) Akıl hastalığı nedeniyle, işlediği fiilin hukukî anlam ve sonuçlarını algılayamayan veya bu fiille ilgili olarak davranışlarını yönlendirme yeteneği önemli derecede azalmış olan kişi hakkında idarî para cezası uygulanmaz.",
+   "not": "idarî para cezası uygulanmaz",
    "karistirilan": []
   },
   {
    "i": "K-6-020",
-   "madde": "17",
-   "tip": "tanim",
-   "tetikleyici": "maktu veya nispi",
-   "cevap": "idarî para cezası türleri",
-   "kanit": "(1) İdarî para cezası, maktu veya nispi olabilir.",
-   "not": "",
+   "madde": "13",
+   "tip": "istisna",
+   "tetikleyici": "Kabahate teşebbüs",
+   "cevap": "cezalandırılmaz; kanunda hüküm varsa saklı",
+   "kanit": "(1) Kabahate teşebbüs cezalandırılmaz. Ancak, teşebbüsün de cezalandırılabileceğine dair ilgili kanunda hüküm bulunan haller saklıdır.",
+   "not": "o hâlde TCK teşebbüs ve gönüllü vazgeçme hükümleri",
    "karistirilan": []
   },
   {
    "i": "K-6-021",
-   "madde": "17",
-   "tip": "makam",
-   "tetikleyici": "kendi bütçelerine gelir",
-   "cevap": "SGK ve mahalli idare cezaları; savcılık-mahkeme cezaları Genel Bütçeye",
-   "kanit": "Cumhuriyet başsavcılıkları ve mahkemeler tarafından verilen idarî para cezaları Genel Bütçeye gelir kaydedilir. Sosyal güvenlik kurumları ile mahalli idareler tarafından verilen idarî para cezaları kendi bütçelerine gelir kaydedilir.",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "iştirak",
+   "cevap": "her biri fail olarak idarî para cezası",
+   "kanit": "(1) Kabahatin işlenişine birden fazla kişinin iştirak etmesi halinde bu kişilerin her biri hakkında, fail olarak idarî para cezası verilir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-022",
-   "madde": "17",
-   "tip": "sure",
-   "tetikleyici": "dört eşit taksit",
-   "cevap": "bir yıl içinde; ilk taksit peşin; ekonomik durum müsait değilse",
-   "kanit": "Kişinin ekonomik durumunun müsait olmaması halinde, idarî para cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit taksit halinde ödenmesine karar verilebilir. Taksitlerin zamanında ve tam olarak ödenmemesi halinde, idarî para cezasının kalan kısmının tamamı tahsil edilir.",
-   "not": "taksit aksarsa kalanın tamamı tahsil",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "Özel faillik niteliğinin",
+   "cevap": "niteliği taşımayan da fail olarak cezalanır",
+   "kanit": "(2) Özel faillik niteliğinin arandığı durumlarda, kabahate iştirak eden ve bu niteliği taşımayan kişi hakkında da fail olarak idarî para cezası verilir.",
+   "not": "TCK’da özgü suçta sıfatsız fail olamaz",
    "karistirilan": []
   },
   {
    "i": "K-6-023",
-   "madde": "17",
-   "tip": "sure",
-   "tetikleyici": "tebliğinden itibaren bir ay içinde",
-   "cevap": "ödeme süresi belirlenmemiş idari para cezası",
-   "kanit": "Kanunlarında ödeme süresi düzenlenmemiş olan idari para cezaları, tebliğinden itibaren bir ay içinde ödenir.",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "iştirak için",
+   "cevap": "kasten ve hukuka aykırı fiil yeterli",
+   "kanit": "(3) Kabahate iştirak için kasten ve hukuka aykırı işlenmiş bir fiilin varlığı yeterlidir",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-024",
-   "madde": "17",
-   "tip": "sayi_oran",
-   "tetikleyici": "%25 oranında indirim",
-   "cevap": "ödeme süresi içinde ödenirse",
-   "kanit": "İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır. Ödeme yapılması, kişinin bu karara karşı kanun yoluna başvurma hakkını etkilemez.",
-   "not": "ödeme, kanun yoluna başvuru hakkını kaldırmaz",
+   "madde": "14",
+   "tip": "kosul",
+   "tetikleyici": "ortaklaşa işlenmesi",
+   "cevap": "suça iştirak hükümleri",
+   "kanit": "ortaklaşa işlenmesi halinde suça iştirake ilişkin hükümler uygulanır.",
+   "not": "birine suç, diğerine kabahat olan fiil",
    "karistirilan": []
   },
   {
    "i": "K-6-025",
-   "madde": "17",
-   "tip": "sayi_oran",
-   "tetikleyici": "yeniden değerleme oranında",
-   "cevap": "her yıl artırılarak uygulanır",
-   "kanit": "yeniden değerleme oranında artırılarak uygulanır.",
-   "not": "nispi cezalar hariç",
+   "madde": "15",
+   "tip": "kosul",
+   "tetikleyici": "Bir fiil ile birden fazla",
+   "cevap": "en ağır idarî para cezası; başka yaptırımların her biri",
+   "kanit": "(1) Bir fiil ile birden fazla kabahatin işlenmesi halinde bu kabahatlere ilişkin tanımlarda sadece idarî para cezası öngörülmüşse, en ağır idarî para cezası verilir. Bu kabahatlerle ilgili olarak kanunda idarî para cezasından başka idarî yaptırımlar da öngörülmüş ise, bu yaptırımların her birinin uygulanmasına karar verilir.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-026",
-   "madde": "18",
+   "madde": "15",
    "tip": "kosul",
-   "tetikleyici": "aksi takdirde Devlete geçer",
-   "cevap": "mülkiyeti kamuya geçirilen eşya; kanunda yazılıysa ilgili kuruma",
-   "kanit": "(4) Eşyanın mülkiyeti, kanunda açık hüküm bulunan hallerde ilgili kamu kurum ve kuruluşuna, aksi takdirde Devlete geçer.",
-   "not": "değerlendirilemezse imha",
+   "tetikleyici": "Aynı kabahatin",
+   "cevap": "her biri için ayrı ayrı ceza",
+   "kanit": "(2) Aynı kabahatin birden fazla işlenmesi halinde her bir kabahatle ilgili olarak ayrı ayrı idarî para cezası verilir.",
+   "not": "kesintisiz fiil karar verilinceye kadar tek",
    "karistirilan": []
   },
   {
    "i": "K-6-027",
-   "madde": "18",
+   "madde": "15",
    "tip": "kosul",
-   "tetikleyici": "şart değildir",
-   "cevap": "mülkiyetin kamuya geçirilmesi için para cezası verilmiş olması gerekmez",
-   "kanit": "(5) Eşyanın mülkiyetinin kamuya geçirilmesine karar verilebilmesi için fail hakkında idarî para cezası veya başka bir idarî yaptırım kararı verilmiş olması şart değildir.",
+   "tetikleyici": "Kesintisiz fiille",
+   "cevap": "karar verilinceye kadar tek fiil",
+   "kanit": "Kesintisiz fiille işlenebilen kabahatlerde, bu nedenle idarî yaptırım kararı verilinceye kadar fiil tek sayılır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-028",
-   "madde": "18",
+   "madde": "15",
    "tip": "kosul",
-   "tetikleyici": "Kaim değerin",
-   "cevap": "mülkiyetin kamuya geçirilmesine karar verilebilir",
-   "kanit": "(6) Kaim değerin mülkiyetinin kamuya geçirilmesine de karar verilebilir.",
+   "tetikleyici": "suç olarak tanımlanmış",
+   "cevap": "sadece suçtan yaptırım; olmazsa kabahatten",
+   "kanit": "(3) Bir fiil hem kabahat hem de suç olarak tanımlanmış ise, sadece suçtan dolayı yaptırım uygulanabilir. Ancak, suçtan dolayı yaptırım uygulanamayan hallerde kabahat dolayısıyla yaptırım uygulanır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-029",
-   "madde": "20",
-   "tip": "sure",
-   "tetikleyici": "Soruşturma zamanaşımı süresi",
-   "cevap": "yüzbin+ beş, ellibin+ dört, az üç yıl",
-   "kanit": "(2) Soruşturma zamanaşımı süresi; a) Yüzbin Türk Lirası veya daha fazla idarî para cezasını gerektiren kabahatlerde beş, b) Ellibin Türk Lirası veya daha fazla cezayı gerektiren kabahatlerde dört, c) Ellibin Türk Lirasından az cezayı gerektiren kabahatlerde üç yıldır.",
-   "not": "dolarsa idarî para cezası verilemez",
-   "karistirilan": []
+   "madde": "16",
+   "tip": "tanim",
+   "tetikleyici": "Kabahatler karşılığında",
+   "cevap": "idarî para cezası ve idarî tedbir; hapis yok",
+   "kanit": "(1) Kabahatler karşılığında uygulanacak olan idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "1",
+     "fark": "Kanunda yaptırım türleri ve sonuçları düzenlenir"
+    },
+    {
+     "madde": "5",
+     "fark": "yaptırım kararlarının yerine getirilmesinde derhal uygulama"
+    }
+   ]
   },
   {
    "i": "K-6-030",
-   "madde": "20",
-   "tip": "sure",
-   "tetikleyici": "Nispî idarî para cezasını",
-   "cevap": "zamanaşımı sekiz yıl",
-   "kanit": "(3) Nispî idarî para cezasını gerektiren kabahatlerde zamanaşımı süresi sekiz yıldır.",
+   "madde": "16",
+   "tip": "tanim",
+   "tetikleyici": "İdarî tedbirler,",
+   "cevap": "mülkiyetin kamuya geçirilmesi ve kanunlardaki diğer tedbirler",
+   "kanit": "(2) İdarî tedbirler, mülkiyetin kamuya geçirilmesi ve ilgili kanunlarda yer alan diğer tedbirlerdir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-031",
-   "madde": "20",
-   "tip": "sure",
-   "tetikleyici": "takvim yılının son günü",
-   "cevap": "trafik, askerlik vb. cezaları yıl sonuna kadar tebliğ edilmezse düşer",
-   "kanit": "Ancak, 1111 Askerlik, 2839 Milletvekili Seçimi, 2918 Karayolları Trafik, 2972, 3376, 4925, 5490 ve 6001 sayılı kanunlarda belirtilen ve idari para cezasını gerektiren fiilin işlendiği tarihi takip eden takvim yılının son günü bitimine kadar idari para cezası verilerek tebliğ edilmediği takdirde idari yaptırım kararı verilemez, verilmiş olanlar düşer.",
-   "not": "1111, 2839, 2918 ve sayılan kanunlar",
+   "madde": "17",
+   "tip": "sayi_oran",
+   "tetikleyici": "alt ve üst sınırı",
+   "cevap": "haksızlık içeriği, failin kusuru, ekonomik durumu",
+   "kanit": "(2) İdarî para cezası, kanunda alt ve üst sınırı gösterilmek suretiyle de belirlenebilir. Bu durumda, idarî para cezasının miktarı belirlenirken işlenen kabahatin haksızlık içeriği ile failin kusuru ve ekonomik durumu birlikte göz önünde bulundurulur.",
+   "not": "idarî para cezası maktu ya da nispî",
    "karistirilan": []
   },
   {
    "i": "K-6-032",
-   "madde": "21",
-   "tip": "sure",
-   "tetikleyici": "Yerine getirme zamanaşımı süresi",
-   "cevap": "ellibin+ yedi, yirmibin+ beş, onbin+ dört, az üç yıl",
-   "kanit": "(2) Yerine getirme zamanaşımı süresi; a) Ellibin Türk Lirası veya daha fazla cezaya karar verilmesi halinde yedi, b) Yirmibin Türk Lirası veya daha fazla cezada beş, c) Onbin Türk Lirası veya daha fazla cezada dört, d) Onbin Türk Lirasından az cezada üç yıldır.",
-   "not": "SORUŞTURMA 5-4-3 · YERİNE GETİRME 7-5-4-3",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-033",
-   "madde": "21",
-   "tip": "sure",
-   "tetikleyici": "zamanaşımı süresi on yıldır",
-   "cevap": "mülkiyetin kamuya geçirilmesinde yerine getirme",
-   "kanit": "(3) Mülkiyetin kamuya geçirilmesine ilişkin zamanaşımı süresi on yıldır.",
+   "madde": "17",
+   "tip": "makam",
+   "tetikleyici": "mahalli idareler",
+   "cevap": "kendi bütçelerine; savcılık-mahkeme cezaları Genel Bütçeye",
+   "kanit": "Cumhuriyet başsavcılıkları ve mahkemeler tarafından verilen idarî para cezaları Genel Bütçeye gelir kaydedilir. Sosyal güvenlik kurumları ile mahalli idareler tarafından verilen idarî para cezaları kendi bütçelerine gelir kaydedilir.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-6-034",
-   "madde": "21",
+   "i": "K-6-033",
+   "madde": "17",
    "tip": "sure",
-   "tetikleyici": "takip eden takvim yılı başından",
-   "cevap": "yerine getirme zamanaşımı başlangıcı; kesinleşme yılını izleyen",
-   "kanit": "(4) Zamanaşımı süresi, kararın kesinleşmesinin rastladığı takvim yılını takip eden takvim yılı başından itibaren işlemeye başlar.",
+   "tetikleyici": "müsait olma",
+   "cevap": "ilk taksit peşin, bir yılda dört eşit taksit",
+   "kanit": "Kişinin ekonomik durumunun müsait olmaması halinde, idarî para cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit taksit halinde ödenmesine karar verilebilir. Taksitlerin zamanında ve tam olarak ödenmemesi halinde, idarî para cezasının kalan kısmının tamamı tahsil edilir.",
+   "not": "taksit aksarsa kalanın tamamı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-034",
+   "madde": "17",
+   "tip": "sure",
+   "tetikleyici": "rıza göstermesi halinde",
+   "cevap": "cezayı veren görevli derhal tahsil eder",
+   "kanit": "(6) Kabahat dolayısıyla idarî para cezası veren kamu görevlisi, ilgilinin rıza göstermesi halinde bunun tahsilatını derhal kendisi gerçekleştirir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-035",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "en üst amiri",
-   "cevap": "idarî yaptırım yetkisi; kanunda açık hüküm yoksa",
-   "kanit": "(2) Kanunda açık hüküm bulunmayan hallerde ilgili kamu kurum ve kuruluşunun en üst amiri bu konuda yetkilidir.",
+   "madde": "17",
+   "tip": "sure",
+   "tetikleyici": "ödeme süresi düzenlenmemiş",
+   "cevap": "tebliğden itibaren bir ay",
+   "kanit": "Kanunlarında ödeme süresi düzenlenmemiş olan idari para cezaları, tebliğinden itibaren bir ay içinde ödenir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-036",
-   "madde": "23",
-   "tip": "makam",
-   "tetikleyici": "kendisi de idarî yaptırım kararı",
-   "cevap": "Cumhuriyet savcısı, suç soruşturmasında kabahati öğrenirse",
-   "kanit": "(2) Bir suç dolayısıyla başlatılan soruşturma kapsamında bir kabahatin işlendiğini öğrenmesi halinde Cumhuriyet savcısı durumu ilgili kamu kurum ve kuruluşuna bildirebileceği gibi, kendisi de idarî yaptırım kararı verebilir.",
-   "not": "kuruma da bildirebilir",
+   "madde": "17",
+   "tip": "sayi_oran",
+   "tetikleyici": "ödeme süresi içinde",
+   "cevap": "%25 indirim; kanun yolu hakkı saklı",
+   "kanit": "İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır. Ödeme yapılması, kişinin bu karara karşı kanun yoluna başvurma hakkını etkilemez.",
+   "not": "peşin ödeyen dörtte üçünü öder",
    "karistirilan": []
   },
   {
    "i": "K-6-037",
-   "madde": "24",
-   "tip": "makam",
-   "tetikleyici": "mahkeme tarafından idarî yaptırım kararı",
-   "cevap": "kovuşturma konusu fiil kabahat çıkarsa",
-   "kanit": "(1) Kovuşturma konusu fiilin kabahat oluşturduğunun anlaşılması halinde mahkeme tarafından idarî yaptırım kararı verilir.",
+   "madde": "17",
+   "tip": "sayi_oran",
+   "tetikleyici": "yeniden değerleme",
+   "cevap": "her yıl artırılarak uygulanır; nispîye uygulanmaz",
+   "kanit": "yeniden değerleme oranında artırılarak uygulanır.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-038",
-   "madde": "25",
-   "tip": "sira_usul",
-   "tetikleyici": "ispata yarayacak bütün deliller",
-   "cevap": "idarî yaptırım tutanağı; kimlik-adres, fiil, tarih, görevlinin kimliği",
-   "kanit": "(1) İdarî yaptırım kararına ilişkin tutanakta; a) Hakkında idarî yaptırım kararı verilen kişinin kimlik ve adresi, b) İdarî yaptırım kararı verilmesini gerektiren kabahat fiili, c) Bu fiilin işlendiğini ispata yarayacak bütün deliller, d) Karar tarihi ve kararı veren kamu görevlilerinin kimliği, açık bir şekilde yazılır.",
-   "not": "fiilin yeri ve zamanı da",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "konusunu oluşturan",
+   "cevap": "ancak kanunda açık hüküm varsa; kaim değer de",
+   "kanit": "(1) Kabahatin konusunu oluşturan veya işlenmesi suretiyle elde edilen eşyanın mülkiyetinin kamuya geçirilmesine, ancak kanunda açık hüküm bulunan hallerde karar verilebilir.",
+   "not": "kaim değer: m.18/6",
    "karistirilan": []
   },
   {
    "i": "K-6-039",
-   "madde": "26",
-   "tip": "sure",
-   "tetikleyici": "beşinci günün sonunda",
-   "cevap": "elektronik tebligat yapılmış sayılır",
-   "kanit": "Elektronik ortamda yapılan tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci günün sonunda yapılmış sayılır.",
-   "not": "tebliğ 7201 Tebligat Kanununa göre",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "geçirilen eşya",
+   "cevap": "açık hüküm yoksa Devlete; değerlendirilemezse imha",
+   "kanit": "(4) Eşyanın mülkiyeti, kanunda açık hüküm bulunan hallerde ilgili kamu kurum ve kuruluşuna, aksi takdirde Devlete geçer.\n(7) Mülkiyeti kamuya geçirilen eşya, başka suretle değerlendirilmesi mümkün olmazsa imha edilir.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-040",
-   "madde": "27",
-   "tip": "sure",
-   "tetikleyici": "sulh ceza mahkemesine başvurulabilir",
-   "cevap": "idarî para cezası ve mülkiyetin kamuya geçirilmesine karşı; onbeş gün",
-   "kanit": "(1) İdarî para cezası ve mülkiyetin kamuya geçirilmesine ilişkin idarî yaptırım kararına karşı, kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir. Bu süre içinde başvurunun yapılmamış olması halinde idarî yaptırım kararı kesinleşir.",
-   "not": "tebliğ ya da tefhimden itibaren; süresinde başvurulmazsa kesinleşir",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "aksi takdirde",
+   "cevap": "Devlete geçer; kanunda yazılıysa ilgili kuruma",
+   "kanit": "(4) Eşyanın mülkiyeti, kanunda açık hüküm bulunan hallerde ilgili kamu kurum ve kuruluşuna, aksi takdirde Devlete geçer.",
+   "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-041",
-   "madde": "27",
-   "tip": "sure",
-   "tetikleyici": "en geç yedi gün içinde",
-   "cevap": "mücbir sebep kalkınca başvuru",
-   "kanit": "(2) Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı başvuruda bulunulabilir",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "şart değil",
+   "cevap": "fail hakkında para cezası verilmiş olması",
+   "kanit": "(5) Eşyanın mülkiyetinin kamuya geçirilmesine karar verilebilmesi için fail hakkında idarî para cezası veya başka bir idarî yaptırım kararı verilmiş olması şart değildir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-6-042",
-   "madde": "27",
-   "tip": "sira_usul",
-   "tetikleyici": "iki nüsha",
-   "cevap": "başvuru dilekçesi",
-   "kanit": "(3) Başvuru, bizzat kanunî temsilci veya avukat tarafından sulh ceza mahkemesine verilecek bir dilekçe ile yapılır. Başvuru dilekçesi, iki nüsha olarak verilir.",
-   "not": "bizzat, kanunî temsilci ya da avukat",
+   "madde": "18",
+   "tip": "kosul",
+   "tetikleyici": "geciktirilebilir",
+   "cevap": "kullanılmaz hale getirme, nitelik değiştirme, belli surette kullanma",
+   "kanit": "(2) Mülkiyetin kamuya geçirilmesine ilişkin karar, eşyanın; a) Kullanılmaz hale getirilmesi, b) Niteliğinin değiştirilmesi, c) Ancak belli bir surette kullanılması koşullarından birinin yerine getirilmesine bağlı olarak belli bir süre geciktirilebilir",
+   "not": "mülkiyet kararı belli süre ertelenebilir",
    "karistirilan": []
   },
   {
    "i": "K-6-043",
-   "madde": "28",
+   "madde": "20",
    "tip": "sure",
-   "tetikleyici": "mahkemeye cevap verir",
-   "cevap": "ilgili kamu kurumu; dilekçenin tebliğinden onbeş gün",
-   "kanit": "(3) İlgili kamu kurum ve kuruluşu, başvuru dilekçesinin tebliği tarihinden itibaren en geç onbeş gün içinde mahkemeye cevap verir",
-   "not": "",
+   "tetikleyici": "Soruşturma zamanaşımı",
+   "cevap": "yüzbin+ beş, ellibin+ dört, az üç; nispî sekiz yıl",
+   "kanit": "(2) Soruşturma zamanaşımı süresi; a) Yüzbin Türk Lirası veya daha fazla idarî para cezasını gerektiren kabahatlerde beş, b) Ellibin Türk Lirası veya daha fazla cezayı gerektiren kabahatlerde dört, c) Ellibin Türk Lirasından az cezayı gerektiren kabahatlerde üç yıldır. Ancak, 1111 Askerlik, 2839 Milletvekili Seçimi, 2918 Karayolları Trafik, 2972, 3376, 4925, 5490 ve 6001 sayılı kanunlarda belirtilen ve idari para cezasını gerektiren fiilin işlendiği tarihi takip eden takvim yılının son günü bitimine kadar idari para cezası verilerek tebliğ edilmediği takdirde idari yaptırım kararı verilemez, verilmiş olanlar düşer.\n(3) Nispî idarî para cezasını gerektiren kabahatlerde zamanaşımı süresi sekiz yıldır.",
+   "not": "SORUŞTURMA 5-4-3 (nispî 8) · YERİNE GETİRME 7-5-4-3 (mülkiyet 10)",
    "karistirilan": []
   },
   {
    "i": "K-6-044",
-   "madde": "28",
-   "tip": "kosul",
-   "tetikleyici": "Onbeşbin Türk Lirası dahil",
-   "cevap": "bu tutara kadar cezalarda başvuru kararı kesin",
-   "kanit": "(10) Onbeşbin Türk Lirası dahil idarî para cezalarına karşı başvuru üzerine verilen kararlar kesindir.",
-   "not": "",
+   "madde": "20",
+   "tip": "sure",
+   "tetikleyici": "Karayolları Trafik",
+   "cevap": "fiili izleyen takvim yılı sonuna kadar tebliğ; yoksa düşer",
+   "kanit": "Ancak, 1111 Askerlik, 2839 Milletvekili Seçimi, 2918 Karayolları Trafik, 2972, 3376, 4925, 5490 ve 6001 sayılı kanunlarda belirtilen ve idari para cezasını gerektiren fiilin işlendiği tarihi takip eden takvim yılının son günü bitimine kadar idari para cezası verilerek tebliğ edilmediği takdirde idari yaptırım kararı verilemez, verilmiş olanlar düşer.",
+   "not": "1111, 2839, 2918 ve sayılan kanunlar",
    "karistirilan": []
   },
   {
    "i": "K-6-045",
-   "madde": "29",
-   "tip": "sure",
-   "tetikleyici": "iki hafta içinde yapılır",
-   "cevap": "mahkemenin son kararına itiraz (CMK)",
-   "kanit": "(1) Mahkemenin verdiği son karara karşı, Ceza Muhakemesi Kanununa göre itiraz edilebilir. Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.",
-   "not": "dosya üzerinden incelenir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-046",
-   "madde": "30",
-   "tip": "kosul",
-   "tetikleyici": "başvurusundan vazgeçebilir",
-   "cevap": "karar verilinceye kadar; bir daha aynı konuda başvurulamaz",
-   "kanit": "(1) Kanun yoluna başvuran kişi, bu konuda karar verilinceye kadar başvurusundan vazgeçebilir. Vazgeçme halinde bir daha aynı konuda başvuruda bulunulamaz.",
-   "not": "kurum da kararını geri alabilir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-047",
-   "madde": "32",
-   "tip": "ceza",
-   "tetikleyici": "verilen emre aykırı hareket eden",
-   "cevap": "yüz Türk Lirası; emri veren makam karar verir",
-   "kanit": "(1) Yetkili makamlar tarafından adlî işlemler nedeniyle ya da kamu güvenliği, kamu düzeni veya genel sağlığın korunması amacıyla, hukuka uygun olarak verilen emre aykırı hareket eden kişiye yüz Türk Lirası idarî para cezası verilir. Bu cezaya emri veren makam tarafından karar verilir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-048",
-   "madde": "33",
-   "tip": "ceza",
-   "tetikleyici": "Dilencilik",
-   "cevap": "elli TL; gelire el konur; mülkiyet mülkî amir/belediye encümeni",
-   "kanit": "(1) Dilencilik yapan kişiye, elli Türk Lirası idarî para cezası verilir. Ayrıca, dilencilikten elde edilen gelire elkonularak mülkiyetin kamuya geçirilmesine karar verilir. (2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk veya belediye zabıta görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir veya belediye encümeni karar verir.",
-   "not": "ceza ve el koyma: kolluk ya da belediye zabıtası",
-   "karistirilan": [
-    {
-     "madde": "34",
-     "fark": "kumarda mülkiyete yalnız mülkî amir karar verir"
-    }
-   ]
-  },
-  {
-   "i": "K-6-049",
-   "madde": "34",
-   "tip": "ceza",
-   "tetikleyici": "Kumar oynayan",
-   "cevap": "bin TL; mülkiyet yalnız mülkî amir (zabıta yok)",
-   "kanit": "(1) Kumar oynayan kişiye, bin Türk Lirası idarî para cezası verilir. Ayrıca, kumardan elde edilen gelire elkonularak mülkiyetin kamuya geçirilmesine karar verilir. (2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir karar verir.",
-   "not": "ceza ve el koyma: kolluk",
-   "karistirilan": [
-    {
-     "madde": "33",
-     "fark": "dilencilikte belediye encümeni de karar verebilir"
-    }
-   ]
-  },
-  {
-   "i": "K-6-050",
-   "madde": "35",
-   "tip": "ceza",
-   "tetikleyici": "Sarhoş olarak",
-   "cevap": "elli TL, kolluk; etkisi geçinceye kadar kontrol altında",
-   "kanit": "(1) Sarhoş olarak başkalarının huzur ve sükununu bozacak şekilde davranışlarda bulunan kişiye, kolluk görevlileri tarafından elli Türk Lirası idarî para cezası verilir. Kişi, ayrıca sarhoşluğun etkisi geçinceye kadar kontrol altında tutulur.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-051",
-   "madde": "36",
-   "tip": "ceza",
-   "tetikleyici": "gürültüye neden olan",
-   "cevap": "elli TL; ticarî işletmede bin–beşbin; kolluk ya da zabıta",
-   "kanit": "(1) Başkalarının huzur ve sükununu bozacak şekilde gürültüye neden olan kişiye, elli Türk Lirası idarî para cezası verilir. (2) Bu fiilin bir ticarî işletmenin faaliyeti çerçevesinde işlenmesi halinde işletme sahibi gerçek veya tüzel kişiye bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir. (3) Bu kabahat dolayısıyla idarî para cezasına kolluk veya belediye zabıta görevlileri karar verir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-052",
-   "madde": "37",
-   "tip": "ceza",
-   "tetikleyici": "başkalarını rahatsız eden",
-   "cevap": "elli TL; kolluk ya da belediye zabıtası",
-   "kanit": "(1) Mal veya hizmet satmak için başkalarını rahatsız eden kişi, elli Türk Lirası idarî para cezası ile cezalandırılır. (2) Bu kabahat dolayısıyla idarî para cezası vermeye kolluk veya belediye zabıta görevlileri yetkilidir.",
-   "not": "mal ya da hizmet satmak için",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-053",
-   "madde": "38",
-   "tip": "ceza",
-   "tetikleyici": "kaldırımları işgal eden",
-   "cevap": "elli TL; yalnız belediye zabıtası",
-   "kanit": "(1) Yetkili makamların açık ve yazılı izni olmaksızın meydan, cadde, sokak veya yayaların gelip geçtiği kaldırımları işgal eden veya buralarda mal satışa arz eden kişiye, belediye zabıta görevlileri tarafından elli Türk Lirası idarî para cezası verilir.",
-   "not": "inşaat malzemesi yığana yüz–beşyüz TL",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-054",
-   "madde": "39",
-   "tip": "ceza",
-   "tetikleyici": "tütün mamulü tüketen",
-   "cevap": "elli TL; kamu binası kapalı alanı; toplu taşımada da",
-   "kanit": "(1) Kamu hizmet binalarının kapalı alanlarında tütün mamulü tüketen kişiye, ilgili idarî birim amirinin yetkili kıldığı kamu görevlileri tarafından elli Türk Lirası idarî para cezası verilir",
-   "not": "birim amirinin yetkili kıldığı görevli verir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-055",
-   "madde": "40",
-   "tip": "ceza",
-   "tetikleyici": "bilgi vermekten kaçınan",
-   "cevap": "elli TL; soran görevli verir",
-   "kanit": "(1) Görevle bağlantılı olarak sorulması halinde kamu görevlisine kimliği veya adresiyle ilgili bilgi vermekten kaçınan veya gerçeğe aykırı beyanda bulunan kişiye, bu görevli tarafından elli Türk Lirası idarî para cezası verilir.",
-   "not": "kimlik ya da adres; gerçeğe aykırı beyan da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-056",
-   "madde": "40",
-   "tip": "sira_usul",
-   "tetikleyici": "kimliği belirlenemeyen kişi",
-   "cevap": "tutulur; Cumhuriyet savcısı haberdar; gözaltı, gerekirse tutuklama",
-   "kanit": "kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir. Bu kişi, kimliği açık bir şekilde anlaşılıncaya kadar gözaltına alınır ve gerekirse tutuklanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-057",
-   "madde": "41",
-   "tip": "makam",
-   "tetikleyici": "belediye sınırları dışında kolluk",
-   "cevap": "çevre kirletme cezası; içinde belediye zabıtası",
-   "kanit": "(7) Bu kabahatler dolayısıyla idarî para cezasına belediye sınırları içerisinde belediye zabıta görevlileri, belediye sınırları dışında kolluk görevlileri karar verir.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-058",
-   "madde": "41",
-   "tip": "istisna",
-   "tetikleyici": "derhal giderilmesi halinde",
-   "cevap": "idarî para cezasına karar verilmeyebilir",
-   "kanit": "(8) Bu kabahatler dolayısıyla meydana gelen kirliliğin kişi tarafından derhal giderilmesi halinde idarî para cezasına karar verilmeyebilir.",
-   "not": "kirliliği kişi hemen temizlerse",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-059",
-   "madde": "42",
-   "tip": "ceza",
-   "tetikleyici": "afiş ve ilân asan",
-   "cevap": "yüz–üçbin TL; aynı içerik tek fiil",
-   "kanit": "(1) Meydanlara/parklara, cadde-sokak kenarlarındaki kamuya ait duvar/alanlara, rızası olmaksızın özel kişilere ait alanlara afiş ve ilân asan kişiye, yüz Türk Lirasından üçbin Türk Lirasına kadar idarî para cezası verilir. Aynı içerikteki afiş ve ilânlar, tek fiil sayılır.",
-   "not": "kolluk ya da belediye zabıtası",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-060",
-   "madde": "42/A",
-   "tip": "ceza",
-   "tetikleyici": "112 Acil Çağrı Merkezini meşgul",
-   "cevap": "il valileri; binbeşyüz TL",
-   "kanit": "(1) 112 Acil Çağrı Merkezini meşgul etmek amacıyla arayarak görevlilerle konuşan veya ısrarla çağrı bırakan kişiye, il valileri tarafından binbeşyüz Türk Lirası idari para cezası verilir.",
-   "not": "bir yıl içinde tekrarı iki katı",
-   "karistirilan": [
-    {
-     "madde": "42a",
-     "fark": "metinde aynı maddenin ikinci kaydı"
-    }
-   ]
-  },
-  {
-   "i": "K-6-061",
-   "madde": "42/A",
-   "tip": "ceza",
-   "tetikleyici": "asılsız olduğunun",
-   "cevap": "il valileri; onbeşbin TL; bir yılda tekrarı iki katı",
-   "kanit": "(2) 112 Acil Çağrı Merkezine yapılan ihbarın asılsız olduğunun olay yerine giden ekiplerce tutanakla tespit edilmesi halinde kişiye, il valileri tarafından onbeşbin Türk Lirası idari para cezası verilir.",
-   "not": "112 ihbarı; ekip tutanakla tespit eder",
-   "karistirilan": [
-    {
-     "madde": "42a",
-     "fark": "metinde aynı maddenin ikinci kaydı"
-    }
-   ]
-  },
-  {
-   "i": "K-6-062",
-   "madde": "43",
-   "tip": "ceza",
-   "tetikleyici": "görünür bir şekilde taşıyan",
-   "cevap": "elli TL, kolluk; yasak olmayan silah, ruhsatsız",
-   "kanit": "(1) Yetkili makamlardan ruhsat almaksızın kanuna göre yasak olmayan silahları park, meydan, cadde veya sokaklarda görünür bir şekilde taşıyan kişiye, kolluk tarafından elli Türk Lirası idarî para cezası verilir.",
-   "not": "park, meydan, cadde, sokak",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-063",
-   "madde": "43/A",
-   "tip": "ceza",
-   "tetikleyici": "iki katından az olamaz",
-   "cevap": "tüzel kişiye idarî para cezası; menfaatin iki katından az olamaz",
-   "kanit": "Ancak idari para cezası, işleme veya eyleme konu menfaatin iki katından az olamaz.",
-   "not": "organ/temsilcinin tüzel kişi yararına işlediği katalog suç; onbin TL–elli milyon TL; yargılayan mahkeme yetkili",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-064",
-   "madde": "43/B",
-   "tip": "ceza",
-   "tetikleyici": "bildirim yükümlülüğü yerine getirilmediği",
-   "cevap": "sahte para; bankaya Cumhuriyet savcısı bin–beşbin TL",
-   "kanit": "bildirim yükümlülüğü yerine getirilmediği takdirde, bu tüzel kişilere Cumhuriyet savcısı tarafından bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "43b",
-     "fark": "metinde aynı maddenin ikinci kaydı"
-    }
-   ]
-  },
-  {
-   "i": "K-6-065",
-   "madde": "3",
-   "tip": "kosul",
-   "tetikleyici": "mülkiyetin kamuya geçirilmesi yaptırımını",
-   "cevap": "Kanunun diğer genel hükümleri bu fiillerin tümüne uygulanır",
-   "kanit": "b) Diğer genel hükümleri, idarî para cezası veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında, uygulanır.",
-   "not": "kanun yolu hükümleri: diğer kanunlarda aksine hüküm yoksa",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-066",
-   "madde": "18",
-   "tip": "kosul",
-   "tetikleyici": "kanunda açık hüküm bulunan hallerde",
-   "cevap": "mülkiyetin kamuya geçirilmesine ancak böyle karar verilir",
-   "kanit": "(1) Kabahatin konusunu oluşturan veya işlenmesi suretiyle elde edilen eşyanın mülkiyetinin kamuya geçirilmesine, ancak kanunda açık hüküm bulunan hallerde karar verilebilir.",
-   "not": "kaim değer için de olabilir; ayrıca para cezası şart değil",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-067",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "aynı zamanda suç oluşturması",
-   "cevap": "suça ilişkin dava zamanaşımı hükümleri uygulanır",
+   "cevap": "suçun dava zamanaşımı uygulanır",
    "kanit": "(5) Kabahati oluşturan fiilin aynı zamanda suç oluşturması halinde suça ilişkin dava zamanaşımı hükümleri uygulanır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-6-068",
-   "madde": "42",
-   "tip": "kosul",
-   "tetikleyici": "Aynı içerikteki afiş ve ilânlar",
-   "cevap": "tek fiil sayılır",
-   "kanit": "Aynı içerikteki afiş ve ilânlar, tek fiil sayılır.",
+   "i": "K-6-046",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "Yerine getirme zamanaşımı",
+   "cevap": "ellibin+ yedi, yirmibin+ beş, onbin+ dört, az üç yıl",
+   "kanit": "(2) Yerine getirme zamanaşımı süresi; a) Ellibin Türk Lirası veya daha fazla cezaya karar verilmesi halinde yedi, b) Yirmibin Türk Lirası veya daha fazla cezada beş, c) Onbin Türk Lirası veya daha fazla cezada dört, d) Onbin Türk Lirasından az cezada üç yıldır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-6-069",
-   "madde": "41",
-   "tip": "ceza",
-   "tetikleyici": "özgü yerler dışına atan",
-   "cevap": "evsel atık: idarî para cezası; derhal giderirse ceza verilmeyebilir",
-   "kanit": "(1) Evsel atık ve artıkları, bunların toplanmasına veya depolanmasına özgü yerler dışına atan kişiye, yirmi Türk Lirası idarî para cezası verilir",
-   "not": "belediye sınırı içinde zabıta, dışında kolluk karar verir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-6-070",
+   "i": "K-6-047",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "Mülkiyetin kamuya geçirilmesine ilişkin",
-   "cevap": "yerine getirme zamanaşımı on yıl",
+   "cevap": "zamanaşımı on yıl",
    "kanit": "(3) Mülkiyetin kamuya geçirilmesine ilişkin zamanaşımı süresi on yıldır.",
-   "not": "2026 sınavında soruldu",
+   "not": "",
    "karistirilan": [
     {
      "madde": "18",
@@ -737,14 +518,488 @@
    ]
   },
   {
-   "i": "K-6-071",
-   "madde": "16",
-   "tip": "tanim",
-   "tetikleyici": "Kabahatler karşılığında uygulanacak",
-   "cevap": "idarî para cezası ve idarî tedbir",
-   "kanit": "(1) Kabahatler karşılığında uygulanacak olan idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir.",
-   "not": "2026 sınavında soruldu",
+   "i": "K-6-048",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "işlemeye başlar",
+   "cevap": "soruşturmada fiil/netice; yerine getirmede kesinleşmeyi izleyen takvim yılı",
+   "kanit": "(4) Zamanaşımı süresi, kararın kesinleşmesinin rastladığı takvim yılını takip eden takvim yılı başından itibaren işlemeye başlar.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "20",
+     "fark": "soruşturma zamanaşımı fiilin işlenmesi ya da neticeyle başlar"
+    }
+   ]
+  },
+  {
+   "i": "K-6-049",
+   "madde": "21",
+   "tip": "sure",
+   "tetikleyici": "başlanamaması",
+   "cevap": "zamanaşımı işlemez (durur)",
+   "kanit": "(5) Kanun hükmü gereği olarak idarî yaptırımın yerine getirilmesine başlanamaması veya yerine getirilememesi halinde zamanaşımı işlemez (durur).",
+   "not": "",
    "karistirilan": []
+  },
+  {
+   "i": "K-6-050",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "idarî yaptırım kararı vermeye",
+   "cevap": "gösterilen idarî kurul, makam, görevli",
+   "kanit": "(1) Kabahat dolayısıyla idarî yaptırım kararı vermeye ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri yetkilidir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "23",
+     "fark": "Cumhuriyet savcısı: kanunda açık hüküm varsa"
+    }
+   ]
+  },
+  {
+   "i": "K-6-051",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "açık hüküm bulunmayan hallerde",
+   "cevap": "kurumun en üst amiri",
+   "kanit": "(2) Kanunda açık hüküm bulunmayan hallerde ilgili kamu kurum ve kuruluşunun en üst amiri bu konuda yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-052",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "Cumhuriyet savcısı,",
+   "cevap": "kanunda açık hüküm varsa; soruşturmada kendisi de verebilir",
+   "kanit": "(1) Cumhuriyet savcısı, kanunda açıkça hüküm bulunan hallerde bir kabahat dolayısıyla idarî yaptırım kararı vermeye yetkilidir.\n(2) Bir suç dolayısıyla başlatılan soruşturma kapsamında bir kabahatin işlendiğini öğrenmesi halinde Cumhuriyet savcısı durumu ilgili kamu kurum ve kuruluşuna bildirebileceği gibi, kendisi de idarî yaptırım kararı verebilir.",
+   "not": "kuruma bildirebilir de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-053",
+   "madde": "24",
+   "tip": "makam",
+   "tetikleyici": "Kovuşturma konusu",
+   "cevap": "mahkeme karar verir",
+   "kanit": "(1) Kovuşturma konusu fiilin kabahat oluşturduğunun anlaşılması halinde mahkeme tarafından idarî yaptırım kararı verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-054",
+   "madde": "25",
+   "tip": "sira_usul",
+   "tetikleyici": "tutanakta",
+   "cevap": "kimlik-adres, fiil, deliller, karar tarihi, görevli, yer-zaman",
+   "kanit": "(1) İdarî yaptırım kararına ilişkin tutanakta; a) Hakkında idarî yaptırım kararı verilen kişinin kimlik ve adresi, b) İdarî yaptırım kararı verilmesini gerektiren kabahat fiili, c) Bu fiilin işlendiğini ispata yarayacak bütün deliller, d) Karar tarihi ve kararı veren kamu görevlilerinin kimliği, açık bir şekilde yazılır. Tutanakta, ayrıca kabahati oluşturan fiil, işlendiği yer ve zaman gösterilerek açıklanır.",
+   "not": "listede olmayan şık cevaptır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-055",
+   "madde": "26",
+   "tip": "sira_usul",
+   "tetikleyici": "ilgili kişiye tebliğ",
+   "cevap": "7201 sayılı Tebligat Kanunu",
+   "kanit": "(1) İdarî yaptırım kararı, 7201 sayılı Tebligat Kanunu hükümlerine göre ilgili kişiye tebliğ edilir",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-056",
+   "madde": "26",
+   "tip": "sure",
+   "tetikleyici": "elektronik adresine ulaştığı",
+   "cevap": "izleyen beşinci günün sonunda",
+   "kanit": "Elektronik ortamda yapılan tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci günün sonunda yapılmış sayılır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-057",
+   "madde": "27",
+   "tip": "sure",
+   "tetikleyici": "sulh ceza mahkemesine",
+   "cevap": "tebliğden itibaren onbeş gün; yoksa kesinleşir",
+   "kanit": "(1) İdarî para cezası ve mülkiyetin kamuya geçirilmesine ilişkin idarî yaptırım kararına karşı, kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir. Bu süre içinde başvurunun yapılmamış olması halinde idarî yaptırım kararı kesinleşir.",
+   "not": "BAŞVURU 15 GÜN sulh ceza · İTİRAZ 2 HAFTA",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-058",
+   "madde": "27",
+   "tip": "sure",
+   "tetikleyici": "ortadan kalktığı tarihten",
+   "cevap": "en geç yedi gün",
+   "kanit": "(2) Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı başvuruda bulunulabilir",
+   "not": "mücbir sebep",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-059",
+   "madde": "27",
+   "tip": "sira_usul",
+   "tetikleyici": "Başvuru dilekçesi",
+   "cevap": "iki nüsha; bizzat, kanunî temsilci ya da avukat",
+   "kanit": "(3) Başvuru, bizzat kanunî temsilci veya avukat tarafından sulh ceza mahkemesine verilecek bir dilekçe ile yapılır. Başvuru dilekçesi, iki nüsha olarak verilir.",
+   "not": "noter onayı aranmaz",
+   "karistirilan": [
+    {
+     "madde": "28",
+     "fark": "kurum, dilekçenin tebliğinden onbeş gün içinde cevap verir"
+    }
+   ]
+  },
+  {
+   "i": "K-6-060",
+   "madde": "28",
+   "tip": "sira_usul",
+   "tetikleyici": "ön inceleme",
+   "cevap": "yetkisizlikte gönderme; süre/karar/hak yoksa ret; aksi usulden kabul",
+   "kanit": "(1) Başvuru üzerine mahkemece yapılan ön inceleme sonucunda; yetkisizlik halinde dosyanın yetkili mahkemeye gönderilmesine, süresinde yapılmama/incelenebilir karar olmama/hak bulunmama halinde başvurunun reddine, aksi halde başvurunun usulden kabulüne karar verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-061",
+   "madde": "28",
+   "tip": "sira_usul",
+   "tetikleyici": "reddine",
+   "cevap": "süre geçmiş, karar incelenemez, hak yok; yetkisizlik ret DEĞİL",
+   "kanit": "(1) Başvuru üzerine mahkemece yapılan ön inceleme sonucunda; yetkisizlik halinde dosyanın yetkili mahkemeye gönderilmesine, süresinde yapılmama/incelenebilir karar olmama/hak bulunmama halinde başvurunun reddine, aksi halde başvurunun usulden kabulüne karar verilir.",
+   "not": "yetkisizlikte dosya yetkili mahkemeye",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-062",
+   "madde": "28",
+   "tip": "sure",
+   "tetikleyici": "mahkemeye cevap verir",
+   "cevap": "kurum, dilekçenin tebliğinden onbeş gün",
+   "kanit": "(3) İlgili kamu kurum ve kuruluşu, başvuru dilekçesinin tebliği tarihinden itibaren en geç onbeş gün içinde mahkemeye cevap verir",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-063",
+   "madde": "28",
+   "tip": "kosul",
+   "tetikleyici": "dahil idarî para cezalarına",
+   "cevap": "on beş bin TL’ye kadar kararlar kesin",
+   "kanit": "(10) Onbeşbin Türk Lirası dahil idarî para cezalarına karşı başvuru üzerine verilen kararlar kesindir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-064",
+   "madde": "29",
+   "tip": "sure",
+   "tetikleyici": "itiraz",
+   "cevap": "Ceza Muhakemesi Kanununa göre iki hafta; dosya üzerinden",
+   "kanit": "(1) Mahkemenin verdiği son karara karşı, Ceza Muhakemesi Kanununa göre itiraz edilebilir. Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.\n(2) İtirazla ilgili karar, dosya üzerinden inceleme yapılarak verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-065",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "Kanun yoluna başvuran",
+   "cevap": "karar verilinceye kadar vazgeçebilir; bir daha başvuramaz",
+   "kanit": "(1) Kanun yoluna başvuran kişi, bu konuda karar verilinceye kadar başvurusundan vazgeçebilir. Vazgeçme halinde bir daha aynı konuda başvuruda bulunulamaz.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-066",
+   "madde": "30",
+   "tip": "kosul",
+   "tetikleyici": "geri alabilir",
+   "cevap": "başvuruyu kabul ederek (karar verilinceye kadar)",
+   "kanit": "(2) İlgili kamu kurum ve kuruluşu da mahkeme tarafından karar verilinceye kadar kanun yolu başvurusunu kabul ederek idarî yaptırım kararını geri alabilir.",
+   "not": "ilgili kurum",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-067",
+   "madde": "32",
+   "tip": "ceza",
+   "tetikleyici": "emre aykırı",
+   "cevap": "yüz TL; emri veren makam karar verir",
+   "kanit": "(1) Yetkili makamlar tarafından adlî işlemler nedeniyle ya da kamu güvenliği, kamu düzeni veya genel sağlığın korunması amacıyla, hukuka uygun olarak verilen emre aykırı hareket eden kişiye yüz Türk Lirası idarî para cezası verilir. Bu cezaya emri veren makam tarafından karar verilir.",
+   "not": "adlî işlem, kamu güvenliği/düzeni, genel sağlık için hukuka uygun emir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-068",
+   "madde": "33",
+   "tip": "ceza",
+   "tetikleyici": "Dilencilik",
+   "cevap": "ceza ve el koyma: kolluk/zabıta; mülkiyet: mülkî amir/encümen",
+   "kanit": "(1) Dilencilik yapan kişiye, elli Türk Lirası idarî para cezası verilir. Ayrıca, dilencilikten elde edilen gelire elkonularak mülkiyetin kamuya geçirilmesine karar verilir. (2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk veya belediye zabıta görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir veya belediye encümeni karar verir.",
+   "not": "elli TL; gelire el konur",
+   "karistirilan": [
+    {
+     "madde": "34",
+     "fark": "kumarda mülkiyete yalnız mülkî amir karar verir"
+    }
+   ]
+  },
+  {
+   "i": "K-6-069",
+   "madde": "34",
+   "tip": "ceza",
+   "tetikleyici": "kumar",
+   "cevap": "bin Türk Lirası; mülkiyete yalnız mülkî amir",
+   "kanit": "(1) Kumar oynayan kişiye, bin Türk Lirası idarî para cezası verilir. Ayrıca, kumardan elde edilen gelire elkonularak mülkiyetin kamuya geçirilmesine karar verilir. (2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir karar verir.",
+   "not": "ceza ve el koyma: kolluk",
+   "karistirilan": [
+    {
+     "madde": "33",
+     "fark": "dilencilikte belediye encümeni de karar verebilir"
+    }
+   ]
+  },
+  {
+   "i": "K-6-070",
+   "madde": "35",
+   "tip": "ceza",
+   "tetikleyici": "Sarhoş",
+   "cevap": "elli TL, kolluk; etkisi geçinceye kadar kontrol altında",
+   "kanit": "(1) Sarhoş olarak başkalarının huzur ve sükununu bozacak şekilde davranışlarda bulunan kişiye, kolluk görevlileri tarafından elli Türk Lirası idarî para cezası verilir. Kişi, ayrıca sarhoşluğun etkisi geçinceye kadar kontrol altında tutulur.",
+   "not": "huzur ve sükûnu bozacak şekilde",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-071",
+   "madde": "36",
+   "tip": "ceza",
+   "tetikleyici": "gürültü",
+   "cevap": "elli TL; işletmede bin–beşbin; kolluk ya da zabıta",
+   "kanit": "(1) Başkalarının huzur ve sükununu bozacak şekilde gürültüye neden olan kişiye, elli Türk Lirası idarî para cezası verilir. (2) Bu fiilin bir ticarî işletmenin faaliyeti çerçevesinde işlenmesi halinde işletme sahibi gerçek veya tüzel kişiye bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir. (3) Bu kabahat dolayısıyla idarî para cezasına kolluk veya belediye zabıta görevlileri karar verir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-072",
+   "madde": "36",
+   "tip": "ceza",
+   "tetikleyici": "ticarî işletmenin",
+   "cevap": "işletme sahibine bin–beşbin TL",
+   "kanit": "(2) Bu fiilin bir ticarî işletmenin faaliyeti çerçevesinde işlenmesi halinde işletme sahibi gerçek veya tüzel kişiye bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-073",
+   "madde": "37",
+   "tip": "ceza",
+   "tetikleyici": "rahatsız",
+   "cevap": "mal-hizmet satmak için; elli TL, kolluk ya da zabıta",
+   "kanit": "(1) Mal veya hizmet satmak için başkalarını rahatsız eden kişi, elli Türk Lirası idarî para cezası ile cezalandırılır. (2) Bu kabahat dolayısıyla idarî para cezası vermeye kolluk veya belediye zabıta görevlileri yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-074",
+   "madde": "38",
+   "tip": "ceza",
+   "tetikleyici": "işgal",
+   "cevap": "elli TL; yalnız belediye zabıtası verir",
+   "kanit": "(1) Yetkili makamların açık ve yazılı izni olmaksızın meydan, cadde, sokak veya yayaların gelip geçtiği kaldırımları işgal eden veya buralarda mal satışa arz eden kişiye, belediye zabıta görevlileri tarafından elli Türk Lirası idarî para cezası verilir.",
+   "not": "açık ve yazılı izin yoksa",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-075",
+   "madde": "38",
+   "tip": "ceza",
+   "tetikleyici": "inşaat malzemesi",
+   "cevap": "yığan: yüz–beşyüz TL",
+   "kanit": "meydan, cadde, sokak veya kaldırımlar üzerine inşaat malzemesi yığan kişiye",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-076",
+   "madde": "39",
+   "tip": "ceza",
+   "tetikleyici": "tütün mamulü",
+   "cevap": "birim amirinin yetkili kıldığı görevli; elli TL",
+   "kanit": "(1) Kamu hizmet binalarının kapalı alanlarında tütün mamulü tüketen kişiye, ilgili idarî birim amirinin yetkili kıldığı kamu görevlileri tarafından elli Türk Lirası idarî para cezası verilir",
+   "not": "toplu taşımada da elli TL",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-077",
+   "madde": "40",
+   "tip": "ceza",
+   "tetikleyici": "bilgi vermekten kaçınan",
+   "cevap": "elli Türk Lirası; soran görevli verir",
+   "kanit": "(1) Görevle bağlantılı olarak sorulması halinde kamu görevlisine kimliği veya adresiyle ilgili bilgi vermekten kaçınan veya gerçeğe aykırı beyanda bulunan kişiye, bu görevli tarafından elli Türk Lirası idarî para cezası verilir.",
+   "not": "kimlik ya da adres bilgisi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-078",
+   "madde": "40",
+   "tip": "ceza",
+   "tetikleyici": "gerçeğe aykırı beyan",
+   "cevap": "elli TL; soran görevli verir; kimlik belirsizse savcıya haber",
+   "kanit": "(1) Görevle bağlantılı olarak sorulması halinde kamu görevlisine kimliği veya adresiyle ilgili bilgi vermekten kaçınan veya gerçeğe aykırı beyanda bulunan kişiye, bu görevli tarafından elli Türk Lirası idarî para cezası verilir.",
+   "not": "kimlik ya da adres bilgisi vermekten kaçınma da",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-079",
+   "madde": "40",
+   "tip": "sira_usul",
+   "tetikleyici": "kimliği belirlenemeyen",
+   "cevap": "tutulur, savcıya haber; gözaltı, gerekirse tutuklama",
+   "kanit": "kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet savcısı haberdar edilir. Bu kişi, kimliği açık bir şekilde anlaşılıncaya kadar gözaltına alınır ve gerekirse tutuklanır.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-080",
+   "madde": "41",
+   "tip": "ceza",
+   "tetikleyici": "Evsel atık",
+   "cevap": "yirmi TL idarî para cezası",
+   "kanit": "(1) Evsel atık ve artıkları, bunların toplanmasına veya depolanmasına özgü yerler dışına atan kişiye, yirmi Türk Lirası idarî para cezası verilir",
+   "not": "özgü yerler dışına atan",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-081",
+   "madde": "41",
+   "tip": "makam",
+   "tetikleyici": "belediye sınırları dışında",
+   "cevap": "kolluk; içinde belediye zabıtası",
+   "kanit": "(7) Bu kabahatler dolayısıyla idarî para cezasına belediye sınırları içerisinde belediye zabıta görevlileri, belediye sınırları dışında kolluk görevlileri karar verir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-082",
+   "madde": "41",
+   "tip": "istisna",
+   "tetikleyici": "kirliliğin",
+   "cevap": "derhal giderirse ceza verilmeyebilir",
+   "kanit": "(8) Bu kabahatler dolayısıyla meydana gelen kirliliğin kişi tarafından derhal giderilmesi halinde idarî para cezasına karar verilmeyebilir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-083",
+   "madde": "42",
+   "tip": "ceza",
+   "tetikleyici": "afiş ve ilân",
+   "cevap": "yüz–üçbin TL (alt-üst sınır); aynı içerik tek fiil",
+   "kanit": "(1) Meydanlara/parklara, cadde-sokak kenarlarındaki kamuya ait duvar/alanlara, rızası olmaksızın özel kişilere ait alanlara afiş ve ilân asan kişiye, yüz Türk Lirasından üçbin Türk Lirasına kadar idarî para cezası verilir. Aynı içerikteki afiş ve ilânlar, tek fiil sayılır.",
+   "not": "kolluk ya da belediye zabıtası",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-084",
+   "madde": "42/A",
+   "tip": "ceza",
+   "tetikleyici": "meşgul etmek",
+   "cevap": "binbeşyüz TL; il valileri",
+   "kanit": "(1) 112 Acil Çağrı Merkezini meşgul etmek amacıyla arayarak görevlilerle konuşan veya ısrarla çağrı bırakan kişiye, il valileri tarafından binbeşyüz Türk Lirası idari para cezası verilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "42a",
+     "fark": "metinde aynı maddenin ikinci kaydı"
+    }
+   ]
+  },
+  {
+   "i": "K-6-085",
+   "madde": "42/A",
+   "tip": "ceza",
+   "tetikleyici": "asılsız",
+   "cevap": "tutanakla tespit; onbeşbin TL; il valileri",
+   "kanit": "(2) 112 Acil Çağrı Merkezine yapılan ihbarın asılsız olduğunun olay yerine giden ekiplerce tutanakla tespit edilmesi halinde kişiye, il valileri tarafından onbeşbin Türk Lirası idari para cezası verilir.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "42a",
+     "fark": "metinde aynı maddenin ikinci kaydı"
+    }
+   ]
+  },
+  {
+   "i": "K-6-086",
+   "madde": "42/A",
+   "tip": "ceza",
+   "tetikleyici": "bir yıl içinde",
+   "cevap": "iki katı; il valileri",
+   "kanit": "(3) Bu maddede yazılı fiillerin bir yıl içinde tekrarı halinde idari para cezası iki katı olarak uygulanır.",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "42a",
+     "fark": "metinde aynı maddenin ikinci kaydı"
+    },
+    {
+     "madde": "17",
+     "fark": "taksit: bir yıl içinde dört eşit taksit"
+    }
+   ]
+  },
+  {
+   "i": "K-6-087",
+   "madde": "43",
+   "tip": "ceza",
+   "tetikleyici": "silah",
+   "cevap": "ruhsatsız, görünür taşıma; elli TL, kolluk",
+   "kanit": "(1) Yetkili makamlardan ruhsat almaksızın kanuna göre yasak olmayan silahları park, meydan, cadde veya sokaklarda görünür bir şekilde taşıyan kişiye, kolluk tarafından elli Türk Lirası idarî para cezası verilir.",
+   "not": "park, meydan, cadde, sokak",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-088",
+   "madde": "43/A",
+   "tip": "ceza",
+   "tetikleyici": "yararına",
+   "cevap": "organ/temsilci, rüşvet-zimmet gibi suç; yargılayan mahkeme",
+   "kanit": "tarafından dolandırıcılık, uyuşturucu imal-ticareti, ihaleye/edime fesat, rüşvet, suçtan kaynaklanan malvarlığını aklama, zimmet, kaçakçılık, petrol piyasası suçu, terörizmin finansmanı suçunun tüzel kişinin yararına işlenmesi halinde, ayrıca bu tüzel kişiye onbin Türk Lirasından elli milyon Türk Lirasına kadar idarî para cezası verilir. Ancak idari para cezası, işleme veya eyleme konu menfaatin iki katından az olamaz.",
+   "not": "dolandırıcılık, uyuşturucu, ihaleye/edime fesat, rüşvet, aklama, zimmet, kaçakçılık, petrol, terör finansmanı",
+   "karistirilan": []
+  },
+  {
+   "i": "K-6-089",
+   "madde": "43/A",
+   "tip": "ceza",
+   "tetikleyici": "tüzel kişiye",
+   "cevap": "organ-temsilci yararına işlerse; menfaatin iki katından az değil; mahkeme",
+   "kanit": "tarafından dolandırıcılık, uyuşturucu imal-ticareti, ihaleye/edime fesat, rüşvet, suçtan kaynaklanan malvarlığını aklama, zimmet, kaçakçılık, petrol piyasası suçu, terörizmin finansmanı suçunun tüzel kişinin yararına işlenmesi halinde, ayrıca bu tüzel kişiye onbin Türk Lirasından elli milyon Türk Lirasına kadar idarî para cezası verilir. Ancak idari para cezası, işleme veya eyleme konu menfaatin iki katından az olamaz.",
+   "not": "onbin TL–elli milyon TL",
+   "karistirilan": [
+    {
+     "madde": "36",
+     "fark": "gürültüde işletme sahibi gerçek ya da tüzel kişiye bin–beşbin"
+    }
+   ]
+  },
+  {
+   "i": "K-6-090",
+   "madde": "43/B",
+   "tip": "ceza",
+   "tetikleyici": "sahte",
+   "cevap": "bankaya ibraz edilirse bildirim; yoksa savcı bin–beşbin TL",
+   "kanit": "ibraz edilen paranın sahte olduğunun anlaşılması halinde,",
+   "not": "bankalar ve finansal kuruluşlar",
+   "karistirilan": [
+    {
+     "madde": "43b",
+     "fark": "metinde aynı maddenin ikinci kaydı"
+    }
+   ]
   }
  ]
 }
