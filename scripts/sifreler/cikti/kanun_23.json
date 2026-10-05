@@ -17,9 +17,9 @@
    "madde": "2",
    "tip": "tanim",
    "tetikleyici": "kapsar",
-   "cevap": "JGK, SGK, Akademi karargâh-birlik-kurum ve personeli; işçiler kendi mevzuatına",
+   "cevap": "Jandarma, Sahil Güvenlik, Akademi karargâh-birlik-kurumu ve personeli; Bakanlık sivili YOK",
    "kanit": "MADDE 2 - (1) Bu Yönetmelik, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisindeki karargâh, birlik ve kurumlar ile buralarda görev yapan personeli kapsar.\n(2) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisi emrine verilen 25/6/2019 tarihli ve 7179 sayılı Askeralma Kanununa tabi askerlik yükümlüleri bakımından, bu Yönetmelikte yer almayan hususlarda diğer askerlik yükümlülerinin tabi olduğu mevzuat hükümleri uygulanır.\n(3) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli işçiler kendi mevzuatına tabidir.",
-   "not": "İçişleri merkez teşkilatının sivil memurları kapsam DIŞI",
+   "not": "işçiler kendi mevzuatına tabi",
    "karistirilan": []
   },
   {
@@ -56,24 +56,14 @@
    "i": "K-23-006",
    "madde": "4",
    "tip": "tanim",
-   "tetikleyici": "Rütbe veya kıdemce büyük",
-   "cevap": "üst olan kimse",
+   "tetikleyici": "Rütbe veya kıdemce",
+   "cevap": "büyük olan üst, küçük olan ast; kadro bağı şart değil",
    "kanit": "ğğ) Üst: Rütbe veya kıdemce büyük olan kimseyi, ifade eder.",
-   "not": "kadro-kuruluş bağı şart değil",
+   "not": "kadro-kuruluş yönünden bağlı olunan ise ÂMİR",
    "karistirilan": []
   },
   {
    "i": "K-23-007",
-   "madde": "4",
-   "tip": "tanim",
-   "tetikleyici": "Rütbe veya kıdemce küçük",
-   "cevap": "ast olan personel",
-   "kanit": "b) Ast: Rütbe veya kıdemce küçük olan personeli,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-23-008",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Maiyet:",
@@ -83,7 +73,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-009",
+   "i": "K-23-008",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Makam:",
@@ -93,7 +83,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-010",
+   "i": "K-23-009",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Disiplin:",
@@ -103,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-011",
+   "i": "K-23-010",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "sair surette asta",
@@ -113,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-012",
+   "i": "K-23-011",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "amir tarafından verilen emirleri",
@@ -123,7 +113,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-013",
+   "i": "K-23-012",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "emir komuta altında toplanan",
@@ -133,7 +123,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-014",
+   "i": "K-23-013",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "duruşu ve dış görünüşü",
@@ -143,7 +133,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-015",
+   "i": "K-23-014",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "aynı nasıplılar arasında",
@@ -153,7 +143,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-016",
+   "i": "K-23-015",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "normal bekleme süresinin başlama",
@@ -163,7 +153,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-017",
+   "i": "K-23-016",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "geçici olarak personelin kullanımına",
@@ -173,7 +163,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-018",
+   "i": "K-23-017",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "giriş ve çıkışlarının kontrol",
@@ -183,7 +173,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-019",
+   "i": "K-23-018",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "sekiz kademeli çavuş",
@@ -193,7 +183,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-020",
+   "i": "K-23-019",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "teğmenden orgeneral",
@@ -203,7 +193,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-021",
+   "i": "K-23-020",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "her durumda",
@@ -213,7 +203,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-022",
+   "i": "K-23-021",
    "madde": "5",
    "tip": "sira_usul",
    "tetikleyici": "göreve başla",
@@ -228,7 +218,7 @@
    ]
   },
   {
-   "i": "K-23-023",
+   "i": "K-23-022",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "Statüler arası",
@@ -238,7 +228,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-024",
+   "i": "K-23-023",
    "madde": "6",
    "tip": "istisna",
    "tetikleyici": "Devlet memurları ile rütbeli",
@@ -248,7 +238,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-025",
+   "i": "K-23-024",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "disiplinin ayrılmaz unsurları",
@@ -258,17 +248,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-026",
+   "i": "K-23-025",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "temelidir",
-   "cevap": "JGK, SGK, Akademinin; hiçbir suretle taviz yok",
+   "cevap": "Jandarma, Sahil Güvenlik, Akademinin; hiçbir suretle taviz yok",
    "kanit": "Disiplin\nMADDE 7 - (1) Disiplin, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinin temelidir ve hiçbir suretle disiplinden taviz verilemez.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-23-027",
+   "i": "K-23-026",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "tesis edilmeli",
@@ -278,7 +268,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-028",
+   "i": "K-23-027",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "Sevk ve idarede otorite",
@@ -288,7 +278,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-029",
+   "i": "K-23-028",
    "madde": "7",
    "tip": "gorev_yetki",
    "tetikleyici": "hep birlikte itaatsizlik",
@@ -298,7 +288,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-030",
+   "i": "K-23-029",
    "madde": "7",
    "tip": "gorev_yetki",
    "tetikleyici": "disipline aykırı",
@@ -308,7 +298,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-031",
+   "i": "K-23-030",
    "madde": "8",
    "tip": "gorev_yetki",
    "tetikleyici": "usulüne uygun emirlerini",
@@ -318,7 +308,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-032",
+   "i": "K-23-031",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "icra eder",
@@ -328,7 +318,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-033",
+   "i": "K-23-032",
    "madde": "8",
    "tip": "yasak",
    "tetikleyici": "mütalâa",
@@ -338,7 +328,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-034",
+   "i": "K-23-033",
    "madde": "8",
    "tip": "gorev_yetki",
    "tetikleyici": "Âmirinin yokluğunda",
@@ -348,7 +338,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-035",
+   "i": "K-23-034",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "yüklenen görevleri",
@@ -358,7 +348,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-036",
+   "i": "K-23-035",
    "madde": "9",
    "tip": "gorev_yetki",
    "tetikleyici": "Âmirin görevleri",
@@ -368,7 +358,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-037",
+   "i": "K-23-036",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "Astlarına karşı",
@@ -378,7 +368,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-038",
+   "i": "K-23-037",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "kolaylık",
@@ -393,7 +383,7 @@
    ]
   },
   {
-   "i": "K-23-039",
+   "i": "K-23-038",
    "madde": "9",
    "tip": "yasak",
    "tetikleyici": "Ödül veya ceza",
@@ -403,7 +393,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-040",
+   "i": "K-23-039",
    "madde": "9",
    "tip": "yasak",
    "tetikleyici": "müdahale",
@@ -422,7 +412,7 @@
    ]
   },
   {
-   "i": "K-23-041",
+   "i": "K-23-040",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "münasebet",
@@ -441,7 +431,7 @@
    ]
   },
   {
-   "i": "K-23-042",
+   "i": "K-23-041",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "isimlerini",
@@ -451,7 +441,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-043",
+   "i": "K-23-042",
    "madde": "9",
    "tip": "yasak",
    "tetikleyici": "hususi bir menfaat",
@@ -461,7 +451,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-044",
+   "i": "K-23-043",
    "madde": "10",
    "tip": "tanim",
    "tetikleyici": "düzenleyicisi",
@@ -471,7 +461,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-045",
+   "i": "K-23-044",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "Emirlerin, göreve",
@@ -481,7 +471,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-046",
+   "i": "K-23-045",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "aykırı gör",
@@ -496,7 +486,7 @@
    ]
   },
   {
-   "i": "K-23-047",
+   "i": "K-23-046",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "yazı ile yinele",
@@ -506,7 +496,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-048",
+   "i": "K-23-047",
    "madde": "10",
    "tip": "yasak",
    "tetikleyici": "suç teşkil",
@@ -516,7 +506,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-049",
+   "i": "K-23-048",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "Emir, resmî veya sivil",
@@ -526,7 +516,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-050",
+   "i": "K-23-049",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "silsile",
@@ -541,7 +531,7 @@
    ]
   },
   {
-   "i": "K-23-051",
+   "i": "K-23-050",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "muhalif ikinci bir emir",
@@ -551,7 +541,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-052",
+   "i": "K-23-051",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "anlaşılır",
@@ -561,7 +551,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-053",
+   "i": "K-23-052",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "Emirde",
@@ -576,7 +566,7 @@
    ]
   },
   {
-   "i": "K-23-054",
+   "i": "K-23-053",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "büyük bir tehlikeye",
@@ -586,7 +576,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-055",
+   "i": "K-23-054",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "değiştirme veya iptal",
@@ -596,7 +586,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-056",
+   "i": "K-23-055",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "yerine getirilmesini müteakip",
@@ -606,7 +596,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-057",
+   "i": "K-23-056",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "Birbiri ile bağlantılı",
@@ -616,7 +606,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-058",
+   "i": "K-23-057",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "yerine getiremeyecek durumda",
@@ -626,7 +616,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-059",
+   "i": "K-23-058",
    "madde": "11",
    "tip": "yasak",
    "tetikleyici": "aynı konu ve şahısla",
@@ -636,7 +626,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-060",
+   "i": "K-23-059",
    "madde": "11",
    "tip": "kosul",
    "tetikleyici": "birden fazla personelin",
@@ -646,7 +636,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-061",
+   "i": "K-23-060",
    "madde": "11",
    "tip": "tanim",
    "tetikleyici": "resmi ve şahsi işlerinden",
@@ -656,7 +646,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-062",
+   "i": "K-23-061",
    "madde": "11",
    "tip": "tanim",
    "tetikleyici": "idari eylem ve işlemlerden",
@@ -666,7 +656,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-063",
+   "i": "K-23-062",
    "madde": "11",
    "tip": "yasak",
    "tetikleyici": "Müracaat ve şikâyet",
@@ -676,7 +666,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-064",
+   "i": "K-23-063",
    "madde": "11",
    "tip": "ceza",
    "tetikleyici": "cezayı mucip",
@@ -686,7 +676,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-065",
+   "i": "K-23-064",
    "madde": "11",
    "tip": "kosul",
    "tetikleyici": "hüküm bulunmayan",
@@ -696,7 +686,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-066",
+   "i": "K-23-065",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "Şikâyetleri incelemeye yetkili",
@@ -706,7 +696,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-067",
+   "i": "K-23-066",
    "madde": "12",
    "tip": "tanim",
    "tetikleyici": "Ödüllendirme",
@@ -716,7 +706,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-068",
+   "i": "K-23-067",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "kıyaslanması",
@@ -726,7 +716,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-069",
+   "i": "K-23-068",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "Ödül sistemi",
@@ -736,7 +726,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-070",
+   "i": "K-23-069",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "aşırıya kaç",
@@ -746,7 +736,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-071",
+   "i": "K-23-070",
    "madde": "12",
    "tip": "sira_usul",
    "tetikleyici": "Ödüller, mümkün olduğunca",
@@ -756,7 +746,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-072",
+   "i": "K-23-071",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "daha büyük ödül",
@@ -766,7 +756,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-073",
+   "i": "K-23-072",
    "madde": "12",
    "tip": "makam",
    "tetikleyici": "Ödül çeşitleri",
@@ -776,7 +766,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-074",
+   "i": "K-23-073",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "tatbik şekli",
@@ -786,7 +776,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-075",
+   "i": "K-23-074",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "fayda ve tesiri",
@@ -796,7 +786,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-076",
+   "i": "K-23-075",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Ceza tam bir",
@@ -806,7 +796,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-077",
+   "i": "K-23-076",
    "madde": "14",
    "tip": "tanim",
    "tetikleyici": "İznin maksadı",
@@ -816,7 +806,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-078",
+   "i": "K-23-077",
    "madde": "14",
    "tip": "kosul",
    "tetikleyici": "planlan",
@@ -831,7 +821,7 @@
    ]
   },
   {
-   "i": "K-23-079",
+   "i": "K-23-078",
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "izin hakkından",
@@ -841,7 +831,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-080",
+   "i": "K-23-079",
    "madde": "14",
    "tip": "makam",
    "tetikleyici": "kullandırıl",
@@ -851,7 +841,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-081",
+   "i": "K-23-080",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "İzne giden",
@@ -861,7 +851,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-082",
+   "i": "K-23-081",
    "madde": "14",
    "tip": "sure",
    "tetikleyici": "İzin yılı",
@@ -871,7 +861,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-083",
+   "i": "K-23-082",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "görev sırasında",
@@ -881,7 +871,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-084",
+   "i": "K-23-083",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "sivil kıyafet giyebileceği",
@@ -891,7 +881,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-085",
+   "i": "K-23-084",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "resmî kıyafet giyemez",
@@ -901,7 +891,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-086",
+   "i": "K-23-085",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "pardösü ve yağmurluk",
@@ -911,7 +901,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-087",
+   "i": "K-23-086",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "çanta",
@@ -921,7 +911,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-088",
+   "i": "K-23-087",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "Kimlik kartı",
@@ -936,7 +926,7 @@
    ]
   },
   {
-   "i": "K-23-089",
+   "i": "K-23-088",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "hamileliğini",
@@ -946,7 +936,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-090",
+   "i": "K-23-089",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "sakız",
@@ -956,7 +946,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-091",
+   "i": "K-23-090",
    "madde": "15",
    "tip": "istisna",
    "tetikleyici": "yüzük, bileklik",
@@ -966,7 +956,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-092",
+   "i": "K-23-091",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "şapkasız",
@@ -981,7 +971,7 @@
    ]
   },
   {
-   "i": "K-23-093",
+   "i": "K-23-092",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "Araç içinde",
@@ -991,7 +981,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-094",
+   "i": "K-23-093",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "işaretler sökülse dahi",
@@ -1001,7 +991,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-095",
+   "i": "K-23-094",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "tabancalarını",
@@ -1011,7 +1001,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-096",
+   "i": "K-23-095",
    "madde": "15",
    "tip": "istisna",
    "tetikleyici": "başörtü",
@@ -1021,7 +1011,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-097",
+   "i": "K-23-096",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "eskimiş",
@@ -1031,7 +1021,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-098",
+   "i": "K-23-097",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "ilişiği kesil",
@@ -1041,7 +1031,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-099",
+   "i": "K-23-098",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "favori, sakal ve bıyık",
@@ -1051,7 +1041,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-100",
+   "i": "K-23-099",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "kısa saçlı",
@@ -1061,7 +1051,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-101",
+   "i": "K-23-100",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "her sabah",
@@ -1071,7 +1061,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-102",
+   "i": "K-23-101",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "Devlet memurları hakkında",
@@ -1081,7 +1071,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-103",
+   "i": "K-23-102",
    "madde": "16",
    "tip": "yasak",
    "tetikleyici": "görgü ve nezaket kurallarına",
@@ -1091,7 +1081,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-104",
+   "i": "K-23-103",
    "madde": "16",
    "tip": "kosul",
    "tetikleyici": "Devlet töresine",
@@ -1101,7 +1091,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-105",
+   "i": "K-23-104",
    "madde": "17",
    "tip": "kosul",
    "tetikleyici": "Esas duruş,",
@@ -1116,7 +1106,7 @@
    ]
   },
   {
-   "i": "K-23-106",
+   "i": "K-23-105",
    "madde": "17",
    "tip": "kosul",
    "tetikleyici": "esas duruş bozulmaz",
@@ -1126,7 +1116,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-107",
+   "i": "K-23-106",
    "madde": "17",
    "tip": "istisna",
    "tetikleyici": "Devlet memurları esas duruş",
@@ -1136,7 +1126,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-108",
+   "i": "K-23-107",
    "madde": "17",
    "tip": "kosul",
    "tetikleyici": "yan tarafta",
@@ -1146,7 +1136,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-109",
+   "i": "K-23-108",
    "madde": "17",
    "tip": "yasak",
    "tetikleyici": "Konuşulması gerekiyorsa",
@@ -1156,7 +1146,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-110",
+   "i": "K-23-109",
    "madde": "18",
    "tip": "istisna",
    "tetikleyici": "selamlama",
@@ -1171,7 +1161,7 @@
    ]
   },
   {
-   "i": "K-23-111",
+   "i": "K-23-110",
    "madde": "18",
    "tip": "tanim",
    "tetikleyici": "büyüğün küçüğü",
@@ -1181,7 +1171,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-112",
+   "i": "K-23-111",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "Astlar, üstlerden",
@@ -1191,7 +1181,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-113",
+   "i": "K-23-112",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "temel kural",
@@ -1201,7 +1191,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-114",
+   "i": "K-23-113",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "Elle selamlama",
@@ -1211,7 +1201,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-115",
+   "i": "K-23-114",
    "madde": "18",
    "tip": "istisna",
    "tetikleyici": "Devlet memurları selamlama",
@@ -1221,7 +1211,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-116",
+   "i": "K-23-115",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "milli marş",
@@ -1231,7 +1221,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-117",
+   "i": "K-23-116",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "cephe selamı",
@@ -1241,7 +1231,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-118",
+   "i": "K-23-117",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "kimlik kartını ibraz",
@@ -1251,7 +1241,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-119",
+   "i": "K-23-118",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "Merdiven ve dar geçit",
@@ -1261,7 +1251,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-120",
+   "i": "K-23-119",
    "madde": "18",
    "tip": "istisna",
    "tetikleyici": "eldiven",
@@ -1271,7 +1261,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-121",
+   "i": "K-23-120",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "başı açık",
@@ -1281,7 +1271,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-122",
+   "i": "K-23-121",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "Şehit na’şı",
@@ -1291,7 +1281,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-123",
+   "i": "K-23-122",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "en büyük ve affedilmeyecek",
@@ -1301,7 +1291,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-124",
+   "i": "K-23-123",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "ahlaki ve manevi vasıflar",
@@ -1316,7 +1306,7 @@
    ]
   },
   {
-   "i": "K-23-125",
+   "i": "K-23-124",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "gösterdiğinden dışarı",
@@ -1326,7 +1316,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-126",
+   "i": "K-23-125",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "İtaat:",
@@ -1336,7 +1326,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-127",
+   "i": "K-23-126",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "İntizam severlik:",
@@ -1346,7 +1336,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-128",
+   "i": "K-23-127",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "Temsil ve tanıtım:",
@@ -1356,7 +1346,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-129",
+   "i": "K-23-128",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "bir vücut gibi",
@@ -1366,7 +1356,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-130",
+   "i": "K-23-129",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "büyüğünün de küçüğünün",
@@ -1376,7 +1366,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-131",
+   "i": "K-23-130",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "pek yürekli",
@@ -1386,7 +1376,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-132",
+   "i": "K-23-131",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "zorluk ve yokluklara",
@@ -1396,7 +1386,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-133",
+   "i": "K-23-132",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "komutansız ve idarecisiz",
@@ -1406,7 +1396,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-134",
+   "i": "K-23-133",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "kardeşten ileri",
@@ -1416,7 +1406,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-135",
+   "i": "K-23-134",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "kötü niyetlilerin",
@@ -1426,7 +1416,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-136",
+   "i": "K-23-135",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "mesai saatleri dışında da",
@@ -1436,7 +1426,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-137",
+   "i": "K-23-136",
    "madde": "20",
    "tip": "gorev_yetki",
    "tetikleyici": "hastalandığında",
@@ -1446,7 +1436,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-138",
+   "i": "K-23-137",
    "madde": "21",
    "tip": "yasak",
    "tetikleyici": "bedelsiz ve emanet",
@@ -1456,7 +1446,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-139",
+   "i": "K-23-138",
    "madde": "21",
    "tip": "yasak",
    "tetikleyici": "kendiliğinden ilâveler",
@@ -1466,7 +1456,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-140",
+   "i": "K-23-139",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "basına",
@@ -1476,7 +1466,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-141",
+   "i": "K-23-140",
    "madde": "22",
    "tip": "yasak",
    "tetikleyici": "iç ve dış siyaset",
@@ -1486,7 +1476,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-142",
+   "i": "K-23-141",
    "madde": "22",
    "tip": "istisna",
    "tetikleyici": "siyaset hariç",
@@ -1496,7 +1486,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-143",
+   "i": "K-23-142",
    "madde": "22",
    "tip": "yasak",
    "tetikleyici": "basın ve yayın organının",
@@ -1506,17 +1496,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-144",
+   "i": "K-23-143",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "resmî kaynak ve belgelerden",
-   "cevap": "yazmadan önce JGK-SGK izni",
+   "cevap": "yazmadan önce Jandarma-Sahil Güvenlik izni",
    "kanit": "b) Yalnız mesleki makam ve mevkii itibariyle kendisince malûm olan resmî kaynak ve belgelerden yararlanmak suretiyle eser yayımlamak isteyenler, eserini yazmadan evvel ilgisine göre Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığından izin almalıdır. Bu gibi eserlerin “resmî kaynak ve belgeler ışığında yazılmıştır.” kaydını içerip içermeyeceğini de ilgisine göre Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı belirler.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-23-145",
+   "i": "K-23-144",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "göreve mahsus kitaplardan",
@@ -1526,7 +1516,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-146",
+   "i": "K-23-145",
    "madde": "22",
    "tip": "yasak",
    "tetikleyici": "kişisel bilgi veya belgeleri",
@@ -1536,7 +1526,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-147",
+   "i": "K-23-146",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "kendi hesabına bastırarak",
@@ -1546,7 +1536,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-148",
+   "i": "K-23-147",
    "madde": "23",
    "tip": "makam",
    "tetikleyici": "aynı kışla içinde",
@@ -1556,17 +1546,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-149",
+   "i": "K-23-148",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "Kışla Komutanı",
-   "cevap": "sınırlar, emniyet, yasak malzeme, giriş-çıkış, su analizi, ilaçlama, paratoner",
+   "cevap": "sınır, emniyet, yasak malzemeyi engeller, giriş-çıkış, su analizi, ilaçlama, paratoner",
    "kanit": "(2) Kışla Komutanının görevleri şunlardır:\na) Birliklerin sınırlarını ve sorumluluk alanlarını ayırır ve birliklere bildirir. Bu alanların ve tesislerin ilgili yönerge ve emirler doğrultusunda tertip, düzen ve bakımının yaptırılmasını takip ve temin eder.\nb) Emniyet, intizam ve disiplin bakımından gereken tedbirleri alır. Kışla veya geçici olarak konaklanan yerler civarında asayiş ve sükûneti bozacak olaylar meydana geldiğinde, karşı tedbirler alır ve bunları ilgili birimlere bildirir. Emniyet tedbirlerinin tespiti, idamesi ve kontrollerinin yapılması amacıyla bir subay veya subay bulunmadığı durumlarda tecrübeli bir astsubay kışla emniyet subayı olarak görevlendirilir.\nc) Yasak edilen malzemelerin kışlaya sokulmasını engeller.\nç) Müşterek görevlerin icrasını planlar ve uygular.\nd) Ziyaretçiler için kışla emniyeti ve çalışma düzenini bozmayacak şekilde zaman ve yer düzenlemesi yapar.\ne) İçme sularının periyodik olarak protokollere göre analizini yaptırır.\nf) Hastalıkların önlenmesi için gerek duyulan alanların ilaçlamasını yaptırır.\ng) Yiyecek depolanan, pişirilen, dağıtılan ve yenilen yerlerde hijyen kurallarına uygun hareket edilmesini sağlar ve denetimini yaptırır.\nğ) Kışlaya giriş ve çıkışların kontrollü yapılmasını sağlar.\nh) Kışlada bulunan Devlet malının muhafazası için gerekli tedbirlerin alınmasını sağlar.\nı) Paratonerlerin ölçüm ve bakımlarının yaptırılması ve kontrol edilmesini sağlar.\ni) Kantin ve gazino gelirlerinin ihtiyaçlar doğrultusunda ve planlı olarak harcanmasını sağlar.\nj) Kışla gelişim planının hazırlanmasını sağlar.",
    "not": "hijyen denetimi, kantin geliri, gelişim planı da",
    "karistirilan": []
   },
   {
-   "i": "K-23-150",
+   "i": "K-23-149",
    "madde": "23",
    "tip": "makam",
    "tetikleyici": "kışla emniyet subayı",
@@ -1576,7 +1566,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-151",
+   "i": "K-23-150",
    "madde": "23",
    "tip": "makam",
    "tetikleyici": "belediye mücavir alanı",
@@ -1586,7 +1576,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-152",
+   "i": "K-23-151",
    "madde": "24",
    "tip": "sure",
    "tetikleyici": "haftalık çalışma",
@@ -1596,7 +1586,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-153",
+   "i": "K-23-152",
    "madde": "24",
    "tip": "makam",
    "tetikleyici": "yirmi dört saatinde devamlılık",
@@ -1606,7 +1596,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-154",
+   "i": "K-23-153",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "eğitimin bitiminde",
@@ -1616,7 +1606,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-155",
+   "i": "K-23-154",
    "madde": "25",
    "tip": "sira_usul",
    "tetikleyici": "mesai başlangıcında",
@@ -1626,7 +1616,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-156",
+   "i": "K-23-155",
    "madde": "25",
    "tip": "sira_usul",
    "tetikleyici": "toplu takdim",
@@ -1636,7 +1626,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-157",
+   "i": "K-23-156",
    "madde": "25",
    "tip": "sira_usul",
    "tetikleyici": "Kışlada kalan",
@@ -1646,7 +1636,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-158",
+   "i": "K-23-157",
    "madde": "25",
    "tip": "kosul",
    "tetikleyici": "Devlet memurları amirlerinin",
@@ -1656,7 +1646,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-159",
+   "i": "K-23-158",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "nöbet görev",
@@ -1666,7 +1656,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-160",
+   "i": "K-23-159",
    "madde": "27",
    "tip": "sayi_oran",
    "tetikleyici": "kuvveti en az",
@@ -1676,7 +1666,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-161",
+   "i": "K-23-160",
    "madde": "27",
    "tip": "makam",
    "tetikleyici": "uyuyup uyumayacağı",
@@ -1686,7 +1676,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-162",
+   "i": "K-23-161",
    "madde": "27",
    "tip": "makam",
    "tetikleyici": "Hazır kıt’a komutanı",
@@ -1696,7 +1686,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-163",
+   "i": "K-23-162",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "sosyal tesisler",
@@ -1706,7 +1696,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-164",
+   "i": "K-23-163",
    "madde": "29",
    "tip": "tanim",
    "tetikleyici": "dayanıklı tüketim",
@@ -1716,7 +1706,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-165",
+   "i": "K-23-164",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "boş yer bulunduğu",
@@ -1726,17 +1716,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-166",
+   "i": "K-23-165",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "sivil moral ekipleri",
-   "cevap": "savaşta-OHAL’de nakil aracından yararlanır",
+   "cevap": "savaşta ve olağanüstü hâlde nakil aracından yararlanır",
    "kanit": "(3) Savaşta ve olağanüstü hallerde, izinli personel ve görevin gerektirdiği diğer işlerde görevlendirilecek personel ile sivil moral ekipleri, harekât bölgesi ve harekâtla ilgili diğer bölgelere gidiş ve dönüşlerinde nakil araçlarından yararlandırılır.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-23-167",
+   "i": "K-23-166",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "hava araçlarından",
@@ -1746,7 +1736,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-168",
+   "i": "K-23-167",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "umumi araçların en son",
@@ -1756,7 +1746,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-169",
+   "i": "K-23-168",
    "madde": "31",
    "tip": "kosul",
    "tetikleyici": "Törenler",
@@ -1771,7 +1761,7 @@
    ]
   },
   {
-   "i": "K-23-170",
+   "i": "K-23-169",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "afet ve acil durumları",
@@ -1781,7 +1771,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-171",
+   "i": "K-23-170",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "yardımları",
@@ -1800,7 +1790,7 @@
    ]
   },
   {
-   "i": "K-23-172",
+   "i": "K-23-171",
    "madde": "32",
    "tip": "kosul",
    "tetikleyici": "acil durumlara ilişkin diğer",
@@ -1810,7 +1800,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-173",
+   "i": "K-23-172",
    "madde": "33",
    "tip": "kosul",
    "tetikleyici": "yangın",
@@ -1825,7 +1815,7 @@
    ]
   },
   {
-   "i": "K-23-174",
+   "i": "K-23-173",
    "madde": "34",
    "tip": "sure",
    "tetikleyici": "yürürlüğe girer",
@@ -1835,7 +1825,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-23-175",
+   "i": "K-23-174",
    "madde": "35",
    "tip": "makam",
    "tetikleyici": "Yönetmelik hükümleri",
