@@ -16,7 +16,7 @@ K = [
  ('3','tanim','Sözleşme yılı:','yürürlük ay-gününden itibaren her bir yıl','ı) (Ek: 16/6/2009-5907/1 md.) Sözleşme yılı','her bir yıllık süreyi,',[],''),
 
  # m.4 — sözleşmeli subay kaynağı ve nitelikleri
- ('4','sure','Sözleşmeli subay kayna','dört yıllık fakülte; yirmiyedi yaş (lisansüstü otuziki)','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[],'düzeltilmemiş nüfus kaydı, ocak ayının ilk günü'),
+ ('4','sure','Sözleşmeli subay kaynak','dört yıllık fakülte; yirmiyedi yaş (lisansüstü otuziki)','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[],'düzeltilmemiş nüfus kaydı, ocak ayının ilk günü'),
  ('4','sure','ocak ayının ilk günü','subay yirmiyedi (lisansüstü otuziki); astsubay yirmiyedi (önlisans yirmidört)','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[('8','astsubay: dört yıl+ yirmiyedi, daha az yirmidört')],'yaşını BİTİRMEMİŞ olmak'),
  ('4','yasak','Askeri okul','alınmaz; askerlik yapan-terhis eden olabilir','Askeri okullardan ve Türk Silahlı Kuvvetlerinden her ne','sözleşmeli subay olabilirler.',[('8','astsubayda istisna: kısa dönem ya da 1111’e tabi erbaş-er')],'her ne sebeple olursa olsun ilişiği kesilen'),
  ('4','kosul','Sözleşmeli subaylık için','vatandaşlık, öğrenim, sağlık, kamusal hak, güvenlik soruşturması, sınav','Sözleşmeli subaylık için genel olarak','g) Yapılacak olan sınavlarda başarılı olmak.',[],'sayılan suçlardan mahkûmiyet olmaması da'),
@@ -30,13 +30,13 @@ K = [
  ('6','sure','Sözleşme süre','en az üç, en çok dokuz yıl; ayrıntısı yönetmelikte','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10', 'astsubayda da üç-dokuz yıl'), ('12', 'sözleşme süreleri yurt dışı öğrenimde uzar'), ('8', 'm.8 metnindeki dipnotta bu ibare geçer'), ('13', 'm.13: sözleşme süresi bitmeden idarece fesih sebepleri'), ('16', 'm.16: sözleşme süresince sağlık ve sosyal haklar')],'kuvvet, sınıf, branş ve yetiştirme maliyetine göre; astsubayda da aynı'),
  ('6','kosul','talebe bakılmaksızın','savaş, seferberlik, alıkonma; komutan lüzumu, Milli Savunma-İçişleri onayıyla uzatılır','Sözleşme süreleri; terörle mücadele','talebe bakılmaksızın uzatılabilir.',[('10', 'astsubayda aynı kural')],'Kuvvet, Jandarma, Sahil Güvenlik komutanı lüzum gösterir; durum sürdükçe uzar'),
  ('6','kosul','rütbe yaş haddini','5434 sayılı Emekli Sandığı Kanunu','Ancak sözleşmeli subaylardan rütbe yaş','5434 sayılı Kanun hükümleri uygulanır.',[('10','astsubayda da 5434')],''),
- ('6','kosul','yenilen','talepleri hâlinde yenilenebilir; yaş haddinde 5434','Yönetmelikte belirlenen şartları taşıyanların','Kanun hükümleri uygulanır.',[('10','astsubayda da talep hâlinde yenilenir'),('16','yenilenmeyenlerin sağlık hakkı'),('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],''),
+ ('6','kosul','yenilenebilir','şartı taşıyanın talebiyle; yaş haddinde 5434 uygulanır','Yönetmelikte belirlenen şartları taşıyanların','Kanun hükümleri uygulanır.',[('10', 'astsubayda da talep hâlinde yenilenir'), ('16', 'yenilenmeyenlerin sağlık hakkı'), ('11', 'm.11 metninin sonunda sonraki bölüm başlığı yer alır')],''),
 
  # m.7 — muvazzaf subaylığa geçiş
  ('7','sure','fiilî hizmet yıl','subay yedinci, astsubay dördüncü yıldan; ikisi onikinciye kadar','Muvazzaf subaylığa geçiş için','bitimine kadar başvuru yapılabilir.',[('11', 'astsubay dördüncü yıldan onikinciye'), ('15', 'derece için subay onbeşinci, astsubay onsekizinci yıl')],'SUBAY 7-12 · ASTSUBAY 4-12'),
  ('7','sure','istifa','nasbedildikleri tarihten onbeş yıl (subay ve astsubay)','Bu şekilde muvazzaf subaylığa geçirilenler','istifa edemezler.',[('11','muvazzaf astsubaylıkta da onbeş yıl'),('13','orada istifade sözcüğü geçer, istifa kuralı yok'),('15','orada istifade sözcüğü geçer, istifa kuralı yok'),('16','orada istifade sözcüğü geçer, istifa kuralı yok')],''),
  ('7','istisna','öğretim üyesi','fiilî hizmet yılı şartı aranmaz','Türk Silahlı Kuvvetleri bünyesinde bulunan','şartı aranmaz.',[],'atamalı olarak görev yapanlar'),
- ('7','istisna','geçirileceklerde','926’nın yaş hükümleri uygulanmaz','Muvazzaf subaylığa geçirileceklerde','hükümler uygulanmaz.',[('11','astsubayda 926 m.68 yaş hükmü uygulanmaz')],''),
+ ('7','istisna','Muvazzaf subaylığa geçirileceklerde','926’nın yaş hükümleri uygulanmaz','Muvazzaf subaylığa geçirileceklerde','hükümler uygulanmaz.',[('11', 'astsubayda 926 m.68 yaş hükmü uygulanmaz')],''),
 
  # m.8 — sözleşmeli astsubay kaynağı
  ('8','sure','yükseköğrenim','dört yıl+ yirmiyedi, daha az yirmidört yaş','(Değişik birinci fıkra: 26/6/2012-6336/21 md.) Sözleşmeli astsubay kaynaklarını','bulunanlar teşkil eder.',[],'subayda lisans yirmiyedi, lisansüstü otuziki'),
@@ -45,7 +45,7 @@ K = [
 
  # m.10-11 — astsubay sözleşme süreleri ve muvazzaflığa geçiş
  ('10','kosul','astsubay çavuş rütbesine','askerî eğitimi bitiren sözleşmeli astsubay adayı','Madde 10 – Sözleşmeli astsubay adayları','astsubay çavuş rütbesine nasbedilirler.',[],'subay adayı teğmen'),
- ('11','sure','muvazzaf astsubaylığa geç','talep edene; dördüncü fiilî hizmet yılı → onikinci (dört-oniki)','Sözleşmeli astsubaylardan yönetmelikte','bitimine kadar başvuru yapılabilir.',[('10','m.10 metninin başında bölüm başlığı yer alır'),('12','muvazzaf astsubaylığa geçende fazla okunan süre düşülür')],'subay yedinci yıldan'),
+ ('11','sure','muvazzaf astsubaylığa','geçiş: talep edene; dördüncü fiilî hizmet yılı → onikinci (dört-oniki)','Sözleşmeli astsubaylardan yönetmelikte','bitimine kadar başvuru yapılabilir.',[('10', 'm.10 metninin başında bölüm başlığı yer alır'), ('12', 'muvazzaf astsubaylığa geçende fazla okunan süre düşülür')],'subay yedinci yıldan'),
 
  # m.12 — rütbe bekleme, yenileme, uzama
  ('12','sure','yenileyeceklerine dair','en az üç ay önce yazılı; yoksa kendiliğinden sona erer','Her sözleşme süresinin sona erme','kendiliğinden sona erer.',[],''),
@@ -74,7 +74,7 @@ K = [
  ('15','kosul','malî ve sosyal hak','emsal muvazzafın haklarından aynen','Sözleşmeli subay ve sözleşmeli astsubaylar, emsali rütbe','aynen istifade ederler.',[],''),
  ('15','sure','rütbe verilmeksizin','subay onbeşinci, astsubay on sekizinci yıl; sicil yüzde 60','Sözleşmeli subaylardan onbeşinci','bir yılını tamamlamış olmak.',[],'derecede üç yıl, üçüncü kademede bir yıl'),
  ('15','sure','müteakip yıllarda','her yıl kademe; şartlıysa üç yılda bir derece','Bunlara, müteakip yıllarda','derece ilerlemesi yaptırılır.',[],''),
- ('16','sure','kendi iste','hizmetin yarısı kadar, en çok beş yıl','b) Sözleşme süresi sonunda kendi','en çok beş yılı,',[],'İDARE YENİLEMEZSE ON · KENDİ İSTEMEZSE BEŞ'),
+ ('16','sure','Sözleşme süresi sonunda','kendi isteğiyle yenilemeyene: hizmetin yarısı kadar, en çok beş yıl','b) Sözleşme süresi sonunda kendi','en çok beş yılı,',[],'İDARE YENİLEMEZSE ON · KENDİ İSTEMEZSE BEŞ'),
  ('16','sure','kusur','hizmet süresi kadar, en çok on yıl','a) Kendi kusurları olmaksızın','en çok on yılı,',[],'idare yenilemediyse'),
  ('16','istisna','ücretsiz','başka kurumdan hakkı doğan yararlanamaz','ücretsiz olarak verilmeye','asker hastanelerinden yararlanamazlar.',[],''),
  ('16','sayi_oran','sağlık yardımı','oniki ayı geçmez; emsal net maaşın 2/3’ü; kesinti yok','Sözleşmeleri sağlık nedeniyle sona erenlerden','Bu ödemeden hiçbir kesinti yapılmaz.',[],''),
