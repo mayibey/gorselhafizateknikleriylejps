@@ -2,7 +2,24 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 6 Ekim 2026 (Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 6 Eki (1) — KART "MADDE METNİ" DENETİMİ: 6 HATA + EDİTÖR İZLERİ TEMİZLENDİ (başkan: "düzeltmemiz gereken varsa düzelt ve yay")
+> Denetim: 25 müşterek kanunda kartta görünen 361 madde metni resmî metinle parça parça karşılaştırıldı (scratchpad parca_tara.py), şüpheli
+> 46 kart workflow ile tek tek incelendi (her bulguya 2 bağımsız çürütücü; 6 bulgu 2/2 doğrulandı, Resmî Yazışma m.38 şüphesi YANLIŞ alarm).
+> İçerik hataları: (1) Jandarma Kanunu Ek 3/4. fıkra: yurt dışı izni listesinde resmî metinde OLMAYAN "uzman erbaş" vardı (Fabrika MASTER +
+> iki iç resmî-metin kopyası düzeltildi; şifre k2 çıktısı değişmedi); (2) Terörle Mücadele m.21: 9/8/2026-7594/3 değişikliği yoktu (h son
+> cümlesi mülga + yeni ek fıkra) → mevzuat.gov.tr 3 Eki kaydından (scratchpad/denetim/kesik/onbellek/7.json) güncel tam metin;
+> (3) 6136 m.12 (m.12+13 birleşik kart): m.13'ün cezaları başlıksız m.12'ye yapışıktı + eski taslak karttan tekrar paragraf.
+> Editör izleri: JTY m.8/m.41 + E-İmza m.3/özet "[GÜNCEL NOT …]", Kara Avcılığı m.22-26 "(2026 … editör teyidi)" + "Tekrar ayrımı" notu,
+> 15 kayıtta ekranda yıldız görünen ** işaretleri, 20 özet kartında + 2 kartta ekranda düz "\n" / "\"" görünen çift kaçış.
+> Kalıcı çözüm üreticide (scripts/madde-metni-uret.mjs): etiketli başka madde metnine "MADDE N –"/"EK MADDE N –" başlığı (Aramalar Yön
+> m.11/13/16 + 6136 Ek 1'de de aynı sorun vardı), "(ESKİ — REFERANS)" kartları atlanır, temizle() notları/**/çift kaçışı siler.
+> Yeniden üretim yalnız 24 anahtarı değiştirdi (hepsi gözden geçirildi). Fabrika MASTER yedekleri: D:\mevzu-fabrika-yedek-20261006.
+> Bilinçli bırakılan: "Not: (b) bendi 7527 ile mülga", "ikinci fıkra AYM'ce iptal" gibi yasal-durum notları (doğru ve yararlı).
+> AÇIK: kullanıcıya görünmeyen iç veri dosyalarında (scripts/veri/kanun-bilgi-listesi.json, sinav-cevapli.json, cikmis-sinav-sorulari.json,
+> docs/HAFIZA brief) 2014 yönetmeliğine göre çıkmış "ek süre on beş iş günü" sorusu mülga işaretsiz duruyor. resmi_metin yalnız 25 müşterek
+> kanunda var; branş kanunlarının madde metni bu yolla doğrulanamadı.
 >
 > ### ▶ 5 Eki (8) — RESMÎ YAZIŞMA: 5 KARTTA ESKİ (2014) YÖNETMELİK METNİ → GÜNCEL (2020) RESMÎ METİN
 > Kullanıcı geri bildirimi (Özge Lavinya, jandarma asb, 23:38/23:42): "m.22 konu koordinasyon, metin gizlilik dereceli belge diyor",

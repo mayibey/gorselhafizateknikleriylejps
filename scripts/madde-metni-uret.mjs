@@ -83,8 +83,39 @@ function metinIsaretiMi(line) {
 // Editör/meta blok-alıntı satırı mı? (kanun metni değil → toplamayı kes.)
 const META_KALIP = /✅|⚠️|🎬|🔨|teyit edildi|mevzuat\.gov|_txt\/|sınavda en|Katman \d/;
 
-/** Bir 📜 işaret satırından metni çıkarır → { text, nextIndex } | null. */
+/** Bir 📜 işaret satırından metni çıkarır → { text, nextIndex, etiketNo } | null.
+ *  etiketNo: işaret etiketindeki madde no ("📜 **Metin (m.13):**" → "13"), yoksa null. Birleşik
+ *  kartta (ID "12-13-1") ikinci maddenin metni bu etiketle gelir; etiket metinden silindiği için
+ *  masterParse başlığı ("MADDE 13 –") geri koyar. (6 Eki 2026: 6136 m.12 kartında m.13'ün cezaları
+ *  başlıksız durup m.12'ninmiş gibi okunuyordu.) */
 function metinCikar(lines, i) {
+  const r = metinCikarHam(lines, i);
+  if (!r) return r;
+  const t = lines[i].trim().replace(/^>\s*/, '');
+  // Etiket parantezi: "📜 **Metin (m.13):**", "(Ek m.4)", "(askerî istisna, m.12 f.2)". Parantezde TEK
+  // madde varsa o alınır; birden çok madde ("m.94 · m.96") belirsizdir → başlık eklenmez.
+  const etiket = t.match(/^\*{0,2}\s*📜\s*\*{0,2}[^:"(]*\(([^)]*)\)[^:"]*:/)?.[1] ?? '';
+  const nolar = [...etiket.matchAll(/(?:^|[\s,(·])(Ek\s+)?m\.\s*(\d+(?:\/[A-Za-z])?)(?![\d/])/gi)];
+  const etiketNo =
+    nolar.length === 1 ? (nolar[0][1] ? `Ek ${nolar[0][2]}` : nolar[0][2].toUpperCase()) : null;
+  return { ...r, etiketNo };
+}
+
+/** Kullanıcıya gösterilecek madde metnini editör izlerinden temizler (madde metni paneli düz metin
+ *  gösterir: ** yıldız olarak görünür, editör notları resmî metnin parçası sanılır). 6 Eki 2026. */
+function temizle(metin) {
+  let t = metin;
+  t = t.replace(/\\n/g, '\n').replace(/\\"/g, '"'); // çift kaçış: ekranda düz "\n" / "\"" görünüyordu
+  t = t.replace(/\s*\*{0,2}\[G[ÜU]NCEL NOT[\s\S]*?\]\*{0,2}/g, ''); // "[GÜNCEL NOT: …]" editör açıklaması
+  t = t.replace(/\s*\*{0,2}\(\d{4}:[^)]*editör teyidi\)\*{0,2}/g, ''); // "(2026: … editör teyidi)" iç not
+  t = t.replace(/\s*·\s*\*\*Tekrar ayrımı:\*\*[\s\S]*$/, ''); // "· Tekrar ayrımı: …" ders notu
+  t = t.replace(/\*\*/g, ''); // markdown kalın işareti
+  // Not silinince sonda tek kalan kapanış tırnağı (metin "…ifade eder." diye bitmeli).
+  if ((t.match(/"/g) || []).length % 2 === 1) t = t.replace(/"\s*$/, '');
+  return t.trim();
+}
+
+function metinCikarHam(lines, i) {
   const t = lines[i].trim().replace(/^>\s*/, '');
   // İşaret (📜) + etiketi (Metin:/Kanun Metni:/Birebir metin (…):) ayıkla.
   let after = t
@@ -212,7 +243,11 @@ function masterParse(text) {
       // Aggregate (tek madde metni DEĞİL) = ayırt/özet/cetvel/tablo/karşılaştırma/ek/geçici.
       // Madde ARALIĞI sonekleri (20-21, 12-13-1) bloke EDİLMEZ → metin İLK maddeye yazılır
       // (placeholder'dan iyidir; gerçek aggregate'ler sonek KELİMESİYLE elenir).
-      bloke = /AYIRT|AYIRD|OZET|ÖZET|CETVEL|TABLO|KARSILAS|KARŞILAŞ|GEÇİCİ|GECICI|\bEK\b/.test(sonek);
+      // "(ESKİ — REFERANS …)" başlıklı kart = birleşik karta taşınmış eski taslak → metni sayılmaz
+      // (6136 "12-1" eski kartı m.12 metnine kısaltılmış TEKRAR olarak ekleniyordu; 6 Eki 2026).
+      bloke =
+        /AYIRT|AYIRD|OZET|ÖZET|CETVEL|TABLO|KARSILAS|KARŞILAŞ|GEÇİCİ|GECICI|\bEK\b/.test(sonek) ||
+        /\(ESK[İI]\s*[—–-]\s*REFERANS/i.test(line);
       const ek = ekSonra || /\bEK$/.test(onek); // Ek Madde N → kart madde_no "m.Ek N" ile eşleşir
       const no = String(parseInt(idm[3], 10));
       const etiketNo = ek ? `Ek ${no}` : harf ? `${no}/${harf}` : no; // kart.madde_no'daki "m.<X>"
@@ -239,8 +274,13 @@ function masterParse(text) {
         if (bloke) {
           // ayırt/özet kartı → madde metni değil, atla
         } else if (cur) {
-          // ID'li kanun: madde no ID'den (tek madde, esas kaynak)
-          (out[cur] ??= []).push(r.text);
+          // ID'li kanun: madde no ID'den (tek madde, esas kaynak). Birleşik kartta başka maddenin
+          // etiketli metni → başına "MADDE N –" (metin zaten "Madde …" ile başlıyorsa ekleme).
+          const baslikli =
+            r.etiketNo && r.etiketNo !== cur && !/^\s*(?:Ek\s+|Geçici\s+)?Madde\s/i.test(r.text)
+              ? `${r.etiketNo.startsWith('Ek ') ? `EK MADDE ${r.etiketNo.slice(3)}` : `MADDE ${r.etiketNo}`} – ${r.text}`
+              : r.text;
+          (out[cur] ??= []).push(baslikli);
         } else {
           // ID'siz kanun (Jandarma): bloğu "Madde N –" sınırlarında böl
           for (const seg of bloklaBol(r.text)) (out[seg.no] ??= []).push(seg.text);
@@ -312,6 +352,7 @@ if (existsSync(outFile)) {
 }
 const korunan = Object.keys(onceki).filter((k) => !(k in registry));
 const birlesik = { ...onceki, ...registry };
+for (const k of Object.keys(birlesik)) birlesik[k] = temizle(birlesik[k]);
 
 // Anahtarları kanun+madde no'ya göre sırala (okunaklı çıktı).
 const siraliAnahtar = Object.keys(birlesik).sort((a, b) => a.localeCompare(b, 'tr'));
