@@ -16,8 +16,8 @@ K = [
  # m.2 — ağırlaştırıcı hâller
  ('2','ceza','yarı nispetinde','toplu, umuma açık yer, basın; gece, tek kişi yok','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'zor kullanmada ise bir misli'),
  ('2','ceza','basın','yarı nispetinde artar','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'toplu ve umuma açık yerde de aynı'),
- ('2','ceza','toplu','iki veya daha fazla kişi; yarı nispetinde','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
- ('2','ceza','zor kullan','bir misli artar; teşebbüste de; yalnız anıt suçunda','Birinci maddenin ikinci fıkrasında','bir misli artırılır.',[],'heykel-büst-abide-kabir suçunda; hatıraya hakarette yok'),
+ ('2','ceza','toplu olarak','iki veya daha fazla kişi; yarı nispetinde','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
+ ('2','ceza','zor kullanılarak','bir misli artar; teşebbüste de; yalnız anıt suçunda','Birinci maddenin ikinci fıkrasında','bir misli artırılır.',[],'heykel-büst-abide-kabir suçunda; hatıraya hakarette yok'),
 
  # m.3-5 — takibat, yürürlük, yürütme
  ('3','sira_usul','takibat',"Cumhuriyet savcılığınca re'sen; şikâyet gerekmez",'Bu kanunda yazılı suçlardan','takibat yapılır.',[],'soruşturma usulü; mağdurun şikâyeti beklenmez'),
