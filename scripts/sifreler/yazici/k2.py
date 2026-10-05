@@ -5,10 +5,10 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.1-3 — konu, kapsam, tanım
- ('1','tanim','görev, yetki ve sorumluluklarına','görev-yetki-sorumluluk, bağlılık-ilişkiler, teşkilat ve konuş','Madde 1 – Bu Kanun','esas ve usulleri düzenler.',[],'özel hukuk sözleşmeleri Kanunun konusu DEĞİL'),
+ ('1','tanim','görev, yetki ve sorumluluklarına','görev-yetki-sorumluluk, bağlılık-ilişkiler, teşkilat-konuş; özel hukuk sözleşmesi YOK','Madde 1 – Bu Kanun','esas ve usulleri düzenler.',[],''),
  ('2','tanim','kapsar','karargah, birlik, kurumlar ve buralarda hizmet gören personel','Madde 2 – Bu Kanun','faaliyet ve esasları kapsar.',[],''),
- ('3','tanim','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk kuvveti','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk kuvvetidir.',[],'emniyet-asayiş ve kamu düzenini korur; özel, silahsız, askeri kolluk DEĞİL; 2026 Astsubay sınavında soruldu'),
- ('3','tanim','verdiği görevleri','diğer kanunlar ve Cumhurbaşkanlığı kararnameleri','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk kuvvetidir.',[],'yalnız şehir merkezinde görev yapmak nitelikleri arasında YOK'),
+ ('3','tanim','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk; emniyet-asayiş, kamu düzeni; yalnız şehir merkezi DEĞİL','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk kuvvetidir.',[],'özel, silahsız, askeri kolluk DEĞİL; 2026 Astsubay sınavında soruldu'),
+ ('3','tanim','verdiği görevleri','diğer kanunlar ve Cumhurbaşkanlığı kararnameleri','Türkiye Cumhuriyeti Jandarması','silahlı genel kolluk kuvvetidir.',[],''),
  # m.4-5 — bağlılık, kuruluş
  ('4','makam','bağlıdır','İçişleri Bakanlığı','Jandarma Genel Komutanlığı İçişleri','Bakanlığına bağlıdır.',[],'Milli Savunma Bakanlığı DEĞİL; 2026 Uzman sınavında soruldu'),
  ('5','makam','kuruluş ve kadrolarıyla konuş','İçişleri Bakanlığı düzenler','Jandarma Genel Komutanlığının kuruluş','İçişleri Bakanlığınca düzenlenir.',[],'Kuvvet emrine girecek birliklerde Genelkurmay görüşü alınır'),
@@ -18,7 +18,7 @@ K = [
  ('5','makam','Bölge komutanı','konuşlu bulunduğu ilin valisine karşı sorumlu','Bölge komutanı','görev yapar.',[],''),
  # m.6, Ek 6 — Genel Komutan, yetki devri
  ('6','makam','tüm Jandarma Teşkilatının','komutanı Jandarma Genel Komutanı','Jandarma Genel Komutanı tüm','Teşkilatının komutanıdır.',[],''),
- ('6','makam','nizam hükümlerinin icrasını','Jandarma Genel Komutanı sorumlu','Jandarma Genel Komutanı, Teşkilatın sevk','uygulanmasından sorumludur.',[],'kanun-nizam icrası, emir-kararların uygulanması da; bütçe onayı DEĞİL'),
+ ('6','makam','nizam hükümlerinin icrasını','Jandarma Genel Komutanı sorumlu; bütçe onayı DEĞİL','Jandarma Genel Komutanı, Teşkilatın sevk','uygulanmasından sorumludur.',[],'sevk-idare, kanun-nizam icrası, emir-karar uygulaması'),
  ('Ek 6','makam','bir kısmını','Jandarma Genel Komutanına veya valilere; sınırları yazılı ve açıkça belirli','İçişleri Bakanı, bu Kanundaki','valilere devredebilir.',[],'İçişleri Bakanının yetki devri'),
  # m.7 — görevler
  ('7','gorev_yetki','mülki görevleri','asayiş, kaçakçılık, ceza infaz kurumu dış koruması; işlenmiş suç DEĞİL','a) Mülki görevleri','emir ve kararlarla Jandarmaya verilen görevleri yapmak.',[('15','mülki görevden doğan suçta 4483 sayılı Kanun uygulanır')],'suç önleme ve diğer kanunlarla verilen görevler de; işlenmiş suç işlemi adli; cezaevi İÇ güvenliği yok'),
@@ -44,10 +44,10 @@ K = [
  ('10','makam','yürürlüğe girer','İçişleri Bakanının onayıyla (komisyon kararları)','Komisyon tarafından alınan kararlar','kroki üzerinde gösterilir.',[('13/A','Akademi hükümlerindeki yürürlük tarihi ayrı'),('26','Kanunun kendisinin yürürlüğü')],'sınırlar harita veya kroki üzerinde; Genelkurmay DEĞİL'),
  ('10','makam','yetersiz','mahalli mülki amirler geçici görevlendirir','Jandarma veya Emniyet Teşkilatı, kendi','görevlendirilebilirler.',[('Ek 8','tesislerde personel yetersizliğinde hizmet dışarıdan kiralanabilir'),('13/A','Akademide disiplin notu yetersiz olanın öğrenimine son verilir')],'jandarma ve emniyet birbirinin sahasında'),
  ('10','kosul','diğer güvenlik kuvvetleriyle','işbirliği ve koordinasyon; esasları ve emir komuta yönetmelikle','Jandarmanın diğer güvenlik kuvvetleriyle','yönetmelikle belirlenir.',[],''),
- ('Geçici 3','kosul','polis sahaları','yeterli polis yoksa jandarma sürdürür; polis arttıkça EGM’ye devreder','Bu Kanunun yürürlüğe girdiği tarihte, yeterli polis','Genel Müdürlüğüne devreder.',[],''),
+ ('Geçici 3','kosul','polis sahaları','polis yetersizse jandarma devam eder; arttıkça Emniyet Genel Müdürlüğüne devreder','Bu Kanunun yürürlüğe girdiği tarihte, yeterli polis','Genel Müdürlüğüne devreder.',[],''),
  # m.11, Ek 11 — silah kullanma, avukat
- ('11','kosul','silah kullanma yetkisi','kanunlarda öngörülen; hizmet özelliğine uygun ve görevin gereği','Jandarma, kendisine verilen görevlerin ifası','silah kullanma yetkisine sahiptir.',[],'yönetmelik, genelge, İçişleri onayı DEĞİL'),
- ('Ek 11','kosul','avukatın ücreti','uygun görülürse Jandarma Genel Komutanlığı bütçesinden','karargâh personeli dahil sanık durumuna düşen','ödenekten karşılanır.',[],'karakol, devriye, asayiş, kaçakçılık, adli görevden dolayı sanık olana; trafik kazası tespiti sayılmamış'),
+ ('11','kosul','silah kullanma yetkisi','kanunlarda öngörülen; hizmete uygun, görev gereği; yönetmelik-genelge DEĞİL','Jandarma, kendisine verilen görevlerin ifası','silah kullanma yetkisine sahiptir.',[],'İçişleri onayına bağlı DEĞİL; 2026 Astsubay sınavında soruldu (yalnız kanun)'),
+ ('Ek 11','kosul','avukat','karakol/devriye/sevk/asayiş/kaçakçılık/adli görevden sanığa; Jandarma bütçesinden; trafik tespiti YOK','Kanunlarla veya Cumhurbaşkanlığı Kararnameleriyle verilen','ödenekten karşılanır.',[],'olayın mahiyeti ve kusura göre uygun görülürse; karargâh personeli dahil'),
  ('Ek 11','makam','Avukat tutma ve ücret','İçişleri Bakanlığı yönetmeliği','Avukat tutma ve ücret ödeme','yönetmelikle düzenlenir.',[],''),
  # m.12 — geçici görevlendirme, tahsis
  ('12','makam','her kademedeki personel','İçişleri Bakanı geçici görevlendirir; il valilerine devredebilir','Lüzum görüldüğü hallerde','il valilerine devredebilir.',[],'EGM, Sahil Güvenlik, Jandarma arasında'),
@@ -75,7 +75,7 @@ K = [
  ('13/A','ceza','disiplinsizlik nedeniyle ilişiği','öğretim masraflarının dört katı','sağlık sebebi hariç öğrenciliği','ödemek zorundadırlar.',[],'sağlık dışı sebeple ayrılan iki katı öder'),
  ('13/A','istisna','sağlık sebebi hariç','sağlık sebebiyle ilişiği kesilen tazminat ödemez','sağlık sebebi hariç öğrenciliği','ödemek zorundadırlar.',[('Ek 14','mecburi hizmette ilişiği kesilen subay-astsubay iki katı, disiplinle çıkarılan dört katı öder')],'şehit ve vazife malulü yakını akademik başarısızlıkta muaf'),
  ('13/A','sayi_oran','döner sermaye işletmesi','onmilyon Türk Lirası sermaye','olarak döner sermaye işletmesi kurulmuştur.','sermaye tahsis edilmiştir.',[],'Maliye Bakanlığı uygun görüşüyle artırılabilir'),
- ('13/A','kosul','öğrenimlerine son verilir','disiplin notu, çıkarma cezası, azami süre, sağlık, devamsızlık, giriş niteliği','Akademide öğrenim gören öğrencilerin aşağıdaki hallerde','ilişik kesilmesine karar verilenler.',[],'memur olma niteliğini kaybetmek de; askerlik erteletme talebi sebep DEĞİL'),
+ ('13/A','kosul','öğrenimlerine son veril','disiplin notu/çıkarma cezası/azami süre/memurluk niteliği/sağlık/giriş niteliği/kendi isteği/devamsızlık; askerlik erteleme DEĞİL','Akademide öğrenim gören öğrencilerin aşağıdaki hallerde','ilişik kesilmesine karar verilenler.',[],'kendi isteği: ön sözleşmeli aday ayrılmak isterse'),
  # m.14 — atama
  ('14','makam','ataması','JGK, yardımcıları, generaller, bölge-il komutanları dışındakiler İçişleri Bakanınca','Jandarma Genel Komutanı, Genel Komutan Yardımcıları','nokta atamasına tabi tutulabilir.',[('13/A','Akademi dekanlarının ataması İçişleri Bakanınca')],'Jandarma Genel Komutanının ataması İçişleri Bakanınca YAPILMAZ'),
  ('14','makam','Nokta ataması yapılmayan','valilik emrine atanır; il içi yer değiştirme vali','Nokta ataması yapılmayan','vali tarafından yapılır.',[],'subay, astsubay, uzman jandarma; özel eğitimliler nokta atamasına tabi'),
@@ -83,10 +83,10 @@ K = [
  # m.15, 15/A — disiplin-soruşturma, arama
  ('15','kosul','Disiplin işleri','özel kanun hükümlerine göre','a) Disiplin işleri','özel kanun hükümlerine göre yürütülür.',[],'bugün 7068 sayılı Genel Kolluk Disiplin Kanunu'),
  ('15','kosul','mülki görevlerinden doğan','4483 sayılı Memurların Yargılanması Kanunu','b) Jandarma personelinin mülki','hükümlerine göre işlem yapılır.',[],'özel kanun hükümleri saklı'),
- ('15','kosul','Adli görevlerinden doğan','CMK 161 inci madde beşinci fıkra','c) Adli görevlerinden','beşinci fıkrası hükmü uygulanır.',[],''),
+ ('15','kosul','Adli görevlerinden doğan','Ceza Muhakemesi Kanunu 161. madde beşinci fıkra','c) Adli görevlerinden','beşinci fıkrası hükmü uygulanır.',[],''),
  ('15','kosul','askeri görev','emrine verildiği askeri birliğin mahkemesi','Jandarma personeline askeri görev verildiği','yetkili olan mahkemede görülür.',[('7','m.7 askeri görev: kanun ve CB kararnamesiyle verilen askeri hizmet'),('8','m.8 askeri görev: garnizon talebinde valinin onayı'),('19','askeri görev verilen birliklerin ihtiyacını MSB sağlar')],''),
  ('15','kosul','kişisel suç','genel hükümler','e) Jandarma personelinin kişisel','genel hükümlere göre işlem yapılır.',[],'görevle ilgisi olmayan suç, ör. komşuyla kavga'),
- ('15','ceza','bir yıl veya daha fazla','ilişik İçişleri Bakanının onayıyla kesilir','Ertelenmiş, seçenek yaptırımlara','İçişleri Bakanının onayı ile kesilir.',[],'kasten suç ya da katalog suçlar; ertelense, HAGB, af olsa bile; kasten yaralamada dokuz ay ilişik kesmez'),
+ ('15','ceza','bir yıl veya daha fazla','İçişleri Bakanı onayıyla ilişik kesilir; katalog suçta süre aranmaz','Ertelenmiş, seçenek yaptırımlara','İçişleri Bakanının onayı ile kesilir.',[],'kasten suçta bir yıl+; ertelense, HAGB, af olsa bile; dokuz ay kasten yaralama ilişik kestirmez'),
  ('15/A','makam','gecikmesinde sakınca','birlik komutanı/kurum amiri yazılı emri; yirmi dört saatte hâkime','Tehlikenin veya suç işlenmesinin','gerekli işlemler yapılır.',[('Ek 5','önleyici dinlemede gecikmede Jandarma Genel Komutanı veya istihbarat başkanının yazılı emri')],'asıl: sulh ceza hâkimi kararı; jandarma hizmet binalarında erbaş-er araması'),
  ('15/A','kosul','erbaş ve erlerin üstü','jandarma hizmet binalarında aranır','Tehlikenin veya suç işlenmesinin','gerekli işlemler yapılır.',[],'özel kâğıtları ve eşyası da; askerlik yükümlüleri'),
  ('15/A','kosul','Arama kararında veya emrinde','sebebi, konusu, kapsamı, yeri, zamanı, süresi; personel adı YOK','Arama kararında veya emrinde','geçerli olacağı süre belirtilir.',[],'aramayı yapacak personelin adı YAZILMAZ'),
@@ -98,16 +98,16 @@ K = [
  ('19','makam','Savunma Sanayii Müsteşarlığına','İçişleri Bakanlığı doğrudan teklif eder','Jandarma Genel Komutanlığının ihtiyaçları, İçişleri','güvenlik önceliklerine göre değerlendirilir.',[],''),
  ('19','makam','sefer stokları','Milli Savunma Bakanlığı sağlar','Seferberlik ve savaş hallerinde Kuvvet','Milli Savunma Bakanlığınca sağlanır.',[],'Kuvvet emrine girecek ya da askeri görev verilen birliklerin ihtiyacı'),
  ('19','kosul','ihtiyaç fazlası ve standart dışı','4645 sayılı Kanuna göre devir','Jandarma Genel Komutanlığının ihtiyaç fazlası','hükümlerine göre yürütülür.',[],'EGM araç-gereç kanunu'),
- ('19','kosul','muafiyet ve istisna','MSB ve TSK’ya tanınan gümrük, vergi, harç muafiyetleri JGK’ya da','Bütçe kanunları ve diğer kanunlarla Milli Savunma','hakkında da uygulanır.',[],''),
+ ('19','kosul','muafiyet ve istisna','MSB-TSK’ya tanınan gümrük, vergi, harç muafiyetleri Jandarma Genel Komutanlığına da','Bütçe kanunları ve diğer kanunlarla Milli Savunma','hakkında da uygulanır.',[],''),
  ('20','kosul','haklardan da yararlanır','926 ve 657 sayılı kanunlar ile diğer kanunlar','Madde 20 – Jandarma Genel Komutanlığı personeli','haklardan da yararlanır.',[],'özlük hakları bakımından'),
  ('21','sayi_oran','Komando ve sınır','% 52 en yüksek memur aylığının','Jandarma Genel Komutanlığı fiili kadrolarına','asayiş tazminatı ödenir.',[],'asayiş tazminatı üst sınırı, en yüksek Devlet memuru aylığına göre; diğer birliklerde yüzde kırk; metindeki 20 ve 21 dipnot numarası'),
  ('21','sayi_oran','Diğer karargah','% 40 en yüksek memur aylığının','Jandarma Genel Komutanlığı fiili kadrolarına','asayiş tazminatı ödenir.',[],'komando ve sınırda yüzde elli iki'),
- ('21','makam','asayiş tazminatı','komando-sınır % 52, diğer % 40; usul İçişleri Bakanlığınca','Jandarma Genel Komutanlığı fiili kadrolarına','asayiş tazminatı ödenir.',[],'fazla çalışma karşılığı'),
+ ('21','makam','asayiş tazminatı','komando-sınır %52, diğer %40; usul İçişleri; damga dışı vergi yok','Jandarma Genel Komutanlığı fiili kadrolarına','asayiş tazminatı ödenir.',[],'fazla çalışma karşılığı; usul İçişleri Bakanlığınca'),
  ('21','istisna','kesinti','damga vergisi hariç yapılmaz','Bu tazminattan damga','kesinti yapılmaz.',[],''),
  ('22','kosul','beslenme usulleri','uzman jandarmalar ile erbaş ve erler: özel kanunlarında','Madde 22 – Uzman jandarmaların','özel kanunlarında gösterildiği gibidir.',[],'erbaş ve erlerin kaynakları, hizmet süreleri, kıyafetleri de'),
- ('24','makam','Kanunun uygulanmasına ilişkin diğer hususlar','Cumhurbaşkanınca yürürlüğe konulan yönetmelik','Bu Kanunla münhasıran','yönetmelikle düzenlenir.',[],'teşkilat, görev, komuta-kontrol, terfi, değerlendirme, ödül, kılık-kıyafet; izin süreleri sayılmamış'),
+ ('24','makam','Kanunun uygulanmasına ilişkin diğer hususlar','Cumhurbaşkanınca yönetmelik: teşkilat/görev/komuta-kontrol/terfi/değerlendirme/ödül/kıyafet; izin YOK','Bu Kanunla münhasıran','yönetmelikle düzenlenir.',[],''),
  # Ek 1, Ek 2 — denetim, değerlendirme raporu
- ('Ek 1','makam','eylem ve işlemleri','İçişleri Bakanlığı, mülki idare amirleri, kendi amirleri; denetler, teftiş eder','eylem ve işlemleri İçişleri Bakanlığı','teftiş edilir.',[],'TBMM komisyonu, Genelkurmay sayılmamış'),
+ ('Ek 1','makam','eylem ve işlemleri','İçişleri Bakanlığı, mülki idare amirleri, kendi amirleri; TBMM-Genelkurmay YOK','eylem ve işlemleri İçişleri Bakanlığı','teftiş edilir.',[],'denetler ve teftiş eder'),
  ('Ek 2','makam','merkez ilçe jandarma komutanı','il valisi düzenler','İl jandarma komutanı ile merkez','değerlendirme raporu düzenlenir.',[],'her yıl sonunda değerlendirme raporu'),
  ('Ek 2','makam','ilçe jandarma komutanı hakkında','kaymakamın değerlendirmesi alınarak il valisi','İl jandarma komutanı ile merkez','değerlendirme raporu düzenlenir.',[],'il ve merkez ilçe komutanında doğrudan il valisi'),
  ('Ek 2','kosul','Değerlendirme raporları','terfi, ödüllendirme, atama ve yer değiştirmede dikkate alınır','Değerlendirme raporları; personelin terfi','yönetmelikle düzenlenir.',[],'içerik ve esaslar İçişleri Bakanlığı yönetmeliği; MSB DEĞİL'),
@@ -117,7 +117,7 @@ K = [
  ('Ek 3','sure','müteakip sene içinde','toplam altmış günü geçemez','ç) Yıllık izinlerin senesi içinde','altmış günü geçemez.',[],'hizmet, alıkonulma, esaret gibi zorunlu nedenlerle'),
  ('Ek 3','makam','izinden geriye','asgari yıllık izin planlamasını onaylayan makam','d) Görev ve hizmet ihtiyacının','izinden geriye çağrılabilir.',[],'savaş ve olağanüstü halde Cumhurbaşkanı izinleri kısaltır ya da kaldırır'),
  ('Ek 3','sure','evlen','yedi güne kadar mazeret izni','a) Eşinin doğum yapması','mazeret izni verilebilir.',[],'kendisinin veya çocuğunun evlenmesi'),
- ('Ek 3','sure','Eşinin doğum yapması','on güne kadar mazeret izni','a) Eşinin doğum yapması','mazeret izni verilebilir.',[],'eşinin, çocuğunun, ana-baba-kardeşin ölümü de on gün; askerlik şubesine kayıt listede YOK'),
+ ('Ek 3','sure','mazeret izin','doğum-ölüm on gün, evlenme yedi, afet otuz; askerlik kaydı YOK','birinci fıkrada yazılı on beş günlük yıllık mazeret izinleri dışında','otuz güne kadar mazeret izni verilebilir.',[],'doğum, eşin-çocuğun-ana-baba-kardeşin ölümü on gün; kendisinin ya da çocuğunun evlenmesi yedi'),
  ('Ek 3','sure','Yangın, deprem, su baskını','bir yıl içinde otuz güne kadar mazeret izni','b) Yangın, deprem, su baskını','mazeret izni verilebilir.',[],''),
  ('Ek 3','sure','radyoaktif ışınlarla','her yıl ayrıca bir aylık izin','c) Hizmetleri sırasında radyoaktif','bir aylık izin verilir.',[],'yıllık izinden ayrı'),
  ('Ek 3','sure','kaza geçirmesi','üç aya kadar aylıklı; bir katına kadar uzatılır','d) Bakmakla yükümlü olduğu','bir katına kadar uzatılır.',[],'sonra altı aya kadar aylıksız; sağlık kurulu raporu; bir defaya mahsus'),
@@ -144,7 +144,7 @@ K = [
  ('Ek 5','sure','terör örgütünün faaliyeti','terörde müteaddit defa; dışında üçer ay, en fazla üç defa','Kararlar, en fazla üç ay için verilebilir','müteaddit defalar uzatılmasına karar verebilir.',[],'hâkim karar verir'),
  ('Ek 5','sure','yok edilir','en geç on gün içinde','Uygulanan tedbirin sona ermesi halinde','ibraz edilmek üzere muhafaza edilir.',[],'dinleme kayıtları; tutanakla tespit'),
  ('Ek 5','makam','aykırı hareket edenler','Cumhuriyet savcılarınca doğrudan soruşturma','Bu madde hükümlerine göre yürütülen faaliyetler','doğrudan soruşturma yapılır.',[],'gizliliği ihlal; görev sırasında işlense bile'),
- ('Ek 5','sure','denetle','sıralı/mülki amir, JGK/bakanlık/CB teftişi yılda bir; rapor TBMM Güvenlik-İstihbarat Komisyonuna','Bu maddede yer alan faaliyetlerin denetimi','Güvenlik ve İstihbarat Komisyonuna sunulur.',[('Ek 1', 'jandarmanın eylem ve işlemlerini İçişleri, mülki idare amirleri ve kendi amirleri denetler')],'CB = Cumhurbaşkanlığı denetim elemanları; Sayıştay sayılmamış'),
+ ('Ek 5','sure','denetle','sıralı/mülki amir, JGK/bakanlık/Cumhurbaşkanlığı teftişi yılda bir; TBMM komisyonuna; Sayıştay YOK','Bu maddede yer alan faaliyetlerin denetimi','Güvenlik ve İstihbarat Komisyonuna sunulur.',[('Ek 1', 'jandarmanın eylem ve işlemlerini İçişleri, mülki idare amirleri ve kendi amirleri denetler')],'Cumhurbaşkanlığı elemanları da denetleyebilir; sonuç rapor hâlinde TBMM Güvenlik ve İstihbarat Komisyonuna'),
  # Ek 7, Ek 8 — tereddüt, tesisler
  ('Ek 7','kosul','bu Kanuna aykırı','bu Kanun hükümleri uygulanır','Diğer kanunlarda bu Kanuna aykırı','Kanun hükümleri uygulanır.',[('Geçici 1','yönetmelikler çıkana kadar Tüzüğün Kanuna aykırı olmayan hükümleri uygulanır')],'diğer kanunlarda aykırı hüküm varsa'),
  ('Ek 7','makam','tereddütleri gidermeye','İçişleri Bakanlığı','Bu Kanunun uygulanmasıyla ilgili tereddütleri','yetkilidir.',[],'yeni ihtiyaçta düzenleme yetkisi Cumhurbaşkanı'),
@@ -159,7 +159,7 @@ K = [
  ('Ek 13','sure','askerlik hizmetini yerine getirmiş','üç yıllık hizmet süresini tamamlayanlar','Birinci fıkra kapsamındakilerden, Jandarma','yerine getirmiş sayılır.',[],'bilgiler İçişleri Bakanlığınca MSB’ye bildirilir'),
  ('Ek 13','sure','Üç yıllık süre','fiilen göreve başlanılan tarihte başlar','Üç yıllık süre, fiilen','tarihte başlar.',[],''),
  ('Ek 13','kosul','ilişiği kesilen personel','askerlik hizmetini yerine getirir','Üç yıllık süreyi tamamlamadan','askerlik hizmetini yerine getirir.',[],'üç yıl dolmadan hangi nedenle olursa olsun'),
- ('Ek 14','sure','mecburi hizmetleri','nasıptan itibaren fiilen on beş yıl','a) Muvazzaf subay veya astsubayların mecburi','tarihten itibaren on beş yıldır.',[],'statü değiştirende ilk statüye nasıp tarihinden; statü değişikliği süreyi uzatan sebep DEĞİL'),
+ ('Ek 14','sure','mecburi hizmet','nasıptan fiilen on beş yıl; statü değişikliği uzatmaz','a) Muvazzaf subay veya astsubayların mecburi','tarihten itibaren on beş yıldır.',[('13/A', 'm.13/A: dışarıdan alınan öğrencinin mecburi hizmeti Akademi öğrencisi gibi'), ('Ek 3', 'm.Ek 3: aylıksız izin süresi mecburi hizmetten sayılmaz')],'statü değiştirende ilk statüye nasıp tarihinden'),
  ('Ek 14','sure','lisans veya lisansüstü öğrenim','yükümlülük buralarda geçen süre kadar uzar','b) Subay veya astsubay nasbedildikten sonra','geçen süreler kadar uzatılır.',[],'tıp-diş uzmanlığı ve doktorada sürenin yarısı kadar'),
  ('Ek 14','sure','uzmanlık ya da yan dal','buralarda geçen sürelerin yarısı kadar uzar','c) Jandarma Genel Komutanlığı hesabına yurt içinde tıp','yarısı kadar uzatılır.',[],'tıpta, diş hekimliğinde, eczacılıkta doktora da'),
  ('Ek 14','sure','Pilotaj eğitimini','yükümlülük altı yıl uzar','d) Pilotaj eğitimini','altı yıl uzatılır.',[],''),

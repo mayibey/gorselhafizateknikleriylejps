@@ -7,9 +7,9 @@
    "madde": "1",
    "tip": "tanim",
    "tetikleyici": "görev, yetki ve sorumluluklarına",
-   "cevap": "görev-yetki-sorumluluk, bağlılık-ilişkiler, teşkilat ve konuş",
+   "cevap": "görev-yetki-sorumluluk, bağlılık-ilişkiler, teşkilat-konuş; özel hukuk sözleşmesi YOK",
    "kanit": "Madde 1 – Bu Kanun, Türkiye Cumhuriyeti Jandarma Teşkilatının görev, yetki ve sorumluluklarına, hizmetin gerektirdiği bağlılık ve ilişkilere, teşkilat ve konuşa ait esas ve usulleri düzenler.",
-   "not": "özel hukuk sözleşmeleri Kanunun konusu DEĞİL",
+   "not": "",
    "karistirilan": []
   },
   {
@@ -27,9 +27,9 @@
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Türkiye Cumhuriyeti Jandarması",
-   "cevap": "silahlı genel kolluk kuvveti",
+   "cevap": "silahlı genel kolluk; emniyet-asayiş, kamu düzeni; yalnız şehir merkezi DEĞİL",
    "kanit": "Türkiye Cumhuriyeti Jandarması, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan ve diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getiren silahlı genel kolluk kuvvetidir.",
-   "not": "emniyet-asayiş ve kamu düzenini korur; özel, silahsız, askeri kolluk DEĞİL; 2026 Astsubay sınavında soruldu",
+   "not": "özel, silahsız, askeri kolluk DEĞİL; 2026 Astsubay sınavında soruldu",
    "karistirilan": []
   },
   {
@@ -39,7 +39,7 @@
    "tetikleyici": "verdiği görevleri",
    "cevap": "diğer kanunlar ve Cumhurbaşkanlığı kararnameleri",
    "kanit": "Türkiye Cumhuriyeti Jandarması, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan ve diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri yerine getiren silahlı genel kolluk kuvvetidir.",
-   "not": "yalnız şehir merkezinde görev yapmak nitelikleri arasında YOK",
+   "not": "",
    "karistirilan": []
   },
   {
@@ -126,9 +126,9 @@
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "nizam hükümlerinin icrasını",
-   "cevap": "Jandarma Genel Komutanı sorumlu",
+   "cevap": "Jandarma Genel Komutanı sorumlu; bütçe onayı DEĞİL",
    "kanit": "Jandarma Genel Komutanı, Teşkilatın sevk ve idaresinden, kanun ve nizam hükümlerinin icrasını sağlamaktan, bunlara dayalı olarak verilen emir ve kararların uygulanmasından sorumludur.",
-   "not": "kanun-nizam icrası, emir-kararların uygulanması da; bütçe onayı DEĞİL",
+   "not": "sevk-idare, kanun-nizam icrası, emir-karar uygulaması",
    "karistirilan": []
   },
   {
@@ -405,7 +405,7 @@
    "madde": "Geçici 3",
    "tip": "kosul",
    "tetikleyici": "polis sahaları",
-   "cevap": "yeterli polis yoksa jandarma sürdürür; polis arttıkça EGM’ye devreder",
+   "cevap": "polis yetersizse jandarma devam eder; arttıkça Emniyet Genel Müdürlüğüne devreder",
    "kanit": "Bu Kanunun yürürlüğe girdiği tarihte, yeterli polis bulunmaması nedeniyle jandarmanın polis sahalarındaki görev ve sorumluluğu devam eder. Polis miktarına bağlı olarak jandarma bu sahaları Emniyet Genel Müdürlüğüne devreder.",
    "not": "",
    "karistirilan": []
@@ -415,19 +415,19 @@
    "madde": "11",
    "tip": "kosul",
    "tetikleyici": "silah kullanma yetkisi",
-   "cevap": "kanunlarda öngörülen; hizmet özelliğine uygun ve görevin gereği",
+   "cevap": "kanunlarda öngörülen; hizmete uygun, görev gereği; yönetmelik-genelge DEĞİL",
    "kanit": "Jandarma, kendisine verilen görevlerin ifası sırasında hizmet özelliğine uygun ve görevin gereği olarak kanunlarda öngörülen silah kullanma yetkisine sahiptir.",
-   "not": "yönetmelik, genelge, İçişleri onayı DEĞİL",
+   "not": "İçişleri onayına bağlı DEĞİL; 2026 Astsubay sınavında soruldu (yalnız kanun)",
    "karistirilan": []
   },
   {
    "i": "K-2-036",
    "madde": "Ek 11",
    "tip": "kosul",
-   "tetikleyici": "avukatın ücreti",
-   "cevap": "uygun görülürse Jandarma Genel Komutanlığı bütçesinden",
-   "kanit": "karargâh personeli dahil sanık durumuna düşen personelin vekalet verdiği avukatın ücreti, olayın mahiyetine ve kusurun derecesine göre durumunun uygun görülmesi halinde Jandarma Genel Komutanlığı bütçesine konulan ödenekten karşılanır.",
-   "not": "karakol, devriye, asayiş, kaçakçılık, adli görevden dolayı sanık olana; trafik kazası tespiti sayılmamış",
+   "tetikleyici": "avukat",
+   "cevap": "karakol/devriye/sevk/asayiş/kaçakçılık/adli görevden sanığa; Jandarma bütçesinden; trafik tespiti YOK",
+   "kanit": "Kanunlarla veya Cumhurbaşkanlığı Kararnameleriyle verilen; karakol, karakol nöbetçisi, devriye, sevk, nakliyat muhafazası hizmetlerinde veya emniyet, asayiş ile kamu düzeninin korunması ve kaçakçılığın men, takip ve tahkiki için görevlendirilen ya da önleyici, caydırıcı, düzenleyici, koruyucu, istihbari ve adli görev ile hizmetlerin yerine getirilmesi sırasında veya bu görevlerinden dolayı, karargâh personeli dahil sanık durumuna düşen personelin vekalet verdiği avukatın ücreti, olayın mahiyetine ve kusurun derecesine göre durumunun uygun görülmesi halinde Jandarma Genel Komutanlığı bütçesine konulan ödenekten karşılanır.",
+   "not": "olayın mahiyeti ve kusura göre uygun görülürse; karargâh personeli dahil",
    "karistirilan": []
   },
   {
@@ -679,10 +679,10 @@
    "i": "K-2-061",
    "madde": "13/A",
    "tip": "kosul",
-   "tetikleyici": "öğrenimlerine son verilir",
-   "cevap": "disiplin notu, çıkarma cezası, azami süre, sağlık, devamsızlık, giriş niteliği",
+   "tetikleyici": "öğrenimlerine son veril",
+   "cevap": "disiplin notu/çıkarma cezası/azami süre/memurluk niteliği/sağlık/giriş niteliği/kendi isteği/devamsızlık; askerlik erteleme DEĞİL",
    "kanit": "Akademide öğrenim gören öğrencilerin aşağıdaki hallerde öğrenimlerine son verilir: a) Bu Kanun hükümlerine göre çıkarılacak yönetmelikle belirlenecek disiplin notu yetersiz olanlar.11 b) Haklarında öğrenim gördükleri kurumdan çıkarma cezası verilerek, cezası kesinleşenler. c) Öğrenimlerini, mevzuatta belirlenen azami süre içerisinde tamamlayamayanlar. d) 657 sayılı Devlet Memurları Kanununa göre memur olma niteliğini kaybedenler. e) Sağlık kurullarınca verilecek raporlara dayalı olarak Akademide öğrenime devam imkanı kalmadığı ilgili Komutanlığın sağlık komisyonunca belirlenenler. f) Giriş ile ilgili nitelikleri taşımadıkları öğrenim sırasında anlaşılanlar. g) 4678 sayılı Kanun kapsamında ön sözleşme yapılan subay ve astsubay adaylarından kendi isteğiyle ayrılmak isteyenler. ğ) Bakanlıkça belirlenen devamsızlık süresi sonunda ilişik kesilmesine karar verilenler.",
-   "not": "memur olma niteliğini kaybetmek de; askerlik erteletme talebi sebep DEĞİL",
+   "not": "kendi isteği: ön sözleşmeli aday ayrılmak isterse",
    "karistirilan": []
   },
   {
@@ -745,7 +745,7 @@
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "Adli görevlerinden doğan",
-   "cevap": "CMK 161 inci madde beşinci fıkra",
+   "cevap": "Ceza Muhakemesi Kanunu 161. madde beşinci fıkra",
    "kanit": "c) Adli görevlerinden doğan suçlarda; 4/12/2004 tarihli ve 5271 sayılı Ceza Muhakemesi Kanununun 161 inci maddesinin beşinci fıkrası hükmü uygulanır.",
    "not": "",
    "karistirilan": []
@@ -788,9 +788,9 @@
    "madde": "15",
    "tip": "ceza",
    "tetikleyici": "bir yıl veya daha fazla",
-   "cevap": "ilişik İçişleri Bakanının onayıyla kesilir",
+   "cevap": "İçişleri Bakanı onayıyla ilişik kesilir; katalog suçta süre aranmaz",
    "kanit": "Ertelenmiş, seçenek yaptırımlara çevrilmiş, hükmün açıklanmasının geri bırakılmasına karar verilmiş, affa uğramış veya 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 53 üncü maddesinde belirtilen süreler geçmiş olsa bile; Devletin güvenliğine karşı suçlar, Anayasal düzene ve bu düzenin işleyişine karşı suçlar, milli savunmaya karşı suçlar, Devlet sırlarına karşı suçlar ve casusluk, zimmet, irtikâp, rüşvet, iftira, hırsızlık, dolandırıcılık, sahtecilik, güveni kötüye kullanma, hileli iflas, ihaleye fesat karıştırma, edimin ifasına fesat karıştırma, suçtan kaynaklanan malvarlığı değerlerini aklama veya kaçakçılık suçlarından ya da kasten işlenen bir suçtan dolayı bir yıl veya daha fazla süreyle hapis cezasına mahkûm olan Jandarma Genel Komutanlığında görevli subay, astsubay ve uzman jandarmaların Komutanlıkla ilişikleri İçişleri Bakanının onayı ile kesilir.",
-   "not": "kasten suç ya da katalog suçlar; ertelense, HAGB, af olsa bile; kasten yaralamada dokuz ay ilişik kesmez",
+   "not": "kasten suçta bir yıl+; ertelense, HAGB, af olsa bile; dokuz ay kasten yaralama ilişik kestirmez",
    "karistirilan": []
   },
   {
@@ -903,7 +903,7 @@
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "muafiyet ve istisna",
-   "cevap": "MSB ve TSK’ya tanınan gümrük, vergi, harç muafiyetleri JGK’ya da",
+   "cevap": "MSB-TSK’ya tanınan gümrük, vergi, harç muafiyetleri Jandarma Genel Komutanlığına da",
    "kanit": "Bütçe kanunları ve diğer kanunlarla Milli Savunma Bakanlığı ile Türk Silahlı Kuvvetlerine tanınan gümrük, her türlü vergi, resim, harç ve ardiye ücretlerine ilişkin muafiyet ve istisna hükümleri Jandarma Genel Komutanlığı hakkında da uygulanır.",
    "not": "",
    "karistirilan": []
@@ -943,9 +943,9 @@
    "madde": "21",
    "tip": "makam",
    "tetikleyici": "asayiş tazminatı",
-   "cevap": "komando-sınır % 52, diğer % 40; usul İçişleri Bakanlığınca",
+   "cevap": "komando-sınır %52, diğer %40; usul İçişleri; damga dışı vergi yok",
    "kanit": "Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.",
-   "not": "fazla çalışma karşılığı",
+   "not": "fazla çalışma karşılığı; usul İçişleri Bakanlığınca",
    "karistirilan": []
   },
   {
@@ -973,9 +973,9 @@
    "madde": "24",
    "tip": "makam",
    "tetikleyici": "Kanunun uygulanmasına ilişkin diğer hususlar",
-   "cevap": "Cumhurbaşkanınca yürürlüğe konulan yönetmelik",
+   "cevap": "Cumhurbaşkanınca yönetmelik: teşkilat/görev/komuta-kontrol/terfi/değerlendirme/ödül/kıyafet; izin YOK",
    "kanit": "Bu Kanunla münhasıran yönetmelik çıkarılması öngörülen hususların yanısıra jandarmanın teşkilat, görev, yetki ve sorumlulukları, diğer makamlarla ilişkileri, birlikte çalışma ve işbirliği esasları dahil komuta ve kontrol ilişkileri ile Jandarma (…)23 personelinin terfi işleri, değerlendirme, ödüllendirme, kılık ve kıyafet ve Kanunun uygulanmasına ilişkin diğer hususlar; Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir.",
-   "not": "teşkilat, görev, komuta-kontrol, terfi, değerlendirme, ödül, kılık-kıyafet; izin süreleri sayılmamış",
+   "not": "",
    "karistirilan": []
   },
   {
@@ -983,9 +983,9 @@
    "madde": "Ek 1",
    "tip": "makam",
    "tetikleyici": "eylem ve işlemleri",
-   "cevap": "İçişleri Bakanlığı, mülki idare amirleri, kendi amirleri; denetler, teftiş eder",
+   "cevap": "İçişleri Bakanlığı, mülki idare amirleri, kendi amirleri; TBMM-Genelkurmay YOK",
    "kanit": "eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir.",
-   "not": "TBMM komisyonu, Genelkurmay sayılmamış",
+   "not": "denetler ve teftiş eder",
    "karistirilan": []
   },
   {
@@ -1072,10 +1072,10 @@
    "i": "K-2-098",
    "madde": "Ek 3",
    "tip": "sure",
-   "tetikleyici": "Eşinin doğum yapması",
-   "cevap": "on güne kadar mazeret izni",
-   "kanit": "a) Eşinin doğum yapması, eşinin ölümü, çocuğunun ölümü, kendisinin veya eşinin ana, baba veya kardeşinin ölümü hallerinin her birinde isteği üzerine on güne kadar; kendisinin veya çocuğunun evlenmesi halinde isteği üzerine yedi güne kadar mazeret izni verilebilir.",
-   "not": "eşinin, çocuğunun, ana-baba-kardeşin ölümü de on gün; askerlik şubesine kayıt listede YOK",
+   "tetikleyici": "mazeret izin",
+   "cevap": "doğum-ölüm on gün, evlenme yedi, afet otuz; askerlik kaydı YOK",
+   "kanit": "birinci fıkrada yazılı on beş günlük yıllık mazeret izinleri dışında; a) Eşinin doğum yapması, eşinin ölümü, çocuğunun ölümü, kendisinin veya eşinin ana, baba veya kardeşinin ölümü hallerinin her birinde isteği üzerine on güne kadar; kendisinin veya çocuğunun evlenmesi halinde isteği üzerine yedi güne kadar mazeret izni verilebilir. b) Yangın, deprem, su baskını gibi olağanüstü bir mazeret dolayısıyla bir yıl içinde otuz güne kadar mazeret izni verilebilir.",
+   "not": "doğum, eşin-çocuğun-ana-baba-kardeşin ölümü on gün; kendisinin ya da çocuğunun evlenmesi yedi",
    "karistirilan": []
   },
   {
@@ -1338,9 +1338,9 @@
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "denetle",
-   "cevap": "sıralı/mülki amir, JGK/bakanlık/CB teftişi yılda bir; rapor TBMM Güvenlik-İstihbarat Komisyonuna",
+   "cevap": "sıralı/mülki amir, JGK/bakanlık/Cumhurbaşkanlığı teftişi yılda bir; TBMM komisyonuna; Sayıştay YOK",
    "kanit": "Bu maddede yer alan faaliyetlerin denetimi; sıralı kurum amirleri, mülki idare amirleri, Jandarma Genel Komutanlığı ve ilgili bakanlığın teftiş elemanları tarafından yılda en az bir defa yapılır. Bu faaliyetler Cumhurbaşkanlığınca görevlendirilen denetim elemanları tarafından da denetlenebilir. Bu kapsamda yapılan denetimlerin sonuçları bir rapor hâlinde Türkiye Büyük Millet Meclisi Güvenlik ve İstihbarat Komisyonuna sunulur.",
-   "not": "CB = Cumhurbaşkanlığı denetim elemanları; Sayıştay sayılmamış",
+   "not": "Cumhurbaşkanlığı elemanları da denetleyebilir; sonuç rapor hâlinde TBMM Güvenlik ve İstihbarat Komisyonuna",
    "karistirilan": [
     {
      "madde": "Ek 1",
@@ -1477,11 +1477,20 @@
    "i": "K-2-137",
    "madde": "Ek 14",
    "tip": "sure",
-   "tetikleyici": "mecburi hizmetleri",
-   "cevap": "nasıptan itibaren fiilen on beş yıl",
+   "tetikleyici": "mecburi hizmet",
+   "cevap": "nasıptan fiilen on beş yıl; statü değişikliği uzatmaz",
    "kanit": "a) Muvazzaf subay veya astsubayların mecburi hizmetleri, subay veya astsubay nasbedildikleri tarihten itibaren fiilen on beş yıldır. Statü değiştirerek subaylığa geçirilenlerin mecburi hizmet süreleri Jandarma Genel Komutanlığındaki ilk statülerine nasbedildikleri veya ilk sözleşmelerinin onaylandığı tarihten itibaren on beş yıldır.",
-   "not": "statü değiştirende ilk statüye nasıp tarihinden; statü değişikliği süreyi uzatan sebep DEĞİL",
-   "karistirilan": []
+   "not": "statü değiştirende ilk statüye nasıp tarihinden",
+   "karistirilan": [
+    {
+     "madde": "13/A",
+     "fark": "m.13/A: dışarıdan alınan öğrencinin mecburi hizmeti Akademi öğrencisi gibi"
+    },
+    {
+     "madde": "Ek 3",
+     "fark": "m.Ek 3: aylıksız izin süresi mecburi hizmetten sayılmaz"
+    }
+   ]
   },
   {
    "i": "K-2-138",
