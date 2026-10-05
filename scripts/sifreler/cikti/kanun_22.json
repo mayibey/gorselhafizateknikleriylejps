@@ -207,7 +207,7 @@
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "28/5/2020",
-   "cevap": "Hukuk (JGK ve SG subay)",
+   "cevap": "Hukuk branşı eklendi (Jandarma ve Sahil Güvenlik subayına)",
    "kanit": "(1) Jandarma Genel Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Pilot 5) İkmal 6) Bakım 7) Personel 8) Kimyager 9) Veteriner hekim 10) Mühendis 11) Maliye 12) Öğretmen 13) Bando 14) Tabip 15) Eczacı 16) Diş tabibi 17) Sağlık 18) (Ek:RG-28/5/2020) Hukuk 19) (Ek:RG-16/1/2024) İnsansız Hava Aracı b) Astsubaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Uçak ve helikopter teknisyeni 5) İkmal 6) Bakım 7) Personel 8) Maliye 9) Bando 10) Sağlık 11) (Ek:RG-16/1/2024) İnsansız Hava Aracı (2) Sahil Güvenlik Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Sahil güvenlik 2) İkmal 3) Mühendis 4) (Ek:RG-28/5/2020) Hukuk",
    "not": "",
    "karistirilan": []
@@ -217,7 +217,7 @@
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "16/1/2024",
-   "cevap": "İnsansız Hava Aracı (JGK subay ve astsubay)",
+   "cevap": "İnsansız Hava Aracı (Jandarma subay ve astsubay); Sahil Güvenlikte YOK",
    "kanit": "(1) Jandarma Genel Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Pilot 5) İkmal 6) Bakım 7) Personel 8) Kimyager 9) Veteriner hekim 10) Mühendis 11) Maliye 12) Öğretmen 13) Bando 14) Tabip 15) Eczacı 16) Diş tabibi 17) Sağlık 18) (Ek:RG-28/5/2020) Hukuk 19) (Ek:RG-16/1/2024) İnsansız Hava Aracı b) Astsubaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Uçak ve helikopter teknisyeni 5) İkmal 6) Bakım 7) Personel 8) Maliye 9) Bando 10) Sağlık 11) (Ek:RG-16/1/2024) İnsansız Hava Aracı",
    "not": "",
    "karistirilan": []
@@ -227,9 +227,9 @@
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "astsubay",
-   "cevap": "JGK: muhabere, uçak-helikopter tek.; SG: güverte, makine, idari; öğretmen subayda",
+   "cevap": "Jandarma: muhabere, uçak-helikopter teknisyeni; Sahil Güvenlik: güverte, makine, idari",
    "kanit": "(1) Jandarma Genel Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Pilot 5) İkmal 6) Bakım 7) Personel 8) Kimyager 9) Veteriner hekim 10) Mühendis 11) Maliye 12) Öğretmen 13) Bando 14) Tabip 15) Eczacı 16) Diş tabibi 17) Sağlık 18) (Ek:RG-28/5/2020) Hukuk 19) (Ek:RG-16/1/2024) İnsansız Hava Aracı b) Astsubaylar 1) Jandarma 2) İstihkâm 3) Muhabere 4) Uçak ve helikopter teknisyeni 5) İkmal 6) Bakım 7) Personel 8) Maliye 9) Bando 10) Sağlık 11) (Ek:RG-16/1/2024) İnsansız Hava Aracı (2) Sahil Güvenlik Komutanlığında bulunan branşlar şunlardır: a) Subaylar 1) Sahil güvenlik 2) İkmal 3) Mühendis 4) (Ek:RG-28/5/2020) Hukuk b) Astsubaylar 1) Güverte 2) Makine 3) İkmal 4) Uçak bakım 5) İdari 6) Bilgi teknolojileri",
-   "not": "JGK astsubayda pilot, öğretmen, tabip YOK; SG astsubayda muhabere YOK; JGK’da güverte YOK; Uzman Erbaş sınavında soruldu",
+   "not": "pilot, öğretmen, tabip, kimyager, veteriner yalnız Jandarma subayında; astsubayda YOK",
    "karistirilan": [
     {
      "madde": "2",
@@ -254,7 +254,7 @@
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "İlk branş belirlenme",
-   "cevap": "Akademi ve üniversitede JGK-SGK adına okuyan öğrenci",
+   "cevap": "Akademi ve üniversitede Jandarma-Sahil Güvenlik adına okuyan öğrenci",
    "kanit": "MADDE 8- (1) İlk branş belirlenme işlemine tabi tutulacak personel Jandarma ve Sahil Güvenlik Akademisi ve diğer yükseköğretim kurumlarında Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı adına öğrenim gören öğrencilerdir.",
    "not": "",
    "karistirilan": []
@@ -289,7 +289,7 @@
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "kesinleş",
-   "cevap": "ilk: Akademi Başkanı; değişiklik: Genel Komutan-SG Komutanı",
+   "cevap": "ilk: Akademi Başkanı; değişiklik: Genel Komutan-Sahil Güvenlik Komutanı",
    "kanit": "İlk branş belirleme kurullarının kararları Jandarma ve Sahil Güvenlik Akademisi Başkanının, ilk branş belirleme ve branş değişikliğine ilişkin branş belirleme kurullarının kararları ise ilgisine göre Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının onayı ile kesinleşir.",
    "not": "",
    "karistirilan": []
@@ -513,7 +513,7 @@
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "eğitim planı",
-   "cevap": "JGK-SGK hazırlar, Bakanlık onaylar",
+   "cevap": "Jandarma-Sahil Güvenlik hazırlar, Bakanlık onaylar",
    "kanit": "(3) Personelin mesleki gelişimine ilişkin eğitim planı Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından ayrı ayrı hazırlanır ve Bakanlık tarafından onaylanır.",
    "not": "",
    "karistirilan": []
@@ -578,7 +578,7 @@
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "itibar ve güvene",
-   "cevap": "hizmet içi ve dışı davranışla",
+   "cevap": "hizmet içindeki ve dışındaki davranışla gösterir",
    "kanit": "MADDE 20- (1) Personel, resmi sıfatının gerektirdiği itibar ve güvene layık olduğunu, hizmet içindeki ve dışındaki davranışlarıyla göstermek zorundadır.",
    "not": "",
    "karistirilan": []
@@ -916,7 +916,7 @@
    "madde": "42",
    "tip": "sure",
    "tetikleyici": "nöbet",
-   "cevap": "yirmi dört saati geçemez; amirin uygun gördüğü zaman başlar",
+   "cevap": "yirmidört saati geçemez; amirin uygun gördüğü zaman başlar",
    "kanit": "(2) Nöbet, kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez.",
    "not": "",
    "karistirilan": []
@@ -1219,7 +1219,7 @@
    "madde": "50",
    "tip": "makam",
    "tetikleyici": "Madalyanın",
-   "cevap": "esasları JGK-SGK ayrı yönetmelikle",
+   "cevap": "esasları Jandarma ve Sahil Güvenlik ayrı yönetmelikle",
    "kanit": "Madalyanın hangi esas ve usuller çerçevesinde verileceği Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından ayrı ayrı yürürlüğe konulan yönetmeliklerle belirlenir.",
    "not": "",
    "karistirilan": []
@@ -1298,7 +1298,7 @@
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "Adli görevlerinden doğan",
-   "cevap": "5271 sayılı CMK 161 beşinci fıkra",
+   "cevap": "5271 sayılı Ceza Muhakemesi Kanunu 161 beşinci fıkra",
    "kanit": "c) Adli görevlerinden doğan suçlarda 5271 sayılı Kanunun 161 inci maddesinin beşinci fıkrası hükmü uygulanır.",
    "not": "",
    "karistirilan": []
@@ -1358,7 +1358,7 @@
    "madde": "55",
    "tip": "yasak",
    "tetikleyici": "eskimiş dahi olsa",
-   "cevap": "personel dışına giydirilemez, verilemez",
+   "cevap": "personel dışındakilerce giyilemez, onlara verilemez",
    "kanit": "c) Resmi üniformalar eskimiş dahi olsa personel dışındaki kişiler tarafından giyilemez ve bu kişilere verilemez.",
    "not": "",
    "karistirilan": []
@@ -1407,7 +1407,7 @@
    "madde": "56",
    "tip": "kosul",
    "tetikleyici": "Asayiş Tazminatı",
-   "cevap": "JGK ve SGK kadrosundaki personel",
+   "cevap": "Jandarma ve Sahil Güvenlik kadrosundaki personel",
    "kanit": "(2) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı kadrolarına atanmış personel ayrıca Asayiş Tazminatından yararlanır.",
    "not": "",
    "karistirilan": []
@@ -1437,7 +1437,7 @@
    "madde": "59",
    "tip": "kosul",
    "tetikleyici": "Sağlık yeteneği",
-   "cevap": "TSK, JGK ve SGK Sağlık Yeteneği Yönetmeliği",
+   "cevap": "Silahlı Kuvvetler, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği",
    "kanit": "MADDE 59- (1) Personelin sağlık yetenekleri ile sağlık işlemlerine ilişkin hususlar 31/10/2016 tarihli ve 2016/9431 sayılı Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliğine göre yürütülür.",
    "not": "",
    "karistirilan": []
@@ -1457,7 +1457,7 @@
    "madde": "61",
    "tip": "makam",
    "tetikleyici": "sosyal tesislerden",
-   "cevap": "Bakanlık-MSB protokolü",
+   "cevap": "Bakanlık-Milli Savunma protokolü",
    "kanit": "(2) Kimlik kartlarının Türk Silahlı Kuvvetlerine bağlı sosyal tesislerden yararlanmayı sağlayacak şekilde düzenlemesine ilişkin hususlar Bakanlık ile Millî Savunma Bakanlığı arasında yapılan bir protokol ile belirlenir.",
    "not": "",
    "karistirilan": []
