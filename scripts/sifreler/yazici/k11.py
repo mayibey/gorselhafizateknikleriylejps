@@ -15,7 +15,8 @@ K = [
  # m.3 — çekme, indirme, tören
  ('3','sure','kamu kurum','sürekli çekili kalır','(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum','sürekli çekili kalır.',[('7','m.7: yönetmelikte belirlenecek kamu kurumları dışındakiler amblemde kullanamaz')],'yalnız mesai saatinde değil'),
  ('3','makam','gereken biçimde','o mahaldeki yetkili amirler','Bayrak törenlerinin gereken biçimde','yetkili amirler sorumludur.',[],'tören sorumluluğu'),
- ('3','kosul','takıl','kurum, temsilcilik, deniz vasıtası; yetkili aracı; konut yok','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu ve yurt dışı temsilciliğe, kamu ve kişilerin deniz vasıtasına çekilir; yetkililerin aracına takılır'),
+ ('3','kosul','takıl','yetkililerin araçlarına (yurt içi-dışı); özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir'),
+ ('3','kosul','çekilir','kamu kurumu/yurt dışı temsilcilik/deniz vasıtası; özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','deniz vasıtalarına çekilir.',[('4', 'm.4: yas alameti olarak 10 Kasımda yarıya çekilir')],'deniz vasıtası kamunun da gerçek-tüzel kişinin de olabilir'),
  ('3','sira_usul','indirilirken','tören yapılır; usulü yönetmelikte','Bayrak çekilirken ve indirilirken','tören yapılır.',[],'selamlama ise m.5: cephe alınarak'),
 
  # m.4-6 — yarıya çekme, selam, örtme
@@ -28,7 +29,7 @@ K = [
  ('7','yasak','kullanılamaz','yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk','Türk Bayrağı, yırtık','herhangi bir şekilde kullanılamaz.',[],'manevi değeri zedeleyecek şekilde de'),
  ('7','yasak','serilemez','masalara, kürsülere; resmi yemin töreni hariç','Resmi yemin törenleri dışında','örtü olarak serilemez.',[],'yemin töreninde masaya örtülebilir (m.6)'),
  ('7','yasak','benzeri eşya','Bayrağın şekli yapılamaz; elbise-üniforma olarak giyilemez','Oturulan veya ayakla basılan','şeklinde giyilemez.',[],'oturulan, ayakla basılan yere konulamaz'),
- ('7','yasak','hakaret','sözle, yazıyla, hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz','Türk Bayrağına sözle','gerekli özen gösterilmeden kullanılamaz.',[],'saygısızlık da yasak'),
+ ('7','yasak','hakaret','söz-yazı-hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz, özensiz kullanılamaz','Türk Bayrağına sözle','gerekli özen gösterilmeden kullanılamaz.',[],'saygısızlık da yasak'),
  ('7','yasak','amblem','parti, dernek, vakıf amblem-flamasında esas-fon olamaz','Hiçbir siyasi parti','fon teşkil edecek şekilde kullanılamaz.',[],'yönetmelikte belirlenen kamu kurumları hariç'),
  ('7','makam','aykırı fiiller','yetkililerce derhal önlenir, soruşturma yapılır','Bu Kanuna ve yönetmeliğe aykırı fiiller','gerekli soruşturma yapılır.',[],''),
 

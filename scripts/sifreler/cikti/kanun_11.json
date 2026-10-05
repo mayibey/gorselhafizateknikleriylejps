@@ -62,13 +62,28 @@
    "madde": "3",
    "tip": "kosul",
    "tetikleyici": "takıl",
-   "cevap": "kurum, temsilcilik, deniz vasıtası; yetkili aracı; konut yok",
+   "cevap": "yetkililerin araçlarına (yurt içi-dışı); özel konut YOK",
    "kanit": "Bayrak, kamu kurum ve kuruluşlarıyla yurt dışı temsilciliklerine ve kamu kuruluşlarıyla gerçek ve tüzelkişilerin deniz vasıtalarına çekilir. Yurt içinde ve yurt dışında yetkililerin araçlarına takılır.",
-   "not": "kamu kurumu ve yurt dışı temsilciliğe, kamu ve kişilerin deniz vasıtasına çekilir; yetkililerin aracına takılır",
+   "not": "kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir",
    "karistirilan": []
   },
   {
    "i": "K-11-007",
+   "madde": "3",
+   "tip": "kosul",
+   "tetikleyici": "çekilir",
+   "cevap": "kamu kurumu/yurt dışı temsilcilik/deniz vasıtası; özel konut YOK",
+   "kanit": "Bayrak, kamu kurum ve kuruluşlarıyla yurt dışı temsilciliklerine ve kamu kuruluşlarıyla gerçek ve tüzelkişilerin deniz vasıtalarına çekilir.",
+   "not": "deniz vasıtası kamunun da gerçek-tüzel kişinin de olabilir",
+   "karistirilan": [
+    {
+     "madde": "4",
+     "fark": "m.4: yas alameti olarak 10 Kasımda yarıya çekilir"
+    }
+   ]
+  },
+  {
+   "i": "K-11-008",
    "madde": "3",
    "tip": "sira_usul",
    "tetikleyici": "indirilirken",
@@ -78,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-008",
+   "i": "K-11-009",
    "madde": "4",
    "tip": "makam",
    "tetikleyici": "yarıya",
@@ -93,7 +108,7 @@
    ]
   },
   {
-   "i": "K-11-009",
+   "i": "K-11-010",
    "madde": "5",
    "tip": "sira_usul",
    "tetikleyici": "selam",
@@ -108,7 +123,7 @@
    ]
   },
   {
-   "i": "K-11-010",
+   "i": "K-11-011",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "örtül",
@@ -123,7 +138,7 @@
    ]
   },
   {
-   "i": "K-11-011",
+   "i": "K-11-012",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "adetler",
@@ -133,7 +148,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-012",
+   "i": "K-11-013",
    "madde": "7",
    "tip": "yasak",
    "tetikleyici": "kullanılamaz",
@@ -143,7 +158,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-013",
+   "i": "K-11-014",
    "madde": "7",
    "tip": "yasak",
    "tetikleyici": "serilemez",
@@ -153,7 +168,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-014",
+   "i": "K-11-015",
    "madde": "7",
    "tip": "yasak",
    "tetikleyici": "benzeri eşya",
@@ -163,17 +178,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-015",
+   "i": "K-11-016",
    "madde": "7",
    "tip": "yasak",
    "tetikleyici": "hakaret",
-   "cevap": "sözle, yazıyla, hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz",
+   "cevap": "söz-yazı-hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz, özensiz kullanılamaz",
    "kanit": "Türk Bayrağına sözle, yazı veya hareketle veya herhangi bir şekilde hakaret edilemez, saygısızlıkta bulunulamaz. Bayrak yırtılamaz, yakılamaz, yere atılamaz, gerekli özen gösterilmeden kullanılamaz.",
    "not": "saygısızlık da yasak",
    "karistirilan": []
   },
   {
-   "i": "K-11-016",
+   "i": "K-11-017",
    "madde": "7",
    "tip": "yasak",
    "tetikleyici": "amblem",
@@ -183,7 +198,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-017",
+   "i": "K-11-018",
    "madde": "7",
    "tip": "makam",
    "tetikleyici": "aykırı fiiller",
@@ -193,7 +208,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-018",
+   "i": "K-11-019",
    "madde": "8",
    "tip": "yasak",
    "tetikleyici": "satmak",
@@ -203,7 +218,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-019",
+   "i": "K-11-020",
    "madde": "8",
    "tip": "makam",
    "tetikleyici": "yapılan Bayrak",
@@ -213,7 +228,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-020",
+   "i": "K-11-021",
    "madde": "8",
    "tip": "makam",
    "tetikleyici": "para ceza",
@@ -223,7 +238,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-021",
+   "i": "K-11-022",
    "madde": "8",
    "tip": "ceza",
    "tetikleyici": "suç oluşturmadığı",
@@ -233,7 +248,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-022",
+   "i": "K-11-023",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "uygulanmasına ilişkin",
@@ -243,7 +258,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-11-023",
+   "i": "K-11-024",
    "madde": "10",
    "tip": "tanim",
    "tetikleyici": "yürürlükten kaldır",
@@ -258,7 +273,7 @@
    ]
   },
   {
-   "i": "K-11-024",
+   "i": "K-11-025",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "yürürlüğe gir",
@@ -273,7 +288,7 @@
    ]
   },
   {
-   "i": "K-11-025",
+   "i": "K-11-026",
    "madde": "12",
    "tip": "makam",
    "tetikleyici": "yürütür",
