@@ -51,7 +51,7 @@
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "rütbe",
-   "cevap": "subay: teğmen-üsteğmen-yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı yok",
+   "cevap": "subay: teğmen/üsteğmen/yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı YOK",
    "kanit": "e) Sözleşmeli subay : Bu Kanunda öngörülen esaslara göre, kendileri ile sözleşme yapılarak subay nasbedilen teğmen, üsteğmen ve yüzbaşı rütbelerini haiz subayları,\nf) Sözleşmeli astsubay : Bu Kanunda öngörülen esaslara göre, kendileri ile sözleşme yapılarak astsubay nasbedilen; astsubay çavuş, astsubay kıdemli çavuş, astsubay üstçavuş ve astsubay kıdemli üstçavuş rütbelerini haiz astsubayları,",
    "not": "binbaşı ve başçavuş yok",
    "karistirilan": [
@@ -253,10 +253,10 @@
    "i": "K-13-018",
    "madde": "6",
    "tip": "sure",
-   "tetikleyici": "Sözleşme süreleri",
-   "cevap": "üç-dokuz yıl; maliyete, kuvvet-sınıf-branşa göre yönetmelikle",
+   "tetikleyici": "Sözleşme süre",
+   "cevap": "en az üç, en çok dokuz yıl; ayrıntısı yönetmelikte",
    "kanit": "Sözleşme süreleri üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.",
-   "not": "",
+   "not": "kuvvet, sınıf, branş ve yetiştirme maliyetine göre; astsubayda da aynı",
    "karistirilan": [
     {
      "madde": "10",
@@ -269,6 +269,14 @@
     {
      "madde": "8",
      "fark": "m.8 metnindeki dipnotta bu ibare geçer"
+    },
+    {
+     "madde": "13",
+     "fark": "m.13: sözleşme süresi bitmeden idarece fesih sebepleri"
+    },
+    {
+     "madde": "16",
+     "fark": "m.16: sözleşme süresince sağlık ve sosyal haklar"
     }
    ]
   },
@@ -277,9 +285,9 @@
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "talebe bakılmaksızın",
-   "cevap": "savaş, seferberlik, alıkonma; komutan lüzumu, MSB/İçişleri onayıyla uzatılır",
+   "cevap": "savaş, seferberlik, alıkonma; komutan lüzumu, Milli Savunma-İçişleri onayıyla uzatılır",
    "kanit": "Sözleşme süreleri; terörle mücadele sırasında veya bu görevlerden dolayı alıkonulma ya da kaybolma hâli ve (…)3 seferberlik, savaş veya silahlı çatışmayı gerektirecek hal ile savaş hallerinde Kuvvet Komutanları, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının göstereceği lüzum üzerine, durumun devamı müddetince ilgisine göre Milli Savunma Bakanlığı veya İçişleri Bakanlığının onayı ile talebe bakılmaksızın uzatılabilir.",
-   "not": "Kuvvet K., JGK, SGK komutanı lüzum gösterir",
+   "not": "Kuvvet, Jandarma, Sahil Güvenlik komutanı lüzum gösterir; durum sürdükçe uzar",
    "karistirilan": [
     {
      "madde": "10",
@@ -579,9 +587,9 @@
    "madde": "12",
    "tip": "istisna",
    "tetikleyici": "tabip subaylar",
-   "cevap": "devlet hizmet yükümlülüğü yok; TUS sonrası üç yıl kıta hizmeti",
+   "cevap": "devlet hizmet yükümlülüğü YOK; uzmanlığa üç yıl kıta hizmetinden sonra",
    "kanit": "Sözleşme süresi sona ermeden sözleşmesi fesih edilenler hariç olmak üzere, sözleşmeli tabip subaylar devlet hizmet yükümlülüğüne tâbi olmazlar. Bunlardan tıpta uzmanlık sınavını kazananlar; kıt’a, kurum ve karargahlarda üç yıllık hizmetini tamamladıktan sonra uzmanlık eğitimine başlayabilirler.",
-   "not": "sözleşmesi feshedilenler hariç",
+   "not": "sözleşmesi süresinden önce feshedilenler hariç",
    "karistirilan": []
   },
   {
@@ -644,7 +652,7 @@
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Yabancı uyruklu",
-   "cevap": "evliliği MSB uygun görmezse fesih; vatandaşlık kaybı da",
+   "cevap": "evliliği Milli Savunma uygun görmezse fesih; vatandaşlık kaybı da",
    "kanit": "ı) Yabancı uyruklu kişilerle yapılan evliliklerde, evlilikleri ilgili mevzuatta belirtilen esaslar dahilinde Milli Savunma Bakanlığınca uygun görülmemek ve çeşitli nedenlerle Türk vatandaşlığını kaybetmek veya Türk vatandaşlığından çıkarılmak.",
    "not": "",
    "karistirilan": []
@@ -734,7 +742,7 @@
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "sağlık yardımı",
-   "cevap": "on iki ay, net maaşın üçte ikisi; kesinti yok",
+   "cevap": "oniki ayı geçmez; emsal net maaşın 2/3’ü; kesinti yok",
    "kanit": "Sözleşmeleri sağlık nedeniyle sona erenlerden; sözleşmelerinin sona ermesine neden olan sıhhi arızalarının tedavisine devam edilenlere, sözleşme sona erme tarihinden başlamak şartıyla oniki ayı geçmemek üzere tedavi süresince, görevdeki emsallerinin almış oldukları net maaşların (27/6/1989 tarihli ve 375 sayılı Kanun Hükmünde Kararnamenin 28 inci maddesinde belirtilen ek tazminatlar ile 14/7/1964 tarihli ve 500 sayılı Kanuna göre ödenen tazminat ve yabancı dil tazminatı hariç) 2/3'ü oranında, her ay sağlık yardımı olarak, kurumlarınca ödeme yapılır. Bu ödemeden hiçbir kesinti yapılmaz.",
    "not": "",
    "karistirilan": []

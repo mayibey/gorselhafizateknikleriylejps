@@ -9,7 +9,7 @@ K = [
  ('3','tanim','Ön sözleşme:','askerî eğitim başından nasıp onayına; sonra asıl sözleşme','a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme','kapsayan sözleşmeyi,',[],''),
  ('3','sure','hizmet yükümlülüğü','en az üç, en çok dokuz yıl','b) Sözleşme : Türk','yazılı bir belgeyi,',[('12','tabip subaylar devlet hizmet yükümlülüğüne tabi değil')],'eğitimi başaranla yapılan yazılı belge'),
  ('3','tanim','astsubay aday','ön sözleşmeyle askerî eğitime alınan','d) Sözleşmeli astsubay adayı','askerî eğitime alınanları,',[('10','astsubay adayı eğitimi bitirince astsubay çavuş'),('13','aday ön sözleşmesinin fesih sebepleri')],'subay adayı da aynı'),
- ('3','tanim','rütbe','subay: teğmen-üsteğmen-yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı yok','e) Sözleşmeli subay : Bu Kanunda','kıdemli üstçavuş rütbelerini haiz astsubayları,',[('6','subay adayı teğmen rütbesine nasbedilir'),('10','astsubay adayı astsubay çavuş rütbesine nasbedilir'),('12','rütbe bekleme süreleri 926’ya göre'),('15','rütbe verilmeksizin derece yükselmesi'),('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],'binbaşı ve başçavuş yok'),
+ ('3','tanim','rütbe','subay: teğmen/üsteğmen/yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı YOK','e) Sözleşmeli subay : Bu Kanunda','kıdemli üstçavuş rütbelerini haiz astsubayları,',[('6', 'subay adayı teğmen rütbesine nasbedilir'), ('10', 'astsubay adayı astsubay çavuş rütbesine nasbedilir'), ('12', 'rütbe bekleme süreleri 926’ya göre'), ('15', 'rütbe verilmeksizin derece yükselmesi'), ('11', 'm.11 metninin sonunda sonraki bölüm başlığı yer alır')],'binbaşı ve başçavuş yok'),
  ('3','tanim','temel askerlik','subaylık veya astsubaylık anlayışı','g) (Değişik: 16/6/2009-5907/1 md.) Askeri eğitim','anlayışı kazandırma eğitimini,',[],'okul, kurum, sınıf okulu, kıta, eğitim merkezinde'),
  ('3','tanim','emsal','subay: harp okulu; astsubay: meslek yüksekokulu mezunu muvazzaf','h) (Ek: 16/6/2009-5907/1 md.) Emsal','mezun olan muvazzaf astsubayları,',[('12','emsalinden fazla okunan süre rütbe beklemeden düşülmez'),('15','emsali muvazzafın mali haklarından aynen yararlanır'),('16','sağlık yardımı emsalin net maaşının üçte ikisi')],'nasbedildikleri yıl mezun olanlar'),
  ('3','tanim','yürürlüğe girdiği ay ve günü','sözleşme yılı','ı) (Ek: 16/6/2009-5907/1 md.) Sözleşme yılı','her bir yıllık süreyi,',[],''),
@@ -27,8 +27,8 @@ K = [
  # m.6 — subay sözleşme süreleri
  ('6','kosul','askerî eğitime alınır','ön sözleşme yapılarak; başarırsa sözleşme','Madde 6 – Sözleşmeli subay adayları','teğmen rütbesine nasbedilirler.',[('10','astsubay adayı da ön sözleşmeyle eğitime alınır')],''),
  ('6','kosul','nasbedilirler','subay teğmen; astsubay astsubay çavuş','Madde 6 – Sözleşmeli subay adayları','teğmen rütbesine nasbedilirler.',[('10','astsubay adayı astsubay çavuş rütbesine nasbedilir')],''),
- ('6','sure','Sözleşme süreleri','üç-dokuz yıl; maliyete, kuvvet-sınıf-branşa göre yönetmelikle','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10', 'astsubayda da üç-dokuz yıl'), ('12', 'sözleşme süreleri yurt dışı öğrenimde uzar'), ('8', 'm.8 metnindeki dipnotta bu ibare geçer')],''),
- ('6','kosul','talebe bakılmaksızın','savaş, seferberlik, alıkonma; komutan lüzumu, MSB/İçişleri onayıyla uzatılır','Sözleşme süreleri; terörle mücadele','talebe bakılmaksızın uzatılabilir.',[('10','astsubayda aynı kural')],'Kuvvet K., JGK, SGK komutanı lüzum gösterir'),
+ ('6','sure','Sözleşme süre','en az üç, en çok dokuz yıl; ayrıntısı yönetmelikte','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10', 'astsubayda da üç-dokuz yıl'), ('12', 'sözleşme süreleri yurt dışı öğrenimde uzar'), ('8', 'm.8 metnindeki dipnotta bu ibare geçer'), ('13', 'm.13: sözleşme süresi bitmeden idarece fesih sebepleri'), ('16', 'm.16: sözleşme süresince sağlık ve sosyal haklar')],'kuvvet, sınıf, branş ve yetiştirme maliyetine göre; astsubayda da aynı'),
+ ('6','kosul','talebe bakılmaksızın','savaş, seferberlik, alıkonma; komutan lüzumu, Milli Savunma-İçişleri onayıyla uzatılır','Sözleşme süreleri; terörle mücadele','talebe bakılmaksızın uzatılabilir.',[('10', 'astsubayda aynı kural')],'Kuvvet, Jandarma, Sahil Güvenlik komutanı lüzum gösterir; durum sürdükçe uzar'),
  ('6','kosul','rütbe yaş haddini','5434 sayılı Emekli Sandığı Kanunu','Ancak sözleşmeli subaylardan rütbe yaş','5434 sayılı Kanun hükümleri uygulanır.',[('10','astsubayda da 5434')],''),
  ('6','kosul','yenilen','talepleri hâlinde yenilenebilir; yaş haddinde 5434','Yönetmelikte belirlenen şartları taşıyanların','Kanun hükümleri uygulanır.',[('10','astsubayda da talep hâlinde yenilenir'),('16','yenilenmeyenlerin sağlık hakkı'),('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],''),
 
@@ -58,7 +58,7 @@ K = [
  ('12','sure','doktora eğitimini','sürelerin yarısı kadar uzar','hekimliğinde veya eczacılıkta doktora','yarısı kadar uzatılır.',[],'tıpta uzmanlık da yarısı kadar'),
  ('12','sure','aylıksız izin','izin süresi kadar uzar','926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu hükümlerine göre aylıksız','izin süresi kadar uzatılır.',[('13','doğum izni (aylıklı ya da aylıksız) sıhhi izin hesabına girmez')],'YURT DIŞI İKİ KAT · YURT İÇİ BİR KAT · UZMANLIK YARIM'),
  ('12','sure','uzatılan sözleşme süreleri','5434’teki rütbe yaş haddini geçemez','Sözleşmeli subay ve astsubayların, yurt içi','yaş haddini geçemez.',[],''),
- ('12','istisna','tabip subaylar','devlet hizmet yükümlülüğü yok; TUS sonrası üç yıl kıta hizmeti','Sözleşme süresi sona ermeden sözleşmesi fesih','uzmanlık eğitimine başlayabilirler.',[],'sözleşmesi feshedilenler hariç'),
+ ('12','istisna','tabip subaylar','devlet hizmet yükümlülüğü YOK; uzmanlığa üç yıl kıta hizmetinden sonra','Sözleşme süresi sona ermeden sözleşmesi fesih','uzmanlık eğitimine başlayabilirler.',[],'sözleşmesi süresinden önce feshedilenler hariç'),
 
  # m.13 — idarece fesih
  ('13','kosul','askeri eğitimin','üçte birine katılmamak; kazada bir kez tekrar','d) Askeri eğitimin üçte birine','eğitime alınırlar.',[],'ön sözleşme feshi'),
@@ -66,7 +66,7 @@ K = [
  ('13','sayi_oran','disiplin amirinden','bir yılda toplam sekiz defa','f) (Değişik: 31/1/2013-6413/45 md.) Son olarak','daha fazla disiplin cezası almak.',[],'en az iki amirden'),
  ('13','sure','hava değişimi','doksan gün; yatarak tedavi, doğum izni, görev kazası hariç','3) Tedavi kurumlarında yatarak','doksan günü geçmek.',[('16','sıhhi izinle sözleşmesi bitenin sağlık hakkı')],'bir sözleşme yılında'),
  ('13','kosul','hürriyeti bağlayıcı','bir ay ve fazlası (taksirli hariç)','e) Taksirli suçlar hariç','cezaya mahkum olmak.',[],''),
- ('13','kosul','Yabancı uyruklu','evliliği MSB uygun görmezse fesih; vatandaşlık kaybı da','ı) Yabancı uyruklu','Türk vatandaşlığından çıkarılmak.',[],''),
+ ('13','kosul','Yabancı uyruklu','evliliği Milli Savunma uygun görmezse fesih; vatandaşlık kaybı da','ı) Yabancı uyruklu','Türk vatandaşlığından çıkarılmak.',[],''),
  ('13','kosul','yıkıcı, bölücü','yasadışı faaliyet: fesih sebebi','g) Yasadışı siyasi','tespit edilmek.',[],'irticai faaliyet de'),
  ('13','kosul','Terörle Mücadele Kanunu','malul istekli uzatılabilir (faydalı, uygun, sağlıklı)','Sözleşmeli subay ve astsubaylardan 12/4/1991','şartıyla uzatılabilir.',[],''),
 
@@ -77,7 +77,7 @@ K = [
  ('16','sure','kendi iste','hizmetin yarısı kadar, en çok beş yıl','b) Sözleşme süresi sonunda kendi','en çok beş yılı,',[],'İDARE YENİLEMEZSE ON · KENDİ İSTEMEZSE BEŞ'),
  ('16','sure','kusur','hizmet süresi kadar, en çok on yıl','a) Kendi kusurları olmaksızın','en çok on yılı,',[],'idare yenilemediyse'),
  ('16','istisna','ücretsiz','başka kurumdan hakkı doğan yararlanamaz','ücretsiz olarak verilmeye','asker hastanelerinden yararlanamazlar.',[],''),
- ('16','sayi_oran','sağlık yardımı','on iki ay, net maaşın üçte ikisi; kesinti yok','Sözleşmeleri sağlık nedeniyle sona erenlerden','Bu ödemeden hiçbir kesinti yapılmaz.',[],''),
+ ('16','sayi_oran','sağlık yardımı','oniki ayı geçmez; emsal net maaşın 2/3’ü; kesinti yok','Sözleşmeleri sağlık nedeniyle sona erenlerden','Bu ödemeden hiçbir kesinti yapılmaz.',[],''),
  ('16','kosul','sosyal hakları ve sağlık işlemlerinde','211 sayılı Kanunun muvazzaf hükümleri','Sözleşmeli subay ve sözleşmeli astsubaylar ile bunların','hükümleri uygulanır.',[],'sözleşme süresince'),
 ]
 yaz(13, "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun", K)
