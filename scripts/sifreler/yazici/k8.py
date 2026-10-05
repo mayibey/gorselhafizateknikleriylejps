@@ -15,15 +15,15 @@ K = [
 
  # m.2 — kapsam
  ('2','kosul','para, mal','çalışma dahil; yalnız afet, salgın, ekonomik bunalım hâlinde','Bu Kanun; olağanüstü hal ilanına tabii afet','çalışma yükümlülükleri',[],'şiddet (b) OHAL’inde para, mal, çalışma yükümlülüğü YOK'),
- ('2','kosul','her türü için','ayrı ayrı: hak sınırlama-durdurma, tedbir, görevli, yönetim usulü; para-mal değil','olağanüstü hallerin her türü için','olağanüstü yönetim usullerine ilişkin hükümleri kapsar.',[],'seçim zamanı, vergi muafiyeti kapsamda yok'),
+ ('2','kosul','olağanüstü hallerin her türü için','ayrı ayrı: hak sınırlama-durdurma, tedbir, görevli, yönetim usulü; para-mal değil','olağanüstü hallerin her türü için','olağanüstü yönetim usullerine ilişkin hükümleri kapsar.',[],'seçim zamanı, vergi muafiyeti kapsamda yok'),
  ('2','gorev_yetki','kamu hizmeti görevlileri','yetkiler ve durumlarındaki değişiklikler','kamu hizmeti görevlilerine','değişiklikler yapılacağına',[],''),
 
  # m.3 — ilan, süre, uzatma, Meclis onayı
  ('3','makam','ilan','Cumhurbaşkanı; en çok altı ay','Cumhurbaşkanı:1','olağanüstü hal ilan edebilir.',[('1','m.1: OHAL ilan edilmesi sebepleri ve amaç'),('2','m.2: ilan edilen OHAL’de yükümlülükler ve kapsam'),('9','m.9: afet ve salgın OHAL’i ilanında tedbirler'),('11','m.11: şiddet OHAL’i ilanında ek tedbirler'),('22','m.22: OHAL ilan edilen ilde valinin yardım istemi'),('23','m.23: OHAL ilanından sonra silah kullanma yetkisi')],'Milli Güvenlik Kurulu görüşünü alarak; eskiden Bakanlar Kurulu'),
  ('3','makam','görüşünü','Milli Güvenlik Kurulu','b) Anayasa ile kurulan','görüşünü de aldıktan sonra;',[],'ilan kararından önce Cumhurbaşkanı alır'),
- ('3','makam','kapsamını değiştir','Milli Güvenlik Kurulu görüşü; şiddet (b) hâlinde','Cumhurbaşkanı, olağanüstü halin bu maddenin','görüşünü alır.',[],'süreyi uzatma ve kaldırmada da; bu kural yalnız (b) bendi için yazılı'),
- ('3','sure','uzat','dört ay; Meclis, Cumhurbaşkanı istemiyle','Meclis, olağanüstü hal süresini değiştirebilir.','olağanüstü hali kaldırabilir.',[],'her defasında; İLAN ALTI, UZATMA DÖRT'),
- ('3','makam','süresini değiştir','Meclis (Türkiye Büyük Millet Meclisi)','Meclis, olağanüstü hal süresini değiştirebilir.','olağanüstü hali kaldırabilir.',[],'kaldırma yetkisi de Meclisin'),
+ ('3','makam','kapsamını','değiştirme, uzatma, kaldırma: Milli Güvenlik Kurulu görüşü; şiddet (b) hâlinde','Cumhurbaşkanı, olağanüstü halin bu maddenin','görüşünü alır.',[],'süreyi uzatma ve kaldırmada da; bu kural yalnız (b) bendi için yazılı'),
+ ('3','sure','her defasında','dört ayı geçmemek üzere uzatılır; Meclis, Cumhurbaşkanı istemiyle','Meclis, olağanüstü hal süresini değiştirebilir.','olağanüstü hali kaldırabilir.',[('11', 'm.11: sınır ötesi harekatta her defasında Hükümet izni')],'her defasında; İLAN ALTI, UZATMA DÖRT'),
+ ('3','makam','olağanüstü hal süresini','değiştirir: Meclis (Türkiye Büyük Millet Meclisi)','Meclis, olağanüstü hal süresini değiştirebilir.','olağanüstü hali kaldırabilir.',[],'kaldırma yetkisi de Meclisin'),
  ('3','sira_usul','Resmi Gazete','yayımlanır; hemen Meclisin onayına sunulur',"Olağanüstü hal kararı Resmi Gazete'de",'onayına sunulur.',[],'Meclis onayı olmadan süresiz yürürlük YOK'),
  ('3','sira_usul','tatilde','derhal toplantıya çağrılır','Türkiye Büyük Millet Meclisi tatilde ise','toplantıya çağrılır.',[],''),
  ('3','sira_usul','sebeplerle alındığı','Türkiye radyo ve televizyonuyla; gerekirse diğer araçlarla','Olağanüstü hal kararının hangi','diğer araçlarla ilan edilir.',[],'sebep, bölge ve süre ilan edilir; diğer araçlara Cumhurbaşkanı karar verir'),
@@ -36,18 +36,18 @@ K = [
  # m.11 — şiddet OHAL'i ek tedbirleri
  ('11','gorev_yetki','kamu düzeni','m.9’a ek: sokağa çıkma/toplantı/silah/dernek/basın; gıda kontrolü-çalışma yükümlülüğü ek DEĞİL','Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince','a) Sokağa çıkmayı sınırlamak veya yasaklamak,',[('1', 'm.1/b: kamu düzeninin ciddi bozulması OHAL sebebi'), ('3', 'm.3/b: aynı sebeple Cumhurbaşkanı ilan eder')],'m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir; çalışma yükümlülüğü afet-bunalım OHAL’inde'),
  ('11','gorev_yetki','Sokağa çıkma','yalnız şiddet (b) hâlinde: sınırlama-yasaklama; afet-salgında YOK','Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince','a) Sokağa çıkmayı sınırlamak veya yasaklamak,',[],'sınırlama veya yasaklama'),
- ('11','gorev_yetki','gösteri yürüyüş','yalnız şiddet (b) hâlinde: yasaklama, erteleme, izne bağlama','m) Kapalı ve açık yerlerde','gerekiyorsa dağıtmak,',[],'yer ve zaman tayini, izletme, dağıtma da'),
+ ('11','gorev_yetki','gösteri yürüyüşlerini','yalnız şiddet (b) hâlinde: yasaklama, erteleme, izne bağlama','m) Kapalı ve açık yerlerde','gerekiyorsa dağıtmak,',[],'yer ve zaman tayini, izletme, dağıtma da'),
  ('11','gorev_yetki','Ruhsatlı da olsa','silah-mermi taşıma ve nakil yasağı; yalnız şiddet (b) hâlinde','i) Ruhsatlı da olsa her nevi silah','naklini yasaklamak,',[],'patlayıcı, zehir, boğucu gaz bulundurma da izne bağlanır ya da yasaklanır (j)'),
  ('11','sure','Dernek faaliyet','üç ay; her dernek için ayrı karar','o) (Ek: 14/11/1984 - 3076/1 md.) Dernek','durdurmak,',[],'yalnız şiddet (b) OHAL’inde'),
- ('11','sure','işçi çıkart','üç ay; izne bağlama veya erteleme','n) (Ek: 14/11/1984 - 3076/1 md.) İşçinin','izne bağlamak veya ertelemek,',[],'işçinin isteği, ahlak, sağlık, emeklilik, süre bitimi hariç'),
- ('11','gorev_yetki','kimlik belirleyici','bölge sakinleri ve hariçten girenler (d bendi)','d) Olağanüstü hal ilan edilen bölge sakinleri','mecburiyeti koymak,',[],'belge taşıma mecburiyeti'),
+ ('11','sure','işçi çıkartmalarını','üç ay; izne bağlama veya erteleme','n) (Ek: 14/11/1984 - 3076/1 md.) İşçinin','izne bağlamak veya ertelemek,',[],'işçinin isteği, ahlak, sağlık, emeklilik, süre bitimi hariç'),
+ ('11','gorev_yetki','kimlik belirleyici belge','bölge sakinleri ve hariçten girenler (d bendi)','d) Olağanüstü hal ilan edilen bölge sakinleri','mecburiyeti koymak,',[],'belge taşıma mecburiyeti'),
  ('11','makam','sınır ötesi','valinin talebi; ilgili komutan icra eder; Genelkurmay kanalı, Hükümet müsaadesi','p) (Ek: 25/7/1986','harekat planlayıp icra etmek.',[],'komşu ülkeyle mutabakat; mahdut hedefli; vali emir vermez'),
 
  # m.22 — il valisinin yardım istemi
  ('22','makam','ani ve olağanüstü','en yakın askeri komutanlıktan yardım','İl valisi, ani ve olağanüstü','yardım gönderilmesini isteyebilir.',[],'bölge valisinin güçleri gelene kadar'),
  ('22','makam','bildirir','bölge valisi ve İçişleri Bakanlığına','İl valisi ayrıca bu durumu','İçişleri Bakanlığına bildirir.',[],'askerî yardım istediğini'),
  ('22','makam','olayları önle','önce emrindeki kolluk; yetmezse bölge valisi','b) İllerinde bu Kanunun 3 üncü maddesinin (b)','bölge valisine başvururlar.',[],'ani olayda en yakın askerî komutanlık'),
- ('22','makam','yardım istem','afette mevcut yetkiler; şiddette kolluk, bölge valisi, askeri','a) İllerinde bu Kanunun 3 üncü maddesinin birinci fıkrasının (a)','bölge valisine başvururlar.',[],'(a) ve (b) için ayrı usul'),
+ ('22','makam','yardım istemi','afette mevcut yetkiler; şiddette kolluk, bölge valisi, askeri','a) İllerinde bu Kanunun 3 üncü maddesinin birinci fıkrasının (a)','bölge valisine başvururlar.',[],'(a) ve (b) için ayrı usul'),
  ('22','sure','istekleri','gecikmeksizin yerine getirilir','İl valisinin yukarıda açıklanan istekleri','gecikmeksizin yerine getirilir.',[],'ilgililerce'),
  ('22','makam','görev ve yetkiler','il valisi (askeri yardım isteyince)','İl valisinin askeri birliklerden yardım','il valilerince yerine getirilir.',[],'bölge valisine ait görev ve yetkiler; m.21 uygulanır'),
 
