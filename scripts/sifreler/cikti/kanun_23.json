@@ -16,7 +16,7 @@
    "i": "K-23-002",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "kapsar",
+   "tetikleyici": "görev yapan personeli kapsar",
    "cevap": "Jandarma, Sahil Güvenlik, Akademi karargâh-birlik-kurumu ve personeli; Bakanlık sivili YOK",
    "kanit": "MADDE 2 - (1) Bu Yönetmelik, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisindeki karargâh, birlik ve kurumlar ile buralarda görev yapan personeli kapsar.\n(2) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisi emrine verilen 25/6/2019 tarihli ve 7179 sayılı Askeralma Kanununa tabi askerlik yükümlüleri bakımından, bu Yönetmelikte yer almayan hususlarda diğer askerlik yükümlülerinin tabi olduğu mevzuat hükümleri uygulanır.\n(3) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli işçiler kendi mevzuatına tabidir.",
    "not": "işçiler kendi mevzuatına tabi",
@@ -252,7 +252,7 @@
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "temelidir",
-   "cevap": "Jandarma, Sahil Güvenlik, Akademinin; hiçbir suretle taviz yok",
+   "cevap": "disiplin: Jandarma, Sahil Güvenlik, Akademinin; hiçbir suretle taviz yok",
    "kanit": "Disiplin\nMADDE 7 - (1) Disiplin, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinin temelidir ve hiçbir suretle disiplinden taviz verilemez.",
    "not": "",
    "karistirilan": []
@@ -262,7 +262,7 @@
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "tesis edilmelidir",
-   "cevap": "en zor zamanlarda bile uygulanacak şekilde",
+   "cevap": "disiplin: en zor zamanlarda bile uygulanacak şekilde",
    "kanit": "(7) Disiplin, en zor zamanlarda bile uygulanacak şekilde tesis edilmelidir.",
    "not": "",
    "karistirilan": []
@@ -312,7 +312,7 @@
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "icra eder",
-   "cevap": "korku ile değil, sevgi ve üstün görev anlayışıyla",
+   "cevap": "ast görevini: korku ile değil, sevgi ve üstün görev anlayışıyla",
    "kanit": "(2) Görevini; korku ile değil, sevgi ve üstün görev anlayışı ile icra eder. Âmirin mevzuata uygun şekilde verdiği her emri mutlak itaat anlayışıyla, bütün tahammül kuvvetini sarf ederek yapar.",
    "not": "mevzuata uygun her emri mutlak itaatle",
    "karistirilan": []
@@ -397,7 +397,7 @@
    "madde": "9",
    "tip": "yasak",
    "tetikleyici": "müdahale",
-   "cevap": "mecbur kalmadıkça yok",
+   "cevap": "âmir, maiyetin görevine mecbur kalmadıkça yapmaz",
    "kanit": "(8) Maiyetine görevini icra esnasında mecbur kalmadıkça müdahalede bulunmaz.",
    "not": "âmir, görev icrasındaki maiyetine",
    "karistirilan": [
@@ -416,7 +416,7 @@
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "münasebet",
-   "cevap": "görevde ciddi, görev dışında samimi-candan",
+   "cevap": "âmir-maiyet: görevde ciddi, görev dışında samimi-candan",
    "kanit": "(3) Görev esnasında, maiyeti ile münasebetleri daima ciddi, görev dışındaki münasebet ve görüşmeleri ise samimi ve candan olur. Bununla beraber, itaat ve itimat hislerini bozacak tavır ve davranışlarda bulunmaz.",
    "not": "",
    "karistirilan": [
@@ -500,7 +500,7 @@
    "madde": "10",
    "tip": "yasak",
    "tetikleyici": "suç teşkil",
-   "cevap": "hiçbir surette yapılmaz; yapan sorumlu",
+   "cevap": "eden emir: hiçbir surette yapılmaz; yapan sorumlu",
    "kanit": "(4) Konusu suç teşkil eden emir hiçbir surette yerine getirilmez; yerine getiren kimse sorumluluktan kurtulamaz.",
    "not": "",
    "karistirilan": []
@@ -545,7 +545,7 @@
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "anlaşılır",
-   "cevap": "net olmalı; âmirin takip-kontrol-yönlendirme sorumluluğu",
+   "cevap": "emir: net olmalı; âmirin takip-kontrol-yönlendirme sorumluluğu",
    "kanit": "(9) Emir, net ve anlaşılır olmalıdır. Emrin yapılmasında ve istenilen şekilde başarıya ulaşmasında astın sorumluluğunun yanı sıra, âmirin de emre yönelik takip, kontrol ve olumlu yönde yönlendirme sorumluluğu vardır.",
    "not": "",
    "karistirilan": []
@@ -835,7 +835,7 @@
    "madde": "14",
    "tip": "makam",
    "tetikleyici": "kullandırılmalı",
-   "cevap": "yetkili âmir; büyük âmir kendi inisiyatifine almaz",
+   "cevap": "izni yetkili âmir; büyük âmir kendi inisiyatifine almaz",
    "kanit": "(4) İzinler yetkili âmir tarafından kullandırılmalı, bu tasarruf daha büyük âmirlerce kendi inisiyatiflerine alınmamalıdır.",
    "not": "",
    "karistirilan": []
