@@ -28,7 +28,7 @@ K = [
  ('9','makam','mevzuatın verdiği yetkiyi','valiler genel emir çıkarır (kaymakam değil)','Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği','bunları ilan ederler.',[],''),
  ('9','makam','imza yetkisi','hesabat ve teknik işlerde şube başkanına','Ancak valiler hesabata','imza yetkisi verebilirler.',[],'vali adına imza'),
  ('9','makam','teftiş','adli ve askerî teşkilat hariç hepsini denetler','D) Vali, dördüncü maddenin','amir ve memurlariyle de yaptırabilir.',[('31','kaymakam da adli-askerî hariç denetler'),('42','bucak teşkilatı bucak müdürünün gözetim ve teftişinde')],'müfettişlere de yaptırabilir'),
- ('9','makam','ilin her yönden','vali sorumlu (ilçede kaymakam)','E) İlin her yönden','denetlemekten sorumludur.',[],''),
+ ('9','makam','ilin her yönden','genel idare ve gidişini düzenlemekten vali sorumlu (ilçede kaymakam)','E) İlin her yönden','denetlemekten sorumludur.',[],''),
  ('9','makam','teşkilatı veya görevli memuru','yakın ilgili şube/daire başkanından ister; yapılması mecburi','F) Vali, ilde teşkilatı','yapılması mecburidir.',[],''),
  ('9','makam','fen kollarına','asli vazifeye halel getirmeden; ilgili Bakanlığa bilgi','G) Vali, il içindeki','bilgi verir.',[('31','kaymakam valiliğe teklif ederek ister')],''),
  ('9','makam','Cumhuriyet Bayram','ilde vali, ilçede kaymakam, bucakta bucak müdürü','K) Vali, Cumhuriyet Bayramında','tebrikleri kabul eder.',[('31','ilçede kaymakam başkanlık eder'),('42','bucakta bucak müdürü başkanlık eder')],''),
@@ -38,7 +38,7 @@ K = [
  ('11','makam','kıyı emniyeti','vali sağlar ve yürütür (ilçede kaymakam)','B) Memleketin sınır ve kıyı','sağlar ve yürütür.',[('32','ilçede kaymakam sağlar ve yürütür')],''),
  ('11','makam','önleyici kolluk','valinin görevi; huzur, güvenlik, kişi dokunulmazlığı','C) İl sınırları içinde huzur','valinin ödev ve görevlerindendir.',[('32','ilçede önleyici kolluk kaymakamın görevi')],''),
  ('11','sure','on beş günü geçmemek','giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı; okul kapatma YOK','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],'yalnız vali (kaymakam değil); ruhsatlı silah da'),
- ('11','sure','olağan hayatı durduracak','en çok on beş gün; yalnız vali (kaymakam değil)','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],''),
+ ('11','sure','olağan hayatı durduracak','bozulmada en çok on beş gün; yalnız vali, kaymakam DEĞİL','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],''),
  ('11','sure','dolaşma','vali en çok on beş gün kısıtlar','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],''),
  ('11','makam','il içine munhasır','vali değiştirir; kaymakam ancak valinin tasvibiyle','Ç) Jandarma, polis','Bakanlıklarına bilgi verir.',[('32','kaymakam valinin tasvibiyle değiştirir')],'İçişleri ve Gümrük-Tekel’e bilgi'),
  ('11','makam','önleyemedi','İçişleri Bakanlığı + en yakın kara-deniz-hava birliği','Valiler, ilde çıkabilecek','yardım isterler.',[],'hangisinden isteneceğini vali takdir eder'),
@@ -60,7 +60,7 @@ K = [
  # m.31 — kaymakamın görevleri
  ('31','ceza','aldıktan sonra','kaymakam: uyarma, kınama; bucak müdürü: yalnız uyarma; ağırı teklif','Kaymakam, ilçenin idare şube başkanlariyle','teklif ve talepte bulunabilir.',[('42', 'bucak müdürü savunma alıp yalnız uyarma verir')],'KAYMAKAM UYARMA-KINAMA · BUCAK MÜDÜRÜ YALNIZ UYARMA'),
  ('31','ceza','ikinci derecedeki memur','genel ve özel kolluk amir ve memurlarına da','Kaymakam, ilçenin idare şube başkanlariyle','teklif ve talepte bulunabilir.',[],'şube başkanlarına da'),
- ('31','ceza',"re'sen verilen",'kesin; tebliğden itibaren sicile geçer',"Kaymakamlarca re'sen verilen",'sicile geçer.',[],''),
+ ('31','ceza',"re'sen verilen",'cezalar kesin; tebliğden itibaren sicile geçer',"Kaymakamlarca re'sen verilen",'sicile geçer.',[],''),
  ('31','makam','takdirname','kaymakam verebilir; bucak müdürü yalnız teklif eder','Kaymakam, ilçe memurlarına takdirnamede','takdirnamede verebilir.',[('42','bucak müdürü takdirname için teklif eder')],''),
  ('31','sure','acele hâllerde','8 güne kadar; kendi memuruna bir ay','J) Kaymakam, ilçe idare şube başkanlarına','bir aya kadar izin verebilir.',[],'şube başkanına izin'),
  ('31','sure','tayini kendisine ait','bir aya kadar (yıllık izinden)','J) Kaymakam, ilçe idare şube başkanlarına','bir aya kadar izin verebilir.',[],''),
@@ -70,8 +70,8 @@ K = [
 
  # m.32 — kaymakamın kolluk yetkileri
  ('32','makam','ilçe sınırları içinde','kaymakam bütün kolluğun amiri','A) Kaymakam, ilçe sınırları içinde','derhal yerine getirmekle ödevlidir;',[],'önleyici kolluk da kaymakamda'),
- ('32','makam','kaymakam tarafından verilen','derhal yerine getirilir','Bu teşkilat amir ve memurları kaymakam','derhal yerine getirmekle ödevlidir;',[],''),
- ('32','makam','sürekli olarak','kaymakam valinin tasvibiyle; vali doğrudan','D) Kaymakam, valinin tasvibiyle','yerlerini değiştirebilir;',[('11','vali il içinde doğrudan değiştirir, bakanlıklara bilgi verir')],''),
+ ('32','makam','kaymakam tarafından verilen emirleri','derhal yerine getirilir','Bu teşkilat amir ve memurları kaymakam','derhal yerine getirmekle ödevlidir;',[],''),
+ ('32','makam','sürekli olarak','yer değiştirme: kaymakam valinin tasvibiyle; vali doğrudan','D) Kaymakam, valinin tasvibiyle','yerlerini değiştirebilir;',[('11', 'm.11: vali il içinde geçici veya sürekli değiştirir')],''),
  ('32','sira_usul','olağanüstü ve ani olaylar','valiye bilgi verip yardım ister; askere haber verir','Kaymakam, ilçe çevresinde','komutanlara da haber verir;',[('11','vali İçişleri ve askerî birlikten doğrudan ister')],''),
  ('32','makam','kimlik ve nitelikleri','kaymakam bilgi ister; hemen verilir','Buralarda bulunan veya çalışanların','istenilen bilgiler hemen verilir.',[],'işyerleri kaymakamın gözetiminde'),
 
@@ -79,13 +79,13 @@ K = [
  ('42','tanim','Bucak müdürü,','en büyük Hükümet memuru; yalnız uyarma; kolluk emre mecbur','Bucak müdürü, bucakta en büyük','en büyük Hükümet memuru ve temsilcisidir.',[],'bucağın genel idaresinden sorumlu; ilde vali, ilçede kaymakam'),
  ('42','ceza','uyarma cezası','önce savunma; kesin, sicile geçer','Memurin Kanunundaki usulüne göre savunmalarını','tebliğ tarihinden itibaren sicile geçer.',[],''),
  ('42','ceza','Daha ağır disiplin','vali ve kaymakama teklif (takdirname de)','Daha ağır disiplin','tekliflerde bulunur.',[('31','kaymakam ağır ceza için özel kanuna göre teklif eder')],''),
- ('43','makam','güven ve düzeninin','bucak müdürü sorumlu; kolluk emre mecbur','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[],''),
+ ('43','makam','Bucağın güven ve düzeninin','bucak müdürü sorumlu; kolluk emre mecbur','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[],''),
  ('43','makam','kolluk kuvvetleri bucak','müdürün emri altında; emri yerine getirmeye mecbur','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[],''),
- ('43','makam','Suç işlenmesini önle','gereken tedbirleri alır ve uygular','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[('11','vali de suçu önlemek için tedbir alır'),('32','kaymakam da suçu önlemek için tedbir alır')],''),
+ ('43','makam','Suç işlenmesini','önlemek için bucak müdürü gereken tedbirleri alır','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[('11', 'm.11: valinin suç önleme tedbirleri'), ('32', 'm.32: kaymakamın suç önleme tedbirleri')],''),
 
  # m.57-58 — idare kurulları
- ('57','makam','il idare kurul','valinin başkanlığında (vali muavini de); hukuk/defterdar/eğitim/bayındırlık/sağlık/tarım/veteriner; jandarma/emniyet/malmüdürü/gençlik-spor YOK','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('58', 'ilçe kurulunda malmüdürü, başkan kaymakam')],'vali, vali muavinini başkan yapabilir; malmüdürü ilçe kurulunda; 2026 Subay sınavında soruldu (Gençlik ve Spor yok)'),
+ ('57','makam','il idare kurulu','valinin başkanlığında (vali muavini de); hukuk/defterdar/eğitim/bayındırlık/sağlık/tarım/veteriner; jandarma/emniyet/malmüdürü/gençlik-spor YOK','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('58', 'ilçe kurulunda malmüdürü, başkan kaymakam')],'vali, vali muavinini başkan yapabilir; malmüdürü ilçe kurulunda; 2026 Subay sınavında soruldu (Gençlik ve Spor yok)'),
  ('57','makam','vali muavini','kurul başkanlığına vali görevlendirebilir','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('18','vali muavininin birinci sicil amiri vali')],''),
- ('58','makam','ilçe idare kurul','kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar-emniyet YOK','İlçe idare kurulu, kaymakamın','veterinerden teşekkül eder.',[('57', 'il kurulunda defterdar, başkan vali')],'defterdar il kurulunda'),
+ ('58','makam','ilçe idare kurulu','kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar-emniyet YOK','İlçe idare kurulu, kaymakamın','veterinerden teşekkül eder.',[('57', 'il kurulunda defterdar, başkan vali')],'defterdar il kurulunda'),
 ]
 yaz(5, '5442 sayılı İl İdaresi Kanunu', K)

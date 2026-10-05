@@ -206,7 +206,7 @@
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "ilin her yönden",
-   "cevap": "vali sorumlu (ilçede kaymakam)",
+   "cevap": "genel idare ve gidişini düzenlemekten vali sorumlu (ilçede kaymakam)",
    "kanit": "E) İlin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten sorumludur.",
    "not": "",
    "karistirilan": []
@@ -310,7 +310,7 @@
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "olağan hayatı durduracak",
-   "cevap": "en çok on beş gün; yalnız vali (kaymakam değil)",
+   "cevap": "bozulmada en çok on beş gün; yalnız vali, kaymakam DEĞİL",
    "kanit": "Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
    "not": "",
    "karistirilan": []
@@ -480,7 +480,7 @@
    "madde": "31",
    "tip": "ceza",
    "tetikleyici": "re'sen verilen",
-   "cevap": "kesin; tebliğden itibaren sicile geçer",
+   "cevap": "cezalar kesin; tebliğden itibaren sicile geçer",
    "kanit": "Kaymakamlarca re'sen verilen cezalar kesindir. Bu cezalar tebliğ tarihinden itibaren sicile geçer.",
    "not": "",
    "karistirilan": []
@@ -564,7 +564,7 @@
    "i": "K-5-051",
    "madde": "32",
    "tip": "makam",
-   "tetikleyici": "kaymakam tarafından verilen",
+   "tetikleyici": "kaymakam tarafından verilen emirleri",
    "cevap": "derhal yerine getirilir",
    "kanit": "Bu teşkilat amir ve memurları kaymakam tarafından verilen emirleri derhal yerine getirmekle ödevlidir;",
    "not": "",
@@ -575,13 +575,13 @@
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "sürekli olarak",
-   "cevap": "kaymakam valinin tasvibiyle; vali doğrudan",
+   "cevap": "yer değiştirme: kaymakam valinin tasvibiyle; vali doğrudan",
    "kanit": "D) Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli olarak yerlerini değiştirebilir;",
    "not": "",
    "karistirilan": [
     {
      "madde": "11",
-     "fark": "vali il içinde doğrudan değiştirir, bakanlıklara bilgi verir"
+     "fark": "m.11: vali il içinde geçici veya sürekli değiştirir"
     }
    ]
   },
@@ -649,7 +649,7 @@
    "i": "K-5-058",
    "madde": "43",
    "tip": "makam",
-   "tetikleyici": "güven ve düzeninin",
+   "tetikleyici": "Bucağın güven ve düzeninin",
    "cevap": "bucak müdürü sorumlu; kolluk emre mecbur",
    "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
    "not": "",
@@ -669,18 +669,18 @@
    "i": "K-5-060",
    "madde": "43",
    "tip": "makam",
-   "tetikleyici": "Suç işlenmesini önle",
-   "cevap": "gereken tedbirleri alır ve uygular",
+   "tetikleyici": "Suç işlenmesini",
+   "cevap": "önlemek için bucak müdürü gereken tedbirleri alır",
    "kanit": "Bucağın güven ve düzeninin korunmasından bucak müdürü sorumludur. Suç işlenmesini önlemek için gereken tedbirleri alır ve uygular. Genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır.Bunlar müdürden aldıkları emri yerine getirmeye mecburdurlar.",
    "not": "",
    "karistirilan": [
     {
      "madde": "11",
-     "fark": "vali de suçu önlemek için tedbir alır"
+     "fark": "m.11: valinin suç önleme tedbirleri"
     },
     {
      "madde": "32",
-     "fark": "kaymakam da suçu önlemek için tedbir alır"
+     "fark": "m.32: kaymakamın suç önleme tedbirleri"
     }
    ]
   },
@@ -688,7 +688,7 @@
    "i": "K-5-061",
    "madde": "57",
    "tip": "makam",
-   "tetikleyici": "il idare kurul",
+   "tetikleyici": "il idare kurulu",
    "cevap": "valinin başkanlığında (vali muavini de); hukuk/defterdar/eğitim/bayındırlık/sağlık/tarım/veteriner; jandarma/emniyet/malmüdürü/gençlik-spor YOK",
    "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
    "not": "vali, vali muavinini başkan yapabilir; malmüdürü ilçe kurulunda; 2026 Subay sınavında soruldu (Gençlik ve Spor yok)",
@@ -718,7 +718,7 @@
    "i": "K-5-063",
    "madde": "58",
    "tip": "makam",
-   "tetikleyici": "ilçe idare kurul",
+   "tetikleyici": "ilçe idare kurulu",
    "cevap": "kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar-emniyet YOK",
    "kanit": "İlçe idare kurulu, kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi, milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder.",
    "not": "defterdar il kurulunda",
