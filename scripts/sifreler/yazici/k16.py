@@ -12,13 +12,13 @@ K = [
  ('3','sure','hizmet yükümlülüğü','en az üç, en çok dokuz yıl','b) Sözleşme: Türk','yazılı bir belgeyi,',[('13','tabip subaylar devlet hizmet yükümlülüğüne tabi değil'),('6','tabip devlet hizmet yükümlülüğü saklı tutulur')],''),
  ('3','tanim','müracaat etmiş','aday adayı (ön sözleşme henüz yok)','c) Sözleşmeli Subay/Astsubay Aday Adayı','yapılmamış olanları,',[],''),
  ('3','tanim','yetiştirilmek amacıyla','subay adayı / astsubay adayı','ç) Sözleşmeli Subay Adayı','askeri eğitime alınanları,',[],'ön sözleşmeyle eğitime alınan'),
- ('3','tanim','rütbe','subay: teğmen-üsteğmen-yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı-başçavuş yok','e) Sözleşmeli Subay:','kıdemli üstçavuş rütbelerini haiz astsubayları,',[('8','raportör herhangi bir rütbeden olabilir'),('11','raportör herhangi bir rütbeden olabilir'),('13','rütbe bekleme 926’ya göre'),('14','uzatma rütbe yaş haddini geçemez'),('32','üst rütbeye yükselmede nasıp 30 Ağustos')],''),
+ ('3','tanim','rütbe','subay: teğmen/üsteğmen/yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı-başçavuş YOK','e) Sözleşmeli Subay:','kıdemli üstçavuş rütbelerini haiz astsubayları,',[('8', 'raportör herhangi bir rütbeden olabilir'), ('11', 'raportör herhangi bir rütbeden olabilir'), ('13', 'rütbe bekleme 926’ya göre'), ('14', 'uzatma rütbe yaş haddini geçemez'), ('32', 'üst rütbeye yükselmede nasıp 30 Ağustos')],''),
  ('3','tanim','emsal','subay: harp okulu; astsubay: meslek yüksekokulu mezunu muvazzaf','ğ) (Ek:RG-11/2/2010-27490) Emsal','mezun olan muvazzaf astsubayları,',[('13','emsalinden fazla okunan süre rütbe beklemeden düşülmez'),('22','sağlık yardımı emsalin net maaşının üçte ikisi')],''),
  ('3','tanim','Sözleşme yılı:','yürürlük ay-gününden her bir yıllık süre','h) (Ek:RG-11/2/2010-27490) Sözleşme yılı','her bir yıllık süreyi,',[],''),
  ('3','tanim','mesleki sınav','yazılı, mülakat, fiziki yeterlilik testi','ı) (Ek:RG-11/2/2010-27490) (Değişik:RG-1/10/2025-33034) Mesleki sınav','değerlendirme testini,',[('8','muvazzaf subaylığa geçişte mesleki sınav şartı'),('11','muvazzaf astsubaylığa geçişte mesleki sınav şartı')],'muvazzaflığa geçişte'),
 
  # m.5-6 — kaynak ve subay adayı nitelikleri
- ('5','sure','ayının ilk günü','Ocak; subay yirmiyedi-otuziki; astsubay yirmiyedi-yirmidört','(Değişik fıkra:RG-27/3/2013-28600)Sözleşmeli subay kaynaklarını','otuz iki yaşını bitirmemiş olanlar',[('6','subay adayı niteliklerinde aynı yaş kuralı'),('9','astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört')],'düzeltilmemiş nüfus kaydı; otuziki lisansüstü'),
+ ('5','sure','ayının ilk günü','Ocak; subay yirmiyedi-otuziki; astsubay yirmiyedi-yirmidört','(Değişik fıkra:RG-27/3/2013-28600)Sözleşmeli subay kaynaklarını','otuz iki yaşını bitirmemiş olanlar',[('6', 'subay adayı niteliklerinde aynı yaş kuralı'), ('9', 'astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört')],'yaş hesabı: düzeltilmemiş nüfus kaydıyla, müracaat yılının Ocak ilk günü itibarıyla BİTİRMEMİŞ olmak'),
  ('5','yasak','askerî okul','alınmaz/alınamaz; yedek, kısa dönem, 1111 terhisli olabilir','Askerî okullardan ve Türk Silahlı','sözleşmeli subay veya astsubay olabilirler.',[],'her ne sebeple olursa olsun ilişiği kesilen'),
  ('5','yasak','statüsünde personel','askerî hâkim sınıfına alınmaz','Askerî hâkim sınıfına','personel alınmaz.',[],''),
  ('6','sure','subay adaylarında aran','yirmi yedi (lisansüstü otuz iki); dört yıllık fakülte','Sözleşmeli subay adaylarında aranacak','yüksekokul mezunu olmak.',[('9','astsubay adayında yaş dört yıl+ yirmi yedi, azı yirmi dört')],'Türk vatandaşı, sağlık, güvenlik soruşturması da'),
@@ -58,12 +58,12 @@ K = [
  ('13','kosul','kadro açığı','terfi şartlarını haizse sözleşme sonuna kadar derece ilerlemesi','Sözleşmeli subaylardan üst rütbede kadro açığı','derece ilerlemesi yaparlar.',[],''),
  ('13','kosul','Aynı seviyede birden fazla','rütbe bekleme süresinden düşülmez','Aynı seviyede birden fazla','düşme yapılmaz.',[],''),
  ('13','sure','Fazla öğrenim süreleri','fazla bir yıl→bir; fazla iki yıl→2 ya da 1+1','Fazla öğrenim süreleri;','bir sonraki rütbede ise 1 yıldır.',[],'iki yılda birer yıl müspet sicil şartı'),
- ('13','istisna','tabip subaylar','devlet hizmet yükümlülüğü yok; TUS sonrası üç yıl kıta','Sözleşme süresi sona ermeden sözleşmesi fesih','uzmanlık eğitimine başlayabilirler.',[],'sözleşmesi feshedilenler hariç'),
+ ('13','istisna','tabip subaylar','devlet hizmet yükümlülüğü YOK; uzmanlığa üç yıl kıta hizmetinden sonra','Sözleşme süresi sona ermeden sözleşmesi fesih','uzmanlık eğitimine başlayabilirler.',[],'sözleşmesi feshedilenler hariç'),
 
  # m.14 — yenileme ve uzatma
  ('14','sira_usul','yenilemek iste','altı ay önceden dilekçeyle ilk amirine','a) Sözleşmeli subay ve astsubaylardan, sözleşmesini yenilemek','ilk amirine müracaat eder.',[],'DİLEKÇE 6 AY · BİLDİRİM 3 AY'),
  ('14','sira_usul','yenilenmesi ve uzatılması','dilekçe ilk amire (Genelkurmay’a değil); nihai karar komutanlık','Madde 14 - Sözleşmenin yenilenmesi','Sahil Güvenlik Komutanlığına gönderilir.',[],'EK-C nitelik belgesiyle, silsile yoluyla'),
- ('14','makam','nihai karar','Kuvvet Komutanlığı, JGK, SGK verir','Sözleşmenin yenilenip yenilenmemesi konusundaki nihai','tarafından verilir.',[],'komisyon değerlendirir'),
+ ('14','makam','nihai karar','Kuvvet Komutanlığı, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı verir','Sözleşmenin yenilenip yenilenmemesi konusundaki nihai','tarafından verilir.',[],'komisyon değerlendirir'),
  ('14','sure','gidiş ve dönüş','altı ay+ yurt dışı: geçen sürenin iki katı','c) Sözleşmeli subay ve astsubay nasbedildikten','geçen sürenin iki katı kadar;',[],'yurt içi TSK hesabına öğrenim: geçen süre kadar'),
  ('14','sure','yabancı memleket','altı ay veya daha uzun; süre iki katı uzar','c) Sözleşmeli subay ve astsubay nasbedildikten','geçen sürenin iki katı kadar;',[],''),
  ('14','sure','yenileyeceklerine dair','en az üç ay önce yazılı; yoksa kendiliğinden sona erer','d) Her sözleşme süresinin sona erme','kendiliğinden sona erer.',[],''),
