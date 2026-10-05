@@ -20,6 +20,26 @@
   {
    "i": "K-20-002",
    "madde": "10",
+   "tip": "istisna",
+   "tetikleyici": "silah taşıma yetkisine sahip",
+   "cevap": "belge istenmez; 5 yıllık harç makbuzuyla ruhsat verilir-yenilenir",
+   "kanit": "Yivsiz tüfek ruhsatnamesi almak veya aldığı ruhsatnameyi yeniletmek isteyen kişi, 10/7/1953 tarihli ve 6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanunun 7 nci maddesinin birinci fıkrasının (1), (2) ve (4) numaralı bentleri hükümlerine göre silah taşıma yetkisine sahip ise veya Bakanlar Kurulu Kararı uyarınca silah taşıma yetkisi verilen ve bu yetkiye dayanarak silah taşımasına müsaade edilmiş kişilerden ise yahut aynı maddenin (5) numaralı bendine göre Bakanlar Kurulunca çıkarılan yönetmelik uyarınca valilerden silah taşıma vesikası almış bulunuyor ise, yivsiz tüfek ruhsatnamesi verilmesinde veya yenilenmesinde kendisinden birinci fıkranın (b) bendinin (1), (2) ve (3) numaralı alt bentlerinde yer alan belgeler istenmez. 5 yıllık ruhsatname harcının ödendiğini kanıtlayan harç tahsil makbuzunun ibrazı halinde kendisine yivsiz tüfek ruhsatnamesi verilir veya mevcut ruhsatnamesi yenilenir.",
+   "not": "6136 m.7 ile taşıma yetkili ya da validen taşıma vesikalı kişi",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-003",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "ikamet tezkeresi",
+   "cevap": "iki yıl+ yabancıya vali verir: karşılıklılık, Dışişleri önerisi, İçişleri onayı",
+   "kanit": "Türkiye’deki yabancı elçilik ve konsolosluklarda görevli kişilerle en az iki yıl süreli ikamet tezkeresi alan yabancılara karşılıklılık ilkesi gözetilmek suretiyle Dışişleri Bakanlığının önerisi ve İçişleri Bakanlığının uygun görmesi üzerine valilerce yivsiz tüfek ruhsatnamesi verilir.",
+   "not": "elçilik-konsolosluk görevlisine de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-20-004",
+   "madde": "10",
    "tip": "sure",
    "tetikleyici": "bayilik",
    "cevap": "3 yıl; münhasıran vali; sağlık raporu: bedeni-ruhi sakınca yok",
@@ -28,7 +48,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-003",
+   "i": "K-20-005",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "engel",
@@ -43,11 +63,11 @@
    ]
   },
   {
-   "i": "K-20-004",
+   "i": "K-20-006",
    "madde": "13",
    "tip": "sure",
    "tetikleyici": "satın al",
-   "cevap": "yivsiz tüfek belgeyle; alan bir ayda cins-marka-çap-seri kaydettirir; tarih YOK",
+   "cevap": "yivsiz tüfek belgeyle; alan bir ayda cins/marka/çap/seri kaydettirir; tarih YOK",
    "kanit": "Bu silahları satın almak isteyenler silah imal eden ya da satan kişi ve kuruluşlardan yivsiz tüfek satın alma belgesi ile bu silahları satın alabilir. Bu şekilde satın alınan av tüfeklerinin en geç bir ay içerisinde belgenin alındığı makama müracaatla cins, marka, çap ve seri numarasının kaydettirilmesi zorunludur.",
    "not": "belgeyi veren makama kaydettirilir",
    "karistirilan": [
@@ -58,7 +78,7 @@
    ]
   },
   {
-   "i": "K-20-005",
+   "i": "K-20-007",
    "madde": "13",
    "tip": "sira_usul",
    "tetikleyici": "görülerek",
@@ -68,7 +88,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-006",
+   "i": "K-20-008",
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "izni ve belgesi",
@@ -78,7 +98,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-007",
+   "i": "K-20-009",
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "umuma mahsus yol",
@@ -88,7 +108,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-008",
+   "i": "K-20-010",
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "affa uğra",
@@ -98,7 +118,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-009",
+   "i": "K-20-011",
    "madde": "14",
    "tip": "kosul",
    "tetikleyici": "belirtilen mahkumiyet",
@@ -108,7 +128,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-20-010",
+   "i": "K-20-012",
    "madde": "14",
    "tip": "kosul",
    "tetikleyici": "paraya çevril",

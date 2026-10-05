@@ -9,11 +9,13 @@ from ortak import yaz
 K = [
  # m.10 — belgeler
  ('10','sure','yivsiz tüfek ruhsatname','5 yıl; merkezde vali, ilçede kaymakam','b) Yivsiz Tüfek Ruhsatnamesi:','5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.',[('13','m.13: engeli olmayana mülki amirlik düzenler; satın alınan tüfek bir ayda kaydedilir')],'bayilik belgesi ise 3 yıl; kırsalda taşıma, şehirde boş ve kılıfta'),
+ ('10','istisna','silah taşıma yetkisine sahip','belge istenmez; 5 yıllık harç makbuzuyla ruhsat verilir-yenilenir','Yivsiz tüfek ruhsatnamesi almak veya aldığı','mevcut ruhsatnamesi yenilenir.',[],'6136 m.7 ile taşıma yetkili ya da validen taşıma vesikalı kişi'),
+ ('10','makam','ikamet tezkeresi','iki yıl+ yabancıya vali verir: karşılıklılık, Dışişleri önerisi, İçişleri onayı','Türkiye’deki yabancı elçilik','valilerce yivsiz tüfek ruhsatnamesi verilir.',[],'elçilik-konsolosluk görevlisine de'),
  ('10','sure','bayilik','3 yıl; münhasıran vali; sağlık raporu: bedeni-ruhi sakınca yok','a) Satıcılık (Bayilik) Belgesi:','satıcılık (bayilik) belgesi verilir.',[],'iş yeri belgesi, sabıka beyanı, taahhütname, kimlik no, iki fotoğraf da'),
 
  # m.13 — satın alma ve kayıt
  ('13','kosul','engel','engeli olmayana mülki amirlik ruhsat düzenler; engelliye verilmez','(Değişik:RG-22/4/2009-27208) Bu Yönetmelik hükümlerine göre av tüfeği','yivsiz tüfek ruhsatnamesi düzenlenir.',[('10','m.10: ruhsat başvurusunda silah taşımaya engel hâl için sağlık raporu istenir')],'mahalli mülki amirlik'),
- ('13','sure','satın al','yivsiz tüfek belgeyle; alan bir ayda cins-marka-çap-seri kaydettirir; tarih YOK','Bu silahları satın almak isteyenler','kaydettirilmesi zorunludur.',[('14', 'm.14/h: uyuşturucu satın alma suçundan mahkûm olana izin verilmez')],'belgeyi veren makama kaydettirilir'),
+ ('13','sure','satın al','yivsiz tüfek belgeyle; alan bir ayda cins/marka/çap/seri kaydettirir; tarih YOK','Bu silahları satın almak isteyenler','kaydettirilmesi zorunludur.',[('14', 'm.14/h: uyuşturucu satın alma suçundan mahkûm olana izin verilmez')],'belgeyi veren makama kaydettirilir'),
  ('13','sira_usul','görülerek','ruhsatnameye kayıt sırasında tüfek görülür','Ruhsatname üzerine tüfeklerin','tespitinin yapılması esastır.',[],''),
 
  # m.14 — izin verilmeyecek hâller
