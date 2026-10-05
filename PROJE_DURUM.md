@@ -2,7 +2,23 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (5) — ŞİFRE SOL KELİME OKUNURLUĞU 25/25 (53125bc … 414d579 kanun başına bir commit, sayfa 5b11c5f)
+> Başkan (TCK ekran görüntüsüyle): "soldaki kelimeleri daha anlaşılır yerden kes … 'açıkça suç saymadığı' ne, 'kanunun açıkça suç
+> saymadığı' yazsan daha anlaşılır olur". 25 kanunda 415 satırın SOL'u yeniden kesildi. Kurallar: (1) eksik özne/baş isim eklendi
+> (≤5 kelime ve resmî metinde aynen geçiyorsa: "Kanunun açıkça suç saymadığı", "Belge vekâleten imzalandığında"); (2) yarım fiil
+> tamamlandı ("devre"→"imza yetkisi devredilen makam", "erişi"→"hiçbir şekilde erişilemez", "denetle"→"jandarma birimini denetler");
+> (3) CÜMLE HİLESİ: kökte geçen kısım SOL'da kalır, cümlenin devamı SAĞ'ın başına geçer ("muvazzaf subaylığa" → "geçiş: yedinci
+> yıla…", "emrini yazı ile" → "yinelerse: emir yapılır…", "görevine son" → "verilmez: kanunda yazılı haller dışında");
+> (4) ANLAMI TERS OKUNAN satırlar düzeltildi ("bildirimde bulunma → kabul edilmiş sayılır" → "İdarenin bildirimde bulunmaması
+> hâlinde"; "kusur → hizmet süresi kadar" → SAĞ "olmaksızın yenilenmezse: …"; "firarın başka şekilde önlenmesine" → SAĞ "imkân
+> bulunmazsa silah kullanılır"); (5) tam isim kökleri (teşebbüs, zimmet, dilekçe, harf büyüklüğü) ve gerçek sınav sorusunu tutan
+> kesik kökler (TCK "gerçekleştirilmesi için", 2521 "satın al") bilinçli bırakıldı; 3+ soru kaybettiren değişiklik yapılmadı.
+> Sonuç: işaretli satır 943 → 695 (kalanlar çoğunlukla tek ve tam terim: antet, karekod, ACELE); gerçek 2026 sınavı 92/109 DEĞİŞMEDİ;
+> arşiv DÜZ 2.210 → 2.173 (−37, %1,3 — her biri okunurluk için bilinçli; satır başına en çok 2 arşiv sorusu). Sayfalar yeniden
+> yayımlandı (Kilit Kelime Şifreleri v12, açık rapor v6). Yöntem aracı scratchpad sifre_denetim/sol_tara.py · sol_oner2.py ·
+> sol_uygula.py (mantik_duzelt.uygula değişkenli satırları da okuyor — 7068 m.8).
 >
 > ### ▶ 5 Eki (4) — ŞİFRE GECE İNCELEMESİ 25/25 (a1b3326 … 475be95, kanun başına bir commit)
 > Başkan: "yapılan çalışmayı farklı açılardan kontrol et; kelimeler cümleler ne kadar anlamlı, konunun özünü veriyor mu, eksik
