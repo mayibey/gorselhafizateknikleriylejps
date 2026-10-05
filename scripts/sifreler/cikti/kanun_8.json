@@ -17,7 +17,7 @@
    "madde": "1",
    "tip": "kosul",
    "tetikleyici": "durumlar",
-   "cevap": "(a) afet, salgın, ekonomik bunalım; (b) yaygın şiddet; savaş yok",
+   "cevap": "(a) afet/salgın/ekonomik bunalım; (b) yaygın şiddet; savaş-dış tehdit YOK",
    "kanit": "a) Tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım, b) Anayasa ile kurulan hür demokrasi düzenini veya temel hak ve hürriyetleri ortadan kaldırmaya yönelik yaygın şiddet hareketlerine ait ciddi belirtilerin ortaya çıkması veya şiddet olayları sebebiyle kamu düzeninin ciddi şekilde bozulması, Durumlarında olağanüstü hal ilan edilmesi",
    "not": "seferberlik, savaş, dış tehdit OHAL sebebi sayılmaz",
    "karistirilan": [
@@ -55,7 +55,7 @@
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "para, mal",
-   "cevap": "çalışma dahil; yalnız afet, salgın, bunalım OHAL’inde",
+   "cevap": "çalışma dahil; yalnız afet, salgın, ekonomik bunalım hâlinde",
    "kanit": "Bu Kanun; olağanüstü hal ilanına tabii afet, tehlikeli salgın hastalıklar veya ağır ekonomik bunalım hallerinde ilan edilen olağanüstü hallerde vatandaşlar için getirilecek para, mal ve çalışma yükümlülükleri",
    "not": "şiddet (b) OHAL’inde para, mal, çalışma yükümlülüğü YOK",
    "karistirilan": []
@@ -130,7 +130,7 @@
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "kapsamını değiştir",
-   "cevap": "Milli Güvenlik Kurulu görüşü; (b) şiddet OHAL’inde",
+   "cevap": "Milli Güvenlik Kurulu görüşü; şiddet (b) hâlinde",
    "kanit": "Cumhurbaşkanı, olağanüstü halin bu maddenin birinci fıkrasının (b) bendi gereğince ilanından sonra; süreyi uzatmaya, kapsamını değiştirmeye veya olağanüstü hali kaldırmaya ilişkin hususlarda da karar almadan önce Milli Güvenlik Kurulunun görüşünü alır.",
    "not": "süreyi uzatma ve kaldırmada da; bu kural yalnız (b) bendi için yazılı",
    "karistirilan": []
@@ -150,7 +150,7 @@
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "süresini değiştir",
-   "cevap": "Meclis (TBMM)",
+   "cevap": "Meclis (Türkiye Büyük Millet Meclisi)",
    "kanit": "Meclis, olağanüstü hal süresini değiştirebilir. Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.",
    "not": "kaldırma yetkisi de Meclisin",
    "karistirilan": []
@@ -200,7 +200,7 @@
    "madde": "9",
    "tip": "gorev_yetki",
    "tetikleyici": "tedbir",
-   "cevap": "afet-salgında: yerleşim/öğrenim/eğlence yeri/izin/haberleşme/bina yıkma/gıda/dağıtım/ticaret/ulaşım; sokağa çıkma-silah-dernek YOK",
+   "cevap": "afet-salgında: yerleşim/öğrenim/eğlence yeri/personel izni/haberleşme/bina yıkma/gıda/dağıtım/ticaret/ulaşım; sokağa çıkma-silah-dernek YOK",
    "kanit": "Tabii afet ve tehlikeli salgın hastalıklar sebebiyle olağanüstü hal ilanında, olağanüstü hal ilanını gerektiren hususlar gözönünde bulundurularak aşağıda yazılı tedbirler alınabilir: a) Bölgenin belirli yerlerinde yerleşimi yasaklamak, belirli yerleşim yerlerine girişi ve buralardan çıkışı sınırlamak, belli yerleşim yerlerini boşaltmak veya başka yerlere nakletmek, b) Resmi ve özel her derecedeki öğretim ve eğitim kurumlarında öğrenime ara vermek ve öğrenci yurtlarını süreli veya süresiz olarak kapatmak, c) Gazino, lokanta, birahane, meyhane, lokal, taverna, diskotek, bar, dansing, sinema, tiyatro ve benzeri eğlence yerleri ile kulüp vesair oyun salonlarını, otel, motel, kamping, tatil köyü ve benzeri konaklama tesislerini denetlemek ve bunların açılma ve kapanma zamanını tayin etmek, sınırlamak, gerektiğinde kapatmak ve bu yerleri olağanüstü halin icaplarına göre kullanmak, d) Bölgede olağanüstü hal hizmetlerinin yürütülmesi ile görevli personelin yıllık izinlerini sınırlamak veya kaldırmak, e) Bölge sınırları içerisindeki tüm haberleşme araç ve gereçlerinden yararlanmak ve gerektiğinde bu amaçla geçici olarak bunlara elkoymak, f) Tehlike arz eden binaları yıkmak; sağlığı tehdit ettiği tespit olunan taşınır ve taşınmaz mallar ile sağlığa zararlı gıda maddelerini ve mahsullerini imha etmek, g) Belli gıda maddeleri ile hayvan ve hayvan yemi ve hayvan ürünlerinin bölge dışına çıkarılmasını veya bölgeye sokulmalarını kontrol etmek, sınırlamak veya gerektiğinde yasaklamak, h) Gerekli görülen zaruri ihtiyaç maddelerinin dağıtımını düzenlemek, i) Halkın beslenmesi, ısınması, temizliği ve aydınlanması için gerekli gıda madde ve eşyalarla her türlü yakıtın, sağlığın korunmasında, tedavide ve tıpta kullanılan ilaç, kimyevi madde, alet ve diğer şeylerin, inşaat, sanayi, ulaşım ve tarımda kullanılan eşya ve maddelerin, kamu için gerekli diğer mal, eşya, araç, gereç ve her türlü maddelerin imali, satımı, dağıtımı, depolanması ve ticareti konularında gerekli tedbirleri almak, bu yerlere gerektiğinde elkoymak, kontrol etmek ve bu malları satıştan kaçınan, saklayan, kaçıran, fazla fiyatla satan, imalatını durduran veya yavaşlatanlar hakkında fiilin işleniş şekli veya niteliği de nazara alınarak işyeri bulunduğu mahal için hayati önem taşımadığı takdirde işyerini kapatmak, j) Kara, deniz ve hava trafik düzenine ilişkin tedbirleri almak, ulaştırma araçlarının bölgeye giriş ve çıkışlarını kayıtlamak veya yasaklamak.",
    "not": "sokağa çıkma, silah, dernek şiddet (b) OHAL’inde (m.11)",
    "karistirilan": [
@@ -233,7 +233,7 @@
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "kamu düzeni",
-   "cevap": "ek: sokağa çıkma/toplantı/silah/dernek/basın; gıda kontrolü, çalışma yükümlülüğü YOK",
+   "cevap": "m.9’a ek: sokağa çıkma/toplantı/silah/dernek/basın; gıda kontrolü-çalışma yükümlülüğü ek DEĞİL",
    "kanit": "Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince olağanüstü hal ilanında; genel güvenlik, asayiş ve kamu düzenini korumak, şiddet olaylarının yaygınlaşmasını önlemek amacıyla 9 uncu maddede öngörülen tedbirlere ek olarak aşağıdaki tedbirler de alınabilir: a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
    "not": "m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir; çalışma yükümlülüğü afet-bunalım OHAL’inde",
    "karistirilan": [
@@ -252,7 +252,7 @@
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "Sokağa çıkma",
-   "cevap": "yalnız şiddet (b) OHAL’inde; afet OHAL’inde yok",
+   "cevap": "yalnız şiddet (b) hâlinde: sınırlama-yasaklama; afet-salgında YOK",
    "kanit": "Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince olağanüstü hal ilanında; genel güvenlik, asayiş ve kamu düzenini korumak, şiddet olaylarının yaygınlaşmasını önlemek amacıyla 9 uncu maddede öngörülen tedbirlere ek olarak aşağıdaki tedbirler de alınabilir: a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
    "not": "sınırlama veya yasaklama",
    "karistirilan": []
@@ -262,13 +262,23 @@
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "gösteri yürüyüş",
-   "cevap": "yalnız şiddet (b) OHAL’inde: yasaklama, erteleme, izne bağlama",
+   "cevap": "yalnız şiddet (b) hâlinde: yasaklama, erteleme, izne bağlama",
    "kanit": "m) Kapalı ve açık yerlerde yapılacak toplantı ve gösteri yürüyüşlerini yasaklamak, ertelemek, izne bağlamak veya toplantı ve gösteri yürüyüşlerinin yapılacağı yer ve zamanı tayin, tespit ve tahsis etmek, izne bağladığı her türlü toplantıyı izletmek, gözetim altında tutmak veya gerekiyorsa dağıtmak,",
    "not": "yer ve zaman tayini, izletme, dağıtma da",
    "karistirilan": []
   },
   {
    "i": "K-8-021",
+   "madde": "11",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Ruhsatlı da olsa",
+   "cevap": "silah-mermi taşıma ve nakil yasağı; yalnız şiddet (b) hâlinde",
+   "kanit": "i) Ruhsatlı da olsa her nevi silah ve mermilerin taşınmasını veya naklini yasaklamak,",
+   "not": "patlayıcı, zehir, boğucu gaz bulundurma da izne bağlanır ya da yasaklanır (j)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-8-022",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "Dernek faaliyet",
@@ -278,7 +288,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-022",
+   "i": "K-8-023",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "işçi çıkart",
@@ -288,7 +298,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-023",
+   "i": "K-8-024",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "kimlik belirleyici",
@@ -298,7 +308,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-024",
+   "i": "K-8-025",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "sınır ötesi",
@@ -308,7 +318,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-025",
+   "i": "K-8-026",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "ani ve olağanüstü",
@@ -318,7 +328,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-026",
+   "i": "K-8-027",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "bildirir",
@@ -328,7 +338,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-027",
+   "i": "K-8-028",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "olayları önle",
@@ -338,7 +348,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-028",
+   "i": "K-8-029",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "yardım istem",
@@ -348,7 +358,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-029",
+   "i": "K-8-030",
    "madde": "22",
    "tip": "sure",
    "tetikleyici": "istekleri",
@@ -358,7 +368,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-030",
+   "i": "K-8-031",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "görev ve yetkiler",
@@ -368,17 +378,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-031",
+   "i": "K-8-032",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "teslim ol",
-   "cevap": "doğruca ve duraksamadan hedefe ateş; yalnız (b) OHAL’inde",
+   "cevap": "doğruca ve duraksamadan hedefe ateş; yalnız şiddet (b) hâlinde",
    "kanit": "Olağanüstü halin, bu Kanunun 3 üncü maddesinin (b) bendi gereğince ilan edilmesi halinde, silah kullanma yetkisini sahip bulunan güvenlik kuvvetlerinin teslim ol emrine itaat edilmemesi veya silahla mukabeleye yeltenilmesi veya güvenlik kuvvetlerinin meşru müdafaa durumuna düşmeleri halinde görevli güvenlik kuvvetleri mensupları doğruca ve duraksamadan hedefe ateş edebilirler.",
    "not": "silahla karşılık veya meşru müdafaa hâlinde de",
    "karistirilan": []
   },
   {
-   "i": "K-8-032",
+   "i": "K-8-033",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "soruşturma",
@@ -388,7 +398,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-033",
+   "i": "K-8-034",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "silah kullanma yetkisi",
