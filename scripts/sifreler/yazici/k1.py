@@ -11,7 +11,7 @@ K = [
  ('2','tanim','Kanunun açıkça suç saymadığı','ceza verilemez, tedbir uygulanamaz; kanunilik ilkesi','(1) Kanunun açıkça suç saymadığı','başka bir ceza ve güvenlik tedbirine hükmolunamaz.',[],'kanunda yazılı olmayan ceza ve tedbire de hükmolunamaz'),
  ('2','yasak','İdarenin düzenleyici işlemleriyle','suç ve ceza konulamaz','(2) İdarenin','konulamaz.',[],'yönetmelik, genelge ile suç olmaz'),
  ('2','yasak','suç ve ceza içeren hükümler','kıyas yapılamaz, geniş yorumlanamaz','(3) Kanunların suç','geniş yorumlanamaz.',[],''),
- ('3','kosul','ceza ve güvenlik tedbiri','işlenen fiilin ağırlığıyla orantılı','(1) Suç işleyen kişi hakkında','tedbirine hükmolunur.',[],'ceza ve güvenlik tedbiri'),
+ ('3','kosul','ceza ve güvenlik tedbiri','işlenen fiilin ağırlığıyla orantılı','(1) Suç işleyen kişi hakkında','tedbirine hükmolunur.',[('2', 'm.2: kanunda yazılı olmayan ceza ve güvenlik tedbiri uygulanamaz')],'ceza ve güvenlik tedbiri'),
  ('3','yasak','ayrım yapılamaz','ırk/dil/din/mezhep/milliyet/renk/cinsiyet/siyasi fikir/felsefi inanç/milli-sosyal köken/doğum/ekonomik-toplumsal konum; meslek-sendika YOK','(2) Ceza Kanununun uygulamasında','ayrıcalık tanınamaz.',[],'hiçbir kimseye ayrıcalık da tanınamaz'),
  ('4','kosul','Ceza kanunlarını','bilmemek mazeret sayılmaz','(1) Ceza kanunlarını bilmemek','mazeret sayılmaz.',[],'2026 Uzman sınavında soruldu'),
  ('5','kosul','Kanunun genel hükümleri','özel ceza kanunlarında da uygulanır','(1) Bu Kanunun genel hükümleri','uygulanır.',[],'ceza içeren kanunlardaki suçlarda da'),
