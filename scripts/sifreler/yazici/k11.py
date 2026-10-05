@@ -13,34 +13,34 @@ K = [
  ('2','tanim','özel bayrak','sembolik bayrak, özel işaret, flama, flandra, fors; yönetmelikte; sancak-arma yok','Bayrak ile özel bayrakların','yönetmelikte gösterilir.',[],'standartları ve kumaşı yönetmelikte'),
 
  # m.3 — çekme, indirme, tören
- ('3','sure','kamu kurum','sürekli çekili kalır','(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum','sürekli çekili kalır.',[('7','m.7: yönetmelikte belirlenecek kamu kurumları dışındakiler amblemde kullanamaz')],'yalnız mesai saatinde değil'),
+ ('3','sure','Kamu kurum ve kuruluşlarında','sürekli çekili kalır','(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum','sürekli çekili kalır.',[('7', 'm.7: yönetmelikte belirlenecek kamu kurumları dışındakiler amblemde kullanamaz')],'yalnız mesai saatinde değil'),
  ('3','makam','törenlerinin gereken biçimde','o mahaldeki yetkili amirler','Bayrak törenlerinin gereken biçimde','yetkili amirler sorumludur.',[],'tören sorumluluğu'),
- ('3','kosul','takılır','yetkililerin araçlarına (yurt içi-dışı); özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir'),
- ('3','kosul','çekilir','kamu kurumu/yurt dışı temsilcilik/deniz vasıtası; özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','deniz vasıtalarına çekilir.',[('4', 'm.4: yas alameti olarak 10 Kasımda yarıya çekilir')],'deniz vasıtası kamunun da gerçek-tüzel kişinin de olabilir'),
- ('3','sira_usul','indirilirken','tören yapılır; usulü yönetmelikte','Bayrak çekilirken ve indirilirken','tören yapılır.',[],'selamlama ise m.5: cephe alınarak'),
+ ('3','kosul','takılır','Bayrak: yetkililerin araçlarına (yurt içi-dışı); özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir'),
+ ('3','kosul','çekilir','Bayrak: kamu kurumu/yurt dışı temsilcilik/deniz vasıtası; özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','deniz vasıtalarına çekilir.',[('4', 'm.4: yas alameti olarak 10 Kasımda yarıya çekilir')],'deniz vasıtası kamunun da gerçek-tüzel kişinin de olabilir'),
+ ('3','sira_usul','Bayrak çekilirken ve indirilirken','tören yapılır; usulü yönetmelikte','Bayrak çekilirken ve indirilirken','tören yapılır.',[],'selamlama ise m.5: cephe alınarak'),
 
  # m.4-6 — yarıya çekme, selam, örtme
- ('4','makam','yarıya','yas: 10 Kasım; diğer hâlleri Cumhurbaşkanlığı ilan eder','Türk Bayrağı, yas alameti olarak','Cumhurbaşkanlığınca ilan edilir.',[('3','m.3 metninin sonunda m.4 başlığı “Bayrağın Yarıya Çekilmesi” yer alır')],'eskiden Başbakanlık'),
+ ('4','makam','yarıya','çekilir: 10 Kasım yas; diğer hâlleri Cumhurbaşkanlığı ilan eder','Türk Bayrağı, yas alameti olarak','Cumhurbaşkanlığınca ilan edilir.',[('3', 'm.3 metninin sonunda m.4 başlığı “Bayrağın Yarıya Çekilmesi” yer alır')],'eskiden Başbakanlık'),
  ('5','sira_usul','selam','cephe alınarak','Çekilmesi ve indirilmesi esnasında','cephe alınarak selamlanır.',[('4','m.4 metninin sonunda m.5 başlığı “Bayrağın Selamlanması” yer alır')],'çekme, indirme ve tören geçişlerinde'),
- ('6','kosul','örtül','tabut: Cumhurbaşkanı/şehit/yönetmelikteki asker-sivil; Atatürk heykeli; yeminde masalara; sporcu/iş insanı/kürsü YOK','Türk Bayrağı, Cumhurbaşkanlığı yapmış','masalara örtülebilir.',[('5', 'm.5 metninin sonunda m.6 başlığı “Bayrağın Örtülebileceği Yerler” yer alır')],'Cumhurbaşkanlığı yapmış kişi; heykele açılış töreninde'),
- ('6','kosul','adetler','diğer kullanılma şekli yönetmelikte','Ayrıca milli orf','yönetmelikte gösterilir.',[],'millî örf ve âdetler gözetilir'),
+ ('6','kosul','örtülebilir','tabut: Cumhurbaşkanı/şehit/yönetmelikteki asker-sivil; Atatürk heykeli; yeminde masalara; sporcu/iş insanı/kürsü YOK','Türk Bayrağı, Cumhurbaşkanlığı yapmış','masalara örtülebilir.',[('5', 'm.5 metninin sonunda m.6 başlığı “Bayrağın Örtülebileceği Yerler” yer alır')],'Cumhurbaşkanlığı yapmış kişi; heykele açılış töreninde'),
+ ('6','kosul','adetler','millî örf-adet gözetilir; diğer kullanılma şekli yönetmelikte','Ayrıca milli orf','yönetmelikte gösterilir.',[],'millî örf ve âdetler gözetilir'),
 
  # m.7 — yasaklar
- ('7','yasak','kullanılamaz','yırtık, sökük, yamalı, delik, kirli, soluk, buruşuk','Türk Bayrağı, yırtık','herhangi bir şekilde kullanılamaz.',[],'manevi değeri zedeleyecek şekilde de'),
- ('7','yasak','serilemez','masalara, kürsülere; resmi yemin töreni hariç','Resmi yemin törenleri dışında','örtü olarak serilemez.',[],'yemin töreninde masaya örtülebilir (m.6)'),
- ('7','yasak','benzeri eşya','Bayrağın şekli yapılamaz; elbise-üniforma olarak giyilemez','Oturulan veya ayakla basılan','şeklinde giyilemez.',[],'oturulan, ayakla basılan yere konulamaz'),
- ('7','yasak','hakaret','söz-yazı-hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz, özensiz kullanılamaz','Türk Bayrağına sözle','gerekli özen gösterilmeden kullanılamaz.',[],'saygısızlık da yasak'),
- ('7','yasak','amblem','parti, dernek, vakıf amblem-flamasında esas-fon olamaz','Hiçbir siyasi parti','fon teşkil edecek şekilde kullanılamaz.',[],'yönetmelikte belirlenen kamu kurumları hariç'),
+ ('7','yasak','kullanılamaz','Bayrak: yırtık, sökük, yamalı, delik, kirli, soluk, buruşuksa','Türk Bayrağı, yırtık','herhangi bir şekilde kullanılamaz.',[],'manevi değeri zedeleyecek şekilde de'),
+ ('7','yasak','örtü olarak serilemez','masalara, kürsülere; resmi yemin töreni hariç','Resmi yemin törenleri dışında','örtü olarak serilemez.',[],'yemin töreninde masaya örtülebilir (m.6)'),
+ ('7','yasak','benzeri eşya','(oturulan-basılan yer gibi): Bayrak şekli yapılamaz; elbise olarak giyilemez','Oturulan veya ayakla basılan','şeklinde giyilemez.',[],'oturulan, ayakla basılan yere konulamaz'),
+ ('7','yasak','hakaret edilemez','söz-yazı-hareketle edilemez; yırtılamaz, yakılamaz, yere atılamaz, özensiz kullanılamaz','Türk Bayrağına sözle','gerekli özen gösterilmeden kullanılamaz.',[],'saygısızlık da yasak'),
+ ('7','yasak','amblem, flama, sembol','parti, dernek, vakıf amblem-flamasında esas-fon olamaz','Hiçbir siyasi parti','fon teşkil edecek şekilde kullanılamaz.',[],'yönetmelikte belirlenen kamu kurumları hariç'),
  ('7','makam','aykırı fiiller','yetkililerce derhal önlenir, soruşturma yapılır','Bu Kanuna ve yönetmeliğe aykırı fiiller','gerekli soruşturma yapılır.',[],''),
 
  # m.8 — yasak ve ceza
- ('8','yasak','satmak','yasak; aykırı Bayrak yetkili amirce toplatılır','(Değişik: 23/1/2008-5728/421 md.) Bu Kanuna','yetkili amirlerince toplatılır.',[],'yapmak, satmak, kullanmak'),
+ ('8','yasak','Bayrak yapmak, satmak ve kullanmak','yasak; aykırı Bayrak yetkili amirce toplatılır','(Değişik: 23/1/2008-5728/421 md.) Bu Kanuna','yetkili amirlerince toplatılır.',[],'yapmak, satmak, kullanmak'),
  ('8','makam','yapılan Bayrak','o mahallin yetkili amirlerince toplatılır','Bu yasağa aykırı olarak yapılan','yetkili amirlerince toplatılır.',[],'para cezasını ise mülki amir verir'),
  ('8','makam','para ceza','mahalli mülki amir verir; Kabahatler m.32','Bu Kanun hükümlerine aykırı davranışta','idarî para ceza verilir.',[],'fiil suç oluşturmuyorsa'),
  ('8','ceza','suç oluşturmadığı takdirde','mülki amirce idari para cezası','Bu Kanun hükümlerine aykırı davranışta','idarî para ceza verilir.',[],'toplatmayı ise yetkili amir yapar'),
 
  # m.9-12 — yönetmelik, yürürlük, yürütme
- ('9','makam','uygulanmasına ilişkin','Cumhurbaşkanınca çıkarılan yönetmelik','Bu Kanunun ilgili maddelerinde','Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir',[],'eskiden tüzük'),
+ ('9','makam','kanunun uygulanmasına ilişkin diğer esaslar','Cumhurbaşkanınca çıkarılan yönetmelik','Bu Kanunun ilgili maddelerinde','Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir',[],'eskiden tüzük'),
  ('10','tanim','yürürlükten kaldırılmıştır','1936 tarihli 2994 sayılı eski Bayrak Kanunu','29 Mayıs 1936','yürürlükten kaldırılmıştır.',[('9', 'm.9 metninin sonunda m.10 başlığı yer alır')],''),
  ('11','sure','yürürlüğe girer','yayımından altı ay sonra','Bu Kanun yayımı tarihinden','yürürlüğe girer.',[('12', 'm.12 metninin sonunda değişikliklerin yürürlük tablosu yer alır')],''),
  ('12','makam','yürütür','Bakanlar Kurulu','Bu Kanun hükümlerini','Bakanlar Kurulu yürütür.',[],''),
