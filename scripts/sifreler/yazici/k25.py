@@ -20,7 +20,7 @@ K = [
  ('4','istisna','Kanun hükümlerine tabi değildir','spor ateşsizi, yivsiz tüfek; ev, tıp, sanayi, tarım, meslek aletleri','Yalnız sporda kullanılan','tabi değildir.',[],''),
  ('4','istisna','yivsiz tüfek','Kanuna tabi değil; yivli olan ruhsata tabi','Yalnız sporda kullanılan','tabi değildir.',[('Ek 1','turist avcı yivsiz tüfeğini gümrüğe beyanla getirir'),('2','m.2 metnindeki değişiklik notunda geçer')],''),
  ('4','makam','sanat veya mesleğin icrası','İçişleri yönetmeliğiyle yapım izni','Bunlardan bir sanat veya mesleğin','kurallara göre izin verilir.',[('5','izinli meslek bıçakları satış-taşıma yasağının dışında')],''),
- ('4','kosul','ateşli yivli','avda-sporda bile m.7 ruhsatına tabi','Avda veya sporda kullanılan her nevi','ruhsata tabidir.',[],''),
+ ('4','kosul','ateşli yivli silahlar','avda-sporda bile m.7 ruhsatına tabi','Avda veya sporda kullanılan her nevi','ruhsata tabidir.',[],''),
  ('5','yasak','satınalınması, taşınması','ve bulundurulması yasak; meslek bıçağı hariç','Yurda sokulması ve yapımı yasaklanan','bu yasağın dışındadırlar.',[('1','Kanunun kapsamı: sokma, yapma, satma, taşıma, bulundurma')],'yapım yasağı m.4’te'),
  ('5','yasak','taşınması ve bulundurulması','yasak: meslek izni olmayan herkese; izinli bıçak hariç','Yurda sokulması ve yapımı yasaklanan','bu yasağın dışındadırlar.',[],''),
 
@@ -40,12 +40,12 @@ K = [
  ('7','kosul','köy veya mahalle muhtarlığı','en az bir dönem muhtar ya da belediye başkanı taşıyabilir','7. Yapılan soruşturma sonucu','bulundurabilirler.',[],'terör irtibatı olan hariç'),
  ('7','makam','valiler tarafından verilecek izin','Cumhurbaşkanı yönetmeliğine göre vali izin vesikası','5. Cumhurbaşkanınca çıkarılan yönetmelikte','izin vesikasını alanlar,',[],''),
  ('7','sayi_oran','en fazla bir adet','korucu ve muhtar en çok bir silah edinir','Birinci fıkranın (1), (2), (3) ve (4)','en fazla bir adet silahın,',[],''),
- ('7','kosul','belgelere işlenmek','emekli kaydı taşıma-bulundurma izin belgesi yerine geçer','Birinci fıkranın (4) numaralı bendinin (A)','izin belgesi yerine geçer.',[],'kuvvet, EGM, SGK, JGK kaydı'),
- ('8','makam','Lüzum görülen','Cumhurbaşkanı kararıyla valiler; toplu silah araması da','Madde 8 – Lüzum görülen','yapılabilir.',[],''),
+ ('7','kosul','belgelere işlenmek şartıyla','emekli kaydı taşıma-bulundurma izin belgesi yerine geçer','Birinci fıkranın (4) numaralı bendinin (A)','izin belgesi yerine geçer.',[],'kuvvet, EGM, SGK, JGK kaydı'),
+ ('8','makam','Lüzum görülen','yerlerde halka silah izni: Cumhurbaşkanı kararıyla valiler; toplu arama da','Madde 8 – Lüzum görülen','yapılabilir.',[],''),
  ('9','yasak','başkasına','ruhsatsıza satamaz; geçici de olsa veremez','Madde 9 – Ateşli silah taşımak','başkalarına veremezler.',[],''),
  ('9','kosul','intihar','silahla suç ya da ihmal: vesika geri, bir daha verilmez','Silah bulundurma ve taşıma ruhsatını haiz olan kimsenin','izni verilmez.',[],''),
- ('9','kosul','İkinci kez','yeni müracaatta tek silah izni','İkinci kez silahı çalınan','izni verilebilir.',[],'İKİNCİ KAYIP TEK SİLAH · ÜÇÜNCÜ KAYIP BEŞ YIL'),
- ('9','sure','üçüncü kez','beş yıl izin yok; sonra tek silah','Üçüncü kez silahı çalınan','izni verilebilir.',[],'vesika geri alınır'),
+ ('9','kosul','İkinci kez','silahı çalınan-kaybedene: yeni müracaatta tek silah izni','İkinci kez silahı çalınan','izni verilebilir.',[],'İKİNCİ KAYIP TEK SİLAH · ÜÇÜNCÜ KAYIP BEŞ YIL'),
+ ('9','sure','üçüncü kez','silahı çalınan-kaybedene: beş yıl izin yok; sonra tek silah','Üçüncü kez silahı çalınan','izni verilebilir.',[],'vesika geri alınır'),
  ('10','makam','zoralımına karar verilen','tutanakla Millî Savunma Bakanlığına','Mahkemelerce zoralımına','Milli Savunma Bakanlığı emrine verilir.',[],'öncelik MSB, JGK, EGM, MİT, Gümrük Muhafaza'),
  ('10','sayi_oran','polisler','zati tabancayı yarı bedelle, bir adet, öncelikli','Emniyet Genel Müdürlüğünce zati silah','öncelik hakkına sahiptirler.',[],''),
 
@@ -57,7 +57,7 @@ K = [
 
  # m.12 — silah kaçakçılığı ve yapımı
  ('12','ceza','ülkeye sok','silahta beş-oniki yıl hapis; beşyüz-beşbin gün adlî para','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[('2','ülkeye sokma yasağı ve istisnaları'),('14','bıçak sokma: iki-beş yıl')],'yapmak, taşımak, satmak da'),
- ('12','ceza','oniki yıla','sokar, yapar, taşır, satar, bu amaçla bulundurur; satın alma değil','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[],'ruhsatsız satın alma m.13’te'),
+ ('12','ceza','beş yıldan oniki yıla kadar','sokar, yapar, taşır, satar, bu amaçla bulundurur; satın alma değil','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[],'ruhsatsız satın alma m.13’te'),
  ('12','ceza','bu amaçla','satmak için bulundurursa da aynı ceza','satar veya satmaya aracılık ederse veya bu amaçla','adlî para cezasıyla cezalandırılır.',[('11','görev için bu amaçla temin edilen kılıç-meç')],'miras yoluyla devralma yok'),
  ('12','ceza','birlikte işle','iki+ kişi: silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki','Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında','adlî para cezasına hükmolunur.',[('14', 'bıçakta iki kişi birlikte: ceza bir kat artar'), ('11', 'antika silah izin vesikasıyla birlikte satılır')],''),
  ('12','ceza','beşyüz günden','beşbin güne kadar (hapis beş-oniki)','beş yıldan oniki yıla kadar hapis','adlî para cezasıyla cezalandırılır.',[('13','vahim ruhsatsız silahta da beşyüz-beşbin gün')],''),
@@ -76,7 +76,7 @@ K = [
 
  # m.14-16 — bıçak suçları
  ('14','ceza','4 üncü maddede yazılı','bıçağı sokma/yapma/taşıma: iki-beş yıl hapis; ikiyüz gün+','Her kim, bu Kanun hükümlerine aykırı olarak 4 üncü','adlî para cezası ile cezalandırılır.',[('15', 'bıçak satma, alma, taşıma, bulundurma: altı ay-bir yıl')],''),
- ('14','ceza','azlığı','ceza yarısına kadar indirilir','Suç konusu bıçak ve aletlerin niteliği','yarısına kadar indirilir.',[],''),
+ ('14','ceza','azlığı','halinde (bıçak nitelik-sayıca): ceza yarısına kadar indirilir','Suç konusu bıçak ve aletlerin niteliği','yarısına kadar indirilir.',[],''),
  ('14','ceza','teşekkül kuranlar ile yönetenler','beş-on yıl hapis; bin-onbin gün','Birinci fıkradaki eylemleri işlemek amacı ile teşekkül','adlî para cezasına hükmolunur.',[],''),
  ('15','ceza','satanlar, satmaya aracılık','yasak bıçak: altı ay-bir yıl; yirmibeş gün+','Bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya diğer aletleri veya benzerlerini satanlar','adlî para cezasına hükmolunur.',[],'satın alma, taşıma, bulundurma da'),
  ('15','ceza','sayı veya nitelik','vahimse bıçakta yarıdan bir katına; silahta beş-sekiz yıl','Bu madde kapsamına giren bıçak veya diğer aletlerin veya benzerlerinin sayı','yarıdan bir katına kadar artırılır.',[('13','ruhsatsız silah vahimse beş-sekiz yıl')],''),
@@ -84,7 +84,7 @@ K = [
  ('15','ceza','sırf saldırıda','üç aya kadar hapis ya da adlî para','Bu Kanunun 4 üncü maddesinin üçüncü fıkrasında','cezalandırılır.',[],'yivsiz tüfek, meslek bıçağı bile'),
  ('17','sure','tarihinden itibaren meridir','15 Ağustos 1953’ten itibaren yürürlükte','Madde 17 – Bu Kanun','itibaren meridir.',[],'meri = yürürlükte'),
  ('18','makam','Vekilleri Heyeti','yürütür; İcra Vekilleri Heyeti = Bakanlar Kurulu','Madde 18 – Bu Kanunu','İcra Vekilleri Heyeti yürütür.',[],''),
- ('16','istisna','Kaçakçılığın Men','1918 sayılı Kanun bu suçlarda uygulanmaz','Bu Kanunun kapsamına giren suçlarda','hükümleri uygulanmaz.',[],''),
+ ('16','istisna','Kaçakçılığın Men ve Takibine Dair','1918 sayılı Kanun bu suçlarda uygulanmaz','Bu Kanunun kapsamına giren suçlarda','hükümleri uygulanmaz.',[],''),
 
  # Ek-1 — silah taşınamayacak yerler, yabancıların silahı
  ('Ek 1','yasak','Ateşli silahlar taşınamaz','mahkeme, cezaevi, okul-yurt, miting, sendika, stadyum, grev, Meclis; ibadethane yok','grev ve lokavt yapılmakta olan','Ateşli silahlar taşınamaz.',[],'psikiyatri, parti toplantısı, dernek de'),

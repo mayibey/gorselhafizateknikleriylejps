@@ -10,7 +10,7 @@ K = [
  ('5','tanim','verilecek izin','dört: yıllık, mazeret, sıhhi, yurt dışı; ödül, hizmet-içi yok','a) Personele verilecek izinler şunlardır:','4) Yurt dışı izinleri.',[],'sayım sırası: 1 yıllık, 2 mazeret, 3 sıhhi, 4 yurt dışı'),
  ('5','kosul','adli makam','şüpheli, sanık, tanık, mağdur, bilirkişi: mahsup edilmez','d) Adli makamlara','kanuni izinlerinden mahsup edilmez.',[],'amir çağrı ve yol süresini dikkate alarak gönderir'),
  ('5','kosul','mahsup','edilmez: bayram il dışı izni; adli çağrı süresi de','Hafta sonu, yılbaşı','kanuni izinlerden mahsup edilmez.',[],'adli çağrı için d) bendi; il dışı izin için j) bendi'),
- ('5','sure','dönüş','48 saat; en kısa yol, en seri vasıta','i) Yurt dışında izinde bulunup','süre uzatılabilir.',[],'yurda dönme kararı tebliğ edilince; mücbir sebeple uzar; ekonomik vasıta değil'),
+ ('5','sure','dönüş','çağrılınca: 48 saat; en kısa yol, en seri vasıta','i) Yurt dışında izinde bulunup','süre uzatılabilir.',[],'yurda dönme kararı tebliğ edilince; mücbir sebeple uzar; ekonomik vasıta değil'),
  ('5','kosul','olağanüstü hal','kısaltılır-kaldırılır, izinden geriye çağrılır; 2803 ek 3','g) Savaş ve olağanüstü hallerde','personel izinden geriye çağrılabilir.',[],'savaşta da'),
  ('5','makam','hizmet ihtiyacı','planlamayı onaylayan makam; yazılı-sözlü; masraf Harcırah’tan','ğ) Görev ve hizmet ihtiyacının','kendisine ödenir.',[],'asgari yıllık izin planlamasını onaylayan makam; sözlü çağrı da görevlendirme yazısıyla yazılıya geçer'),
  ('5','sure','bitiş saati','günün başlangıç saati; istisnada amir belirler','h) İzinlerin başlangıç ve bitiş saati','farklı bir saat olarak belirlenebilir.',[],'emniyet-asayiş, ulaşım, hava şartı gibi istisnalar'),
