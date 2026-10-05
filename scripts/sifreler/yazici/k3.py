@@ -12,13 +12,13 @@ K = [
  # m.3 — tanımlar (tanım sorusu: terim → tanım · "ne ad verilir" sorusu: tanım → terim)
  ('3','tanim','özgür iradeyle açıklanan','açık rıza: belirli konu, bilgilendirilmeye dayanan','a) Açık rıza:','özgür iradeyle açıklanan rızayı,',[],'üç unsur birlikte; zımni, geçmiş, güncel rıza diye tanım yok'),
  ('3','tanim','Anonim hâle getirme:','gerçek kişiyle ilişkilendirilemez; eşleştirilse dahi','b) Anonim hâle getirme:','ilişkilendirilemeyecek hâle getirilmesini,',[],'başka verilerle eşleştirilerek dahi kimlik bulunamaz'),
- ('3','tanim','başka verilerle eşleştiril','anonim hâle getirme','b) Anonim hâle getirme:','ilişkilendirilemeyecek hâle getirilmesini,',[],'veri karartma, genelleştirme diye tanım yok'),
+ ('3','tanim','başka verilerle','eşleştirilse dahi kişiyle ilişkilendirilemez: anonim hâle getirme','b) Anonim hâle getirme:','ilişkilendirilemeyecek hâle getirilmesini,',[],'veri karartma, genelleştirme diye tanım yok'),
  ('3','tanim','İlgili kişi:','gerçek kişi; tüzel değil','ç) İlgili kişi:','işlenen gerçek kişiyi,',[],'kişisel verisi işlenen gerçek kişi'),
  ('3','tanim','Kişisel veri:','her türlü bilgi; gerçek kişi','d) Kişisel veri:','her türlü bilgiyi,',[],'kimliği belirli veya belirlenebilir gerçek kişiye ilişkin; tüzel kişi bilgisi değil'),
  ('3','tanim','Kişisel verilerin işlenmesi:','otomatik ya da kayıt sistemiyle her türlü işlem','e) Kişisel verilerin işlenmesi:','gerçekleştirilen her türlü işlemi,',[],'otomatik olmayan yol da girer; elde etme, kaydetme, depolama, aktarma, sınıflandırma'),
  ('3','tanim','Kurul:','Koruma Kurulu','f) Kurul:','Kişisel Verileri Koruma Kurulunu,',[],'tam adı Kişisel Verileri Koruma Kurulu'),
  ('3','tanim','Kurum:','Koruma Kurumu','g) Kurum:','Kişisel Verileri Koruma Kurumunu,',[],'tam adı Kişisel Verileri Koruma Kurumu; Başkan = Kurum Başkanı'),
- ('3','tanim','verdiği yetki','veri işleyen (sorumlu adına işler)','ğ) Veri işleyen:','gerçek veya tüzel kişiyi,',[('28', 'm.28/2-c: kanunun verdiği yetkiyle kamu kurumlarının denetleme ve disiplin işi')],'gerçek veya tüzel kişi; bordroyu talimatla işleyen muhasebe firması = veri işleyen'),
+ ('3','tanim','verdiği yetki','veri sorumlusunun yetkisiyle onun adına işleyen: veri işleyen','ğ) Veri işleyen:','gerçek veya tüzel kişiyi,',[('28', 'm.28/2-c: kanunun verdiği yetkiyle kamu kurumlarının denetleme ve disiplin işi')],'gerçek veya tüzel kişi; bordroyu talimatla işleyen muhasebe firması = veri işleyen'),
  ('3','tanim','amaçlarını ve vasıtalarını','veri sorumlusu; kayıt sistemini kurar-yönetir','ı) Veri sorumlusu:','gerçek veya tüzel kişiyi,',[],'veri işleyen ise onun verdiği yetkiyle, onun adına işler'),
  ('3','tanim','Veri kayıt sistemi:','kriterlere göre yapılandırılmış sistem','h) Veri kayıt sistemi:','işlendiği kayıt sistemini,',[],'tanımlarda Veri Sorumluları Sicili ve veri ihlali bildirimi YOK'),
 
@@ -30,7 +30,7 @@ K = [
  # m.5 — genel veride açık rıza ve yedi istisna
  ('5','istisna','açık rıza','yedi: kanun, fiili-imkânsızlık, sözleşme, hukuki-yükümlülük, alenileştirme, hak-tesisi, meşru-menfaat','(2) Aşağıdaki şartlardan birinin','meşru menfaatleri için veri işlenmesinin zorunlu olması.',[('3','m.3/a: açık rızanın tanımı; belirli konu, bilgilendirme, özgür irade'),('6','m.6/3: özel nitelikli veride sekiz hâl; ilki açık rıza')],'kural rızasız işlenemez; özel nitelikli veride SEKİZ hâl, orada sözleşme ve meşru menfaat yok'),
  ('5','kosul','olmaksızın işlenemez','açık rızası (kural)','(1) Kişisel veriler ilgili kişinin açık rızası','olmaksızın işlenemez.',[],'istisnası ikinci fıkradaki yedi hâl'),
- ('5','istisna','rızasını açıklaya','fiili imkânsızlık; hayatı-beden bütünlüğü korunması','b) Fiili imkânsızlık nedeniyle','korunması için zorunlu olması.',[('6','m.6/3-c: özel nitelikli veride de aynı fiili imkânsızlık hâli')],'kendisinin ya da başkasının; baygın hasta, rızasına geçerlilik tanınmayan kişi'),
+ ('5','istisna','rızasını açıklayamayacak','fiili imkânsızlık; hayatı-beden bütünlüğü korunması','b) Fiili imkânsızlık nedeniyle','korunması için zorunlu olması.',[('6', 'm.6: özel nitelikli veride de rızasını açıklayamayan için istisna')],'kendisinin ya da başkasının; baygın hasta, rızasına geçerlilik tanınmayan kişi'),
  ('5','istisna','kurulması veya ifası','sözleşme; taraflarına ait veri','c) Bir sözleşmenin kurulması','işlenmesinin gerekli olması.',[],'doğrudan doğruya ilgili olmak kaydıyla; sipariş-kargo örneği'),
  ('5','istisna','meşru menfaat','temel hak-özgürlüklere zarar vermemek','f) İlgili kişinin temel hak','işlenmesinin zorunlu olması.',[],'özel nitelikli veride meşru menfaat hâli YOK'),
 
@@ -38,11 +38,11 @@ K = [
  ('6','tanim','özel nitelikli kişisel veri','ırk-etnik, siyasi-felsefi, din-mezhep, kılık, dernek-sendika, sağlık-cinsel, ceza, biyometrik-genetik; eğitim-adres yok','(1) Kişilerin ırkı','özel nitelikli kişisel veridir.',[('5','m.5 metninin sonunda m.6 başlığı yer alır')],'parmak izi = biyometrik; vakıf üyeliği, güvenlik tedbiri de; telefon, e-posta, eğitim durumu, ev adresi DEĞİL'),
  ('6','yasak','özel nitelikli kişisel veriler','yasak; açık rıza dahil sekiz hâl; Kurul önlemi; meşru-menfaat YOK','(3) (Değişik:2/3/2024-7499/33 md.)','yeterli önlemlerin alınması şarttır.',[('5', 'm.5 metninin sonunda m.6 başlığı yer alır')],'genel veride YEDİ hâl; ikinci fıkra 7499 ile mülga'),
  ('6','istisna','koruyucu hekimlik','sır saklayanlar veya yetkili kurumlar','e) Sır saklama yükümlülüğü','amacıyla gerekli olması,',[],'kamu sağlığı, teşhis, tedavi, bakım; sağlık hizmeti planlama-finansman'),
- ('6','istisna','kâr amacı gütmeyen','üyelere; üçüncü kişilere açıklanmamak kaydıyla','g) Siyasi, felsefi, dini veya sendikal','yönelik olması,',[],'mevcut-eski üye ve düzenli temastakiler; faaliyet alanıyla sınırlı'),
+ ('6','istisna','kâr amacı gütmeyen kuruluş','üyelere; üçüncü kişilere açıklanmamak kaydıyla','g) Siyasi, felsefi, dini veya sendikal','yönelik olması,',[],'mevcut-eski üye ve düzenli temastakiler; faaliyet alanıyla sınırlı'),
 
  # m.7 — silme, yok etme, anonim hâle getirme
- ('7','kosul','ortadan kalk','silme/yok etme/anonimleştirme, resen ya da talep üzerine; süresiz saklama YOK','(1) Bu Kanun ve ilgili diğer kanun','anonim hâle getirilir.',[],'hukuka uygun işlenmiş olsa bile, işlenmesini gerektiren sebep kalkınca; veri sorumlusu yapar'),
- ('7','kosul','diğer kanunlarda yer alan','saklıdır','(2) Kişisel verilerin silinmesi','hükümler saklıdır.',[],'silme, yok etme, anonim hâle getirmeye dair hükümler'),
+ ('7','kosul','gerektiren sebepler','kalkınca silme/yok etme/anonimleştirme, resen-talep üzerine; süresiz saklama YOK','(1) Bu Kanun ve ilgili diğer kanun','anonim hâle getirilir.',[],'hukuka uygun işlenmiş olsa bile, işlenmesini gerektiren sebep kalkınca; veri sorumlusu yapar'),
+ ('7','kosul','diğer kanunlarda yer alan hükümler','saklıdır','(2) Kişisel verilerin silinmesi','hükümler saklıdır.',[],'silme, yok etme, anonim hâle getirmeye dair hükümler'),
  ('7','makam','usul ve esaslar','yönetmelikle','(3) Kişisel verilerin silinmesine','yönetmelikle düzenlenir.',[('4','m.4/1: bu Kanun ve diğer kanunlardaki usul ve esaslara uygun işleme')],'silme, yok etme, anonim hâle getirme usulü'),
 
  # m.28 — istisnalar: (1) TAM, Kanun hiç uygulanmaz · (2) KISMİ, aydınlatma-haklar-sicil uygulanmaz
