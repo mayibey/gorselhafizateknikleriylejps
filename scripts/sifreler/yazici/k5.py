@@ -24,7 +24,7 @@ K = [
  # m.9 — valinin sıfatı ve görevleri
  ('9','tanim','idari yürütme vasıtası','Cumhurbaşkanının; ilde vali temsilci, ilçede kaymakam','Vali, ilde Cumhurbaşkanının','idari yürütme vasıtasıdır.',[('27','kaymakam: ilçede Cumhurbaşkanının idari yürütme vasıtası')],'vali hem temsilci hem yürütme vasıtası'),
  ('9','makam','ilin genel idaresinden','Cumhurbaşkanına karşı sorumlu','Valiler, ilin genel idaresinden','Cumhurbaşkanına karşı sorumludur.',[],'İçişleri Bakanına değil'),
- ('9','makam',"re'sen",'bakanlar ve CB yardımcıları valiye doğrudan emir verir','Cumhurbaşkanı yardımcıları ve bakanlar','emir ve talimat verirler.',[('31',"kaymakamın re'sen verdiği uyarma-kınama kesin")],'yalnız İçişleri Bakanı değil'),
+ ('9','makam',"re'sen",'bakanlar ve Cumhurbaşkanı yardımcıları valiye doğrudan emir verir','Cumhurbaşkanı yardımcıları ve bakanlar','emir ve talimat verirler.',[('31', "kaymakamın re'sen verdiği uyarma-kınama kesin")],'yalnız İçişleri Bakanı değil'),
  ('9','makam','mevzuatın verdiği yetkiyi','valiler genel emir çıkarır (kaymakam değil)','Kanun, Cumhurbaşkanlığı kararnamesi ve diğer mevzuatın verdiği','bunları ilan ederler.',[],''),
  ('9','makam','imza yetkisi','hesabat ve teknik işlerde şube başkanına','Ancak valiler hesabata','imza yetkisi verebilirler.',[],'vali adına imza'),
  ('9','makam','teftiş','adli ve askerî teşkilat hariç hepsini denetler','D) Vali, dördüncü maddenin','amir ve memurlariyle de yaptırabilir.',[('31','kaymakam da adli-askerî hariç denetler'),('42','bucak teşkilatı bucak müdürünün gözetim ve teftişinde')],'müfettişlere de yaptırabilir'),
@@ -37,7 +37,7 @@ K = [
  ('11','makam','il sınırları içinde','bütün kolluğun amiri; emri derhal yerine getirilir','A) Vali, il sınırları içinde','derhal yerine getirmekle yükümlüdür.',[],'genel ve özel kolluk'),
  ('11','makam','kıyı emniyeti','vali sağlar ve yürütür (ilçede kaymakam)','B) Memleketin sınır ve kıyı','sağlar ve yürütür.',[('32','ilçede kaymakam sağlar ve yürütür')],''),
  ('11','makam','önleyici kolluk','valinin görevi; huzur, güvenlik, kişi dokunulmazlığı','C) İl sınırları içinde huzur','valinin ödev ve görevlerindendir.',[('32','ilçede önleyici kolluk kaymakamın görevi')],''),
- ('11','sure','on beş günü geçmemek','giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],'yalnız vali (kaymakam değil); ruhsatlı silah da'),
+ ('11','sure','on beş günü geçmemek','giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı; okul kapatma YOK','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],'yalnız vali (kaymakam değil); ruhsatlı silah da'),
  ('11','sure','olağan hayatı durduracak','en çok on beş gün; yalnız vali (kaymakam değil)','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],''),
  ('11','sure','dolaşma','vali en çok on beş gün kısıtlar','Vali, kamu düzeni veya güvenliğinin','naklini yasaklayabilir.',[],''),
  ('11','makam','il içine munhasır','vali değiştirir; kaymakam ancak valinin tasvibiyle','Ç) Jandarma, polis','Bakanlıklarına bilgi verir.',[('32','kaymakam valinin tasvibiyle değiştirir')],'İçişleri ve Gümrük-Tekel’e bilgi'),
@@ -84,7 +84,7 @@ K = [
  ('43','makam','Suç işlenmesini önle','gereken tedbirleri alır ve uygular','Bucağın güven ve düzeninin','yerine getirmeye mecburdurlar.',[('11','vali de suçu önlemek için tedbir alır'),('32','kaymakam da suçu önlemek için tedbir alır')],''),
 
  # m.57-58 — idare kurulları
- ('57','makam','il idare kurul','vali; hukuk, defterdar, eğitim, bayındırlık, sağlık, tarım, veteriner; jandarma-emniyet-malmüdürü YOK','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('58', 'ilçe kurulunda malmüdürü, başkan kaymakam')],'malmüdürü ilçe kurulunda; vali, vali muavinini başkan yapabilir'),
+ ('57','makam','il idare kurul','valinin başkanlığında (vali muavini de); hukuk/defterdar/eğitim/bayındırlık/sağlık/tarım/veteriner; jandarma/emniyet/malmüdürü/gençlik-spor YOK','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('58', 'ilçe kurulunda malmüdürü, başkan kaymakam')],'vali, vali muavinini başkan yapabilir; malmüdürü ilçe kurulunda; 2026 Subay sınavında soruldu (Gençlik ve Spor yok)'),
  ('57','makam','vali muavini','kurul başkanlığına vali görevlendirebilir','İl idare kurulu, valinin başkanlığı','vali muavinini görevlendirebilir.',[('18','vali muavininin birinci sicil amiri vali')],''),
  ('58','makam','ilçe idare kurul','kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar-emniyet YOK','İlçe idare kurulu, kaymakamın','veterinerden teşekkül eder.',[('57', 'il kurulunda defterdar, başkan vali')],'defterdar il kurulunda'),
 ]

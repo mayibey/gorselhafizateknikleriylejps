@@ -152,7 +152,7 @@
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "re'sen",
-   "cevap": "bakanlar ve CB yardımcıları valiye doğrudan emir verir",
+   "cevap": "bakanlar ve Cumhurbaşkanı yardımcıları valiye doğrudan emir verir",
    "kanit": "Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işleri için valilere re'sen emir ve talimat verirler.",
    "not": "yalnız İçişleri Bakanı değil",
    "karistirilan": [
@@ -300,7 +300,7 @@
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "on beş günü geçmemek",
-   "cevap": "giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı",
+   "cevap": "giriş-çıkış, dolaşma, toplanma, araç, silah kısıtı; okul kapatma YOK",
    "kanit": "Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir.",
    "not": "yalnız vali (kaymakam değil); ruhsatlı silah da",
    "karistirilan": []
@@ -689,9 +689,9 @@
    "madde": "57",
    "tip": "makam",
    "tetikleyici": "il idare kurul",
-   "cevap": "vali; hukuk, defterdar, eğitim, bayındırlık, sağlık, tarım, veteriner; jandarma-emniyet-malmüdürü YOK",
+   "cevap": "valinin başkanlığında (vali muavini de); hukuk/defterdar/eğitim/bayındırlık/sağlık/tarım/veteriner; jandarma/emniyet/malmüdürü/gençlik-spor YOK",
    "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
-   "not": "malmüdürü ilçe kurulunda; vali, vali muavinini başkan yapabilir",
+   "not": "vali, vali muavinini başkan yapabilir; malmüdürü ilçe kurulunda; 2026 Subay sınavında soruldu (Gençlik ve Spor yok)",
    "karistirilan": [
     {
      "madde": "58",
