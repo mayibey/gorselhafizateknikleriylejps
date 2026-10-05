@@ -2,7 +2,34 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (4) — ŞİFRE GECE İNCELEMESİ 25/25 (a1b3326 … 475be95, kanun başına bir commit)
+> Başkan: "yapılan çalışmayı farklı açılardan kontrol et; kelimeler cümleler ne kadar anlamlı, konunun özünü veriyor mu, eksik
+> kalıyor mu bak". Her kanunda: satır dökümü + kalite bayrakları (kalite_tara) + açık sorular okundu; düzeltme listesi
+> (scratchpad sifre_denetim/gece_ops/kN.py) gece_uygula.py ile uygulandı → yazıcı + denetçi BİTTİ + soru soru kayıp/kazanç (kayip_bul);
+> her kayıp ya geri alındı ya bilinçli bırakıldı. Bulunanlar: (1) BİLGİ HATASI: TCK m.260 "üçten azsa ceza yok" yanlıştı →
+> "üçten fazla değilse ceza yok". (2) KISALTMA: cevapta TCK/JGK/SGK/SG/EGM/MSB/CMK/OHAL/TBMM/YUKK/TUS açıldı (şıklar açık yazıyor);
+> şıkta kısaltmanın kendisi geçiyorsa ikisi birlikte (Bilgi Edinme "İMKB (Menkul Kıymetler Borsası)"). (3) EK TUZAĞI: kökte başka
+> ekle geçen SOL'lar köke indi ("gerektiren"→"gerektir", "öğrenildiği tarihten"→"öğrenil", "Sözleşme süreleri"→"Sözleşme süre",
+> "yurtdışı liman"→"liman ziyaret"); sayılar metindeki/şıktaki yazımla (yirmidört, kırksekiz, "on beşinci"). (4) NOTTA KALAN TUZAK
+> SAĞ'a (OHAL gıda kontrolü-çalışma yükümlülüğü "ek DEĞİL", 5816 portre YOK, 7068 görevden uzaklaştırma/oda hapsi/kademe YOK,
+> 3713 kayıt/bulundurma DEĞİL ...). (5) EKSİK HÜKÜM: hiç satırı olmayan 6284 Uygulama Yön. m.18, 21-24 (önleyici tedbirler) ve
+> 6136 m.17-18 eklendi; 3713 m.7 ilk-son fıkra, m.20 araç-gereç/emekli konutu/şerh, m.21 aylık/kira/köy korucusu; 6284 m.5/f,
+> m.8/7, m.10/2-4; Bayrak "çekilir" ayrı satır; 7068 m.14/1, m.32/2; Resmî Yazışma m.6/2, 15/1, 31/6; Jandarma Yön. m.6, 11, 39,
+> 55; 2521 Yön. m.10 (taşıma yetkilisi, yabancıya ruhsat). (6) GENİŞ SOL daraltıldı (6136 "birlikte"→"birlikte işle": antika
+> "vesikasıyla birlikte" sorularına yanlışlıkla düşüyordu). İki satır birleşti (Hizmet Esasları üst-ast tek karşıtlık satırı).
+> Sonuç (fd12de1 → 475be95): 1.940 → 1.972 satır; gerçek 2026 sınavı 90 → 92/109 (%84; İl İdaresi il idare kurulu + 4678
+> Subay#46 sözleşme süresi); arşiv 2.144 → 2.210; tüm cevaplı DÜZ 2.302/2.946 (%78). Kayıp 1 (6698-OO-007, daha anlamlı SOL için).
+> AÇIK / ONAY BEKLEYEN: (a) resmî metni 6000 karakterde kesik 5 kapsam maddesi: İl İdaresi m.11, 3713 m.21, Söz. Subay-Astsubay
+> Yön. m.8 ve m.11, 6136 m.7 (tam metin scratchpad önbelleğinde; metin yaması ayrı iş); Kabahatler resmî metni kısaltılmış/karışık.
+> (b) KAPSAM: 2026 Uzman #40 Kişisel Veri Silme Yön. m.6'dan (imha politikasının içeriği) soruldu; bizim kapsam listemizde
+> yalnız m.8-11 var, m.6 metni de yok → Emir Ek-1 listesi yeniden kontrol edilmeli. (c) 2026 Astsubay #48 kökü "yaş hesaplaması"
+> diyor, bu ifade yönetmelik metninde yok → kurala göre SOL yazılamıyor; kuralın tamamı satır notunda. 4678 Subay#32 "Personel
+> Temin Merkezi" ve 6136 "roketatar bir kat / atış poligonu İçişleri izni / JGK tabanca satışı" metinlerimizde yok.
+> (d) Romen rakamlı (I-II-III) ve 3 harfli cevaplı (Üst, Ast, tek, net, yas) sorular kural gereği ölçülemez. (e) Sayfada parça
+> SOL'ların "…" ile gösterilmesi önerisi kod değişikliği → başkan onayı bekliyor. Bot satın alma bildirimine alıcı bilgisi ekleme
+> de onay bekliyor. Sayfalar yenilendi: Kilit Kelime Şifreleri (MebRKHX3h5dJprFnxPRTnn v11) · Şifre Açıkları (4Wpq1yZvUrKjZU3zcn6vVX v5).
 >
 > ### ▶ 5 Eki (3) — ŞİFRE MANTIK TEMİZLİĞİ (1378d2d): ters kopyalar teke, notta saklanan cevaplar SAĞ'a, yarım listeler tam
 > Başkan (TCK ekran görüntüsü): "Ayrım ve mazeret sayılmaz kısımlarına bak bi mantıksız olmamış mı?" + "tek tek ben mi bulacam".
