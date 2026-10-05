@@ -17,6 +17,10 @@
 > Sonuç: denetçi 25/25 BİTTİ; harf harf ölçüm gerçek 2026 92 → 91/109 (Uzman#44: kökte "amaçlarının", SOL "amacın"; anlam aynı),
 > arşiv DÜZ 2.173 → 2.076 (−97, %3,4; ek farkını gözetmeyen gevşek ölçümle bunların 37'si yine eşleşiyor). Okunurluk için bilinçli
 > kabul; sayfa v13 yayımlandı (Kilit Kelime Şifreleri, link herkese açık), açık rapor v7.
+> EK (aynı gün, 4db9d56 + 48e53d4): başkan "ikincisi ne diyor anlamadım" (TCK m.1 "amacın gerçekleştirilmesi için → sorumluluk
+> esasları, suçlar…"): SAĞ yüklemsiz listeydi, SOL ile bağı görünmüyordu → "Kanunda düzenlenenler: …". Aynı biçim tarandı (SOL zarf
+> cümleciği + SAĞ'da iki nokta/yüklem yok + liste): 9 kanunda 16 satır daha düzeltildi ("aranan nitelikler:", "imza bölümü:",
+> "işlenirse … artar"). KURAL: SAĞ liste ise başına ne listesi olduğu yazılır. Ölçüm değişmedi; sayfa v14.
 >
 > ### ▶ 5 Eki (5) — ŞİFRE SOL KELİME OKUNURLUĞU 25/25 (53125bc … 414d579 kanun başına bir commit, sayfa 5b11c5f)
 > Başkan (TCK ekran görüntüsüyle): "soldaki kelimeleri daha anlaşılır yerden kes … 'açıkça suç saymadığı' ne, 'kanunun açıkça suç
