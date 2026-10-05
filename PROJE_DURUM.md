@@ -20,6 +20,10 @@
 > AÇIK: kullanıcıya görünmeyen iç veri dosyalarında (scripts/veri/kanun-bilgi-listesi.json, sinav-cevapli.json, cikmis-sinav-sorulari.json,
 > docs/HAFIZA brief) 2014 yönetmeliğine göre çıkmış "ek süre on beş iş günü" sorusu mülga işaretsiz duruyor. resmi_metin yalnız 25 müşterek
 > kanunda var; branş kanunlarının madde metni bu yolla doğrulanamadı.
+> YAYIN (başkan "yay"): OTA production 1.0.47 (grup bbd1e14a-4064-4be4-a280-ba6c1b5bd428) + 1.0.46 (grup 765c073b-ac14-4e59-92be-8e6eae24c4ad),
+> runtime doğru (scratchpad/madde-metni-ota.sh; başarı = "Update group ID"). Son yayından (02f9dc2) beri pakete yalnız bu iki veri dosyası
+> girdi; bayrak:denetle 0. Son 14 günde açan 1.007 kişinin 997'si 1.0.46/47'de; eski runtime'lardaki 10 kişiye basılmadı (native risk).
+> Resmî Yazışma düzeltmesi (5 Eki (8)) da bu yayınla kullanıcıya ulaştı.
 >
 > ### ▶ 5 Eki (8) — RESMÎ YAZIŞMA: 5 KARTTA ESKİ (2014) YÖNETMELİK METNİ → GÜNCEL (2020) RESMÎ METİN
 > Kullanıcı geri bildirimi (Özge Lavinya, jandarma asb, 23:38/23:42): "m.22 konu koordinasyon, metin gizlilik dereceli belge diyor",
