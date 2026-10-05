@@ -7,7 +7,7 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.1-2 — amaç, ilkeler, tanımlar
- ('1','tanim','amacı','kadın, çocuk, aile bireyi, ısrarlı takip mağduru; tehlikesi olan da','(1) Bu Kanunun amacı;','usul ve esasları düzenlemektir.',[('8','tedbir, Kanunun amacını tehlikeye sokacak şekilde geciktirilemez')],'komşuluk, kamu düzeni yok'),
+ ('1','tanim','Kanunun amacı','kadın, çocuk, aile bireyi, ısrarlı takip mağduru; tehlikesi olan da','(1) Bu Kanunun amacı;','usul ve esasları düzenlemektir.',[('8', 'tedbir, Kanunun amacını tehlikeye sokacak şekilde geciktirilemez')],'komşuluk, kamu düzeni yok'),
  ('1','kosul','cinsiyete dayalı şiddet','özel tedbirler ayrımcılık sayılmaz','ç) Bu Kanun kapsamında kadınlara yönelik cinsiyete','ayrımcılık olarak yorumlanamaz.',[],''),
  ('1','kosul','temel ilke','Anayasa ve uluslararası sözleşmeler; eşitlik, sosyal devlet, adil, süratli','(2) Bu Kanunun uygulanmasında','süratli bir usul izlenir.',[],'yalnız Anayasa değil; İstanbul Sözleşmesi'),
  ('2','tanim','Bakanlık:','Aile ve Sosyal Politikalar Bakanlığı','a) Bakanlık:','Sosyal Politikalar Bakanlığını,',[],'bugün Aile ve Sosyal Hizmetler Bakanlığı'),
@@ -40,14 +40,14 @@ K = [
  # m.5 — hâkimin önleyici tedbirleri
  ('5','makam','önleyici tedbir','hâkim; gecikmede kolluk da (söz, uzaklaştırma, yaklaşmama); mülkî amir YOK','(1) Şiddet uygulayanlarla ilgili olarak','hâkim tarafından karar verilebilir:',[('2', 'tanımlarda koruyucu ve önleyici tedbirler'), ('8', 'önleyici tedbir geciktirilmeksizin verilir'), ('10', 'önleyici tedbiri kolluk birimi uygular'), ('4', 'm.4 metninin sonunda sonraki maddenin başlığı yer alır')],'kolluk evrakı ilk işgünü hâkime sunar; yirmidört saatte onaylanmazsa kalkar'),
  ('5','makam','şiddet tehdidi, hakaret','bulunmaması (önleyici, hâkim)','a) Şiddet mağduruna yönelik olarak şiddet tehdidi','söz ve davranışlarda bulunmaması.',[],''),
- ('5','makam','uzaklaştırıl','müşterek konut korunan kişiye tahsis','b) Müşterek konuttan','tahsis edilmesi.',[],'evden çıkan uygulayan, mağdur değil'),
- ('5','makam','bulundukları konuta','okula ve işyerine yaklaşmaz','c) Korunan kişilere, bu kişilerin bulundukları','işyerine yaklaşmaması.',[],''),
+ ('5','makam','Müşterek konuttan','derhâl uzaklaştırma; konut korunan kişiye tahsis','b) Müşterek konuttan','tahsis edilmesi.',[],'evden çıkan uygulayan, mağdur değil'),
+ ('5','makam','kişilerin bulundukları konuta','okula ve işyerine yaklaşmaz','c) Korunan kişilere, bu kişilerin bulundukları','işyerine yaklaşmaması.',[],''),
  ('5','makam','iletişim araçları','veya sair surette rahatsız etmemesi (önleyici, hâkim)','f) Korunan kişiyi iletişim araçlarıyla','rahatsız etmemesi.',[],'şahsi ve ev eşyasına zarar vermemesi de önleyici tedbir'),
  ('5','makam','tanıklarına','şiddete uğramasa da yakın, tanık, çocuklara yaklaşmama','d) Gerekli görülmesi hâlinde korunan kişinin','çocuklarına yaklaşmaması.',[],'kişisel ilişki hâlleri saklı'),
  ('5','kosul','kamu görevi','zimmetindeki silahı kurumuna teslim','ğ) Silah taşıması zorunlu','kurumuna teslim etmesi.',[],'ruhsatlı silahlar kolluğa'),
  ('5','makam','alkol ya da uyuşturucu','korunanın yanında kullanmama; bağımlıysa hastane dahil tedavi','h) Korunan kişilerin bulundukları yerlerde alkol','muayene ve tedavisinin sağlanması.',[],''),
  ('5','makam','Çocuk Koruma Kanunu','hâkim velayet, kayyım, nafaka, kişisel ilişkiye de karar verir','(3) Bu Kanunda belirtilen tedbirlerle birlikte','karar vermeye yetkilidir.',[],''),
- ('5','kosul','tedbir nafaka','talep olmasa da; geçimi sağlayan şiddet uygulayandan','(4) Şiddet uygulayan, aynı zamanda','tedbir nafakasına hükmedebilir.',[],'Medenî Kanuna göre nafaka yoksa'),
+ ('5','kosul','tedbir nafakası','talep olmasa da; geçimi sağlayan şiddet uygulayandan','(4) Şiddet uygulayan, aynı zamanda','tedbir nafakasına hükmedebilir.',[],'Medenî Kanuna göre nafaka yoksa'),
  ('6','kosul','denetimli serbestlik','koruma ve infaz tedbirlerine ilişkin hükümler saklı','(1) Kişinin silah bulundurması','ilişkin kanun hükümleri saklıdır.',[],'silah, uyuşturucu suç oluşturuyorsa'),
  ('7','kosul','resmi makam veya mercilere','herkes ihbar eder; görevli gecikmeksizin işlem yapar','(1) Şiddet veya şiddet uygulanma tehlikesinin varlığı','yetkilileri haberdar etmekle yükümlüdür.',[],''),
 
@@ -55,12 +55,12 @@ K = [
  ('8','sira_usul','başvurusu üzerine','ilgili, Bakanlık, kolluk, Cumhuriyet savcısı; muhtar yok','(1) Tedbir kararı, ilgilinin talebi','kolluk biriminden talep edilebilir.',[],'en kolay ulaşılan hâkim, mülkî amir ya da kolluktan istenir'),
  ('8','sira_usul','en kolay ulaşılabilecek','yer hâkimi, mülkî amir ya da kolluk birimi','(1) Tedbir kararı, ilgilinin talebi','kolluk biriminden talep edilebilir.',[],''),
  ('8','sure','ilk defasında','en çok altı ay','(2) Tedbir kararı ilk defasında','en çok altı ay için verilebilir.',[],''),
- ('8','sure','devam edeceğinin','resen ya da korunan kişi, Bakanlık, kolluk talebiyle','(2) Tedbir kararı ilk defasında','aynen devam etmesine karar verilebilir.',[],'süre-şekil değişir, kaldırılır, devam eder'),
+ ('8','sure','tehlikesinin devam edeceğinin','resen ya da korunan kişi, Bakanlık, kolluk talebiyle','(2) Tedbir kararı ilk defasında','aynen devam etmesine karar verilebilir.',[],'süre-şekil değişir, kaldırılır, devam eder'),
  ('8','kosul','Koruyucu tedbir','delil veya belge aranmaz; önleyici geciktirilmeksizin','(3) Koruyucu tedbir kararı verilebilmesi','geciktirilmeksizin verilir.',[('4','hâkimin koruyucu tedbirleri'),('10','geçici koruma kararını kolluk uygular'),('2','m.2 metninin sonunda sonraki maddenin başlığı yer alır'),('3','m.3 metninin sonunda sonraki maddenin başlığı yer alır')],''),
  ('8','sure','Önleyici tedbir kararı','geciktirilmeksizin verilir','(3) Koruyucu tedbir kararı verilebilmesi','geciktirilmeksizin verilir.',[('10','önleyici tedbiri kolluk birimi uygular')],''),
- ('8','sira_usul','reddine ilişkin karar','sadece korunan kişiye tebliğ','Tedbir talebinin reddine','sadece korunan kişiye tebliğ edilir.',[('10','başvurunun kabul ya da reddi Bakanlık müdürlüğüne bildirilir')],'tedbir kararı iki tarafa'),
+ ('8','sira_usul','talebinin reddine ilişkin karar','sadece korunan kişiye tebliğ','Tedbir talebinin reddine','sadece korunan kişiye tebliğ edilir.',[('10', 'başvurunun kabul ya da reddi Bakanlık müdürlüğüne bildirilir')],'tedbir kararı iki tarafa'),
  ('8','sira_usul','tefhim ve tebliğ','aykırılıkta zorlama hapsi ihtarı','(5) Tedbir kararının tefhim','ihtarı yapılır.',[],''),
- ('8','kosul','gizli tutul','korunanın-ailesinin kimlik-adresi; tebligata ayrı adres; adli sicil YOK','(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte','ayrı bir adres tespit edilir.',[],'ifşa edene TCK'),
+ ('8','kosul','tüm resmi kayıtlarda','gizli: korunanın-ailesinin kimlik-adresi; tebligata ayrı adres; adli sicil YOK','(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte','ayrı bir adres tespit edilir.',[],'ifşa edene TCK'),
  ('8','makam','kişisel eşya','talep hâlinde kolluk marifetiyle teslim edilir','(7) Talep hâlinde ilgililere','kolluk marifetiyle teslimi sağlanır.',[],'belgeler de'),
 
  # m.9 — itiraz
@@ -70,9 +70,9 @@ K = [
 
  # m.10-12 — bildirim, uygulama, kolluk, teknik takip
  ('10','makam','en seri vasıtalarla','Bakanlık il-ilçe müdürlükleri, savcılık ya da kolluk','(1) Bu Kanun hükümlerine göre alınan tedbir kararları','en seri vasıtalarla bildirilir.',[],''),
- ('10','makam','kabul ya da reddine','Bakanlığın il-ilçe müdürlüklerine derhâl bildirilir','(2) Bu Kanun kapsamında ilgili mercilere','müdürlüklerine derhâl bildirilir.',[],'başvuru yapılan merci bildirir'),
- ('10','makam','yerine getirilmesinden','yerleşim yeri, bulunduğu ya da tedbir yeri kolluk birimi','(3) Korunan kişinin geçici koruma','kolluk birimi görevli ve yetkilidir.',[],''),
- ('10','makam','kollukta bulunduğu','kolluk kişiyi Bakanlık il-ilçe müdürlüğüne ivedilikle ulaştırır','(4) Tedbir kararının, kolluk amirince','geçici olarak barınma imkânı sağlanır.',[],'ulaştırılamazsa Bakanlık bütçesinden geçici barınma'),
+ ('10','makam','başvuruların kabul ya da reddine','Bakanlığın il-ilçe müdürlüklerine derhâl bildirilir','(2) Bu Kanun kapsamında ilgili mercilere','müdürlüklerine derhâl bildirilir.',[],'başvuru yapılan merci bildirir'),
+ ('10','makam','kararlarının yerine getirilmesinden','yerleşim yeri, bulunduğu ya da tedbir yeri kolluk birimi','(3) Korunan kişinin geçici koruma','kolluk birimi görevli ve yetkilidir.',[],''),
+ ('10','makam','kişinin kollukta bulunduğu hâllerde','kolluk kişiyi Bakanlık il-ilçe müdürlüğüne ivedilikle ulaştırır','(4) Tedbir kararının, kolluk amirince','geçici olarak barınma imkânı sağlanır.',[],'ulaştırılamazsa Bakanlık bütçesinden geçici barınma'),
  ('10','kosul','tebliğ edilmemesi','uygulamaya engel değil','(5) Tedbir kararının ilgililere','engel teşkil etmez.',[],''),
  ('10','makam','Barınma yerlerinin yetersiz','kamu sosyal tesis, yurt; mülkî amir, acelede kolluk talebiyle','(6) Hakkında barınma yeri sağlanmasına','geçici olarak barındırılabilir.',[],''),
  ('10','makam','İşyerinin değiştirilmesi yönündeki','kişinin tabi olduğu mevzuata göre yetkili merci uygular','(7) İşyerinin değiştirilmesi','yerine getirilir.',[],''),
