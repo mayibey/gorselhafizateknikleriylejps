@@ -466,7 +466,7 @@
    "madde": "10",
    "tip": "sure",
    "tetikleyici": "gideceği yere",
-   "cevap": "acilde hemen, diğer hallerde yirmi dört saat önce",
+   "cevap": "acilde hemen, diğer hallerde yirmidört saat önce kolluğa bilgi",
    "kanit": "(2) Geçici koruma altına alınma tedbir kararının yerine getirilmesinden, hakkında koruyucu tedbir kararı verilen kişilerin yerleşim yeri, bulunduğu\nveya tedbirin uygulanacağı yerdeki kolluk görevli ve yetkilidir. Korunan kişi acil durumlarda hemen, diğer hallerde ise yirmidört saat öncesinden\n\fgideceği yere ilişkin olarak görevli ve yetkili kolluğa bilgi verir. Kolluk tarafından korunan kişinin gideceği yerdeki kolluk gecikmeksizin haberdar edilir\nve tedbir kararı uygulanmaya devam olunur.",
    "not": "gidilen yerin kolluğu haberdar edilir",
    "karistirilan": []
@@ -674,13 +674,28 @@
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "velayet, kayyım",
-   "cevap": "hâkim TMK’ya göre de karar verir",
+   "cevap": "hâkim Türk Medeni Kanununa göre de karar verir",
    "kanit": "(2) Hâkim, 3/7/2005 tarihli ve 5395 sayılı Çocuk Koruma Kanununda yer alan koruyucu ve destekleyici tedbirler ile Türk Medeni Kanunu\n\fhükümlerine göre velayet, kayyım, nafaka ve kişisel ilişki kurulması hususlarında da karar verebilir.",
    "not": "Çocuk Koruma Kanunu tedbirleri de",
    "karistirilan": []
   },
   {
    "i": "K-21-056",
+   "madde": "18",
+   "tip": "makam",
+   "tetikleyici": "küçük düşürme",
+   "cevap": "tehdit, hakaret, aşağılama da: söz-davranış yasağı (hâkim)",
+   "kanit": "(1) Hâkim tarafından, şiddet uygulayanın korunan kişiye karşı tehdit, hakaret, aşağılama veya küçük düşürme ve benzeri söz ve\ndavranışlarda bulunmamasına ilişkin olarak karar verilebilir.",
+   "not": "önleyici tedbir; gecikmede kolluk amiri de alır",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17: hâkimin önleyici tedbirleri toplu listesi"
+    }
+   ]
+  },
+  {
+   "i": "K-21-057",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "kira, elektrik, su",
@@ -690,7 +705,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-057",
+   "i": "K-21-058",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "kişisel eşya ve belgelerin",
@@ -700,7 +715,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-058",
+   "i": "K-21-059",
    "madde": "20",
    "tip": "tanim",
    "tetikleyici": "sair yerlere",
@@ -710,7 +725,71 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-059",
+   "i": "K-21-060",
+   "madde": "21",
+   "tip": "makam",
+   "tetikleyici": "refakatçi eşliğinde",
+   "cevap": "kişisel ilişki refakatçiyle, sınırlı ya da tümden kaldırılır (hâkim)",
+   "kanit": "(1) Hâkim tarafından daha önce verilmiş, çocukla kişisel ilişki kurma kararı varsa kişisel ilişkinin refakatçi eşliğinde yapılmasına\nveya durumun özelliğine göre sınırlandırılmasına ya da tümüyle kaldırılmasına ilişkin karar verilebilir.",
+   "not": "daha önce kişisel ilişki kararı varsa",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17: hâkimin önleyici tedbirleri toplu listesi"
+    }
+   ]
+  },
+  {
+   "i": "K-21-061",
+   "madde": "22",
+   "tip": "makam",
+   "tetikleyici": "şiddete uğramamış olsa bile",
+   "cevap": "yakın, tanık ve çocuklara yaklaşmama (hâkim)",
+   "kanit": "(1) Hâkim tarafından gerekli görülmesi hâlinde, şiddet uygulayanın, şiddete uğramamış olsa bile korunan kişinin, yakınlarına,\nşiddetin tanıklarına ve kişisel ilişki kurulmasına ilişkin hâller saklı kalmak üzere çocuklarına yaklaşmamasına ilişkin karar verilebilir.",
+   "not": "kişisel ilişki hâlleri saklı",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17: hâkimin önleyici tedbirleri toplu listesi"
+    }
+   ]
+  },
+  {
+   "i": "K-21-062",
+   "madde": "23",
+   "tip": "makam",
+   "tetikleyici": "ev eşyalarına",
+   "cevap": "şahsi ve ev eşyasına zarar vermeme kararı (hâkim)",
+   "kanit": "(1) Hâkim tarafından, şiddet uygulayanın, korunan kişinin şahsi eşyalarına ve ev eşyalarına zarar vermemesine yönelik karar",
+   "not": "",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17: hâkimin önleyici tedbirleri toplu listesi"
+    }
+   ]
+  },
+  {
+   "i": "K-21-063",
+   "madde": "24",
+   "tip": "makam",
+   "tetikleyici": "iletişim araçlarıyla",
+   "cevap": "görsel, işitsel, yazılı, internetle rahatsız etmeme (hâkim)",
+   "kanit": "(1) Hâkim tarafından, şiddet mağdurunun korunması amacıyla, şiddet uygulayanın görsel, işitsel, yazılı, internet ve benzeri iletişim\naraçlarıyla ya da sair surette korunan kişiyi rahatsız etmemesine yönelik karar verilebilir.",
+   "not": "sair surette rahatsız etme de",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17: hâkimin önleyici tedbirleri toplu listesi"
+    },
+    {
+     "madde": "23",
+     "fark": "m.23 metninin sonunda m.24 başlığı yer alır"
+    }
+   ]
+  },
+  {
+   "i": "K-21-064",
    "madde": "25",
    "tip": "sure",
    "tetikleyici": "kolluğa teslim",
@@ -725,7 +804,7 @@
    ]
   },
   {
-   "i": "K-21-060",
+   "i": "K-21-065",
    "madde": "26",
    "tip": "yasak",
    "tetikleyici": "Silahı teslim alan kurum amiri",
@@ -735,7 +814,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-061",
+   "i": "K-21-066",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "teslim alınması ve iadesi",
@@ -745,7 +824,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-062",
+   "i": "K-21-067",
    "madde": "27",
    "tip": "sira_usul",
    "tetikleyici": "tedaviyi reddetme",
@@ -760,7 +839,7 @@
    ]
   },
   {
-   "i": "K-21-063",
+   "i": "K-21-068",
    "madde": "28",
    "tip": "makam",
    "tetikleyici": "il halk sağlığı müdürlüğü",
@@ -770,7 +849,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-064",
+   "i": "K-21-069",
    "madde": "29",
    "tip": "sure",
    "tetikleyici": "kolluk amirince",
@@ -785,7 +864,7 @@
    ]
   },
   {
-   "i": "K-21-065",
+   "i": "K-21-070",
    "madde": "29",
    "tip": "makam",
    "tetikleyici": "Mülkî amir tarafından alınabilecek",
@@ -800,7 +879,7 @@
    ]
   },
   {
-   "i": "K-21-066",
+   "i": "K-21-071",
    "madde": "29",
    "tip": "sure",
    "tetikleyici": "mülkî amirin onayına",
@@ -810,7 +889,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-067",
+   "i": "K-21-072",
    "madde": "29",
    "tip": "sure",
    "tetikleyici": "Tatil günleri",
@@ -820,7 +899,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-068",
+   "i": "K-21-073",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "ilk defasında",
@@ -830,7 +909,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-069",
+   "i": "K-21-074",
    "madde": "30",
    "tip": "makam",
    "tetikleyici": "en kolay ulaşılabilecek",
@@ -840,7 +919,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-070",
+   "i": "K-21-075",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "Koruyucu tedbir kararı verilebilmesi",
@@ -850,7 +929,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-071",
+   "i": "K-21-076",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "ortadan kalktığının",
@@ -860,7 +939,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-072",
+   "i": "K-21-077",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "reddine ilişkin karar",
@@ -875,7 +954,7 @@
    ]
   },
   {
-   "i": "K-21-073",
+   "i": "K-21-078",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "kolluk birimi tarafından alınan",
@@ -885,7 +964,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-074",
+   "i": "K-21-079",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "ihtar",
@@ -900,17 +979,17 @@
    ]
   },
   {
-   "i": "K-21-075",
+   "i": "K-21-080",
    "madde": "32",
    "tip": "sure",
    "tetikleyici": "gizlilik şerhi",
-   "cevap": "tedbir bitimini takip eden on beşinci gün silinir",
+   "cevap": "tedbir bitimini takip eden on beşinci gün MERNİS’ten silinir",
    "kanit": "(6) Korunan kişinin nüfus kaydına işlenen gizlilik şerhi, tedbir kararının süresinin sona ermesini takip eden onbeşinci gün MERNİS veri\ntabanından silinir.",
    "not": "MERNİS",
    "karistirilan": []
   },
   {
-   "i": "K-21-076",
+   "i": "K-21-081",
    "madde": "32",
    "tip": "yasak",
    "tetikleyici": "ifşa",
@@ -920,7 +999,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-077",
+   "i": "K-21-082",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "gizlilik kararı verilen",
@@ -930,7 +1009,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-078",
+   "i": "K-21-083",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "tebligatlarda",
@@ -940,7 +1019,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-079",
+   "i": "K-21-084",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "aile mahkemesine itiraz",
@@ -955,7 +1034,7 @@
    ]
   },
   {
-   "i": "K-21-080",
+   "i": "K-21-085",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "koruyucu tedbir kararına karşı",
@@ -965,7 +1044,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-081",
+   "i": "K-21-086",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "İtiraz üzerine",
@@ -980,7 +1059,7 @@
    ]
   },
   {
-   "i": "K-21-082",
+   "i": "K-21-087",
    "madde": "34",
    "tip": "sure",
    "tetikleyici": "zorlama hapsi kararlarına",
@@ -990,7 +1069,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-083",
+   "i": "K-21-088",
    "madde": "34",
    "tip": "makam",
    "tetikleyici": "İtiraz üzerine dosya",
@@ -1000,7 +1079,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-084",
+   "i": "K-21-089",
    "madde": "34",
    "tip": "kosul",
    "tetikleyici": "Asıl dava ile birlikte",
@@ -1010,7 +1089,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-085",
+   "i": "K-21-090",
    "madde": "34",
    "tip": "sure",
    "tetikleyici": "Karar bir hafta",
@@ -1025,7 +1104,7 @@
    ]
   },
   {
-   "i": "K-21-086",
+   "i": "K-21-091",
    "madde": "35",
    "tip": "sure",
    "tetikleyici": "ziyaret",
@@ -1035,7 +1114,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-087",
+   "i": "K-21-092",
    "madde": "35",
    "tip": "sira_usul",
    "tetikleyici": "kolluk tarafından kontrol",
@@ -1045,7 +1124,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-088",
+   "i": "K-21-093",
    "madde": "35",
    "tip": "yasak",
    "tetikleyici": "uzlaşma ya da arabuluculuk",
@@ -1055,7 +1134,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-089",
+   "i": "K-21-094",
    "madde": "35",
    "tip": "sure",
    "tetikleyici": "aşamaları ve sonucu",
@@ -1065,7 +1144,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-090",
+   "i": "K-21-095",
    "madde": "35",
    "tip": "kosul",
    "tetikleyici": "tefhim veya tebliğ edilmemesi",
@@ -1075,7 +1154,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-091",
+   "i": "K-21-096",
    "madde": "36",
    "tip": "kosul",
    "tetikleyici": "eğitim almış personel",
@@ -1085,7 +1164,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-092",
+   "i": "K-21-097",
    "madde": "37",
    "tip": "yasak",
    "tetikleyici": "teknik araç",
@@ -1095,7 +1174,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-093",
+   "i": "K-21-098",
    "madde": "38",
    "tip": "ceza",
    "tetikleyici": "aykırı hareket eden",
@@ -1105,7 +1184,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-094",
+   "i": "K-21-099",
    "madde": "38",
    "tip": "sure",
    "tetikleyici": "her tekrarında",
@@ -1115,7 +1194,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-095",
+   "i": "K-21-100",
    "madde": "38",
    "tip": "istisna",
    "tetikleyici": "zorlama hapsi",
@@ -1138,7 +1217,7 @@
    ]
   },
   {
-   "i": "K-21-096",
+   "i": "K-21-101",
    "madde": "38",
    "tip": "kosul",
    "tetikleyici": "karar verilebilmesi için",
@@ -1148,7 +1227,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-097",
+   "i": "K-21-102",
    "madde": "38",
    "tip": "sira_usul",
    "tetikleyici": "mükerrer",
@@ -1158,7 +1237,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-098",
+   "i": "K-21-103",
    "madde": "38",
    "tip": "sira_usul",
    "tetikleyici": "kolluk tarafından tespit",
@@ -1168,17 +1247,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-099",
+   "i": "K-21-104",
    "madde": "39",
    "tip": "makam",
    "tetikleyici": "ŞÖNİM’i kurar",
-   "cevap": "Bakanlık; yedi gün yirmi dört saat; tercihen kadın personel",
+   "cevap": "Bakanlık; yedi gün yirmidört saat; tercihen kadın personel",
    "kanit": "(1) Bakanlık, şiddetin önlenmesi ile şiddet mağduru hakkında verilecek koruyucu tedbirler ile şiddet uygulayan hakkında verilecek\nönleyici tedbirlerin etkin bir biçimde uygulanmasına yönelik güçlendirici ve destekleyici danışmanlık, rehberlik, yönlendirme ve izleme hizmetlerinin\nverildiği, yeterli ve gerekli uzman personelin görev yaptığı ve tercihen kadın personelin istihdam edildiği, çalışmaların yedi gün yirmidört saat esasına\ngöre yürütüldüğü ŞÖNİM’i kurar.",
    "not": "yalnız kadın personel DEĞİL",
    "karistirilan": []
   },
   {
-   "i": "K-21-100",
+   "i": "K-21-105",
    "madde": "40",
    "tip": "sayi_oran",
    "tetikleyici": "Materyaller",
@@ -1188,7 +1267,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-101",
+   "i": "K-21-106",
    "madde": "40",
    "tip": "makam",
    "tetikleyici": "kurumlararası ve sivil toplum",
@@ -1198,7 +1277,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-102",
+   "i": "K-21-107",
    "madde": "41",
    "tip": "kosul",
    "tetikleyici": "müfredat",
@@ -1208,7 +1287,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-103",
+   "i": "K-21-108",
    "madde": "41",
    "tip": "kosul",
    "tetikleyici": "mezun oldukları tarihte",
@@ -1218,7 +1297,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-104",
+   "i": "K-21-109",
    "madde": "42",
    "tip": "sure",
    "tetikleyici": "ödemelerin tahsili",
@@ -1228,7 +1307,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-105",
+   "i": "K-21-110",
    "madde": "42",
    "tip": "sure",
    "tetikleyici": "süresinde yapılmaması",
@@ -1238,7 +1317,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-106",
+   "i": "K-21-111",
    "madde": "42",
    "tip": "kosul",
    "tetikleyici": "gerçeğe aykırı beyan",
@@ -1248,11 +1327,11 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-107",
+   "i": "K-21-112",
    "madde": "43",
    "tip": "sira_usul",
    "tetikleyici": "nafaka",
-   "cevap": "kararın örneği resen icra müdürlüğüne; SGK’lıdan maaştan kesilir; harç yok",
+   "cevap": "resen icra müdürlüğüne; Sosyal Güvenlik bağlantılıysa maaştan; harç alınmaz",
    "kanit": "(1) Kanun hükümlerine göre nafakaya karar verilmesi hâlinde, kararın bir örneği, resen nafaka alacaklısının veya borçlusunun\nyerleşim yeri icra müdürlüğüne gönderilir.\n (2) Gizlilik kararı bulunması halinde icra müdürlükleri tarafından yapılacak işlemlerde 32 nci maddenin ikinci fıkrası kapsamında korunan kişinin\nbilgileri gizli tutulur.\n (3) Nafaka ödemekle yükümlü kılınan kişinin Sosyal Güvenlik Kurumu ile bağlantısı olması durumunda, korunan kişinin başvurusu aranmaksızın\nnafaka, ilgilinin aylık, maaş ya da ücretinden icra müdürlüğü tarafından tahsil edilir.\n (4) İcra müdürlüklerinin nafakanın tahsili işlemlerine ilişkin posta giderleri Cumhuriyet başsavcılığının suçüstü ödeneğinden karşılanır. Ayrıca harç\nve benzeri hiçbir ad altında masraf alınmaz.",
    "not": "",
    "karistirilan": [
@@ -1267,7 +1346,7 @@
    ]
   },
   {
-   "i": "K-21-108",
+   "i": "K-21-113",
    "madde": "43",
    "tip": "makam",
    "tetikleyici": "posta giderleri",
@@ -1277,7 +1356,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-109",
+   "i": "K-21-114",
    "madde": "44",
    "tip": "kosul",
    "tetikleyici": "sağlık giderleri",
@@ -1292,7 +1371,7 @@
    ]
   },
   {
-   "i": "K-21-110",
+   "i": "K-21-115",
    "madde": "44",
    "tip": "kosul",
    "tetikleyici": "prim borcu",
@@ -1302,7 +1381,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-111",
+   "i": "K-21-116",
    "madde": "44",
    "tip": "kosul",
    "tetikleyici": "sıra beklememesi",
@@ -1312,7 +1391,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-112",
+   "i": "K-21-117",
    "madde": "44",
    "tip": "makam",
    "tetikleyici": "rehabilitasyon",
@@ -1322,7 +1401,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-113",
+   "i": "K-21-118",
    "madde": "45",
    "tip": "istisna",
    "tetikleyici": "icra ve infazı",
@@ -1332,7 +1411,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-114",
+   "i": "K-21-119",
    "madde": "45",
    "tip": "istisna",
    "tetikleyici": "müstesna",
@@ -1342,7 +1421,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-115",
+   "i": "K-21-120",
    "madde": "46",
    "tip": "makam",
    "tetikleyici": "müdahil",
@@ -1357,7 +1436,7 @@
    ]
   },
   {
-   "i": "K-21-116",
+   "i": "K-21-121",
    "madde": "47",
    "tip": "sure",
    "tetikleyici": "yürürlüğe girer",
@@ -1367,7 +1446,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-21-117",
+   "i": "K-21-122",
    "madde": "48",
    "tip": "makam",
    "tetikleyici": "hükümlerini",
