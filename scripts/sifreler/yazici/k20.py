@@ -8,7 +8,7 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.10 — belgeler
- ('10','sure','yivsiz tüfek ruhsatname','5 yıl; merkezde vali, ilçede kaymakam','b) Yivsiz Tüfek Ruhsatnamesi:','5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.',[('13','m.13: engeli olmayana mülki amirlik düzenler; satın alınan tüfek bir ayda kaydedilir')],'bayilik belgesi ise 3 yıl; kırsalda taşıma, şehirde boş ve kılıfta'),
+ ('10','sure','Yivsiz Tüfek Ruhsatnamesi','5 yıl; merkezde vali, ilçede kaymakam','b) Yivsiz Tüfek Ruhsatnamesi:','5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.',[('13', 'm.13: engeli olmayana mülki amirlik düzenler; satın alınan tüfek bir ayda kaydedilir')],'bayilik belgesi ise 3 yıl; kırsalda taşıma, şehirde boş ve kılıfta'),
  ('10','istisna','silah taşıma yetkisine sahip','belge istenmez; 5 yıllık harç makbuzuyla ruhsat verilir-yenilenir','Yivsiz tüfek ruhsatnamesi almak veya aldığı','mevcut ruhsatnamesi yenilenir.',[],'6136 m.7 ile taşıma yetkili ya da validen taşıma vesikalı kişi'),
  ('10','makam','ikamet tezkeresi','iki yıl+ yabancıya vali verir: karşılıklılık, Dışişleri önerisi, İçişleri onayı','Türkiye’deki yabancı elçilik','valilerce yivsiz tüfek ruhsatnamesi verilir.',[],'elçilik-konsolosluk görevlisine de'),
  ('10','sure','bayilik','3 yıl; münhasıran vali; sağlık raporu: bedeni-ruhi sakınca yok','a) Satıcılık (Bayilik) Belgesi:','satıcılık (bayilik) belgesi verilir.',[],'iş yeri belgesi, sabıka beyanı, taahhütname, kimlik no, iki fotoğraf da'),
@@ -19,7 +19,7 @@ K = [
  ('13','sira_usul','görülerek tespit','ruhsatnameye kayıt sırasında tüfek görülür','Ruhsatname üzerine tüfeklerin','tespitinin yapılması esastır.',[],''),
 
  # m.14 — izin verilmeyecek hâller
- ('14','yasak','izni ve belgesi','silah suçu, terör, uyuşturucu, kısıtlı, akıl hastası; taksirli hariç','(Değişik:RG-11/06/1998-23369) Aşağıda belirtilen','j) 18 yaşını bitirmemiş olanlar,',[],'18 yaşını bitirmeyen, kamu hizmetinden yasaklı da; yapım, alım, satım, taşıma, bulundurma izni verilmez'),
+ ('14','yasak','izni ve belgesi','verilmez: silah suçu, terör, uyuşturucu, kısıtlı, akıl hastası; taksirli hariç','(Değişik:RG-11/06/1998-23369) Aşağıda belirtilen','j) 18 yaşını bitirmemiş olanlar,',[],'18 yaşını bitirmeyen, kamu hizmetinden yasaklı da; yapım, alım, satım, taşıma, bulundurma izni verilmez'),
  ('14','yasak','umuma mahsus yol','kamu davası açılmasa da izin-belge verilmez','c) Haklarında','birinden mahkum olanlar,',[],'zorunlu olmadan meskûn mahalde silah atan da'),
  ('14','yasak','affa uğramış olsalar','a-h bentlerinde yine verilmez; suç olmaktan çıkan fiil hariç','Yukarıdaki fıkranın (a)','hüküm giymiş olanlara uygulanmaz.',[],'adli sicilden silinse bile'),
  ('14','kosul','belirtilen mahkumiyet','kesinleşmiş mahkumiyet','Bu madde de belirtilen mahkumiyet','hürriyeti bağlayıcı ceza esas alınır.',[],''),
