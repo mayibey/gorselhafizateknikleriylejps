@@ -42,7 +42,7 @@ K = [
  ('5','sayi_oran','olağanüstü durumlarda hazırlanacak belgeler','en az iki nüsha; paraflı nüsha idarede','(2) Zorunlu hâllerde','iki nüsha olarak düzenlenir.',[('6','aynı ifade + üst yazı ise kâğıdın bir yüzü')],'E-İMZA TEK, KÂĞIT EN AZ İKİ'),
 
  # m.6-9 — kâğıt, yazı tipi, kenar, logo
- ('6','sayi_oran','dikkate alınarak hazırlanır','A4 (210x297 mm) boyutu','MADDE 6- (1) Belgeler, A4','dikkate alınarak hazırlanır.',[],'ekler farklı form, format, ebatta olabilir'),
+ ('6','sayi_oran','dikkate alınarak hazırlanır','belgeler: A4 (210x297 mm) boyutu','MADDE 6- (1) Belgeler, A4','dikkate alınarak hazırlanır.',[],'ekler farklı form, format, ebatta olabilir'),
  ('6','kosul','Belge ekleri farklı','form, format veya ebatta hazırlanabilir','(2) Belge ekleri farklı','ebatlarda hazırlanabilir.',[],'üst yazı A4 boyutunda; eklerde farklı yazı tipi de olabilir (m.7)'),
  ('6','sira_usul','belgelerin üst yazıları için','kâğıdın bir yüzü; eklerde iki yüz','(3) Zorunlu hâllerde','her iki yüzü de kullanılabilir.',[],''),
  ('7','sayi_oran','harf büyüklüğü','Times 12, Arial 11; en az 9, iletişimde 8','Harf büyüklüğünün Times','8 puntoya kadar düşürülebilir.',[],'eklerde farklı yazı tipi ve punto olabilir'),
@@ -89,16 +89,16 @@ K = [
  ('14','sira_usul','Cumhurbaşkanı Yardımcısı','CUMHURBAŞKANI YARDIMCISINA; birden fazlaysa alt satırda Sayın','Cumhurbaşkanı Yardımcısı’nın muhatap','büyük harflerle yazılır (Örnek 4).',[],''),
  ('14','sira_usul','konunun son satırından itibaren','iki satır boşluk, sayfa ortalanarak','(1) Muhatap, belgenin','sayfa ortalanarak yazılır.',[],''),
  ('14','kosul','bağlı, ilgili veya ilişkili','doğrudan gönderilebilir; bilgi gerekirse bağlı olunan idare aracılığıyla','(4) Bağlı, ilgili veya ilişkili','(Örnek 6/A, 6/B).',[],''),
- ('14','sira_usul','Mülki idareye veya dış','ilk satır mülki idare BÜYÜK; birim parantez içinde','(5) Mülki idareye','doğrudan muhatap birime gönderilir.',[],'aynı mülki idare içi yazışma doğrudan birime'),
+ ('14','sira_usul','Mülki idareye veya dış temsilciliğe','bağlı teşkilatta: ilk satır mülki idare BÜYÜK; birim parantez içinde','(5) Mülki idareye','doğrudan muhatap birime gönderilir.',[],'aynı mülki idare içi yazışma doğrudan birime'),
  ('14','sira_usul','belgenin gideceği yerin adresi','muhatap satırının altına, ortalanarak','(3) İdare dışına','birden fazla satıra yazılabilir.',[],''),
 
  # m.15 — ilgi
  ('15','tanim','belgenin bağlantılı olduğu diğer belge','İlgi bölümü','(1) İlgi, belgenin','belirtildiği bölümdür.',[],'birden fazlaysa önceki tarihliden başlanır'),
- ('15','sira_usul','İlginin birden fazla','önceki tarihliden başlanır (eskiden yeniye)','(5) İlginin birden fazla','konularak kullanılır (Örnek 7).',[],'sıra harfleri: küçük harf + “)”'),
+ ('15','sira_usul','İlginin birden fazla olması','önceki tarihliden başlanır (eskiden yeniye)','(5) İlginin birden fazla','konularak kullanılır (Örnek 7).',[],'sıra harfleri: küçük harf + “)”'),
  ('15','sira_usul','ilgi bölümü','önceki tarihli önce; kişiden ise başvurusu/dilekçesi','(5) İlginin birden fazla','biçiminde yazılır (Örnek 9).',[],'isimsiz-tarihsiz dilekçe de ilgi tutulabilir'),
  ('15','sira_usul','ilginin sonuna','nokta (.)','(7) İlgide,','nokta (.) işareti konulur (Örnek 7).',[],'“… tarihli ve … sayılı …” ibaresi'),
  ('15','sira_usul','muhatapta bulunmadığı durumlarda','ek olarak iletilebilir','(8) İlgide belirtilen belge','ek olarak muhatabına iletilebilir (Örnek 7).',[],''),
- ('15','istisna','muhatap idarenin daha önce','idare adı belirtilmez','Ancak ilgi tutulan belgenin','idare adı belirtilmez (Örnek 7).',[],'normalde gönderen idare adı, tarih ve sayı'),
+ ('15','istisna','muhatap idarenin daha önce','gönderdiği belge ilgide: idare adı belirtilmez','Ancak ilgi tutulan belgenin','idare adı belirtilmez (Örnek 7).',[],'normalde gönderen idare adı, tarih ve sayı'),
  ('15','sira_usul','yan başlıklarından sonra','iki nokta (:) aynı hizada','(3) “Sayı”, “Konu” ve “İlgi”','aynı hizada yazılır (Örnek 7).',[],''),
  ('15','sira_usul','Gerçek kişi ve tarih bilgisi','“İsimsiz ve tarihsiz başvuru/dilekçe.”','(10) Gerçek kişi ve tarih','biçiminde yazılır.',[],''),
  ('15','sira_usul','muhatap bölümünün son satırından itibaren','iki satır boşluk, yazı alanının solundan','(2) “İlgi:” yan başlığı','solundan başlanarak yazılır (Örnek 7).',[],''),
@@ -128,7 +128,7 @@ K = [
 
  # m.17 — imza
  ('17','sayi_oran','Metnin bitiminden itibaren','iki-dört satır boşluk; en sağda ortalı','(1) Metnin bitiminden','yer verilir (Örnek 9).',[],'ad, soyad, altında unvan'),
- ('17','sira_usul','kâğıda işlemesini','mavi renkli kalem','El yazısıyla atılan imza','mavi renkli kalemle atılır.',[('21','paraf da mavi kalemle atılır')],''),
+ ('17','sira_usul','kâğıda işlemesini sağlayacak','mavi renkli kalem','El yazısıyla atılan imza','mavi renkli kalemle atılır.',[('21', 'paraf da mavi kalemle atılır')],''),
  ('17','sira_usul','imza yetkisi devredilen makam','ikinci satıra “Vali a.”, “Genel Müdür a.”; vekâlette V.','(9) Belgeyi imza yetkisi','yetki devredenin unvanı kullanılmaz.',[('16', 'bitiş ibaresi devredenin hiyerarşisine göre')],'iç yazışmada devredenin unvanı yok'),
  ('17','sira_usul','Belge vekâleten imzalandığında','ikinci satıra “Genel Müdür V.”, “Başkan V.”','(10) Belge vekâleten','ikinci satıra yazılır (Örnek 10).',[],'YETKİ DEVRİ a., VEKÂLET V.'),
  ('17','sira_usul','iki yetkili tarafından imzalanması','üst unvan SAĞDA; ikiden fazlada en üst EN SOLDA','(11) Belgenin iki yetkili','sıralanır (Örnek 11).',[],'soldan sağa unvan sırası'),
@@ -149,11 +149,11 @@ K = [
  ('18','kosul','eklenecek elektronik dosyalar','Birlikte Çalışabilirlik Esasları formatında','(3) Elektronik ortamda hazırlanan belgelere','formatlarda oluşturulur.',[],''),
 
  # m.19 — dağıtım
- ('19','sira_usul','Dağıtım:” başlığı','ek varsa Ek’ten SONRA, yoksa imzadan sonra; solda','(1) Belgenin birden fazla muhataba','solundan başlanarak yazılır (Örnek 14).',[],'EK ÖNCE, DAĞITIM SONRA'),
+ ('19','sira_usul','“Dağıtım:” başlığı','ek varsa Ek’ten SONRA, yoksa imzadan sonra; solda','(1) Belgenin birden fazla muhataba','solundan başlanarak yazılır (Örnek 14).',[],'EK ÖNCE, DAĞITIM SONRA'),
  ('19','sira_usul','gereğini yerine getirme durumunda','“Gereği:” kısmına, Dağıtım başlığının altına','(2) Belgenin gereğini','“Dağıtım:” başlığının altına yazılır',[('3', 'belge tanımında işlemin yerine getirilmesi'), ('33', 'talepleri yerine getirme süresi')],''),
  ('19','sira_usul','bilgi sahibi olması istenenler','“Bilgi:” kısmına','(2) Belgenin gereğini','“Bilgi:” kısmına yazılır.',[('14', 'bağlı idarenin bilgi sahibi olması gerekiyorsa onun aracılığıyla')],''),
  ('19','sira_usul','“Bilgi:” kısmı','Gereği ile aynı satırda, ortaya doğru','(2) Belgenin gereğini','“Dağıtım:” başlığının altına yazılır (Örnek 14).',[],''),
- ('19','sira_usul','kısmı yoksa','muhatap adları doğrudan Dağıtım altına','(2) Belgenin gereğini','“Dağıtım:” başlığının altına yazılır (Örnek 14).',[],''),
+ ('19','sira_usul','“Bilgi:” kısmı yoksa','muhatap adları doğrudan Dağıtım altına','(2) Belgenin gereğini','“Dağıtım:” başlığının altına yazılır (Örnek 14).',[],''),
  ('19','sira_usul','sığmayacak kadar uzunsa','ayrı sayfada “DAĞITIM LİSTESİ”; Ek de olabilir','(3) Dağıtımlı belgeler','üst yazıya eklenebilir (Örnek 16).',[('18','ek listesi sığmazsa ayrı sayfada EK LİSTESİ')],''),
 
  # m.20-24 — olur, paraf, koordinasyon, doğrulama, iletişim
@@ -184,7 +184,7 @@ K = [
  # m.28-29 — üstveri, çoğaltma
  ('28','kosul','belgenin üstveri elemanları','ayrılmaz bütün; görüntüyle fark olamaz','(3) Elektronik ortamda güvenli elektronik imza ile imzalanan belgenin üstveri','arasında fark olamaz.',[],''),
  ('28','kosul','belge görüntüsü üzerinde','üstveriyle fark olamaz (tarih, sayı aynı)','(3) Elektronik ortamda güvenli elektronik imza ile imzalanan belgenin üstveri','arasında fark olamaz.',[('20','olur tarihi belge görüntüsü üzerinde gösterilir')],''),
- ('28','kosul','asgari olarak','e-Yazışma Teknik Rehberi elemanları; idare ilave edebilir','MADDE 28- (1) Güvenli elektronik imza','üstveri elemanları kullanabilir.',[],''),
+ ('28','kosul','asgari olarak','kullanılacak üstveri: e-Yazışma Teknik Rehberi elemanları; idare ilave edebilir','MADDE 28- (1) Güvenli elektronik imza','üstveri elemanları kullanabilir.',[],''),
  ('29','sira_usul','örnek çıkartılması hâlinde','“ASLI GİBİDİR” + yetkili görevli imzası','(2) Zorunlu hâllerde','asıl belge gibi kabul edilir.',[],'ad, soyad, unvan, tarih'),
  ('29','sira_usul','belgenin çoğaltılması','yetkilendirilmiş görevli çıktı alır; kod-karekodla doğrulanır','MADDE 29- (1) Güvenli elektronik imza','şekilde yapılır.',[],''),
  ('29','istisna','ASLI GİBİDİR','fiziksel/eski kâğıt örneğe; e-imzalıya konmaz','(2) Zorunlu hâllerde','asıl belge gibi kabul edilir.',[],''),
@@ -201,7 +201,7 @@ K = [
  ('31','sira_usul','iletiminin mümkün olmadığı durumlarda','elektronik aslına erişim amacıyla','MADDE 31- (1) Muhatabına elektronik','fiziksel ortamda gönderilir.',[],'çıktıyı yetkilendirilmiş görevli alır'),
  ('31','sira_usul','etiket','ilk sayfanın ön/arka yüzüne basılır','(5) İdareler, fiziksel','yüzüne basılır.',[],'en az Örnek 23 unsurları'),
  ('31','sira_usul','Belge zarflanarak muhatabına iletildiğinde','sol üst gönderen, tarih-sayı; ortada muhatap; ACELE sağ üst kırmızı','(2) Belge zarflanarak','büyük harflerle belirtilir (Örnek 22).',[],'kısaltma kullanılmaz'),
- ('31','kosul','haricindeki gizlilik','fiziksel gönderilir; kriptolu yetkili idare elektronik','(3) “Hizmete Özel” haricindeki','elektronik ortamda da gönderebilir.',[],''),
+ ('31','kosul','“Hizmete Özel” haricindeki gizlilik dereceli','fiziksel gönderilir; kriptolu yetkili idare elektronik','(3) “Hizmete Özel” haricindeki','elektronik ortamda da gönderebilir.',[],''),
  ('31','sira_usul','fiziksel ortamda gelen belgenin','alındığı tarih ve üstveri EBYS’ye kaydedilir','(4) İdareye fiziksel','kayıt sistemine kaydedilir.',[],''),
  ('31','sira_usul','havale, talimat','üst yazının ilk sayfası ön-arka yüzüne kaşe basılabilir','(6) Birime fiziksel ortamda gelen','tarafından belirlenir.',[],'kaşenin şeklini ilgili birim belirler'),
  ('32','sira_usul','belgenin muhatabı olunmadığı bilgisi','gönderene elektronik iletilir; asıl muhatap belliyse ona','MADDE 32- (1) İdareye muhatabı','elektronik ortamda muhafaza edilir.',[],''),
