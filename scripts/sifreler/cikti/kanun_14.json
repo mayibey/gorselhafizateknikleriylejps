@@ -171,9 +171,9 @@
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "kefalet",
-   "cevap": "yerleşik olmayanınki istisna dışı, e-imzayla gerçekleştirilemez",
+   "cevap": "yalnız Türkiye’de yerleşik sigortanınki e-imzayla olur; yabancınınki gerçekleştirilemez",
    "kanit": "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.",
-   "not": "yalnız Türkiye’de yerleşik sigorta şirketinin kefalet senedi olur",
+   "not": "banka teminat mektubu da e-imzayla olur; diğer teminat sözleşmeleri olmaz",
    "karistirilan": []
   }
  ]
