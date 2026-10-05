@@ -9,13 +9,13 @@ from ortak import yaz
 K = [
  # m.1-2 — amaç, tanım
  ('1','tanim','amacı','üç: şekli, yapımı, korunması','Bu Kanunun amacı','usulleri belirlemektir.',[],'esas ve usulleri belirlemek'),
- ('2','tanim','şekil ve oran','ekli cetveldeki; beyaz ay-yıldızlı albayrak','Türk Bayrağı, bu Kanuna ekli','albayraktır.',[],''),
+ ('2','tanim','şekil ve oranlarda','ekli cetveldeki; beyaz ay-yıldızlı albayrak','Türk Bayrağı, bu Kanuna ekli','albayraktır.',[],''),
  ('2','tanim','özel bayrak','sembolik bayrak, özel işaret, flama, flandra, fors; yönetmelikte; sancak-arma yok','Bayrak ile özel bayrakların','yönetmelikte gösterilir.',[],'standartları ve kumaşı yönetmelikte'),
 
  # m.3 — çekme, indirme, tören
  ('3','sure','kamu kurum','sürekli çekili kalır','(Değişik: 14/7/1999 - 4409/1 md.) Kamu kurum','sürekli çekili kalır.',[('7','m.7: yönetmelikte belirlenecek kamu kurumları dışındakiler amblemde kullanamaz')],'yalnız mesai saatinde değil'),
- ('3','makam','gereken biçimde','o mahaldeki yetkili amirler','Bayrak törenlerinin gereken biçimde','yetkili amirler sorumludur.',[],'tören sorumluluğu'),
- ('3','kosul','takıl','yetkililerin araçlarına (yurt içi-dışı); özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir'),
+ ('3','makam','törenlerinin gereken biçimde','o mahaldeki yetkili amirler','Bayrak törenlerinin gereken biçimde','yetkili amirler sorumludur.',[],'tören sorumluluğu'),
+ ('3','kosul','takılır','yetkililerin araçlarına (yurt içi-dışı); özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','yetkililerin araçlarına takılır.',[],'kamu kurumu, temsilcilik, deniz vasıtasına ise çekilir'),
  ('3','kosul','çekilir','kamu kurumu/yurt dışı temsilcilik/deniz vasıtası; özel konut YOK','Bayrak, kamu kurum ve kuruluşlarıyla','deniz vasıtalarına çekilir.',[('4', 'm.4: yas alameti olarak 10 Kasımda yarıya çekilir')],'deniz vasıtası kamunun da gerçek-tüzel kişinin de olabilir'),
  ('3','sira_usul','indirilirken','tören yapılır; usulü yönetmelikte','Bayrak çekilirken ve indirilirken','tören yapılır.',[],'selamlama ise m.5: cephe alınarak'),
 
@@ -37,12 +37,12 @@ K = [
  ('8','yasak','satmak','yasak; aykırı Bayrak yetkili amirce toplatılır','(Değişik: 23/1/2008-5728/421 md.) Bu Kanuna','yetkili amirlerince toplatılır.',[],'yapmak, satmak, kullanmak'),
  ('8','makam','yapılan Bayrak','o mahallin yetkili amirlerince toplatılır','Bu yasağa aykırı olarak yapılan','yetkili amirlerince toplatılır.',[],'para cezasını ise mülki amir verir'),
  ('8','makam','para ceza','mahalli mülki amir verir; Kabahatler m.32','Bu Kanun hükümlerine aykırı davranışta','idarî para ceza verilir.',[],'fiil suç oluşturmuyorsa'),
- ('8','ceza','suç oluşturmadığı','mülki amirce idari para cezası','Bu Kanun hükümlerine aykırı davranışta','idarî para ceza verilir.',[],'toplatmayı ise yetkili amir yapar'),
+ ('8','ceza','suç oluşturmadığı takdirde','mülki amirce idari para cezası','Bu Kanun hükümlerine aykırı davranışta','idarî para ceza verilir.',[],'toplatmayı ise yetkili amir yapar'),
 
  # m.9-12 — yönetmelik, yürürlük, yürütme
  ('9','makam','uygulanmasına ilişkin','Cumhurbaşkanınca çıkarılan yönetmelik','Bu Kanunun ilgili maddelerinde','Cumhurbaşkanınca çıkarılan yönetmelikte gösterilir',[],'eskiden tüzük'),
- ('10','tanim','yürürlükten kaldır','1936 tarihli 2994 sayılı eski Bayrak Kanunu','29 Mayıs 1936','yürürlükten kaldırılmıştır.',[('9','m.9 metninin sonunda m.10 başlığı yer alır')],''),
- ('11','sure','yürürlüğe gir','yayımından altı ay sonra','Bu Kanun yayımı tarihinden','yürürlüğe girer.',[('12','m.12 metninin sonunda değişikliklerin yürürlük tablosu yer alır')],''),
+ ('10','tanim','yürürlükten kaldırılmıştır','1936 tarihli 2994 sayılı eski Bayrak Kanunu','29 Mayıs 1936','yürürlükten kaldırılmıştır.',[('9', 'm.9 metninin sonunda m.10 başlığı yer alır')],''),
+ ('11','sure','yürürlüğe girer','yayımından altı ay sonra','Bu Kanun yayımı tarihinden','yürürlüğe girer.',[('12', 'm.12 metninin sonunda değişikliklerin yürürlük tablosu yer alır')],''),
  ('12','makam','yürütür','Bakanlar Kurulu','Bu Kanun hükümlerini','Bakanlar Kurulu yürütür.',[],''),
 ]
 yaz(11, '2893 sayılı Türk Bayrağı Kanunu', K)
