@@ -23,7 +23,7 @@ K = [
  ('3','tanim','Veri kayıt sistemi:','kriterlere göre yapılandırılmış sistem','h) Veri kayıt sistemi:','işlendiği kayıt sistemini,',[],'tanımlarda Veri Sorumluları Sicili ve veri ihlali bildirimi YOK'),
 
  # m.4 — genel ilkeler
- ('4','kosul','ilkeler','hukuk-dürüstlük, doğru-güncel, meşru-amaç, sınırlı-ölçülü, gerekli-süre-muhafaza; açık rıza değil','(2) Kişisel verilerin işlenmesinde','süre kadar muhafaza edilme.',[('3','m.3 metninin sonunda m.4 başlığı “Genel ilkeler” yer alır'),('28','m.28/2: Kanunun amacına ve temel ilkelerine uygun olma kaydı')],'beş ilke; süresiz muhafaza, sürekli saklama ilke DEĞİL; açık rıza m.5 işleme şartıdır'),
+ ('4','kosul','ilkeler','hukuk-dürüstlük, doğru-güncel, meşru amaç, sınırlı-ölçülü, gereken süre; süresiz/açık rıza DEĞİL','(2) Kişisel verilerin işlenmesinde','süre kadar muhafaza edilme.',[('3', 'm.3 metninin sonunda m.4 başlığı “Genel ilkeler” yer alır'), ('28', 'm.28/2: Kanunun amacına ve temel ilkelerine uygun olma kaydı')],'beş ilke; süresiz-sürekli saklama ilke değil; açık rıza m.5 işleme şartıdır, ilke değil'),
  ('4','sayi_oran','uyulması zorunlu','beş ilke','(2) Kişisel verilerin işlenmesinde','süre kadar muhafaza edilme.',[],'her hâlde açık rıza alınması ilke sayılmaz'),
  ('4','kosul','uygun olarak işlenebilir','bu Kanun ve diğer kanunlar','(1) Kişisel veriler, ancak','uygun olarak işlenebilir.',[],'öngörülen usul ve esaslara uygun; yalnız bu Kanun değil'),
 
@@ -36,12 +36,12 @@ K = [
 
  # m.6 — özel nitelikli kişisel veri
  ('6','tanim','özel nitelikli kişisel veri','ırk-etnik, siyasi-felsefi, din-mezhep, kılık, dernek-sendika, sağlık-cinsel, ceza, biyometrik-genetik; eğitim-adres yok','(1) Kişilerin ırkı','özel nitelikli kişisel veridir.',[('5','m.5 metninin sonunda m.6 başlığı yer alır')],'parmak izi = biyometrik; vakıf üyeliği, güvenlik tedbiri de; telefon, e-posta, eğitim durumu, ev adresi DEĞİL'),
- ('6','yasak','özel nitelikli kişisel verilerin','yasak; sekiz hâlde mümkün; Kurul’un yeterli önlemi şart; meşru-menfaat yok','(3) (Değişik:2/3/2024-7499/33 md.)','yeterli önlemlerin alınması şarttır.',[('5','m.5 metninin sonunda m.6 başlığı yer alır')],'genel veride YEDİ hâl; ikinci fıkra 7499 ile mülga'),
+ ('6','yasak','özel nitelikli kişisel veriler','yasak; açık rıza dahil sekiz hâl; Kurul önlemi; meşru-menfaat YOK','(3) (Değişik:2/3/2024-7499/33 md.)','yeterli önlemlerin alınması şarttır.',[('5', 'm.5 metninin sonunda m.6 başlığı yer alır')],'genel veride YEDİ hâl; ikinci fıkra 7499 ile mülga'),
  ('6','istisna','koruyucu hekimlik','sır saklayanlar veya yetkili kurumlar','e) Sır saklama yükümlülüğü','amacıyla gerekli olması,',[],'kamu sağlığı, teşhis, tedavi, bakım; sağlık hizmeti planlama-finansman'),
  ('6','istisna','kâr amacı gütmeyen','üyelere; üçüncü kişilere açıklanmamak kaydıyla','g) Siyasi, felsefi, dini veya sendikal','yönelik olması,',[],'mevcut-eski üye ve düzenli temastakiler; faaliyet alanıyla sınırlı'),
 
  # m.7 — silme, yok etme, anonim hâle getirme
- ('7','kosul','gerektiren','silinir, yok edilir, anonimleştirilir; resen ya da talep üzerine','(1) Bu Kanun ve ilgili diğer kanun','anonim hâle getirilir.',[],'hukuka uygun işlenmiş olsa bile; veri sorumlusu yapar'),
+ ('7','kosul','ortadan kalk','silme/yok etme/anonimleştirme, resen ya da talep üzerine; süresiz saklama YOK','(1) Bu Kanun ve ilgili diğer kanun','anonim hâle getirilir.',[],'hukuka uygun işlenmiş olsa bile, işlenmesini gerektiren sebep kalkınca; veri sorumlusu yapar'),
  ('7','kosul','diğer kanunlarda yer alan','saklıdır','(2) Kişisel verilerin silinmesi','hükümler saklıdır.',[],'silme, yok etme, anonim hâle getirmeye dair hükümler'),
  ('7','makam','usul ve esaslar','yönetmelikle','(3) Kişisel verilerin silinmesine','yönetmelikle düzenlenir.',[('4','m.4/1: bu Kanun ve diğer kanunlardaki usul ve esaslara uygun işleme')],'silme, yok etme, anonim hâle getirme usulü'),
 
