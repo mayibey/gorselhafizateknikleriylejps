@@ -8,7 +8,7 @@ K = [
  # m.1-2 — amaç, kapsam, dayanak
  ('1','tanim','Yönetmeliğin amacı','hızlı ve güvenli alışveriş; uygulama birliği','MADDE 1- (1) Bu Yönetmeliğin amacı','uygulama birliğini sağlamaktır.',[],'e-imzalı ve el yazısıyla imzalı yazışmanın kuralları'),
  ('1','tanim','kuruluşlarını kapsar','bütün kamu kurum ve kuruluşları','(2) Bu Yönetmelik, bütün','kuruluşlarını kapsar.',[],''),
- ('2','kosul','dayanılarak hazırlanmıştır','1 sayılı CB Kararnamesi m.6 ve m.7','MADDE 2- (1) Bu Yönetmelik, 1 sayılı','dayanılarak hazırlanmıştır.',[],''),
+ ('2','kosul','dayanılarak hazırlanmıştır','1 sayılı Cumhurbaşkanlığı Teşkilatı Kararnamesi m.6 ve m.7','MADDE 2- (1) Bu Yönetmelik, 1 sayılı','dayanılarak hazırlanmıştır.',[],''),
 
  # m.3 — tanımlar (tanımdaki ayırt edici ifade → kavram)
  ('3','tanim','hazırlanmasından tasfiyesine','aidiyet zinciri','a) Aidiyet zinciri:','tasfiyesine kadar olan sürecini,',[],''),
@@ -43,6 +43,7 @@ K = [
 
  # m.6-9 — kâğıt, yazı tipi, kenar, logo
  ('6','sayi_oran','dikkate alınarak hazırlanır','A4 (210x297 mm) boyutu','MADDE 6- (1) Belgeler, A4','dikkate alınarak hazırlanır.',[],'ekler farklı form, format, ebatta olabilir'),
+ ('6','kosul','Belge ekleri farklı','form, format veya ebatta hazırlanabilir','(2) Belge ekleri farklı','ebatlarda hazırlanabilir.',[],'üst yazı A4 boyutunda; eklerde farklı yazı tipi de olabilir (m.7)'),
  ('6','sira_usul','üst yazıları için','kâğıdın bir yüzü; eklerde iki yüz','(3) Zorunlu hâllerde','her iki yüzü de kullanılabilir.',[],''),
  ('7','sayi_oran','harf büyüklüğü','Times 12, Arial 11; en az 9, iletişimde 8','Harf büyüklüğünün Times','8 puntoya kadar düşürülebilir.',[],'eklerde farklı yazı tipi ve punto olabilir'),
  ('7','sayi_oran','yazı tipi','Times New Roman veya Arial','MADDE 7- (1) Hazırlanan belgelerde','normal yazı stilinde kullanılır.',[],'normal yazı stili'),
@@ -92,6 +93,7 @@ K = [
  ('14','sira_usul','gideceği yerin adresi','muhatap satırının altına, ortalanarak','(3) İdare dışına','birden fazla satıra yazılabilir.',[],''),
 
  # m.15 — ilgi
+ ('15','tanim','bağlantılı olduğu','İlgi bölümü (bağlantılı diğer belgeler)','(1) İlgi, belgenin','belirtildiği bölümdür.',[],'birden fazlaysa önceki tarihliden başlanır'),
  ('15','sira_usul','İlginin birden fazla','önceki tarihliden başlanır (eskiden yeniye)','(5) İlginin birden fazla','konularak kullanılır (Örnek 7).',[],'sıra harfleri: küçük harf + “)”'),
  ('15','sira_usul','ilgi bölümü','önceki tarihli önce; kişiden ise başvurusu/dilekçesi','(5) İlginin birden fazla','biçiminde yazılır (Örnek 9).',[],'isimsiz-tarihsiz dilekçe de ilgi tutulabilir'),
  ('15','sira_usul','ilginin sonuna','nokta (.)','(7) İlgide,','nokta (.) işareti konulur (Örnek 7).',[],'“… tarihli ve … sayılı …” ibaresi'),
@@ -176,7 +178,7 @@ K = [
  ('26','sure','ACELE','derhâl ve süratle cevap','(2) “ACELE” ibaresi','belirtilen süre içinde cevap verilir.',[('31','zarfta ACELE sağ üst köşede kırmızı büyük harfle')],'GÜNLÜDÜR: belirtilen süre içinde'),
  ('26','sure','“GÜNLÜDÜR” ibaresi taşıyan','belirtilen süre içinde cevap; süre metinde yazılır','“GÜNLÜDÜR” ibaresi taşıyan belgelere','ilgili üstveri alanında belirtilir.',[],''),
  ('26','sira_usul','süreli belgelerde','ACELE/GÜNLÜDÜR sağ üst köşe, kırmızı; yalnız ilk sayfa','(3) Elektronik ortamda veya zorunlu','sadece birinci sayfada belirtilir (Örnek 9).',[],'e-imzalıda üstveride ve üst yazıda'),
- ('26','sira_usul','KİŞİYE ÖZEL','zarf açılmadan yetkili birimce kaydedilir; yalnız ilgili tasarruf eder','(5) “KİŞİYE ÖZEL” ibaresi taşıyan belgenin zarfı','ilgilinin talebi ile EBYS’ye kaydedilir.',[('31','zarfın sağ üst köşesinde kırmızı büyük harfle')],''),
+ ('26','sira_usul','KİŞİYE ÖZEL','ilgilisine teslim; zarf açılmadan yetkili birimce kaydedilir; yalnız ilgili tasarruf','(5) “KİŞİYE ÖZEL” ibaresi taşıyan belgenin zarfı','ilgilinin talebi ile EBYS’ye kaydedilir.',[('31', 'zarfın sağ üst köşesinde kırmızı büyük harfle')],''),
  ('27','sira_usul','sayfa numarası','iletişim bilgilerinin altında, ortada; toplamın kaçıncısı','MADDE 27- (1) Birden fazla sayfa','gösterecek şekilde belirtilir (Örnek 9).',[],''),
 
  # m.28-29 — üstveri, çoğaltma
@@ -201,6 +203,7 @@ K = [
  ('31','sira_usul','zarflanarak','sol üst gönderen, tarih-sayı; ortada muhatap; ACELE sağ üst kırmızı','(2) Belge zarflanarak','büyük harflerle belirtilir (Örnek 22).',[],'kısaltma kullanılmaz'),
  ('31','kosul','haricindeki gizlilik','fiziksel gönderilir; kriptolu yetkili idare elektronik','(3) “Hizmete Özel” haricindeki','elektronik ortamda da gönderebilir.',[],''),
  ('31','sira_usul','fiziksel ortamda gelen belgenin','alındığı tarih ve üstveri EBYS’ye kaydedilir','(4) İdareye fiziksel','kayıt sistemine kaydedilir.',[],''),
+ ('31','sira_usul','havale, talimat','üst yazının ilk sayfası ön-arka yüzüne kaşe basılabilir','(6) Birime fiziksel ortamda gelen','tarafından belirlenir.',[],'kaşenin şeklini ilgili birim belirler'),
  ('32','sira_usul','muhatabı olunmadığı bilgisi','gönderene elektronik iletilir; asıl muhatap belliyse ona','MADDE 32- (1) İdareye muhatabı','elektronik ortamda muhafaza edilir.',[],''),
  ('32','sira_usul','asıl muhatabı anlaşılamıyorsa','gönderene iade edilir','(2) İdareye muhatabı olmadığı hâlde fiziksel','gönderene iade edilir.',[],'muhatap belliyse aslı ona, suret alınır'),
 

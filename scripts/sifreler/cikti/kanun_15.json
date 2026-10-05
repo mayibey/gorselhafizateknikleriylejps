@@ -27,7 +27,7 @@
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "dayanılarak hazırlanmıştır",
-   "cevap": "1 sayılı CB Kararnamesi m.6 ve m.7",
+   "cevap": "1 sayılı Cumhurbaşkanlığı Teşkilatı Kararnamesi m.6 ve m.7",
    "kanit": "MADDE 2- (1) Bu Yönetmelik, 1 sayılı Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesinin 6 ncı ve 7 nci maddeleri hükümlerine dayanılarak hazırlanmıştır.",
    "not": "",
    "karistirilan": []
@@ -320,6 +320,16 @@
   {
    "i": "K-15-032",
    "madde": "6",
+   "tip": "kosul",
+   "tetikleyici": "Belge ekleri farklı",
+   "cevap": "form, format veya ebatta hazırlanabilir",
+   "kanit": "(2) Belge ekleri farklı form, format veya ebatlarda hazırlanabilir.",
+   "not": "üst yazı A4 boyutunda; eklerde farklı yazı tipi de olabilir (m.7)",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-033",
+   "madde": "6",
    "tip": "sira_usul",
    "tetikleyici": "üst yazıları için",
    "cevap": "kâğıdın bir yüzü; eklerde iki yüz",
@@ -328,7 +338,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-033",
+   "i": "K-15-034",
    "madde": "7",
    "tip": "sayi_oran",
    "tetikleyici": "harf büyüklüğü",
@@ -338,7 +348,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-034",
+   "i": "K-15-035",
    "madde": "7",
    "tip": "sayi_oran",
    "tetikleyici": "yazı tipi",
@@ -348,7 +358,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-035",
+   "i": "K-15-036",
    "madde": "8",
    "tip": "sayi_oran",
    "tetikleyici": "sağ kenarından",
@@ -358,7 +368,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-036",
+   "i": "K-15-037",
    "madde": "8",
    "tip": "sayi_oran",
    "tetikleyici": "logo kullanmak istediğinde",
@@ -368,7 +378,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-037",
+   "i": "K-15-038",
    "madde": "9",
    "tip": "sayi_oran",
    "tetikleyici": "logo kullanılabilir",
@@ -378,7 +388,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-038",
+   "i": "K-15-039",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "kurumsal logo",
@@ -388,7 +398,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-039",
+   "i": "K-15-040",
    "madde": "9",
    "tip": "sira_usul",
    "tetikleyici": "logo kullanıldığında",
@@ -398,7 +408,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-040",
+   "i": "K-15-041",
    "madde": "10",
    "tip": "tanim",
    "tetikleyici": "antet",
@@ -408,7 +418,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-041",
+   "i": "K-15-042",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "il ve ilçe teşkilatlarında",
@@ -418,7 +428,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-042",
+   "i": "K-15-043",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "Dış temsilciliklerde",
@@ -428,7 +438,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-043",
+   "i": "K-15-044",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "Başlığın yazımında",
@@ -438,7 +448,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-044",
+   "i": "K-15-045",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "bağlı veya ilgili idarelerde",
@@ -448,7 +458,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-045",
+   "i": "K-15-046",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "merkezî teşkilata bağlı",
@@ -458,7 +468,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-046",
+   "i": "K-15-047",
    "madde": "10",
    "tip": "sira_usul",
    "tetikleyici": "Bölge müdürlüklerinde",
@@ -468,7 +478,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-047",
+   "i": "K-15-048",
    "madde": "11",
    "tip": "tanim",
    "tetikleyici": "“Sayı:”",
@@ -483,7 +493,7 @@
    ]
   },
   {
-   "i": "K-15-048",
+   "i": "K-15-049",
    "madde": "11",
    "tip": "tanim",
    "tetikleyici": "zorunlu hâller için",
@@ -493,7 +503,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-049",
+   "i": "K-15-050",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "standart dosya planı kodu",
@@ -503,7 +513,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-050",
+   "i": "K-15-051",
    "madde": "11",
    "tip": "kosul",
    "tetikleyici": "kayıt numarası",
@@ -513,7 +523,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-051",
+   "i": "K-15-052",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "el yazısıyla imzalandıktan sonra",
@@ -523,7 +533,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-052",
+   "i": "K-15-053",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "başlığın son satırından",
@@ -533,7 +543,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-053",
+   "i": "K-15-054",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "EBYS’ye erişim sağlandığında",
@@ -543,7 +553,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-054",
+   "i": "K-15-055",
    "madde": "12",
    "tip": "sira_usul",
    "tetikleyici": "Tarih;",
@@ -553,7 +563,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-055",
+   "i": "K-15-056",
    "madde": "12",
    "tip": "sayi_oran",
    "tetikleyici": "Gün ve ay iki haneli",
@@ -563,7 +573,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-056",
+   "i": "K-15-057",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "belge tarihi olarak",
@@ -578,7 +588,7 @@
    ]
   },
   {
-   "i": "K-15-057",
+   "i": "K-15-058",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "imzalandığı zamanı belirtir",
@@ -588,7 +598,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-058",
+   "i": "K-15-059",
    "madde": "12",
    "tip": "istisna",
    "tetikleyici": "tebliğ-tebellüğ",
@@ -598,7 +608,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-059",
+   "i": "K-15-060",
    "madde": "13",
    "tip": "sira_usul",
    "tetikleyici": "Konu:",
@@ -608,7 +618,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-060",
+   "i": "K-15-061",
    "madde": "13",
    "tip": "sira_usul",
    "tetikleyici": "hizasını geçmeyecek",
@@ -618,7 +628,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-061",
+   "i": "K-15-062",
    "madde": "13",
    "tip": "tanim",
    "tetikleyici": "kısa ve öz bilgi",
@@ -628,7 +638,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-062",
+   "i": "K-15-063",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "özel hukuk tüzel kişisi",
@@ -638,7 +648,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-063",
+   "i": "K-15-064",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "muhatap bölümüne",
@@ -648,7 +658,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-064",
+   "i": "K-15-065",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "Cumhurbaşkanı Yardımcısı",
@@ -658,7 +668,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-065",
+   "i": "K-15-066",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "konunun son satırından",
@@ -668,7 +678,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-066",
+   "i": "K-15-067",
    "madde": "14",
    "tip": "kosul",
    "tetikleyici": "bağlı, ilgili veya ilişkili",
@@ -678,7 +688,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-067",
+   "i": "K-15-068",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "Mülki idareye veya dış",
@@ -688,7 +698,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-068",
+   "i": "K-15-069",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "gideceği yerin adresi",
@@ -698,7 +708,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-069",
+   "i": "K-15-070",
+   "madde": "15",
+   "tip": "tanim",
+   "tetikleyici": "bağlantılı olduğu",
+   "cevap": "İlgi bölümü (bağlantılı diğer belgeler)",
+   "kanit": "(1) İlgi, belgenin bağlantılı olduğu diğer belge veya belgelerin belirtildiği bölümdür.",
+   "not": "birden fazlaysa önceki tarihliden başlanır",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-071",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "İlginin birden fazla",
@@ -708,7 +728,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-070",
+   "i": "K-15-072",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "ilgi bölümü",
@@ -718,7 +738,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-071",
+   "i": "K-15-073",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "ilginin sonuna",
@@ -728,7 +748,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-072",
+   "i": "K-15-074",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "muhatapta bulunmadığı",
@@ -738,7 +758,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-073",
+   "i": "K-15-075",
    "madde": "15",
    "tip": "istisna",
    "tetikleyici": "muhatap idarenin daha önce",
@@ -748,7 +768,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-074",
+   "i": "K-15-076",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "yan başlıklarından sonra",
@@ -758,7 +778,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-075",
+   "i": "K-15-077",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "Gerçek kişi ve tarih bilgisi",
@@ -768,7 +788,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-076",
+   "i": "K-15-078",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "muhatap bölümünün son satırından",
@@ -778,7 +798,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-077",
+   "i": "K-15-079",
    "madde": "16",
    "tip": "tanim",
    "tetikleyici": "arasındaki kısım",
@@ -788,7 +808,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-078",
+   "i": "K-15-080",
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "metin başlangıcı",
@@ -798,7 +818,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-079",
+   "i": "K-15-081",
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "içeriden başlanır",
@@ -808,7 +828,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-080",
+   "i": "K-15-082",
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "kesir",
@@ -818,7 +838,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-081",
+   "i": "K-15-083",
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "çok haneli sayılar",
@@ -828,7 +848,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-082",
+   "i": "K-15-084",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "kısaltma kullanılacak",
@@ -838,7 +858,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-083",
+   "i": "K-15-085",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "üst ve aynı düzeydeki",
@@ -848,7 +868,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-084",
+   "i": "K-15-086",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "hiyerarşi",
@@ -867,7 +887,7 @@
    ]
   },
   {
-   "i": "K-15-085",
+   "i": "K-15-087",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "dağıtımlı olarak",
@@ -877,7 +897,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-086",
+   "i": "K-15-088",
    "madde": "16",
    "tip": "istisna",
    "tetikleyici": "İdari İşler Başkanı tarafından",
@@ -887,7 +907,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-087",
+   "i": "K-15-089",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "imza yetkisini devreden",
@@ -897,7 +917,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-088",
+   "i": "K-15-090",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "Muhatabı gerçek kişi",
@@ -907,7 +927,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-089",
+   "i": "K-15-091",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "ikinci satırda parantez",
@@ -917,7 +937,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-090",
+   "i": "K-15-092",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "sayfa tutan üst yazılarda",
@@ -927,7 +947,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-091",
+   "i": "K-15-093",
    "madde": "16",
    "tip": "yasak",
    "tetikleyici": "yabancı kelimeye",
@@ -937,7 +957,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-092",
+   "i": "K-15-094",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "Türk Dil Kurumu",
@@ -947,7 +967,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-093",
+   "i": "K-15-095",
    "madde": "16",
    "tip": "istisna",
    "tetikleyici": "uluslararası kuruluş",
@@ -957,7 +977,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-094",
+   "i": "K-15-096",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "alıntılar",
@@ -967,7 +987,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-095",
+   "i": "K-15-097",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "maddelendirme",
@@ -977,7 +997,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-096",
+   "i": "K-15-098",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "noktalama işaretlerinden sonra",
@@ -987,7 +1007,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-097",
+   "i": "K-15-099",
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "Metin içinde geçen sayılar",
@@ -997,7 +1017,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-098",
+   "i": "K-15-100",
    "madde": "17",
    "tip": "sayi_oran",
    "tetikleyici": "metnin bitiminden",
@@ -1007,7 +1027,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-099",
+   "i": "K-15-101",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "kâğıda işlemesini",
@@ -1022,7 +1042,7 @@
    ]
   },
   {
-   "i": "K-15-100",
+   "i": "K-15-102",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "devre",
@@ -1037,7 +1057,7 @@
    ]
   },
   {
-   "i": "K-15-101",
+   "i": "K-15-103",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "vekâleten",
@@ -1047,7 +1067,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-102",
+   "i": "K-15-104",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "iki yetkili",
@@ -1057,7 +1077,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-103",
+   "i": "K-15-105",
    "madde": "17",
    "tip": "yasak",
    "tetikleyici": "imzalandığına dair",
@@ -1067,7 +1087,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-104",
+   "i": "K-15-106",
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "imza yetkisi bulunan görevlilere",
@@ -1077,7 +1097,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-105",
+   "i": "K-15-107",
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "Cumhurbaşkanlığı ile yapacakları",
@@ -1087,7 +1107,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-106",
+   "i": "K-15-108",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "rütbeler",
@@ -1097,7 +1117,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-107",
+   "i": "K-15-109",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "Belgeyi imzalayanın adı",
@@ -1107,7 +1127,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-108",
+   "i": "K-15-110",
    "madde": "17",
    "tip": "sira_usul",
    "tetikleyici": "son sayfadan önceki",
@@ -1117,7 +1137,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-109",
+   "i": "K-15-111",
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "idareler arası yazışmalarda",
@@ -1127,7 +1147,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-110",
+   "i": "K-15-112",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "Belge ekleri",
@@ -1146,7 +1166,7 @@
    ]
   },
   {
-   "i": "K-15-111",
+   "i": "K-15-113",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "“Ek:” başlığı",
@@ -1156,7 +1176,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-112",
+   "i": "K-15-114",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "birden fazla ek",
@@ -1166,7 +1186,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-113",
+   "i": "K-15-115",
    "madde": "18",
    "tip": "sira_usul",
    "tetikleyici": "Ek listesi",
@@ -1176,7 +1196,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-114",
+   "i": "K-15-116",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "gönderilemeyen veya alınamayan",
@@ -1186,7 +1206,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-115",
+   "i": "K-15-117",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "veri depolama araçları ile",
@@ -1196,7 +1216,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-116",
+   "i": "K-15-118",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "Dağıtım:” başlığı",
@@ -1206,7 +1226,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-117",
+   "i": "K-15-119",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "yerine getir",
@@ -1225,7 +1245,7 @@
    ]
   },
   {
-   "i": "K-15-118",
+   "i": "K-15-120",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "bilgi sahibi olması",
@@ -1240,7 +1260,7 @@
    ]
   },
   {
-   "i": "K-15-119",
+   "i": "K-15-121",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "Bilgi:” kısmı",
@@ -1250,7 +1270,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-120",
+   "i": "K-15-122",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "kısmı yoksa",
@@ -1260,7 +1280,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-121",
+   "i": "K-15-123",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "sığmayacak kadar uzunsa",
@@ -1275,7 +1295,7 @@
    ]
   },
   {
-   "i": "K-15-122",
+   "i": "K-15-124",
    "madde": "20",
    "tip": "sira_usul",
    "tetikleyici": "makam oluru",
@@ -1285,7 +1305,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-123",
+   "i": "K-15-125",
    "madde": "20",
    "tip": "sira_usul",
    "tetikleyici": "başka makamlar varsa",
@@ -1295,7 +1315,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-124",
+   "i": "K-15-126",
    "madde": "20",
    "tip": "sira_usul",
    "tetikleyici": "olur için makama",
@@ -1305,7 +1325,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-125",
+   "i": "K-15-127",
    "madde": "21",
    "tip": "kosul",
    "tetikleyici": "paraf bilgileri",
@@ -1315,7 +1335,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-126",
+   "i": "K-15-128",
    "madde": "21",
    "tip": "sira_usul",
    "tetikleyici": "Fiziksel ortamda hazırlanan belgelerde",
@@ -1325,7 +1345,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-127",
+   "i": "K-15-129",
    "madde": "21",
    "tip": "sira_usul",
    "tetikleyici": "Elektronik ortamda hazırlanan belgelerde",
@@ -1335,7 +1355,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-128",
+   "i": "K-15-130",
    "madde": "21",
    "tip": "sira_usul",
    "tetikleyici": "Paraf bölümünde",
@@ -1345,7 +1365,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-129",
+   "i": "K-15-131",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "Günlük raporlar",
@@ -1355,7 +1375,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-130",
+   "i": "K-15-132",
    "madde": "22",
    "tip": "sira_usul",
    "tetikleyici": "iş birliği ile hazırlanan",
@@ -1365,7 +1385,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-131",
+   "i": "K-15-133",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "belge doğrulama kodu",
@@ -1375,7 +1395,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-132",
+   "i": "K-15-134",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "karekod",
@@ -1385,7 +1405,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-133",
+   "i": "K-15-135",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "Belge doğrulama işlemi",
@@ -1395,7 +1415,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-134",
+   "i": "K-15-136",
    "madde": "24",
    "tip": "sira_usul",
    "tetikleyici": "İletişim bilgileri;",
@@ -1405,7 +1425,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-135",
+   "i": "K-15-137",
    "madde": "25",
    "tip": "kosul",
    "tetikleyici": "Hizmete Özel",
@@ -1420,7 +1440,7 @@
    ]
   },
   {
-   "i": "K-15-136",
+   "i": "K-15-138",
    "madde": "25",
    "tip": "kosul",
    "tetikleyici": "gizlilik dereceli belgeler",
@@ -1435,7 +1455,7 @@
    ]
   },
   {
-   "i": "K-15-137",
+   "i": "K-15-139",
    "madde": "25",
    "tip": "makam",
    "tetikleyici": "derecesinin belirlenmesinden",
@@ -1445,7 +1465,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-138",
+   "i": "K-15-140",
    "madde": "26",
    "tip": "sure",
    "tetikleyici": "ACELE",
@@ -1460,7 +1480,7 @@
    ]
   },
   {
-   "i": "K-15-139",
+   "i": "K-15-141",
    "madde": "26",
    "tip": "sure",
    "tetikleyici": "“GÜNLÜDÜR” ibaresi taşıyan",
@@ -1470,7 +1490,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-140",
+   "i": "K-15-142",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "süreli belgelerde",
@@ -1480,11 +1500,11 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-141",
+   "i": "K-15-143",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "KİŞİYE ÖZEL",
-   "cevap": "zarf açılmadan yetkili birimce kaydedilir; yalnız ilgili tasarruf eder",
+   "cevap": "ilgilisine teslim; zarf açılmadan yetkili birimce kaydedilir; yalnız ilgili tasarruf",
    "kanit": "(5) “KİŞİYE ÖZEL” ibaresi taşıyan belgenin zarfı açılmadan zarf üzerinde yer alan bilgiler, yetkili birimce EBYS’ye veya kurumsal belge kayıt sistemine kaydedilir ve ilgilisine teslim edilir. “KİŞİYE ÖZEL” ibaresi taşıyan belge üzerinde yalnızca ilgili kişi tasarruf hakkına sahiptir ve ilgilinin talebi ile EBYS’ye kaydedilir.",
    "not": "",
    "karistirilan": [
@@ -1495,7 +1515,7 @@
    ]
   },
   {
-   "i": "K-15-142",
+   "i": "K-15-144",
    "madde": "27",
    "tip": "sira_usul",
    "tetikleyici": "sayfa numarası",
@@ -1505,7 +1525,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-143",
+   "i": "K-15-145",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "üstveri elemanları",
@@ -1515,7 +1535,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-144",
+   "i": "K-15-146",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "belge görüntüsü üzerinde",
@@ -1530,7 +1550,7 @@
    ]
   },
   {
-   "i": "K-15-145",
+   "i": "K-15-147",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "asgari olarak",
@@ -1540,7 +1560,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-146",
+   "i": "K-15-148",
    "madde": "29",
    "tip": "sira_usul",
    "tetikleyici": "örnek çıkartılması",
@@ -1550,7 +1570,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-147",
+   "i": "K-15-149",
    "madde": "29",
    "tip": "sira_usul",
    "tetikleyici": "belgenin çoğaltılması",
@@ -1560,7 +1580,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-148",
+   "i": "K-15-150",
    "madde": "29",
    "tip": "istisna",
    "tetikleyici": "ASLI GİBİDİR",
@@ -1570,7 +1590,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-149",
+   "i": "K-15-151",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "hazırlanmamış",
@@ -1580,7 +1600,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-150",
+   "i": "K-15-152",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "reddetme hakkı",
@@ -1590,7 +1610,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-151",
+   "i": "K-15-153",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "bir taraf aracılığıyla",
@@ -1600,7 +1620,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-152",
+   "i": "K-15-154",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "bildirimde bulunma",
@@ -1610,7 +1630,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-153",
+   "i": "K-15-155",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "şifresini açamazsa",
@@ -1620,7 +1640,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-154",
+   "i": "K-15-156",
    "madde": "30",
    "tip": "sira_usul",
    "tetikleyici": "şifreleme sertifikaları",
@@ -1630,7 +1650,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-155",
+   "i": "K-15-157",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "veri depolama araçlarıyla",
@@ -1640,7 +1660,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-156",
+   "i": "K-15-158",
    "madde": "31",
    "tip": "istisna",
    "tetikleyici": "dilekçe",
@@ -1655,7 +1675,7 @@
    ]
   },
   {
-   "i": "K-15-157",
+   "i": "K-15-159",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "iletiminin mümkün olmadığı",
@@ -1665,7 +1685,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-158",
+   "i": "K-15-160",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "etiket",
@@ -1675,7 +1695,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-159",
+   "i": "K-15-161",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "zarflanarak",
@@ -1685,7 +1705,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-160",
+   "i": "K-15-162",
    "madde": "31",
    "tip": "kosul",
    "tetikleyici": "haricindeki gizlilik",
@@ -1695,7 +1715,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-161",
+   "i": "K-15-163",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "fiziksel ortamda gelen belgenin",
@@ -1705,7 +1725,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-162",
+   "i": "K-15-164",
+   "madde": "31",
+   "tip": "sira_usul",
+   "tetikleyici": "havale, talimat",
+   "cevap": "üst yazının ilk sayfası ön-arka yüzüne kaşe basılabilir",
+   "kanit": "(6) Birime fiziksel ortamda gelen belgelerle ilgili havale, talimat ve benzeri işlemler, üst yazının ilk sayfasının ön veya arka yüzüne kaşe basılarak belge üzerinde gösterilebilir. Bu kaşenin şekli ilgili birimler tarafından belirlenir.",
+   "not": "kaşenin şeklini ilgili birim belirler",
+   "karistirilan": []
+  },
+  {
+   "i": "K-15-165",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "muhatabı olunmadığı bilgisi",
@@ -1715,7 +1745,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-163",
+   "i": "K-15-166",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "asıl muhatabı anlaşılamıyorsa",
@@ -1725,7 +1755,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-164",
+   "i": "K-15-167",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "belge talepleri",
@@ -1735,7 +1765,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-165",
+   "i": "K-15-168",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "görüş talepleri",
@@ -1745,7 +1775,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-166",
+   "i": "K-15-169",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "talep yazıları",
@@ -1755,7 +1785,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-167",
+   "i": "K-15-170",
    "madde": "33",
    "tip": "kosul",
    "tetikleyici": "Talebin ulaştığı tarih",
@@ -1765,7 +1795,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-168",
+   "i": "K-15-171",
    "madde": "34",
    "tip": "sira_usul",
    "tetikleyici": "süresi içinde cevap verilmemesi",
@@ -1775,7 +1805,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-169",
+   "i": "K-15-172",
    "madde": "35",
    "tip": "istisna",
    "tetikleyici": "uygun olarak yazılmayan",
@@ -1785,7 +1815,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-170",
+   "i": "K-15-173",
    "madde": "36",
    "tip": "makam",
    "tetikleyici": "tereddütleri gidermeye",
@@ -1795,7 +1825,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-171",
+   "i": "K-15-174",
    "madde": "36",
    "tip": "makam",
    "tetikleyici": "Yönetmelik Kılavuzu",
@@ -1805,7 +1835,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-172",
+   "i": "K-15-175",
    "madde": "36",
    "tip": "kosul",
    "tetikleyici": "ek düzenleme yapabilir",
@@ -1815,7 +1845,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-173",
+   "i": "K-15-176",
    "madde": "37",
    "tip": "kosul",
    "tetikleyici": "yapılan atıflar",
@@ -1825,7 +1855,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-174",
+   "i": "K-15-177",
    "madde": "38",
    "tip": "sure",
    "tetikleyici": "takip eden ayın",
@@ -1835,7 +1865,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-175",
+   "i": "K-15-178",
    "madde": "39",
    "tip": "makam",
    "tetikleyici": "hükümlerini",
@@ -1845,7 +1875,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-176",
+   "i": "K-15-179",
    "madde": "Geçici",
    "tip": "sure",
    "tetikleyici": "kurulan EBYS’ler",
@@ -1855,7 +1885,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-15-177",
+   "i": "K-15-180",
    "madde": "Geçici",
    "tip": "sure",
    "tetikleyici": "kullanıcı hesaplarını",
