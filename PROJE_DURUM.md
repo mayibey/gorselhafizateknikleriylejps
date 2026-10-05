@@ -2,7 +2,26 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (3) — ŞİFRE MANTIK TEMİZLİĞİ (1378d2d): ters kopyalar teke, notta saklanan cevaplar SAĞ'a, yarım listeler tam
+> Başkan (TCK ekran görüntüsü): "Ayrım ve mazeret sayılmaz kısımlarına bak bi mantıksız olmamış mı?" + "tek tek ben mi bulacam".
+> 25 kanun tarandı (tarayıcılar scratchpad'de: ikiz_not_tara.py, ikiz_sorular.py, kayip_bul.py; düzeltme betiği mantik_duzelt*.py).
+> Bulunan 3 hata türü: (1) TERS KOPYA: aynı bilgi iki satırda iki yönde (TCK m.4 "bilmeme → mazeret sayılmaz" + "mazeret
+> sayılmaz → bilmemek"). Kural: tek satır kalır; gerçek sınav/kitapçık isabeti olan tutulur, ortak kelime bulunursa iki yönü tek
+> satır çözer (TCK m.4 → "Ceza kanunlarını → bilmemek mazeret sayılmaz", üç boşluk sorusunu birden çözer). Liste satırı + aynı
+> listeyi tersten söyleyen madde satırı: madde satırı yalnız gerçek sınav isabeti ya da ek bilgi taşıyorsa kalır.
+> (2) NOTA GÖMÜLÜ CEVAP: sınavda doğru şık olan tuzak notta duruyordu → SAĞ'a "X YOK/DEĞİL" olarak taşındı (ayrım: meslek-sendika
+> YOK, rüşvet artırımı: avukat YOK, zaman damgası: doğum tarihi YOK, il idare kurulu: jandarma-emniyet-malmüdürü YOK ...).
+> (3) YARIM LİSTE: "… da var" notları SAĞ'da tamamlandı; uzun listeler eğik çizgiyle tek satıra sığdırıldı (TCK m.3 ayrım,
+> karakol bölgesi ölçütleri, ahlaki-manevi vasıflar 14'ü birden, 6136 m.4 yasak aletler, OHAL m.9 tedbirleri, 7068 takdir hakkı).
+> Ayrıca aynı bilgiyi tekrar eden ve hiç soru çözmeyen satırlar silindi. DERS: not→SAĞ taşırken kelime eki ölçümü bozar
+> ("Validen" ≠ "vali", "masalara" ≠ "masası") — önce/sonra soru soru karşılaştırma (kayip_bul.py) ile 5 kayıp geri alındı.
+> Sonuç: 1.995 → 1.940 satır; gerçek 2026 sınavı 89 → 90/109 (%82); tüm cevaplı 2.207 → 2.234/2.946 (%75); TERS 103 → 112.
+> Kaybedilen ~40 arşiv sorusu bilinçli (ters kopyanın tek başına yakaladığı sorular); kazanılan ~65 (tuzakların SAĞ'a geçmesi).
+> Kalan bilinçli istisnalar: 3713 m.3 "304 yok" notta (denetçi kanıtta olmayan sayıyı SAĞ'a koydurmuyor); liste+madde ikilileri
+> 6 adet (5816 m.2 basın-toplu, e-imza m.3/m.5, 6136 m.4) ek bilgi/gerçek sınav isabeti taşıdığı için duruyor.
+> Sayfalar yenilendi: Kilit Kelime Şifreleri (MebRKHX3h5dJprFnxPRTnn v10) · Şifre Açıkları (4Wpq1yZvUrKjZU3zcn6vVX v4).
 >
 > ### ▶ 5 Eki (2) — BOT DALKAVUKLUK KİLİDİ (jsps-community-bot 8b8f832 + 6ef347a + 923096e, VPS'te CANLI)
 > Vaka (4 Eki 17:59, Savaş Yılmaz): uygulamanın sonuç ekranını atıp "cevap yanlış işaretlenmiş ama cevabım doğru cevapla aynı"
