@@ -28,7 +28,7 @@ K = [
  ('6','sure','taşıma ve bulundurma ruhsatları','yenileme harcıyla beş yıl geçerli','Bu Kanun kapsamına giren silahlar için verilen','beş yıl için geçerlidir.',[('Geçici','korucu ruhsatlarının usulü yönetmelikle belirlenir')],''),
  ('6','sure','veriliş sebe','altı ay içinde bildirir; yenilemeyenin ruhsatı iptal','Ruhsatların veriliş sebeplerinin','ruhsatları iptal edilir.',[],'süresi dolup altı ayda yenilemeyen de iptal'),
  ('6','makam','tekrar ruhsat','üçbin TL idari para cezası; mülki amir verir','Ancak, gerekli şartları haiz olan kişilere','mülki amir yetkilidir.',[],''),
- ('6','istisna','süre kaydı aranmaz','Cumhurbaşkanı, bakan, milletvekili, komutan, JGK, gazi, şehit yakını','Ancak, Cumhurbaşkanı, Başbakan','süre kaydı aranmaz.',[],'emekli astsubay listede yok'),
+ ('6','istisna','süre kaydı aranmaz','Cumhurbaşkanı, bakan, milletvekili, komutan, Jandarma Genel Komutanı, gazi, şehit yakını','Ancak, Cumhurbaşkanı, Başbakan','süre kaydı aranmaz.',[],'emekli astsubay listede yok'),
  ('6','kosul','mermiler için','ayrıca ruhsat aranmaz; ruhsat mermiyi de kapsar','Ruhsata bağlanmış silahlara ait','mermiler için de geçerlidir.',[],'yerli ve yabancı menşeli'),
  ('6','istisna','Silah taşıma ruhsatları','nereden verilmiş olursa olsun; Ek-1 yerleri dışında geçerli','Silah taşıma ruhsatları nereden','yerler dışında geçerlidir.',[],''),
  ('6','kosul','Birden fazla silaha','isteğiyle her biri için ayrı taşıma ruhsatı','Birden fazla silaha sahip','ayrı ayrı taşıma ruhsatı verilir.',[],''),
@@ -59,7 +59,7 @@ K = [
  ('12','ceza','ülkeye sok','silahta beş-oniki yıl hapis; beşyüz-beşbin gün adlî para','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[('2','ülkeye sokma yasağı ve istisnaları'),('14','bıçak sokma: iki-beş yıl')],'yapmak, taşımak, satmak da'),
  ('12','ceza','oniki yıla','sokar, yapar, taşır, satar, bu amaçla bulundurur; satın alma değil','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[],'ruhsatsız satın alma m.13’te'),
  ('12','ceza','bu amaçla','satmak için bulundurursa da aynı ceza','satar veya satmaya aracılık ederse veya bu amaçla','adlî para cezasıyla cezalandırılır.',[('11','görev için bu amaçla temin edilen kılıç-meç')],'miras yoluyla devralma yok'),
- ('12','ceza','birlikte','silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki','Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında','adlî para cezasına hükmolunur.',[('14','bıçakta iki kişi birlikte: ceza bir kat artar'),('11','antika silah izin vesikasıyla birlikte satılır')],''),
+ ('12','ceza','birlikte işle','iki+ kişi: silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki','Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında','adlî para cezasına hükmolunur.',[('14', 'bıçakta iki kişi birlikte: ceza bir kat artar'), ('11', 'antika silah izin vesikasıyla birlikte satılır')],''),
  ('12','ceza','beşyüz günden','beşbin güne kadar (hapis beş-oniki)','beş yıldan oniki yıla kadar hapis','adlî para cezasıyla cezalandırılır.',[('13','vahim ruhsatsız silahta da beşyüz-beşbin gün')],''),
  ('12','ceza','örgütün faaliyeti','cezalar bir kat artırılır','Birinci fıkradaki fiillerin, suç işlemek','bir kat artırılır.',[],''),
  ('12','ceza','susturuculu','tüfek, tam otomatik, dürbünlü, hedef noktalayıcı: yarı oranında artar','Ateşli silahın tüfek veya seri','yarı oranında artırılarak hükmolunur.',[],'dürbünsüz tabanca nitelikli değil'),
@@ -75,13 +75,15 @@ K = [
  ('13','makam','idari para ceza','mülki idare amiri verir (onbin-yirmibeşbin TL)','Bu madde hükümlerine göre idari para cezası vermeye','mülki idare amiri yetkilidir.',[('6','ruhsat yenilemeyene üçbin TL; mülki amir')],''),
 
  # m.14-16 — bıçak suçları
- ('14','ceza','4 üncü maddede yazılı','bıçak sokma-yapma-nakil: iki-beş yıl; ikiyüz gün+','Her kim, bu Kanun hükümlerine aykırı olarak 4 üncü','adlî para cezası ile cezalandırılır.',[('15','bıçak satma, alma, taşıma, bulundurma: altı ay-bir yıl')],''),
+ ('14','ceza','4 üncü maddede yazılı','bıçağı sokma/yapma/taşıma: iki-beş yıl hapis; ikiyüz gün+','Her kim, bu Kanun hükümlerine aykırı olarak 4 üncü','adlî para cezası ile cezalandırılır.',[('15', 'bıçak satma, alma, taşıma, bulundurma: altı ay-bir yıl')],''),
  ('14','ceza','azlığı','ceza yarısına kadar indirilir','Suç konusu bıçak ve aletlerin niteliği','yarısına kadar indirilir.',[],''),
  ('14','ceza','teşekkül','beş-on yıl hapis; bin-onbin gün','Birinci fıkradaki eylemleri işlemek amacı ile teşekkül','adlî para cezasına hükmolunur.',[],''),
  ('15','ceza','satanlar, satmaya aracılık','yasak bıçak: altı ay-bir yıl; yirmibeş gün+','Bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya diğer aletleri veya benzerlerini satanlar','adlî para cezasına hükmolunur.',[],'satın alma, taşıma, bulundurma da'),
  ('15','ceza','sayı veya nitelik','vahimse bıçakta yarıdan bir katına; silahta beş-sekiz yıl','Bu madde kapsamına giren bıçak veya diğer aletlerin veya benzerlerinin sayı','yarıdan bir katına kadar artırılır.',[('13','ruhsatsız silah vahimse beş-sekiz yıl')],''),
  ('15','ceza','günden az ol','bıçak satış-taşıma yirmibeş; bıçak sokma ikiyüz; yasak yer elli','Bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya diğer aletleri veya benzerlerini satanlar','adlî para cezasına hükmolunur.',[('14','bıçak sokmada ikiyüz günden az olmamak'),('Ek 1','yasak yere silahla girene elli günden az olmamak')],''),
  ('15','ceza','sırf saldırıda','üç aya kadar hapis ya da adlî para','Bu Kanunun 4 üncü maddesinin üçüncü fıkrasında','cezalandırılır.',[],'yivsiz tüfek, meslek bıçağı bile'),
+ ('17','sure','meridir','15 Ağustos 1953’ten itibaren yürürlükte','Madde 17 – Bu Kanun','itibaren meridir.',[],'meri = yürürlükte'),
+ ('18','makam','Vekilleri Heyeti','yürütür; İcra Vekilleri Heyeti = Bakanlar Kurulu','Madde 18 – Bu Kanunu','İcra Vekilleri Heyeti yürütür.',[],''),
  ('16','istisna','Kaçakçılığın Men','1918 sayılı Kanun bu suçlarda uygulanmaz','Bu Kanunun kapsamına giren suçlarda','hükümleri uygulanmaz.',[],''),
 
  # Ek-1 — silah taşınamayacak yerler, yabancıların silahı
@@ -92,7 +94,7 @@ K = [
  ('Ek 1','ceza','silahla giren','elli gün+ adlî para; ruhsat bulundurmaya; beş yıl taşıma yok','(A), (B) ve (C) bentlerinde sayılan yerlere silahla giren','silah ruhsatları bulundurmaya çevrilir.',[],'beş yıl kuralı aynı fıkranın sonunda'),
  ('Ek 1','sure','yıllık süre geç','beş yıl taşıma ruhsatı verilmez','beş yıllık süre geçmediği takdirde','taşıma ruhsatı verilmez.',[],''),
  ('Ek 1','kosul','turist olarak avcılık','gümrüğe beyan + giriş kapısı emniyetinden izin; geçici','Kara Avcılığı Kanunu esaslarına göre','geçici olarak yurda sokabilirler.',[],'atıcılık yarışmasına gelen yabancı da'),
- ('Ek 1','kosul','bilimsel araştırmalar','EGM izni + gümrük beyanı','Antlaşmalarla yurdumuza görevli olarak gelen','şartıyla yurda sokabilirler.',[],'antlaşmayla görevli gelen yabancı da'),
+ ('Ek 1','kosul','bilimsel araştırmalar','Emniyet Genel Müdürlüğü izni + gümrük beyanı','Antlaşmalarla yurdumuza görevli olarak gelen','şartıyla yurda sokabilirler.',[],'antlaşmayla görevli gelen yabancı da'),
  ('Ek 1','kosul','geçici olarak yurda sok','turist avcı, atıcılık yarışmacısı, antlaşmalı görevli, bilimsel araştırmacı; ticari YOK','Kara Avcılığı Kanunu esaslarına göre','geçici olarak yurda sokabilirler.',[],''),
  ('Ek 1','kosul','pasaportuna','taşıma izin vesikası yerine geçer','yurda sokulmasına izin verilen silah, silah aksamı','taşıma izin vesikası yerine geçer.',[],''),
  ('Ek 1','kosul','sarfedilmeyen','ülke terk edilirken yurt dışına çıkarılır','sarfedilmeyen mermilerin ülkemiz','yurt dışına çıkarılması zorunludur.',[],''),

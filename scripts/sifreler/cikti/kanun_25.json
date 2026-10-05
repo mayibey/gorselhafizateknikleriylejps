@@ -234,7 +234,7 @@
    "madde": "6",
    "tip": "istisna",
    "tetikleyici": "süre kaydı aranmaz",
-   "cevap": "Cumhurbaşkanı, bakan, milletvekili, komutan, JGK, gazi, şehit yakını",
+   "cevap": "Cumhurbaşkanı, bakan, milletvekili, komutan, Jandarma Genel Komutanı, gazi, şehit yakını",
    "kanit": "Ancak, Cumhurbaşkanı, Başbakan, Cumhurbaşkanı yardımcıları, bakanlar, Genelkurmay Başkanı, Hükümet Üyeleri, Türkiye Büyük Millet Meclisi Üyeleri, Kuvvet Komutanları, Jandarma Genel Komutanı, Cumhurbaşkanlığı Genel Sekreteri, Türkiye Büyük Millet Meclisi Genel Sekreteri, Başbakanlık ile İçişleri Bakanlığı müsteşarları, Savunma Sanayii Geliştirme ve Destekleme İdaresi Müsteşarı, Emniyet Genel Müdürü, Sahil Güvenlik Komutanı, Cumhurbaşkanlığı Genel Sekreter yardımcıları, Türkiye Büyük Millet Meclisi Genel Sekreter yardımcıları ve bu görevlerde bulunmuş olanların, gazilerin ve 7 nci maddenin üçüncü fıkrasında belirtilen şehitlerin ve gazilerin ana, baba, eş ve çocuklarına intikal eden veya intikal eden yoksa edinecekleri ruhsatlarında süre kaydı aranmaz.",
    "not": "emekli astsubay listede yok",
    "karistirilan": []
@@ -497,8 +497,8 @@
    "i": "K-25-044",
    "madde": "12",
    "tip": "ceza",
-   "tetikleyici": "birlikte",
-   "cevap": "silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki",
+   "tetikleyici": "birlikte işle",
+   "cevap": "iki+ kişi: silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki",
    "kanit": "Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında iki veya daha çok kişinin birlikte işlemeleri halinde, failler hakkında sekiz yıldan onbeş yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasına hükmolunur.",
    "not": "",
    "karistirilan": [
@@ -647,7 +647,7 @@
    "madde": "14",
    "tip": "ceza",
    "tetikleyici": "4 üncü maddede yazılı",
-   "cevap": "bıçak sokma-yapma-nakil: iki-beş yıl; ikiyüz gün+",
+   "cevap": "bıçağı sokma/yapma/taşıma: iki-beş yıl hapis; ikiyüz gün+",
    "kanit": "Her kim, bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya başkaca aletler yahut benzerlerini ülkeye sokar, sokmaya kalkışır veya bunların ülkeye sokulmasına aracılık eder veya bunları ülkede yapar veya bir yerden diğer bir yere taşır veya yollar veya taşımaya aracılık ederse iki yıldan beş yıla kadar hapis ve ikiyüz günden az olmamak üzere adlî para cezası ile cezalandırılır.",
    "not": "",
    "karistirilan": [
@@ -733,6 +733,26 @@
   },
   {
    "i": "K-25-063",
+   "madde": "17",
+   "tip": "sure",
+   "tetikleyici": "meridir",
+   "cevap": "15 Ağustos 1953’ten itibaren yürürlükte",
+   "kanit": "Madde 17 – Bu Kanun 15 Ağustos 1953 tarihinden itibaren meridir.",
+   "not": "meri = yürürlükte",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-064",
+   "madde": "18",
+   "tip": "makam",
+   "tetikleyici": "Vekilleri Heyeti",
+   "cevap": "yürütür; İcra Vekilleri Heyeti = Bakanlar Kurulu",
+   "kanit": "Madde 18 – Bu Kanunu İcra Vekilleri Heyeti yürütür.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-25-065",
    "madde": "16",
    "tip": "istisna",
    "tetikleyici": "Kaçakçılığın Men",
@@ -742,7 +762,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-064",
+   "i": "K-25-066",
    "madde": "Ek 1",
    "tip": "yasak",
    "tetikleyici": "taşınama",
@@ -752,7 +772,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-065",
+   "i": "K-25-067",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "ilgili kanunlarda",
@@ -762,7 +782,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-066",
+   "i": "K-25-068",
    "madde": "Ek 1",
    "tip": "istisna",
    "tetikleyici": "jandarma personeli",
@@ -772,7 +792,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-067",
+   "i": "K-25-069",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "daha ağır cezayı gerektiren",
@@ -782,7 +802,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-068",
+   "i": "K-25-070",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "silahla giren",
@@ -792,7 +812,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-069",
+   "i": "K-25-071",
    "madde": "Ek 1",
    "tip": "sure",
    "tetikleyici": "yıllık süre geç",
@@ -802,7 +822,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-070",
+   "i": "K-25-072",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "turist olarak avcılık",
@@ -812,17 +832,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-071",
+   "i": "K-25-073",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "bilimsel araştırmalar",
-   "cevap": "EGM izni + gümrük beyanı",
+   "cevap": "Emniyet Genel Müdürlüğü izni + gümrük beyanı",
    "kanit": "Antlaşmalarla yurdumuza görevli olarak gelen yabancılar ile bilimsel araştırmalar yapmak amacıyla gelen kişiler de beraberlerinde getirecekleri yivli veya yivsiz tüfekler ve aksamı ile mermilerini İçişleri Bakanlığı Emniyet Genel Müdürlüğünden izin almak ve gümrük makamlarına beyan etmek şartıyla yurda sokabilirler.",
    "not": "antlaşmayla görevli gelen yabancı da",
    "karistirilan": []
   },
   {
-   "i": "K-25-072",
+   "i": "K-25-074",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "geçici olarak yurda sok",
@@ -832,7 +852,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-073",
+   "i": "K-25-075",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "pasaportuna",
@@ -842,7 +862,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-074",
+   "i": "K-25-076",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "sarfedilmeyen",
@@ -852,7 +872,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-075",
+   "i": "K-25-077",
    "madde": "Ek",
    "tip": "kosul",
    "tetikleyici": "teslim ettikleri takdirde",
@@ -867,7 +887,7 @@
    ]
   },
   {
-   "i": "K-25-076",
+   "i": "K-25-078",
    "madde": "Geçici",
    "tip": "sure",
    "tetikleyici": "gönüllü korucu",
