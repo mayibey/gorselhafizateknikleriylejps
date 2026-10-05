@@ -497,7 +497,7 @@
    "madde": "11",
    "tip": "tanim",
    "tetikleyici": "zorunlu hâller için",
-   "cevap": "Z (E elektronik, O olağanüstü)",
+   "cevap": "sayıda “Z” ibaresi (elektronik E, olağanüstü O)",
    "kanit": "“Sayı:” sırasıyla; belgenin hazırlanma süreçlerini ifade eden elektronik ortam için “E”, zorunlu hâller için “Z” veya olağanüstü durumlar için “O” ibarelerinden uygun olanı, DETSİS’te belirtilen Türkiye Cumhuriyeti Devlet Teşkilatı Numarası, standart dosya planı kodu ile kayıt numarasından oluşur ve bunların arasına kısa çizgi işareti (-) konulur (Örnek 3).",
    "not": "",
    "karistirilan": []
@@ -537,7 +537,7 @@
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "başlığın son satırından itibaren",
-   "cevap": "iki satır boşluk, yazı alanının solundan",
+   "cevap": "“Sayı:” yazılır: iki satır boşluk bırakılarak, yazı alanının solundan",
    "kanit": "(2) “Sayı:” yan başlığı, başlığın son satırından itibaren iki satır boşluk bırakılarak ve yazı alanının solundan başlanarak yazılır (Örnek 3).",
    "not": "",
    "karistirilan": []
@@ -672,7 +672,7 @@
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "konunun son satırından itibaren",
-   "cevap": "iki satır boşluk, sayfa ortalanarak",
+   "cevap": "muhatap yazılır: iki satır boşluk bırakılarak, sayfa ortalanarak",
    "kanit": "(1) Muhatap, belgenin gönderildiği idareyi veya kişiyi belirtir. Bu bölüm konunun son satırından itibaren, iki satır boşluk bırakılarak ve sayfa ortalanarak yazılır.",
    "not": "",
    "karistirilan": []
@@ -792,7 +792,7 @@
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "muhatap bölümünün son satırından itibaren",
-   "cevap": "iki satır boşluk, yazı alanının solundan",
+   "cevap": "“İlgi:” yazılır: iki satır boşluk bırakılarak, yazı alanının solundan",
    "kanit": "(2) “İlgi:” yan başlığı, muhatap bölümünün son satırından itibaren iki satır boşluk bırakılarak ve yazı alanının solundan başlanarak yazılır (Örnek 7).",
    "not": "",
    "karistirilan": []
@@ -1001,7 +1001,7 @@
    "madde": "16",
    "tip": "sira_usul",
    "tetikleyici": "noktalama işaretlerinden sonra",
-   "cevap": "bir karakter boşluk; noktalama bitişik",
+   "cevap": "bir karakter boşluk bırakılır; işaret önceki harfe bitişik",
    "kanit": "(3) Metindeki kelime aralarında ve noktalama işaretlerinden sonra bir karakter boşluk bırakılır. Noktalama işaretleri kendinden önce gelen harfe bitişik yazılır.",
    "not": "",
    "karistirilan": []
@@ -1021,7 +1021,7 @@
    "madde": "17",
    "tip": "sayi_oran",
    "tetikleyici": "Metnin bitiminden itibaren",
-   "cevap": "iki-dört satır boşluk; en sağda ortalı",
+   "cevap": "imza bölümü: iki-dört satır boşluk bırakılarak, en sağda ortalı",
    "kanit": "(1) Metnin bitiminden itibaren iki ilâ dört satır boşluk bırakılarak, belgeyi imzalayacak olan makam sahibinin adına, soyadına ve bunların altında unvanına, yazı alanının en sağında ortalanarak yer verilir (Örnek 9).",
    "not": "ad, soyad, altında unvan",
    "karistirilan": []

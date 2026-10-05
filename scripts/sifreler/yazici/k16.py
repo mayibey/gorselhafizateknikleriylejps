@@ -33,14 +33,14 @@ K = [
  ('8','sira_usul','aşama','yazılı, fiziki yeterlilik testi, mülakat','1) Muvazzaf subaylığa geçiş sınavları','üç aşamalı yapılır.',[('11','astsubayda da üç aşama'),('9','seçim ve sınav aşamalarında başarılı er-erbaşa öncelik')],''),
  ('8','sayi_oran','üç bin metre','her testte en az elli; ortalama altmış','3) Fiziki yeterlilik ve değerlendirme testinden','en az altmış puan olması gerekir.',[('11','astsubayda da aynı')],'şınav, mekik, üç bin metre'),
  ('8','sayi_oran','en az üç doktor','heyet raporuyla iki test üzerinden değerlendirilir','Sağlık sorunu nedeniyle herhangi bir teste','iki test üzerinden yapılır.',[('11','astsubayda da aynı')],'iki teste girmeyen başarısız'),
- ('8','sayi_oran','Heyet, biri başkan olmak üzere','en az üç, en çok beş kişi','Heyet, biri başkan','en çok beş kişiden oluşur.',[('11', 'astsubayda da aynı')],'oy hakkı olmayan raportör olabilir'),
+ ('8','sayi_oran','Heyet, biri başkan olmak üzere','en az üç, en çok beş kişiden oluşur','Heyet, biri başkan','en çok beş kişiden oluşur.',[('11', 'astsubayda da aynı')],'oy hakkı olmayan raportör olabilir'),
  ('8','sayi_oran','Mülakat sınavına katılan adayın','asgari yetmiş puan','Mülakat sınavına katılan adayın','şartı aranır.',[('11', 'astsubayda da yetmiş')],''),
  ('8','sayi_oran','başarı sıralamasına esas','yazılı %55, fiziki %15, mülakat %30; ceza puanı ×0,118','6) Başarı sıralamasına esas değerlendirme notu','ceza puanı olarak düşülmesi ile belirlenir.',[('11','astsubayda da aynı oranlar')],'YAZILI 55 · FİZİKİ 15 · MÜLAKAT 30'),
  ('8','sayi_oran','katsayı','0,118 ile çarpılıp ceza puanı olarak düşülür','6) Başarı sıralamasına esas değerlendirme notu','ceza puanı olarak düşülmesi ile belirlenir.',[('11','astsubayda da 0,118')],''),
  ('8','sayi_oran','komando temel kursunu','üç puan; ihtisas kursuna iki puan daha','Bu nota komando temel kursunu','ilave edilir.',[('11', 'astsubayda da aynı')],''),
  ('8','sayi_oran','Terörle Mücadele Kanunu kapsamında','malul olup göreve devam edene ilave on puan','12/4/1991 tarihli ve 3713 sayılı Terörle','ilave on puan verilir.',[('11','astsubayda da on puan')],''),
  ('8','sayi_oran','hamile','yazılı %63, mülakat %37 (fiziki yok)','7) Fiziki yeterlilik ve değerlendirme testine katılmasına','hesaplanır.',[('11','astsubayda da aynı')],'harp/vazife malulü de'),
- ('8','sira_usul','notlarının eşitliği halinde','önce yazılı, sonra sicil, fiili hizmet, en son kıdem','8) Başarı sıralamasına esas değerlendirme notlarının','öncelik tanınır.',[('11', 'astsubayda da aynı')],''),
+ ('8','sira_usul','notlarının eşitliği halinde','üstünlük sırası: yazılı notu, sicil ortalaması, fiili hizmet, kıdem','8) Başarı sıralamasına esas değerlendirme notlarının','öncelik tanınır.',[('11', 'astsubayda da aynı')],''),
  ('8','sayi_oran','disiplin cezası','bir yıl: on puan-dört ceza; üç yıl: yirmi puan-sekiz ceza','1) En son alınan disiplin cezasının','toplam sekiz defa',[('11', 'muvazzaf astsubaylıkta da aynı eşik'), ('15', 'fesih: bir yılda iki amirden sekiz ceza')],'en az iki farklı amirden'),
 
  # m.9 — astsubay adayı nitelikleri

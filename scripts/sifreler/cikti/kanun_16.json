@@ -332,7 +332,7 @@
    "madde": "8",
    "tip": "sayi_oran",
    "tetikleyici": "Heyet, biri başkan olmak üzere",
-   "cevap": "en az üç, en çok beş kişi",
+   "cevap": "en az üç, en çok beş kişiden oluşur",
    "kanit": "Heyet, biri başkan olmak üzere en az üç, en çok beş kişiden oluşur.",
    "not": "oy hakkı olmayan raportör olabilir",
    "karistirilan": [
@@ -437,7 +437,7 @@
    "madde": "8",
    "tip": "sira_usul",
    "tetikleyici": "notlarının eşitliği halinde",
-   "cevap": "önce yazılı, sonra sicil, fiili hizmet, en son kıdem",
+   "cevap": "üstünlük sırası: yazılı notu, sicil ortalaması, fiili hizmet, kıdem",
    "kanit": "8) Başarı sıralamasına esas değerlendirme notlarının eşitliği halinde, önce yazılı sınav notu yüksek olana, eşitliğin devam etmesi halinde sicil notu ortalaması yüksek olana, eşitliğin devam etmesi halinde fiili hizmet süresi daha fazla olana ve bunun da eşit olması halinde ise kıdem sırası önde olana öncelik tanınır.",
    "not": "",
    "karistirilan": [

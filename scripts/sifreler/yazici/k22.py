@@ -131,7 +131,7 @@ K = [
  ('53','kosul','Disiplin işleri','özel kanun hükümleri','a) Disiplin işleri','göre yürütülür.',[],''),
  ('53','kosul','mülki görevlerinden doğan','suçlarda 4483 sayılı Kanun','b) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı teşkilatları personelinin mülki','hükümlerine göre işlem yapılır.',[],''),
  ('53','kosul','Adli görevlerinden doğan suçlarda','5271 sayılı Ceza Muhakemesi Kanunu 161 beşinci fıkra','c) Adli görevlerinden doğan','fıkrası hükmü uygulanır.',[],''),
- ('53','kosul','askeri görev verildiği takdirde','353 sayılı Kanun; askeri mahkeme','ç) Jandarma hizmetleri ve sahil güvenlik','askeri mahkemede görülür.',[],''),
+ ('53','kosul','askeri görev verildiği takdirde','bu görevden doğan suçlarda 353 sayılı Kanun; askeri mahkeme','ç) Jandarma hizmetleri ve sahil güvenlik','askeri mahkemede görülür.',[],''),
  ('53','kosul','kişisel suçlarında','genel hükümler','d) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı teşkilatları personelinin kişisel','genel hükümlere göre işlem yapılır.',[],''),
  ('54','kosul','resmi üniforma giymesi','görevde zorunlu; istisnalar saklı','MADDE 54- (1) Personelin görev','giymesi zorunludur.',[],''),
  ('55','kosul','ilişiği kesildiği tarihten','üniformayı çıkarmaya mecbur','(3) Personel; emeklilik','çıkarmaya mecburdur.',[],'emeklilik, çekilme ya da başka nedenle'),

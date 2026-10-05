@@ -103,7 +103,7 @@ K = [
  ('32','gorev_yetki','firarın başka şekilde önlenmesine','imkân bulunmazsa silah kullanılır','Bu ihtara uymayarak','silah kullanılır.',[],'önce ihtar edilir'),
  ('32','makam','jandarmaların sevke devam edip edemeyeceklerini','Cumhuriyet savcısı belirler','(3) Bu gibi durumlarda','o yer jandarması tarafından yapılır.',[],'jandarma tutuklanırsa sevki o yer jandarması yapar'),
  ('33','sira_usul','varılacak biçimde','sevkte gidilecek yere: gündüz','MADDE 33- (1) Sevk ve nakillerde','hareket edilir.',[],'gece DEĞİL'),
- ('33','sira_usul','konaklamak durumunda','cezaevi; zorunlulukta emniyet odası; köyde karakol-köy odası','Zorunluluk nedeniyle konaklamak','kalınabilir.',[],''),
+ ('33','sira_usul','konaklamak durumunda','tutuklular ceza infaz kurumunda; zorunlulukta emniyet odası; köyde karakol-köy odası','Zorunluluk nedeniyle konaklamak','kalınabilir.',[],''),
  ('34','kosul','kaçmalarını önlemek','sağlığa zarar vermeyen bütün önlemler','MADDE 34- (1) Tutuklu ve hükümlülerin','gerekli önlemleri alması sağlanır.',[],'gidilecek yerin jandarmasına önceden bilgi'),
  ('35','gorev_yetki','kurumlarının kendi revirlerinde','iyileştirme esas; diğer sağlık kurumunda muhafaza jandarmanın','MADDE 35- (1) Tutuklu ve hükümlülerden','jandarma tarafından sağlanır.',[],'özel yerler jandarma görüşüyle önceden hazırlanır'),
  ('36','makam','Adalet Bakanlığınca düzenlenen','çalıştırmada muhafaza jandarma; diğer kurumlarınkinde cezaevi personeli','MADDE 36- (1) Adalet Bakanlığınca','personelince yürütülür.',[],''),

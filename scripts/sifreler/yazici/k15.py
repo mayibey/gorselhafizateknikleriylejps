@@ -64,11 +64,11 @@ K = [
 
  # m.11 — sayı
  ('11','tanim','“Sayı:”','zorunlu; E/Z/O-DETSİS no-dosya planı kodu-kayıt no','MADDE 11- (1) Belgelerde sayı','konulur (Örnek 3).',[('13','“Konu:” yan başlığı “Sayı:” yan başlığının bir alt satırına')],''),
- ('11','tanim','zorunlu hâller için','Z (E elektronik, O olağanüstü)','“Sayı:” sırasıyla','konulur (Örnek 3).',[],''),
+ ('11','tanim','zorunlu hâller için','sayıda “Z” ibaresi (elektronik E, olağanüstü O)','“Sayı:” sırasıyla','konulur (Örnek 3).',[],''),
  ('11','sira_usul','standart dosya planı kodu','aralarına kısa çizgi (-)','“Sayı:” sırasıyla','kısa çizgi işareti (-) konulur (Örnek 3).',[],''),
  ('11','kosul','kayıt numarası','EBYS’den alınır; eşsiz olmalı','Kayıt numarası, belge hazırlanırken','eşsiz olması zorunludur.',[],'zorunlu hâlde imzadan SONRA alınır'),
  ('11','sira_usul','el yazısıyla imzalandıktan sonra','zorunlu hâlde kayıt numarası alınır','Zorunlu hâllerde hazırlanan belgenin kayıt','kurumsal belge kayıt sistemi üzerinden alınır',[],''),
- ('11','sira_usul','başlığın son satırından itibaren','iki satır boşluk, yazı alanının solundan','(2) “Sayı:” yan başlığı','solundan başlanarak yazılır (Örnek 3).',[],''),
+ ('11','sira_usul','başlığın son satırından itibaren','“Sayı:” yazılır: iki satır boşluk bırakılarak, yazı alanının solundan','(2) “Sayı:” yan başlığı','solundan başlanarak yazılır (Örnek 3).',[],''),
  ('11','sira_usul','EBYS’ye erişim sağlandığında','belge ve üstveri EBYS’ye kaydedilir','(3) Olağanüstü durumlarda belge','EBYS’ye kaydedilir.',[],'olağanüstü durumda numara kurumsal belge kayıt sisteminden'),
 
  # m.12 — tarih
@@ -87,7 +87,7 @@ K = [
  ('14','sira_usul','özel hukuk tüzel kişisi','BÜYÜK harf + yönelme eki','(2) Muhatabın idare veya özel hukuk','getirilerek yazılır.',[],'muhatap adı DETSİS kaydına göre'),
  ('14','sira_usul','muhatap bölümüne','gerçek kişiye Sayın; çok muhataba DAĞITIM YERLERİNE','Muhatap gerçek kişi ise','ibaresi yazılır (Örnek 15, 16).',[],'adı ilk harf büyük, SOYADI büyük'),
  ('14','sira_usul','Cumhurbaşkanı Yardımcısı','CUMHURBAŞKANI YARDIMCISINA; birden fazlaysa alt satırda Sayın','Cumhurbaşkanı Yardımcısı’nın muhatap','büyük harflerle yazılır (Örnek 4).',[],''),
- ('14','sira_usul','konunun son satırından itibaren','iki satır boşluk, sayfa ortalanarak','(1) Muhatap, belgenin','sayfa ortalanarak yazılır.',[],''),
+ ('14','sira_usul','konunun son satırından itibaren','muhatap yazılır: iki satır boşluk bırakılarak, sayfa ortalanarak','(1) Muhatap, belgenin','sayfa ortalanarak yazılır.',[],''),
  ('14','kosul','bağlı, ilgili veya ilişkili','doğrudan gönderilebilir; bilgi gerekirse bağlı olunan idare aracılığıyla','(4) Bağlı, ilgili veya ilişkili','(Örnek 6/A, 6/B).',[],''),
  ('14','sira_usul','Mülki idareye veya dış temsilciliğe','bağlı teşkilatta: ilk satır mülki idare BÜYÜK; birim parantez içinde','(5) Mülki idareye','doğrudan muhatap birime gönderilir.',[],'aynı mülki idare içi yazışma doğrudan birime'),
  ('14','sira_usul','belgenin gideceği yerin adresi','muhatap satırının altına, ortalanarak','(3) İdare dışına','birden fazla satıra yazılabilir.',[],''),
@@ -101,7 +101,7 @@ K = [
  ('15','istisna','muhatap idarenin daha önce','gönderdiği belge ilgide: idare adı belirtilmez','Ancak ilgi tutulan belgenin','idare adı belirtilmez (Örnek 7).',[],'normalde gönderen idare adı, tarih ve sayı'),
  ('15','sira_usul','yan başlıklarından sonra','iki nokta (:) aynı hizada','(3) “Sayı”, “Konu” ve “İlgi”','aynı hizada yazılır (Örnek 7).',[],''),
  ('15','sira_usul','Gerçek kişi ve tarih bilgisi','“İsimsiz ve tarihsiz başvuru/dilekçe.”','(10) Gerçek kişi ve tarih','biçiminde yazılır.',[],''),
- ('15','sira_usul','muhatap bölümünün son satırından itibaren','iki satır boşluk, yazı alanının solundan','(2) “İlgi:” yan başlığı','solundan başlanarak yazılır (Örnek 7).',[],''),
+ ('15','sira_usul','muhatap bölümünün son satırından itibaren','“İlgi:” yazılır: iki satır boşluk bırakılarak, yazı alanının solundan','(2) “İlgi:” yan başlığı','solundan başlanarak yazılır (Örnek 7).',[],''),
 
  # m.16 — metin
  ('16','tanim','“İlgi” ile “İmza” arasındaki kısım','metin alanı (Muhatap/İlgi ile İmza arası)','MADDE 16- (1) Metin alanı','arasındaki kısımdır.',[],''),
@@ -123,11 +123,11 @@ K = [
  ('16','istisna','uluslararası kuruluş','yabancı dil olabilir; Türkçe tercümesi saklanır','Ancak muhatabı yabancı ülke','ilişkilendirilerek saklanır.',[],''),
  ('16','sira_usul','alıntılar','tırnak içinde ve/veya italik','(9) Metin içinde yer alan alıntılar','olarak yazılabilir.',[],''),
  ('16','sira_usul','maddelendirme','küçük harf + kapama parantezi “)”','(10) Metin içinde harfler','konularak kullanılır.',[],'ilgi sıralaması da böyle'),
- ('16','sira_usul','noktalama işaretlerinden sonra','bir karakter boşluk; noktalama bitişik','(3) Metindeki kelime','harfe bitişik yazılır.',[],''),
+ ('16','sira_usul','noktalama işaretlerinden sonra','bir karakter boşluk bırakılır; işaret önceki harfe bitişik','(3) Metindeki kelime','harfe bitişik yazılır.',[],''),
  ('16','sira_usul','Metin içinde geçen sayılar','rakamla veya harfle yazılabilir','(6) Metin içinde geçen sayılar','harfle de gösterilebilir.',[],''),
 
  # m.17 — imza
- ('17','sayi_oran','Metnin bitiminden itibaren','iki-dört satır boşluk; en sağda ortalı','(1) Metnin bitiminden','yer verilir (Örnek 9).',[],'ad, soyad, altında unvan'),
+ ('17','sayi_oran','Metnin bitiminden itibaren','imza bölümü: iki-dört satır boşluk bırakılarak, en sağda ortalı','(1) Metnin bitiminden','yer verilir (Örnek 9).',[],'ad, soyad, altında unvan'),
  ('17','sira_usul','kâğıda işlemesini sağlayacak','mavi renkli kalem','El yazısıyla atılan imza','mavi renkli kalemle atılır.',[('21', 'paraf da mavi kalemle atılır')],''),
  ('17','sira_usul','imza yetkisi devredilen makam','ikinci satıra “Vali a.”, “Genel Müdür a.”; vekâlette V.','(9) Belgeyi imza yetkisi','yetki devredenin unvanı kullanılmaz.',[('16', 'bitiş ibaresi devredenin hiyerarşisine göre')],'iç yazışmada devredenin unvanı yok'),
  ('17','sira_usul','Belge vekâleten imzalandığında','ikinci satıra “Genel Müdür V.”, “Başkan V.”','(10) Belge vekâleten','ikinci satıra yazılır (Örnek 10).',[],'YETKİ DEVRİ a., VEKÂLET V.'),
