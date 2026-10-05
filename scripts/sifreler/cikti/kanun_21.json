@@ -181,7 +181,7 @@
    "i": "K-21-018",
    "madde": "4",
    "tip": "kosul",
-   "tetikleyici": "haberdar olan kamu",
+   "tetikleyici": "haberdar olan kamu kurum",
    "cevap": "derhal şikâyet mercilerine bildirmek zorunda",
    "kanit": "Şiddet veya şiddete uğrama tehlikesinden haberdar olan kamu kurum ve kuruluşları ile kamu kurumu\nniteliğindeki meslek kuruluşları ise durumu derhal, şikâyet mercilerine bildirmek zorundadır.",
    "not": "kamu kurumu niteliğindeki meslek kuruluşları da",
@@ -221,8 +221,8 @@
    "i": "K-21-022",
    "madde": "5",
    "tip": "makam",
-   "tetikleyici": "onaylanmak üzere",
-   "cevap": "tedbirin niteliğine göre mülki amire veya hâkime",
+   "tetikleyici": "tedbirleri onaylanmak üzere",
+   "cevap": "kolluk sunar: niteliğine göre mülki amire veya hâkime",
    "kanit": "(1) Kolluk, kendisine yapılan ihbar veya şikâyet üzerine genel hükümler doğrultusunda gerekli işlemleri yapar. Gecikmesinde\nsakınca bulunan hallerde Kanun kapsamında almış olduğu koruyucu ve önleyici tedbirleri onaylanmak üzere tedbirin niteliğine göre mülki amire veya\nhâkime sunar.",
    "not": "gecikmesinde sakınca bulunan hallerde kolluğun aldığı tedbir",
    "karistirilan": []
@@ -261,7 +261,7 @@
    "i": "K-21-026",
    "madde": "5",
    "tip": "sira_usul",
-   "tetikleyici": "tarafından verilen kararlar",
+   "tetikleyici": "mülki amir tarafından verilen kararlar",
    "cevap": "ivedilikle ŞÖNİM’e",
    "kanit": "(4) Hâkim veya mülki amir tarafından verilen kararlar ivedilikle ŞÖNİM’e bildirilir.",
    "not": "hâkim ya da mülki amirin kararları",
@@ -433,7 +433,7 @@
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "koordinasyon",
-   "cevap": "ŞÖNİM",
+   "cevap": "hizmetlerde koordinasyonu sağlayan: ŞÖNİM",
    "kanit": "(3) Bu hizmetlerin yerine getirilmesinde koordinasyon ŞÖNİM tarafından sağlanır.",
    "not": "rehberlik, psikolojik destek, hukuki danışmanlıkta",
    "karistirilan": [
@@ -465,8 +465,8 @@
    "i": "K-21-039",
    "madde": "10",
    "tip": "sure",
-   "tetikleyici": "gideceği yere",
-   "cevap": "acilde hemen, diğer hallerde yirmidört saat önce kolluğa bilgi",
+   "tetikleyici": "gideceği yere ilişkin",
+   "cevap": "korunan kişi kolluğa: acilde hemen, diğerinde yirmidört saat önce",
    "kanit": "(2) Geçici koruma altına alınma tedbir kararının yerine getirilmesinden, hakkında koruyucu tedbir kararı verilen kişilerin yerleşim yeri, bulunduğu\nveya tedbirin uygulanacağı yerdeki kolluk görevli ve yetkilidir. Korunan kişi acil durumlarda hemen, diğer hallerde ise yirmidört saat öncesinden\n\fgideceği yere ilişkin olarak görevli ve yetkili kolluğa bilgi verir. Kolluk tarafından korunan kişinin gideceği yerdeki kolluk gecikmeksizin haberdar edilir\nve tedbir kararı uygulanmaya devam olunur.",
    "not": "gidilen yerin kolluğu haberdar edilir",
    "karistirilan": []
@@ -718,7 +718,7 @@
    "i": "K-21-059",
    "madde": "20",
    "tip": "tanim",
-   "tetikleyici": "sair yerlere",
+   "tetikleyici": "bulunabileceği sair yerlere",
    "cevap": "yaklaşmama; konut, okul, işyeri",
    "kanit": "(1) Hâkim tarafından, şiddet uygulayanın korunan kişiye, konuta, okula, işyerine ve korunan kişinin bulunabileceği sair yerlere\nyaklaşmamasına ilişkin karar verilebilir.",
    "not": "önleyici",
@@ -902,7 +902,7 @@
    "i": "K-21-073",
    "madde": "30",
    "tip": "sure",
-   "tetikleyici": "ilk defasında",
+   "tetikleyici": "Tedbir kararı ilk defasında",
    "cevap": "en çok altı ay; tehlike sürerse uzatılabilir",
    "kanit": "(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir. Ancak şiddet veya şiddet uygulanma tehlikesinin devam edeceğinin anlaşılması\nhâlinde, resen, korunan kişinin, müdürlük, ŞÖNİM veya kolluk görevlilerinin talebi üzerine, tedbirlerin süresinin veya şeklinin değiştirilmesine ya da\naynen devam etmesine karar verilebilir.",
    "not": "",
@@ -1414,18 +1414,23 @@
    "i": "K-21-119",
    "madde": "45",
    "tip": "istisna",
-   "tetikleyici": "müstesna",
-   "cevap": "gelir, veraset-intikal; kâğıtlar damga vergisinden",
+   "tetikleyici": "ödemeler için düzenlenen kâğıtlar",
+   "cevap": "damga vergisinden; ödemeler gelir ve veraset vergisinden müstesna",
    "kanit": "(2) Kanunun 17 nci maddesi uyarınca yapılan ödemeler, gelir vergisi ile veraset ve intikal vergisinden, bu ödemeler için düzenlenen kâğıtlar ise\ndamga vergisinden müstesnadır.",
    "not": "",
-   "karistirilan": []
+   "karistirilan": [
+    {
+     "madde": "8",
+     "fark": "m.8: geçici maddi yardım ödemelerinin kâğıtları da damga vergisinden müstesna"
+    }
+   ]
   },
   {
    "i": "K-21-120",
    "madde": "46",
    "tip": "makam",
    "tetikleyici": "müdahil",
-   "cevap": "Bakanlık; idari, cezai, hukuki dava, çekişmesiz yargı; icra YOK",
+   "cevap": "katılabilir: Bakanlık; idari, cezai, hukuki dava, çekişmesiz yargı; icra YOK",
    "kanit": "(1) Bakanlık, gerekli görmesi hâlinde kadın, çocuk ve aile bireylerine yönelik olarak uygulanan şiddet veya şiddet tehlikesi\ndolayısıyla açılan ve herhangi bir şekilde haberdar olduğu idarî, cezaî, hukukî her tür davaya ve çekişmesiz yargıya müdahil olarak katılabilir.",
    "not": "",
    "karistirilan": [
