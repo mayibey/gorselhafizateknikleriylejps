@@ -11,9 +11,9 @@ K = [
  # m.2 — kapsam
  ('2','istisna','mahalli idare','köyler hariç; bağlı-ilgili kuruluş, birlik ve şirketleri dahil','Madde 2 - Bu Yönetmelik;','faaliyetlerinde uygulanır.',[],'özel bankalar, özel hukuk tüzel kişileri kapsamda değil'),
  ('2','kosul','merkezi idare','bağlı, ilgili veya ilişkili kuruluşlarıyla','Madde 2 - Bu Yönetmelik; merkezi idare','ilişkili kuruluşlarının,',[],''),
- ('2','kosul','Merkez Bankası','üniversitelerle dahil; aradaki İMKB 864 ile çıkarıldı','Madde 2 - Bu Yönetmelik;','madde metninden çıkarılmıştır.',[],'kamu tüzel kişiliğini haiz kuruluşlar arasında'),
+ ('2','kosul','Merkez Bankası','üniversitelerle birlikte dahil; İMKB (Menkul Kıymetler Borsası) çıkarıldı','Madde 2 - Bu Yönetmelik;','madde metninden çıkarılmıştır.',[],'kamu tüzel kişiliğini haiz kuruluşlar arasında'),
  ('2','tanim','İMKB','864 sayılı Cumhurbaşkanı Kararıyla çıkarıldı','[Dipnot (1)','madde metninden çıkarılmıştır.',[],''),
- ('2','kosul','kamu tüzel kişiliği','enstitü, teşebbüs, teşekkül, fon ve sair ad; vakıf yok','kamu tüzel kişiliğini haiz','bütün kamu kurum ve kuruluşlarının',[],''),
+ ('2','kosul','kamu tüzel kişiliği','enstitü/teşebbüs/teşekkül/fon; Merkez Bankası-üniversite dahil; vakıf YOK','kamu tüzel kişiliğini haiz','bütün kamu kurum ve kuruluşlarının',[],''),
  ('2','kosul','meslek kuruluş','faaliyetlerinde uygulanır; dahil','ve kamu kurumu niteliğindeki meslek','faaliyetlerinde uygulanır.',[],'kamu kurumu niteliğindeki meslek kuruluşları'),
 
  # m.3 — dayanak
