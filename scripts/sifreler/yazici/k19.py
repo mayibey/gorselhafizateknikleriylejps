@@ -14,10 +14,10 @@ K = [
  ('2','kosul','Merkez Bankası','üniversitelerle birlikte dahil; İMKB (Menkul Kıymetler Borsası) çıkarıldı','Madde 2 - Bu Yönetmelik;','madde metninden çıkarılmıştır.',[],'kamu tüzel kişiliğini haiz kuruluşlar arasında'),
  ('2','tanim','İMKB','864 sayılı Cumhurbaşkanı Kararıyla çıkarıldı','[Dipnot (1)','madde metninden çıkarılmıştır.',[],''),
  ('2','kosul','kamu tüzel kişiliği','enstitü/teşebbüs/teşekkül/fon; Merkez Bankası-üniversite dahil; vakıf YOK','kamu tüzel kişiliğini haiz','bütün kamu kurum ve kuruluşlarının',[],''),
- ('2','kosul','meslek kuruluş','faaliyetlerinde uygulanır; dahil','ve kamu kurumu niteliğindeki meslek','faaliyetlerinde uygulanır.',[],'kamu kurumu niteliğindeki meslek kuruluşları'),
+ ('2','kosul','kamu kurumu niteliğindeki meslek kuruluşları','faaliyetlerinde uygulanır; dahil','ve kamu kurumu niteliğindeki meslek','faaliyetlerinde uygulanır.',[],'kamu kurumu niteliğindeki meslek kuruluşları'),
 
  # m.3 — dayanak
- ('3','tanim','hazırlanmıştır','4982 sayılı Kanunun 31. maddesi','Madde 3 - Bu Yönetmelik,','uyarınca hazırlanmıştır.',[],'9/10/2003 tarihli Bilgi Edinme Hakkı Kanunu'),
+ ('3','tanim','uyarınca hazırlanmıştır','4982 sayılı Kanunun 31. maddesi','Madde 3 - Bu Yönetmelik,','uyarınca hazırlanmıştır.',[],'9/10/2003 tarihli Bilgi Edinme Hakkı Kanunu'),
 
  # m.4 — tanımlar
  ('4','tanim','her türlü veri','bilgi; belge ise veri taşıyıcısı','c) Bilgi:','her türlü veriyi,',[],'kurum kayıtlarındaki veri'),
@@ -26,9 +26,9 @@ K = [
  ('4','tanim','Başvuru sahibi:','başvuran gerçek ve tüzel kişiler','b) Başvuru sahibi:','gerçek ve tüzel kişileri,',[],''),
 
  # m.5 — hak sahipleri
- ('5','kosul','sahiptir','herkes; yaş-sıfat şartı yok','Madde 5 - Herkes,','bilgi edinme hakkına sahiptir.',[],'reşit olmayan da başvurabilir'),
+ ('5','kosul','bilgi edinme hakkına','sahiptir: herkes; yaş-sıfat şartı yok','Madde 5 - Herkes,','bilgi edinme hakkına sahiptir.',[],'reşit olmayan da başvurabilir'),
  ('5','kosul','yabancı','kendisi-faaliyetiyle ilgili + karşılıklılık; başvuru Türkçe',"Türkiye'de ikamet eden yabancılar",'Türkçe olarak yapılır.',[],'ikamet eden yabancı ve faaliyetteki yabancı tüzel kişi; kendi dilinde başvuru yok'),
- ('5','makam','karşılıklılık','ülkeleri Dışişleri Bakanlığı Resmî Gazete’de ilan eder','Karşılıklılık ilkesi kapsamında bulunan','Resmi Gazetede ilan edilir.',[],''),
- ('5','kosul','uluslararası sözleşme','hak ve yükümlülükler saklıdır',"Türkiye'nin taraf olduğu",'yükümlülükleri saklıdır.',[],'Yönetmelik karşısında ortadan kalkmaz'),
+ ('5','makam','Karşılıklılık ilkesi','ülkeleri Dışişleri Bakanlığı Resmî Gazete’de ilan eder','Karşılıklılık ilkesi kapsamında bulunan','Resmi Gazetede ilan edilir.',[],''),
+ ('5','kosul','uluslararası sözleşmelerden doğan','hak ve yükümlülükler saklıdır',"Türkiye'nin taraf olduğu",'yükümlülükleri saklıdır.',[],'Yönetmelik karşısında ortadan kalkmaz'),
 ]
 yaz(19, 'Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik', K)
