@@ -2,7 +2,21 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (6) — ŞİFRE SOL "TEK BAŞINA ANLAŞILIR" 2. TUR 25/25 (244a195 … 6f3d8fe)
+> Başkan (TCK ekranı): "Orantılı ne? Ayrım ne? Neyin gerçekleştirilmesi için kardeşim beni mi sınıyorsun". 1. tur yalnız kesik
+> kökleri düzeltmişti; bu turda 1.972 satırın HEPSİ tek başına okundu (scratchpad sifre_denetim/oku_dok.py: satır + kanıttaki yeri +
+> kök/çözüm sayısı; aday.py: yeni SOL kanıtta mı, kaç soru kaybettirir). Ölçüt: SOL'u okuyan "ne/kimin/neyin?" diye sormamalı.
+> 368 satır değişti. Türler: (1) yalın sıfat/zarf → isimle: "orantılı" → "ceza ve güvenlik tedbiri" + SAĞ "işlenen fiilin
+> ağırlığıyla orantılı"; (2) soyut isim → yüklemle: "ayrım" → "ayrım yapılamaz", "ayırım yapamaz"; (3) sarkık amaç/şart → öznesiyle:
+> "amacın gerçekleştirilmesi için", "Etkin pişmanlığın hükümden önce gerçekleşmesi"; (4) tek yüklem (kapsar, bağlıdır, yapılamaz,
+> girebilir, işlemeye başlar) → SOL'a özne/nesne ya da SAĞ'ın başına özne ("JGK, İçişleri Bakanlığına", "önleme araması: konut…",
+> "Zamanaşımı süresi" + "işler: …"); (5) 7068 fiil satırlarına eylem ("kaybetmek:", "gizlemek:", "kurallara uymamak:").
+> Boşluk-doldurma satırları (SOL'un eksiği zaten cevap: "fiilinden dolayı sorumlu tutulamaz → kimse başkasının") bilinçli kaldı.
+> Sonuç: denetçi 25/25 BİTTİ; harf harf ölçüm gerçek 2026 92 → 91/109 (Uzman#44: kökte "amaçlarının", SOL "amacın"; anlam aynı),
+> arşiv DÜZ 2.173 → 2.076 (−97, %3,4; ek farkını gözetmeyen gevşek ölçümle bunların 37'si yine eşleşiyor). Okunurluk için bilinçli
+> kabul; sayfa v13 yayımlandı (Kilit Kelime Şifreleri, link herkese açık), açık rapor v7.
 >
 > ### ▶ 5 Eki (5) — ŞİFRE SOL KELİME OKUNURLUĞU 25/25 (53125bc … 414d579 kanun başına bir commit, sayfa 5b11c5f)
 > Başkan (TCK ekran görüntüsüyle): "soldaki kelimeleri daha anlaşılır yerden kes … 'açıkça suç saymadığı' ne, 'kanunun açıkça suç
