@@ -86,10 +86,10 @@
    "i": "K-12-008",
    "madde": "7",
    "tip": "tanim",
-   "tetikleyici": "Personele verilecek",
-   "cevap": "yedi: uyarma, kınama, aylıktan kesme, kısa-uzun durdurma, meslekten-memurluktan çıkarma",
+   "tetikleyici": "Personele verile",
+   "cevap": "yedi: uyarma/kınama/aylıktan kesme/kısa-uzun durdurma/meslekten-memurluktan çıkarma; görevden uzaklaştırma-oda hapsi-kademe YOK",
    "kanit": "(1) Personele verilecek disiplin cezaları şunlardır: a) Uyarma cezası: Personele görevinin icrasında veya hal ve hareketlerinde daha dikkatli olması gerektiğinin yazı ile bildirilmesidir. b) Kınama cezası: Personele görevinin icrasında veya hal ve hareketlerinde kusurlu olduğunun yazı ile bildirilmesidir. c) Aylıktan kesme cezası: Disiplin cezası verilen personelin, fiilin ağırlık derecesine göre zam ve tazminatlar hariç brüt aylığından onbeş günlüğe kadar kesinti yapılmasıdır. Ceza, aylığı tahakkuk ettiren birimce personelin aylığından kesilmek suretiyle yerine getirilir. Aylıktan kesme tam Türk Lirası üzerinden yapılır ve kuruşlar dikkate alınmaz. ç) Kısa süreli durdurma: Personelin bulunduğu kademede ilerlemesinin dört, altı veya on ay süre ile durdurulmasıdır. d) Uzun süreli durdurma: Personelin bulunduğu kademede ilerlemesinin oniki, onaltı, yirmi veya yirmidört ay süre ile durdurulmasıdır. e) Meslekten çıkarma: Personelin emniyet, jandarma ve sahil güvenlik teşkilatlarında bir daha çalıştırılmamak üzere meslekten çıkarılmasıdır. f) Devlet memurluğundan çıkarma: Personelin bir daha Devlet memurluğuna atanmamak üzere memurluktan çıkarılmasıdır.",
-   "not": "oda hapsi, görevden uzaklaştırma, kademe geri alma ceza DEĞİL",
+   "not": "görevden uzaklaştırma ceza değil, tedbir (m.28)",
    "karistirilan": []
   },
   {
@@ -147,7 +147,7 @@
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "Meslekten çıkarma:",
-   "cevap": "emniyet, jandarma, SG’de bir daha çalışamaz",
+   "cevap": "Emniyet, Jandarma, Sahil Güvenlikte bir daha çalışamaz",
    "kanit": "e) Meslekten çıkarma: Personelin emniyet, jandarma ve sahil güvenlik teşkilatlarında bir daha çalıştırılmamak üzere meslekten çıkarılmasıdır.",
    "not": "memurluktan çıkarma: bir daha Devlet memuru olamaz",
    "karistirilan": []
@@ -196,8 +196,8 @@
    "i": "K-12-019",
    "madde": "8",
    "tip": "tanim",
-   "tetikleyici": "Uyarma cezasını gerektiren",
-   "cevap": "temizlik, tasarruf, gecikme, nezaket, alenen eleştiri; il dışına çıkma DEĞİL",
+   "tetikleyici": "Uyarma cezasını gerektir",
+   "cevap": "temizlik/tasarruf/mesaiye gecikme/nezaket/bilgi vermeme/alenen eleştiri; nöbet dönüşü-il dışına çıkma DEĞİL",
    "kanit": "MADDE 8- (1) Uyarma cezasını gerektiren fiiller şunlardır: a) Silahını, araç ve gerecini, giyim ve kuşamını temiz tutmamak, çalıştığı yerin temizliğine özen göstermemek. b) Yetkili makamlarca belirlenmiş tasarruf tedbirlerine riayet etmemek veya kullanımına sunulan kamu kaynaklarının kullanılmasında gösterilmesi gereken makul seviyedeki özeni göstermemek. c) İzinsiz veya kurumunca kabul edilebilir özrü olmaksızın belirli zamanda yapılması gereken faaliyetlere geç kalmak. ç) (Mülga). d) Özürsüz veya izinsiz olarak mesaiye geç gelmek veya erken ayrılmak ya da günlük mesai saatlerine riayet etmemek. e) Nezaket kurallarına aykırı tavır ve davranışlarda bulunmak. f) Emrin icrası veya sonuçları ile katılım sağlanan toplantılarla ilgili olarak görevlendirme yapan amire bilgi vermemek. g) Usulüne uygun olarak kendisine verilmiş olan bir emir üzerine; emrin uygun olmadığı, yanlış verildiği, yapılamayacağı ve benzeri şekillerde amirini alenen eleştirmek veya amire karşı itirazda bulunmak (Amir tarafından karar verilene kadar astın fikrini savunması veya emrin kanunsuz olduğu hususundaki kanaatini belirtmek için amire yaptığı itiraz bu kapsamda disiplinsizlik teşkil etmez.).",
    "not": "faaliyete-mesaiye geç kalma, amire bilgi vermemek de; il dışına izinsiz çıkmak üç gün kesme",
    "karistirilan": []
@@ -206,7 +206,7 @@
    "i": "K-12-020",
    "madde": "8",
    "tip": "tanim",
-   "tetikleyici": "Kınama cezasını gerektiren",
+   "tetikleyici": "Kınama cezasını gerektir",
    "cevap": "usulsüz şikâyet, nöbet dönüşü gecikme, takı, arkadaşa saygısızlık, imtina, hitap",
    "kanit": "MADDE 8- (2) Kınama cezasını gerektiren fiiller şunlardır: a) Görev sırasında, mevzuat veya talimatlarla yasaklanan davranışlarda bulunmak. b) Mevzuatta belirlenmiş usul ve kurallara riayet etmeden sözlü, yazılı veya elektronik olarak müracaat veya şikâyette bulunmak. c) Nöbeti teslimden sonra görev yerine özürsüz olarak geç dönmek. ç) Bildirimleri süresi içerisinde yerine ulaştırmamak. d) Mevzuat veya talimatlarla taşınmasına veya bulundurulmasına izin verilmiş olanlar dışında, mesleğin ciddiyeti ile bağdaşmayacak biçimde yüzük, bilezik, kolye, madalyon, rozet ve benzeri şeyleri takmak. e) Görev sırasında veya dışında kendisi ile aynı rütbede çalışanlara veya mesai arkadaşlarına karşı saygısız davranmak. f) Mevzuat ve talimatlarla kendisine tevdi edilmiş görevlerin gerektirdiği sorumluluğu üstlenmekten imtina ettiğini gösterecek tavır ve davranışlarda bulunmak. g) Amirleri, üstleri, aynı rütbedeki veya çalışma arkadaşları hakkında ve onların bulunmadığı ortamlarda, onların kişilikleri hakkında kötüleyici veya konuştuğu kişilerde kötü intiba bırakacak tarzda olumsuz sözler söylemek. ğ) Zati demirbaş tabanca veya geçici olarak verilen demirbaş tabancanın üzerinde orijinalliğini bozacak boya, kaplama, gravür veya ciddiyetle bağdaşmayacak şekil, desen, resim ve karakter gibi değişiklikler yapmak. h) Mevzuata veya mesleki teamüllere aykırı hitaplarda bulunmak. ı) Bu fıkrada disiplinsizlik olarak saptanan eylem, işlem, tutum ve davranışlar dışında herhangi bir biçimde görevin takdir ve yerine getirilmesinde müsamaha ve savsaklama göstermek.",
    "not": "yasak davranış, bildirim gecikmesi, arkadaşı kötüleme, tabanca süsleme, savsaklama da",
@@ -1469,7 +1469,7 @@
    "tetikleyici": "verilmesini gerektiren hallerde",
    "cevap": "kısada 1/5-1/4, uzunda 1/3-1/2 brüt aylık kesilir",
    "kanit": "a) Kısa süreli durdurma cezası verilmesini gerektiren hallerde brüt aylıklarının 1/5'i ila 1/4'ü, b) Uzun süreli durdurma cezası verilmesini gerektiren hallerde brüt aylıklarının 1/3'ü ila 1/2'si, kesilir.",
-   "not": "terfisi 926, 3466, 3269, 6191’e tabi JGK-SGK personeli; durdurma yerine",
+   "not": "terfisi 926-3466-3269-6191’e tabi Jandarma ve Sahil Güvenlik personeli; durdurma yerine",
    "karistirilan": []
   },
   {
@@ -1487,7 +1487,7 @@
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "bu cezayı verme yetkisi",
-   "cevap": "657 sayılı Kanun",
+   "cevap": "657 sayılı Kanuna göre; ek: milli güvenlik-bölücü yapı, işkence",
    "kanit": "(1) Devlet memurluğundan çıkarma cezası uygulanacak fiiller ve bu cezayı verme yetkisi ile ilgili olarak 657 sayılı Kanun hükümleri uygulanır.",
    "not": "",
    "karistirilan": []
@@ -1656,7 +1656,7 @@
    "i": "K-12-161",
    "madde": "10",
    "tip": "ceza",
-   "tetikleyici": "yurtdışı liman",
+   "tetikleyici": "liman ziyaret",
    "cevap": "bir üst ceza: uyarma-kınamada kesme-durdurma; diğerinde meslekten çıkarma",
    "kanit": "(13) Bu Kanunda belirlenmiş ve bir disiplin cezasıyla yaptırıma bağlanmış fiillerin sahil güvenlik personelince yurtdışı liman ziyaretlerinde veya Türk karasuları dışında işlenmesi halinde, uyarma ve kınama cezası gerektiren fiillerde meydana gelen zarar ve tehlikenin ağırlığı da dikkate alınarak aylıktan kesme, kısa veya uzun süreli durdurma cezası; aylıktan kesme, kısa veya uzun süreli durdurma cezası gerektiren fiillerde ise yine meydana gelen zarar veya tehlikenin ağırlığı dikkate alınarak meslekten çıkarma cezası verilebilir.",
    "not": "SG personeli, Türk karasuları dışında da",
@@ -1677,7 +1677,7 @@
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "kontrol altına al",
-   "cevap": "yirmi dört saati geçmez; oniki saatte yakınlara-üste bilgi",
+   "cevap": "en çok yirmidört saat; oniki saati geçerse yakınlara-üste bilgi",
    "kanit": "(1) Jandarma Genel Komutanlığının terörle mücadele harekatı kapsamındaki operasyonlarında ve Sahil Güvenlik Komutanlığının seyir halindeki gemi ve botlarında, bunların komutanları, diğer kanunlar ile verilmiş yakalama yetkisi haricinde aşağıdaki durumlardan birisi bulunduğunda veya benzer bir amaçla emri altındakileri geçici olarak kontrol altına almaya veya aldırmaya yetkilidir.\n7 18/10/2018 tarihli ve 7148 sayılı Kanunun 37 nci maddesiyle beş, altı, onbirinci fıkralarda yer alan “silahıyla” ibareleri “silahla” şeklinde; onbirinci fıkrada yer alan “yirmidört ay uzun süreli durdurma” ibaresi “meslekten çıkarma” şeklinde değiştirilmiştir.\na) Kendisine, başkalarına veya çevresine ya da hizmete ait bir eşyaya zarar vereceği açık bir şekilde belli olanların bu durumunun engellenmesi.\nb) Ciddi şekilde bozulan disiplinin yeniden tesis edilmesi. c) Sarhoşluk süresince kişinin kontrol altında tutulması. (2) Kontrol altında bulundurma, bu amaç için hazırlanacak mahallerde, Jandarma Genel Komutanlığı için operasyon komutanının uygun gördüğü mahallerde ve yirmidört saati geçmeyecek şekilde uygulanır. Tedbir süresinin oniki saati geçmesi halinde, personelin yakınlarına ve tedbiri uygulayan komutanın üstüne en kısa sürede bilgi verilir.",
    "not": "altı saat DEĞİL",
    "karistirilan": [
@@ -1692,7 +1692,7 @@
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "Kontrol altında bulundurma",
-   "cevap": "yirmi dört saati geçmez",
+   "cevap": "yirmidört saati geçmez; operasyon komutanının uygun gördüğü yerde",
    "kanit": "(2) Kontrol altında bulundurma, bu amaç için hazırlanacak mahallerde, Jandarma Genel Komutanlığı için operasyon komutanının uygun gördüğü mahallerde ve yirmidört saati geçmeyecek şekilde uygulanır.",
    "not": "operasyon komutanının uygun gördüğü yerde",
    "karistirilan": []
@@ -1767,7 +1767,7 @@
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "ceza puanlarının hesaplanması",
-   "cevap": "JGK-SGK (2) sayılı, EGM (1) sayılı çizelge",
+   "cevap": "Jandarma-Sahil Güvenlik (2), Emniyet (1) sayılı çizelge",
    "kanit": "(3) Birinci fıkra kapsamında ceza puanlarının hesaplanması usulü Emniyet Genel Müdürlüğü personeli için ekli (1) sayılı çizelgede, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı personeli için ekli (2) sayılı çizelgede gösterilmiştir.",
    "not": "",
    "karistirilan": []
@@ -1807,7 +1807,7 @@
    "madde": "13",
    "tip": "makam",
    "tetikleyici": "bir üst disiplin amiri",
-   "cevap": "vali kaymakama; Bakan EGM, JGK, SGK ve valilere",
+   "cevap": "vali kaymakama; Bakan valilere, Emniyet-Jandarma-Sahil Güvenlik başlarına",
    "kanit": "(3) Kaymakamlar ilçe, valiler il teşkilatındaki diğer disiplin amirlerine göre en üst disiplin amiridir. Valiler kaymakamlara, Bakan ise Emniyet Genel Müdürü, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanı ile valilere göre bir üst disiplin amiridir.",
    "not": "",
    "karistirilan": [
@@ -1851,6 +1851,16 @@
    "i": "K-12-179",
    "madde": "14",
    "tip": "sira_usul",
+   "tetikleyici": "Maiyetinde",
+   "cevap": "öğrenen amir bizzat ya da yazılı görevlendireceği soruşturmacıyla soruşturur",
+   "kanit": "(1) Maiyetinden birinin disiplinsizlik teşkil eden bir fiilini veya mesleğe aykırı tutum ve davranışını herhangi bir şekilde öğrenen disiplin amirleri, olayın araştırılmasının gerektiğine kanaat getirirse bizzat ya da yazılı olarak görevlendireceği soruşturmacılar vasıtasıyla disiplin soruşturması yapar.",
+   "not": "olayın araştırılması gerektiğine kanaat getirirse",
+   "karistirilan": []
+  },
+  {
+   "i": "K-12-180",
+   "madde": "14",
+   "tip": "sira_usul",
    "tetikleyici": "Disiplin soruşturmacısı olarak",
    "cevap": "üst/müfettiş; ast yalnız heyet üyesi; eş-hısım (boşanmış da) olamaz",
    "kanit": "(2) Disiplin soruşturmacısı olarak hakkında disiplin soruşturması yapılacak kişinin üstü konumundaki bir veya birden fazla kişi ya da Bakanlık ve/veya ilgisine göre Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ya da Sahil Güvenlik Komutanlığı müfettişi görevlendirilebilir. Ancak gerek görülmesi halinde, heyet başkanı hariç olmak üzere hakkında disiplin soruşturması yapılacak kişinin astı konumunda heyet üyeleri görevlendirilebilir. Disiplin soruşturmacısı olarak mülki idare amirliği hizmetleri sınıfı ile ilgisine göre emniyet hizmetleri sınıfından olanlar ile Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı personeli haricinde herhangi bir personel görevlendirilemez.8 (3) Disiplin soruşturmacıları ve heyeti, kendilerini görevlendiren disiplin amiri adına disiplin soruşturmasıyla ilgili bilgi ve belgeleri toplama, ifade alma, tanık dinleme, bilirkişi görevlendirme, keşif yapma, hâkim veya savcı kararı gerektirmeyen durumlarda kriminal inceleme yaptırma da dahil olmak üzere her türlü inceleme yapma ve ilgili makamlarla yazışma yetkisini haizdir. Müfettişlerin özel mevzuatlarından doğan yetkileri saklıdır. (4) Disiplin soruşturmacısı olarak görevlendirilebileceği belirtilenler, boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları olan personel hakkında yürütülen soruşturmalarda görevlendirilemez.",
@@ -1858,7 +1868,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-180",
+   "i": "K-12-181",
    "madde": "14",
    "tip": "gorev_yetki",
    "tetikleyici": "soruşturmacıları ve heyeti",
@@ -1873,7 +1883,7 @@
    ]
   },
   {
-   "i": "K-12-181",
+   "i": "K-12-182",
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "boşanmış",
@@ -1888,7 +1898,7 @@
    ]
   },
   {
-   "i": "K-12-182",
+   "i": "K-12-183",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "ikinci derece",
@@ -1903,7 +1913,7 @@
    ]
   },
   {
-   "i": "K-12-183",
+   "i": "K-12-184",
    "madde": "15",
    "tip": "yasak",
    "tetikleyici": "Disiplin amirliği yetkisi",
@@ -1913,7 +1923,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-184",
+   "i": "K-12-185",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "vekâleten",
@@ -1923,13 +1933,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-185",
+   "i": "K-12-186",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "İl jandarma disiplin kurulu",
-   "cevap": "vali yardımcısı; hukuk müdürü, il J.K., personel-asayiş şube; tuğgeneral YOK",
+   "cevap": "vali yardımcısı başkan; hukuk, jandarma komutanı, personel-asayiş şube; tuğgeneral YOK",
    "kanit": "a) İl jandarma disiplin kurulu, vali yardımcısının başkanlığında,\n9 6/12/2019 tarihli ve 7196 sayılı Kanunun 91 inci maddesiyle, bu fıkranın (a) bendinde yer alan “polis memurları hakkında” ibaresi madde metninden çıkarılmış, aynı fıkranın (a) ve (b) bentlerine “Yüksek Disiplin Kurulunun” ibarelerinden sonra gelmek üzere “uygun” ibareleri eklenmiştir. 10 6/12/2019 tarihli ve 7196 sayılı Kanunun 91 inci maddesiyle, bu fıkrada yer alan “Birinci fıkranın” ibaresi “Birinci fıkra kapsamında Bakan onayına sunulan kararlardan uygun görülmeyenler ile birinci fıkranın” şeklinde değiştirilmiştir.\n1) İl hukuk işleri müdürü, bulunmadığı durumda il hukuk işleri şube müdürlüğünün bağlı olduğu vali yardımcısı,\n2) İl jandarma komutanı veya görevlendireceği yardımcılarından biri, komutan yardımcısı bulunmadığı durumda il jandarma kuruluşunda il jandarma komutanından sonra gelen en kıdemli subay,\n3) Personel şube müdürü veya geçici bölge komutanlığı personel şube müdürü, 4) Asayiş şube müdürü veya geçici bölge komutanlığı asayiş şube müdüründen, oluşur.",
-   "not": "il J.K. ya da yardımcısı; Merkez kurulunun başkanı tuğgeneral",
+   "not": "il jandarma komutanı ya da yardımcısı; Merkez kurulunun başkanı tuğgeneral",
    "karistirilan": [
     {
      "madde": "20",
@@ -1942,7 +1952,7 @@
    ]
   },
   {
-   "i": "K-12-186",
+   "i": "K-12-187",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "Merkez Disiplin Kurulu",
@@ -1961,7 +1971,7 @@
    ]
   },
   {
-   "i": "K-12-187",
+   "i": "K-12-188",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "Jandarma Genel Komutanlığı Yüksek",
@@ -1980,7 +1990,7 @@
    ]
   },
   {
-   "i": "K-12-188",
+   "i": "K-12-189",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "Astsubayların disiplin işleri",
@@ -1990,7 +2000,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-189",
+   "i": "K-12-190",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "Akademisi Disiplin Kurulu",
@@ -2000,7 +2010,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-190",
+   "i": "K-12-191",
    "madde": "20",
    "tip": "gorev_yetki",
    "tetikleyici": "yüzbaşı",
@@ -2010,37 +2020,37 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-191",
-   "madde": "20",
-   "tip": "gorev_yetki",
-   "tetikleyici": "binbaşı ve yarbay",
-   "cevap": "meslekten çıkarmayı JGK Yüksek DK verir",
-   "kanit": "d) Jandarma Genel Komutanlığı Yüksek Disiplin Kurulu; 1) Genel Komutanlık merkez teşkilatı, asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları, il jandarma, ilçe jandarma ve geçici bölge komutanlıkları, eğitim ve öğretim kurumları kadrolarında bulunan binbaşı ve yarbay rütbelerindeki subaylara meslekten çıkarma cezasını,",
-   "not": "diğer cezaları Merkez kurulu",
-   "karistirilan": []
-  },
-  {
    "i": "K-12-192",
    "madde": "20",
    "tip": "gorev_yetki",
-   "tetikleyici": "Albay rütbesindeki",
-   "cevap": "meslekten çıkarmayı Bakanlık Yüksek DK verir",
-   "kanit": "(2) Genel Komutanlık merkez teşkilatı, asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları, il jandarma, ilçe jandarma ve geçici bölge komutanlıkları, eğitim ve öğretim kurumları kadrolarında bulunan;12 a) Albay rütbesindeki personele meslekten çıkarma cezasını, b) Generaller hakkında tüm disiplin cezalarını, vermeye Bakanlık Yüksek Disiplin Kurulu yetkilidir.",
-   "not": "",
+   "tetikleyici": "binbaşı ve yarbay",
+   "cevap": "meslekten çıkarmayı Jandarma Genel Komutanlığı Yüksek Disiplin Kurulu verir",
+   "kanit": "d) Jandarma Genel Komutanlığı Yüksek Disiplin Kurulu; 1) Genel Komutanlık merkez teşkilatı, asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları, il jandarma, ilçe jandarma ve geçici bölge komutanlıkları, eğitim ve öğretim kurumları kadrolarında bulunan binbaşı ve yarbay rütbelerindeki subaylara meslekten çıkarma cezasını,",
+   "not": "diğer cezaları Merkez kurulu",
    "karistirilan": []
   },
   {
    "i": "K-12-193",
    "madde": "20",
    "tip": "gorev_yetki",
-   "tetikleyici": "Generaller",
-   "cevap": "tüm cezaları Bakanlık Yüksek DK verir",
+   "tetikleyici": "Albay rütbesindeki",
+   "cevap": "meslekten çıkarmayı Bakanlık Yüksek Disiplin Kurulu verir",
    "kanit": "(2) Genel Komutanlık merkez teşkilatı, asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları, il jandarma, ilçe jandarma ve geçici bölge komutanlıkları, eğitim ve öğretim kurumları kadrolarında bulunan;12 a) Albay rütbesindeki personele meslekten çıkarma cezasını, b) Generaller hakkında tüm disiplin cezalarını, vermeye Bakanlık Yüksek Disiplin Kurulu yetkilidir.",
    "not": "",
    "karistirilan": []
   },
   {
    "i": "K-12-194",
+   "madde": "20",
+   "tip": "gorev_yetki",
+   "tetikleyici": "Generaller",
+   "cevap": "tüm cezaları Bakanlık Yüksek Disiplin Kurulu verir",
+   "kanit": "(2) Genel Komutanlık merkez teşkilatı, asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları, il jandarma, ilçe jandarma ve geçici bölge komutanlıkları, eğitim ve öğretim kurumları kadrolarında bulunan;12 a) Albay rütbesindeki personele meslekten çıkarma cezasını, b) Generaller hakkında tüm disiplin cezalarını, vermeye Bakanlık Yüksek Disiplin Kurulu yetkilidir.",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-12-195",
    "madde": "21",
    "tip": "makam",
    "tetikleyici": "dışındaki kararları",
@@ -2055,7 +2065,7 @@
    ]
   },
   {
-   "i": "K-12-195",
+   "i": "K-12-196",
    "madde": "21",
    "tip": "makam",
    "tetikleyici": "Yüksek Disiplin Kurulunun kararları",
@@ -2065,11 +2075,11 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-196",
+   "i": "K-12-197",
    "madde": "21",
    "tip": "makam",
    "tetikleyici": "uygun görülmeyen",
-   "cevap": "Bakanlık Yüksek DK kesin karar",
+   "cevap": "Bakanlık Yüksek Disiplin Kurulu kesin karar verir",
    "kanit": "(3) İl jandarma disiplin kurulunca verilen ve vali tarafından uygun görülmeyen kararlar Jandarma Genel Komutanlığı Yüksek Disiplin Kurulunca; asayiş kolordu komutanlıkları, komando tugay komutanlıkları, komando alay komutanlıkları, Jandarma Komando Özel Asayiş ve Kurtarma Tugay Komutanlığı, eğitim tugay ve birlik komutanlıkları disiplin kurulu, Genel Komutanlık Merkez Disiplin Kurulu ile eğitim ve öğretim kurumları disiplin kurulu tarafından verilen ve Jandarma Genel Komutanı tarafından uygun görülmeyen kararlar Bakanlık Yüksek Disiplin Kurulunca kesin karara bağlanır.",
    "not": "valinin uygun görmediği il kurulu kararı JGK Yüksek DK’ya",
    "karistirilan": [
@@ -2080,7 +2090,7 @@
    ]
   },
   {
-   "i": "K-12-197",
+   "i": "K-12-198",
    "madde": "26",
    "tip": "kosul",
    "tetikleyici": "disiplin kurulunun saptanmasında",
@@ -2090,7 +2100,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-198",
+   "i": "K-12-199",
    "madde": "26",
    "tip": "kosul",
    "tetikleyici": "Ast memur ile üst memurun",
@@ -2100,7 +2110,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-199",
+   "i": "K-12-200",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "salt çoğunluk",
@@ -2110,7 +2120,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-200",
+   "i": "K-12-201",
    "madde": "26",
    "tip": "sira_usul",
    "tetikleyici": "Oyların eşit",
@@ -2120,7 +2130,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-201",
+   "i": "K-12-202",
    "madde": "27",
    "tip": "kosul",
    "tetikleyici": "soruşturma sonucunda",
@@ -2130,7 +2140,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-202",
+   "i": "K-12-203",
    "madde": "27",
    "tip": "sira_usul",
    "tetikleyici": "gerekçeli olarak yazılır",
@@ -2140,7 +2150,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-203",
+   "i": "K-12-204",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "görevden uzaklaştırma",
@@ -2155,17 +2165,17 @@
    ]
   },
   {
-   "i": "K-12-204",
+   "i": "K-12-205",
    "madde": "29",
    "tip": "sure",
-   "tetikleyici": "öğrenildiği tarihten",
+   "tetikleyici": "öğrenil",
    "cevap": "uyarma-durdurma bir ay, çıkarmalar altı ay içinde soruşturma",
    "kanit": "(1) Bu Kanunda sayılan fiilleri işleyenler hakkında bu fiillerin işlendiğinin disiplin amiri tarafından öğrenildiği tarihten itibaren;\n15 18/10/2018 tarihli ve 7148 sayılı Kanunun 43 üncü maddesiyle bu fıkrada yer alan “cezası verilmesine yer olmadığına” ibaresinden sonra gelmek üzere “, karar verilmesine yer olmadığına” ibaresi eklenmiştir.\na) Uyarma, kınama, aylıktan kesme ve kısa ve uzun süreli durdurma cezalarında bir ay içinde,\nb) Meslekten çıkarma cezası ve Devlet memurluğundan çıkarma cezasında altı ay içinde,\ndisiplin soruşturmasına başlanmadığı takdirde disiplin cezası verme yetkisi zamanaşımına uğrar.",
    "not": "ÖĞRENMEDEN: HAFİF BİR AY, ÇIKARMA ALTI AY",
    "karistirilan": []
   },
   {
-   "i": "K-12-205",
+   "i": "K-12-206",
    "madde": "29",
    "tip": "sure",
    "tetikleyici": "işlendiği tarihten itibaren",
@@ -2175,7 +2185,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-206",
+   "i": "K-12-207",
    "madde": "29",
    "tip": "kosul",
    "tetikleyici": "işlemeye başla",
@@ -2185,7 +2195,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-207",
+   "i": "K-12-208",
    "madde": "29",
    "tip": "sure",
    "tetikleyici": "iptal edil",
@@ -2195,7 +2205,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-208",
+   "i": "K-12-209",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "itiraz",
@@ -2218,7 +2228,7 @@
    ]
   },
   {
-   "i": "K-12-209",
+   "i": "K-12-210",
    "madde": "30",
    "tip": "makam",
    "tetikleyici": "kaymakam",
@@ -2233,7 +2243,7 @@
    ]
   },
   {
-   "i": "K-12-210",
+   "i": "K-12-211",
    "madde": "30",
    "tip": "makam",
    "tetikleyici": "doğrudan verdikleri",
@@ -2243,7 +2253,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-211",
+   "i": "K-12-212",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "yetkili merci tarafından",
@@ -2253,7 +2263,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-212",
+   "i": "K-12-213",
    "madde": "30",
    "tip": "yasak",
    "tetikleyici": "İtiraz üzerine",
@@ -2268,7 +2278,7 @@
    ]
   },
   {
-   "i": "K-12-213",
+   "i": "K-12-214",
    "madde": "30",
    "tip": "kosul",
    "tetikleyici": "Bakan ile disiplin kurullarının",
@@ -2278,11 +2288,11 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-214",
+   "i": "K-12-215",
    "madde": "31",
    "tip": "sure",
    "tetikleyici": "savunma",
-   "cevap": "alınmadan ceza yok; süre en az yedi gün; yapmayan vazgeçmiş",
+   "cevap": "alınmadan ceza verilemez; en az yedi gün süre; yapmayan vazgeçmiş",
    "kanit": "(1) Disiplin amirleri veya disiplin kurulları tarafından savunma alınmadan disiplin cezası verilemez. (2) Disiplin amirince veya yetkili disiplin kurulu başkanı ya da görevlendireceği kurul üyelerinden biri tarafından ilgiliden savunma istenir. Savunma için verilen süre yedi günden az olamaz. Süresi içinde savunmasını yapmayan personel, savunma hakkından vazgeçmiş sayılır.",
    "not": "",
    "karistirilan": [
@@ -2297,7 +2307,7 @@
    ]
   },
   {
-   "i": "K-12-215",
+   "i": "K-12-216",
    "madde": "31",
    "tip": "makam",
    "tetikleyici": "savunma iste",
@@ -2307,7 +2317,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-216",
+   "i": "K-12-217",
    "madde": "31",
    "tip": "kosul",
    "tetikleyici": "soruşturma evrakını inceleme",
@@ -2317,7 +2327,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-217",
+   "i": "K-12-218",
    "madde": "31",
    "tip": "kosul",
    "tetikleyici": "istenen personel",
@@ -2327,7 +2337,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-218",
+   "i": "K-12-219",
    "madde": "32",
    "tip": "kosul",
    "tetikleyici": "Kesinleşen disiplin cezalarına",
@@ -2337,7 +2347,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-219",
+   "i": "K-12-220",
+   "madde": "32",
+   "tip": "sure",
+   "tetikleyici": "açma süresi",
+   "cevap": "kesinleşen cezanın personele tebliğinden başlar",
+   "kanit": "(2) Dava açma süresi, kesinleşen cezanın personele tebliğinden itibaren başlar.",
+   "not": "gemi-botta verilen cezada üsse-limana dönüşle",
+   "karistirilan": []
+  },
+  {
+   "i": "K-12-221",
    "madde": "32",
    "tip": "sure",
    "tetikleyici": "seyir halindeki gemi",
@@ -2352,7 +2372,7 @@
    ]
   },
   {
-   "i": "K-12-220",
+   "i": "K-12-222",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "Disiplin cezaları,",
@@ -2367,7 +2387,7 @@
    ]
   },
   {
-   "i": "K-12-221",
+   "i": "K-12-223",
    "madde": "33",
    "tip": "sure",
    "tetikleyici": "Aylıktan kesme cezası,",
@@ -2377,7 +2397,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-222",
+   "i": "K-12-224",
    "madde": "33",
    "tip": "makam",
    "tetikleyici": "üst disiplin amirine",
@@ -2392,7 +2412,7 @@
    ]
   },
   {
-   "i": "K-12-223",
+   "i": "K-12-225",
    "madde": "34",
    "tip": "kosul",
    "tetikleyici": "kademe ilerlemesinin durdurulması",
@@ -2402,7 +2422,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-12-224",
+   "i": "K-12-226",
    "madde": "34",
    "tip": "kosul",
    "tetikleyici": "hüküm bulunmayan hallerde",
