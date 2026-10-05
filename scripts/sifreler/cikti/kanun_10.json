@@ -44,7 +44,7 @@
    "tetikleyici": "Bakanlık:",
    "cevap": "Aile ve Sosyal Politikalar Bakanlığı",
    "kanit": "a) Bakanlık: Aile ve Sosyal Politikalar Bakanlığını,",
-   "not": "",
+   "not": "bugün Aile ve Sosyal Hizmetler Bakanlığı",
    "karistirilan": []
   },
   {
@@ -61,8 +61,8 @@
    "i": "K-10-006",
    "madde": "2",
    "tip": "tanim",
-   "tetikleyici": "hâkimini",
-   "cevap": "aile mahkemesi",
+   "tetikleyici": "Hâkim:",
+   "cevap": "aile mahkemesi hâkimi",
    "kanit": "c) Hâkim: Aile mahkemesi hâkimini,",
    "not": "",
    "karistirilan": [
@@ -77,9 +77,9 @@
    "madde": "2",
    "tip": "tanim",
    "tetikleyici": "sonuçlanması muhtemel",
-   "cevap": "fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; meslekî başarı YOK",
+   "cevap": "fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; dinî-meslekî YOK",
    "kanit": "d) Şiddet: Kişinin, fiziksel, cinsel, psikolojik veya ekonomik açıdan zarar görmesiyle veya acı çekmesiyle sonuçlanan veya sonuçlanması muhtemel hareketleri, buna yönelik tehdit ve baskıyı ya da özgürlüğün keyfî engellenmesini de içeren, toplumsal, kamusal veya özel alanda meydana gelen fiziksel, cinsel, psikolojik, sözlü veya ekonomik her türlü tutum ve davranışı,",
-   "not": "dinî şiddet de listede yok",
+   "not": "zarar doğmasa da muhtemel olması yeter",
    "karistirilan": []
   },
   {
@@ -97,7 +97,7 @@
    "madde": "2",
    "tip": "tanim",
    "tetikleyici": "izleme merkezleri",
-   "cevap": "yedi gün yirmi dört saat",
+   "cevap": "yedi gün yirmidört saat esasıyla çalışır",
    "kanit": "f) Şiddet önleme ve izleme merkezleri: Şiddetin önlenmesi ile koruyucu ve önleyici tedbirlerin etkin olarak uygulanmasına yönelik destek ve izleme hizmetlerinin verildiği, çalışmalarını yedi gün yirmidört saat esası ile yürüten merkezleri,",
    "not": "ŞÖNİM",
    "karistirilan": [
@@ -327,9 +327,9 @@
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "önleyici tedbir",
-   "cevap": "yalnız hâkim; kolluk gecikmede yalnız a-b-c-d (söz, uzaklaştırma, yaklaşmama)",
+   "cevap": "hâkim; gecikmede kolluk da (söz, uzaklaştırma, yaklaşmama); mülkî amir YOK",
    "kanit": "(1) Şiddet uygulayanlarla ilgili olarak aşağıdaki önleyici tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir:",
-   "not": "mülkî amir önleyici tedbir veremez",
+   "not": "kolluk evrakı ilk işgünü hâkime sunar; yirmidört saatte onaylanmazsa kalkar",
    "karistirilan": [
     {
      "madde": "2",
@@ -383,6 +383,16 @@
    "i": "K-10-030",
    "madde": "5",
    "tip": "makam",
+   "tetikleyici": "iletişim araçları",
+   "cevap": "veya sair surette rahatsız etmemesi (önleyici, hâkim)",
+   "kanit": "f) Korunan kişiyi iletişim araçlarıyla veya sair surette rahatsız etmemesi.",
+   "not": "şahsi ve ev eşyasına zarar vermemesi de önleyici tedbir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-031",
+   "madde": "5",
+   "tip": "makam",
    "tetikleyici": "tanıklarına",
    "cevap": "şiddete uğramasa da yakın, tanık, çocuklara yaklaşmama",
    "kanit": "d) Gerekli görülmesi hâlinde korunan kişinin, şiddete uğramamış olsa bile yakınlarına, tanıklarına ve kişisel ilişki kurulmasına ilişkin hâller saklı kalmak üzere çocuklarına yaklaşmaması.",
@@ -390,7 +400,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-031",
+   "i": "K-10-032",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "kamu görevi",
@@ -400,7 +410,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-032",
+   "i": "K-10-033",
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "alkol ya da uyuşturucu",
@@ -410,7 +420,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-033",
+   "i": "K-10-034",
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "Çocuk Koruma Kanunu",
@@ -420,7 +430,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-034",
+   "i": "K-10-035",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "tedbir nafaka",
@@ -430,7 +440,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-035",
+   "i": "K-10-036",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "denetimli serbestlik",
@@ -440,7 +450,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-036",
+   "i": "K-10-037",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "resmi makam veya mercilere",
@@ -450,7 +460,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-037",
+   "i": "K-10-038",
    "madde": "8",
    "tip": "sira_usul",
    "tetikleyici": "başvurusu üzerine",
@@ -460,7 +470,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-038",
+   "i": "K-10-039",
    "madde": "8",
    "tip": "sira_usul",
    "tetikleyici": "en kolay ulaşılabilecek",
@@ -470,7 +480,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-039",
+   "i": "K-10-040",
    "madde": "8",
    "tip": "sure",
    "tetikleyici": "ilk defasında",
@@ -480,7 +490,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-040",
+   "i": "K-10-041",
    "madde": "8",
    "tip": "sure",
    "tetikleyici": "devam edeceğinin",
@@ -490,7 +500,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-041",
+   "i": "K-10-042",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "Koruyucu tedbir",
@@ -517,7 +527,7 @@
    ]
   },
   {
-   "i": "K-10-042",
+   "i": "K-10-043",
    "madde": "8",
    "tip": "sure",
    "tetikleyici": "Önleyici tedbir kararı",
@@ -532,7 +542,7 @@
    ]
   },
   {
-   "i": "K-10-043",
+   "i": "K-10-044",
    "madde": "8",
    "tip": "sira_usul",
    "tetikleyici": "reddine ilişkin karar",
@@ -547,7 +557,7 @@
    ]
   },
   {
-   "i": "K-10-044",
+   "i": "K-10-045",
    "madde": "8",
    "tip": "sira_usul",
    "tetikleyici": "tefhim ve tebliğ",
@@ -557,7 +567,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-045",
+   "i": "K-10-046",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "gizli tutul",
@@ -567,7 +577,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-046",
+   "i": "K-10-047",
+   "madde": "8",
+   "tip": "makam",
+   "tetikleyici": "kişisel eşya",
+   "cevap": "talep hâlinde kolluk marifetiyle teslim edilir",
+   "kanit": "(7) Talep hâlinde ilgililere kişisel eşya ve belgelerinin kolluk marifetiyle teslimi sağlanır.",
+   "not": "belgeler de",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-048",
    "madde": "9",
    "tip": "sure",
    "tetikleyici": "itiraz",
@@ -582,7 +602,7 @@
    ]
   },
   {
-   "i": "K-10-047",
+   "i": "K-10-049",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "daire",
@@ -592,7 +612,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-048",
+   "i": "K-10-050",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "aynı hâkim",
@@ -602,7 +622,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-049",
+   "i": "K-10-051",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "en seri vasıtalarla",
@@ -612,7 +632,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-050",
+   "i": "K-10-052",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "kabul ya da reddine",
+   "cevap": "Bakanlığın il-ilçe müdürlüklerine derhâl bildirilir",
+   "kanit": "(2) Bu Kanun kapsamında ilgili mercilere yapılan başvurular ile bu başvuruların kabul ya da reddine ilişkin kararlar, başvuru yapılan merci tarafından Bakanlığın ilgili il ve ilçe müdürlüklerine derhâl bildirilir.",
+   "not": "başvuru yapılan merci bildirir",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-053",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "yerine getirilmesinden",
@@ -622,7 +652,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-051",
+   "i": "K-10-054",
+   "madde": "10",
+   "tip": "makam",
+   "tetikleyici": "kollukta bulunduğu",
+   "cevap": "kolluk kişiyi Bakanlık il-ilçe müdürlüğüne ivedilikle ulaştırır",
+   "kanit": "(4) Tedbir kararının, kolluk amirince verilip uygulandığı veya korunan kişinin kollukta bulunduğu hâllerde, kolluk birimleri tarafından kişi, Bakanlığın ilgili il veya ilçe müdürlüklerine ivedilikle ulaştırılır; bunun mümkün olmaması hâlinde giderleri Bakanlık bütçesinin ilgili tertibinden karşılanmak üzere kendisine ve beraberindekilere geçici olarak barınma imkânı sağlanır.",
+   "not": "ulaştırılamazsa Bakanlık bütçesinden geçici barınma",
+   "karistirilan": []
+  },
+  {
+   "i": "K-10-055",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "tebliğ edilmemesi",
@@ -632,7 +672,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-052",
+   "i": "K-10-056",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "Barınma yerlerinin yetersiz",
@@ -642,7 +682,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-053",
+   "i": "K-10-057",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "İşyerinin değiştirilmesi yönündeki",
@@ -652,7 +692,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-10-054",
+   "i": "K-10-058",
    "madde": "11",
    "tip": "kosul",
    "tetikleyici": "Kolluk görevleri",
@@ -667,17 +707,17 @@
    ]
   },
   {
-   "i": "K-10-055",
+   "i": "K-10-059",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "teknik araç",
    "cevap": "hâkim kararıyla; ses-görüntü dinlenemez, izlenemez, kaydedilemez",
    "kanit": "(1) Bu Kanun hükümlerine göre verilen tedbir kararlarının uygulanmasında hâkim kararı ile teknik araç ve yöntemler kullanılabilir. Ancak, bu suretle, kişilerin ses ve görüntüleri dinlenemez, izlenemez ve kayda alınamaz.",
-   "not": "",
+   "not": "takip usul ve esasları yönetmelikle",
    "karistirilan": []
   },
   {
-   "i": "K-10-056",
+   "i": "K-10-060",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "aykırı",
@@ -696,7 +736,7 @@
    ]
   },
   {
-   "i": "K-10-057",
+   "i": "K-10-061",
    "madde": "13",
    "tip": "makam",
    "tetikleyici": "ilçe müdürlüklerine",
@@ -711,7 +751,7 @@
    ]
   },
   {
-   "i": "K-10-058",
+   "i": "K-10-062",
    "madde": "13",
    "tip": "makam",
    "tetikleyici": "zorlama hapsi",

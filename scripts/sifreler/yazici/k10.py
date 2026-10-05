@@ -10,12 +10,12 @@ K = [
  ('1','tanim','amacı','kadın, çocuk, aile bireyi, ısrarlı takip mağduru; tehlikesi olan da','(1) Bu Kanunun amacı;','usul ve esasları düzenlemektir.',[('8','tedbir, Kanunun amacını tehlikeye sokacak şekilde geciktirilemez')],'komşuluk, kamu düzeni yok'),
  ('1','kosul','cinsiyete dayalı şiddet','özel tedbirler ayrımcılık sayılmaz','ç) Bu Kanun kapsamında kadınlara yönelik cinsiyete','ayrımcılık olarak yorumlanamaz.',[],''),
  ('1','kosul','temel ilke','Anayasa ve uluslararası sözleşmeler; eşitlik, sosyal devlet, adil, süratli','(2) Bu Kanunun uygulanmasında','süratli bir usul izlenir.',[],'yalnız Anayasa değil; İstanbul Sözleşmesi'),
- ('2','tanim','Bakanlık:','Aile ve Sosyal Politikalar Bakanlığı','a) Bakanlık:','Sosyal Politikalar Bakanlığını,',[],''),
+ ('2','tanim','Bakanlık:','Aile ve Sosyal Politikalar Bakanlığı','a) Bakanlık:','Sosyal Politikalar Bakanlığını,',[],'bugün Aile ve Sosyal Hizmetler Bakanlığı'),
  ('2','tanim','aynı haneyi paylaşmasa da','ev içi şiddet','b) Ev içi şiddet:','ekonomik şiddeti,',[],'fiziksel, cinsel, psikolojik, ekonomik'),
- ('2','tanim','hâkimini','aile mahkemesi','c) Hâkim:','Aile mahkemesi hâkimini,',[('9','itirazda aynı hâkimse en yakın asliye hukuka')],''),
- ('2','tanim','sonuçlanması muhtemel','fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; meslekî başarı YOK','d) Şiddet: Kişinin','her türlü tutum ve davranışı,',[],'dinî şiddet de listede yok'),
+ ('2','tanim','Hâkim:','aile mahkemesi hâkimi','c) Hâkim:','Aile mahkemesi hâkimini,',[('9', 'itirazda aynı hâkimse en yakın asliye hukuka')],''),
+ ('2','tanim','sonuçlanması muhtemel','fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; dinî-meslekî YOK','d) Şiddet: Kişinin','her türlü tutum ve davranışı,',[],'zarar doğmasa da muhtemel olması yeter'),
  ('2','tanim','Şiddet mağduru:','doğrudan ya da dolaylı maruz kalan, etkilenen; tehlikesi olan da','e) Şiddet mağduru:','etkilenme tehlikesi bulunan kişileri,',[],''),
- ('2','tanim','izleme merkezleri','yedi gün yirmi dört saat','f) Şiddet önleme ve izleme merkezleri','yürüten merkezleri,',[('13','m.13 metninin sonunda sonraki bölüm başlığı yer alır')],'ŞÖNİM'),
+ ('2','tanim','izleme merkezleri','yedi gün yirmidört saat esasıyla çalışır','f) Şiddet önleme ve izleme merkezleri','yürüten merkezleri,',[('13', 'm.13 metninin sonunda sonraki bölüm başlığı yer alır')],'ŞÖNİM'),
  ('2','tanim','koruyucu ve önleyici','koruyucu korunan kişiye, önleyici şiddet uygulayana','f) Şiddet önleme ve izleme merkezleri','yürüten merkezleri,',[('3','korunan kişi için mülkî amirin koruyucu tedbirleri'),('5','şiddet uygulayan için hâkimin önleyici tedbirleri')],''),
  ('2','tanim','Şiddet uygulayan:','tehlikesi olan da','g) Şiddet uygulayan:','uygulama tehlikesi bulunan kişileri,',[],'fiilen uygulayan ya da uygulama tehlikesi bulunan'),
  ('2','tanim','istem üzerine veya resen','hâkim, kolluk görevlileri ve mülkî amirler','ğ) Tedbir kararı:','tedbir kararlarını,',[],'Cumhuriyet başsavcılığı tanımlarda yok'),
@@ -38,10 +38,11 @@ K = [
  ('4','makam','kimlik ve ilgili','hayatî tehlike + diğer tedbir yetersiz + aydınlatılmış rıza','ç) Korunan kişi bakımından hayatî','değiştirilmesi.',[],'Tanık Koruma Kanununa göre'),
 
  # m.5 — hâkimin önleyici tedbirleri
- ('5','makam','önleyici tedbir','yalnız hâkim; kolluk gecikmede yalnız a-b-c-d (söz, uzaklaştırma, yaklaşmama)','(1) Şiddet uygulayanlarla ilgili olarak','hâkim tarafından karar verilebilir:',[('2','tanımlarda koruyucu ve önleyici tedbirler'),('8','önleyici tedbir geciktirilmeksizin verilir'),('10','önleyici tedbiri kolluk birimi uygular'),('4','m.4 metninin sonunda sonraki maddenin başlığı yer alır')],'mülkî amir önleyici tedbir veremez'),
+ ('5','makam','önleyici tedbir','hâkim; gecikmede kolluk da (söz, uzaklaştırma, yaklaşmama); mülkî amir YOK','(1) Şiddet uygulayanlarla ilgili olarak','hâkim tarafından karar verilebilir:',[('2', 'tanımlarda koruyucu ve önleyici tedbirler'), ('8', 'önleyici tedbir geciktirilmeksizin verilir'), ('10', 'önleyici tedbiri kolluk birimi uygular'), ('4', 'm.4 metninin sonunda sonraki maddenin başlığı yer alır')],'kolluk evrakı ilk işgünü hâkime sunar; yirmidört saatte onaylanmazsa kalkar'),
  ('5','makam','şiddet tehdidi, hakaret','bulunmaması (önleyici, hâkim)','a) Şiddet mağduruna yönelik olarak şiddet tehdidi','söz ve davranışlarda bulunmaması.',[],''),
  ('5','makam','uzaklaştırıl','müşterek konut korunan kişiye tahsis','b) Müşterek konuttan','tahsis edilmesi.',[],'evden çıkan uygulayan, mağdur değil'),
  ('5','makam','bulundukları konuta','okula ve işyerine yaklaşmaz','c) Korunan kişilere, bu kişilerin bulundukları','işyerine yaklaşmaması.',[],''),
+ ('5','makam','iletişim araçları','veya sair surette rahatsız etmemesi (önleyici, hâkim)','f) Korunan kişiyi iletişim araçlarıyla','rahatsız etmemesi.',[],'şahsi ve ev eşyasına zarar vermemesi de önleyici tedbir'),
  ('5','makam','tanıklarına','şiddete uğramasa da yakın, tanık, çocuklara yaklaşmama','d) Gerekli görülmesi hâlinde korunan kişinin','çocuklarına yaklaşmaması.',[],'kişisel ilişki hâlleri saklı'),
  ('5','kosul','kamu görevi','zimmetindeki silahı kurumuna teslim','ğ) Silah taşıması zorunlu','kurumuna teslim etmesi.',[],'ruhsatlı silahlar kolluğa'),
  ('5','makam','alkol ya da uyuşturucu','korunanın yanında kullanmama; bağımlıysa hastane dahil tedavi','h) Korunan kişilerin bulundukları yerlerde alkol','muayene ve tedavisinin sağlanması.',[],''),
@@ -60,6 +61,7 @@ K = [
  ('8','sira_usul','reddine ilişkin karar','sadece korunan kişiye tebliğ','Tedbir talebinin reddine','sadece korunan kişiye tebliğ edilir.',[('10','başvurunun kabul ya da reddi Bakanlık müdürlüğüne bildirilir')],'tedbir kararı iki tarafa'),
  ('8','sira_usul','tefhim ve tebliğ','aykırılıkta zorlama hapsi ihtarı','(5) Tedbir kararının tefhim','ihtarı yapılır.',[],''),
  ('8','kosul','gizli tutul','korunanın-ailesinin kimlik-adresi; tebligata ayrı adres; adli sicil YOK','(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte','ayrı bir adres tespit edilir.',[],'ifşa edene TCK'),
+ ('8','makam','kişisel eşya','talep hâlinde kolluk marifetiyle teslim edilir','(7) Talep hâlinde ilgililere','kolluk marifetiyle teslimi sağlanır.',[],'belgeler de'),
 
  # m.9 — itiraz
  ('9','sure','itiraz','iki hafta, aile mahkemesine; merci bir haftada karar verir, kesin','(1) Bu Kanun hükümlerine göre verilen kararlara','kesindir.',[('8','m.8 metninin sonunda bu maddenin başlığı yer alır')],'İTİRAZ 2 HAFTA · KARAR 1 HAFTA · temyiz yok'),
@@ -68,12 +70,14 @@ K = [
 
  # m.10-12 — bildirim, uygulama, kolluk, teknik takip
  ('10','makam','en seri vasıtalarla','Bakanlık il-ilçe müdürlükleri, savcılık ya da kolluk','(1) Bu Kanun hükümlerine göre alınan tedbir kararları','en seri vasıtalarla bildirilir.',[],''),
+ ('10','makam','kabul ya da reddine','Bakanlığın il-ilçe müdürlüklerine derhâl bildirilir','(2) Bu Kanun kapsamında ilgili mercilere','müdürlüklerine derhâl bildirilir.',[],'başvuru yapılan merci bildirir'),
  ('10','makam','yerine getirilmesinden','yerleşim yeri, bulunduğu ya da tedbir yeri kolluk birimi','(3) Korunan kişinin geçici koruma','kolluk birimi görevli ve yetkilidir.',[],''),
+ ('10','makam','kollukta bulunduğu','kolluk kişiyi Bakanlık il-ilçe müdürlüğüne ivedilikle ulaştırır','(4) Tedbir kararının, kolluk amirince','geçici olarak barınma imkânı sağlanır.',[],'ulaştırılamazsa Bakanlık bütçesinden geçici barınma'),
  ('10','kosul','tebliğ edilmemesi','uygulamaya engel değil','(5) Tedbir kararının ilgililere','engel teşkil etmez.',[],''),
  ('10','makam','Barınma yerlerinin yetersiz','kamu sosyal tesis, yurt; mülkî amir, acelede kolluk talebiyle','(6) Hakkında barınma yeri sağlanmasına','geçici olarak barındırılabilir.',[],''),
  ('10','makam','İşyerinin değiştirilmesi yönündeki','kişinin tabi olduğu mevzuata göre yetkili merci uygular','(7) İşyerinin değiştirilmesi','yerine getirilir.',[],''),
  ('11','kosul','Kolluk görevleri','kadın-çocuk hakları ve eşitlik eğitimi almış yeterli personel','(1) Kolluk görevleri, kolluğun merkez','personel tarafından yerine getirilir.',[('10','m.10 metninin sonunda bu maddenin başlığı yer alır')],'yalnız kadın personel şartı yok'),
- ('12','yasak','teknik araç','hâkim kararıyla; ses-görüntü dinlenemez, izlenemez, kaydedilemez','(1) Bu Kanun hükümlerine göre verilen tedbir kararlarının uygulanmasında','kayda alınamaz.',[],''),
+ ('12','yasak','teknik araç','hâkim kararıyla; ses-görüntü dinlenemez, izlenemez, kaydedilemez','(1) Bu Kanun hükümlerine göre verilen tedbir kararlarının uygulanmasında','kayda alınamaz.',[],'takip usul ve esasları yönetmelikle'),
 
  # m.13 — zorlama hapsi
  ('13','ceza','aykırı','ilk üç-on gün; tekrarında onbeş-otuz; toplam altı ay zorlama hapsi','(1) Bu Kanun hükümlerine göre hakkında tedbir','altı ayı geçemez.',[('8','tebliğde zorlama hapsi ihtarı yapılır'),('12','m.12 metninin sonunda bu maddenin başlığı yer alır')],'fiil suç olsa bile; hâkim kararıyla'),
