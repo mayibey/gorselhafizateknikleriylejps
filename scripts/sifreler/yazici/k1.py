@@ -7,7 +7,7 @@ from ortak import yaz
 K = [
  # m.1-5 — amaç, kanunilik, eşitlik, bağlayıcılık, genel hükümler
  ('1','tanim','Kanununun amacı','hak-özgürlük/kamu düzen-güvenliği/hukuk devleti/kamu sağlığı-çevre/toplum barışı/suç önleme; milli ekonomi-kamusal etki YOK','(1) Ceza Kanununun amacı','suç işlenmesini önlemektir.',[],'2026 Uzman sınavında soruldu (cevap: suçun kamusal etkisini incelemek amaç değil)'),
- ('1','tanim','amacın gerçekleştirilmesi için','sorumluluk esasları, suçlar, ceza, güvenlik tedbirleri; suça iten sebepler YOK','Kanunda, bu amacın gerçekleştirilmesi','türleri düzenlenmiştir.',[],'2026 Uzman sınavında soruldu'),
+ ('1','tanim','amacın gerçekleştirilmesi için','Kanunda düzenlenenler: sorumluluk esasları, suçlar, ceza-güvenlik tedbirleri; suça-iten-sebepler YOK','Kanunda, bu amacın gerçekleştirilmesi','türleri düzenlenmiştir.',[],'2026 Uzman sınavında soruldu'),
  ('2','tanim','Kanunun açıkça suç saymadığı','ceza verilemez, tedbir uygulanamaz; kanunilik ilkesi','(1) Kanunun açıkça suç saymadığı','başka bir ceza ve güvenlik tedbirine hükmolunamaz.',[],'kanunda yazılı olmayan ceza ve tedbire de hükmolunamaz'),
  ('2','yasak','İdarenin düzenleyici işlemleriyle','suç ve ceza konulamaz','(2) İdarenin','konulamaz.',[],'yönetmelik, genelge ile suç olmaz'),
  ('2','yasak','suç ve ceza içeren hükümler','kıyas yapılamaz, geniş yorumlanamaz','(3) Kanunların suç','geniş yorumlanamaz.',[],''),
