@@ -62,9 +62,9 @@
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "takdir hak",
-   "cevap": "ölçülü, adaletli, hakkaniyetli, gerekçeli; işleniş, zarar, kusur, pişmanlık",
+   "cevap": "ölçülü-adil-hakkaniyetli-gerekçeli; işleniş/zaman-yer/hizmete etki/zarar/kusur/önceki disiplin/pişmanlık; medeni hal/sosyal medya/sicil amiri görüşü YOK",
    "kanit": "(1) Bu Kanun ile disiplin cezası vermeye yetkilendirilen disiplin amirleri veya kurulları, disiplin cezası uygulanması ile ilgili takdir haklarını ölçülü, adaletli ve hakkaniyetli bir şekilde kullanırlar.\n(2) Takdir hakkı mutlaka gerekçeli olarak kullanılır. (3) Takdir hakkı kullanılırken; a) Disiplinsizliğin işleniş biçimi, b) Disiplinsizliğin işlendiği zaman ve yer, c) Disiplinsizliğin hizmete olumsuz etkisinin ağırlığı, ç) Meydana gelen zarar veya tehlikenin ağırlığı, d) Disiplinsizlik yapan personelin kast veya taksire dayalı kusurunun ağırlığı, e) Disiplinsizlik yapan personelin daha önceki disiplin durumu, f) Disiplinsizlik yapan personelin samimi ikrarı ve gösterdiği pişmanlık, gözönüne alınır.",
-   "not": "zaman-yer, hizmete etki, önceki disiplin durumu da; medeni hal, sosyal medya, sicil amirinin görüşü YOK",
+   "not": "",
    "karistirilan": [
     {
      "madde": "5",
@@ -87,9 +87,9 @@
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "Personele verilecek",
-   "cevap": "uyarma, kınama, aylıktan kesme, kısa-uzun durdurma, meslekten-memurluktan çıkarma",
+   "cevap": "yedi: uyarma, kınama, aylıktan kesme, kısa-uzun durdurma, meslekten-memurluktan çıkarma",
    "kanit": "(1) Personele verilecek disiplin cezaları şunlardır: a) Uyarma cezası: Personele görevinin icrasında veya hal ve hareketlerinde daha dikkatli olması gerektiğinin yazı ile bildirilmesidir. b) Kınama cezası: Personele görevinin icrasında veya hal ve hareketlerinde kusurlu olduğunun yazı ile bildirilmesidir. c) Aylıktan kesme cezası: Disiplin cezası verilen personelin, fiilin ağırlık derecesine göre zam ve tazminatlar hariç brüt aylığından onbeş günlüğe kadar kesinti yapılmasıdır. Ceza, aylığı tahakkuk ettiren birimce personelin aylığından kesilmek suretiyle yerine getirilir. Aylıktan kesme tam Türk Lirası üzerinden yapılır ve kuruşlar dikkate alınmaz. ç) Kısa süreli durdurma: Personelin bulunduğu kademede ilerlemesinin dört, altı veya on ay süre ile durdurulmasıdır. d) Uzun süreli durdurma: Personelin bulunduğu kademede ilerlemesinin oniki, onaltı, yirmi veya yirmidört ay süre ile durdurulmasıdır. e) Meslekten çıkarma: Personelin emniyet, jandarma ve sahil güvenlik teşkilatlarında bir daha çalıştırılmamak üzere meslekten çıkarılmasıdır. f) Devlet memurluğundan çıkarma: Personelin bir daha Devlet memurluğuna atanmamak üzere memurluktan çıkarılmasıdır.",
-   "not": "yedi tür; oda hapsi, görevden uzaklaştırma, kademe geri alma ceza DEĞİL",
+   "not": "oda hapsi, görevden uzaklaştırma, kademe geri alma ceza DEĞİL",
    "karistirilan": []
   },
   {
@@ -137,9 +137,9 @@
    "madde": "7",
    "tip": "sure",
    "tetikleyici": "Uzun süreli durdurma:",
-   "cevap": "oniki, onaltı, yirmi, yirmidört ay",
+   "cevap": "oniki, onaltı, yirmi, yirmidört ay; onsekiz YOK",
    "kanit": "d) Uzun süreli durdurma: Personelin bulunduğu kademede ilerlemesinin oniki, onaltı, yirmi veya yirmidört ay süre ile durdurulmasıdır.",
-   "not": "onsekiz ay YOK",
+   "not": "",
    "karistirilan": []
   },
   {
@@ -1852,8 +1852,8 @@
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "Disiplin soruşturmacısı olarak",
-   "cevap": "üst konumdaki kişi ya da müfettiş; ast yalnız heyet üyesi",
-   "kanit": "(2) Disiplin soruşturmacısı olarak hakkında disiplin soruşturması yapılacak kişinin üstü konumundaki bir veya birden fazla kişi ya da Bakanlık ve/veya ilgisine göre Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ya da Sahil Güvenlik Komutanlığı müfettişi görevlendirilebilir. Ancak gerek görülmesi halinde, heyet başkanı hariç olmak üzere hakkında disiplin soruşturması yapılacak kişinin astı konumunda heyet üyeleri görevlendirilebilir. Disiplin soruşturmacısı olarak mülki idare amirliği hizmetleri sınıfı ile ilgisine göre emniyet hizmetleri sınıfından olanlar ile Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı personeli haricinde herhangi bir personel görevlendirilemez.",
+   "cevap": "üst/müfettiş; ast yalnız heyet üyesi; eş-hısım (boşanmış da) olamaz",
+   "kanit": "(2) Disiplin soruşturmacısı olarak hakkında disiplin soruşturması yapılacak kişinin üstü konumundaki bir veya birden fazla kişi ya da Bakanlık ve/veya ilgisine göre Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ya da Sahil Güvenlik Komutanlığı müfettişi görevlendirilebilir. Ancak gerek görülmesi halinde, heyet başkanı hariç olmak üzere hakkında disiplin soruşturması yapılacak kişinin astı konumunda heyet üyeleri görevlendirilebilir. Disiplin soruşturmacısı olarak mülki idare amirliği hizmetleri sınıfı ile ilgisine göre emniyet hizmetleri sınıfından olanlar ile Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı personeli haricinde herhangi bir personel görevlendirilemez.8 (3) Disiplin soruşturmacıları ve heyeti, kendilerini görevlendiren disiplin amiri adına disiplin soruşturmasıyla ilgili bilgi ve belgeleri toplama, ifade alma, tanık dinleme, bilirkişi görevlendirme, keşif yapma, hâkim veya savcı kararı gerektirmeyen durumlarda kriminal inceleme yaptırma da dahil olmak üzere her türlü inceleme yapma ve ilgili makamlarla yazışma yetkisini haizdir. Müfettişlerin özel mevzuatlarından doğan yetkileri saklıdır. (4) Disiplin soruşturmacısı olarak görevlendirilebileceği belirtilenler, boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları olan personel hakkında yürütülen soruşturmalarda görevlendirilemez.",
    "not": "heyet başkanı ast OLAMAZ; mülki idare, emniyet sınıfı, JGK-SGK personeli dışından olmaz",
    "karistirilan": []
   },
@@ -1877,9 +1877,9 @@
    "madde": "14",
    "tip": "yasak",
    "tetikleyici": "boşanmış",
-   "cevap": "eş ve ikinci derece hısım soruşturmacı olamaz",
+   "cevap": "eş (boşanmış da), ikinci dereceye kadar kan-kayın hısım görevlendirilemez",
    "kanit": "(4) Disiplin soruşturmacısı olarak görevlendirilebileceği belirtilenler, boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları olan personel hakkında yürütülen soruşturmalarda görevlendirilemez.",
-   "not": "boşanmış olsa da",
+   "not": "",
    "karistirilan": [
     {
      "madde": "15",
@@ -1927,9 +1927,9 @@
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "İl jandarma disiplin kurulu",
-   "cevap": "vali yardımcısı başkanlığında",
-   "kanit": "a) İl jandarma disiplin kurulu, vali yardımcısının başkanlığında,",
-   "not": "hukuk işleri müdürü, il jandarma komutanı, personel ve asayiş şube müdürleri",
+   "cevap": "vali yardımcısı; hukuk müdürü, il J.K., personel-asayiş şube; tuğgeneral YOK",
+   "kanit": "a) İl jandarma disiplin kurulu, vali yardımcısının başkanlığında,\n9 6/12/2019 tarihli ve 7196 sayılı Kanunun 91 inci maddesiyle, bu fıkranın (a) bendinde yer alan “polis memurları hakkında” ibaresi madde metninden çıkarılmış, aynı fıkranın (a) ve (b) bentlerine “Yüksek Disiplin Kurulunun” ibarelerinden sonra gelmek üzere “uygun” ibareleri eklenmiştir. 10 6/12/2019 tarihli ve 7196 sayılı Kanunun 91 inci maddesiyle, bu fıkrada yer alan “Birinci fıkranın” ibaresi “Birinci fıkra kapsamında Bakan onayına sunulan kararlardan uygun görülmeyenler ile birinci fıkranın” şeklinde değiştirilmiştir.\n1) İl hukuk işleri müdürü, bulunmadığı durumda il hukuk işleri şube müdürlüğünün bağlı olduğu vali yardımcısı,\n2) İl jandarma komutanı veya görevlendireceği yardımcılarından biri, komutan yardımcısı bulunmadığı durumda il jandarma kuruluşunda il jandarma komutanından sonra gelen en kıdemli subay,\n3) Personel şube müdürü veya geçici bölge komutanlığı personel şube müdürü, 4) Asayiş şube müdürü veya geçici bölge komutanlığı asayiş şube müdüründen, oluşur.",
+   "not": "il J.K. ya da yardımcısı; Merkez kurulunun başkanı tuğgeneral",
    "karistirilan": [
     {
      "madde": "20",

@@ -27,23 +27,13 @@
    "madde": "2",
    "tip": "makam",
    "tetikleyici": "Bucak kurulması",
-   "cevap": "Cumhurbaşkanı onayı; il-ilçe sınırı, köyün başka ilçeye bağlanması da",
+   "cevap": "Cumhurbaşkanı onayı (sınır, köy bağlama da); ilçe-il bağlama kanunla",
    "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile;",
-   "not": "",
+   "not": "mühim mevki ve tabii arazi adları da CB onayı",
    "karistirilan": []
   },
   {
    "i": "K-5-004",
-   "madde": "2",
-   "tip": "makam",
-   "tetikleyici": "Cumhurbaşkanı onayı",
-   "cevap": "bucak, sınır, köy-kasaba bağlama; ilçeyi ile bağlama kanunla",
-   "kanit": "B) Bucak kurulması, kaldırılması, merkezinin belirtilmesi, il ilçe ve bucak sınırlarının ve bucak adlarının değiştirilmesi bir köyün veya kasabanın veya bucağın başka bir il ve ilçeye bağlanması, mühim mevki ve tabii arazi adlarının değiştirilmesi Cumhurbaşkanı onayı ile;",
-   "not": "mühim mevki ve tabii arazi adları da",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-005",
    "madde": "2",
    "tip": "makam",
    "tetikleyici": "Yeniden köy kurulması",
@@ -53,7 +43,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-006",
+   "i": "K-5-005",
    "madde": "2",
    "tip": "makam",
    "tetikleyici": "köy adlarının",
@@ -63,7 +53,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-007",
+   "i": "K-5-006",
    "madde": "2",
    "tip": "sira_usul",
    "tetikleyici": "merkez yapılan",
@@ -73,7 +63,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-008",
+   "i": "K-5-007",
    "madde": "4",
    "tip": "makam",
    "tetikleyici": "İl genel idaresinin başı",
@@ -83,7 +73,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-009",
+   "i": "K-5-008",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "başında bulunanlar",
@@ -93,17 +83,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-010",
+   "i": "K-5-009",
    "madde": "4",
    "tip": "istisna",
    "tetikleyici": "valinin emri",
-   "cevap": "bakanlık il teşkilatı; yargıç, savcı, askerî birlik hariç",
+   "cevap": "il teşkilatı (eğitim müdürü de); yargıç, savcı, askerî birlik hariç",
    "kanit": "Bu teşkilat valinin emri altındadır.5\nHakimler Kanunu ile İcra ve İflas Kanununda yazılı yargıç, Cumhuriyet savcısı ve yargıç sınıfında bulunanlarla bu kanunlarda yazılı adalet memurları, askeri birlikler, askeri fabrika ve müesseseler, askerlik daire ve şubeleri bu madde hükmünden müstesnadır.",
-   "not": "il millî eğitim müdürü emrinde",
+   "not": "bakanlıkların il teşkilatı vali emrinde",
    "karistirilan": []
   },
   {
-   "i": "K-5-011",
+   "i": "K-5-010",
    "madde": "4",
    "tip": "istisna",
    "tetikleyici": "müstesna",
@@ -113,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-012",
+   "i": "K-5-011",
    "madde": "4",
    "tip": "istisna",
    "tetikleyici": "yargıç, Cumhuriyet savcısı",
@@ -123,7 +113,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-013",
+   "i": "K-5-012",
    "madde": "4",
    "tip": "istisna",
    "tetikleyici": "Hakim",
@@ -133,7 +123,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-014",
+   "i": "K-5-013",
    "madde": "9",
    "tip": "tanim",
    "tetikleyici": "idari yürütme vasıtası",
@@ -148,7 +138,7 @@
    ]
   },
   {
-   "i": "K-5-015",
+   "i": "K-5-014",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "ilin genel idaresinden",
@@ -158,7 +148,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-016",
+   "i": "K-5-015",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "re'sen",
@@ -173,7 +163,7 @@
    ]
   },
   {
-   "i": "K-5-017",
+   "i": "K-5-016",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "mevzuatın verdiği yetkiyi",
@@ -183,7 +173,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-018",
+   "i": "K-5-017",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "imza yetkisi",
@@ -193,7 +183,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-019",
+   "i": "K-5-018",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "teftiş",
@@ -212,7 +202,7 @@
    ]
   },
   {
-   "i": "K-5-020",
+   "i": "K-5-019",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "ilin her yönden",
@@ -222,7 +212,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-021",
+   "i": "K-5-020",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "teşkilatı veya görevli memuru",
@@ -232,7 +222,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-022",
+   "i": "K-5-021",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "fen kollarına",
@@ -247,7 +237,7 @@
    ]
   },
   {
-   "i": "K-5-023",
+   "i": "K-5-022",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "Cumhuriyet Bayram",
@@ -266,7 +256,7 @@
    ]
   },
   {
-   "i": "K-5-024",
+   "i": "K-5-023",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "il sınırları içinde",
@@ -276,7 +266,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-025",
+   "i": "K-5-024",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "kıyı emniyeti",
@@ -291,7 +281,7 @@
    ]
   },
   {
-   "i": "K-5-026",
+   "i": "K-5-025",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "önleyici kolluk",
@@ -306,7 +296,7 @@
    ]
   },
   {
-   "i": "K-5-027",
+   "i": "K-5-026",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "on beş günü geçmemek",
@@ -316,7 +306,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-028",
+   "i": "K-5-027",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "olağan hayatı durduracak",
@@ -326,7 +316,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-029",
+   "i": "K-5-028",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "dolaşma",
@@ -336,7 +326,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-030",
+   "i": "K-5-029",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "il içine munhasır",
@@ -351,7 +341,7 @@
    ]
   },
   {
-   "i": "K-5-031",
+   "i": "K-5-030",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "önleyemedi",
@@ -361,7 +351,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-032",
+   "i": "K-5-031",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "acil",
@@ -371,7 +361,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-033",
+   "i": "K-5-032",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "kuvvetin çapı",
@@ -381,7 +371,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-034",
+   "i": "K-5-033",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "işbirliği ve koordinasyon",
@@ -391,7 +381,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-035",
+   "i": "K-5-034",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "komuta, sevk ve idare",
@@ -401,7 +391,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-036",
+   "i": "K-5-035",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "Birden fazla ili",
@@ -411,7 +401,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-037",
+   "i": "K-5-036",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "sınır ötesi",
@@ -421,17 +411,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-038",
+   "i": "K-5-037",
    "madde": "18",
    "tip": "makam",
    "tetikleyici": "sicil amir",
-   "cevap": "validen birinci: kaymakam, muavin, şube başkanı, kolluk amiri; diğerine ikinci",
+   "cevap": "validen birinci: kaymakam/muavin/şube başkanı/muhakemat/kolluk; vali diğerine ikinci; bucak YOK",
    "kanit": "Valiler, vali muavini ile kaymakamların, il idare şube başkanlarının ve il ve bölge muhakemat müdürlerinin, genel ve özel kolluk amirlerinin birinci derecede, diğer memurların ikinci derecede sicil amiridirler.",
-   "not": "muhakemat müdürü de birinci; bucak müdürü listede yok",
+   "not": "muhakemat müdürü, genel-özel kolluk amiri",
    "karistirilan": []
   },
   {
-   "i": "K-5-039",
+   "i": "K-5-038",
    "madde": "27",
    "tip": "makam",
    "tetikleyici": "İlçe genel idaresinin başı",
@@ -441,7 +431,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-040",
+   "i": "K-5-039",
    "madde": "27",
    "tip": "makam",
    "tetikleyici": "İlçenin genel idaresinden",
@@ -451,7 +441,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-041",
+   "i": "K-5-040",
    "madde": "27",
    "tip": "istisna",
    "tetikleyici": "kaymakamın emri",
@@ -461,11 +451,11 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-042",
+   "i": "K-5-041",
    "madde": "31",
    "tip": "ceza",
    "tetikleyici": "aldıktan sonra",
-   "cevap": "kaymakam: uyarma, kınama; bucak müdürü: yalnız uyarma",
+   "cevap": "kaymakam: uyarma, kınama; bucak müdürü: yalnız uyarma; ağırı teklif",
    "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.",
    "not": "KAYMAKAM UYARMA-KINAMA · BUCAK MÜDÜRÜ YALNIZ UYARMA",
    "karistirilan": [
@@ -476,22 +466,7 @@
    ]
   },
   {
-   "i": "K-5-043",
-   "madde": "31",
-   "tip": "ceza",
-   "tetikleyici": "disiplin ceza",
-   "cevap": "bucak müdürü yalnız uyarma; kaymakam uyarma-kınama; ağırı teklif",
-   "kanit": "Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular. Daha ağır disiplin cezaları verilmesi için özel kanunu hükümlerine göre teklif ve talepte bulunabilir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "42",
-     "fark": "bucak müdürü yalnız uyarma verir"
-    }
-   ]
-  },
-  {
-   "i": "K-5-044",
+   "i": "K-5-042",
    "madde": "31",
    "tip": "ceza",
    "tetikleyici": "ikinci derecedeki memur",
@@ -501,7 +476,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-045",
+   "i": "K-5-043",
    "madde": "31",
    "tip": "ceza",
    "tetikleyici": "re'sen verilen",
@@ -511,7 +486,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-046",
+   "i": "K-5-044",
    "madde": "31",
    "tip": "makam",
    "tetikleyici": "takdirname",
@@ -526,7 +501,7 @@
    ]
   },
   {
-   "i": "K-5-047",
+   "i": "K-5-045",
    "madde": "31",
    "tip": "sure",
    "tetikleyici": "acele hâllerde",
@@ -536,7 +511,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-048",
+   "i": "K-5-046",
    "madde": "31",
    "tip": "sure",
    "tetikleyici": "tayini kendisine ait",
@@ -546,7 +521,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-049",
+   "i": "K-5-047",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "askerlik muameleleri",
@@ -556,7 +531,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-050",
+   "i": "K-5-048",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "olağanüstü hallerde",
@@ -566,7 +541,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-051",
+   "i": "K-5-049",
    "madde": "31",
    "tip": "kosul",
    "tetikleyici": "işten el çektirebilir",
@@ -576,7 +551,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-052",
+   "i": "K-5-050",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "ilçe sınırları içinde",
@@ -586,7 +561,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-053",
+   "i": "K-5-051",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "kaymakam tarafından verilen",
@@ -596,17 +571,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-054",
-   "madde": "32",
-   "tip": "makam",
-   "tetikleyici": "kolluk kuvvetleri mensuplarının",
-   "cevap": "valinin tasvibiyle (kaymakam)",
-   "kanit": "D) Kaymakam, valinin tasvibiyle ilçe genel ve özel kolluk kuvvetleri mensuplarının geçici veya sürekli olarak yerlerini değiştirebilir;",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-055",
+   "i": "K-5-052",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "sürekli olarak",
@@ -621,7 +586,7 @@
    ]
   },
   {
-   "i": "K-5-056",
+   "i": "K-5-053",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "olağanüstü ve ani olaylar",
@@ -636,7 +601,7 @@
    ]
   },
   {
-   "i": "K-5-057",
+   "i": "K-5-054",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "kimlik ve nitelikleri",
@@ -646,27 +611,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-058",
+   "i": "K-5-055",
    "madde": "42",
    "tip": "tanim",
    "tetikleyici": "Bucak müdürü,",
    "cevap": "en büyük Hükümet memuru; yalnız uyarma; kolluk emre mecbur",
    "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir.",
-   "not": "bucağın genel idaresinden sorumlu",
+   "not": "bucağın genel idaresinden sorumlu; ilde vali, ilçede kaymakam",
    "karistirilan": []
   },
   {
-   "i": "K-5-059",
-   "madde": "42",
-   "tip": "tanim",
-   "tetikleyici": "en büyük Hükümet memuru",
-   "cevap": "bucak müdürü",
-   "kanit": "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir.",
-   "not": "ilde vali, ilçede kaymakam",
-   "karistirilan": []
-  },
-  {
-   "i": "K-5-060",
+   "i": "K-5-056",
    "madde": "42",
    "tip": "ceza",
    "tetikleyici": "uyarma cezası",
@@ -676,7 +631,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-061",
+   "i": "K-5-057",
    "madde": "42",
    "tip": "ceza",
    "tetikleyici": "Daha ağır disiplin",
@@ -691,7 +646,7 @@
    ]
   },
   {
-   "i": "K-5-062",
+   "i": "K-5-058",
    "madde": "43",
    "tip": "makam",
    "tetikleyici": "güven ve düzeninin",
@@ -701,7 +656,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-063",
+   "i": "K-5-059",
    "madde": "43",
    "tip": "makam",
    "tetikleyici": "kolluk kuvvetleri bucak",
@@ -711,7 +666,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-5-064",
+   "i": "K-5-060",
    "madde": "43",
    "tip": "makam",
    "tetikleyici": "Suç işlenmesini önle",
@@ -730,13 +685,13 @@
    ]
   },
   {
-   "i": "K-5-065",
+   "i": "K-5-061",
    "madde": "57",
    "tip": "makam",
    "tetikleyici": "il idare kurul",
-   "cevap": "vali; hukuk, defterdar, eğitim, bayındırlık, sağlık, tarım, veteriner; malmüdürü ilçede",
+   "cevap": "vali; hukuk, defterdar, eğitim, bayındırlık, sağlık, tarım, veteriner; jandarma-emniyet-malmüdürü YOK",
    "kanit": "İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül\neder. Vali, idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir.",
-   "not": "jandarma ve emniyet kurulda yok",
+   "not": "malmüdürü ilçe kurulunda; vali, vali muavinini başkan yapabilir",
    "karistirilan": [
     {
      "madde": "58",
@@ -745,7 +700,7 @@
    ]
   },
   {
-   "i": "K-5-066",
+   "i": "K-5-062",
    "madde": "57",
    "tip": "makam",
    "tetikleyici": "vali muavini",
@@ -760,13 +715,13 @@
    ]
   },
   {
-   "i": "K-5-067",
+   "i": "K-5-063",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "ilçe idare kurul",
-   "cevap": "kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar ilde",
+   "cevap": "kaymakam; tahrirat, malmüdürü, hekim, eğitim, tarım, veteriner; defterdar-emniyet YOK",
    "kanit": "İlçe idare kurulu, kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi, milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder.",
-   "not": "emniyet müdürü kurulda yok",
+   "not": "defterdar il kurulunda",
    "karistirilan": [
     {
      "madde": "57",

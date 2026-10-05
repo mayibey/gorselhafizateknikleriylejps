@@ -6,8 +6,7 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.3 — tanımlar
- ('3','tanim','nasıp onayı','ön sözleşme (askerî eğitim başı → nasıp)','a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme','kapsayan sözleşmeyi,',[],'eğitim bitince asıl sözleşme'),
- ('3','tanim','Ön sözleşme:','askerî eğitime alınma; eğitim başından nasıp onayına','a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme','kapsayan sözleşmeyi,',[],''),
+ ('3','tanim','Ön sözleşme:','askerî eğitim başından nasıp onayına; sonra asıl sözleşme','a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme','kapsayan sözleşmeyi,',[],''),
  ('3','sure','hizmet yükümlülüğü','en az üç, en çok dokuz yıl','b) Sözleşme : Türk','yazılı bir belgeyi,',[('12','tabip subaylar devlet hizmet yükümlülüğüne tabi değil')],'eğitimi başaranla yapılan yazılı belge'),
  ('3','tanim','astsubay aday','ön sözleşmeyle askerî eğitime alınan','d) Sözleşmeli astsubay adayı','askerî eğitime alınanları,',[('10','astsubay adayı eğitimi bitirince astsubay çavuş'),('13','aday ön sözleşmesinin fesih sebepleri')],'subay adayı da aynı'),
  ('3','tanim','rütbe','subay: teğmen-üsteğmen-yüzbaşı; astsubay: çavuş→kıdemli üstçavuş; binbaşı yok','e) Sözleşmeli subay : Bu Kanunda','kıdemli üstçavuş rütbelerini haiz astsubayları,',[('6','subay adayı teğmen rütbesine nasbedilir'),('10','astsubay adayı astsubay çavuş rütbesine nasbedilir'),('12','rütbe bekleme süreleri 926’ya göre'),('15','rütbe verilmeksizin derece yükselmesi'),('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],'binbaşı ve başçavuş yok'),
@@ -18,7 +17,6 @@ K = [
 
  # m.4 — sözleşmeli subay kaynağı ve nitelikleri
  ('4','sure','Sözleşmeli subay kayna','dört yıllık fakülte; yirmiyedi yaş (lisansüstü otuziki)','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[],'düzeltilmemiş nüfus kaydı, ocak ayının ilk günü'),
- ('4','sure','lisansüstü','otuziki yaş; lisans mezunu yirmiyedi','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[('7','öğretim üyesi kadrolarında fiilî hizmet şartı aranmaz')],''),
  ('4','sure','ocak ayının ilk günü','subay yirmiyedi (lisansüstü otuziki); astsubay yirmiyedi (önlisans yirmidört)','Sözleşmeli subay kaynaklarını','bitirmemiş olanlar teşkil eder.',[('8','astsubay: dört yıl+ yirmiyedi, daha az yirmidört')],'yaşını BİTİRMEMİŞ olmak'),
  ('4','yasak','Askeri okul','alınmaz; askerlik yapan-terhis eden olabilir','Askeri okullardan ve Türk Silahlı Kuvvetlerinden her ne','sözleşmeli subay olabilirler.',[('8','astsubayda istisna: kısa dönem ya da 1111’e tabi erbaş-er')],'her ne sebeple olursa olsun ilişiği kesilen'),
  ('4','kosul','Sözleşmeli subaylık için','vatandaşlık, öğrenim, sağlık, kamusal hak, güvenlik soruşturması, sınav','Sözleşmeli subaylık için genel olarak','g) Yapılacak olan sınavlarda başarılı olmak.',[],'sayılan suçlardan mahkûmiyet olmaması da'),
@@ -29,16 +27,13 @@ K = [
  # m.6 — subay sözleşme süreleri
  ('6','kosul','askerî eğitime alınır','ön sözleşme yapılarak; başarırsa sözleşme','Madde 6 – Sözleşmeli subay adayları','teğmen rütbesine nasbedilirler.',[('10','astsubay adayı da ön sözleşmeyle eğitime alınır')],''),
  ('6','kosul','nasbedilirler','subay teğmen; astsubay astsubay çavuş','Madde 6 – Sözleşmeli subay adayları','teğmen rütbesine nasbedilirler.',[('10','astsubay adayı astsubay çavuş rütbesine nasbedilir')],''),
- ('6','sure','yetiştirme maliyetlerine','üç-dokuz yıl; kuvvet, sınıf, branşa göre','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10','astsubayda da üç-dokuz yıl')],''),
- ('6','sure','Sözleşme süreleri','en az üç, en çok dokuz yıl; yönetmelikle','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10','astsubayda da üç-dokuz yıl'),('12','sözleşme süreleri yurt dışı öğrenimde uzar'),('8','m.8 metnindeki dipnotta bu ibare geçer')],''),
+ ('6','sure','Sözleşme süreleri','üç-dokuz yıl; maliyete, kuvvet-sınıf-branşa göre yönetmelikle','Sözleşme süreleri üç yıldan az','yönetmelikte belirlenir.',[('10', 'astsubayda da üç-dokuz yıl'), ('12', 'sözleşme süreleri yurt dışı öğrenimde uzar'), ('8', 'm.8 metnindeki dipnotta bu ibare geçer')],''),
  ('6','kosul','talebe bakılmaksızın','savaş, seferberlik, alıkonma; komutan lüzumu, MSB/İçişleri onayıyla uzatılır','Sözleşme süreleri; terörle mücadele','talebe bakılmaksızın uzatılabilir.',[('10','astsubayda aynı kural')],'Kuvvet K., JGK, SGK komutanı lüzum gösterir'),
- ('6','kosul','savaş','komutan lüzumu, MSB/İçişleri onayı; talebe bakılmaksızın uzatma','Sözleşme süreleri; terörle mücadele','talebe bakılmaksızın uzatılabilir.',[('10','astsubayda aynı kural'),('13','barışta ve savaşta görev kazası sıhhi izne sayılmaz')],''),
  ('6','kosul','rütbe yaş haddini','5434 sayılı Emekli Sandığı Kanunu','Ancak sözleşmeli subaylardan rütbe yaş','5434 sayılı Kanun hükümleri uygulanır.',[('10','astsubayda da 5434')],''),
  ('6','kosul','yenilen','talepleri hâlinde yenilenebilir; yaş haddinde 5434','Yönetmelikte belirlenen şartları taşıyanların','Kanun hükümleri uygulanır.',[('10','astsubayda da talep hâlinde yenilenir'),('16','yenilenmeyenlerin sağlık hakkı'),('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],''),
 
  # m.7 — muvazzaf subaylığa geçiş
- ('7','sure','muvazzaf subaylığa geç','yedinci fiilî hizmet yılı → onikinci (yedi-oniki); astsubay dört','Muvazzaf subaylığa geçiş için','bitimine kadar başvuru yapılabilir.',[('6','m.6 metninin başında bölüm başlığı yer alır'),('12','muvazzafa geçende fazla okunan süre rütbe beklemeden düşülür')],'SUBAY 7-12 · ASTSUBAY 4-12'),
- ('7','sure','fiilî hizmet yıl','subay yedinci, astsubay dördüncü yıldan; ikisi onikinciye kadar','Muvazzaf subaylığa geçiş için','bitimine kadar başvuru yapılabilir.',[('11','astsubay dördüncü yıldan onikinciye'),('15','derece için subay onbeşinci, astsubay onsekizinci yıl')],''),
+ ('7','sure','fiilî hizmet yıl','subay yedinci, astsubay dördüncü yıldan; ikisi onikinciye kadar','Muvazzaf subaylığa geçiş için','bitimine kadar başvuru yapılabilir.',[('11', 'astsubay dördüncü yıldan onikinciye'), ('15', 'derece için subay onbeşinci, astsubay onsekizinci yıl')],'SUBAY 7-12 · ASTSUBAY 4-12'),
  ('7','sure','istifa','nasbedildikleri tarihten onbeş yıl (subay ve astsubay)','Bu şekilde muvazzaf subaylığa geçirilenler','istifa edemezler.',[('11','muvazzaf astsubaylıkta da onbeş yıl'),('13','orada istifade sözcüğü geçer, istifa kuralı yok'),('15','orada istifade sözcüğü geçer, istifa kuralı yok'),('16','orada istifade sözcüğü geçer, istifa kuralı yok')],''),
  ('7','istisna','öğretim üyesi','fiilî hizmet yılı şartı aranmaz','Türk Silahlı Kuvvetleri bünyesinde bulunan','şartı aranmaz.',[],'atamalı olarak görev yapanlar'),
  ('7','istisna','geçirileceklerde','926’nın yaş hükümleri uygulanmaz','Muvazzaf subaylığa geçirileceklerde','hükümler uygulanmaz.',[('11','astsubayda 926 m.68 yaş hükmü uygulanmaz')],''),
@@ -54,7 +49,6 @@ K = [
 
  # m.12 — rütbe bekleme, yenileme, uzama
  ('12','sure','yenileyeceklerine dair','en az üç ay önce yazılı; yoksa kendiliğinden sona erer','Her sözleşme süresinin sona erme','kendiliğinden sona erer.',[],''),
- ('12','sure','kendiliğinden sona erer','üç ay önce yazılı yenileme bildirimi yoksa','Her sözleşme süresinin sona erme','kendiliğinden sona erer.',[],''),
  ('12','yasak','tek taraflı','süre bitmeden feshedemez','Sözleşmeli subay veya astsubaylar, sözleşme süreleri','fesh edemezler.',[],''),
  ('12','yasak','sona ermeden','tek taraflı feshedemezler','Sözleşmeli subay veya astsubaylar, sözleşme süreleri','fesh edemezler.',[],''),
  ('12','sure','rütbe bekleme süreleri','926 sayılı Kanunda muvazzaflar için olan süreler (27.7.1967)','Madde 12 – Sözleşmeli subay ve astsubayların rütbe','belirlenen süreler uygulanır.',[('11','m.11 metninin sonunda sonraki bölüm başlığı yer alır')],''),

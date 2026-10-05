@@ -277,7 +277,7 @@
    "madde": "6",
    "tip": "tanim",
    "tetikleyici": "mülkî amir tarafından",
-   "cevap": "barınma, geçici maddi yardım, rehberlik, geçici koruma, kreş; delil aranmaz",
+   "cevap": "barınma/maddi yardım/rehberlik/geçici koruma/kreş; delil aranmaz; konut şerhi YOK",
    "kanit": "(1) Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer\ntedbirlere delil veya belge aranmaksızın mülkî amir tarafından ilgilinin talebi, Bakanlık veya kolluk görevlilerinin başvurusu üzerine ya da resen karar\nverilebilir:\n a) Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması,\n b) Diğer kanunlar kapsamında yapılacak yardımlar saklı kalmak üzere, geçici maddi yardım yapılması,\n c) Psikolojik, meslekî, hukukî ve sosyal bakımdan rehberlik ve danışmanlık hizmeti verilmesi,\n ç) Hayatî tehlikesinin bulunması hâlinde, ilgilinin talebi üzerine veya resen geçici koruma altına alınması,\n d) Gerekli olması hâlinde, korunan kişinin çocukları varsa çalışma yaşamına katılımını desteklemek üzere dört ay, kişinin çalışması hâlinde ise iki\naylık süre ile sınırlı olmak kaydıyla, on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının yarısını geçmemek ve belgelendirilmek\nşartıyla Bakanlık bütçesinin ilgili tertibinden karşılanmak suretiyle kreş imkânının sağlanması.",
    "not": "iş yeri değişikliği, aile konutu şerhi HÂKİM tedbiri",
    "karistirilan": [
@@ -535,9 +535,9 @@
    "madde": "12",
    "tip": "tanim",
    "tetikleyici": "koruyucu tedbirlerden",
-   "cevap": "iş yeri, ayrı yerleşim yeri, aile konutu şerhi, kimlik değişikliği",
+   "cevap": "işyeri, ayrı yerleşim, konut şerhi, kimlik değişikliği; silah teslimi ÖNLEYİCİ",
    "kanit": "(1) Kanun kapsamında korunan kişilerle ilgili olarak hâkim tarafından, ilgilinin talebi, Bakanlık veya kolluk görevlilerinin ya da\nCumhuriyet savcısının başvurusu üzerine veya resen, şiddetin uygulandığı hususunda delil veya belge aranmaksızın aşağıdaki koruyucu tedbirlerden\nbirine, birkaçına veya olayın özelliğine göre mülki amir tarafından alınabilecek tedbirler de dâhil olmak üzere, uygun görülecek benzer tedbirlere karar\nverilebilir:\n a) İş yerinin değiştirilmesi.\n b) Kişinin evli olması hâlinde müşterek yerleşim yerinden ayrı yerleşim yeri belirlenmesi.\n c) 22/11/2001 tarihli ve 4721 sayılı Türk Medenî Kanunundaki şartların varlığı hâlinde ve korunan kişinin talebi üzerine tapu kütüğüne aile konutu\nşerhi konulması.\n ç) Korunan kişi bakımından hayatî tehlikenin bulunması ve bu tehlikenin önlenmesi için diğer tedbirlerin yeterli olmayacağının anlaşılması hâlinde\nve ilgilinin aydınlatılmış rızasına dayalı olarak 27/12/2007 tarihli ve 5726 sayılı Tanık Koruma Kanununa göre kimlik ve ilgili diğer bilgi ve belgelerinin\ndeğiştirilmesi.",
-   "not": "silah teslimi, uzaklaştırma ÖNLEYİCİ; hâkim mülki amir tedbirlerini de verebilir; delil aranmaz",
+   "not": "uzaklaştırma da ÖNLEYİCİ; hâkim mülki amir tedbirlerini de verebilir; delil aranmaz",
    "karistirilan": [
     {
      "madde": "5",
@@ -634,9 +634,9 @@
    "madde": "17",
    "tip": "tanim",
    "tetikleyici": "Müşterek konuttan",
-   "cevap": "derhal uzaklaştırma, konut korunan kişiye",
+   "cevap": "derhal uzaklaştırma: önleyici, hâkim; gecikmede kolluk amiri",
    "kanit": "b) Müşterek konuttan veya bulunduğu yerden derhâl uzaklaştırılması ve müşterek konutun korunan kişiye tahsis edilmesi.",
-   "not": "önleyici; gecikmede kolluk amiri de alır",
+   "not": "konut korunan kişiye tahsis edilir",
    "karistirilan": [
     {
      "madde": "19",
@@ -1346,9 +1346,9 @@
    "madde": "46",
    "tip": "makam",
    "tetikleyici": "müdahil",
-   "cevap": "Bakanlık; idari, cezai, hukuki dava, çekişmesiz yargı",
+   "cevap": "Bakanlık; idari, cezai, hukuki dava, çekişmesiz yargı; icra YOK",
    "kanit": "(1) Bakanlık, gerekli görmesi hâlinde kadın, çocuk ve aile bireylerine yönelik olarak uygulanan şiddet veya şiddet tehlikesi\ndolayısıyla açılan ve herhangi bir şekilde haberdar olduğu idarî, cezaî, hukukî her tür davaya ve çekişmesiz yargıya müdahil olarak katılabilir.",
-   "not": "icra takibi YOK",
+   "not": "",
    "karistirilan": [
     {
      "madde": "9",

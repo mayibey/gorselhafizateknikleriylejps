@@ -6,24 +6,14 @@
    "i": "K-3-001",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Açık rıza:",
-   "cevap": "bilgilendirilmeye dayanan; belirli konu, özgür irade",
+   "tetikleyici": "özgür iradeyle açıklanan",
+   "cevap": "açık rıza: belirli konu, bilgilendirilmeye dayanan",
    "kanit": "a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı,",
-   "not": "üç unsur birlikte",
+   "not": "üç unsur birlikte; zımni, geçmiş, güncel rıza diye tanım yok",
    "karistirilan": []
   },
   {
    "i": "K-3-002",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "özgür iradeyle açıklanan",
-   "cevap": "açık rıza",
-   "kanit": "a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı,",
-   "not": "zımni, geçmiş, güncel rıza diye tanım yok",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-003",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Anonim hâle getirme:",
@@ -33,7 +23,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-004",
+   "i": "K-3-003",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "başka verilerle eşleştiril",
@@ -43,7 +33,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-005",
+   "i": "K-3-004",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "İlgili kişi:",
@@ -53,7 +43,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-006",
+   "i": "K-3-005",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Kişisel veri:",
@@ -63,7 +53,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-007",
+   "i": "K-3-006",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Kişisel verilerin işlenmesi:",
@@ -73,7 +63,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-008",
+   "i": "K-3-007",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Kurul:",
@@ -83,7 +73,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-009",
+   "i": "K-3-008",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Kurum:",
@@ -93,23 +83,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-010",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "Veri işleyen:",
-   "cevap": "onun adına, verdiği yetkiyle işler",
-   "kanit": "ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,",
-   "not": "veri sorumlusunun yetkisiyle; gerçek veya tüzel kişi",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-011",
+   "i": "K-3-009",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "verdiği yetki",
-   "cevap": "veri işleyen",
+   "cevap": "veri işleyen (sorumlu adına işler)",
    "kanit": "ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,",
-   "not": "bordroyu talimatla işleyen muhasebe firması = veri işleyen",
+   "not": "gerçek veya tüzel kişi; bordroyu talimatla işleyen muhasebe firması = veri işleyen",
    "karistirilan": [
     {
      "madde": "28",
@@ -118,27 +98,17 @@
    ]
   },
   {
-   "i": "K-3-012",
+   "i": "K-3-010",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Veri sorumlusu:",
-   "cevap": "amaç-vasıta belirler; sistemi kurar-yönetir",
+   "tetikleyici": "amaçlarını ve vasıtalarını",
+   "cevap": "veri sorumlusu; kayıt sistemini kurar-yönetir",
    "kanit": "ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi,",
    "not": "veri işleyen ise onun verdiği yetkiyle, onun adına işler",
    "karistirilan": []
   },
   {
-   "i": "K-3-013",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "amaçlarını ve vasıtalarını",
-   "cevap": "veri sorumlusu",
-   "kanit": "ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi,",
-   "not": "kayıt sistemini kurar ve yönetir",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-014",
+   "i": "K-3-011",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Veri kayıt sistemi:",
@@ -148,7 +118,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-015",
+   "i": "K-3-012",
    "madde": "4",
    "tip": "kosul",
    "tetikleyici": "ilkeler",
@@ -167,7 +137,7 @@
    ]
   },
   {
-   "i": "K-3-016",
+   "i": "K-3-013",
    "madde": "4",
    "tip": "sayi_oran",
    "tetikleyici": "uyulması zorunlu",
@@ -177,7 +147,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-017",
+   "i": "K-3-014",
    "madde": "4",
    "tip": "kosul",
    "tetikleyici": "uygun olarak işlenebilir",
@@ -187,7 +157,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-018",
+   "i": "K-3-015",
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "açık rıza",
@@ -206,7 +176,7 @@
    ]
   },
   {
-   "i": "K-3-019",
+   "i": "K-3-016",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "olmaksızın işlenemez",
@@ -216,7 +186,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-020",
+   "i": "K-3-017",
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "rızasını açıklaya",
@@ -231,7 +201,7 @@
    ]
   },
   {
-   "i": "K-3-021",
+   "i": "K-3-018",
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "kurulması veya ifası",
@@ -241,7 +211,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-022",
+   "i": "K-3-019",
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "meşru menfaat",
@@ -251,7 +221,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-023",
+   "i": "K-3-020",
    "madde": "6",
    "tip": "tanim",
    "tetikleyici": "özel nitelikli kişisel veri",
@@ -266,7 +236,7 @@
    ]
   },
   {
-   "i": "K-3-024",
+   "i": "K-3-021",
    "madde": "6",
    "tip": "yasak",
    "tetikleyici": "özel nitelikli kişisel verilerin",
@@ -281,7 +251,7 @@
    ]
   },
   {
-   "i": "K-3-025",
+   "i": "K-3-022",
    "madde": "6",
    "tip": "istisna",
    "tetikleyici": "koruyucu hekimlik",
@@ -291,7 +261,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-026",
+   "i": "K-3-023",
    "madde": "6",
    "tip": "istisna",
    "tetikleyici": "kâr amacı gütmeyen",
@@ -301,27 +271,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-027",
+   "i": "K-3-024",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "gerektiren",
-   "cevap": "silinir, yok edilir, anonimleştirilir; resen de",
+   "cevap": "silinir, yok edilir, anonimleştirilir; resen ya da talep üzerine",
    "kanit": "(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.",
-   "not": "veri sorumlusu yapar; resen veya ilgili kişinin talebiyle",
+   "not": "hukuka uygun işlenmiş olsa bile; veri sorumlusu yapar",
    "karistirilan": []
   },
   {
-   "i": "K-3-028",
-   "madde": "7",
-   "tip": "kosul",
-   "tetikleyici": "silinir, yok edilir",
-   "cevap": "işlenmesini gerektiren sebepler ortadan kalkınca",
-   "kanit": "(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.",
-   "not": "hukuka uygun işlenmiş olsa bile",
-   "karistirilan": []
-  },
-  {
-   "i": "K-3-029",
+   "i": "K-3-025",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "diğer kanunlarda yer alan",
@@ -331,7 +291,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-030",
+   "i": "K-3-026",
    "madde": "7",
    "tip": "makam",
    "tetikleyici": "usul ve esaslar",
@@ -346,13 +306,13 @@
    ]
   },
   {
-   "i": "K-3-031",
+   "i": "K-3-027",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "hükümleri",
-   "cevap": "hiç uygulanmaz: aile, istatistik, sanat-bilim, istihbari, yargı; suç-önlenmesi kısmi",
+   "cevap": "hiç uygulanmaz: aile/istatistik/sanat-bilim/istihbari/yargı; aleni veri-suç önleme kısmi",
    "kanit": "(1) Bu Kanun hükümleri aşağıdaki hâllerde uygulanmaz:",
-   "not": "tam istisna beş hâl; suç önleme, aleni veri, denetim-disiplin, bütçe-vergi kısmi istisna",
+   "not": "tam istisna beş hâl; kısmi istisnalar ayrı satırda (aydınlatma yükümlülüğü)",
    "karistirilan": [
     {
      "madde": "7",
@@ -361,7 +321,7 @@
    ]
   },
   {
-   "i": "K-3-032",
+   "i": "K-3-028",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "önleyici, koruyucu",
@@ -371,7 +331,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-033",
+   "i": "K-3-029",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "veri güvenliği",
@@ -381,7 +341,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-034",
+   "i": "K-3-030",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "ifade özgürlüğü",
@@ -391,7 +351,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-035",
+   "i": "K-3-031",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "suç işlenmesinin önlenmesi",
@@ -401,7 +361,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-3-036",
+   "i": "K-3-032",
    "madde": "28",
    "tip": "istisna",
    "tetikleyici": "aydınlatma yükümlülüğü",

@@ -205,16 +205,6 @@
   {
    "i": "K-24-021",
    "madde": "20",
-   "tip": "kosul",
-   "tetikleyici": "malî imkân",
-   "cevap": "uygun meskende, meslekî şerefe uygun yaşar",
-   "kanit": "ç) Mevzuat ve malî imkânlarına göre uygun bir meskende ve meslekî şerefe uygun bir şekilde yaşamak zorundadır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-24-022",
-   "madde": "20",
    "tip": "yasak",
    "tetikleyici": "üniforma",
    "cevap": "zorunlu olmadıkça giyemez",
@@ -223,7 +213,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-24-023",
+   "i": "K-24-022",
    "madde": "20",
    "tip": "yasak",
    "tetikleyici": "seyahat",
@@ -233,7 +223,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-24-024",
+   "i": "K-24-023",
    "madde": "20",
    "tip": "makam",
    "tetikleyici": "uyarıcı bilgi",
@@ -243,23 +233,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-24-025",
+   "i": "K-24-024",
    "madde": "20",
    "tip": "makam",
    "tetikleyici": "istihbarata karşı koyma",
-   "cevap": "esasları Jandarma Genel Komutanlığı belirler; uymak zorunlu",
+   "cevap": "koruyucu güvenlik de; esasları Jandarma Genel Komutanlığı belirler, uymak zorunlu",
    "kanit": "(3) İzinli olarak yurt dışında bulunan personel, Jandarma Genel Komutanlığınca belirlenen istihbarata karşı koyma ve koruyucu güvenlik esaslarına uyar.",
-   "not": "bilgiyi birlik verir, esası JGK belirler",
-   "karistirilan": []
-  },
-  {
-   "i": "K-24-026",
-   "madde": "20",
-   "tip": "kosul",
-   "tetikleyici": "Komutanlığınca belirlenen",
-   "cevap": "istihbarata karşı koyma, koruyucu güvenlik esasları",
-   "kanit": "(3) İzinli olarak yurt dışında bulunan personel, Jandarma Genel Komutanlığınca belirlenen istihbarata karşı koyma ve koruyucu güvenlik esaslarına uyar.",
-   "not": "",
+   "not": "uyarıcı bilgiyi birlik verir, esası JGK belirler",
    "karistirilan": []
   }
  ]

@@ -12,7 +12,6 @@ K = [
  ('2','istisna','mahalli idare','köyler hariç; bağlı-ilgili kuruluş, birlik ve şirketleri dahil','Madde 2 - Bu Yönetmelik;','faaliyetlerinde uygulanır.',[],'özel bankalar, özel hukuk tüzel kişileri kapsamda değil'),
  ('2','kosul','merkezi idare','bağlı, ilgili veya ilişkili kuruluşlarıyla','Madde 2 - Bu Yönetmelik; merkezi idare','ilişkili kuruluşlarının,',[],''),
  ('2','kosul','Merkez Bankası','üniversitelerle dahil; aradaki İMKB 864 ile çıkarıldı','Madde 2 - Bu Yönetmelik;','madde metninden çıkarılmıştır.',[],'kamu tüzel kişiliğini haiz kuruluşlar arasında'),
- ('2','kosul','üniversiteler','Merkez Bankası ile dahil','T.C. Merkez Bankası ve üniversiteler','faaliyetlerinde uygulanır.',[],''),
  ('2','tanim','İMKB','864 sayılı Cumhurbaşkanı Kararıyla çıkarıldı','[Dipnot (1)','madde metninden çıkarılmıştır.',[],''),
  ('2','kosul','kamu tüzel kişiliği','enstitü, teşebbüs, teşekkül, fon ve sair ad; vakıf yok','kamu tüzel kişiliğini haiz','bütün kamu kurum ve kuruluşlarının',[],''),
  ('2','kosul','meslek kuruluş','faaliyetlerinde uygulanır; dahil','ve kamu kurumu niteliğindeki meslek','faaliyetlerinde uygulanır.',[],'kamu kurumu niteliğindeki meslek kuruluşları'),
@@ -22,7 +21,6 @@ K = [
 
  # m.4 — tanımlar
  ('4','tanim','her türlü veri','bilgi; belge ise veri taşıyıcısı','c) Bilgi:','her türlü veriyi,',[],'kurum kayıtlarındaki veri'),
- ('4','tanim','veri taşıyıcı','belge; bilgi ise kayıttaki veri','d) Belge:','veri taşıyıcılarını,',[],''),
  ('4','tanim','Belge:','yazılı-basılı evrak, film, fotoğraf, harita, elektronik kayıt; sözlü açıklama değil','d) Belge:','veri taşıyıcılarını,',[],'dosya, kitap, kroki, plan, teyp ve video kaseti de'),
  ('4','sira_usul','erişim','önce kopya; mümkün değilse aslını inceleme, not, görme-işitme','e) Bilgi veya belgeye erişim:','işitmesine izin verilmesini,',[],'kopya mümkünken yalnız inceletmek yanlış'),
  ('4','tanim','Başvuru sahibi:','başvuran gerçek ve tüzel kişiler','b) Başvuru sahibi:','gerçek ve tüzel kişileri,',[],''),

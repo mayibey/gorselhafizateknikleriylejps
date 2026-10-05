@@ -37,8 +37,7 @@ K = [
  ('4','kosul','kuruluşlarınca resmî yazışmalar','elektronik ortamda, güvenli e-imzayla','MADDE 4- (1) Kamu kurum ve kuruluşlarınca','elektronik ortamda saklanır.',[],'e-Yazışma Teknik Rehberine uygun'),
  ('4','kosul','muhatapları ile paylaşılır','elektronik ortamda saklanır','Bu belgeler, elektronik ortamda','elektronik ortamda saklanır.',[],''),
  ('4','yasak','çıktısı alınarak','el yazısıyla imzalanmaz, fiziksel saklanmaz','Ayrıca güvenli elektronik imza ile imzalanan belgeler, çıktısı','fiziksel ortamda saklanmaz.',[],''),
- ('4','istisna','olağanüstü durumlarda resmî yazışmalar','el yazısıyla imzalı belge; fiziksel ortam','(2) Zorunlu hâllerde','fiziksel ortam şartlarına göre gerçekleştirilir.',[],''),
- ('4','istisna','el yazısıyla imzalanan belgelerle','zorunlu hâl veya olağanüstü durum','(2) Zorunlu hâllerde','fiziksel ortam şartlarına göre gerçekleştirilir.',[],''),
+ ('4','istisna','el yazısıyla imzalanan belgelerle','zorunlu hâl veya olağanüstü durumda; fiziksel ortam','(2) Zorunlu hâllerde','fiziksel ortam şartlarına göre gerçekleştirilir.',[],''),
  ('5','sayi_oran','nüsha olarak hazırlanır','tek nüsha (e-imzalı belge)','(1) Elektronik ortamda güvenli','tek nüsha olarak hazırlanır.',[],''),
  ('5','sayi_oran','olağanüstü durumlarda hazırlanacak belgeler','en az iki nüsha; paraflı nüsha idarede','(2) Zorunlu hâllerde','iki nüsha olarak düzenlenir.',[('6','aynı ifade + üst yazı ise kâğıdın bir yüzü')],'E-İMZA TEK, KÂĞIT EN AZ İKİ'),
 
@@ -103,15 +102,13 @@ K = [
  ('15','sira_usul','muhatap bölümünün son satırından','iki satır boşluk, yazı alanının solundan','(2) “İlgi:” yan başlığı','solundan başlanarak yazılır (Örnek 7).',[],''),
 
  # m.16 — metin
- ('16','tanim','Metin alanı','Muhatap/İlgi ile İmza arası','MADDE 16- (1) Metin alanı','arasındaki kısımdır.',[],''),
- ('16','tanim','arasındaki kısım','İlgi ile İmza arası (metin alanı)','MADDE 16- (1) Metin alanı','arasındaki kısımdır.',[],''),
+ ('16','tanim','arasındaki kısım','metin alanı (Muhatap/İlgi ile İmza arası)','MADDE 16- (1) Metin alanı','arasındaki kısımdır.',[],''),
  ('16','sayi_oran','metin başlangıcı','İlgi varsa bir satır, yoksa iki satır','(2) “İlgi” ile metin','iki satır boşluk bulunur (Örnek 8).',[],''),
  ('16','sayi_oran','içeriden başlanır','1,25 cm; paragraflar arası boşluksuz','(4) Paragrafa 1,25 cm','satır boşluğu bırakılmaz (Örnek 8).',[],'metin iki yana hizalı'),
  ('16','sayi_oran','kesir','virgülle ayrılır (10.545,72)','Sayılarda kesirler','(Örnek: 10.545,72).',[],''),
  ('16','sayi_oran','çok haneli sayılar','sondan üçlü gruplar, araya nokta','(7) Dört ve dörtten çok haneli','(Örnek: 1.452; 25.126; 326.197).',[],''),
  ('16','sira_usul','kısaltma kullanılacak','önce açık biçim, sonra parantezde kısaltma','(11) Metin içinde kısaltma','(KEP)).',[],''),
  ('16','sira_usul','üst ve aynı düzeydeki','… arz ederim','a) Yazışma yapan makamlar','ibaresiyle bitirilir.',[],'asta “… rica ederim.”'),
- ('16','sira_usul','alt makamlara','… rica ederim','a) Yazışma yapan makamlar','ibaresiyle bitirilir.',[],'üste ve eşite “… arz ederim.”'),
  ('16','sira_usul','hiyerarşi','üste-eşite arz, asta rica ederim','a) Yazışma yapan makamlar','ibaresiyle bitirilir.',[('9','logo: hiyerarşide üst idare solda'),('22','paraf hiyerarşisinden sonra Koordinasyon seçilir')],''),
  ('16','sira_usul','dağıtımlı olarak','… arz ve rica ederim (arz/rica)','b) Üst, aynı düzey','ibaresiyle bitirilir.',[],''),
  ('16','istisna','İdari İşler Başkanı tarafından','“Rica ederim.” (bakanlıklarla yazışma)','ç) 1 sayılı','“Rica ederim.” ibaresiyle bitirilir.',[],'bakanlıklarla yazışmada'),

@@ -485,9 +485,9 @@
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "çarşı ve mahalle bekçileri",
-   "cevap": "Emniyetteki emsal bekçilerin mali ve sosyal hakları",
+   "cevap": "Emniyetteki emsal bekçinin mali-sosyal hakları; nasıp-terfi hükmü uygulanmaz",
    "kanit": "Jandarma Hizmetleri Sınıfında yer alan çarşı ve mahalle bekçileri hakkında, Emniyet Hizmetleri Sınıfında yer alan emsali çarşı ve mahalle bekçilerinin mali ve sosyal hakları aynı usul ve esaslar çerçevesinde uygulanır. Bunlar hakkında birinci fıkranın ikinci cümlesi uygulanmaz.",
-   "not": "926 vb. nasıp-terfi hükümleri bekçilere uygulanmaz",
+   "not": "926 vb. kanunların nasıp-terfi hükümleri bekçilere uygulanmaz",
    "karistirilan": []
   },
   {
@@ -1276,16 +1276,6 @@
   {
    "i": "K-2-118",
    "madde": "Ek 5",
-   "tip": "kosul",
-   "tetikleyici": "önleyici ve koruyucu tedbirleri",
-   "cevap": "casusluk hariç CMK 250 suçları; yalnız kendi alanında",
-   "kanit": "Jandarma, bu Kanunun 7 nci maddesinin (a) bendine ilişkin görevleri yerine getirirken önleyici ve koruyucu tedbirleri almak üzere, sadece kendi sorumluluk alanında 4.12.2004 tarihli ve 5271 sayılı Ceza Muhakemesi Kanununun, casusluk suçları hariç, 250 nci maddesinin birinci fıkrasının (a), (b) ve (c) bentlerinde yazılı suçların işlenmesinin önlenmesi amacıyla, hâkim kararı veya gecikmesinde sakınca bulunan hallerde Jandarma Genel Komutanı veya istihbarat başkanının yazılı emriyle, telekomünikasyon yoluyla yapılan iletişimi tespit edebilir, dinleyebilir, sinyal bilgilerini değerlendirebilir, kayda alabilir.",
-   "not": "casusluk suçlarında uygulanamaz",
-   "karistirilan": []
-  },
-  {
-   "i": "K-2-119",
-   "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "verilen yazılı emir",
    "cevap": "yirmidört saat içinde hâkime; karar kırk sekiz saatte",
@@ -1294,7 +1284,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-120",
+   "i": "K-2-119",
    "madde": "Ek 5",
    "tip": "makam",
    "tetikleyici": "Yetkili ve görevli hâkim",
@@ -1304,7 +1294,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-121",
+   "i": "K-2-120",
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "en fazla üç ay",
@@ -1314,17 +1304,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-122",
+   "i": "K-2-121",
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "terör örgütünün faaliyeti",
-   "cevap": "dışında üç ay, üçer ay en fazla üç defa",
+   "cevap": "terörde müteaddit defa; dışında üçer ay, en fazla üç defa",
    "kanit": "Kararlar, en fazla üç ay için verilebilir; bu süre aynı usûlle üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir. Ancak, terör örgütünün faaliyeti çerçevesinde devam eden tehlikelere ilişkin olarak gerekli görülmesi halinde, hâkim üç aydan fazla olmamak üzere sürenin müteaddit defalar uzatılmasına karar verebilir.",
-   "not": "terör örgütünde müteaddit defalar uzatılabilir",
+   "not": "hâkim karar verir",
    "karistirilan": []
   },
   {
-   "i": "K-2-123",
+   "i": "K-2-122",
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "yok edilir",
@@ -1334,7 +1324,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-124",
+   "i": "K-2-123",
    "madde": "Ek 5",
    "tip": "makam",
    "tetikleyici": "aykırı hareket edenler",
@@ -1344,13 +1334,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-125",
+   "i": "K-2-124",
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "denetle",
-   "cevap": "yılda en az bir; rapor TBMM Güvenlik ve İstihbarat Komisyonuna",
+   "cevap": "sıralı/mülki amir, JGK/bakanlık/CB teftişi yılda bir; rapor TBMM Güvenlik-İstihbarat Komisyonuna",
    "kanit": "Bu maddede yer alan faaliyetlerin denetimi; sıralı kurum amirleri, mülki idare amirleri, Jandarma Genel Komutanlığı ve ilgili bakanlığın teftiş elemanları tarafından yılda en az bir defa yapılır. Bu faaliyetler Cumhurbaşkanlığınca görevlendirilen denetim elemanları tarafından da denetlenebilir. Bu kapsamda yapılan denetimlerin sonuçları bir rapor hâlinde Türkiye Büyük Millet Meclisi Güvenlik ve İstihbarat Komisyonuna sunulur.",
-   "not": "denetleyenler: sıralı kurum amirleri, mülki idare amirleri, JGK ve bakanlık teftiş elemanları; Sayıştay yok",
+   "not": "CB = Cumhurbaşkanlığı denetim elemanları; Sayıştay sayılmamış",
    "karistirilan": [
     {
      "madde": "Ek 1",
@@ -1359,7 +1349,7 @@
    ]
   },
   {
-   "i": "K-2-126",
+   "i": "K-2-125",
    "madde": "Ek 7",
    "tip": "kosul",
    "tetikleyici": "bu Kanuna aykırı",
@@ -1374,7 +1364,7 @@
    ]
   },
   {
-   "i": "K-2-127",
+   "i": "K-2-126",
    "madde": "Ek 7",
    "tip": "makam",
    "tetikleyici": "tereddütleri gidermeye",
@@ -1384,7 +1374,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-128",
+   "i": "K-2-127",
    "madde": "Ek 7",
    "tip": "makam",
    "tetikleyici": "yeni ihtiyaçların",
@@ -1394,7 +1384,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-129",
+   "i": "K-2-128",
    "madde": "Ek 8",
    "tip": "tanim",
    "tetikleyici": "tesisler",
@@ -1404,7 +1394,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-130",
+   "i": "K-2-129",
    "madde": "Ek 8",
    "tip": "sayi_oran",
    "tetikleyici": "gayrisafi hasılatının",
@@ -1414,7 +1404,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-131",
+   "i": "K-2-130",
    "madde": "Ek 12",
    "tip": "sayi_oran",
    "tetikleyici": "üst sınır",
@@ -1424,7 +1414,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-132",
+   "i": "K-2-131",
    "madde": "Ek 12",
    "tip": "kosul",
    "tetikleyici": "normal bekleme süresinin bitiminden",
@@ -1434,7 +1424,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-133",
+   "i": "K-2-132",
    "madde": "Ek 13",
    "tip": "sure",
    "tetikleyici": "uzman erbaş adaylarının",
@@ -1444,7 +1434,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-134",
+   "i": "K-2-133",
    "madde": "Ek 13",
    "tip": "sure",
    "tetikleyici": "muvazzaf askerlik yükümlülüğüne başlamadan",
@@ -1454,7 +1444,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-135",
+   "i": "K-2-134",
    "madde": "Ek 13",
    "tip": "sure",
    "tetikleyici": "askerlik hizmetini yerine getirmiş",
@@ -1464,7 +1454,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-136",
+   "i": "K-2-135",
    "madde": "Ek 13",
    "tip": "sure",
    "tetikleyici": "Üç yıllık süre",
@@ -1474,7 +1464,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-137",
+   "i": "K-2-136",
    "madde": "Ek 13",
    "tip": "kosul",
    "tetikleyici": "ilişiği kesilen personel",
@@ -1484,7 +1474,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-138",
+   "i": "K-2-137",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "mecburi hizmetleri",
@@ -1494,7 +1484,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-139",
+   "i": "K-2-138",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "lisans veya lisansüstü öğrenim",
@@ -1504,7 +1494,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-140",
+   "i": "K-2-139",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "uzmanlık ya da yan dal",
@@ -1514,7 +1504,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-141",
+   "i": "K-2-140",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "Pilotaj eğitimini",
@@ -1524,7 +1514,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-142",
+   "i": "K-2-141",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "Yabancı memleketlere altı ay",
@@ -1534,7 +1524,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-143",
+   "i": "K-2-142",
    "madde": "Ek 14",
    "tip": "sure",
    "tetikleyici": "Yurt dışı sürekli göreve",
@@ -1544,7 +1534,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-144",
+   "i": "K-2-143",
    "madde": "Ek 14",
    "tip": "ceza",
    "tetikleyici": "mecburi hizmetle yükümlü",
@@ -1554,7 +1544,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-145",
+   "i": "K-2-144",
    "madde": "Ek 14",
    "tip": "ceza",
    "tetikleyici": "meslekten",
@@ -1564,7 +1554,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-146",
+   "i": "K-2-145",
    "madde": "Ek 15",
    "tip": "istisna",
    "tetikleyici": "ilaç ve tıbbi sarf",
@@ -1574,27 +1564,27 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-147",
+   "i": "K-2-146",
    "madde": "Ek 16",
    "tip": "sure",
-   "tetikleyici": "Uzman jandarmalıktan astsubaylığa",
-   "cevap": "çavuş 43, üstçavuş 52, başçavuş 54, kıdemli başçavuş 55",
+   "tetikleyici": "kıdemli çavuş",
+   "cevap": "43 (astsubay çavuş da); uzman jandarmadan geçen",
    "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
-   "not": "kıdemli çavuş ve kıdemli üstçavuş da aynı",
+   "not": "",
+   "karistirilan": []
+  },
+  {
+   "i": "K-2-147",
+   "madde": "Ek 17",
+   "tip": "kosul",
+   "tetikleyici": "kademe ilerleme",
+   "cevap": "terfi, derece, kademe ilerlemesi yapılmaz; usul yönetmelikle",
+   "kanit": "Bunlar ile hakkındaki görevden uzaklaştırma veya tutuklanma tedbiri ortadan kaldırılmasına rağmen yargılamaları veya adli/idari soruşturmaları devam edenlerin terfi, derece ve kademe ilerlemeleri yapılmaz, bu işlemlerin ne şekilde yapılacağı yönetmelikle belirlenir.",
+   "not": "uzman erbaş; tedbir kalksa da soruşturma sürüyorsa",
    "karistirilan": []
   },
   {
    "i": "K-2-148",
-   "madde": "Ek 17",
-   "tip": "kosul",
-   "tetikleyici": "kademe ilerleme",
-   "cevap": "terfi, derece ve kademe ilerlemeleri yapılmaz",
-   "kanit": "Bunlar ile hakkındaki görevden uzaklaştırma veya tutuklanma tedbiri ortadan kaldırılmasına rağmen yargılamaları veya adli/idari soruşturmaları devam edenlerin terfi, derece ve kademe ilerlemeleri yapılmaz, bu işlemlerin ne şekilde yapılacağı yönetmelikle belirlenir.",
-   "not": "uzman erbaş; tedbir kalksa da soruşturma sürüyorsa; usul yönetmelikle",
-   "karistirilan": []
-  },
-  {
-   "i": "K-2-149",
    "madde": "Ek 18",
    "tip": "sure",
    "tetikleyici": "astsubay kıdemli başçavuşların yaş haddi",
@@ -1604,7 +1594,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-150",
+   "i": "K-2-149",
    "madde": "Ek 18",
    "tip": "sayi_oran",
    "tetikleyici": "sicil notu ortalaması",
@@ -1614,7 +1604,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-151",
+   "i": "K-2-150",
    "madde": "Ek 19",
    "tip": "tanim",
    "tetikleyici": "emniyet ve asayişe yönelik hizmetleri",
@@ -1624,7 +1614,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-152",
+   "i": "K-2-151",
    "madde": "Geçici",
    "tip": "sure",
    "tetikleyici": "astsubaylıktan subaylığa",
@@ -1643,7 +1633,7 @@
    ]
   },
   {
-   "i": "K-2-153",
+   "i": "K-2-152",
    "madde": "Geçici 1",
    "tip": "kosul",
    "tetikleyici": "Vazife Tüzüğü",
@@ -1653,7 +1643,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-154",
+   "i": "K-2-153",
    "madde": "Geçici 5",
    "tip": "sure",
    "tetikleyici": "askerlik yükümlüsü ihtiyacı",
@@ -1663,7 +1653,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-155",
+   "i": "K-2-154",
    "madde": "12",
    "tip": "makam",
    "tetikleyici": "devredebilir",
@@ -1678,7 +1668,7 @@
    ]
   },
   {
-   "i": "K-2-156",
+   "i": "K-2-155",
    "madde": "13/A",
    "tip": "makam",
    "tetikleyici": "Akademinin ihtiyaçları",
@@ -1688,7 +1678,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-157",
+   "i": "K-2-156",
    "madde": "Ek 2",
    "tip": "makam",
    "tetikleyici": "içeriği ve düzenlenme esasları",
@@ -1698,7 +1688,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-158",
+   "i": "K-2-157",
    "madde": "Ek 5",
    "tip": "kosul",
    "tetikleyici": "kayda al",
@@ -1708,7 +1698,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-159",
+   "i": "K-2-158",
    "madde": "Ek 5",
    "tip": "sure",
    "tetikleyici": "kararını en geç",
@@ -1718,7 +1708,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-160",
+   "i": "K-2-159",
    "madde": "Ek 5",
    "tip": "makam",
    "tetikleyici": "rapor hâlinde",
@@ -1728,13 +1718,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-161",
+   "i": "K-2-160",
    "madde": "Ek 16",
    "tip": "sure",
    "tetikleyici": "kıdemli üstçavuş",
-   "cevap": "52 (uzman jandarmalıktan astsubaylığa geçen)",
+   "cevap": "52 (astsubay üstçavuş da); uzman jandarmadan geçen",
    "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
-   "not": "astsubay üstçavuş da 52",
+   "not": "",
    "karistirilan": [
     {
      "madde": "Ek 12",
@@ -1743,23 +1733,23 @@
    ]
   },
   {
-   "i": "K-2-162",
+   "i": "K-2-161",
    "madde": "Ek 16",
    "tip": "sure",
    "tetikleyici": "astsubay başçavuş",
-   "cevap": "54 (uzman jandarmalıktan astsubaylığa geçen)",
+   "cevap": "54; uzman jandarmadan geçen",
    "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-2-163",
+   "i": "K-2-162",
    "madde": "Ek 16",
    "tip": "sure",
    "tetikleyici": "kıdemli başçavuş",
-   "cevap": "55 (uzman jandarmalıktan astsubaylığa geçen)",
+   "cevap": "55; uzman jandarmadan geçen",
    "kanit": "Uzman jandarmalıktan astsubaylığa geçenlerin rütbe yaş hadleri aşağıda belirtilmiştir:\nRütbe — Yaş Haddi\nAstsubay çavuş, astsubay kıdemli çavuş: 43\nAstsubay üstçavuş, astsubay kıdemli üstçavuş: 52\nAstsubay başçavuş: 54\nAstsubay kıdemli başçavuş: 55",
-   "not": "",
+   "not": "temayüz edenin yaş haddi İçişleri Bakanınca 60’a uzatılabilir (Ek 18)",
    "karistirilan": [
     {
      "madde": "Ek 18",
@@ -1768,7 +1758,7 @@
    ]
   },
   {
-   "i": "K-2-164",
+   "i": "K-2-163",
    "madde": "Ek 19",
    "tip": "tanim",
    "tetikleyici": "Jandarma Asayiş Vakfı",
@@ -1778,7 +1768,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-165",
+   "i": "K-2-164",
    "madde": "Geçici 1",
    "tip": "kosul",
    "tetikleyici": "yönetmelikler yürürlüğe girinceye",
@@ -1788,7 +1778,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-2-166",
+   "i": "K-2-165",
    "madde": "Geçici 5",
    "tip": "makam",
    "tetikleyici": "giderleri",

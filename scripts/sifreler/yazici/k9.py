@@ -17,7 +17,6 @@ K = [
  ('2','ceza','yarı nispet','toplu, umuma açık yer, basın; gece, tek kişi yok','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'zor kullanmada ise bir misli'),
  ('2','ceza','basın','yarı nispetinde artar','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],'toplu ve umuma açık yerde de aynı'),
  ('2','ceza','toplu','iki veya daha fazla kişi; yarı nispetinde','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
- ('2','ceza','umuma açık','yarı nispetinde (umumi yer de)','Birinci maddede yazılı suçlar; iki','yarı nispetinde artırılır.',[],''),
  ('2','ceza','zor kullan','bir misli artar; teşebbüste de; yalnız anıt suçunda','Birinci maddenin ikinci fıkrasında','bir misli artırılır.',[],'heykel-büst-abide-kabir suçunda; hatıraya hakarette yok'),
 
  # m.3-5 — takibat, yürürlük, yürütme

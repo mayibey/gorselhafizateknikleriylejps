@@ -7,9 +7,9 @@
    "madde": "1",
    "tip": "tanim",
    "tetikleyici": "balistik önemi haiz",
-   "cevap": "namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, iğne",
+   "cevap": "namlu/sürgü/gövde/çerçeve/silindir/mekanizma başı/çıkarıcı/tırnak/ateşleme iğnesi; dürbün YOK",
    "kanit": "Madde 1 – (Değişik: 12/6/1979 - 2249/2 md.) Ateşli silahlarla mermilerinin veya bu silahlara ait namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaların ve bıçaklarla salt saldırı ve savunmada kullanılmak üzere özel olarak yapılmış bulunan diğer aletlerin memlekete sokulması, yapılması, satılması, satınalınması, taşınması veya bulundurulması bu kanun hükümlerine tabidir.",
-   "not": "dürbün listede yok",
+   "not": "",
    "karistirilan": [
     {
      "madde": "12",
@@ -95,9 +95,9 @@
    "madde": "4",
    "tip": "yasak",
    "tetikleyici": "yapımı yasak",
-   "cevap": "kama, hançer, şişli baston, sustalı, kasatura, muşta; yivsiz serbest",
+   "cevap": "kama/hançer/saldırma/şişli baston/sustalı/pala/kılıç/kasatura/süngü/oluklu bıçak/topuz/kamçı/boğma teli/muşta; mutfak bıçağı-yivsiz tüfek YOK",
    "kanit": "Ülke içinde kama, hançer, saldırma, şişli baston, sustalı çakı, pala,kılıç, kasatura, süngü, sivri uçlu ve oluklu bıçaklar, topuz, topuzlu kamçı, boğma teli veya zinciri, muşta ile salt saldırı ve savunmada kullanılmak üzere özel nitelikteki benzeri aletlerin yapımı yasaktır.",
-   "not": "mutfak bıçağı listede yok",
+   "not": "yivsiz tüfek ve meslek aletleri tabi değil (ayrı satır)",
    "karistirilan": [
     {
      "madde": "5",
@@ -112,7 +112,7 @@
    "tetikleyici": "muşta",
    "cevap": "yapımı yasak salt saldırı-savunma aleti; meslek bıçağı tabi değil",
    "kanit": "Ülke içinde kama, hançer, saldırma, şişli baston, sustalı çakı, pala,kılıç, kasatura, süngü, sivri uçlu ve oluklu bıçaklar, topuz, topuzlu kamçı, boğma teli veya zinciri, muşta ile salt saldırı ve savunmada kullanılmak üzere özel nitelikteki benzeri aletlerin yapımı yasaktır.",
-   "not": "topuz, boğma teli, pala, kılıç da",
+   "not": "kasap bıçağı gibi meslek aleti izinle yapılır",
    "karistirilan": []
   },
   {
@@ -451,16 +451,6 @@
   },
   {
    "i": "K-25-041",
-   "madde": "11",
-   "tip": "kosul",
-   "tetikleyici": "satış",
-   "cevap": "izin vesikasıyla serbest",
-   "kanit": "Hatıra teşkil eden veya antika olan ateşli silahlarla bıçakların bulundurulmasına izin verilmesi zorunludur. Ancak, görevleri nedeniyle Devletçe verilen veya kendilerince bu amaçla temin edilen ve bu görevleri sona erdikten sonra meskenlerinde kalan veya kanuni yakınlarına intikal eden kılıç, meç ve benzeri aletler için izin belgesi aranmaz. Antika olan ateşli silahlarla bıçaklar için verilen izin bunların yalnız sahibine bırakılmasına veya nakline müsaadeyi tazammun edip üstte taşımaya cevaz vermez. Antika olan ateşli silahlarla bıçakların izin vesikalarıyla birlikte satışı serbesttir.",
-   "not": "antika silah ve bıçak",
-   "karistirilan": []
-  },
-  {
-   "i": "K-25-042",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "ülkeye sok",
@@ -479,7 +469,7 @@
    ]
   },
   {
-   "i": "K-25-043",
+   "i": "K-25-042",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "oniki yıla",
@@ -489,7 +479,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-044",
+   "i": "K-25-043",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "bu amaçla",
@@ -504,7 +494,7 @@
    ]
   },
   {
-   "i": "K-25-045",
+   "i": "K-25-044",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "birlikte",
@@ -523,17 +513,7 @@
    ]
   },
   {
-   "i": "K-25-046",
-   "madde": "12",
-   "tip": "ceza",
-   "tetikleyici": "onbeş yıla",
-   "cevap": "iki ya da daha çok kişi birlikte",
-   "kanit": "Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında iki veya daha çok kişinin birlikte işlemeleri halinde, failler hakkında sekiz yıldan onbeş yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasına hükmolunur.",
-   "not": "örgüt değilse",
-   "karistirilan": []
-  },
-  {
-   "i": "K-25-047",
+   "i": "K-25-045",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "beşyüz günden",
@@ -548,7 +528,7 @@
    ]
   },
   {
-   "i": "K-25-048",
+   "i": "K-25-046",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "örgütün faaliyeti",
@@ -558,7 +538,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-049",
+   "i": "K-25-047",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "susturuculu",
@@ -568,7 +548,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-050",
+   "i": "K-25-048",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "miktar bakımından vahim",
@@ -583,7 +563,7 @@
    ]
   },
   {
-   "i": "K-25-051",
+   "i": "K-25-049",
    "madde": "12",
    "tip": "ceza",
    "tetikleyici": "Kurusıkı",
@@ -593,7 +573,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-052",
+   "i": "K-25-050",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "satın alan",
@@ -608,7 +588,7 @@
    ]
   },
   {
-   "i": "K-25-053",
+   "i": "K-25-051",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "mutat",
@@ -618,7 +598,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-054",
+   "i": "K-25-052",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "takdir edilmemesi",
@@ -628,7 +608,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-055",
+   "i": "K-25-053",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "Nakil izin belgesi",
@@ -638,7 +618,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-056",
+   "i": "K-25-054",
    "madde": "13",
    "tip": "ceza",
    "tetikleyici": "ruhsat yenileme işlemlerinde",
@@ -648,7 +628,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-057",
+   "i": "K-25-055",
    "madde": "13",
    "tip": "makam",
    "tetikleyici": "idari para ceza",
@@ -663,7 +643,7 @@
    ]
   },
   {
-   "i": "K-25-058",
+   "i": "K-25-056",
    "madde": "14",
    "tip": "ceza",
    "tetikleyici": "4 üncü maddede yazılı",
@@ -678,7 +658,7 @@
    ]
   },
   {
-   "i": "K-25-059",
+   "i": "K-25-057",
    "madde": "14",
    "tip": "ceza",
    "tetikleyici": "azlığı",
@@ -688,7 +668,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-060",
+   "i": "K-25-058",
    "madde": "14",
    "tip": "ceza",
    "tetikleyici": "teşekkül",
@@ -698,7 +678,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-061",
+   "i": "K-25-059",
    "madde": "15",
    "tip": "ceza",
    "tetikleyici": "satanlar, satmaya aracılık",
@@ -708,7 +688,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-062",
+   "i": "K-25-060",
    "madde": "15",
    "tip": "ceza",
    "tetikleyici": "sayı veya nitelik",
@@ -723,7 +703,7 @@
    ]
   },
   {
-   "i": "K-25-063",
+   "i": "K-25-061",
    "madde": "15",
    "tip": "ceza",
    "tetikleyici": "günden az ol",
@@ -742,7 +722,7 @@
    ]
   },
   {
-   "i": "K-25-064",
+   "i": "K-25-062",
    "madde": "15",
    "tip": "ceza",
    "tetikleyici": "sırf saldırıda",
@@ -752,7 +732,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-065",
+   "i": "K-25-063",
    "madde": "16",
    "tip": "istisna",
    "tetikleyici": "Kaçakçılığın Men",
@@ -762,7 +742,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-066",
+   "i": "K-25-064",
    "madde": "Ek 1",
    "tip": "yasak",
    "tetikleyici": "taşınama",
@@ -772,7 +752,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-067",
+   "i": "K-25-065",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "ilgili kanunlarda",
@@ -782,7 +762,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-068",
+   "i": "K-25-066",
    "madde": "Ek 1",
    "tip": "istisna",
    "tetikleyici": "jandarma personeli",
@@ -792,7 +772,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-069",
+   "i": "K-25-067",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "daha ağır cezayı gerektiren",
@@ -802,7 +782,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-070",
+   "i": "K-25-068",
    "madde": "Ek 1",
    "tip": "ceza",
    "tetikleyici": "silahla giren",
@@ -812,7 +792,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-071",
+   "i": "K-25-069",
    "madde": "Ek 1",
    "tip": "sure",
    "tetikleyici": "yıllık süre geç",
@@ -822,7 +802,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-072",
+   "i": "K-25-070",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "turist olarak avcılık",
@@ -832,7 +812,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-073",
+   "i": "K-25-071",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "bilimsel araştırmalar",
@@ -842,17 +822,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-074",
+   "i": "K-25-072",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "geçici olarak yurda sok",
-   "cevap": "turist avcı, atıcılık yarışmacısı, antlaşmalı görevli, bilimsel araştırmacı",
+   "cevap": "turist avcı, atıcılık yarışmacısı, antlaşmalı görevli, bilimsel araştırmacı; ticari YOK",
    "kanit": "Kara Avcılığı Kanunu esaslarına göre izin alıp turist olarak avcılık yapmak ya da Gençlik ve Spor Bakanlığınca tertip olunacak atıcılık yarışmalarına katılmak üzere yurda gelen yabancılar beraberlerinde getirdikleri miktarı yönetmelikte belirtilen yivli ve yivsiz tüfekler ile nişan tüfek ve tabancalarını ve bunların aksamı ile mermilerini gümrük makamlarına beyan etmek ve giriş kapısı emniyet makamlarından izin almak koşuluyla geçici olarak yurda sokabilirler.",
-   "not": "ticari ithalatçı yok",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-25-075",
+   "i": "K-25-073",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "pasaportuna",
@@ -862,7 +842,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-076",
+   "i": "K-25-074",
    "madde": "Ek 1",
    "tip": "kosul",
    "tetikleyici": "sarfedilmeyen",
@@ -872,7 +852,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-25-077",
+   "i": "K-25-075",
    "madde": "Ek",
    "tip": "kosul",
    "tetikleyici": "teslim ettikleri takdirde",
@@ -887,7 +867,7 @@
    ]
   },
   {
-   "i": "K-25-078",
+   "i": "K-25-076",
    "madde": "Geçici",
    "tip": "sure",
    "tetikleyici": "gönüllü korucu",

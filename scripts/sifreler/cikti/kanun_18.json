@@ -19,16 +19,6 @@
   },
   {
    "i": "K-18-002",
-   "madde": "8",
-   "tip": "tanim",
-   "tetikleyici": "ilgili kullanıcı",
-   "cevap": "silinmesi: erişilemez, tekrar kullanılamaz; hiç kimse için yok edilmesi",
-   "kanit": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
-   "not": "yedekte teknik olarak dursa da kullanıcıya kapalıysa silme",
-   "karistirilan": []
-  },
-  {
-   "i": "K-18-003",
    "madde": "9",
    "tip": "tanim",
    "tetikleyici": "hiç kimse",
@@ -38,7 +28,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-18-004",
+   "i": "K-18-003",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "teknik ve idari",
@@ -57,7 +47,7 @@
    ]
   },
   {
-   "i": "K-18-005",
+   "i": "K-18-004",
    "madde": "10",
    "tip": "tanim",
    "tetikleyici": "eşleştirilse dahi",
@@ -67,7 +57,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-18-006",
+   "i": "K-18-005",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "periyodik imha",
@@ -77,7 +67,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-18-007",
+   "i": "K-18-006",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "yükümlülüğü olmayan",
@@ -87,7 +77,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-18-008",
+   "i": "K-18-007",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "kısalt",

@@ -57,9 +57,9 @@
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "doğrulama verisi",
-   "cevap": "imzayı doğrulayan şifre, açık anahtar; sertifikada kimlikle bağlanır",
+   "cevap": "imzayı doğrulayan şifre, açık anahtar",
    "kanit": "f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri,",
-   "not": "",
+   "not": "sertifika bunu kimlik bilgisine bağlar (ayrı satır)",
    "karistirilan": []
   },
   {
@@ -77,9 +77,9 @@
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "zaman damgası",
-   "cevap": "üretim, değişiklik, gönderim, alım, kayıt zamanı; sağlayıcı imzalar",
+   "cevap": "üretim, değişiklik, gönderim, alım, kayıt zamanı; doğum tarihi YOK",
    "kanit": "h) Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,",
-   "not": "elektronik sertifika hizmet sağlayıcısı elektronik imzayla doğrular; doğum tarihi yok",
+   "not": "elektronik sertifika hizmet sağlayıcısı elektronik imzayla doğrular",
    "karistirilan": []
   },
   {
@@ -107,9 +107,9 @@
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "güvenli elektronik imza",
-   "cevap": "münhasıran sahibine bağlı, tasarrufundaki araçla, nitelikli sertifikayla kimlik, değişiklik tespiti",
+   "cevap": "sahibe özgü/tasarrufundaki araçla/nitelikli sertifikalı/değişiklik tespitli; noter-elle imza YOK",
    "kanit": "Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır.",
-   "not": "dört unsur birlikte; noter onayı, valilik onayı, ıslak imzayla birlikte kullanma YOK",
+   "not": "dört unsur birlikte; valilik onayı da YOK",
    "karistirilan": [
     {
      "madde": "3",
@@ -160,16 +160,6 @@
    "i": "K-14-015",
    "madde": "5",
    "tip": "istisna",
-   "tetikleyici": "merasim",
-   "cevap": "e-imzayla gerçekleştirilemez; resmî şekil de",
-   "kanit": "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.",
-   "not": "taşınmaz satışı gibi resmî şekle tabi işlemler",
-   "karistirilan": []
-  },
-  {
-   "i": "K-14-016",
-   "madde": "5",
-   "tip": "istisna",
    "tetikleyici": "teminat",
    "cevap": "yapılamaz; banka mektubu ve yerleşik sigorta kefaleti hariç",
    "kanit": "Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.",
@@ -177,7 +167,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-14-017",
+   "i": "K-14-016",
    "madde": "5",
    "tip": "istisna",
    "tetikleyici": "kefalet",

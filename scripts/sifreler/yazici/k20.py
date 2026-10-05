@@ -13,7 +13,7 @@ K = [
 
  # m.13 — satın alma ve kayıt
  ('13','kosul','engel','engeli olmayana mülki amirlik ruhsat düzenler; engelliye verilmez','(Değişik:RG-22/4/2009-27208) Bu Yönetmelik hükümlerine göre av tüfeği','yivsiz tüfek ruhsatnamesi düzenlenir.',[('10','m.10: ruhsat başvurusunda silah taşımaya engel hâl için sağlık raporu istenir')],'mahalli mülki amirlik'),
- ('13','sure','satın al','belgeyle alınır; bir ayda belgeyi veren makama cins-marka-çap-seri kaydı','Bu silahları satın almak isteyenler','kaydettirilmesi zorunludur.',[('14','m.14/h: uyuşturucu satın alma suçundan mahkûm olana izin verilmez')],'yivsiz tüfek satın alma belgesi; kayıt yükümlüsü satın alan; satın alma tarihi kaydedilmez'),
+ ('13','sure','satın al','yivsiz tüfek belgeyle; alan bir ayda cins-marka-çap-seri kaydettirir; tarih YOK','Bu silahları satın almak isteyenler','kaydettirilmesi zorunludur.',[('14', 'm.14/h: uyuşturucu satın alma suçundan mahkûm olana izin verilmez')],'belgeyi veren makama kaydettirilir'),
  ('13','sira_usul','görülerek','ruhsatnameye kayıt sırasında tüfek görülür','Ruhsatname üzerine tüfeklerin','tespitinin yapılması esastır.',[],''),
 
  # m.14 — izin verilmeyecek hâller

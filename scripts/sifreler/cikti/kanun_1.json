@@ -54,16 +54,6 @@
   },
   {
    "i": "K-1-006",
-   "madde": "2",
-   "tip": "yasak",
-   "tetikleyici": "kıyasa yol açacak",
-   "cevap": "geniş yorumlanamaz",
-   "kanit": "(3) Kanunların suç ve ceza içeren hükümlerinin uygulanmasında kıyas yapılamaz. Suç ve ceza içeren hükümler, kıyasa yol açacak biçimde geniş yorumlanamaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-1-007",
    "madde": "3",
    "tip": "kosul",
    "tetikleyici": "orantılı",
@@ -73,37 +63,27 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-008",
+   "i": "K-1-007",
    "madde": "3",
    "tip": "yasak",
    "tetikleyici": "ayrım",
-   "cevap": "ırk, dil, din, mezhep, milliyet, cinsiyet, fikir, köken, ekonomik konum",
+   "cevap": "ırk/dil/din/mezhep/milliyet/renk/cinsiyet/siyasi fikir/felsefi inanç/milli-sosyal köken/doğum/ekonomik-toplumsal konum; meslek-sendika YOK",
    "kanit": "(2) Ceza Kanununun uygulamasında kişiler arasında ırk, dil, din, mezhep, milliyet, renk, cinsiyet, siyasal veya diğer fikir yahut düşünceleri, felsefi inanç, milli veya sosyal köken, doğum, ekonomik ve diğer toplumsal konumları yönünden ayrım yapılamaz ve hiçbir kimseye ayrıcalık tanınamaz.",
-   "not": "renk, felsefi inanç, doğum da var; meslek grubu, sendika listede YOK; hiç kimseye ayrıcalık tanınmaz",
+   "not": "hiçbir kimseye ayrıcalık da tanınamaz",
    "karistirilan": []
   },
   {
-   "i": "K-1-009",
+   "i": "K-1-008",
    "madde": "4",
    "tip": "kosul",
-   "tetikleyici": "bilmeme",
-   "cevap": "mazeret sayılmaz",
+   "tetikleyici": "Ceza kanunlarını",
+   "cevap": "bilmemek mazeret sayılmaz",
    "kanit": "(1) Ceza kanunlarını bilmemek mazeret sayılmaz.",
    "not": "2026 Uzman sınavında soruldu",
    "karistirilan": []
   },
   {
-   "i": "K-1-010",
-   "madde": "4",
-   "tip": "kosul",
-   "tetikleyici": "mazeret sayılmaz",
-   "cevap": "ceza kanunlarını bilmemek",
-   "kanit": "(1) Ceza kanunlarını bilmemek mazeret sayılmaz.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-1-011",
+   "i": "K-1-009",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "genel hükümleri",
@@ -113,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-012",
+   "i": "K-1-010",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "işlenmiş sayıl",
@@ -123,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-013",
+   "i": "K-1-011",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "Ceza sorumluluğu",
@@ -138,7 +118,7 @@
    ]
   },
   {
-   "i": "K-1-014",
+   "i": "K-1-012",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "fiilinden dolayı",
@@ -148,7 +128,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-015",
+   "i": "K-1-013",
    "madde": "20",
    "tip": "istisna",
    "tetikleyici": "Tüzel kişiler",
@@ -163,17 +143,17 @@
    ]
   },
   {
-   "i": "K-1-016",
+   "i": "K-1-014",
    "madde": "21",
    "tip": "tanim",
    "tetikleyici": "Kast,",
-   "cevap": "bilerek ve istenerek",
+   "cevap": "bilerek ve istenerek; pişmanlık unsur DEĞİL",
    "kanit": "(1) Suçun oluşması kastın varlığına bağlıdır. Kast, suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir.",
-   "not": "suçun kanuni tanımındaki unsurların; suçun oluşması kastın varlığına bağlı; pişmanlık duymamak unsur DEĞİL",
+   "not": "suçun kanuni tanımındaki unsurların; suçun oluşması kastın varlığına bağlı",
    "karistirilan": []
   },
   {
-   "i": "K-1-017",
+   "i": "K-1-015",
    "madde": "21",
    "tip": "suc_adi",
    "tetikleyici": "öngörmesine rağmen",
@@ -183,7 +163,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-018",
+   "i": "K-1-016",
    "madde": "21",
    "tip": "ceza",
    "tetikleyici": "olası kast",
@@ -193,7 +173,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-019",
+   "i": "K-1-017",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "Taksirle işlenen fiiller",
@@ -203,7 +183,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-020",
+   "i": "K-1-018",
    "madde": "22",
    "tip": "tanim",
    "tetikleyici": "dikkat ve özen yükümlülüğüne",
@@ -213,7 +193,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-021",
+   "i": "K-1-019",
    "madde": "22",
    "tip": "suc_adi",
    "tetikleyici": "istememesine karşın",
@@ -223,7 +203,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-022",
+   "i": "K-1-020",
    "madde": "22",
    "tip": "ceza",
    "tetikleyici": "bilinçli taksir",
@@ -233,7 +213,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-023",
+   "i": "K-1-021",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "herkes kendi kusurundan",
@@ -243,7 +223,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-024",
+   "i": "K-1-022",
    "madde": "22",
    "tip": "istisna",
    "tetikleyici": "kişisel ve ailevi durumu",
@@ -253,7 +233,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-025",
+   "i": "K-1-023",
    "madde": "23",
    "tip": "kosul",
    "tetikleyici": "daha ağır veya başka",
@@ -263,7 +243,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-026",
+   "i": "K-1-024",
    "madde": "35",
    "tip": "suc_adi",
    "tetikleyici": "elinde olmayan nedenlerle",
@@ -273,7 +253,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-027",
+   "i": "K-1-025",
    "madde": "35",
    "tip": "kosul",
    "tetikleyici": "teşebbüsten",
@@ -288,7 +268,7 @@
    ]
   },
   {
-   "i": "K-1-028",
+   "i": "K-1-026",
    "madde": "35",
    "tip": "ceza",
    "tetikleyici": "Suça teşebbüs",
@@ -303,7 +283,7 @@
    ]
   },
   {
-   "i": "K-1-029",
+   "i": "K-1-027",
    "madde": "36",
    "tip": "istisna",
    "tetikleyici": "vazgeç",
@@ -322,7 +302,7 @@
    ]
   },
   {
-   "i": "K-1-030",
+   "i": "K-1-028",
    "madde": "36",
    "tip": "istisna",
    "tetikleyici": "neticenin gerçekleşmesini önle",
@@ -332,7 +312,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-031",
+   "i": "K-1-029",
    "madde": "37",
    "tip": "kosul",
    "tetikleyici": "fiili birlikte gerçekleştiren",
@@ -342,7 +322,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-032",
+   "i": "K-1-030",
    "madde": "37",
    "tip": "suc_adi",
    "tetikleyici": "araç olarak kullanan",
@@ -352,7 +332,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-033",
+   "i": "K-1-031",
    "madde": "38",
    "tip": "ceza",
    "tetikleyici": "azmettir",
@@ -367,7 +347,7 @@
    ]
   },
   {
-   "i": "K-1-034",
+   "i": "K-1-032",
    "madde": "38",
    "tip": "ceza",
    "tetikleyici": "Üstsoy ve altsoy",
@@ -377,7 +357,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-035",
+   "i": "K-1-033",
    "madde": "38",
    "tip": "ceza",
    "tetikleyici": "Azmettirenin belli olmaması",
@@ -387,7 +367,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-036",
+   "i": "K-1-034",
    "madde": "39",
    "tip": "ceza",
    "tetikleyici": "yardım",
@@ -402,42 +382,17 @@
    ]
   },
   {
-   "i": "K-1-037",
-   "madde": "39",
-   "tip": "suc_adi",
-   "tetikleyici": "yardım eden sıfatıyla",
-   "cevap": "teşvik, karar kuvvetlendirme, yol gösterme, araç sağlama, kolaylaştırma",
-   "kanit": "(2) Aşağıdaki hallerde kişi işlenen suçtan dolayı yardım eden sıfatıyla sorumlu olur: a) Suç işlemeye teşvik etmek veya suç işleme kararını kuvvetlendirmek veya fiilin işlenmesinden sonra yardımda bulunacağını vaat etmek. b) Suçun nasıl işleneceği hususunda yol göstermek veya fiilin işlenmesinde kullanılan araçları sağlamak. c) Suçun işlenmesinden önce veya işlenmesi sırasında yardımda bulunarak icrasını kolaylaştırmak.",
-   "not": "silahı önceden temin eden de yardım eden; fiili bizzat icra eden fail olur",
-   "karistirilan": []
-  },
-  {
-   "i": "K-1-038",
+   "i": "K-1-035",
    "madde": "39",
    "tip": "suc_adi",
    "tetikleyici": "yol göstermek",
-   "cevap": "yardım eden",
-   "kanit": "b) Suçun nasıl işleneceği hususunda yol göstermek veya fiilin işlenmesinde kullanılan araçları sağlamak.",
-   "not": "azmettiren DEĞİL",
+   "cevap": "yardım eden; teşvik, karar kuvvetlendirme, araç sağlama, kolaylaştırma da",
+   "kanit": "(2) Aşağıdaki hallerde kişi işlenen suçtan dolayı yardım eden sıfatıyla sorumlu olur: a) Suç işlemeye teşvik etmek veya suç işleme kararını kuvvetlendirmek veya fiilin işlenmesinden sonra yardımda bulunacağını vaat etmek. b) Suçun nasıl işleneceği hususunda yol göstermek veya fiilin işlenmesinde kullanılan araçları sağlamak. c) Suçun işlenmesinden önce veya işlenmesi sırasında yardımda bulunarak icrasını kolaylaştırmak.",
+   "not": "azmettiren DEĞİL; fiili bizzat icra eden fail olur",
    "karistirilan": []
   },
   {
-   "i": "K-1-039",
-   "madde": "39",
-   "tip": "suc_adi",
-   "tetikleyici": "kararını kuvvetlendirmek",
-   "cevap": "yardım eden",
-   "kanit": "a) Suç işlemeye teşvik etmek veya suç işleme kararını kuvvetlendirmek veya fiilin işlenmesinden sonra yardımda bulunacağını vaat etmek.",
-   "not": "sonradan yardım vaadi de",
-   "karistirilan": [
-    {
-     "madde": "38",
-     "fark": "azmettirme: suç kararı olmayan kişide karar oluşturmak"
-    }
-   ]
-  },
-  {
-   "i": "K-1-040",
+   "i": "K-1-036",
    "madde": "40",
    "tip": "kosul",
    "tetikleyici": "Suça iştirak için",
@@ -447,7 +402,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-041",
+   "i": "K-1-037",
    "madde": "40",
    "tip": "kosul",
    "tetikleyici": "Özgü suçlarda",
@@ -457,7 +412,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-042",
+   "i": "K-1-038",
    "madde": "40",
    "tip": "kosul",
    "tetikleyici": "iştirakten",
@@ -467,7 +422,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-043",
+   "i": "K-1-039",
    "madde": "41",
    "tip": "istisna",
    "tetikleyici": "İştirak halinde",
@@ -477,7 +432,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-044",
+   "i": "K-1-040",
    "madde": "42",
    "tip": "suc_adi",
    "tetikleyici": "tek fiil sayılan",
@@ -487,7 +442,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-045",
+   "i": "K-1-041",
    "madde": "42",
    "tip": "kosul",
    "tetikleyici": "içtima hükümleri",
@@ -497,7 +452,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-046",
+   "i": "K-1-042",
    "madde": "43",
    "tip": "suc_adi",
    "tetikleyici": "değişik zamanlarda",
@@ -512,17 +467,17 @@
    ]
   },
   {
-   "i": "K-1-047",
+   "i": "K-1-043",
    "madde": "43",
    "tip": "kosul",
    "tetikleyici": "tek bir fiille",
-   "cevap": "zincirleme hükmü uygulanır",
+   "cevap": "birden fazla kişiye: zincirleme hükmü uygulanır",
    "kanit": "(2) Aynı suçun birden fazla kişiye karşı tek bir fiille işlenmesi durumunda da, birinci fıkra hükmü uygulanır.",
-   "not": "aynı suç birden fazla kişiye",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-1-048",
+   "i": "K-1-044",
    "madde": "43",
    "tip": "istisna",
    "tetikleyici": "işkence ve yağma",
@@ -532,7 +487,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-049",
+   "i": "K-1-045",
    "madde": "44",
    "tip": "suc_adi",
    "tetikleyici": "farklı suçun",
@@ -542,7 +497,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-050",
+   "i": "K-1-046",
    "madde": "45",
    "tip": "tanim",
    "tetikleyici": "Suç karşılığında uygulanan",
@@ -552,7 +507,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-051",
+   "i": "K-1-047",
    "madde": "247",
    "tip": "suc_adi",
    "tetikleyici": "Görevi nedeniyle",
@@ -567,7 +522,7 @@
    ]
   },
   {
-   "i": "K-1-052",
+   "i": "K-1-048",
    "madde": "247",
    "tip": "ceza",
    "tetikleyici": "zimmetine geçiren",
@@ -577,7 +532,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-053",
+   "i": "K-1-049",
    "madde": "247",
    "tip": "ceza",
    "tetikleyici": "açığa çıkmamasını",
@@ -587,7 +542,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-054",
+   "i": "K-1-050",
    "madde": "247",
    "tip": "ceza",
    "tetikleyici": "iade edilmek üzere",
@@ -597,7 +552,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-055",
+   "i": "K-1-051",
    "madde": "248",
    "tip": "ceza",
    "tetikleyici": "Soruşturma başlamadan önce",
@@ -607,7 +562,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-056",
+   "i": "K-1-052",
    "madde": "248",
    "tip": "ceza",
    "tetikleyici": "Kovuşturma başlamadan önce",
@@ -617,7 +572,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-057",
+   "i": "K-1-053",
    "madde": "248",
    "tip": "ceza",
    "tetikleyici": "hükümden önce",
@@ -627,7 +582,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-058",
+   "i": "K-1-054",
    "madde": "249",
    "tip": "ceza",
    "tetikleyici": "değerinin azlığı",
@@ -637,7 +592,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-059",
+   "i": "K-1-055",
    "madde": "250",
    "tip": "suc_adi",
    "tetikleyici": "icbar eden",
@@ -652,7 +607,7 @@
    ]
   },
   {
-   "i": "K-1-060",
+   "i": "K-1-056",
    "madde": "250",
    "tip": "kosul",
    "tetikleyici": "kendisini mecbur hissederek",
@@ -662,7 +617,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-061",
+   "i": "K-1-057",
    "madde": "250",
    "tip": "suc_adi",
    "tetikleyici": "ikna eden",
@@ -672,7 +627,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-062",
+   "i": "K-1-058",
    "madde": "250",
    "tip": "ceza",
    "tetikleyici": "hatasından yararlan",
@@ -682,7 +637,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-063",
+   "i": "K-1-059",
    "madde": "250",
    "tip": "ceza",
    "tetikleyici": "mağdurun ekonomik durumu",
@@ -692,7 +647,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-064",
+   "i": "K-1-060",
    "madde": "251",
    "tip": "kosul",
    "tetikleyici": "göz yuman",
@@ -702,7 +657,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-065",
+   "i": "K-1-061",
    "madde": "251",
    "tip": "ceza",
    "tetikleyici": "Denetim görevini ihmal",
@@ -712,7 +667,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-066",
+   "i": "K-1-062",
    "madde": "252",
    "tip": "ceza",
    "tetikleyici": "Görevinin ifasıyla ilgili bir işi",
@@ -722,13 +677,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-067",
+   "i": "K-1-063",
    "madde": "252",
    "tip": "kosul",
    "tetikleyici": "anlaşmaya varılması",
-   "cevap": "suç tamamlanmış sayılır",
+   "cevap": "suç tamamlanmış sayılır; teşebbüs DEĞİL",
    "kanit": "(3) Rüşvet konusunda anlaşmaya varılması halinde, suç tamamlanmış gibi cezaya hükmolunur.",
-   "not": "para el değiştirmese de; teşebbüs DEĞİL",
+   "not": "para el değiştirmese de",
    "karistirilan": [
     {
      "madde": "255",
@@ -737,7 +692,7 @@
    ]
   },
   {
-   "i": "K-1-068",
+   "i": "K-1-064",
    "madde": "252",
    "tip": "ceza",
    "tetikleyici": "rüşvet talebinde bulunması",
@@ -747,7 +702,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-069",
+   "i": "K-1-065",
    "madde": "252",
    "tip": "kosul",
    "tetikleyici": "aracılık",
@@ -762,13 +717,13 @@
    ]
   },
   {
-   "i": "K-1-070",
+   "i": "K-1-066",
    "madde": "252",
    "tip": "ceza",
    "tetikleyici": "Rüşvet alan",
-   "cevap": "yargı görevlisi, hakem, bilirkişi, noter, YMM; üçte bir-yarı artırım",
+   "cevap": "üçte bir-yarı artar: yargı, hakem, bilirkişi, noter, YMM; avukat YOK",
    "kanit": "(7) Rüşvet alan veya talebinde bulunan ya da bu konuda anlaşmaya varan kişinin; yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir olması halinde, verilecek ceza üçte birden yarısına kadar artırılır.",
-   "not": "avukat listede YOK",
+   "not": "",
    "karistirilan": [
     {
      "madde": "254",
@@ -777,7 +732,7 @@
    ]
   },
   {
-   "i": "K-1-071",
+   "i": "K-1-067",
    "madde": "253",
    "tip": "istisna",
    "tetikleyici": "yararına haksız menfaat",
@@ -787,17 +742,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-072",
+   "i": "K-1-068",
    "madde": "254",
    "tip": "istisna",
    "tetikleyici": "aynen teslim",
-   "cevap": "rüşvet alana ceza yok",
+   "cevap": "makamlarca öğrenilmeden önce: rüşvet alana ceza yok",
    "kanit": "(1) (Değişik: 2/7/2012-6352/88 md.) Rüşvet alan kişinin, durum resmi makamlarca öğrenilmeden önce, rüşvet konusu şeyi soruşturmaya yetkili makamlara aynen teslim etmesi halinde, hakkında rüşvet suçundan dolayı cezaya hükmolunmaz.",
-   "not": "resmî makamlar öğrenmeden önce; anlaşan kamu görevlisi haber verirse de",
+   "not": "anlaşan kamu görevlisi haber verirse de",
    "karistirilan": []
   },
   {
-   "i": "K-1-073",
+   "i": "K-1-069",
    "madde": "254",
    "tip": "istisna",
    "tetikleyici": "Rüşvet veren",
@@ -812,7 +767,7 @@
    ]
   },
   {
-   "i": "K-1-074",
+   "i": "K-1-070",
    "madde": "255",
    "tip": "suc_adi",
    "tetikleyici": "nüfuz sahibi olduğundan bahisle",
@@ -822,7 +777,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-075",
+   "i": "K-1-071",
    "madde": "255",
    "tip": "suc_adi",
    "tetikleyici": "gördürülmesi amacıyla",
@@ -832,7 +787,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-076",
+   "i": "K-1-072",
    "madde": "255",
    "tip": "ceza",
    "tetikleyici": "Kişinin kamu görevlisi olması",
@@ -842,7 +797,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-077",
+   "i": "K-1-073",
    "madde": "255",
    "tip": "ceza",
    "tetikleyici": "gördürülmesi karşılığında",
@@ -852,7 +807,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-078",
+   "i": "K-1-074",
    "madde": "255",
    "tip": "ceza",
    "tetikleyici": "Nüfuz ticareti",
@@ -862,7 +817,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-079",
+   "i": "K-1-075",
    "madde": "256",
    "tip": "suc_adi",
    "tetikleyici": "ölçünün dışında kuvvet",
@@ -872,7 +827,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-080",
+   "i": "K-1-076",
    "madde": "257",
    "tip": "ceza",
    "tetikleyici": "gereklerine aykırı hareket",
@@ -882,7 +837,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-081",
+   "i": "K-1-077",
    "madde": "257",
    "tip": "ceza",
    "tetikleyici": "ihmal veya gecikme",
@@ -892,7 +847,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-082",
+   "i": "K-1-078",
    "madde": "258",
    "tip": "ceza",
    "tetikleyici": "gizli kalması gereken",
@@ -902,7 +857,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-083",
+   "i": "K-1-079",
    "madde": "258",
    "tip": "kosul",
    "tetikleyici": "sıfatı sona erdikten sonra",
@@ -912,17 +867,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-084",
+   "i": "K-1-080",
    "madde": "259",
    "tip": "ceza",
    "tetikleyici": "mal veya hizmet satmaya",
-   "cevap": "altı aya kadar hapis ya da adlî para",
+   "cevap": "nüfuzdan yararlanarak: altı aya kadar hapis ya da adlî para",
    "kanit": "(1) Yürüttüğü görevin sağladığı nüfuzdan yararlanarak, bir başkasına mal veya hizmet satmaya çalışan kamu görevlisi, altı aya kadar hapis veya adlî para cezası ile cezalandırılır.",
-   "not": "görevin sağladığı nüfuzdan yararlanma",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-1-085",
+   "i": "K-1-081",
    "madde": "260",
    "tip": "ceza",
    "tetikleyici": "toplu biçimde",
@@ -932,17 +887,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-086",
+   "i": "K-1-082",
    "madde": "260",
    "tip": "istisna",
    "tetikleyici": "hizmeti aksatmayacak",
-   "cevap": "indirim ya da ceza yok",
+   "cevap": "geçici, kısa süreli iş bırakma: indirim ya da ceza yok",
    "kanit": "(2) Kamu görevlilerinin mesleki ve sosyal hakları ile ilgili olarak, hizmeti aksatmayacak biçimde, geçici ve kısa süreli iş bırakmaları veya yavaşlatmaları halinde, verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.",
-   "not": "mesleki-sosyal haklar için geçici, kısa süreli iş bırakma",
+   "not": "mesleki-sosyal haklar için",
    "karistirilan": []
   },
   {
-   "i": "K-1-087",
+   "i": "K-1-083",
    "madde": "261",
    "tip": "ceza",
    "tetikleyici": "tasarruf",
@@ -952,17 +907,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-088",
+   "i": "K-1-084",
    "madde": "262",
    "tip": "ceza",
    "tetikleyici": "görevi sürdüren",
-   "cevap": "üç ay-iki yıl hapis",
+   "cevap": "terk emrine rağmen: üç ay-iki yıl hapis",
    "kanit": "(1) Bir kamu görevini, kanun ve nizamlara aykırı olarak yerine getirmeye teşebbüs eden veya terk emri kendisine bildirilmiş olduğu halde görevi sürdüren kimseye üç aydan iki yıla kadar hapis cezası verilir.",
-   "not": "terk emri bildirildiği halde; kamu görevinin usulsüz üstlenilmesi",
+   "not": "kamu görevinin usulsüz üstlenilmesi",
    "karistirilan": []
   },
   {
-   "i": "K-1-089",
+   "i": "K-1-085",
    "madde": "262",
    "tip": "suc_adi",
    "tetikleyici": "kanun ve nizamlara aykırı olarak",
@@ -972,7 +927,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-090",
+   "i": "K-1-086",
    "madde": "264",
    "tip": "ceza",
    "tetikleyici": "resmi elbise",
@@ -982,7 +937,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-091",
+   "i": "K-1-087",
    "madde": "264",
    "tip": "ceza",
    "tetikleyici": "kolaylık",
@@ -992,17 +947,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-092",
+   "i": "K-1-088",
    "madde": "265",
    "tip": "ceza",
    "tetikleyici": "görevini yapmasını engelle",
-   "cevap": "altı ay-üç yıl hapis",
+   "cevap": "cebir-tehdit: görevi yaptırmamak için direnme; altı ay-üç yıl",
    "kanit": "(1) Kamu görevlisine karşı görevini yapmasını engellemek amacıyla, cebir veya tehdit kullanan kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır.",
-   "not": "cebir veya tehdit; görevi yaptırmamak için direnme",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-1-093",
+   "i": "K-1-089",
    "madde": "265",
    "tip": "ceza",
    "tetikleyici": "yargı görevi yapan",
@@ -1017,7 +972,7 @@
    ]
   },
   {
-   "i": "K-1-094",
+   "i": "K-1-090",
    "madde": "265",
    "tip": "ceza",
    "tetikleyici": "tanınmayacak",
@@ -1027,7 +982,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-095",
+   "i": "K-1-091",
    "madde": "265",
    "tip": "ceza",
    "tetikleyici": "korkutucu güç",
@@ -1037,7 +992,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-096",
+   "i": "K-1-092",
    "madde": "266",
    "tip": "ceza",
    "tetikleyici": "araç ve gereçleri",
@@ -1047,7 +1002,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-097",
+   "i": "K-1-093",
    "madde": "317",
    "tip": "ceza",
    "tetikleyici": "komutasını alan",
@@ -1057,27 +1012,27 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-098",
+   "i": "K-1-094",
    "madde": "317",
    "tip": "ceza",
    "tetikleyici": "emirlere uymayanlara",
-   "cevap": "aynı ceza (müebbet)",
+   "cevap": "komutanlığı terk emrine uymayana aynı ceza (müebbet)",
    "kanit": "(1) Kanunen yetkili olmadıkları veya Devlet tarafından memur edilmedikleri halde, bir asker kıtasının veya donanmasının veya savaş gemisinin veya savaş hava filosunun veya bir kale veya müstahkem mevkiin veya bir askerî üssün veya tesisin, bir liman veya şehrin komutasını alanlara müebbet hapis cezası verilir. (2) Kanunen yetkili olmaları veya Devlet tarafından görevlendirilmeleri suretiyle yukarıda gösterilen yerlerin komutanı bulunanlardan, yetkili makamlarca komutanlığı terk etmeleri için verilen emirlere uymayanlara da aynı ceza verilir.",
-   "not": "komutanlığı terk emrine uymayan komutan",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-1-099",
+   "i": "K-1-095",
    "madde": "318",
    "tip": "ceza",
    "tetikleyici": "firara sevk",
-   "cevap": "altı ay-iki yıl hapis",
+   "cevap": "altı ay-iki yıl; basın-yayınla yarı artar (bir kat DEĞİL)",
    "kanit": "Askerlik hizmetini yapanları firara sevk edecek veya askerlik hizmetine katılacak olanları bu hizmeti yapmaktan vazgeçirecek şekilde teşvik veya telkinde bulunanlara altı aydan iki yıla kadar hapis cezası verilir. (2) Fiil, basın ve yayın yolu ile işlenirse ceza yarısı oranında artırılır.",
-   "not": "basın-yayınla yarısı artırım; askerlikten soğutma",
+   "not": "askerlikten soğutma",
    "karistirilan": []
   },
   {
-   "i": "K-1-100",
+   "i": "K-1-096",
    "madde": "318",
    "tip": "ceza",
    "tetikleyici": "basın ve yayın yolu",
@@ -1087,17 +1042,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-101",
+   "i": "K-1-097",
    "madde": "319",
    "tip": "ceza",
    "tetikleyici": "itaatsizliğe",
-   "cevap": "bir-üç yıl; aleni iki-beş; savaşta bir kat",
+   "cevap": "bir-üç yıl; aleni iki-beş; savaşta bir kat; basın-yayın YOK",
    "kanit": "(1) Askerleri veya askerî idareye bağlı olarak görev yapan diğer kişileri kanunlara karşı itaatsizliğe veya yeminlerini bozmaya veya askerî disiplini veya askerlik hizmetine ilişkin görevlerini ihlale yönelten ve tahrik edenler ile kanunlara, yeminlere veya disiplin veya diğer görevlere aykırı hareketleri askerler önünde öven veya iyi gördüğünü söyleyen kimselere, bir yıldan üç yıla kadar hapis cezası verilir. (2) Fiil, aleni olarak işlenmişse iki yıldan beş yıla kadar hapis cezası verilir. (3) Fiil, savaş zamanında işlenmiş ise ceza bir katı oranında artırılır.",
-   "not": "basın-yayın artırımı bu maddede YOK",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-1-102",
+   "i": "K-1-098",
    "madde": "320",
    "tip": "ceza",
    "tetikleyici": "asker yazan",
@@ -1107,7 +1062,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-103",
+   "i": "K-1-099",
    "madde": "320",
    "tip": "ceza",
    "tetikleyici": "askerlik çağında",
@@ -1117,7 +1072,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-104",
+   "i": "K-1-100",
    "madde": "320",
    "tip": "ceza",
    "tetikleyici": "hizmeti kabul eden",
@@ -1127,7 +1082,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-105",
+   "i": "K-1-101",
    "madde": "321",
    "tip": "ceza",
    "tetikleyici": "bilerek aykırı",
@@ -1137,7 +1092,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-106",
+   "i": "K-1-102",
    "madde": "322",
    "tip": "ceza",
    "tetikleyici": "sözleşmedeki yükümlülükleri",
@@ -1147,7 +1102,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-107",
+   "i": "K-1-103",
    "madde": "322",
    "tip": "ceza",
    "tetikleyici": "taksirden ileri",
@@ -1157,7 +1112,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-108",
+   "i": "K-1-104",
    "madde": "322",
    "tip": "ceza",
    "tetikleyici": "hile yapan",
@@ -1167,17 +1122,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-109",
+   "i": "K-1-105",
    "madde": "323",
    "tip": "ceza",
    "tetikleyici": "asılsız veya abartılmış",
-   "cevap": "beş-on yıl; propaganda, askerlere, yabancıyla anlaşma on-yirmi",
+   "cevap": "beş-on yıl; propaganda, askerlere, yabancıyla anlaşma on-yirmi; kin-düşmanlık YOK",
    "kanit": "(1) Savaş sırasında kamunun endişe ve heyecan duymasına neden olacak veya halkın maneviyatını sarsacak veya düşman karşısında ülkenin direncini azaltacak şekilde asılsız veya abartılmış veya özel maksada dayalı havadis veya haber yayan veya nakleden veya temel milli yararlara zarar verebilecek herhangi bir faaliyette bulunan kimseye beş yıldan on yıla kadar hapis cezası verilir. (2) Eğer fiil; a) Propagandayla, b) Askerlere yönelik olarak, c) Bir yabancı ile anlaşma neticesi, İşlenmişse, verilecek ceza on yıldan yirmi yıla kadar hapistir.",
-   "not": "halkı kin ve düşmanlığa tahrik amacı ağırlaştırıcı DEĞİL; basın-yayın artırımı YOK",
+   "not": "basın-yayın artırımı da YOK",
    "karistirilan": []
   },
   {
-   "i": "K-1-110",
+   "i": "K-1-106",
    "madde": "323",
    "tip": "ceza",
    "tetikleyici": "düşmanla anlaşma",
@@ -1187,7 +1142,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-111",
+   "i": "K-1-107",
    "madde": "324",
    "tip": "ceza",
    "tetikleyici": "seferberlikle",
@@ -1197,7 +1152,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-1-112",
+   "i": "K-1-108",
    "madde": "325",
    "tip": "ceza",
    "tetikleyici": "akademik derece",

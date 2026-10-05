@@ -53,41 +53,16 @@
   },
   {
    "i": "K-7-004",
-   "madde": "2",
-   "tip": "tanim",
-   "tetikleyici": "örgüt adına",
-   "cevap": "mensup olmasa da terör suçlusu sayılır",
-   "kanit": "Birinci maddede belirlenen amaçlara ulaşmak için meydana getirilmiş örgütlerin mensubu olup da, bu amaçlar doğrultusunda diğerleri ile beraber veya tek başına suç işleyen veya amaçlanan suçu işlemese dahi örgütlerin mensubu olan kişi terör suçlusudur. Terör örgütüne mensup olmasa dahi örgüt adına suç işleyenler de terör suçlusu sayılır",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "7",
-     "fark": "m.7 son fıkra: üye olmayan örgüt adına propaganda vb. işlerse 314/3’ten ayrıca ceza yok"
-    }
-   ]
-  },
-  {
-   "i": "K-7-005",
-   "madde": "2",
-   "tip": "tanim",
-   "tetikleyici": "amaçlanan suç",
-   "cevap": "işlemese de örgüt mensubu terör suçlusudur",
-   "kanit": "Birinci maddede belirlenen amaçlara ulaşmak için meydana getirilmiş örgütlerin mensubu olup da, bu amaçlar doğrultusunda diğerleri ile beraber veya tek başına suç işleyen veya amaçlanan suçu işlemese dahi örgütlerin mensubu olan kişi terör suçlusudur. Terör örgütüne mensup olmasa dahi örgüt adına suç işleyenler de terör suçlusu sayılır",
-   "not": "örgütlerin mensubu olmak yeter",
-   "karistirilan": []
-  },
-  {
-   "i": "K-7-006",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "yazılı suç",
-   "cevap": "302, 307, 309, 311-315, 320; doğrudan terör suçu",
+   "cevap": "302, 307, 309, 310 birinci fıkra, 311-315, 320: terör suçu",
    "kanit": "(Değişik: 29/6/2006-5532/2 md.) 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar, terör suçlarıdır.",
-   "not": "TCK maddeleri; 310’un birinci fıkrası da; örgüt faaliyeti şartı aranmaz; 304 yok",
+   "not": "TCK maddeleri; örgüt faaliyeti şartı aranmaz; 304 bu listede YOK",
    "karistirilan": []
   },
   {
-   "i": "K-7-007",
+   "i": "K-7-005",
    "madde": "4",
    "tip": "kosul",
    "tetikleyici": "terör suçu sayıl",
@@ -97,7 +72,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-008",
+   "i": "K-7-006",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "yöneticisi olarak",
@@ -107,7 +82,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-009",
+   "i": "K-7-007",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "propagandasını yapan",
@@ -117,7 +92,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-010",
+   "i": "K-7-008",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "basın ve yayın",
@@ -127,7 +102,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-011",
+   "i": "K-7-009",
    "madde": "7",
    "tip": "kosul",
    "tetikleyici": "haber verme sınır",
@@ -137,7 +112,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-012",
+   "i": "K-7-010",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "destekçisi",
@@ -147,7 +122,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-013",
+   "i": "K-7-011",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "yüzünü",
@@ -157,7 +132,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-014",
+   "i": "K-7-012",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "molotof",
@@ -167,7 +142,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-015",
+   "i": "K-7-013",
    "madde": "7",
    "tip": "ceza",
    "tetikleyici": "öğrenci yurt",
@@ -177,7 +152,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-016",
+   "i": "K-7-014",
    "madde": "8",
    "tip": "ceza",
    "tetikleyici": "nüfuz",
@@ -187,7 +162,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-017",
+   "i": "K-7-015",
    "madde": "8",
    "tip": "ceza",
    "tetikleyici": "tüzel kişi",
@@ -202,7 +177,7 @@
    ]
   },
   {
-   "i": "K-7-018",
+   "i": "K-7-016",
    "madde": "15",
    "tip": "sayi_oran",
    "tetikleyici": "avukat",
@@ -217,7 +192,7 @@
    ]
   },
   {
-   "i": "K-7-019",
+   "i": "K-7-017",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "ödenmesine ilişkin",
@@ -227,7 +202,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-020",
+   "i": "K-7-018",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "para ödülü",
@@ -237,7 +212,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-021",
+   "i": "K-7-019",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "kimliklerini bildiren",
@@ -247,7 +222,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-022",
+   "i": "K-7-020",
    "madde": "20",
    "tip": "makam",
    "tetikleyici": "koruma tedbir",
@@ -262,7 +237,7 @@
    ]
   },
   {
-   "i": "K-7-023",
+   "i": "K-7-021",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "talep hal",
@@ -272,7 +247,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-024",
+   "i": "K-7-022",
    "madde": "20",
    "tip": "gorev_yetki",
    "tetikleyici": "ayrılmış",
@@ -282,7 +257,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-025",
+   "i": "K-7-023",
    "madde": "21",
    "tip": "kosul",
    "tetikleyici": "engelli",
@@ -292,7 +267,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-026",
+   "i": "K-7-024",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "ikramiye",
@@ -302,7 +277,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-027",
+   "i": "K-7-025",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "kamu konut",
@@ -312,7 +287,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-028",
+   "i": "K-7-026",
    "madde": "21",
    "tip": "kosul",
    "tetikleyici": "tanıtım kart",
@@ -322,7 +297,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-029",
+   "i": "K-7-027",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "yaralananların",
@@ -332,7 +307,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-030",
+   "i": "K-7-028",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "öncelikle",
@@ -347,17 +322,17 @@
    ]
   },
   {
-   "i": "K-7-031",
+   "i": "K-7-029",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "Sosyal Yardımlaşma",
-   "cevap": "vatandaşa öncelikli yardım; şehit çocuğu öğrenimi; ikramiye değil",
+   "cevap": "şehit çocuğu öğrenimi de; emekli ikramiyesi DEĞİL",
    "kanit": "Zarar gören, can ve mal kaybına uğrayan vatandaşlara, Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonundan öncelikle yardım yapılır. Bu fondan ilk ve orta öğrenim çağındaki şehit çocuklarının öğrenim masrafları karşılanır.",
    "not": "30 yıl ikramiye ve konut m.21’de, kamu görevlisine",
    "karistirilan": []
   },
   {
-   "i": "K-7-032",
+   "i": "K-7-030",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "öğrenim",
@@ -367,7 +342,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-7-033",
+   "i": "K-7-031",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "kapsam ve ölçü",

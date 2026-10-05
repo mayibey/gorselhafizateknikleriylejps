@@ -21,7 +21,7 @@ K = [
  # m.4-6 — yarıya çekme, selam, örtme
  ('4','makam','yarıya','yas: 10 Kasım; diğer hâlleri Cumhurbaşkanlığı ilan eder','Türk Bayrağı, yas alameti olarak','Cumhurbaşkanlığınca ilan edilir.',[('3','m.3 metninin sonunda m.4 başlığı “Bayrağın Yarıya Çekilmesi” yer alır')],'eskiden Başbakanlık'),
  ('5','sira_usul','selam','cephe alınarak','Çekilmesi ve indirilmesi esnasında','cephe alınarak selamlanır.',[('4','m.4 metninin sonunda m.5 başlığı “Bayrağın Selamlanması” yer alır')],'çekme, indirme ve tören geçişlerinde'),
- ('6','kosul','örtül','Cumhurbaşkanı-şehit tabutu, açılışta Atatürk heykeli, yeminde masalara; kürsüye yok','Türk Bayrağı, Cumhurbaşkanlığı yapmış','masalara örtülebilir.',[('5','m.5 metninin sonunda m.6 başlığı “Bayrağın Örtülebileceği Yerler” yer alır')],'yönetmelikte belirlenen asker ve sivillerin tabutu da; sporcu omzu, iş insanı tabutu yok'),
+ ('6','kosul','örtül','tabut: Cumhurbaşkanı/şehit/yönetmelikteki asker-sivil; Atatürk heykeli; yeminde masalara; sporcu/iş insanı/kürsü YOK','Türk Bayrağı, Cumhurbaşkanlığı yapmış','masalara örtülebilir.',[('5', 'm.5 metninin sonunda m.6 başlığı “Bayrağın Örtülebileceği Yerler” yer alır')],'Cumhurbaşkanlığı yapmış kişi; heykele açılış töreninde'),
  ('6','kosul','adetler','diğer kullanılma şekli yönetmelikte','Ayrıca milli orf','yönetmelikte gösterilir.',[],'millî örf ve âdetler gözetilir'),
 
  # m.7 — yasaklar

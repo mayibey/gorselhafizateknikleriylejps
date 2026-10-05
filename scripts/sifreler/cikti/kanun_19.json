@@ -35,16 +35,6 @@
   {
    "i": "K-19-004",
    "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "üniversiteler",
-   "cevap": "Merkez Bankası ile dahil",
-   "kanit": "T.C. Merkez Bankası ve üniversiteler de dahil olmak üzere kamu tüzel kişiliğini haiz olarak enstitü, teşebbüs, teşekkül, fon ve sair adlarla kurulmuş olan bütün kamu kurum ve kuruluşlarının ve kamu kurumu niteliğindeki meslek kuruluşlarının faaliyetlerinde uygulanır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-19-005",
-   "madde": "2",
    "tip": "tanim",
    "tetikleyici": "İMKB",
    "cevap": "864 sayılı Cumhurbaşkanı Kararıyla çıkarıldı",
@@ -53,7 +43,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-006",
+   "i": "K-19-005",
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "kamu tüzel kişiliği",
@@ -63,7 +53,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-007",
+   "i": "K-19-006",
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "meslek kuruluş",
@@ -73,7 +63,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-008",
+   "i": "K-19-007",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "hazırlanmıştır",
@@ -83,7 +73,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-009",
+   "i": "K-19-008",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "her türlü veri",
@@ -93,17 +83,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-010",
-   "madde": "4",
-   "tip": "tanim",
-   "tetikleyici": "veri taşıyıcı",
-   "cevap": "belge; bilgi ise kayıttaki veri",
-   "kanit": "d) Belge: Kurum ve kuruluşların sahip oldukları 4982 sayılı Kanun kapsamındaki yazılı, basılı veya çoğaltılmış dosya, evrak, kitap, dergi, broşür, etüt, mektup, program, talimat, kroki, plan, film, fotoğraf, teyp ve video kaseti, harita, elektronik ortamda kaydedilen her türlü bilgi, haber ve veri taşıyıcılarını,",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-19-011",
+   "i": "K-19-009",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Belge:",
@@ -113,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-012",
+   "i": "K-19-010",
    "madde": "4",
    "tip": "sira_usul",
    "tetikleyici": "erişim",
@@ -123,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-013",
+   "i": "K-19-011",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Başvuru sahibi:",
@@ -133,7 +113,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-014",
+   "i": "K-19-012",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "sahiptir",
@@ -143,7 +123,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-015",
+   "i": "K-19-013",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "yabancı",
@@ -153,7 +133,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-016",
+   "i": "K-19-014",
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "karşılıklılık",
@@ -163,7 +143,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-19-017",
+   "i": "K-19-015",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "uluslararası sözleşme",

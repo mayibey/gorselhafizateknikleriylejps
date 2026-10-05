@@ -77,9 +77,9 @@
    "madde": "2",
    "tip": "tanim",
    "tetikleyici": "sonuçlanması muhtemel",
-   "cevap": "fiziksel, cinsel, psikolojik, ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli",
+   "cevap": "fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; meslekî başarı YOK",
    "kanit": "d) Şiddet: Kişinin, fiziksel, cinsel, psikolojik veya ekonomik açıdan zarar görmesiyle veya acı çekmesiyle sonuçlanan veya sonuçlanması muhtemel hareketleri, buna yönelik tehdit ve baskıyı ya da özgürlüğün keyfî engellenmesini de içeren, toplumsal, kamusal veya özel alanda meydana gelen fiziksel, cinsel, psikolojik, sözlü veya ekonomik her türlü tutum ve davranışı,",
-   "not": "dinî şiddet, meslekî başarı azalması yok",
+   "not": "dinî şiddet de listede yok",
    "karistirilan": []
   },
   {
@@ -259,7 +259,7 @@
    "madde": "4",
    "tip": "makam",
    "tetikleyici": "hâkim tarafından",
-   "cevap": "koruyucu: işyeri, ayrı yerleşim, konut şerhi, kimlik; önleyici: uzaklaştırma",
+   "cevap": "koruyucu: işyeri/ayrı yerleşim/konut şerhi/kimlik; önleyici: uzaklaştırma; barınma YOK",
    "kanit": "(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir:",
    "not": "barınma ve geçici koruma mülkî amirde",
    "karistirilan": [
@@ -561,9 +561,9 @@
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "gizli tutul",
-   "cevap": "korunan ve aile bireylerinin kimlik-adres bilgisi; tebligata ayrı adres",
+   "cevap": "korunanın-ailesinin kimlik-adresi; tebligata ayrı adres; adli sicil YOK",
    "kanit": "(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte talep üzerine veya resen, korunan kişi ve diğer aile bireylerinin kimlik bilgileri veya kimliğini ortaya çıkarabilecek bilgileri ve adresleri ile korumanın etkinliği bakımından önem taşıyan diğer bilgileri, tüm resmi kayıtlarda gizli tutulur. Yapılacak tebligatlara ilişkin ayrı bir adres tespit edilir.",
-   "not": "adli sicil yok; ifşaya TCK",
+   "not": "ifşa edene TCK",
    "karistirilan": []
   },
   {
@@ -715,9 +715,9 @@
    "madde": "13",
    "tip": "makam",
    "tetikleyici": "zorlama hapsi",
-   "cevap": "toplam altı ay; Cumhuriyet başsavcılığı yerine getirir",
+   "cevap": "toplam altı ay; başsavcılık yerine getirir; infaz hâkimliği DEĞİL",
    "kanit": "(2) Tedbir kararının gereklerine aykırılığın her tekrarında, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre zorlama hapsinin süresi onbeş günden otuz güne kadardır. Ancak zorlama hapsinin toplam süresi altı ayı geçemez. (3) Zorlama hapsine ilişkin kararlar, Cumhuriyet başsavcılığınca yerine getirilir. Bu kararlar Bakanlığın ilgili il ve ilçe müdürlüklerine bildirilir.",
-   "not": "infaz hâkimliği değil",
+   "not": "",
    "karistirilan": [
     {
      "madde": "8",

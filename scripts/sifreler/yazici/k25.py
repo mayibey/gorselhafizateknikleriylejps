@@ -8,15 +8,15 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.1-5 — kapsam, yurda sokma, yapım yasağı
- ('1','tanim','balistik önemi haiz','namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, iğne','Madde 1 – (Değişik: 12/6/1979 - 2249/2 md.) Ateşli','bu kanun hükümlerine tabidir.',[('12','bu parçaları sokmak, yapmak, satmak: beş-oniki yıl'),('13','bu parçaları ruhsatsız alma-taşıma: iki-dört yıl'),('2','m.2 metnindeki değişiklik notunda geçer')],'dürbün listede yok'),
+ ('1','tanim','balistik önemi haiz','namlu/sürgü/gövde/çerçeve/silindir/mekanizma başı/çıkarıcı/tırnak/ateşleme iğnesi; dürbün YOK','Madde 1 – (Değişik: 12/6/1979 - 2249/2 md.) Ateşli','bu kanun hükümlerine tabidir.',[('12', 'bu parçaları sokmak, yapmak, satmak: beş-oniki yıl'), ('13', 'bu parçaları ruhsatsız alma-taşıma: iki-dört yıl'), ('2', 'm.2 metnindeki değişiklik notunda geçer')],''),
  ('2','yasak','ülkeye sokulması yasaktır','silah, mermi, salt saldırı aleti; kurum alımları saklı','Milli Savunma Bakanlığı, Jandarma Genel Komutanlığı, Emniyet','ülkeye sokulması yasaktır.',[],'MSB, JGK, EGM, MİT alımları ve 6551 saklı'),
  ('2','istisna','diplomatik ayrıcalık','tek silah ve mermisi; karşılıklılık şartı','A) Tek bir silaha ve bu silahın mermilerine','(Karşılıklı olmak koşuluyla)',[],'akredite diplomatlar'),
  ('2','istisna','armağan edilen','resmî görevde armağan; belgeli, vergisiz','B) Resmi görevle yurt dışına','resmi ödenmeksizin)',[('6','armağan silah belgelerinde süre kaydı aranmaz')],'devlet/hükümet başkanı, genelkurmay başkanı, kuvvet komutanı armağanı'),
  ('2','istisna','tek bir silaha mahsus','elçi, konsolos, daimi subay, güvenlik memuru','C) Memuriyetleri devamınca','yurda sokulmasına izin verilir.',[],'dış temsilciliklerimizde'),
  ('2','istisna','kıta ile gönderilen','kimlik kartındaki silaha izin aranmaz','Yurt dışına kıta ile','izin şartı aranmaz.',[],'subay ve astsubay'),
  ('3','kosul','mermilerinin yapılması','3763, 5591 (MKE) ve 6551 sayılı kanunlar','Madde 3 – (Değişik: 12/6/1979 - 2249/4 md.) Memleket içinde','Kanunların hükümlerine tabidir.',[],''),
- ('4','yasak','yapımı yasak','kama, hançer, şişli baston, sustalı, kasatura, muşta; yivsiz serbest','Ülke içinde kama','yapımı yasaktır.',[('5','yasak bıçağın satışı, taşınması, bulundurulması da yasak')],'mutfak bıçağı listede yok'),
- ('4','yasak','muşta','yapımı yasak salt saldırı-savunma aleti; meslek bıçağı tabi değil','Ülke içinde kama','yapımı yasaktır.',[],'topuz, boğma teli, pala, kılıç da'),
+ ('4','yasak','yapımı yasak','kama/hançer/saldırma/şişli baston/sustalı/pala/kılıç/kasatura/süngü/oluklu bıçak/topuz/kamçı/boğma teli/muşta; mutfak bıçağı-yivsiz tüfek YOK','Ülke içinde kama','yapımı yasaktır.',[('5', 'yasak bıçağın satışı, taşınması, bulundurulması da yasak')],'yivsiz tüfek ve meslek aletleri tabi değil (ayrı satır)'),
+ ('4','yasak','muşta','yapımı yasak salt saldırı-savunma aleti; meslek bıçağı tabi değil','Ülke içinde kama','yapımı yasaktır.',[],'kasap bıçağı gibi meslek aleti izinle yapılır'),
  ('4','istisna','tabi değil','spor ateşsizi, yivsiz tüfek; ev, tıp, sanayi, tarım, meslek aletleri','Yalnız sporda kullanılan','tabi değildir.',[],''),
  ('4','istisna','yivsiz tüfek','Kanuna tabi değil; yivli olan ruhsata tabi','Yalnız sporda kullanılan','tabi değildir.',[('Ek 1','turist avcı yivsiz tüfeğini gümrüğe beyanla getirir'),('2','m.2 metnindeki değişiklik notunda geçer')],''),
  ('4','makam','sanat veya mesleğin icrası','İçişleri yönetmeliğiyle yapım izni','Bunlardan bir sanat veya mesleğin','kurallara göre izin verilir.',[('5','izinli meslek bıçakları satış-taşıma yasağının dışında')],''),
@@ -54,14 +54,12 @@ K = [
  ('11','tanim','antika silah','eskiden kalma, değerli, az rastlanan, artık imal edilmeyen','Antika silah deyimi','ifade eder.',[],'hediye olması hatıra silah ölçütü'),
  ('11','tanim','hatıra silah','yabancı devlet/hükümet, Devlet Başkanı, Başbakan, Genelkurmay hediyesi; belgeli; İstiklal Savaşı','Bu Kanunun uygulanmasında hatıra silah deyimi','Ateşli veya ateşsiz silah ve bıçakları ifade eder.',[],'vali hediyesi yok'),
  ('11','istisna','kılıç, meç','görev nedeniyle verilen; izin belgesi aranmaz','Ancak, görevleri nedeniyle Devletçe','izin belgesi aranmaz.',[],''),
- ('11','kosul','satış','izin vesikasıyla serbest','Hatıra teşkil eden veya antika','satışı serbesttir.',[],'antika silah ve bıçak'),
 
  # m.12 — silah kaçakçılığı ve yapımı
  ('12','ceza','ülkeye sok','silahta beş-oniki yıl hapis; beşyüz-beşbin gün adlî para','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[('2','ülkeye sokma yasağı ve istisnaları'),('14','bıçak sokma: iki-beş yıl')],'yapmak, taşımak, satmak da'),
  ('12','ceza','oniki yıla','sokar, yapar, taşır, satar, bu amaçla bulundurur; satın alma değil','Her kim bu Kanunun kapsamına giren ateşli','adlî para cezasıyla cezalandırılır.',[],'ruhsatsız satın alma m.13’te'),
  ('12','ceza','bu amaçla','satmak için bulundurursa da aynı ceza','satar veya satmaya aracılık ederse veya bu amaçla','adlî para cezasıyla cezalandırılır.',[('11','görev için bu amaçla temin edilen kılıç-meç')],'miras yoluyla devralma yok'),
  ('12','ceza','birlikte','silahta sekiz-onbeş yıl, bin-onbin gün; tek kişi beş-oniki','Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında','adlî para cezasına hükmolunur.',[('14','bıçakta iki kişi birlikte: ceza bir kat artar'),('11','antika silah izin vesikasıyla birlikte satılır')],''),
- ('12','ceza','onbeş yıla','iki ya da daha çok kişi birlikte','Birinci fıkrada yazılı suçları üçüncü fıkradaki hal dışında','adlî para cezasına hükmolunur.',[],'örgüt değilse'),
  ('12','ceza','beşyüz günden','beşbin güne kadar (hapis beş-oniki)','beş yıldan oniki yıla kadar hapis','adlî para cezasıyla cezalandırılır.',[('13','vahim ruhsatsız silahta da beşyüz-beşbin gün')],''),
  ('12','ceza','örgütün faaliyeti','cezalar bir kat artırılır','Birinci fıkradaki fiillerin, suç işlemek','bir kat artırılır.',[],''),
  ('12','ceza','susturuculu','tüfek, tam otomatik, dürbünlü, hedef noktalayıcı: yarı oranında artar','Ateşli silahın tüfek veya seri','yarı oranında artırılarak hükmolunur.',[],'dürbünsüz tabanca nitelikli değil'),
@@ -95,7 +93,7 @@ K = [
  ('Ek 1','sure','yıllık süre geç','beş yıl taşıma ruhsatı verilmez','beş yıllık süre geçmediği takdirde','taşıma ruhsatı verilmez.',[],''),
  ('Ek 1','kosul','turist olarak avcılık','gümrüğe beyan + giriş kapısı emniyetinden izin; geçici','Kara Avcılığı Kanunu esaslarına göre','geçici olarak yurda sokabilirler.',[],'atıcılık yarışmasına gelen yabancı da'),
  ('Ek 1','kosul','bilimsel araştırmalar','EGM izni + gümrük beyanı','Antlaşmalarla yurdumuza görevli olarak gelen','şartıyla yurda sokabilirler.',[],'antlaşmayla görevli gelen yabancı da'),
- ('Ek 1','kosul','geçici olarak yurda sok','turist avcı, atıcılık yarışmacısı, antlaşmalı görevli, bilimsel araştırmacı','Kara Avcılığı Kanunu esaslarına göre','geçici olarak yurda sokabilirler.',[],'ticari ithalatçı yok'),
+ ('Ek 1','kosul','geçici olarak yurda sok','turist avcı, atıcılık yarışmacısı, antlaşmalı görevli, bilimsel araştırmacı; ticari YOK','Kara Avcılığı Kanunu esaslarına göre','geçici olarak yurda sokabilirler.',[],''),
  ('Ek 1','kosul','pasaportuna','taşıma izin vesikası yerine geçer','yurda sokulmasına izin verilen silah, silah aksamı','taşıma izin vesikası yerine geçer.',[],''),
  ('Ek 1','kosul','sarfedilmeyen','ülke terk edilirken yurt dışına çıkarılır','sarfedilmeyen mermilerin ülkemiz','yurt dışına çıkarılması zorunludur.',[],''),
  ('Ek','kosul','teslim ettikleri takdirde','üç ay içinde teslim: takibat yok','İzin vesikaları bu suretle iptal edilenler','takibat yapılmaz.',[('Geçici','korucular 90 gün içinde teslim ederse takibat yok')],'silahlar MSB emrine'),

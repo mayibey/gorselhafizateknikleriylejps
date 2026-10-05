@@ -15,11 +15,9 @@ K = [
 
  # m.2 — terör suçlusu
  ('2','tanim','terör suçlusu','mensup: suç işlemese de; mensup değil: örgüt adına işlerse','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[('1','m.1 metninin sonunda m.2 başlığı “Terör suçlusu” yer alır')],'tek başına ya da beraber suç işleyen mensup da'),
- ('2','tanim','örgüt adına','mensup olmasa da terör suçlusu sayılır','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[('7','m.7 son fıkra: üye olmayan örgüt adına propaganda vb. işlerse 314/3’ten ayrıca ceza yok')],''),
- ('2','tanim','amaçlanan suç','işlemese de örgüt mensubu terör suçlusudur','Birinci maddede belirlenen amaçlara','terör suçlusu sayılır',[],'örgütlerin mensubu olmak yeter'),
 
  # m.3 ve m.4 — terör suçları
- ('3','tanim','yazılı suç','302, 307, 309, 311-315, 320; doğrudan terör suçu','(Değişik: 29/6/2006-5532/2 md.) 26/9/2004','terör suçlarıdır.',[],'TCK maddeleri; 310’un birinci fıkrası da; örgüt faaliyeti şartı aranmaz; 304 yok'),
+ ('3','tanim','yazılı suç','302, 307, 309, 310 birinci fıkra, 311-315, 320: terör suçu','(Değişik: 29/6/2006-5532/2 md.) 26/9/2004','terör suçlarıdır.',[],'TCK maddeleri; örgüt faaliyeti şartı aranmaz; 304 bu listede YOK'),
  ('4','kosul','terör suçu sayıl','örgüt faaliyeti çerçevesinde; kasten orman yakma, kaçakçılık da','(Değişik: 29/6/2006-5532/3 md.) Aşağıdaki suçlar','terör suçu sayılır:',[],'TCK’daki birçok suç, 6136 silah suçları, KASTEN orman yakma, hapisli kaçakçılık, OHAL bölgesi olayları, 2863 m.68; taksirle orman yakma YOK'),
 
  # m.7 — örgüt, propaganda, yüz kapatma
@@ -58,7 +56,7 @@ K = [
  # m.22 — terörden zarar gören vatandaş
  ('22','makam','yaralananların','Devlet tarafından tedavi','(Değişik: 13/11/1995 - 4131/2 md.) Terör eylemlerinden','Devlet tarafından yapılır.',[],''),
  ('22','makam','öncelikle','Sosyal Yardımlaşma ve Dayanışmayı Teşvik Fonu','Zarar gören, can ve mal kaybına','öncelikle yardım yapılır.',[('20','m.20: savcı ve hâkimin korunma talepleri öncelikle yerine getirilir')],'vatandaşa; kamu görevlisine 2330 Nakdi Tazminat (m.21)'),
- ('22','kosul','Sosyal Yardımlaşma','vatandaşa öncelikli yardım; şehit çocuğu öğrenimi; ikramiye değil','Zarar gören, can ve mal kaybına','öğrenim masrafları karşılanır.',[],'30 yıl ikramiye ve konut m.21’de, kamu görevlisine'),
+ ('22','kosul','Sosyal Yardımlaşma','şehit çocuğu öğrenimi de; emekli ikramiyesi DEĞİL','Zarar gören, can ve mal kaybına','öğrenim masrafları karşılanır.',[],'30 yıl ikramiye ve konut m.21’de, kamu görevlisine'),
  ('22','kosul','öğrenim','şehit çocuklarının masrafı; yükseköğretim değil','Bu fondan ilk ve orta','öğrenim masrafları karşılanır.',[],'ilk ve orta öğrenim çağındakiler'),
  ('22','makam','kapsam ve ölçü','Fon Kurulu tespit eder','Yardımın kapsam ve ölçüsü','Fon Kurulunca tespit edilir.',[],'Fonun mahalli yetkililerince belirlenen miktarı aşmamak kaydıyla'),
 ]

@@ -19,11 +19,26 @@
    "tetikleyici": "kapsar",
    "cevap": "subay, astsubay, sözleşmeli, uzman, er; sivil memur DEĞİL",
    "kanit": "MADDE 2- (1) Bu Yönetmelik; Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli subay, astsubay, sözleşmeli subay ve astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erlerin kaynakları, işe alınmaları, mesleki gelişimleri, branşlaşmaları, hizmet şartları, nitelikleri, atanma ve yetiştirilmeleri, ödev, hak, yükümlülük ile sorumlulukları ve diğer özlük işlerine ilişkin hükümleri kapsar.",
-   "not": "kaynak, işe alma, mesleki gelişim, atama, ödev-hak-sorumluluk, özlük",
+   "not": "sivil memur ve işçi kapsamda değil",
    "karistirilan": []
   },
   {
    "i": "K-22-003",
+   "madde": "2",
+   "tip": "tanim",
+   "tetikleyici": "mesleki gelişimleri",
+   "cevap": "branşlaşma, hizmet şartı, nitelik, atama, ödev-hak-yükümlülük-sorumluluk, özlük",
+   "kanit": "MADDE 2- (1) Bu Yönetmelik; Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli subay, astsubay, sözleşmeli subay ve astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve erlerin kaynakları, işe alınmaları, mesleki gelişimleri, branşlaşmaları, hizmet şartları, nitelikleri, atanma ve yetiştirilmeleri, ödev, hak, yükümlülük ile sorumlulukları ve diğer özlük işlerine ilişkin hükümleri kapsar.",
+   "not": "kaynak ve işe alınma da",
+   "karistirilan": [
+    {
+     "madde": "17",
+     "fark": "m.17 mesleki gelişim: lisansüstü eğitim, yurt içi-dışı kurs"
+    }
+   ]
+  },
+  {
+   "i": "K-22-004",
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "nasıp ve terfi",
@@ -33,7 +48,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-004",
+   "i": "K-22-005",
    "madde": "3",
    "tip": "kosul",
    "tetikleyici": "dayanılarak",
@@ -48,7 +63,7 @@
    ]
   },
   {
-   "i": "K-22-005",
+   "i": "K-22-006",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "Bakan:",
@@ -58,7 +73,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-006",
+   "i": "K-22-007",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "kıdem büyüklüğü",
@@ -68,7 +83,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-007",
+   "i": "K-22-008",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "temsil ettiği mevki",
@@ -78,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-008",
+   "i": "K-22-009",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "amir olarak yetkilendirilmiş",
@@ -88,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-009",
+   "i": "K-22-010",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "inha eden makam",
@@ -98,7 +113,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-010",
+   "i": "K-22-011",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "teknik bilgi ve beceri",
@@ -108,7 +123,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-011",
+   "i": "K-22-012",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "alt hizmet alanları",
@@ -118,7 +133,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-012",
+   "i": "K-22-013",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "beden ve zihni kabiliyetleri",
@@ -128,7 +143,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-013",
+   "i": "K-22-014",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "başarı düzeyini ölçen",
@@ -138,7 +153,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-014",
+   "i": "K-22-015",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "belirlenen atama yeri",
@@ -148,7 +163,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-015",
+   "i": "K-22-016",
    "madde": "4",
    "tip": "tanim",
    "tetikleyici": "birçok birimi bir araya getiren",
@@ -158,17 +173,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-016",
+   "i": "K-22-017",
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "personel ihtiyacı",
-   "cevap": "Akademi ve eğitim komutanlıkları; Bakanlık onaylı insan gücü planı",
+   "cevap": "Akademi, eğitim komutanlığını başarıyla bitirenler; Bakanlık onaylı plan",
    "kanit": "MADDE 5- (1) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığının personel ihtiyacı;\na) Jandarma ve Sahil Güvenlik Akademisi tarafından,\nb) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bünyesindeki eğitim komutanlıklarındaki eğitimlerini başarıyla tamamlayanlardan, karşılanır.\n(2) Jandarma ve Sahil Güvenlik Akademisi tarafından Akademide yetiştirilemeyen veya az yetiştirilen sınıf ve branşlara yönelik olarak diğer yükseköğretim kurumlarıyla protokoller yapılarak öğrenci yetiştirilebilir, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı nam ve hesabına diğer yükseköğretim kurumlarında öğrenci okutulabilir. Bu kapsamda uygulanacak usul ve esaslar Bakanlık tarafından belirlenir.\n(3) Personelin mesleki gelişimine yönelik yapılan planlamalara ilişkin usul ve esaslar Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından ayrı ayrı hazırlanarak Bakanlık tarafından yürürlüğe konulan yönetmeliklerle belirlenir.\n(4) Personel ihtiyacı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından ayrı ayrı hazırlanarak Bakanlık tarafından onaylanan insan gücü planına göre karşılanır.",
-   "not": "eğitimi başarıyla tamamlayanlardan",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-22-017",
+   "i": "K-22-018",
    "madde": "5",
    "tip": "kosul",
    "tetikleyici": "yetiştirilemeyen",
@@ -178,7 +193,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-018",
+   "i": "K-22-019",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "İlk nasıp",
@@ -188,7 +203,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-019",
+   "i": "K-22-020",
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "28/5/2020",
@@ -198,7 +213,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-020",
+   "i": "K-22-021",
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "16/1/2024",
@@ -208,7 +223,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-021",
+   "i": "K-22-022",
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "astsubay",
@@ -235,7 +250,7 @@
    ]
   },
   {
-   "i": "K-22-022",
+   "i": "K-22-023",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "İlk branş belirlenme",
@@ -245,7 +260,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-023",
+   "i": "K-22-024",
    "madde": "8",
    "tip": "makam",
    "tetikleyici": "branş değişikliği",
@@ -260,7 +275,7 @@
    ]
   },
   {
-   "i": "K-22-024",
+   "i": "K-22-025",
    "madde": "9",
    "tip": "sira_usul",
    "tetikleyici": "Çekimser oy",
@@ -270,7 +285,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-025",
+   "i": "K-22-026",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "kesinleş",
@@ -280,7 +295,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-026",
+   "i": "K-22-027",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "Atamalarda",
@@ -299,7 +314,7 @@
    ]
   },
   {
-   "i": "K-22-027",
+   "i": "K-22-028",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "zorunlu atama",
@@ -309,7 +324,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-028",
+   "i": "K-22-029",
    "madde": "10",
    "tip": "istisna",
    "tetikleyici": "kritik ve kilit kadrolar",
@@ -319,7 +334,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-029",
+   "i": "K-22-030",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "tamamlamadan",
@@ -329,7 +344,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-030",
+   "i": "K-22-031",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "subay kadrolarına",
@@ -339,7 +354,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-031",
+   "i": "K-22-032",
    "madde": "11",
    "tip": "sira_usul",
    "tetikleyici": "ilk görev",
@@ -349,7 +364,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-032",
+   "i": "K-22-033",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "aşağıdaki kriterler",
@@ -359,7 +374,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-033",
+   "i": "K-22-034",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "evlenmeden önceki",
@@ -369,7 +384,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-034",
+   "i": "K-22-035",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Hizmet bölgelerinin derece",
@@ -379,7 +394,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-035",
+   "i": "K-22-036",
    "madde": "14",
    "tip": "sure",
    "tetikleyici": "Genel atamalar",
@@ -389,7 +404,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-036",
+   "i": "K-22-037",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "Aynı yerdeki",
@@ -399,7 +414,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-037",
+   "i": "K-22-038",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "Başka yerdeki",
@@ -409,7 +424,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-038",
+   "i": "K-22-039",
    "madde": "15",
    "tip": "makam",
    "tetikleyici": "Savaş ve olağanüstü",
@@ -419,7 +434,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-039",
+   "i": "K-22-040",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "mutemetler",
@@ -429,7 +444,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-040",
+   "i": "K-22-041",
    "madde": "15",
    "tip": "sira_usul",
    "tetikleyici": "yollukları",
@@ -444,7 +459,7 @@
    ]
   },
   {
-   "i": "K-22-041",
+   "i": "K-22-042",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "amire ulaşmasından",
@@ -454,7 +469,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-042",
+   "i": "K-22-043",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "izinli, raporlu, tutuklu",
@@ -464,7 +479,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-043",
+   "i": "K-22-044",
    "madde": "16",
    "tip": "makam",
    "tetikleyici": "geçici görevlendir",
@@ -474,7 +489,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-044",
+   "i": "K-22-045",
    "madde": "16",
    "tip": "makam",
    "tetikleyici": "Aylık ve diğer mali haklar",
@@ -484,7 +499,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-045",
+   "i": "K-22-046",
    "madde": "16",
    "tip": "makam",
    "tetikleyici": "Disiplin soruşturması",
@@ -494,7 +509,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-046",
+   "i": "K-22-047",
    "madde": "17",
    "tip": "makam",
    "tetikleyici": "eğitim planı",
@@ -504,7 +519,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-047",
+   "i": "K-22-048",
    "madde": "18",
    "tip": "kosul",
    "tetikleyici": "sadakatle bağlı",
@@ -514,7 +529,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-048",
+   "i": "K-22-049",
    "madde": "19",
    "tip": "yasak",
    "tetikleyici": "Tarafsızlık",
@@ -529,7 +544,7 @@
    ]
   },
   {
-   "i": "K-22-049",
+   "i": "K-22-050",
    "madde": "19",
    "tip": "yasak",
    "tetikleyici": "ayırım",
@@ -539,7 +554,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-050",
+   "i": "K-22-051",
    "madde": "19",
    "tip": "kosul",
    "tetikleyici": "Devletin menfaatlerini",
@@ -549,7 +564,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-051",
+   "i": "K-22-052",
    "madde": "19",
    "tip": "yasak",
    "tetikleyici": "zümrenin",
@@ -559,7 +574,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-052",
+   "i": "K-22-053",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "itibar ve güvene",
@@ -569,7 +584,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-053",
+   "i": "K-22-054",
    "madde": "20",
    "tip": "kosul",
    "tetikleyici": "ilkelerini esas alır",
@@ -579,7 +594,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-054",
+   "i": "K-22-055",
    "madde": "20",
    "tip": "sira_usul",
    "tetikleyici": "mesleki nezaket",
@@ -589,7 +604,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-055",
+   "i": "K-22-056",
    "madde": "21",
    "tip": "yasak",
    "tetikleyici": "maiyetindeki personele",
@@ -599,7 +614,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-056",
+   "i": "K-22-057",
    "madde": "22",
    "tip": "kosul",
    "tetikleyici": "görevlerinin iyi ve doğru",
@@ -609,7 +624,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-057",
+   "i": "K-22-058",
    "madde": "23",
    "tip": "kosul",
    "tetikleyici": "Devlet malı",
@@ -619,7 +634,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-058",
+   "i": "K-22-059",
    "madde": "23",
    "tip": "kosul",
    "tetikleyici": "idare zarara",
@@ -629,7 +644,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-059",
+   "i": "K-22-060",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "kamu hukukuna tabi görev",
@@ -639,7 +654,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-060",
+   "i": "K-22-061",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "zimmete geçiril",
@@ -649,7 +664,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-061",
+   "i": "K-22-062",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "sorumlu personel",
@@ -659,7 +674,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-062",
+   "i": "K-22-063",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "Avrupa İnsan Hakları Mahkemesi",
@@ -669,7 +684,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-063",
+   "i": "K-22-064",
    "madde": "25",
    "tip": "yasak",
    "tetikleyici": "basına",
@@ -679,7 +694,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-064",
+   "i": "K-22-065",
    "madde": "25",
    "tip": "yasak",
    "tetikleyici": "demeç",
@@ -689,7 +704,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-065",
+   "i": "K-22-066",
    "madde": "26",
    "tip": "yasak",
    "tetikleyici": "yetki verilen mahaller",
@@ -699,7 +714,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-066",
+   "i": "K-22-067",
    "madde": "26",
    "tip": "kosul",
    "tetikleyici": "iade",
@@ -709,7 +724,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-067",
+   "i": "K-22-068",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "aynen uygulanmasını",
@@ -719,7 +734,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-068",
+   "i": "K-22-069",
    "madde": "29",
    "tip": "kosul",
    "tetikleyici": "görevine son ver",
@@ -729,7 +744,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-069",
+   "i": "K-22-070",
    "madde": "30",
    "tip": "sure",
    "tetikleyici": "emeklilik talep",
@@ -739,7 +754,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-070",
+   "i": "K-22-071",
    "madde": "31",
    "tip": "sure",
    "tetikleyici": "çekilme",
@@ -762,7 +777,7 @@
    ]
   },
   {
-   "i": "K-22-071",
+   "i": "K-22-072",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "Müracaat ve şikâyetler",
@@ -772,17 +787,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-072",
+   "i": "K-22-073",
    "madde": "33",
    "tip": "kosul",
    "tetikleyici": "isnad",
-   "cevap": "merkezde en büyük amir, illerde valiler savcılıktan dava ister",
+   "cevap": "garaz-hakaret amaçlı: merkezde en büyük amir, illerde valiler dava ister",
    "kanit": "(1) Personel hakkındaki ihbar ve şikâyetler, garaz veya mücerret hakaret için, uydurma bir suç isnadı suretiyle yapıldığı ve soruşturma veya yargılamanın tabi olduğu kanuni işlem sonucunda bu isnat sabit olmadığı takdirde, merkezde bu personelin en büyük amiri, illerde valiler, isnatta bulunanlar hakkında kamu davası açılmasını Cumhuriyet savcılığından ister.",
-   "not": "garaz veya mücerret hakaret amaçlı, sabit olmayan isnat",
+   "not": "sabit olmayan uydurma suç isnadı; kamu davası savcılıktan istenir",
    "karistirilan": []
   },
   {
-   "i": "K-22-073",
+   "i": "K-22-074",
    "madde": "35",
    "tip": "yasak",
    "tetikleyici": "Toplu eylem",
@@ -792,7 +807,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-074",
+   "i": "K-22-075",
    "madde": "36",
    "tip": "yasak",
    "tetikleyici": "grev",
@@ -802,7 +817,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-075",
+   "i": "K-22-076",
    "madde": "37",
    "tip": "yasak",
    "tetikleyici": "tacir veya esnaf",
@@ -812,7 +827,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-076",
+   "i": "K-22-077",
    "madde": "37",
    "tip": "istisna",
    "tetikleyici": "kooperatif",
@@ -822,17 +837,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-077",
+   "i": "K-22-078",
    "madde": "37",
    "tip": "sure",
    "tetikleyici": "yasaklanan",
-   "cevap": "eşi-çocuğu yaparsa onbeş gün içinde kuruma bildirir",
+   "cevap": "eşi, reşit olmayan-mahcur çocuk yaparsa onbeş günde bildirir",
    "kanit": "(3) Eşleri, reşit olmayan veya mahcur olan çocukları, yasaklanan faaliyetlerde bulunan personel, bu durumu onbeş gün içinde bağlı oldukları kuruma bildirmekle yükümlüdürler.",
-   "not": "reşit olmayan ya da mahcur çocuk",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-22-078",
+   "i": "K-22-079",
    "madde": "38",
    "tip": "yasak",
    "tetikleyici": "borç para",
@@ -842,7 +857,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-079",
+   "i": "K-22-080",
    "madde": "38",
    "tip": "yasak",
    "tetikleyici": "Hediye alma",
@@ -857,7 +872,7 @@
    ]
   },
   {
-   "i": "K-22-080",
+   "i": "K-22-081",
    "madde": "39",
    "tip": "yasak",
    "tetikleyici": "denetimi altında",
@@ -867,7 +882,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-081",
+   "i": "K-22-082",
    "madde": "40",
    "tip": "yasak",
    "tetikleyici": "İkinci görev",
@@ -877,23 +892,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-082",
+   "i": "K-22-083",
    "madde": "41",
    "tip": "yasak",
    "tetikleyici": "gizli bilgi",
    "cevap": "görevden ayrılsa da Bakanın yazılı izni olmadan açıklanamaz",
    "kanit": "(1) Gizli bilgi; doğrudan kanunlarla veya kanun ve düzenleyici işlemlere dayanarak yetkili makamlar tarafından gizli olarak nitelendirilen bilgidir.\n(2) Personel, kamu hizmetleri ile ilgili gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.",
    "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-22-083",
-   "madde": "41",
-   "tip": "yasak",
-   "tetikleyici": "gizli olarak nitelendiril",
-   "cevap": "Bakanın yazılı izni olmadan açıklanamaz",
-   "kanit": "(1) Gizli bilgi; doğrudan kanunlarla veya kanun ve düzenleyici işlemlere dayanarak yetkili makamlar tarafından gizli olarak nitelendirilen bilgidir.\n(2) Personel, kamu hizmetleri ile ilgili gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.",
-   "not": "görevden ayrılmış olsa bile",
    "karistirilan": []
   },
   {
@@ -1119,9 +1124,9 @@
    "madde": "46",
    "tip": "tanim",
    "tetikleyici": "ödüller",
-   "cevap": "başarı, üstün başarı, takdir belgesi, şerit rozet, bröve, madalya",
+   "cevap": "başarı, üstün başarı, takdir belgesi, rozet, bröve, madalya; aylık-plaket YOK",
    "kanit": "(4) Bu Yönetmelik kapsamında verilen ödüller; başarı belgesi, üstün başarı belgesi, takdir belgesi, şerit rozet, bröve ve madalyadır.",
-   "not": "aylıkla ödül, plaket, terfi ikramiyesi, yurt dışı görevi YOK",
+   "not": "şerit rozet; terfi ikramiyesi, yurt dışı görevi de YOK",
    "karistirilan": []
   },
   {
@@ -1163,29 +1168,14 @@
    "i": "K-22-108",
    "madde": "47",
    "tip": "sayi_oran",
-   "tetikleyici": "Üç defa",
-   "cevap": "üstün başarı belgesi",
+   "tetikleyici": "defa başarı belgesi",
+   "cevap": "üç defa alana üstün başarı belgesi",
    "kanit": "Üç defa başarı belgesi alanlara üstün başarı belgesi verilir.",
    "not": "ÜÇ BAŞARI = BİR ÜSTÜN BAŞARI",
    "karistirilan": []
   },
   {
    "i": "K-22-109",
-   "madde": "47",
-   "tip": "sayi_oran",
-   "tetikleyici": "üstün başarı belgesi",
-   "cevap": "üç başarı belgesi alana",
-   "kanit": "Üç defa başarı belgesi alanlara üstün başarı belgesi verilir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "46",
-     "fark": "ödül türleri listesinde de üstün başarı belgesi"
-    }
-   ]
-  },
-  {
-   "i": "K-22-110",
    "madde": "48",
    "tip": "tanim",
    "tetikleyici": "Şerit rozet",
@@ -1200,7 +1190,7 @@
    ]
   },
   {
-   "i": "K-22-111",
+   "i": "K-22-110",
    "madde": "49",
    "tip": "tanim",
    "tetikleyici": "Bröve",
@@ -1215,7 +1205,7 @@
    ]
   },
   {
-   "i": "K-22-112",
+   "i": "K-22-111",
    "madde": "50",
    "tip": "makam",
    "tetikleyici": "üstün cesaret ve feragat",
@@ -1225,7 +1215,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-113",
+   "i": "K-22-112",
    "madde": "50",
    "tip": "makam",
    "tetikleyici": "Madalyanın",
@@ -1235,7 +1225,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-114",
+   "i": "K-22-113",
    "madde": "51",
    "tip": "tanim",
    "tetikleyici": "Görevden uzaklaştır",
@@ -1254,7 +1244,7 @@
    ]
   },
   {
-   "i": "K-22-115",
+   "i": "K-22-114",
    "madde": "52",
    "tip": "makam",
    "tetikleyici": "uzaklaştırmaya yetkili",
@@ -1269,7 +1259,7 @@
    ]
   },
   {
-   "i": "K-22-116",
+   "i": "K-22-115",
    "madde": "52",
    "tip": "sira_usul",
    "tetikleyici": "uzaklaştırma tedbiri",
@@ -1284,7 +1274,7 @@
    ]
   },
   {
-   "i": "K-22-117",
+   "i": "K-22-116",
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "Disiplin işleri",
@@ -1294,7 +1284,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-118",
+   "i": "K-22-117",
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "mülki görevlerinden doğan",
@@ -1304,17 +1294,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-119",
+   "i": "K-22-118",
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "Adli görevlerinden doğan",
-   "cevap": "CMK 161 beşinci fıkra",
+   "cevap": "5271 sayılı CMK 161 beşinci fıkra",
    "kanit": "c) Adli görevlerinden doğan suçlarda 5271 sayılı Kanunun 161 inci maddesinin beşinci fıkrası hükmü uygulanır.",
-   "not": "5271 sayılı Kanun m.161 beşinci fıkra",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-22-120",
+   "i": "K-22-119",
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "askeri görev verildiği",
@@ -1324,7 +1314,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-121",
+   "i": "K-22-120",
    "madde": "53",
    "tip": "kosul",
    "tetikleyici": "kişisel suç",
@@ -1334,7 +1324,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-122",
+   "i": "K-22-121",
    "madde": "54",
    "tip": "kosul",
    "tetikleyici": "resmi üniforma giymesi",
@@ -1344,7 +1334,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-123",
+   "i": "K-22-122",
    "madde": "55",
    "tip": "kosul",
    "tetikleyici": "ilişiği kesil",
@@ -1354,7 +1344,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-124",
+   "i": "K-22-123",
    "madde": "55",
    "tip": "istisna",
    "tetikleyici": "sivil kıyafet",
@@ -1364,7 +1354,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-125",
+   "i": "K-22-124",
    "madde": "55",
    "tip": "yasak",
    "tetikleyici": "eskimiş dahi olsa",
@@ -1374,7 +1364,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-126",
+   "i": "K-22-125",
    "madde": "55",
    "tip": "kosul",
    "tetikleyici": "kravat",
@@ -1384,7 +1374,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-127",
+   "i": "K-22-126",
    "madde": "55",
    "tip": "kosul",
    "tetikleyici": "şapka, kep, bere",
@@ -1394,7 +1384,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-128",
+   "i": "K-22-127",
    "madde": "56",
    "tip": "kosul",
    "tetikleyici": "özlük hakları",
@@ -1413,7 +1403,7 @@
    ]
   },
   {
-   "i": "K-22-129",
+   "i": "K-22-128",
    "madde": "56",
    "tip": "kosul",
    "tetikleyici": "Asayiş Tazminatı",
@@ -1423,7 +1413,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-130",
+   "i": "K-22-129",
    "madde": "57",
    "tip": "makam",
    "tetikleyici": "il sınırları dışına çıkan",
@@ -1433,7 +1423,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-131",
+   "i": "K-22-130",
    "madde": "58",
    "tip": "kosul",
    "tetikleyici": "kazandan",
@@ -1443,7 +1433,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-132",
+   "i": "K-22-131",
    "madde": "59",
    "tip": "kosul",
    "tetikleyici": "Sağlık yeteneği",
@@ -1453,7 +1443,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-133",
+   "i": "K-22-132",
    "madde": "60",
    "tip": "sira_usul",
    "tetikleyici": "Selamlama",
@@ -1463,7 +1453,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-134",
+   "i": "K-22-133",
    "madde": "61",
    "tip": "makam",
    "tetikleyici": "sosyal tesislerden",
@@ -1473,7 +1463,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-135",
+   "i": "K-22-134",
    "madde": "63",
    "tip": "sure",
    "tetikleyici": "yürürlüğe girer",
@@ -1483,7 +1473,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-22-136",
+   "i": "K-22-135",
    "madde": "64",
    "tip": "makam",
    "tetikleyici": "hükümlerini",

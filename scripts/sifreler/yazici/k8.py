@@ -15,8 +15,7 @@ K = [
 
  # m.2 — kapsam
  ('2','kosul','para, mal','çalışma dahil; yalnız afet, salgın, bunalım OHAL’inde','Bu Kanun; olağanüstü hal ilanına tabii afet','çalışma yükümlülükleri',[],'şiddet (b) OHAL’inde para, mal, çalışma yükümlülüğü YOK'),
- ('2','kosul','her türü için','hak sınırlama, tedbir, görevli, yönetim usulü; para-mal değil','olağanüstü hallerin her türü için','olağanüstü yönetim usullerine ilişkin hükümleri kapsar.',[],'seçim zamanı, vergi muafiyeti kapsamda yok'),
- ('2','kosul','nasıl sınırlan','OHAL’in her türü için ayrı ayrı geçerli','olağanüstü hallerin her türü için','olağanüstü yönetim usullerine ilişkin hükümleri kapsar.',[],'temel hak ve hürriyetlerin sınırlanması veya durdurulması'),
+ ('2','kosul','her türü için','ayrı ayrı: hak sınırlama-durdurma, tedbir, görevli, yönetim usulü; para-mal değil','olağanüstü hallerin her türü için','olağanüstü yönetim usullerine ilişkin hükümleri kapsar.',[],'seçim zamanı, vergi muafiyeti kapsamda yok'),
  ('2','gorev_yetki','kamu hizmeti görevlileri','yetkiler ve durumlarındaki değişiklikler','kamu hizmeti görevlilerine','değişiklikler yapılacağına',[],''),
 
  # m.3 — ilan, süre, uzatma, Meclis onayı
@@ -31,11 +30,11 @@ K = [
  ('3','kosul','bütününde','bölgesinde ya da tüm yurtta','Yurdun bir veya birden fazla','olağanüstü hal ilan edebilir.',[],'yalnız bir bölgede ilan şartı yok'),
 
  # m.9 — afet ve salgın OHAL'i tedbirleri
- ('9','gorev_yetki','tedbir','afet-salgında: öğrenime ara, bina yıkma; sokağa çıkma, silah, dernek yok','Tabii afet ve tehlikeli salgın hastalıklar sebebiyle','imha etmek,',[('2','m.2: halin gerektirdiği tedbirlerin nasıl alınacağı kapsamda'),('11','m.11: şiddet OHAL’inde m.9’a ek tedbirler; sokağa çıkma, silah, dernek orada'),('22','m.22/b: valinin aldığı tedbirleri kolluk uygulayamazsa bölge valisi')],'yerleşimi yasaklama-boşaltma, eğlence yeri denetimi, personel izni, haberleşmeye elkoyma, gıda kontrolü de'),
+ ('9','gorev_yetki','tedbir','afet-salgında: yerleşim/öğrenim/eğlence yeri/izin/haberleşme/bina yıkma/gıda/dağıtım/ticaret/ulaşım; sokağa çıkma-silah-dernek YOK','Tabii afet ve tehlikeli salgın hastalıklar sebebiyle','kayıtlamak veya yasaklamak.',[('2', 'm.2: halin gerektirdiği tedbirlerin nasıl alınacağı kapsamda'), ('11', 'm.11: şiddet OHAL’inde m.9’a ek tedbirler; sokağa çıkma, silah, dernek orada'), ('22', 'm.22/b: valinin aldığı tedbirleri kolluk uygulayamazsa bölge valisi')],'sokağa çıkma, silah, dernek şiddet (b) OHAL’inde (m.11)'),
  ('9','gorev_yetki','deniz ve hava','ulaştırma araçlarının giriş-çıkışı kayıtlanır, yasaklanır','j) Kara, deniz ve hava','kayıtlamak veya yasaklamak.',[],'trafik düzenine ilişkin tedbirler'),
 
  # m.11 — şiddet OHAL'i ek tedbirleri
- ('11','gorev_yetki','kamu düzeni','ek: sokağa çıkma, toplantı, silah, dernek, basın; çalışma yükümlülüğü yok','Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince','a) Sokağa çıkmayı sınırlamak veya yasaklamak,',[('1','m.1/b: kamu düzeninin ciddi bozulması OHAL sebebi'),('3','m.3/b: aynı sebeple Cumhurbaşkanı ilan eder')],'m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir, ek tedbir değil'),
+ ('11','gorev_yetki','kamu düzeni','ek: sokağa çıkma/toplantı/silah/dernek/basın; gıda kontrolü, çalışma yükümlülüğü YOK','Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince','a) Sokağa çıkmayı sınırlamak veya yasaklamak,',[('1', 'm.1/b: kamu düzeninin ciddi bozulması OHAL sebebi'), ('3', 'm.3/b: aynı sebeple Cumhurbaşkanı ilan eder')],'m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir; çalışma yükümlülüğü afet-bunalım OHAL’inde'),
  ('11','gorev_yetki','Sokağa çıkma','yalnız şiddet (b) OHAL’inde; afet OHAL’inde yok','Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince','a) Sokağa çıkmayı sınırlamak veya yasaklamak,',[],'sınırlama veya yasaklama'),
  ('11','gorev_yetki','gösteri yürüyüş','yalnız şiddet (b) OHAL’inde: yasaklama, erteleme, izne bağlama','m) Kapalı ve açık yerlerde','gerekiyorsa dağıtmak,',[],'yer ve zaman tayini, izletme, dağıtma da'),
  ('11','sure','Dernek faaliyet','üç ay; her dernek için ayrı karar','o) (Ek: 14/11/1984 - 3076/1 md.) Dernek','durdurmak,',[],'yalnız şiddet (b) OHAL’inde'),
@@ -47,7 +46,6 @@ K = [
  ('22','makam','ani ve olağanüstü','en yakın askeri komutanlıktan yardım','İl valisi, ani ve olağanüstü','yardım gönderilmesini isteyebilir.',[],'bölge valisinin güçleri gelene kadar'),
  ('22','makam','bildirir','bölge valisi ve İçişleri Bakanlığına','İl valisi ayrıca bu durumu','İçişleri Bakanlığına bildirir.',[],'askerî yardım istediğini'),
  ('22','makam','olayları önle','önce emrindeki kolluk; yetmezse bölge valisi','b) İllerinde bu Kanunun 3 üncü maddesinin (b)','bölge valisine başvururlar.',[],'ani olayda en yakın askerî komutanlık'),
- ('22','makam','emrindeki kolluk','yetmezse bağlı olduğu bölge valisine','b) İllerinde bu Kanunun 3 üncü maddesinin (b)','bölge valisine başvururlar.',[],'gönderilen kolluk il valisinin emrine girer'),
  ('22','makam','yardım istem','afette mevcut yetkiler; şiddette kolluk, bölge valisi, askeri','a) İllerinde bu Kanunun 3 üncü maddesinin birinci fıkrasının (a)','bölge valisine başvururlar.',[],'(a) ve (b) için ayrı usul'),
  ('22','sure','istekleri','gecikmeksizin yerine getirilir','İl valisinin yukarıda açıklanan istekleri','gecikmeksizin yerine getirilir.',[],'ilgililerce'),
  ('22','makam','görev ve yetkiler','il valisi (askeri yardım isteyince)','İl valisinin askeri birliklerden yardım','il valilerince yerine getirilir.',[],'bölge valisine ait görev ve yetkiler; m.21 uygulanır'),

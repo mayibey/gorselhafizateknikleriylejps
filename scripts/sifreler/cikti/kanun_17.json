@@ -66,20 +66,10 @@
    "i": "K-17-007",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "Kamu düzeni:",
-   "cevap": "emniyet-asayiş, huzur-sükun, genel sağlık-ahlak; ekonomik istikrar DEĞİL",
+   "tetikleyici": "huzur ve sükun",
+   "cevap": "kamu düzeni (emniyet-asayiş, genel sağlık-ahlak da); ekonomik istikrar DEĞİL",
    "kanit": "i) Kamu düzeni: Emniyet ve asayiş, huzur ve sükun, genel sağlık ve genel ahlak unsurlarından oluşan, hak ve hürriyetlerin tam olarak kullanımına elverişli ortamı,",
    "not": "hak ve hürriyetlerin tam kullanımına elverişli ortam",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-008",
-   "madde": "3",
-   "tip": "tanim",
-   "tetikleyici": "huzur ve sükun",
-   "cevap": "kamu düzeni",
-   "kanit": "i) Kamu düzeni: Emniyet ve asayiş, huzur ve sükun, genel sağlık ve genel ahlak unsurlarından oluşan, hak ve hürriyetlerin tam olarak kullanımına elverişli ortamı,",
-   "not": "emniyet-asayiş, huzur-sükun, genel sağlık, genel ahlak",
    "karistirilan": [
     {
      "madde": "11",
@@ -88,7 +78,7 @@
    ]
   },
   {
-   "i": "K-17-009",
+   "i": "K-17-008",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "yerleşik ve yaygın",
@@ -98,17 +88,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-010",
+   "i": "K-17-009",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Genel kolluk:",
-   "cevap": "Bakanlığa bağlı jandarma, SG, polis; özel kanun DEĞİL",
+   "cevap": "Bakanlığa bağlı jandarma, SG, polis; özel kanun-orman muhafaza DEĞİL",
    "kanit": "e) Genel kolluk: Kamu düzeninin korunmasını sağlayan, mevzuatla verilen görevleri yerine getiren ve silah kullanma yetkisini haiz Bakanlığa bağlı jandarma, sahil güvenlik ve polisi,",
-   "not": "silah kullanma yetkili; özel kanunla kurulmak özel kolluğun unsuru; orman muhafaza gibi diğerleri genel kolluk DEĞİL",
+   "not": "silah kullanma yetkili; özel kanunla kurulan özel kolluktur",
    "karistirilan": []
   },
   {
-   "i": "K-17-011",
+   "i": "K-17-010",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Özel kolluk:",
@@ -118,7 +108,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-012",
+   "i": "K-17-011",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Kapalı yerler:",
@@ -128,7 +118,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-013",
+   "i": "K-17-012",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Mülki amir:",
@@ -138,7 +128,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-014",
+   "i": "K-17-013",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Jandarma hizmet merkezi",
@@ -153,7 +143,7 @@
    ]
   },
   {
-   "i": "K-17-015",
+   "i": "K-17-014",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "ihtiyatını oluşturmak",
@@ -163,7 +153,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-016",
+   "i": "K-17-015",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "takip ve tenkil",
@@ -173,7 +163,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-017",
+   "i": "K-17-016",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Jandarma kriminal birimleri",
@@ -183,7 +173,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-018",
+   "i": "K-17-017",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "harekata hazırlanma",
@@ -193,7 +183,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-019",
+   "i": "K-17-018",
    "madde": "4",
    "tip": "makam",
    "tetikleyici": "bağlıdır",
@@ -208,7 +198,7 @@
    ]
   },
   {
-   "i": "K-17-020",
+   "i": "K-17-019",
    "madde": "5",
    "tip": "tanim",
    "tetikleyici": "taşra teşkilatı",
@@ -231,7 +221,7 @@
    ]
   },
   {
-   "i": "K-17-021",
+   "i": "K-17-020",
    "madde": "5",
    "tip": "tanim",
    "tetikleyici": "merkeze bağlı",
@@ -241,7 +231,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-022",
+   "i": "K-17-021",
    "madde": "5",
    "tip": "tanim",
    "tetikleyici": "Merkez teşkilatı",
@@ -256,7 +246,7 @@
    ]
   },
   {
-   "i": "K-17-023",
+   "i": "K-17-022",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "konuşlarının düzenlenmesinde",
@@ -266,7 +256,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-024",
+   "i": "K-17-023",
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "her düzeydeki jandarma birlikleri",
@@ -276,7 +266,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-025",
+   "i": "K-17-024",
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "birden çok ili",
@@ -286,7 +276,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-026",
+   "i": "K-17-025",
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "Karakolların sorumluluk bölgeleri",
@@ -296,7 +286,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-027",
+   "i": "K-17-026",
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "Geçici asayiş karakolları",
@@ -306,17 +296,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-028",
+   "i": "K-17-027",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "Karakol sorumluluk bölgesinin belirlenmesinde",
-   "cevap": "asayiş, suç analizi, coğrafya, yerleşim, nüfus, ulaşım; personel sayısı DEĞİL",
+   "cevap": "asayiş/suç analizi/coğrafya-ekonomi-kamu hizmeti/yerleşim/nüfus/ulaşım/sosyal-kültürel; personel sayısı DEĞİL",
    "kanit": "Karakol sorumluluk bölgesinin belirlenmesinde aşağıdaki hususlar gözönünde tutulur.\na) Emniyet ve asayiş durumu.\nb) Suç oranları, suç haritaları gibi benzeri suç analizlerinin sonuçları.\nc) İlçenin coğrafi durumu, ekonomik şartlar ve kamu hizmetlerinin gerekleri.\nç) Yerleşim alanlarının durumu.\nd) Nüfus yoğunluğu.\ne) Ulaşım durumu.\nf) Sosyal ve kültürel gelişimi ve benzeri özellikler.",
-   "not": "ekonomik şartlar, kamu hizmeti gerekleri, sosyal-kültürel gelişim de var",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-029",
+   "i": "K-17-028",
    "madde": "6",
    "tip": "makam",
    "tetikleyici": "kuvvet tasarrufu",
@@ -326,7 +316,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-030",
+   "i": "K-17-029",
    "madde": "6",
    "tip": "tanim",
    "tetikleyici": "il merkez jandarma komutanlığı",
@@ -336,7 +326,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-031",
+   "i": "K-17-030",
    "madde": "7",
    "tip": "tanim",
    "tetikleyici": "genel olarak görev",
@@ -346,7 +336,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-032",
+   "i": "K-17-031",
    "madde": "7",
    "tip": "makam",
    "tetikleyici": "Bakanın kararıyla",
@@ -356,7 +346,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-033",
+   "i": "K-17-032",
    "madde": "8",
    "tip": "gorev_yetki",
    "tetikleyici": "Mülki görevler:",
@@ -366,7 +356,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-034",
+   "i": "K-17-033",
    "madde": "8",
    "tip": "gorev_yetki",
    "tetikleyici": "Adli görevler:",
@@ -376,7 +366,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-035",
+   "i": "K-17-034",
    "madde": "8",
    "tip": "gorev_yetki",
    "tetikleyici": "askeri görev",
@@ -395,33 +385,23 @@
    ]
   },
   {
-   "i": "K-17-036",
-   "madde": "8",
-   "tip": "yasak",
-   "tetikleyici": "öngörülmeyen",
-   "cevap": "hiçbir görev istenemez",
-   "kanit": "(2) Kanunlar ve diğer mevzuat hükümleri ile bunlara dayalı olarak yetkili makamlarca verilen emir ve kararlarda öngörülmeyen hiçbir görev jandarmadan istenemez.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-17-037",
+   "i": "K-17-035",
    "madde": "8",
    "tip": "yasak",
    "tetikleyici": "Görev sınırı",
-   "cevap": "mevzuatta öngörülmeyen görev istenemez",
+   "cevap": "mevzuatta öngörülmeyen hiçbir görev istenemez",
    "kanit": "Görev sınırı\nMADDE 8- (1) Jandarmanın görevleri şunlardır:\na) Mülki görevler: Emniyet ve asayiş ile kamu düzenini sağlamak, korumak ve kollamak, kaçakçılığı men, takip ve tahkik etmek, suç işlenmesini önlemek için gerekli tedbirleri almak ve uygulamak, ceza infaz kurumlarının dış korumalarını sağlamak, trafik hizmetlerini yürütmek, arama kurtarma görevlerini yapmak, hassas ve kritik öneme sahip tesislerin korunmasına ilişkin önlemleri ilgili kuruluşlarla işbirliği içinde sağlamak, bu fıkranın (b) ve (c) bentlerinde belirtilen görevler dışında kalan ve mevzuat hükümlerinin icrası ile bunlara dayalı emir ve kararlarla jandarmaya verilen görevleri yapmak.\nb) Adli görevler: İşlenmiş suçlarla ilgili olarak kanunlarda belirtilen işlemleri yapmak ve bunlara ilişkin adli hizmetleri yerine getirmek.\nc) Askeri görevler: Seferberlik ve savaş hallerinde Bakanlar Kurulunun uygun gördüğü bölümleriyle kuvvet komutanlıkları emrinde görev icra etmek ile Genelkurmay Başkanının talebi üzerine Bakanın, illerde ise garnizon komutanının talebi ve valinin onayıyla verilen askeri görevleri icra etmek.\n(2) Kanunlar ve diğer mevzuat hükümleri ile bunlara dayalı olarak yetkili makamlarca verilen emir ve kararlarda öngörülmeyen hiçbir görev jandarmadan istenemez.",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-038",
+   "i": "K-17-036",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "sorumluluk alanı dışında",
-   "cevap": "polis teşkilatı yoksa; özel kolluk alanı ya da yokluğu",
+   "cevap": "polis yoksa; özel kolluk alanı-yokluğu; iç güvenlik devri DEĞİL",
    "kanit": "MADDE 9- (1) Jandarma sorumluluk alanı dışında olmakla birlikte;\na) Polis teşkilatı kurulmamış olması nedeniyle,\nb) Özel kolluk kuruluşlarının sorumluluk alanına giren yerlerde, jandarmayı ilgilendiren ihlal ya da suç işlenmesi nedeniyle,\nc) Özel kolluk kuruluşlarının sorumluluk alanına giren konularda, bu kuruluş ve kuvvetlerin yokluğundan ötürü meydana gelen ihlal ya da suçlar nedeniyle, jandarmanın görevlendirilmesi ya da kendiliğinden olaya elkoyması mümkündür. Bu gibi durumlarda jandarmanın görev yaptığı o yer, jandarmanın görev alanı sayılır.",
-   "not": "kurumun iç güvenliğini sürekli devretmesi sebep DEĞİL",
+   "not": "görevlendirme ya da kendiliğinden el koyma; o yer görev alanı sayılır",
    "karistirilan": [
     {
      "madde": "43",
@@ -430,7 +410,7 @@
    ]
   },
   {
-   "i": "K-17-039",
+   "i": "K-17-037",
    "madde": "9",
    "tip": "kosul",
    "tetikleyici": "kendiliğinden",
@@ -440,7 +420,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-040",
+   "i": "K-17-038",
    "madde": "9",
    "tip": "makam",
    "tetikleyici": "geçici olarak koruma",
@@ -450,7 +430,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-041",
+   "i": "K-17-039",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "komisyon",
@@ -460,7 +440,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-042",
+   "i": "K-17-040",
    "madde": "10",
    "tip": "sure",
    "tetikleyici": "sınırlarda değişiklik",
@@ -470,7 +450,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-043",
+   "i": "K-17-041",
    "madde": "10",
    "tip": "makam",
    "tetikleyici": "anlaşmazlık",
@@ -480,7 +460,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-044",
+   "i": "K-17-042",
    "madde": "10",
    "tip": "sure",
    "tetikleyici": "devir ve teslim",
@@ -490,7 +470,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-045",
+   "i": "K-17-043",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "halkın",
@@ -513,7 +493,7 @@
    ]
   },
   {
-   "i": "K-17-046",
+   "i": "K-17-044",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "yardım eder",
@@ -523,7 +503,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-047",
+   "i": "K-17-045",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "Mülki görevlerin esasları",
@@ -533,7 +513,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-048",
+   "i": "K-17-046",
    "madde": "12",
    "tip": "gorev_yetki",
    "tetikleyici": "Önleyici kolluk",
@@ -543,7 +523,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-049",
+   "i": "K-17-047",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Kişisel koruma ve kollama",
@@ -553,7 +533,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-050",
+   "i": "K-17-048",
    "madde": "14",
    "tip": "sira_usul",
    "tetikleyici": "tutanağın",
@@ -568,7 +548,7 @@
    ]
   },
   {
-   "i": "K-17-051",
+   "i": "K-17-049",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "akıl hastalarının",
@@ -578,7 +558,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-052",
+   "i": "K-17-050",
    "madde": "15",
    "tip": "gorev_yetki",
    "tetikleyici": "kuduz",
@@ -588,7 +568,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-053",
+   "i": "K-17-051",
    "madde": "16",
    "tip": "gorev_yetki",
    "tetikleyici": "aile hayatının gizliliğini",
@@ -598,7 +578,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-054",
+   "i": "K-17-052",
    "madde": "17",
    "tip": "gorev_yetki",
    "tetikleyici": "korkusuz ve güvenlik içinde",
@@ -608,7 +588,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-055",
+   "i": "K-17-053",
    "madde": "18",
    "tip": "gorev_yetki",
    "tetikleyici": "denetim kesintisiz",
@@ -618,7 +598,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-056",
+   "i": "K-17-054",
    "madde": "19",
    "tip": "tanim",
    "tetikleyici": "umuma açık istirahat",
@@ -628,7 +608,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-057",
+   "i": "K-17-055",
    "madde": "19",
    "tip": "sure",
    "tetikleyici": "görüşünü",
@@ -638,7 +618,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-058",
+   "i": "K-17-056",
    "madde": "19",
    "tip": "makam",
    "tetikleyici": "ruhsatı",
@@ -648,7 +628,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-059",
+   "i": "K-17-057",
    "madde": "19",
    "tip": "sira_usul",
    "tetikleyici": "kat’i delil",
@@ -658,7 +638,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-060",
+   "i": "K-17-058",
    "madde": "20",
    "tip": "makam",
    "tetikleyici": "İnternet Toplu Kullanım",
@@ -668,7 +648,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-061",
+   "i": "K-17-059",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "gürültü",
@@ -678,7 +658,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-062",
+   "i": "K-17-060",
    "madde": "21",
    "tip": "sure",
    "tetikleyici": "Düğün, nişan",
@@ -688,7 +668,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-063",
+   "i": "K-17-061",
    "madde": "22",
    "tip": "gorev_yetki",
    "tetikleyici": "imdat isteyen",
@@ -698,7 +678,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-064",
+   "i": "K-17-062",
    "madde": "22",
    "tip": "sira_usul",
    "tetikleyici": "teslim almaktan kaçın",
@@ -708,7 +688,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-065",
+   "i": "K-17-063",
    "madde": "22",
    "tip": "gorev_yetki",
    "tetikleyici": "ısrarlı takip",
@@ -723,7 +703,7 @@
    ]
   },
   {
-   "i": "K-17-066",
+   "i": "K-17-064",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "korunmaya, bakıma",
@@ -733,7 +713,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-067",
+   "i": "K-17-065",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "jandarmanın görevine giren",
@@ -743,7 +723,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-068",
+   "i": "K-17-066",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "personelinin bulunmadığı",
@@ -753,7 +733,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-069",
+   "i": "K-17-067",
    "madde": "23",
    "tip": "makam",
    "tetikleyici": "mülki amirin emri veya onayıyla",
@@ -763,7 +743,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-070",
+   "i": "K-17-068",
    "madde": "24",
    "tip": "gorev_yetki",
    "tetikleyici": "dış korunması",
@@ -773,7 +753,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-071",
+   "i": "K-17-069",
    "madde": "24",
    "tip": "yasak",
    "tetikleyici": "infaz koruma memurluğu",
@@ -783,7 +763,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-072",
+   "i": "K-17-070",
    "madde": "24",
    "tip": "kosul",
    "tetikleyici": "genel bir hareket ve kargaşa",
@@ -793,7 +773,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-073",
+   "i": "K-17-071",
    "madde": "24",
    "tip": "yasak",
    "tetikleyici": "görüşmeleri ve ilişki kurmaları",
@@ -803,7 +783,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-074",
+   "i": "K-17-072",
    "madde": "24",
    "tip": "yasak",
    "tetikleyici": "girmesi yasak olan silah",
@@ -813,7 +793,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-075",
+   "i": "K-17-073",
    "madde": "24",
    "tip": "yasak",
    "tetikleyici": "jandarma muhafazasında olmadıkça",
@@ -823,7 +803,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-076",
+   "i": "K-17-074",
    "madde": "25",
    "tip": "makam",
    "tetikleyici": "muhafız devriyenin kuvvetini",
@@ -833,7 +813,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-077",
+   "i": "K-17-075",
    "madde": "25",
    "tip": "yasak",
    "tetikleyici": "başkalarıyla görüşmelerine",
@@ -843,7 +823,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-078",
+   "i": "K-17-076",
    "madde": "25",
    "tip": "sira_usul",
    "tetikleyici": "inzibat aletleri",
@@ -853,7 +833,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-079",
+   "i": "K-17-077",
    "madde": "26",
    "tip": "kosul",
    "tetikleyici": "gönderilmesi gereken",
@@ -863,7 +843,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-080",
+   "i": "K-17-078",
    "madde": "27",
    "tip": "kosul",
    "tetikleyici": "sevk ve nakillerinin",
@@ -873,7 +853,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-081",
+   "i": "K-17-079",
    "madde": "27",
    "tip": "yasak",
    "tetikleyici": "hizmet araçları",
@@ -883,7 +863,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-082",
+   "i": "K-17-080",
    "madde": "27",
    "tip": "kosul",
    "tetikleyici": "özel taşıt",
@@ -893,7 +873,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-083",
+   "i": "K-17-081",
    "madde": "28",
    "tip": "sira_usul",
    "tetikleyici": "alındı belgesi",
@@ -908,7 +888,7 @@
    ]
   },
   {
-   "i": "K-17-084",
+   "i": "K-17-082",
    "madde": "28",
    "tip": "kosul",
    "tetikleyici": "doktor raporuyla",
@@ -918,7 +898,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-085",
+   "i": "K-17-083",
    "madde": "29",
    "tip": "kosul",
    "tetikleyici": "kadın olması",
@@ -928,7 +908,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-086",
+   "i": "K-17-084",
    "madde": "29",
    "tip": "yasak",
    "tetikleyici": "birlikte sevk",
@@ -938,7 +918,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-087",
+   "i": "K-17-085",
    "madde": "30",
    "tip": "sira_usul",
    "tetikleyici": "yolda hastalan",
@@ -953,7 +933,7 @@
    ]
   },
   {
-   "i": "K-17-088",
+   "i": "K-17-086",
    "madde": "31",
    "tip": "sira_usul",
    "tetikleyici": "birisi öldüğünde",
@@ -963,7 +943,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-089",
+   "i": "K-17-087",
    "madde": "32",
    "tip": "gorev_yetki",
    "tetikleyici": "firar hazırlığı",
@@ -973,7 +953,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-090",
+   "i": "K-17-088",
    "madde": "32",
    "tip": "sira_usul",
    "tetikleyici": "yaralandığında veya öldüğünde",
@@ -983,7 +963,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-091",
+   "i": "K-17-089",
    "madde": "32",
    "tip": "gorev_yetki",
    "tetikleyici": "başka şekilde önlenmesine",
@@ -993,7 +973,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-092",
+   "i": "K-17-090",
    "madde": "32",
    "tip": "makam",
    "tetikleyici": "sevke devam edip edemeyeceklerini",
@@ -1003,7 +983,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-093",
+   "i": "K-17-091",
    "madde": "33",
    "tip": "sira_usul",
    "tetikleyici": "varılacak biçimde",
@@ -1013,7 +993,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-094",
+   "i": "K-17-092",
    "madde": "33",
    "tip": "sira_usul",
    "tetikleyici": "konaklamak durumunda",
@@ -1023,7 +1003,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-095",
+   "i": "K-17-093",
    "madde": "34",
    "tip": "kosul",
    "tetikleyici": "kaçmalarını önlemek",
@@ -1033,7 +1013,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-096",
+   "i": "K-17-094",
    "madde": "35",
    "tip": "gorev_yetki",
    "tetikleyici": "revirlerinde",
@@ -1043,7 +1023,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-097",
+   "i": "K-17-095",
    "madde": "36",
    "tip": "makam",
    "tetikleyici": "Adalet Bakanlığınca düzenlenen",
@@ -1053,7 +1033,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-098",
+   "i": "K-17-096",
    "madde": "37",
    "tip": "gorev_yetki",
    "tetikleyici": "Diğer mülki görevler",
@@ -1063,7 +1043,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-099",
+   "i": "K-17-097",
    "madde": "38",
    "tip": "makam",
    "tetikleyici": "Soruşturma işlemleri",
@@ -1078,7 +1058,7 @@
    ]
   },
   {
-   "i": "K-17-100",
+   "i": "K-17-098",
    "madde": "38",
    "tip": "makam",
    "tetikleyici": "haricindeki hizmetlerde",
@@ -1088,7 +1068,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-101",
+   "i": "K-17-099",
    "madde": "39",
    "tip": "kosul",
    "tetikleyici": "soruşturulması ve kovuşturulması",
@@ -1098,7 +1078,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-102",
+   "i": "K-17-100",
    "madde": "40",
    "tip": "makam",
    "tetikleyici": "yeme, içme ve nakil",
@@ -1108,7 +1088,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-103",
+   "i": "K-17-101",
    "madde": "40",
    "tip": "makam",
    "tetikleyici": "yakıt ve benzeri",
@@ -1118,7 +1098,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-104",
+   "i": "K-17-102",
    "madde": "41",
    "tip": "makam",
    "tetikleyici": "belirlenecek bölümleriyle",
@@ -1128,7 +1108,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-105",
+   "i": "K-17-103",
    "madde": "41",
    "tip": "kosul",
    "tetikleyici": "seferberlik ve savaş halinde",
@@ -1138,7 +1118,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-106",
+   "i": "K-17-104",
    "madde": "41",
    "tip": "makam",
    "tetikleyici": "garnizon komutan",
@@ -1153,7 +1133,7 @@
    ]
   },
   {
-   "i": "K-17-107",
+   "i": "K-17-105",
    "madde": "41",
    "tip": "makam",
    "tetikleyici": "Genelkurmay Başkanlığının talebi",
@@ -1163,7 +1143,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-108",
+   "i": "K-17-106",
    "madde": "42",
    "tip": "gorev_yetki",
    "tetikleyici": "sahip olduğu yetki",
@@ -1173,7 +1153,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-109",
+   "i": "K-17-107",
    "madde": "42",
    "tip": "kosul",
    "tetikleyici": "aykırı görürse",
@@ -1183,7 +1163,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-110",
+   "i": "K-17-108",
    "madde": "42",
    "tip": "kosul",
    "tetikleyici": "ısrar",
@@ -1198,7 +1178,7 @@
    ]
   },
   {
-   "i": "K-17-111",
+   "i": "K-17-109",
    "madde": "42",
    "tip": "yasak",
    "tetikleyici": "suç teşkil eden",
@@ -1208,7 +1188,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-112",
+   "i": "K-17-110",
    "madde": "42",
    "tip": "kosul",
    "tetikleyici": "sözlü emirler",
@@ -1218,7 +1198,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-113",
+   "i": "K-17-111",
    "madde": "43",
    "tip": "gorev_yetki",
    "tetikleyici": "trafiği düzenlemeye",
@@ -1228,7 +1208,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-114",
+   "i": "K-17-112",
    "madde": "44",
    "tip": "gorev_yetki",
    "tetikleyici": "uyarır",
@@ -1238,7 +1218,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-115",
+   "i": "K-17-113",
    "madde": "44",
    "tip": "gorev_yetki",
    "tetikleyici": "zor kullanarak karşı koyan",
@@ -1248,7 +1228,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-116",
+   "i": "K-17-114",
    "madde": "45",
    "tip": "yasak",
    "tetikleyici": "veli ve vasileri olsa bile",
@@ -1258,7 +1238,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-117",
+   "i": "K-17-115",
    "madde": "45",
    "tip": "yasak",
    "tetikleyici": "küçüklerin çalıştırılması",
@@ -1268,7 +1248,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-118",
+   "i": "K-17-116",
    "madde": "45",
    "tip": "gorev_yetki",
    "tetikleyici": "şikâyet olmasa bile",
@@ -1278,17 +1258,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-119",
+   "i": "K-17-117",
    "madde": "46",
    "tip": "gorev_yetki",
    "tetikleyici": "durdurabilir",
-   "cevap": "suç-kabahat önleme, kaçan fail, yakalama emri, tehlike önleme",
+   "cevap": "suç-kabahat-tehlike önleme, kaçan fail-kimlik, yakalama emri; ceza tahsili DEĞİL",
    "kanit": "MADDE 46- (1) Jandarma, kişileri ve araçları;\na) Bir suç veya kabahatin işlenmesini önlemek,\nb) Suç işlendikten sonra kaçan faillerin yakalanmasını sağlamak, işlenen suç veya kabahatlerin faillerinin kimliklerini tespit etmek,\nc) Hakkında yakalama emri ya da zorla getirme kararı verilmiş olan kişileri tespit etmek,\nç) Kişilerin hayatı, vücut bütünlüğü veya malvarlığı bakımından ya da topluma yönelik mevcut veya muhtemel bir tehlikeyi önlemek, amacıyla durdurabilir.",
-   "not": "para cezası tahsili amaç DEĞİL",
+   "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-17-120",
+   "i": "K-17-118",
    "madde": "46",
    "tip": "kosul",
    "tetikleyici": "durdurma yetkisi",
@@ -1298,7 +1278,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-121",
+   "i": "K-17-119",
    "madde": "46",
    "tip": "sure",
    "tetikleyici": "Durdurma süresi",
@@ -1308,7 +1288,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-122",
+   "i": "K-17-120",
    "madde": "46",
    "tip": "yasak",
    "tetikleyici": "elbise",
@@ -1318,7 +1298,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-123",
+   "i": "K-17-121",
    "madde": "46",
    "tip": "makam",
    "tetikleyici": "kolluk amirinin",
@@ -1328,7 +1308,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-124",
+   "i": "K-17-122",
    "madde": "46",
    "tip": "sira_usul",
    "tetikleyici": "araç aramalarına",
@@ -1338,7 +1318,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-125",
+   "i": "K-17-123",
    "madde": "46",
    "tip": "sira_usul",
    "tetikleyici": "jandarma olduğunu belirleyen",
@@ -1348,7 +1328,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-126",
+   "i": "K-17-124",
    "madde": "46",
    "tip": "sira_usul",
    "tetikleyici": "kimliği belirlenemeyen",
@@ -1358,7 +1338,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-127",
+   "i": "K-17-125",
    "madde": "46",
    "tip": "sira_usul",
    "tetikleyici": "Nüfusa kayıtlı olmadığı",
@@ -1368,7 +1348,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-128",
+   "i": "K-17-126",
    "madde": "46",
    "tip": "sira_usul",
    "tetikleyici": "yabancı olduğunun",
@@ -1378,7 +1358,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-129",
+   "i": "K-17-127",
    "madde": "47",
    "tip": "makam",
    "tetikleyici": "önleme araması",
@@ -1388,7 +1368,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-130",
+   "i": "K-17-128",
    "madde": "47",
    "tip": "kosul",
    "tetikleyici": "talep yazısında",
@@ -1398,7 +1378,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-131",
+   "i": "K-17-129",
    "madde": "47",
    "tip": "kosul",
    "tetikleyici": "kararında veya emrinde",
@@ -1408,7 +1388,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-132",
+   "i": "K-17-130",
    "madde": "47",
    "tip": "kosul",
    "tetikleyici": "İdarecilerinin talebiyle",
@@ -1418,7 +1398,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-133",
+   "i": "K-17-131",
    "madde": "47",
    "tip": "yasak",
    "tetikleyici": "yapılamaz",
@@ -1433,7 +1413,7 @@
    ]
   },
   {
-   "i": "K-17-134",
+   "i": "K-17-132",
    "madde": "47",
    "tip": "kosul",
    "tetikleyici": "aniden toplulukların",
@@ -1443,7 +1423,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-135",
+   "i": "K-17-133",
    "madde": "47",
    "tip": "gorev_yetki",
    "tetikleyici": "güvenliğini sağladığı bina",
@@ -1453,7 +1433,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-136",
+   "i": "K-17-134",
    "madde": "47",
    "tip": "sira_usul",
    "tetikleyici": "Önleme aramasının sonucu",
@@ -1463,22 +1443,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-137",
-   "madde": "48",
-   "tip": "gorev_yetki",
-   "tetikleyici": "imdat",
-   "cevap": "konuta, işyerine girebilir",
-   "kanit": "MADDE 48- (1) Jandarma;\na) İmdat istenmesi veya yangın, su baskını ve boğulma gibi büyük tehlikelerin haber verilmesi veya görülmesi hallerinde bu tehlikelerden kişileri kurtarmak amacıyla,\nb) Bir suçun işlenmesine veya işlenmekte olan bir suçun devamına engel olmak için, konutlara, işyerlerine ve eklentilerine girebilir.",
-   "not": "yangın, su baskını, boğulma da; karar-emir gerekmez",
-   "karistirilan": [
-    {
-     "madde": "22",
-     "fark": "imdat isteyen herkese yardım"
-    }
-   ]
-  },
-  {
-   "i": "K-17-138",
+   "i": "K-17-135",
    "madde": "48",
    "tip": "gorev_yetki",
    "tetikleyici": "girebilir",
@@ -1488,7 +1453,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-139",
+   "i": "K-17-136",
    "madde": "49",
    "tip": "gorev_yetki",
    "tetikleyici": "Silah kullanma yetkisi",
@@ -1503,7 +1468,7 @@
    ]
   },
   {
-   "i": "K-17-140",
+   "i": "K-17-137",
    "madde": "50",
    "tip": "gorev_yetki",
    "tetikleyici": "yeri ve zamanına bakılmaksızın",
@@ -1513,7 +1478,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-141",
+   "i": "K-17-138",
    "madde": "51",
    "tip": "gorev_yetki",
    "tetikleyici": "diğer mevzuatta yer alan",
@@ -1523,7 +1488,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-142",
+   "i": "K-17-139",
    "madde": "52",
    "tip": "makam",
    "tetikleyici": "Jandarma Genel Komutanı;",
@@ -1538,7 +1503,7 @@
    ]
   },
   {
-   "i": "K-17-143",
+   "i": "K-17-140",
    "madde": "52",
    "tip": "makam",
    "tetikleyici": "üst yöneticiye verilen",
@@ -1548,7 +1513,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-144",
+   "i": "K-17-141",
    "madde": "53",
    "tip": "makam",
    "tetikleyici": "bulunmadığı zamanlarda",
@@ -1558,7 +1523,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-145",
+   "i": "K-17-142",
    "madde": "54",
    "tip": "makam",
    "tetikleyici": "Bölge komutanı",
@@ -1573,7 +1538,7 @@
    ]
   },
   {
-   "i": "K-17-146",
+   "i": "K-17-143",
    "madde": "54",
    "tip": "makam",
    "tetikleyici": "kuvvet kaydırması",
@@ -1583,7 +1548,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-147",
+   "i": "K-17-144",
    "madde": "55",
    "tip": "makam",
    "tetikleyici": "vali tarafından verilen",
@@ -1602,7 +1567,7 @@
    ]
   },
   {
-   "i": "K-17-148",
+   "i": "K-17-145",
    "madde": "55",
    "tip": "makam",
    "tetikleyici": "Komutanın yokluğunda",
@@ -1617,7 +1582,7 @@
    ]
   },
   {
-   "i": "K-17-149",
+   "i": "K-17-146",
    "madde": "56",
    "tip": "makam",
    "tetikleyici": "kaymakam tarafından verilen",
@@ -1627,7 +1592,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-150",
+   "i": "K-17-147",
    "madde": "57",
    "tip": "makam",
    "tetikleyici": "ilçe jandarma komutanı tarafından",
@@ -1637,7 +1602,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-151",
+   "i": "K-17-148",
    "madde": "57",
    "tip": "gorev_yetki",
    "tetikleyici": "karakol komutanlarının",
@@ -1647,7 +1612,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-152",
+   "i": "K-17-149",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "doğrudan emir",
@@ -1657,7 +1622,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-153",
+   "i": "K-17-150",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "Bakan, jandarma teşkilatı",
@@ -1667,7 +1632,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-154",
+   "i": "K-17-151",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "il ve ilçe jandarma komutanları",
@@ -1677,7 +1642,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-155",
+   "i": "K-17-152",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "doğrudan doğruya sorumlu",
@@ -1687,7 +1652,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-156",
+   "i": "K-17-153",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "her kademedeki amir",
@@ -1697,7 +1662,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-157",
+   "i": "K-17-154",
    "madde": "58",
    "tip": "makam",
    "tetikleyici": "araç ve gereçlerin seçimi",
@@ -1707,7 +1672,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-158",
+   "i": "K-17-155",
    "madde": "59",
    "tip": "sira_usul",
    "tetikleyici": "vakit geçirmeksizin",
@@ -1722,7 +1687,7 @@
    ]
   },
   {
-   "i": "K-17-159",
+   "i": "K-17-156",
    "madde": "59",
    "tip": "sira_usul",
    "tetikleyici": "afetleri",
@@ -1732,7 +1697,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-160",
+   "i": "K-17-157",
    "madde": "60",
    "tip": "sira_usul",
    "tetikleyici": "Taşra teşkilatının merkez",
@@ -1742,7 +1707,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-161",
+   "i": "K-17-158",
    "madde": "60",
    "tip": "sira_usul",
    "tetikleyici": "hak ve yükümlülük doğuran",
@@ -1752,7 +1717,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-162",
+   "i": "K-17-159",
    "madde": "60",
    "tip": "sira_usul",
    "tetikleyici": "yazı işleri",
@@ -1762,7 +1727,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-163",
+   "i": "K-17-160",
    "madde": "60",
    "tip": "sira_usul",
    "tetikleyici": "emir ve tebligat",
@@ -1772,7 +1737,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-164",
+   "i": "K-17-161",
    "madde": "60",
    "tip": "makam",
    "tetikleyici": "asayiş raporlarından",
@@ -1782,7 +1747,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-165",
+   "i": "K-17-162",
    "madde": "60",
    "tip": "sayi_oran",
    "tetikleyici": "istatistikler",
@@ -1792,7 +1757,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-166",
+   "i": "K-17-163",
    "madde": "61",
    "tip": "makam",
    "tetikleyici": "genel hayatın akışını",
@@ -1802,7 +1767,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-167",
+   "i": "K-17-164",
    "madde": "62",
    "tip": "kosul",
    "tetikleyici": "Adli kolluk makamları ile işbirliği",
@@ -1812,7 +1777,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-168",
+   "i": "K-17-165",
    "madde": "63",
    "tip": "sure",
    "tetikleyici": "İcra müdürlüklerinin talebi",
@@ -1822,7 +1787,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-169",
+   "i": "K-17-166",
    "madde": "64",
    "tip": "makam",
    "tetikleyici": "askeri makamlarla ilişkisi",
@@ -1832,7 +1797,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-170",
+   "i": "K-17-167",
    "madde": "65",
    "tip": "yasak",
    "tetikleyici": "suçla karşılaş",
@@ -1847,7 +1812,7 @@
    ]
   },
   {
-   "i": "K-17-171",
+   "i": "K-17-168",
    "madde": "65",
    "tip": "kosul",
    "tetikleyici": "Zorunlu durumlarda, jandarma da",
@@ -1857,7 +1822,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-172",
+   "i": "K-17-169",
    "madde": "65",
    "tip": "gorev_yetki",
    "tetikleyici": "Faillerin belirlenmesi",
@@ -1867,7 +1832,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-173",
+   "i": "K-17-170",
    "madde": "65",
    "tip": "makam",
    "tetikleyici": "hangi kolluk kuvvetine",
@@ -1877,7 +1842,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-174",
+   "i": "K-17-171",
    "madde": "66",
    "tip": "makam",
    "tetikleyici": "dış ilişkiler uygulama planı",
@@ -1887,7 +1852,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-175",
+   "i": "K-17-172",
    "madde": "66",
    "tip": "makam",
    "tetikleyici": "uluslararası kuruluşlara",
@@ -1897,7 +1862,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-176",
+   "i": "K-17-173",
    "madde": "67",
    "tip": "makam",
    "tetikleyici": "denetle",
@@ -1940,7 +1905,7 @@
    ]
   },
   {
-   "i": "K-17-177",
+   "i": "K-17-174",
    "madde": "68",
    "tip": "makam",
    "tetikleyici": "kadro tavanını",
@@ -1950,7 +1915,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-178",
+   "i": "K-17-175",
    "madde": "69",
    "tip": "kosul",
    "tetikleyici": "Savunma Sanayi Destekleme Fonundan",
@@ -1960,7 +1925,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-179",
+   "i": "K-17-176",
    "madde": "69",
    "tip": "makam",
    "tetikleyici": "sefer stokları",
@@ -1970,17 +1935,17 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-180",
+   "i": "K-17-177",
    "madde": "70",
    "tip": "makam",
    "tetikleyici": "değişik kılık",
-   "cevap": "mülki amir ya da il J.K. izni",
+   "cevap": "gizli takip için; mülki amir ya da il J.K. izni",
    "kanit": "Ancak suç ve suçluların gizli olarak takibi, yakalanması ve istihbarat, kaçakçılık ve terörle mücadele hizmetleri için gerek görüldüğünde mülki amirin veya il jandarma komutanının izni ile görevin icap ettirdiği değişik kılık ve kıyafetle de hizmet yürütülebilir.",
-   "not": "resmi kıyafet esas; gizli takip, istihbarat, kaçakçılık, terör",
+   "not": "resmî kıyafet esas; istihbarat, kaçakçılık, terör için de",
    "karistirilan": []
   },
   {
-   "i": "K-17-181",
+   "i": "K-17-178",
    "madde": "70",
    "tip": "makam",
    "tetikleyici": "farklı tertiplenme",
@@ -1990,7 +1955,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-182",
+   "i": "K-17-179",
    "madde": "71",
    "tip": "makam",
    "tetikleyici": "birbirlerinin sorumluluk alanlarında",
@@ -2000,7 +1965,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-183",
+   "i": "K-17-180",
    "madde": "72",
    "tip": "gorev_yetki",
    "tetikleyici": "görevlendirilen ekipler",
@@ -2010,7 +1975,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-184",
+   "i": "K-17-181",
    "madde": "72",
    "tip": "makam",
    "tetikleyici": "önemli olayları",
@@ -2025,7 +1990,7 @@
    ]
   },
   {
-   "i": "K-17-185",
+   "i": "K-17-182",
    "madde": "73",
    "tip": "makam",
    "tetikleyici": "tahsis",
@@ -2035,7 +2000,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-186",
+   "i": "K-17-183",
    "madde": "74",
    "tip": "sure",
    "tetikleyici": "yoklama kaçağı",
@@ -2045,7 +2010,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-187",
+   "i": "K-17-184",
    "madde": "74",
    "tip": "makam",
    "tetikleyici": "yakalanmaları için",
@@ -2055,7 +2020,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-188",
+   "i": "K-17-185",
    "madde": "74",
    "tip": "kosul",
    "tetikleyici": "teslim alınamayan",
@@ -2065,7 +2030,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-189",
+   "i": "K-17-186",
    "madde": "74",
    "tip": "makam",
    "tetikleyici": "Firar, izin veya hava değişimi",
@@ -2075,7 +2040,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-190",
+   "i": "K-17-187",
    "madde": "75",
    "tip": "tanim",
    "tetikleyici": "Emniyet ve asayiş planları",
@@ -2090,7 +2055,7 @@
    ]
   },
   {
-   "i": "K-17-191",
+   "i": "K-17-188",
    "madde": "75",
    "tip": "makam",
    "tetikleyici": "Planlar",
@@ -2109,7 +2074,7 @@
    ]
   },
   {
-   "i": "K-17-192",
+   "i": "K-17-189",
    "madde": "76",
    "tip": "sure",
    "tetikleyici": "stratejik hedef planı",
@@ -2119,7 +2084,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-193",
+   "i": "K-17-190",
    "madde": "77",
    "tip": "yasak",
    "tetikleyici": "tebligat",
@@ -2134,7 +2099,7 @@
    ]
   },
   {
-   "i": "K-17-194",
+   "i": "K-17-191",
    "madde": "78",
    "tip": "makam",
    "tetikleyici": "sancaklar",
@@ -2144,7 +2109,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-195",
+   "i": "K-17-192",
    "madde": "79",
    "tip": "makam",
    "tetikleyici": "düzenleyici işlemler",
@@ -2154,7 +2119,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-196",
+   "i": "K-17-193",
    "madde": "80",
    "tip": "kosul",
    "tetikleyici": "83/7362",
@@ -2164,7 +2129,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-197",
+   "i": "K-17-194",
    "madde": "80",
    "tip": "sure",
    "tetikleyici": "8 inci maddesinde sayılan",
@@ -2174,7 +2139,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-198",
+   "i": "K-17-195",
    "madde": "80",
    "tip": "sure",
    "tetikleyici": "mühürle",
@@ -2184,7 +2149,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-17-199",
+   "i": "K-17-196",
    "madde": "81",
    "tip": "sure",
    "tetikleyici": "yürürlüğe girer",
@@ -2199,7 +2164,7 @@
    ]
   },
   {
-   "i": "K-17-200",
+   "i": "K-17-197",
    "madde": "82",
    "tip": "makam",
    "tetikleyici": "Yönetmelik hükümlerini",

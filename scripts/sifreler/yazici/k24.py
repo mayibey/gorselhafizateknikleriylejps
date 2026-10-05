@@ -29,11 +29,9 @@ K = [
  ('20','kosul','tavır ve hareket','TSK, Sahil Güvenlik, yabancı asker-kolluğa karşı meslekî vakar ve anane','b) Yurt dışındaki Türk Silahlı Kuvvetleri','ananeyi muhafaza eder.',[],''),
  ('20','kosul','yabancılarla temas','daha titiz-dikkatli; olumsuz olaya sebebiyet vermemek','c) Yabancılarla temasta','özen gösterir.',[],'resmî ve özel hayatta'),
  ('20','kosul','mesken','mevzuat ve malî imkâna göre; meslekî şerefe uygun','ç) Mevzuat ve malî','yaşamak zorundadır.',[],''),
- ('20','kosul','malî imkân','uygun meskende, meslekî şerefe uygun yaşar','ç) Mevzuat ve malî','yaşamak zorundadır.',[],''),
  ('20','yasak','üniforma','zorunlu olmadıkça giyemez','d) Zorunlu olmadıkça','üniforma giyemez.',[],'resmî temasta her zaman giyme zorunluluğu YOK'),
  ('20','yasak','seyahat','şahsi, zati, miri silah götüremez','e) Seyahat maksadıyla','silahını götüremez.',[],'kişisel güvenlik için de götüremez'),
  ('20','makam','uyarıcı bilgi','birlik-karargâh-kurum amirlikleri verir; konu: hareket tarzı, istihbarata karşı koyma','(2) Yurt dışına izinli gidecek','uyarıcı bilgiler verilir.',[],'koruyucu güvenlik önlemleri de'),
- ('20','makam','istihbarata karşı koyma','esasları Jandarma Genel Komutanlığı belirler; uymak zorunlu','(3) İzinli olarak yurt dışında','güvenlik esaslarına uyar.',[],'bilgiyi birlik verir, esası JGK belirler'),
- ('20','kosul','Komutanlığınca belirlenen','istihbarata karşı koyma, koruyucu güvenlik esasları','(3) İzinli olarak yurt dışında','güvenlik esaslarına uyar.',[],''),
+ ('20','makam','istihbarata karşı koyma','koruyucu güvenlik de; esasları Jandarma Genel Komutanlığı belirler, uymak zorunlu','(3) İzinli olarak yurt dışında','güvenlik esaslarına uyar.',[],'uyarıcı bilgiyi birlik verir, esası JGK belirler'),
 ]
 yaz(24, 'Jandarma Genel Komutanlığı İzin Yönetmeliği', K)

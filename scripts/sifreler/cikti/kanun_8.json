@@ -65,23 +65,13 @@
    "madde": "2",
    "tip": "kosul",
    "tetikleyici": "her türü için",
-   "cevap": "hak sınırlama, tedbir, görevli, yönetim usulü; para-mal değil",
+   "cevap": "ayrı ayrı: hak sınırlama-durdurma, tedbir, görevli, yönetim usulü; para-mal değil",
    "kanit": "olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
    "not": "seçim zamanı, vergi muafiyeti kapsamda yok",
    "karistirilan": []
   },
   {
    "i": "K-8-006",
-   "madde": "2",
-   "tip": "kosul",
-   "tetikleyici": "nasıl sınırlan",
-   "cevap": "OHAL’in her türü için ayrı ayrı geçerli",
-   "kanit": "olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı veya nasıl durdurulacağına, halin gerektirdiği tedbirlerin nasıl ve ne suretle alınacağına, kamu hizmeti görevlilerine ne gibi yetkiler verileceğine, görevlilerin durumlarında ne gibi değişiklikler yapılacağına ve olağanüstü yönetim usullerine ilişkin hükümleri kapsar.",
-   "not": "temel hak ve hürriyetlerin sınırlanması veya durdurulması",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-007",
    "madde": "2",
    "tip": "gorev_yetki",
    "tetikleyici": "kamu hizmeti görevlileri",
@@ -91,7 +81,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-008",
+   "i": "K-8-007",
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "ilan",
@@ -126,7 +116,7 @@
    ]
   },
   {
-   "i": "K-8-009",
+   "i": "K-8-008",
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "görüşünü",
@@ -136,7 +126,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-010",
+   "i": "K-8-009",
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "kapsamını değiştir",
@@ -146,7 +136,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-011",
+   "i": "K-8-010",
    "madde": "3",
    "tip": "sure",
    "tetikleyici": "uzat",
@@ -156,7 +146,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-012",
+   "i": "K-8-011",
    "madde": "3",
    "tip": "makam",
    "tetikleyici": "süresini değiştir",
@@ -166,7 +156,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-013",
+   "i": "K-8-012",
    "madde": "3",
    "tip": "sira_usul",
    "tetikleyici": "Resmi Gazete",
@@ -176,7 +166,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-014",
+   "i": "K-8-013",
    "madde": "3",
    "tip": "sira_usul",
    "tetikleyici": "tatilde",
@@ -186,7 +176,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-015",
+   "i": "K-8-014",
    "madde": "3",
    "tip": "sira_usul",
    "tetikleyici": "sebeplerle alındığı",
@@ -196,7 +186,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-016",
+   "i": "K-8-015",
    "madde": "3",
    "tip": "kosul",
    "tetikleyici": "bütününde",
@@ -206,13 +196,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-017",
+   "i": "K-8-016",
    "madde": "9",
    "tip": "gorev_yetki",
    "tetikleyici": "tedbir",
-   "cevap": "afet-salgında: öğrenime ara, bina yıkma; sokağa çıkma, silah, dernek yok",
-   "kanit": "Tabii afet ve tehlikeli salgın hastalıklar sebebiyle olağanüstü hal ilanında, olağanüstü hal ilanını gerektiren hususlar gözönünde bulundurularak aşağıda yazılı tedbirler alınabilir: a) Bölgenin belirli yerlerinde yerleşimi yasaklamak, belirli yerleşim yerlerine girişi ve buralardan çıkışı sınırlamak, belli yerleşim yerlerini boşaltmak veya başka yerlere nakletmek, b) Resmi ve özel her derecedeki öğretim ve eğitim kurumlarında öğrenime ara vermek ve öğrenci yurtlarını süreli veya süresiz olarak kapatmak, c) Gazino, lokanta, birahane, meyhane, lokal, taverna, diskotek, bar, dansing, sinema, tiyatro ve benzeri eğlence yerleri ile kulüp vesair oyun salonlarını, otel, motel, kamping, tatil köyü ve benzeri konaklama tesislerini denetlemek ve bunların açılma ve kapanma zamanını tayin etmek, sınırlamak, gerektiğinde kapatmak ve bu yerleri olağanüstü halin icaplarına göre kullanmak, d) Bölgede olağanüstü hal hizmetlerinin yürütülmesi ile görevli personelin yıllık izinlerini sınırlamak veya kaldırmak, e) Bölge sınırları içerisindeki tüm haberleşme araç ve gereçlerinden yararlanmak ve gerektiğinde bu amaçla geçici olarak bunlara elkoymak, f) Tehlike arz eden binaları yıkmak; sağlığı tehdit ettiği tespit olunan taşınır ve taşınmaz mallar ile sağlığa zararlı gıda maddelerini ve mahsullerini imha etmek,",
-   "not": "yerleşimi yasaklama-boşaltma, eğlence yeri denetimi, personel izni, haberleşmeye elkoyma, gıda kontrolü de",
+   "cevap": "afet-salgında: yerleşim/öğrenim/eğlence yeri/izin/haberleşme/bina yıkma/gıda/dağıtım/ticaret/ulaşım; sokağa çıkma-silah-dernek YOK",
+   "kanit": "Tabii afet ve tehlikeli salgın hastalıklar sebebiyle olağanüstü hal ilanında, olağanüstü hal ilanını gerektiren hususlar gözönünde bulundurularak aşağıda yazılı tedbirler alınabilir: a) Bölgenin belirli yerlerinde yerleşimi yasaklamak, belirli yerleşim yerlerine girişi ve buralardan çıkışı sınırlamak, belli yerleşim yerlerini boşaltmak veya başka yerlere nakletmek, b) Resmi ve özel her derecedeki öğretim ve eğitim kurumlarında öğrenime ara vermek ve öğrenci yurtlarını süreli veya süresiz olarak kapatmak, c) Gazino, lokanta, birahane, meyhane, lokal, taverna, diskotek, bar, dansing, sinema, tiyatro ve benzeri eğlence yerleri ile kulüp vesair oyun salonlarını, otel, motel, kamping, tatil köyü ve benzeri konaklama tesislerini denetlemek ve bunların açılma ve kapanma zamanını tayin etmek, sınırlamak, gerektiğinde kapatmak ve bu yerleri olağanüstü halin icaplarına göre kullanmak, d) Bölgede olağanüstü hal hizmetlerinin yürütülmesi ile görevli personelin yıllık izinlerini sınırlamak veya kaldırmak, e) Bölge sınırları içerisindeki tüm haberleşme araç ve gereçlerinden yararlanmak ve gerektiğinde bu amaçla geçici olarak bunlara elkoymak, f) Tehlike arz eden binaları yıkmak; sağlığı tehdit ettiği tespit olunan taşınır ve taşınmaz mallar ile sağlığa zararlı gıda maddelerini ve mahsullerini imha etmek, g) Belli gıda maddeleri ile hayvan ve hayvan yemi ve hayvan ürünlerinin bölge dışına çıkarılmasını veya bölgeye sokulmalarını kontrol etmek, sınırlamak veya gerektiğinde yasaklamak, h) Gerekli görülen zaruri ihtiyaç maddelerinin dağıtımını düzenlemek, i) Halkın beslenmesi, ısınması, temizliği ve aydınlanması için gerekli gıda madde ve eşyalarla her türlü yakıtın, sağlığın korunmasında, tedavide ve tıpta kullanılan ilaç, kimyevi madde, alet ve diğer şeylerin, inşaat, sanayi, ulaşım ve tarımda kullanılan eşya ve maddelerin, kamu için gerekli diğer mal, eşya, araç, gereç ve her türlü maddelerin imali, satımı, dağıtımı, depolanması ve ticareti konularında gerekli tedbirleri almak, bu yerlere gerektiğinde elkoymak, kontrol etmek ve bu malları satıştan kaçınan, saklayan, kaçıran, fazla fiyatla satan, imalatını durduran veya yavaşlatanlar hakkında fiilin işleniş şekli veya niteliği de nazara alınarak işyeri bulunduğu mahal için hayati önem taşımadığı takdirde işyerini kapatmak, j) Kara, deniz ve hava trafik düzenine ilişkin tedbirleri almak, ulaştırma araçlarının bölgeye giriş ve çıkışlarını kayıtlamak veya yasaklamak.",
+   "not": "sokağa çıkma, silah, dernek şiddet (b) OHAL’inde (m.11)",
    "karistirilan": [
     {
      "madde": "2",
@@ -229,7 +219,7 @@
    ]
   },
   {
-   "i": "K-8-018",
+   "i": "K-8-017",
    "madde": "9",
    "tip": "gorev_yetki",
    "tetikleyici": "deniz ve hava",
@@ -239,13 +229,13 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-019",
+   "i": "K-8-018",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "kamu düzeni",
-   "cevap": "ek: sokağa çıkma, toplantı, silah, dernek, basın; çalışma yükümlülüğü yok",
+   "cevap": "ek: sokağa çıkma/toplantı/silah/dernek/basın; gıda kontrolü, çalışma yükümlülüğü YOK",
    "kanit": "Bu Kanunun 3 üncü maddesinin birinci fıkrasının (b) bendi gereğince olağanüstü hal ilanında; genel güvenlik, asayiş ve kamu düzenini korumak, şiddet olaylarının yaygınlaşmasını önlemek amacıyla 9 uncu maddede öngörülen tedbirlere ek olarak aşağıdaki tedbirler de alınabilir: a) Sokağa çıkmayı sınırlamak veya yasaklamak,",
-   "not": "m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir, ek tedbir değil",
+   "not": "m.9 tedbirleri de alınır; gıda kontrolü m.9’dan gelir; çalışma yükümlülüğü afet-bunalım OHAL’inde",
    "karistirilan": [
     {
      "madde": "1",
@@ -258,7 +248,7 @@
    ]
   },
   {
-   "i": "K-8-020",
+   "i": "K-8-019",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "Sokağa çıkma",
@@ -268,7 +258,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-021",
+   "i": "K-8-020",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "gösteri yürüyüş",
@@ -278,7 +268,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-022",
+   "i": "K-8-021",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "Dernek faaliyet",
@@ -288,7 +278,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-023",
+   "i": "K-8-022",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "işçi çıkart",
@@ -298,7 +288,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-024",
+   "i": "K-8-023",
    "madde": "11",
    "tip": "gorev_yetki",
    "tetikleyici": "kimlik belirleyici",
@@ -308,7 +298,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-025",
+   "i": "K-8-024",
    "madde": "11",
    "tip": "makam",
    "tetikleyici": "sınır ötesi",
@@ -318,7 +308,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-026",
+   "i": "K-8-025",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "ani ve olağanüstü",
@@ -328,7 +318,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-027",
+   "i": "K-8-026",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "bildirir",
@@ -338,7 +328,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-028",
+   "i": "K-8-027",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "olayları önle",
@@ -348,17 +338,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-029",
-   "madde": "22",
-   "tip": "makam",
-   "tetikleyici": "emrindeki kolluk",
-   "cevap": "yetmezse bağlı olduğu bölge valisine",
-   "kanit": "b) İllerinde bu Kanunun 3 üncü maddesinin (b) bendi gereğince olağanüstü hal ilan edilen il valileri çıkabilecek toplumsal olaylarla meydana gelen olayları, emrindeki kolluk kuvvetleri ile önlemeye ve bastırmaya çalışırlar. Olayları önleyemedikleri veya önlenmesini mümkün görmedikleri veya aldıkları tedbirleri bu kuvvetlerle uygulayamadıkları veya uygulanmasını mümkün görmedikleri takdirde, bağlı oldukları bölge valisine başvururlar.",
-   "not": "gönderilen kolluk il valisinin emrine girer",
-   "karistirilan": []
-  },
-  {
-   "i": "K-8-030",
+   "i": "K-8-028",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "yardım istem",
@@ -368,7 +348,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-031",
+   "i": "K-8-029",
    "madde": "22",
    "tip": "sure",
    "tetikleyici": "istekleri",
@@ -378,7 +358,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-032",
+   "i": "K-8-030",
    "madde": "22",
    "tip": "makam",
    "tetikleyici": "görev ve yetkiler",
@@ -388,7 +368,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-033",
+   "i": "K-8-031",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "teslim ol",
@@ -398,7 +378,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-034",
+   "i": "K-8-032",
    "madde": "23",
    "tip": "sira_usul",
    "tetikleyici": "soruşturma",
@@ -408,7 +388,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-8-035",
+   "i": "K-8-033",
    "madde": "23",
    "tip": "gorev_yetki",
    "tetikleyici": "silah kullanma yetkisi",

@@ -8,8 +8,7 @@ import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import yaz
 K = [
  # m.3 — tanımlar
- ('3','tanim','kararnamesinin onay','ön sözleşme (eğitim başı → nasıp onayı)','a ) (Değişik:RG-11/2/2010-27490) Ön sözleşme','kapsayan sözleşmeyi (EK-A, EK-B),',[],''),
- ('3','tanim','Ön sözleşme:','askerî eğitim başından nasıp onayına kadar','a ) (Değişik:RG-11/2/2010-27490) Ön sözleşme','kapsayan sözleşmeyi (EK-A, EK-B),',[],'asıl sözleşme eğitimi bitirenle 3-9 yıl'),
+ ('3','tanim','kararnamesinin onay','ön sözleşme (eğitim başı → nasıp onayı)','a ) (Değişik:RG-11/2/2010-27490) Ön sözleşme','kapsayan sözleşmeyi (EK-A, EK-B),',[],'asıl sözleşme eğitimi bitirenle 3-9 yıl'),
  ('3','sure','hizmet yükümlülüğü','en az üç, en çok dokuz yıl','b) Sözleşme: Türk','yazılı bir belgeyi,',[('13','tabip subaylar devlet hizmet yükümlülüğüne tabi değil'),('6','tabip devlet hizmet yükümlülüğü saklı tutulur')],''),
  ('3','tanim','müracaat etmiş','aday adayı (ön sözleşme henüz yok)','c) Sözleşmeli Subay/Astsubay Aday Adayı','yapılmamış olanları,',[],''),
  ('3','tanim','yetiştirilmek amacıyla','subay adayı / astsubay adayı','ç) Sözleşmeli Subay Adayı','askeri eğitime alınanları,',[],'ön sözleşmeyle eğitime alınan'),
@@ -20,7 +19,6 @@ K = [
 
  # m.5-6 — kaynak ve subay adayı nitelikleri
  ('5','sure','ayının ilk günü','Ocak; subay yirmiyedi-otuziki; astsubay yirmiyedi-yirmidört','(Değişik fıkra:RG-27/3/2013-28600)Sözleşmeli subay kaynaklarını','otuz iki yaşını bitirmemiş olanlar',[('6','subay adayı niteliklerinde aynı yaş kuralı'),('9','astsubay adayı: dört yıl+ yirmi yedi, azı yirmi dört')],'düzeltilmemiş nüfus kaydı; otuziki lisansüstü'),
- ('5','sure','lisansüstü','otuz iki; lisans yirmi yedi','(Değişik fıkra:RG-27/3/2013-28600)Sözleşmeli subay kaynaklarını','otuz iki yaşını bitirmemiş olanlar',[('6','subay adayı niteliklerinde aynı yaş kuralı')],''),
  ('5','yasak','askerî okul','alınmaz/alınamaz; yedek, kısa dönem, 1111 terhisli olabilir','Askerî okullardan ve Türk Silahlı','sözleşmeli subay veya astsubay olabilirler.',[],'her ne sebeple olursa olsun ilişiği kesilen'),
  ('5','yasak','statüsünde personel','askerî hâkim sınıfına alınmaz','Askerî hâkim sınıfına','personel alınmaz.',[],''),
  ('6','sure','subay adaylarında aran','yirmi yedi (lisansüstü otuz iki); dört yıllık fakülte','Sözleşmeli subay adaylarında aranacak','yüksekokul mezunu olmak.',[('9','astsubay adayında yaş dört yıl+ yirmi yedi, azı yirmi dört')],'Türk vatandaşı, sağlık, güvenlik soruşturması da'),
@@ -78,7 +76,7 @@ K = [
  # m.15 — fesih
  ('15','yasak','tek taraflı','süre bitmeden feshedemez','MADDE 15 – (Değişik:RG-11/2/2010-27490) Sözleşmeli subay','tek taraflı olarak feshedemezler.',[],''),
  ('15','yasak','sona ermeden','tek taraflı feshedemezler','MADDE 15 – (Değişik:RG-11/2/2010-27490) Sözleşmeli subay','tek taraflı olarak feshedemezler.',[('13','sözleşmesi süre bitmeden feshedilen tabip devlet hizmetine tabi')],''),
- ('15','kosul','ön sözleşmeleri','başarısızlık-disiplinsizlik, sağlık kurulu, şart kaybı, üçte bir devamsızlık','Sözleşmeli subay veya sözleşmeli astsubay adaylarının ön sözleşmeleri','eğitime alınırlar.',[],'yüz kızartıcı suç asıl sözleşmenin fesih sebebi'),
+ ('15','kosul','ön sözleşmeleri','başarısızlık/disiplinsizlik/sağlık kurulu/şart kaybı/üçte bir devamsızlık; yüz kızartıcı DEĞİL','Sözleşmeli subay veya sözleşmeli astsubay adaylarının ön sözleşmeleri','eğitime alınırlar.',[],'yüz kızartıcı suç asıl sözleşmenin fesih sebebi'),
  ('15','kosul','devam edemez','yetkili sağlık kurulları kararı','Sözleşmeli subay veya sözleşmeli astsubay adaylarının ön sözleşmeleri','eğitime alınırlar.',[],'ön sözleşme fesih sebebi'),
  ('15','kosul','askerî eğitimin','üçte birine katılmamak; kazada bir kez tekrar','ç) Askerî eğitimin üçte birine','eğitime alınırlar.',[],'ön sözleşme feshi'),
  ('15','kosul','eğitim ve öğretimde','başarısız olmak (sınıf okulu, ÖKK eğitimi)','a ) (Değişik:RG-23/7/2015-29423)Türk Silahlı','eğitimde başarısız olmak.',[],''),

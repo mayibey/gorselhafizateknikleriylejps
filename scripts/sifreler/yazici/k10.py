@@ -13,7 +13,7 @@ K = [
  ('2','tanim','Bakanlık:','Aile ve Sosyal Politikalar Bakanlığı','a) Bakanlık:','Sosyal Politikalar Bakanlığını,',[],''),
  ('2','tanim','aynı haneyi paylaşmasa da','ev içi şiddet','b) Ev içi şiddet:','ekonomik şiddeti,',[],'fiziksel, cinsel, psikolojik, ekonomik'),
  ('2','tanim','hâkimini','aile mahkemesi','c) Hâkim:','Aile mahkemesi hâkimini,',[('9','itirazda aynı hâkimse en yakın asliye hukuka')],''),
- ('2','tanim','sonuçlanması muhtemel','fiziksel, cinsel, psikolojik, ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli','d) Şiddet: Kişinin','her türlü tutum ve davranışı,',[],'dinî şiddet, meslekî başarı azalması yok'),
+ ('2','tanim','sonuçlanması muhtemel','fiziksel/cinsel/psikolojik/ekonomik zarar; tehdit-baskı, keyfî özgürlük engeli; meslekî başarı YOK','d) Şiddet: Kişinin','her türlü tutum ve davranışı,',[],'dinî şiddet de listede yok'),
  ('2','tanim','Şiddet mağduru:','doğrudan ya da dolaylı maruz kalan, etkilenen; tehlikesi olan da','e) Şiddet mağduru:','etkilenme tehlikesi bulunan kişileri,',[],''),
  ('2','tanim','izleme merkezleri','yedi gün yirmi dört saat','f) Şiddet önleme ve izleme merkezleri','yürüten merkezleri,',[('13','m.13 metninin sonunda sonraki bölüm başlığı yer alır')],'ŞÖNİM'),
  ('2','tanim','koruyucu ve önleyici','koruyucu korunan kişiye, önleyici şiddet uygulayana','f) Şiddet önleme ve izleme merkezleri','yürüten merkezleri,',[('3','korunan kişi için mülkî amirin koruyucu tedbirleri'),('5','şiddet uygulayan için hâkimin önleyici tedbirleri')],''),
@@ -31,7 +31,7 @@ K = [
  ('3','makam','geçici maddi yardım','diğer kanunlardaki yardımlar saklı','b) Diğer kanunlar kapsamında','geçici maddi yardım yapılması.',[],''),
 
  # m.4 — hâkimin koruyucu tedbirleri
- ('4','makam','hâkim tarafından','koruyucu: işyeri, ayrı yerleşim, konut şerhi, kimlik; önleyici: uzaklaştırma','(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu','hâkim tarafından karar verilebilir:',[('5','hâkimin önleyici tedbirleri şiddet uygulayana'),('9','hâkim kararlarına itiraz aile mahkemesine'),('3','m.3 metninin sonunda sonraki maddenin başlığı yer alır')],'barınma ve geçici koruma mülkî amirde'),
+ ('4','makam','hâkim tarafından','koruyucu: işyeri/ayrı yerleşim/konut şerhi/kimlik; önleyici: uzaklaştırma; barınma YOK','(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu','hâkim tarafından karar verilebilir:',[('5', 'hâkimin önleyici tedbirleri şiddet uygulayana'), ('9', 'hâkim kararlarına itiraz aile mahkemesine'), ('3', 'm.3 metninin sonunda sonraki maddenin başlığı yer alır')],'barınma ve geçici koruma mülkî amirde'),
  ('4','makam','işyerinin değiştirilmesi','hâkimin koruyucu tedbiri; korunan kişiye yönelik','(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu','a) İşyerinin değiştirilmesi.',[('10','işyeri değişikliğini kişinin mevzuatındaki yetkili merci uygular')],''),
  ('4','makam','müşterek yerleşim yerinden','ayrı yerleşim yeri (hâkim)','(1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu','ayrı yerleşim yeri belirlenmesi.',[],'evli korunan kişi'),
  ('4','makam','aile konutu şerhi','hâkim; Medenî Kanun şartı ve korunanın talebi','c) 22/11/2001','aile konutu şerhi konulması.',[],''),
@@ -59,7 +59,7 @@ K = [
  ('8','sure','Önleyici tedbir kararı','geciktirilmeksizin verilir','(3) Koruyucu tedbir kararı verilebilmesi','geciktirilmeksizin verilir.',[('10','önleyici tedbiri kolluk birimi uygular')],''),
  ('8','sira_usul','reddine ilişkin karar','sadece korunan kişiye tebliğ','Tedbir talebinin reddine','sadece korunan kişiye tebliğ edilir.',[('10','başvurunun kabul ya da reddi Bakanlık müdürlüğüne bildirilir')],'tedbir kararı iki tarafa'),
  ('8','sira_usul','tefhim ve tebliğ','aykırılıkta zorlama hapsi ihtarı','(5) Tedbir kararının tefhim','ihtarı yapılır.',[],''),
- ('8','kosul','gizli tutul','korunan ve aile bireylerinin kimlik-adres bilgisi; tebligata ayrı adres','(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte','ayrı bir adres tespit edilir.',[],'adli sicil yok; ifşaya TCK'),
+ ('8','kosul','gizli tutul','korunanın-ailesinin kimlik-adresi; tebligata ayrı adres; adli sicil YOK','(6) Gerekli bulunması hâlinde, tedbir kararı ile birlikte','ayrı bir adres tespit edilir.',[],'ifşa edene TCK'),
 
  # m.9 — itiraz
  ('9','sure','itiraz','iki hafta, aile mahkemesine; merci bir haftada karar verir, kesin','(1) Bu Kanun hükümlerine göre verilen kararlara','kesindir.',[('8','m.8 metninin sonunda bu maddenin başlığı yer alır')],'İTİRAZ 2 HAFTA · KARAR 1 HAFTA · temyiz yok'),
@@ -78,6 +78,6 @@ K = [
  # m.13 — zorlama hapsi
  ('13','ceza','aykırı','ilk üç-on gün; tekrarında onbeş-otuz; toplam altı ay zorlama hapsi','(1) Bu Kanun hükümlerine göre hakkında tedbir','altı ayı geçemez.',[('8','tebliğde zorlama hapsi ihtarı yapılır'),('12','m.12 metninin sonunda bu maddenin başlığı yer alır')],'fiil suç olsa bile; hâkim kararıyla'),
  ('13','makam','ilçe müdürlüklerine','Bakanlığın müdürlüklerine; yerine getiren başsavcılık','(3) Zorlama hapsine','müdürlüklerine bildirilir.',[('10','tedbir kararları da Bakanlık il-ilçe müdürlüklerine bildirilir')],''),
- ('13','makam','zorlama hapsi','toplam altı ay; Cumhuriyet başsavcılığı yerine getirir','(2) Tedbir kararının gereklerine','müdürlüklerine bildirilir.',[('8','tebliğde zorlama hapsi ihtarı yapılır')],'infaz hâkimliği değil'),
+ ('13','makam','zorlama hapsi','toplam altı ay; başsavcılık yerine getirir; infaz hâkimliği DEĞİL','(2) Tedbir kararının gereklerine','müdürlüklerine bildirilir.',[('8', 'tebliğde zorlama hapsi ihtarı yapılır')],''),
 ]
 yaz(10, '6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun', K)

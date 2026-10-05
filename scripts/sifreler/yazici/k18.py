@@ -10,7 +10,6 @@ from ortak import yaz
 K = [
  # m.8 — silme
  ('8','tanim','erişi','silinmesi: ilgili kullanıcılar; yok edilmesi: hiç kimse','(1)Kişisel verilerin silinmesi','kullanılamaz hale getirilmesi işlemidir.',[('9','m.9 yok etme: hiç kimse tarafından erişilemez, geri getirilemez')],'silmede geri getirilemezlik şartı yok'),
- ('8','tanim','ilgili kullanıcı','silinmesi: erişilemez, tekrar kullanılamaz; hiç kimse için yok edilmesi','(1)Kişisel verilerin silinmesi','kullanılamaz hale getirilmesi işlemidir.',[],'yedekte teknik olarak dursa da kullanıcıya kapalıysa silme'),
 
  # m.9 — yok etme
  ('9','tanim','hiç kimse','geri getirilemez; yok edilmesi','(1) Kişisel verilerin yok edilmesi','kullanılamaz hale getirilmesi işlemidir.',[],'erişilemez + geri getirilemez + tekrar kullanılamaz, üçü birlikte; diski parçalamak gibi'),

@@ -76,16 +76,6 @@
    "i": "K-9-008",
    "madde": "2",
    "tip": "ceza",
-   "tetikleyici": "umuma açık",
-   "cevap": "yarı nispetinde (umumi yer de)",
-   "kanit": "Birinci maddede yazılı suçlar; iki veya daha fazla kimseler tarafından toplu olarak veya umumi veya umuma açık mahallerde yahut basın vasıtasiyle işlenirse hükmolunacak ceza yarı nispetinde artırılır.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-9-009",
-   "madde": "2",
-   "tip": "ceza",
    "tetikleyici": "zor kullan",
    "cevap": "bir misli artar; teşebbüste de; yalnız anıt suçunda",
    "kanit": "Birinci maddenin ikinci fıkrasında yazılı suçlar zor kullanılarak işlenir veya bu suretle işlenmesine teşebbüs olunursa verilecek ceza bir misli artırılır.",
@@ -93,7 +83,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-9-010",
+   "i": "K-9-009",
    "madde": "3",
    "tip": "sira_usul",
    "tetikleyici": "takib",
@@ -103,7 +93,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-9-011",
+   "i": "K-9-010",
    "madde": "4",
    "tip": "sure",
    "tetikleyici": "yürürlüğe gir",
@@ -113,7 +103,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-9-012",
+   "i": "K-9-011",
    "madde": "5",
    "tip": "makam",
    "tetikleyici": "yürüt",

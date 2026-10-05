@@ -6,24 +6,14 @@
    "i": "K-13-001",
    "madde": "3",
    "tip": "tanim",
-   "tetikleyici": "nasıp onayı",
-   "cevap": "ön sözleşme (askerî eğitim başı → nasıp)",
-   "kanit": "a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme: Türk Silâhlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay veya sözleşmeli astsubay adayları arasında; askerî eğitime alınmaları konusunda yapılan ve askerî eğitim dönemi başlangıcı ile subaylık veya astsubaylık nasıp onayı tarihine kadar geçecek süreyi kapsayan sözleşmeyi,",
-   "not": "eğitim bitince asıl sözleşme",
-   "karistirilan": []
-  },
-  {
-   "i": "K-13-002",
-   "madde": "3",
-   "tip": "tanim",
    "tetikleyici": "Ön sözleşme:",
-   "cevap": "askerî eğitime alınma; eğitim başından nasıp onayına",
+   "cevap": "askerî eğitim başından nasıp onayına; sonra asıl sözleşme",
    "kanit": "a) (Değişik: 16/6/2009-5907/1 md.) Ön sözleşme: Türk Silâhlı Kuvvetleri birlik, karargâh, kurum ve kuruluşları ile sözleşmeli subay veya sözleşmeli astsubay adayları arasında; askerî eğitime alınmaları konusunda yapılan ve askerî eğitim dönemi başlangıcı ile subaylık veya astsubaylık nasıp onayı tarihine kadar geçecek süreyi kapsayan sözleşmeyi,",
    "not": "",
    "karistirilan": []
   },
   {
-   "i": "K-13-003",
+   "i": "K-13-002",
    "madde": "3",
    "tip": "sure",
    "tetikleyici": "hizmet yükümlülüğü",
@@ -38,7 +28,7 @@
    ]
   },
   {
-   "i": "K-13-004",
+   "i": "K-13-003",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "astsubay aday",
@@ -57,7 +47,7 @@
    ]
   },
   {
-   "i": "K-13-005",
+   "i": "K-13-004",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "rütbe",
@@ -88,7 +78,7 @@
    ]
   },
   {
-   "i": "K-13-006",
+   "i": "K-13-005",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "temel askerlik",
@@ -98,7 +88,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-007",
+   "i": "K-13-006",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "emsal",
@@ -121,7 +111,7 @@
    ]
   },
   {
-   "i": "K-13-008",
+   "i": "K-13-007",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "yürürlüğe girdiği ay ve günü",
@@ -131,7 +121,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-009",
+   "i": "K-13-008",
    "madde": "3",
    "tip": "tanim",
    "tetikleyici": "Sözleşme yılı:",
@@ -141,7 +131,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-010",
+   "i": "K-13-009",
    "madde": "4",
    "tip": "sure",
    "tetikleyici": "Sözleşmeli subay kayna",
@@ -151,22 +141,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-011",
-   "madde": "4",
-   "tip": "sure",
-   "tetikleyici": "lisansüstü",
-   "cevap": "otuziki yaş; lisans mezunu yirmiyedi",
-   "kanit": "Sözleşmeli subay kaynaklarını; en az dört yıllık fakülte veya yüksekokulları bitirenlerden düzeltilmemiş nüfus kaydına göre müracaat yapılan yılın ocak ayının ilk günü itibarıyla yirmiyedi yaşını, lisansüstü eğitimini tamamlamış olanlardan otuziki yaşını bitirmemiş olanlar teşkil eder.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "7",
-     "fark": "öğretim üyesi kadrolarında fiilî hizmet şartı aranmaz"
-    }
-   ]
-  },
-  {
-   "i": "K-13-012",
+   "i": "K-13-010",
    "madde": "4",
    "tip": "sure",
    "tetikleyici": "ocak ayının ilk günü",
@@ -181,7 +156,7 @@
    ]
   },
   {
-   "i": "K-13-013",
+   "i": "K-13-011",
    "madde": "4",
    "tip": "yasak",
    "tetikleyici": "Askeri okul",
@@ -196,7 +171,7 @@
    ]
   },
   {
-   "i": "K-13-014",
+   "i": "K-13-012",
    "madde": "4",
    "tip": "kosul",
    "tetikleyici": "Sözleşmeli subaylık için",
@@ -206,7 +181,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-015",
+   "i": "K-13-013",
    "madde": "4",
    "tip": "kosul",
    "tetikleyici": "hükmün açıklanmasının geri",
@@ -225,7 +200,7 @@
    ]
   },
   {
-   "i": "K-13-016",
+   "i": "K-13-014",
    "madde": "4",
    "tip": "yasak",
    "tetikleyici": "hakim sınıf",
@@ -235,7 +210,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-017",
+   "i": "K-13-015",
    "madde": "4",
    "tip": "yasak",
    "tetikleyici": "statüsünde personel",
@@ -245,7 +220,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-018",
+   "i": "K-13-016",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "askerî eğitime alınır",
@@ -260,7 +235,7 @@
    ]
   },
   {
-   "i": "K-13-019",
+   "i": "K-13-017",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "nasbedilirler",
@@ -275,26 +250,11 @@
    ]
   },
   {
-   "i": "K-13-020",
-   "madde": "6",
-   "tip": "sure",
-   "tetikleyici": "yetiştirme maliyetlerine",
-   "cevap": "üç-dokuz yıl; kuvvet, sınıf, branşa göre",
-   "kanit": "Sözleşme süreleri üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "10",
-     "fark": "astsubayda da üç-dokuz yıl"
-    }
-   ]
-  },
-  {
-   "i": "K-13-021",
+   "i": "K-13-018",
    "madde": "6",
    "tip": "sure",
    "tetikleyici": "Sözleşme süreleri",
-   "cevap": "en az üç, en çok dokuz yıl; yönetmelikle",
+   "cevap": "üç-dokuz yıl; maliyete, kuvvet-sınıf-branşa göre yönetmelikle",
    "kanit": "Sözleşme süreleri üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.",
    "not": "",
    "karistirilan": [
@@ -313,7 +273,7 @@
    ]
   },
   {
-   "i": "K-13-022",
+   "i": "K-13-019",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "talebe bakılmaksızın",
@@ -328,26 +288,7 @@
    ]
   },
   {
-   "i": "K-13-023",
-   "madde": "6",
-   "tip": "kosul",
-   "tetikleyici": "savaş",
-   "cevap": "komutan lüzumu, MSB/İçişleri onayı; talebe bakılmaksızın uzatma",
-   "kanit": "Sözleşme süreleri; terörle mücadele sırasında veya bu görevlerden dolayı alıkonulma ya da kaybolma hâli ve (…)3 seferberlik, savaş veya silahlı çatışmayı gerektirecek hal ile savaş hallerinde Kuvvet Komutanları, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının göstereceği lüzum üzerine, durumun devamı müddetince ilgisine göre Milli Savunma Bakanlığı veya İçişleri Bakanlığının onayı ile talebe bakılmaksızın uzatılabilir.",
-   "not": "",
-   "karistirilan": [
-    {
-     "madde": "10",
-     "fark": "astsubayda aynı kural"
-    },
-    {
-     "madde": "13",
-     "fark": "barışta ve savaşta görev kazası sıhhi izne sayılmaz"
-    }
-   ]
-  },
-  {
-   "i": "K-13-024",
+   "i": "K-13-020",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "rütbe yaş haddini",
@@ -362,7 +303,7 @@
    ]
   },
   {
-   "i": "K-13-025",
+   "i": "K-13-021",
    "madde": "6",
    "tip": "kosul",
    "tetikleyici": "yenilen",
@@ -385,32 +326,13 @@
    ]
   },
   {
-   "i": "K-13-026",
-   "madde": "7",
-   "tip": "sure",
-   "tetikleyici": "muvazzaf subaylığa geç",
-   "cevap": "yedinci fiilî hizmet yılı → onikinci (yedi-oniki); astsubay dört",
-   "kanit": "Muvazzaf subaylığa geçiş için, Türk Silâhlı Kuvvetlerindeki yedinci fiilî hizmet yılı başından itibaren onikinci fiilî hizmet yılının bitimine kadar başvuru yapılabilir.",
-   "not": "SUBAY 7-12 · ASTSUBAY 4-12",
-   "karistirilan": [
-    {
-     "madde": "6",
-     "fark": "m.6 metninin başında bölüm başlığı yer alır"
-    },
-    {
-     "madde": "12",
-     "fark": "muvazzafa geçende fazla okunan süre rütbe beklemeden düşülür"
-    }
-   ]
-  },
-  {
-   "i": "K-13-027",
+   "i": "K-13-022",
    "madde": "7",
    "tip": "sure",
    "tetikleyici": "fiilî hizmet yıl",
    "cevap": "subay yedinci, astsubay dördüncü yıldan; ikisi onikinciye kadar",
    "kanit": "Muvazzaf subaylığa geçiş için, Türk Silâhlı Kuvvetlerindeki yedinci fiilî hizmet yılı başından itibaren onikinci fiilî hizmet yılının bitimine kadar başvuru yapılabilir.",
-   "not": "",
+   "not": "SUBAY 7-12 · ASTSUBAY 4-12",
    "karistirilan": [
     {
      "madde": "11",
@@ -423,7 +345,7 @@
    ]
   },
   {
-   "i": "K-13-028",
+   "i": "K-13-023",
    "madde": "7",
    "tip": "sure",
    "tetikleyici": "istifa",
@@ -450,7 +372,7 @@
    ]
   },
   {
-   "i": "K-13-029",
+   "i": "K-13-024",
    "madde": "7",
    "tip": "istisna",
    "tetikleyici": "öğretim üyesi",
@@ -460,7 +382,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-030",
+   "i": "K-13-025",
    "madde": "7",
    "tip": "istisna",
    "tetikleyici": "geçirileceklerde",
@@ -475,7 +397,7 @@
    ]
   },
   {
-   "i": "K-13-031",
+   "i": "K-13-026",
    "madde": "8",
    "tip": "sure",
    "tetikleyici": "yükseköğrenim",
@@ -485,7 +407,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-032",
+   "i": "K-13-027",
    "madde": "8",
    "tip": "kosul",
    "tetikleyici": "astsubay kaynak",
@@ -495,7 +417,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-033",
+   "i": "K-13-028",
    "madde": "8",
    "tip": "sayi_oran",
    "tetikleyici": "sicil tam notu",
@@ -514,7 +436,7 @@
    ]
   },
   {
-   "i": "K-13-034",
+   "i": "K-13-029",
    "madde": "10",
    "tip": "kosul",
    "tetikleyici": "astsubay çavuş rütbesine",
@@ -524,7 +446,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-035",
+   "i": "K-13-030",
    "madde": "11",
    "tip": "sure",
    "tetikleyici": "muvazzaf astsubaylığa geç",
@@ -543,7 +465,7 @@
    ]
   },
   {
-   "i": "K-13-036",
+   "i": "K-13-031",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "yenileyeceklerine dair",
@@ -553,17 +475,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-037",
-   "madde": "12",
-   "tip": "sure",
-   "tetikleyici": "kendiliğinden sona erer",
-   "cevap": "üç ay önce yazılı yenileme bildirimi yoksa",
-   "kanit": "Her sözleşme süresinin sona erme tarihinden en az üç ay önce taraflar sözleşmeyi yenileyeceklerine dair yazılı bildirimde bulunmadıkları takdirde, sözleşme kendiliğinden sona erer.",
-   "not": "",
-   "karistirilan": []
-  },
-  {
-   "i": "K-13-038",
+   "i": "K-13-032",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "tek taraflı",
@@ -573,7 +485,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-039",
+   "i": "K-13-033",
    "madde": "12",
    "tip": "yasak",
    "tetikleyici": "sona ermeden",
@@ -583,7 +495,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-040",
+   "i": "K-13-034",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "rütbe bekleme süreleri",
@@ -598,7 +510,7 @@
    ]
   },
   {
-   "i": "K-13-041",
+   "i": "K-13-035",
    "madde": "12",
    "tip": "kosul",
    "tetikleyici": "kadro açığı",
@@ -608,7 +520,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-042",
+   "i": "K-13-036",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "kurs",
@@ -618,7 +530,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-043",
+   "i": "K-13-037",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "sürekli göreve",
@@ -628,7 +540,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-044",
+   "i": "K-13-038",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "doktora eğitimini",
@@ -638,7 +550,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-045",
+   "i": "K-13-039",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "aylıksız izin",
@@ -653,7 +565,7 @@
    ]
   },
   {
-   "i": "K-13-046",
+   "i": "K-13-040",
    "madde": "12",
    "tip": "sure",
    "tetikleyici": "uzatılan sözleşme süreleri",
@@ -663,7 +575,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-047",
+   "i": "K-13-041",
    "madde": "12",
    "tip": "istisna",
    "tetikleyici": "tabip subaylar",
@@ -673,7 +585,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-048",
+   "i": "K-13-042",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "askeri eğitimin",
@@ -683,7 +595,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-049",
+   "i": "K-13-043",
    "madde": "13",
    "tip": "sayi_oran",
    "tetikleyici": "oda hapsi",
@@ -693,7 +605,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-050",
+   "i": "K-13-044",
    "madde": "13",
    "tip": "sayi_oran",
    "tetikleyici": "disiplin amirinden",
@@ -703,7 +615,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-051",
+   "i": "K-13-045",
    "madde": "13",
    "tip": "sure",
    "tetikleyici": "hava değişimi",
@@ -718,7 +630,7 @@
    ]
   },
   {
-   "i": "K-13-052",
+   "i": "K-13-046",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "hürriyeti bağlayıcı",
@@ -728,7 +640,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-053",
+   "i": "K-13-047",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Yabancı uyruklu",
@@ -738,7 +650,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-054",
+   "i": "K-13-048",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "yıkıcı, bölücü",
@@ -748,7 +660,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-055",
+   "i": "K-13-049",
    "madde": "13",
    "tip": "kosul",
    "tetikleyici": "Terörle Mücadele Kanunu",
@@ -758,7 +670,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-056",
+   "i": "K-13-050",
    "madde": "15",
    "tip": "kosul",
    "tetikleyici": "malî ve sosyal hak",
@@ -768,7 +680,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-057",
+   "i": "K-13-051",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "rütbe verilmeksizin",
@@ -778,7 +690,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-058",
+   "i": "K-13-052",
    "madde": "15",
    "tip": "sure",
    "tetikleyici": "müteakip yıllarda",
@@ -788,7 +700,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-059",
+   "i": "K-13-053",
    "madde": "16",
    "tip": "sure",
    "tetikleyici": "kendi iste",
@@ -798,7 +710,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-060",
+   "i": "K-13-054",
    "madde": "16",
    "tip": "sure",
    "tetikleyici": "kusur",
@@ -808,7 +720,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-061",
+   "i": "K-13-055",
    "madde": "16",
    "tip": "istisna",
    "tetikleyici": "ücretsiz",
@@ -818,7 +730,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-062",
+   "i": "K-13-056",
    "madde": "16",
    "tip": "sayi_oran",
    "tetikleyici": "sağlık yardımı",
@@ -828,7 +740,7 @@
    "karistirilan": []
   },
   {
-   "i": "K-13-063",
+   "i": "K-13-057",
    "madde": "16",
    "tip": "kosul",
    "tetikleyici": "sosyal hakları ve sağlık işlemlerinde",
