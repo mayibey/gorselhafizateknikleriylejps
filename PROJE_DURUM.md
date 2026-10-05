@@ -2,7 +2,26 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 5 Ekim 2026 (Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 5 Ekim 2026 (Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 5 Eki (8) — RESMÎ YAZIŞMA: 5 KARTTA ESKİ (2014) YÖNETMELİK METNİ → GÜNCEL (2020) RESMÎ METİN
+> Kullanıcı geri bildirimi (Özge Lavinya, jandarma asb, 23:38/23:42): "m.22 konu koordinasyon, metin gizlilik dereceli belge diyor",
+> "m.24 iletişim bilgileri anlatılıyor, metin sayfa numarasından bahsediyor". HAKLI. Kök: `src/db/madde-metinleri.ts` el-yazımı
+> MADDE_METINLERI'ndeki Resmî Yazışma m.2/22/24/27/32, 2014 tarihli MÜLGA yönetmelikten (m.2 3056 sayılı Kanun'a dayanıyordu; güncel
+> 2020 metni 1 sayılı CBK). El-yazımı kayıt KART_MADDE_METINLERI'nden ÖNCE okunduğu için kartta eski metin görünüyordu; konu/ses doğruydu.
+> Düzeltme: 5 metin `gemini_calisma/girdi/resmi_metin/kanun_15.json`'dan birebir (m.22 Koordinasyon, m.24 İletişim bilgileri, m.27 Sayfa
+> numarası, m.32 Yanlış idareye gelen belge, m.2 Dayanak). tsc 0 hata (npx bozuk: D:\node.exe silik → Cursor node v22 ile
+> `node node_modules/typescript/bin/tsc --noEmit`). Tarama (scratchpad elyazimi_tara2.py, başlık/dipnot ayıklanmış tam metin): el-yazımı
+> 62 metinde başka ESKİ SÜRÜM yok; 7 maddede yalnız uzunluk farkı (TMK m.15/20/21, 6136 m.7, JTY m.8, 4678 m.8, 2521 Yön m.13 —
+> resmî kopya 6000 kr'de kesik ya da uygulama metni kısa), eksik fıkra var mı ayrıca inceleniyor. Kullanıcıya kişiye özel duyuru + push gönderildi (duyuru 3244d9aa, push ok).
+> AÇIK: kullanıcıya ulaşması OTA ister → başkanın "yay" onayı bekleniyor. Aynı kullanıcının 4 Eki bildirimi (5607 m.9 + özet: ses
+> sonlara doğru kesiliyor) bilinen ses kesilmesi sorunu, açık.
+>
+> ### ▶ 5 Eki (7) — ŞİFRE SAYFASI: SOL SÜTUNA KONU BAŞLIĞI (b6169bd, sayfa v15)
+> Başkan: "sol taraf zaten açıklayıcı değil, derdim solda". Her satırın SOL'unun üstüne küçük gri "m.X · <madde başlığı>" eklendi
+> (sayfa/uret.py + sablon.html; kaynak Harekât Masası madde blokları, eksikler sayfa/konu_ek.json: 2803 Ek/Geçici + yürürlük/yürütme/
+> dayanak). 1.973 satırın hepsinde başlık var; arama başlıkta da arar. Sağ sütunu "hiç bilmeyen anlasın" diye toplu yeniden yazma
+> denemesi (84 parça) oturum sınırına takıldı, HİÇBİR ŞEY uygulanmadı; iş Codex'e devredilecek (talimat: scratchpad/CODEX_SIFRE_PROMPT.md).
 >
 > ### ▶ 5 Eki (6) — ŞİFRE SOL "TEK BAŞINA ANLAŞILIR" 2. TUR 25/25 (244a195 … 6f3d8fe)
 > Başkan (TCK ekranı): "Orantılı ne? Ayrım ne? Neyin gerçekleştirilmesi için kardeşim beni mi sınıyorsun". 1. tur yalnız kesik
