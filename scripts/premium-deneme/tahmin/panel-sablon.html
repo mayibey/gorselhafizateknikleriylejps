@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Prova Paneli — Mevzu JSPS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500;600;700;800&display=swap">
+<style>
+:root{--zemin:#F7F3EA;--kagit:#FFFCF5;--kenar:#E7DCC7;--metin:#1B2A4A;--soluk:#6E6047;--lacivert:#0B1F3A;--altin:#C9A227;--kirmizi:#C00000;--yesil:#2E7D32;--amber:#8A5A12;
+  --baslik:'Playfair Display',Georgia,serif;--govde:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--metin);font-family:var(--govde);font-weight:500;padding:0 16px 40px}
+.kap{max-width:1000px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:8px;padding-block:18px 14px;border-bottom:2px solid var(--altin)}
+h1{font-family:var(--baslik);margin:0;font-size:clamp(24px,5vw,34px);color:var(--lacivert)}
+.guncel{font-size:13px;color:var(--soluk)}
+.kutular{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}
+.kutu{background:var(--kagit);border:1px solid var(--kenar);border-radius:12px;padding:14px}
+.kutu b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--lacivert)}
+.kutu span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--soluk)}
+.kutu.canli b{color:var(--yesil)}
+@media (max-width:620px){.kutular{grid-template-columns:repeat(2,minmax(0,1fr))}}
+h2{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--soluk);margin:22px 0 8px}
+.dagilim{display:flex;flex-wrap:wrap;gap:6px}
+.dagilim span{background:#F3E7C1;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:600}
+.tablo{overflow-x:auto;background:var(--kagit);border:1px solid var(--kenar);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--kenar);white-space:nowrap}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk)}
+td.sayi{font-variant-numeric:tabular-nums}
+.d{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.d.bitti{background:#E3F0E2;color:var(--yesil)}.d.cozuyor{background:#FFF3D6;color:var(--amber)}.d.ayrildi{background:#EEE;color:#555}
+.cubuk{display:inline-block;width:80px;height:6px;background:#EDE3CF;border-radius:3px;vertical-align:middle;margin-right:6px;overflow:hidden}
+.cubuk i{display:block;height:100%;background:var(--altin)}
+.hata{color:var(--kirmizi);font-weight:700;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="kap">
+  <header><h1>Sınav Provası · Canlı Panel</h1><div class="guncel" id="guncel">Yükleniyor…</div></header>
+  <div class="kutular">
+    <div class="kutu"><b id="kAcan">–</b><span>Giren kişi</span></div>
+    <div class="kutu canli"><b id="kCanli">–</b><span>Şu an çözüyor</span></div>
+    <div class="kutu"><b id="kBitti">–</b><span>Bitiren</span></div>
+    <div class="kutu"><b id="kOrt">–</b><span>Ort. doğru (80)</span></div>
+  </div>
+  <h2>Rütbe / branş</h2><div class="dagilim" id="dagilim"></div>
+  <h2>Hızlandırma talepleri</h2><div class="dagilim" id="hiz"></div>
+  <h2>Kişiler (en son hareket üstte)</h2>
+  <div class="tablo"><table><thead><tr><th>Ad</th><th>Rütbe · Branş</th><th>Durum</th><th>İlerleme / sonuç</th><th>Giriş</th><th>Son hareket</th></tr></thead><tbody id="liste"></tbody></table></div>
+  <p class="hata" id="hata" hidden></p>
+</div>
+<script>
+const SB_URL = __SB_URL__, SB_ANON = __SB_ANON__;
+const RUTBE = {sb:'Subay', asb:'Astsubay', uzmj:'Uzm.J', uzmerb:'Uzm.Erb'};
+const CANLI_DK = 20;
+const anahtar = decodeURIComponent(location.hash.slice(1));
+function esc(t){ return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function saat(ts){ const d = new Date(ts); return d.toLocaleString('tr-TR', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}); }
+function once(ts){ const dk = Math.round((Date.now() - new Date(ts)) / 60000); return dk < 1 ? 'şimdi' : dk < 60 ? dk + ' dk önce' : Math.round(dk / 60) + ' sa önce'; }
+async function yukle(){
+  const h = document.getElementById('hata');
+  if (!anahtar) { h.hidden = false; h.textContent = 'Panel bağlantısı eksik. Sana verilen tam bağlantıyı kullan.'; return; }
+  let r;
+  try {
+    const y = await fetch(SB_URL + '/rest/v1/rpc/prova_panel', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body: JSON.stringify({p_anahtar: anahtar})});
+    if (!y.ok) throw new Error(y.status === 400 ? 'Panel anahtarı geçersiz.' : 'Sunucu cevap vermedi (' + y.status + ').');
+    r = await y.json(); h.hidden = true;
+  } catch (e) { h.hidden = false; h.textContent = e.message; return; }
+  const simdi = Date.now();
+  const kisi = r.filter(x => x.deneme || x.hizlandir);
+  const bitti = kisi.filter(x => x.bitti), canli = kisi.filter(x => !x.bitti && x.deneme && simdi - new Date(x.son) < CANLI_DK * 60000);
+  document.getElementById('kAcan').textContent = kisi.length;
+  document.getElementById('kCanli').textContent = canli.length;
+  document.getElementById('kBitti').textContent = bitti.length;
+  const tam = bitti.filter(x => x.dogru != null && (x.dogru + x.yanlis + x.bos) === 80);
+  document.getElementById('kOrt').textContent = tam.length ? (tam.reduce((a, x) => a + x.dogru, 0) / tam.length).toFixed(1) : '–';
+  const say = {}; kisi.forEach(x => { const k = (RUTBE[x.rutbe] || '?') + ' ' + (x.brans || ''); say[k] = (say[k] || 0) + 1; });
+  document.getElementById('dagilim').innerHTML = Object.entries(say).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<span>${esc(k)}: ${n}</span>`).join('') || '<span>—</span>';
+  const hz = {}; r.filter(x => x.hizlandir).forEach(x => { const k = (RUTBE[x.rutbe] || '?') + ' ' + x.brans; hz[k] = (hz[k] || 0) + 1; });
+  document.getElementById('hiz').innerHTML = Object.entries(hz).map(([k, n]) => `<span>${esc(k)}: ${n}</span>`).join('') || '<span>yok</span>';
+  document.getElementById('liste').innerHTML = kisi.map(x => {
+    let durum, ilerleme;
+    if (x.bitti) { durum = '<span class="d bitti">Bitirdi</span>'; ilerleme = x.dogru != null ? `<b>${x.dogru}</b> D · ${x.yanlis} Y · ${x.bos} B` : '—'; }
+    else if (simdi - new Date(x.son) < CANLI_DK * 60000) { durum = '<span class="d cozuyor">Çözüyor</span>'; }
+    else { durum = '<span class="d ayrildi">Yarım bıraktı</span>'; }
+    if (!x.bitti) { const n = x.isaretli || 0; ilerleme = `<span class="cubuk"><i style="width:${Math.min(100, n / 80 * 100)}%"></i></span>${n ? n + '+ işaretli' : 'yeni başladı'}`; }
+    return `<tr><td>${esc(x.ad || '(adsız)')}</td><td>${esc((RUTBE[x.rutbe] || '?') + ' · ' + (x.brans || '-'))}</td><td>${durum}</td><td class="sayi">${ilerleme}</td><td class="sayi">${saat(x.ilk)}</td><td class="sayi">${once(x.son)}</td></tr>`;
+  }).join('');
+  document.getElementById('guncel').textContent = 'Güncellendi: ' + new Date().toLocaleTimeString('tr-TR') + ' · her 30 sn yenilenir';
+}
+yukle(); setInterval(yukle, 30000);
+</script>
+</body>
+</html>

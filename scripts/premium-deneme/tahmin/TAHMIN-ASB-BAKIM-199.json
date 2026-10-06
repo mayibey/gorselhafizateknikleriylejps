@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "Elektronik imza",
+    "Elektronik sertifika",
+    "Elektronik veri",
     "İmza doğrulama verisi",
     "Zaman damgası",
-    "Elektronik mühür",
-    "Elektronik sertifika"
+    "İmza oluşturma verisi"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-BAKIM-199-29"
   },
   {
@@ -1271,18 +1271,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre Hazine ve Maliye Bakanlığına bağlı İç Denetim Koordinasyon Kurulu kaç üyeden oluşur?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre kamu zararı oluşturmamakla birlikte ödenek gönderme belgelerindeki ödenek miktarını aşan harcama talimatı veren harcama yetkilisine, bir aylık net ödemeler toplamının ne kadarına kadar para cezası verilir?",
    "siklar": [
-    "Dokuz",
-    "Beş",
-    "On üç",
-    "Yedi",
-    "On bir"
+    "Tamamı",
+    "Yarısı",
+    "Dört katı",
+    "İki katı",
+    "Üç katı"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.66",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.66: “Hazine ve Maliye Bakanlığına bağlı İç Denetim Koordinasyon Kurulu, yedi üyeden oluşur.”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.70",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.70: “… ödenek gönderme belgelerindeki ödenek miktarını aşan harcama talimatı veren harcama yetkililerine, her türlü aylık, ödenek, zam ve tazminat dahil yapılan bir aylık net ödemeler toplamının iki katı tutarına kadar para cezası verilir.”",
    "id": "TAHMIN-ASB-BAKIM-199-80"
   }
  ]

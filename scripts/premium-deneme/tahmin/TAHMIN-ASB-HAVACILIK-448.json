@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "Zaman damgası",
-    "Elektronik mühür",
     "İmza doğrulama verisi",
-    "Elektronik sertifika",
-    "Elektronik imza"
+    "Zaman damgası",
+    "Elektronik veri",
+    "İmza oluşturma verisi",
+    "Elektronik sertifika"
    ],
    "dogru": 1,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-HAVACILIK-448-29"
   },
   {
@@ -1111,18 +1111,18 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre havaalanlarında altı aydan fazla süreyle bekleyen ve sahipleri tarafından alınmayan Türk siciline kayıtlı hava araçlarının maliklerine ve/veya işleticilerine, konma-konaklama ücretleri ile vergi borçlarının ödenmesi ve hava aracının havaalanından kaldırılması için ne kadar süre verildiği tebliğ olunur?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre uluslararası hava trafiğine açılabilecek havaalanlarını sertifikalandıran makam hangisidir?",
    "siklar": [
-    "Altı ay",
-    "Otuz gün",
-    "Altmış gün",
-    "Doksan gün",
-    "On beş gün"
+    "İçişleri Bakanlığı",
+    "Sivil Havacılık Genel Müdürlüğü",
+    "Genelkurmay Başkanlığı",
+    "Dışişleri Bakanlığı",
+    "Devlet Hava Meydanları İşletmesi Genel Müdürlüğü"
    ],
    "dogru": 1,
    "tip": "duz",
-   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
-   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “… otuz gün içinde konma-konaklama ücretleri ile vergi borçlarının ödenmesi ve hava aracının bulunduğu havaalanından kaldırılması konusu tebliğ olunur.” … “Havaalanlarında altı aydan fazla süreyle bekleyen ve sahipleri tarafından alınmayan Türk siciline kayıtlı hava araçlarının maliklerine ve/veya işleticilerine, Sivil Havacılık Genel Müdürlüğü tarafından 11/2/1959 tarihli ve 7201 sayılı Tebligat Kanunu hükümleri çerçevesinde veya bu şekilde tebligat yapılamaması durumunda Türkiye genelinde yayımlanan ve tirajı yüzbinin üzerinde olan bir gazetede ilanen”",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.35",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.35: “Sivil Havacılık Genel Müdürlüğünce sertifikalandırılan havaalanları, uluslararası hava trafiğine açılabilir.”",
    "id": "TAHMIN-ASB-HAVACILIK-448-70"
   },
   {

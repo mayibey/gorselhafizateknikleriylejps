@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "Elektronik mühür",
-    "İmza doğrulama verisi",
-    "Elektronik sertifika",
     "Zaman damgası",
-    "Elektronik imza"
+    "Elektronik veri",
+    "İmza oluşturma verisi",
+    "İmza doğrulama verisi",
+    "Elektronik sertifika"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-MALIYE-161-29"
   },
   {
@@ -711,18 +711,18 @@
   },
   {
    "lawId": 70,
-   "soru": "2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun kapsamındaki bir görevi yapmakta olan bir pilot, bu sırada uçuş hizmet faaliyetinden dolayı şehit olmuştur. 2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre bu durumda aşağıdakilerden hangisi doğrudur?",
+   "soru": "Uçuş hizmet faaliyeti sırasında şehit olan bir pilotun ölüm tarihinde eşi, iki çocuğu ile sağ olan annesi ve babası bulunmaktadır. 2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre şehitlik tazminatının mirasçılara intikali nasıl olur?",
    "siklar": [
-    "2629 sayılı Kanunun 14 üncü maddesine göre şehitlik tazminatı alınır; ayrıca 2330 sayılı Kanundan yararlanılamaz.",
-    "Hem 2629 sayılı Kanuna hem de 2330 sayılı Kanuna göre ayrı ayrı tazminat ödenir.",
-    "Mirasçılar iki Kanundan birini seçer; seçilmeyen Kanuna göre hesaplanan tazminatın yarısı ayrıca ödenir.",
-    "Yalnızca 2330 sayılı Kanuna göre nakdi tazminat ödenir; 2629 sayılı Kanun uygulanmaz.",
-    "2629 sayılı Kanuna göre ödenecek tazminattan 2330 sayılı Kanuna göre ödenen tutar düşülerek fark ödenir."
+    "Ana ve babanın her birine ayrı ayrı tazminatın %10'u verilir, kalanı eş ve çocuklara ödenir.",
+    "Ana ve babaya birlikte tazminatın %10'u verilir, kalanı eş ve çocuklara ödenir.",
+    "Tazminat; eş, çocuklar, ana ve baba arasında eşit olarak paylaştırılır.",
+    "Ana ve babanın her birine ayrı ayrı tazminatın %25'i verilir, kalanı eş ve çocuklara ödenir.",
+    "Tazminatın tamamı eş ve çocuklara ödenir; ana ve babaya pay verilmez."
    ],
    "dogru": 0,
    "tip": "vaka",
-   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.19",
-   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.19: “… 2330 sayılı Kanun hükümlerine göre görev yaparken bu Kanunun 13 üncü maddesindeki faaliyetlerinden dolayı şehit olanlar veya engelli hâle gelenler 14 üncü maddeye göre şehitlik ve engellilik tazminatı alırlar, ayrıca 2330 sayılı Kanundan yararlanamazlar.” … “Pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi personeli, görev ekibi personeli ve bunların adaylarının uçuş hizmet faaliyetlerinden”",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.14",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.14: “… şehidin eş ve füruu veya yalnızca füruu ile içtima eden ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı olmak üzere % 10 tutarındaki kısmı verildikten sonra kalanı içtima eden diğer mirasçılara ödenir.” … “Pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi personeli, görev ekibi personeli ve bunların adaylarının uçuş hizmet faaliyetlerinden”",
    "id": "TAHMIN-ASB-MALIYE-161-45"
   },
   {
@@ -743,18 +743,18 @@
   },
   {
    "lawId": 140,
-   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre kadın personelin doğum izni ve süt izniyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre Jandarma Genel Komutanlığı personelinin özlük ve mali hakları ile ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Süt izninin hangi saatler arasında ve kaça bölünerek kullanılacağı personelin tercihine bırakılır.",
-    "Doğumdan önce sekiz hafta ve doğumdan sonra on altı hafta olmak üzere toplam yirmi dört hafta aylıklı izin verilir.",
-    "Çoğul gebelik hâlinde doğum öncesi sekiz haftalık izin süresine iki hafta eklenir.",
-    "Aylıklı izin süresinin bitiminden itibaren ikinci altı ayda günde iki saat süt izni verilir.",
-    "Aylıklı izin süresinin bitiminden itibaren ilk altı ayda günde üç saat süt izni verilir."
+    "İşçilerin işe alınma, yükselme, izin ve hizmet akdinin feshi işlemleri 4857 sayılı İş Kanunu ile varsa geçerli toplu iş sözleşmesine göre yapılır.",
+    "Jandarma Hizmetleri Sınıfı hariç diğer hizmet sınıflarındaki Devlet memurları, Türk Silahlı Kuvvetlerindeki emsallerinin mali ve sosyal haklarından aynı şekilde yararlanır.",
+    "Jandarma Hizmetleri Sınıfındaki çarşı ve mahalle bekçileri hakkında, Emniyet Hizmetleri Sınıfındaki emsallerinin mali ve sosyal hakları aynı usul ve esaslarla uygulanır.",
+    "Hizmetlerine ihtiyaç duyulan albaylar 65 yaşına, generaller 70 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilir.",
+    "Personel hakkında, Türk Silahlı Kuvvetlerinde karşılığı olan rütbe ve kıdem üzerinden aynı şartlarla 205 sayılı Ordu Yardımlaşma Kurumu Kanunu uygulanır."
    ],
    "dogru": 3,
    "tip": "olumsuz",
-   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler) Ek 3",
-   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler), Ek 3: “… ilk altı ayda günde üç saat, ikinci altı ayda günde bir buçuk saat süt izni verilir. Süt izninin hangi saatler arasında ve kaça bölünerek kullanılacağı personelin tercihine bırakılır.” … “Kadın personele doğum yapmasından önce sekiz hafta ve doğum yaptığı tarihten itibaren on altı hafta olmak üzere toplam yirmi dört hafta süre ile aylıklı izin verilir.”",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler) m.13",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler), m.13: “… hizmetlerine ihtiyaç duyulan albaylar 60 yaşına, generaller ise 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilirler.” … “Jandarma Genel Komutanlığı personeli hakkında, Türk Silahlı Kuvvetlerinde karşılığı olan rütbe ve kıdem üzerinden aynı şartlarla, 3/1/1961 tarihli ve 205 sayılı Ordu Yardımlaşma Kurumu Kanunu uygulanır. İşçilerin işe alınma, işyeri değişikliği, yükselme, izin, sicil, ödül ve hizmet akdinin feshi işlemleri 22/5/2003 tarihli ve 4857 sayılı İş Kanunu ile varsa geçerli bulunan toplu iş sözleşmesi hükümlerine göre yapılır.”",
    "id": "TAHMIN-ASB-MALIYE-161-47"
   },
   {
@@ -775,18 +775,18 @@
   },
   {
    "lawId": 73,
-   "soru": "3269 sayılı Uzman Erbaş Kanunu'na göre ilköğretim mezunlarından ihtiyaç duyulacak özel ihtisası gerektiren sınıf, branş ve ihtisaslarda çok üstün başarı belgesi alanlar kimin kararı ile uzman erbaş olarak alınabilir?",
+   "soru": "3269 sayılı Uzman Erbaş Kanunu'na göre sözleşmeleri sağlık nedeniyle sona erenlerden, sözleşmenin sona ermesine neden olan sıhhî arızalarının tedavisine devam edilenlere, sözleşme sona erme tarihinden başlamak şartıyla on iki ayı geçmemek üzere tedavi süresince görevdeki emsallerinin net maaşlarının ne kadarı her ay sağlık yardımı olarak ödenir?",
    "siklar": [
-    "Kuvvet komutanları, Jandarma Genel Komutanı veya Sahil Güvenlik Komutanı",
-    "Birlik komutanları",
-    "Genelkurmay Başkanı",
-    "Cumhurbaşkanı",
-    "Millî Savunma Bakanı veya İçişleri Bakanı"
+    "2/3'ü",
+    "3/4'ü",
+    "1/3'ü",
+    "Tamamı",
+    "1/2'si"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "Uzman Erbaş Kanunu (Mali Hükümler) Ek 1",
-   "aciklama": "Uzman Erbaş Kanunu (Mali Hükümler), Ek 1: “İlköğretim mezunlarından ihtiyaç duyulacak özel ihtisası gerektiren sınıf, branş ve ihtisaslarda çok üstün başarı belgesi alanlar; kuvvet komutanları, Jandarma Genel Komutanı veya Sahil Güvenlik Komutanının kararı ile uzman erbaş olarak alınabilirler.”",
+   "kaynak": "Uzman Erbaş Kanunu (Mali Hükümler) m.10",
+   "aciklama": "Uzman Erbaş Kanunu (Mali Hükümler), m.10: “… sözleşme sona erme tarihinden başlamak şartıyla on iki ayı geçmemek üzere tedavi süresince, görevdeki emsallerinin almış oldukları net maaşların (27/6/1989 tarihli ve 375 sayılı Kanun Hükmünde Kararnamenin 28 inci maddesinde belirtilen ek tazminatlar ile 14/7/1964 tarihli ve 500 sayılı Kanuna göre ödenen tazminat ve yabancı dil tazminatı hariç) 2/3'ü her ay sağlık yardımı olarak kurumlarınca ödenir.”",
    "id": "TAHMIN-ASB-MALIYE-161-49"
   },
   {
@@ -1127,18 +1127,18 @@
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre yabancı konuk ve heyetlerin ağırlanması amacıyla görevlendirilen mihmandarlar tarafından yapılan temsil ve ağırlama giderlerinin ödenmesinde, harcama talimatı ve fatura ile birlikte ödeme belgesine aşağıdakilerden hangisi bağlanır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kamu personeline yapılacak doğum yardımı ödemesinde ödeme belgesine aşağıdakilerden hangisi bağlanır?",
    "siklar": [
-    "Hizmet İşleri Hakediş Raporu",
-    "Yurtiçi / Yurtdışı Geçici Görev Yolluğu Bildirimi",
-    "Çeşitli Ödemeler Bordrosu",
-    "Taşınır İşlem Fişi",
-    "Mihmandar Hesap Cetveli"
+    "Doğumu gösteren sağlık kurulu raporu",
+    "Nüfus müdürlüğünden alınan nüfus kayıt örneği",
+    "Aile Yardımı Bildirimi",
+    "Çeşitli Ödemeler Bordrosu ile harcama talimatı",
+    "Doğumun yerini ve tarihini belirten ilgilinin dilekçesi"
    ],
    "dogru": 4,
    "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.47",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.47: “… perakende satış fişi veya ödeme kaydedici cihazlara ait satış fişi ve adisyon, - Mihmandar Hesap Cetveli (Örnek: 35), ödeme belgesine bağlanır.” … “Yabancı konuk ve heyetlerin ağırlanması amacıyla görevlendirilecek personel ve ilgili yönetmeliklere göre görevlendirilecek mihmandarlar tarafından yapılan temsil ve ağırlama giderlerinin ödenmesinde”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.12",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.12: “Doğum yardımı : Doğum olayının meydana geldiği yeri ve tarihi belirten ilgilinin dilekçesi ödeme belgesine bağlanır.”",
    "id": "TAHMIN-ASB-MALIYE-161-71"
   },
   {
@@ -1159,18 +1159,18 @@
   },
   {
    "lawId": 109,
-   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantin heyetiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantinlerin muhasebesi ve vergi muafiyetleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Kantin heyetinde bir başkan, bir muhasip üye ve bir mutemet olmak üzere en az üç kişi bulunur.",
-    "Kantin heyeti seçimle teşkil edildiğinde bir yıllık süre için görev yapar.",
-    "Kantin heyetlerinde en az bir astsubay bulunması şarttır.",
-    "Kantin heyetinin atama ile teşkil edilmesi hâlinde görev süresi en fazla beş yıldır.",
-    "Kantin heyetlerinde muhasip ile mutemetlik görevi aynı kişide birleşemez."
+    "Kantin hesap yılı 1 Ocakta başlar ve 31 Aralıkta sona erer.",
+    "Kantinlerin kuruluş amaçlarına uygun olarak yaptıkları teslim ve hizmetler katma değer vergisinden müstesnadır.",
+    "Jandarma Genel Komutanlığına ait kantinler emlak vergisinden istisnadır.",
+    "Kantinlerin kurumlar vergisi muafiyeti, Gelir Vergisi ve Kurumlar Vergisi Kanunları uyarınca yapılacak vergi kesintilerini de kapsar.",
+    "Kantinlerin mal ve hizmet alımları nedeniyle düzenlediği ödemeye ilişkin kâğıtlar damga vergisinden istisnadır."
    ],
    "dogru": 3,
    "tip": "olumsuz",
-   "kaynak": "Jandarma Kantin Yönetmeliği m.6",
-   "aciklama": "Jandarma Kantin Yönetmeliği, m.6: “Kantin heyetinin atama ile teşkil edilmesi halinde görev süresi en fazla üç yıldır.” … “Kantin heyeti, bir yıllık süre için seçimle veya kadrosu oluşturulmak ve bu Yönetmeliğin 7, 8, 9 ve 10 uncu maddelerinde belirtilen seçim ve görevlendirmeye yönelik esaslar da dikkate alınmak kaydıyla birlik komutanı tarafından yapılacak atama ile teşkil edilir.”",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.43",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.43: “Bu muafiyet, 31/12/1960 tarihli ve 193 sayılı Gelir Vergisi Kanunu ile 13/6/2006 tarihli ve 5520 sayılı Kurumlar Vergisi Kanunu uyarınca yapılacak vergi kesintilerini (Gelir Vergisi, Kurumlar Vergisi ve Katma Değer Vergisi Tevkifatını) kapsamaz.” … “Kantin hesap yılı, 1 Ocakta başlayıp, 31 Aralıkta son bulur.”",
    "id": "TAHMIN-ASB-MALIYE-161-73"
   },
   {

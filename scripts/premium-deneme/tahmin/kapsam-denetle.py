@@ -29,7 +29,7 @@ def bolum(dosya):
 
 
 # Emirde AÇIKÇA sayılan ek maddeler (json yalnız sayı tutuyor): (bölüm, law) → paket 'no' değerleri
-EK_IZIN = {('müşterek', 7): {'Ek'}}  # 3713 Ek Madde 2 (silah kullanma) emirde var
+EK_IZIN = {('müşterek', 7): {'Ek'}, ('jandarma', 40): {'13/A'}, ('maliye', 140): {'13/A'}}  # emirde açıkça: 3713 Ek Madde 2; 2559 m.13/A; 2803 mali hükümler 13/A
 paket = {}
 sorun = 0
 toplam = 0
@@ -60,7 +60,7 @@ for f in sorted(glob.glob(K + 'tahmin-*.json')):
             sayi = re.match(r'(\d+)', no)
             if no in EK_IZIN.get((kb, L), set()):
                 continue
-            if not sayi or no.startswith(('Ek', 'Geçici')):
+            if not sayi or no.startswith(('Ek', 'Geçici')) or sayi.group(1) != no:  # 13/A, 12/C gibi ara maddeler 13'e sayılmaz
                 print(f'? {os.path.basename(f)} #{i} law {L} m.{no}: emir yalnız {izin} maddelerini sayıyor (ek/geçici madde, elle bak)')
                 sorun += 1
             elif int(sayi.group(1)) not in izin:

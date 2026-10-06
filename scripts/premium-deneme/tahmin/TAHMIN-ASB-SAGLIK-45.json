@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
+    "Elektronik veri",
     "İmza doğrulama verisi",
     "Zaman damgası",
-    "Elektronik mühür",
-    "Elektronik imza",
-    "Elektronik sertifika"
+    "Elektronik sertifika",
+    "İmza oluşturma verisi"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-SAGLIK-45-29"
   },
   {

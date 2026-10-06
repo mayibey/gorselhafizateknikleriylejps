@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "Elektronik mühür",
-    "İmza doğrulama verisi",
-    "Elektronik sertifika",
     "Zaman damgası",
-    "Elektronik imza"
+    "Elektronik veri",
+    "İmza oluşturma verisi",
+    "İmza doğrulama verisi",
+    "Elektronik sertifika"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-PERSONEL-206-29"
   },
   {
@@ -695,23 +695,23 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre kamu idarelerinde pilot olan ve olmayan uçucu, denizaltıcı, dalgıç, kurbağa adam ve paraşütçülerin bu görevlerde geçirdikleri fiilî hizmet sürelerinin her yılı için kaç ay itibarî hizmet süresi eklenir?",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre Kurum, sigortalıya veya hak sahiplerine bağlanacak gelir, aylık veya toptan ödemeleri, gerekli belgelerin ve incelemelerin tamamlandığı tarihten itibaren en geç ne kadar süre içinde hesap ve tespit ederek sonuçlarını yazı ile bildirir?",
    "siklar": [
-    "Dört ay",
     "Altı ay",
     "Bir ay",
+    "On beş gün",
     "Üç ay",
     "İki ay"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.49",
-   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.49: “Kamu idarelerinde pilot olan ve olmayan uçucu, denizaltıcı, dalgıç, kurbağa adam ve paraşütçülerin bu görevlerde geçirdikleri fiilî hizmet sürelerinin her yılı için üç ay itibarî hizmet süresi eklenir.”",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.42",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.42: “Kurum, sigortalıya veya hak sahiplerine bağlanacak gelir, aylık veya toptan ödemeleri, gerekli belgelerin ve incelemelerin tamamlandığı tarihten itibaren en geç üç ay içinde hesap ve tespit ederek sonuçlarını yazı ile bildirir.”",
    "id": "TAHMIN-ASB-PERSONEL-206-44"
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre itibarî hizmet süresiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Seferberliği gerektiren iç tedip hareketlerine fiilen katılan birliklerde görevli subay ve astsubayların bu durumlarda geçen fiilî hizmet sürelerinin her yılı için altı ay itibarî hizmet süresi eklenir.\nII. Seferberlik, iç tedip hareketleri ve tutsaklık gibi bu nedenlerle eklenecek itibarî hizmet sürelerinin toplamı üç yıldan fazla olamaz.\nIII. İtibarî hizmet süresi, emeklilik ikramiyesinin hesabında dikkate alınır.",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılıkla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri, (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.\nII. Jandarma ve Sahil Güvenlik Akademisinde Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyanlar hakkında da (c) bendi gereği sigortalı sayılanlara ilişkin hükümler uygulanır.\nIII. Jandarma ve Sahil Güvenlik Akademisini tamamlamadan ayrılanların bu okulda geçen eğitim süreleri sigortalılıklarından sayılır.",
    "siklar": [
     "II ve III",
     "Yalnız II",
@@ -721,24 +721,24 @@
    ],
    "dogru": 2,
    "tip": "oncullu",
-   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.49",
-   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.49: “… her yılı için altı ay itibarî hizmet süresi olarak eklenir. Bu nedenlerle eklenecek itibarî hizmet sürelerinin toplamı, üç yıldan fazla olamaz.” … “Seferberliği gerektiren iç tedip hareketlerine fiilen katılan birliklerde görevli olanların”",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.4",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.4: “Bu Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri bu maddenin birinci fıkrasının (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.” … “Jandarma ve Sahil Güvenlik Akademisi ile fakülte ve yüksekokullarda Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyan veya kendi hesabına okumakta iken Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okumaya devam edenler ile subay ve astsubay naspedilmek üzere temel askerlik eğitimine tabi tutulan adaylar, hakkında da uygulanır.”",
    "id": "TAHMIN-ASB-PERSONEL-206-45"
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılardan istek üzerine emekliye ayrılmak isteyenlerin ilişikleri, her durumda istek tarihinden itibaren ne kadar süre sonunda kesilmiş sayılır?",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre harp malûlü sayılan uzman erbaşlara hangi kademenin prime esas kazancı üzerinden aylık bağlanır?",
    "siklar": [
-    "Bir ay",
-    "Altı ay",
-    "On beş gün",
-    "Üç ay",
-    "İki ay"
+    "Bulundukları kademenin üç ilerisindeki kademenin",
+    "Bulundukları kademenin beş ilerisindeki kademenin",
+    "Bulundukları kademenin iki ilerisindeki kademenin",
+    "Bulundukları kademenin dört ilerisindeki kademenin",
+    "Bulundukları kademenin bir ilerisindeki kademenin"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.48",
-   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.48: “Birinci fıkranın (b) bendine göre emekliye ayrılmak isteyenler için her durumda, istek tarihinden itibaren bir aylık süre sonunda ilişikleri kesilmiş sayılır.” … “… b) İstek üzerine veya yaş haddi, malûllük veya vazife malûllüğü hallerinde kamu idaresinin en yüksek amirinin”",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.47",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.47: “Bunlardan uzman erbaş ve sözleşmeli erbaş ve erlere bulundukları kademenin üç ilerisindeki kademenin, uzman jandarmalara bulundukları rütbenin bir üst rütbesinin aynı kademesinin” … “Subay, astsubay, uzman jandarma, uzman erbaş, sözleşmeli erbaş ve er ile Türk Silâhlı Kuvvetlerince görevlendirilen 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılardan”",
    "id": "TAHMIN-ASB-PERSONEL-206-46"
   },
   {
@@ -775,18 +775,18 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre evlenmeleri nedeniyle gelir veya aylıklarının kesilmesi gereken kız çocuklarına, evlenmeleri ve talepte bulunmaları hâlinde almakta oldukları aylık veya gelirlerinin kaç yıllık tutarı evlenme ödeneği olarak peşin ödenir?",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre kamu idareleri, vazife malûllüğüne sebep olan olayı yetkili mercilere derhal, Sosyal Güvenlik Kurumuna da en geç kaç iş günü içinde bildirmekle yükümlüdür?",
    "siklar": [
+    "Otuz",
+    "On",
+    "On beş",
     "Beş",
-    "Dört",
-    "İki",
-    "Üç",
-    "Bir"
+    "Üç"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.37",
-   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.37: “… almakta oldukları aylık veya gelirlerinin iki yıllık tutarı bir defaya mahsus olmak üzere evlenme ödeneği olarak peşin ödenir.”",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.47",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.47: “Kamu idareleri vazife malûllüğüne sebep olan olayı, o yer yetkili kolluk kuvvetlerine veya kendi mevzuatına göre yetkili mercilere derhal, Kuruma da en geç onbeş iş günü içinde bildirmekle yükümlüdür.”",
    "id": "TAHMIN-ASB-PERSONEL-206-49"
   },
   {
@@ -1159,34 +1159,34 @@
   },
   {
    "lawId": 109,
-   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantin sermayesinin aylık artırımında, bir önceki ayın Tüketici Fiyatları Endeksi (TÜFE) oranı %4'ten fazla ise artırma hangi oranda yapılır?",
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantin heyetinin seçimi her yılın hangi ayının ilk haftasında yapılır?",
    "siklar": [
-    "%4",
-    "%2",
-    "%3",
-    "%5",
-    "%8"
+    "Kasım",
+    "Aralık",
+    "Ekim",
+    "Eylül",
+    "Ocak"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "Jandarma Kantin Yönetmeliği m.19",
-   "aciklama": "Jandarma Kantin Yönetmeliği, m.19: “Tüketici Fiyatları Endeksi, % 4 ve daha az ise en az Tüketici Fiyatları Endeksi oranı kadar, % 4’den fazla ise % 4 oranında arttırma yapılır.”",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.8",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.8: “Kantin heyetinin seçimi, her yılın Kasım ayı ilk haftasında yapılır.”",
    "id": "TAHMIN-ASB-PERSONEL-206-73"
   },
   {
    "lawId": 109,
-   "soru": "Jandarma Kantin Yönetmeliği'ne göre aşağıdakilerden hangisi kantin gelirleri arasında sayılmamıştır?",
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre aşağıdakilerden hangisi kantinlerin tabi tutulduğu denetleme ve teftiş türleri arasında sayılmamıştır?",
    "siklar": [
-    "İhtiyaç fazlası boş ambalaj malzemesi satışları",
-    "Personelden alınan aylık üyelik aidatları",
-    "Yüklenici firmalardan tahsil edilen ceza bedelleri",
-    "Banka faizleri",
-    "Firmalar tarafından yapılan promosyon bağışları"
+    "Durum teftişi",
+    "Dış denetim",
+    "Tasfiye teftişi",
+    "Özel denetleme",
+    "Hesap teftişi"
    ],
    "dogru": 1,
    "tip": "olumsuz",
-   "kaynak": "Jandarma Kantin Yönetmeliği m.35",
-   "aciklama": "Jandarma Kantin Yönetmeliği, m.35: “Kantin gelirleri; a. Kantin ve yan kuruluşlarının kârlarından, b. Banka faizlerinden, c. İhtiyaç fazlası boş ambalaj malzemesi satışlarından, ç.” … “… e. Sermayesi ve geliri fazla olan kantinlerden yapılan sermaye (mal, para) naklinden, f. Firmalar tarafından yapılan promosyon bağışlarından, g.”",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.49",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.49: “Kantinler; a. İdarî denetlemeye, b. Özel denetlemeye, c. Durum teftişine, ç. Hesap teftişine, d. İç denetime, e. Tasfiye teftişine tabi tutulur.”",
    "id": "TAHMIN-ASB-PERSONEL-206-74"
   },
   {
@@ -1207,18 +1207,18 @@
   },
   {
    "lawId": 106,
-   "soru": "Şehitlik Yönetmeliği'ne göre yurt dışında bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemleri için mahallî rayice göre belirlenen ödenek ihtiyacı, sorumlu büyükelçilik veya temsilcilik tarafından hangi ayın sonuna kadar Dışişleri Bakanlığına gönderilir?",
+   "soru": "Şehitlik Yönetmeliği'ne göre şehitliğe defin kararı veren makam tarafından, hayatını kaybeden kişinin hangi şehitliğe ya da mezarlığa defin yapılmasını talep ettiğine dair yazılı beyan, belirtilen sıraya göre ilk olarak kimden alınır?",
    "siklar": [
-    "Haziran",
-    "Aralık",
-    "Ağustos",
-    "Eylül",
-    "Mart"
+    "Anasından",
+    "En büyük reşit kardeşinden",
+    "Eşinden",
+    "Babasından",
+    "En büyük reşit çocuğundan"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "Şehitlik Yönetmeliği m.10",
-   "aciklama": "Şehitlik Yönetmeliği, m.10: “… mahalli rayice göre belirlenen ödenek ihtiyacı, sorumlu büyükelçilik veya temsilcilik tarafından Ağustos ayı sonuna kadar Dışişleri Bakanlığına gönderilir.”",
+   "kaynak": "Şehitlik Yönetmeliği m.5",
+   "aciklama": "Şehitlik Yönetmeliği, m.5: “… hayatını kaybeden kişinin sırasıyla eşinden, en büyük reşit çocuğundan, anasından, babasından, en büyük reşit kardeşinden hangi şehitliğe ya da mezarlığa defin yapılmasını talep ettiğine dair yazılı beyan alınır ve bu beyan defnin yapılacağı il valiliğine bildirilir.”",
    "id": "TAHMIN-ASB-PERSONEL-206-76"
   },
   {

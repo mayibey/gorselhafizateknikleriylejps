@@ -428,16 +428,16 @@
  {
   "law": 14,
   "tip": "duz",
-  "k": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+  "k": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
   "s": [
-   "Elektronik mühür",
-   "Elektronik imza",
    "Zaman damgası",
    "Elektronik sertifika",
-   "İmza doğrulama verisi"
+   "İmza doğrulama verisi",
+   "İmza oluşturma verisi",
+   "Elektronik veri"
   ],
   "kanit": [
-   "Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir"
+   "Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı"
   ]
  },
  {

@@ -292,7 +292,14 @@ document.getElementById('sorular').addEventListener('click', e => {
   kaydet();
   b.closest('.soru').querySelectorAll('.sik').forEach(x => { const on = +x.dataset.j === cevap[i]; x.classList.toggle('secili', on); x.setAttribute('aria-pressed', String(on)); });
   sayac();
+  ilerlemeBildir();
 });
+// Canlı takip: her 10 işarette bir (yalnız ilk kez geçince) ilerleme kaydı
+function ilerlemeBildir(){
+  const n = Object.keys(cevap).length, kova = Math.floor(n / 10) * 10, anahtar = 'prova-ilerleme-' + deneme.id;
+  let son = 0; try { son = +(sessionStorage.getItem(anahtar) || 0); } catch (e) {}
+  if (kova >= 10 && kova > son) { kayit('ilerleme', {deneme: deneme.id, isaretli: kova}); try { sessionStorage.setItem(anahtar, String(kova)); } catch (e) {} }
+}
 document.getElementById('bitir').addEventListener('click', () => {
   bitti = true; kaydet(); ciz();
   const {dg, yn, bos} = sayim();

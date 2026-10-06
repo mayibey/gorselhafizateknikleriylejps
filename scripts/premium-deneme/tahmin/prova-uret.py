@@ -68,6 +68,13 @@ for a, b in (('__SB_URL__', json.dumps(env['EXPO_PUBLIC_SUPABASE_URL'].strip()))
     t = t.replace(a, b)
 io.open(os.path.join(cikti, 'index.html'), 'w', encoding='utf-8').write(t)
 
+# Canlı panel (okuma gizli anahtarla RPC'den; bağlantı: /sinavprovasi/panel/#<anahtar>)
+pt = io.open(os.path.join(KOK, 'panel-sablon.html'), encoding='utf-8').read()
+for a, b in (('__SB_URL__', json.dumps(env['EXPO_PUBLIC_SUPABASE_URL'].strip())), ('__SB_ANON__', json.dumps(env['EXPO_PUBLIC_SUPABASE_ANON_KEY'].strip()))):
+    pt = pt.replace(a, b)
+os.makedirs(os.path.join(cikti, 'panel'), exist_ok=True)
+io.open(os.path.join(cikti, 'panel', 'index.html'), 'w', encoding='utf-8').write(pt)
+
 # Eski adres → yeni adres
 yon = ('<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
        '<meta http-equiv="refresh" content="0; url=/sinavprovasi/"><title>Sınav Provası</title>'

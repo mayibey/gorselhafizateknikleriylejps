@@ -1271,18 +1271,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre Hazine ve Maliye Bakanlığına bağlı İç Denetim Koordinasyon Kurulu kaç üyeden oluşur?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre kamu zararı oluşturmamakla birlikte ödenek gönderme belgelerindeki ödenek miktarını aşan harcama talimatı veren harcama yetkilisine, bir aylık net ödemeler toplamının ne kadarına kadar para cezası verilir?",
    "siklar": [
-    "Dokuz",
-    "On bir",
-    "On üç",
-    "Yedi",
-    "Beş"
+    "Tamamı",
+    "Üç katı",
+    "Dört katı",
+    "İki katı",
+    "Yarısı"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.66",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.66: “Hazine ve Maliye Bakanlığına bağlı İç Denetim Koordinasyon Kurulu, yedi üyeden oluşur.”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.70",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.70: “… ödenek gönderme belgelerindeki ödenek miktarını aşan harcama talimatı veren harcama yetkililerine, her türlü aylık, ödenek, zam ve tazminat dahil yapılan bir aylık net ödemeler toplamının iki katı tutarına kadar para cezası verilir.”",
    "id": "TAHMIN-SB-BAKIM-382-80"
   }
  ]

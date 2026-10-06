@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "İmza doğrulama verisi",
-    "Elektronik imza",
+    "Elektronik veri",
     "Elektronik sertifika",
-    "Elektronik mühür",
-    "Zaman damgası"
+    "İmza oluşturma verisi",
+    "Zaman damgası",
+    "İmza doğrulama verisi"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-MEBS-82-29"
   },
   {
@@ -679,18 +679,18 @@
   },
   {
    "lawId": 20,
-   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre bu Yönetmelikle Emniyet Genel Müdürlüğüne verilen yetki ve görevlerden jandarma sorumluluk bölgesinde ikamet eden kişilere ilişkin olanlar kim tarafından yerine getirilir?",
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre ilk defa yivsiz tüfek ruhsatnamesi almak için gerekli belgelerle başvuran ve harcı ödeyen kişiye, verildiği tarihten geçerli olmak üzere kaç yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir?",
    "siklar": [
-    "Emniyet Genel Müdürlüğü",
-    "Kaymakamlık",
-    "Valilik",
-    "İçişleri Bakanlığı",
-    "Jandarma Genel Komutanlığı"
+    "1 yıl",
+    "3 yıl",
+    "2 yıl",
+    "10 yıl",
+    "5 yıl"
    ],
    "dogru": 4,
    "tip": "duz",
-   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) Ek madde",
-   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), Ek madde: “… jandarma sorumluluk bölgesinde ikamet eden gerçek ve tüzel kişilere ilişkin olanlar, aynı esaslara göre Jandarma Genel Komutanlığınca yerine getirilir.”",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.10",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.10: “… verildiği tarihten geçerli olmak üzere 5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.”",
    "id": "TAHMIN-ASB-MEBS-82-43"
   },
   {
@@ -871,114 +871,114 @@
   },
   {
    "lawId": 97,
-   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre işletmecinin hangi süre içerisinde hizmet sunmadığının tespiti hâlinde yetkilendirmesi iptal edilir?",
+   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre erişim sağlayıcı olan veya telefon hizmeti sunan işletmeci, altyapısı üzerinden gerçekleşen görüşmelere ait trafik bilgilerini ne kadar süreyle muhafaza etmekle yükümlüdür?",
    "siklar": [
-    "Son bir yıl",
-    "Son iki yıl",
-    "Son üç yıl",
-    "Son beş yıl",
-    "Son altı ay"
+    "Altı ay",
+    "Beş yıl",
+    "İki yıl",
+    "Üç yıl",
+    "Bir yıl"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği Geçici 10",
-   "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, Geçici 10: “İşletmecinin son üç yıl içerisinde hizmet sunmadığının tespiti halinde yetkilendirmesinin iptal edilmesine ilişkin 7 nci maddenin beşinci fıkrasındaki hüküm, bu maddenin yürürlüğe girdiği tarihten itibaren üç yıl sonra uygulanmaya başlanır.”",
+   "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği m.19",
+   "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, m.19: “… altyapısı üzerinden gerçekleşen görüşmelere ait trafik bilgilerini iki yıl süreyle; kullanıcı bilgilerini ise ilgili mevzuatta belirtilen zamanaşımı süresi boyunca muhafaza etmekle yükümlüdür.”",
    "id": "TAHMIN-ASB-MEBS-82-55"
   },
   {
    "lawId": 98,
-   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre taşınmaz yıkımı, bakımı veya onarımı sırasında ortaya çıkıp sözleşme gereği yükleniciye bırakılan taşınır malzemelerden kayıtlı olmayanlar hakkında ne yapılır?",
+   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre HEK'e ayrılan ve ekonomik değeri olan her türlü maden, malzeme, araç, metal ve gereçler hakkında, özel mevzuatındaki hükümler saklı kalmak üzere hangi hükümler uygulanır?",
    "siklar": [
-    "Önce kayda alınıp sonra çıkış yapılır.",
-    "Taşınır mal kayıtlarına alınmaz.",
-    "Makina ve Kimya Endüstrisine devredilir.",
-    "HEK'e ayrılarak kayıtlardan düşülür.",
-    "Sayım kurulunca sayılarak depoya alınır."
+    "Devlet Malzeme Ofisi Ana Statüsü hükümleri",
+    "Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri",
+    "Millî Emlak Genel Tebliği hükümleri",
+    "Kamu İhale Kanunu hükümleri",
+    "Devlet İhale Kanunu hükümleri"
    ],
    "dogru": 1,
    "tip": "duz",
-   "kaynak": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği m.25/A",
-   "aciklama": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği, m.25/A: “… kayıtlı olanlar çıkış işlemine tabi tutulur, kayıtlı olmayanlar taşınır mal kayıtlarına alınmaz ve bu malzemeler hakkında Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri uygulanmaz.”",
+   "kaynak": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği m.25",
+   "aciklama": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği, m.25: “HEK’e ayrılan ve ekonomik değeri olan her türlü maden, malzeme, araç, metal ve gereçler hakkında, özel mevzuatındaki hükümler saklı kalmak üzere Makina ve Kimya Endüstrisi Kurumu Ana Statüsü hükümleri uygulanır.”",
    "id": "TAHMIN-ASB-MEBS-82-56"
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre alacaklı adına vekiline yapılacak ödemelerde ödemenin yapılacağı kişi hangi belgeye göre tespit edilir?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ihale veya doğrudan temin usulüyle yapılan hizmet alımlarına ilişkin giderlerden sigorta giderlerinin ödenmesinde, fatura yerine ödeme belgesine ne bağlanır?",
    "siklar": [
-    "Noterce düzenlenmiş vekâletname aslı veya noterce onaylanmış örneği",
-    "Vekilin nüfus cüzdanı örneği",
-    "Alacaklının dilekçesi",
-    "Muhtarlıktan alınan yetki belgesi",
-    "Harcama yetkilisinin onayı"
+    "Sigorta poliçesi veya zeyilname",
+    "Piyasa fiyat araştırması tutanağı",
+    "Hasar tespit tutanağı",
+    "Muayene ve kabul komisyonu tutanağı",
+    "Taşınır işlem fişi"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.8",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.8: “Vekillere yapılacak ödemelerde, vekilin alacaklı adına tahsile yetkili olduğuna ilişkin noterce düzenlenmiş vekaletname aslı veya bunun noterce onaylanmış örneği.”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.46",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.46: “Fatura (sigorta giderlerinin ödenmesinde sigorta poliçesi veya zeyilname), - Hizmet İşleri Hakediş Raporu (Örnek: 4), ödeme belgesine bağlanır.”",
    "id": "TAHMIN-ASB-MEBS-82-57"
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre 5233 sayılı Kanun uyarınca terör zararlarının sulhen ve nakden ödenmesinde ödeme belgesine hangileri bağlanır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre tüketim malı, demirbaş, makine, teçhizat ve taşıt alımlarında yurt dışından yapılan satın almalarda hangi durumda fatura aslı yerine onaylı örneği aranır?",
    "siklar": [
-    "Hak sahibinin dilekçesi ve muhtarlık yazısı",
-    "Fatura ve taşınır işlem fişi",
-    "Sulhname ile valinin onayı veya gereken hâllerde İçişleri Bakanının onayı",
-    "Taahhüt dosyası ve hakediş raporu",
-    "Mahkeme kararı ve bilirkişi raporu"
+    "Malın gümrükte bekletilmesi hâlinde",
+    "Bedelin döviz olarak ödenmesi hâlinde",
+    "Ödenen vergilerin idarece geri alınması hâlinde",
+    "Taşıma senedinin (konşimento) bulunmaması hâlinde",
+    "Faturanın yabancı dilde düzenlenmesi hâlinde"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.30",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.30: “Ödenecek zararın miktarını belirleyen ve zarar tespit komisyonu başkanı ile alacaklı veya temsilcisi tarafından imzalanan sulhname, -Valinin onayı veya gereken hallerde İçişleri Bakanının onayı, ödeme belgesine bağlanır.”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.48",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.48: “Yurtdışından yapılan satınalmalarda ödenen vergilerin idarece geri alınması halinde, fatura aslı yerine onaylı örneği aranır.”",
    "id": "TAHMIN-ASB-MEBS-82-58"
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre makine, teçhizat, taşıt ve demirbaş bakım ve onarım giderlerinin ödenmesinde aşağıdakilerden hangisi ödeme belgesine bağlanmaz?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre her türlü tüketim mal ve malzemeleri ile demirbaş, makine, teçhizat ve taşıt alımlarına ilişkin giderlerin ödenmesinde aşağıdakilerden hangisi ödeme belgesine bağlanacak belgeler arasında sayılmamıştır?",
    "siklar": [
     "Taahhüt dosyası",
-    "Hizmet İşleri Hakediş Raporu",
+    "Muayene ve kabul komisyonu tutanağı",
     "Fatura",
-    "Bunların hepsi bağlanır.",
-    "Yapım İşleri Hakediş Raporu"
+    "Taşınır işlem fişi",
+    "Hizmet İşleri Hakediş Raporu"
    ],
    "dogru": 4,
    "tip": "olumsuz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.42",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.42: “Makine, teçhizat, taşıt, demirbaş bakım giderleri ile bunların her türlü onarımlarına ilişkin giderlerin ödenmesinde; - Taahhüt dosyası, - Fatura, - Hizmet İşleri Hakediş Raporu (Örnek: 4), ödeme belgesine bağlanır.”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.48",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.48: “Her türlü tüketim mal ve malzemeleri ile demirbaş, makine, teçhizat ve taşıt alımlarına ilişkin giderlerin ödenmesinde; - Taahhüt dosyası, - Fatura, - Muayene ve kabul komisyonu tutanağı, -Taşınır işlem fişi, ödeme belgesine bağlanır.”",
    "id": "TAHMIN-ASB-MEBS-82-59"
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kapalı istihbarat ve kapalı savunma hizmet giderleri nasıl gerçekleştirilir?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre Jandarma Genel Komutanlığınca yapılacak taşınır alımlarında, taşınır girişlerinde düzenlenecek belgenin ödeme belgesine bağlanması hususunda hangi düzenlemenin hükümleri saklıdır?",
    "siklar": [
-    "Genel hükümlere göre fatura karşılığı",
-    "Valilik onayıyla",
-    "5018 sayılı Kanunun 24 üncü maddesinde belirtilen kararname esaslarına göre",
-    "Sayıştay onayıyla",
-    "Kamu İhale Kanununa göre ihale yoluyla"
+    "Genel Yönetim Muhasebe Yönetmeliği",
+    "Devlet İhale Kanunu",
+    "TSK, MİT ve EGM Taşınır Mal Yönetmeliği",
+    "Kamu İhale Genel Tebliği",
+    "Afet Harcamaları Yönetmeliği"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.31",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.31: “Kapalı istihbarat ve kapalı savunma hizmet giderleri 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanununun 24 üncü maddesinde belirtilen kararname esaslarına göre gerçekleştirilir.”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.66",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.66: “Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı ve Emniyet Genel Müdürlüğü Taşınır Mal Yönetmeliği hükümleri saklıdır.” … “Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı ile Milli İstihbarat Teşkilatı ve Emniyet Genel Müdürlüğünce yapılacak taşınır alımlarında, taşınır girişlerinde düzenlenecek belgenin ödeme belgesine bağlanması hususunda, 21/6/2010 tarihli ve 2010/616 sayılı Bakanlar Kurulu kararıyla yürürlüğe konulan Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı ve Emniyet Genel Müdürlüğü Taşınır Mal Yönetmeliği hükümleri saklıdır.”",
    "id": "TAHMIN-ASB-MEBS-82-60"
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre cenaze personelin bağlı bulunduğu kurumca görevlendirilen bir personel veya ailesi tarafından kaldırıldığında, cenaze giderlerinin ödenmesinde ödeme belgesine ne bağlanır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bütçeden nakden veya mahsuben yapılacak kesin ödemelerde kanıtlayıcı belgeler hangi belgeye bağlanır?",
    "siklar": [
-    "Yapılan masraflara ilişkin fatura, perakende satış fişi veya ödeme kaydedici cihaz satış fişi",
-    "Muhtarlık ilmühaberi",
-    "Aile yardımı bildirimi",
-    "Yalnızca ölüm belgesi",
-    "Belediyece düzenlenen defin ruhsatı"
+    "Ödeme Emri Belgesi",
+    "Taahhüt Dosyası",
+    "Harcama Talimatı",
+    "Muhasebe İşlem Fişi",
+    "Taşınır İşlem Fişi"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.21",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.21: “Cenaze, personelin bağlı bulunduğu kurumca tayin edilen bir personel veya ailesi ya da yakınları tarafından kaldırıldığı takdirde, yapılan masraflara ilişkin fatura, perakende satış fişi veya ödeme kaydedici cihazlara ait satış fişi, ödeme belgesine bağlanır.”",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.5",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.5: “Bütçeden nakden veya mahsuben yapılacak kesin ödemelerde Genel Yönetim Muhasebe Yönetmeliği eki 1 örnek numaralı Ödeme Emri Belgesine harcamanın çeşidine göre Yönetmeliğin ilgili maddelerinde belirtilen belgeler kanıtlayıcı belge olarak bağlanır.”",
    "id": "TAHMIN-ASB-MEBS-82-61"
   },
   {

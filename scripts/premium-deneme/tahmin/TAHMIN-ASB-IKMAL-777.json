@@ -455,18 +455,18 @@
   },
   {
    "lawId": 14,
-   "soru": "Elektronik İmza Kanunu'na göre başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+   "soru": "Elektronik İmza Kanunu'na göre bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayda ne ad verilir?",
    "siklar": [
-    "Elektronik mühür",
-    "Elektronik imza",
     "Zaman damgası",
+    "Elektronik sertifika",
     "İmza doğrulama verisi",
-    "Elektronik sertifika"
+    "Elektronik veri",
+    "İmza oluşturma verisi"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek madde",
-   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek madde: “Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir.”",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.3",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.3: “Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,”",
    "id": "TAHMIN-ASB-IKMAL-777-29"
   },
   {
@@ -999,18 +999,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim bütçe kanun teklifi, malî yılbaşından en az kaç gün önce Cumhurbaşkanı tarafından Türkiye Büyük Millet Meclisine sunulur?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre kamu zararları ile para cezaları, fiilin işlendiği yılı izleyen malî yılın başından başlamak üzere kaçıncı yılın sonuna kadar tespit ve tahsil edilemezse zamanaşımına uğrar?",
    "siklar": [
-    "Yetmiş beş",
-    "Yüz yirmi",
-    "Doksan",
-    "Altmış",
-    "Kırk beş"
+    "Onuncu",
+    "Yirminci",
+    "On beşinci",
+    "Yedinci",
+    "Beşinci"
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.18",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.18: “Merkezî yönetim bütçe kanun teklifi malî yılbaşından en az yetmiş beş gün önce Cumhurbaşkanı tarafından”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.74",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.74: “… işlendiği yılı izleyen malî yılın başından başlamak üzere zamanaşımını kesen ve durduran genel hükümler saklı kalmak kaydıyla onuncu yılın sonuna kadar tespit ve tahsil edilemeyen kamu zararları ile para cezaları zamanaşımına uğrar.”",
    "id": "TAHMIN-ASB-IKMAL-777-63"
   },
   {
