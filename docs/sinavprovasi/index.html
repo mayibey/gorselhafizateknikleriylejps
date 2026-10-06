@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>JSPS Sınav Provası · Mevzu JSPS</title>
+<meta property="og:title" content="JSPS Sınav Provası · 10 Ekim 2026">
+<meta property="og:description" content="Rütbene ve branşına göre hazırlanmış 80 soruluk prova. Çöz, puanını ve açıklamaları gör.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+html,body{margin:0}
+[hidden]{display:none!important}
+/* Düzen: tek sütun sınav kâğıdı; giriş kartı → deneme. Mevzu krem-lacivert marka sistemi. */
+:root{
+  --zemin:#F7F3EA; --kagit:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+  --metin:#1B2A4A; --soluk:#6E6047; --lacivert:#0B1F3A; --lacivert2:#173B6B;
+  --altin:#C9A227; --altinKoyu:#B88917; --altinYuzey:#F3E7C1;
+  --kirmizi:#C00000; --kirmiziYuzey:#F8E3E0; --yesil:#2E7D32; --yesilYuzey:#E3F0E2;
+  --golge:0 1px 2px rgba(11,31,58,.06),0 6px 18px rgba(11,31,58,.06);
+  --baslik:'Playfair Display',Georgia,'Times New Roman',serif;
+  --govde:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --zemin:#08162A; --kagit:#0E2139; --kenar:#22385A; --ayirici:#1A2D49;
+  --metin:#E9E3D6; --soluk:#A9B4C6; --lacivert:#E9E3D6; --lacivert2:#9FB8DD;
+  --altin:#D9B441; --altinKoyu:#E6C766; --altinYuzey:#2A2715;
+  --kirmizi:#F07B70; --kirmiziYuzey:#3A1E22; --yesil:#6FC475; --yesilYuzey:#173322;
+  --golge:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3); color-scheme:dark}}
+*{box-sizing:border-box}
+body{background:var(--zemin);color:var(--metin);font-family:var(--govde);font-size:15.5px;line-height:1.55;padding:0 16px}
+.kap{max-width:760px;margin:0 auto;padding-block:20px 72px}
+h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;margin:0;color:var(--lacivert);text-wrap:balance}
+.ust{display:grid;gap:10px;padding-block:8px 18px;border-bottom:2px solid var(--altin)}
+.etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
+.alt{color:var(--soluk);margin:0;max-width:62ch}
+.kart{display:grid;gap:12px;margin:18px 0;padding:16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px}
+.kart.vurgu{border-color:var(--altin)}
+.kart p{margin:0}
+.kart b{color:var(--lacivert)}
+.alanlar{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.alanlar{grid-template-columns:1fr}}
+.alan{display:grid;gap:6px;min-width:0}
+.alan label{font-weight:700;font-size:14px;color:var(--lacivert)}
+.alan input,.alan select{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin);color:var(--metin);width:100%}
+.hata{color:var(--kirmizi);font-size:14px;min-height:1.2em}
+.kimlik{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;color:var(--soluk)}
+.kimlik b{color:var(--metin)}
+.baglanti{font:inherit;font-size:14px;font-weight:700;color:var(--lacivert2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.blok{margin:26px 0 10px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.blok h2{font-family:var(--govde);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:0;color:var(--lacivert2)}
+.blok span{font-size:13px;color:var(--soluk)}
+.serit{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--zemin);padding-block:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid var(--kenar)}
+.serit strong{font-size:14px}
+.sayac{margin-left:auto;font-size:13.5px;color:var(--soluk);font-variant-numeric:tabular-nums}
+.sayac b{color:var(--metin)}
+.soru{background:var(--kagit);border:1px solid var(--kenar);border-radius:10px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--golge)}
+.soru.dogru{border-color:var(--yesil)} .soru.yanlis{border-color:var(--kirmizi)}
+.kok{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:10px}
+.no{font-weight:800;color:var(--altinKoyu);font-variant-numeric:tabular-nums;min-width:2ch}
+.metin{white-space:pre-line;min-width:0}
+.tip{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk);border:1px solid var(--kenar);border-radius:4px;padding:0 5px;vertical-align:1px}
+.siklar{display:grid;gap:6px}
+.sik{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;width:100%;text-align:left;font:inherit;font-size:14.5px;color:inherit;background:var(--zemin);border:1px solid var(--kenar);border-radius:8px;padding:8px 10px;cursor:pointer;line-height:1.45}
+.sik:hover:not(:disabled){border-color:var(--altin)}
+.sik:focus-visible,.btn:focus-visible,.baglanti:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+.sik .h{font-weight:800;color:var(--soluk)}
+.sik.secili{border-color:var(--lacivert2);background:var(--altinYuzey)}
+.sik.secili .h{color:var(--lacivert2)}
+.sik:disabled{cursor:default}
+.sik.isaret-dogru{border-color:var(--yesil);background:var(--yesilYuzey)} .sik.isaret-dogru .h{color:var(--yesil)}
+.sik.isaret-yanlis{border-color:var(--kirmizi);background:var(--kirmiziYuzey)} .sik.isaret-yanlis .h{color:var(--kirmizi)}
+.aciklama{margin-top:10px;padding:10px 12px;border-left:3px solid var(--altin);background:var(--zemin);border-radius:0 8px 8px 0;font-size:13.5px;color:var(--soluk)}
+.aciklama b{color:var(--metin)}
+.alt-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:24px}
+.btn{font:inherit;font-weight:700;font-size:15px;padding:11px 18px;border-radius:8px;border:1px solid var(--lacivert);background:var(--lacivert);color:var(--zemin);cursor:pointer}
+.btn.ikincil{background:transparent;color:var(--metin);border-color:var(--kenar)}
+.onay{font-size:14px;color:var(--soluk)}
+.sonuc{display:grid;gap:12px;margin-top:22px;padding:18px;background:var(--kagit);border:1px solid var(--altin);border-radius:12px}
+.sonuc h2{font-family:var(--govde);font-size:15px;font-weight:800;margin:0;color:var(--lacivert)}
+.kutular{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.kutu{padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin)}
+.kutu b{display:block;font-size:24px;font-variant-numeric:tabular-nums;color:var(--metin)}
+.kutu span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk)}
+.anahtar{font-family:ui-monospace,Consolas,monospace;font-size:13px;letter-spacing:.06em;overflow-x:auto;white-space:nowrap;color:var(--soluk)}
+.dipnot{margin-top:32px;font-size:12.5px;color:var(--soluk);border-top:1px solid var(--kenar);padding-top:12px}
+.filigran{position:fixed;inset:0;z-index:50;pointer-events:none;user-select:none;-webkit-user-select:none;overflow:hidden}
+.filigran span{position:absolute;left:50%;top:50%;font-family:var(--baslik);font-weight:700;letter-spacing:.18em;white-space:nowrap;color:var(--lacivert);opacity:.08;
+  font-size:var(--boy,96px);transform:translate(-50%,-50%) rotate(var(--aci,-35deg))}
+@media print{
+  .filigran span{opacity:.09;font-size:96pt;transform:translate(-50%,-50%) rotate(-54.7deg)}
+  .serit{position:static}
+  #giris,.alt-bar,.onay,.baglanti{display:none!important}
+  .soru{break-inside:avoid;box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="filigran" aria-hidden="true"><span>MEVZU JSPS</span></div>
+<div class="kap">
+  <header class="ust">
+    <div class="etiket">JSPS · Yenilenen sınav 10 Ekim 2026</div>
+    <h1>Sınav Provası</h1>
+    <p class="alt">Rütbene ve branşına göre hazırlanmış 80 soruluk prova. Sorular Jandarmanın Ek-1 emrindeki maddelerden yazıldı; her cevap resmî madde metniyle doğrulandı.</p>
+  </header>
+
+  <form class="kart vurgu" id="giris" hidden novalidate>
+    <p><b>Başlamadan önce kendini tanıt.</b> Deneme rütbene ve branşına göre açılır.</p>
+    <div class="alanlar">
+      <div class="alan"><label for="ad">Adın</label><input id="ad" maxlength="40" autocomplete="given-name" required></div>
+      <div class="alan"><label for="soyad">Soyadın</label><input id="soyad" maxlength="40" autocomplete="family-name" required></div>
+      <div class="alan"><label for="rutbe">Rütbe</label>
+        <select id="rutbe" required><option value="">Seç</option><option value="sb">Subay</option><option value="asb">Astsubay</option><option value="uzmj">Uzman Jandarma</option><option value="uzmerb">Uzman Erbaş</option></select></div>
+      <div class="alan"><label for="brans">Branş</label><select id="brans" required disabled><option value="">Önce rütbe seç</option></select></div>
+    </div>
+    <div class="hata" id="girisHata" aria-live="polite"></div>
+    <div><button class="btn" type="submit">Provaya başla</button></div>
+    <small class="onay">Adın yalnızca provayı kimlerin çözdüğünü görmek için kaydedilir.</small>
+  </form>
+
+  <section id="deneme" hidden>
+    <div class="kart">
+      <div class="kimlik" id="kimlik"></div>
+      <p id="denemeNot"></p>
+    </div>
+    <div class="serit"><strong id="denemeAd"></strong><span class="sayac" id="sayac"></span></div>
+    <main id="sorular"></main>
+    <div class="alt-bar">
+      <button class="btn" id="bitir" type="button">Bitir ve sonucu göster</button>
+      <button class="btn ikincil" id="sifirla" type="button">Cevaplarımı sil</button>
+      <span class="onay" id="onay" aria-live="polite"></span>
+    </div>
+    <section class="sonuc" id="sonuc" hidden></section>
+  </section>
+
+  <p class="dipnot">Bu sayfa sınavın kendisi değildir; Mevzu JSPS'nin hazırladığı bir provadır. Kaynak: Ek-1 emrindeki mevzuatın resmî metinleri.</p>
+</div>
+
+<script>
+const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
+const KATALOG = {"surum": "1791287025", "bransAd": {"jandarma": "Jandarma", "mebs": "MEBS (Muhabere Elektronik Bilgi Sistemleri)", "havacilik": "Havacılık", "personel": "Personel", "maliye": "Maliye", "istihkam": "İstihkam", "ikmal": "İkmal", "bakim": "Bakım", "bando": "Bando", "saglik": "Sağlık", "tabip": "Tabip", "dis_tabibi": "Diş Tabibi", "eczaci": "Eczacı", "kimyager": "Kimyager", "veteriner": "Veteriner", "muhendis": "Mühendis"}, "branslar": {"sb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "tabip", "dis_tabibi", "eczaci", "kimyager", "veteriner", "muhendis"], "asb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "saglik"], "uzmj": ["jandarma"], "uzmerb": ["jandarma"]}, "denemeler": {"sb/jandarma": "SB-JAN", "sb/mebs": "SB-MEBS"}, "musterek": {"sb": "SB-MUS"}};
+const RUTBE_AD = {sb:'Subay', asb:'Astsubay', uzmj:'Uzman Jandarma', uzmerb:'Uzman Erbaş'};
+const HARF = 'ABCDE', TIP = {oncullu:'Öncüllü', olumsuz:'Olumsuz', vaka:'Olay'};
+const ls = {
+  al(k){ try { return localStorage.getItem(k); } catch (e) { return null; } },
+  koy(k, v){ try { localStorage.setItem(k, v); } catch (e) {} }
+};
+let ziyaretci = ls.al('prova-ziyaretci');
+if (!ziyaretci) { ziyaretci = 'z' + Math.random().toString(36).slice(2) + Date.now().toString(36); ls.koy('prova-ziyaretci', ziyaretci); }
+let kim = null; try { kim = JSON.parse(ls.al('prova-kim') || 'null'); } catch (e) {}
+let deneme = null, cevap = {}, bitti = false;
+
+function kayit(olay, ek){
+  const govde = Object.assign({ziyaretci, ad: kim ? (kim.ad + ' ' + kim.soyad).trim() : null, rutbe: kim && kim.rutbe, brans: kim && kim.brans, olay}, ek || {});
+  fetch(SB_URL + '/rest/v1/tahmin_deneme_kayit', {method:'POST', keepalive:true,
+    headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json', Prefer:'return=minimal'},
+    body: JSON.stringify(govde)}).catch(() => {});
+}
+function esc(t){ return String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+// --- Giriş ---
+const fRutbe = document.getElementById('rutbe'), fBrans = document.getElementById('brans');
+function bransDoldur(secili){
+  const r = fRutbe.value;
+  if (!r) { fBrans.innerHTML = '<option value="">Önce rütbe seç</option>'; fBrans.disabled = true; return; }
+  const liste = KATALOG.branslar[r];
+  fBrans.innerHTML = '<option value="">Seç</option>' + liste.map(b => `<option value="${b}">${KATALOG.bransAd[b]}</option>`).join('');
+  fBrans.disabled = false;
+  if (liste.length === 1) fBrans.value = liste[0];
+  if (secili && liste.includes(secili)) fBrans.value = secili;
+}
+fRutbe.addEventListener('change', () => bransDoldur());
+function girisGoster(){
+  document.getElementById('deneme').hidden = true;
+  const f = document.getElementById('giris'); f.hidden = false;
+  if (kim) { document.getElementById('ad').value = kim.ad; document.getElementById('soyad').value = kim.soyad; fRutbe.value = kim.rutbe; bransDoldur(kim.brans); }
+  document.getElementById('ad').focus();
+}
+document.getElementById('giris').addEventListener('submit', e => {
+  e.preventDefault();
+  const ad = document.getElementById('ad').value.trim(), soyad = document.getElementById('soyad').value.trim();
+  const rutbe = fRutbe.value, brans = fBrans.value, hata = document.getElementById('girisHata');
+  if (!ad || !soyad) { hata.textContent = 'Adını ve soyadını yaz.'; return; }
+  if (!rutbe) { hata.textContent = 'Rütbeni seç.'; return; }
+  if (!brans) { hata.textContent = 'Branşını seç.'; return; }
+  hata.textContent = '';
+  kim = {ad, soyad, rutbe, brans}; ls.koy('prova-kim', JSON.stringify(kim));
+  document.getElementById('giris').hidden = true;
+  denemeAc();
+});
+
+// --- Deneme ---
+function denemeSec(){
+  const tam = KATALOG.denemeler[kim.rutbe + '/' + kim.brans];
+  if (tam) return {id: tam, kismi: false};
+  const mus = KATALOG.musterek[kim.rutbe];
+  return mus ? {id: mus, kismi: true} : null;
+}
+async function denemeAc(){
+  const sec = denemeSec();
+  document.getElementById('deneme').hidden = false;
+  document.getElementById('kimlik').innerHTML = `<span><b>${esc(kim.ad + ' ' + kim.soyad)}</b> · ${RUTBE_AD[kim.rutbe]} · ${esc(KATALOG.bransAd[kim.brans])}</span><button class="baglanti" type="button" id="degistir">Bilgilerimi değiştir</button>`;
+  document.getElementById('degistir').addEventListener('click', girisGoster);
+  const not = document.getElementById('denemeNot'), kap = document.getElementById('sorular');
+  if (!sec) {
+    not.innerHTML = `<b>${RUTBE_AD[kim.rutbe]} provası hazırlanıyor.</b> Hazır olunca bu sayfa otomatik olarak sana uygun denemeyi açacak; birazdan tekrar bak.`;
+    kap.innerHTML = ''; document.getElementById('denemeAd').textContent = ''; document.getElementById('sayac').textContent = '';
+    document.querySelector('.alt-bar').hidden = true; document.getElementById('sonuc').hidden = true;
+    kayit('acilis', {deneme: null}); return;
+  }
+  document.querySelector('.alt-bar').hidden = false;
+  not.innerHTML = sec.kismi
+    ? `<b>${esc(KATALOG.bransAd[kim.brans])} branş soruları hazırlanıyor.</b> Şimdilik ${RUTBE_AD[kim.rutbe].toLowerCase()} müşterek bölümünü (40 soru) çözebilirsin; branş bölümü eklenince bu sayfada otomatik görünecek.`
+    : 'Soruları işaretle, bitirince puanını, doğru cevapları ve her sorunun dayandığı madde cümlesini gör.';
+  kap.innerHTML = '<p class="onay">Deneme yükleniyor…</p>';
+  try {
+    const y = await fetch('d/' + sec.id + '.json?v=' + KATALOG.surum);
+    if (!y.ok) throw new Error(y.status);
+    deneme = await y.json();
+  } catch (e) { kap.innerHTML = '<p class="hata">Deneme yüklenemedi. Bağlantını kontrol edip sayfayı yenile.</p>'; return; }
+  try { const k = JSON.parse(ls.al('prova-cevap-' + deneme.id) || 'null'); cevap = (k && k.cevap) || {}; bitti = !!(k && k.bitti); } catch (e) { cevap = {}; bitti = false; }
+  document.getElementById('denemeAd').textContent = deneme.baslik;
+  const anahtar = 'prova-acilis-' + deneme.id;
+  let yazildi = false; try { yazildi = sessionStorage.getItem(anahtar) === '1'; } catch (e) {}
+  if (!yazildi) { kayit('acilis', {deneme: deneme.id}); try { sessionStorage.setItem(anahtar, '1'); } catch (e) {} }
+  ciz();
+}
+function kaydet(){ ls.koy('prova-cevap-' + deneme.id, JSON.stringify({cevap, bitti})); }
+function ciz(){
+  const s = deneme.sorular, p = [];
+  for (const [bas, son, ad, aralik] of deneme.bloklar) {
+    p.push(`<div class="blok"><h2>${esc(ad)}</h2><span>${esc(aralik)}</span></div>`);
+    for (let i = bas; i < son; i++) {
+      const q = s[i], sec = cevap[i];
+      const durum = bitti ? (sec === q.d ? ' dogru' : (sec == null ? '' : ' yanlis')) : '';
+      const siklar = q.s.map((t, j) => {
+        let c = 'sik';
+        if (bitti) { if (j === q.d) c += ' isaret-dogru'; else if (j === sec) c += ' isaret-yanlis'; }
+        else if (j === sec) c += ' secili';
+        return `<button type="button" class="${c}" data-i="${i}" data-j="${j}" ${bitti ? 'disabled' : ''} aria-pressed="${j === sec}"><span class="h">${HARF[j]})</span><span>${esc(t)}</span></button>`;
+      }).join('');
+      const ac = bitti ? `<div class="aciklama"><b>Doğru cevap ${HARF[q.d]}.</b> ${esc(q.a)}</div>` : '';
+      const tip = TIP[q.t] ? `<span class="tip">${TIP[q.t]}</span>` : '';
+      p.push(`<article class="soru${durum}" id="s-${i+1}"><div class="kok"><span class="no">${i+1}.</span><div class="metin">${esc(q.k)}${tip}</div></div><div class="siklar">${siklar}</div>${ac}</article>`);
+    }
+  }
+  document.getElementById('sorular').innerHTML = p.join('');
+  sayac(); sonucCiz();
+}
+function sayac(){
+  const n = Object.keys(cevap).length, top = deneme.sorular.length;
+  document.getElementById('sayac').innerHTML = bitti ? 'Sonuç gösteriliyor' : `<b>${n}</b> / ${top} işaretli`;
+  document.getElementById('bitir').hidden = bitti;
+}
+function sayim(){
+  let dg = 0, yn = 0, bos = 0;
+  deneme.sorular.forEach((q, i) => { const c = cevap[i]; if (c == null) bos++; else if (c === q.d) dg++; else yn++; });
+  return {dg, yn, bos};
+}
+function sonucCiz(){
+  const el = document.getElementById('sonuc');
+  if (!bitti) { el.hidden = true; return; }
+  const {dg, yn, bos} = sayim(), s = deneme.sorular;
+  const parca = deneme.bloklar.map(([a, b, ad, aralik]) => { let x = 0; for (let i = a; i < b; i++) if (cevap[i] === s[i].d) x++; return `${esc(ad)} (${esc(aralik)}): <b>${x}</b> / ${b - a}`; }).join(' · ');
+  el.innerHTML = `<h2>Sonucun</h2>
+    <div class="kutular"><div class="kutu"><b>${dg}</b><span>Doğru</span></div><div class="kutu"><b>${yn}</b><span>Yanlış</span></div><div class="kutu"><b>${bos}</b><span>Boş</span></div></div>
+    <div>${parca}</div>
+    <div class="anahtar" aria-label="Cevap anahtarı">${s.map((q, i) => `${i+1}${HARF[q.d]}`).join(' ')}</div>`;
+  el.hidden = false;
+}
+document.getElementById('sorular').addEventListener('click', e => {
+  const b = e.target.closest('.sik'); if (!b || b.disabled) return;
+  const i = +b.dataset.i, j = +b.dataset.j;
+  if (cevap[i] === j) delete cevap[i]; else cevap[i] = j;
+  kaydet();
+  b.closest('.soru').querySelectorAll('.sik').forEach(x => { const on = +x.dataset.j === cevap[i]; x.classList.toggle('secili', on); x.setAttribute('aria-pressed', String(on)); });
+  sayac();
+});
+document.getElementById('bitir').addEventListener('click', () => {
+  bitti = true; kaydet(); ciz();
+  const {dg, yn, bos} = sayim();
+  kayit('bitir', {deneme: deneme.id, dogru: dg, yanlis: yn, bos});
+  document.getElementById('sonuc').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+});
+let silOnay = false;
+document.getElementById('sifirla').addEventListener('click', () => {
+  const o = document.getElementById('onay');
+  if (!silOnay) { silOnay = true; o.textContent = 'İşaretlerin silinecek. Onaylamak için tekrar bas.'; return; }
+  silOnay = false; cevap = {}; bitti = false; kaydet(); ciz(); o.textContent = 'Cevapların silindi.';
+});
+function aciAyarla(){
+  const k = document.documentElement.style;
+  k.setProperty('--aci', (-Math.atan2(innerHeight, innerWidth) * 180 / Math.PI).toFixed(1) + 'deg');
+  k.setProperty('--boy', Math.round(Math.min(Math.hypot(innerWidth, innerHeight) / 12, 130)) + 'px');
+}
+aciAyarla(); addEventListener('resize', aciAyarla);
+if (kim && kim.rutbe && kim.brans && KATALOG.branslar[kim.rutbe] && KATALOG.branslar[kim.rutbe].includes(kim.brans)) denemeAc(); else girisGoster();
+</script>
+</body>
+</html>

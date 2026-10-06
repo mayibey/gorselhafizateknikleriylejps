@@ -21,3 +21,11 @@ create policy "tahmin kayit ekle" on public.tahmin_deneme_kayit
 
 revoke all on public.tahmin_deneme_kayit from anon, authenticated;
 grant insert on public.tahmin_deneme_kayit to anon, authenticated;
+
+-- 6 Eki: mevzujsps.com/sinavprovasi — rütbe/branş ve çoklu deneme kimliği
+alter table public.tahmin_deneme_kayit add column if not exists rutbe text check (rutbe is null or rutbe in ('sb', 'asb', 'uzmj', 'uzmerb'));
+alter table public.tahmin_deneme_kayit add column if not exists brans text check (brans is null or char_length(brans) <= 30);
+alter table public.tahmin_deneme_kayit drop constraint if exists tahmin_deneme_kayit_deneme_check;
+alter table public.tahmin_deneme_kayit add constraint tahmin_deneme_kayit_deneme_check check (deneme is null or char_length(deneme) <= 40);
+alter table public.tahmin_deneme_kayit drop constraint if exists tahmin_deneme_kayit_ad_check;
+alter table public.tahmin_deneme_kayit add constraint tahmin_deneme_kayit_ad_check check (ad is null or char_length(ad) <= 80);
