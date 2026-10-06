@@ -44,4 +44,6 @@ export const SORU_KARA_LISTE = new Set([
   // 26 Eyl 2026 — kullanıcı bildirimi (Hasan Can Kılınç): (4) sayılı çizelge eşleştirmesinde üç şık
   // kanunda yok; çizelge metni resmî kaynaklarımızda bulunmadığı için doğru değerlerle düzeltilemedi.
   '05-D-149',    // 7068 (4) sayılı çizelge rütbe/makam - aylıktan kesme eşleştirmesi (birden çok yanlış şık)
+  // 6 Eki 2026 — kullanıcı bildirimi (Metehan Güler): bent harfi ezberletiyor ((l)/(h)/(i)/(j)/(ı)), anlamsız trivia.
+  '5809-S-018',  // 5809 m.4 "bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi" hangi bentte
 ]);

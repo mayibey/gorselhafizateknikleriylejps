@@ -68,7 +68,7 @@ export const KART_SORU_SAYILARI: Record<number, number> = {
   65: 17,
   66: 22,
   67: 45,
-  68: 26,
+  68: 25,
   69: 26,
   70: 79,
   71: 57,
