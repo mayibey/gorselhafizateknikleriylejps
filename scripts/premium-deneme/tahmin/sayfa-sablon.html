@@ -1,0 +1,192 @@
+<title>10 Ekim Tahmin Denemeleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* Düzen: tek sütun sınav kâğıdı; üstte sabit sekme + sayaç şeridi, altta sonuç kartı. Mevzu krem-lacivert marka sistemi. */
+:root{
+  --zemin:#F7F3EA; --kagit:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+  --metin:#1B2A4A; --soluk:#6E6047; --lacivert:#0B1F3A; --lacivert2:#173B6B;
+  --altin:#C9A227; --altinKoyu:#B88917; --altinYuzey:#F3E7C1;
+  --kirmizi:#C00000; --kirmiziYuzey:#F8E3E0; --yesil:#2E7D32; --yesilYuzey:#E3F0E2;
+  --golge:0 1px 2px rgba(11,31,58,.06),0 6px 18px rgba(11,31,58,.06);
+  --baslik:'Playfair Display',Georgia,'Times New Roman',serif;
+  --govde:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --zemin:#08162A; --kagit:#0E2139; --kenar:#22385A; --ayirici:#1A2D49;
+  --metin:#E9E3D6; --soluk:#A9B4C6; --lacivert:#E9E3D6; --lacivert2:#9FB8DD;
+  --altin:#D9B441; --altinKoyu:#E6C766; --altinYuzey:#2A2715;
+  --kirmizi:#F07B70; --kirmiziYuzey:#3A1E22; --yesil:#6FC475; --yesilYuzey:#173322;
+  --golge:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --zemin:#08162A; --kagit:#0E2139; --kenar:#22385A; --ayirici:#1A2D49;
+  --metin:#E9E3D6; --soluk:#A9B4C6; --lacivert:#E9E3D6; --lacivert2:#9FB8DD;
+  --altin:#D9B441; --altinKoyu:#E6C766; --altinYuzey:#2A2715;
+  --kirmizi:#F07B70; --kirmiziYuzey:#3A1E22; --yesil:#6FC475; --yesilYuzey:#173322;
+  --golge:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--zemin);color:var(--metin);font-family:var(--govde);font-size:15.5px;line-height:1.55;padding:0 16px}
+.kap{max-width:760px;margin:0 auto;padding-block:20px 72px}
+h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;margin:0;color:var(--lacivert);text-wrap:balance}
+.ust{display:grid;gap:10px;padding-block:8px 18px;border-bottom:2px solid var(--altin)}
+.etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
+.alt{color:var(--soluk);margin:0;max-width:62ch}
+.not{display:grid;gap:8px;margin:18px 0 6px;padding:14px 16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px;font-size:14.5px}
+.not p{margin:0}
+.not b{color:var(--lacivert)}
+.serit{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--zemin);padding-block:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid var(--kenar)}
+.sekme{font:inherit;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;border:1px solid var(--kenar);background:var(--kagit);color:var(--soluk);cursor:pointer}
+.sekme[aria-selected="true"]{background:var(--lacivert);color:var(--zemin);border-color:var(--lacivert)}
+.sayac{margin-left:auto;font-size:13.5px;color:var(--soluk);font-variant-numeric:tabular-nums}
+.sayac b{color:var(--metin)}
+.blok{margin:26px 0 10px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.blok h2{font-family:var(--govde);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:0;color:var(--lacivert2)}
+.blok span{font-size:13px;color:var(--soluk)}
+.soru{background:var(--kagit);border:1px solid var(--kenar);border-radius:10px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--golge)}
+.soru.dogru{border-color:var(--yesil)} .soru.yanlis{border-color:var(--kirmizi)}
+.kok{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:10px}
+.no{font-weight:800;color:var(--altinKoyu);font-variant-numeric:tabular-nums;min-width:2ch}
+.metin{white-space:pre-line;min-width:0}
+.tip{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk);border:1px solid var(--kenar);border-radius:4px;padding:0 5px;vertical-align:1px}
+.siklar{display:grid;gap:6px}
+.sik{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;width:100%;text-align:left;font:inherit;font-size:14.5px;color:inherit;background:var(--zemin);border:1px solid var(--kenar);border-radius:8px;padding:8px 10px;cursor:pointer;line-height:1.45}
+.sik:hover:not(:disabled){border-color:var(--altin)}
+.sik:focus-visible,.sekme:focus-visible,.btn:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+.sik .h{font-weight:800;color:var(--soluk)}
+.sik.secili{border-color:var(--lacivert2);background:var(--altinYuzey)}
+.sik.secili .h{color:var(--lacivert2)}
+.sik:disabled{cursor:default}
+.sik.isaret-dogru{border-color:var(--yesil);background:var(--yesilYuzey)} .sik.isaret-dogru .h{color:var(--yesil)}
+.sik.isaret-yanlis{border-color:var(--kirmizi);background:var(--kirmiziYuzey)} .sik.isaret-yanlis .h{color:var(--kirmizi)}
+.aciklama{margin-top:10px;padding:10px 12px;border-left:3px solid var(--altin);background:var(--zemin);border-radius:0 8px 8px 0;font-size:13.5px;color:var(--soluk)}
+.aciklama b{color:var(--metin)}
+.alt-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:24px}
+.btn{font:inherit;font-weight:700;font-size:15px;padding:11px 18px;border-radius:8px;border:1px solid var(--lacivert);background:var(--lacivert);color:var(--zemin);cursor:pointer}
+.btn.ikincil{background:transparent;color:var(--metin);border-color:var(--kenar)}
+.onay{font-size:14px;color:var(--soluk)}
+.sonuc{display:grid;gap:12px;margin-top:22px;padding:18px;background:var(--kagit);border:1px solid var(--altin);border-radius:12px}
+.sonuc h2{font-family:var(--govde);font-size:15px;font-weight:800;margin:0;color:var(--lacivert)}
+.kutular{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.kutu{padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin)}
+.kutu b{display:block;font-size:24px;font-variant-numeric:tabular-nums;color:var(--metin)}
+.kutu span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk)}
+.anahtar{font-family:ui-monospace,Consolas,monospace;font-size:13px;letter-spacing:.06em;overflow-x:auto;white-space:nowrap;color:var(--soluk)}
+.dipnot{margin-top:32px;font-size:12.5px;color:var(--soluk);border-top:1px solid var(--kenar);padding-top:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="kap">
+  <header class="ust">
+    <div class="etiket">JSPS · Subay · Yenilenen sınav 10 Ekim 2026</div>
+    <h1>Tahmin Denemeleri</h1>
+    <p class="alt">İptal edilen 19 Eylül sınavının yerine yapılacak sınav için, soruları hazırlayan komisyonun başında biz olsaydık soracağımız 80'er soru.</p>
+  </header>
+
+  <section class="not" aria-label="Nasıl hazırlandı">
+    <p><b>Neyi esas aldık:</b> 19 Eylül'de sorulan maddeler bu kez başka açıdan geliyor; aynı soru tekrar edilmiyor. Konular yalnız Jandarmanın Ek-1 emrindeki maddelerden seçildi. Son değişiklikler öne alındı: CMK'ya 2025'te eklenen hesap askıya alma, Sözleşmeli Yönetmelik'teki %90 sicil şartı gibi.</p>
+    <p><b>Tarz:</b> Atatürk Üniversitesi'nin soru dili esas alındı: kısa kök, kısa şık, "hangisi yanlıştır" ağırlığı, öncüllü ve olay soruları. Cevaplar beş harfe 16'şar dağıtıldı ve sırada örüntü yok.</p>
+    <p><b>Doğrulama:</b> Her sorunun cevabı resmî madde metnindeki bir cümleyle eşleştirildi; bitirince her sorunun altında o cümle görünür.</p>
+  </section>
+
+  <div class="serit" role="tablist" aria-label="Branş">
+    <button class="sekme" role="tab" id="sekme-jan" data-d="jan" aria-selected="true">Jandarma</button>
+    <button class="sekme" role="tab" id="sekme-mebs" data-d="mebs" aria-selected="false">MEBS</button>
+    <span class="sayac" id="sayac"></span>
+  </div>
+
+  <main id="sorular"></main>
+
+  <div class="alt-bar">
+    <button class="btn" id="bitir">Bitir ve sonucu göster</button>
+    <button class="btn ikincil" id="sifirla">Cevaplarımı sil</button>
+    <span class="onay" id="onay" aria-live="polite"></span>
+  </div>
+  <section class="sonuc" id="sonuc" hidden></section>
+
+  <p class="dipnot">Bu sayfa sınavın kendisi değil, bir tahmin denemesidir. Müşterek bölümün ilk 40 sorusu iki branşta aynıdır; MEBS'te 41–50 arası ek müşterek sorulardır. Kaynak: Ek-1 emrindeki mevzuatın resmî metinleri.</p>
+</div>
+
+<script>
+const VERI = __VERI__;
+const HARF = 'ABCDE';
+const TIP = {oncullu:'Öncüllü', olumsuz:'Olumsuz', vaka:'Olay'};
+let aktif = 'jan';
+let cevap = {jan:{}, mebs:{}};
+let bitti = {jan:false, mebs:false};
+try { const k = JSON.parse(localStorage.getItem('tahmin-10eki') || 'null'); if (k) { cevap = k.cevap || cevap; bitti = k.bitti || bitti; } } catch (e) {}
+try { const t = localStorage.getItem('tahmin-10eki-sekme'); if (t === 'jan' || t === 'mebs') aktif = t; } catch (e) {}
+if (location.hash === '#mebs') aktif = 'mebs';
+function kaydet(){ try { localStorage.setItem('tahmin-10eki', JSON.stringify({cevap, bitti})); localStorage.setItem('tahmin-10eki-sekme', aktif); } catch (e) {} }
+
+function bloklar(d){
+  return d === 'jan'
+    ? [[0,40,'Müşterek mevzuat','1–40 · iki branşta aynı'],[40,80,'Jandarma branş mevzuatı','41–80']]
+    : [[0,40,'Müşterek mevzuat','1–40 · iki branşta aynı'],[40,50,'Müşterek mevzuat (MEBS ek)','41–50'],[50,80,'MEBS branş mevzuatı','51–80']];
+}
+
+function ciz(){
+  const d = VERI[aktif], kap = document.getElementById('sorular');
+  document.querySelectorAll('.sekme').forEach(b => b.setAttribute('aria-selected', String(b.dataset.d === aktif)));
+  const parcalar = [];
+  for (const [bas, son, ad, aralik] of bloklar(aktif)) {
+    parcalar.push(`<div class="blok"><h2>${ad}</h2><span>${aralik}</span></div>`);
+    for (let i = bas; i < son; i++) {
+      const s = d[i], sec = cevap[aktif][i], b = bitti[aktif];
+      const durum = b ? (sec === s.d ? ' dogru' : (sec == null ? '' : ' yanlis')) : '';
+      const siklar = s.s.map((t, j) => {
+        let c = 'sik';
+        if (b) { if (j === s.d) c += ' isaret-dogru'; else if (j === sec) c += ' isaret-yanlis'; }
+        else if (j === sec) c += ' secili';
+        return `<button class="${c}" data-i="${i}" data-j="${j}" ${b ? 'disabled' : ''} aria-pressed="${j === sec}"><span class="h">${HARF[j]})</span><span>${esc(t)}</span></button>`;
+      }).join('');
+      const ac = b ? `<div class="aciklama"><b>Doğru cevap ${HARF[s.d]}.</b> ${esc(s.a)}</div>` : '';
+      const tip = TIP[s.t] ? `<span class="tip">${TIP[s.t]}</span>` : '';
+      parcalar.push(`<article class="soru${durum}" id="s-${aktif}-${i+1}"><div class="kok"><span class="no">${i+1}.</span><div class="metin">${esc(s.k)}${tip}</div></div><div class="siklar">${siklar}</div>${ac}</article>`);
+    }
+  }
+  kap.innerHTML = parcalar.join('');
+  sayac(); sonucCiz();
+}
+function esc(t){ return String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function sayac(){
+  const n = Object.keys(cevap[aktif]).length;
+  document.getElementById('sayac').innerHTML = bitti[aktif] ? 'Sonuç gösteriliyor' : `<b>${n}</b> / 80 işaretli`;
+  document.getElementById('bitir').hidden = bitti[aktif];
+}
+function sonucCiz(){
+  const el = document.getElementById('sonuc');
+  if (!bitti[aktif]) { el.hidden = true; return; }
+  const d = VERI[aktif]; let dg = 0, yn = 0, bos = 0;
+  const parca = (a, b) => { let x = 0; for (let i = a; i < b; i++) if (cevap[aktif][i] === d[i].d) x++; return x; };
+  d.forEach((s, i) => { const c = cevap[aktif][i]; if (c == null) bos++; else if (c === s.d) dg++; else yn++; });
+  const brans = aktif === 'jan' ? `Branş (41–80): <b>${parca(40,80)}</b> / 40` : `Ek müşterek (41–50): <b>${parca(40,50)}</b> / 10 · Branş (51–80): <b>${parca(50,80)}</b> / 30`;
+  el.innerHTML = `<h2>${aktif === 'jan' ? 'Jandarma' : 'MEBS'} sonucun</h2>
+    <div class="kutular"><div class="kutu"><b>${dg}</b><span>Doğru</span></div><div class="kutu"><b>${yn}</b><span>Yanlış</span></div><div class="kutu"><b>${bos}</b><span>Boş</span></div></div>
+    <div>Müşterek (1–40): <b>${parca(0,40)}</b> / 40 · ${brans}</div>
+    <div class="anahtar" aria-label="Cevap anahtarı">${d.map((s, i) => `${i+1}${HARF[s.d]}`).join(' ')}</div>`;
+  el.hidden = false;
+}
+
+document.getElementById('sorular').addEventListener('click', e => {
+  const b = e.target.closest('.sik'); if (!b || b.disabled) return;
+  const i = +b.dataset.i, j = +b.dataset.j;
+  if (cevap[aktif][i] === j) delete cevap[aktif][i]; else cevap[aktif][i] = j;
+  kaydet();
+  const art = b.closest('.soru');
+  art.querySelectorAll('.sik').forEach(x => { const on = +x.dataset.j === cevap[aktif][i]; x.classList.toggle('secili', on); x.setAttribute('aria-pressed', String(on)); });
+  sayac();
+});
+document.querySelectorAll('.sekme').forEach(b => b.addEventListener('click', () => { aktif = b.dataset.d; kaydet(); ciz(); document.getElementById('onay').textContent = ''; }));
+document.getElementById('bitir').addEventListener('click', () => {
+  bitti[aktif] = true; kaydet(); ciz();
+  document.getElementById('sonuc').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+});
+let silOnay = false;
+document.getElementById('sifirla').addEventListener('click', () => {
+  const o = document.getElementById('onay');
+  if (!silOnay) { silOnay = true; o.textContent = 'Bu branştaki işaretlerin silinecek. Onaylamak için tekrar bas.'; return; }
+  silOnay = false; cevap[aktif] = {}; bitti[aktif] = false; kaydet(); ciz(); o.textContent = 'Cevapların silindi.';
+});
+ciz();
+</script>

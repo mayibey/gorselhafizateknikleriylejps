@@ -2,7 +2,20 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 6 Ekim 2026 (Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 6 Ekim 2026 (10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 6 Eki (3) — 10 EKİM YENİLENEN SINAV İÇİN TAHMİN DENEMELERİ (subay Jandarma + subay MEBS, 80'er soru)
+> Başkan: "komisyonun başı sen ol, ben olsam bunları sorardım dediğin 80 soruyu jandarma ve mebs için ayrı ayrı üret, müşterek aynı".
+> Yapı 19 Eyl subay sınavından ölçüldü: müşterek 40 (her iki branşta aynı) + Jandarma branş 40 / MEBS ek müşterek 10 (yönetmelikler 18-24)
+> + MEBS branş 30. Toplam 120 tekil soru, ajan kullanılmadan kanun kanun yazıldı; kaynak scripts/premium-deneme/kaynak/tahmin-*.json
+> (mus-a/b/c, mebs-ek, jan-a/b, mebs-brans). Kural: 19 Eyl'de sorulan maddeler başka açıdan, aynı soru yok; yalnız Ek-1 emir paketindeki
+> maddeler; yeni değişiklikler öne (CMK 128/A 24/12/2025, Söz. Yön. m.8 %90 sicil 1/10/2025). Hepsi denetle.py 0 sorun + ayrı okuma turu:
+> Suç Eşyası m.21 şıkkı ("bedeli emanete" → "vadeli hesaba") ve CMK adli kontrol kanıtı (m.102 ile çakışıyordu → 110/A) düzeltildi.
+> Olumsuz oran 19 Eyl subay Jandarma %32 / astsubay MEBS %16 ölçülünce 8 düz soru olumsuza çevrildi (deneme başına 17-18 olumsuz, 9-10 öncüllü).
+> Cevap anahtarı tohumu örüntüsüz seçildi (3'lü aynı harf, ABAB, ABCD yok): TAHMIN-SB-JAN-63, TAHMIN-SB-MEBS-7 (harf başına 16).
+> Çıktı scripts/premium-deneme/tahmin/ (cikti/ DEĞİL — uygulamaya.mjs cikti/*.json'u uygulamaya alır; uygulamaya EKLENMEDİ).
+> Açıklamalar tahmin/aciklama.py ile temiz alıntıya çevrildi; sayfa tahmin/sayfa-sablon.html (__VERI__) → artifact
+> https://claude.ai/artifact/NnbMefHkBS83g3WirNqQtS (özel; işaretle-bitir-puan-cevap anahtarı-kaynak alıntısı). Astsubay sürümü istenirse ayrı iş.
 >
 > ### ▶ 6 Eki (2) — MÜLGA "EK SÜRE" ÇIKMIŞ SORUSU İŞARETLENDİ, ÜRETEÇLER ATLIYOR (başkan: "işaretle, eskisinden soru vb varsa kaldır ya da düzelt")
 > Soru: 2020 Gazi subay no.35 "bilgi ve görüş isteyen idareye … geçmemek üzere ek süre kullanabilir (on beş iş günü)" — 2014 MÜLGA Resmî
