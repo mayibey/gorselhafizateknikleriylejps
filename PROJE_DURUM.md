@@ -2,7 +2,19 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 6 Ekim 2026 (10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 6 Eki (5) — mevzujsps.com/sinavprovasi: RÜTBE + BRANŞA GÖRE SINAV PROVASI (başkan: "uzman erbaş ve asb için de yap, branşlara göre farklı, girişte ad-soyad-rütbe-branş, link düzgün isim")
+> Adres: mevzujsps.com/sinavprovasi (eski /tahmin oraya yönlenir). Girişte ad, soyad, rütbe, branş (branş listesi rütbeye göre Ek-1 matrisi);
+> deneme rütbe/branşa göre gelir. Tam deneme hazır: Subay Jandarma (SB-JAN), Subay MEBS (SB-MEBS), Uzman Erbaş/Uzman Jandarma (UZM-JAN,
+> ikisi aynı sınav), Astsubay Jandarma (ASB-JAN), Astsubay MEBS (ASB-MEBS) — 80'er soru. Branşı hazır olmayan subay/astsubay o rütbenin
+> müşterek 40'ını çözer ("branş hazırlanıyor" notuyla). Kayıt tahmin_deneme_kayit'a ad+rütbe+branş+deneme ile (123a99c altyapı).
+> Uzman müşterek: 4678/Söz.Yön YOK, yönetmelikler (18-25) VAR, tanım ağırlıklı. Astsubay müşterek: 4678+Söz.Yön dahil. Her set subay setiyle
+> ve 19 Eylül ilgili kitapçığıyla çakışmayan maddelerden; her sorunun kanıt cümlesi paket metninde (denetle 0 sorun), A-E 16'şar, örüntüsüz tohum.
+> Kaynaklar scripts/premium-deneme/kaynak/tahmin-{uzm,asb}-*.json; çıktı tahmin/TAHMIN-{UZM-JAN-311,ASB-JAN-61,ASB-MEBS-82}.json.
+> Açıklama etiketi düzeltildi: genelge/rehber paketlerinde "no" sıra numarasıydı ("m.20") → "Tedbir 19", "Bölüm 3.1.11"; 2803 ek maddeleri "Ek m.14".
+> Yeni deneme eklemek: prova-uret.py DENEMELER'e satır + aciklama.py isle() + çalıştır + commit. Commit: bcd0713 (uzman), af21ea0 (astsubay).
+> Uygulamaya KONMADI (başkan "yay" demeden konmaz). Sırada: havacılık, personel, ... branş setleri (üye sayısı önceliği).
 >
 > ### ▶ 6 Eki (4) — TAHMİN DENEMELERİ mevzujsps.com/tahmin + KİM ÇÖZDÜ TAKİBİ (başkan: "yakın arkadaşlarıma atacağım, kaç kişi girdi/çözdü?")
 > Claude artifact'inde db yalnız giriş yapmış Claude kullanıcısını sayar → sayfa kendi sitemize taşındı (başkan seçti: mevzujsps.com + ad sorulsun).
