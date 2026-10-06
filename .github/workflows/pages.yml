@@ -39,10 +39,21 @@ jobs:
           sparse-checkout: docs
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Upload docs artifact
+      # GÜVENLİK: docs/ iç notları (güvenlik planları, SQL, md raporlar) da barındırıyor.
+      # Siteye YALNIZ bu izin listesi çıkar; yeni herkese açık sayfa eklenirse buraya yazılmalı.
+      - name: Build public site (izin listesi)
+        run: |
+          mkdir -p _site
+          for f in .nojekyll .well-known CNAME 404.html google2b2160762885508d.html \
+                   index.html gizlilik hesap-sil.html iletisim.html onaylandi.html sartlar.html \
+                   uygulama.html sinavprovasi tahmin jsps2026iptalanaliz assets; do
+            if [ -e "docs/$f" ]; then cp -r "docs/$f" _site/; fi
+          done
+          echo "Yayınlanan:"; ls -a _site
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
