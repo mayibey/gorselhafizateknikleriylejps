@@ -32,7 +32,7 @@ t = ('<!doctype html>\n<html lang="tr">\n<head>\n<meta charset="utf-8">\n'
      '<meta property="og:title" content="10 Ekim Tahmin Denemeleri · Jandarma ve MEBS">\n'
      '<meta property="og:description" content="Yenilenen JSPS subay sınavı için 80\'er soruluk tahmin denemesi. Çöz, puanını gör.">\n'
      '<meta name="theme-color" content="#0B1F3A">\n') + t
-degistir('<style>', '<style>\nhtml,body{margin:0}\n')
+degistir('<style>', '<style>\nhtml,body{margin:0}\n[hidden]{display:none!important}\n')
 degistir('</style>', '''.kapi{display:grid;gap:10px;margin:18px 0 6px;padding:16px;background:var(--kagit);border:1px solid var(--altin);border-radius:10px}
 .kapi label{font-weight:700;color:var(--lacivert)}
 .kapi input{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin);color:var(--metin);width:100%}
