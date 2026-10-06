@@ -9,7 +9,8 @@
  *   SONUÇLARIM — çözdüğün her deneme: puan, yüzde, süre, tarih. Satıra dokununca
  *                YANLIŞLARIN TAMAMI açılır: hangi kanun/madde, senin cevabın, doğrusu,
  *                açıklaması. Kayıt CİHAZDA durur (internet gerekmez) ve ayrıca sunucuya
- *                gönderilir.
+ *                gönderilir; açılışta sunucudaki sonuçlar da birleştirilir (7 Eki 2026 —
+ *                yeniden kurulumda / telefon değişince sonuçlar kaybolmasın).
  *   SIRALAMA    — her deneme için ilk 50 (kişi başına en iyi puan). Sunucudaki
  *                deneme_siralama() yalnız ad + puan döndürür; e-posta/kimlik sızmaz.
  */
@@ -186,13 +187,20 @@ function SonucKarti({
                   </AppText>
                 ) : null}
                 <SoruMetni variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} gece={gece} metin={y.soru} />
-                <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
-                  Senin cevabın:{' '}
-                  {y.secilen >= 0 ? `${String.fromCharCode(65 + y.secilen)}) ${y.siklar[y.secilen]}` : 'boş bıraktın'}
-                </AppText>
-                <AppText variant="etiket" bold color="yesil">
-                  Doğrusu: {String.fromCharCode(65 + y.dogru)}) {y.siklar[y.dogru]}
-                </AppText>
+                {/* -2: sunucudan gelen eski kayıtta seçilen şık tutulmamış (7 Eki 2026). */}
+                {y.secilen !== -2 ? (
+                  <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
+                    Senin cevabın:{' '}
+                    {y.secilen >= 0 && y.siklar[y.secilen] != null
+                      ? `${String.fromCharCode(65 + y.secilen)}) ${y.siklar[y.secilen]}`
+                      : 'boş bıraktın'}
+                  </AppText>
+                ) : null}
+                {y.dogru >= 0 && y.siklar[y.dogru] != null ? (
+                  <AppText variant="etiket" bold color="yesil">
+                    Doğrusu: {String.fromCharCode(65 + y.dogru)}) {y.siklar[y.dogru]}
+                  </AppText>
+                ) : null}
                 {y.aciklama ? (
                   <AciklamaMetni variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} gece={gece} metin={y.aciklama} />
                 ) : null}

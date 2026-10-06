@@ -126,6 +126,26 @@ function premiumKaynak(): PremiumDeneme[] {
   return _premium;
 }
 
+/**
+ * Soru kimliğinden soruyu bulur (banka + müşterek/branş/karma/premium denemeler). Sonuçlar ekranı
+ * yanlış listesini cihazda kimlikle tutar, metni buradan çözer (7 Eki 2026). Bulunamazsa null.
+ */
+let _soruBulHarita: Map<string, KartSoru> | null = null;
+export function soruBul(id: string): KartSoru | null {
+  if (!_soruBulHarita) {
+    const h = new Map(idHarita());
+    for (const blok of [undefined, 'karma', 'brans', 'premium'] as const) {
+      for (const d of genelKaynak(blok)) for (const q of d.sorular) if (q?.id && !h.has(String(q.id))) h.set(String(q.id), q);
+    }
+    _soruBulHarita = h;
+  }
+  const q = _soruBulHarita.get(id);
+  if (q) return q;
+  // Son çare: eski (kaldırılmış 100 soruluk karma) denemelerin soruları yalnız düello havuzunda kaldı.
+  const d = (require('../assets/duello-sorulari') as { DUELLO_SORULARI: KartSoru[] }).DUELLO_SORULARI.find((x) => x.id === id);
+  return d ?? null;
+}
+
 /** Premium deneme meta bilgisi (kişiye süzme için branş + rütbe dahil). */
 export function premiumDenemeler(): { no: number; baslik: string; soruSayisi: number; brans: string; rutbe: string }[] {
   return premiumKaynak().map((d) => ({

@@ -36,6 +36,7 @@ import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { indirmeDurumYukle } from '@/lib/indirme';
+import { bekleyenleriGonder } from '@/lib/deneme-servis';
 import { senkronKaydet } from '@/lib/senkron';
 import { takipIzniVeMetaBaslat } from '@/lib/takip-izni';
 import { BransProvider, useBrans } from '@/lib/brans-context';
@@ -144,6 +145,13 @@ export default function RootLayout() {
   // "ses yok" sanıyordu; iOS varsayılanı sessiz modda susar). Android'de bu alan etkisiz.
   useEffect(() => {
     void setAudioModeAsync({ shouldPlayInBackground: false, playsInSilentMode: true });
+  }, []);
+
+  // İnternet yokken bitirilip sunucuya gidemeyen deneme sonuçlarını gönder (7 Eki 2026; eskiden
+  // fonksiyon vardı ama hiç çağrılmıyordu). Açılışı yavaşlatmasın diye biraz sonra; giriş yoksa no-op.
+  useEffect(() => {
+    const t = setTimeout(() => void bekleyenleriGonder(), 8000);
+    return () => clearTimeout(t);
   }, []);
 
   // Uygulama arka plana alınınca ilerlemeyi buluta yaz (giriş yoksa no-op).

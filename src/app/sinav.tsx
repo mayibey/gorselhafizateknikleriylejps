@@ -468,6 +468,9 @@ export default function SinavScreen() {
         toplamPuan,
         sureSn: Math.max(0, Math.round((Date.now() - baslangicRef.current) / 1000)),
         yanlislar,
+        // Kart skorunun sunucudan geri yüklenebilmesi için (7 Eki 2026).
+        brans: genelBrans ? brans : genelKarmaB ? (kb ?? null) : null,
+        sanalLawId: lawIdNum,
       });
     }
     void (async () => {

@@ -13,7 +13,7 @@ import type { SinavSonuc } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
-import { rekorGetir, type DenemeTakim, type SiraSatiri } from '@/lib/deneme-servis';
+import { rekorGetir, sonuclariOku, type DenemeSonuc, type DenemeTakim, type SiraSatiri } from '@/lib/deneme-servis';
 import { genelDenemeler, genelSanalLawId, karmaAnahtar, karmaSunucuNo, premiumDenemeler, puanKatsayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -95,9 +95,28 @@ function TatbikatIcerik() {
           m.set(s.test, s); // id artan → son yazan (en güncel) kalır
         }
         setSonucMap(sm);
+        // 7 Eki 2026 (başkan: "bazı denemelerin sonuçları görünmüyor"): cihazda skoru olmayan
+        // denemeye hesabın sunucudaki son sonucu yazılır (yeniden kurulum / telefon değişimi).
+        void sonuclariOku(false)
+          .then((liste) => {
+            let ek = false;
+            for (const d of liste) {
+              const id = sonucKimligi(d, karmaKey);
+              if (id == null || sm.get(id)?.has(0)) continue;
+              let m = sm.get(id);
+              if (!m) {
+                m = new Map();
+                sm.set(id, m);
+              }
+              m.set(0, { id: 0, law_id: id, test: 0, dogru: d.dogru, toplam: d.toplam, tarih: d.tarih.slice(0, 10) });
+              ek = true;
+            }
+            if (ek) setSonucMap(new Map(sm));
+          })
+          .catch(() => undefined);
       })
       .catch(() => setSonucMap(new Map()));
-  }, []);
+  }, [karmaKey]);
 
   useFocusEffect(yukle);
 
@@ -290,6 +309,24 @@ function TatbikatIcerik() {
       )}
     </Screen>
   );
+}
+
+/**
+ * Deneme sonucunun kart skor kimliği (genelSanalLawId). Yeni kayıtlar kimliği taşır; sunucudan
+ * gelen eski kayıtta takım + numaradan çıkarılır. Branşı bilinmeyen eski branş sonucu eşlenmez
+ * (sunucuda branş numarası branşlar arası aynı — başka branşın puanı görünmesin).
+ */
+function sonucKimligi(s: DenemeSonuc, karmaKey: string | null): number | null {
+  if (s.sanalLawId != null) return s.sanalLawId;
+  if (s.takim === 'musterek') return genelSanalLawId(undefined, s.denemeNo);
+  if (s.takim === 'premium') return genelSanalLawId('premium', s.denemeNo);
+  if (s.takim === 'brans') return s.brans ? genelSanalLawId('brans', s.denemeNo, s.brans) : null;
+  // karma: 1-5 eski 100 soruluk; 100+ branşa göre karma (sunucu no = anahtar*100 + no)
+  if (s.denemeNo <= 100) return genelSanalLawId('karma', s.denemeNo);
+  if (karmaKey && s.denemeNo - (s.denemeNo % 100) === karmaSunucuNo(karmaKey, 0)) {
+    return genelSanalLawId('karmab', s.denemeNo % 100, karmaKey);
+  }
+  return null;
 }
 
 /**
