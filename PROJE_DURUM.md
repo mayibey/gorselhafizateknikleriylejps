@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (9) — KAPSAM DENETİMİ (25 soru değişti) + CANLI TAKİP PANELİ
+> Paketler emrin saymadığı maddeleri de içeriyordu → 24 (+1) soru Ek-1 madde listesi dışındaydı (personel 7, maliye 5, ASB MEBS 7, ASB müşterek 1,
+> havacılık/bakım/ikmal 1'er). Değiştirildi; kapsam-denetle.py (scripts/_emir-madde-kapsam.json + 13/A, 3713 Ek Madde 2 istisnaları) 600 soru 0 sorun.
+> Sağlık elle bakıldı: 11 mevzuat "Tamamı". Kural 3A eklendi. Canlı takip: sayfa her 10 işarette olay='ilerleme' (isaretli), panel
+> mevzujsps.com/sinavprovasi/panel/#<anahtar> (anahtar scratchpad/panel-anahtar.txt, depoda YOK; RPC prova_panel). Commit ab48bf0.
+>
 > ### ▶ 6 Eki (8) — BRANŞ PROVALARI (ajanlarla) + ÜYESİZ BRANŞA "HIZLANDIR" TALEBİ
 > Yayında 80 soru: SB+ASB Jandarma, MEBS, Personel, Havacılık (müşterek 40 + ek 10 + branş 30), İkmal, Bakım, İstihkam, Maliye; ASB Sağlık;
 > Uzm.J/Uzm.Erb Jandarma. Branş 40'ı SB ve ASB'de ORTAK (yalnız Jandarma/MEBS'te ASB'ye ayrı set). Ajan kuralları scripts/premium-deneme/
