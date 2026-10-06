@@ -228,5 +228,75 @@
     "ikmal"
    ]
   ]
+ },
+ {
+  "id": "SB-BAKIM",
+  "kaynak": "TAHMIN-SB-BAKIM-382",
+  "rutbe": "sb",
+  "brans": "bakim",
+  "baslik": "Subay · Bakım",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Bakım branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-bakim",
+    "bakim"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-BAKIM",
+  "kaynak": "TAHMIN-ASB-BAKIM-199",
+  "rutbe": "asb",
+  "brans": "bakim",
+  "baslik": "Astsubay · Bakım",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Bakım branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-bakim",
+    "bakim"
+   ]
+  ]
  }
 ]
