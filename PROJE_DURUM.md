@@ -11,6 +11,8 @@
 > geçersiz olay 400. Kayıt: tarayıcı başına rastgele ziyaretçi kimliği + (isteğe bağlı) ad; oturum başına 1 "acilis", "Bitir"de doğru/yanlış/boş.
 > Rapor: python -X utf8 scripts/premium-deneme/tahmin/rapor.py (kim açtı, kim bitirdi, puanlar; saat TR). Uçtan uca test (Chrome, 390px)
 > ilk turda hata yakaladı: bağımsız sayfada [hidden] kuralı yoktu → ad kapısı kapanmıyordu; düzeltildi (bd24356). Test satırları silindi.
+> EK: "MEVZU JSPS" filigranı (çıktı alınırsa diye): sol alt → sağ üst, açı ve boy ekran köşegeninden (JS), çıktıda A4 köşegeni -54.7°,
+> opaklık ekranda .08 / çıktıda .09, tıklamayı engellemez (pointer-events:none); telefon/masaüstü/A4 PDF ile görsel kontrol edildi.
 >
 > ### ▶ 6 Eki (3) — 10 EKİM YENİLENEN SINAV İÇİN TAHMİN DENEMELERİ (subay Jandarma + subay MEBS, 80'er soru)
 > Başkan: "komisyonun başı sen ol, ben olsam bunları sorardım dediğin 80 soruyu jandarma ve mebs için ayrı ayrı üret, müşterek aynı".

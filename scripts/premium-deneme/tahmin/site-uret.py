@@ -38,9 +38,20 @@ degistir('</style>', '''.kapi{display:grid;gap:10px;margin:18px 0 6px;padding:16
 .kapi input{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin);color:var(--metin);width:100%}
 .kapi .satir{display:flex;flex-wrap:wrap;gap:10px}
 .kapi small{color:var(--soluk)}
+/* Filigran: sol alttan sağ üste çapraz; tıklamayı ve okumayı engellemez, çıktının her sayfasında tekrar eder */
+.filigran{position:fixed;inset:0;z-index:50;pointer-events:none;user-select:none;-webkit-user-select:none;overflow:hidden}
+.filigran span{position:absolute;left:50%;top:50%;font-family:var(--baslik);font-weight:700;letter-spacing:.18em;white-space:nowrap;color:var(--lacivert);opacity:.08;
+  font-size:var(--boy,96px);transform:translate(-50%,-50%) rotate(var(--aci,-35deg))}
+@media print{
+  .filigran span{opacity:.09;font-size:96pt;transform:translate(-50%,-50%) rotate(-54.7deg)}
+  .serit{position:static}
+  .kapi,.alt-bar,.onay{display:none!important}
+  .soru{break-inside:avoid;box-shadow:none}
+}
 </style>
 </head>
-<body>''')
+<body>
+<div class="filigran" aria-hidden="true"><span>MEVZU JSPS</span></div>''')
 degistir('<section class="not" aria-label="Nasıl hazırlandı">', '''<form class="kapi" id="kapi" hidden>
     <label for="ad">Başlamadan önce adını yazar mısın?</label>
     <input id="ad" maxlength="60" autocomplete="given-name" placeholder="Örn. Mete">
@@ -68,6 +79,12 @@ degistir("  bitti[aktif] = true; kaydet(); ciz();", """  bitti[aktif] = true; ka
 # Açılış: ad kapısı (ad yoksa sor), oturum başına bir açılış kaydı
 degistir('\nciz();\n</script>', '''
 ciz();
+function aciAyarla() {  // filigran ekranın köşegeni boyunca: sol alt → sağ üst
+  const kok = document.documentElement.style;
+  kok.setProperty('--aci', (-Math.atan2(innerHeight, innerWidth) * 180 / Math.PI).toFixed(1) + 'deg');
+  kok.setProperty('--boy', Math.round(Math.min(Math.hypot(innerWidth, innerHeight) / 12, 130)) + 'px');
+}
+aciAyarla(); addEventListener('resize', aciAyarla);
 function acilisKaydi() {
   let yazildi = false; try { yazildi = sessionStorage.getItem('tahmin-acilis') === '1'; } catch (e) {}
   if (!yazildi) { kayit('acilis'); try { sessionStorage.setItem('tahmin-acilis', '1'); } catch (e) {} }
