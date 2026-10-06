@@ -94,7 +94,7 @@ async function yukle(){
     const yy = await fetch(SB_URL + '/rest/v1/rpc/prova_panel_yorum', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body: JSON.stringify({p_anahtar: anahtar})});
     const ys = yy.ok ? await yy.json() : [];
     const ort = ys.length ? (ys.reduce((a, y) => a + y.puan, 0) / ys.length).toFixed(1) : '–';
-    document.getElementById('puanOzet').innerHTML = `<span>${ys.length} puan · ortalama ${ort} ★</span>` + [5,4,3,2,1].map(n => `<span>${n}★: ${ys.filter(y => y.puan === n).length}</span>`).join('');
+    document.getElementById('puanOzet').innerHTML = `<span>${ys.length} puan · ortalama ${ort} ★</span>` + [1,2,3,4,5].map(n => `<span>${n}★: ${ys.filter(y => y.puan === n).length}</span>`).join('');
     document.getElementById('yorumListe').innerHTML = ys.map(y => `<tr><td>${'★'.repeat(y.puan)}</td><td>${esc(y.ad || '')}</td><td>${esc((RUTBE[y.rutbe] || '?') + ' · ' + (y.brans || '-'))}</td><td style="white-space:normal;min-width:240px">${esc(y.yorum || '—')}</td><td>${y.sitede_goster ? (y.onay ? 'yayında' : 'izin var, onay bekliyor') : 'hayır'}</td><td class="sayi">${once(y.olusturma)}</td></tr>`).join('') || '<tr><td colspan="6">Henüz puan yok.</td></tr>';
   } catch (e) {}
   document.getElementById('guncel').textContent = 'Güncellendi: ' + new Date().toLocaleTimeString('tr-TR') + ' · her 30 sn yenilenir';
