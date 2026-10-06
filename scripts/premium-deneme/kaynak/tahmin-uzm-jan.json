@@ -1,0 +1,157 @@
+[
+ {"law": 26, "tip": "vaka", "k": "Bir uzman erbaş, izinli olduğu gün çarşıda bir kişinin yaşlı bir kadının çantasını kapıp kaçtığını görmüş ve kişiyi yakalamıştır. Ceza Muhakemesi Kanunu'na göre bu yakalama hakkında aşağıdakilerden hangisi doğrudur?",
+  "s": ["Kişiye suçu işlerken rastlandığından herkes tarafından geçici olarak yakalama yapılabilir.", "Yakalama yalnızca hâkim kararıyla yapılabilir.", "Yakalama yalnızca görevdeki kolluk tarafından yapılabilir.", "Yakalama için Cumhuriyet savcısının yazılı emri gerekir.", "Yakalama için mülki amirin izni gerekir."],
+  "kanit": ["Aşağıda belirtilen hâllerde, herkes tarafından geçici olarak yakalama yapılabilir: a) Kişiye suçu işlerken rastlanması"]},
+
+ {"law": 27, "tip": "duz", "k": "Kimlik Bildirme Kanunu'na göre aşağıdakilerden hangisi bu Kanunun kapsamı dışındadır?",
+  "s": ["Askerî konaklama, dinlenme ve kamp tesisleri ile ordu evleri", "Özel sağlık müesseseleri", "Günübirlik kiralanan evler", "Marinalar", "Öğrenci yurtları"],
+  "kanit": ["Askeri konaklama, dinlenme ve kamp tesisleri ile ordu evleri bu Kanunun kapsamı dışındadır"]},
+
+ {"law": 28, "tip": "duz", "k": "Toplantı ve Gösteri Yürüyüşleri Kanunu'na göre toplantı ve yürüyüşlere hangi zamandan önce başlanamaz?",
+  "s": ["Güneş doğmadan", "Saat 08.00'den", "Saat 09.00'dan", "Güneş doğduktan bir saat sonrasına kadar", "Mülki amirin belirleyeceği saatten"],
+  "kanit": ["Toplantı ve yürüyüşlere ve bu amaçla toplanmalara güneş doğmadan başlanamaz"]},
+
+ {"law": 29, "tip": "duz", "k": "Kara Avcılığı Kanunu'na göre avcılık belgesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": ["Türk vatandaşlarına bir defaya mahsus olmak üzere verilir ve her yıl vize edilir.", "Beş yıl için verilir, süre sonunda yenilenir.", "Her yıl yeniden verilir.", "Bir defaya mahsus verilir, vize edilmez.", "On yıl için verilir ve iki yılda bir vize edilir."],
+  "kanit": ["Avcılık belgesi, Türk vatandaşlarına bir defaya mahsus olmak üzere verilir ve her yıl vize edilir"]},
+
+ {"law": 30, "tip": "olumsuz", "k": "Su Ürünleri Kanunu'na göre aşağıdakilerden hangisi müsaadeye bağlı olmaksızın yapılabilir?",
+  "s": ["Belli bir aydınlatma gücünü geçmemek üzere elektrik cereyanı ile aydınlatma", "Dinamit ile su ürünleri avlanması", "Sönmemiş kireç ile su ürünleri avlanması", "Uyuşturucu maddeler ile su ürünleri avlanması", "Torpil ile su ürünleri avlanması"],
+  "kanit": ["Tespit olunacak belli bir aydınlatma gücünü geçmemek üzere elektrik cereyanı ile aydınlatma", "müsaadeye bağlı değildir"]},
+
+ {"law": 31, "tip": "duz", "k": "Yabancılar ve Uluslararası Koruma Kanunu'na göre yabancı, sınır dışı etme kararına karşı kararın tebliğinden itibaren kaç gün içinde idare mahkemesine başvurabilir?",
+  "s": ["Yedi gün", "On beş gün", "Otuz gün", "Üç gün", "Altmış gün"],
+  "kanit": ["sınır dışı etme kararına karşı, kararın tebliğinden itibaren yedi gün içinde idare m"]},
+
+ {"law": 32, "tip": "duz", "k": "Orman Kanunu'na göre orman suçlarına ait davalar mahkemelerce nasıl değerlendirilir?",
+  "s": ["Acele işlerden (acele mevaddan) sayılır.", "Şikâyete bağlı işlerden sayılır.", "Yalnızca idari yargıda görülür.", "Uzlaştırma kapsamında sayılır.", "Duruşmasız incelenir."],
+  "kanit": ["Orman suçlarına ait davalar mahkemelerce acele mevaddan sayılır"]},
+ {"law": 32, "tip": "duz", "k": "Orman Kanunu'na göre orman memurları, bu Kanunda tanımlanan suçların önlenmesi veya işlenen suçlarla ilgili başlatılan soruşturmadaki görevleri kapsamında hangi sıfatı taşırlar?",
+  "s": ["Kolluk görevlisi", "Bilirkişi", "Cumhuriyet savcısı yardımcısı", "Özel güvenlik görevlisi", "Mülki amir"],
+  "kanit": ["Orman memurları, bu Kanunda tanımlanan suçların işlenmesinin önlenmesi veya işlenen suçlarla ilgili olarak başlatılan soruşturmadaki görevleri kapsamında kolluk görevlisi sıfatını taşırlar"]},
+
+ {"law": 33, "tip": "duz", "k": "Mera Kanunu'na göre mera, yaylak ve kışlakların ve sınır işaretlerinin korunmasından kimler sorumludur?",
+  "s": ["Muhtarlar ve belediye başkanları", "Kaymakamlar", "Jandarma karakol komutanları", "Tarım il müdürleri", "Köy ihtiyar heyeti üyeleri"],
+  "kanit": ["Muhtarlar ve belediye başkanları; mera, yaylak ve kışlakların ve sınır işaretlerinin korunmasından"]},
+
+ {"law": 34, "tip": "duz", "k": "Karayolları Trafik Kanunu'na göre geçiş üstünlüğüne sahip araçlardan öncelik sırasında ilk sırada hangisi yer alır?",
+  "s": ["Cankurtaran araçları, yaralı veya acil hasta taşıyan araçlar", "İtfaiye araçları", "Hükümlü veya sanığı takip eden zabıta araçları", "Trafik suçu işleyerek kaçan aracı takip eden araçlar", "Afet ve acil durum hizmetlerinde görevli araçlar"],
+  "kanit": ["Geçiş üstünlüğüne sahip araçlar öncelik sırasıyla şunlardır: a) Cankurtaran araçları, yaralı veya acil hasta taşıyan araçlar"]},
+
+ {"law": 35, "tip": "duz", "k": "Özel Güvenlik Hizmetlerine Dair Kanun'a göre özel güvenlik personeli ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": ["Greve katılamaz.", "Sendika üyesi olamaz.", "Her yıl yenileme eğitimi almak zorundadır.", "Yalnızca kamu kurumlarında çalışabilir.", "Silahsız görev yapamaz."],
+  "kanit": ["Özel güvenlik personeli greve katılamaz"]},
+
+ {"law": 36, "tip": "duz", "k": "Çocuk Koruma Kanunu'na göre çocuklara zincir, kelepçe ve benzeri aletler takılması hakkında aşağıdakilerden hangisi doğrudur?",
+  "s": ["Takılamaz; ancak zorunlu hâllerde kaçmayı veya tehlikeyi önlemek için kolluk gerekli önlemi alabilir.", "On beş yaşını doldurmuş çocuklara her zaman takılabilir.", "Cumhuriyet savcısının izniyle takılabilir.", "Ailesinin rızasıyla takılabilir.", "Yalnızca nakil sırasında takılabilir."],
+  "kanit": ["Çocuklara zincir, kelepçe ve benzeri aletler takılamaz. Ancak; zorunlu hâllerde çocuğun kaçmasını, kendisinin veya başkalarının hayat veya beden bütünlükleri bakımından doğabilecek tehlikeleri önlemek için kolluk tarafından gerekli önlem alınabilir"]},
+ {"law": 36, "tip": "duz", "k": "Çocuk Koruma Kanunu'na göre gözaltına alınan çocuklar nerede tutulur?",
+  "s": ["Kolluğun çocuk biriminde", "Genel nezarethanede yetişkinlerle birlikte", "Sosyal hizmet merkezinde", "Ailesinin yanında", "Cumhuriyet başsavcılığında"],
+  "kanit": ["Gözaltına alınan çocuklar, kolluğun çocuk biriminde tutulur"]},
+
+ {"law": 37, "tip": "duz", "k": "Yardım Toplama Kanunu'na göre aşağıdakilerden hangisi yardım toplama faaliyetlerinde çalışamaz?",
+  "s": ["Güvenlik kuvvetleri mensupları", "Vali izni almış öğretmenler", "Dernek üyeleri", "Vakıf yöneticileri", "Gazete ve dergi çalışanları"],
+  "kanit": ["Silahlı Kuvvetler, adli ve idari yargıda görevli hakim ve savcılar ile güvenlik kuvvetleri mensupları ve özel kolluk görevlileri, yardım toplama faaliyetlerinde çalışamazlar"]},
+
+ {"law": 38, "tip": "duz", "k": "Hayvanları Koruma Kanunu'na göre ev hayvanlarını kaç yaşından küçüklere satmak yasaktır?",
+  "s": ["On altı", "On iki", "On sekiz", "On beş", "On dört"],
+  "kanit": ["hayvanlarını onaltı yaşından küçüklere satmak"]},
+
+ {"law": 39, "tip": "duz", "k": "Çevre Kanunu'na göre bu Kanuna aykırı davrananlara aykırı faaliyeti düzeltmeleri için en fazla ne kadar süre verilebilir?",
+  "s": ["Bir defaya mahsus olmak üzere bir yılı aşmamak üzere", "Her defasında altı ay", "Bir defaya mahsus olmak üzere iki yıl", "Otuz gün", "Süre verilemez, faaliyet derhal durdurulur."],
+  "kanit": ["bir defaya mahsus", "olmak üzere esasları yönetmelikle belirlenen ve bir yılı aşmamak üzere süre verilebilir"]},
+
+ {"law": 40, "tip": "olumsuz", "k": "Polis Vazife ve Salahiyet Kanunu'na göre aşağıdakilerden hangisinin parmak izi polis tarafından alınmaz?",
+  "s": ["Nüfus cüzdanını yenilemek için başvuran", "Silah ruhsatı almak için başvuran", "Sürücü belgesi almak için başvuran", "Türk vatandaşlığına başvuran", "Gözaltına alınan"],
+  "kanit": ["Her çeşit silah ruhsatı, sürücü belgesi, pasaport veya pasaport yerine geçen belge almak için başvuruda bulunan", "Türk vatandaşlığına başvuruda bulunan", "Gözaltına alınan, kişilerin parmak izini alır"]},
+
+ {"law": 41, "tip": "duz", "k": "Kaçakçılıkla Mücadele Kanunu'na göre belirlenen kapı ve yollardan başka yerlerden gümrük bölgesine girmek isteyen kişinin \"dur\" uyarısına uymaması hâlinde ne yapılır?",
+  "s": ["Havaya ateş edilmek suretiyle uyarı yinelenir.", "Doğrudan hedefe ateş edilir.", "Kişi serbest bırakılır.", "Mülki amirin emri beklenir.", "Yalnızca tutanak düzenlenir."],
+  "kanit": ["bu uyarıya uymaması halinde, havaya ateş edilmek suretiyle uyarı yinelenir"]},
+
+ {"law": 43, "tip": "duz", "k": "Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun'a göre her spor güvenlik birimi amiri, futbolda en üst lig ve bir altındaki lig için her bir kulüple ilgili kimi gözlemci olarak görevlendirmekle yükümlüdür?",
+  "s": ["Bir kolluk görevlisini", "Bir özel güvenlik görevlisini", "Bir federasyon temsilcisini", "Bir mülki amiri", "Bir kulüp yöneticisini"],
+  "kanit": ["her bir kulüple ilgili bir kolluk görevlisini gözlemci olarak görevlendirmekle yükümlüdür"]},
+
+ {"law": 44, "tip": "duz", "k": "2313 sayılı Kanun'a göre lif, tohum ve sap üretimi amacıyla kenevir yetiştiriciliği hangi Bakanlığın iznine tabidir?",
+  "s": ["Tarım ve Orman Bakanlığı", "Sağlık Bakanlığı", "İçişleri Bakanlığı", "Ticaret Bakanlığı", "Sanayi ve Teknoloji Bakanlığı"],
+  "kanit": ["kenevir yetiştiriciliği, Tarım ve Orman Bakanlığının iznine tabidir"]},
+
+ {"law": 45, "tip": "duz", "k": "Terörizmin Finansmanının Önlenmesi Hakkında Kanun'a göre belli bir fiille ilişkilendirilmeden dahi bir teröriste veya terör örgütüne bilerek ve isteyerek fon sağlayan kişiye hangi ceza verilir?",
+  "s": ["Beş yıldan on yıla kadar hapis", "Bir yıldan üç yıla kadar hapis", "İki yıldan beş yıla kadar hapis", "On yıldan on beş yıla kadar hapis", "Yalnızca adli para cezası"],
+  "kanit": ["beş yıldan on yıla kadar hapis cezası ile cezalandırılır"]},
+
+ {"law": 46, "tip": "olumsuz", "k": "Kültür ve Tabiat Varlıklarını Koruma Kanunu'na göre taşınır veya taşınmaz kültür varlığı bulan kişi, bunu en geç üç gün içinde aşağıdakilerden hangisine bildirmekle yükümlü değildir?",
+  "s": ["Belediye başkanlığına", "En yakın müze müdürlüğüne", "Köyde muhtara", "Diğer yerlerde mülki idare amirlerine", "Askerî garnizon içinde bulunursa üst komutanlıklara"],
+  "kanit": ["bunu en geç üç gün içinde, en yakın müze müdürlüğüne veya köyde muhtara veya diğer yerlerde mülki idare amirlerine bildirmeye mecburdurlar"]},
+
+ {"law": 47, "tip": "duz", "k": "3091 sayılı Kanun'a göre taşınmaz mala tecavüz başvurusu üzerine yapılan soruşturma en geç kaç gün içinde tamamlanarak karara bağlanır?",
+  "s": ["15", "5", "30", "60", "7"],
+  "kanit": ["Soruşturma en geç 15 gün içinde tamamlanarak karara bağlanır"]},
+
+ {"law": 48, "tip": "duz", "k": "4207 sayılı Kanun'a göre tütün ürünlerinin içilmesinin yasaklandığı yerlerde, yasağı ve cezai sonuçlarını belirten uyarılar salonlarda en az kaç santimetrelik puntolarla asılır?",
+  "s": ["On", "Üç", "Beş", "Yedi", "On beş"],
+  "kanit": ["salonlarda asgari on santimetrelik puntolarla, toplu taşım araçlarında üç santimetrelik puntolarla"]},
+
+ {"law": 50, "tip": "duz", "k": "Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik'e göre \"üç gün\" deyimi kaç saatlik süreyi kapsar?",
+  "s": ["72 saat", "48 saat", "24 saat", "96 saat", "36 saat"],
+  "kanit": ["Üç gün deyimi; işe başlama veya geliş veya ayrılmanın vuku bulduğu saatten itibaren işlemeye başlayan 72 saatlik"]},
+
+ {"law": 51, "tip": "duz", "k": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik'e göre bu silahları satın almak için verilen yetki belgesinin geçerlilik süresi ne kadardır?",
+  "s": ["6 ay", "1 ay", "1 yıl", "3 ay", "5 yıl"],
+  "kanit": ["Yetki belgesinin geçerlilik süresi 6 aydır"]},
+
+ {"law": 52, "tip": "duz", "k": "Karayolları Trafik Yönetmeliği'ne göre hususi otomobil sürücüleri dışındaki diğer araç sürücülerinin kanlarındaki alkol miktarı kaç promilin üstünde olursa araç sürmeleri yasaktır?",
+  "s": ["0.20", "0.50", "0.00", "1.00", "0.10"],
+  "kanit": ["kanlarındaki alkol miktarı 0.20 promilin üstünde olan diğer araç sürücülerinin karayolunda araç sürmeleri yasaktır"]},
+ {"law": 52, "tip": "duz", "k": "Karayolları Trafik Yönetmeliği'ne göre kuralın ihlal edildiği tarihten geriye doğru bir yıl içinde toplam 100 ceza puanını aşan sürücünün sürücü belgesi ne kadar süreyle geri alınır?",
+  "s": ["2 ay", "1 ay", "4 ay", "6 ay", "1 yıl"],
+  "kanit": ["Toplam 100 ceza puanını aştığı tespit edilen sürücülerin, sürücü belgeleri 2 ay süre ile geri alınır"]},
+
+ {"law": 53, "tip": "duz", "k": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik'e göre aşağıdakilerden hangisi için ihbar ikramiyesi ödenmez?",
+  "s": ["Varlığı Bakanlıkça daha önceden bilinen taşınır kültür varlıkları", "Başkasının mülkünde bulunan taşınır varlıklar", "Devlete ait arazide bulunan taşınır varlıklar", "Süresi içinde haber verilmeyip gizlenmiş sayılan varlıklar", "Su altında bulunan taşınır varlıklar"],
+  "kanit": ["varlığı Bakanlıkça daha önceden bilinen taşınır kültür ve tabiat varlıkları için ihbar ikramiyesi ödenmez"]},
+
+ {"law": 54, "tip": "duz", "k": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik'e göre özel güvenlik birimleri ve şirketleri, koruma ve güvenlik planlarını hizmetin başladığı tarihten itibaren en geç kaç gün içinde hazırlar?",
+  "s": ["Otuz", "On beş", "Yedi", "Altmış", "Doksan"],
+  "kanit": ["hizmetin başladığı tarihten itibaren en geç otuz gün içinde hazırlayarak"]},
+
+ {"law": 55, "tip": "duz", "k": "Adli Kolluk Yönetmeliği'ne göre Jandarma Genel Komutanlığınca soruşturma yapmak üzere adli kolluk personeli asgari hangi birimin bulunduğu yerlerde görevlendirilir?",
+  "s": ["Tam teşekküllü bir jandarma karakolu", "İlçe jandarma komutanlığı", "İl jandarma komutanlığı", "Jandarma bölge komutanlığı", "Jandarma asayiş komutanlığı"],
+  "kanit": ["Jandarma Genel Komutanlığınca, asgarî tam teşekküllü bir jandarma karakolu bulunan yerlerde"]},
+
+ {"law": 56, "tip": "duz", "k": "Adli ve Önleme Aramaları Yönetmeliği'ne göre \"gece vakti\" hangi süreyi ifade eder?",
+  "s": ["Güneşin batmasından bir saat sonra başlayıp doğmasından bir saat evvele kadar devam eden süre", "Saat 22.00 ile 06.00 arası", "Güneşin batışından doğuşuna kadar olan süre", "Saat 24.00 ile 05.00 arası", "Güneşin batmasından iki saat sonra başlayıp doğmasına kadar olan süre"],
+  "kanit": ["Gece vakti: Güneşin batmasından bir saat sonra başlayan ve doğmasından bir saat evvele kadar devam eden süreyi"]},
+
+ {"law": 57, "tip": "duz", "k": "Suç Eşyası Yönetmeliği'ne göre emanet memuru hangi suç eşyasını teslim alamaz?",
+  "s": ["Usulüne göre ambalajlanmamış veya mühürlenmemiş olanı", "Değeri yüksek olanı", "Bozulabilir nitelikte olanı", "Ateşli silah niteliğinde olanı", "Sahibi belli olmayanı"],
+  "kanit": ["Emanet memuru, 5 inci maddedeki usule göre ambalajlanmamış veya mühürlenmemiş olan suç eşyasını teslim alamaz"]},
+
+ {"law": 58, "tip": "oncullu", "k": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre nezarethane işlemleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Aynı suçla ilgisi olanlar ve birbirine hasım olanlar bir araya konulmaz.\nII. Zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz.\nIII. Çocuklar, yer yetersizliğinde yetişkinlerle birlikte tutulabilir.",
+  "s": ["I ve II", "Yalnız I", "Yalnız II", "II ve III", "I, II ve III"],
+  "kanit": ["Aynı suçla ilgisi olanlar, birbirine hasım olanlar, erkek ve kadınlar bir araya konulmazlar, çocuklar yetişkinlerden ayrı tutulurlar", "Nezarethanede zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz"]},
+ {"law": 58, "tip": "duz", "k": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre toplu olarak işlenen suçlarda Cumhuriyet savcısı gözaltı süresinin uzatılmasına nasıl emir verebilir?",
+  "s": ["Her defasında bir günü geçmemek üzere üç gün süreyle", "Bir defada yedi gün süreyle", "Her defasında iki günü geçmemek üzere dört gün süreyle", "Bir defaya mahsus olmak üzere kırk sekiz saat", "Her defasında üç günü geçmemek üzere on beş gün süreyle"],
+  "kanit": ["Cumhuriyet savcısı gözaltı süresini her defasında bir günü geçmemek üzere, üç gün süreyle uzatılmasına yazılı olarak emir verebilir"]},
+
+ {"law": 60, "tip": "duz", "k": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik'e göre tedbir kararının nasıl yerine getirileceğine dair plan, çocuğun teslim edildiği ya da teslim alındığı tarihten itibaren en geç kaç gün içinde onaya sunulur?",
+  "s": ["On", "Beş", "Üç", "On beş", "Otuz"],
+  "kanit": ["en geç on gün içerisinde mahkeme veya çocuk hâkiminin onayına sunulur"]},
+
+ {"law": 62, "tip": "duz", "k": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik'e göre kanuni istisnalar saklı kalmak üzere eğlence, oyun, içki ve benzeri amaçlı umuma açık yerlerde kimler çalıştırılamaz?",
+  "s": ["On sekiz yaşından küçükler", "On altı yaşından küçükler", "Yabancı uyruklular", "Adli sicil kaydı bulunanlar", "Altmış beş yaşından büyükler"],
+  "kanit": ["eğlence, oyun, içki ve benzeri amaçlı umuma açık yerlerde onsekiz yaşından küçükler çalıştırılamaz"]},
+
+ {"law": 64, "tip": "duz", "k": "Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre tütün mamulü satışı ve teslimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": ["Bilgi toplumu hizmetleri ya da posta ve benzeri dağıtım hizmetleri yoluyla yapılamaz.", "Kargo yoluyla yapılabilir.", "İnternet üzerinden yalnızca hafta sonları yapılabilir.", "Otomatik satış makinelerinde serbestçe yapılabilir.", "Spor tesislerinin yerleşkelerinde yapılabilir."],
+  "kanit": ["Bilgi toplumu hizmetleri vasıtasıyla ya da posta ve benzeri dağıtım hizmetleri yoluyla tütün mamulü satışı ve teslimi yapılamaz"]},
+
+ {"law": 65, "tip": "duz", "k": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik'e göre Türk vatandaşlığı hangi yollarla kazanılır?",
+  "s": ["Doğumla veya sonradan", "Yalnızca doğumla", "Yalnızca evlenme yoluyla", "Doğumla veya evlat edinme yoluyla", "Yalnızca yetkili makam kararıyla"],
+  "kanit": ["Türk vatandaşlığı, doğumla veya sonradan olmak üzere iki yolla kazanılır"]},
+
+ {"law": 66, "tip": "duz", "k": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik'e göre bıçak, diğer aletler ve benzerlerinin taşınması hakkında aşağıdakilerden hangisi doğrudur?",
+  "s": ["Her ne sebeple olursa olsun üstte taşınamaz; bavul, çanta veya araç bagajında nakledilebilir.", "Kullanım belgesi olanlar üstte taşıyabilir.", "Yalnızca gece saatlerinde üstte taşınamaz.", "Mülki amirin izniyle her zaman üstte taşınabilir.", "Ağız uzunluğuna bakılmaksızın serbestçe taşınabilir."],
+  "kanit": ["Bıçak, diğer aletler ve benzerleri, her ne sebeple olursa olsun üstte taşınamaz"]}
+]

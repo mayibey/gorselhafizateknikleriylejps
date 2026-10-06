@@ -76,3 +76,4 @@ def isle(deneme, bloklar):
 MUS = [('tahmin-mus-a', ''), ('tahmin-mus-b', ''), ('tahmin-mus-c', '')]
 isle('TAHMIN-SB-JAN-63', MUS + [('tahmin-jan-a', 'jandarma'), ('tahmin-jan-b', 'jandarma')])
 isle('TAHMIN-SB-MEBS-7', MUS + [('tahmin-mebs-ek', ''), ('tahmin-mebs-brans', 'mebs')])
+isle('TAHMIN-UZM-JAN-311', [('tahmin-uzm-mus', ''), ('tahmin-uzm-jan', 'jandarma')])
