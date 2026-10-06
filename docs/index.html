@@ -65,6 +65,9 @@ h1,h2,h3{font-family:var(--baslik);text-wrap:balance;margin:0}
 .prova .ust-baslik{color:var(--kirmizi)}
 .prova h2{font-size:1.5rem;color:var(--lacivert);margin-top:4px}
 .prova p{margin:6px 0 0;color:var(--soluk)}
+.prova h2.manset-band{font-size:clamp(1.9rem,4.6vw,2.8rem);font-weight:800;line-height:1.08}
+.prova h2.manset-band span{color:var(--kirmizi)}
+.prova p.alt-baslik{margin-top:6px;font-weight:800;color:var(--lacivert);font-size:1.05rem}
 .rutbeler{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .rutbeler span{font-size:.78rem;font-weight:600;background:var(--altin-yuzey);color:var(--metin);padding:3px 10px;border-radius:999px}
 .aksiyon{display:inline-flex;align-items:center;gap:8px;background:var(--kirmizi);color:var(--beyaz);text-decoration:none;font-weight:800;padding:14px 22px;border-radius:12px;white-space:nowrap}
@@ -148,7 +151,8 @@ footer a:hover{color:var(--altin-koyu)}
   <div class="prova">
     <div>
       <div class="ust-baslik">Yenilenen sınava hazırlık</div>
-      <h2>Sınav provası: rütbene ve branşına göre deneme</h2>
+      <h2 class="manset-band">Bu denemeyi çözmeden <span>sınava girme!</span></h2>
+      <p class="alt-baslik">Sınav provası: rütbene ve branşına göre deneme</p>
       <p>Adını, rütbeni ve branşını seç; deneme sana göre hazırlanır. Bitirdiğinde doğru cevapları ve her sorunun dayandığı madde cümlesini görürsün.</p>
       <div class="rutbeler"><span>Subay</span><span>Astsubay</span><span>Uzman Jandarma</span><span>Uzman Erbaş</span></div>
     </div>
