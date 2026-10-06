@@ -36,6 +36,9 @@ body{background:var(--zemin);color:var(--metin);font-family:var(--govde);font-si
 h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;margin:0;color:var(--lacivert);text-wrap:balance}
 .manset{font-size:clamp(34px,8.5vw,56px);font-weight:800;line-height:1.05;letter-spacing:-.01em}
 .manset span{color:var(--kirmizi);display:block}
+.tuttur-bant{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--metin);background:var(--kagit);border:1px solid var(--altin);border-radius:10px;padding:8px;font-size:14px}
+.tuttur-bant img{width:54px;height:81px;object-fit:cover;border-radius:6px;flex:none}
+.tuttur-bant b{color:var(--lacivert);display:block}
 .ust{display:grid;gap:10px;padding-block:8px 18px;border-bottom:2px solid var(--altin)}
 .etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
 .alt{color:var(--soluk);margin:0;max-width:62ch}
@@ -109,6 +112,7 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
   <header class="ust">
     <div class="etiket">JSPS Sınav Provası · Yenilenen sınav 10 Ekim 2026</div>
     <h1 class="manset">Bu denemeyi çözmeden <span>sınava girme!</span></h1>
+    <a class="tuttur-bant" href="/jsps2026iptalanaliz/"><img src="/assets/tutturduk.jpg" alt=""><span><b>İptal edilen sınavda kaçını tutturduk?</b> Tutturduğumuz soruları gör →</span></a>
     <p class="alt">Rütbene ve branşına göre hazırlanmış prova. Sorular Jandarmanın Ek-1 emrindeki maddelerden yazıldı; her cevap resmî madde metniyle doğrulandı.</p>
   </header>
 
@@ -146,7 +150,7 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 
 <script>
 const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
-const KATALOG = {"surum": "1791294230", "bransAd": {"jandarma": "Jandarma", "mebs": "MEBS (Muhabere Elektronik Bilgi Sistemleri)", "havacilik": "Havacılık", "personel": "Personel", "maliye": "Maliye", "istihkam": "İstihkam", "ikmal": "İkmal", "bakim": "Bakım", "bando": "Bando", "saglik": "Sağlık", "tabip": "Tabip", "dis_tabibi": "Diş Tabibi", "eczaci": "Eczacı", "kimyager": "Kimyager", "veteriner": "Veteriner", "muhendis": "Mühendis"}, "branslar": {"sb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "tabip", "dis_tabibi", "eczaci", "kimyager", "veteriner", "muhendis"], "asb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "saglik"], "uzmj": ["jandarma"], "uzmerb": ["jandarma"]}, "denemeler": {"sb/jandarma": "SB-JAN", "sb/mebs": "SB-MEBS", "uzmerb/jandarma": "UZM-JAN", "uzmj/jandarma": "UZM-JAN", "asb/jandarma": "ASB-JAN", "asb/mebs": "ASB-MEBS", "sb/havacilik": "SB-HAVACILIK", "asb/havacilik": "ASB-HAVACILIK", "sb/personel": "SB-PERSONEL", "asb/personel": "ASB-PERSONEL", "sb/ikmal": "SB-IKMAL", "asb/ikmal": "ASB-IKMAL", "sb/bakim": "SB-BAKIM", "asb/bakim": "ASB-BAKIM", "sb/istihkam": "SB-ISTIHKAM", "asb/istihkam": "ASB-ISTIHKAM", "sb/maliye": "SB-MALIYE", "asb/maliye": "ASB-MALIYE", "asb/saglik": "ASB-SAGLIK"}, "musterek": {"sb": "SB-MUS", "asb": "ASB-MUS"}};
+const KATALOG = {"surum": "1791296473", "bransAd": {"jandarma": "Jandarma", "mebs": "MEBS (Muhabere Elektronik Bilgi Sistemleri)", "havacilik": "Havacılık", "personel": "Personel", "maliye": "Maliye", "istihkam": "İstihkam", "ikmal": "İkmal", "bakim": "Bakım", "bando": "Bando", "saglik": "Sağlık", "tabip": "Tabip", "dis_tabibi": "Diş Tabibi", "eczaci": "Eczacı", "kimyager": "Kimyager", "veteriner": "Veteriner", "muhendis": "Mühendis"}, "branslar": {"sb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "tabip", "dis_tabibi", "eczaci", "kimyager", "veteriner", "muhendis"], "asb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "saglik"], "uzmj": ["jandarma"], "uzmerb": ["jandarma"]}, "denemeler": {"sb/jandarma": "SB-JAN", "sb/mebs": "SB-MEBS", "uzmerb/jandarma": "UZM-JAN", "uzmj/jandarma": "UZM-JAN", "asb/jandarma": "ASB-JAN", "asb/mebs": "ASB-MEBS", "sb/havacilik": "SB-HAVACILIK", "asb/havacilik": "ASB-HAVACILIK", "sb/personel": "SB-PERSONEL", "asb/personel": "ASB-PERSONEL", "sb/ikmal": "SB-IKMAL", "asb/ikmal": "ASB-IKMAL", "sb/bakim": "SB-BAKIM", "asb/bakim": "ASB-BAKIM", "sb/istihkam": "SB-ISTIHKAM", "asb/istihkam": "ASB-ISTIHKAM", "sb/maliye": "SB-MALIYE", "asb/maliye": "ASB-MALIYE", "asb/saglik": "ASB-SAGLIK"}, "musterek": {"sb": "SB-MUS", "asb": "ASB-MUS"}};
 const RUTBE_AD = {sb:'Subay', asb:'Astsubay', uzmj:'Uzman Jandarma', uzmerb:'Uzman Erbaş'};
 const HARF = 'ABCDE', TIP = {oncullu:'Öncüllü', olumsuz:'Olumsuz', vaka:'Olay'};
 const ls = {

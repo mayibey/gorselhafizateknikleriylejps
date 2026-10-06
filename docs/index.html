@@ -79,6 +79,13 @@ section.blok{padding-block:64px 8px}
 .bolum-baslik h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--lacivert);margin-top:6px;line-height:1.15}
 .bolum-baslik p{color:var(--soluk);margin:10px 0 0}
 
+.tuttur{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:36px;align-items:center}
+.tuttur-gorsel{display:block;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(11,31,58,.18)}
+.tuttur-gorsel img{display:block;width:100%;height:auto}
+.tuttur-metin h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--lacivert);margin-top:6px;line-height:1.15}
+.tuttur-metin .ust-baslik{color:var(--kirmizi)}
+.tuttur-metin p{color:var(--soluk);margin:10px 0 18px}
+@media (max-width:760px){.tuttur{grid-template-columns:1fr}.tuttur-gorsel{max-width:360px}}
 .anatomi{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:36px;align-items:start;margin-top:30px}
 .anatomi figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--kenar);box-shadow:0 10px 26px rgba(11,31,58,.10)}
 .anatomi figure img{display:block;width:100%}
@@ -158,6 +165,16 @@ footer a:hover{color:var(--altin-koyu)}
     </div>
     <a class="aksiyon" href="/sinavprovasi/">Provaya başla →</a>
   </div>
+
+  <section class="blok tuttur" id="tutturduk">
+    <a class="tuttur-gorsel" href="/jsps2026iptalanaliz/"><img src="/assets/tutturduk.jpg" width="1024" height="1536" loading="lazy" alt="İptal edilen 2026 JSPS sınavında kaçını tutturduk: Subay Bakım 74/80, Jandarma 68/80, Astsubay Jandarma 71/80, Uzman Erbaş 70/80"></a>
+    <div class="tuttur-metin">
+      <div class="ust-baslik">İptal edilen 19 Eylül sınavı</div>
+      <h2>İptal edilen 2026 JSPS sınavında kaçını tutturduk?</h2>
+      <p>Uygulamadaki kartlar ve sorularla, iptal edilen sınavın sorularını tek tek karşılaştırdık. Rütbeni ve branşını seç, tutturduğumuz soruların tamamını gör.</p>
+      <a class="aksiyon" href="/jsps2026iptalanaliz/">Tutturduğumuz soruları gör →</a>
+    </div>
+  </section>
 
   <section class="blok" id="kart">
     <div class="bolum-baslik">
