@@ -298,5 +298,75 @@
     "bakim"
    ]
   ]
+ },
+ {
+  "id": "SB-ISTIHKAM",
+  "kaynak": "TAHMIN-SB-ISTIHKAM-235",
+  "rutbe": "sb",
+  "brans": "istihkam",
+  "baslik": "Subay · İstihkam",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "İstihkam branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-istihkam",
+    "istihkam"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-ISTIHKAM",
+  "kaynak": "TAHMIN-ASB-ISTIHKAM-335",
+  "rutbe": "asb",
+  "brans": "istihkam",
+  "baslik": "Astsubay · İstihkam",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "İstihkam branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-istihkam",
+    "istihkam"
+   ]
+  ]
  }
 ]
