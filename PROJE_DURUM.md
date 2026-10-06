@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (4) — TAHMİN DENEMELERİ mevzujsps.com/tahmin + KİM ÇÖZDÜ TAKİBİ (başkan: "yakın arkadaşlarıma atacağım, kaç kişi girdi/çözdü?")
+> Claude artifact'inde db yalnız giriş yapmış Claude kullanıcısını sayar → sayfa kendi sitemize taşındı (başkan seçti: mevzujsps.com + ad sorulsun).
+> Sayfa docs/tahmin/index.html (noindex), üretici scripts/premium-deneme/tahmin/site-uret.py (artifact şablonu + ad kapısı + kayıt).
+> Tablo public.tahmin_deneme_kayit (supabase/sql/tahmin-deneme-kayit.sql): anon YALNIZ INSERT; canlı RLS testi: okuma/değiştirme/silme 401,
+> geçersiz olay 400. Kayıt: tarayıcı başına rastgele ziyaretçi kimliği + (isteğe bağlı) ad; oturum başına 1 "acilis", "Bitir"de doğru/yanlış/boş.
+> Rapor: python -X utf8 scripts/premium-deneme/tahmin/rapor.py (kim açtı, kim bitirdi, puanlar; saat TR). Uçtan uca test (Chrome, 390px)
+> ilk turda hata yakaladı: bağımsız sayfada [hidden] kuralı yoktu → ad kapısı kapanmıyordu; düzeltildi (bd24356). Test satırları silindi.
+>
 > ### ▶ 6 Eki (3) — 10 EKİM YENİLENEN SINAV İÇİN TAHMİN DENEMELERİ (subay Jandarma + subay MEBS, 80'er soru)
 > Başkan: "komisyonun başı sen ol, ben olsam bunları sorardım dediğin 80 soruyu jandarma ve mebs için ayrı ayrı üret, müşterek aynı".
 > Yapı 19 Eyl subay sınavından ölçüldü: müşterek 40 (her iki branşta aynı) + Jandarma branş 40 / MEBS ek müşterek 10 (yönetmelikler 18-24)
