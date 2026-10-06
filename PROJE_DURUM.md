@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (6) — SİTE GÜVENLİĞİ: docs/ İÇ NOTLARI YAYINDAN ÇIKTI + YENİ TANITIM SAYFASI TASLAĞI (başkan: "kaldır, binlerce kişi girecek")
+> mevzujsps.com/SERVING_GUVENLIK.md, YAYIN_DENETIM_GUVENLIK.md, v2/*.sql, HAFIZA/* vb. herkese açıktı. .github/workflows/pages.yml artık
+> yalnız İZİN LİSTESİNİ (_site) yayınlıyor; notlar depoda duruyor. Canlı ölçüldü: iç dosyalar 404, sayfalar/sınav provası/assetlinks 200 (25f8262).
+> YENİ herkese açık sayfa eklenirse pages.yml izin listesine yazılmalı. Tanıtım sayfası taslağı artifact'te (claude.ai/artifact/BQ6946exe4pAsDYHtVGJbx),
+> canlıya KONMADI: ana sayfa hâlâ gizlilik politikası; onaylanınca gizlilik /gizlilik/'e taşınacak (eski adres de çalışacak).
+>
 > ### ▶ 6 Eki (5) — mevzujsps.com/sinavprovasi: RÜTBE + BRANŞA GÖRE SINAV PROVASI (başkan: "uzman erbaş ve asb için de yap, branşlara göre farklı, girişte ad-soyad-rütbe-branş, link düzgün isim")
 > Adres: mevzujsps.com/sinavprovasi (eski /tahmin oraya yönlenir). Girişte ad, soyad, rütbe, branş (branş listesi rütbeye göre Ek-1 matrisi);
 > deneme rütbe/branşa göre gelir. Tam deneme hazır: Subay Jandarma (SB-JAN), Subay MEBS (SB-MEBS), Uzman Erbaş/Uzman Jandarma (UZM-JAN,
