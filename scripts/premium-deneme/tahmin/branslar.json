@@ -1,0 +1,72 @@
+[
+ {
+  "id": "SB-PERSONEL",
+  "kaynak": "TAHMIN-SB-PERSONEL-43",
+  "rutbe": "sb",
+  "brans": "personel",
+  "baslik": "Subay · Personel",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Personel branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-personel",
+    "personel"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-PERSONEL",
+  "kaynak": "TAHMIN-ASB-PERSONEL-206",
+  "rutbe": "asb",
+  "brans": "personel",
+  "baslik": "Astsubay · Personel",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Personel branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-personel",
+    "personel"
+   ]
+  ]
+ }
+]
