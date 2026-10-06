@@ -370,6 +370,76 @@
   ]
  },
  {
+  "id": "SB-MALIYE",
+  "kaynak": "TAHMIN-SB-MALIYE-42",
+  "rutbe": "sb",
+  "brans": "maliye",
+  "baslik": "Subay · Maliye",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Maliye branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-maliye",
+    "maliye"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-MALIYE",
+  "kaynak": "TAHMIN-ASB-MALIYE-161",
+  "rutbe": "asb",
+  "brans": "maliye",
+  "baslik": "Astsubay · Maliye",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Maliye branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-maliye",
+    "maliye"
+   ]
+  ]
+ },
+ {
   "id": "ASB-SAGLIK",
   "kaynak": "TAHMIN-ASB-SAGLIK-45",
   "rutbe": "asb",
