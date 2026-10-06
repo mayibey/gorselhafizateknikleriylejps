@@ -45,6 +45,23 @@ def alinti(metin, kanit):
     return bas + parca
 
 
+def etiket(law, m):
+    # Genelge/rehber paketlerinde "no" sıra numarasıdır, madde numarası değil: gerçek başlığı göster.
+    no, t = str(m['no']), m['metin']
+    if law == 102:
+        b = re.search(r'Tedbir \d+', t[:200])
+        return b.group(0) if b else 'Giriş/Kapanış'
+    if law == 103:
+        b = re.search(r'— (\d+(?:\.\d+)+)\.', t[:200])
+        return f'Bölüm {b.group(1)}' if b else 'Ek taahhütname'
+    if law == 142:
+        return ''  # paket adı zaten bölümü söylüyor
+    if no == 'Ek':
+        b = re.search(r'Ek Madde (\d+)', t[:120])
+        return f'Ek m.{b.group(1)}' if b else 'Ek madde'
+    return ('m.' + no) if not no.startswith(('Ek', 'Geçici')) else no
+
+
 def isle(deneme, bloklar):
     d = json.load(open(D + f'tahmin/{deneme}.json', encoding='utf-8'))
     kaynak = []
@@ -61,14 +78,14 @@ def isle(deneme, bloklar):
                 al = alinti(m['metin'], kn)
                 if al:
                     if madde is None:
-                        no = str(m['no'])
-                        madde = ('m.' + no) if not no.startswith(('Ek', 'Geçici')) else no
+                        madde = etiket(q['law'], m)
                     if al not in parcalar:
                         parcalar.append(al)
                     break
         assert parcalar, q['k']
-        s['aciklama'] = f"{p['ad']}, {madde}: “" + '” … “'.join(parcalar) + '”'
-        s['kaynak'] = f"{p['ad']} {madde}"
+        bas = f"{p['ad']}, {madde}" if madde else p['ad']
+        s['aciklama'] = f"{bas}: “" + '” … “'.join(parcalar) + '”'
+        s['kaynak'] = f"{p['ad']} {madde}".strip()
     json.dump(d, open(D + f'tahmin/{deneme}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(deneme, 'açıklamalar yenilendi')
 
@@ -77,3 +94,6 @@ MUS = [('tahmin-mus-a', ''), ('tahmin-mus-b', ''), ('tahmin-mus-c', '')]
 isle('TAHMIN-SB-JAN-63', MUS + [('tahmin-jan-a', 'jandarma'), ('tahmin-jan-b', 'jandarma')])
 isle('TAHMIN-SB-MEBS-7', MUS + [('tahmin-mebs-ek', ''), ('tahmin-mebs-brans', 'mebs')])
 isle('TAHMIN-UZM-JAN-311', [('tahmin-uzm-mus', ''), ('tahmin-uzm-jan', 'jandarma')])
+ASB = [('tahmin-asb-mus', '')]
+isle('TAHMIN-ASB-JAN-61', ASB + [('tahmin-asb-jan', 'jandarma')])
+isle('TAHMIN-ASB-MEBS-82', ASB + [('tahmin-asb-mebs-ek', ''), ('tahmin-asb-mebs-brans', 'mebs')])

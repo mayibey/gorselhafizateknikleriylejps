@@ -26,10 +26,13 @@ DENEMELER = [
     # Uzman erbaş ve uzman jandarma aynı sınava girer (müşterek + Jandarma branşı)
     ('UZM-JAN', 'TAHMIN-UZM-JAN-311', 'uzmerb', 'jandarma', 'Uzman Erbaş / Uzman Jandarma · Jandarma', [[0, 40, MUS, '1–40'], [40, 80, 'Jandarma branş mevzuatı', '41–80']]),
     ('UZM-JAN', 'TAHMIN-UZM-JAN-311', 'uzmj', 'jandarma', 'Uzman Erbaş / Uzman Jandarma · Jandarma', [[0, 40, MUS, '1–40'], [40, 80, 'Jandarma branş mevzuatı', '41–80']]),
+    ('ASB-JAN', 'TAHMIN-ASB-JAN-61', 'asb', 'jandarma', 'Astsubay · Jandarma', [[0, 40, MUS, '1–40'], [40, 80, 'Jandarma branş mevzuatı', '41–80']]),
+    ('ASB-MEBS', 'TAHMIN-ASB-MEBS-82', 'asb', 'mebs', 'Astsubay · MEBS', [[0, 40, MUS, '1–40'], [40, 50, MUS + ' (MEBS ek)', '41–50'], [50, 80, 'MEBS branş mevzuatı', '51–80']]),
 ]
 # Branşı hazır olmayanlar için rütbenin müşterek bölümü: (id, kaynak, ilk N soru, başlık)
 MUSTEREK = {
     'sb': ('SB-MUS', 'TAHMIN-SB-JAN-63', 40, 'Subay · Müşterek'),
+    'asb': ('ASB-MUS', 'TAHMIN-ASB-JAN-61', 40, 'Astsubay · Müşterek'),
 }
 
 
