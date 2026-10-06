@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (10) — BİLDİRİMDEN SİTE AÇMA + YANIP SÖNEN DUYURU + SINAV PROVASI HERKESE
+> src/lib/bildirim.ts: push data.url (YALNIZ https://mevzujsps.com/...) → dokununca tarayıcıda açılır. duyuru-ikonu.tsx: okunmamış duyuru varken
+> zil + DUYURULAR yanıp söner (hareket azaltmada sabit). OTA 1.0.47+1.0.46 (f37fd84, fff8dc6); başkan iPhone'unda test edildi, açıldı.
+> Duyuru "BU DENEMEYİ ÇÖZMEDEN SINAVA GİRME!" (link "Sınav Provasına Başla|https://mevzujsps.com/sinavprovasi/", herkes).
+> Push herkese (başkan "gönder gitsin"): 897 token, 897 ok (1.0.46: 701, 1.0.47: 151, eski sürümler ~50 → onlarda Karargâh açılır).
+>
 > ### ▶ 6 Eki (9) — KAPSAM DENETİMİ (25 soru değişti) + CANLI TAKİP PANELİ
 > Paketler emrin saymadığı maddeleri de içeriyordu → 24 (+1) soru Ek-1 madde listesi dışındaydı (personel 7, maliye 5, ASB MEBS 7, ASB müşterek 1,
 > havacılık/bakım/ikmal 1'er). Değiştirildi; kapsam-denetle.py (scripts/_emir-madde-kapsam.json + 13/A, 3713 Ek Madde 2 istisnaları) 600 soru 0 sorun.
