@@ -25,7 +25,7 @@ export const YAYIN_HERKESE = true;
 // (constants/yasal-metin.ts + /yasal ekranı) kullanılır; "web'de aç" linki gizlenir.
 // Markalı alan adı mevzujsps.com (GitHub Pages, HTTPS) yayında — App Store/Play gizlilik
 // URL'i de buraya işaret eder. (Eski mayibey.github.io markaya uymadığı için KALDIRILDI.)
-export const GIZLILIK_URL = 'https://mevzujsps.com/';
+export const GIZLILIK_URL = 'https://mevzujsps.com/gizlilik/';
 export const SARTLAR_URL = 'https://mevzujsps.com/sartlar.html';
 
 /**
