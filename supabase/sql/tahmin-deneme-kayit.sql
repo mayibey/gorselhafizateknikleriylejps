@@ -29,3 +29,8 @@ alter table public.tahmin_deneme_kayit drop constraint if exists tahmin_deneme_k
 alter table public.tahmin_deneme_kayit add constraint tahmin_deneme_kayit_deneme_check check (deneme is null or char_length(deneme) <= 40);
 alter table public.tahmin_deneme_kayit drop constraint if exists tahmin_deneme_kayit_ad_check;
 alter table public.tahmin_deneme_kayit add constraint tahmin_deneme_kayit_ad_check check (ad is null or char_length(ad) <= 80);
+
+-- 6 Eki 2026: branşı hazır olmayanlar "hızlandır" talebi bırakabilir
+alter table public.tahmin_deneme_kayit drop constraint if exists tahmin_deneme_kayit_olay_check;
+alter table public.tahmin_deneme_kayit add constraint tahmin_deneme_kayit_olay_check check (olay in ('acilis','bitir','hizlandir'));
+notify pgrst, 'reload schema';

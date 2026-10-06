@@ -40,6 +40,8 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 .etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
 .alt{color:var(--soluk);margin:0;max-width:62ch}
 .kart{display:grid;gap:12px;margin:18px 0;padding:16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px}
+.hizlandir{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.btn.ikincil{background:var(--kirmizi);border-color:var(--kirmizi);color:#fff}
 .kart.vurgu{border-color:var(--altin)}
 .kart p{margin:0}
 .kart b{color:var(--lacivert)}
@@ -216,8 +218,10 @@ async function denemeAc(){
   }
   document.querySelector('.alt-bar').hidden = false;
   not.innerHTML = sec.kismi
-    ? `<b>${esc(KATALOG.bransAd[kim.brans])} branş soruları hazırlanıyor.</b> Şimdilik ${RUTBE_AD[kim.rutbe].toLowerCase()} müşterek bölümünü (40 soru) çözebilirsin; branş bölümü eklenince bu sayfada otomatik görünecek.`
+    ? `<b>${esc(KATALOG.bransAd[kim.brans])} branş soruları henüz hazır değil.</b> Şimdilik ${RUTBE_AD[kim.rutbe].toLowerCase()} müşterek bölümünü (40 soru) çözebilirsin. Bu branşın sorularının hazırlanmasını istiyorsan aşağıdaki düğmeye bas; talep gelen branşları öne alıyoruz.
+       <span class="hizlandir"><button class="btn ikincil" type="button" id="hizlandirBtn">${esc(KATALOG.bransAd[kim.brans])} sorularının hazırlanmasını hızlandır</button><span id="hizlandirSonuc" aria-live="polite"></span></span>`
     : 'Soruları işaretle, bitirince puanını, doğru cevapları ve her sorunun dayandığı madde cümlesini gör.';
+  if (sec.kismi) hizlandirBagla();
   kap.innerHTML = '<p class="onay">Deneme yükleniyor…</p>';
   try {
     const y = await fetch('d/' + sec.id + '.json?v=' + KATALOG.surum);
@@ -230,6 +234,13 @@ async function denemeAc(){
   let yazildi = false; try { yazildi = sessionStorage.getItem(anahtar) === '1'; } catch (e) {}
   if (!yazildi) { kayit('acilis', {deneme: deneme.id}); try { sessionStorage.setItem(anahtar, '1'); } catch (e) {} }
   ciz();
+}
+function hizlandirBagla(){
+  const btn = document.getElementById('hizlandirBtn'), out = document.getElementById('hizlandirSonuc');
+  const anahtar = 'prova-hizlandir-' + kim.rutbe + '-' + kim.brans;
+  const tamam = () => { btn.hidden = true; out.innerHTML = '<b>Talebin alındı.</b> Sorular hazır olunca bu sayfada otomatik görünecek.'; };
+  if (ls.al(anahtar) === '1') { tamam(); return; }
+  btn.addEventListener('click', () => { kayit('hizlandir', {deneme: null}); ls.koy(anahtar, '1'); tamam(); });
 }
 function kaydet(){ ls.koy('prova-cevap-' + deneme.id, JSON.stringify({cevap, bitti})); }
 function ciz(){

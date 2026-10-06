@@ -13,6 +13,7 @@ rows = json.load(urllib.request.urlopen(req))
 RUTBE = {'sb': 'Subay', 'asb': 'Astsubay', 'uzmj': 'Uzm.J', 'uzmerb': 'Uzm.Erb', None: '-'}
 
 kisi = {}
+hiz = {}
 for r in rows:
     k = kisi.setdefault(r['ziyaretci'], {'ad': None, 'rutbe': None, 'brans': None, 'ilk': r['olusturma'], 'acilis': 0, 'bitir': {}})
     for a in ('ad', 'rutbe', 'brans'):
@@ -20,6 +21,8 @@ for r in rows:
             k[a] = r[a]
     if r['olay'] == 'acilis':
         k['acilis'] += 1
+    elif r['olay'] == 'hizlandir':
+        hiz[f"{RUTBE[r['rutbe']]} {r['brans']}"] = hiz.get(f"{RUTBE[r['rutbe']]} {r['brans']}", 0) + 1
     else:
         k['bitir'][r['deneme']] = (r['dogru'], r['yanlis'], r['bos'])
 
@@ -38,6 +41,7 @@ for k in kisi.values():
         puan.setdefault(d, []).append(v[0])
 for d, p in sorted(puan.items(), key=lambda x: -len(x[1])):
     print(f"  {d}: {len(p)} kişi bitirdi · ortalama {sum(p) / len(p):.1f} doğru · en yüksek {max(p)}")
+print('Hızlandırma talepleri:', ', '.join(f'{a}: {n}' for a, n in sorted(hiz.items(), key=lambda x: -x[1])) or 'yok')
 print()
 for k in sorted(kisi.values(), key=lambda x: x['ilk']):
     sonuc = ' · '.join(f"{d}: {v[0]} D / {v[1]} Y / {v[2]} B" for d, v in k['bitir'].items()) or 'bitirmedi'
