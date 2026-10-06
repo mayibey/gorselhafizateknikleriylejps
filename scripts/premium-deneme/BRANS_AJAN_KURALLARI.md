@@ -34,6 +34,13 @@ Hız ikinci planda; doğruluk birinci.
   - Dipnot/değişiklik künyesi ("2/7/2018 tarihli ve 703 sayılı KHK'nin … ibaresi") gibi metinler.
   - Anlamı belirsiz, OCR bozuk, yarım kesilmiş cümleler.
 
+## 3A. EK-1 MADDE KAPSAMI (6 Eki eklendi — EN SIK HATA)
+- Paketler bazı mevzuatlarda emrin saymadığı maddeleri de içeriyor. **Paket = kapsam DEĞİL.**
+- Emrin madde listesi: `scripts/_emir-madde-kapsam.json` → `kapsam[<branş veya "müşterek">][<law>]` = izinli madde numaraları.
+  Law orada yoksa emir "Tamamı" demektir (sınır yok). Varsa YALNIZ o numaralı maddelerden soru yaz.
+- Ek madde / geçici madde: listede açıkça "Ek Madde N" geçmiyorsa KULLANMA (3713 Ek Madde 2 gibi istisnalar emirde açıkça yazılıdır).
+- Bitirmeden: `python -X utf8 scripts/premium-deneme/tahmin/kapsam-denetle.py` → kendi dosyan için "KAPSAM DIŞI" ve "?" satırı KALMAMALI.
+
 ## 4. Tekrar yasağı
 - 19 Eylül 2026'da sorulmuş sorular (varsa) AYNI bilgiyi tekrar sorma:
   `scratchpad/Subay_Bakim_61_100.md`, `Subay_Havacilik_71_100.md`, `Subay_Maliye_61_100.md`, `Subay_Personel_61_100.md`
@@ -62,7 +69,8 @@ Hız ikinci planda; doğruluk birinci.
    - s[0] metne göre kesin doğru mu? Diğer 4 şık metne göre kesin yanlış mı? Maddenin başka fıkrası bir çeldiriciyi doğru yapıyor mu?
    - Kök "göre" dediği mevzuat, `law` paketiyle aynı mı?
    Şüpheli olan soruyu düzelt ya da başka maddeden yenisiyle değiştir.
-3. `python -X utf8 -c "import json;q=json.load(open('<dosya>',encoding='utf-8'));print(len(q));import collections;print(collections.Counter(x['tip'] for x in q));print(all(len(x['s'])==5 and len(set(x['s']))==5 for x in q))"` → sayı doğru, `True`.
+3. `python -X utf8 scripts/premium-deneme/tahmin/kapsam-denetle.py` → kendi dosyan için satır çıkmamalı (bkz. 3A).
+4. `python -X utf8 -c "import json;q=json.load(open('<dosya>',encoding='utf-8'));print(len(q));import collections;print(collections.Counter(x['tip'] for x in q));print(all(len(x['s'])==5 and len(set(x['s']))==5 for x in q))"` → sayı doğru, `True`.
 
 ## 7. Bitince raporla (kısa)
 - Dosya yolu, soru sayısı, tip dağılımı, hangi law'dan kaç soru, denetle sonucu.
