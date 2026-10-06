@@ -9,7 +9,8 @@
 > Site Telegram Duyurular konusunda paylaşıldı; 20:05 push herkese gitti. Cengiz Aslan ömür boyu üyeliği yeni hesaba taşındı.
 > Metehan Güler bildirimi: 5809-S-018 (bent harfi ezberi) kara listeye alındı — 9b43d7b (MEBS branş/karma denemede 1'er soru eksilir, 79 soru).
 > 2010/616-S-027 (teknik rapor İSTENMEYEN hâl: depodaki HEK malzeme) DOĞRU — m.25/1: HEK komisyon kararıyla düşülür, teknik rapor yalnız
-> uzay/denizaltı/yeraltı kayıplarında. Değişmedi. Kaldırma uygulamaya OTA ile gider (başkan "yay" onayı bekleniyor).
+> uzay/denizaltı/yeraltı kayıplarında. Cevap aynı; kök "teknik rapor tanzim edileceği belirtilen hâller" diye netleşti, açıklama m.25/1 ile
+> genişledi (fabrika JSON da düzeltildi, yedek .yedek-6eki) — 230643c. OTA ("yay"): 1.0.47 f4e76ec3, 1.0.46 4c35083c.
 > NOT: "genel:uret" ESKİ üreteç — genel-denemeler.ts'yi bozuyor, kara liste sonrası çalıştırma (geri alındı).
 >
 > ### ▶ 6 Eki (10) — BİLDİRİMDEN SİTE AÇMA + YANIP SÖNEN DUYURU + SINAV PROVASI HERKESE
