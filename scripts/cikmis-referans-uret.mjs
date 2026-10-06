@@ -87,7 +87,8 @@ function konuAdi(q) {
 // Doğrudan çalıştırılmadıysa aşağısı ATLANIR.
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 const ham = JSON.parse(readFileSync(join(kok, 'scripts/veri/cikmis-sinav-sorulari.json'), 'utf8'));
-const mev = ham.filter((q) => MEVZUAT.test(q.kok));
+// gecersiz: mülga mevzuata göre sorulmuş, artık yanlış öğretir (scripts/veri/gecersiz-cikmis-sorular.json)
+const mev = ham.filter((q) => !q.gecersiz && MEVZUAT.test(q.kok));
 
 const kitapciklar = [];
 const birlesikKonu = new Map();

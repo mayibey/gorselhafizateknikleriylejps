@@ -2,9 +2,10 @@
  "uretim": "kanun-bilgi-listesi.mjs",
  "kaynak": "9 çıkmış JSPS PDF · 2.298 soru · 664 cevaplı",
  "kapsam": {
-  "cevapliSoru": 733,
-  "kanunaAtanan": 497,
-  "atanamayan": 236
+  "cevapliSoru": 732,
+  "kanunaAtanan": 496,
+  "atanamayan": 236,
+  "gecersizCikarilan": 1
  },
  "kanunlar": [
   {
@@ -3307,29 +3308,18 @@
   },
   {
    "kanun": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
-   "cevapliSoru": 8,
+   "cevapliSoru": 7,
    "turDagilimi": {
     "KAPSAM/UNSUR": 5,
-    "SÜRE": 2,
+    "SÜRE": 1,
     "TANIM": 1
    },
    "bicimDagilimi": {
-    "BOŞLUK": 3,
+    "BOŞLUK": 2,
     "OLUMSUZ": 3,
     "DÜZ": 2
    },
    "bilgiler": [
-    {
-     "tur": "SÜRE",
-     "bicim": "BOŞLUK",
-     "madde": "33",
-     "maddeKesin": false,
-     "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik’e göre “ida- reler, bilgi ve görüş isteyen idareye süresi içinde ve gerekçesini bildirmek kaydıyla ……..… geçmemek üzere ek süre kullana- bilir.” Yukarıdaki cümlede boş bırakılan yere, aşağıdakilerden hangisi yazılmalıdır?",
-     "cevapHarfi": "C",
-     "cevapMetni": "on beş iş günü",
-     "cevapKaynak": "kirmizi",
-     "kaynakDosya": "2020 Gazi Üniversitesi JSPS Çıkmış Sorular.pdf"
-    },
     {
      "tur": "TANIM",
      "bicim": "OLUMSUZ",

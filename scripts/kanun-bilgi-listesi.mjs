@@ -19,7 +19,8 @@ import { siniflandir } from './sinav-madde-eslestir.mjs';
 import { bilgiTuru, soruBicimi } from './soru-tipleri.mjs';
 
 const veri = JSON.parse(fs.readFileSync('scripts/veri/sinav-cevapli.json', 'utf8'));
-const cevapli = veri.sorular.filter((q) => q.cevap && Object.keys(q.siklar || {}).length >= 4);
+// gecersiz: mülga mevzuata göre sorulmuş, öğretilmez (scripts/veri/gecersiz-cikmis-sorular.json)
+const cevapli = veri.sorular.filter((q) => q.cevap && !q.gecersiz && Object.keys(q.siklar || {}).length >= 4);
 
 const kanunlar = new Map();
 let atanamayan = 0;

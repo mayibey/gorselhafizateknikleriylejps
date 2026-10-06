@@ -2,7 +2,22 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 6 Ekim 2026 (Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 6 Ekim 2026 (Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 6 Eki (2) — MÜLGA "EK SÜRE" ÇIKMIŞ SORUSU İŞARETLENDİ, ÜRETEÇLER ATLIYOR (başkan: "işaretle, eskisinden soru vb varsa kaldır ya da düzelt")
+> Soru: 2020 Gazi subay no.35 "bilgi ve görüş isteyen idareye … geçmemek üzere ek süre kullanabilir (on beş iş günü)" — 2014 MÜLGA Resmî
+> Yazışma Yön.'e göre; 2020 Yön. m.33'te ek süre YOK. Tarama (ölçerek): uygulama içeriği (kart/düello/genel+karma+premium deneme/oyun
+> paketi/madde+ses metni), sunucudaki 17 Harekât Merkezi sayfası (masa-*.html), sunucu oyun paketleri, Altın Özet kitapları, Telegram
+> botu (yerel + VPS /opt/mevzu-bot), herkese açık Kilit Kelime Şifreleri sayfası → HEPSİ TEMİZ; geçen tek yer RY-S-024/025 kart soruları,
+> onlar ek sürenin KALDIRILDIĞINI doğru öğretiyor (E şıkkı çeldirici). Eski kayda dayanan m.2/22/24/27/32 sorusu da YOK (5 eski madde metnine
+> kaynak veren hiçbir soru yok). Düzeltilenler: (1) yeni `scripts/veri/gecersiz-cikmis-sorular.json` (eşleşme + neden listesi);
+> (2) cikmis-sinav-sorulari.json (2 kayıt) + sinav-cevapli.json (2 kayıt) → "gecersiz" alanı (arşiv silinmedi); (3) kanun-bilgi-listesi.json
+> → kayıt çıkarıldı, sayımlar düzeltildi (yeniden üretim YAPILMADI: sınıflandırıcı o günden beri değişmiş, 1.400 satır kayıyordu);
+> (4) üreteçler gecersiz'i atlar: kanun-bilgi-listesi.mjs, cikmis-referans-uret.mjs, sinav-madde-eslestir.mjs, altin_pack.py,
+> altin_pack_brans.py; sinav-cevapli-cikar.py --yaz alanı listeden yeniden koyar; (5) HAFIZA brief (docs/HAFIZA + OneDrive HAFIZA KANUN
+> DOSYALARI) → kayıt "GEÇERSİZ — ÖĞRETME" uyarısına çevrildi; (6) eski özel artifact "JSPS Harekât Masası" (29 Ağu, 7SeHZvx5) → 2 kayıt
+> çıkarılıp v2 yayımlandı (scratchpad yerel kopyaları da). Kullanıcıya görünen içerik değişmedi → OTA GEREKMEZ. Yeni mülga çıkmış soru
+> bulunursa: listeye bir satır ekle, işaretleme betiği scratchpad'de (isaretle.py mantığı: kök satırına "gecersiz" alanı).
 >
 > ### ▶ 6 Eki (1) — KART "MADDE METNİ" DENETİMİ: 6 HATA + EDİTÖR İZLERİ TEMİZLENDİ (başkan: "düzeltmemiz gereken varsa düzelt ve yay")
 > Denetim: 25 müşterek kanunda kartta görünen 361 madde metni resmî metinle parça parça karşılaştırıldı (scratchpad parca_tara.py), şüpheli
@@ -18,7 +33,7 @@
 > Yeniden üretim yalnız 24 anahtarı değiştirdi (hepsi gözden geçirildi). Fabrika MASTER yedekleri: D:\mevzu-fabrika-yedek-20261006.
 > Bilinçli bırakılan: "Not: (b) bendi 7527 ile mülga", "ikinci fıkra AYM'ce iptal" gibi yasal-durum notları (doğru ve yararlı).
 > AÇIK: kullanıcıya görünmeyen iç veri dosyalarında (scripts/veri/kanun-bilgi-listesi.json, sinav-cevapli.json, cikmis-sinav-sorulari.json,
-> docs/HAFIZA brief) 2014 yönetmeliğine göre çıkmış "ek süre on beş iş günü" sorusu mülga işaretsiz duruyor. resmi_metin yalnız 25 müşterek
+> docs/HAFIZA brief) 2014 yönetmeliğine göre çıkmış "ek süre on beş iş günü" sorusu mülga işaretsiz duruyordu → 6 Eki (2) ile KAPATILDI. resmi_metin yalnız 25 müşterek
 > kanunda var; branş kanunlarının madde metni bu yolla doğrulanamadı.
 > YAYIN (başkan "yay"): OTA production 1.0.47 (grup bbd1e14a-4064-4be4-a280-ba6c1b5bd428) + 1.0.46 (grup 765c073b-ac14-4e59-92be-8e6eae24c4ad),
 > runtime doğru (scratchpad/madde-metni-ota.sh; başarı = "Update group ID"). Son yayından (02f9dc2) beri pakete yalnız bu iki veri dosyası

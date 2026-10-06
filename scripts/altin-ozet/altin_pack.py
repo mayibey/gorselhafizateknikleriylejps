@@ -61,6 +61,7 @@ def cikmis_bul(anah):
     out = []
     for x in cikmis:
         if x['bolum'] == 'genel': continue
+        if x.get('gecersiz'): continue  # mülga mevzuata göre sorulmuş (scripts/veri/gecersiz-cikmis-sorular.json)
         k = x['kok']; tut = False
         for a in anah:
             if a.isdigit():

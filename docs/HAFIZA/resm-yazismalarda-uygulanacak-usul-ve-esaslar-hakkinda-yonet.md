@@ -35,10 +35,7 @@ Cevabı doğrulanmış soru: **8** · 12 ayrı sınav kitapçığında çıkmı�
 
 ### Süre
 
-**S.** Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik’e göre “ida- reler, bilgi ve görüş isteyen idareye süresi içinde ve gerekçesini bildirmek kaydıyla ……..… geçmemek üzere ek süre kullana- bilir.” Yukarıdaki cümlede boş bırakılan yere, aşağıdakilerden hangisi yazılmalıdır?
-
-**Cevap (C):** on beş iş günü
-<sub>SÜRE · ~madde 33</sub>
+> ⛔ **GEÇERSİZ — ÖĞRETME.** 2020 sınavındaki "bilgi ve görüş talebine … geçmemek üzere ek süre kullanabilir (on beş iş günü)" sorusu 2014 tarihli ESKİ (mülga) yönetmeliğe göre sorulmuştu. Güncel 2020 Yönetmeliği m.33'te ek süre YOK: süre belirtilmeyen belge talebi en geç beş, bilgi ve görüş talebi en geç on beş iş günü. (6 Eki 2026)
 
 **S.** Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik’e göre “İda- reler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla, süre belirtilmeyen belge taleplerini talebin kendilerine ulaşmasından itibaren en geç ……………süre belirtilme- yen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç……… içinde yerine getirir”. Yukarıdaki cümlede boş bırakılan yerle- re sırasıyla aşağıdakilerden hangileri ya- zılmalıdır?
 

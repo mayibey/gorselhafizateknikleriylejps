@@ -28,6 +28,8 @@ import pdfplumber
 
 KLASOR = r"C:\Users\GIGABYTE\OneDrive\Desktop\sınav çıkmış soruları"
 CIKTI = "scripts/veri/sinav-cevapli.json"
+# Mülga mevzuata göre sorulmuş çıkmış sorular — kayda "gecersiz" alanı yazılır, üreteçler atlar.
+GECERSIZ = json.load(open("scripts/veri/gecersiz-cikmis-sorular.json", encoding="utf-8"))["sorular"]
 
 SORU_BAS = re.compile(r"^\s*(\d{1,3})\s*[\.\)]\s*(\S.*)$")
 SIK_BAS = re.compile(r"^\s*([A-E])\s*[\)\.]\s*(.*)$")
@@ -240,9 +242,14 @@ for yol in sorted(glob.glob(os.path.join(KLASOR, "*.pdf"))):
             dosya_soru += 1
             if cevap:
                 dosya_cevap += 1
+            kok = re.sub(r"\s+", " ", q["kok"]).strip()[:600]
+            kayit = {"dosya": ad, "kitapcik": sv["kitapcik"], "sayfa": sv["baslangicSayfa"], "no": no}
+            gec = next((g["neden"] for g in GECERSIZ if g["eslesme"] in kok), None)
+            if gec:
+                kayit["gecersiz"] = gec  # arşivde kalır, üreteçler atlar
             tum.append({
-                "dosya": ad, "kitapcik": sv["kitapcik"], "sayfa": sv["baslangicSayfa"], "no": no,
-                "kok": re.sub(r"\s+", " ", q["kok"]).strip()[:600],
+                **kayit,
+                "kok": kok,
                 "siklar": {h: re.sub(r"\s+", " ", v).strip()[:300] for h, v in sorted(q["siklar"].items())},
                 "cevap": cevap, "cevapKaynak": kaynak,
             })

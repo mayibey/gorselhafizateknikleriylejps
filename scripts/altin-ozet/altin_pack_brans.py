@@ -91,6 +91,7 @@ def cikmis_bul(baslik, onek):
     out = []
     for x in cikmis:
         if x.get('bolum') == 'genel': continue
+        if x.get('gecersiz'): continue  # mülga mevzuata göre sorulmuş (scripts/veri/gecersiz-cikmis-sorular.json)
         k = x['kok']; nk = norm(k); tut = False
         if no: tut = bool(re.search(r'\b' + no.group(1) + r'\s*[Ss]ay', k))
         elif len(ipucu) >= 2: tut = all(a in nk for a in ipucu)

@@ -1,0 +1,10 @@
+{
+  "aciklama": "Çıkmış sınav arşivinde duran ama mevzuat değiştiği için artık YANLIŞ öğreten sorular. Ham veri silinmez (arşiv); kayda \"gecersiz\" alanı yazılır ve içerik üreteçleri (kanun-bilgi-listesi, cikmis-referans-uret, sinav-madde-eslestir, altin_pack*) bu kayıtları ATLAR. sinav-cevapli-cikar.py --yaz yeniden üretimde alanı bu listeden yeniden koyar. Eşleşme: soru kökünde 'eslesme' metni geçiyorsa.",
+  "sorular": [
+    {
+      "eslesme": "geçmemek üzere ek süre kullana",
+      "neden": "MÜLGA: 2014 tarihli eski Resmî Yazışma Yönetmeliği'ne göre sorulmuş (2020 Gazi, subay no.35). Güncel 2020 Yönetmeliği m.33'te ek süre YOK: süre belirtilmeyen belge talebi en geç 5, bilgi ve görüş talebi en geç 15 iş günü. Öğretilmez, soru üretiminde kullanılmaz.",
+      "tarih": "2026-10-06"
+    }
+  ]
+}

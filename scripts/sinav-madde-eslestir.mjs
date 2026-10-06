@@ -177,7 +177,8 @@ const ham = JSON.parse(fs.readFileSync('scripts/veri/cikmis-sinav-sorulari.json'
 // ÖLÇÜM DÜZELTMESİ (26 Ağu): kitapçıklarda 2.336 sorunun yalnız 682'si MESLEK (mevzuat);
 // 1.654'ü genel kültür (Türkçe/matematik/tarih). Eski "1.760 mevzuat sorusu" sayımı, kökünde
 // 'kanun' geçen genel soruları da sayıyordu. Ölçü artık bolum='meslek'.
-const adaylar = ham.filter((q) => q.bolum === 'meslek');
+// gecersiz: mülga mevzuata göre sorulmuş (scripts/veri/gecersiz-cikmis-sorular.json)
+const adaylar = ham.filter((q) => q.bolum === 'meslek' && !q.gecersiz);
 
 function adiSil(metin) {
   return String(metin)
