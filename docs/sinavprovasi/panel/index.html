@@ -49,6 +49,8 @@ td.sayi{font-variant-numeric:tabular-nums}
   <h2>Hızlandırma talepleri</h2><div class="dagilim" id="hiz"></div>
   <h2>Kişiler (en son hareket üstte)</h2>
   <div class="tablo"><table><thead><tr><th>Ad</th><th>Rütbe · Branş</th><th>Durum</th><th>İlerleme / sonuç</th><th>Giriş</th><th>Son hareket</th></tr></thead><tbody id="liste"></tbody></table></div>
+  <h2>Puanlar ve yorumlar</h2><div class="dagilim" id="puanOzet"></div>
+  <div class="tablo"><table><thead><tr><th>Puan</th><th>Ad</th><th>Rütbe · Branş</th><th>Yorum</th><th>Sitede?</th><th>Zaman</th></tr></thead><tbody id="yorumListe"></tbody></table></div>
   <p class="hata" id="hata" hidden></p>
 </div>
 <script>
@@ -88,6 +90,13 @@ async function yukle(){
     if (!x.bitti) { const n = x.isaretli || 0; ilerleme = `<span class="cubuk"><i style="width:${Math.min(100, n / 80 * 100)}%"></i></span>${n ? n + '+ işaretli' : 'yeni başladı'}`; }
     return `<tr><td>${esc(x.ad || '(adsız)')}</td><td>${esc((RUTBE[x.rutbe] || '?') + ' · ' + (x.brans || '-'))}</td><td>${durum}</td><td class="sayi">${ilerleme}</td><td class="sayi">${saat(x.ilk)}</td><td class="sayi">${once(x.son)}</td></tr>`;
   }).join('');
+  try {
+    const yy = await fetch(SB_URL + '/rest/v1/rpc/prova_panel_yorum', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body: JSON.stringify({p_anahtar: anahtar})});
+    const ys = yy.ok ? await yy.json() : [];
+    const ort = ys.length ? (ys.reduce((a, y) => a + y.puan, 0) / ys.length).toFixed(1) : '–';
+    document.getElementById('puanOzet').innerHTML = `<span>${ys.length} puan · ortalama ${ort} ★</span>` + [5,4,3,2,1].map(n => `<span>${n}★: ${ys.filter(y => y.puan === n).length}</span>`).join('');
+    document.getElementById('yorumListe').innerHTML = ys.map(y => `<tr><td>${'★'.repeat(y.puan)}</td><td>${esc(y.ad || '')}</td><td>${esc((RUTBE[y.rutbe] || '?') + ' · ' + (y.brans || '-'))}</td><td style="white-space:normal;min-width:240px">${esc(y.yorum || '—')}</td><td>${y.sitede_goster ? (y.onay ? 'yayında' : 'izin var, onay bekliyor') : 'hayır'}</td><td class="sayi">${once(y.olusturma)}</td></tr>`).join('') || '<tr><td colspan="6">Henüz puan yok.</td></tr>';
+  } catch (e) {}
   document.getElementById('guncel').textContent = 'Güncellendi: ' + new Date().toLocaleTimeString('tr-TR') + ' · her 30 sn yenilenir';
 }
 yukle(); setInterval(yukle, 30000);

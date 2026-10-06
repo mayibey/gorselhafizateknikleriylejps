@@ -39,6 +39,17 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 .tuttur-bant{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--metin);background:var(--kagit);border:1px solid var(--altin);border-radius:10px;padding:8px;font-size:14px}
 .tuttur-bant img{width:54px;height:81px;object-fit:cover;border-radius:6px;flex:none}
 .tuttur-bant b{color:var(--lacivert);display:block}
+.geri{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid var(--kenar)}
+.geri h3{margin:0;font-family:var(--baslik);font-size:22px;color:var(--lacivert)}
+.geri p{margin:0;color:var(--soluk)}
+.yildizlar{display:flex;gap:6px}
+.yildiz{font-size:34px;line-height:1;background:none;border:0;color:var(--kenar);cursor:pointer;padding:2px}
+.yildiz.dolu{color:var(--altin)}
+.yorum-etiket{font-weight:700;font-size:14px;color:var(--lacivert)}
+.geri textarea{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin);color:var(--metin);width:100%;resize:vertical}
+.onay-satir{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--soluk)}
+.geri .magaza{display:flex;flex-wrap:wrap;gap:8px}
+.geri .magaza .btn{text-decoration:none;display:inline-block}
 .ust{display:grid;gap:10px;padding-block:8px 18px;border-bottom:2px solid var(--altin)}
 .etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
 .alt{color:var(--soluk);margin:0;max-width:62ch}
@@ -286,8 +297,50 @@ function sonucCiz(){
   el.innerHTML = `<h2>Sonucun</h2>
     <div class="kutular"><div class="kutu"><b>${dg}</b><span>Doğru</span></div><div class="kutu"><b>${yn}</b><span>Yanlış</span></div><div class="kutu"><b>${bos}</b><span>Boş</span></div></div>
     <div>${parca}</div>
-    <div class="anahtar" aria-label="Cevap anahtarı">${s.map((q, i) => `${i+1}${HARF[q.d]}`).join(' ')}</div>`;
+    <div class="anahtar" aria-label="Cevap anahtarı">${s.map((q, i) => `${i+1}${HARF[q.d]}`).join(' ')}</div>
+    <div class="geri" id="geri"></div>`;
   el.hidden = false;
+  geriBildirimCiz(dg);
+}
+
+// --- Puan + yorum (deneme bitince) ---
+const IOS = /iPhone|iPad|iPod/i.test(navigator.userAgent), ANDROID = /Android/i.test(navigator.userAgent);
+const MAGAZA = {ios: 'https://apps.apple.com/tr/app/id6787908212?action=write-review', android: 'https://play.google.com/store/apps/details?id=app.mevzujsps.android&showAllReviews=true'};
+function magazaDugmeleri(){
+  const a = `<a class="btn" href="${MAGAZA.ios}" target="_blank" rel="noopener">App Store'da değerlendir</a>`;
+  const g = `<a class="btn" href="${MAGAZA.android}" target="_blank" rel="noopener">Google Play'de değerlendir</a>`;
+  return IOS ? a : ANDROID ? g : a + g;
+}
+function geriBildirimCiz(dg){
+  const kap = document.getElementById('geri'); if (!kap) return;
+  const anahtar = 'prova-yorum-' + deneme.id;
+  if (ls.al(anahtar) === '1') {
+    kap.innerHTML = `<h3>Teşekkürler!</h3><p>Görüşün bize ulaştı. Uygulamayı beğendiysen mağazada da puan vermen başka adaylara yol gösterir.</p><div class="magaza">${magazaDugmeleri()}</div>`;
+    return;
+  }
+  kap.innerHTML = `<h3>Provayı beğendin mi?</h3>
+    <div class="yildizlar" role="radiogroup" aria-label="Puanın">${[1,2,3,4,5].map(n => `<button type="button" class="yildiz" data-p="${n}" role="radio" aria-checked="false" aria-label="${n} yıldız">★</button>`).join('')}</div>
+    <label class="yorum-etiket" for="yorum">Yorumun (isteğe bağlı)</label>
+    <textarea id="yorum" maxlength="600" rows="3" placeholder="Sorular nasıldı? Neyi geliştirelim?"></textarea>
+    <label class="onay-satir"><input type="checkbox" id="sitedeGoster"> Yorumum adımla (soyadımın baş harfiyle) mevzujsps.com'da yayınlanabilir.</label>
+    <div class="hata" id="geriHata" aria-live="polite"></div>
+    <button class="btn" type="button" id="geriGonder">Gönder</button>`;
+  let puan = 0;
+  kap.querySelectorAll('.yildiz').forEach(b => b.addEventListener('click', () => {
+    puan = +b.dataset.p;
+    kap.querySelectorAll('.yildiz').forEach(x => { const on = +x.dataset.p <= puan; x.classList.toggle('dolu', on); x.setAttribute('aria-checked', String(+x.dataset.p === puan)); });
+  }));
+  document.getElementById('geriGonder').addEventListener('click', () => {
+    if (!puan) { document.getElementById('geriHata').textContent = 'Önce 1 ile 5 arasında bir yıldız seç.'; return; }
+    const yorum = document.getElementById('yorum').value.trim().slice(0, 600);
+    const govde = {ziyaretci, ad: (kim.ad + ' ' + kim.soyad).trim(), rutbe: kim.rutbe, brans: kim.brans, deneme: deneme.id, dogru: dg, puan,
+      yorum: yorum || null, sitede_goster: document.getElementById('sitedeGoster').checked};
+    fetch(SB_URL + '/rest/v1/prova_yorum', {method:'POST', keepalive:true,
+      headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json', Prefer:'return=minimal'},
+      body: JSON.stringify(govde)}).catch(() => {});
+    ls.koy(anahtar, '1');
+    geriBildirimCiz(dg);
+  });
 }
 document.getElementById('sorular').addEventListener('click', e => {
   const b = e.target.closest('.sik'); if (!b || b.disabled) return;

@@ -86,6 +86,11 @@ section.blok{padding-block:64px 8px}
 .tuttur-metin .ust-baslik{color:var(--kirmizi)}
 .tuttur-metin p{color:var(--soluk);margin:10px 0 18px}
 @media (max-width:760px){.tuttur{grid-template-columns:1fr}.tuttur-gorsel{max-width:360px}}
+.yorum-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:24px}
+.yorum-kart{background:var(--kart);border:1px solid var(--kenar);border-radius:14px;padding:18px;display:grid;gap:8px}
+.yorum-kart .yildiz{color:var(--altin);letter-spacing:2px}
+.yorum-kart p{margin:0;color:var(--metin)}
+.yorum-kart .kim{font-size:.85rem;color:var(--soluk);font-weight:600}
 .anatomi{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:36px;align-items:start;margin-top:30px}
 .anatomi figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--kenar);box-shadow:0 10px 26px rgba(11,31,58,.10)}
 .anatomi figure img{display:block;width:100%}
@@ -118,6 +123,7 @@ footer .ic{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-betwe
 footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
 footer a{text-decoration:none;color:var(--metin);font-weight:600}
 footer a:hover{color:var(--altin-koyu)}
+[hidden]{display:none!important}
 :focus-visible{outline:3px solid var(--altin);outline-offset:2px}
 </style>
 </head>
@@ -176,6 +182,14 @@ footer a:hover{color:var(--altin-koyu)}
     </div>
   </section>
 
+  <section class="blok" id="yorumlar" hidden>
+    <div class="bolum-baslik">
+      <div class="ust-baslik">Sınav provasını çözenler</div>
+      <h2>Adaylar ne diyor?</h2>
+    </div>
+    <div class="yorum-izgara" id="yorumListe"></div>
+  </section>
+
   <section class="blok" id="kart">
     <div class="bolum-baslik">
       <div class="ust-baslik">Bir kart, bir madde</div>
@@ -228,5 +242,20 @@ footer a:hover{color:var(--altin-koyu)}
     </nav>
   </div>
 </footer>
+<script>
+(function(){
+  var U="https://vwmjrvolkbiofpkzzwef.supabase.co", A="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho", R={sb:'Subay',asb:'Astsubay',uzmj:'Uzman Jandarma',uzmerb:'Uzman Erbaş'};
+  var B={jandarma:'Jandarma',mebs:'MEBS',havacilik:'Havacılık',personel:'Personel',maliye:'Maliye',istihkam:'İstihkam',ikmal:'İkmal',bakim:'Bakım',saglik:'Sağlık',bando:'Bando',tabip:'Tabip',eczaci:'Eczacı',veteriner:'Veteriner',muhendis:'Mühendis',kimyager:'Kimyager',dis_tabibi:'Diş Tabibi'};
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  fetch(U+'/rest/v1/rpc/prova_yorumlar',{method:'POST',headers:{apikey:A,Authorization:'Bearer '+A,'Content-Type':'application/json'},body:'{}'})
+    .then(function(r){return r.ok?r.json():[];}).then(function(l){
+      if(!l||!l.length) return;
+      document.getElementById('yorumListe').innerHTML=l.map(function(y){
+        return '<figure class="yorum-kart"><div class="yildiz" aria-label="'+y.puan+' yıldız">'+'★'.repeat(y.puan)+'</div><p>'+esc(y.yorum)+'</p><figcaption class="kim">'+esc(y.ad)+' · '+esc((R[y.rutbe]||'')+(y.brans?' · '+(B[y.brans]||y.brans):''))+'</figcaption></figure>';
+      }).join('');
+      document.getElementById('yorumlar').hidden=false;
+    }).catch(function(){});
+})();
+</script>
 </body>
 </html>
