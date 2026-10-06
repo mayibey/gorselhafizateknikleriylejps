@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 7 Eki (1) — DENEME SONUÇLARI KAYBOLMASIN + PROVA İŞARETLEME
+> Başkan: "deneme merkezinde bazı denemelerin sonuçları görünmüyor". Sebep: Sonuçlarım yalnız cihazdan okunuyordu (yeniden kurulum/telefon
+> değişimi/hesap değişiminde boş), kart skorları buluttan yalnız boş cihazda dönüyordu, bekleyenleriGonder hiç çağrılmıyordu, sınır 60.
+> Düzeltme 2fb4ef1: deneme-servis sunucu (deneme_sonuc, RLS kendi satırı) + cihaz birleşimi; kartlara sunucu skoru yedek (sonucKimligi);
+> açılışta bekleyen gönderim + çift gönderim kilidi; cihazda yanlış metni yazılmaz (sinav.ts soruBul: banka+denemeler+premium+düello);
+> sınır 200; uid ile hesap ayrımı. deneme_sonuc.brans sütunu eklendi (supabase/sql/deneme-sonuc-brans.sql). Test: sahte depo/sunucu 19/19,
+> gerçek 2884 yanlış kimliğinden 2881 çözülüyor (3'ü kara liste). Eski branş sonuçları (brans boş) kartlara EŞLENMEZ (branş karışmasın).
+> OTA bekliyor ("yay"). Prova sitesi: seçili şık lacivert+✓, aynı şıkka tekrar dokunma silmez, "İşareti kaldır" — 1adcade (kullanıcı bildirimi).
+>
 > ### ▶ 6 Eki (11) — PUAN/YORUM + TELEGRAM PAYLAŞIMI + KULLANICI BİLDİRİMİ SORULAR
 > Prova bitince 1-5 yıldız (1 solda) + yorum + mağaza düğmeleri; onaylı yorumlar ana sayfada (prova_yorum, onay=false varsayılan) — 04eb8f6, d4099af.
 > Site Telegram Duyurular konusunda paylaşıldı; 20:05 push herkese gitti. Cengiz Aslan ömür boyu üyeliği yeni hesaba taşındı.
