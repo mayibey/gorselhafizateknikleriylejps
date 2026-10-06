@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (11) — PUAN/YORUM + TELEGRAM PAYLAŞIMI + KULLANICI BİLDİRİMİ SORULAR
+> Prova bitince 1-5 yıldız (1 solda) + yorum + mağaza düğmeleri; onaylı yorumlar ana sayfada (prova_yorum, onay=false varsayılan) — 04eb8f6, d4099af.
+> Site Telegram Duyurular konusunda paylaşıldı; 20:05 push herkese gitti. Cengiz Aslan ömür boyu üyeliği yeni hesaba taşındı.
+> Metehan Güler bildirimi: 5809-S-018 (bent harfi ezberi) kara listeye alındı — 9b43d7b (MEBS branş/karma denemede 1'er soru eksilir, 79 soru).
+> 2010/616-S-027 (teknik rapor İSTENMEYEN hâl: depodaki HEK malzeme) DOĞRU — m.25/1: HEK komisyon kararıyla düşülür, teknik rapor yalnız
+> uzay/denizaltı/yeraltı kayıplarında. Değişmedi. Kaldırma uygulamaya OTA ile gider (başkan "yay" onayı bekleniyor).
+> NOT: "genel:uret" ESKİ üreteç — genel-denemeler.ts'yi bozuyor, kara liste sonrası çalıştırma (geri alındı).
+>
 > ### ▶ 6 Eki (10) — BİLDİRİMDEN SİTE AÇMA + YANIP SÖNEN DUYURU + SINAV PROVASI HERKESE
 > src/lib/bildirim.ts: push data.url (YALNIZ https://mevzujsps.com/...) → dokununca tarayıcıda açılır. duyuru-ikonu.tsx: okunmamış duyuru varken
 > zil + DUYURULAR yanıp söner (hareket azaltmada sabit). OTA 1.0.47+1.0.46 (f37fd84, fff8dc6); başkan iPhone'unda test edildi, açıldı.
