@@ -368,5 +368,36 @@
     "istihkam"
    ]
   ]
+ },
+ {
+  "id": "ASB-SAGLIK",
+  "kaynak": "TAHMIN-ASB-SAGLIK-45",
+  "rutbe": "asb",
+  "brans": "saglik",
+  "baslik": "Astsubay · Sağlık",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Sağlık branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-saglik",
+    "saglik"
+   ]
+  ]
  }
 ]
