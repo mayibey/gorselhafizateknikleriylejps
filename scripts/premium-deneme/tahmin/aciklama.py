@@ -1,6 +1,6 @@
 # Tahmini denemelerin açıklamalarını temiz alıntıyla yeniden yazar:
 # alıntı kanıtın başladığı yerden başlar, cümle sonunda biter; birden fazla kanıt varsa ikisi de gösterilir.
-import json, re, sys
+import json, os, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
 D = 'scripts/premium-deneme/'
 
@@ -97,3 +97,7 @@ isle('TAHMIN-UZM-JAN-311', [('tahmin-uzm-mus', ''), ('tahmin-uzm-jan', 'jandarma
 ASB = [('tahmin-asb-mus', '')]
 isle('TAHMIN-ASB-JAN-61', ASB + [('tahmin-asb-jan', 'jandarma')])
 isle('TAHMIN-ASB-MEBS-82', ASB + [('tahmin-asb-mebs-ek', ''), ('tahmin-asb-mebs-brans', 'mebs')])
+# Branş provaları (brans-ekle.py üretir)
+if os.path.exists(D + 'tahmin/branslar.json'):
+    for b in json.load(open(D + 'tahmin/branslar.json', encoding='utf-8')):
+        isle(b['kaynak'], [tuple(x) for x in b['aciklama_bloklar']])

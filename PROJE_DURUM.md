@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 6 Eki (7) — mevzujsps.com YENİ TANITIM ANA SAYFASI CANLI (başkan: "aktif et, bozuk cümleleri düzelt, telefonda olası kast görseli tam ekran")
+> docs/index.html = tanıtım (telefonda TCK m.21 kast kartı kırpılmadan 2:3, sınav provası bandı, kart anatomisi, özellikler, Telegram).
+> Gizlilik politikası → docs/gizlilik/index.html (iletisim/sartlar/hesap-sil bağlantıları güncellendi). Görseller docs/assets/. Canlı 200 ölçüldü (763930e).
+> AÇIK İŞ: uygulamada GIZLILIK_URL = 'https://mevzujsps.com/' (src/constants/config.ts) → paywall/yasal gizlilik bağlantısı artık tanıtım
+> sayfasını açıyor (sayfada üstte "Gizlilik" bağlantısı var). /gizlilik/ yapılıp OTA ile basılmalı + App Store/Play gizlilik URL'i güncellenmeli (başkan onayı).
+> Branş provaları: 9 ajan başlatıldı (kurallar scripts/premium-deneme/BRANS_AJAN_KURALLARI.md, birleştirme tahmin/brans-ekle.py); API 529 yoğunluğu
+> yüzünden hepsi durdu, sırayla yeniden çalıştırılıyor.
+>
 > ### ▶ 6 Eki (6) — SİTE GÜVENLİĞİ: docs/ İÇ NOTLARI YAYINDAN ÇIKTI + YENİ TANITIM SAYFASI TASLAĞI (başkan: "kaldır, binlerce kişi girecek")
 > mevzujsps.com/SERVING_GUVENLIK.md, YAYIN_DENETIM_GUVENLIK.md, v2/*.sql, HAFIZA/* vb. herkese açıktı. .github/workflows/pages.yml artık
 > yalnız İZİN LİSTESİNİ (_site) yayınlıyor; notlar depoda duruyor. Canlı ölçüldü: iç dosyalar 404, sayfalar/sınav provası/assetlinks 200 (25f8262).

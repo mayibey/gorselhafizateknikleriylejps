@@ -29,6 +29,11 @@ DENEMELER = [
     ('ASB-JAN', 'TAHMIN-ASB-JAN-61', 'asb', 'jandarma', 'Astsubay · Jandarma', [[0, 40, MUS, '1–40'], [40, 80, 'Jandarma branş mevzuatı', '41–80']]),
     ('ASB-MEBS', 'TAHMIN-ASB-MEBS-82', 'asb', 'mebs', 'Astsubay · MEBS', [[0, 40, MUS, '1–40'], [40, 50, MUS + ' (MEBS ek)', '41–50'], [50, 80, 'MEBS branş mevzuatı', '51–80']]),
 ]
+# Branş provaları (brans-ekle.py → branslar.json)
+_bj = os.path.join(KOK, 'branslar.json')
+if os.path.exists(_bj):
+    for _b in json.load(open(_bj, encoding='utf-8')):
+        DENEMELER.append((_b['id'], _b['kaynak'], _b['rutbe'], _b['brans'], _b['baslik'], _b['bloklar']))
 # Branşı hazır olmayanlar için rütbenin müşterek bölümü: (id, kaynak, ilk N soru, başlık)
 MUSTEREK = {
     'sb': ('SB-MUS', 'TAHMIN-SB-JAN-63', 40, 'Subay · Müşterek'),
