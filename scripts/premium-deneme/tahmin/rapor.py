@@ -23,7 +23,7 @@ for r in rows:
         k['acilis'] += 1
     elif r['olay'] == 'hizlandir':
         hiz[f"{RUTBE[r['rutbe']]} {r['brans']}"] = hiz.get(f"{RUTBE[r['rutbe']]} {r['brans']}", 0) + 1
-    else:
+    elif r['olay'] == 'bitir':
         k['bitir'][r['deneme']] = (r['dogru'], r['yanlis'], r['bos'])
 
 
