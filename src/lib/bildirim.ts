@@ -17,7 +17,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
-import { Platform } from 'react-native';
+import { Linking, Platform } from 'react-native';
 
 export type BildirimAyar = {
   aktif: boolean;
@@ -206,13 +206,25 @@ export function bildirimTiklamaDinle(onTikla: (rota?: string) => void): () => vo
     const r = typeof ham?.rota === 'string' ? ham.rota : undefined;
     return r && r.startsWith('/') && !r.startsWith('//') ? r : undefined;
   };
+  // 6 Eki 2026: bildirim bir WEB SAYFASI da açabilir: `data: { url: 'https://mevzujsps.com/...' }`.
+  // Güvenlik: YALNIZ kendi alan adımız (mevzujsps.com) kabul edilir; başka adres yok sayılır.
+  const urlCoz = (yanit: Notifications.NotificationResponse | null): string | undefined => {
+    const ham = yanit?.notification?.request?.content?.data as { url?: unknown } | undefined;
+    const u = typeof ham?.url === 'string' ? ham.url.trim() : '';
+    return /^https:\/\/(www\.)?mevzujsps\.com(\/|$)/i.test(u) ? u : undefined;
+  };
+  const isle = (yanit: Notifications.NotificationResponse) => {
+    onTikla(rotaCoz(yanit));
+    const u = urlCoz(yanit);
+    if (u) setTimeout(() => void Linking.openURL(u).catch(() => {}), 600);
+  };
   // Uygulama TAMAMEN kapalıyken bildirime tıklanıp açıldıysa: son yanıtı bir kez işle.
   Notifications.getLastNotificationResponseAsync()
     .then((yanit) => {
-      if (yanit) onTikla(rotaCoz(yanit));
+      if (yanit) isle(yanit);
     })
     .catch(() => {});
-  const sub = Notifications.addNotificationResponseReceivedListener((yanit) => onTikla(rotaCoz(yanit)));
+  const sub = Notifications.addNotificationResponseReceivedListener(isle);
   return () => sub.remove();
 }
 
