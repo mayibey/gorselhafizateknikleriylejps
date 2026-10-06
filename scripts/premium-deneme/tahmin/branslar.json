@@ -1,5 +1,95 @@
 [
  {
+  "id": "SB-HAVACILIK",
+  "kaynak": "TAHMIN-SB-HAVACILIK-213",
+  "rutbe": "sb",
+  "brans": "havacilik",
+  "baslik": "Subay · Havacılık",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    50,
+    "Müşterek mevzuat (havacılık ek)",
+    "41–50"
+   ],
+   [
+    50,
+    80,
+    "Havacılık branş mevzuatı",
+    "51–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-havacilik-ek",
+    ""
+   ],
+   [
+    "tahmin-brans-havacilik",
+    "havacilik"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-HAVACILIK",
+  "kaynak": "TAHMIN-ASB-HAVACILIK-448",
+  "rutbe": "asb",
+  "brans": "havacilik",
+  "baslik": "Astsubay · Havacılık",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    50,
+    "Müşterek mevzuat (havacılık ek)",
+    "41–50"
+   ],
+   [
+    50,
+    80,
+    "Havacılık branş mevzuatı",
+    "51–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-havacilik-ek",
+    ""
+   ],
+   [
+    "tahmin-brans-havacilik",
+    "havacilik"
+   ]
+  ]
+ },
+ {
   "id": "SB-PERSONEL",
   "kaynak": "TAHMIN-SB-PERSONEL-43",
   "rutbe": "sb",
@@ -66,6 +156,76 @@
    [
     "tahmin-brans-personel",
     "personel"
+   ]
+  ]
+ },
+ {
+  "id": "SB-IKMAL",
+  "kaynak": "TAHMIN-SB-IKMAL-57",
+  "rutbe": "sb",
+  "brans": "ikmal",
+  "baslik": "Subay · İkmal",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "İkmal branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-mus-a",
+    ""
+   ],
+   [
+    "tahmin-mus-b",
+    ""
+   ],
+   [
+    "tahmin-mus-c",
+    ""
+   ],
+   [
+    "tahmin-brans-ikmal",
+    "ikmal"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-IKMAL",
+  "kaynak": "TAHMIN-ASB-IKMAL-777",
+  "rutbe": "asb",
+  "brans": "ikmal",
+  "baslik": "Astsubay · İkmal",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "İkmal branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin-asb-mus",
+    ""
+   ],
+   [
+    "tahmin-brans-ikmal",
+    "ikmal"
    ]
   ]
  }

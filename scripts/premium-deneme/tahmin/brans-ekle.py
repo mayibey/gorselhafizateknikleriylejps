@@ -39,8 +39,11 @@ def tohum(on):
     sys.exit('tohum yok ' + on)
 
 
+SECILI = sys.argv[1:]  # boşsa hepsi; ör. personel havacilik (yalnız onaylanmış branşlar)
 kayit = []
 for b, rutbeler in RUTBE.items():
+    if SECILI and b not in SECILI:
+        continue
     ana = K + f'tahmin-brans-{b}.json'
     if not os.path.exists(ana):
         print('YOK (atlandı):', b)
