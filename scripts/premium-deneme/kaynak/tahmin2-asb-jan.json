@@ -1,0 +1,627 @@
+[
+ {
+  "law": 26,
+  "tip": "duz",
+  "k": "Ceza Muhakemesi Kanunu'na göre gözaltı süresine dahil edilmeyen, yakalanan kişinin yakalama yerine en yakın hâkim veya mahkemeye gönderilmesi için zorunlu süre en fazla ne kadar olabilir?",
+  "s": [
+   "On iki saat",
+   "Altı saat",
+   "Yirmi dört saat",
+   "Otuz altı saat",
+   "Kırk sekiz saat"
+  ],
+  "kanit": [
+   "Yakalama yerine en yakın hâkim veya mahkemeye gönderilme için zorunlu süre oniki saatten fazla olamaz"
+  ]
+ },
+ {
+  "law": 26,
+  "tip": "vaka",
+  "k": "Kolluk görevlilerince yakalanan bir şüpheli, karakola götürülürken görevlilerin elinden kaçmıştır. Ceza Muhakemesi Kanunu'na göre bu şüpheli hakkında yakalama emri düzenlenmesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Cumhuriyet savcıları ve kolluk kuvvetleri de yakalama emri düzenleyebilir.",
+   "Yakalama emrini yalnızca Cumhuriyet savcısının istemi üzerine sulh ceza hâkimi düzenleyebilir.",
+   "Yakalama emrini yalnızca mahallin en büyük mülki amiri düzenleyebilir.",
+   "Yakalama emri ancak kovuşturma evresinde mahkemece düzenlenebilir.",
+   "Kolluk kuvvetleri yakalama emri düzenleyemez; yalnızca Cumhuriyet savcısı düzenleyebilir."
+  ],
+  "kanit": [
+   "Yakalanmış iken kolluk görevlisinin elinden kaçan şüpheli veya sanık ya da tutukevi veya ceza infaz kurumundan kaçan tutuklu veya hükümlü hakkında Cumhuriyet savcıları ve kolluk kuvvetleri de yakalama emri düzenleyebilirler"
+  ]
+ },
+ {
+  "law": 27,
+  "tip": "duz",
+  "k": "Kimlik Bildirme Kanunu'na göre iş yerlerinde çalışanlar ile öğrenci yurtlarında kalanlara ilişkin kimlik bildirimlerinin sorumlu işleticiler tarafından genel kolluk kuvvetlerine elektronik ortamda yapılması hâlinde aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Bildirimlerin mahalle veya köy muhtarına onaylatılması şartı uygulanmaz.",
+   "Bildirim süresi üç günden yedi güne uzar.",
+   "Bildirimler genel kolluk yerine mülki idare amirliğine yapılır.",
+   "Ayrıca yazılı bildirim belgesinin yirmi dört saat içinde kolluğa verilmesi gerekir.",
+   "Bildirimler köy ve mahalle muhtarları ile hiçbir şekilde paylaşılmaz."
+  ],
+  "kanit": [
+   "Bildirimlerin elektronik ortamda yapılması durumunda üçüncü fıkra hükmü uygulanmaz",
+   "Kimlik bildirimleri, mahalli kolluk örgütüne verilmeden evvel mahalle veya köy muhtarına onaylatılır",
+   "Bu fıkra kapsamında elektronik ortamda yapılan bildirimler, genel kolluk tarafından köy ve mahalle muhtarları ile paylaşılır"
+  ]
+ },
+ {
+  "law": 28,
+  "tip": "duz",
+  "k": "Toplantı ve Gösteri Yürüyüşleri Kanunu'na göre yabancıların bu Kanuna göre düzenlenen toplantı ve gösteri yürüyüşlerinde topluluğa hitap edebilmeleri için mahallin en büyük mülki idare amirliğine toplantıdan en az ne kadar önce bildirimde bulunulması gerekir?",
+  "s": [
+   "Kırk sekiz saat",
+   "Yirmi dört saat",
+   "Yetmiş iki saat",
+   "Yedi gün",
+   "On beş gün"
+  ],
+  "kanit": [
+   "toplantının yapılacağı mahallin en büyük mülkî idare amirliğine toplantıdan en az kırksekiz saat önce yapılacak bildirimle mümkündür"
+  ]
+ },
+ {
+  "law": 28,
+  "tip": "olumsuz",
+  "k": "Toplantı ve Gösteri Yürüyüşleri Kanunu'na göre aşağıdakilerden hangisi bu Kanun hükümlerine tabi olmayan toplantı ve faaliyetler arasında sayılmamıştır?",
+  "s": [
+   "Siyasi partilerin açık yer toplantıları",
+   "Spor faaliyetleri ile bilimsel, ticari ve ekonomik amaçlarla yapılan toplantılar",
+   "Kanun veya gelenek ve göreneklere göre yapılacak karşılama ve uğurlamalar",
+   "Türkiye Büyük Millet Meclisi üyelerinin halk ile yapacakları sohbet niteliğindeki görüşmeler",
+   "Bakanların Devlet işleri hakkındaki toplantı ve konuşmaları"
+  ],
+  "kanit": [
+   "Siyasi partilerin, kamu kurumu niteliğindeki meslek kuruluşlarının, sendikaların, vakıfların, derneklerin, ticari ortaklıkların ve diğer tüzelkişilirin özel kanunlarına ve kendi tüzüklerine göre yapacakları kapalı yer toplantıları",
+   "kanun veya gelenek ve göreneklere göre yapılacak toplantı, tören, şenlik, karşılama ve uğurlamalar, c) Spor faaliyetleri ile bilimsel, ticari ve ekonomik amaçlarla yapılan toplantılar",
+   "işleri hakkındaki toplantı ve konuşmaları ile Türkiye Büyük Millet Meclisi üyelerinin halk ile yapacakları sohbet niteliğindeki görüşmeler"
+  ]
+ },
+ {
+  "law": 29,
+  "tip": "duz",
+  "k": "Kara Avcılığı Kanunu'na göre fahri av müfettişleri, yasak avlanma sayılan fiilleri işleyenler hakkında düzenledikleri tutanağı en geç ne kadar süre içinde en yakın Genel Müdürlük taşra birimine teslim etmek zorundadır?",
+  "s": [
+   "Bir hafta",
+   "Yirmi dört saat",
+   "Üç gün",
+   "On beş gün",
+   "Bir ay"
+  ],
+  "kanit": [
+   "Genel Müdürlükçe kendilerine verilen tutanağı düzenleyerek en geç bir hafta içinde en yakın Genel Müdürlük taşra birimine teslim etmek mecburiyetindedir"
+  ]
+ },
+ {
+  "law": 30,
+  "tip": "duz",
+  "k": "Su Ürünleri Kanunu'na göre bu Kanunda düzenlenen mülkiyetin kamuya geçirilmesi kararları kim tarafından verilir?",
+  "s": [
+   "Vali",
+   "Kaymakam",
+   "Cumhuriyet savcısı",
+   "Sulh ceza hâkimi",
+   "Belediye başkanı"
+  ],
+  "kanit": [
+   "Bu Kanunda düzenlenen mülkiyetin kamuya geçirilmesi kararları vali tarafından verilir"
+  ]
+ },
+ {
+  "law": 31,
+  "tip": "duz",
+  "k": "Yabancılar ve Uluslararası Koruma Kanunu'na göre geri gönderme merkezlerindeki idari gözetim süresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Altı ayı geçemez; Kanunda belirtilen hâllerde en fazla altı ay daha uzatılabilir.",
+   "Üç ayı geçemez; Kanunda belirtilen hâllerde en fazla üç ay daha uzatılabilir.",
+   "Bir yılı geçemez; hiçbir şekilde uzatılamaz.",
+   "Altı ayı geçemez; hiçbir şekilde uzatılamaz.",
+   "Otuz günü geçemez; her defasında otuz gün uzatılabilir."
+  ],
+  "kanit": [
+   "Geri gönderme merkezlerindeki idari gözetim süresi altı ayı geçemez",
+   "ülkesiyle ilgili doğru bilgi ya da belgeleri vermemesi nedeniyle tamamlanamaması hâlinde, en fazla altı ay daha uzatılabilir"
+  ]
+ },
+ {
+  "law": 32,
+  "tip": "duz",
+  "k": "Orman Kanunu'na göre bu Kanunda tanımlanan suçlardan dolayı arama, Cumhuriyet savcısına ulaşılamadığı hâllerde kimin yazılı emri ile yapılır?",
+  "s": [
+   "Orman şefinin",
+   "Orman bölge müdürünün",
+   "Mahallin en büyük mülki amirinin",
+   "Köy muhtarının",
+   "Jandarma karakol komutanının"
+  ],
+  "kanit": [
+   "Cumhuriyet savcısına ulaşılamadığı hâllerde arama, orman şefinin yazılı emri ile yapılır"
+  ]
+ },
+ {
+  "law": 32,
+  "tip": "duz",
+  "k": "Orman Kanunu'na göre Devlet ormanlarında arkeolojik kazı ve restorasyon yapılmasına Orman Genel Müdürlüğünce bedeli alınarak en fazla kaç yıla kadar izin verilebilir?",
+  "s": [
+   "Yirmi dokuz",
+   "On",
+   "On dokuz",
+   "Kırk dokuz",
+   "Doksan dokuz"
+  ],
+  "kanit": [
+   "Orman Genel Müdürlüğünce bedeli alınarak yirmidokuz yıla kadar izin verilebilir"
+  ]
+ },
+ {
+  "law": 33,
+  "tip": "duz",
+  "k": "Mera Kanunu'na göre mera, yaylak ve kışlaklarda otlatma haklarından fazla hayvan otlatanlardan, komisyonca tespit edilen ücret fazla her hayvan için nasıl tahsil edilir?",
+  "s": [
+   "Üç katı olarak",
+   "İki katı olarak",
+   "Beş katı olarak",
+   "Yarı oranında artırılarak",
+   "On katı olarak"
+  ],
+  "kanit": [
+   "otlatma haklarından fazla hayvan otlatanlardan bu ücret, fazla her hayvan sayısı için üç katı olarak tahsil edilir"
+  ]
+ },
+ {
+  "law": 34,
+  "tip": "duz",
+  "k": "Karayolları Trafik Kanunu'na göre ölümlü veya yaralanmalı trafik kazalarında zabıtanın iznini almadan zaruret dışında olay yerinden ayrılan sürücülerin sürücü belgesi ne kadar süreyle geri alınır?",
+  "s": [
+   "İki yıl",
+   "Altı ay",
+   "Bir yıl",
+   "Üç yıl",
+   "Beş yıl"
+  ],
+  "kanit": [
+   "Bu fıkranın ikinci cümlesi kapsamında olay yerinden ayrılan sürücülerin sürücü belgesi bu Kanunun 6 ncı maddesinde sayılan görevliler tarafından iki yıl süreyle geri alınır",
+   "Ölümlü veya yaralanmalı trafik kazalarında, zabıtanın iznini almadan zaruret dışında olay yerinden ayrılan sürücülere bir yıldan üç yıla kadar hapis cezası verilir"
+  ]
+ },
+ {
+  "law": 34,
+  "tip": "duz",
+  "k": "Karayolları Trafik Kanunu'na göre tamirhane, servis istasyonu ve garaj sahip ve sorumlularının, tesislerine ölüm veya yaralanma ile sonuçlanan bir kaza geçirmiş olduğu belli olan bir araç gelmesi hâlindeki yükümlülüğü aşağıdakilerden hangisidir?",
+  "s": [
+   "Gecikmeksizin zabıtaya haber vermek ve bunu bir deftere işlemek",
+   "Aracı onardıktan sonra yirmi dört saat içinde belediyeye bildirmek",
+   "Araç sahibinden yazılı beyan alarak aracı onarmak",
+   "Durumu üç gün içinde Cumhuriyet başsavcılığına yazılı bildirmek",
+   "Aracı onarmadan sigorta şirketine teslim etmek"
+  ],
+  "kanit": [
+   "Tamirhane, servis istasyonu, garaj sahip ve sorumluları; tesislerine, ölüm veya yaralanma ile sonuçlanan bir kaza geçirmiş olduğu belli olan veya üzerinde suç belirtisi bulunan bir araç gelince gecikmeksizin zabıtaya haber vermeye ve bunları bir deftere işlemeye"
+  ]
+ },
+ {
+  "law": 35,
+  "tip": "olumsuz",
+  "k": "Özel Güvenlik Hizmetlerine Dair Kanun'a göre aşağıdakilerden hangisi özel güvenlik görevlilerinin yetkileri arasında sayılmamıştır?",
+  "s": [
+   "Görev alanı dışındaki konut ve işyerlerinde önleme araması yapma",
+   "Ceza Muhakemesi Kanununun 90 ıncı maddesine göre yakalama",
+   "Terk edilmiş ve bulunmuş eşyayı emanete alma",
+   "Tabiî afet durumlarında görev alanındaki işyeri ve konutlara girme",
+   "Toplu ulaşım tesislerinde kimlik sorma ve duyarlı kapıdan geçirme"
+  ],
+  "kanit": [
+   "Ceza Muhakemesi Kanununun 90 ıncı maddesine göre yakalama",
+   "Yangın, deprem gibi tabiî afet durumlarında ve imdat istenmesi halinde görev alanındaki işyeri ve konutlara girme. f) Hava meydanı, liman, gar, istasyon ve terminal gibi toplu ulaşım tesislerinde kimlik sorma, duyarlı kapıdan geçirme",
+   "Terk edilmiş ve bulunmuş eşyayı emanete alma. ı) Kişinin vücudu veya sağlığı bakımından mevcut bir tehlikeden korunması amacıyla yakalama"
+  ]
+ },
+ {
+  "law": 36,
+  "tip": "duz",
+  "k": "Çocuk Koruma Kanunu'na göre çocuk mahkemeleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Çocuk mahkemelerinde yapılan duruşmalarda Cumhuriyet savcısı bulunmaz.",
+   "Çocuk mahkemesi, bir başkan ve iki üyeden oluşur.",
+   "Çocuk mahkemeleri yalnızca büyükşehir statüsündeki illerde kurulur.",
+   "Cumhuriyet savcıları çocuk mahkemesi kararlarına karşı kanun yoluna başvuramaz.",
+   "İş durumu gerektirse dahi çocuk mahkemelerinin birden fazla dairesi oluşturulamaz."
+  ],
+  "kanit": [
+   "Çocuk mahkemelerinde yapılan duruşmalarda Cumhuriyet savcısı bulunmaz",
+   "Çocuk mahkemesi, tek hâkimden oluşur. Bu mahkemeler her il merkezinde kurulur",
+   "Mahkemelerin bulunduğu yerlerdeki Cumhuriyet savcıları, çocuk mahkemeleri kararlarına karşı kanun yoluna başvurabilirler"
+  ]
+ },
+ {
+  "law": 36,
+  "tip": "oncullu",
+  "k": "Çocuk Koruma Kanunu'na göre çocukların yetişkinlerle birlikte suç işlemesi hâli ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Davaların birleştirilmesi hâlinde birleştirilen davalar çocuk mahkemesinde görülür.\nII. Soruşturma ve kovuşturma ayrı yürütülür.\nIII. Mahkeme lüzum gördüğü takdirde çocuk hakkındaki yargılamayı genel mahkemedeki davanın sonucuna kadar bekletebilir.",
+  "s": [
+   "II ve III",
+   "Yalnız I",
+   "Yalnız II",
+   "I ve II",
+   "I, II ve III"
+  ],
+  "kanit": [
+   "Çocukların yetişkinlerle birlikte suç işlemesi hâlinde, soruşturma ve kovuşturma ayrı yürütülür",
+   "mahkeme lüzum gördüğü takdirde çocuk hakkındaki yargılamayı genel mahkemedeki davanın sonucuna kadar bekletebilir",
+   "Bu takdirde birleştirilen davalar genel mahkemelerde görülür"
+  ]
+ },
+ {
+  "law": 37,
+  "tip": "vaka",
+  "k": "Merkezi İzmir'de bulunan bir dernek; İzmir, Manisa ve Aydın illerini kapsayacak şekilde yardım toplama faaliyeti düzenlemek istemektedir. Yardım Toplama Kanunu'na göre dernek bu faaliyet için kimden izin almalıdır?",
+  "s": [
+   "İzmir Valisinden",
+   "İçişleri Bakanlığından",
+   "Her ilin valisinden ayrı ayrı",
+   "Manisa ve Aydın valilerinden",
+   "İzmir'deki ilçe kaymakamından"
+  ],
+  "kanit": [
+   "Yardım toplama faaliyeti birden fazla ili kapsıyorsa yardım toplama faaliyetine girişecek gerçek veya tüzel kişilerin yerleşim yerinin bulunduğu ilin valisinden izin alınır"
+  ]
+ },
+ {
+  "law": 38,
+  "tip": "duz",
+  "k": "Hayvanları Koruma Kanunu'na göre Türkiye Radyo ve Televizyon Kurumu ile özel televizyon kanallarına ait televizyon programlarında, hayvanların korunması ve refahı amacıyla ayda en az ne kadar eğitici yayın yapılması zorunludur?",
+  "s": [
+   "İki saat",
+   "Yarım saat",
+   "Bir saat",
+   "Üç saat",
+   "Doksan dakika"
+  ],
+  "kanit": [
+   "Türkiye Radyo ve Televizyon Kurumu ile özel televizyon kanallarına ait televizyon programlarında ayda en az iki saat, özel radyo kanallarının programlarında ise ayda en az yarım saat eğitici yayınların yapılması zorunludur"
+  ]
+ },
+ {
+  "law": 39,
+  "tip": "duz",
+  "k": "Çevre Kanunu'na göre proje tanıtım dosyası hazırlanmaksızın başlanan faaliyetler kim tarafından süre verilmeksizin durdurulur?",
+  "s": [
+   "Mahallin en büyük mülki amiri",
+   "Belediye başkanı",
+   "İl özel idaresi",
+   "Cumhuriyet savcısı",
+   "Sulh ceza hâkimi"
+  ],
+  "kanit": [
+   "proje tanıtım dosyası hazırlanmaksızın başlanan faaliyetler ise mahallin en büyük mülkî amiri tarafından süre verilmeksizin durdurulur"
+  ]
+ },
+ {
+  "law": 41,
+  "tip": "duz",
+  "k": "Kaçakçılıkla Mücadele Kanunu'na göre 3 üncü maddede tanımlanan suçlardan birini işleyen kişi, etkin pişmanlık göstererek suç konusu eşyanın gümrüklenmiş değerinin iki katı kadar parayı soruşturma evresi sona erinceye kadar Devlet Hazinesine öderse hakkında verilecek ceza ne oranda indirilir?",
+  "s": [
+   "Yarı oranında",
+   "Üçte bir oranında",
+   "Üçte iki oranında",
+   "Dörtte bir oranında",
+   "Dörtte üç oranında"
+  ],
+  "kanit": [
+   "Soruşturma evresi sona erinceye kadar ödediği takdirde, hakkında bu Kanunda tanımlanan kaçakçılık suçlarından dolayı verilecek ceza yarı oranında",
+   "etkin pişmanlık göstererek suç konusu eşyanın gümrüklenmiş değerinin iki katı kadar parayı Devlet Hazinesine"
+  ]
+ },
+ {
+  "law": 41,
+  "tip": "duz",
+  "k": "Kaçakçılıkla Mücadele Kanunu'na göre kaçak akaryakıt, miktarı, cinsi ve özelliklerini gösterir bir tutanakla nereye teslim edilir?",
+  "s": [
+   "Yakalandığı ildeki il özel idaresine",
+   "Bağlı bulunduğu gümrük idaresine",
+   "Tasfiye idaresinin deposuna",
+   "Cumhuriyet başsavcılığı emanet bürosuna",
+   "Yakalandığı ildeki belediye başkanlığına"
+  ],
+  "kanit": [
+   "Kaçak akaryakıt, yakalandığı ildeki il özel idaresine, il özel idaresi bulunmayan yerlerde ise yatırım izleme ve koordinasyon başkanlığına, miktarı, cinsi ve özelliklerini gösterir bir tutanakla yakalandığı yerde teslim edilir"
+  ]
+ },
+ {
+  "law": 42,
+  "tip": "duz",
+  "k": "Uyuşturucu Maddelerle İlgili Kanun'a göre haşhaş ekimi için alınan izin belgeleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Bir üretim yılı için geçerli olup başkasına devredilemez.",
+   "Üç üretim yılı için geçerli olup mülki amirin onayıyla devredilebilir.",
+   "Süresiz olarak geçerli olup mirasçılara devredilebilir.",
+   "Bir üretim yılı için geçerli olup birinci derece yakınlara devredilebilir.",
+   "Beş yıl için geçerli olup başkasına devredilemez."
+  ],
+  "kanit": [
+   "İzin belgeleri bir üretim yılı için geçerli olup, başkasına devir edilemez"
+  ]
+ },
+ {
+  "law": 43,
+  "tip": "duz",
+  "k": "Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun'a göre en üst profesyonel futbol ligi kulüplerinin yüksek riskli müsabakalarında, görevde olmayan genel kolluk görevlileri, il veya ilçe spor güvenlik kurullarınca belirlenen özel güvenlik görevlisi sayısının en fazla ne kadarını geçmeyecek sayıda bunların yerine görevlendirilebilir?",
+  "s": [
+   "Üçte ikisini",
+   "Yarısını",
+   "Üçte birini",
+   "Dörtte birini",
+   "Tamamını"
+  ],
+  "kanit": [
+   "İl veya ilçe spor güvenlik kurulları tarafından belirlenen özel güvenlik görevlisi sayısının yarısını, yüksek riskli müsabakalarda ise üçte ikisini geçmeyecek sayıda ve bunların yerine genel kolluk görevlisi bu şekilde görevlendirilir",
+   "En üst profesyonel futbol ligi kulüplerinin müsabakalarında güvenliğin sağlanması amacıyla genel kolluk görevlilerinden, görevde olmayanlar da görevlendirilebilir"
+  ]
+ },
+ {
+  "law": 45,
+  "tip": "duz",
+  "k": "Terörizmin Finansmanının Önlenmesi Hakkında Kanun'a göre 5 inci ve 6 ncı maddelerde düzenlenen hususlar dışında, mahkemelerce terör örgütü olduğuna kesin olarak karar verildikten sonra Kanun kapsamındaki fiilleri gerçekleştirdiği hususunda makul sebepler bulunan kişilerin Türkiye'de bulunan malvarlığının dondurulmasına, Değerlendirme Komisyonunun önerisi üzerine kim karar verebilir?",
+  "s": [
+   "Hazine ve Maliye Bakanı ile İçişleri Bakanı birlikte",
+   "Adalet Bakanı ile Dışişleri Bakanı birlikte",
+   "Mali Suçları Araştırma Kurulu Başkanı",
+   "Sulh ceza hâkimi",
+   "İçişleri Bakanı tek başına"
+  ],
+  "kanit": [
+   "malvarlığının dondurulmasının kaldırılmasına Değerlendirme Komisyonunun önerisi üzerine Hazine ve Maliye Bakanı ile İçişleri Bakanı tarafından birlikte karar verilebilir"
+  ]
+ },
+ {
+  "law": 46,
+  "tip": "duz",
+  "k": "Kültür ve Tabiat Varlıklarını Koruma Kanunu'na göre izinsiz olarak define araştıranlar hangi cezayla cezalandırılır?",
+  "s": [
+   "Üç aydan iki yıla kadar hapis",
+   "İki yıldan beş yıla kadar hapis",
+   "Altı aydan üç yıla kadar hapis",
+   "Bir yıldan dört yıla kadar hapis",
+   "Beş yıldan on iki yıla kadar hapis"
+  ],
+  "kanit": [
+   "İzinsiz olarak define araştıranlar, üç aydan iki yıla kadar hapis cezası ile cezalandırılır"
+  ]
+ },
+ {
+  "law": 47,
+  "tip": "duz",
+  "k": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun'a göre mütecavize tebligat yapılamaması hâlinde, soruşturmanın yapılacağı veya kararın yerine getirileceği yer, tarih ve saat taşınmaz malın bulunduğu köy veya beldede kaç gün önceden ilan edilir?",
+  "s": [
+   "Üç gün",
+   "Bir gün",
+   "Beş gün",
+   "Yedi gün",
+   "On beş gün"
+  ],
+  "kanit": [
+   "Mütecavize tebligat yapılamaması halinde soruşturmanın yapılacağı veya kararın yerine getirileceği yer, tarih ve saat 3 gün önceden alışılmış usullerle taşınmaz malın bulunduğu köy veya beldede ilan edilir"
+  ]
+ },
+ {
+  "law": 48,
+  "tip": "olumsuz",
+  "k": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun'a göre aşağıdakilerden hangisinde tütün ürünleri tüketilmesine mahsus alan oluşturulabileceği öngörülmemiştir?",
+  "s": [
+   "Taksi hizmeti veren araçlar",
+   "Yaşlı bakım evleri",
+   "Ruh ve sinir hastalıkları hastaneleri",
+   "Cezaevleri",
+   "Şehirlerarası güzergâhlarda yolcu taşıyan denizyolu araçlarının güverteleri"
+  ],
+  "kanit": [
+   "Yaşlı bakım evlerinde, ruh ve sinir hastalıkları hastanelerinde, cezaevlerinde, b) Şehirlerarası veya uluslararası güzergâhlarda yolcu taşıyan denizyolu araçlarının güvertelerinde, tütün ürünleri tüketilmesine mahsus alanlar oluşturulabilir",
+   "Hususi araçların sürücü koltukları ile taksi hizmeti verenler dâhil olmak üzere karayolu, demiryolu, denizyolu ve havayolu toplu taşıma araçlarında"
+  ]
+ },
+ {
+  "law": 50,
+  "tip": "duz",
+  "k": "Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik'e göre her karakol, bölge krokisinde veya binalar cetvelinde yer almayan yeni veya yıkılan yapıları saptamak için bölgesini gerektiğinde sürekli olarak taramanın yanı sıra hangi sıklıkla tarar?",
+  "s": [
+   "Üç ayda bir kez",
+   "Ayda bir kez",
+   "Altı ayda bir kez",
+   "Yılda bir kez",
+   "Haftada bir kez"
+  ],
+  "kanit": [
+   "Her karakol üç ayda bir kez ve gerektiğinde sürekli olarak, bölgesini tarar ve bölge krokisinde veya binalar cetvelinde yer almayan yeni veya yıkılan yapıları ve her türlü ilave ve değişiklikleri saptar"
+  ]
+ },
+ {
+  "law": 51,
+  "tip": "duz",
+  "k": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik'e göre Kanunda belirtilen şartları sağlamayan ve merkezi kayıt sisteminin devreye alınmasını müteakip yetki belgesi olmayan kişilere satış yapan dağıtıcının İçişleri Bakanlığınca verilen bayilik belgesi ne kadar süreyle iptal edilir?",
+  "s": [
+   "5 yıl",
+   "1 yıl",
+   "2 yıl",
+   "3 yıl",
+   "10 yıl"
+  ],
+  "kanit": [
+   "İçişleri Bakanlığınca verilen bayilik belgesi 5 yıl süre ile iptal edilir"
+  ]
+ },
+ {
+  "law": 52,
+  "tip": "duz",
+  "k": "Karayolları Trafik Yönetmeliği'ne göre trafikten men edilerek alıkonulan araçlara ilişkin bilgi ve belgeler, araçların trafikten men edildiği tarihten itibaren ne kadar süre içinde Defterdarlık veya Mal Müdürlüğüne gönderilir?",
+  "s": [
+   "4 ay",
+   "1 ay",
+   "2 ay",
+   "6 ay",
+   "1 yıl"
+  ],
+  "kanit": [
+   "araçların trafikten men edildiği tarihten, buluntu araçlar için buluntu tutanağının düzenlendiği tarihten itibaren 4 ay içinde Defterdarlık veya Mal Müdürlüğüne gönderilir"
+  ]
+ },
+ {
+  "law": 52,
+  "tip": "olumsuz",
+  "k": "Karayolları Trafik Yönetmeliği'ne göre duraklama ve parketme ile ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Belirlenmiş yangın musluklarına her iki yönden 15 metrelik mesafe içinde parketmek yasaktır.",
+   "Duraklama, bekleme amacı ile yapılırsa bunun süresi en çok 5 dakikadır.",
+   "Kamu hizmeti yapan yolcu taşıtlarının duraklarını belirten levhalara her iki yönden 15 metre mesafe içinde parketmek yasaktır.",
+   "Geçiş üstünlüğü olan araçların gidiş ve çıkışlarının yapıldığı yerleri belirten işaret levhalarına 15 metrelik mesafe içinde parketmek yasaktır.",
+   "Kavşaklara yerleşim birimleri dışında 100 metre mesafede duraklamak yasaktır."
+  ],
+  "kanit": [
+   "Belirlenmiş yangın musluklarına her iki yönden 5 metrelik mesafe içinde, 5) Kamu hizmeti yapan yolcu taşıtlarının duraklarını belirten levhalara her iki yönden 15 metre mesafe içinde",
+   "Geçiş üstünlüğü olan araçların gidiş ve çıkışlarının yapıldığı yerleri belirten işaret levhalarına 15 metrelik mesafe içinde",
+   "Duraklama, bekleme amacı ile yapılırsa, bunun süresi en çok 5 dakikadır. Bu sürenin geçirilmesi parketme sayılır. Madde 113 (Duraklamanın yasak olduğu yerler) — ... d) Kavşaklar, tüneller, köprüler ve bağlantı yollarında ve buralara, yerleşim birimleri içinde 5 metre ve yerleşim birimleri dışında 100 metre mesafede"
+  ]
+ },
+ {
+  "law": 53,
+  "tip": "duz",
+  "k": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik'e göre süresi içinde haber verilen taşınır kültür ve tabiat varlığı Devlete ait arazide bulunmuş ise, takdir olunacak bedelin yüzde kaçı bulana ikramiye olarak ödenir?",
+  "s": [
+   "%40",
+   "%80",
+   "%30",
+   "%50",
+   "%20"
+  ],
+  "kanit": [
+   "Varlık Devlete ait arazide bulunmuş ise, ilgili Yönetmeliğine göre takdir olunacak bedelin % 40ı bulana ikramiye olarak ödenir"
+  ]
+ },
+ {
+  "law": 54,
+  "tip": "olumsuz",
+  "k": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik'e göre aşağıdakilerden hangisi denetim sırasında incelenecek hususlar arasında sayılmamıştır?",
+  "s": [
+   "Şirket ortaklarının kişisel vergi borçlarının bulunup bulunmadığı",
+   "Özel güvenlik görevlileri için mali sorumluluk sigortasının yaptırılıp yaptırılmadığı",
+   "Silah ve teçhizatın ruhsatlı olup olmadığı",
+   "Kayıt ve defterlerin usulüne uygun tutulup tutulmadığı",
+   "Personelin çalışma izinlerinin geçerli olup olmadığı"
+  ],
+  "kanit": [
+   "Denetim sırasında, faaliyet izninin ve personelin çalışma izinlerinin geçerli olup olmadığı; özel güvenlik görevlileri için mali sorumluluk sigortasının yaptırılıp yaptırılmadığı",
+   "silah ve teçhizatın ruhsatlı olup olmadığı ve bunların usulüne uygun korunup korunmadığı; kayıt ve defterlerin usulüne uygun tutulup tutulmadığı"
+  ]
+ },
+ {
+  "law": 56,
+  "tip": "duz",
+  "k": "Adli ve Önleme Aramaları Yönetmeliği'ne göre aksine bir hüküm içermeyen bir arama kararı kaç kez arama yapma yetkisi verir?",
+  "s": [
+   "Yalnızca bir kez",
+   "İki kez",
+   "Üç kez",
+   "Kararda belirtilen süre içinde sınırsız sayıda",
+   "Soruşturma sonuçlanıncaya kadar her gerektiğinde"
+  ],
+  "kanit": [
+   "Her arama kararı, aksine bir hüküm içermiyorsa sadece bir kez arama yapma yetkisi verir"
+  ]
+ },
+ {
+  "law": 57,
+  "tip": "duz",
+  "k": "Suç Eşyası Yönetmeliği'ne göre iadesine karar verilmiş olup da sahibi ölmüş veya hakkında gaiplik kararı alınmış bulunanlara ait eşya nereye tevdi olunur?",
+  "s": [
+   "Yetkili sulh hukuk hâkimine",
+   "Yetkili sulh ceza hâkimine",
+   "Defterdarlığa",
+   "Adalet komisyonuna",
+   "Mahallin en büyük mülki amirine"
+  ],
+  "kanit": [
+   "İadesine karar verilmiş olup da sahibi ölmüş veya hakkında gaiplik kararı alınmış bulunanlara ait eşya, yetkili sulh hukuk hâkimine tevdi olunur"
+  ]
+ },
+ {
+  "law": 58,
+  "tip": "oncullu",
+  "k": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre gözaltına alınan kişinin sağlık kontrolü ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hekim raporu üç nüsha hâlinde düzenlenir.\nII. Hekim, kişisel güvenlik endişesini ileri sürerek muayenenin kolluk görevlisinin gözetiminde yapılmasını isteyebilir.\nIII. Gözaltına alınan kişinin ifadesini alan kolluk görevlisinin, bu kişiyi tıbbi muayeneye de bizzat götürmesi zorunludur.",
+  "s": [
+   "I ve II",
+   "Yalnız I",
+   "Yalnız II",
+   "II ve III",
+   "I, II ve III"
+  ],
+  "kanit": [
+   "Hekim raporu üç nüsha hâlinde düzenlenir",
+   "hekim kişisel güvenlik endişesini ileri sürerek muayenenin kolluk görevlisinin gözetiminde yapılmasını isteyebilir",
+   "Gözaltına alınan kişinin ifadesini alan veya soruşturmayı yürüten kolluk görevlisi ile bu kişiyi tıbbî muayeneye götüren kolluk görevlisinin farklı olması zorunludur"
+  ]
+ },
+ {
+  "law": 59,
+  "tip": "duz",
+  "k": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğin Tespiti Hakkında Yönetmelik'e göre \"iç beden muayenesi\" aşağıdakilerden hangisini ifade eder?",
+  "s": [
+   "Kafa, göğüs ve karın boşlukları ile cilt altı dokularının incelenmesini",
+   "Vücudun dış yüzeyi ile kulak, burun ve ağız bölgelerinin gözle ve elle yapılan yüzeysel tıbbi incelemesini",
+   "Tabip tarafından tıbbi yöntemler kullanılarak yapılan değerlendirmeleri",
+   "Tıbbi aletler yardımıyla vücutta yapılan tanı ya da tedaviye yönelik operasyonları",
+   "Kişinin hastalık dışındaki özelliklerinin moleküler düzeyde araştırılmasını"
+  ],
+  "kanit": [
+   "İç beden muayenesi: Kafa, göğüs ve karın boşlukları ile cilt altı dokularının incelenmesini",
+   "Dış beden muayenesi: Vücudun dış yüzeyi ile kulak, burun ve ağız bölgelerinin gözle ve elle yapılan yüzeysel tıbbî incelemesini"
+  ]
+ },
+ {
+  "law": 62,
+  "tip": "oncullu",
+  "k": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik'e göre umuma açık istirahat ve eğlence yerlerinin açılması ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İl özel idaresi ve belediyeler, ruhsatı vermeden önce kolluk kuvvetinin görüşünü alır.\nII. Yetkili kolluk kuvveti, işyeri hakkındaki görüşünü mülki idare amiri vasıtasıyla yedi gün içinde bildirir.\nIII. Açılma başvuruları yetkili idareler tarafından bir ay içinde sonuçlandırılır.",
+  "s": [
+   "I, II ve III",
+   "Yalnız I",
+   "Yalnız II",
+   "I ve II",
+   "II ve III"
+  ],
+  "kanit": [
+   "İl özel idaresi ve belediyeler, umuma açık istirahat ve eğlence yeri ruhsatını vermeden önce kolluk kuvvetinin görüşünü alır",
+   "işyeri hakkındaki görüşünü mülki idare amiri vasıtasıyla yedi gün içinde bildirir",
+   "Umuma açık istirahat ve eğlence yeri açılması hususundaki başvurular yetkili idareler tarafından bir ay içinde sonuçlandırılır"
+  ]
+ },
+ {
+  "law": 64,
+  "tip": "olumsuz",
+  "k": "Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangisi, faaliyet gösteren işyerlerinde alkollü içki satışı veya sunumu yapılamayacak yerler arasında sayılmamıştır?",
+  "s": [
+   "Lokantalar",
+   "Kahvehane ve kıraathaneler",
+   "Akaryakıt istasyonları",
+   "Spor müsabakası yapılan stadyumlar",
+   "Öğrenci yurtları"
+  ],
+  "kanit": [
+   "Aşağıda sayılan yerlerde faaliyet gösteren işyerlerinde alkollü içki satışı veya sunumu yapılamaz: a) Öğrenci yurtlarında",
+   "Spor müsabakası yapılan stadyum ve kapalı spor salonlarında",
+   "Kahvehane, kıraathane, pastane, bezik ve briç salonları ile akaryakıt istasyonlarında"
+  ]
+ },
+ {
+  "law": 66,
+  "tip": "duz",
+  "k": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik'e göre yivli spor tüfek ve tabancası olarak kayıtlı bulunan silahlara hangi tür ruhsat verilir?",
+  "s": [
+   "Bulundurma ruhsatı",
+   "Taşıma ruhsatı",
+   "Hem taşıma hem bulundurma ruhsatı",
+   "Yivli av tüfeği taşıma ruhsatı",
+   "Geçici taşıma ruhsatı"
+  ],
+  "kanit": [
+   "Yivli spor tüfek ve tabancası olarak kayıtlı bulunan bütün silahlara bulundurma ruhsatı verilir"
+  ]
+ }
+]

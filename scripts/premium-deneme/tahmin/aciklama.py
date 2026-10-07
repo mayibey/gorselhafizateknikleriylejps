@@ -101,3 +101,11 @@ isle('TAHMIN-ASB-MEBS-82', ASB + [('tahmin-asb-mebs-ek', ''), ('tahmin-asb-mebs-
 if os.path.exists(D + 'tahmin/branslar.json'):
     for b in json.load(open(D + 'tahmin/branslar.json', encoding='utf-8')):
         isle(b['kaynak'], [tuple(x) for x in b['aciklama_bloklar']])
+# Sınav Provası 2 (prova2-kur.py üretir); aynı deneme birden çok rütbeye bağlı olabilir → bir kez işle
+if os.path.exists(D + 'tahmin/ikinci.json'):
+    _gor = set()
+    for b in json.load(open(D + 'tahmin/ikinci.json', encoding='utf-8')):
+        if b['kaynak'] in _gor:
+            continue
+        _gor.add(b['kaynak'])
+        isle(b['kaynak'], [tuple(x) for x in b['aciklama_bloklar']])

@@ -1,0 +1,208 @@
+[
+ {
+  "id": "SB-JAN-2",
+  "kaynak": "TAHMIN2-SB-JAN-217",
+  "rutbe": "sb",
+  "brans": "jandarma",
+  "baslik": "Subay · Jandarma — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Jandarma branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-sb-mus",
+    ""
+   ],
+   [
+    "tahmin2-sb-jan",
+    "jandarma"
+   ]
+  ]
+ },
+ {
+  "id": "SB-MEBS-2",
+  "kaynak": "TAHMIN2-SB-MEBS-2",
+  "rutbe": "sb",
+  "brans": "mebs",
+  "baslik": "Subay · MEBS — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    50,
+    "Müşterek mevzuat (MEBS ek)",
+    "41–50"
+   ],
+   [
+    50,
+    80,
+    "MEBS branş mevzuatı",
+    "51–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-sb-mus",
+    ""
+   ],
+   [
+    "tahmin2-sb-mebs-ek",
+    ""
+   ],
+   [
+    "tahmin2-sb-mebs-brans",
+    "mebs"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-JAN-2",
+  "kaynak": "TAHMIN2-ASB-JAN-73",
+  "rutbe": "asb",
+  "brans": "jandarma",
+  "baslik": "Astsubay · Jandarma — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Jandarma branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-asb-mus",
+    ""
+   ],
+   [
+    "tahmin2-asb-jan",
+    "jandarma"
+   ]
+  ]
+ },
+ {
+  "id": "ASB-MEBS-2",
+  "kaynak": "TAHMIN2-ASB-MEBS-285",
+  "rutbe": "asb",
+  "brans": "mebs",
+  "baslik": "Astsubay · MEBS — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    50,
+    "Müşterek mevzuat (MEBS ek)",
+    "41–50"
+   ],
+   [
+    50,
+    80,
+    "MEBS branş mevzuatı",
+    "51–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-asb-mus",
+    ""
+   ],
+   [
+    "tahmin2-asb-mebs-ek",
+    ""
+   ],
+   [
+    "tahmin2-asb-mebs-brans",
+    "mebs"
+   ]
+  ]
+ },
+ {
+  "id": "UZM-JAN-2",
+  "kaynak": "TAHMIN2-UZM-JAN-43",
+  "rutbe": "uzmerb",
+  "brans": "jandarma",
+  "baslik": "Uzman Erbaş / Uzman Jandarma · Jandarma — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Jandarma branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-uzm-mus",
+    ""
+   ],
+   [
+    "tahmin2-uzm-jan",
+    "jandarma"
+   ]
+  ]
+ },
+ {
+  "id": "UZM-JAN-2",
+  "kaynak": "TAHMIN2-UZM-JAN-43",
+  "rutbe": "uzmj",
+  "brans": "jandarma",
+  "baslik": "Uzman Erbaş / Uzman Jandarma · Jandarma — 2. Prova",
+  "bloklar": [
+   [
+    0,
+    40,
+    "Müşterek mevzuat",
+    "1–40"
+   ],
+   [
+    40,
+    80,
+    "Jandarma branş mevzuatı",
+    "41–80"
+   ]
+  ],
+  "aciklama_bloklar": [
+   [
+    "tahmin2-uzm-mus",
+    ""
+   ],
+   [
+    "tahmin2-uzm-jan",
+    "jandarma"
+   ]
+  ]
+ }
+]
