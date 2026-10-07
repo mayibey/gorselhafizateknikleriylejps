@@ -42,16 +42,17 @@
    "soru": "Türk Ceza Kanunu'na göre kamu görevinin terki veya yapılmaması suçu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hukuka aykırı olarak ve toplu biçimde görevini terk eden kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.\nII. Kamu görevlisi sayısının üçten fazla olmaması hâlinde cezaya hükmolunmaz.\nIII. Mesleki ve sosyal haklarla ilgili olarak hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakmada ceza verilmeyebilir.",
    "siklar": [
     "I, II ve III",
-    "II ve III",
-    "I ve II",
+    "I ve III",
     "Yalnız I",
+    "II ve III",
     "Yalnız II"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.” … “… verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.”",
-   "id": "TAHMIN-SB-MALIYE-42-03"
+   "id": "TAHMIN-SB-MALIYE-42-03",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -265,17 +266,18 @@
    "lawId": 6,
    "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.\nIII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.",
    "siklar": [
-    "II ve III",
+    "Yalnız I",
     "I ve II",
     "I, II ve III",
-    "I ve III",
-    "Yalnız I"
+    "II ve III",
+    "Yalnız II"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
    "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “… kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.” … “Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.”",
-   "id": "TAHMIN-SB-MALIYE-42-17"
+   "id": "TAHMIN-SB-MALIYE-42-17",
+   "oncul_karisik": true
   },
   {
    "lawId": 7,
@@ -311,19 +313,20 @@
   },
   {
    "lawId": 8,
-   "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.\nIII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.",
+   "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.\nIII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.",
    "siklar": [
-    "I ve II",
-    "I, II ve III",
     "I ve III",
-    "II ve III",
-    "Yalnız I"
+    "Yalnız I",
+    "I, II ve III",
+    "Yalnız II",
+    "II ve III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
    "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Milli Güvenlik Kurulunun görüşünü de aldıktan sonra” … “… altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
-   "id": "TAHMIN-SB-MALIYE-42-20"
+   "id": "TAHMIN-SB-MALIYE-42-20",
+   "oncul_karisik": true
   },
   {
    "lawId": 9,
@@ -455,19 +458,20 @@
   },
   {
    "lawId": 13,
-   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.",
+   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.\nII. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.",
    "siklar": [
-    "I ve III",
-    "I, II ve III",
-    "I ve II",
     "Yalnız II",
-    "Yalnız I"
+    "I ve III",
+    "II ve III",
+    "I ve II",
+    "I, II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.15",
    "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.15: “Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler: a) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.” … “Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.”",
-   "id": "TAHMIN-SB-MALIYE-42-29"
+   "id": "TAHMIN-SB-MALIYE-42-29",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -569,33 +573,35 @@
    "lawId": 15,
    "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.\nIII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.",
    "siklar": [
-    "Yalnız II",
+    "Yalnız III",
     "I ve II",
-    "II ve III",
-    "I, II ve III",
-    "Yalnız I"
+    "Yalnız II",
+    "I ve III",
+    "I, II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
    "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.” … “Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.”",
-   "id": "TAHMIN-SB-MALIYE-42-36"
+   "id": "TAHMIN-SB-MALIYE-42-36",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
-   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Bakan onayı ile yürürlüğe konulur.\nIII. Her yıl gözden geçirilir.",
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Her yıl gözden geçirilir.\nIII. Bakan onayı ile yürürlüğe konulur.",
    "siklar": [
-    "II ve III",
-    "Yalnız I",
-    "I, II ve III",
+    "Yalnız II",
     "I ve II",
-    "Yalnız II"
+    "II ve III",
+    "I ve III",
+    "Yalnız III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “… beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.” … “Bu plan en az iki yılda bir gözden geçirilir.”",
-   "id": "TAHMIN-SB-MALIYE-42-37"
+   "id": "TAHMIN-SB-MALIYE-42-37",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -919,19 +925,20 @@
   },
   {
    "lawId": 72,
-   "soru": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.\nII. Rütbe terfi veya rütbe kıdemliliği onanan subay ve astsubaylar, onay metninde yazılı yükselme tarihini takip eden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.\nIII. Nasıplarından itibaren üç yılını tamamlayan ve liyakatleri üst makamlarca onaylanan albaylara kıdemli albay denir.",
+   "soru": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Nasıplarından itibaren üç yılını tamamlayan ve liyakatleri üst makamlarca onaylanan albaylara kıdemli albay denir.\nII. Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.\nIII. Rütbe terfi veya rütbe kıdemliliği onanan subay ve astsubaylar, onay metninde yazılı yükselme tarihini takip eden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.",
    "siklar": [
-    "II ve III",
-    "I ve II",
-    "Yalnız I",
     "I, II ve III",
-    "Yalnız II"
+    "II ve III",
+    "Yalnız III",
+    "I ve III",
+    "I ve II"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler) m.147",
    "aciklama": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler), m.147: “Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.” … “onay metninde yazılı yükselme tarihini takibeden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.”",
-   "id": "TAHMIN-SB-MALIYE-42-58"
+   "id": "TAHMIN-SB-MALIYE-42-58",
+   "oncul_karisik": true
   },
   {
    "lawId": 72,
@@ -1017,17 +1024,18 @@
    "lawId": 75,
    "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre sağlık hizmeti sunucularıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sağlık hizmeti sunucuları birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.\nII. Aile hekimleri birinci basamak hizmet sunucuları içinde yer alır.\nIII. Basamaklar ve sağlık hizmet sunucuları arasındaki sevk zinciri Hazine ve Maliye Bakanlığı tarafından belirlenir.",
    "siklar": [
-    "II ve III",
+    "Yalnız III",
     "I ve II",
-    "Yalnız II",
-    "I, II ve III",
-    "Yalnız I"
+    "II ve III",
+    "Yalnız I",
+    "I ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.70",
    "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.70: “… sağlık hizmeti sunucuları birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.” … “Aile hekimleri birinci basamak hizmet sunucuları içinde yer alır.”",
-   "id": "TAHMIN-SB-MALIYE-42-64"
+   "id": "TAHMIN-SB-MALIYE-42-64",
+   "oncul_karisik": true
   },
   {
    "lawId": 77,
@@ -1095,19 +1103,20 @@
   },
   {
    "lawId": 86,
-   "soru": "Harcırah Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemeyen memur ve hizmetlilere, vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.\nII. Seyahat günlerine ait yevmiyelerin hesabında 24 saatten az devam eden seyahatler bir gün itibar olunur.\nIII. Resmî bir görevle memuriyet mahalli içinde bir yere gönderilenlere tam gündelik verilir.",
+   "soru": "Harcırah Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemeyen memur ve hizmetlilere, vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.\nII. Resmî bir görevle memuriyet mahalli içinde bir yere gönderilenlere tam gündelik verilir.\nIII. Seyahat günlerine ait yevmiyelerin hesabında 24 saatten az devam eden seyahatler bir gün itibar olunur.",
    "siklar": [
-    "Yalnız II",
-    "II ve III",
-    "I, II ve III",
     "I ve II",
+    "Yalnız II",
+    "Yalnız III",
+    "I ve III",
     "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "Harcırah Kanunu m.19",
    "aciklama": "Harcırah Kanunu, m.19: “Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemiyen memur ve hizmetlilere, bu sebeple vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.” … “… seyahat edilen vasıtanın hareket saatinden gidilecek yere muvasalat saatine kadar gelen her 24 saat için hesap olunur. Bu süreden az devam eden seyahatler bir gün itibar olunur.”",
-   "id": "TAHMIN-SB-MALIYE-42-69"
+   "id": "TAHMIN-SB-MALIYE-42-69",
+   "oncul_karisik": true
   },
   {
    "lawId": 86,

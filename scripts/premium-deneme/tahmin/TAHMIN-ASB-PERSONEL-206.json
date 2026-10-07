@@ -711,19 +711,20 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılıkla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri, (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.\nII. Jandarma ve Sahil Güvenlik Akademisinde Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyanlar hakkında da (c) bendi gereği sigortalı sayılanlara ilişkin hükümler uygulanır.\nIII. Jandarma ve Sahil Güvenlik Akademisini tamamlamadan ayrılanların bu okulda geçen eğitim süreleri sigortalılıklarından sayılır.",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılıkla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri, (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.\nII. Jandarma ve Sahil Güvenlik Akademisini tamamlamadan ayrılanların bu okulda geçen eğitim süreleri sigortalılıklarından sayılır.\nIII. Jandarma ve Sahil Güvenlik Akademisinde Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyanlar hakkında da (c) bendi gereği sigortalı sayılanlara ilişkin hükümler uygulanır.",
    "siklar": [
-    "II ve III",
-    "Yalnız II",
-    "I ve II",
     "Yalnız I",
+    "II ve III",
+    "I ve III",
+    "I ve II",
     "I, II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.4",
    "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.4: “Bu Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri bu maddenin birinci fıkrasının (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.” … “Jandarma ve Sahil Güvenlik Akademisi ile fakülte ve yüksekokullarda Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyan veya kendi hesabına okumakta iken Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okumaya devam edenler ile subay ve astsubay naspedilmek üzere temel askerlik eğitimine tabi tutulan adaylar, hakkında da uygulanır.”",
-   "id": "TAHMIN-ASB-PERSONEL-206-45"
+   "id": "TAHMIN-ASB-PERSONEL-206-45",
+   "oncul_karisik": true
   },
   {
    "lawId": 75,
@@ -807,19 +808,20 @@
   },
   {
    "lawId": 71,
-   "soru": "657 sayılı Devlet Memurları Kanunu'na göre yıllık izinlerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yıllık izinler, amirin uygun bulacağı zamanlarda toptan veya ihtiyaca göre kısım kısım kullanılabilir.\nII. Birbirini izleyen iki yılın izni bir arada verilebilir.\nIII. Cari yıl ile önceki iki yıl hariç, daha önceki yıllara ait kullanılmayan izin hakları düşer.",
+   "soru": "657 sayılı Devlet Memurları Kanunu'na göre yıllık izinlerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cari yıl ile önceki iki yıl hariç, daha önceki yıllara ait kullanılmayan izin hakları düşer.\nII. Yıllık izinler, amirin uygun bulacağı zamanlarda toptan veya ihtiyaca göre kısım kısım kullanılabilir.\nIII. Birbirini izleyen iki yılın izni bir arada verilebilir.",
    "siklar": [
-    "II ve III",
-    "Yalnız I",
     "I, II ve III",
     "I ve II",
-    "Yalnız II"
+    "Yalnız II",
+    "II ve III",
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "657 Sayılı Devlet Memurları Kanunu m.103",
    "aciklama": "657 Sayılı Devlet Memurları Kanunu, m.103: “Yıllık izinler, amirin uygun bulacağı zamanlarda, toptan veya ihtiyaca göre kısım kısım kullanılabilir. Birbirini izliyen iki yılın izni bir arada verilebilir.” … “Cari yıl ile bir önceki yıl hariç, önceki yıllara ait kullanılmayan izin hakları düşer.”",
-   "id": "TAHMIN-ASB-PERSONEL-206-51"
+   "id": "TAHMIN-ASB-PERSONEL-206-51",
+   "oncul_karisik": true
   },
   {
    "lawId": 71,
@@ -1049,17 +1051,18 @@
    "lawId": 108,
    "soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay başçavuşların kademeli başçavuşluğa (rütbe kademeliliğine) geçebilmesi için aranan şartlarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Rütbesine ait en az bir geçerli sicili bulunmak\nII. Başçavuşlukta almış olduğu sicil notlarının ortalamasının sicil tam notunun %60’ı ve daha fazlası olması\nIII. Nasbından itibaren başçavuşlukta beş yılını tamamlamış olmak",
    "siklar": [
-    "II ve III",
+    "Yalnız III",
     "I ve II",
-    "Yalnız II",
     "Yalnız I",
-    "I, II ve III"
+    "Yalnız II",
+    "II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Astsubay Sicil Yönetmeliği m.76",
    "aciklama": "Astsubay Sicil Yönetmeliği, m.76: “… c. Rütbesine ait en az bir geçerli sicili bulunmak, d. Bulundukları rütbe içerisinde kademeli başçavuşluk için, başçavuşlukta; kademeli kıdemli başçavuşluk için, kıdemli başçavuşlukta; ikinci kademeli kıdemli başçavuşluk için kademeli kıdemli başçavuşlukta almış oldukları sicil notlarının ortalaması, sicil tam notunun % 60’ı ve daha fazlası olmak.” … “Nasbından itibaren kademeli başçavuşluk için, başçavuşlukta; kademeli kıdemli başçavuşluk için, kıdemli başçavuşlukta; ikinci kademeli kıdemli başçavuşluk için kademeli kıdemli başçavuşlukta üç yılını tamamlamış olmak, c.”",
-   "id": "TAHMIN-ASB-PERSONEL-206-66"
+   "id": "TAHMIN-ASB-PERSONEL-206-66",
+   "oncul_karisik": true
   },
   {
    "lawId": 108,

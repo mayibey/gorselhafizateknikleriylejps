@@ -41,17 +41,18 @@
    "lawId": 1,
    "soru": "Türk Ceza Kanunu'na göre kamu görevinin terki veya yapılmaması suçu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hukuka aykırı olarak ve toplu biçimde görevini terk eden kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.\nII. Kamu görevlisi sayısının üçten fazla olmaması hâlinde cezaya hükmolunmaz.\nIII. Mesleki ve sosyal haklarla ilgili olarak hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakmada ceza verilmeyebilir.",
    "siklar": [
-    "II ve III",
+    "I ve III",
     "I, II ve III",
-    "I ve II",
     "Yalnız I",
+    "II ve III",
     "Yalnız II"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.” … “… verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-03"
+   "id": "TAHMIN-SB-HAVACILIK-213-03",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -263,19 +264,20 @@
   },
   {
    "lawId": 6,
-   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.\nIII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.",
+   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.\nIII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.",
    "siklar": [
-    "I ve III",
-    "I, II ve III",
     "Yalnız I",
+    "Yalnız III",
     "I ve II",
-    "II ve III"
+    "I ve III",
+    "Yalnız II"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
    "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “… kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.” … “Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-17"
+   "id": "TAHMIN-SB-HAVACILIK-213-17",
+   "oncul_karisik": true
   },
   {
    "lawId": 7,
@@ -311,19 +313,20 @@
   },
   {
    "lawId": 8,
-   "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.\nIII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.",
+   "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.\nII. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nIII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.",
    "siklar": [
-    "I, II ve III",
-    "Yalnız I",
-    "II ve III",
     "I ve III",
-    "I ve II"
+    "Yalnız II",
+    "I ve II",
+    "Yalnız I",
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
    "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Milli Güvenlik Kurulunun görüşünü de aldıktan sonra” … “… altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-20"
+   "id": "TAHMIN-SB-HAVACILIK-213-20",
+   "oncul_karisik": true
   },
   {
    "lawId": 9,
@@ -458,8 +461,8 @@
    "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.",
    "siklar": [
     "Yalnız II",
-    "Yalnız I",
     "I, II ve III",
+    "Yalnız I",
     "I ve III",
     "I ve II"
    ],
@@ -467,7 +470,8 @@
    "tip": "oncullu",
    "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.15",
    "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.15: “Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler: a) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.” … “Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-29"
+   "id": "TAHMIN-SB-HAVACILIK-213-29",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -567,35 +571,37 @@
   },
   {
    "lawId": 15,
-   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.\nIII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.",
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.\nIII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.",
    "siklar": [
-    "I ve II",
-    "II ve III",
+    "I ve III",
     "Yalnız II",
+    "I, II ve III",
     "Yalnız I",
-    "I, II ve III"
+    "Yalnız III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
    "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.” … “Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-36"
+   "id": "TAHMIN-SB-HAVACILIK-213-36",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
-   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Bakan onayı ile yürürlüğe konulur.\nIII. Her yıl gözden geçirilir.",
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Her yıl gözden geçirilir.\nII. Beş yıllık bir dönemi kapsar.\nIII. Bakan onayı ile yürürlüğe konulur.",
    "siklar": [
     "Yalnız II",
-    "I, II ve III",
-    "I ve II",
+    "Yalnız I",
     "II ve III",
-    "Yalnız I"
+    "I ve II",
+    "Yalnız III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “… beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.” … “Bu plan en az iki yılda bir gözden geçirilir.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-37"
+   "id": "TAHMIN-SB-HAVACILIK-213-37",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -937,17 +943,18 @@
    "lawId": 70,
    "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmet sürelerinin hesabı ile ilgili\nI. Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır.\nII. 23 yıl ve daha fazla uçuculuk hizmet süresi olanlara 23 üncü hizmet yılı karşılığında gösterilen oranda aylık tazminat ödenir.\nIII. Uçuculardan istekleri üzerine ayrılmaları kabul edilenlerin uçuştan ayrılma tarihi, uçuş kıymetlendirme kurulunun karar tasdik tarihidir.\nifadelerinden hangileri doğrudur?",
    "siklar": [
-    "I, II ve III",
+    "Yalnız II",
     "I ve II",
-    "Yalnız I",
     "II ve III",
-    "Yalnız II"
+    "I, II ve III",
+    "Yalnız III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.12",
    "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.12: “Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır.” … “… 23 yıl ve daha fazla uçuculuk, paraşütçülük, dalıcılık hizmet süresi olanlara 23 üncü hizmet yılı karşılığında gösterilen oranda aylık tazminat ödenir.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-59"
+   "id": "TAHMIN-SB-HAVACILIK-213-59",
+   "oncul_karisik": true
   },
   {
    "lawId": 70,
@@ -1223,19 +1230,20 @@
   },
   {
    "lawId": 104,
-   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre yetişmiş uçucular hakkında uygulanacak sağlık işlemleri ile ilgili\nI. Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.\nII. Harekât gibi zorunlu nedenlerle periyodik muayene geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.\nIII. Uçucular hakkında uçuşa elverişlilik kararları, istirahat kararları gibi bütün sağlık kurullarınca verilebilir.\nifadelerinden hangileri doğrudur?",
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre yetişmiş uçucular hakkında uygulanacak sağlık işlemleri ile ilgili\nI. Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.\nII. Uçucular hakkında uçuşa elverişlilik kararları, istirahat kararları gibi bütün sağlık kurullarınca verilebilir.\nIII. Harekât gibi zorunlu nedenlerle periyodik muayene geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.\nifadelerinden hangileri doğrudur?",
    "siklar": [
-    "I, II ve III",
     "I ve II",
-    "Yalnız II",
+    "I ve III",
+    "II ve III",
     "Yalnız I",
-    "II ve III"
+    "Yalnız III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.” … “Harekât gibi zorunlu nedenlerle periyodik muayene ve/veya uçuş fizyolojisi eğitimi geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.”",
-   "id": "TAHMIN-SB-HAVACILIK-213-77"
+   "id": "TAHMIN-SB-HAVACILIK-213-77",
+   "oncul_karisik": true
   },
   {
    "lawId": 104,

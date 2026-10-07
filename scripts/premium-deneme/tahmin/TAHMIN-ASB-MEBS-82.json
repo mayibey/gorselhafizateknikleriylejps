@@ -1097,9 +1097,9 @@
    "lawId": 102,
    "soru": "2019/12 sayılı Genelge'ye göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Sosyal medya üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmaz.\nII. Sosyal medya ve haberleşme uygulamalarında yerli uygulamaların kullanımı tercih edilir.\nIII. Gizlilik dereceli belgeler, şifrelenmek kaydıyla kişisel olarak kullanılan harici belleklerde bulundurulabilir.",
    "siklar": [
-    "Yalnız I",
-    "I, II ve III",
     "II ve III",
+    "I ve III",
+    "Yalnız I",
     "Yalnız II",
     "I ve II"
    ],
@@ -1107,7 +1107,8 @@
    "tip": "oncullu",
    "kaynak": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12) Tedbir 5",
    "aciklama": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12), Tedbir 5: “Sosyal medya üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır.” … “Sosyal medya ve haberleşme uygulamalarına ait yerli uygulamaların kullanımı tercih edilecektir.”",
-   "id": "TAHMIN-ASB-MEBS-82-69"
+   "id": "TAHMIN-ASB-MEBS-82-69",
+   "oncul_karisik": true
   },
   {
    "lawId": 103,

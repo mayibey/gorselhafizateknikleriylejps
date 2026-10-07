@@ -745,17 +745,18 @@
    "lawId": 91,
    "soru": "3194 sayılı İmar Kanunu'na göre yapı ruhsatının süresiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yapıya başlama müddeti ruhsat tarihinden itibaren iki yıldır.\nII. Yapıya başlanıp da başlama müddetiyle birlikte beş yıl içinde bitirilmeyen yapının ruhsatı hükümsüz sayılır.\nIII. Ruhsat yenilenmesi sırasında ayrıca harç alınır.",
    "siklar": [
-    "I, II ve III",
-    "I ve II",
     "Yalnız II",
-    "Yalnız I",
-    "II ve III"
+    "I ve II",
+    "II ve III",
+    "I ve III",
+    "I, II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "3194 Sayılı İmar Kanunu m.29",
    "aciklama": "3194 Sayılı İmar Kanunu, m.29: “Yapıya başlama müddeti ruhsat tarihinden itibaren iki yıldır.” … “… başlama müddetiyle birlikte beş yıl içinde bitirilmediği takdirde verilen ruhsat hükümsüz sayılır.”",
-   "id": "TAHMIN-ASB-ISTIHKAM-335-47"
+   "id": "TAHMIN-ASB-ISTIHKAM-335-47",
+   "oncul_karisik": true
   },
   {
    "lawId": 91,
@@ -1143,19 +1144,20 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene ve kabul komisyonlarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Komisyon, biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşur.\nII. Ara denetimi gerçekleştiren personel muayene ve kabul komisyonlarında görevlendirilebilir.\nIII. Muayene ve kabul komisyonunda görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulabilir.",
+   "soru": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene ve kabul komisyonlarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Komisyon, biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşur.\nII. Muayene ve kabul komisyonunda görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulabilir.\nIII. Ara denetimi gerçekleştiren personel muayene ve kabul komisyonlarında görevlendirilebilir.",
    "siklar": [
-    "II ve III",
-    "Yalnız II",
+    "Yalnız I",
     "I ve II",
-    "I, II ve III",
-    "Yalnız I"
+    "I ve III",
+    "Yalnız III",
+    "I, II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.6",
    "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.6: “Yetkili makam tarafından biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşan muayene ve kabul komisyonları kurulur.” … “Ara denetimi gerçekleştiren personel muayene kabul komisyonlarında görevlendirilebilir. Ancak, muayene ve kabul komisyonlarında görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulamaz.”",
-   "id": "TAHMIN-ASB-ISTIHKAM-335-72"
+   "id": "TAHMIN-ASB-ISTIHKAM-335-72",
+   "oncul_karisik": true
   },
   {
    "lawId": 99,

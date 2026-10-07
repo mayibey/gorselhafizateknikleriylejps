@@ -823,19 +823,20 @@
   },
   {
    "lawId": 118,
-   "soru": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kontrol, denetim veya inceleme sonucunda tespit edilen kamu zararından doğan alacağın tebliğinde, sorumlulara ve/veya ilgililere ödeme, itiraz veya sulh teklifinde bulunmak üzere otuz gün süre verilir.\nII. İhtiyati haciz kararının uygulanması, kararın verildiği tarihten itibaren otuz gün içinde icra dairesinden talep edilir.\nIII. Taksitlerden birinin vadesinde ödenmemesi hâlinde yalnızca ödenmeyen taksit muaccel olur.",
+   "soru": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. İhtiyati haciz kararının uygulanması, kararın verildiği tarihten itibaren otuz gün içinde icra dairesinden talep edilir.\nII. Kontrol, denetim veya inceleme sonucunda tespit edilen kamu zararından doğan alacağın tebliğinde, sorumlulara ve/veya ilgililere ödeme, itiraz veya sulh teklifinde bulunmak üzere otuz gün süre verilir.\nIII. Taksitlerden birinin vadesinde ödenmemesi hâlinde yalnızca ödenmeyen taksit muaccel olur.",
    "siklar": [
-    "I ve II",
-    "Yalnız II",
-    "II ve III",
+    "I ve III",
+    "Yalnız I",
+    "Yalnız III",
     "I, II ve III",
-    "Yalnız I"
+    "Yalnız II"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik m.10",
    "aciklama": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.10: “Tebliğde; borcun miktarı, sebebi, doğuş tarihi, faiz başlangıç tarihi, ödeme yeri belirtilir ve sorumlulara ve/veya ilgililere ödeme, itiraz veya sulh teklifinde bulunmak üzere otuz gün süre verilir.” … “İhtiyatî haciz kararının verildiği tarihten itibaren on gün içinde icra dairesinden kararın uygulanması talep edilir.”",
-   "id": "TAHMIN-ASB-IKMAL-777-52"
+   "id": "TAHMIN-ASB-IKMAL-777-52",
+   "oncul_karisik": true
   },
   {
    "lawId": 128,
@@ -1063,19 +1064,20 @@
   },
   {
    "lawId": 90,
-   "soru": "Kamulaştırma Kanunu'na göre mal sahibinin geri alma hakkıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kamulaştırma bedelinin kesinleşmesi tarihinden itibaren beş yıl içinde kamulaştırma amacına uygun hiçbir işlem veya tesisat yapılmaz ve taşınmaz mal olduğu gibi bırakılırsa, mal sahibi veya mirasçıları taşınmazı geri alabilir.\nII. Doğmasından itibaren bir yıl içinde kullanılmayan geri alma hakkı düşer.\nIII. Geri alma hâlinde mal sahibi, aldığı kamulaştırma bedelini faiz ödemeksizin iade eder.",
+   "soru": "Kamulaştırma Kanunu'na göre mal sahibinin geri alma hakkıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Geri alma hâlinde mal sahibi, aldığı kamulaştırma bedelini faiz ödemeksizin iade eder.\nII. Kamulaştırma bedelinin kesinleşmesi tarihinden itibaren beş yıl içinde kamulaştırma amacına uygun hiçbir işlem veya tesisat yapılmaz ve taşınmaz mal olduğu gibi bırakılırsa, mal sahibi veya mirasçıları taşınmazı geri alabilir.\nIII. Doğmasından itibaren bir yıl içinde kullanılmayan geri alma hakkı düşer.",
    "siklar": [
-    "Yalnız II",
-    "I ve II",
-    "Yalnız I",
     "I, II ve III",
-    "II ve III"
+    "II ve III",
+    "I ve III",
+    "Yalnız III",
+    "Yalnız I"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Kamulaştırma Kanunu m.23",
    "aciklama": "Kamulaştırma Kanunu, m.23: “… mal sahibi veya mirasçıları kamulaştırma bedelini aldıkları günden itibaren işleyecek kanuni faiziyle birlikte ödeyerek, taşınmaz malını geri alabilir.” … “Kamulaştırma bedelinin kesinleşmesi tarihinden itibaren beş yıl içinde, kamulaştırmayı yapan idarece veya 22 nci maddenin dördüncü fıkrası uyarınca devir veya tahsis yapılan idarece”",
-   "id": "TAHMIN-ASB-IKMAL-777-67"
+   "id": "TAHMIN-ASB-IKMAL-777-67",
+   "oncul_karisik": true
   },
   {
    "lawId": 94,
@@ -1145,17 +1147,18 @@
    "lawId": 122,
    "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre yaklaşık maliyetle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İhale onay belgesi düzenlenmeden önce ihale konusu malın KDV hariç olmak üzere yaklaşık maliyeti hesaplanır.\nII. Pazarlık usulü ile yapılan ihalede yaklaşık maliyet, son yazılı fiyat teklifleriyle birlikte açıklanır.\nIII. Yaklaşık maliyetin idarelerce hesaplanması esastır.",
    "siklar": [
-    "Yalnız I",
-    "Yalnız II",
-    "II ve III",
     "I ve II",
+    "Yalnız II",
+    "Yalnız I",
+    "II ve III",
     "I, II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.7",
    "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.7: “İdare tarafından, ihale onay belgesi düzenlenmeden önce, bu Yönetmelikte belirlenen esas ve usullere göre ihale konusu malın KDV hariç olmak üzere yaklaşık maliyeti hesaplanır ve dayanaklarıyla birlikte bir hesap cetvelinde gösterilir.” … “Pazarlık usulü ile yapılan ihalede ise yaklaşık maliyet, son yazılı fiyat teklifleriyle birlikte açıklanır.”",
-   "id": "TAHMIN-ASB-IKMAL-777-72"
+   "id": "TAHMIN-ASB-IKMAL-777-72",
+   "oncul_karisik": true
   },
   {
    "lawId": 122,

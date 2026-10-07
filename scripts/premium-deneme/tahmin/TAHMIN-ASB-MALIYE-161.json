@@ -921,17 +921,18 @@
    "lawId": 72,
    "soru": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.\nII. Rütbe terfi veya rütbe kıdemliliği onanan subay ve astsubaylar, onay metninde yazılı yükselme tarihini takip eden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.\nIII. Nasıplarından itibaren üç yılını tamamlayan ve liyakatleri üst makamlarca onaylanan albaylara kıdemli albay denir.",
    "siklar": [
-    "Yalnız II",
-    "II ve III",
     "Yalnız I",
+    "I ve III",
+    "Yalnız II",
     "I ve II",
-    "I, II ve III"
+    "II ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler) m.147",
    "aciklama": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu (Mali Hükümler), m.147: “Subay ve astsubaylar kademe ilerlemesinde onay metninde yazılı tarihi takip eden aybaşından itibaren kademe maaşına müstahak olurlar.” … “onay metninde yazılı yükselme tarihini takibeden aybaşından itibaren yeni rütbe veya kıdemliliğin birinci kademe aylığına hak kazanırlar.”",
-   "id": "TAHMIN-ASB-MALIYE-161-58"
+   "id": "TAHMIN-ASB-MALIYE-161-58",
+   "oncul_karisik": true
   },
   {
    "lawId": 72,
@@ -1015,19 +1016,20 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre sağlık hizmeti sunucularıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sağlık hizmeti sunucuları birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.\nII. Aile hekimleri birinci basamak hizmet sunucuları içinde yer alır.\nIII. Basamaklar ve sağlık hizmet sunucuları arasındaki sevk zinciri Hazine ve Maliye Bakanlığı tarafından belirlenir.",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre sağlık hizmeti sunucularıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sağlık hizmeti sunucuları birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.\nII. Basamaklar ve sağlık hizmet sunucuları arasındaki sevk zinciri Hazine ve Maliye Bakanlığı tarafından belirlenir.\nIII. Aile hekimleri birinci basamak hizmet sunucuları içinde yer alır.",
    "siklar": [
+    "I ve II",
     "Yalnız I",
     "I, II ve III",
-    "Yalnız II",
-    "I ve II",
+    "I ve III",
     "II ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.70",
    "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.70: “… sağlık hizmeti sunucuları birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.” … “Aile hekimleri birinci basamak hizmet sunucuları içinde yer alır.”",
-   "id": "TAHMIN-ASB-MALIYE-161-64"
+   "id": "TAHMIN-ASB-MALIYE-161-64",
+   "oncul_karisik": true
   },
   {
    "lawId": 77,
@@ -1095,19 +1097,20 @@
   },
   {
    "lawId": 86,
-   "soru": "Harcırah Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemeyen memur ve hizmetlilere, vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.\nII. Seyahat günlerine ait yevmiyelerin hesabında 24 saatten az devam eden seyahatler bir gün itibar olunur.\nIII. Resmî bir görevle memuriyet mahalli içinde bir yere gönderilenlere tam gündelik verilir.",
+   "soru": "Harcırah Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Resmî bir görevle memuriyet mahalli içinde bir yere gönderilenlere tam gündelik verilir.\nII. Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemeyen memur ve hizmetlilere, vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.\nIII. Seyahat günlerine ait yevmiyelerin hesabında 24 saatten az devam eden seyahatler bir gün itibar olunur.",
    "siklar": [
-    "II ve III",
-    "Yalnız I",
-    "I ve II",
     "I, II ve III",
-    "Yalnız II"
+    "I ve II",
+    "II ve III",
+    "Yalnız II",
+    "Yalnız III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "Harcırah Kanunu m.19",
    "aciklama": "Harcırah Kanunu, m.19: “Muvakkat vazife mahallinde hastalanmaları sebebiyle vazife ifa edemiyen memur ve hizmetlilere, bu sebeple vazife göremedikleri günlerin en çok yedi günü için yevmiye verilebilir.” … “… seyahat edilen vasıtanın hareket saatinden gidilecek yere muvasalat saatine kadar gelen her 24 saat için hesap olunur. Bu süreden az devam eden seyahatler bir gün itibar olunur.”",
-   "id": "TAHMIN-ASB-MALIYE-161-69"
+   "id": "TAHMIN-ASB-MALIYE-161-69",
+   "oncul_karisik": true
   },
   {
    "lawId": 86,

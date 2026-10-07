@@ -647,19 +647,20 @@
   },
   {
    "lawId": 96,
-   "soru": "Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli sağlık astsubayları, gerekli eğitimleri başarıyla tamamlamak kaydıyla acil tıbbi yardım ve bakım ile sınırlı kalmak üzere hastaya müdahale edebilir.\nII. Cerrahi sağireye ait ameliyat ile sünneti her tabip yapabilir.\nIII. Muharip ve operasyonel unsurlardan görevlendirilip ilgili eğitimi tamamlayanlar, sağlık personeli bulunsa dahi her durumda acil tıbbi müdahale yapmaya yetkilidir.",
+   "soru": "Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli sağlık astsubayları, gerekli eğitimleri başarıyla tamamlamak kaydıyla acil tıbbi yardım ve bakım ile sınırlı kalmak üzere hastaya müdahale edebilir.\nII. Muharip ve operasyonel unsurlardan görevlendirilip ilgili eğitimi tamamlayanlar, sağlık personeli bulunsa dahi her durumda acil tıbbi müdahale yapmaya yetkilidir.\nIII. Cerrahi sağireye ait ameliyat ile sünneti her tabip yapabilir.",
    "siklar": [
+    "I ve II",
     "II ve III",
-    "Yalnız I",
-    "Yalnız II",
     "I, II ve III",
-    "I ve II"
+    "Yalnız II",
+    "I ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun m.3",
    "aciklama": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, m.3: “Acil tıbbi yardım ve bakım ile sınırlı kalmak ve Sağlık Bakanlığınca çıkarılacak yönetmeliğinde belirtilmek kaydıyla acil tıp teknikerleri ile verilecek gerekli eğitimleri başarıyla tamamlamak kaydıyla Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığında görevli sağlık astsubayları (…)2 hastaya müdahale edebilir, bu hususta lazım gelen iş ve işlemleri yapabilirler.” … “Cerrahii sağireye ait ameliyat ile sünneti her tabip yapabilir.”",
-   "id": "TAHMIN-ASB-SAGLIK-45-41"
+   "id": "TAHMIN-ASB-SAGLIK-45-41",
+   "oncul_karisik": true
   },
   {
    "lawId": 96,
@@ -809,17 +810,18 @@
    "lawId": 95,
    "soru": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu'na göre gıda ve yem işletmelerinin onay ve kayıt işlemleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Gıda ve yem işletmecisi, faaliyetlerinin tamamını veya bir kısmını durdurduğunda bu durumu bir yıl içinde Bakanlığa bildirmek zorundadır.\nII. Onaya tâbi işletmeler için faaliyete geçmeden önce Bakanlıktan onay alınması zorunludur.\nIII. Askıya alınan onay, belirlenen eksikliklerin askıya alma tarihinden itibaren bir yıl içinde karşılanmaması durumunda Bakanlıkça iptal edilir.",
    "siklar": [
-    "Yalnız II",
-    "I ve II",
+    "I ve III",
+    "Yalnız III",
     "II ve III",
-    "Yalnız I",
-    "I, II ve III"
+    "I, II ve III",
+    "Yalnız I"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu m.30",
    "aciklama": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu, m.30: “Onaya tâbi işletmeler için, faaliyete geçmeden önce Bakanlıktan onay alınması zorunludur.” … “Bu eksikliklerin askıya alma tarihinden itibaren bir yıl içerisinde karşılanmaması durumunda onay Bakanlıkça iptal edilir.”",
-   "id": "TAHMIN-ASB-SAGLIK-45-51"
+   "id": "TAHMIN-ASB-SAGLIK-45-51",
+   "oncul_karisik": true
   },
   {
    "lawId": 95,
@@ -985,17 +987,18 @@
    "lawId": 134,
    "soru": "İlkyardım Yönetmeliği'ne göre ilkyardım eğitim merkezlerinin çalışma esaslarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Mesul müdür, müdürlük yaptığı merkezde eğitmenlik de yapabilir.\nII. İlkyardım eğitimi programlarında katılımcı sayısı en fazla 21 kişidir.\nIII. Merkezler, eğitim programlarında her 7 katılımcıya bir eğitmen olacak şekilde çalışır.",
    "siklar": [
+    "Yalnız II",
     "Yalnız I",
-    "II ve III",
     "I, II ve III",
-    "I ve II",
-    "Yalnız II"
+    "Yalnız III",
+    "II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "İlkyardım Yönetmeliği m.15",
    "aciklama": "İlkyardım Yönetmeliği, m.15: “Mesul müdür, müdürlük yaptığı merkezde eğitmenlik de yapabilir.” … “İlkyardım eğitimi, ilkyardım eğitici eğitimi ve ilkyardım eğitici eğitmeni eğitim programlarında katılımcı sayısı en fazla 21 kişidir.”",
-   "id": "TAHMIN-ASB-SAGLIK-45-62"
+   "id": "TAHMIN-ASB-SAGLIK-45-62",
+   "oncul_karisik": true
   },
   {
    "lawId": 131,

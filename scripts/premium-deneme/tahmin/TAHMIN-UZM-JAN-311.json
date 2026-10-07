@@ -375,19 +375,20 @@
   },
   {
    "lawId": 12,
-   "soru": "7068 sayılı Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Aynı fiil nedeniyle birden fazla disiplin cezası verilemez.\nII. Bir fiilin birden fazla disiplinsizlik teşkil etmesi hâlinde ağır olan disiplin cezası verilir.\nIII. Bir fiilin başka kanunlar kapsamında idari yaptırıma bağlanmış olması, aynı fiile disiplin cezası verilmesine engeldir.",
+   "soru": "7068 sayılı Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Aynı fiil nedeniyle birden fazla disiplin cezası verilemez.\nII. Bir fiilin başka kanunlar kapsamında idari yaptırıma bağlanmış olması, aynı fiile disiplin cezası verilmesine engeldir.\nIII. Bir fiilin birden fazla disiplinsizlik teşkil etmesi hâlinde ağır olan disiplin cezası verilir.",
    "siklar": [
-    "I, II ve III",
-    "Yalnız II",
     "II ve III",
+    "Yalnız II",
     "Yalnız I",
-    "I ve II"
+    "Yalnız III",
+    "I ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.4",
    "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.4: “Aynı fiil nedeniyle bu Kanunda yazılı disiplin cezalarından birden fazlası verilemez.” … “Bir fiilin diğer kanunlar kapsamında idari yaptırıma bağlanmış olması, aynı fiile bu Kanun kapsamında disiplin cezası verilmesine engel teşkil etmez.”",
-   "id": "TAHMIN-UZM-JAN-311-24"
+   "id": "TAHMIN-UZM-JAN-311-24",
+   "oncul_karisik": true
   },
   {
    "lawId": 14,
@@ -1175,19 +1176,20 @@
   },
   {
    "lawId": 58,
-   "soru": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre nezarethane işlemleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Aynı suçla ilgisi olanlar ve birbirine hasım olanlar bir araya konulmaz.\nII. Zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz.\nIII. Çocuklar, yer yetersizliğinde yetişkinlerle birlikte tutulabilir.",
+   "soru": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre nezarethane işlemleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Çocuklar, yer yetersizliğinde yetişkinlerle birlikte tutulabilir.\nII. Aynı suçla ilgisi olanlar ve birbirine hasım olanlar bir araya konulmaz.\nIII. Zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz.",
    "siklar": [
-    "Yalnız I",
     "I ve II",
     "II ve III",
     "I, II ve III",
-    "Yalnız II"
+    "I ve III",
+    "Yalnız III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği m.11",
    "aciklama": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği, m.11: “Aynı suçla ilgisi olanlar, birbirine hasım olanlar, erkek ve kadınlar bir araya konulmazlar, çocuklar yetişkinlerden ayrı tutulurlar.” … “Nezarethanede zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz.”",
-   "id": "TAHMIN-UZM-JAN-311-74"
+   "id": "TAHMIN-UZM-JAN-311-74",
+   "oncul_karisik": true
   },
   {
    "lawId": 58,

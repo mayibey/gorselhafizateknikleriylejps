@@ -553,17 +553,18 @@
    "lawId": 16,
    "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmeleri sona eren sözleşmeli subay ve astsubayların sağlık hizmetlerinden yararlanmasıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kendi kusurları olmaksızın idare tarafından sözleşmeleri yenilenmeyenlere, hizmet edilen süre kadar ve en çok on yılı geçmemek üzere muayene ve tedavi hizmetleri ücretsiz verilmeye devam edilir.\nII. Sözleşme süresi sonunda kendi istekleriyle sözleşmeleri yenilenmeyenlere, hizmet edilen sürenin yarısı kadar ve en çok beş yılı geçmemek üzere muayene ve tedavi hizmetleri ücretsiz verilmeye devam edilir.\nIII. Sözleşmeleri sağlık nedeniyle sona erenlerden tedavisine devam edilenlere, yirmi dört ayı geçmemek üzere görevdeki emsallerinin net maaşlarının tamamı kadar sağlık yardımı ödenir.",
    "siklar": [
-    "II ve III",
     "Yalnız II",
+    "Yalnız III",
     "I, II ve III",
-    "Yalnız I",
+    "I ve III",
     "I ve II"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.22",
    "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.22: “Türk Silahlı Kuvvetlerinde sözleşmeli subay ve sözleşmeli astsubay olarak hizmet edilen süre kadar ve en çok on yılı” … “Türk Silahlı Kuvvetlerinde sözleşmeli subay ve sözleşmeli astsubay olarak hizmet edilen sürenin yarısı kadar ve en çok beş yılı geçmemek üzere muayene ve tedavi hizmetleri askerî hastanelerde, asker hastanelerinin bulunmadığı garnizonlarda ise garnizon komutanlıklarından sevk alınmak şartıyla kamu sağlık kuruluşlarında, ücretsiz olarak verilmeye devam edilir.”",
-   "id": "TAHMIN2-ASB-JAN-73-35"
+   "id": "TAHMIN2-ASB-JAN-73-35",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -599,19 +600,20 @@
   },
   {
    "lawId": 17,
-   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre tutuklu ve hükümlülerin sevk ve nakli ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İştirak hâlinde suç işlemiş olan kadın ve erkek tutuklular birlikte sevk edilebilir.\nII. Sevk edilen hükümlünün kadın olması durumunda kadın ceza infaz koruma görevlisi verilir.\nIII. Sevk ve nakil sırasında ölen hükümlünün durumu, devriye komutanınca doğrudan il valiliğine bildirilir.",
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre tutuklu ve hükümlülerin sevk ve nakli ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İştirak hâlinde suç işlemiş olan kadın ve erkek tutuklular birlikte sevk edilebilir.\nII. Sevk ve nakil sırasında ölen hükümlünün durumu, devriye komutanınca doğrudan il valiliğine bildirilir.\nIII. Sevk edilen hükümlünün kadın olması durumunda kadın ceza infaz koruma görevlisi verilir.",
    "siklar": [
     "Yalnız II",
+    "I ve III",
     "I ve II",
-    "I, II ve III",
     "Yalnız I",
-    "II ve III"
+    "Yalnız III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.29",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.29: “İştirak halinde suç işlemiş olanlar ile kanunen önemli ilişki sayılacak derecede yakınlığı olanlar dışında; erkek ve kadın tutuklu ya da hükümlüler, birlikte sevk edilemez.” … “Sevk edilen tutuklu ve hükümlünün kadın olması durumunda, kadın ceza infaz koruma görevlisi verilir.”",
-   "id": "TAHMIN2-ASB-JAN-73-38"
+   "id": "TAHMIN2-ASB-JAN-73-38",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -889,17 +891,18 @@
    "lawId": 36,
    "soru": "Çocuk Koruma Kanunu'na göre çocukların yetişkinlerle birlikte suç işlemesi hâli ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Davaların birleştirilmesi hâlinde birleştirilen davalar çocuk mahkemesinde görülür.\nII. Soruşturma ve kovuşturma ayrı yürütülür.\nIII. Mahkeme lüzum gördüğü takdirde çocuk hakkındaki yargılamayı genel mahkemedeki davanın sonucuna kadar bekletebilir.",
    "siklar": [
+    "Yalnız III",
     "I ve II",
-    "Yalnız I",
-    "Yalnız II",
+    "I, II ve III",
     "II ve III",
-    "I, II ve III"
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5395 sayılı Çocuk Koruma Kanunu m.17",
    "aciklama": "5395 sayılı Çocuk Koruma Kanunu, m.17: “Çocukların yetişkinlerle birlikte suç işlemesi hâlinde, soruşturma ve kovuşturma ayrı yürütülür.” … “… mahkeme lüzum gördüğü takdirde çocuk hakkındaki yargılamayı genel mahkemedeki davanın sonucuna kadar bekletebilir.”",
-   "id": "TAHMIN2-ASB-JAN-73-56"
+   "id": "TAHMIN2-ASB-JAN-73-56",
+   "oncul_karisik": true
   },
   {
    "lawId": 37,
@@ -1210,8 +1213,8 @@
    "soru": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre gözaltına alınan kişinin sağlık kontrolü ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hekim raporu üç nüsha hâlinde düzenlenir.\nII. Hekim, kişisel güvenlik endişesini ileri sürerek muayenenin kolluk görevlisinin gözetiminde yapılmasını isteyebilir.\nIII. Gözaltına alınan kişinin ifadesini alan kolluk görevlisinin, bu kişiyi tıbbi muayeneye de bizzat götürmesi zorunludur.",
    "siklar": [
     "I ve II",
+    "Yalnız III",
     "Yalnız II",
-    "Yalnız I",
     "I, II ve III",
     "II ve III"
    ],
@@ -1219,7 +1222,8 @@
    "tip": "oncullu",
    "kaynak": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği m.9",
    "aciklama": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği, m.9: “Hekim raporu üç nüsha hâlinde düzenlenir.” … “… hekim kişisel güvenlik endişesini ileri sürerek muayenenin kolluk görevlisinin gözetiminde yapılmasını isteyebilir.”",
-   "id": "TAHMIN2-ASB-JAN-73-76"
+   "id": "TAHMIN2-ASB-JAN-73-76",
+   "oncul_karisik": true
   },
   {
    "lawId": 59,
@@ -1241,17 +1245,18 @@
    "lawId": 62,
    "soru": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik'e göre umuma açık istirahat ve eğlence yerlerinin açılması ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İl özel idaresi ve belediyeler, ruhsatı vermeden önce kolluk kuvvetinin görüşünü alır.\nII. Yetkili kolluk kuvveti, işyeri hakkındaki görüşünü mülki idare amiri vasıtasıyla yedi gün içinde bildirir.\nIII. Açılma başvuruları yetkili idareler tarafından bir ay içinde sonuçlandırılır.",
    "siklar": [
-    "I ve II",
-    "Yalnız I",
+    "Yalnız III",
+    "I ve III",
     "Yalnız II",
     "I, II ve III",
-    "II ve III"
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik m.32",
    "aciklama": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik, m.32: “İl özel idaresi ve belediyeler, umuma açık istirahat ve eğlence yeri ruhsatını vermeden önce kolluk kuvvetinin görüşünü alır.” … “… işyeri hakkındaki görüşünü mülki idare amiri vasıtasıyla yedi gün içinde bildirir.”",
-   "id": "TAHMIN2-ASB-JAN-73-78"
+   "id": "TAHMIN2-ASB-JAN-73-78",
+   "oncul_karisik": true
   },
   {
    "lawId": 64,

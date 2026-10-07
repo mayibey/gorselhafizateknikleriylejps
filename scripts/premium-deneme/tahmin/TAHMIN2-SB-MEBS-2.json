@@ -55,19 +55,20 @@
   },
   {
    "lawId": 1,
-   "soru": "Türk Ceza Kanunu'na göre zimmet ve irtikap suçlarında denetim görevi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.\nII. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.\nIII. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.",
+   "soru": "Türk Ceza Kanunu'na göre zimmet ve irtikap suçlarında denetim görevi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.\nII. Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.\nIII. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.",
    "siklar": [
+    "Yalnız III",
+    "I ve III",
     "II ve III",
     "Yalnız II",
-    "I ve II",
-    "Yalnız I",
     "I, II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.251",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.251: “Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.” … “Denetim görevini ihmal ederek, zimmet veya irtikap suçunun işlenmesine imkan sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.”",
-   "id": "TAHMIN2-SB-MEBS-2-04"
+   "id": "TAHMIN2-SB-MEBS-2-04",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -169,17 +170,18 @@
    "lawId": 3,
    "soru": "Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangileri, özel nitelikli kişisel verilerin işlenmesine imkân veren hâller arasında sayılmıştır?\nI. İlgili kişinin açık rızasının olması\nII. Kanunlarda açıkça öngörülmesi\nIII. İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaatleri için zorunlu olması",
    "siklar": [
-    "I, II ve III",
     "Yalnız II",
-    "Yalnız I",
+    "I, II ve III",
+    "Yalnız III",
     "I ve II",
-    "II ve III"
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.6",
    "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.6: “Özel nitelikli kişisel verilerin işlenmesi yasaktır. Ancak bu verilerin işlenmesi” … “İlgili kişinin açık rızasının olması, b) Kanunlarda açıkça öngörülmesi, c) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin, kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması”",
-   "id": "TAHMIN2-SB-MEBS-2-11"
+   "id": "TAHMIN2-SB-MEBS-2-11",
+   "oncul_karisik": true
   },
   {
    "lawId": 4,
@@ -375,19 +377,20 @@
   },
   {
    "lawId": 12,
-   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin amirliği yetkisi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Disiplin amirliği yetkisi devredilemez.\nII. Disiplin amirleri, boşanmış olsalar dahi eşleri olan personel hakkında disiplin amirliği sıfatından doğan yetkilerini kullanamaz.\nIII. Disiplin amiri olarak tayin edilen unvana ait görevi vekâleten yürütenler, disiplin amirlerine tanınan yetkileri kullanamaz.",
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin amirliği yetkisi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Disiplin amirliği yetkisi devredilemez.\nII. Disiplin amiri olarak tayin edilen unvana ait görevi vekâleten yürütenler, disiplin amirlerine tanınan yetkileri kullanamaz.\nIII. Disiplin amirleri, boşanmış olsalar dahi eşleri olan personel hakkında disiplin amirliği sıfatından doğan yetkilerini kullanamaz.",
    "siklar": [
-    "I, II ve III",
-    "I ve II",
+    "Yalnız II",
+    "I ve III",
     "II ve III",
-    "Yalnız I",
-    "Yalnız II"
+    "Yalnız III",
+    "I, II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.15",
    "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.15: “Bu hallerde, disiplin amirliği yetkisi, üst konumdaki disiplin amiri tarafından kullanılır. (4) Disiplin amirliği yetkisi devredilemez.” … “Disiplin amirleri boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları olan personel hakkında, bu sıfatlarından doğan yetkilerini kullanamazlar.”",
-   "id": "TAHMIN2-SB-MEBS-2-24"
+   "id": "TAHMIN2-SB-MEBS-2-24",
+   "oncul_karisik": true
   },
   {
    "lawId": 12,
@@ -871,19 +874,20 @@
   },
   {
    "lawId": 97,
-   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre işletmecilerin hisse devirleri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yüzde on ve üzeri hisse devir, edinim ve hareketleri işlemlerinden önce Kurumdan izin alınması zorunludur.\nII. Yüzde ona kadar olan hisse devri, edinimi ve hareketleri hâlinde Kurum en geç bir ay içerisinde bilgilendirilir.\nIII. Kontrol unsurunun el değiştirmesine yol açan hisse devirlerinde, devirden sonra Kuruma bildirimde bulunulması yeterlidir.",
+   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre işletmecilerin hisse devirleri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kontrol unsurunun el değiştirmesine yol açan hisse devirlerinde, devirden sonra Kuruma bildirimde bulunulması yeterlidir.\nII. Yüzde on ve üzeri hisse devir, edinim ve hareketleri işlemlerinden önce Kurumdan izin alınması zorunludur.\nIII. Yüzde ona kadar olan hisse devri, edinimi ve hareketleri hâlinde Kurum en geç bir ay içerisinde bilgilendirilir.",
    "siklar": [
-    "II ve III",
     "I, II ve III",
-    "Yalnız I",
+    "I ve III",
     "Yalnız II",
-    "I ve II"
+    "Yalnız I",
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği m.19",
    "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, m.19: “İşletmeciler, yüzde on ve üzeri hisse devir, edinim ve hareketleri işlemlerinden önce Kurumdan izin almak zorundadır. İşletmeciler, yüzde ona kadar olan hisse devri, edinimi ve hareketleri halinde Kurumu en geç bir ay içerisinde bilgilendirir.” … “Kontrol unsurunun el değiştirmesine yol açan her nevi hisse devrinden önce Kurumdan izin alınması zorunludur.”",
-   "id": "TAHMIN2-SB-MEBS-2-55"
+   "id": "TAHMIN2-SB-MEBS-2-55",
+   "oncul_karisik": true
   },
   {
    "lawId": 97,
@@ -986,16 +990,17 @@
    "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre mevzuatları gereği yüklenicilere verilecek avanslarda kanıtlayıcı belge olarak bağlanacak belgeler arasında aşağıdakilerden hangileri yer alır?\nI. Harcama talimatı, ihale mevzuatına göre yapılacak alımlarda onay belgesi\nII. Avans teminatına ilişkin alındının onaylı örneği\nIII. Muayene ve kabul komisyonu tutanağı",
    "siklar": [
     "I ve II",
-    "I, II ve III",
-    "Yalnız I",
+    "I ve III",
     "II ve III",
-    "Yalnız II"
+    "I, II ve III",
+    "Yalnız III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.5",
    "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.5: “Mevzuatları gereği yüklenicilere verilecek avanslarda; -Harcama talimatı, ihale mevzuatına göre yapılacak alımlarda onay belgesi, -Avans teminatına ilişkin alındının onaylı örneği, -Gereken hallerde Bakanlığın uygun görüş yazısı veya üst yöneticinin kararı, Genel Yönetim Muhasebe Yönetmeliği eki 2 örnek numaralı Muhasebe İşlem Fişine kanıtlayıcı belge olarak bağlanır.”",
-   "id": "TAHMIN2-SB-MEBS-2-62"
+   "id": "TAHMIN2-SB-MEBS-2-62",
+   "oncul_karisik": true
   },
   {
    "lawId": 99,
@@ -1223,19 +1228,20 @@
   },
   {
    "lawId": 103,
-   "soru": "Bilgi ve İletişim Güvenliği Rehberi'nde yer alan temel prensiplerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Saldırı Yüzeyinin Azaltılması: Saldırıya maruz kalınabilecek alanların en aza indirilmesi sağlanmalıdır.\nII. Yerli ve Milli Ürünlerin Tercih Edilmesi: İhtiyaç duyulan güvenlik gereksinimlerinin karşılanması durumunda yerli ve milli ürünler tercih edilmelidir.\nIII. Mahremiyet Temelli Tasarım: Kişisel veri güvenliği, tasarım tamamlandıktan sonra kullanım aşamasında dikkate alınmalıdır.",
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'nde yer alan temel prensiplerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Saldırı Yüzeyinin Azaltılması: Saldırıya maruz kalınabilecek alanların en aza indirilmesi sağlanmalıdır.\nII. Mahremiyet Temelli Tasarım: Kişisel veri güvenliği, tasarım tamamlandıktan sonra kullanım aşamasında dikkate alınmalıdır.\nIII. Yerli ve Milli Ürünlerin Tercih Edilmesi: İhtiyaç duyulan güvenlik gereksinimlerinin karşılanması durumunda yerli ve milli ürünler tercih edilmelidir.",
    "siklar": [
+    "II ve III",
+    "I ve III",
     "Yalnız I",
     "I ve II",
-    "I, II ve III",
-    "II ve III",
-    "Yalnız II"
+    "Yalnız III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Bilgi ve İletişim Güvenliği Rehberi Bölüm 2.1.4",
    "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, Bölüm 2.1.4: “Saldırı Yüzeyinin Azaltılması: Saldırıya maruz kalınabilecek alanların en aza indirilmesi sağlanmalıdır.” … “Yerli ve Milli Ürünlerin Tercih Edilmesi: İhtiyaç duyulan güvenlik gereksinimlerinin karşılanması durumunda yerli ve milli ürünler tercih edilmelidir.”",
-   "id": "TAHMIN2-SB-MEBS-2-77"
+   "id": "TAHMIN2-SB-MEBS-2-77",
+   "oncul_karisik": true
   },
   {
    "lawId": 142,

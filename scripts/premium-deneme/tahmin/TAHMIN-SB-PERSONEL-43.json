@@ -41,17 +41,18 @@
    "lawId": 1,
    "soru": "Türk Ceza Kanunu'na göre kamu görevinin terki veya yapılmaması suçu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hukuka aykırı olarak ve toplu biçimde görevini terk eden kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.\nII. Kamu görevlisi sayısının üçten fazla olmaması hâlinde cezaya hükmolunmaz.\nIII. Mesleki ve sosyal haklarla ilgili olarak hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakmada ceza verilmeyebilir.",
    "siklar": [
-    "I ve II",
-    "Yalnız II",
+    "I ve III",
     "Yalnız I",
     "II ve III",
+    "Yalnız II",
     "I, II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.” … “… verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.”",
-   "id": "TAHMIN-SB-PERSONEL-43-03"
+   "id": "TAHMIN-SB-PERSONEL-43-03",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -263,19 +264,20 @@
   },
   {
    "lawId": 6,
-   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.\nIII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.",
+   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.\nII. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nIII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.",
    "siklar": [
-    "I ve II",
-    "I ve III",
     "II ve III",
+    "I ve II",
     "I, II ve III",
-    "Yalnız I"
+    "Yalnız I",
+    "I ve III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
    "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “… kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.” … “Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.”",
-   "id": "TAHMIN-SB-PERSONEL-43-17"
+   "id": "TAHMIN-SB-PERSONEL-43-17",
+   "oncul_karisik": true
   },
   {
    "lawId": 7,
@@ -313,17 +315,18 @@
    "lawId": 8,
    "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.\nIII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.",
    "siklar": [
-    "Yalnız I",
+    "I, II ve III",
     "I ve II",
+    "Yalnız II",
     "I ve III",
-    "II ve III",
-    "I, II ve III"
+    "II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
    "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Milli Güvenlik Kurulunun görüşünü de aldıktan sonra” … “… altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
-   "id": "TAHMIN-SB-PERSONEL-43-20"
+   "id": "TAHMIN-SB-PERSONEL-43-20",
+   "oncul_karisik": true
   },
   {
    "lawId": 9,
@@ -455,19 +458,20 @@
   },
   {
    "lawId": 13,
-   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.",
+   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.\nIII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.",
    "siklar": [
+    "II ve III",
     "I, II ve III",
+    "Yalnız III",
     "Yalnız I",
-    "Yalnız II",
-    "I ve III",
-    "I ve II"
+    "I ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.15",
    "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.15: “Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler: a) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.” … “Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.”",
-   "id": "TAHMIN-SB-PERSONEL-43-29"
+   "id": "TAHMIN-SB-PERSONEL-43-29",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -567,35 +571,37 @@
   },
   {
    "lawId": 15,
-   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.\nIII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.",
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.\nII. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nIII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.",
    "siklar": [
-    "I ve II",
-    "Yalnız I",
     "II ve III",
+    "Yalnız III",
+    "Yalnız I",
     "Yalnız II",
-    "I, II ve III"
+    "I ve III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
    "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.” … “Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.”",
-   "id": "TAHMIN-SB-PERSONEL-43-36"
+   "id": "TAHMIN-SB-PERSONEL-43-36",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
    "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Bakan onayı ile yürürlüğe konulur.\nIII. Her yıl gözden geçirilir.",
    "siklar": [
-    "Yalnız I",
+    "Yalnız III",
     "I ve II",
+    "II ve III",
     "Yalnız II",
-    "I, II ve III",
-    "II ve III"
+    "Yalnız I"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “… beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.” … “Bu plan en az iki yılda bir gözden geçirilir.”",
-   "id": "TAHMIN-SB-PERSONEL-43-37"
+   "id": "TAHMIN-SB-PERSONEL-43-37",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -711,19 +717,20 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılıkla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri, (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.\nII. Jandarma ve Sahil Güvenlik Akademisinde Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyanlar hakkında da (c) bendi gereği sigortalı sayılanlara ilişkin hükümler uygulanır.\nIII. Jandarma ve Sahil Güvenlik Akademisini tamamlamadan ayrılanların bu okulda geçen eğitim süreleri sigortalılıklarından sayılır.",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre 4 üncü maddenin birinci fıkrasının (c) bendi kapsamındaki sigortalılıkla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri, (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.\nII. Jandarma ve Sahil Güvenlik Akademisini tamamlamadan ayrılanların bu okulda geçen eğitim süreleri sigortalılıklarından sayılır.\nIII. Jandarma ve Sahil Güvenlik Akademisinde Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyanlar hakkında da (c) bendi gereği sigortalı sayılanlara ilişkin hükümler uygulanır.",
    "siklar": [
     "Yalnız I",
-    "I, II ve III",
     "II ve III",
     "I ve II",
-    "Yalnız II"
+    "I ve III",
+    "I, II ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.4",
    "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.4: “Bu Kanunun kısa vadeli sigorta kollarına ilişkin hükümleri bu maddenin birinci fıkrasının (c) bendi kapsamında sigortalı sayılanlara bu kapsamda oldukları sürece uygulanmaz.” … “Jandarma ve Sahil Güvenlik Akademisi ile fakülte ve yüksekokullarda Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okuyan veya kendi hesabına okumakta iken Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı nam ve hesabına okumaya devam edenler ile subay ve astsubay naspedilmek üzere temel askerlik eğitimine tabi tutulan adaylar, hakkında da uygulanır.”",
-   "id": "TAHMIN-SB-PERSONEL-43-45"
+   "id": "TAHMIN-SB-PERSONEL-43-45",
+   "oncul_karisik": true
   },
   {
    "lawId": 75,
@@ -807,19 +814,20 @@
   },
   {
    "lawId": 71,
-   "soru": "657 sayılı Devlet Memurları Kanunu'na göre yıllık izinlerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yıllık izinler, amirin uygun bulacağı zamanlarda toptan veya ihtiyaca göre kısım kısım kullanılabilir.\nII. Birbirini izleyen iki yılın izni bir arada verilebilir.\nIII. Cari yıl ile önceki iki yıl hariç, daha önceki yıllara ait kullanılmayan izin hakları düşer.",
+   "soru": "657 sayılı Devlet Memurları Kanunu'na göre yıllık izinlerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cari yıl ile önceki iki yıl hariç, daha önceki yıllara ait kullanılmayan izin hakları düşer.\nII. Yıllık izinler, amirin uygun bulacağı zamanlarda toptan veya ihtiyaca göre kısım kısım kullanılabilir.\nIII. Birbirini izleyen iki yılın izni bir arada verilebilir.",
    "siklar": [
     "I, II ve III",
-    "Yalnız I",
-    "II ve III",
+    "I ve II",
     "Yalnız II",
-    "I ve II"
+    "Yalnız I",
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "657 Sayılı Devlet Memurları Kanunu m.103",
    "aciklama": "657 Sayılı Devlet Memurları Kanunu, m.103: “Yıllık izinler, amirin uygun bulacağı zamanlarda, toptan veya ihtiyaca göre kısım kısım kullanılabilir. Birbirini izliyen iki yılın izni bir arada verilebilir.” … “Cari yıl ile bir önceki yıl hariç, önceki yıllara ait kullanılmayan izin hakları düşer.”",
-   "id": "TAHMIN-SB-PERSONEL-43-51"
+   "id": "TAHMIN-SB-PERSONEL-43-51",
+   "oncul_karisik": true
   },
   {
    "lawId": 71,
@@ -1049,17 +1057,18 @@
    "lawId": 108,
    "soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay başçavuşların kademeli başçavuşluğa (rütbe kademeliliğine) geçebilmesi için aranan şartlarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Rütbesine ait en az bir geçerli sicili bulunmak\nII. Başçavuşlukta almış olduğu sicil notlarının ortalamasının sicil tam notunun %60’ı ve daha fazlası olması\nIII. Nasbından itibaren başçavuşlukta beş yılını tamamlamış olmak",
    "siklar": [
-    "II ve III",
+    "Yalnız III",
     "I ve II",
+    "Yalnız I",
     "Yalnız II",
-    "I, II ve III",
-    "Yalnız I"
+    "II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "Astsubay Sicil Yönetmeliği m.76",
    "aciklama": "Astsubay Sicil Yönetmeliği, m.76: “… c. Rütbesine ait en az bir geçerli sicili bulunmak, d. Bulundukları rütbe içerisinde kademeli başçavuşluk için, başçavuşlukta; kademeli kıdemli başçavuşluk için, kıdemli başçavuşlukta; ikinci kademeli kıdemli başçavuşluk için kademeli kıdemli başçavuşlukta almış oldukları sicil notlarının ortalaması, sicil tam notunun % 60’ı ve daha fazlası olmak.” … “Nasbından itibaren kademeli başçavuşluk için, başçavuşlukta; kademeli kıdemli başçavuşluk için, kıdemli başçavuşlukta; ikinci kademeli kıdemli başçavuşluk için kademeli kıdemli başçavuşlukta üç yılını tamamlamış olmak, c.”",
-   "id": "TAHMIN-SB-PERSONEL-43-66"
+   "id": "TAHMIN-SB-PERSONEL-43-66",
+   "oncul_karisik": true
   },
   {
    "lawId": 108,

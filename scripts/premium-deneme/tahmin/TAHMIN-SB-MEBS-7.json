@@ -41,17 +41,18 @@
    "lawId": 1,
    "soru": "Türk Ceza Kanunu'na göre kamu görevinin terki veya yapılmaması suçu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hukuka aykırı olarak ve toplu biçimde görevini terk eden kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.\nII. Kamu görevlisi sayısının üçten fazla olmaması hâlinde cezaya hükmolunmaz.\nIII. Mesleki ve sosyal haklarla ilgili olarak hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakmada ceza verilmeyebilir.",
    "siklar": [
+    "I ve III",
     "Yalnız I",
-    "I ve II",
-    "Yalnız II",
     "II ve III",
+    "Yalnız II",
     "I, II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.” … “… verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.”",
-   "id": "TAHMIN-SB-MEBS-7-03"
+   "id": "TAHMIN-SB-MEBS-7-03",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -263,19 +264,20 @@
   },
   {
    "lawId": 6,
-   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.\nIII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.",
+   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.\nII. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nIII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.",
    "siklar": [
-    "II ve III",
-    "Yalnız I",
-    "I ve III",
     "I ve II",
-    "I, II ve III"
+    "I, II ve III",
+    "Yalnız I",
+    "II ve III",
+    "I ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
    "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “… kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.” … “Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.”",
-   "id": "TAHMIN-SB-MEBS-7-17"
+   "id": "TAHMIN-SB-MEBS-7-17",
+   "oncul_karisik": true
   },
   {
    "lawId": 7,
@@ -313,17 +315,18 @@
    "lawId": 8,
    "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.\nIII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.",
    "siklar": [
+    "I, II ve III",
+    "Yalnız II",
     "I ve III",
-    "Yalnız I",
-    "II ve III",
     "I ve II",
-    "I, II ve III"
+    "II ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
    "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Milli Güvenlik Kurulunun görüşünü de aldıktan sonra” … “… altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
-   "id": "TAHMIN-SB-MEBS-7-20"
+   "id": "TAHMIN-SB-MEBS-7-20",
+   "oncul_karisik": true
   },
   {
    "lawId": 9,
@@ -455,19 +458,20 @@
   },
   {
    "lawId": 13,
-   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.",
+   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.\nIII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.",
    "siklar": [
-    "Yalnız I",
-    "Yalnız II",
-    "I ve II",
+    "II ve III",
     "I, II ve III",
-    "I ve III"
+    "I ve III",
+    "Yalnız III",
+    "Yalnız I"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.15",
    "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.15: “Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler: a) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.” … “Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.”",
-   "id": "TAHMIN-SB-MEBS-7-29"
+   "id": "TAHMIN-SB-MEBS-7-29",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -567,35 +571,37 @@
   },
   {
    "lawId": 15,
-   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.\nIII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.",
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.\nII. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nIII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.",
    "siklar": [
+    "Yalnız III",
+    "Yalnız I",
     "II ve III",
-    "I, II ve III",
-    "I ve II",
     "Yalnız II",
-    "Yalnız I"
+    "I ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
    "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.” … “Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.”",
-   "id": "TAHMIN-SB-MEBS-7-36"
+   "id": "TAHMIN-SB-MEBS-7-36",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
    "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Bakan onayı ile yürürlüğe konulur.\nIII. Her yıl gözden geçirilir.",
    "siklar": [
     "I ve II",
-    "Yalnız II",
+    "Yalnız III",
     "II ve III",
-    "I, II ve III",
+    "Yalnız II",
     "Yalnız I"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “… beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.” … “Bu plan en az iki yılda bir gözden geçirilir.”",
-   "id": "TAHMIN-SB-MEBS-7-37"
+   "id": "TAHMIN-SB-MEBS-7-37",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -935,35 +941,37 @@
   },
   {
    "lawId": 98,
-   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre yıl sonu sayımları ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Depolarda ve kullanımda olan taşınır mallar yıl sonlarında sayım kurulları tarafından sayılır.\nII. Sayım yapılan birimin taşınır mal sorumlusu, sayım süresince sayım kuruluna refakat eder ve sayım tutanağını imzalar.\nIII. Fire nedeniyle ortaya çıkan noksanlıklar sayım tutanağında gösterilmez.",
+   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre yıl sonu sayımları ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Depolarda ve kullanımda olan taşınır mallar yıl sonlarında sayım kurulları tarafından sayılır.\nII. Fire nedeniyle ortaya çıkan noksanlıklar sayım tutanağında gösterilmez.\nIII. Sayım yapılan birimin taşınır mal sorumlusu, sayım süresince sayım kuruluna refakat eder ve sayım tutanağını imzalar.",
    "siklar": [
-    "I, II ve III",
-    "I ve II",
-    "Yalnız I",
+    "Yalnız III",
+    "I ve III",
     "II ve III",
-    "Yalnız II"
+    "I ve II",
+    "I, II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği m.32",
    "aciklama": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği, m.32: “… yıl sonlarında 30 uncu maddeye göre oluşturulan sayım kurulları tarafından sayılır.” … “… taşınır mal sorumlusu, sayım süresince sayım kuruluna refakat eder ve kurulca düzenlenen sayım tutanağını imzalar.”",
-   "id": "TAHMIN-SB-MEBS-7-59"
+   "id": "TAHMIN-SB-MEBS-7-59",
+   "oncul_karisik": true
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Ödeme belgesi, kanıtlayıcı belgelerle birlikte iki nüsha olarak muhasebe birimine verilir.\nII. Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.\nIII. Ödeme belgesinin ikinci nüshası harcama biriminde saklanır.",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Ödeme belgesinin ikinci nüshası harcama biriminde saklanır.\nII. Ödeme belgesi, kanıtlayıcı belgelerle birlikte iki nüsha olarak muhasebe birimine verilir.\nIII. Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
    "siklar": [
-    "Yalnız II",
     "I, II ve III",
+    "Yalnız II",
+    "Yalnız III",
     "Yalnız I",
-    "I ve III",
-    "I ve II"
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.5",
    "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.5: “Ödeme belgesi iki nüsha olarak Yönetmelikte belirtilen kanıtlayıcı belgelerle birlikte muhasebe birimine verilir.” … “… ödeme belgesinin ikinci nüshası ise muhasebe biriminde saklanır.”",
-   "id": "TAHMIN-SB-MEBS-7-60"
+   "id": "TAHMIN-SB-MEBS-7-60",
+   "oncul_karisik": true
   },
   {
    "lawId": 99,
@@ -1129,17 +1137,18 @@
    "lawId": 102,
    "soru": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kamu kurumlarındaki kritik veriler, internete kapalı ve fiziksel güvenliği sağlanmış bir ortamdaki güvenli bir ağda tutulacaktır.\nII. Kritik belgelerin bulunduğu çalışma odalarında mobil cihazlar ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır.\nIII. Kurumsal e-postalar kişisel sosyal medya hesapları için kullanılabilir.",
    "siklar": [
-    "Yalnız I",
-    "II ve III",
-    "I, II ve III",
+    "Yalnız III",
     "Yalnız II",
+    "I, II ve III",
+    "Yalnız I",
     "I ve II"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12) Tedbir 2",
    "aciklama": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12), Tedbir 2: “… internete kapalı ve fiziksel güvenliği sağlanmış bir ortamda bulunan güvenli bir ağda tutulacak, bu ağda kullanılacak cihazlara erişim kontrollü olarak sağlanacak ve log kayıtları değiştirilmeye karşı önlem alınarak saklanacaktır.” … “… mobil cihazlar ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır.”",
-   "id": "TAHMIN-SB-MEBS-7-71"
+   "id": "TAHMIN-SB-MEBS-7-71",
+   "oncul_karisik": true
   },
   {
    "lawId": 102,
@@ -1271,19 +1280,20 @@
   },
   {
    "lawId": 142,
-   "soru": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Elektronik bilgi yönetim sistemi üzerinden yapılan resmî yazışmalar ayrıca posta ile gönderilmeyecektir.\nII. Kurum arşivleri elektronik bilgi yönetim sistemlerine taşındıktan sonra fiziki arşiv tutulmayacaktır.\nIII. Kamu kurumları tebligatlarını kural olarak posta yoluyla yapacaktır.",
+   "soru": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Elektronik bilgi yönetim sistemi üzerinden yapılan resmî yazışmalar ayrıca posta ile gönderilmeyecektir.\nII. Kamu kurumları tebligatlarını kural olarak posta yoluyla yapacaktır.\nIII. Kurum arşivleri elektronik bilgi yönetim sistemlerine taşındıktan sonra fiziki arşiv tutulmayacaktır.",
    "siklar": [
+    "I ve II",
     "II ve III",
     "I, II ve III",
-    "Yalnız I",
     "Yalnız II",
-    "I ve II"
+    "I ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri",
    "aciklama": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri: “Elektronik bilgi yönetim sistemleri üzerinden yapılan resmî yazışmalar ayrıca posta ile gönderilmeyecektir.” … “… bunu müteakip fiziki arşiv tutulmayacaktır.”",
-   "id": "TAHMIN-SB-MEBS-7-80"
+   "id": "TAHMIN-SB-MEBS-7-80",
+   "oncul_karisik": true
   }
  ]
 }

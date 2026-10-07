@@ -57,17 +57,18 @@
    "lawId": 1,
    "soru": "Türk Ceza Kanunu'na göre zimmet ve irtikap suçlarında denetim görevi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.\nII. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.\nIII. Denetim görevini ihmal ederek zimmet veya irtikap suçunun işlenmesine imkân sağlayan kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.",
    "siklar": [
-    "II ve III",
-    "Yalnız II",
+    "I, II ve III",
+    "I ve III",
     "I ve II",
-    "Yalnız I",
-    "I, II ve III"
+    "II ve III",
+    "Yalnız I"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.251",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.251: “Zimmet veya irtikap suçunun işlenmesine kasten göz yuman denetimle yükümlü kamu görevlisi, işlenen suçun müşterek faili olarak sorumlu tutulur.” … “Denetim görevini ihmal ederek, zimmet veya irtikap suçunun işlenmesine imkan sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.”",
-   "id": "TAHMIN2-SB-JAN-217-04"
+   "id": "TAHMIN2-SB-JAN-217-04",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -167,19 +168,20 @@
   },
   {
    "lawId": 3,
-   "soru": "Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangileri, özel nitelikli kişisel verilerin işlenmesine imkân veren hâller arasında sayılmıştır?\nI. İlgili kişinin açık rızasının olması\nII. Kanunlarda açıkça öngörülmesi\nIII. İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaatleri için zorunlu olması",
+   "soru": "Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangileri, özel nitelikli kişisel verilerin işlenmesine imkân veren hâller arasında sayılmıştır?\nI. İlgili kişinin açık rızasının olması\nII. İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaatleri için zorunlu olması\nIII. Kanunlarda açıkça öngörülmesi",
    "siklar": [
     "I, II ve III",
-    "II ve III",
     "Yalnız I",
     "Yalnız II",
-    "I ve II"
+    "I ve II",
+    "I ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.6",
    "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.6: “Özel nitelikli kişisel verilerin işlenmesi yasaktır. Ancak bu verilerin işlenmesi” … “İlgili kişinin açık rızasının olması, b) Kanunlarda açıkça öngörülmesi, c) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin, kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması”",
-   "id": "TAHMIN2-SB-JAN-217-11"
+   "id": "TAHMIN2-SB-JAN-217-11",
+   "oncul_karisik": true
   },
   {
    "lawId": 4,
@@ -375,19 +377,20 @@
   },
   {
    "lawId": 12,
-   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin amirliği yetkisi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Disiplin amirliği yetkisi devredilemez.\nII. Disiplin amirleri, boşanmış olsalar dahi eşleri olan personel hakkında disiplin amirliği sıfatından doğan yetkilerini kullanamaz.\nIII. Disiplin amiri olarak tayin edilen unvana ait görevi vekâleten yürütenler, disiplin amirlerine tanınan yetkileri kullanamaz.",
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin amirliği yetkisi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Disiplin amiri olarak tayin edilen unvana ait görevi vekâleten yürütenler, disiplin amirlerine tanınan yetkileri kullanamaz.\nII. Disiplin amirliği yetkisi devredilemez.\nIII. Disiplin amirleri, boşanmış olsalar dahi eşleri olan personel hakkında disiplin amirliği sıfatından doğan yetkilerini kullanamaz.",
    "siklar": [
-    "Yalnız II",
     "I, II ve III",
+    "Yalnız III",
     "Yalnız I",
-    "II ve III",
-    "I ve II"
+    "I ve III",
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.15",
    "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.15: “Bu hallerde, disiplin amirliği yetkisi, üst konumdaki disiplin amiri tarafından kullanılır. (4) Disiplin amirliği yetkisi devredilemez.” … “Disiplin amirleri boşanmış olsalar dahi eşleri veya ikinci dereceye kadar kan ve kayın hısımları olan personel hakkında, bu sıfatlarından doğan yetkilerini kullanamazlar.”",
-   "id": "TAHMIN2-SB-JAN-217-24"
+   "id": "TAHMIN2-SB-JAN-217-24",
+   "oncul_karisik": true
   },
   {
    "lawId": 12,
@@ -1001,17 +1004,18 @@
    "lawId": 47,
    "soru": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun'a göre, mahkeme kararıyla kendisine teslim edilmeksizin aynı taşınmaz mala ikinci defa yapılan tecavüz veya müdahaleye ilişkin aşağıdaki ifadelerden hangileri doğrudur? (Fiil daha ağır cezayı gerektiren ayrı bir suç oluşturmamaktadır.)\nI. Taşınmaz mal kamu kurum veya kuruluşlarına ait ise altı aydan iki yıla kadar hapis cezasına hükmolunur.\nII. Tecavüz silahlı bir kişi tarafından yapılmışsa ceza bir kat artırılarak hükmolunur.\nIII. Taşınmaz mal gerçek kişilere ait ise altı aydan iki yıla kadar hapis cezasına hükmolunur.",
    "siklar": [
-    "Yalnız II",
+    "I, II ve III",
     "II ve III",
     "I ve II",
-    "I, II ve III",
-    "Yalnız I"
+    "Yalnız II",
+    "Yalnız III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun m.15",
    "aciklama": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun, m.15: “Taşınmaz mal, kamu kurum veya kuruluşlarına ait bulunuyorsa veya Devletin hüküm ve tasarrufu altında bulunan sahipsiz veya umumun menfaatine ait yerlerden ise altı aydan iki yıla kadar; şayet taşınmaz mal diğer tüzelkişilere veya gerçek kişilere ait ise üç aydan bir yıla kadar hapis cezasına hükmolunur.” … “Tecavüz veya müdahale silahlı bir kişi veya silahsız olsalar dahi birden fazla kişiler tarafından yapıldığı takdirde (a) bendindeki cezalar bir kat artırılarak hükmolunur.”",
-   "id": "TAHMIN2-SB-JAN-217-63"
+   "id": "TAHMIN2-SB-JAN-217-63",
+   "oncul_karisik": true
   },
   {
    "lawId": 48,
@@ -1175,19 +1179,20 @@
   },
   {
    "lawId": 61,
-   "soru": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır; gecikmesinde sakınca bulunan hâllerde çocuk bürosunda görevli olmayan Cumhuriyet savcıları tarafından da yerine getirilebilir.\nII. İşlenen suçun etkisiyle psikolojisi bozulmuş mağdur çocuk, maddi gerçeğin ortaya çıkarılması açısından zorunlu hâller saklı kalmak üzere, bu suça ilişkin soruşturmada tanık olarak bir defa dinlenebilir.\nIII. Kolluğun çocuk birimi, çocuk hakkında işleme başlandığında durumu çocuğu suça azmettirdiğinden şüphelenilen yakınlarına da derhal bildirir.",
+   "soru": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır; gecikmesinde sakınca bulunan hâllerde çocuk bürosunda görevli olmayan Cumhuriyet savcıları tarafından da yerine getirilebilir.\nII. Kolluğun çocuk birimi, çocuk hakkında işleme başlandığında durumu çocuğu suça azmettirdiğinden şüphelenilen yakınlarına da derhal bildirir.\nIII. İşlenen suçun etkisiyle psikolojisi bozulmuş mağdur çocuk, maddi gerçeğin ortaya çıkarılması açısından zorunlu hâller saklı kalmak üzere, bu suça ilişkin soruşturmada tanık olarak bir defa dinlenebilir.",
    "siklar": [
-    "I ve II",
+    "I ve III",
     "I, II ve III",
-    "Yalnız II",
-    "Yalnız I",
-    "II ve III"
+    "II ve III",
+    "Yalnız III",
+    "Yalnız II"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik m.5",
    "aciklama": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.5: “Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır. Gecikmesinde sakınca bulunan hâllerde, soruşturma çocuk bürosunda görevli olmayan Cumhuriyet savcıları tarafından da yerine getirilebilir.” … “İşlenen suçun etkisiyle psikolojisi bozulmuş mağdur çocuk, bu suça ilişkin soruşturmada tanık olarak bir defa dinlenebilir. Maddî gerçeğin ortaya çıkarılması açısından zorunluluk arz eden haller saklıdır.”",
-   "id": "TAHMIN2-SB-JAN-217-74"
+   "id": "TAHMIN2-SB-JAN-217-74",
+   "oncul_karisik": true
   },
   {
    "lawId": 62,

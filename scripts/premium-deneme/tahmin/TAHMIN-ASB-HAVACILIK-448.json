@@ -937,17 +937,18 @@
    "lawId": 70,
    "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmet sürelerinin hesabı ile ilgili\nI. Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır.\nII. 23 yıl ve daha fazla uçuculuk hizmet süresi olanlara 23 üncü hizmet yılı karşılığında gösterilen oranda aylık tazminat ödenir.\nIII. Uçuculardan istekleri üzerine ayrılmaları kabul edilenlerin uçuştan ayrılma tarihi, uçuş kıymetlendirme kurulunun karar tasdik tarihidir.\nifadelerinden hangileri doğrudur?",
    "siklar": [
+    "Yalnız II",
     "II ve III",
-    "Yalnız I",
     "I ve II",
     "I, II ve III",
-    "Yalnız II"
+    "Yalnız III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.12",
    "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.12: “Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır.” … “… 23 yıl ve daha fazla uçuculuk, paraşütçülük, dalıcılık hizmet süresi olanlara 23 üncü hizmet yılı karşılığında gösterilen oranda aylık tazminat ödenir.”",
-   "id": "TAHMIN-ASB-HAVACILIK-448-59"
+   "id": "TAHMIN-ASB-HAVACILIK-448-59",
+   "oncul_karisik": true
   },
   {
    "lawId": 70,
@@ -1223,19 +1224,20 @@
   },
   {
    "lawId": 104,
-   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre yetişmiş uçucular hakkında uygulanacak sağlık işlemleri ile ilgili\nI. Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.\nII. Harekât gibi zorunlu nedenlerle periyodik muayene geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.\nIII. Uçucular hakkında uçuşa elverişlilik kararları, istirahat kararları gibi bütün sağlık kurullarınca verilebilir.\nifadelerinden hangileri doğrudur?",
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre yetişmiş uçucular hakkında uygulanacak sağlık işlemleri ile ilgili\nI. Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.\nII. Uçucular hakkında uçuşa elverişlilik kararları, istirahat kararları gibi bütün sağlık kurullarınca verilebilir.\nIII. Harekât gibi zorunlu nedenlerle periyodik muayene geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.\nifadelerinden hangileri doğrudur?",
    "siklar": [
-    "Yalnız II",
+    "I ve II",
     "II ve III",
     "Yalnız I",
-    "I ve II",
-    "I, II ve III"
+    "I ve III",
+    "Yalnız III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “Yıllık ve dört yıllık periyodik kontrol muayenesini ve dört yıllık fizyolojik eğitimini tamamlamayan uçuculara uçuş verilmez.” … “Harekât gibi zorunlu nedenlerle periyodik muayene ve/veya uçuş fizyolojisi eğitimi geçerlilik süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.”",
-   "id": "TAHMIN-ASB-HAVACILIK-448-77"
+   "id": "TAHMIN-ASB-HAVACILIK-448-77",
+   "oncul_karisik": true
   },
   {
    "lawId": 104,

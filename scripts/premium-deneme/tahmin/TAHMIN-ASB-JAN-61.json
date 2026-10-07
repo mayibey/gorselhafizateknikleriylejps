@@ -887,19 +887,20 @@
   },
   {
    "lawId": 36,
-   "soru": "Çocuk Koruma Kanunu'na göre acil korunma kararı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kurum, çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine müracaat eder.\nII. Hâkim, üç gün içinde talep hakkında karar verir.\nIII. Acil korunma kararı en fazla altmış günlük süre ile verilebilir.",
+   "soru": "Çocuk Koruma Kanunu'na göre acil korunma kararı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Acil korunma kararı en fazla altmış günlük süre ile verilebilir.\nII. Kurum, çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine müracaat eder.\nIII. Hâkim, üç gün içinde talep hakkında karar verir.",
    "siklar": [
-    "I, II ve III",
-    "I ve II",
+    "I ve III",
     "II ve III",
     "Yalnız III",
-    "Yalnız I"
+    "I ve II",
+    "I, II ve III"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "5395 sayılı Çocuk Koruma Kanunu m.9",
    "aciklama": "5395 sayılı Çocuk Koruma Kanunu, m.9: “… en geç beş gün içinde çocuk hâkimine müracaat edilir. Hâkim tarafından, üç gün içinde talep hakkında karar verilir.” … “Acil korunma kararı en fazla otuz günlük süre ile sınırlı olmak üzere verilebilir.”",
-   "id": "TAHMIN-ASB-JAN-61-56"
+   "id": "TAHMIN-ASB-JAN-61-56",
+   "oncul_karisik": true
   },
   {
    "lawId": 37,

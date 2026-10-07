@@ -41,17 +41,18 @@
    "lawId": 1,
    "soru": "Türk Ceza Kanunu'na göre kamu görevinin terki veya yapılmaması suçu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hukuka aykırı olarak ve toplu biçimde görevini terk eden kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.\nII. Kamu görevlisi sayısının üçten fazla olmaması hâlinde cezaya hükmolunmaz.\nIII. Mesleki ve sosyal haklarla ilgili olarak hizmeti aksatmayacak biçimde geçici ve kısa süreli iş bırakmada ceza verilmeyebilir.",
    "siklar": [
-    "Yalnız I",
+    "I ve III",
     "I, II ve III",
+    "Yalnız I",
     "II ve III",
-    "I ve II",
     "Yalnız II"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
    "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.” … “… verilecek cezada indirim yapılabileceği gibi, ceza da verilmeyebilir.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-03"
+   "id": "TAHMIN-SB-ISTIHKAM-235-03",
+   "oncul_karisik": true
   },
   {
    "lawId": 1,
@@ -263,19 +264,20 @@
   },
   {
    "lawId": 6,
-   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.\nIII. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.",
+   "soru": "Kabahatler Kanunu'na göre idari yaptırım kararlarına karşı kanun yolu ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Mahkemenin verdiği son karara karşı, kararın tebliğinden itibaren en geç bir ay içinde itiraz edilebilir.\nII. İdari para cezası kararına karşı kararın tebliği veya tefhimi tarihinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir.\nIII. Süresi içinde başvurunun yapılmamış olması hâlinde idari yaptırım kararı kesinleşir.",
    "siklar": [
-    "I ve III",
+    "I ve II",
+    "I, II ve III",
     "Yalnız I",
     "II ve III",
-    "I ve II",
-    "I, II ve III"
+    "I ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
    "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “… kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.” … “Bu itiraz, kararın tebliği tarihten itibaren en geç iki hafta içinde yapılır.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-17"
+   "id": "TAHMIN-SB-ISTIHKAM-235-17",
+   "oncul_karisik": true
   },
   {
    "lawId": 7,
@@ -313,8 +315,8 @@
    "lawId": 8,
    "soru": "Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü de aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl, yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere ilan edilebilir.\nIII. Türkiye Büyük Millet Meclisi, Cumhurbaşkanının istemi üzerine süreyi her defasında altı ayı geçmemek üzere uzatabilir.",
    "siklar": [
-    "Yalnız I",
     "I, II ve III",
+    "Yalnız II",
     "I ve III",
     "I ve II",
     "II ve III"
@@ -323,7 +325,8 @@
    "tip": "oncullu",
    "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
    "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Milli Güvenlik Kurulunun görüşünü de aldıktan sonra” … “… altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-20"
+   "id": "TAHMIN-SB-ISTIHKAM-235-20",
+   "oncul_karisik": true
   },
   {
    "lawId": 9,
@@ -455,19 +458,20 @@
   },
   {
    "lawId": 13,
-   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.\nIII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.",
+   "soru": "4678 sayılı Kanun'a göre sözleşmeli subay ve astsubayların rütbe verilmeksizin bir üst dereceye yükseltilmesi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Sözleşmeli subaylar için on beşinci fiilî hizmet yılının tamamlanması gerekir.\nII. Son üç yıla ait sicil notu ortalamasının sicil tam notunun %90'ı ve daha üstünde olması gerekir.\nIII. Sözleşmeli astsubaylar için on sekizinci fiilî hizmet yılının tamamlanması gerekir.",
    "siklar": [
-    "Yalnız II",
+    "II ve III",
     "I, II ve III",
-    "I ve II",
-    "Yalnız I",
-    "I ve III"
+    "I ve III",
+    "Yalnız III",
+    "Yalnız I"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.15",
    "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.15: “Sözleşmeli subaylardan onbeşinci, sözleşmeli astsubaylardan onsekizinci fiilî hizmet yılını tamamlayanlardan, aşağıdaki koşulları yerine getirenler rütbe verilmeksizin bir üst dereceye yükseltilirler: a) Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.” … “Son üç yıla ait sicil notu ortalaması sicil tam notunun % 60 ve daha üstünde olmak.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-29"
+   "id": "TAHMIN-SB-ISTIHKAM-235-29",
+   "oncul_karisik": true
   },
   {
    "lawId": 16,
@@ -567,27 +571,28 @@
   },
   {
    "lawId": 15,
-   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.\nIII. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.",
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Birden fazla sayfa tutan belgelerde sayfa numarası, iletişim bilgilerinin üstünde ve sayfanın sağında belirtilir.\nII. \"Hizmete Özel\" gizlilik dereceli belgelerin hazırlanması, gönderilmesi ve diğer işlemleri elektronik ortamda gerçekleştirilir.\nIII. Tarihte gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir.",
    "siklar": [
+    "Yalnız III",
+    "Yalnız I",
     "Yalnız II",
     "II ve III",
-    "Yalnız I",
-    "I ve II",
-    "I, II ve III"
+    "I ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
    "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.” … “Gün ve ay iki haneli, yıl ise dört haneli olarak düzenlenir (Örnek: 01.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-36"
+   "id": "TAHMIN-SB-ISTIHKAM-235-36",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
    "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Beş yıllık bir dönemi kapsar.\nII. Bakan onayı ile yürürlüğe konulur.\nIII. Her yıl gözden geçirilir.",
    "siklar": [
-    "Yalnız II",
-    "I, II ve III",
+    "Yalnız III",
     "II ve III",
+    "Yalnız II",
     "Yalnız I",
     "I ve II"
    ],
@@ -595,7 +600,8 @@
    "tip": "oncullu",
    "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
    "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “… beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.” … “Bu plan en az iki yılda bir gözden geçirilir.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-37"
+   "id": "TAHMIN-SB-ISTIHKAM-235-37",
+   "oncul_karisik": true
   },
   {
    "lawId": 17,
@@ -743,19 +749,20 @@
   },
   {
    "lawId": 91,
-   "soru": "3194 sayılı İmar Kanunu'na göre yapı ruhsatının süresiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yapıya başlama müddeti ruhsat tarihinden itibaren iki yıldır.\nII. Yapıya başlanıp da başlama müddetiyle birlikte beş yıl içinde bitirilmeyen yapının ruhsatı hükümsüz sayılır.\nIII. Ruhsat yenilenmesi sırasında ayrıca harç alınır.",
+   "soru": "3194 sayılı İmar Kanunu'na göre yapı ruhsatının süresiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yapıya başlama müddeti ruhsat tarihinden itibaren iki yıldır.\nII. Ruhsat yenilenmesi sırasında ayrıca harç alınır.\nIII. Yapıya başlanıp da başlama müddetiyle birlikte beş yıl içinde bitirilmeyen yapının ruhsatı hükümsüz sayılır.",
    "siklar": [
-    "Yalnız II",
-    "Yalnız I",
-    "I, II ve III",
+    "II ve III",
+    "Yalnız III",
     "I ve II",
-    "II ve III"
+    "I ve III",
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "3194 Sayılı İmar Kanunu m.29",
    "aciklama": "3194 Sayılı İmar Kanunu, m.29: “Yapıya başlama müddeti ruhsat tarihinden itibaren iki yıldır.” … “… başlama müddetiyle birlikte beş yıl içinde bitirilmediği takdirde verilen ruhsat hükümsüz sayılır.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-47"
+   "id": "TAHMIN-SB-ISTIHKAM-235-47",
+   "oncul_karisik": true
   },
   {
    "lawId": 91,
@@ -1143,19 +1150,20 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene ve kabul komisyonlarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Komisyon, biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşur.\nII. Ara denetimi gerçekleştiren personel muayene ve kabul komisyonlarında görevlendirilebilir.\nIII. Muayene ve kabul komisyonunda görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulabilir.",
+   "soru": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene ve kabul komisyonlarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Muayene ve kabul komisyonunda görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulabilir.\nII. Komisyon, biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşur.\nIII. Ara denetimi gerçekleştiren personel muayene ve kabul komisyonlarında görevlendirilebilir.",
    "siklar": [
-    "I ve II",
-    "Yalnız II",
     "II ve III",
+    "Yalnız II",
+    "I ve III",
     "Yalnız I",
-    "I, II ve III"
+    "Yalnız III"
    ],
    "dogru": 0,
    "tip": "oncullu",
    "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.6",
    "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.6: “Yetkili makam tarafından biri başkan, biri işin uzmanı olmak üzere en az üç veya daha fazla tek sayıda kişi ile yedek üyelerden oluşan muayene ve kabul komisyonları kurulur.” … “Ara denetimi gerçekleştiren personel muayene kabul komisyonlarında görevlendirilebilir. Ancak, muayene ve kabul komisyonlarında görevlendirilen personelin tamamı ara denetimi gerçekleştiren personelden oluşturulamaz.”",
-   "id": "TAHMIN-SB-ISTIHKAM-235-72"
+   "id": "TAHMIN-SB-ISTIHKAM-235-72",
+   "oncul_karisik": true
   },
   {
    "lawId": 99,

@@ -375,19 +375,20 @@
   },
   {
    "lawId": 12,
-   "soru": "7068 sayılı Kanun'a göre disiplin amirleri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kaymakamlar ilçe, valiler il teşkilatındaki diğer disiplin amirlerine göre en üst disiplin amiridir.\nII. Valiler kaymakamlara göre bir üst disiplin amiridir.\nIII. Disiplin amirliği yetkisi, üst disiplin amirinin onayıyla devredilebilir.",
+   "soru": "7068 sayılı Kanun'a göre disiplin amirleri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Disiplin amirliği yetkisi, üst disiplin amirinin onayıyla devredilebilir.\nII. Kaymakamlar ilçe, valiler il teşkilatındaki diğer disiplin amirlerine göre en üst disiplin amiridir.\nIII. Valiler kaymakamlara göre bir üst disiplin amiridir.",
    "siklar": [
+    "Yalnız III",
     "Yalnız II",
-    "Yalnız I",
-    "II ve III",
     "I, II ve III",
-    "I ve II"
+    "I ve II",
+    "II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.13",
    "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.13: “Kaymakamlar ilçe, valiler il teşkilatındaki diğer disiplin amirlerine göre en üst disiplin amiridir.” … “Valiler kaymakamlara, Bakan ise Emniyet Genel Müdürü, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanı ile valilere göre bir üst disiplin amiridir.”",
-   "id": "TAHMIN2-UZM-JAN-43-24"
+   "id": "TAHMIN2-UZM-JAN-43-24",
+   "oncul_karisik": true
   },
   {
    "lawId": 14,
@@ -551,19 +552,20 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre korunan kişi hakkında verilen gizlilik kararı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Gizlilik kararı verilen korunan kişiden resmî başvuru, iş ve işlemleri sırasında adres beyanı istenir.\nII. Korunan kişiye yapılacak tebligatlarda ŞÖNİM'e ait adres bilgileri kullanılır.\nIII. Nüfus kaydına işlenen gizlilik şerhi, tedbir kararının süresinin sona ermesini takip eden on beşinci gün MERNİS veri tabanından silinir.",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre korunan kişi hakkında verilen gizlilik kararı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Korunan kişiye yapılacak tebligatlarda ŞÖNİM'e ait adres bilgileri kullanılır.\nII. Nüfus kaydına işlenen gizlilik şerhi, tedbir kararının süresinin sona ermesini takip eden on beşinci gün MERNİS veri tabanından silinir.\nIII. Gizlilik kararı verilen korunan kişiden resmî başvuru, iş ve işlemleri sırasında adres beyanı istenir.",
    "siklar": [
-    "I, II ve III",
-    "Yalnız II",
-    "Yalnız I",
+    "I ve III",
     "II ve III",
-    "I ve II"
+    "Yalnız III",
+    "I ve II",
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.32",
    "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.32: “Korunan kişiye yapılacak tebligatlarda ŞÖNİM’e ait adres bilgileri kullanılır.” … “… tedbir kararının süresinin sona ermesini takip eden onbeşinci gün MERNİS veri tabanından silinir.”",
-   "id": "TAHMIN2-UZM-JAN-43-35"
+   "id": "TAHMIN2-UZM-JAN-43-35",
+   "oncul_karisik": true
   },
   {
    "lawId": 22,
@@ -727,19 +729,20 @@
   },
   {
    "lawId": 31,
-   "soru": "Yabancılar ve Uluslararası Koruma Kanunu'na göre sınır dışı etmek üzere idari gözetimle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Geri gönderme merkezlerindeki idari gözetim süresi hiçbir hâlde uzatılamaz.\nII. Hakkında idari gözetim kararı alınan yabancılar, yakalamayı yapan kolluk birimince geri gönderme merkezlerine kırk sekiz saat içinde götürülür.\nIII. İdari gözetim kararına karşı yapılan başvuruda sulh ceza hâkimi incelemeyi beş gün içinde sonuçlandırır.",
+   "soru": "Yabancılar ve Uluslararası Koruma Kanunu'na göre sınır dışı etmek üzere idari gözetimle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hakkında idari gözetim kararı alınan yabancılar, yakalamayı yapan kolluk birimince geri gönderme merkezlerine kırk sekiz saat içinde götürülür.\nII. Geri gönderme merkezlerindeki idari gözetim süresi hiçbir hâlde uzatılamaz.\nIII. İdari gözetim kararına karşı yapılan başvuruda sulh ceza hâkimi incelemeyi beş gün içinde sonuçlandırır.",
    "siklar": [
-    "Yalnız I",
     "II ve III",
-    "Yalnız II",
-    "I ve II",
-    "I, II ve III"
+    "I ve III",
+    "I, II ve III",
+    "Yalnız I",
+    "Yalnız II"
    ],
    "dogru": 1,
    "tip": "oncullu",
    "kaynak": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu m.57",
    "aciklama": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu, m.57: “Hakkında idari gözetim kararı alınan yabancılar, yakalamayı yapan kolluk birimince geri gönderme merkezlerine kırk sekiz saat içinde götürülür.” … “Sulh ceza hâkimi incelemeyi beş gün içinde sonuçlandırır.”",
-   "id": "TAHMIN2-UZM-JAN-43-46"
+   "id": "TAHMIN2-UZM-JAN-43-46",
+   "oncul_karisik": true
   },
   {
    "lawId": 32,
@@ -1143,19 +1146,20 @@
   },
   {
    "lawId": 56,
-   "soru": "Adli ve Önleme Aramaları Yönetmeliği'ne göre arama sırasında ele geçen belge ve kâğıtlarla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hakkında arama işlemi uygulanan kimsenin belge veya kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime aittir.\nII. Kolluk, arama sırasında ele geçen belge veya kâğıtlara, suçla ilgisi olup olmadığını tespit amacıyla, incelemeksizin bakabilir.\nIII. Şüpheli ile tanıklıktan çekinebilecek kimseler arasındaki mektup ve belgelere, bu kimselerin nezdinde bulunsalar dahi elkonulabilir.",
+   "soru": "Adli ve Önleme Aramaları Yönetmeliği'ne göre arama sırasında ele geçen belge ve kâğıtlarla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Şüpheli ile tanıklıktan çekinebilecek kimseler arasındaki mektup ve belgelere, bu kimselerin nezdinde bulunsalar dahi elkonulabilir.\nII. Hakkında arama işlemi uygulanan kimsenin belge veya kâğıtlarını inceleme yetkisi Cumhuriyet savcısı ve hâkime aittir.\nIII. Kolluk, arama sırasında ele geçen belge veya kâğıtlara, suçla ilgisi olup olmadığını tespit amacıyla, incelemeksizin bakabilir.",
    "siklar": [
+    "Yalnız III",
     "I, II ve III",
-    "Yalnız II",
-    "I ve II",
     "II ve III",
-    "Yalnız I"
+    "Yalnız II",
+    "I ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "Adli ve Önleme Aramaları Yönetmeliği m.16",
    "aciklama": "Adli ve Önleme Aramaları Yönetmeliği, m.16: “Hakkında arama işlemi uygulanan kimsenin belge veya kâğıtlarını inceleme yetkisi, Cumhuriyet savcısı ve hâkime aittir.” … “Kolluk, arama sırasında ele geçen belge veya kağıtlara, suçla ilgisi olup olmadığını tespit amacıyla, incelemeksizin bakabilir.”",
-   "id": "TAHMIN2-UZM-JAN-43-72"
+   "id": "TAHMIN2-UZM-JAN-43-72",
+   "oncul_karisik": true
   },
   {
    "lawId": 57,

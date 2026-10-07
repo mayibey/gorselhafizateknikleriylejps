@@ -743,19 +743,20 @@
   },
   {
    "lawId": 128,
-   "soru": "Hekimlik Meslek Etiği Kuralları'na göre hekimin sır saklama yükümlülüğü ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Hastanın ölmesi, hekimin sır saklama yükümlülüğünü ortadan kaldırır.\nII. Yasal zorunluluk durumlarında hekimin rapor düzenlemesi, meslek sırrının açıklanması anlamına gelmez.\nIII. Hekim, tanık ya da bilirkişi olarak mahkemeye çağrıldığında olayın meslek sırrı olduğunu ileri sürerek bu görevlerinden çekilebilir.",
+   "soru": "Hekimlik Meslek Etiği Kuralları'na göre hekimin sır saklama yükümlülüğü ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Yasal zorunluluk durumlarında hekimin rapor düzenlemesi, meslek sırrının açıklanması anlamına gelmez.\nII. Hastanın ölmesi, hekimin sır saklama yükümlülüğünü ortadan kaldırır.\nIII. Hekim, tanık ya da bilirkişi olarak mahkemeye çağrıldığında olayın meslek sırrı olduğunu ileri sürerek bu görevlerinden çekilebilir.",
    "siklar": [
     "Yalnız I",
+    "Yalnız II",
     "I ve II",
-    "I, II ve III",
-    "II ve III",
-    "Yalnız II"
+    "I ve III",
+    "II ve III"
    ],
    "dogru": 3,
    "tip": "oncullu",
    "kaynak": "Hekimlik Meslek Etiği Kuralları m.9",
    "aciklama": "Hekimlik Meslek Etiği Kuralları, m.9: “Hastanın ölmesi ya da o hekimle ilişkisinin sona ermesi, hekimin bu yükümlülüğünü ortadan kaldırmaz.” … “Yasal zorunluluk durumlarında hekimin rapor düzenlemesi de, meslek sırrının açıklanması anlamına gelmez.”",
-   "id": "TAHMIN-ASB-BAKIM-199-47"
+   "id": "TAHMIN-ASB-BAKIM-199-47",
+   "oncul_karisik": true
   },
   {
    "lawId": 106,
@@ -919,19 +920,20 @@
   },
   {
    "lawId": 124,
-   "soru": "Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Taşınır Mal Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Taşınır mal sorumluları, sorumluluklarında bulunan depoları devir ve teslim etmeden görevlerinden ayrılamaz.\nII. Taşınır mal kayıt sorumlusu, öngörülen belgeler usulüne uygun olarak düzenlenmedikçe hiçbir taşınır malın giriş veya çıkış kaydını yapamaz.\nIII. Taşınır mal yönetim yetkilisi ile taşınır mal kayıt sorumlusu görevleri aynı kişide birleşebilir.",
+   "soru": "Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Taşınır Mal Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Taşınır mal yönetim yetkilisi ile taşınır mal kayıt sorumlusu görevleri aynı kişide birleşebilir.\nII. Taşınır mal sorumluları, sorumluluklarında bulunan depoları devir ve teslim etmeden görevlerinden ayrılamaz.\nIII. Taşınır mal kayıt sorumlusu, öngörülen belgeler usulüne uygun olarak düzenlenmedikçe hiçbir taşınır malın giriş veya çıkış kaydını yapamaz.",
    "siklar": [
-    "Yalnız II",
-    "Yalnız I",
-    "I ve II",
+    "I ve III",
+    "Yalnız III",
     "II ve III",
+    "I ve II",
     "I, II ve III"
    ],
    "dogru": 2,
    "tip": "oncullu",
    "kaynak": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği m.7",
    "aciklama": "TSK, MİT, EGM, JGK ve SGK Taşınır Mal Yönetmeliği, m.7: “Taşınır mal sorumluları, sorumluluklarında bulunan depoları devir ve teslim etmeden görevlerinden ayrılamaz.” … “Taşınır mal kayıt sorumlusu, bu Yönetmelikte ve bu Yönetmeliğe dayanılarak yürürlüğe konulan alt düzenleyici işlemlerde öngörülen belge veya belgeler usulüne uygun olarak düzenlenmedikçe hiçbir taşınır malın giriş veya çıkış kaydını yapamaz.”",
-   "id": "TAHMIN-ASB-BAKIM-199-58"
+   "id": "TAHMIN-ASB-BAKIM-199-58",
+   "oncul_karisik": true
   },
   {
    "lawId": 94,
@@ -1242,16 +1244,17 @@
    "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre niteliğinden dolayı malî yılla sınırlı tutulamayan iş ve hizmetler için ertesi yıla geçen yüklenmelerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Her iş itibarıyla bütçelerinde öngörülen ödeneklerin yüzde ellisini geçmemek üzere girişilebilir.\nII. Yüklenme süresi on iki ayı aşamaz.\nIII. Jandarma Genel Komutanlığının yiyecek ve giyecek alımları bu iş ve hizmetler arasında sayılmıştır.",
    "siklar": [
     "II ve III",
-    "Yalnız II",
-    "Yalnız I",
+    "I ve III",
     "I ve II",
+    "Yalnız I",
     "I, II ve III"
    ],
    "dogru": 4,
    "tip": "oncullu",
    "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.27",
    "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.27: “… her iş itibarıyla, bütçelerinde öngörülen ödeneklerin yüzde ellisini, izleyen yılın Haziran ayını geçmemek ve yüklenme süresi on iki ayı aşmamak üzere, ilgili üst yöneticinin onayıyla ertesi yıla geçen yüklenmelere girişilebilir: a) Türk Silahlı Kuvvetlerinin yapım, onarım, etüt ve proje işleri, araştırma-geliştirme projeleri, giyecek ve yiyecek alımları, makine-teçhizat, silah-mühimmat-teçhizat alımlarıyla” … “Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığının yapım, onarım, etüt ve proje işleri, araştırma-geliştirme projeleri, yiyecek ve giyecek alımları makine-teçhizat ile silah, mühimmat ve teçhizat alımlarıyla bunların bakım, onarım ve imalat işleri.”",
-   "id": "TAHMIN-ASB-BAKIM-199-78"
+   "id": "TAHMIN-ASB-BAKIM-199-78",
+   "oncul_karisik": true
   },
   {
    "lawId": 77,
