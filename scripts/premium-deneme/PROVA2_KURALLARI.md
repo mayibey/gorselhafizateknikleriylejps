@@ -26,6 +26,7 @@ Aşağıdakiler o dosyadaki ilgili maddelerin YERİNE geçer:
 
 ## 3. Dağılım
 - Kanun (law) dağılımı, sana verilen "hedef dağılım"a ±1 uysun (1. provayla aynı ağırlık = gerçek sınav ağırlığı).
+- Öncüllü sorularda doğru cevabı DENGELE: hep "I ve II" yazma (8 Eki: 1. provada 79/100 "I ve II" çıktı, ezberle işaretleniyordu). I ve III, II ve III, Yalnız …, hepsi dağılsın.
 - Tip: 40 soruda ~28-30 duz, 6-8 olumsuz, 2-3 oncullu, 1-2 vaka (10/30 soruluk dosyada orantılı).
 - Zorluk: 1. prova ayarında — ezber değil, dikkat isteyen sayı/süre/makam/istisna soruları ağırlıkta; bariz çeldirici yok.
 

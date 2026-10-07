@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 8 Eki (1) — ÖNCÜLLÜ KALIBI + BAŞKANIN YANLIŞ ANALİZİ
+> Başkanın 2 MEBS provası (59, 51) /sinavprovasi/aktar/ (cihazdaki işaretleri metin yapar, ağ isteği yok) ile alındı, 50 yanlış analiz edildi:
+> öncüllüde "hepsi" tuzağı, TCK sayıları, makamda bakanlık yerine yerel/askerî seçme, olumsuz kök. Bu sırada KUSUR bulundu: öncüllü doğru
+> cevap 1. provada 79/100, 2.'de 21/25 "I ve II". oncul-karistir.py ile kırıldı (öncül sırası + etiket; doğru harf aynı → eski sonuçlar
+> bozulmaz). ⚠️ birlestir/prova2-kur ile deneme YENİDEN kurulursa oncul-karistir.py tekrar çalıştırılmalı (kaynak/ eski sırada).
+> İLERİDE ajan kurallarına: öncüllü doğru cevabı dengele.
+>
 > ### ▶ 7 Eki (3) — SINAV PROVASI 2 + GELİR TOPLAMI + ANA SAYFA YORUMLARI
 > Adaylar "aynı ayarda başka deneme" istedi; başkan: sitede ücretsiz + uygulamaya yönlendir, en çok çözülenler, 1 deneme.
 > 92044fb altyapı: sayfada 1./2. Prova sekmesi (ilk gelen 1'den, 1'i bitiren 2'den; seçim sabitlenir), sonuçta "2. Provaya geç" +
