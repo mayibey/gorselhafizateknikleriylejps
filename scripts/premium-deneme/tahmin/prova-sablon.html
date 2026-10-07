@@ -57,10 +57,15 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 .etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
 .alt{color:var(--soluk);margin:0;max-width:62ch}
 .kart{display:grid;gap:12px;margin:18px 0;padding:16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px}
-.sekmeler{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.sekme{font:inherit;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);cursor:pointer}
-.sekme[aria-pressed="true"]{background:var(--lacivert);border-color:var(--lacivert);color:var(--zemin)}
-.sekme .yeni{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--kirmizi);color:#fff;font-size:11px;letter-spacing:.06em;vertical-align:1px}
+.sekmeler{display:grid;gap:8px;margin-top:14px}
+.sekmeler h3{margin:0;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--soluk)}
+.sekme{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;font-size:15px;padding:12px 14px;border-radius:10px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);cursor:pointer}
+.sekme b{font-weight:800}
+.sekme .durum{font-size:13px;color:var(--soluk);font-variant-numeric:tabular-nums}
+.sekme[aria-pressed="true"]{border:2px solid var(--lacivert2);padding:11px 13px;background:var(--altinYuzey)}
+.sekme[aria-pressed="true"] .acik{display:inline}
+.sekme .acik{display:none;margin-left:8px;font-size:12px;font-weight:700;color:var(--lacivert2)}
+.sekme .yeni{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--kirmizi);color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em}
 .uygulama{display:grid;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid var(--kenar)}
 .uygulama h3{margin:0;font-family:var(--baslik);font-size:22px;color:var(--lacivert)}
 .uygulama p{margin:0;color:var(--soluk)}
@@ -160,7 +165,7 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
     <div class="kart">
       <div class="kimlik" id="kimlik"></div>
       <p id="denemeNot"></p>
-      <div class="sekmeler" id="sekmeler" role="group" aria-label="Prova seç" hidden></div>
+      <div class="sekmeler" id="sekmeler" role="group" aria-label="Denemelerin" hidden></div>
     </div>
     <div class="serit"><strong id="denemeAd"></strong><span class="sayac" id="sayac"></span></div>
     <main id="sorular"></main>
@@ -240,13 +245,21 @@ function provaNo(){
   if (kayitli === '1' || kayitli === '2') return +kayitli;
   return bittiMi(KATALOG.denemeler[anahtarRB()]) ? 2 : 1;
 }
+function durumYaz(n, id){
+  let k = null; try { k = JSON.parse(ls.al('prova-cevap-' + id) || 'null'); } catch (e) {}
+  if (k && k.bitti) { const p = ls.al('prova-puan-' + id); return '✓ Bitirdin' + (p ? ` · ${p}/80 doğru` : ''); }
+  const isaretli = k && k.cevap ? Object.keys(k.cevap).length : 0;
+  if (isaretli) return `${isaretli}/80 işaretli`;
+  return n === 2 ? '<span class="yeni">YENİ</span>' : 'Başlamadın';
+}
 function sekmeCiz(no){
   const el = document.getElementById('sekmeler');
   const iki = KATALOG.ikinci && KATALOG.ikinci[anahtarRB()];
   if (!iki) { el.hidden = true; el.innerHTML = ''; return; }
   el.hidden = false;
-  el.innerHTML = `<button type="button" class="sekme" data-no="1" aria-pressed="${no === 1}">1. Prova${bittiMi(KATALOG.denemeler[anahtarRB()]) ? ' ✓' : ''}</button>`
-    + `<button type="button" class="sekme" data-no="2" aria-pressed="${no === 2}">2. Prova${bittiMi(iki) ? ' ✓' : '<span class="yeni">YENİ</span>'}</button>`;
+  // Liste (başkan, 7 Eki: "ilk link aynı kalsın, denemeler orada listelensin"): her prova bir satır + durumu.
+  const satir = (n, id) => `<button type="button" class="sekme" data-no="${n}" aria-pressed="${no === n}"><span><b>${n}. Prova</b><span class="acik">· açık</span></span><span class="durum">${durumYaz(n, id)}</span></button>`;
+  el.innerHTML = '<h3>Denemelerin</h3>' + satir(1, KATALOG.denemeler[anahtarRB()]) + satir(2, iki);
   el.querySelectorAll('.sekme').forEach(b => b.addEventListener('click', () => {
     if (+b.dataset.no === provaNo()) return;
     ls.koy('prova-no-' + anahtarRB(), b.dataset.no); denemeAc(); window.scrollTo({top: 0, behavior: 'smooth'});
@@ -322,8 +335,8 @@ function ciz(){
     }
   }
   document.getElementById('sorular').innerHTML = p.join('');
-  sekmeCiz(provaNo()); // bitirince ✓ işareti güncellensin
   sayac(); sonucCiz();
+  sekmeCiz(provaNo()); // sonucCiz puanı kaydettikten SONRA → listede "Bitirdin · x/80" hemen görünsün
 }
 function sayac(){
   const n = Object.keys(cevap).length, top = deneme.sorular.length;
@@ -339,6 +352,7 @@ function sonucCiz(){
   const el = document.getElementById('sonuc');
   if (!bitti) { el.hidden = true; return; }
   const {dg, yn, bos} = sayim(), s = deneme.sorular;
+  ls.koy('prova-puan-' + deneme.id, String(dg)); // denemeler listesinde "Bitirdin · x/80" için
   const parca = deneme.bloklar.map(([a, b, ad, aralik]) => { let x = 0; for (let i = a; i < b; i++) if (cevap[i] === s[i].d) x++; return `${esc(ad)} (${esc(aralik)}): <b>${x}</b> / ${b - a}`; }).join(' · ');
   el.innerHTML = `<h2>Sonucun</h2>
     <div class="kutular"><div class="kutu"><b>${dg}</b><span>Doğru</span></div><div class="kutu"><b>${yn}</b><span>Yanlış</span></div><div class="kutu"><b>${bos}</b><span>Boş</span></div></div>
@@ -417,6 +431,7 @@ document.getElementById('sorular').addEventListener('click', e => {
   b.closest('.soru').querySelector('.temizle').hidden = cevap[i] == null;
   b.closest('.soru').querySelectorAll('.sik').forEach(x => { const on = +x.dataset.j === cevap[i]; x.classList.toggle('secili', on); x.setAttribute('aria-pressed', String(on)); });
   sayac();
+  if (KATALOG.ikinci && KATALOG.ikinci[anahtarRB()]) sekmeCiz(provaNo()); // listedeki "x/80 işaretli"
   ilerlemeBildir();
 });
 // Canlı takip: her 10 işarette bir (yalnız ilk kez geçince) ilerleme kaydı
