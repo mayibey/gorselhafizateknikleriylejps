@@ -14,6 +14,8 @@
 > O ana kadar: provayı 336 kişi açtı, 185 bitirdi. Ana sayfaya 3 yorum onaylandı (Turgut S., Oğuz H., Recep T.).
 > Gelir (iadeler hariç, 10 Tem–7 Eki): Apple 104 işlem 101.159 TL brüt, Google 87 sipariş 69.708 TL brüt / 49.376 net;
 > toplam ≈170,9 bin brüt ≈121 bin net (scratchpad/gelir/gelir-topla.mjs; ASC salesReports anahtarı 403).
+> 0b018b6: sekmeler yerine "Denemelerin" listesi (başkan: ilk link aynı kalsın, denemeler orada listelensin). Duyuru ("yay"):
+> uygulama içi duyuru + push 914/914 ok + Telegram Duyurular mesaj 2701 (scratchpad/prova2-duyuru.py).
 >
 > ### ▶ 7 Eki (2) — YARIM SES DOSYASI ("2-3 sn çalıp kesiliyor")
 > Cahit Güçlü (ömür boyu, dün aldı): Ateşli Silahlar seslerinde ses 2-3 sn sonra kesiliyor. Sunucu 37 dosya ölçüldü: SAĞLAM (süre 70-133 sn,
