@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Cevaplarımı Aktar — Sınav Provası</title>
+<style>
+:root{--zemin:#F7F3EA;--kagit:#FFFCF5;--kenar:#E7DCC7;--metin:#1B2A4A;--soluk:#6E6047;--lacivert:#0B1F3A;--altin:#C9A227;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--metin);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;padding:16px}
+.kap{max-width:640px;margin:0 auto;display:grid;gap:14px}
+h1{font-family:'Playfair Display',Georgia,serif;margin:8px 0 0;color:var(--lacivert);font-size:26px}
+p{margin:0;color:var(--soluk);line-height:1.5}
+textarea{width:100%;min-height:220px;font:13px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px;border:1px solid var(--kenar);border-radius:8px;background:var(--kagit);color:var(--metin)}
+button{font:inherit;font-weight:700;font-size:16px;padding:12px 18px;border-radius:8px;border:1px solid var(--lacivert);background:var(--lacivert);color:#fff;cursor:pointer}
+#durum{font-weight:700;color:var(--lacivert)}
+</style>
+</head>
+<body>
+<div class="kap">
+  <h1>Cevaplarımı aktar</h1>
+  <p>Bu sayfa, bu cihazda çözdüğün sınav provalarındaki işaretlerini kısa bir metin olarak gösterir. Hiçbir yere gönderilmez; kopyalayıp yanlış analizi için Mevzu JSPS'ye iletebilirsin.</p>
+  <textarea id="metin" readonly></textarea>
+  <div><button type="button" id="kopyala">Metni kopyala</button> <span id="durum" aria-live="polite"></span></div>
+</div>
+<script>
+// 7 Eki 2026: işaretler yalnız tarayıcıda (localStorage 'prova-cevap-<deneme>') tutulur. Bu sayfa onları okuyup
+// "DENEME|bitti|soruNo:şık,..." biçiminde gösterir (şık 0=A … 4=E, soru numarası 1'den). Ağ isteği YOK.
+const satirlar = [];
+let kim = '';
+try { const k = JSON.parse(localStorage.getItem('prova-kim') || 'null'); if (k) kim = `${k.ad} ${k.soyad} · ${k.rutbe} · ${k.brans}`; } catch (e) {}
+try {
+  for (let i = 0; i < localStorage.length; i++) {
+    const a = localStorage.key(i);
+    if (!a || !a.startsWith('prova-cevap-')) continue;
+    const v = JSON.parse(localStorage.getItem(a) || 'null');
+    if (!v || !v.cevap) continue;
+    const isaret = Object.keys(v.cevap).map(Number).sort((x, y) => x - y).map(n => `${n + 1}:${'ABCDE'[v.cevap[n]]}`).join(',');
+    satirlar.push(`${a.slice('prova-cevap-'.length)}|${v.bitti ? 'bitti' : 'yarim'}|${isaret}`);
+  }
+} catch (e) {}
+document.getElementById('metin').value = satirlar.length
+  ? `PROVA-AKTAR ${kim}\n` + satirlar.join('\n')
+  : 'Bu cihazda kayıtlı prova cevabı bulunamadı. Provayı çözdüğün telefonda ve tarayıcıda bu sayfayı aç.';
+document.getElementById('kopyala').addEventListener('click', async () => {
+  const t = document.getElementById('metin');
+  try { await navigator.clipboard.writeText(t.value); } catch (e) { t.select(); document.execCommand('copy'); }
+  document.getElementById('durum').textContent = 'Kopyalandı.';
+});
+</script>
+</body>
+</html>
