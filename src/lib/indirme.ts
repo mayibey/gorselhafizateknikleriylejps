@@ -15,9 +15,11 @@ import { AppState } from 'react-native';
 import { KANUN_BOYUT } from '../assets/kart-boyutlari';
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
+import { SES_BOYUT } from '../assets/ses-boyutlari';
 import { ICERIK_TABANI, IMZALI_URL_AKTIF } from '@/constants/config';
 import { icerikAnahtari } from './cihaz-anahtar';
 import { gorselFiligran, imzaliUrller } from './imzali-url';
+import { sesTamIndiMi } from './ses-onbellek';
 import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
 
 /** Cihazda indirme destekleniyor mu (web'de hayır). */
@@ -190,28 +192,40 @@ export async function kanunIndir(
   // Tek dosya: GÖRSEL = (filigran fn / imzalı) indir + AES şifrele; SES = imzalı indir.
   // Var + GERÇEKTEN dolu olanı atlar (minik bozuk dosyayı "inmiş" SAYMA → eski hatalı sesler yeniden
   // iner). HTTP != 200 ya da minik gövde → ATMA (kaydetme), böylece retry temiz yeniden dener.
+  //
+  // 7 Eki 2026 (Cahit Güçlü: "2-3 saniye ses gelip kesiliyor"): indirme yarıda kopunca (uygulama
+  // kapatıldı / ağ gitti) asıl adla YARIM dosya kalıyordu; "1KB'tan büyük" kontrolü onu inmiş
+  // sayıp bir daha indirmiyordu. Artık (1) dosya önce `.part` geçici adına iner, tamamı gelince
+  // asıl adına taşınır; (2) ses, sunucudaki boyuttan (SES_BOYUT) küçükse yarım sayılıp yeniden iner.
   const indirTek = async (tip: 'gorsel' | 'ses', yol: string) => {
     const hedef = KOK + yol;
+    const gecici = hedef + '.part';
+    const beklenen = tip === 'ses' ? (SES_BOYUT[yol] ?? 0) : 0;
     const bilgi = await FileSystem.getInfoAsync(hedef);
-    if (bilgi.exists && (bilgi.size ?? 0) >= GECERLI_MIN) return;
+    if (bilgi.exists && (bilgi.size ?? 0) >= Math.max(GECERLI_MIN, beklenen)) return;
+    await FileSystem.deleteAsync(gecici, { idempotent: true }).catch(() => {});
     if (tip === 'gorsel') {
       const url = filigran ? `${filigran.base}?yol=${encodeURIComponent(yol)}` : await indirUrl(yol);
       if (!url) throw new Error('görsel URL alınamadı: ' + yol);
-      const res = await FileSystem.downloadAsync(url, hedef, filigran ? { headers: filigran.headers } : undefined);
+      const res = await FileSystem.downloadAsync(url, gecici, filigran ? { headers: filigran.headers } : undefined);
       if (res.status !== 200) throw new Error(`görsel HTTP ${res.status}: ${yol}`);
-      const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
+      const b64 = await FileSystem.readAsStringAsync(gecici, { encoding: FileSystem.EncodingType.Base64 });
       const paket = aesSifrele(b64ToBytes(b64), anahtar);
-      await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
+      await FileSystem.writeAsStringAsync(gecici, bytesToB64(paket), {
         encoding: FileSystem.EncodingType.Base64,
       });
     } else {
       const url = await indirUrl(yol);
       if (!url) throw new Error('ses imzalı URL alınamadı: ' + yol);
-      const res = await FileSystem.downloadAsync(url, hedef);
+      const res = await FileSystem.downloadAsync(url, gecici);
       if (res.status !== 200) throw new Error(`ses HTTP ${res.status}: ${yol}`);
-      const s = await FileSystem.getInfoAsync(hedef);
-      if (!s.exists || (s.size ?? 0) < GECERLI_MIN) throw new Error('ses dosyası geçersiz/boş: ' + yol);
+      const s = await FileSystem.getInfoAsync(gecici);
+      if (!s.exists || !sesTamIndiMi(s.size ?? 0, beklenen, res.headers)) {
+        throw new Error('ses dosyası yarım/geçersiz: ' + yol);
+      }
     }
+    await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+    await FileSystem.moveAsync({ from: gecici, to: hedef });
   };
 
   // Dayanıklı indirme: ön planı bekle → indir. Hata OLURSA ve bu sırada uygulama arka plandaysa
@@ -226,7 +240,7 @@ export async function kanunIndir(
       try {
         return await indirTek(tip, yol);
       } catch (e) {
-        await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+        await FileSystem.deleteAsync(hedef + '.part', { idempotent: true }).catch(() => {});
         // Arka plana geçtiği için düştüyse: sayma, ön planı bekleyip tekrar dene.
         if (AppState.currentState !== 'active') continue;
         if (d++ >= 2) throw e;
@@ -311,6 +325,39 @@ export async function bozukIcerikSil(yol: string): Promise<void> {
   } catch {
     /* silinemezse sorun değil: kart yine uzak kaynaktan gösterilir */
   }
+}
+
+/**
+ * YARIM SES ONARIMI (7 Eki 2026): indirilmiş kanunlarda boyutu sunucudakinden küçük (yarım inmiş)
+ * ya da hiç olmayan ses dosyalarını bulur ve o kanunların indirmesini yeniden başlatır (sağlam
+ * dosyalar atlanır → yalnız yarım/eksikler iner). Açılışta bir kez çağrılır. Hata yutulur.
+ */
+export async function yarimSesleriOnar(): Promise<number> {
+  if (!indirmeDestekli) return 0;
+  let onarilan = 0;
+  const klasorler = new Set<string>();
+  try {
+    for (const klasor of [...indirilmis]) {
+      for (const { yol } of kanunSesleri(klasor)) {
+        const beklenen = SES_BOYUT[yol];
+        if (!beklenen) continue;
+        // eslint-disable-next-line no-await-in-loop
+        const b = await FileSystem.getInfoAsync(KOK + yol).catch(() => null);
+        if (b?.exists && (b.size ?? 0) >= beklenen) continue;
+        // Yarım dosya SİLİNMEZ: kanunIndir onu yarım görüp `.part`'a yenisini indirir ve tek
+        // hamlede değiştirir → arada kart sessiz kalmaz.
+        if (b?.exists) onarilan++;
+        klasorler.add(klasor);
+      }
+    }
+    for (const klasor of klasorler) {
+      // eslint-disable-next-line no-await-in-loop
+      await kanunIndirBaslat(klasor).catch(() => {});
+    }
+  } catch {
+    /* sessiz — onarım kullanıcı akışını asla bozmaz */
+  }
+  return onarilan;
 }
 
 export async function kanunSil(klasor: string): Promise<void> {

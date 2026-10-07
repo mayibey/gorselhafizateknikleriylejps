@@ -14,6 +14,8 @@
  */
 import * as FileSystem from 'expo-file-system/legacy';
 
+import { SES_BOYUT } from '../assets/ses-boyutlari';
+
 const KLASOR = FileSystem.cacheDirectory ? `${FileSystem.cacheDirectory}jsps-ses/` : null;
 
 // Bellek-içi: aynı oturumda inen mp3'lerin yerel uri'si (senkron erişim için).
@@ -73,25 +75,48 @@ export async function sesiOnbellekle(
   async function isiYap(): Promise<string | null> {
     const hedef = `${klasor}${dosyaAdi(yol)}`;
     try {
-      // Diskte önceki oturumdan kalmış olabilir → indirmeden kullan.
+      // Diskte önceki oturumdan kalmış olabilir → indirmeden kullan. 7 Eki 2026 (Cahit Güçlü:
+      // "2-3 saniye ses gelip kesiliyor"): indirme yarıda kopunca YARIM mp3 kalıyordu ve
+      // "1KB'tan büyük" diye tam sayılıyordu. Artık sunucudaki boyuttan küçükse yeniden iner.
+      const beklenen = SES_BOYUT[yol] ?? 0;
       const bilgi = await FileSystem.getInfoAsync(hedef);
-      if (bilgi.exists && bilgi.size && bilgi.size > 1024) {
+      if (bilgi.exists && bilgi.size && bilgi.size > 1024 && bilgi.size >= beklenen) {
         bellek.set(yol, hedef);
         return hedef;
       }
       await FileSystem.makeDirectoryAsync(klasor, { intermediates: true }).catch(() => {});
-      const sonuc = await FileSystem.downloadAsync(uzakUri, hedef);
-      if (sonuc.status !== 200) {
-        await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+      // Önce geçici dosyaya iner, TAMAMI gelince asıl adına taşınır → yarım dosya asıl adla kalmaz.
+      const gecici = `${hedef}.part`;
+      await FileSystem.deleteAsync(gecici, { idempotent: true }).catch(() => {});
+      const sonuc = await FileSystem.downloadAsync(uzakUri, gecici);
+      const inen = await FileSystem.getInfoAsync(gecici);
+      if (sonuc.status !== 200 || !sesTamIndiMi(inen.exists ? (inen.size ?? 0) : 0, beklenen, sonuc.headers)) {
+        await FileSystem.deleteAsync(gecici, { idempotent: true }).catch(() => {});
         return null;
       }
+      await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+      await FileSystem.moveAsync({ from: gecici, to: hedef });
       bellek.set(yol, hedef);
       return hedef;
     } catch {
       await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+      await FileSystem.deleteAsync(`${hedef}.part`, { idempotent: true }).catch(() => {});
       return null;
     } finally {
       suren.delete(yol);
     }
   }
+}
+
+/**
+ * Yeni inen ses dosyası TAM mı? Sunucunun bildirdiği uzunluk (Content-Length) varsa ona birebir
+ * uymalı; yoksa bilinen boyuttan küçük olmamalı. (Sunucuda dosya sonradan değişirse başlık doğruyu
+ * söyler → sonsuz yeniden indirme olmaz.)
+ */
+export function sesTamIndiMi(boyut: number, beklenen: number, basliklar?: Record<string, string>): boolean {
+  if (boyut <= 1024) return false;
+  const uzunluk = Object.entries(basliklar ?? {}).find(([k]) => k.toLowerCase() === 'content-length')?.[1];
+  const n = uzunluk ? Number(uzunluk) : NaN;
+  if (Number.isFinite(n) && n > 0) return boyut === n;
+  return boyut >= beklenen;
 }

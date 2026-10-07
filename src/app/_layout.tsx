@@ -35,7 +35,7 @@ import { otaGuncellemeUygula } from '@/lib/ota';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { indirmeDurumYukle } from '@/lib/indirme';
+import { indirmeDurumYukle, yarimSesleriOnar } from '@/lib/indirme';
 import { bekleyenleriGonder } from '@/lib/deneme-servis';
 import { senkronKaydet } from '@/lib/senkron';
 import { takipIzniVeMetaBaslat } from '@/lib/takip-izni';
@@ -123,7 +123,8 @@ export default function RootLayout() {
   // Sunucuda DÜZELTİLEN kart görselini, o kanunu zaten indirmiş cihaza da ulaştır
   // (dosya adı aynı kaldığı için indirme "var" deyip atlıyordu). Damga değişmedikçe no-op.
   useEffect(() => {
-    void indirmeDurumYukle().then(() => bayatIcerikTazele());
+    // Yarım inmiş sesleri onar (7 Eki 2026) — bayat tazelemeden SONRA (aynı kanunu iki kez başlatmasın).
+    void indirmeDurumYukle().then(() => bayatIcerikTazele()).then(() => yarimSesleriOnar());
   }, []);
 
   // GOOGLE GİRİŞ DÖNÜŞÜ (deep-link): Android'de OAuth redirect app'e `mevzu://?code=...` deep-link
