@@ -4,6 +4,17 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 7 Eki (3) — SINAV PROVASI 2 + GELİR TOPLAMI + ANA SAYFA YORUMLARI
+> Adaylar "aynı ayarda başka deneme" istedi; başkan: sitede ücretsiz + uygulamaya yönlendir, en çok çözülenler, 1 deneme.
+> 92044fb altyapı: sayfada 1./2. Prova sekmesi (ilk gelen 1'den, 1'i bitiren 2'den; seçim sabitlenir), sonuçta "2. Provaya geç" +
+> App Store/Google Play indir; panel kişi+deneme gruplu (prova_panel güncellendi), 2. Prova etiketi.
+> d65bf53 içerik: SB-JAN-2, SB-MEBS-2, ASB-JAN-2, ASB-MEBS-2, UZM-JAN-2 (uzmerb+uzmj) — 400 soru, 8 ajan (PROVA2_KURALLARI.md):
+> denetle 0, kapsam 0 (920 soru), 1. prova çakışma 0 (rütbe içi; başka branş provasıyla 7 ortak bilgi — farklı kitle, bırakıldı),
+> doğru şıkkı belirgin uzun 7 soru dengelendi, 15 soru elle okundu. Kur: prova2-kur.py → aciklama.py → prova-uret.py.
+> O ana kadar: provayı 336 kişi açtı, 185 bitirdi. Ana sayfaya 3 yorum onaylandı (Turgut S., Oğuz H., Recep T.).
+> Gelir (iadeler hariç, 10 Tem–7 Eki): Apple 104 işlem 101.159 TL brüt, Google 87 sipariş 69.708 TL brüt / 49.376 net;
+> toplam ≈170,9 bin brüt ≈121 bin net (scratchpad/gelir/gelir-topla.mjs; ASC salesReports anahtarı 403).
+>
 > ### ▶ 7 Eki (2) — YARIM SES DOSYASI ("2-3 sn çalıp kesiliyor")
 > Cahit Güçlü (ömür boyu, dün aldı): Ateşli Silahlar seslerinde ses 2-3 sn sonra kesiliyor. Sunucu 37 dosya ölçüldü: SAĞLAM (süre 70-133 sn,
 > sessizlik yok, md5 aynı). Kök: indirme kopunca cihazda yarım mp3 kalıyor, indirme.ts + ses-onbellek.ts "1KB'tan büyük" diye tam sayıyordu.
