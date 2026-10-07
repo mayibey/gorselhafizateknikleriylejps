@@ -34,11 +34,19 @@ td.sayi{font-variant-numeric:tabular-nums}
 .cubuk{display:inline-block;width:80px;height:6px;background:#EDE3CF;border-radius:3px;vertical-align:middle;margin-right:6px;overflow:hidden}
 .cubuk i{display:block;height:100%;background:var(--altin)}
 .hata{color:var(--kirmizi);font-weight:700;margin-top:20px}
+.filtre{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.filtre button{font:inherit;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--kenar);background:var(--kagit);color:var(--metin);cursor:pointer}
+.filtre button[aria-pressed="true"]{background:var(--lacivert);border-color:var(--lacivert);color:#fff}
 </style>
 </head>
 <body>
 <div class="kap">
   <header><h1>Sınav Provası · Canlı Panel</h1><div class="guncel" id="guncel">Yükleniyor…</div></header>
+  <div class="filtre" id="filtre" role="group" aria-label="Prova">
+    <button type="button" data-f="hepsi" aria-pressed="true">Tümü</button>
+    <button type="button" data-f="1" aria-pressed="false">1. Prova</button>
+    <button type="button" data-f="2" aria-pressed="false">2. Prova</button>
+  </div>
   <div class="kutular">
     <div class="kutu"><b id="kAcan">–</b><span>Giren kişi</span></div>
     <div class="kutu canli"><b id="kCanli">–</b><span>Şu an çözüyor</span></div>
@@ -59,6 +67,14 @@ const RUTBE = {sb:'Subay', asb:'Astsubay', uzmj:'Uzm.J', uzmerb:'Uzm.Erb'};
 const provaAd = (d) => (d && /-2$/.test(d) ? ' · 2. Prova' : '');
 const CANLI_DK = 20;
 const anahtar = decodeURIComponent(location.hash.slice(1));
+// 7 Eki 2026: prova filtresi (başkan: "2.'yi nasıl takip edicem"). Deneme kimliği "-2" ile biterse 2. Prova.
+let filtre = 'hepsi';
+const provaNo = (x) => (x.deneme && /-2$/.test(x.deneme) ? '2' : x.deneme ? '1' : null);
+document.querySelectorAll('#filtre button').forEach(b => b.addEventListener('click', () => {
+  filtre = b.dataset.f;
+  document.querySelectorAll('#filtre button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  yukle();
+}));
 function esc(t){ return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function saat(ts){ const d = new Date(ts); return d.toLocaleString('tr-TR', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}); }
 function once(ts){ const dk = Math.round((Date.now() - new Date(ts)) / 60000); return dk < 1 ? 'şimdi' : dk < 60 ? dk + ' dk önce' : Math.round(dk / 60) + ' sa önce'; }
@@ -72,7 +88,7 @@ async function yukle(){
     r = await y.json(); h.hidden = true;
   } catch (e) { h.hidden = false; h.textContent = e.message; return; }
   const simdi = Date.now();
-  const kisi = r.filter(x => x.deneme || x.hizlandir);
+  const kisi = r.filter(x => (x.deneme || x.hizlandir) && (filtre === 'hepsi' || provaNo(x) === filtre));
   const bitti = kisi.filter(x => x.bitti), canli = kisi.filter(x => !x.bitti && x.deneme && simdi - new Date(x.son) < CANLI_DK * 60000);
   document.getElementById('kAcan').textContent = new Set(kisi.map(x => x.ziyaretci)).size;
   document.getElementById('kCanli').textContent = canli.length;
