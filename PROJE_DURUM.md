@@ -11,7 +11,7 @@
 > açılışta bekleyen gönderim + çift gönderim kilidi; cihazda yanlış metni yazılmaz (sinav.ts soruBul: banka+denemeler+premium+düello);
 > sınır 200; uid ile hesap ayrımı. deneme_sonuc.brans sütunu eklendi (supabase/sql/deneme-sonuc-brans.sql). Test: sahte depo/sunucu 19/19,
 > gerçek 2884 yanlış kimliğinden 2881 çözülüyor (3'ü kara liste). Eski branş sonuçları (brans boş) kartlara EŞLENMEZ (branş karışmasın).
-> OTA bekliyor ("yay"). Prova sitesi: seçili şık lacivert+✓, aynı şıkka tekrar dokunma silmez, "İşareti kaldır" — 1adcade (kullanıcı bildirimi).
+> OTA ("yay"): 1.0.47 f4bb0781, 1.0.46 4e35c052. Prova sitesi: seçili şık lacivert+✓, aynı şıkka tekrar dokunma silmez, "İşareti kaldır" — 1adcade (kullanıcı bildirimi).
 >
 > ### ▶ 6 Eki (11) — PUAN/YORUM + TELEGRAM PAYLAŞIMI + KULLANICI BİLDİRİMİ SORULAR
 > Prova bitince 1-5 yıldız (1 solda) + yorum + mağaza düğmeleri; onaylı yorumlar ana sayfada (prova_yorum, onay=false varsayılan) — 04eb8f6, d4099af.
