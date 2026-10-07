@@ -56,6 +56,7 @@ td.sayi{font-variant-numeric:tabular-nums}
 <script>
 const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
 const RUTBE = {sb:'Subay', asb:'Astsubay', uzmj:'Uzm.J', uzmerb:'Uzm.Erb'};
+const provaAd = (d) => (d && /-2$/.test(d) ? ' · 2. Prova' : '');
 const CANLI_DK = 20;
 const anahtar = decodeURIComponent(location.hash.slice(1));
 function esc(t){ return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
@@ -73,12 +74,12 @@ async function yukle(){
   const simdi = Date.now();
   const kisi = r.filter(x => x.deneme || x.hizlandir);
   const bitti = kisi.filter(x => x.bitti), canli = kisi.filter(x => !x.bitti && x.deneme && simdi - new Date(x.son) < CANLI_DK * 60000);
-  document.getElementById('kAcan').textContent = kisi.length;
+  document.getElementById('kAcan').textContent = new Set(kisi.map(x => x.ziyaretci)).size;
   document.getElementById('kCanli').textContent = canli.length;
   document.getElementById('kBitti').textContent = bitti.length;
   const tam = bitti.filter(x => x.dogru != null && (x.dogru + x.yanlis + x.bos) === 80);
   document.getElementById('kOrt').textContent = tam.length ? (tam.reduce((a, x) => a + x.dogru, 0) / tam.length).toFixed(1) : '–';
-  const say = {}; kisi.forEach(x => { const k = (RUTBE[x.rutbe] || '?') + ' ' + (x.brans || ''); say[k] = (say[k] || 0) + 1; });
+  const say = {}; kisi.forEach(x => { const k = (RUTBE[x.rutbe] || '?') + ' ' + (x.brans || '') + provaAd(x.deneme); say[k] = (say[k] || 0) + 1; });
   document.getElementById('dagilim').innerHTML = Object.entries(say).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<span>${esc(k)}: ${n}</span>`).join('') || '<span>—</span>';
   const hz = {}; r.filter(x => x.hizlandir).forEach(x => { const k = (RUTBE[x.rutbe] || '?') + ' ' + x.brans; hz[k] = (hz[k] || 0) + 1; });
   document.getElementById('hiz').innerHTML = Object.entries(hz).map(([k, n]) => `<span>${esc(k)}: ${n}</span>`).join('') || '<span>yok</span>';
@@ -88,7 +89,7 @@ async function yukle(){
     else if (simdi - new Date(x.son) < CANLI_DK * 60000) { durum = '<span class="d cozuyor">Çözüyor</span>'; }
     else { durum = '<span class="d ayrildi">Yarım bıraktı</span>'; }
     if (!x.bitti) { const n = x.isaretli || 0; ilerleme = `<span class="cubuk"><i style="width:${Math.min(100, n / 80 * 100)}%"></i></span>${n ? n + '+ işaretli' : 'yeni başladı'}`; }
-    return `<tr><td>${esc(x.ad || '(adsız)')}</td><td>${esc((RUTBE[x.rutbe] || '?') + ' · ' + (x.brans || '-'))}</td><td>${durum}</td><td class="sayi">${ilerleme}</td><td class="sayi">${saat(x.ilk)}</td><td class="sayi">${once(x.son)}</td></tr>`;
+    return `<tr><td>${esc(x.ad || '(adsız)')}</td><td>${esc((RUTBE[x.rutbe] || '?') + ' · ' + (x.brans || '-') + provaAd(x.deneme))}</td><td>${durum}</td><td class="sayi">${ilerleme}</td><td class="sayi">${saat(x.ilk)}</td><td class="sayi">${once(x.son)}</td></tr>`;
   }).join('');
   try {
     const yy = await fetch(SB_URL + '/rest/v1/rpc/prova_panel_yorum', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body: JSON.stringify({p_anahtar: anahtar})});

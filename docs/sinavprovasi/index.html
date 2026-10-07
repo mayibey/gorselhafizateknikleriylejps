@@ -57,6 +57,15 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 .etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
 .alt{color:var(--soluk);margin:0;max-width:62ch}
 .kart{display:grid;gap:12px;margin:18px 0;padding:16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px}
+.sekmeler{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.sekme{font:inherit;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);cursor:pointer}
+.sekme[aria-pressed="true"]{background:var(--lacivert);border-color:var(--lacivert);color:var(--zemin)}
+.sekme .yeni{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--kirmizi);color:#fff;font-size:11px;letter-spacing:.06em;vertical-align:1px}
+.uygulama{display:grid;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid var(--kenar)}
+.uygulama h3{margin:0;font-family:var(--baslik);font-size:22px;color:var(--lacivert)}
+.uygulama p{margin:0;color:var(--soluk)}
+.uygulama .magaza{display:flex;flex-wrap:wrap;gap:8px}
+.uygulama .magaza .btn{text-decoration:none;display:inline-block}
 .hizlandir{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
 .btn.ikincil{background:var(--kirmizi);border-color:var(--kirmizi);color:#fff}
 .kart.vurgu{border-color:var(--altin)}
@@ -151,6 +160,7 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
     <div class="kart">
       <div class="kimlik" id="kimlik"></div>
       <p id="denemeNot"></p>
+      <div class="sekmeler" id="sekmeler" role="group" aria-label="Prova seç" hidden></div>
     </div>
     <div class="serit"><strong id="denemeAd"></strong><span class="sayac" id="sayac"></span></div>
     <main id="sorular"></main>
@@ -167,7 +177,7 @@ h1{font-family:var(--baslik);font-size:clamp(28px,6vw,38px);line-height:1.12;mar
 
 <script>
 const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
-const KATALOG = {"surum": "1791322040", "bransAd": {"jandarma": "Jandarma", "mebs": "MEBS (Muhabere Elektronik Bilgi Sistemleri)", "havacilik": "Havacılık", "personel": "Personel", "maliye": "Maliye", "istihkam": "İstihkam", "ikmal": "İkmal", "bakim": "Bakım", "bando": "Bando", "saglik": "Sağlık", "tabip": "Tabip", "dis_tabibi": "Diş Tabibi", "eczaci": "Eczacı", "kimyager": "Kimyager", "veteriner": "Veteriner", "muhendis": "Mühendis"}, "branslar": {"sb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "tabip", "dis_tabibi", "eczaci", "kimyager", "veteriner", "muhendis"], "asb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "saglik"], "uzmj": ["jandarma"], "uzmerb": ["jandarma"]}, "denemeler": {"sb/jandarma": "SB-JAN", "sb/mebs": "SB-MEBS", "uzmerb/jandarma": "UZM-JAN", "uzmj/jandarma": "UZM-JAN", "asb/jandarma": "ASB-JAN", "asb/mebs": "ASB-MEBS", "sb/havacilik": "SB-HAVACILIK", "asb/havacilik": "ASB-HAVACILIK", "sb/personel": "SB-PERSONEL", "asb/personel": "ASB-PERSONEL", "sb/ikmal": "SB-IKMAL", "asb/ikmal": "ASB-IKMAL", "sb/bakim": "SB-BAKIM", "asb/bakim": "ASB-BAKIM", "sb/istihkam": "SB-ISTIHKAM", "asb/istihkam": "ASB-ISTIHKAM", "sb/maliye": "SB-MALIYE", "asb/maliye": "ASB-MALIYE", "asb/saglik": "ASB-SAGLIK"}, "musterek": {"sb": "SB-MUS", "asb": "ASB-MUS"}};
+const KATALOG = {"surum": "1791399580", "bransAd": {"jandarma": "Jandarma", "mebs": "MEBS (Muhabere Elektronik Bilgi Sistemleri)", "havacilik": "Havacılık", "personel": "Personel", "maliye": "Maliye", "istihkam": "İstihkam", "ikmal": "İkmal", "bakim": "Bakım", "bando": "Bando", "saglik": "Sağlık", "tabip": "Tabip", "dis_tabibi": "Diş Tabibi", "eczaci": "Eczacı", "kimyager": "Kimyager", "veteriner": "Veteriner", "muhendis": "Mühendis"}, "branslar": {"sb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "tabip", "dis_tabibi", "eczaci", "kimyager", "veteriner", "muhendis"], "asb": ["jandarma", "mebs", "havacilik", "personel", "maliye", "istihkam", "ikmal", "bakim", "bando", "saglik"], "uzmj": ["jandarma"], "uzmerb": ["jandarma"]}, "denemeler": {"sb/jandarma": "SB-JAN", "sb/mebs": "SB-MEBS", "uzmerb/jandarma": "UZM-JAN", "uzmj/jandarma": "UZM-JAN", "asb/jandarma": "ASB-JAN", "asb/mebs": "ASB-MEBS", "sb/havacilik": "SB-HAVACILIK", "asb/havacilik": "ASB-HAVACILIK", "sb/personel": "SB-PERSONEL", "asb/personel": "ASB-PERSONEL", "sb/ikmal": "SB-IKMAL", "asb/ikmal": "ASB-IKMAL", "sb/bakim": "SB-BAKIM", "asb/bakim": "ASB-BAKIM", "sb/istihkam": "SB-ISTIHKAM", "asb/istihkam": "ASB-ISTIHKAM", "sb/maliye": "SB-MALIYE", "asb/maliye": "ASB-MALIYE", "asb/saglik": "ASB-SAGLIK"}, "musterek": {"sb": "SB-MUS", "asb": "ASB-MUS"}, "ikinci": {}};
 const RUTBE_AD = {sb:'Subay', asb:'Astsubay', uzmj:'Uzman Jandarma', uzmerb:'Uzman Erbaş'};
 const HARF = 'ABCDE', TIP = {oncullu:'Öncüllü', olumsuz:'Olumsuz', vaka:'Olay'};
 const ls = {
@@ -219,8 +229,35 @@ document.getElementById('giris').addEventListener('submit', e => {
 });
 
 // --- Deneme ---
+// 2. PROVA (7 Eki 2026): rütbe/branşın ikinci denemesi varsa sekme çıkar. Seçim hatırlanır; ilk kez gelen 1. Provadan,
+// 1. Provayı bitirmiş olan doğrudan 2. Provadan başlar.
+function anahtarRB(){ return kim.rutbe + '/' + kim.brans; }
+function bittiMi(id){ try { const k = JSON.parse(ls.al('prova-cevap-' + id) || 'null'); return !!(k && k.bitti); } catch (e) { return false; } }
+function provaNo(){
+  const iki = KATALOG.ikinci && KATALOG.ikinci[anahtarRB()];
+  if (!iki) return 1;
+  const kayitli = ls.al('prova-no-' + anahtarRB());
+  if (kayitli === '1' || kayitli === '2') return +kayitli;
+  return bittiMi(KATALOG.denemeler[anahtarRB()]) ? 2 : 1;
+}
+function sekmeCiz(no){
+  const el = document.getElementById('sekmeler');
+  const iki = KATALOG.ikinci && KATALOG.ikinci[anahtarRB()];
+  if (!iki) { el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = `<button type="button" class="sekme" data-no="1" aria-pressed="${no === 1}">1. Prova${bittiMi(KATALOG.denemeler[anahtarRB()]) ? ' ✓' : ''}</button>`
+    + `<button type="button" class="sekme" data-no="2" aria-pressed="${no === 2}">2. Prova${bittiMi(iki) ? ' ✓' : '<span class="yeni">YENİ</span>'}</button>`;
+  el.querySelectorAll('.sekme').forEach(b => b.addEventListener('click', () => {
+    if (+b.dataset.no === provaNo()) return;
+    ls.koy('prova-no-' + anahtarRB(), b.dataset.no); denemeAc(); window.scrollTo({top: 0, behavior: 'smooth'});
+  }));
+}
 function denemeSec(){
-  const tam = KATALOG.denemeler[kim.rutbe + '/' + kim.brans];
+  const iki = KATALOG.ikinci && KATALOG.ikinci[anahtarRB()];
+  // Açılan prova sabitlenir: 1. Provayı bitirince sayfa kendiliğinden "2. Prova açık" sanmasın.
+  if (iki) ls.koy('prova-no-' + anahtarRB(), String(provaNo()));
+  if (iki && provaNo() === 2) return {id: iki, kismi: false};
+  const tam = KATALOG.denemeler[anahtarRB()];
   if (tam) return {id: tam, kismi: false};
   const mus = KATALOG.musterek[kim.rutbe];
   return mus ? {id: mus, kismi: true} : null;
@@ -233,11 +270,12 @@ async function denemeAc(){
   const not = document.getElementById('denemeNot'), kap = document.getElementById('sorular');
   if (!sec) {
     not.innerHTML = `<b>${RUTBE_AD[kim.rutbe]} provası hazırlanıyor.</b> Hazır olunca bu sayfa otomatik olarak sana uygun denemeyi açacak; birazdan tekrar bak.`;
-    kap.innerHTML = ''; document.getElementById('denemeAd').textContent = ''; document.getElementById('sayac').textContent = '';
+    kap.innerHTML = ''; document.getElementById('denemeAd').textContent = ''; document.getElementById('sayac').textContent = ''; sekmeCiz(1);
     document.querySelector('.alt-bar').hidden = true; document.getElementById('sonuc').hidden = true;
     kayit('acilis', {deneme: null}); return;
   }
   document.querySelector('.alt-bar').hidden = false;
+  sekmeCiz(provaNo());
   not.innerHTML = sec.kismi
     ? `<b>${esc(KATALOG.bransAd[kim.brans])} branş soruları henüz hazır değil.</b> Şimdilik ${RUTBE_AD[kim.rutbe].toLowerCase()} müşterek bölümünü (40 soru) çözebilirsin. Bu branşın sorularının hazırlanmasını istiyorsan aşağıdaki düğmeye bas; talep gelen branşları öne alıyoruz.
        <span class="hizlandir"><button class="btn ikincil" type="button" id="hizlandirBtn">${esc(KATALOG.bransAd[kim.brans])} sorularının hazırlanmasını hızlandır</button><span id="hizlandirSonuc" aria-live="polite"></span></span>`
@@ -284,6 +322,7 @@ function ciz(){
     }
   }
   document.getElementById('sorular').innerHTML = p.join('');
+  sekmeCiz(provaNo()); // bitirince ✓ işareti güncellensin
   sayac(); sonucCiz();
 }
 function sayac(){
@@ -305,8 +344,10 @@ function sonucCiz(){
     <div class="kutular"><div class="kutu"><b>${dg}</b><span>Doğru</span></div><div class="kutu"><b>${yn}</b><span>Yanlış</span></div><div class="kutu"><b>${bos}</b><span>Boş</span></div></div>
     <div>${parca}</div>
     <div class="anahtar" aria-label="Cevap anahtarı">${s.map((q, i) => `${i+1}${HARF[q.d]}`).join(' ')}</div>
+    <div class="uygulama" id="uygulama"></div>
     <div class="geri" id="geri"></div>`;
   el.hidden = false;
+  uygulamaCiz();
   geriBildirimCiz(dg);
 }
 
@@ -317,6 +358,22 @@ function magazaDugmeleri(){
   const a = `<a class="btn" href="${MAGAZA.ios}" target="_blank" rel="noopener">App Store'da değerlendir</a>`;
   const g = `<a class="btn" href="${MAGAZA.android}" target="_blank" rel="noopener">Google Play'de değerlendir</a>`;
   return IOS ? a : ANDROID ? g : a + g;
+}
+// Sonuç ekranı: (varsa) diğer provaya geç + uygulamada daha fazla deneme (7 Eki 2026, başkan: "uygulamaya yönlendir").
+const INDIR = {ios: 'https://apps.apple.com/tr/app/id6787908212', android: 'https://play.google.com/store/apps/details?id=app.mevzujsps.android'};
+function uygulamaCiz(){
+  const kap = document.getElementById('uygulama'); if (!kap) return;
+  const iki = KATALOG.ikinci && KATALOG.ikinci[anahtarRB()];
+  const no = provaNo(), digerId = iki ? (no === 1 ? iki : KATALOG.denemeler[anahtarRB()]) : null;
+  const gec = digerId && !bittiMi(digerId)
+    ? `<div><button class="btn" type="button" id="digerProva">${no === 1 ? '2. Provaya geç' : '1. Provayı çöz'}</button></div>` : '';
+  const a = `<a class="btn ikincil" href="${INDIR.ios}" target="_blank" rel="noopener">App Store'dan indir</a>`;
+  const g = `<a class="btn ikincil" href="${INDIR.android}" target="_blank" rel="noopener">Google Play'den indir</a>`;
+  kap.innerHTML = `<h3>${gec ? 'Devam et' : 'Daha fazla deneme mi istiyorsun?'}</h3>${gec}
+    <p>Mevzu JSPS uygulamasında rütbene ve branşına göre hazırlanmış başka denemeler, her maddenin görsel hafıza kartı ve sesli anlatımı var.</p>
+    <div class="magaza">${IOS ? a : ANDROID ? g : a + g}</div>`;
+  const b = document.getElementById('digerProva');
+  if (b) b.addEventListener('click', () => { ls.koy('prova-no-' + anahtarRB(), String(no === 1 ? 2 : 1)); denemeAc(); window.scrollTo({top: 0, behavior: 'smooth'}); });
 }
 function geriBildirimCiz(dg){
   const kap = document.getElementById('geri'); if (!kap) return;

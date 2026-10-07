@@ -21,7 +21,8 @@ begin
              bool_or(olay = 'hizlandir') as hizlandir
       from public.tahmin_deneme_kayit
       where ad is null or ad not like 'TESTPROVA%'
-      group by ziyaretci
+      -- 7 Eki 2026: kişi + deneme (2. prova eklendi; 1. provayı bitiren 2.'yi açınca "bitirdi" görünmesin)
+      group by ziyaretci, coalesce(deneme, '')
     ) x
   );
 end $$;

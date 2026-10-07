@@ -34,6 +34,13 @@ _bj = os.path.join(KOK, 'branslar.json')
 if os.path.exists(_bj):
     for _b in json.load(open(_bj, encoding='utf-8')):
         DENEMELER.append((_b['id'], _b['kaynak'], _b['rutbe'], _b['brans'], _b['baslik'], _b['bloklar']))
+# SINAV PROVASI 2 (7 Eki 2026, adaylar "aynı ayarda başka deneme" istedi): ikinci.json → aynı biçimde satırlar.
+# Sayfada "1. Prova / 2. Prova" sekmesi çıkar; katalog['ikinci'][rutbe/brans] = id.
+IKINCI = []
+_ij = os.path.join(KOK, 'ikinci.json')
+if os.path.exists(_ij):
+    for _b in json.load(open(_ij, encoding='utf-8')):
+        IKINCI.append((_b['id'], _b['kaynak'], _b['rutbe'], _b['brans'], _b['baslik'], _b['bloklar']))
 # Branşı hazır olmayanlar için rütbenin müşterek bölümü: (id, kaynak, ilk N soru, başlık)
 MUSTEREK = {
     'sb': ('SB-MUS', 'TAHMIN-SB-JAN-63', 40, 'Subay · Müşterek'),
@@ -49,12 +56,18 @@ def sorular(kaynak, n=None):
 
 cikti = os.path.join(DEPO, 'docs/sinavprovasi')
 os.makedirs(os.path.join(cikti, 'd'), exist_ok=True)
-katalog = {'surum': str(int(time.time())), 'bransAd': BRANS_AD, 'branslar': BRANSLAR, 'denemeler': {}, 'musterek': {}}
+katalog = {'surum': str(int(time.time())), 'bransAd': BRANS_AD, 'branslar': BRANSLAR, 'denemeler': {}, 'musterek': {}, 'ikinci': {}}
 for did, kaynak, rutbe, brans, baslik, bloklar in DENEMELER:
     s = sorular(kaynak)
     assert bloklar[-1][1] == len(s), (did, len(s))
     json.dump({'id': did, 'baslik': baslik, 'bloklar': bloklar, 'sorular': s}, open(os.path.join(cikti, 'd', did + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
     katalog['denemeler'][f'{rutbe}/{brans}'] = did
+for did, kaynak, rutbe, brans, baslik, bloklar in IKINCI:
+    s = sorular(kaynak)
+    assert bloklar[-1][1] == len(s), (did, len(s))
+    assert f'{rutbe}/{brans}' in katalog['denemeler'], ('2. prova 1. provasız', did)
+    json.dump({'id': did, 'baslik': baslik, 'bloklar': bloklar, 'sorular': s}, open(os.path.join(cikti, 'd', did + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+    katalog['ikinci'][f'{rutbe}/{brans}'] = did
 for rutbe, (did, kaynak, n, baslik) in MUSTEREK.items():
     json.dump({'id': did, 'baslik': baslik, 'bloklar': [[0, n, MUS, f'1–{n}']], 'sorular': sorular(kaynak, n)},
               open(os.path.join(cikti, 'd', did + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
@@ -83,4 +96,4 @@ yon = ('<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="r
 io.open(os.path.join(DEPO, 'docs/tahmin/index.html'), 'w', encoding='utf-8').write(yon)
 
 hazir = {r: sum(1 for d in DENEMELER if d[2] == r) for r in BRANSLAR}
-print('yazıldı: index.html +', len(DENEMELER) + len(MUSTEREK), 'deneme · tam deneme sayısı rütbe başına:', hazir)
+print('yazıldı: index.html +', len(DENEMELER) + len(MUSTEREK) + len(IKINCI), 'deneme · tam deneme sayısı rütbe başına:', hazir, '· 2. prova:', sorted(katalog['ikinci']))

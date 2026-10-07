@@ -15,12 +15,12 @@ def norm(t):
 
 
 def bolum(dosya):
-    ad = os.path.basename(dosya)[len('tahmin-'):-5]
-    if ad in ('mus-a', 'mus-b', 'mus-c', 'asb-mus', 'uzm-mus', 'mebs-ek', 'asb-mebs-ek', 'brans-havacilik-ek'):
+    ad = re.sub(r'^tahmin\d*-', '', os.path.basename(dosya))[:-5]  # tahmin-… (prova 1) / tahmin2-… (prova 2)
+    if ad in ('mus-a', 'mus-b', 'mus-c', 'asb-mus', 'uzm-mus', 'mebs-ek', 'asb-mebs-ek', 'brans-havacilik-ek', 'sb-mus', 'sb-mebs-ek'):
         return 'müşterek', ''
-    if ad in ('jan-a', 'jan-b', 'uzm-jan', 'asb-jan'):
+    if ad in ('jan-a', 'jan-b', 'uzm-jan', 'asb-jan', 'sb-jan'):
         return 'jandarma', 'jandarma'
-    if ad in ('mebs-brans', 'asb-mebs-brans'):
+    if ad in ('mebs-brans', 'asb-mebs-brans', 'sb-mebs-brans'):
         return 'mebs', 'mebs'
     if ad.startswith('brans-'):
         b = ad[len('brans-'):]
@@ -33,14 +33,14 @@ EK_IZIN = {('müşterek', 7): {'Ek'}, ('jandarma', 40): {'13/A'}, ('maliye', 140
 paket = {}
 sorun = 0
 toplam = 0
-for f in sorted(glob.glob(K + 'tahmin-*.json')):
+for f in sorted(glob.glob(K + 'tahmin-*.json') + glob.glob(K + 'tahmin2-*.json')):
     kb, klas = bolum(f)
     if kb is None:
         continue
     for i, q in enumerate(json.load(open(f, encoding='utf-8')), 1):
         toplam += 1
         L = q['law']
-        if os.path.basename(f) == 'tahmin-uzm-mus.json' and L in (13, 16):
+        if os.path.basename(f) in ('tahmin-uzm-mus.json', 'tahmin2-uzm-mus.json') and L in (13, 16):
             print(f'X {os.path.basename(f)} #{i}: uzman müşterekinde law {L} (yalnız Sb/Asb)')
             sorun += 1
         izin = KAP.get(kb, {}).get(str(L))
