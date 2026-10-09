@@ -4,6 +4,11 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 9 Eki (2) — APPLE ÖDEMESİ: İŞ BANKASINA GEÇİŞ
+> ASC: 1 Ekim'de ödeme yapılmadı; Temmuz+Ağustos 48.025,59 devretti, Eylül 12.159,48 → Apple borcu 60.185,07 TL.
+> Başkan İş Bankası hesabı açtı; ASC'de Replace with New Account + Compliance Screening (pasaport) yapıldı → yeni hesap "Verifying".
+> Ayrıntı ve form biçimi: hafıza apple-odeme-takip-ve-finance-talebi.md. Doğrulama bitince royalty currency kontrol edilecek.
+>
 > ### ▶ 9 Eki (1) — KİŞİSEL FİLİGRAN + AD SOYAD KAPISI (bayraklı, önce başkan)
 > Savaş Yılmaz Check-up sorusunun görüntüsünü Telegram'a attı; filigran yoktu. Keşif (ajan): yalnız İNDİRİLEN kart görselinde
 > sunucu filigranı (user.id ilk 8); soru/PDF/oyun/Harekât/deneme ekranlarında iz yok; FLAG_SECURE global açık (ekran_koruma=1).
