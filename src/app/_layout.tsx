@@ -20,7 +20,7 @@ import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { useAnlikGuncelleme } from '@/lib/anlik-guncelleme';
-import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/auth';
+import { oauthUrlIsle, profilGetir, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { pushTokenGuncelle } from '@/lib/er-meydani';
@@ -34,7 +34,10 @@ import { zorunluGuncellemeGerekli } from '@/lib/guncelleme';
 import { otaGuncellemeUygula } from '@/lib/ota';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
-import { useKisiselOzellik } from '@/lib/ozellik';
+import { kisiselOzellikAcikMi, useKisiselOzellik } from '@/lib/ozellik';
+import { filigranAdi, isimSorunu } from '@/lib/isim-dogrula';
+import { IsimTamamla } from '@/components/profil/isim-tamamla';
+import { KisiselFiligran } from '@/components/profil/kisisel-filigran';
 import { indirmeDurumYukle, yarimSesleriOnar } from '@/lib/indirme';
 import { bekleyenleriGonder } from '@/lib/deneme-servis';
 import { senkronKaydet } from '@/lib/senkron';
@@ -209,7 +212,34 @@ export default function RootLayout() {
 function RootNavigator() {
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
   const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
-  const { kullanici, hazir, yukleniyor: authYukleniyor } = useAuth();
+  const { kullanici, hazir, yukleniyor: authYukleniyor, cikis } = useAuth();
+  // AD SOYAD KAPISI + KİŞİSEL FİLİGRAN (9 Eki 2026, başkan): profil adı + iki bayrak (önce kişiye özel
+  // test, sonra herkese). Profil okunamazsa (çevrimdışı) kapı AÇILMAZ — kullanıcı içeride kalır.
+  const [isim, setIsim] = useState<{ ad: string | null; soyad: string | null } | null>(null);
+  const [isimKapisi, setIsimKapisi] = useState(false);
+  const [filigranAcik, setFiligranAcik] = useState(false);
+  useEffect(() => {
+    if (!kullanici) {
+      setIsim(null);
+      setIsimKapisi(false);
+      setFiligranAcik(false);
+      return;
+    }
+    let iptal = false;
+    void Promise.all([
+      profilGetir(),
+      kisiselOzellikAcikMi('isim-zorunlu'),
+      kisiselOzellikAcikMi('kisisel-filigran'),
+    ]).then(([p, kapi, filigran]) => {
+      if (iptal) return;
+      setIsim(p ? { ad: p.ad, soyad: p.soyad } : null);
+      setIsimKapisi(kapi);
+      setFiligranAcik(filigran);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [kullanici?.id]);
   const segments = useSegments();
   const router = useRouter();
   // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
@@ -289,6 +319,19 @@ function RootNavigator() {
     return <ZorunluGuncelleme />;
   }
 
+  // AD SOYAD KAPISI: ad/soyad boş ya da uydurmaysa uygulamaya girmeden önce bir kez (kapatılamaz,
+  // çıkış yapılabilir). Başarı belgesi, ödül-ceza ve kişisel filigran için gerçek ad soyad şart.
+  if (kullanici && isimKapisi && isim && !eksik && !yukleniyor && isimSorunu(isim.ad, isim.soyad)) {
+    return (
+      <IsimTamamla
+        ilkAd={isim.ad}
+        ilkSoyad={isim.soyad}
+        onTamam={(ad, soyad) => setIsim({ ad, soyad })}
+        onCikis={() => void cikis()}
+      />
+    );
+  }
+
   // SON ADIM (uygulamaya girmeden ÖNCE): profil/görev TAMAMLANDIYSA (!eksik) ve tur görülmediyse
   // uygulama turunu göster. Böylece sıra: giriş → profil → görev → TUR → ana ekran. Tamamlanınca
   // kalıcı işaretlenir → bir daha çıkmaz. (Giriş/profil eksikken tur AÇILMAZ; önce onboarding.)
@@ -336,6 +379,12 @@ function RootNavigator() {
         <Stack.Screen name="telegram-baglan" />
         <Stack.Screen name="giris" />
       </Stack>
+      {/* Kişisel filigran: tüm ekranların (WebView/PDF dahil) üstünde, dokunmayı engellemez. */}
+      {kullanici && filigranAcik ? (
+        <KisiselFiligran
+          metin={kullanici.id.slice(0, 8) + (filigranAdi(isim?.ad, isim?.soyad) ? ' · ' + filigranAdi(isim?.ad, isim?.soyad) : '')}
+        />
+      ) : null}
       {/* Branş okunana kadar krom rengi overlay (flash önleme). */}
       {yukleniyor ? (
         <View style={[StyleSheet.absoluteFill, styles.splash]} />
