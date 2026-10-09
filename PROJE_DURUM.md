@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 9 Eki (1) — KİŞİSEL FİLİGRAN + AD SOYAD KAPISI (bayraklı, önce başkan)
+> Savaş Yılmaz Check-up sorusunun görüntüsünü Telegram'a attı; filigran yoktu. Keşif (ajan): yalnız İNDİRİLEN kart görselinde
+> sunucu filigranı (user.id ilk 8); soru/PDF/oyun/Harekât/deneme ekranlarında iz yok; FLAG_SECURE global açık (ekran_koruma=1).
+> IP: auth.sessions'ta tüm oturumlarda ip var (2.546) + icerik_erisim_log. 8831cf6: isim-dogrula.ts (boş/uydurma/tek harf/rakam/
+> ad=soyad reddi; ölçüm 479/2477 kapıya düşer, 38 premium), IsimTamamla (geçilemez, çıkış var; amaç: başarı belgesi, ödül-ceza,
+> içerik güvenliği), KisiselFiligran (kök düzende tüm ekran+WebView üstü, "kod · Ad S."). Bayrak: isim-zorunlu, kisisel-filigran
+> — yalnız başkanda. OTA 1.0.47 0d875a8c, 1.0.46 1687fdfe. Apple 5.1.1 riski: inceleme hesabı adı geçerli → kapıyı görmez.
+> SIRADA: başkan testi → ozellik_herkes; IP/cihaz günlük kaydı + gizlilik metni; kullanım sözleşmesi maddesi; Telegram bot "komutanım".
+>
 > ### ▶ 8 Eki (1) — ÖNCÜLLÜ KALIBI + BAŞKANIN YANLIŞ ANALİZİ
 > Başkanın 2 MEBS provası (59, 51) /sinavprovasi/aktar/ (cihazdaki işaretleri metin yapar, ağ isteği yok) ile alındı, 50 yanlış analiz edildi:
 > öncüllüde "hepsi" tuzağı, TCK sayıları, makamda bakanlık yerine yerel/askerî seçme, olumsuz kök. Bu sırada KUSUR bulundu: öncüllü doğru
