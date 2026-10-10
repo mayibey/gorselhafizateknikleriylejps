@@ -11,6 +11,11 @@
 > bağlı), görüş (≤1500); prova-kim localStorage'dan ön doldurma; sitede yayınlanmaz. Panel: docs/sinavgorus/panel/#ANAHTAR,
 > 30 sn'de bir yenilenir, rütbe/branş/nasıl filtre + arama. Uçtan uca test edildi, test satırı silindi.
 > Aynı gün: sınav günü "Başarılar!" push (938/938 ok) + uygulama içi duyuru + Telegram 2771 (başkan metni aynen).
+> (2) Başkan: "herkes diğerlerinin yorumlarını görsün, dikkat çekici olsun". sinav-gorus-acik.sql: isim_goster + gizli sütunları,
+> herkese açık RPC sinav_gorusler (isim yalnız izinliyse "Ad S."), panel RPC sinav_gorus_gizle. Herkese açık sayfa
+> docs/sinavgorus/gorusler/ (nasıl geçti dağılım çubuğu, rütbe/branş filtre, 60 sn yenileme); form üstünde kırmızı "Canlı · Diğer
+> adaylar ne dedi?" bandı (canlı sayı), form metni "sitede yayınlanır" olarak değişti (o an 0 kayıt vardı). Panelde Gizle/Yayına al.
+> Uçtan uca test: isimli/isimsiz görünüm, anon gizli=true RLS reddi, yanlış anahtar reddi, gizleme; test satırları silindi.
 > SIRADA: duyuru (başkan "yay" derse) · talep-takip.py'ye sinav_gorus olayı eklenebilir.
 >
 > ### ▶ 9 Eki (2) — APPLE ÖDEMESİ: İŞ BANKASINA GEÇİŞ

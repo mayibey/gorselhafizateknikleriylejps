@@ -42,11 +42,15 @@ h2{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;c
 .metin{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
 .hata{color:var(--kirmizi);font-weight:700;margin-top:20px}
 .bos{color:var(--soluk)}
+.gizle{font:inherit;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);cursor:pointer}
+.gorus.gizli{opacity:.55}
+.gorus.gizli .gizle{border-color:var(--kirmizi);color:var(--kirmizi)}
+.ust-link{font-size:13px;font-weight:700;color:var(--metin)}
 </style>
 </head>
 <body>
 <div class="kap">
-  <header><h1>Sınav Görüşleri</h1><div class="guncel" id="guncel">Yükleniyor…</div></header>
+  <header><h1>Sınav Görüşleri</h1><div class="guncel"><a class="ust-link" href="../gorusler/" target="_blank" rel="noopener">Herkese açık sayfa ↗</a> · <span id="guncel">Yükleniyor…</span></div></header>
   <div class="hata" id="hata" hidden></div>
   <div class="kutular">
     <div class="kutu"><b id="kToplam">–</b><span>Görüş</span></div>
@@ -79,9 +83,10 @@ function ciz(){
   const fr = fRutbe.value, fb = fBrans.value, fn = fNasil.value, fa = fAra.value.trim().toLocaleLowerCase('tr');
   const l = veri.filter(g => (!fr || g.rutbe === fr) && (!fb || g.brans === fb) && (!fn || String(g.nasil) === fn) &&
     (!fa || (g.gorus + ' ' + g.ad + ' ' + g.soyad).toLocaleLowerCase('tr').includes(fa)));
-  document.getElementById('liste').innerHTML = l.length ? l.map(g => `<article class="gorus n${g.nasil}">
+  document.getElementById('liste').innerHTML = l.length ? l.map(g => `<article class="gorus n${g.nasil}${g.gizli ? ' gizli' : ''}">
     <div class="ust-satir"><b>${esc(g.ad)} ${esc(g.soyad)}</b><span>${RUTBE[g.rutbe] || esc(g.rutbe)} · ${esc(BRANS[g.brans] || g.brans)}</span>
-    <span class="cip">${NASIL[g.nasil]}</span>${g.tahmini != null ? `<span class="cip">~${g.tahmini} doğru</span>` : ''}<span class="zaman">${zaman(g.olusturma)}</span></div>
+    <span class="cip">${NASIL[g.nasil]}</span>${g.tahmini != null ? `<span class="cip">~${g.tahmini} doğru</span>` : ''}<span class="cip">${g.isim_goster ? 'İsimli' : 'İsimsiz'}</span><span class="zaman">${zaman(g.olusturma)}</span>
+    <button class="gizle" type="button" data-id="${g.id}" data-g="${g.gizli ? 0 : 1}">${g.gizli ? 'Gizli · Yayına al' : 'Sitede · Gizle'}</button></div>
     <p class="metin">${esc(g.gorus)}</p></article>`).join('') : '<p class="bos">Bu filtreye uyan görüş yok.</p>';
 }
 function ozet(){
@@ -111,6 +116,16 @@ async function yukle(){
 }
 const fRutbe = document.getElementById('fRutbe'), fBrans = document.getElementById('fBrans'), fNasil = document.getElementById('fNasil'), fAra = document.getElementById('fAra');
 [fRutbe, fBrans, fNasil].forEach(x => x.addEventListener('change', ciz)); fAra.addEventListener('input', ciz);
+document.getElementById('liste').addEventListener('click', async e => {
+  const b = e.target.closest('.gizle'); if (!b) return;
+  b.disabled = true;
+  try {
+    const y = await fetch(SB_URL + '/rest/v1/rpc/sinav_gorus_gizle', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'},
+      body: JSON.stringify({p_anahtar: anahtar, p_id: b.dataset.id, p_gizli: b.dataset.g === '1'})});
+    if (!y.ok) throw new Error();
+    await yukle();
+  } catch (err) { b.disabled = false; b.textContent = 'Olmadı, tekrar dene'; }
+});
 yukle(); setInterval(yukle, 30000);
 </script>
 </body>

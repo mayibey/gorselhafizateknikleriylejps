@@ -58,6 +58,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visib
 .tesekkur h2{font-family:var(--baslik);font-size:26px;margin:0;color:var(--lacivert)}
 .tesekkur p{margin:0}
 .baglanti{font:inherit;font-size:14px;font-weight:700;color:var(--lacivert2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;justify-self:start}
+/* Dikkat çekici bant: diğer adayların görüşleri */
+.bant{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;background:#C00000;border-radius:12px;padding:14px 16px;margin-top:16px;
+  box-shadow:0 6px 18px rgba(192,0,0,.28);position:relative;overflow:hidden}
+.bant .ikon{flex:none;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:24px}
+.bant b{display:block;font-size:18px;font-weight:800;line-height:1.2}
+.bant small{display:block;font-size:13.5px;opacity:.92;margin-top:2px}
+.bant .ok{margin-left:auto;font-size:26px;font-weight:800;flex:none}
+.bant .canli{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:#C00000;border-radius:999px;padding:2px 8px;margin-bottom:4px}
+.bant .canli i{width:7px;height:7px;border-radius:50%;background:#C00000;animation:nabiz 1.4s infinite}
+@keyframes nabiz{0%,100%{opacity:1}50%{opacity:.25}}
+.bant:focus-visible{outline:3px solid var(--altin);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.bant .canli i{animation:none}}
+.onay-satir{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--metin)}
+.onay-satir input{width:20px;height:20px;flex:none;margin-top:1px}
 </style>
 </head>
 <body>
@@ -65,7 +79,12 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visib
   <header class="ust">
     <div class="etiket">JSPS · 10 Ekim 2026</div>
     <h1>Sınav nasıl geçti?</h1>
-    <p class="alt">Sınavdan çıktın mı komutanım? Nasıl geçtiğini, soruları ve önerilerini bizimle paylaş. Her görüşü tek tek okuyoruz; bir sonraki sınava hazırlığı bunlara göre şekillendireceğiz.</p>
+    <p class="alt">Sınavdan çıktın mı komutanım? Nasıl geçtiğini, soruları ve önerilerini paylaş. Her görüşü tek tek okuyoruz; bir sonraki sınava hazırlığı bunlara göre şekillendireceğiz.</p>
+    <a class="bant" href="gorusler/">
+      <span class="ikon" aria-hidden="true">💬</span>
+      <span><span class="canli"><i></i>Canlı</span><b>Diğer adaylar ne dedi?</b><small id="bantSayi">Sınavdan çıkanların görüşlerini oku</small></span>
+      <span class="ok" aria-hidden="true">→</span>
+    </a>
   </header>
 
   <form class="kart" id="form" novalidate>
@@ -99,7 +118,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visib
       <div class="sayac" id="gorusSayac">0 / 1500</div>
     </div>
 
-    <p class="kvkk">Görüşün yalnız Mevzu JSPS ekibine ulaşır, sitede yayınlanmaz. Adını, sana dönüş yapabilmek ve görüşleri rütbe-branşa göre değerlendirebilmek için istiyoruz.</p>
+    <label class="onay-satir"><input type="checkbox" id="isimGoster"> Görüşüm adımla (soyadımın baş harfiyle) görünsün.</label>
+    <p class="kvkk">Görüşün, rütben ve branşınla birlikte herkese açık "Görüşler" sayfasında yayınlanır. Kutuyu işaretlemezsen adın görünmez, yalnız rütben ve branşın görünür. Hakaret veya uygunsuz içerik yayından kaldırılır.</p>
     <div class="hata" id="hata" aria-live="polite"></div>
     <div><button class="btn" type="submit" id="gonder">Gönder</button></div>
   </form>
@@ -107,6 +127,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visib
   <div class="tesekkur" id="tesekkur" hidden>
     <h2>Teşekkürler komutanım!</h2>
     <p>Görüşün bize ulaştı. Emeğine sağlık, sonucun hayırlı olsun.</p>
+    <a class="btn" href="gorusler/" style="text-decoration:none;justify-self:start">Diğer adayların görüşlerini oku →</a>
     <button class="baglanti" type="button" id="yeniGorus">Bir görüş daha yaz</button>
   </div>
 </div>
@@ -163,7 +184,7 @@ document.getElementById('form').addEventListener('submit', async e => {
   try {
     const y = await fetch(SB_URL + '/rest/v1/sinav_gorus', {method:'POST',
       headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json', Prefer:'return=minimal'},
-      body: JSON.stringify({ziyaretci, ad, soyad, rutbe, brans, nasil, tahmini, gorus})});
+      body: JSON.stringify({ziyaretci, ad, soyad, rutbe, brans, nasil, tahmini, gorus, isim_goster: document.getElementById('isimGoster').checked})});
     if (!y.ok) throw new Error(String(y.status));
     ls.koy('prova-kim', JSON.stringify({ad, soyad, rutbe, brans}));
     document.getElementById('form').hidden = true;
@@ -173,6 +194,9 @@ document.getElementById('form').addEventListener('submit', async e => {
     hata.textContent = 'Görüşün gönderilemedi. İnternet bağlantını kontrol edip tekrar dene.';
   } finally { btn.disabled = false; btn.textContent = 'Gönder'; }
 });
+// Banttaki canlı sayı
+fetch(SB_URL + '/rest/v1/rpc/sinav_gorusler', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body:'{}'})
+  .then(y => y.ok ? y.json() : []).then(l => { if (l.length) document.getElementById('bantSayi').textContent = l.length + ' adayın görüşünü oku'; }).catch(() => {});
 document.getElementById('yeniGorus').addEventListener('click', () => {
   fGorus.value = ''; document.getElementById('gorusSayac').textContent = '0 / 1500';
   document.getElementById('tesekkur').hidden = true; document.getElementById('form').hidden = false;
