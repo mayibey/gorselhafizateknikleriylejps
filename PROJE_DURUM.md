@@ -4,6 +4,17 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 10 Eki (2) — KULLANICI SORU HATA BİLDİRİMLERİ (44 "yeni", 41 soru) İNCELENDİ
+> Her biri güncel resmî metinle (mevzuat.gov.tr PDF + fabrika _KAYNAK_METIN) karşılaştırıldı. GERÇEK HATA 1: 7068-OO-007 (B "on gün
+> içinde bir üst disiplin amirine" de doğruydu — vali kaymakamın üst disiplin amiri, m.13/3) → B "on beş gün içinde valiye".
+> KÖK/AÇIKLAMA NETLEŞTİ: BILGIEDINME-S-010 (bozuk kök "göre ne (...) göre"), 2010-616-S-010 (standartlaştırıcı "taşınır mal tanımı"nı
+> sökmüştü; fabrikada madde no'suz yazıldı), YON27-S-010 ("Ek-3'te yer alan" → "yönetmelik ekinde örneği bulunan"), 84/8345-S-007
+> (dil bilgisi), premium P-SB-JAN-01-43 (CMK 102/1 ikinci cümle eklendi), P-SB-JAN-03-54 (5199 m.7 + m.10 "bulundurulamaz, ancak üretim
+> yeri kedi/köpeği satılabilir"), P-SB-JAN-01-03 (TCK 265/4 korkutucu güç). Premium tekil tablo İLK kopyayı alır → aynı soru 27 dosyada
+> güncellendi. "mercie" HATA DEĞİL (resmî metinler böyle yazar, CMK 268). Cevabı doğru 24 bildirim incelendi-dogru. DB: duzeltildi 1,
+> netlestirildi 9, incelendi-dogru 24; Özge Lavinya'nın 10 "İlgili kartı çalış konuyla alakasız" bildirimi 'yeni' bırakıldı (uygulama
+> eşleme hatası, ayrı keşif). Fabrika JSON yedekleri *.yedek-10eki. tsc 0. OTA BEKLİYOR (başkan "yay").
+>
 > ### ▶ 10 Eki — SINAV GÖRÜŞLERİ SAYFASI (mevzujsps.com/sinavgorus)
 > Başkan: "sınavdan çıkanlar görüşünü, nasıl geçtiğini, rütbe-branş-ad soyadını yazsın, ben takip edeyim". Tablo sinav_gorus
 > (supabase/sql/sinav-gorus.sql; anon YALNIZ ekler, okuyamaz — 401 ölçüldü), panel RPC sinav_gorus_panel (prova paneliyle AYNI
