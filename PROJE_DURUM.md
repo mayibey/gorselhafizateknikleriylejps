@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 10 Eki — SINAV GÖRÜŞLERİ SAYFASI (mevzujsps.com/sinavgorus)
+> Başkan: "sınavdan çıkanlar görüşünü, nasıl geçtiğini, rütbe-branş-ad soyadını yazsın, ben takip edeyim". Tablo sinav_gorus
+> (supabase/sql/sinav-gorus.sql; anon YALNIZ ekler, okuyamaz — 401 ölçüldü), panel RPC sinav_gorus_panel (prova paneliyle AYNI
+> anahtar, scratchpad/panel-anahtar.txt, git'e girmez). Form: ad, soyad, rütbe, branş, nasıl geçti (5'li), tahmini doğru (isteğe
+> bağlı), görüş (≤1500); prova-kim localStorage'dan ön doldurma; sitede yayınlanmaz. Panel: docs/sinavgorus/panel/#ANAHTAR,
+> 30 sn'de bir yenilenir, rütbe/branş/nasıl filtre + arama. Uçtan uca test edildi, test satırı silindi.
+> Aynı gün: sınav günü "Başarılar!" push (938/938 ok) + uygulama içi duyuru + Telegram 2771 (başkan metni aynen).
+> SIRADA: duyuru (başkan "yay" derse) · talep-takip.py'ye sinav_gorus olayı eklenebilir.
+>
 > ### ▶ 9 Eki (2) — APPLE ÖDEMESİ: İŞ BANKASINA GEÇİŞ
 > ASC: 1 Ekim'de ödeme yapılmadı; Temmuz+Ağustos 48.025,59 devretti, Eylül 12.159,48 → Apple borcu 60.185,07 TL.
 > Başkan İş Bankası hesabı açtı; ASC'de Replace with New Account + Compliance Screening (pasaport) yapıldı → yeni hesap "Verifying".

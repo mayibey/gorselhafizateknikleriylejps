@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Sınav Görüşleri Paneli — Mevzu JSPS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500;600;700;800&display=swap">
+<style>
+html,body{margin:0}
+[hidden]{display:none!important}
+/* Düzen: özet kutuları → dağılım çipleri → filtre → görüş kartları (en yeni üstte). 30 sn'de bir kendini yeniler. */
+:root{--zemin:#F7F3EA;--kagit:#FFFCF5;--kenar:#E7DCC7;--metin:#1B2A4A;--soluk:#6E6047;--lacivert:#0B1F3A;--altin:#C9A227;--altinYuzey:#F3E7C1;
+  --kirmizi:#C00000;--yesil:#2E7D32;--amber:#8A5A12;
+  --baslik:'Playfair Display',Georgia,serif;--govde:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--zemin:#08162A;--kagit:#0E2139;--kenar:#22385A;--metin:#E9E3D6;--soluk:#A9B4C6;--lacivert:#E9E3D6;--altin:#D9B441;--altinYuzey:#2A2715;--kirmizi:#F07B70;--yesil:#6FC475;--amber:#E6C766;color-scheme:dark}}
+:root[data-theme="dark"]{--zemin:#08162A;--kagit:#0E2139;--kenar:#22385A;--metin:#E9E3D6;--soluk:#A9B4C6;--lacivert:#E9E3D6;--altin:#D9B441;--altinYuzey:#2A2715;--kirmizi:#F07B70;--yesil:#6FC475;--amber:#E6C766;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--zemin);color:var(--metin);font-family:var(--govde);font-weight:500;padding:0 16px 40px}
+.kap{max-width:900px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:8px;padding-block:18px 14px;border-bottom:2px solid var(--altin)}
+h1{font-family:var(--baslik);margin:0;font-size:clamp(24px,5vw,34px);color:var(--lacivert)}
+.guncel{font-size:13px;color:var(--soluk)}
+.kutular{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}
+@media (max-width:620px){.kutular{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kutu{background:var(--kagit);border:1px solid var(--kenar);border-radius:12px;padding:14px}
+.kutu b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--lacivert)}
+.kutu span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--soluk)}
+h2{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--soluk);margin:22px 0 8px}
+.dagilim{display:flex;flex-wrap:wrap;gap:6px}
+.dagilim span{background:var(--altinYuzey);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:600}
+.filtre{display:flex;gap:8px;flex-wrap:wrap}
+.filtre select,.filtre input{font:inherit;font-size:14px;padding:8px 10px;border-radius:8px;border:1px solid var(--kenar);background:var(--kagit);color:var(--metin);min-width:0}
+.filtre input{flex:1 1 180px}
+.kartlar{display:grid;gap:10px}
+.gorus{background:var(--kagit);border:1px solid var(--kenar);border-left-width:4px;border-radius:10px;padding:12px 14px;display:grid;gap:6px}
+.gorus.n5,.gorus.n4{border-left-color:var(--yesil)} .gorus.n3{border-left-color:var(--amber)} .gorus.n2,.gorus.n1{border-left-color:var(--kirmizi)}
+.ust-satir{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-size:14px}
+.ust-satir b{font-size:15px}
+.cip{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:700;background:var(--altinYuzey)}
+.zaman{margin-left:auto;font-size:12.5px;color:var(--soluk);font-variant-numeric:tabular-nums}
+.metin{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.hata{color:var(--kirmizi);font-weight:700;margin-top:20px}
+.bos{color:var(--soluk)}
+</style>
+</head>
+<body>
+<div class="kap">
+  <header><h1>Sınav Görüşleri</h1><div class="guncel" id="guncel">Yükleniyor…</div></header>
+  <div class="hata" id="hata" hidden></div>
+  <div class="kutular">
+    <div class="kutu"><b id="kToplam">–</b><span>Görüş</span></div>
+    <div class="kutu"><b id="kIyi">–</b><span>İyi geçti</span></div>
+    <div class="kutu"><b id="kKotu">–</b><span>Kötü geçti</span></div>
+    <div class="kutu"><b id="kTahmin">–</b><span>Ort. tahmini doğru</span></div>
+  </div>
+  <h2>Nasıl geçti</h2><div class="dagilim" id="dNasil"></div>
+  <h2>Rütbe / branş</h2><div class="dagilim" id="dRb"></div>
+  <h2>Görüşler (en yeni üstte)</h2>
+  <div class="filtre">
+    <select id="fRutbe" aria-label="Rütbe"><option value="">Tüm rütbeler</option></select>
+    <select id="fBrans" aria-label="Branş"><option value="">Tüm branşlar</option></select>
+    <select id="fNasil" aria-label="Nasıl geçti"><option value="">Hepsi</option><option value="5">Çok iyi</option><option value="4">İyi</option><option value="3">Orta</option><option value="2">Kötü</option><option value="1">Çok kötü</option></select>
+    <input id="fAra" type="search" placeholder="Görüşlerde ara" aria-label="Ara">
+  </div>
+  <div class="kartlar" id="liste" style="margin-top:10px"></div>
+</div>
+<script>
+const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
+const anahtar = decodeURIComponent(location.hash.slice(1));
+const RUTBE = {sb:'Subay', asb:'Astsubay', uzmj:'Uzman Jandarma', uzmerb:'Uzman Erbaş'};
+const BRANS = {jandarma:'Jandarma', mebs:'MEBS', havacilik:'Havacılık', personel:'Personel', maliye:'Maliye', istihkam:'İstihkam', ikmal:'İkmal', bakim:'Bakım', bando:'Bando', saglik:'Sağlık', tabip:'Tabip', dis_tabibi:'Diş Tabibi', eczaci:'Eczacı', kimyager:'Kimyager', veteriner:'Veteriner', muhendis:'Mühendis'};
+const NASIL = {5:'Çok iyi', 4:'İyi', 3:'Orta', 2:'Kötü', 1:'Çok kötü'};
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const zaman = t => new Date(t).toLocaleString('tr-TR', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+let veri = [];
+function say(o){ return Object.entries(o).sort((a,b) => b[1]-a[1]).map(([k,v]) => `<span>${esc(k)} · ${v}</span>`).join('') || '<span>–</span>'; }
+function ciz(){
+  const fr = fRutbe.value, fb = fBrans.value, fn = fNasil.value, fa = fAra.value.trim().toLocaleLowerCase('tr');
+  const l = veri.filter(g => (!fr || g.rutbe === fr) && (!fb || g.brans === fb) && (!fn || String(g.nasil) === fn) &&
+    (!fa || (g.gorus + ' ' + g.ad + ' ' + g.soyad).toLocaleLowerCase('tr').includes(fa)));
+  document.getElementById('liste').innerHTML = l.length ? l.map(g => `<article class="gorus n${g.nasil}">
+    <div class="ust-satir"><b>${esc(g.ad)} ${esc(g.soyad)}</b><span>${RUTBE[g.rutbe] || esc(g.rutbe)} · ${esc(BRANS[g.brans] || g.brans)}</span>
+    <span class="cip">${NASIL[g.nasil]}</span>${g.tahmini != null ? `<span class="cip">~${g.tahmini} doğru</span>` : ''}<span class="zaman">${zaman(g.olusturma)}</span></div>
+    <p class="metin">${esc(g.gorus)}</p></article>`).join('') : '<p class="bos">Bu filtreye uyan görüş yok.</p>';
+}
+function ozet(){
+  document.getElementById('kToplam').textContent = veri.length;
+  document.getElementById('kIyi').textContent = veri.filter(g => g.nasil >= 4).length;
+  document.getElementById('kKotu').textContent = veri.filter(g => g.nasil <= 2).length;
+  const t = veri.filter(g => g.tahmini != null);
+  document.getElementById('kTahmin').textContent = t.length ? (t.reduce((a,g) => a + g.tahmini, 0) / t.length).toFixed(1).replace('.', ',') : '–';
+  const n = {}, rb = {};
+  veri.forEach(g => { n[NASIL[g.nasil]] = (n[NASIL[g.nasil]] || 0) + 1; const k = (RUTBE[g.rutbe] || g.rutbe) + ' ' + (BRANS[g.brans] || g.brans); rb[k] = (rb[k] || 0) + 1; });
+  document.getElementById('dNasil').innerHTML = say(n);
+  document.getElementById('dRb').innerHTML = say(rb);
+  const doldur = (sel, kume, ad) => { const s = sel.value; sel.innerHTML = sel.options[0].outerHTML + [...kume].map(k => `<option value="${esc(k)}">${esc(ad[k] || k)}</option>`).join(''); sel.value = s; };
+  doldur(fRutbe, new Set(veri.map(g => g.rutbe)), RUTBE);
+  doldur(fBrans, new Set(veri.map(g => g.brans)), BRANS);
+}
+async function yukle(){
+  const h = document.getElementById('hata');
+  if (!anahtar) { h.hidden = false; h.textContent = 'Panel bağlantısı eksik. Sana verilen tam bağlantıyı kullan.'; return; }
+  try {
+    const y = await fetch(SB_URL + '/rest/v1/rpc/sinav_gorus_panel', {method:'POST', headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json'}, body: JSON.stringify({p_anahtar: anahtar})});
+    if (!y.ok) throw new Error(y.status === 400 ? 'Panel anahtarı geçersiz.' : 'Sunucu cevap vermedi (' + y.status + ').');
+    veri = await y.json(); h.hidden = true;
+    ozet(); ciz();
+    document.getElementById('guncel').textContent = 'Son güncelleme ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit', second:'2-digit'}) + ' · 30 sn\'de bir yenilenir';
+  } catch (e) { h.hidden = false; h.textContent = e.message; }
+}
+const fRutbe = document.getElementById('fRutbe'), fBrans = document.getElementById('fBrans'), fNasil = document.getElementById('fNasil'), fAra = document.getElementById('fAra');
+[fRutbe, fBrans, fNasil].forEach(x => x.addEventListener('change', ciz)); fAra.addEventListener('input', ciz);
+yukle(); setInterval(yukle, 30000);
+</script>
+</body>
+</html>

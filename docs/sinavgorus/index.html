@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sınav Nasıl Geçti? · Mevzu JSPS</title>
+<meta property="og:title" content="JSPS 10 Ekim 2026 · Sınav nasıl geçti?">
+<meta property="og:description" content="Sınavdan çıktın mı? Nasıl geçtiğini, görüşlerini ve önerilerini bizimle paylaş.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+html,body{margin:0}
+[hidden]{display:none!important}
+/* Düzen: tek sütun form kartı; Mevzu krem-lacivert marka sistemi (sinavprovasi ile aynı tokenlar). */
+:root{
+  --zemin:#F7F3EA; --kagit:#FFFCF5; --kenar:#E7DCC7; --metin:#1B2A4A; --soluk:#6E6047;
+  --lacivert:#0B1F3A; --lacivert2:#173B6B; --altin:#C9A227; --altinKoyu:#B88917; --altinYuzey:#F3E7C1;
+  --seciliZemin:#173B6B; --seciliYazi:#FFFFFF; --kirmizi:#C00000; --yesil:#2E7D32;
+  --baslik:'Playfair Display',Georgia,'Times New Roman',serif;
+  --govde:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --zemin:#08162A; --kagit:#0E2139; --kenar:#22385A; --metin:#E9E3D6; --soluk:#A9B4C6;
+  --lacivert:#E9E3D6; --lacivert2:#9FB8DD; --altin:#D9B441; --altinKoyu:#E6C766; --altinYuzey:#2A2715;
+  --seciliZemin:#9FB8DD; --seciliYazi:#08162A; --kirmizi:#F07B70; --yesil:#6FC475; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --zemin:#08162A; --kagit:#0E2139; --kenar:#22385A; --metin:#E9E3D6; --soluk:#A9B4C6;
+  --lacivert:#E9E3D6; --lacivert2:#9FB8DD; --altin:#D9B441; --altinKoyu:#E6C766; --altinYuzey:#2A2715;
+  --seciliZemin:#9FB8DD; --seciliYazi:#08162A; --kirmizi:#F07B70; --yesil:#6FC475; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--zemin);color:var(--metin);font-family:var(--govde);font-size:15.5px;line-height:1.55;padding:0 16px}
+.kap{max-width:640px;margin:0 auto;padding-block:20px 72px}
+.ust{display:grid;gap:10px;padding-block:8px 18px;border-bottom:2px solid var(--altin)}
+.etiket{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--altinKoyu)}
+h1{font-family:var(--baslik);font-size:clamp(30px,7vw,42px);line-height:1.1;margin:0;color:var(--lacivert);text-wrap:balance}
+.alt{color:var(--soluk);margin:0;max-width:60ch}
+.kart{display:grid;gap:16px;margin:18px 0;padding:18px 16px;background:var(--kagit);border:1px solid var(--kenar);border-radius:10px}
+.alanlar{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.alanlar{grid-template-columns:1fr}}
+.alan{display:grid;gap:6px;min-width:0}
+label,.soru-baslik{font-weight:700;font-size:14px;color:var(--lacivert)}
+.ipucu{font-weight:500;color:var(--soluk)}
+input,select,textarea{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--kenar);border-radius:8px;background:var(--zemin);color:var(--metin);width:100%}
+textarea{resize:vertical;min-height:130px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visible,.secenek:focus-visible{outline:2px solid var(--altin);outline-offset:2px}
+.secenekler{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+@media (max-width:480px){.secenekler{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.secenek{font:inherit;font-size:14px;font-weight:600;padding:10px 6px;border-radius:8px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);cursor:pointer;text-align:center}
+.secenek[aria-checked="true"]{background:var(--seciliZemin);border-color:var(--seciliZemin);color:var(--seciliYazi)}
+.sayac{font-size:12.5px;color:var(--soluk);text-align:right;font-variant-numeric:tabular-nums}
+.hata{color:var(--kirmizi);font-size:14px;font-weight:600;min-height:1.2em}
+.btn{font:inherit;font-weight:700;font-size:16px;padding:12px 20px;border-radius:8px;border:1px solid var(--lacivert);background:var(--lacivert);color:var(--zemin);cursor:pointer}
+.btn:disabled{opacity:.6;cursor:default}
+.kvkk{font-size:12.5px;color:var(--soluk);margin:0}
+.tesekkur{display:grid;gap:10px;margin:18px 0;padding:20px 16px;background:var(--kagit);border:2px solid var(--altin);border-radius:10px}
+.tesekkur h2{font-family:var(--baslik);font-size:26px;margin:0;color:var(--lacivert)}
+.tesekkur p{margin:0}
+.baglanti{font:inherit;font-size:14px;font-weight:700;color:var(--lacivert2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;justify-self:start}
+</style>
+</head>
+<body>
+<div class="kap">
+  <header class="ust">
+    <div class="etiket">JSPS · 10 Ekim 2026</div>
+    <h1>Sınav nasıl geçti?</h1>
+    <p class="alt">Sınavdan çıktın mı komutanım? Nasıl geçtiğini, soruları ve önerilerini bizimle paylaş. Her görüşü tek tek okuyoruz; bir sonraki sınava hazırlığı bunlara göre şekillendireceğiz.</p>
+  </header>
+
+  <form class="kart" id="form" novalidate>
+    <div class="alanlar">
+      <div class="alan"><label for="ad">Adın</label><input id="ad" maxlength="40" autocomplete="given-name" required></div>
+      <div class="alan"><label for="soyad">Soyadın</label><input id="soyad" maxlength="40" autocomplete="family-name" required></div>
+      <div class="alan"><label for="rutbe">Rütbe</label>
+        <select id="rutbe" required><option value="">Seç</option><option value="sb">Subay</option><option value="asb">Astsubay</option><option value="uzmj">Uzman Jandarma</option><option value="uzmerb">Uzman Erbaş</option></select></div>
+      <div class="alan"><label for="brans">Branş</label><select id="brans" required disabled><option value="">Önce rütbe seç</option></select></div>
+    </div>
+
+    <div class="alan">
+      <span class="soru-baslik" id="nasilBaslik">Sınav senin için nasıl geçti?</span>
+      <div class="secenekler" role="radiogroup" aria-labelledby="nasilBaslik" id="nasil">
+        <button type="button" class="secenek" role="radio" aria-checked="false" data-v="5">Çok iyi</button>
+        <button type="button" class="secenek" role="radio" aria-checked="false" data-v="4">İyi</button>
+        <button type="button" class="secenek" role="radio" aria-checked="false" data-v="3">Orta</button>
+        <button type="button" class="secenek" role="radio" aria-checked="false" data-v="2">Kötü</button>
+        <button type="button" class="secenek" role="radio" aria-checked="false" data-v="1">Çok kötü</button>
+      </div>
+    </div>
+
+    <div class="alan">
+      <label for="tahmini">Tahmini doğru sayın <span class="ipucu">(isteğe bağlı)</span></label>
+      <input id="tahmini" type="number" inputmode="numeric" min="0" max="100" placeholder="Örn. 62">
+    </div>
+
+    <div class="alan">
+      <label for="gorus">Görüşün</label>
+      <textarea id="gorus" maxlength="1500" placeholder="Sorular zor muydu, kolay mıydı? Hangi konulardan beklemediğin sorular geldi? Hazırlığında neyi farklı yapardın? Bize önerin var mı?" required></textarea>
+      <div class="sayac" id="gorusSayac">0 / 1500</div>
+    </div>
+
+    <p class="kvkk">Görüşün yalnız Mevzu JSPS ekibine ulaşır, sitede yayınlanmaz. Adını, sana dönüş yapabilmek ve görüşleri rütbe-branşa göre değerlendirebilmek için istiyoruz.</p>
+    <div class="hata" id="hata" aria-live="polite"></div>
+    <div><button class="btn" type="submit" id="gonder">Gönder</button></div>
+  </form>
+
+  <div class="tesekkur" id="tesekkur" hidden>
+    <h2>Teşekkürler komutanım!</h2>
+    <p>Görüşün bize ulaştı. Emeğine sağlık, sonucun hayırlı olsun.</p>
+    <button class="baglanti" type="button" id="yeniGorus">Bir görüş daha yaz</button>
+  </div>
+</div>
+
+<script>
+const SB_URL = "https://vwmjrvolkbiofpkzzwef.supabase.co", SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho";
+const BRANS_AD = {jandarma:'Jandarma', mebs:'MEBS (Muhabere Elektronik Bilgi Sistemleri)', havacilik:'Havacılık', personel:'Personel', maliye:'Maliye', istihkam:'İstihkam', ikmal:'İkmal', bakim:'Bakım', bando:'Bando', saglik:'Sağlık', tabip:'Tabip', dis_tabibi:'Diş Tabibi', eczaci:'Eczacı', kimyager:'Kimyager', veteriner:'Veteriner', muhendis:'Mühendis'};
+const BRANSLAR = {sb:['jandarma','mebs','havacilik','personel','maliye','istihkam','ikmal','bakim','bando','tabip','dis_tabibi','eczaci','kimyager','veteriner','muhendis'],
+  asb:['jandarma','mebs','havacilik','personel','maliye','istihkam','ikmal','bakim','bando','saglik'], uzmj:['jandarma'], uzmerb:['jandarma']};
+const ls = {al(k){try{return localStorage.getItem(k)}catch(e){return null}}, koy(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let ziyaretci = ls.al('gorus-ziyaretci');
+if (!ziyaretci) { ziyaretci = 'g' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); ls.koy('gorus-ziyaretci', ziyaretci); }
+
+const fRutbe = document.getElementById('rutbe'), fBrans = document.getElementById('brans');
+function bransDoldur(secili){
+  const r = fRutbe.value;
+  if (!r) { fBrans.innerHTML = '<option value="">Önce rütbe seç</option>'; fBrans.disabled = true; return; }
+  fBrans.innerHTML = '<option value="">Seç</option>' + BRANSLAR[r].map(b => `<option value="${b}">${BRANS_AD[b]}</option>`).join('');
+  fBrans.disabled = false;
+  if (secili && BRANSLAR[r].includes(secili)) fBrans.value = secili;
+  else if (BRANSLAR[r].length === 1) fBrans.value = BRANSLAR[r][0];
+}
+fRutbe.addEventListener('change', () => bransDoldur());
+
+// Provayı çözen biri ise bilgilerini önceden doldur (aynı site, aynı tarayıcı)
+try {
+  const kim = JSON.parse(ls.al('prova-kim') || 'null');
+  if (kim) { document.getElementById('ad').value = kim.ad || ''; document.getElementById('soyad').value = kim.soyad || '';
+    if (BRANSLAR[kim.rutbe]) { fRutbe.value = kim.rutbe; bransDoldur(kim.brans); } }
+} catch (e) {}
+
+let nasil = 0;
+document.getElementById('nasil').addEventListener('click', e => {
+  const b = e.target.closest('.secenek'); if (!b) return;
+  nasil = +b.dataset.v;
+  document.querySelectorAll('#nasil .secenek').forEach(x => x.setAttribute('aria-checked', String(x === b)));
+});
+const fGorus = document.getElementById('gorus');
+fGorus.addEventListener('input', () => { document.getElementById('gorusSayac').textContent = fGorus.value.length + ' / 1500'; });
+
+const hata = document.getElementById('hata');
+document.getElementById('form').addEventListener('submit', async e => {
+  e.preventDefault(); hata.textContent = '';
+  const ad = document.getElementById('ad').value.trim(), soyad = document.getElementById('soyad').value.trim();
+  const rutbe = fRutbe.value, brans = fBrans.value, gorus = fGorus.value.trim();
+  const tRaw = document.getElementById('tahmini').value.trim(), tahmini = tRaw === '' ? null : Math.round(+tRaw);
+  if (ad.length < 2 || soyad.length < 2) { hata.textContent = 'Adını ve soyadını yaz.'; return; }
+  if (!rutbe) { hata.textContent = 'Rütbeni seç.'; return; }
+  if (!brans) { hata.textContent = 'Branşını seç.'; return; }
+  if (!nasil) { hata.textContent = 'Sınavın nasıl geçtiğini seç.'; return; }
+  if (tahmini !== null && !(tahmini >= 0 && tahmini <= 100)) { hata.textContent = 'Tahmini doğru sayısı 0 ile 100 arasında olmalı.'; return; }
+  if (gorus.length < 3) { hata.textContent = 'Görüşünü birkaç kelimeyle de olsa yaz.'; return; }
+  const btn = document.getElementById('gonder'); btn.disabled = true; btn.textContent = 'Gönderiliyor…';
+  try {
+    const y = await fetch(SB_URL + '/rest/v1/sinav_gorus', {method:'POST',
+      headers:{apikey:SB_ANON, Authorization:'Bearer ' + SB_ANON, 'Content-Type':'application/json', Prefer:'return=minimal'},
+      body: JSON.stringify({ziyaretci, ad, soyad, rutbe, brans, nasil, tahmini, gorus})});
+    if (!y.ok) throw new Error(String(y.status));
+    ls.koy('prova-kim', JSON.stringify({ad, soyad, rutbe, brans}));
+    document.getElementById('form').hidden = true;
+    document.getElementById('tesekkur').hidden = false;
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  } catch (err) {
+    hata.textContent = 'Görüşün gönderilemedi. İnternet bağlantını kontrol edip tekrar dene.';
+  } finally { btn.disabled = false; btn.textContent = 'Gönder'; }
+});
+document.getElementById('yeniGorus').addEventListener('click', () => {
+  fGorus.value = ''; document.getElementById('gorusSayac').textContent = '0 / 1500';
+  document.getElementById('tesekkur').hidden = true; document.getElementById('form').hidden = false;
+});
+</script>
+</body>
+</html>
