@@ -46,7 +46,7 @@ jobs:
           mkdir -p _site
           for f in .nojekyll .well-known CNAME 404.html google2b2160762885508d.html \
                    index.html gizlilik hesap-sil.html iletisim.html onaylandi.html sartlar.html \
-                   uygulama.html sinavprovasi tahmin jsps2026iptalanaliz assets; do
+                   uygulama.html sinavprovasi sinavgorus tahmin jsps2026iptalanaliz assets; do
             if [ -e "docs/$f" ]; then cp -r "docs/$f" _site/; fi
           done
           echo "Yayınlanan:"; ls -a _site
