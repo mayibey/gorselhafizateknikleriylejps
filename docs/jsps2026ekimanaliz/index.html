@@ -77,6 +77,7 @@ main{flex:1;padding-bottom:40px}
 .sust{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
 .sno{font-family:Inter,sans-serif;font-weight:800;font-size:1.1rem;color:var(--goldDark);min-width:1.6em}
 .rz{font:700 .66rem Inter,sans-serif;letter-spacing:.1em;padding:4px 9px;border-radius:999px}
+.rz.g{background:var(--cream);color:var(--muted);border:1px solid var(--line)}
 .rz.b{background:#EAF3EA;color:#1E5720}.rz.k{background:#FBF1DC;color:#8A5A12}.rz.m{background:#E8EEF7;color:#173B6B}
 .kny{margin-left:auto;font-size:.74rem;color:var(--muted);background:var(--cream);border:1px solid var(--line);padding:2px 8px;border-radius:6px}
 .olc{border-left:3px solid var(--gold);padding:2px 0 2px 10px;margin-bottom:12px}
@@ -194,11 +195,13 @@ function listele(){
   $('#lbas').textContent=`${o.ad} · tutturduğumuz ${V.length} soru`;
   $('#suz').innerHTML=[['hepsi','Hepsi'],['b','Birebir'],['k','Kısmi'],['m','Madde kartından']].filter(([k])=>n[k])
     .map(([k,a])=>`<button type="button" data-s="${k}" aria-pressed="${k===suz}">${a} (${n[k]})</button>`).join('');
-  let son=null, h='';
-  for(const x of V){
+  let son=null, h='', sira=0;
+  const SV=[...V].sort((a,b)=>(a.tip==='birebir'?0:1)-(b.tip==='birebir'?0:1)||a.no-b.no);
+  for(const x of SV){
     if((suz==='b'&&x.tip!=='birebir')||(suz==='k'&&x.tip!=='kismi')||(suz==='m'&&!x.kartta)) continue;
-    const bol=x.bolum==='musterek'?'Müşterek mevzuat':'Branş mevzuatı';
-    if(bol!==son){ h+=`<div class="bbar">${bol}</div>`; son=bol; }
+    const grup=x.tip==='birebir'?'Birebir tutturduklarımız':'Kısmi tutturduklarımız';
+    if(grup!==son){ h+=`<div class="bbar">${grup}</div>`; son=grup; }
+    sira++;
     let ic='';
     if(x.madde) ic+=`<div class="etk">Uygulamadaki madde kartı</div><div class="mad">${esc(x.madde)}</div>`;
     for(const s of x.sorular){
@@ -206,7 +209,7 @@ function listele(){
         <ul class="sl">${s.siklar.map((t,i)=>`<li class="${i===s.dogru?'d':''}"><span class="h">${HRF[i]})</span>${esc(t)}${i===s.dogru?' ✓':''}</li>`).join('')}</ul>
         ${s.aciklama?`<details class="day"><summary>Dayanağı gör</summary>${esc(s.aciklama)}</details>`:''}`;
     }
-    h+=`<article class="sk"><div class="sust"><span class="sno">${x.no}</span><span class="rz ${x.tip==='birebir'?'b':'k'}">${x.tip==='birebir'?'BİREBİR':'KISMİ'}</span>${x.kartta?'<span class="rz m">MADDE KARTI</span>':''}${x.kaynak?`<span class="kny">${esc(x.kaynak)}</span>`:''}</div>
+    h+=`<article class="sk"><div class="sust"><span class="sno">${sira}</span><span class="rz ${x.tip==='birebir'?'b':'k'}">${x.tip==='birebir'?'BİREBİR':'KISMİ'}</span><span class="rz g">${x.bolum==='musterek'?'MÜŞTEREK':'BRANŞ'}</span>${x.kartta?'<span class="rz m">MADDE KARTI</span>':''}${x.kaynak?`<span class="kny">${esc(x.kaynak)}</span>`:''}</div>
       <div class="olc"><small>Sınavda ölçülen konu</small><b>${esc(x.konu)}</b></div>${ic}
       ${x.yer.length?`<div class="yr"><b>Uygulamada:</b> ${x.yer.map(esc).join(' · ')}</div>`:''}</article>`;
   }

@@ -106,6 +106,7 @@ table.ozet tr.toplam td{background:#F3E7C1;font-weight:700;color:#8A5A12;border-
 .r-bir{background:#EAF3EA;color:#1E5720}
 .r-kis{background:#FBF1DC;color:#8A5A12}
 .r-kart{background:#E8EEF7;color:#173B6B}
+.r-bol{background:#F7F3EA;color:#6E6047;border:.2mm solid #E7DCC7}
 .kunye{margin-left:auto;font-size:8.2pt;color:#6E6047;background:#F7F3EA;border:.2mm solid #E7DCC7;padding:.6mm 2.2mm;border-radius:1.5mm}
 .olcu{font-size:9.4pt;color:#0B1F3A;font-weight:700;margin:0 0 2.5mm;padding-left:2.5mm;border-left:.8mm solid #C9A227}
 .olcu small{display:block;font-weight:500;font-size:7.6pt;letter-spacing:.12em;color:#6E6047;text-transform:uppercase}
@@ -152,10 +153,12 @@ def pdf(kod, V):
  </div>
 </div>'''
     par, son = [], None
-    for x in V:
-        b = 'Müşterek Mevzuat' if x['bolum'] == 'musterek' else cfg['brans']
+    SV = sorted(V, key=lambda x: (x['tip'] != 'birebir', x['no']))  # önce birebir, sonra kısmi; sıra no 1..N
+    for sira, x in enumerate(SV, 1):
+        b = 'Birebir tutturduklarımız' if x['tip'] == 'birebir' else 'Kısmi tutturduklarımız'
         if b != son: par.append(f'<div class="bolumbar">{e(b)}</div>'); son = b
         rz = '<span class="rozet r-bir">BİREBİR</span>' if x['tip'] == 'birebir' else '<span class="rozet r-kis">KISMİ</span>'
+        rz += f'<span class="rozet r-bol">{"MÜŞTEREK" if x["bolum"] == "musterek" else "BRANŞ"}</span>'
         if x['kartta']: rz += '<span class="rozet r-kart">MADDE KARTI</span>'
         ic = ''
         if x['madde']:
@@ -166,7 +169,7 @@ def pdf(kod, V):
             ic += (f'<div class="biz"><div class="etk">{"SİTEMİZDEKİ SINAV PROVASINDAN" if s["site"] else "UYGULAMADAKİ SORUMUZ"}</div><div class="kok">{e(s["soru"])}</div><ul class="sik">{sik}</ul>'
                    + (f'<div class="acik"><b>Dayanak.</b> {e(s["aciklama"])}</div>' if s['aciklama'] else '') + '</div>')
         yer = f'<div class="yer"><b>Uygulamada:</b> {" · ".join(e(y) for y in x["yer"])}</div>' if x['yer'] else ''
-        par.append(f'''<div class="blok"><div class="ust"><span class="no">{x["no"]}</span>{rz}{f'<span class="kunye">{e(x["kaynak"])}</span>' if x["kaynak"] else ""}</div>
+        par.append(f'''<div class="blok"><div class="ust"><span class="no">{sira}</span>{rz}{f'<span class="kunye">{e(x["kaynak"])}</span>' if x["kaynak"] else ""}</div>
  <div class="olcu"><small>Sınavda ölçülen konu</small>{e(x["konu"])}</div>{ic}{yer}</div>''')
     hp = S + f'_site_{kod}.html'
     io.open(hp, 'w', encoding='utf-8').write('<!doctype html><html lang=tr><head><meta charset=utf-8><style>' + CSS + '</style></head><body>' + kapak + ''.join(par) + '</body></html>')
