@@ -21,6 +21,49 @@ def e(t):
     return _html.escape(str(t or '')).replace('\n', '<br>')
 
 
+def yerler_cevir(yer, cfg):
+    """Ham yer listesi → [{tur, yol}] (kullanıcının uygulamada gördüğü adlarla). Başka branş/rütbenin göremediği denemeler atılır."""
+    out, diger = [], []
+    for y in yer:
+        m = re.match(r'Mevzuat › (.+?) › Talim', y)
+        if m: out.append({'tur': 'Konu testi', 'yol': f'Mevzuat sekmesi › {m.group(1)} › Talim Yap'}); continue
+        m = re.match(r'Er Meydanı \(düello\) · (.+)', y)
+        if m: out.append({'tur': 'Er Meydanı', 'yol': f'Er Meydanı düellosu · {m.group(1)}'}); continue
+        m = re.match(r'Branşa göre karma deneme · ([\w-]+) · (.+)', y)
+        if m:
+            if m.group(1) == cfg.get('kb'): out.append({'tur': 'Deneme', 'yol': f'Tatbikat › Karma › {m.group(2)}'})
+            else: diger.append({'tur': 'Deneme', 'yol': f'Tatbikat › Karma › {m.group(2)} ({m.group(1)} branşı seçilince)'})
+            continue
+        m = re.match(r'Premium Deneme \d+ · (.+?) — Premium Deneme (\d+) · (\d+)\. soru', y)
+        if m:
+            if m.group(1) == cfg.get('premium'): out.append({'tur': 'Premium deneme', 'yol': f'Tatbikat › Karma › Premium Deneme {m.group(2)} · {m.group(3)}. soru'})
+            else: diger.append({'tur': 'Premium deneme', 'yol': f'Tatbikat › Karma › Premium Deneme {m.group(2)} · {m.group(3)}. soru ({m.group(1)} denemelerinde)'})
+            continue
+        m = re.match(r'Branş denemesi · ([\w-]+) · (.+)', y)
+        if m:
+            if m.group(1) == cfg.get('kb'): out.append({'tur': 'Deneme', 'yol': f'Tatbikat › Branş › {m.group(2)}'})
+            continue
+        m = re.match(r'Genel deneme · (.+)', y)
+        if m: out.append({'tur': 'Deneme', 'yol': f'Tatbikat › Müşterek › {m.group(1)}'}); continue
+        if y.startswith('Karma deneme ·'): continue  # eski karma liste: uygulamada artık görünmüyor
+        m = re.match(r'Site · Sınav Provası · (.+) · (\d+)\. soru', y)
+        if m: out.append({'tur': 'Site provası', 'yol': f'mevzujsps.com/sinavprovasi › {m.group(1)} · {m.group(2)}. soru'}); continue
+        m = re.match(r'Altın Özet kitabı › (.+)', y)
+        if m: out.append({'tur': 'Altın Özet', 'yol': f'Karargâh › Altın Özet kitapları › {m.group(1)} kitabı (premium)'}); continue
+        m = re.match(r'Mevzuat › (.+?) kartı', y)
+        if m: out.append({'tur': 'Madde kartı', 'yol': f'Mevzuat sekmesi › {m.group(1)} kartı'}); continue
+    if not out: out = diger[:2]
+    tek = []
+    for x in out:
+        if x not in tek: tek.append(x)
+    # Site provası: aynı soru birçok provada → yalnız ilgili rütbe/branşınkini ya da ilkini tut
+    sp = [x for x in tek if x['tur'] == 'Site provası']
+    if len(sp) > 1:
+        uygun = [x for x in sp if cfg['ad'].split(' — ')[0] in x['yol'] and cfg['kisa'] in x['yol']] or sp[:1]
+        tek = [x for x in tek if x['tur'] != 'Site provası'] + uygun[:2]
+    return tek
+
+
 def sikistir(yer):
     out, prem, karma = [], 0, 0
     for y in yer:
@@ -36,22 +79,27 @@ def sikistir(yer):
 def veri_kur(kod):
     K = json.load(open(S + f'ekim10/{kod}/kayit.json', encoding='utf-8'))
     KONU = json.load(open(S + f'ekim10/{kod}/konu.json', encoding='utf-8'))
+    SOR = json.load(open(S + f'ekim10/{kod}/soruldu.json', encoding='utf-8')) if os.path.exists(S + f'ekim10/{kod}/soruldu.json') else {}
+    cfg = SINAVLAR[kod]
     M1 = SINAVLAR[kod]['musterek'][1]
     out = []
     for k in K:
         kn = KONU[str(k['no'])]
-        sorular = [x for x in k['bizde'] if x.get('tur') != 'kart'][:1 if k['durum'] == 'b' else 2]
+        sorular = [x for x in k['bizde'] if x.get('tur') not in ('kart', 'altin')][:3]
+        altin = next((x for x in k['bizde'] if x.get('tur') == 'altin'), None)
         madde = next((x['metin'] for x in k['bizde'] if x.get('tur') == 'kart'), None)
         kartyer = next((x['yer'] for x in k['bizde'] if x.get('tur') == 'kart'), [])
         if k.get('kaynak') == 'kart' or k.get('yukselt') == 'kart':
-            sorular = sorular[:1]  # belirleyici olan kart metni; bir destek sorusu yeter
+            sorular = sorular[:2]  # belirleyici olan kart metni; destek soruları
         out.append({
             'no': k['no'], 'tip': 'birebir' if k['durum'] == 'b' else 'kismi', 'bolum': 'musterek' if k['no'] <= M1 else 'brans',
-            'konu': kn['konu'], 'kaynak': kn.get('kaynak', ''),
+            'konu': kn['konu'], 'kaynak': kn.get('kaynak', ''), 'soruldu': SOR.get(str(k['no']), ''),
             'kartta': bool(madde and (k.get('kaynak') == 'kart' or k.get('yukselt') == 'kart')),
             'madde': madde if (k.get('kaynak') == 'kart' or k.get('yukselt') == 'kart') else None,
             'sorular': [{'soru': x['soru'], 'siklar': x['siklar'], 'dogru': x['dogru'], 'aciklama': x.get('aciklama') or '',
-                         'site': x.get('tur') == 'prova'} for x in sorular],
+                         'site': x.get('tur') == 'prova', 'yer': yerler_cevir(x['yer'], cfg)} for x in sorular],
+            'kartyer': yerler_cevir(kartyer, cfg),
+            'altin': {'baslik': altin['baslik'], 'metin': altin['metin'], 'yer': yerler_cevir(altin['yer'], cfg)} if altin else None,
             'yer': sikistir((kartyer if (k.get('kaynak') == 'kart' or k.get('yukselt') == 'kart') else []) + sum((x['yer'] for x in sorular), [])),
         })
     return out
@@ -59,10 +107,11 @@ def veri_kur(kod):
 
 def olcum(kod, V):
     M0, M1 = SINAVLAR[kod]['musterek']
+    eks = SINAVLAR[kod].get('eksik', [])
     f = lambda l, t: {'t': t, 'b': sum(x['tip'] == 'birebir' for x in l), 'k': sum(x['tip'] == 'kismi' for x in l)}
-    mus = f([x for x in V if x['bolum'] == 'musterek'], M1 - M0 + 1)
-    bra = f([x for x in V if x['bolum'] == 'brans'], 100 - M1)
-    top = f(V, T)
+    mus = f([x for x in V if x['bolum'] == 'musterek'], M1 - M0 + 1 - sum(M0 <= n <= M1 for n in eks))
+    bra = f([x for x in V if x['bolum'] == 'brans'], 100 - M1 - sum(n > M1 for n in eks))
+    top = f(V, T - len(eks))
     for d in (mus, bra, top): d['kar'] = d['b'] + d['k']; d['oran'] = d['kar'] / d['t'] * 100
     return mus, bra, top
 
@@ -139,7 +188,7 @@ def pdf(kod, V):
  <div class="kalt">Sınavın 80 mevzuat sorusu, uygulamamızdaki soru bankası, madde kartları ve sitemizdeki sınav provalarıyla tek tek karşılaştırıldı. Bu kitapta karşılığı bizde çıkan soruların tamamı var.</div>
  <div class="buyuk">
   <div class="oran"><b>%{yz(top["oran"])}</b><span>KARŞILIK ORANI</span>
-   <small>80 mevzuat sorusunun <strong>{top["kar"]}</strong> tanesinin karşılığı bizde vardı<br><strong>{top["b"]}</strong> birebir · <strong>{top["k"]}</strong> kısmi · {T - top["kar"]} soruda karşılık yok</small></div>
+   <small>{top["t"]} mevzuat sorusunun <strong>{top["kar"]}</strong> tanesinin karşılığı bizde vardı<br><strong>{top["b"]}</strong> birebir · <strong>{top["k"]}</strong> kısmi · {top["t"] - top["kar"]} soruda karşılık yok{f"<br>({T - top['t']} sorunun ekran görüntüsü elimizde yok, hesaba katılmadı)" if top["t"] < T else ""}</small></div>
   <div class="yan">
    <div class="ku"><b>{mus["kar"]}<span style="display:inline;font-size:12pt;letter-spacing:0"> / {mus["t"]}</span></b><span>MÜŞTEREK</span><small>%{yz(mus["oran"])}</small></div>
    <div class="ku"><b>{bra["kar"]}<span style="display:inline;font-size:12pt;letter-spacing:0"> / {bra["t"]}</span></b><span>BRANŞ</span><small>%{yz(bra["oran"])}</small></div>
@@ -160,7 +209,10 @@ def pdf(kod, V):
         rz = '<span class="rozet r-bir">BİREBİR</span>' if x['tip'] == 'birebir' else '<span class="rozet r-kis">KISMİ</span>'
         rz += f'<span class="rozet r-bol">{"MÜŞTEREK" if x["bolum"] == "musterek" else "BRANŞ"}</span>'
         if x['kartta']: rz += '<span class="rozet r-kart">MADDE KARTI</span>'
+        if x.get('altin'): rz += '<span class="rozet r-kis">ALTIN ÖZET</span>'
         ic = ''
+        if x.get('altin'):
+            ic += f'<div class="biz"><div class="etk">{e(x["altin"]["baslik"])}</div><div class="madde" style="border-left-color:#C9A227">{e(x["altin"]["metin"])}</div></div>'
         if x['madde']:
             ic += f'<div class="biz"><div class="etk">UYGULAMADAKİ MADDE KARTI</div><div class="madde">{e(x["madde"])}</div></div>'
         for s in x['sorular']:
@@ -199,7 +251,8 @@ def sayfa(OL):
     rut = {}
     for kod, cfg in SINAVLAR.items():
         if kod in OL: rut.setdefault(cfg['rutbe'], {'ad': RUTBE_AD[cfg['rutbe']], 'branslar': []})['branslar'].append([kod, cfg['kisa']])
-    ol = {kod: {'ad': SINAVLAR[kod]['ad'], 'oran': yz(t['oran']), 'kar': t['kar'], 'bir': t['b'], 'kis': t['k'], 'yok': T - t['kar']} for kod, (m, b, t) in OL.items()}
+    ol = {kod: {'ad': SINAVLAR[kod]['ad'], 'oran': yz(t['oran']), 'kar': t['kar'], 'top': t['t'], 'bir': t['b'], 'kis': t['k'], 'yok': t['t'] - t['kar'],
+                'eksik': len(SINAVLAR[kod].get('eksik', []))} for kod, (m, b, t) in OL.items()}
     io.open(SITE + 'index.html', 'w', encoding='utf-8').write(
         tpl.replace('__RUTBELER__', json.dumps(rut, ensure_ascii=False)).replace('__OLCUM__', json.dumps(ol, ensure_ascii=False)))
 

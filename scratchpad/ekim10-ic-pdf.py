@@ -42,14 +42,18 @@ def sik(l, d, et):
 def kitap(kod):
     cfg = SINAVLAR[kod]; M0, M1 = cfg['musterek']
     K = json.load(open(S + f'ekim10/{kod}/kayit.json', encoding='utf-8'))
-    T = 80
+    if os.path.exists(S + f'ekim10/{kod}/konu.json'):
+        KN = json.load(open(S + f'ekim10/{kod}/konu.json', encoding='utf-8'))
+        for k in K: k['konu'] = KN.get(str(k['no']), {}).get('konu') or k.get('konu', '')
+    EK = cfg.get('eksik', []); T = 80 - len(EK)
     B = sum(k['durum'] == 'b' for k in K); KI = sum(k['durum'] == 'k' for k in K); Y = T - B - KI; BK = B + KI
-    MK = sum(k.get('kaynak') == 'kart' for k in K); PV = sum(k.get('kaynak') == 'prova' for k in K); HV = BK - MK - PV
+    MK = sum(k.get('kaynak') == 'kart' for k in K); PV = sum(k.get('kaynak') == 'prova' for k in K); AO = sum(k.get('kaynak') == 'altin' for k in K); HV = BK - MK - PV - AO
     yz = lambda n: f'{n / T * 100:.1f}'.replace('.0', '').replace('.', ',')
 
     def bol(a, b):
         l = [k for k in K if a <= k['no'] <= b]; bb = sum(k['durum'] == 'b' for k in l)
-        return {'t': b - a + 1, 'b': bb, 'k': len(l) - bb, 'y': b - a + 1 - len(l)}
+        t = b - a + 1 - sum(a <= n <= b for n in EK)
+        return {'t': t, 'b': bb, 'k': len(l) - bb, 'y': t - len(l)}
 
     def cub(d):
         return (f'<div class="cub"><i class="cy" style="width:{d["b"]/d["t"]*100:.1f}%"></i>'
@@ -63,7 +67,7 @@ def kitap(kod):
  <div class="kust">MEVZU JSPS · İÇ DEĞERLENDİRME · YAYIMLANMAZ</div>
  <h1>{cfg['baslik']} · 10 Ekim<br><span>Sınavdaki Hâli / Bizdeki Hâli / Uygulamada Nerede</span></h1>
  <div class="buyuk">
-  <div class="oran"><b>%{yz(BK)}</b><span>BİREBİR + KISMİ</span><small>80 mevzuat sorusunun {BK} tanesi · soru havuzu {HV} + madde kartı {MK} + site denemesi {PV} · yalnız birebir %{yz(B)}</small></div>
+  <div class="oran"><b>%{yz(BK)}</b><span>BİREBİR + KISMİ</span><small>{T} mevzuat sorusunun {BK} tanesi{f' ({len(EK)} sorunun görüntüsü yok)' if EK else ''} · soru havuzu {HV} + madde kartı {MK} + site denemesi {PV} + Altın Özet {AO} · yalnız birebir %{yz(B)}</small></div>
   <div class="yan"><div class="ku y"><b>{B}</b><span>BİREBİR</span></div>
   <div class="ku a"><b>{KI}</b><span>KISMİ</span></div></div>
  </div>
@@ -80,7 +84,7 @@ def kitap(kod):
         k = dict(k, bizde=k['bizde'][:2 if k['durum'] == 'b' else 3])  # en belirleyici kaynaklar; fazlası sayfa şişirir
         cok = len(k['bizde']) > 1
         biz = ''.join(
-            (f'<div class="biz"><div class="kok"><b>{e(x["baslik"])}</b></div><div class="acik">{e(x["metin"])}</div></div>' if x.get('tur') == 'kart' else
+            (f'<div class="biz"><div class="kok"><b>{e(x["baslik"])}</b></div><div class="acik">{e(x["metin"])}</div></div>' if x.get('tur') in ('kart', 'altin') else
              f'<div class="biz">{f"<div class=sira>{i+1}. soru</div>" if cok else ""}<div class="kok">{e(x["soru"])}</div>{sik(x["siklar"], x["dogru"], "doğru")}'
              f'<div class="meta"><span class="sid">{e(x["id"])}</span></div></div>')
             for i, x in enumerate(k['bizde']))
@@ -89,6 +93,7 @@ def kitap(kod):
             for i, x in enumerate(k['bizde']))
         rozet = f'<span class="rozet {"yesil" if k["durum"] == "b" else "amber"}">{"BİREBİR" if k["durum"] == "b" else "KISMİ"}</span>'
         if k.get('kaynak') == 'kart' or k.get('yukselt') == 'kart': rozet += '<span class="rozet lac">MADDE KARTI</span>'
+        if k.get('kaynak') == 'altin' or k.get('yukselt') == 'altin': rozet += '<span class="rozet lac" style="background:#C9A227;color:#0B1F3A">ALTIN ÖZET</span>'
         if k.get('kaynak') == 'prova' or k.get('yukselt') == 'prova': rozet += '<span class="rozet lac" style="background:#8A5A12">SİTE DENEMESİ</span>'
         par.append(f'''<div class="blok">
  <div class="ust"><span class="no">Soru {k["no"]}</span>{rozet}<span class="konu">{e(k["konu"])}</span></div>

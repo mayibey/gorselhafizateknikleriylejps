@@ -66,7 +66,7 @@ main{flex:1;padding-bottom:40px}
 .pdfbag{display:inline-block;margin-top:12px;font:600 .9rem Inter,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 
 /* soru listesi */
-.liste{max-width:760px;margin:26px auto 0;padding:0 16px}
+.liste{max-width:980px;margin:26px auto 0;padding:0 16px}
 .lbas{color:#fff;font-family:"Playfair Display",Georgia,serif;font-size:1.35rem;margin:0 0 4px}
 .lalt{color:#A9BAD2;font-size:.88rem;margin:0 0 14px}
 .suz{position:sticky;top:0;z-index:5;background:var(--navy);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:14px}
@@ -95,6 +95,27 @@ details.day summary{cursor:pointer;font-weight:600;color:var(--navy);min-height:
 .yr{margin-top:10px;font-size:.8rem;color:#173B6B;border-top:1px dashed var(--line);padding-top:8px}
 .yr b{color:var(--navy)}
 .bos{color:#A9BAD2;text-align:center;padding:20px}
+.rehber{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;margin:0 0 14px;color:#D6E0EE;font-size:.86rem}
+.rehber b{color:#fff}
+.rehber ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.rehber li{display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.rehber li .rz{flex:0 0 auto;margin-top:1px}
+.govde{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:16px}
+@media(min-width:761px){.sol{position:sticky;top:70px}}
+@media(max-width:760px){.govde{grid-template-columns:1fr}}
+.sol{background:#0B1F3A;color:#fff;border-radius:12px;padding:14px;align-self:start}
+.sol small{display:block;font:700 .64rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.sol p{font-size:.95rem;line-height:1.5;margin:0}
+.sol .knu{margin-top:10px;font-size:.78rem;color:#A9BAD2}
+.bz{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+.bz+.bz{margin-top:10px}
+.bzb{display:flex;align-items:center;gap:8px;margin-bottom:8px;font:700 .64rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nere{margin-top:10px;display:grid;gap:5px}
+.nere div{display:flex;gap:8px;align-items:flex-start;font-size:.8rem;color:#173B6B;line-height:1.4}
+.nere .tr{flex:0 0 auto;font:700 .62rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:#E8EEF7;color:#173B6B;border-radius:6px;padding:3px 7px;margin-top:1px}
+.nere .tr.p{background:#F3E7C1;color:#8A5A12}.nere .tr.a{background:#C9A227;color:#0B1F3A}
+.rz.a{background:#C9A227;color:#0B1F3A}
+.alt{background:#FFF8E1;border-left:3px solid #C9A227;border-radius:6px;padding:10px 12px;font-size:.9rem}.nere .tr.e{background:#FBE9E7;color:#9A3412}.nere .tr.s{background:#EDE7F6;color:#4527A0}
 .notu{font-size:.8rem;color:var(--muted);margin-top:12px;line-height:1.5}
 
 footer{background:rgba(0,0,0,.22);padding:26px 0 30px;text-align:center}
@@ -143,6 +164,15 @@ footer p{color:#A9BAD2;font-size:.9rem;margin-bottom:14px}
   <section class="liste" id="sorular" aria-live="polite">
     <h2 class="lbas" id="lbas">Tutturduğumuz sorular</h2>
     <p class="lalt">Sorular bize aittir. Sınavdaki sorunun metni yayımlanmaz; her kartta yalnızca sınavda ölçülen konu kendi cümlemizle yazılıdır.</p>
+    <div class="rehber"><b>Kartlar nasıl okunur?</b>
+      <ul>
+        <li><span class="rz b">BİREBİR</span><span>Bizdeki soruyu çözen, sınavdaki soruyu da doğru yapardı.</span></li>
+        <li><span class="rz k">KISMİ</span><span>Bilgi bizde vardı ama iki soruyu birleştirmek gerekiyordu ya da şıkları ikiye indiriyordu.</span></li>
+        <li><span class="rz g">MÜŞTEREK</span><span>Sınavın herkese ortak bölümünden (<b>BRANŞ</b> ise branş bölümünden) gelen soru.</span></li>
+        <li><span class="rz m">MADDE KARTI</span><span>Cevap, uygulamada o maddenin kartında (madde metni / sesli anlatım) yazıyordu.</span></li>
+        <li><span class="rz a">ALTIN ÖZET</span><span>Cevap, uygulamadaki Altın Özet kitabında (premium) yazıyordu.</span></li>
+        <li><span class="rz g">KONU TESTİ · DENEME</span><span>Bizdeki sorunun uygulamada nerede olduğu: Mevzuat sekmesinde kanunun "Talim Yap" testi, Tatbikat sekmesindeki denemeler, Er Meydanı düellosu.</span></li>
+      </ul></div>
     <div class="suz" role="group" aria-label="Süzgeç" id="suz"></div>
     <div id="liste"></div>
   </section>
@@ -161,9 +191,9 @@ footer p{color:#A9BAD2;font-size:.9rem;margin-bottom:14px}
 </footer>
 
 <script>
-const RUTBELER={"subay": {"ad": "Subay", "branslar": [["subay-mebs", "MEBS"]]}, "astsubay": {"ad": "Astsubay", "branslar": [["astsubay-mebs", "MEBS"]]}};
+const RUTBELER={"subay": {"ad": "Subay", "branslar": [["subay-mebs", "MEBS"], ["subay-bakim", "Bakım"], ["subay-jandarma", "Jandarma"]]}, "astsubay": {"ad": "Astsubay", "branslar": [["astsubay-mebs", "MEBS"], ["astsubay-jandarma", "Jandarma"]]}, "uzmanerbas": {"ad": "Uzman Erbaş", "branslar": [["uzman-erbas", "Jandarma / SG"]]}};
 /* Katı ölçü: birebir = bizdeki tek soru / madde kartı doğru cevabı tek başına buldurur; kısmi = iki kaynak birleşir ya da şıklar ikiye iner. */
-const OLCUM={"subay-mebs": {"ad": "Subay — MEBS", "oran": "75", "kar": 60, "bir": 43, "kis": 17, "yok": 20}, "astsubay-mebs": {"ad": "Astsubay — MEBS", "oran": "86,3", "kar": 69, "bir": 58, "kis": 11, "yok": 11}};
+const OLCUM={"subay-mebs": {"ad": "Subay — MEBS", "oran": "87,5", "kar": 70, "top": 80, "bir": 63, "kis": 7, "yok": 10, "eksik": 0}, "astsubay-mebs": {"ad": "Astsubay — MEBS", "oran": "91,3", "kar": 73, "top": 80, "bir": 68, "kis": 5, "yok": 7, "eksik": 0}, "subay-bakim": {"ad": "Subay — Bakım", "oran": "95", "kar": 76, "top": 80, "bir": 68, "kis": 8, "yok": 4, "eksik": 0}, "subay-jandarma": {"ad": "Subay — Jandarma", "oran": "91,3", "kar": 73, "top": 80, "bir": 66, "kis": 7, "yok": 7, "eksik": 0}, "astsubay-jandarma": {"ad": "Astsubay — Jandarma", "oran": "95", "kar": 76, "top": 80, "bir": 74, "kis": 2, "yok": 4, "eksik": 0}, "uzman-erbas": {"ad": "Uzman Erbaş — Jandarma / SG", "oran": "93,8", "kar": 75, "top": 80, "bir": 72, "kis": 3, "yok": 5, "eksik": 0}};
 const $=(s)=>document.querySelector(s);
 let rutbe=Object.keys(RUTBELER)[0], brans=RUTBELER[rutbe].branslar[0][0];
 
@@ -175,8 +205,8 @@ function ciz(){
   const o=OLCUM[brans];
   $('#ad').textContent=o.ad;
   $('#yuzde').textContent='%'+o.oran;
-  $('#sayi').textContent=`${o.kar} / 80`;
-  $('#kirilim').textContent=`${o.bir} soru birebir, ${o.kis} soru kısmi · ${o.yok} soruda karşılık yok`;
+  $('#sayi').textContent=`${o.kar} / ${o.top}`;
+  $('#kirilim').textContent=`${o.bir} soru birebir, ${o.kis} soru kısmi · ${o.yok} soruda karşılık yok`+(o.eksik?` · ${o.eksik} sorunun görüntüsü elimizde yok, hesaba katılmadı`:'');
   history.replaceState(null,'','#'+brans);
   yukle(brans);
 }
@@ -189,27 +219,31 @@ async function yukle(kod){
   listele();
 }
 function listele(){
-  const o=OLCUM[brans], n={hepsi:V.length,b:V.filter(x=>x.tip==='birebir').length,k:V.filter(x=>x.tip==='kismi').length,m:V.filter(x=>x.kartta).length};
+  const o=OLCUM[brans], n={hepsi:V.length,b:V.filter(x=>x.tip==='birebir').length,k:V.filter(x=>x.tip==='kismi').length,m:V.filter(x=>x.kartta).length,a:V.filter(x=>x.altin).length};
   $('#lbas').textContent=`${o.ad} · tutturduğumuz ${V.length} soru`;
-  $('#suz').innerHTML=[['hepsi','Hepsi'],['b','Birebir'],['k','Kısmi'],['m','Madde kartından']].filter(([k])=>n[k])
+  $('#suz').innerHTML=[['hepsi','Hepsi'],['b','Birebir'],['k','Kısmi'],['m','Madde kartından'],['a','Altın Özet’ten']].filter(([k])=>n[k])
     .map(([k,a])=>`<button type="button" data-s="${k}" aria-pressed="${k===suz}">${a} (${n[k]})</button>`).join('');
   let son=null, h='', sira=0;
   const SV=[...V].sort((a,b)=>(a.tip==='birebir'?0:1)-(b.tip==='birebir'?0:1)||a.no-b.no);
   for(const x of SV){
-    if((suz==='b'&&x.tip!=='birebir')||(suz==='k'&&x.tip!=='kismi')||(suz==='m'&&!x.kartta)) continue;
+    if((suz==='b'&&x.tip!=='birebir')||(suz==='k'&&x.tip!=='kismi')||(suz==='m'&&!x.kartta)||(suz==='a'&&!x.altin)) continue;
     const grup=x.tip==='birebir'?'Birebir tutturduklarımız':'Kısmi tutturduklarımız';
     if(grup!==son){ h+=`<div class="bbar">${grup}</div>`; son=grup; }
     sira++;
-    let ic='';
-    if(x.madde) ic+=`<div class="etk">Uygulamadaki madde kartı</div><div class="mad">${esc(x.madde)}</div>`;
+    const TR={'Konu testi':'','Deneme':'','Premium deneme':'p','Er Meydanı':'e','Madde kartı':'','Site provası':'s','Altın Özet':'a'};
+    const nere=l=>l&&l.length?`<div class="nere">${l.map(y=>`<div><span class="tr ${TR[y.tur]??''}">${esc(y.tur)}</span><span>${esc(y.yol)}</span></div>`).join('')}</div>`:'';
+    let ic='', i2=0;
+    if(x.altin) ic+=`<div class="bz"><div class="bzb"><span class="rz a">ALTIN ÖZET</span>${esc(x.altin.baslik.replace(/^Altın Özet · /,''))}</div><div class="alt">${esc(x.altin.metin)}</div>${nere(x.altin.yer)}</div>`;
+    if(x.madde) ic+=`<div class="bz"><div class="bzb"><span class="rz m">MADDE KARTI</span>Uygulamadaki madde metni</div><div class="mad">${esc(x.madde)}</div>${nere(x.kartyer)}</div>`;
     for(const s of x.sorular){
-      ic+=`<div class="etk">${s.site?'Sitemizdeki sınav provasından':'Uygulamadaki sorumuz'}</div><div class="kk">${esc(s.soru).replace(/\n/g,'<br>')}</div>
+      i2++;
+      ic+=`<div class="bz"><div class="bzb">${s.site?'Sitemizdeki sınav provasından':'Uygulamadaki sorumuz'}${x.sorular.length>1?` · ${i2}`:''}</div><div class="kk">${esc(s.soru).replace(/\n/g,'<br>')}</div>
         <ul class="sl">${s.siklar.map((t,i)=>`<li class="${i===s.dogru?'d':''}"><span class="h">${HRF[i]})</span>${esc(t)}${i===s.dogru?' ✓':''}</li>`).join('')}</ul>
-        ${s.aciklama?`<details class="day"><summary>Dayanağı gör</summary>${esc(s.aciklama)}</details>`:''}`;
+        ${s.aciklama?`<details class="day"><summary>Dayanağı gör</summary>${esc(s.aciklama)}</details>`:''}${nere(s.yer)}</div>`;
     }
-    h+=`<article class="sk"><div class="sust"><span class="sno">${sira}</span><span class="rz ${x.tip==='birebir'?'b':'k'}">${x.tip==='birebir'?'BİREBİR':'KISMİ'}</span><span class="rz g">${x.bolum==='musterek'?'MÜŞTEREK':'BRANŞ'}</span>${x.kartta?'<span class="rz m">MADDE KARTI</span>':''}${x.kaynak?`<span class="kny">${esc(x.kaynak)}</span>`:''}</div>
-      <div class="olc"><small>Sınavda ölçülen konu</small><b>${esc(x.konu)}</b></div>${ic}
-      ${x.yer.length?`<div class="yr"><b>Uygulamada:</b> ${x.yer.map(esc).join(' · ')}</div>`:''}</article>`;
+    h+=`<article class="sk"><div class="sust"><span class="sno">${sira}</span><span class="rz ${x.tip==='birebir'?'b':'k'}">${x.tip==='birebir'?'BİREBİR':'KISMİ'}</span><span class="rz g">${x.bolum==='musterek'?'MÜŞTEREK':'BRANŞ'}</span>${x.kartta?'<span class="rz m">MADDE KARTI</span>':''}${x.altin?'<span class="rz a">ALTIN ÖZET</span>':''}${x.kaynak?`<span class="kny">${esc(x.kaynak)}</span>`:''}</div>
+      <div class="govde"><div class="sol"><small>Sınavda ne soruldu</small><p>${esc(x.soruldu||x.konu)}</p>${x.soruldu?`<div class="knu">${esc(x.konu)}</div>`:''}</div>
+      <div class="sag"><small class="etk" style="display:block;margin-top:0">Bizde ne vardı</small>${ic}</div></div></article>`;
   }
   $('#liste').innerHTML=h||'<p class="bos">Bu süzgeçte soru yok.</p>';
 }
@@ -220,7 +254,7 @@ $('#branslar').addEventListener('click',(e)=>{const d=e.target.closest('[data-br
 
 const h=location.hash.replace('#','');
 const r=Object.keys(RUTBELER).find((k)=>RUTBELER[k].branslar.some(([a])=>a===h));
-sec(r ?? Object.keys(RUTBELER)[0], r ? h : null);
+sec(r ?? 'subay', r ? h : 'subay-jandarma');  // varsayılan: Subay Jandarma
 </script>
 </body>
 </html>

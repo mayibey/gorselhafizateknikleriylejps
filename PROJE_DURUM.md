@@ -12,6 +12,12 @@
 > Yeni rütbe/branş: `ekim10/<kod>/kayit.json + konu.json` + `ekim10_sinavlar.py` satırı. pages.yml allowlist'e eklendi.
 > Sıralama (0f6c006): sınav soru no gösterilmez; 1..N sıra, önce birebirler sonra kısmiler (site + site PDF).
 > AÇIK: 5809-S-026/S-036 Dışişleri'ni TSK'dan ayrı öncelik muhatabı öğretiyor; Astsubay sınavı (Q99) dahil sayıyor → düzeltme onay bekliyor.
+> GÜNCELLEME (11 Eki, yayında): 6 sınav — Subay MEBS 70/80 %87,5 · Subay Bakım 76/80 %95 · Subay Jandarma 73/80 %91,3 (temiz seriyle
+> 70–75 eklendi) · Astsubay MEBS 73/80 %91,3 · Astsubay Jandarma 76/80 %95 · Uzman Erbaş 75/80 %93,8. Altın Özet kitapları da kaynak
+> (`scratchpad/ekim10-altin.py`, ayrı rozet/süzgeç). Kart: sol "Sınavda ne soruldu" (kendi cümlemiz) + sağ "Bizde ne vardı" (≤3 soru +
+> uygulamadaki yeri). PDF indirme kaldırıldı. Varsayılan seçim Subay Jandarma. AÇIK içerik hataları: P607 açıklaması m.103 (m.279
+> olmalı), Trafik m.97 kartı/Altın Özet "2 yıl" (5 yıl), personelyon_m18 ses metni, 2942 m.20 kitap şartı eksik, Uzman Erbaş 46/99
+> anahtar bizimle çelişiyor (güncel metin kontrolü / olası itiraz).
 >
 > ### ▶ 10 Eki (2) — KULLANICI SORU HATA BİLDİRİMLERİ (44 "yeni", 41 soru) İNCELENDİ
 > Her biri güncel resmî metinle (mevzuat.gov.tr PDF + fabrika _KAYNAK_METIN) karşılaştırıldı. GERÇEK HATA 1: 7068-OO-007 (B "on gün
