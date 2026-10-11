@@ -10,6 +10,7 @@
 > taraması sıfır), BİZE AİT sorular, madde kartı metni (FSEK m.31), uygulamadaki yer. Sorular sayfada listelenir (süzgeç), PDF ikincil.
 > İki çıktı: iç PDF (sınav metinli, yayımlanmaz) `scratchpad/ekim10-ic-pdf.py`; site `scratchpad/ekim10-site.py` → docs/jsps2026ekimanaliz/.
 > Yeni rütbe/branş: `ekim10/<kod>/kayit.json + konu.json` + `ekim10_sinavlar.py` satırı. pages.yml allowlist'e eklendi.
+> Sıralama (0f6c006): sınav soru no gösterilmez; 1..N sıra, önce birebirler sonra kısmiler (site + site PDF).
 > AÇIK: 5809-S-026/S-036 Dışişleri'ni TSK'dan ayrı öncelik muhatabı öğretiyor; Astsubay sınavı (Q99) dahil sayıyor → düzeltme onay bekliyor.
 >
 > ### ▶ 10 Eki (2) — KULLANICI SORU HATA BİLDİRİMLERİ (44 "yeni", 41 soru) İNCELENDİ
