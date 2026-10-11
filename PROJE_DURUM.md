@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 11 Eki — 10 EKİM SINAVI "KAÇINI TUTTURDUK" SAYFASI (mevzujsps.com/jsps2026ekimanaliz/)
+> Subay MEBS 60/80 (%75) + Astsubay MEBS 69/80 (%86,3) katı kuralla (birebir = tek soru/madde kartı tek başına buldurur; kısmi = iki
+> kaynak ya da ≤2 şık). TELİF: sınav kökü/şık/ekran görüntüsü YOK; yalnız soru no + kendi cümlemizle "ölçülen konu" (3+ kelime kopya
+> taraması sıfır), BİZE AİT sorular, madde kartı metni (FSEK m.31), uygulamadaki yer. Sorular sayfada listelenir (süzgeç), PDF ikincil.
+> İki çıktı: iç PDF (sınav metinli, yayımlanmaz) `scratchpad/ekim10-ic-pdf.py`; site `scratchpad/ekim10-site.py` → docs/jsps2026ekimanaliz/.
+> Yeni rütbe/branş: `ekim10/<kod>/kayit.json + konu.json` + `ekim10_sinavlar.py` satırı. pages.yml allowlist'e eklendi.
+> AÇIK: 5809-S-026/S-036 Dışişleri'ni TSK'dan ayrı öncelik muhatabı öğretiyor; Astsubay sınavı (Q99) dahil sayıyor → düzeltme onay bekliyor.
+>
 > ### ▶ 10 Eki (2) — KULLANICI SORU HATA BİLDİRİMLERİ (44 "yeni", 41 soru) İNCELENDİ
 > Her biri güncel resmî metinle (mevzuat.gov.tr PDF + fabrika _KAYNAK_METIN) karşılaştırıldı. GERÇEK HATA 1: 7068-OO-007 (B "on gün
 > içinde bir üst disiplin amirine" de doğruydu — vali kaymakamın üst disiplin amiri, m.13/3) → B "on beş gün içinde valiye".

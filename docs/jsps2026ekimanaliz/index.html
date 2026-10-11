@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow" />
+<title>10 Ekim 2026 JSPS Sınavı — Kaçını Tutturduk? | Mevzu · JSPS</title>
+<meta name="description" content="10 Ekim 2026 JSPS sınavında kaç soruyu tutturduk? Rütbeni ve branşını seç, tutturduğumuz soruların tamamını gör." />
+<meta property="og:title" content="10 Ekim 2026 JSPS sınavında kaçını tutturduk?" />
+<meta property="og:description" content="Rütbeni ve branşını seç, tutturduğumuz soruların tamamını gör." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0B1F3A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A; --gold:#C9A227; --goldDark:#B88917;
+  --cream:#F7F3EA; --card:#FFFCF5; --line:#E7DCC7; --text:#1B2A4A; --muted:#6E6047;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:var(--text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  min-height:100vh;display:flex;flex-direction:column}
+h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.15;margin:0}
+p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.sar{width:100%;max-width:620px;margin:0 auto;padding:0 20px}
+
+header{padding:34px 0 24px;text-align:center}
+.marka{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:#fff;font-weight:700;text-decoration:none}
+.marka i{font-style:normal;color:var(--gold)}
+header h1{color:#fff;font-size:clamp(1.55rem,5.8vw,2.3rem);margin:20px 0 10px}
+header h1 em{font-style:normal;color:var(--gold);display:block}
+header p{color:#A9BAD2;font-size:.95rem;max-width:44ch;margin:0 auto}
+
+main{flex:1;padding-bottom:40px}
+.kutu{background:var(--cream);border-radius:18px;padding:26px 22px 28px;box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.adim{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.adim span{color:var(--goldDark)}
+.secenekler{display:grid;gap:8px;margin-bottom:24px}
+.r3{grid-template-columns:repeat(3,1fr)}
+.b2{grid-template-columns:repeat(2,1fr)}
+.secenekler button{border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;
+  font:600 .95rem/1.25 Inter,sans-serif;padding:14px 10px;border-radius:12px;min-height:52px;
+  transition:border-color .15s,background .15s,color .15s}
+.secenekler button:hover{border-color:var(--gold)}
+.secenekler button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media(max-width:480px){.r3{grid-template-columns:1fr}.b2{grid-template-columns:1fr 1fr}}
+
+.sonuc{border-top:1px solid var(--line);padding-top:22px;text-align:center}
+.sonuc h2{font-size:1.12rem;color:var(--navy);margin-bottom:14px}
+.oran{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.oran .buyuk{font-family:Inter,sans-serif;font-weight:800;font-variant-numeric:lining-nums;font-size:clamp(2.6rem,11vw,3.6rem);
+  line-height:.95;color:var(--goldDark)}
+.oran .yan{text-align:left}
+.oran .yan b{display:block;font-size:1.05rem;color:var(--navy);line-height:1.2}
+.oran .yan span{font-size:.84rem;color:var(--muted)}
+.kirilim{font-size:.86rem;color:var(--muted);margin-bottom:20px}
+.indir{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  background:var(--gold);color:var(--navy);text-decoration:none;font:700 1rem Inter,sans-serif;
+  padding:17px 20px;border-radius:12px;min-height:56px;transition:background .15s}
+.indir:hover{background:var(--goldDark);color:#fff}
+.indir small{font-weight:500;opacity:.75}
+.pdfbag{display:inline-block;margin-top:12px;font:600 .9rem Inter,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+
+/* soru listesi */
+.liste{max-width:760px;margin:26px auto 0;padding:0 16px}
+.lbas{color:#fff;font-family:"Playfair Display",Georgia,serif;font-size:1.35rem;margin:0 0 4px}
+.lalt{color:#A9BAD2;font-size:.88rem;margin:0 0 14px}
+.suz{position:sticky;top:0;z-index:5;background:var(--navy);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:14px}
+.suz button{font:600 .85rem Inter,sans-serif;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;min-height:38px}
+.suz button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.bbar{color:var(--gold);font:700 .75rem Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:22px 0 10px}
+.sk{background:var(--card);border-radius:14px;padding:16px 16px 14px;margin-bottom:12px;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.sust{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.sno{font-family:Inter,sans-serif;font-weight:800;font-size:1.1rem;color:var(--goldDark);min-width:1.6em}
+.rz{font:700 .66rem Inter,sans-serif;letter-spacing:.1em;padding:4px 9px;border-radius:999px}
+.rz.b{background:#EAF3EA;color:#1E5720}.rz.k{background:#FBF1DC;color:#8A5A12}.rz.m{background:#E8EEF7;color:#173B6B}
+.kny{margin-left:auto;font-size:.74rem;color:var(--muted);background:var(--cream);border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+.olc{border-left:3px solid var(--gold);padding:2px 0 2px 10px;margin-bottom:12px}
+.olc small{display:block;font:700 .64rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.olc b{color:var(--navy);font-size:.98rem;line-height:1.35}
+.etk{font:700 .64rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:10px 0 6px}
+.mad{background:#fff;border-left:3px solid #173B6B;border-radius:6px;padding:10px 12px;font-size:.9rem}
+.kk{font-weight:600;font-size:.95rem;margin-bottom:8px}
+.sl{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.sl li{background:var(--cream);border-radius:8px;padding:8px 10px;font-size:.9rem;line-height:1.4}
+.sl li.d{background:#EAF3EA;color:#1E5720;font-weight:600;box-shadow:inset 3px 0 0 #2E7D32}
+.sl li .h{font-weight:700;color:var(--muted);margin-right:6px}.sl li.d .h{color:#2E7D32}
+details.day{margin-top:8px;font-size:.85rem;color:var(--muted)}
+details.day summary{cursor:pointer;font-weight:600;color:var(--navy);min-height:32px;display:flex;align-items:center}
+.yr{margin-top:10px;font-size:.8rem;color:#173B6B;border-top:1px dashed var(--line);padding-top:8px}
+.yr b{color:var(--navy)}
+.bos{color:#A9BAD2;text-align:center;padding:20px}
+.notu{font-size:.8rem;color:var(--muted);margin-top:12px;line-height:1.5}
+
+footer{background:rgba(0,0,0,.22);padding:26px 0 30px;text-align:center}
+footer p{color:#A9BAD2;font-size:.9rem;margin-bottom:14px}
+.magaza{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.magaza a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;
+  text-decoration:none;font:600 .88rem Inter,sans-serif;padding:12px 20px;border-radius:11px;min-height:46px;
+  display:inline-flex;align-items:center}
+.magaza a:hover{border-color:var(--gold)}
+.kucuk{color:#7E93B0;font-size:.74rem;margin-top:18px;line-height:1.6}
+.kucuk a{color:#A9BAD2}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="sar">
+    <a class="marka" href="https://mevzujsps.com">Mevzu<i>JSPS</i></a>
+    <h1>10 Ekim 2026 JSPS sınavında<em>kaçını tutturduk?</em></h1>
+    <p>Rütbeni ve branşını seç, o sınavda tutturduğumuz soruların tamamını gör.</p>
+  </div>
+</header>
+
+<main>
+  <div class="sar">
+    <div class="kutu">
+      <p class="adim"><span>1</span> · Rütbeni seç</p>
+      <div class="secenekler b2" id="rutbeler" role="group" aria-label="Rütbe"></div>
+
+      <p class="adim"><span>2</span> · Branşını seç</p>
+      <div class="secenekler b2" id="branslar" role="group" aria-label="Branş"></div>
+
+      <div class="sonuc">
+        <h2 id="ad"></h2>
+        <div class="oran">
+          <div class="buyuk" id="yuzde"></div>
+          <div class="yan"><b id="sayi"></b><span>soruyu tutturduk</span></div>
+        </div>
+        <p class="kirilim" id="kirilim"></p>
+        <a class="indir" href="#sorular"><span>Tutturduğumuz soruları gör ↓</span></a>
+        <a class="pdfbag" id="indir" href="#" download>PDF olarak indir</a>
+        <p class="notu">Kitapçıktaki sorular bize aittir (Mevzu JSPS soru bankası ve sitemizdeki sınav provaları).
+          Sınav sorularının metni ve şıkları yayımlanmaz; her başlıkta yalnızca ölçülen konu kendi cümlemizle yazılıdır.</p>
+      </div>
+    </div>
+  </div>
+  <section class="liste" id="sorular" aria-live="polite">
+    <h2 class="lbas" id="lbas">Tutturduğumuz sorular</h2>
+    <p class="lalt">Sorular bize aittir. Sınavdaki sorunun metni yayımlanmaz; her kartta yalnızca sınavda ölçülen konu kendi cümlemizle yazılıdır.</p>
+    <div class="suz" role="group" aria-label="Süzgeç" id="suz"></div>
+    <div id="liste"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="sar">
+    <p>Diğer rütbe ve branşlar eklendikçe bu sayfada yer alacak. · <a href="/jsps2026iptalanaliz/" style="color:#C9A227">19 Eylül sınavının analizi</a></p>
+    <div class="magaza">
+      <a href="https://play.google.com/store/apps/details?id=app.mevzujsps.android" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/tr/app/id6787908212" target="_blank" rel="noopener">App Store</a>
+    </div>
+    <p class="kucuk">© 2026 Mevzu · JSPS · <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a><br>
+      Bağımsız bir sınav hazırlık uygulamasıdır; hiçbir resmî kurumla bağlantılı değildir.</p>
+  </div>
+</footer>
+
+<script>
+const RUTBELER={"subay": {"ad": "Subay", "branslar": [["subay-mebs", "MEBS"]]}, "astsubay": {"ad": "Astsubay", "branslar": [["astsubay-mebs", "MEBS"]]}};
+/* Katı ölçü: birebir = bizdeki tek soru / madde kartı doğru cevabı tek başına buldurur; kısmi = iki kaynak birleşir ya da şıklar ikiye iner. */
+const OLCUM={"subay-mebs": {"ad": "Subay — MEBS", "oran": "75", "kar": 60, "bir": 43, "kis": 17, "yok": 20}, "astsubay-mebs": {"ad": "Astsubay — MEBS", "oran": "86,3", "kar": 69, "bir": 58, "kis": 11, "yok": 11}};
+const $=(s)=>document.querySelector(s);
+let rutbe=Object.keys(RUTBELER)[0], brans=RUTBELER[rutbe].branslar[0][0];
+
+function ciz(){
+  $('#rutbeler').innerHTML=Object.entries(RUTBELER).map(([k,v])=>
+    `<button type="button" data-rutbe="${k}" aria-pressed="${k===rutbe}">${v.ad}</button>`).join('');
+  $('#branslar').innerHTML=RUTBELER[rutbe].branslar.map(([k,ad])=>
+    `<button type="button" data-brans="${k}" aria-pressed="${k===brans}">${ad}</button>`).join('');
+  const o=OLCUM[brans];
+  $('#ad').textContent=o.ad;
+  $('#yuzde').textContent='%'+o.oran;
+  $('#sayi').textContent=`${o.kar} / 80`;
+  $('#kirilim').textContent=`${o.bir} soru birebir, ${o.kis} soru kısmi · ${o.yok} soruda karşılık yok`;
+  $('#indir').href=`pdf/${brans}.pdf`;
+  history.replaceState(null,'','#'+brans);
+  yukle(brans);
+}
+const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const HRF='ABCDE'; let V=[], suz='hepsi', yuklenen=null;
+async function yukle(kod){
+  if(yuklenen===kod) return; yuklenen=kod; V=[]; $('#liste').innerHTML='<p class="bos">Yükleniyor…</p>';
+  try{ const r=await fetch(`veri/${kod}.json`); if(!r.ok) throw 0; const v=await r.json(); if(yuklenen!==kod) return; V=v; }
+  catch(_){ if(yuklenen===kod) $('#liste').innerHTML='<p class="bos">Sorular yüklenemedi; PDF olarak indirebilirsin.</p>'; return; }
+  listele();
+}
+function listele(){
+  const o=OLCUM[brans], n={hepsi:V.length,b:V.filter(x=>x.tip==='birebir').length,k:V.filter(x=>x.tip==='kismi').length,m:V.filter(x=>x.kartta).length};
+  $('#lbas').textContent=`${o.ad} · tutturduğumuz ${V.length} soru`;
+  $('#suz').innerHTML=[['hepsi','Hepsi'],['b','Birebir'],['k','Kısmi'],['m','Madde kartından']].filter(([k])=>n[k])
+    .map(([k,a])=>`<button type="button" data-s="${k}" aria-pressed="${k===suz}">${a} (${n[k]})</button>`).join('');
+  let son=null, h='';
+  for(const x of V){
+    if((suz==='b'&&x.tip!=='birebir')||(suz==='k'&&x.tip!=='kismi')||(suz==='m'&&!x.kartta)) continue;
+    const bol=x.bolum==='musterek'?'Müşterek mevzuat':'Branş mevzuatı';
+    if(bol!==son){ h+=`<div class="bbar">${bol}</div>`; son=bol; }
+    let ic='';
+    if(x.madde) ic+=`<div class="etk">Uygulamadaki madde kartı</div><div class="mad">${esc(x.madde)}</div>`;
+    for(const s of x.sorular){
+      ic+=`<div class="etk">${s.site?'Sitemizdeki sınav provasından':'Uygulamadaki sorumuz'}</div><div class="kk">${esc(s.soru).replace(/\n/g,'<br>')}</div>
+        <ul class="sl">${s.siklar.map((t,i)=>`<li class="${i===s.dogru?'d':''}"><span class="h">${HRF[i]})</span>${esc(t)}${i===s.dogru?' ✓':''}</li>`).join('')}</ul>
+        ${s.aciklama?`<details class="day"><summary>Dayanağı gör</summary>${esc(s.aciklama)}</details>`:''}`;
+    }
+    h+=`<article class="sk"><div class="sust"><span class="sno">${x.no}</span><span class="rz ${x.tip==='birebir'?'b':'k'}">${x.tip==='birebir'?'BİREBİR':'KISMİ'}</span>${x.kartta?'<span class="rz m">MADDE KARTI</span>':''}${x.kaynak?`<span class="kny">${esc(x.kaynak)}</span>`:''}</div>
+      <div class="olc"><small>Sınavda ölçülen konu</small><b>${esc(x.konu)}</b></div>${ic}
+      ${x.yer.length?`<div class="yr"><b>Uygulamada:</b> ${x.yer.map(esc).join(' · ')}</div>`:''}</article>`;
+  }
+  $('#liste').innerHTML=h||'<p class="bos">Bu süzgeçte soru yok.</p>';
+}
+$('#suz').addEventListener('click',(e)=>{const b=e.target.closest('[data-s]'); if(b){ suz=b.dataset.s; listele(); }});
+function sec(r,b){ suz='hepsi'; rutbe=r; brans=b ?? RUTBELER[r].branslar[0][0]; ciz(); }
+$('#rutbeler').addEventListener('click',(e)=>{const d=e.target.closest('[data-rutbe]'); if(d) sec(d.dataset.rutbe);});
+$('#branslar').addEventListener('click',(e)=>{const d=e.target.closest('[data-brans]'); if(d) sec(rutbe,d.dataset.brans);});
+
+const h=location.hash.replace('#','');
+const r=Object.keys(RUTBELER).find((k)=>RUTBELER[k].branslar.some(([a])=>a===h));
+sec(r ?? Object.keys(RUTBELER)[0], r ? h : null);
+</script>
+</body>
+</html>
