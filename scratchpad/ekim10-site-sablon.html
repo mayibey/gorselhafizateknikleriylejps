@@ -135,7 +135,6 @@ footer p{color:#A9BAD2;font-size:.9rem;margin-bottom:14px}
         </div>
         <p class="kirilim" id="kirilim"></p>
         <a class="indir" href="#sorular"><span>Tutturduğumuz soruları gör ↓</span></a>
-        <a class="pdfbag" id="indir" href="#" download>PDF olarak indir</a>
         <p class="notu">Kitapçıktaki sorular bize aittir (Mevzu JSPS soru bankası ve sitemizdeki sınav provaları).
           Sınav sorularının metni ve şıkları yayımlanmaz; her başlıkta yalnızca ölçülen konu kendi cümlemizle yazılıdır.</p>
       </div>
@@ -178,7 +177,6 @@ function ciz(){
   $('#yuzde').textContent='%'+o.oran;
   $('#sayi').textContent=`${o.kar} / 80`;
   $('#kirilim').textContent=`${o.bir} soru birebir, ${o.kis} soru kısmi · ${o.yok} soruda karşılık yok`;
-  $('#indir').href=`pdf/${brans}.pdf`;
   history.replaceState(null,'','#'+brans);
   yukle(brans);
 }
@@ -187,7 +185,7 @@ const HRF='ABCDE'; let V=[], suz='hepsi', yuklenen=null;
 async function yukle(kod){
   if(yuklenen===kod) return; yuklenen=kod; V=[]; $('#liste').innerHTML='<p class="bos">Yükleniyor…</p>';
   try{ const r=await fetch(`veri/${kod}.json`); if(!r.ok) throw 0; const v=await r.json(); if(yuklenen!==kod) return; V=v; }
-  catch(_){ if(yuklenen===kod) $('#liste').innerHTML='<p class="bos">Sorular yüklenemedi; PDF olarak indirebilirsin.</p>'; return; }
+  catch(_){ if(yuklenen===kod) $('#liste').innerHTML='<p class="bos">Sorular yüklenemedi; sayfayı yenileyip tekrar dene.</p>'; return; }
   listele();
 }
 function listele(){

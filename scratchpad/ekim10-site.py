@@ -185,10 +185,8 @@ def pdf(kod, V):
         pg.draw_rect(fitz.Rect(W - 58, Hh - 32, W - 32, Hh - 17), color=None, fill=(0.043, 0.122, 0.227), radius=0.25)
         pg.insert_text(fitz.Point(W - 52, Hh - 21), f'{i + 1}', fontsize=8.5, fontname='sgb', fontfile=FONTB, color=(1, 1, 1))
         pg.insert_text(fitz.Point(34, Hh - 21), 'Mevzu JSPS · mevzujsps.com', fontsize=7.2, fontname='sg', fontfile=FONT, color=(0.55, 0.49, 0.36))
-    os.makedirs(SITE + 'pdf', exist_ok=True); os.makedirs(MASA, exist_ok=True)
-    out = SITE + f'pdf/{kod}.pdf'
-    d.save(out, garbage=3, deflate=True)
-    shutil.copy(out, os.path.join(MASA, f'{cfg["dosya"]} - Tutturdugumuz Sorular.pdf'))
+    os.makedirs(MASA, exist_ok=True)  # PDF sitede YAYIMLANMAZ (başkan 11 Eki); yalnız Masaüstüne
+    d.save(os.path.join(MASA, f'{cfg["dosya"]} - Tutturdugumuz Sorular.pdf'), garbage=3, deflate=True)
     for n in (0, 1):
         if n < len(d): d[n].get_pixmap(dpi=60).save(S + f'_site_on_{kod}_{n}.png')
     print(f'{kod:16} {len(V)} soru · {len(d)} sayfa · %{yz(top["oran"])}')
