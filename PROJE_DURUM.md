@@ -3573,3 +3573,9 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   sürüm ded9e633 PREPARE_FOR_SUBMISSION, build bağlı, sürüm notu + 5 iPad 12.9" ekran görüntüsü (web çizimi, inceleme hesabıyla) yüklendi.
   İNCELEMEYE GÖNDERİLMEDİ — başkan onayı bekleniyor. DİKKAT: 1.0.47 yayına girince OTA'lar HEM 1.0.47 (iOS) HEM 1.0.46 (Android) runtime'a basılmalı.
   Gece zemini iPad'de tam kaplama düzeltmesi (screen.tsx) commit'li, henüz OTA'lanmadı.
+
+### 12 Eki 2026 — Ekim analiz sayfasına ziyaret sayacı (476f813)
+- Supabase `analiz_ziyaret` tablosu (supabase/sql/analiz_ziyaret.sql): olay acilis/brans/sorular, brans, rastgele tarayıcı kimliği, kaynak (utm_source / ?k= / referrer), mobil. Kişisel veri yok. RLS: anon yalnız INSERT; okuma/silme kapalı (canlı test edildi).
+- Sayfa: açılışta 'acilis', branş değişince 'brans', soru listesi ekrana gelince 'sorular' (branş başına 1). `?ben=1` ile açan cihaz kalıcı olarak sayılmaz.
+- Rapor: `set -a; . ./.env; set +a; python scripts/analiz-sayac-rapor.py` (açılış, tekil kişi, inceleyen, gün gün, branş, kaynak).
+- Paylaşım linkine `?k=instagram` eklenirse kaynak ayrı görünür.
