@@ -247,7 +247,23 @@ function listele(){
   $('#liste').innerHTML=h||'<p class="bos">Bu süzgeçte soru yok.</p>';
 }
 $('#suz').addEventListener('click',(e)=>{const b=e.target.closest('[data-s]'); if(b){ suz=b.dataset.s; listele(); }});
-function sec(r,b){ suz='hepsi'; rutbe=r; brans=b ?? RUTBELER[r].branslar[0][0]; ciz(); }
+/* Ziyaret sayacı: kişisel veri yok; rastgele tarayıcı kimliği. ?ben=1 ile açan cihaz sayılmaz. */
+const SAYAC=(()=>{
+  const U='https://vwmjrvolkbiofpkzzwef.supabase.co/rest/v1/analiz_ziyaret', K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho';
+  let id='', ben=false;
+  try{ if(new URLSearchParams(location.search).get('ben')==='1') localStorage.setItem('mz_ben','1'); ben=localStorage.getItem('mz_ben')==='1';
+       id=localStorage.getItem('mz_zid')||''; if(!id){ id=(crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36)); localStorage.setItem('mz_zid',id); } }
+  catch(_){ id='g'+Math.random().toString(36).slice(2,12); }
+  const q=new URLSearchParams(location.search);
+  let kaynak=q.get('utm_source')||q.get('k')||''; if(!kaynak&&document.referrer){ try{ kaynak=new URL(document.referrer).hostname; }catch(_){} }
+  if(kaynak===location.hostname) kaynak='';
+  const mobil=matchMedia('(max-width:700px)').matches;
+  return (olay,br)=>{ if(ben) return; try{ fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=minimal'},
+    body:JSON.stringify({olay,brans:br||null,ziyaretci:id.slice(0,40),kaynak:kaynak.slice(0,80)||null,mobil})}).catch(()=>{}); }catch(_){} };
+})();
+let sayIlk=true; const sayGorulen=new Set();
+new IntersectionObserver((es)=>{ for(const e of es) if(e.isIntersecting&&V.length&&!sayGorulen.has(brans)){ sayGorulen.add(brans); SAYAC('sorular',brans); } },{threshold:0}).observe(document.querySelector('#liste'));
+function sec(r,b){ suz='hepsi'; rutbe=r; brans=b ?? RUTBELER[r].branslar[0][0]; ciz(); SAYAC(sayIlk?'acilis':'brans',brans); sayIlk=false; }
 $('#rutbeler').addEventListener('click',(e)=>{const d=e.target.closest('[data-rutbe]'); if(d) sec(d.dataset.rutbe);});
 $('#branslar').addEventListener('click',(e)=>{const d=e.target.closest('[data-brans]'); if(d) sec(rutbe,d.dataset.brans);});
 
