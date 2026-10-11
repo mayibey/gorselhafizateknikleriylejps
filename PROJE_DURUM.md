@@ -18,6 +18,10 @@
 > uygulamadaki yeri). PDF indirme kaldırıldı. Varsayılan seçim Subay Jandarma. AÇIK içerik hataları: P607 açıklaması m.103 (m.279
 > olmalı), Trafik m.97 kartı/Altın Özet "2 yıl" (5 yıl), personelyon_m18 ses metni, 2942 m.20 kitap şartı eksik, Uzman Erbaş 46/99
 > anahtar bizimle çelişiyor (güncel metin kontrolü / olası itiraz).
+> ÖLÇÜ DEĞİŞTİ (11 Eki akşam, başkan): bilgi bazlı. Sayılan = doğru şıkkı kesinleştiren bilgi çalışma sorusu ve/veya Altın Özet'le
+> öğretilmiş (birleşme aynı mevzuat içinde); madde kartı SAYILMAZ, şıkkı ≤2'ye indiren sayılmaz. Rozetler BİREBİR (aynı soru) + ÇOK BENZER.
+> Sonuç /80: AJ 74 (22+52) · UE 70 (30+40) · SJ 69 (20+49) · SB 68 (26+42) · SM 67 (18+49) · AM 66 (23+43) = 414/480 %86,3.
+> Veri: scratchpad/ekim10/ayni/ (son_seviye.json + ajan kararları). "Tutturduk" ifadesi siteden kalktı; "Nasıl saydık?" notu eklendi.
 >
 > ### ▶ 10 Eki (2) — KULLANICI SORU HATA BİLDİRİMLERİ (44 "yeni", 41 soru) İNCELENDİ
 > Her biri güncel resmî metinle (mevzuat.gov.tr PDF + fabrika _KAYNAK_METIN) karşılaştırıldı. GERÇEK HATA 1: 7068-OO-007 (B "on gün

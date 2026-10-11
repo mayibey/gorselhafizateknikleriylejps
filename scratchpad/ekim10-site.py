@@ -76,7 +76,102 @@ def sikistir(yer):
     return out[:4]
 
 
+# --- 11 Eki ölçüsü (başkan): bilgi bazlı. Sayılan = doğru şıkkı kesinleştiren bilgi uygulamada ÇALIŞMA SORUSU ve/veya
+# ALTIN ÖZET ile öğretilmiş (birleşme aynı mevzuat içinde). Madde kartı SAYILMAZ. Kısmi/yok listelenmez.
+# birebir = bizde aynı soru; benzer = "çok benzer" (bilgi farklı soru kalıbında / Altın Özet'te). Seviye: ekim10/ayni/son_seviye.json
+import glob as _glob
+A = S + 'ekim10/ayni/'
+SEV = json.load(open(A + 'son_seviye.json', encoding='utf-8'))
+H = {h['id']: h for h in json.load(open(S + 'havuz-tum.json', encoding='utf-8'))}
+B = 'D:/GorselHafizaTeknikleriyleJSPS/'
+_s = open(S + 'yakalanan-sayfa.py', encoding='utf-8').read()
+exec(_s[_s.index('# --- Uygulamadaki yer ---'):_s.index('kayit = []')])  # yerler(id)
+PADI = {}
+for _f in _glob.glob('D:/GorselHafizaTeknikleriyleJSPS/docs/sinavprovasi/d/*.json'):
+    _d = json.load(open(_f, encoding='utf-8')); PADI[_d['id']] = (_d['baslik'], _d['sorular'])
+KITAP = {'ozet_A': 'Müşterek', 'ozet_B': 'Müşterek', 'ozet_C': 'Müşterek', 'ozet_D': 'MEBS', 'ozet_B_bakim': 'Bakım',
+         'ozet_I_ikmal': 'Bakım', 'ozet_J_jandarma': 'Jandarma'}
+
+
+def kitap_adi(dosya):
+    d = dosya.replace('.md', '').replace('_sade', '').replace('_m', '')
+    for k in sorted(KITAP, key=len, reverse=True):
+        if d.startswith(k): return KITAP[k]
+    return 'Altın Özet'
+
+
+# ilk tur (aynı soru) kararları: anahtar = soru kökünün ilk 120 harfi
+ILK = {}
+for _f in _glob.glob(A + 'parca_*.json'):
+    _P = {x['sira']: x['anahtar'] for x in json.load(open(_f, encoding='utf-8'))}
+    for r in json.load(open(_f.replace('parca_', 'sonuc_'), encoding='utf-8')): ILK[_P[r['sira']]] = r
+# yeniden değerlendirme (birleşik kaynak) kararları: anahtar = kod#no; aynı-konu kontrolü öncelikli
+YB = {}
+for _i in (1, 2, 3):
+    _L = {x['sira']: x['sinavlar'] for x in json.load(open(A + f'yb_{_i}.json', encoding='utf-8'))}
+    for r in json.load(open(A + f'yb_sonuc_{_i}.json', encoding='utf-8')):
+        for y in _L[r['sira']]: YB[y] = r
+_AK = {x['kayit']: x['sinavlar'] for x in json.load(open(A + 'ayni_konu_kontrol.json', encoding='utf-8'))}
+for r in json.load(open(A + 'ayni_konu_sonuc.json', encoding='utf-8')):
+    for y in _AK[r['kayit']]: YB[y] = r
+
+
+def soru_kalem(i, bizde):
+    for x in bizde:
+        if x.get('id') == i and 'siklar' in x: return x
+    m = re.match(r'(.+?) #(\d+)$', i)
+    if m and m.group(1) in PADI:
+        q = PADI[m.group(1)][1][int(m.group(2)) - 1]
+        yer = [f'Site · Sınav Provası · {PADI[d][0]} · {j + 1}. soru' for d in sorted(PADI) for j, z in enumerate(PADI[d][1]) if z['k'] == q['k']]
+        return {'tur': 'prova', 'soru': q['k'], 'siklar': q['s'], 'dogru': q['d'], 'aciklama': q['a'], 'yer': yer}
+    if i in H:
+        h = H[i]
+        return {'soru': h['soru'], 'siklar': h['siklar'], 'dogru': h['dogru'], 'aciklama': h.get('aciklama') or '', 'yer': yerler(i) or []}
+    return None
+
+
+def temiz(t):
+    return re.sub(r'\*\*|(?<!\w)\*(?!\s)|(?<!\s)\*(?!\w)', '', t).replace(' | ', ' · ').strip(' |')
+
+
 def veri_kur(kod):
+    K = json.load(open(S + f'ekim10/{kod}/kayit.json', encoding='utf-8'))
+    KONU = json.load(open(S + f'ekim10/{kod}/konu.json', encoding='utf-8'))
+    SOR = json.load(open(S + f'ekim10/{kod}/soruldu.json', encoding='utf-8')) if os.path.exists(S + f'ekim10/{kod}/soruldu.json') else {}
+    cfg = SINAVLAR[kod]
+    M1 = SINAVLAR[kod]['musterek'][1]
+    out = []
+    for k in K:
+        key = f'{kod}#{k["no"]}'
+        sev = SEV.get(key)
+        if sev not in ('ayni', 'bilgi'): continue
+        kn = KONU[str(k['no'])]
+        altin = None
+        if key in YB:  # birleşik kaynaklarla öğretilmiş
+            r = YB[key]
+            sorular = [q for q in (soru_kalem(i, k['bizde']) for i in r['sorular']) if q][:4]
+            if r.get('altin'):
+                adlar = sorted({kitap_adi(a['dosya']) for a in r['altin']})
+                altin = {'baslik': f'{" + ".join(adlar)} kitabı', 'metin': ' … '.join(temiz(a['alinti']) for a in r['altin'][:3]),
+                         'yer': [f'Altın Özet kitabı › {a}' for a in adlar]}
+        elif sev == 'ayni':  # bizde aynı soru: yalnız o soru
+            r = ILK.get(k['tam']['kok'][:120], {})
+            sorular = [q for q in (soru_kalem(r.get('id') or '', k['bizde']),) if q] or [x for x in k['bizde'] if 'siklar' in x][:1]
+        else:
+            sorular = [x for x in k['bizde'] if 'siklar' in x][:3]
+            a = next((x for x in k['bizde'] if x.get('tur') == 'altin'), None)
+            if a: altin = {'baslik': a['baslik'].replace('Altın Özet · ', ''), 'metin': a['metin'], 'yer': a['yer']}
+        out.append({
+            'no': k['no'], 'tip': 'birebir' if sev == 'ayni' else 'benzer', 'bolum': 'musterek' if k['no'] <= M1 else 'brans',
+            'konu': kn['konu'], 'kaynak': kn.get('kaynak', ''), 'soruldu': SOR.get(str(k['no']), ''),
+            'sorular': [{'soru': x['soru'], 'siklar': x['siklar'], 'dogru': x['dogru'], 'aciklama': x.get('aciklama') or '',
+                         'site': x.get('tur') == 'prova', 'yer': yerler_cevir(x['yer'], cfg)} for x in sorular],
+            'altin': {'baslik': altin['baslik'], 'metin': altin['metin'], 'yer': yerler_cevir(altin['yer'], cfg)} if altin else None,
+        })
+    return out
+
+
+def veri_kur_eski(kod):
     K = json.load(open(S + f'ekim10/{kod}/kayit.json', encoding='utf-8'))
     KONU = json.load(open(S + f'ekim10/{kod}/konu.json', encoding='utf-8'))
     SOR = json.load(open(S + f'ekim10/{kod}/soruldu.json', encoding='utf-8')) if os.path.exists(S + f'ekim10/{kod}/soruldu.json') else {}
@@ -265,6 +360,9 @@ if __name__ == '__main__':
             print('atlandı (veri yok):', kod); continue
         V = veri_kur(kod)
         json.dump(V, open(SITE + f'veri/{kod}.json', 'w', encoding='utf-8'), ensure_ascii=False)
-        OL[kod] = pdf(kod, V)
+        # 11 Eki ölçüsü: site PDF'i (eski birebir/kısmi) üretilmez; ölçüm doğrudan buradan
+        b = sum(x['tip'] == 'birebir' for x in V); c = sum(x['tip'] == 'benzer' for x in V)
+        OL[kod] = (None, None, {'t': T, 'b': b, 'k': c, 'kar': b + c, 'oran': (b + c) / T * 100})
+        print(f'{kod:18} birebir {b} · çok benzer {c} · toplam {b + c}/80')
     sayfa(OL)
     print('sayfa:', SITE + 'index.html', list(OL))
