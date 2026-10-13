@@ -82,6 +82,8 @@ def sikistir(yer):
 import glob as _glob
 A = S + 'ekim10/ayni/'
 SEV = json.load(open(A + 'son_seviye.json', encoding='utf-8'))
+# Doğrudan yeni ölçüyle değerlendirilen sınavlar (ekim10-bilgi-entegre.py): ekim10/<kod>/seviye.json
+for _f in _glob.glob(S + 'ekim10/*/seviye.json'): SEV.update(json.load(open(_f, encoding='utf-8')))
 H = {h['id']: h for h in json.load(open(S + 'havuz-tum.json', encoding='utf-8'))}
 B = 'D:/GorselHafizaTeknikleriyleJSPS/'
 _s = open(S + 'yakalanan-sayfa.py', encoding='utf-8').read()
@@ -143,6 +145,7 @@ def veri_kur(kod):
     out = []
     for k in K:
         key = f'{kod}#{k["no"]}'
+        if key not in SEV and k['no'] <= M1 and cfg.get('ortak_kaynak'): key = f'{cfg["ortak_kaynak"]}#{k["no"]}'  # ortak bölüm
         sev = SEV.get(key)
         if sev not in ('ayni', 'bilgi'): continue
         kn = KONU[str(k['no'])]
