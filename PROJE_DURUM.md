@@ -3579,3 +3579,10 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
 - Sayfa: açılışta 'acilis', branş değişince 'brans', soru listesi ekrana gelince 'sorular' (branş başına 1). `?ben=1` ile açan cihaz kalıcı olarak sayılmaz.
 - Rapor: `set -a; . ./.env; set +a; python scripts/analiz-sayac-rapor.py` (açılış, tekil kişi, inceleyen, gün gün, branş, kaynak).
 - Paylaşım linkine `?k=instagram` eklenirse kaynak ayrı görünür.
+
+### 13 Eki 2026 — Ekim analiz sayfasına Subay Maliye + Subay Personel (6fc75b5, YAYINDA)
+Başkan "yay" dedi. Bilgi bazlı ölçüyle doğrudan değerlendirme: Maliye 67/80 (17 birebir + 50 çok benzer), Personel 62/80 (15 + 47).
+Ortak 21–60 seviyesi `ortak_kaynak` (subay-mebs) anahtarından okunuyor; yeni hat `scratchpad/ekim10-bilgi-entegre.py <kod>`
+(ekim10/<kod>/bilgi_*.json → kayit/konu/soruldu/seviye.json). Sınav metinli `scratchpad/ekim10/` repoya GİRMEZ (telif).
+Açık: Maliye Q76 olası anahtar hatası (257 m.10 "haczedilemez" → A, anahtar D); Altın Özet Maliye kantin satırı (Q88) belirsiz;
+Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı başlangıcı, pilotaj yükümlülüğü 2803, nöbet kıyafeti makamı).
