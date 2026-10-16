@@ -438,6 +438,54 @@ export function eslesenKartIdleri(kaynak: string, kartlar: readonly EslesmeKart[
   return ids;
 }
 
+/**
+ * ÇOK KARTLI MADDEDE DOĞRU KART (16 Eki 2026 — Özge Lavinya, karma denemede 10 bildirim).
+ * Bir maddenin birden fazla kartı varken "İlgili kartı çalış" hep İLK kartı açıyordu; sorunun
+ * konusu çoğu zaman 2. ya da 3. karttaydı (Mera m.3 "Büyükbaş Hayvan Birimi" → 2. kart).
+ * Soru kökü + doğru şıkkın kelime kökleri her adayın anlatım metniyle karşılaştırılır; tırnak
+ * içindeki terim ('istihsal vasıtaları') 3 kat sayılır, bütün adaylarda geçen kelime sayılmaz.
+ * Hiç örtüşme yoksa (ya da eşitlikte) eski davranış: ilk kart. Saf; metin dışarıdan verilir.
+ */
+const YAYGIN_KOK = new Set(
+  kelimeKokleri('kanun kanunu göre aşağıdakilerden hangisi hangisidir madde maddesi kart kartı komutanım görselde konusu sayılı tanım tanımı olarak ilgili'),
+);
+
+function kelimeKokleri(metin: string): Set<string> {
+  const out = new Set<string>();
+  for (const w of metin.toLocaleLowerCase('tr').split(/[^\p{L}\p{N}]+/u)) {
+    if (w.length >= 4 && !/^\d+$/.test(w)) out.add(w.slice(0, 5));
+  }
+  return out;
+}
+
+export function enUygunKartId(
+  soru: { soru: string; siklar: string[]; dogru: number },
+  adaylar: readonly EslesmeKart[],
+  metin: (gorselYolu: string | null) => string | null,
+): number | null {
+  if (adaylar.length === 0) return null;
+  if (adaylar.length === 1) return adaylar[0].id;
+  const agir = new Set<string>();
+  for (const m of soru.soru.matchAll(/(?:^|\s)['‘“"]([^'’”"]{3,60})['’”"]/g)) {
+    for (const k of kelimeKokleri(m[1])) agir.add(k);
+  }
+  const hedef = kelimeKokleri(`${soru.soru} ${soru.siklar[soru.dogru] ?? ''}`);
+  for (const k of YAYGIN_KOK) hedef.delete(k);
+  const kokler = adaylar.map((k) => kelimeKokleri(metin(k.gorsel_yolu) ?? ''));
+  const ortak = new Set([...kokler[0]].filter((w) => kokler.every((s) => s.has(w))));
+  let en = adaylar[0].id;
+  let enSkor = 0;
+  adaylar.forEach((k, i) => {
+    let skor = 0;
+    for (const w of hedef) if (kokler[i].has(w) && !ortak.has(w)) skor += agir.has(w) ? 3 : 1;
+    if (skor > enSkor) {
+      enSkor = skor;
+      en = k.id;
+    }
+  });
+  return en;
+}
+
 /** Bir kartın kapsadığı madde no'ları (kendi madde_no + birleşik/ayırt-özet üyeleri). */
 function kartMaddeNolari(k: { madde_no: string; gorsel_yolu: string | null }): Set<number> {
   const s = new Set<number>();

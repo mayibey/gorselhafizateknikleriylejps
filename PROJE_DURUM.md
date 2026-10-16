@@ -2,7 +2,19 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 6 Ekim 2026 (mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 16 Ekim 2026 (İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 16 Eki — "İLGİLİ KARTI ÇALIŞ" ÇOK KARTLI MADDEDE DOĞRU KART + BEKLEYEN BİLDİRİMLER
+> Özge Lavinya'nın 10 bildirimi (8 Eki, karmab-jandarma-1) incelendi. Kök: bir maddenin birden çok kartı varsa düğme hep İLK kartı
+> açıyordu (Mera m.3 BBHB 2. kartta, Su Ürünleri m.2 "istihsal vasıtaları" 3. kartta, Beden Muayenesi Yön. m.3 "iç beden" 2. kartta).
+> Fix: `sinav.ts enUygunKartId` (saf) — soru kökü + doğru şık kelime kökleri adayların ses metniyle karşılaştırılır, tırnaklı terim
+> ×3, tüm adaylarda geçen kelime sayılmaz, eşitlikte ilk kart. `sinav.tsx secKart` iki kartHedefi yoluna bağlandı (soru id'sine göre
+> saklanır, metin tembel `ses-metni`). Banka ölçümü (Python ikizi): 577 çok kartlı sorunun 367'sinde ilk karttan farklı, örnekler doğru.
+> AÇIK: 3713-OO-010'da TCK "kast merdiveni" kartının açılması kodla AÇIKLANAMADI (mantık 3713 m.22 kartını vermeli) → cihazda dene.
+> İÇERİK AÇIĞI (başkan: "kart üretme dursun"): 5199 m.3 "hayvan bakımevi" tanımı hiçbir kartta yok.
+> tsc ÇALIŞTIRILAMADI: bu PC'de Node kurulu değil (PATH'te yok) — Node kurulunca `npx tsc --noEmit` şart. OTA BEKLİYOR ("yay").
+> Aynı gün cevaplar gönderildi: Serkan Demirci (Bluestacks, talep açık kaldı — çalışma planı başkan kararıyla sonraya), Bulut Özcan
+> (2918 m.48 promil 0,21 doğru, duyuru), Kasım Tuncer (tablet, duyuru + iOS push). Özge'ye cevap fix yayınlanınca.
 >
 > ### ▶ 11 Eki — 10 EKİM SINAVI "KAÇINI TUTTURDUK" SAYFASI (mevzujsps.com/jsps2026ekimanaliz/)
 > Subay MEBS 60/80 (%75) + Astsubay MEBS 69/80 (%86,3) katı kuralla (birebir = tek soru/madde kartı tek başına buldurur; kısmi = iki

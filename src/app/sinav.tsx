@@ -20,6 +20,7 @@ import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import {
   eslesenKartIdleri,
+  enUygunKartId,
   soruKanunId,
   genelSanalLawId,
   getGenelDenemeSorulari,
@@ -48,6 +49,7 @@ import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 import { useMesgul } from '@/lib/mesgul';
+import { sesMetni } from '@/lib/ses-metni';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
 const DOGRU_YESIL = Palette.yesil;
@@ -302,6 +304,22 @@ export default function SinavScreen() {
     }
   }
 
+  /**
+   * Maddenin birden çok kartı varsa sorunun konusuna en uygun olanı (16 Eki, Özge Lavinya bildirimi).
+   * kartHedefi her render'da çağrıldığı için sonuç soru id'sine göre saklanır; metinler tembel yüklenir.
+   */
+  const kartSecimRef = useRef(new Map<string, number>());
+  function secKart(soru: KartSoru, havuz: CardWithLaw[], ids: number[]): number {
+    if (ids.length === 1) return ids[0];
+    const anahtar = `${soru.id}|${ids.join(',')}`;
+    const kayitli = kartSecimRef.current.get(anahtar);
+    if (kayitli != null) return kayitli;
+    const adaylar = ids.map((id) => havuz.find((k) => k.id === id)).filter((k): k is CardWithLaw => !!k);
+    const secilen = enUygunKartId(soru, adaylar, sesMetni) ?? ids[0];
+    kartSecimRef.current.set(anahtar, secilen);
+    return secilen;
+  }
+
   /** Sonuç ekranındaki yanlış soru → ilgili kartın akışına git (o kanunun kartında). */
   /**
    * Bir sorunun çalışma hedefi: önce KANUN, sonra o kanunun içinde madde kartı.
@@ -325,7 +343,7 @@ export default function SinavScreen() {
     const havuz = kanunId != null ? kartlar.filter((k) => k.law_id === kanunId) : [];
     if (havuz.length > 0) {
       const ids = eslesenKartIdleri(soru.kaynak, havuz);
-      const kart = ids.length > 0 ? havuz.find((k) => k.id === ids[0]) : undefined;
+      const kart = ids.length > 0 ? havuz.find((k) => k.id === secKart(soru, havuz, ids)) : undefined;
       return kart ? { lawId: kart.law_id, kartId: kart.id } : { lawId: havuz[0].law_id };
     }
     // Kanun çözülemediyse eski davranış: madde numarasıyla en yakın kart.
@@ -355,7 +373,7 @@ export default function SinavScreen() {
     const havuz = liste.filter((k) => k.law_id === kanunId);
     if (havuz.length > 0) {
       const ids = eslesenKartIdleri(soru.kaynak, havuz);
-      const kart = ids.length > 0 ? havuz.find((k) => k.id === ids[0]) : undefined;
+      const kart = ids.length > 0 ? havuz.find((k) => k.id === secKart(soru, havuz, ids)) : undefined;
       if (kart) return { lawId: kart.law_id, kartId: kart.id };
     }
     const kt = kitaplarRef.current;
