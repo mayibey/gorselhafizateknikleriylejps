@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 const PORT = 9500;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
-const HTML = 'file:///D:/GorselHafizaTeknikleriyleJSPS/scratchpad/canli-0836grid.html';
+const HTML = 'file:///D:/Mevzu/JSPS/uygulama/scratchpad/canli-0836grid.html';
 const OYUN = process.argv[2];              // oyun id
 const AD = process.argv[3] || ('ss-' + (OYUN || 'menu'));
 const BOLUM = process.argv[4];             // 'h' => harita oyununda bolumBasla(0) ile oynanisa gir

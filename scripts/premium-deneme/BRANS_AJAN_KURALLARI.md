@@ -5,7 +5,7 @@ Sorular mevzujsps.com/sinavprovasi sitesinde binlerce adaya gösterilecek. **Tek
 Hız ikinci planda; doğruluk birinci.
 
 ## 1. Ne üreteceksin
-- Çalışma klasörü: `D:\GorselHafizaTeknikleriyleJSPS` (komutları buradan çalıştır).
+- Çalışma klasörü: `D:\Mevzu\JSPS\uygulama` (komutları buradan çalıştır).
 - Çıktı dosyası: `scripts/premium-deneme/kaynak/tahmin-brans-<brans>.json` (UTF-8, JSON dizi).
   - `<brans>` = paket klasörünün adı (ör. `havacilik`, `personel`, `ikmal`).
 - **Soru sayısı: 40.** İSTİSNA — **havacılık**: 19 Eylül havacılık sınavında müşterek bölüm 70. soruya kadar sürdü, branş 30 soru.

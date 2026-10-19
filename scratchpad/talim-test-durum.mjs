@@ -7,7 +7,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/uygulama/';
 const yaz = (p, s) => fs.writeFileSync(KOK + p, s, 'utf8');
 const oku = (p) => fs.readFileSync(KOK + p, 'utf8');
 let sayac = 0;

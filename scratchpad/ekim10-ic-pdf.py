@@ -5,7 +5,7 @@
 import html, io, json, os, re, subprocess, sys
 import fitz
 sys.stdout.reconfigure(encoding='utf-8')
-S = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/'
+S = 'D:/Mevzu/JSPS/uygulama/scratchpad/'
 sys.path.insert(0, S)
 from ekim10_sinavlar import SINAVLAR
 CHROME = r"C:/Program Files/Google/Chrome/Application/chrome.exe"

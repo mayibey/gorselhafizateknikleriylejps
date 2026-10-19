@@ -3,7 +3,7 @@
 BRANŞ görsellerini kaynak fabrikadan alıp uygulamaya yerleştirir.
 icerik-yerlestir.py'nin BİREBİR AYNI parse/san/goz mantığı (müşterek ile parite) —
 tek fark: kaynak = BRANS klasörü ve MAP = branş kanunları (law 26-66).
-- Kaynak: D:\\JSPS Fabrika\\...\\BRANS\\{folder}\\uretilen_gorseller\\*.png (sadece bu seviye)
+- Kaynak: D:\\Mevzu\\JSPS\\icerik-fabrikasi\\JSPS Fabrika\\...\\BRANS\\{folder}\\uretilen_gorseller\\*.png (sadece bu seviye)
 - Hedef:  assets/kartlar/{slug}/{key}.png
 - ses_metinleri/{aynı ad}.txt -> ses metni (key -> metin)
 Çıktı: scripts/_icerik_rapor.json (müşterek kayıtları KORUNUR; sadece branş slug'ları eklenir)
@@ -12,7 +12,7 @@ Kullanım: python scripts/icerik-yerlestir-brans.py [SLUG1 SLUG2 ...]  (boşsa h
 """
 import os, re, sys, json, shutil
 
-SRC_BASE = r"D:\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\BRANS"
+SRC_BASE = r"D:\Mevzu\JSPS\icerik-fabrikasi\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\BRANS"
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEST_BASE = os.path.join(REPO, "assets", "kartlar")
 

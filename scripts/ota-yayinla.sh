@@ -9,14 +9,14 @@
 # Kullanım:  bash scripts/ota-yayinla.sh "yayin mesaji"
 # ŞART: önce `npm run icerik:manifest`, sonra `npm run icerik:tam` (bkz. hafıza: OTA reçetesi).
 set -u
-cd "D:/GorselHafizaTeknikleriyleJSPS"
+cd "D:/Mevzu/JSPS/uygulama"
 
 MESAJ="${1:?kullanim: bash scripts/ota-yayinla.sh \"yayin mesaji\"}"
 SURUMLER="${SURUMLER:-1.0.44 1.0.43 1.0.42 1.0.41 1.0.40}"
 
-export TMPDIR='D:\easbuild-tmp'
-export TEMP='D:\easbuild-tmp'
-export TMP='D:\easbuild-tmp'
+export TMPDIR='D:\Mevzu\ortak\easbuild-tmp'
+export TEMP='D:\Mevzu\ortak\easbuild-tmp'
+export TMP='D:\Mevzu\ortak\easbuild-tmp'
 export NODE_OPTIONS='--dns-result-order=ipv4first'   # IPv6 DNS tuzağı
 export EAS_SKIP_AUTO_FINGERPRINT=1                   # parmak izi hesabı uzun sürüyor, gerekmiyor
 

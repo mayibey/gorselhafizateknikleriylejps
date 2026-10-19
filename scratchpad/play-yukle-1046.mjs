@@ -6,8 +6,8 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 
-const SA = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
-const AAB = 'D:/buildler/mevzu-1046-resign.aab';
+const SA = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const AAB = 'D:/Mevzu/JSPS/yayin-build/buildler/mevzu-1046-resign.aab';
 const PAKET = 'app.mevzujsps.android';
 const SURUM = '1.0.46';
 

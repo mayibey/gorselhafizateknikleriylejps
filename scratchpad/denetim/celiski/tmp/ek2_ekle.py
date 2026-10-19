@@ -3,8 +3,8 @@
 parçası değiştirilir (uzun hüküm elle kopyalanmaz). Aynı kart zaten varsa yenisi yerine geçer."""
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
-CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
+KOK = 'D:/Mevzu/JSPS/uygulama'
+CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
 YOL = KOK + '/scratchpad/denetim/celiski/sonuc.json'
 D = json.load(open(YOL, encoding='utf-8'))
 

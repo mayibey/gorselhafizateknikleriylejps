@@ -6,7 +6,7 @@ lid = int(sys.argv[1])
 bas = int(sys.argv[2]) if len(sys.argv) > 2 and not sys.argv[2].startswith('--') else 0
 son = int(sys.argv[3]) if len(sys.argv) > 3 and not sys.argv[3].startswith('--') else 10**6
 metinsiz = '--metinsiz' in sys.argv
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 basildi = set()
 for i, k in enumerate(G['kartlar']):
     if i < bas or i >= son: continue

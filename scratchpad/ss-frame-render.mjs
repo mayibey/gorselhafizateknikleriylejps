@@ -2,7 +2,7 @@ import fs from 'node:fs';
 const PORT = 9500;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 const AD = process.argv[2]; // kare-1-menu ...
-const HTML = `file:///D:/GorselHafizaTeknikleriyleJSPS/scratchpad/${AD}.html`;
+const HTML = `file:///D:/Mevzu/JSPS/uygulama/scratchpad/${AD}.html`;
 
 const t = await (await fetch(`http://127.0.0.1:${PORT}/json`)).json();
 const p = t.find((x) => x.type === 'page');

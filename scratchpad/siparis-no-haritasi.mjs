@@ -8,14 +8,14 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 
 const PAKET = 'app.mevzujsps.android';
-const SA_YOL = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA_YOL = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const BUNDLE = 'app.mevzujsps.ios';
 const KEYID = 'JPFAY6DKU3';
 const ISS = '6ad2e590-a37b-41d0-bcd6-0462ff64781f';
 const KEY_YOL = 'C:/Users/GIGABYTE/OneDrive/Desktop/SubscriptionKey_JPFAY6DKU3.p8';
 
 const env = Object.fromEntries(
-  fs.readFileSync('D:/GorselHafizaTeknikleriyleJSPS/.env', 'utf8').split(/\r?\n/)
+  fs.readFileSync('D:/Mevzu/JSPS/uygulama/.env', 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))
     .map((s) => [s.slice(0, s.indexOf('=')).trim(), s.slice(s.indexOf('=') + 1).trim()]),
 );
@@ -88,7 +88,7 @@ for (const s of satirlar) {
     durum: j.purchaseState ?? j.subscriptionState ?? null,
   });
 }
-fs.writeFileSync('D:/GorselHafizaTeknikleriyleJSPS/scratchpad/siparis-haritasi.json', JSON.stringify(harita, null, 1), 'utf8');
+fs.writeFileSync('D:/Mevzu/JSPS/uygulama/scratchpad/siparis-haritasi.json', JSON.stringify(harita, null, 1), 'utf8');
 const iadeli = harita.filter((h) => h.iade);
 console.log(`kayıt: ${harita.length} · sipariş no bulunan: ${harita.filter((h) => h.siparis).length} · iade işaretli: ${iadeli.length}`);
 console.log('dosya: scratchpad/siparis-haritasi.json  (sipariş numarasıyla arayınca kim olduğu çıkar)');

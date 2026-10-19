@@ -1,7 +1,7 @@
 # Sınav ölçümünün bulduğu düzeltme + eksik satırları yazıcı betiklere (scripts/sifreler/yazici/kN.py) işler
 import sys, os
 sys.stdout.reconfigure(encoding='utf-8')
-Y = 'D:/GorselHafizaTeknikleriyleJSPS/scripts/sifreler/yazici'
+Y = 'D:/Mevzu/JSPS/uygulama/scripts/sifreler/yazici'
 
 DUZELT = {
  22: [("'tebliğ günü işe başlar'", "'tebliğ gününü izleyen işgünü içinde işe başlar'"),

@@ -2,7 +2,7 @@
 # sorulur<=40, akilda<=30, neden<=15 kelime; soru_sayisi 0 ise "Beklenen kalıp:" ile başlama
 import json, os, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = r'D:\GorselHafizaTeknikleriyleJSPS'
+KOK = r'D:\Mevzu\JSPS\uygulama'
 lid = int(sys.argv[1])
 B = json.load(open(os.path.join(KOK, 'scratchpad', 'denetim', 'blok', 'sonuc', f'kanun_{lid}.json'), encoding='utf-8'))
 G = json.load(open(os.path.join(KOK, 'scratchpad', 'denetim', 'blok', 'girdi', f'kanun_{lid}.json'), encoding='utf-8'))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Müşterek görselleri kaynak fabrikadan alıp uygulamaya yerleştirir.
-- Kaynak: D:\\JSPS Fabrika\\...\\MUSTEREK\\{folder}\\uretilen_gorseller\\*.png (sadece bu seviye)
+- Kaynak: D:\\Mevzu\\JSPS\\icerik-fabrikasi\\JSPS Fabrika\\...\\MUSTEREK\\{folder}\\uretilen_gorseller\\*.png (sadece bu seviye)
 - Hedef: assets/kartlar/{slug}/{registry_key}.png
 - ses_metinleri/{aynı ad}.txt -> ses metni (registry_key -> metin) JSON raporu
 Çıktı: scripts/_icerik_rapor.json (kapsam etiketleri + dosya eşleşmeleri + ses metinleri)
@@ -10,7 +10,7 @@ Kullanım: python scripts/icerik-yerlestir.py [SLUG1 SLUG2 ...]  (boşsa hepsi)
 """
 import os, re, sys, json, shutil
 
-SRC_BASE = r"D:\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\MUSTEREK"
+SRC_BASE = r"D:\Mevzu\JSPS\icerik-fabrikasi\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\MUSTEREK"
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEST_BASE = os.path.join(REPO, "assets", "kartlar")
 

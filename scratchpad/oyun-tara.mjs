@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { spawn } from 'node:child_process';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const PORT = 9455;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 

@@ -3,7 +3,7 @@
 import json, sys, glob
 
 sys.stdout.reconfigure(encoding='utf-8')
-ROOT = 'D:/GorselHafizaTeknikleriyleJSPS'
+ROOT = 'D:/Mevzu/JSPS/uygulama'
 D = json.load(open(f'{ROOT}/scripts/harekat-masasi/duzeltmeler.json', encoding='utf-8'))
 K = []
 for f in sorted(glob.glob(f'{ROOT}/scratchpad/denetim/kutu/sonuc/kanun_*.json')):

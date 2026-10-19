@@ -4,7 +4,7 @@
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-const BRANS_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const BRANS_DIGER = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
 const OZET = join(BRANS_DIGER, '_OZET_KITAPLAR');
 
 // build.py TR_MAP + slug üretimi birebir.

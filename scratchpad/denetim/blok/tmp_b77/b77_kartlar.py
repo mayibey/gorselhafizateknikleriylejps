@@ -1,6 +1,6 @@
 import json, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
-d = json.load(open(r'D:\GorselHafizaTeknikleriyleJSPS\scratchpad\denetim\blok\girdi\kanun_77.json', encoding='utf-8'))
+d = json.load(open(r'D:\Mevzu\JSPS\uygulama\scratchpad\denetim\blok\girdi\kanun_77.json', encoding='utf-8'))
 ids = []
 for m in d['maddeler']:
     for k in m['kartlar']:

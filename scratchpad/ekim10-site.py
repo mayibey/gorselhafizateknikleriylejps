@@ -5,10 +5,10 @@
 import html as _html, io, json, os, re, shutil, subprocess, sys
 import fitz
 sys.stdout.reconfigure(encoding='utf-8')
-S = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/'
+S = 'D:/Mevzu/JSPS/uygulama/scratchpad/'
 sys.path.insert(0, S)
 from ekim10_sinavlar import SINAVLAR, RUTBE_AD
-SITE = 'D:/GorselHafizaTeknikleriyleJSPS/docs/jsps2026ekimanaliz/'
+SITE = 'D:/Mevzu/JSPS/uygulama/docs/jsps2026ekimanaliz/'
 MASA = r"C:\Users\GIGABYTE\OneDrive\Desktop\JSPS 10 Ekim 2026\Site (yayimlanacak)"
 CHROME = r"C:/Program Files/Google/Chrome/Application/chrome.exe"
 FONT = r"C:\Windows\Fonts\segoeui.ttf"
@@ -85,11 +85,11 @@ SEV = json.load(open(A + 'son_seviye.json', encoding='utf-8'))
 # Doğrudan yeni ölçüyle değerlendirilen sınavlar (ekim10-bilgi-entegre.py): ekim10/<kod>/seviye.json
 for _f in _glob.glob(S + 'ekim10/*/seviye.json'): SEV.update(json.load(open(_f, encoding='utf-8')))
 H = {h['id']: h for h in json.load(open(S + 'havuz-tum.json', encoding='utf-8'))}
-B = 'D:/GorselHafizaTeknikleriyleJSPS/'
+B = 'D:/Mevzu/JSPS/uygulama/'
 _s = open(S + 'yakalanan-sayfa.py', encoding='utf-8').read()
 exec(_s[_s.index('# --- Uygulamadaki yer ---'):_s.index('kayit = []')])  # yerler(id)
 PADI = {}
-for _f in _glob.glob('D:/GorselHafizaTeknikleriyleJSPS/docs/sinavprovasi/d/*.json'):
+for _f in _glob.glob('D:/Mevzu/JSPS/uygulama/docs/sinavprovasi/d/*.json'):
     _d = json.load(open(_f, encoding='utf-8')); PADI[_d['id']] = (_d['baslik'], _d['sorular'])
 KITAP = {'ozet_A': 'Müşterek', 'ozet_B': 'Müşterek', 'ozet_C': 'Müşterek', 'ozet_D': 'MEBS', 'ozet_B_bakim': 'Bakım',
          'ozet_I_ikmal': 'Bakım', 'ozet_J_jandarma': 'Jandarma'}

@@ -5,7 +5,7 @@ Türk Jandarma/Sahil Güvenlik personeli için JSPS sınav hazırlık uygulamas�
 ## Stack & komutlar
 - Expo SDK 54, TypeScript (strict), expo-router, expo-sqlite (native), AsyncStorage (branş kaydı)
 - `npx expo start` (yerel) · `npx expo start --web` (tarayıcı) · `npx tsc --noEmit` (tip denetimi) · `npm run gorsel:uret` (görsel registry codegen)
-- Repo: github.com/mayibey/gorselhafizateknikleriylejps · branch: **sadece master** · Local: D:\GorselHafizaTeknikleriyleJSPS
+- Repo: github.com/mayibey/gorselhafizateknikleriylejps · branch: **sadece master** · Local: D:\Mevzu\JSPS\uygulama
 
 ## Mimari değişmezler (BOZMA)
 - **Veri katmanı platforma bölük**: `database.web.ts` (MemoryBackend, bellek-içi) / `database.native.ts` (SqliteBackend, kalıcı). Metro platform uzantısıyla seçer. Web'de expo-sqlite'a HİÇBİR import girmemeli.

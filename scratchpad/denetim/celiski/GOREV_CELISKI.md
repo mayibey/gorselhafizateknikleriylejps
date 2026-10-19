@@ -8,7 +8,7 @@ Madde bloğu ve kırmızı kutu ajanları bazı kartlarda gerçek içerik hatas�
 2. Aşağıdaki EK LİSTE (raporlardan).
 3. Doğrulama kaynağı: `scratchpad/denetim/blok/girdi/kanun_<id>.json` → `maddeler[].resmi_metin` (kapsam maddeleri) ve
    `diger_maddeler_kisa`; tam metin gerekirse `gemini_calisma/girdi/resmi_metin/kanun_<id>.json` (`maddeler[] = {no, metin}`).
-   Kartın şu anki hâli: `C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/veri2-<brans>.json`
+   Kartın şu anki hâli: `C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/veri2-<brans>.json`
    içinde `kanun[].n[]` (`i` = kart id; `b` başlık, `h` hüküm, `yz` sınavda böyle yazarlar, `dg` doğrusu, `m` madde listesi).
    Kanunun hangi branş dosyasında olduğunu bilmiyorsan `veri2-jandarma.json` (müşterek + jandarma), `veri2-maliye.json`,
    `veri2-personel.json`, `veri2-tabip.json`, `veri2-istihkam.json` dosyalarına bak. YALNIZ OKU.

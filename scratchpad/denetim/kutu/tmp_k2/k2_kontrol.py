@@ -3,8 +3,8 @@
 import json, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
 lid = int(sys.argv[1])
-D = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/sonuc/kanun_{lid}.json', encoding='utf-8'))
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+D = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/sonuc/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 sira = [k['id'] for k in G['kartlar']]
 print('sira ayni:', [x['kart_id'] for x in D] == sira, '| kayit', len(D), '| girdi', len(sira))
 sorun = 0

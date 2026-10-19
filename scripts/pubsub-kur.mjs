@@ -23,7 +23,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 
-const SA_YOL = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA_YOL = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const KONU = 'play-bildirim';
 const ABONELIK = 'play-bildirim-sunucu';
 const UC = 'https://vwmjrvolkbiofpkzzwef.supabase.co/functions/v1/magaza-bildirim';

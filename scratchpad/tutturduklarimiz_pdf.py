@@ -17,7 +17,7 @@ Oran ölçüsü AFİŞLE aynı: karşılık = birebir + çok benzer.
 import io, json, os, re, subprocess, sys, html as _html
 import fitz
 
-KOK = r"D:\GorselHafizaTeknikleriyleJSPS"
+KOK = r"D:\Mevzu\JSPS\uygulama"
 VERI = os.path.join(KOK, "docs", "jsps2026iptalanaliz", "veri")
 CIK = r"C:\Users\GIGABYTE\OneDrive\Desktop\jsps 2026\tutturduklarimiz"
 GECICI = os.path.join(KOK, "scratchpad")

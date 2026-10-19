@@ -11,7 +11,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/jsps-community-bot/';
+const KOK = 'D:/Mevzu/JSPS/telegram-bot/';
 let n = 0;
 const degistir = (p, eski, yeni, ad) => {
   const s = fs.readFileSync(KOK + p, 'utf8');

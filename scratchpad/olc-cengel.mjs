@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { spawn } from 'node:child_process';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const CHROME = '/c/Program Files/Google/Chrome/Application/chrome.exe';
 
 // 1) Düzeltmesiz (canlı) + düzeltmeli iki dosya hazırla

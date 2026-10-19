@@ -7,7 +7,7 @@
 > (`MADDE_METINLERI`, 90 el-yazımı), `src/assets/kart-madde-metinleri.ts`
 > (`KART_MADDE_METINLERI`, 355 üretilen); `seed.ts gorselKartlari()` + `maddeMetni()`
 > (`src/db/madde-metinleri.ts:411`) birebir simüle edildi. Şüpheli her vaka, içerik fabrikası
-> MASTER md kaynağına (`D:/JSPS Fabrika/.../KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md`)
+> MASTER md kaynağına (`D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/.../KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md`)
 > ve üretici betiğe (`scripts/madde-metni-uret.mjs`) bakılarak DOĞRULANDI.
 
 ## Özet sayılar

@@ -5,7 +5,7 @@
 #    kirmizi_kutu kaydı varsa yenisi yerine geçer; dosya sonuna eklenir → önceki düzeltmeleri ezer)
 import json, os, sys, glob, shutil, re
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 sys.path.insert(0, KOK + '/scripts/harekat-masasi')
 import blok_denetle, kutu_denetle
 

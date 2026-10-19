@@ -1,7 +1,7 @@
 // Başkan + Kemalettin premium (tam erişim) GERİ YÜKLE — free test bitince çalıştır.
 // Kullanım: node scratchpad/premium-geri-yukle.mjs
 import fs from 'node:fs';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS';
+const KOK = 'D:/Mevzu/JSPS/uygulama';
 const env = Object.fromEntries(
   fs.readFileSync(`${KOK}/.env`, 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))

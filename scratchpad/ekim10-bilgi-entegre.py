@@ -5,7 +5,7 @@
 # Kullanım: python ekim10-bilgi-entegre.py <kod>
 import json, glob, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-B = 'D:/GorselHafizaTeknikleriyleJSPS/'
+B = 'D:/Mevzu/JSPS/uygulama/'
 S = B + 'scratchpad/'
 sys.path.insert(0, S)
 from ekim10_sinavlar import SINAVLAR

@@ -3,7 +3,7 @@
 #   python m22_madde_oku.py ara "Ek Madde 7" [pencere]
 import json, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-YOL = 'D:/GorselHafizaTeknikleriyleJSPS/src/assets/kart-madde-metinleri.ts'
+YOL = 'D:/Mevzu/JSPS/uygulama/src/assets/kart-madde-metinleri.ts'
 t = open(YOL, encoding='utf-8').read()
 sozluk = {}
 for m in re.finditer(r'^\s*("(?:[^"\\]|\\.)*")\s*:\s*("(?:[^"\\]|\\.)*")\s*,?\s*$', t, re.M):

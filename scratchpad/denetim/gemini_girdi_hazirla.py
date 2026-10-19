@@ -4,9 +4,9 @@
 # → Girdide BİZİM kart/soru/özet YOK. Yalnız resmî metin + resmî kapsam (16 branş, 143 mevzuat) + biçim örneği.
 import json, os, re, shutil, sys, glob
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 G = KOK + '/gemini_calisma/girdi'
-C = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/'
+C = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/'
 
 for alt in ('kartlar', 'sorular', 'altin_ozet_md', 'resmi_metin'):
     shutil.rmtree(f'{G}/{alt}', ignore_errors=True)
@@ -17,7 +17,7 @@ os.makedirs(KOK + '/gemini_calisma/cikti', exist_ok=True)
 
 EMIR = json.load(open(KOK + '/scripts/_emir-madde-kapsam.json', encoding='utf-8'))['kapsam']
 tam = json.load(open(KOK + '/scratchpad/denetim/tam_metin.json', encoding='utf-8'))
-bot = json.load(open('D:/jsps-community-bot/data/maddeler.json', encoding='utf-8'))
+bot = json.load(open('D:/Mevzu/JSPS/telegram-bot/data/maddeler.json', encoding='utf-8'))
 bot_onek = {}
 for key in bot:
     if ' m.' in key: bot_onek.setdefault(key.rsplit(' m.', 1)[0], []).append(key)

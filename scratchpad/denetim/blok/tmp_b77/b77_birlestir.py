@@ -1,6 +1,6 @@
 import json, sys, glob, os, re
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = r'D:\GorselHafizaTeknikleriyleJSPS\scratchpad\denetim\blok'
+KOK = r'D:\Mevzu\JSPS\uygulama\scratchpad\denetim\blok'
 TMP = os.path.join(KOK, 'tmp_b77')
 G = json.load(open(os.path.join(KOK, 'girdi', 'kanun_77.json'), encoding='utf-8'))
 sira = [m['no'] for m in G['maddeler']]

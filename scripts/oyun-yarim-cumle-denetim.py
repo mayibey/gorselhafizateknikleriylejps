@@ -16,7 +16,7 @@ import re
 import sys
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-OYUN = r'D:\GorselHafizaTeknikleriyleJSPS\assets\oyun\oyun-merkezi.html'
+OYUN = r'D:\Mevzu\JSPS\uygulama\assets\oyun\oyun-merkezi.html'
 s = io.open(OYUN, encoding='utf-8').read()
 
 

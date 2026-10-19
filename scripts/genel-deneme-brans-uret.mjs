@@ -12,7 +12,7 @@ import { denetle, yedekSoru } from './soru-standart.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
-const KAYNAK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS/_DENEME_SORULARI/GENEL_DENEMELER';
+const KAYNAK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS/_DENEME_SORULARI/GENEL_DENEMELER';
 const outFile = join(root, 'src', 'assets', 'genel-denemeler-brans.ts');
 const outDir = dirname(outFile);
 

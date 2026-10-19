@@ -11,7 +11,7 @@ Haydi, aç uygulamayı.`;
 const PUSH = 'Günde 3 saat ayır, JSPS\'yi bitir. 15 gün yeter.';
 
 const env = Object.fromEntries(
-  fs.readFileSync('D:/GorselHafizaTeknikleriyleJSPS/.env', 'utf8').split(/\r?\n/)
+  fs.readFileSync('D:/Mevzu/JSPS/uygulama/.env', 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))
     .map((s) => [s.slice(0, s.indexOf('=')).trim(), s.slice(s.indexOf('=') + 1).trim()]),
 );

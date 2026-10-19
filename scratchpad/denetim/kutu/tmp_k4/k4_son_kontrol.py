@@ -1,7 +1,7 @@
 # k4 son kontrol: kart sayisi, tirnak bicimi, yasak kelime, ayni sayida dogrusu, KART_CELISKI var mi
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
-B = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu'
+B = 'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu'
 for lid in (14, 15, 16):
     G = json.load(open(f'{B}/girdi/kanun_{lid}.json', encoding='utf-8'))
     D = json.load(open(f'{B}/sonuc/kanun_{lid}.json', encoding='utf-8'))

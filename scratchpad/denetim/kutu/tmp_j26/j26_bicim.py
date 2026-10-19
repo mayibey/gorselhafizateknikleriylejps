@@ -1,7 +1,7 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 lid = int(sys.argv[1])
-D = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/sonuc/kanun_{lid}.json', encoding='utf-8'))
+D = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/sonuc/kanun_{lid}.json', encoding='utf-8'))
 sorun = 0
 for x in D:
     dz = x.get('duzeltme') or {}

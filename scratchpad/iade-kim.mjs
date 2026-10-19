@@ -7,9 +7,9 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 
 const PAKET = 'app.mevzujsps.android';
-const SA_YOL = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA_YOL = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const env = Object.fromEntries(
-  fs.readFileSync('D:/GorselHafizaTeknikleriyleJSPS/.env', 'utf8').split(/\r?\n/)
+  fs.readFileSync('D:/Mevzu/JSPS/uygulama/.env', 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))
     .map((s) => [s.slice(0, s.indexOf('=')).trim(), s.slice(s.indexOf('=') + 1).trim()]),
 );

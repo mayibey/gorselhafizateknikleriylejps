@@ -23,7 +23,7 @@ envYukle();
 const URL = process.env.SUPABASE_URL || process.env.EXPO_PUBLIC_SUPABASE_URL;
 const KEY = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = process.env.ICERIK_BUCKET || 'icerik';
-const KOK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER/_OZET_KITAPLAR';
+const KOK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER/_OZET_KITAPLAR';
 const TEK = (process.env.BRANS || '').toLowerCase();
 const FORCE = process.env.FORCE === '1';
 if (!URL || !KEY) { console.error('HATA: SUPABASE_URL + SUPABASE_SERVICE_KEY gerekli.'); process.exit(1); }
@@ -32,7 +32,7 @@ const sb = createClient(URL, KEY, { auth: { persistSession: false } });
 
 // DÜZGÜN Türkçe başlık kaynağı: BRANS_DIGER/*/_ozet_meta.json baslik'i (build.py bunu ASCII'ye
 // çevirip kırparak dosya adını üretmiş). Aynı algoritmayla dosya adı → meta.baslik haritası kur.
-const BRANS_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const BRANS_DIGER = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
 const TR_FROM = 'şçğıöüŞÇĞİÖÜ', TR_TO = 'scgiouSCGIOU';
 const translit = (s) => { let o = ''; for (const ch of s) { const i = TR_FROM.indexOf(ch); o += i >= 0 ? TR_TO[i] : ch; } return o; };
 function fnameYap(meta) {

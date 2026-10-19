@@ -2,8 +2,8 @@
 #   python acik_dok.py <lid> [madde ...]     (madde verilirse yalnız o maddelerin resmî metni basılır)
 import json, sys, re, collections
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
-A = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/sifre_test/arsiv'
+KOK = 'D:/Mevzu/JSPS/uygulama'
+A = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/sifre_test/arsiv'
 lid = int(sys.argv[1]); maddeler = sys.argv[2:]
 R = json.load(open(f'{KOK}/gemini_calisma/girdi/resmi_metin/kanun_{lid}.json', encoding='utf-8'))
 MT = {m['no']: m['metin'] for m in R['maddeler']}

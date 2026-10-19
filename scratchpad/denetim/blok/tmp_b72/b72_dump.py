@@ -2,7 +2,7 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 lid = sys.argv[1]
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/blok/girdi/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/blok/girdi/kanun_{lid}.json', encoding='utf-8'))
 istek = sys.argv[2:]
 if istek == ['--diger']:
     for k, v in G['diger_maddeler_kisa'].items():

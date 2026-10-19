@@ -4,7 +4,7 @@ import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 lid = int(sys.argv[1]); a = int(sys.argv[2]); b = int(sys.argv[3])
 mx = int(sys.argv[4]) if len(sys.argv) > 4 else 100000
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 for i, k in enumerate(G['kartlar'][a:b], a):
     print(f'#### [{i}] {k["id"]} | madde={k["madde"]} | {k["baslik"]}')
     print('HUKUM:', k['hukum'])

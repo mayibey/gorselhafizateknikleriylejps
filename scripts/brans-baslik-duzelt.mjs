@@ -19,7 +19,7 @@ const DRY = process.env.DRY === '1';
 if (!URL || !KEY) { console.error('HATA: SUPABASE_URL + SUPABASE_SERVICE_KEY gerekli.'); process.exit(1); }
 const sb = createClient(URL, KEY, { auth: { persistSession: false } });
 
-const BRANS_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const BRANS_DIGER = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
 const TR_FROM = 'şçğıöüŞÇĞİÖÜ', TR_TO = 'scgiouSCGIOU';
 const translit = (s) => { let o = ''; for (const ch of s) { const i = TR_FROM.indexOf(ch); o += i >= 0 ? TR_TO[i] : ch; } return o; };
 function fnameYap(meta) {

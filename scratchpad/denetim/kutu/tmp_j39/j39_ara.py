@@ -4,7 +4,7 @@ import json, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
 on = sys.argv[1]
 kelimeler = sys.argv[2:]
-t = open('D:/GorselHafizaTeknikleriyleJSPS/src/assets/kart-madde-metinleri.ts', encoding='utf-8').read()
+t = open('D:/Mevzu/JSPS/uygulama/src/assets/kart-madde-metinleri.ts', encoding='utf-8').read()
 desen = re.compile(r'^\s*("(?:[^"\\]|\\.)*")\s*:\s*("(?:[^"\\]|\\.)*"),?\s*$', re.M)
 for m in desen.finditer(t):
     k = json.loads(m.group(1))

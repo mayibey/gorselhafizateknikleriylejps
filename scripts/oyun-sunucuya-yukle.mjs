@@ -17,7 +17,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS';
+const KOK = 'D:/Mevzu/JSPS/uygulama';
 // ⚠️ ÜRETİLMİŞ dosya yüklenir, kaynak html DEĞİL. 8 Ağu'da kaynağı yükledim ve oyunlar
 // "Oyunlar hazırlanıyor" yazısında sonsuza kadar takıldı: köprü kodunu (hazır mesajı, kayıt
 // taşıma) ve TEST_MODU=false ayarını ÜRETİCİ ekliyor; kaynak dosyada ikisi de yok. Üstelik

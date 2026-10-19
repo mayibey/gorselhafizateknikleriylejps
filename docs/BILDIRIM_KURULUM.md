@@ -23,7 +23,7 @@ plugin'i ile yapılandırıldı.
    - **Android package name:** `app.mevzujsps.android`  *(app.json'daki ile BİREBİR aynı — şart)*
    - Nickname/SHA-1 opsiyonel (push için SHA-1 ileride faydalı; şimdilik atla).
 3. **google-services.json indir.**
-4. İndirilen dosyayı **repo kök dizinine** koy: `D:\GorselHafizaTeknikleriyleJSPS\google-services.json`
+4. İndirilen dosyayı **repo kök dizinine** koy: `D:\Mevzu\JSPS\uygulama\google-services.json`
    *(gitignore'da — commit edilmez, her makinede elle durur.)*
 5. Build al (yerel gradle / EAS) ve telefonda test et.
 

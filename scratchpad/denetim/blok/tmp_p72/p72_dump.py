@@ -1,7 +1,7 @@
 # p72_dump.py — girdi JSON'unu okunur metne döker (yalnız okuma; tmp_p72 içine yazar)
 import json, os, sys
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = r'D:\GorselHafizaTeknikleriyleJSPS'
+KOK = r'D:\Mevzu\JSPS\uygulama'
 GIRDI = os.path.join(KOK, 'scratchpad', 'denetim', 'blok', 'girdi')
 CIKTI = os.path.join(KOK, 'scratchpad', 'denetim', 'blok', 'tmp_p72')
 

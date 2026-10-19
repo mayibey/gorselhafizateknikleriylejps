@@ -1,7 +1,7 @@
 # Öz-denetim: tırnak biçimi + "kazara doğru" riski taşıyan sınır kalıpları (en çok/en az/geçemez/içinde/fazla)
 import json, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-B = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/sonuc/'
+B = 'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/sonuc/'
 RISK = re.compile(r'(en çok|en az|en geç|geçemez|geçmeyen|fazla|içinde|kadar|asgari|azami)', re.I)
 toplam = 0
 for lid in [52, 53, 54, 55, 56, 57, 58]:

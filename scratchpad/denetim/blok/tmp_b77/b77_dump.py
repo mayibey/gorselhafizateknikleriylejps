@@ -1,6 +1,6 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
-d = json.load(open(r'D:\GorselHafizaTeknikleriyleJSPS\scratchpad\denetim\blok\girdi\kanun_77.json', encoding='utf-8'))
+d = json.load(open(r'D:\Mevzu\JSPS\uygulama\scratchpad\denetim\blok\girdi\kanun_77.json', encoding='utf-8'))
 nolar = sys.argv[1:]
 if nolar == ['diger']:
     for k, v in d['diger_maddeler_kisa'].items():

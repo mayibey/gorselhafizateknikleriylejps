@@ -5,8 +5,8 @@ Kullanım: python goster.py 25-2 25-3 --m 25:4,15  (ek madde metinleri için --m
 import json, sys, os, glob, re
 
 sys.stdout.reconfigure(encoding='utf-8')
-ROOT = 'D:/GorselHafizaTeknikleriyleJSPS'
-CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
+ROOT = 'D:/Mevzu/JSPS/uygulama'
+CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
 VERI = ['jandarma', 'maliye', 'personel', 'tabip', 'istihkam', 'bakim', 'bando', 'dis_tabibi', 'eczaci', 'havacilik',
         'ikmal', 'kimyager', 'mebs', 'muhendis', 'saglik', 'veteriner']
 

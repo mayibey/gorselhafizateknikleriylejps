@@ -2,7 +2,7 @@
 #   python scripts/sifreler/olcum/rapor_uret.py <arsiv_dir>   → <arsiv_dir>/sifre_acik.html
 import json, re, sys, os, glob, collections, html
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 A = sys.argv[1]
 H = json.load(open(f'{A}/havuz_sonuc.json', encoding='utf-8'))
 ADLAR = {}; SAY = {}

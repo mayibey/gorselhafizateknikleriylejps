@@ -2,8 +2,8 @@
 """ek_liste2.json'a 17:59'da eklenen 122-1 ve 122-5 kayıtlarını celiski/sonuc.json'a ekler (uzun hükümde yalnız hatalı parça değişir)."""
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
-CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
+KOK = 'D:/Mevzu/JSPS/uygulama'
+CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
 YOL = KOK + '/scratchpad/denetim/celiski/sonuc.json'
 D = json.load(open(YOL, encoding='utf-8'))
 K = {}

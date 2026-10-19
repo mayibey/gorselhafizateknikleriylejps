@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 // 5 magaza karesi HTML'i uret: ust baslik + cerceveli ekran gorseli, koyu marka zemini.
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const KARE = [
   { img: 'ss-1-menu.png', ust: 'Ezber yok, oyun var', alt: '14 oyunla mevzuat aklında kalır', ad: 'kare-1-menu' },
   { img: 'ss-g-cengel.png', ust: 'Çengel Bulmaca', alt: 'Maddeyi harf harf çöz, aklına kazı', ad: 'kare-2-cengel' },

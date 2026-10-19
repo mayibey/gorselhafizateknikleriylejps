@@ -1,5 +1,5 @@
 # "Sınavda ne soruldu" kutusu daha belirgin: altın çerçeve + büyük etiket + büyük/kalın metin
-p = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/ekim10-site-sablon.html'
+p = 'D:/Mevzu/JSPS/uygulama/scratchpad/ekim10-site-sablon.html'
 s = open(p, encoding='utf-8').read()
 def R(a, b):
     global s

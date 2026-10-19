@@ -3,7 +3,7 @@
 // tip-güvenli src/assets/kart-sorulari.ts dosyasını OTOMATİK yazar.
 // Çalıştır: npm run soru:uret
 //
-// Kaynak: D:/JSPS Fabrika .../MUSTEREK/<klasor>/<klasor>_SORULAR.json (25 müşterek kanun).
+// Kaynak: D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika .../MUSTEREK/<klasor>/<klasor>_SORULAR.json (25 müşterek kanun).
 // Klasör adları " TAMAM" gibi sonek alabildiği için ÖNEK eşleştirilir (madde-metni-uret.mjs deseni).
 // JSON'daki `klasor` alanı tutarsız (bazen "07", "10" gibi kırpık) → ona GÜVENİLMEZ;
 // kanun eşlemesi klasör adı ÖNEKİNDEN yapılır.
@@ -18,7 +18,7 @@ import { denetle } from './soru-standart.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
-const KAYNAK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK';
+const KAYNAK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK';
 const outFile = join(root, 'src', 'assets', 'kart-sorulari.ts');
 const outDir = dirname(outFile);
 
@@ -52,7 +52,7 @@ const KLASOR_LAW = {
 };
 
 // JANDARMA BRANŞ kaynağı — BRANS/<klasor>/<klasor>_SORULAR.json (klasör adları TAM, sonek yok).
-const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
+const KAYNAK_BRANS = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
 // BRANS klasör → branş law_id (src/db/seed.ts SEED_LAWS 26-66). 01_5237_TCK ATLANIR (müşterek law 1).
 const BRANS_KLASOR_LAW = {
   '01_5237_TCK': 67, // Branş TCK (Jandarma) — müşterek TCK law 1'den AYRI, BRANS kaynağı
@@ -82,7 +82,7 @@ let atlanan = 0;
 
 // DİĞER BRANŞLAR kaynağı — BRANS_DIGER/<klasor>/<klasor>_SORULAR.json (law 68+).
 // Klasör→law_id haritası brans-diger-seed-uret.mjs tarafından üretilir (tek kaynak).
-const KAYNAK_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const KAYNAK_DIGER = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
 const DIGER_MAP_YOL = join(scriptDir, '_brans-diger-law-map.json');
 const DIGER_KLASOR_LAW = existsSync(DIGER_MAP_YOL) ? JSON.parse(readFileSync(DIGER_MAP_YOL, 'utf8')) : {};
 
@@ -170,7 +170,7 @@ const govde = siraliLaw
   .join('\n');
 
 const out = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run soru:uret\` ile yenile.
-// Kaynak: D:\\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*_SORULAR.json (küratörlü deneme soruları).
+// Kaynak: D:\\Mevzu\\JSPS\\icerik-fabrikasi\\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*_SORULAR.json (küratörlü deneme soruları).
 // Anahtar = law_id (src/db/seed.ts SEED_LAWS). \`dogru\` 0-tabanlı şık index'i (A=0..E=4).
 // Şık metinleri "A) " önekinden ayıklanmıştır; sıra KORUNUR (açıklama bazen harfe atıf yapar).
 

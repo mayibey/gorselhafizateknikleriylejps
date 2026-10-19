@@ -9,8 +9,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const KOK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
-const PROJE = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const PROJE = 'D:/Mevzu/JSPS/uygulama/';
 const env = Object.fromEntries(
   fs.readFileSync(PROJE + '.env', 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))

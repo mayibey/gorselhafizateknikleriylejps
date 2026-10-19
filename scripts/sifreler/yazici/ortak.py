@@ -1,7 +1,7 @@
 # Kelime → cevap dosyası yazıcı (ortak). Kanıt resmî metinden [baş ... son] arası aynen kesilir.
 import json, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS/gemini_calisma'
+KOK = 'D:/Mevzu/JSPS/uygulama/gemini_calisma'
 
 def _bul(t, parca, bas=0):
     """Önce birebir arar; bulamazsa boşlukları esnek arar (metinde satır sonu cümle ortasına düşebilir).

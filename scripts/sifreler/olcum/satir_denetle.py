@@ -15,7 +15,7 @@ from eslesme import norm, tok, kes, icinde, kesisir
 
 A, OUT = sys.argv[1], sys.argv[2]
 LIDS = [int(x) for x in sys.argv[3:]] or list(range(1, 26))
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 os.makedirs(OUT, exist_ok=True)
 H = json.load(open(f'{A}/havuz_sonuc.json', encoding='utf-8'))
 SAYI = re.compile(r'\b(\d+|bir|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|onbeş|yirmi|yirmidört|otuz|kırk|kırksekiz|elli|altmış|doksan|yüz|bin)\b', re.I)

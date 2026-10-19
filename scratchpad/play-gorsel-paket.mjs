@@ -9,7 +9,7 @@ import sharp from 'sharp';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const KAYNAK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KAYNAK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const HEDEF = 'C:/Users/GIGABYTE/OneDrive/Desktop/MEVZU MAGAZA GORSELLERI';
 const DOSYALAR = [
   ['kare-1-menu.png', '1-oyun-merkezi.png'],

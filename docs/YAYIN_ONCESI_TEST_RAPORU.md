@@ -80,7 +80,7 @@ Uygulama yayına HAZIR görünüyor. Çekirdek akışların hepsi Android'de sa�
 ---
 
 ## TEST ORTAMI NOTLARI
-- Emülatör: `mevzu_test` (Pixel 7, Android 14, D:\android-avd), AEHD hızlandırıcı kurulu.
+- Emülatör: `mevzu_test` (Pixel 7, Android 14, D:\ARACLAR\android-avd), AEHD hızlandırıcı kurulu.
 - Test kullanıcısı: android.test@mevzujsps.com (Supabase onaylı) · profil: Android Testcisi, Astsubay/Jandarma → sonra Personel.
 - APK: eldeki vCode 11 AAB + gecenin/bugünün fixleri, `EXPO_PUBLIC_TEST_MODU=1` (yalnız test için ekran görüntüsü açık; **üretimde bu env YOK → FLAG_SECURE tam aktif**).
 - Commit'ler: `0aaca1a` (Google retry), `c654f65` (aksan-duyarsız arama), `1e47557` (test şalteri) + gece commit'leri.

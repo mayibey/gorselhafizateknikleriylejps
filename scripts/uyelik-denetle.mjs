@@ -24,7 +24,7 @@ import crypto from 'node:crypto';
 
 const PROJE = 'vwmjrvolkbiofpkzzwef';
 const PAKET = 'app.mevzujsps.android';
-const SA_YOL = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA_YOL = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const BUNDLE_IOS = 'app.mevzujsps.ios';
 const APPLE_KEYID = 'JPFAY6DKU3';
 const APPLE_ISS = '6ad2e590-a37b-41d0-bcd6-0462ff64781f';

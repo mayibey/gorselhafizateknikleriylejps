@@ -6,7 +6,7 @@
 #         kelime+cevap kökleri soruda) · L0 = şifre yok (EKSİK). Cevap biliniyorsa ayrıca şifre cevabı doğru şıkkı gösteriyor mu.
 import json, re, sys, os, glob, collections
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(KOK, 'scratchpad', '_sifre_arsiv')
 os.makedirs(OUT, exist_ok=True)
 

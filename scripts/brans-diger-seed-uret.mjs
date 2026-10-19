@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
-const KOK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const KOK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
 const ILK_LAW_ID = 68; // 1-25 müşterek, 26-66 jandarma branş, 67 branş TCK → 68'den başla
 
 // _META.json branş adı → branch_id (src/db/seed.ts SEED_BRANCHES ile birebir; jandarma=1 hariç).

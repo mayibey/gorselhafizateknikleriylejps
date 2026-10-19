@@ -2,9 +2,9 @@
 # Madde metni düzeltmeleri OTA (6 Eki 2026, başkan "düzelt ve yay"): 1.0.47 + 1.0.46 (son yayınlarla aynı filo;
 # eski runtime'lara bu tur basılmadı). Başarı = çıktıda "Update group ID". Kullanım: bash scratchpad/madde-metni-ota.sh
 set -u
-cd "D:/GorselHafizaTeknikleriyleJSPS"
+cd "D:/Mevzu/JSPS/uygulama"
 export PATH="/c/Users/GIGABYTE/AppData/Local/Programs/cursor/resources/app/resources/helpers:$PATH"
-export EAS_NO_VCS=1 TMPDIR="D:/easbuild-tmp" NODE_OPTIONS="--max-old-space-size=8192 --dns-result-order=ipv4first"
+export EAS_NO_VCS=1 TMPDIR="D:/Mevzu/ortak/easbuild-tmp" NODE_OPTIONS="--max-old-space-size=8192 --dns-result-order=ipv4first"
 EAS=~/AppData/Roaming/npm/node_modules/eas-cli/bin/run
 MESAJ="Madde metni duzeltmeleri: Resmi Yazisma guncel metin, Ek 3 yurt disi izni, TMK m.21 (7594), editor notlari temizlendi"
 ASIL=$(node -e "console.log(JSON.parse(require('fs').readFileSync('app.json','utf8')).expo.version)")

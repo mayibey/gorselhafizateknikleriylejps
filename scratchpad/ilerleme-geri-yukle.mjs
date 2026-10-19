@@ -2,7 +2,7 @@
 // Not: geri gelmesi için başkan temiz (yeni kurulmuş) cihazda giriş yapmalı; yerel BOŞken
 // bulut TAM yüklenir (senkronYukle → yerelBosMu=true → ilerlemeIceAktar tamYukle).
 import fs from 'node:fs';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS';
+const KOK = 'D:/Mevzu/JSPS/uygulama';
 const env = Object.fromEntries(
   fs.readFileSync(`${KOK}/.env`, 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))

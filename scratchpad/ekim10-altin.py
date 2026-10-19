@@ -4,7 +4,7 @@
 # Ortak bölüm soruları sınavlar arasında aynı olduğu için eşleme soru kökünün başıyla yapılır.
 import json, glob, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-S = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/'
+S = 'D:/Mevzu/JSPS/uygulama/scratchpad/'
 sys.path.insert(0, S)
 from ekim10_sinavlar import SINAVLAR
 

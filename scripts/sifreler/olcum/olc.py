@@ -1,7 +1,7 @@
 # Kilit kelime şifrelerini gerçek sınav sorularına uygula: kelime soruda geçiyor mu, cevap doğru şıkkı gösteriyor mu?
 import json, re, glob, os, sys, unicodedata
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 BURA = os.path.dirname(os.path.abspath(__file__))
 SINAVLAR = [('Subay (ortak 21-60)', f'{KOK}/scratchpad/Subay_Jandarma_100_Soru.md', 21, 60),
             ('Astsubay (ortak 21-70)', f'{KOK}/scratchpad/Astsubay_MEBS_100_Soru.md', 21, 70),

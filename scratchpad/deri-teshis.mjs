@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const PORT = 9472;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 const OY = [['cengel',"haritaAc('cengel')",1],['dy','dyKur()',0],['milyoner','acMilyoner()',0],['asmaca',"haritaAc('asmaca')",1],['ayrim',"haritaAc('ayrim')",1],['bosluk',"haritaAc('bosluk')",1],['terazi',"haritaAc('terazi')",1],['esles',"haritaAc('esles')",1],['sure',"haritaAc('sure')",1],['sira',"haritaAc('sira')",1],['hangi',"haritaAc('hangi')",1],['yalan',"haritaAc('yalan')",1],['kelime','acKelime()',0]];

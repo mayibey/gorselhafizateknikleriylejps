@@ -2,7 +2,7 @@
 # Liste iki kez konur: (1) HAZIR BASILI HTML (betiksiz dışa aktarma/yazdırma da tam çıkar), (2) JSON veri (süzgeç/arama için).
 import json, glob, os, re, sys, html
 sys.stdout.reconfigure(encoding='utf-8')
-K = 'D:/GorselHafizaTeknikleriyleJSPS/gemini_calisma'
+K = 'D:/Mevzu/JSPS/uygulama/gemini_calisma'
 BURA = os.path.dirname(os.path.abspath(__file__))
 kap = json.load(open(f'{K}/girdi/kapsam.json', encoding='utf-8'))['mevzuatlar']
 ONCELIK = {'müşterek': 0, 'jandarma': 1, 'mebs': 2, 'havacilik': 3, 'personel': 4}
@@ -11,7 +11,7 @@ GRUP = {'müşterek': 'Müşterek', 'jandarma': 'Jandarma', 'mebs': 'MEBS', 'hav
 # orada olmayan maddeler konu_ek.json'dan. Başlığı olmayan madde kalırsa uyarı basılır (sayfa yine üretilir).
 KONU_EK = json.load(open(f'{BURA}/konu_ek.json', encoding='utf-8'))
 def konular(lid):
-    yol = f'D:/GorselHafizaTeknikleriyleJSPS/scripts/harekat-masasi/madde_bloklari/kanun_{lid}.json'
+    yol = f'D:/Mevzu/JSPS/uygulama/scripts/harekat-masasi/madde_bloklari/kanun_{lid}.json'
     b = {str(x['madde']): (x.get('baslik') or '').strip() for x in json.load(open(yol, encoding='utf-8'))} if os.path.exists(yol) else {}
     b.update({m: v for m, v in KONU_EK.get(str(lid), {}).items() if not m.startswith('_')})
     return b

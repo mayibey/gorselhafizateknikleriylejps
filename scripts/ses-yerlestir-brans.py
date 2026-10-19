@@ -11,7 +11,7 @@ Kullanım: python scripts/ses-yerlestir-brans.py [SLUG1 ...]  (boşsa hepsi)
 """
 import os, re, sys, shutil
 
-SRC_BASE = r"D:\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\BRANS"
+SRC_BASE = r"D:\Mevzu\JSPS\icerik-fabrikasi\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\BRANS"
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEST_BASE = os.path.join(REPO, "assets", "sesler")
 

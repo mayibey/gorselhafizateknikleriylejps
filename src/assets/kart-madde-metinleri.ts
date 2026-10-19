@@ -1,5 +1,5 @@
 // OTOMATİK ÜRETİLDİ — elle düzenleme. `npm run madde:uret` ile yenile.
-// Kaynak: D:\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md (📜 Metin blokları).
+// Kaynak: D:\Mevzu\JSPS\icerik-fabrikasi\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md (📜 Metin blokları).
 // Anahtar = "<etiket> m.<no>" → kart.madde_no ile birebir eşleşir.
 // maddeMetni() bu registry'yi el-yazımı MADDE_METINLERI'nden SONRA kontrol eder.
 

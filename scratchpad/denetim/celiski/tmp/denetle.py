@@ -4,10 +4,10 @@ biçim, alanlar, kart/kanun eşleşmesi, madde numarası geçerliliği, yz/dg e�
 madde atfı, resmî metinde olmayan sayı, 'yanlış' cümlenin resmî metinde aynen geçmesi, yasak kelime."""
 import json, os, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 sys.path.insert(0, KOK + '/scripts/harekat-masasi')
 from blok_denetle import kelime_sayilari, rakamlar, madde_atiflarini_sil, kucuk
-CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
+CAL = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma'
 META = re.compile(r'\b(denir|deniyor|yazılır|yanlıştır|yanlış|doğrusu|doğru olan|oysa|aslında|gerçekte|karıştırılır|sanılır|tuzak|çarpıtılır|kaydırılır)\b', re.I)
 SORUN = {'hukum_hatali', 'dogrusu_hatali', 'madde_hatali', 'eksik_kayit'}
 ALAN = {'hukum', 'sinavda_boyle_yazarlar', 'dogrusu', 'madde', 'baslik'}

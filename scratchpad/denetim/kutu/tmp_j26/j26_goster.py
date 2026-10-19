@@ -1,7 +1,7 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 lid = int(sys.argv[1]); bas = int(sys.argv[2]); son = int(sys.argv[3])
-d = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+d = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 basildi = {}
 for i, k in enumerate(d['kartlar'][bas:son], bas):
     print(f'######## [{i}] {k["id"]} | madde {k["madde"]} | {k["baslik"]}')

@@ -1,7 +1,7 @@
 /** Play Developer API — googleapis paketi olmadan (JWT + REST). */
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-const KEY = JSON.parse(fs.readFileSync('D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json', 'utf8'));
+const KEY = JSON.parse(fs.readFileSync('D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json', 'utf8'));
 const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
 const simdi = Math.floor(Date.now() / 1000);
 const govde = b64({ alg: 'RS256', typ: 'JWT' }) + '.' + b64({

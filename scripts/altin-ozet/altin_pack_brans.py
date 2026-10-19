@@ -27,7 +27,7 @@ brans = (sys.argv[1] if len(sys.argv) > 1 else '').strip().lower()
 if not brans:
     print('kullanım: altin_pack_brans.py <brans_slug>'); raise SystemExit(1)
 
-ars = json.load(io.open('D:/jsps-community-bot/data/maddeler.json', encoding='utf-8'))
+ars = json.load(io.open('D:/Mevzu/JSPS/telegram-bot/data/maddeler.json', encoding='utf-8'))
 kitaplar = [r for r in json.load(io.open(BURA + '/brans_kitaplari.json', encoding='utf-8'))
             if r['brans_slug'] == brans]
 

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 const PAKET='app.mevzujsps.android';
-const SA_YOL='D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA_YOL='D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const env=Object.fromEntries(fs.readFileSync('.env','utf8').split(/\r?\n/).filter(s=>s.includes('=')&&!s.trim().startsWith('#')).map(s=>[s.slice(0,s.indexOf('=')).trim(),s.slice(s.indexOf('=')+1).trim()]));
 async function sql(q){const r=await fetch('https://api.supabase.com/v1/projects/vwmjrvolkbiofpkzzwef/database/query',{method:'POST',headers:{Authorization:`Bearer ${env.SUPABASE_ACCESS_TOKEN}`,'Content-Type':'application/json'},body:JSON.stringify({query:q})});return JSON.parse(await r.text());}
 const b64u=(x)=>Buffer.from(x).toString('base64url');

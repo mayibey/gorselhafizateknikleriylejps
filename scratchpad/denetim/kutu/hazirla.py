@@ -3,9 +3,9 @@
 #   python scratchpad/denetim/kutu/hazirla.py
 import json, os, re, sys, glob, collections
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 B = KOK + '/scratchpad/denetim/kutu'
-C = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/'
+C = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma/'
 os.makedirs(B + '/girdi', exist_ok=True); os.makedirs(B + '/sonuc', exist_ok=True)
 KAP = json.load(open(KOK + '/gemini_calisma/girdi/kapsam.json', encoding='utf-8'))
 

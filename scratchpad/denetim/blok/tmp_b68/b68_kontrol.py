@@ -3,7 +3,7 @@ import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 yol = sys.argv[1]; lid = int(sys.argv[2])
 B = json.load(open(yol, encoding='utf-8'))
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/blok/girdi/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/blok/girdi/kanun_{lid}.json', encoding='utf-8'))
 kap = [m['no'] for m in G['maddeler']]
 sira = [b['madde'] for b in B]
 if [k for k in kap if k in sira] != sira: print('SIRA farklı!')

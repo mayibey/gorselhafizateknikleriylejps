@@ -2,7 +2,7 @@
 // Fabrikadaki BİRLEŞİK düello bankasını (00_TUM_DUELLO_SORULAR.json) okuyup tip-güvenli
 // DÜZ dizi src/assets/duello-sorulari.ts dosyasını OTOMATİK yazar. Çalıştır: npm run soru:duello
 //
-// Kaynak: D:/JSPS Fabrika .../MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json (~1992 soru).
+// Kaynak: D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika .../MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json (~1992 soru).
 // dogru harf ("A") → 0-tabanlı index; şık "A) " öneki ayıklanır. açıklama+çeldirici+zorluk korunur.
 // DB'ye GİRMEZ. Er Meydanı oyun modu bu bankadan RASTGELE (tohumlu) soru seçer.
 
@@ -15,7 +15,7 @@ import { denetle } from './soru-standart.mjs';
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
 const KAYNAK =
-  'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json';
+  'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json';
 const outFile = join(root, 'src', 'assets', 'duello-sorulari.ts');
 const outDir = dirname(outFile);
 
@@ -167,7 +167,7 @@ sorular.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 const govde = sorular.map((q) => `  ${JSON.stringify(q)},`).join('\n');
 
 const out = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run soru:duello\` ile yenile.
-// Kaynak: D:\\JSPS Fabrika ... MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json (birleşik düello bankası).
+// Kaynak: D:\\Mevzu\\JSPS\\icerik-fabrikasi\\JSPS Fabrika ... MUSTEREK/_DUELLO_SORULARI/00_TUM_DUELLO_SORULAR.json (birleşik düello bankası).
 // Er Meydanı oyun modu bu bankadan RASTGELE (tohumlu) soru seçer. \`dogru\` 0-tabanlı index (A=0..E=4).
 // Şık metinleri "A) " önekinden ayıklanmıştır; sıra KORUNUR (açıklama harfe atıf yapabilir).
 

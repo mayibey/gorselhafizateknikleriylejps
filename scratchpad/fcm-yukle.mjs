@@ -2,8 +2,8 @@ import { spawn } from 'node:child_process';
 const KEY = 'C:/Users/GIGABYTE/OneDrive/Desktop/mevzu-jsps-59639-firebase-adminsdk-fbsvc-9ef9cb207a.json';
 const strip = s => s.replace(/\x1b\[[0-9;?]*[a-zA-Z]/g,'').replace(/\x1b[=>]/g,'').replace(/\r/g,'');
 const child = spawn('winpty', ['cmd','/c','npx eas credentials -p android'], {
-  cwd:'D:/GorselHafizaTeknikleriyleJSPS',
-  env:{...process.env, TMPDIR:'D:/easbuild-tmp', TEMP:'D:/easbuild-tmp', TMP:'D:/easbuild-tmp'},
+  cwd:'D:/Mevzu/JSPS/uygulama',
+  env:{...process.env, TMPDIR:'D:/Mevzu/ortak/easbuild-tmp', TEMP:'D:/Mevzu/ortak/easbuild-tmp', TMP:'D:/Mevzu/ortak/easbuild-tmp'},
 });
 let buf='';
 child.stdout.on('data',d=>{buf+=d.toString();process.stdout.write(d.toString());});

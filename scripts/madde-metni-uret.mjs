@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
-const KAYNAK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK';
+const KAYNAK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK';
 const outFile = join(root, 'src', 'assets', 'kart-madde-metinleri.ts');
 const outDir = dirname(outFile);
 
@@ -49,7 +49,7 @@ const ETIKET = {
 };
 
 // BRANŞ kaynağı (law 26-66). Etiketler seed.ts KANUN_BILGI branş etiketleriyle BİREBİR.
-const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
+const KAYNAK_BRANS = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
 const ETIKET_BRANS = {
   '01_5237_TCK': 'TCK',
   '02_5271_CMK': 'CMK', '03_1774_KIMLIK_BILDIRME': 'Kimlik Bildirme',
@@ -361,7 +361,7 @@ const govde = siraliAnahtar
   .join('\n');
 
 const out = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run madde:uret\` ile yenile.
-// Kaynak: D:\\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md (📜 Metin blokları).
+// Kaynak: D:\\Mevzu\\JSPS\\icerik-fabrikasi\\JSPS Fabrika ... KANUN_MASTER_DOSYALARI/MUSTEREK/*/​*MASTER*.md (📜 Metin blokları).
 // Anahtar = "<etiket> m.<no>" → kart.madde_no ile birebir eşleşir.
 // maddeMetni() bu registry'yi el-yazımı MADDE_METINLERI'nden SONRA kontrol eder.
 

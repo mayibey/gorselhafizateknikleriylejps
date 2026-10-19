@@ -5,7 +5,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 args = [a for a in sys.argv[1:] if not a.startswith('--')]
 metinsiz = '--metinsiz' in sys.argv
 lid = args[0]
-d = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+d = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 kartlar = d['kartlar']
 bas = int(args[1]) if len(args) > 1 else 0
 son = int(args[2]) if len(args) > 2 else len(kartlar) - 1

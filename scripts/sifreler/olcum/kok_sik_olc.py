@@ -4,7 +4,7 @@
 # (çevrilince çözer) · YOK = ikisi de değil. Çoktan seçmeli olmayan/cevapsız sorular sayılmaz.
 import json, glob, re, sys, collections
 sys.stdout.reconfigure(encoding='utf-8')
-A = sys.argv[1]; KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+A = sys.argv[1]; KOK = 'D:/Mevzu/JSPS/uygulama'
 sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from eslesme import norm, tok, kes, icinde, kesisir
 S = {}

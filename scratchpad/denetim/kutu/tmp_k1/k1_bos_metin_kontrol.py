@@ -3,7 +3,7 @@
 #   python k1_bos_metin_kontrol.py <kanun_id> <anahtar_oneki>     ornek: 2 "Jandarma Kanunu m."
 import json, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-K = 'D:/GorselHafizaTeknikleriyleJSPS'
+K = 'D:/Mevzu/JSPS/uygulama'
 sys.path.insert(0, K + '/scripts/harekat-masasi')
 from kutu_denetle import norm
 lid, onek = int(sys.argv[1]), sys.argv[2]

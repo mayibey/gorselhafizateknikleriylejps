@@ -22,7 +22,7 @@ Başkan uyuyor; "onay bekleme, iş bitmeden durma" dedi. Oturum sınırı ~05:55
 ## Kalanlar (eski liste)
 1. Soru parti 4 (scratchpad/denetim/soru/sonuc_4.json) gelince: `python scripts/harekat-masasi/ek_soru_dogrula.py scratchpad/denetim/soru/sonuc_4.json`
    (sonuc_4 yoksa: girdi_4.json için GOREV_SORU.md ile ajan çalıştır).
-2. `python scripts/harekat-masasi/hepsini_kur.py <calisma>` (calisma = C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma)
+2. `python scripts/harekat-masasi/hepsini_kur.py <calisma>` (calisma = C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/1cb33cb3-f233-47d5-9f06-b8d257742241/scratchpad/calisma)
 3. WebKit testleri: C:/Users/GIGABYTE/AppData/Local/Temp/bak31.py mebs / jandarma, bak27.py jandarma (ücretsiz), bak21.py.
 4. Yükle: 16 branş × (tarama/ + tarama-ucretsiz/) + masa.html varsayılanları (curl x-upsert; .env SUPABASE_SERVICE_KEY). OTA GEREKMEZ (yalnız sayfa).
 5. Commit + push (Türkçe mesaj, Claude Opus 5.5 imzası), PROJE_DURUM.md girdisi, hafıza (harekat-merkezi-tum-branslar.md).

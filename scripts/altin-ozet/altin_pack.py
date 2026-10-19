@@ -1,10 +1,10 @@
 """Altın Özet veri paketi: her mevzuat için emir maddeleri + arşiv madde metinleri + çıkmış sorular + banka kaynak sayıları."""
 import json, io, re, os, collections, sys
 sys.stdout.reconfigure(encoding='utf-8')
-K = 'D:/GorselHafizaTeknikleriyleJSPS/'
-S = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/7dde7236-e3e5-4bef-9ec6-05f83f966efa/scratchpad/'
+K = 'D:/Mevzu/JSPS/uygulama/'
+S = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/7dde7236-e3e5-4bef-9ec6-05f83f966efa/scratchpad/'
 OUT = S + 'altin/'; os.makedirs(OUT, exist_ok=True)
-ars = json.load(io.open('D:/jsps-community-bot/data/maddeler.json', encoding='utf-8'))
+ars = json.load(io.open('D:/Mevzu/JSPS/telegram-bot/data/maddeler.json', encoding='utf-8'))
 kapsam = json.load(io.open(K + 'scripts/_emir-madde-kapsam.json', encoding='utf-8'))['kapsam']
 cikmis = json.load(io.open(K + 'scripts/veri/cikmis-sinav-sorulari.json', encoding='utf-8'))
 mebs2024 = []

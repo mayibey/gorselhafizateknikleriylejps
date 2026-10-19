@@ -2,7 +2,7 @@
 giris.md + sozluk.md + ozet_A..D(_sade).md → HTML → Chrome PDF → PyMuPDF (cari başlık, sayfa no, yer imi)."""
 import re, io, os, html as H, subprocess, fitz, sys, datetime
 sys.stdout.reconfigure(encoding='utf-8')
-S = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--GorselHafizaTeknikleriyleJSPS/7dde7236-e3e5-4bef-9ec6-05f83f966efa/scratchpad/altin/'
+S = 'C:/Users/GIGABYTE/AppData/Local/Temp/claude/D--Mevzu-JSPS-uygulama/7dde7236-e3e5-4bef-9ec6-05f83f966efa/scratchpad/altin/'
 CHROME = r'C:/Program Files/Google/Chrome/Application/chrome.exe'
 FONT = r'C:/Windows/Fonts/segoeui.ttf'
 FONTB = r'C:/Windows/Fonts/segoeuib.ttf'

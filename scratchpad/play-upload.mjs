@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-const PORT=9500; const AAB='D:/easbuild-tmp/mevzu-1045-clean.aab';
+const PORT=9500; const AAB='D:/Mevzu/ortak/easbuild-tmp/mevzu-1045-clean.aab';
 const bekle=ms=>new Promise(r=>setTimeout(r,ms));
 const t=await(await fetch(`http://127.0.0.1:${PORT}/json`)).json();
 const p=t.find(x=>x.type==='page'&&(x.url||'').includes('play.google.com/console'));

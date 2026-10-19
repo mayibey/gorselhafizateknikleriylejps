@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 
-const SA = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const SA = 'D:/KISISEL/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
 const PAKET = 'app.mevzujsps.android';
 const URUN = 'musterek_aylik';
 const YENI_TL = 389;

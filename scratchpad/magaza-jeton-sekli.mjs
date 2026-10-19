@@ -12,7 +12,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/uygulama/';
 let n = 0;
 const degistir = (p, eski, yeni, ad) => {
   const s = fs.readFileSync(KOK + p, 'utf8');

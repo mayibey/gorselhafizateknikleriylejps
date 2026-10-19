@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 const PORT = 9500;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
-const HTML = 'file:///D:/GorselHafizaTeknikleriyleJSPS/scratchpad/canli-0836grid.html';
+const HTML = 'file:///D:/Mevzu/JSPS/uygulama/scratchpad/canli-0836grid.html';
 
 const t = await (await fetch(`http://127.0.0.1:${PORT}/json`)).json();
 const p = t.find((x) => x.type === 'page' && (x.url || '').includes('canli-0836grid')) || t.find((x) => x.type === 'page');

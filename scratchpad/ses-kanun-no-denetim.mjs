@@ -5,7 +5,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/uygulama/';
 const seed = fs.readFileSync(KOK + 'src/db/seed.ts', 'utf8');
 
 // klasör → law_id  (KANUN_BILGI bloğu)

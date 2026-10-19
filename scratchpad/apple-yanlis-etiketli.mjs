@@ -11,7 +11,7 @@ const KEYID = 'JPFAY6DKU3';
 const ISS = '6ad2e590-a37b-41d0-bcd6-0462ff64781f';
 const KEY_YOL = 'C:/Users/GIGABYTE/OneDrive/Desktop/SubscriptionKey_JPFAY6DKU3.p8';
 const env = Object.fromEntries(
-  fs.readFileSync('D:/GorselHafizaTeknikleriyleJSPS/.env', 'utf8').split(/\r?\n/)
+  fs.readFileSync('D:/Mevzu/JSPS/uygulama/.env', 'utf8').split(/\r?\n/)
     .filter((s) => s.includes('=') && !s.trim().startsWith('#'))
     .map((s) => [s.slice(0, s.indexOf('=')).trim(), s.slice(s.indexOf('=') + 1).trim()]),
 );

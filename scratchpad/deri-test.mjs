@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { spawn } from 'node:child_process';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const PORT = 9473;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 const ch = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe',['--headless=new','--disable-gpu','--no-first-run',`--remote-debugging-port=${PORT}`,`--user-data-dir=${KOK}/chrome-dt`,'about:blank'],{stdio:'ignore'});

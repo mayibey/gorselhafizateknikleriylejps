@@ -3,7 +3,7 @@
 Fabrikadaki DAHA YENI ise: o kart uygulamaya aktarilmamis (bayat) demektir."""
 import os, sys, re, io
 sys.stdout.reconfigure(encoding='utf-8')
-SRC = r"D:\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\MUSTEREK"
+SRC = r"D:\Mevzu\JSPS\icerik-fabrikasi\JSPS Fabrika\kaynaklar\astsubay\KANUN_MASTER_DOSYALARI\MUSTEREK"
 APP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "kartlar")
 
 # klasor onegi -> slug (icerik-yerlestir.py MAP ile ayni)

@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { spawn } from 'node:child_process';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad';
+const KOK = 'D:/Mevzu/JSPS/uygulama/scratchpad';
 const HEDEF = 'C:/Users/GIGABYTE/OneDrive/Desktop/mevzu-oyun-denetim';
 const PORT = 9477;
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));

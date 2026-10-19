@@ -2,7 +2,7 @@
 // Fabrikadaki 3 GENEL_DENEME_*.json'u okuyup src/assets/genel-denemeler.ts'i OTOMATİK yazar.
 // Çalıştır: npm run genel:uret
 //
-// Kaynak: D:/JSPS Fabrika/.../MUSTEREK/_DENEME_SORULARI/GENEL_DENEMELER/GENEL_DENEME_{1,2,3}.json
+// Kaynak: D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/.../MUSTEREK/_DENEME_SORULARI/GENEL_DENEMELER/GENEL_DENEME_{1,2,3}.json
 // Her deneme 50 karma soru (25 müşterek kanundan). soru_id benzersiz (çakışma kontrolü buradan).
 // kart_id → yanlış cevapta ilgili karta yönlendirme (kaynak_madde ile birlikte).
 // DB'ye GİRMEZ — quiz salt ölçüm.
@@ -15,7 +15,7 @@ import { denetle, yedekSoru } from './soru-standart.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
-const KAYNAK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK/_DENEME_SORULARI/GENEL_DENEMELER';
+const KAYNAK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/MUSTEREK/_DENEME_SORULARI/GENEL_DENEMELER';
 const outFile = join(root, 'src', 'assets', 'genel-denemeler.ts');
 const outDir = dirname(outFile);
 

@@ -4,7 +4,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/uygulama/';
 const oku = (p) => fs.readFileSync(KOK + p, 'utf8');
 
 // —— 1) Personel branşına bağlı kanunlar ——

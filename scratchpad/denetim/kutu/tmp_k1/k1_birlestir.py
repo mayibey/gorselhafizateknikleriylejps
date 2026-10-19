@@ -2,7 +2,7 @@
 #   python k1_birlestir.py <kanun_id>
 import json, sys, glob, os
 sys.stdout.reconfigure(encoding='utf-8')
-B = 'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu'
+B = 'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu'
 lid = int(sys.argv[1])
 G = json.load(open(f'{B}/girdi/kanun_{lid}.json', encoding='utf-8'))
 sira = [k['id'] for k in G['kartlar']]

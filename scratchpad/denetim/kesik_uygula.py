@@ -5,7 +5,7 @@
 #   python scratchpad/denetim/kesik_uygula.py [--calisan 52,122,143]
 import json, sys, os, re, glob, subprocess
 sys.stdout.reconfigure(encoding='utf-8')
-KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+KOK = 'D:/Mevzu/JSPS/uygulama'
 T = json.load(open(KOK + '/scratchpad/denetim/kesik/tam_metinler.json', encoding='utf-8'))
 L = {x['kanun_id']: x for x in json.load(open(KOK + '/scratchpad/denetim/kesik_liste.json', encoding='utf-8'))}
 tam_yol = KOK + '/scratchpad/denetim/tam_metin.json'

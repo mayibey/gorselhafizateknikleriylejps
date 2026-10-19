@@ -4,7 +4,7 @@
  */
 import fs from 'node:fs';
 
-const KOK = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER/_KAYNAK_METIN/';
+const KOK = 'D:/Mevzu/JSPS/icerik-fabrikasi/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER/_KAYNAK_METIN/';
 const [, , no, kapsamStr] = process.argv;
 const kapsam = kapsamStr.split(',').map((s) => s.trim());
 
@@ -32,7 +32,7 @@ for (const k of kapsam) {
   const metin = b.satirlar.join('\n').replace(/\n{3,}/g, '\n\n').trim();
   cikti += `\n\n########## ${no} MADDE ${k} ##########\n${metin}\n`;
 }
-const hedef = `D:/GorselHafizaTeknikleriyleJSPS/scratchpad/metin_${no}.txt`;
+const hedef = `D:/Mevzu/JSPS/uygulama/scratchpad/metin_${no}.txt`;
 fs.writeFileSync(hedef, cikti, 'utf8');
 console.log(`madde: ${kapsam.length} · çıkarılan: ${(cikti.match(/##########/g) || []).length / 2} · ${Math.round(cikti.length / 1024)} KB → ${hedef}`);
 console.log('bulunamayan:', kapsam.filter((k) => !bloklar.some((b) => !b.ek && b.no === k)).join(', ') || 'yok');

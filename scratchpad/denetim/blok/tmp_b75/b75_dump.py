@@ -2,7 +2,7 @@ import json, sys, os
 sys.stdout.reconfigure(encoding='utf-8')
 kid = sys.argv[1]
 nolar = sys.argv[2:]
-d = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/blok/girdi/kanun_{kid}.json', encoding='utf-8'))
+d = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/blok/girdi/kanun_{kid}.json', encoding='utf-8'))
 for m in d['maddeler']:
     if nolar and m['no'] not in nolar:
         continue

@@ -1,6 +1,6 @@
 /** "Telekomünikasyon Kurumu" eski adı hangi kartlarda geçiyor, BTK notu var mı? (Serhat Ceyhan bildirdi) */
 import fs from 'node:fs';
-const KOK = 'D:/GorselHafizaTeknikleriyleJSPS/';
+const KOK = 'D:/Mevzu/JSPS/uygulama/';
 const oku = (p) => fs.readFileSync(KOK + p, 'utf8');
 
 for (const dosya of ['src/assets/kart-ses-metinleri.ts', 'src/assets/kart-madde-metinleri.ts']) {

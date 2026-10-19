@@ -3,7 +3,7 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
 lid, a, b = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])
-G = json.load(open(f'D:/GorselHafizaTeknikleriyleJSPS/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
+G = json.load(open(f'D:/Mevzu/JSPS/uygulama/scratchpad/denetim/kutu/girdi/kanun_{lid}.json', encoding='utf-8'))
 basilan = set()
 for k in G['kartlar'][a:b]:
     print('=' * 100)
