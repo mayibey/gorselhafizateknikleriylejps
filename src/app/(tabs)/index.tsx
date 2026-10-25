@@ -42,6 +42,7 @@ import { LAW_KLASOR } from '@/db/seed';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { ayarOku } from '@/lib/uzak-ayar';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
@@ -81,6 +82,48 @@ const BASVURU_BITIS = new Date(2026, 7, 23, 23, 59, 59); // 23 Ağustos 2026 (so
 
 function ikiHane(n: number): string {
   return String(n).padStart(2, '0');
+}
+
+/**
+ * KARARGÂH DUYURUSU (24 Eki 2026, başkan): 10 Ekim sınavı geçti, sayaç "0 GÜN" gösteriyordu →
+ * sayacın yerine duyuru. Bayrak 'karargah-duyuru' (önce yalnız başkanda). Metin sunucudan:
+ * `uygulama_ayar.karargah_duyuru` = JSON {"baslik","metin"} → OTA'sız değiştirilir.
+ * Okunamazsa aşağıdaki varsayılan görünür.
+ */
+const VARSAYILAN_DUYURU = {
+  baslik: 'Yeni sınav dönemi hazırlığı başladı',
+  metin:
+    'Gelecek JSPS sınavına yönelik uygulama güncelleme çalışmalarımız başlamıştır. Yeni içerik ve geliştirmeleri hazır oldukça buradan duyuracağız.',
+};
+function KarargahDuyuru() {
+  const [duyuru, setDuyuru] = useState(VARSAYILAN_DUYURU);
+  useEffect(() => {
+    let iptal = false;
+    ayarOku('karargah_duyuru').then((ham) => {
+      try {
+        const d = ham ? (JSON.parse(ham) as { baslik?: string; metin?: string }) : null;
+        if (!iptal && d?.baslik && d?.metin) setDuyuru({ baslik: d.baslik, metin: d.metin });
+      } catch {
+        // bozuk JSON → varsayılan kalır
+      }
+    });
+    return () => {
+      iptal = true;
+    };
+  }, []);
+  return (
+    <View style={styles.duyuruMerkez}>
+      <AppText variant="etiket" bold color="altinParlak" style={styles.duyuruEtiket}>
+        DUYURU
+      </AppText>
+      <AppText variant="baslik" bold color="beyaz" style={styles.duyuruBaslik}>
+        {duyuru.baslik}
+      </AppText>
+      <AppText variant="kucuk" color="beyaz" style={styles.duyuruMetin}>
+        {duyuru.metin}
+      </AppText>
+    </View>
+  );
 }
 
 /** Karargah en üstü: JSPS sınavına canlı geri sayım (gün/saat/dk/sn). Her saniye işler.
@@ -210,6 +253,8 @@ export default function KarargahScreen() {
   const router = useRouter();
   // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
+  // Sayaç yerine duyuru (24 Eki) — bkz. KarargahDuyuru.
+  const duyuruAcik = useKisiselOzellik('karargah-duyuru');
   // ALTIN ÖZET GİRİŞİ (başkan, 23 Eyl 2026; aynı gün "herkese yay"): "Genel deneme çöz" şeridi
   // Altın Özet kitabına dönüştü (genel denemeler zaten Deneme Merkezi'nin ikinci sekmesinde),
   // "TATBİKAT MERKEZİ" başlığı "DENEME MERKEZİ" oldu. Kitap satırı sunucudan ('musterek' sanal
@@ -539,6 +584,9 @@ export default function KarargahScreen() {
                 Yerine: ortada TEK SATIR canlı geri sayım (dev serif font, saniye işler) +
                 mühür + "JSPS sınavına kalan süre". Başvuru tarihi küçük satır — 23 Ağustos
                 geçince kendiliğinden kaybolur. */}
+            {duyuruAcik ? (
+              <KarargahDuyuru />
+            ) : (
             <View style={styles.sayacMerkez}>
               {/* Başkan (23 Ağu): açıklama ve başvuru bandı sayacın ALTINDA üç satır yer
                   kaplıyor, oyunlara/tatbikata giden kartlar ekranın altında kalıyordu.
@@ -559,6 +607,7 @@ export default function KarargahScreen() {
                 {geriSayim}
               </AppText>
             </View>
+            )}
 
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
                 Sağ üst köşede çapraz KURDELE (ref v3): rozet değil, kırmızı şerit. */}
@@ -772,6 +821,10 @@ export default function KarargahScreen() {
                 </View>
               ) : null}
             </View>
+        </View>
+      ) : duyuruAcik ? (
+        <View style={styles.geriSayim}>
+          <KarargahDuyuru />
         </View>
       ) : (
         <SinavGeriSayim />
@@ -1680,6 +1733,27 @@ const styles = StyleSheet.create({
     gap: Spacing.three,
   },
   // Ortalı tek-satır canlı sayaç sahnesi (11 Ağu)
+  // Karargâh duyurusu (sayacın yerine, 24 Eki).
+  duyuruMerkez: {
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: Spacing.three,
+  },
+  duyuruEtiket: {
+    letterSpacing: 1.5,
+    textAlign: 'center',
+  },
+  duyuruBaslik: {
+    textAlign: 'center',
+    textShadowColor: 'rgba(0,0,0,0.45)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  duyuruMetin: {
+    textAlign: 'center',
+    lineHeight: 20,
+    opacity: 0.92,
+  },
   sayacMerkez: {
     alignItems: 'center',
     gap: 2,

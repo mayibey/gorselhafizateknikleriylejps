@@ -133,6 +133,8 @@ export default function SinavScreen() {
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
   // İLGİLİ KART / KİTAP bayrağı (önce yalnız başkan) + branşın PDF kitapları (kanuna bağlı olanlar + Altın Özetler).
   const kartKitapBayrak = useKisiselOzellik('ilgili-kart-kitap');
+  // En uygun kart seçimi (16 Eki) önce yalnız başkanda; kapalıyken eski davranış (ilk kart).
+  const uygunKartAcik = useKisiselOzellik('ilgili-kart-uygun');
   const kitaplarRef = useRef<{ kanun: Map<number, BransKitap>; brans: BransKitap | null; musterek: BransKitap | null } | null>(null);
   useEffect(() => {
     if (!kartKitapBayrak) return;
@@ -310,7 +312,7 @@ export default function SinavScreen() {
    */
   const kartSecimRef = useRef(new Map<string, number>());
   function secKart(soru: KartSoru, havuz: CardWithLaw[], ids: number[]): number {
-    if (ids.length === 1) return ids[0];
+    if (ids.length === 1 || !uygunKartAcik) return ids[0];
     const anahtar = `${soru.id}|${ids.join(',')}`;
     const kayitli = kartSecimRef.current.get(anahtar);
     if (kayitli != null) return kayitli;
