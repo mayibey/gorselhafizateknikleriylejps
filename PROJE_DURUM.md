@@ -9,7 +9,7 @@
 > (gece sahnesi + eski sayaç yolu) "DUYURU" + başlık + metin. Metin `uygulama_ayar.karargah_duyuru` JSON {baslik,metin} — OTA'sız
 > değişir; okunamazsa gömülü varsayılan. e7d2e97 "en uygun kart" da `ilgili-kart-uygun` bayrağına alındı (kapalıyken ilk kart).
 > İki bayrak `ozellik_kisi`'de YALNIZ başkanda; `bayrak-denetle` KASITLI_KAPALI'ya yazıldı. Commit 497263d; OTA 1.0.47 (d343c298) +
-> 1.0.46 (35771769). Herkese açmak ("yay"): `ozellik_herkes` dizisine iki bayrağı ekle (OTA gerekmez). Sonra Özge'ye cevap.
+> 1.0.46 (35771769). Aynı gün başkan "aç herkese" → iki bayrak `ozellik_herkes`e eklendi, HERKESE AÇIK. Sırada: Özge'ye cevap.
 >
 > ### ▶ 19 Eki — YENİ BİLGİSAYAR + D DİSKİ "MEVZU" DÜZENİ (YOLLAR DEĞİŞTİ)
 > Yeni PC (kullanıcı `Administrator`; `C:\Users\GIGABYTE` → junction ile aynı profile bakar). Node 22, Git, gh, Python 3.14, ffmpeg,
