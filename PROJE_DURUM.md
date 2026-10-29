@@ -8,7 +8,7 @@
 > Serkan Demirci: hızlı eşleşme 45 sn başlıyor ama maç sonu "Tekrar oyna" 15 sn açıyordu. Kök: `er-meydani-mac.tsx onTekrar` yalnız
 > seed+mod aktarıyordu → varsayılan 15 sn + konu seçimi kayboluyor (tüm banka). Fix: bayrak `er-tekrar-45` açıkken sure=45 + aynı
 > `kanun` parametresi. Süre seçici başkan kararıyla YAPILMADI ("uğraşma"). Commit 2c749b3; OTA 1.0.47 (6fb1cfef) + 1.0.46 (25ac946c).
-> Bayrak yalnız başkanda; "yay" = `ozellik_herkes`e ekle.
+> Aynı gün başkan "yay" → `ozellik_herkes`e eklendi, HERKESE AÇIK. Sırada: Serkan'a cevap.
 >
 > ### ▶ 24 Eki — KARARGÂH: GERİ SAYIM YERİNE DUYURU (BAYRAKLI, ÖNCE BAŞKAN)
 > 10 Ekim sınavı geçti, sayaç "0 GÜN 00:00:00" gösteriyordu. `index.tsx KarargahDuyuru`: bayrak `karargah-duyuru` açıksa sayacın yerine
