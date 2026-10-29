@@ -2,7 +2,13 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ekim 2026 (Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 29 Ekim 2026 (Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 29 Eki — ER MEYDANI "TEKRAR OYNA" 45 SN (BAYRAKLI, ÖNCE BAŞKAN)
+> Serkan Demirci: hızlı eşleşme 45 sn başlıyor ama maç sonu "Tekrar oyna" 15 sn açıyordu. Kök: `er-meydani-mac.tsx onTekrar` yalnız
+> seed+mod aktarıyordu → varsayılan 15 sn + konu seçimi kayboluyor (tüm banka). Fix: bayrak `er-tekrar-45` açıkken sure=45 + aynı
+> `kanun` parametresi. Süre seçici başkan kararıyla YAPILMADI ("uğraşma"). Commit 2c749b3; OTA 1.0.47 (6fb1cfef) + 1.0.46 (25ac946c).
+> Bayrak yalnız başkanda; "yay" = `ozellik_herkes`e ekle.
 >
 > ### ▶ 24 Eki — KARARGÂH: GERİ SAYIM YERİNE DUYURU (BAYRAKLI, ÖNCE BAŞKAN)
 > 10 Ekim sınavı geçti, sayaç "0 GÜN 00:00:00" gösteriyordu. `index.tsx KarargahDuyuru`: bayrak `karargah-duyuru` açıksa sayacın yerine
