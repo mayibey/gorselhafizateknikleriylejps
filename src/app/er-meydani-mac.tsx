@@ -52,6 +52,9 @@ export default function ErMeydaniMacScreen() {
   const gece = useKisiselOzellik('gece-er-meydani');
   const styles = useMemo(() => stilOlustur(gece), [gece]);
   const router = useRouter();
+  // TEKRAR OYNA (29 Eki, Serkan Demirci): düğme süreyi/konuyu aktarmıyordu → 2. maç 15 sn + tüm
+  // banka. Bayrak açıkken hızlı eşleşmeyle aynı: 45 sn + aynı konular. Önce yalnız başkanda.
+  const tekrarAyarli = useKisiselOzellik('er-tekrar-45');
   const params = useLocalSearchParams<{
     seed?: string;
     mod?: string;
@@ -497,7 +500,16 @@ export default function ErMeydaniMacScreen() {
         ligSonuc={ligSonucState}
         kaydediliyor={kaydediliyor}
         onIncele={() => setFaz('inceleme')}
-        onTekrar={() => router.replace({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } })}
+        onTekrar={() =>
+          router.replace({
+            pathname: '/er-meydani-mac',
+            params: {
+              seed: String(seedUret()),
+              mod: 'hizli',
+              ...(tekrarAyarli ? { sure: '45', ...(params.kanun ? { kanun: params.kanun } : {}) } : {}),
+            },
+          })
+        }
         onYeniLig={() => void yeniLigMac()}
         onSiralama={() => router.replace(ligMod ? '/er-meydani-lig' : '/er-meydani-siralama')}
         onCik={() => router.replace('/er-meydani')}

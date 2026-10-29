@@ -16,6 +16,7 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
+  'er-tekrar-45': 'ER MEYDANI TEKRAR OYNA 45 sn + aynı konular (29 Eki 2026, Serkan Demirci) — ÖNCE YALNIZ BAŞKAN; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir (OTA gerekmez).',
   'karargah-duyuru': 'KARARGÂH DUYURUSU (24 Eki 2026) — geri sayım yerine duyuru; metin uygulama_ayar.karargah_duyuru. 24 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'ilgili-kart-uygun': 'EN UYGUN KART SEÇİMİ (16 Eki, Özge bildirimi, e7d2e97) — 24 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'kitap-ara': 'KİTAPTA ARAMA (Altın Özet / PDF görüntüleyici 🔍, 4 Eki 2026, kullanıcı isteği) — 4 Eki 2026 başkan test edip "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
