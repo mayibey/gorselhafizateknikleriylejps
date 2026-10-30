@@ -4,6 +4,16 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eki (2) — HANGİ KANUN? ŞIKLARI + ER MEYDANI RÜTBE SÜZGECİ (HERKESE AÇIK)
+> Serkan (Instagram DM 09:37): "Kanun bilmece"de (= Hangi Kanun?) Uzman Jandarma K. vb., Er Meydanı'nda Söz. Asb. Yön. çıkıyor;
+> uygulama içi cevabı Destek Talepleri'nde bulamadı (cevap duyuruya gitmişti; Destek'e de yazılmalı).
+> Fix 1 `oyun-merkezi.html`: kapsam dışı YANLIŞ şık, kişinin kapsamındaki başka bir cevap-kanunuyla değişir (Anayasa ortak);
+> ref'siz soru cevap kanununa göre süzülür; KAPSAM_AD += "kişisel veri silme"→18. Edge headless: 5 profilde kapsam dışı şık 0,
+> çift şık 0, cevap hep şıklarda, JS hatası 0. Oyun 20261030-0944 genel.
+> Fix 2 `er-meydani-mantik.ts kullaniciKanunlari(brans, rutbe)`: rütbe hariçleri (uzman → 4678 + Söz. Sb/Asb Yön.) hızlı eşleş +
+> oda kanun seçicisinden düşer (bayrak `oyun-brans-kapsam`). OTA 1.0.47 (749adc99) + 1.0.46 (0634542a).
+> Hâlâ açık: Günün Maddesi, Çengel, Sıraya Diz, TCK-CMK-Kabahat (Jandarma dışı CMK), Er Meydanı dereceli/lig tüm banka.
+
 > ### ▶ 30 Eki — OYUNLARDA BRANŞ KAPSAMI (HERKESE AÇIK)
 > Serkan Demirci (uzman erbaş, Jandarma) Doğru mu Yanlış mı'da 5510, 5996, Yapım İşleri İhale Yön., subay/sözl. astsubay yön. gördü.
 > Kök: oyun havuzları 16 branşın mevzuatından karışık, oyun sayfası branşı bilmiyordu. Fix: `lib/oyun-kapsam.ts oyunKapsami`

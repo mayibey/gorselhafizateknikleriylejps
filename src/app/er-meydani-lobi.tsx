@@ -9,6 +9,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { useBrans } from '@/lib/brans-context';
+import { useRutbe } from '@/lib/rutbe-context';
 import { DUELLO_KANUNLAR, kullaniciKanunlari, seedUret } from '@/lib/er-meydani-mantik';
 import {
   type AcikOda,
@@ -60,7 +61,9 @@ export default function ErMeydaniLobiScreen() {
   const [eslesiyor, setEslesiyor] = useState(false);
   const [benimOdalar, setBenimOdalar] = useState<Odam[]>([]);
   const { brans } = useBrans();
-  const hizliScope = useMemo(() => kullaniciKanunlari(brans), [brans]);
+  const kapsamAcik = useKisiselOzellik('oyun-brans-kapsam');
+  const { rutbe } = useRutbe();
+  const hizliScope = useMemo(() => kullaniciKanunlari(brans, kapsamAcik ? rutbe : null), [brans, kapsamAcik, rutbe]);
   const [hizliAcik, setHizliAcik] = useState(false);
   const [hizliKanunlar, setHizliKanunlar] = useState<number[]>([]); // boş = karışık (kapsam)
   const [onayOda, setOnayOda] = useState<OdaOnizle | null>(null);
@@ -543,7 +546,12 @@ function OdaKurPanel({
   const [kuruluyor, setKuruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
   const { brans } = useBrans();
-  const { musterek, brans: bransKanunlar } = useMemo(() => kullaniciKanunlari(brans), [brans]);
+  const kapsamAcik = useKisiselOzellik('oyun-brans-kapsam');
+  const { rutbe } = useRutbe();
+  const { musterek, brans: bransKanunlar } = useMemo(
+    () => kullaniciKanunlari(brans, kapsamAcik ? rutbe : null),
+    [brans, kapsamAcik, rutbe],
+  );
 
   async function kur() {
     if (!aktif || kuruluyor) return;

@@ -770,7 +770,7 @@ HAVUZ.yalan=HAVUZ.yalan.map(x=>({...x,ger:sadelestir(x.ger),sah:x.sah.map(sadele
    TCK-CMK-Kabahat Üçlüsü (ayrim) süzülmez: oyunun kendisi bu üç kanunu ayırt etmek.          */
 const KAPSAM_NO={"5237":[1,67,139],"2803":[2,140],"6698":[3],"7201":[4],"5442":[5],"5326":[6],"3713":[7],"2935":[8],"5816":[9],"6284":[10,21],"2893":[11],"7068":[12],"4678":[13,141],"5070":[14],"2521":[20],"6136":[25,66],"5271":[26],"1774":[27,50],"2911":[28],"4915":[29],"1380":[30],"6458":[31],"6831":[32],"4342":[33],"2918":[34],"5188":[35],"5395":[36],"2860":[37],"5199":[38],"2872":[39,143],"2559":[40],"5607":[41],"3298":[42],"6222":[43],"2313":[44],"6415":[45],"2863":[46],"3091":[47],"4207":[48],"4733":[49],"5809":[68],"2920":[69],"2629":[70],"657":[71],"926":[72,136],"3269":[73,137],"3466":[74,138],"5510":[75],"7179":[76],"5018":[77],"6085":[78],"257":[79],"488":[80],"2155":[81],"2330":[82],"3212":[83],"5668":[84],"6191":[85],"6245":[86],"4734":[87],"4735":[88],"5543":[89],"2942":[90],"3194":[91],"3402":[92],"2565":[93],"4925":[94],"5996":[95],"1219":[96],"7567":[113]};
 // Numarasız ref'ler (yönetmelikler vb.) — küçük harfli (tr) ad parçası → kanun id'leri. Sıra önemli.
-const KAPSAM_AD=[["il idaresi",[5]],["jgk/sgk personel",[22]],["personel yön",[22]],["jandarma teşkilat yön",[17]],["aramalar",[56]],["yakalama",[58]],["suç eşyası",[57]],["hizmet esasları",[23]],["trafik yön",[52]],["resmî yazışma",[15]],["bilgi edinme",[19]],["jandarma kanunu",[2,140]],["kantin",[109]],["özel güvenlik yön",[54]],["yetkilendirme",[97]],["izin yön",[24]],["bütçe",[113]],["e-imza",[14]],["karayolu taşıma yön",[119]],["adli kolluk",[55]],["sözleşmeli",[16]],["kimlik bild",[50]],["bilgi güvenliği",[103]],["subay sicil",[107]],["sağlık yeteneği",[104]],["harçlık",[114]],["atama yön",[112]],["yapım işleri",[125]],["çocuk tedbir",[60]],["ordu evleri",[111]],["kamu zarar",[118]],["kamu konut",[121]],["mal alımı",[122]],["tck",[1]],["cmk",[26]]];
+const KAPSAM_AD=[["il idaresi",[5]],["kişisel veri silme",[18]],["jgk/sgk personel",[22]],["personel yön",[22]],["jandarma teşkilat yön",[17]],["aramalar",[56]],["yakalama",[58]],["suç eşyası",[57]],["hizmet esasları",[23]],["trafik yön",[52]],["resmî yazışma",[15]],["bilgi edinme",[19]],["jandarma kanunu",[2,140]],["kantin",[109]],["özel güvenlik yön",[54]],["yetkilendirme",[97]],["izin yön",[24]],["bütçe",[113]],["e-imza",[14]],["karayolu taşıma yön",[119]],["adli kolluk",[55]],["sözleşmeli",[16]],["kimlik bild",[50]],["bilgi güvenliği",[103]],["subay sicil",[107]],["sağlık yeteneği",[104]],["harçlık",[114]],["atama yön",[112]],["yapım işleri",[125]],["çocuk tedbir",[60]],["ordu evleri",[111]],["kamu zarar",[118]],["kamu konut",[121]],["mal alımı",[122]],["tck",[1]],["cmk",[26]]];
 function refKanun(ref){
   const bas=String(ref||'').split('·')[0].trim();
   const no=(bas.match(/\d{3,5}/)||[''])[0];
@@ -791,6 +791,20 @@ function kapsamSuz(liste,asgari){
   return s.length>=(asgari||12)?s:liste;
 }
 ['bosluk','sure','dy','kim','ceza','hangi','yalan'].forEach(k=>{HAVUZ[k]=kapsamSuz(HAVUZ[k]);});
+/* Hangi Kanun? şıkları: soru kapsamda olsa da YANLIŞ şıklarda başka branşın kanunu geçiyordu
+   (Serkan, 30 Eki: "Uzman Jandarma Kanunu, kanun bilmecede de"). Kapsam dışı yanlış şık, kişinin
+   kapsamındaki başka bir cevap-kanunuyla değiştirilir. Anayasa herkese ortak. */
+if(KAPSAM){
+  const icinde=s=>{const ids=refKanun(s);return ids?ids.some(i=>KAPSAM.has(i)):/anayasa/i.test(s);};
+  HAVUZ.hangi=HAVUZ.hangi.filter(x=>x.ref||kapsamda(x.c)); // ref'siz soruda cevap kanununa bak
+  const yedekler=[...new Set(HAVUZ.hangi.map(x=>x.c))].filter(icinde);
+  HAVUZ.hangi=HAVUZ.hangi.map(x=>{
+    if(!Array.isArray(x.sik)||x.sik.every(s=>s===x.c||icinde(s))) return x;
+    const aday=yedekler.filter(y=>!x.sik.includes(y)&&y!==x.c);
+    const sik=x.sik.map(s=>(s===x.c||icinde(s)||!aday.length)?s:aday.splice(Math.floor(Math.random()*aday.length),1)[0]);
+    return {...x,sik};
+  });
+}
 
 /* =====================================================================
    İÇERİK — tamamı resmî metinden doğrulanmıştır

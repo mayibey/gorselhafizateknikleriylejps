@@ -13,6 +13,8 @@ import { DUELLO_SORULARI, type DuelloSoru } from '../assets/duello-sorulari';
 
 export type { DuelloSoru } from '../assets/duello-sorulari';
 import { DUELLO_KANUNLAR } from '../assets/duello-kanunlar';
+import { rutbeGorur } from './rutbe-kapsam';
+import type { Rutbe } from './rutbe-store';
 export { DUELLO_KANUNLAR };
 
 /** Branş slug → branch_id (SEED_BRANCHES ile birebir; er-meydani kanun gruplaması için). */
@@ -27,11 +29,16 @@ export type SeciciKanun = { id: number; ad: string };
  * Kullanıcının Er Meydanı'nda SEÇEBİLECEĞİ kanunlar: müşterek (herkese) + KENDİ branşı.
  * Kategorizasyon law_id/blok ile (duello-kanunlar.ts, seed.ts kanonik) → karışma yok.
  */
-export function kullaniciKanunlari(bransSlug: string | null): { musterek: SeciciKanun[]; brans: SeciciKanun[] } {
+export function kullaniciKanunlari(
+  bransSlug: string | null,
+  rutbe: Rutbe | null = null,
+): { musterek: SeciciKanun[]; brans: SeciciKanun[] } {
   const bid = bransSlug ? BRANS_SLUG_ID[bransSlug] : undefined;
   const musterek: SeciciKanun[] = [];
   const brans: SeciciKanun[] = [];
   for (const k of DUELLO_KANUNLAR) {
+    // Rütbe hariçleri (30 Eki, Serkan: uzman erbaşa Sözleşmeli Sb/Asb soruları geliyordu).
+    if (!rutbeGorur(k.id, rutbe)) continue;
     if (k.blok === 'müşterek') musterek.push({ id: k.id, ad: k.ad });
     else if (bid && k.branslar.includes(bid)) brans.push({ id: k.id, ad: k.ad });
   }
