@@ -16,7 +16,7 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
-  'oyun-brans-kapsam': 'OYUNLARDA BRANŞ KAPSAMI (30 Eki 2026, Serkan Demirci) — oyun soruları müşterek + kendi branşıyla süzülür. ÖNCE BAŞKAN test edecek; onaylanınca uygulama_ayar.ozellik_herkes dizisine eklenir.',
+  'oyun-brans-kapsam': 'OYUNLARDA BRANŞ KAPSAMI (30 Eki 2026, Serkan Demirci) — oyun soruları müşterek + kendi branşıyla süzülür. 30 Eki 2026 başkan "doğrula, herkese aç" dedi (Edge headless + TS testiyle doğrulandı), HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'er-tekrar-45': 'ER MEYDANI TEKRAR OYNA 45 sn + aynı konular (29 Eki 2026, Serkan Demirci) — 29 Eki başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'karargah-duyuru': 'KARARGÂH DUYURUSU (24 Eki 2026) — geri sayım yerine duyuru; metin uygulama_ayar.karargah_duyuru. 24 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
   'ilgili-kart-uygun': 'EN UYGUN KART SEÇİMİ (16 Eki, Özge bildirimi, e7d2e97) — 24 Eki 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',

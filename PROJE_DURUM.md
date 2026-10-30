@@ -2,7 +2,18 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 29 Ekim 2026 (Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 30 Eki — OYUNLARDA BRANŞ KAPSAMI (HERKESE AÇIK)
+> Serkan Demirci (uzman erbaş, Jandarma) Doğru mu Yanlış mı'da 5510, 5996, Yapım İşleri İhale Yön., subay/sözl. astsubay yön. gördü.
+> Kök: oyun havuzları 16 branşın mevzuatından karışık, oyun sayfası branşı bilmiyordu. Fix: `lib/oyun-kapsam.ts oyunKapsami`
+> (müşterek + kendi branşı, rütbe hariçleri düşülmüş; seed id) → `er-meydani.tsx` bayrak `oyun-brans-kapsam` ile
+> `window.__MEVZU_KAPSAM` enjekte; `oyun-merkezi.html` "BRANŞ KAPSAMI" bloğu ref→kanun id (numara + ad parçası) çözüp
+> bosluk/sure/dy/kim/ceza/hangi/yalan + asmaca + merdiven + ortak havuzu süzer. Kapsam yoksa (eski sürüm) değişiklik yok;
+> çözülemeyen ref (Anayasa) gösterilir; havuz <12 (kuşak <3) kalırsa süzülmez; TCK-CMK-Kabahat Üçlüsü süzülmez.
+> Doğrulama: gerçek oyunKapsami TS'den çalıştırıldı + sunucudaki sayfa Edge headless'ta enjekteli oynatıldı (Serkan DY 402→297,
+> kapsam dışı 0, JS hatası 0). Commit 7f7de8b; OTA 1.0.47 (8172d2b9) + 1.0.46 (2e1bb7fe); oyun 20261030-0728 genel;
+> `ozellik_herkes`e eklendi. Serkan'a kişiye özel duyuru + push gitti (aa1e9e42). Not: SIRA, Çengel, Günün Maddesi süzülmedi.
 >
 > ### ▶ 29 Eki — ER MEYDANI "TEKRAR OYNA" 45 SN (BAYRAKLI, ÖNCE BAŞKAN)
 > Serkan Demirci: hızlı eşleşme 45 sn başlıyor ama maç sonu "Tekrar oyna" 15 sn açıyordu. Kök: `er-meydani-mac.tsx onTekrar` yalnız
