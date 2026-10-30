@@ -10,6 +10,9 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
 import { type OyunKayit, oyunKaydiGonder, oyunKaydiYaz, oyunKaydiYukle } from '@/lib/oyun-kayit';
 import { useUyelik } from '@/lib/uyelik-context';
+import { useBrans } from '@/lib/brans-context';
+import { useRutbe } from '@/lib/rutbe-context';
+import { oyunKapsami } from '@/lib/oyun-kapsam';
 
 /**
  * OYUN MERKEZİ — sekmenin kendisi.
@@ -33,6 +36,12 @@ export default function OyunMerkeziScreen() {
   // ÖNİZLEME (18 Ağu): boş-ekran düzeltmesi (süreç ölünce reload) yalnız başkan+Kemalettin'de
   // dener; onaylanınca herkese açılır (gerçek bir hata düzeltmesi olduğu için sonra genele).
   const onIzleme = useKisiselOzellik('on-izleme');
+  // BRANŞ KAPSAMI (bayraklı, 30 Eki — önce başkan): oyun sayfasına kullanıcının kanunlarını
+  // ver; sayfa soruları müşterek + kendi branşıyla süzer (lib/oyun-kapsam). Kapalıysa birebir eski.
+  const kapsamAcik = useKisiselOzellik('oyun-brans-kapsam');
+  const { brans, yukleniyor: bransYukleniyor } = useBrans();
+  const { rutbe } = useRutbe();
+  const kapsam = kapsamAcik ? oyunKapsami(brans, rutbe) : null;
   const router = useRouter();
   const params = useLocalSearchParams<{ katilKod?: string; oyunKod?: string }>();
   const web = useRef<WebView>(null);
@@ -186,7 +195,7 @@ export default function OyunMerkeziScreen() {
   // düğmesi orada. Üstüne bir de uygulamanın başlığını koyunca "Oyun Merkezi" iki kez
   // yazıyordu. Ortak `Screen` sarmalayıcısı da kullanılmıyor: onun gövdesinde kenar boşluğu
   // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
-  if (!kayit || !oyunHtml || uyelikYukleniyor) {
+  if (!kayit || !oyunHtml || uyelikYukleniyor || (kapsamAcik && bransYukleniyor)) {
     if (geceYukleme) {
       return (
         <SafeAreaView style={styles.safeKoyu} edges={['top', 'left', 'right']}>
@@ -217,7 +226,7 @@ export default function OyunMerkeziScreen() {
           injectedJavaScriptBeforeContentLoaded={`window.__MEVZU_KAYIT = ${JSON.stringify({
             ...kayit,
             mevzu_premium: premium ? '1' : '0',
-          })}; true;`}
+          })};${kapsam ? ` window.__MEVZU_KAPSAM = ${JSON.stringify(kapsam)};` : ''} true;`}
           onMessage={mesaj}
           // BOŞ EKRAN FIX (18 Ağu — başkan: "Patika'dayken arka plana aldım, dönünce
           // Oyunlar boş kaldı"). iOS uygulamayı arka planda tutarken bellek baskısıyla
