@@ -9,6 +9,7 @@
 > - OTA b5db071c (1.0.47) + 92e9f204 (1.0.46). tsc 0.
 > - Başkan "yay herkese" dedi → `sinav-sonuc-sor` `uygulama_ayar.ozellik_herkes`e eklendi (sunucudan, build yok). İlk kayıt: başkan uzmerb/jandarma 59,59.
 > - Duyuru/push/Telegram metni: tam metin gösterilip onay bekleniyor.
+> - Başkan: "sonuçlar açıklandı" YAZILMAZ (açıklanalı çok oldu) → ekrandan ve web'den kaldırıldı; OTA c21fe527 (1.0.47) + 2340d023 (1.0.46), commit 7ff4714. Duyuru hitabı: push/uygulama içi = "Merhaba komutanım".
 
 > ### ▶ 2 Kas — SINAV SONUCU TOPLAMA (ÖNCE BAŞKAN)
 > Başkan: 10 Ekim JSPS sonuçları açıklandı, üyelerin puanını toplamadık. Tablo `sinav_sonuc` (kişi başı tek kayıt; puan
