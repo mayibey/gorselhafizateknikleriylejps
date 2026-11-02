@@ -8,7 +8,7 @@
 > - Evsaf'a "JSPS sonucum: 59,59 puan · Düzenle" satırı (`components/profil/sinav-sonuc-satiri.tsx`): yalnız cevap verende görünür; dokununca aynı ekran önceki cevapla dolu açılır (Modal, `duzenleme` kipi, Kaydet/Vazgeç); kayıt RPC ile üstüne yazılır. `lib/sinav-sonuc.ts` → `sinavSonucumuGetir`, `puanYaz`.
 > - OTA b5db071c (1.0.47) + 92e9f204 (1.0.46). tsc 0.
 > - Başkan "yay herkese" dedi → `sinav-sonuc-sor` `uygulama_ayar.ozellik_herkes`e eklendi (sunucudan, build yok). İlk kayıt: başkan uzmerb/jandarma 59,59.
-> - Duyuru/push/Telegram metni: tam metin gösterilip onay bekleniyor.
+> - DUYURU GİTTİ (başkan "Tamam yap duyuruyu"): uygulama içi duyuru 50b8c710; push 972 cihaz → 791 telefona düştü (181 DeviceNotRegistered); Telegram Duyurular mesaj 2845. Betik scratchpad/sinav-sonuc-duyuru.py.
 > - Başkan: "sonuçlar açıklandı" YAZILMAZ (açıklanalı çok oldu) → ekrandan ve web'den kaldırıldı; OTA c21fe527 (1.0.47) + 2340d023 (1.0.46), commit 7ff4714. Duyuru hitabı: push/uygulama içi = "Merhaba komutanım".
 
 > ### ▶ 2 Kas — SINAV SONUCU TOPLAMA (ÖNCE BAŞKAN)
