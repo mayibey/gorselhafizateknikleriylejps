@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 2 Kas — SINAV SONUCU TOPLAMA (ÖNCE BAŞKAN)
+> Başkan: 10 Ekim JSPS sonuçları açıklandı, üyelerin puanını toplamadık. Tablo `sinav_sonuc` (kişi başı tek kayıt; puan
+> numeric(5,2) virgüllü; `girmedi`; kaynak uygulama/web; RLS: web yalnız ekler, okuma yalnız kendi satırı) + RPC
+> `sinav_sonuc_kaydet` (ad soyad profilden, yeniden gönderirse günceller). Uygulama: `components/profil/sinav-sonuc-sor.tsx`
+> açılış kapısı (_layout, isim/tur'dan sonra), branş/rütbe cihazdan seçili gelir ve değiştirilebilir (uygulama ayarına
+> dokunmaz), "Sınava girmedim" seçeneği, cevap zorunlu; bayrak `sinav-sonuc-sor` YALNIZ BAŞKAN. OTA 1.0.47 (712897a3) +
+> 1.0.46 (703fbe27). Web: mevzujsps.com/sonuc (noindex, duyurulmadı) ad/soyad/rütbe/branş/puan. Edge'de uçtan uca test
+> + RLS denendi, test kaydı silindi. Sonraki: başkan bakar → "yay" → ozellik_herkes + duyuru/push/Telegram metni.
+
 > ### ▶ 30 Eki (2) — HANGİ KANUN? ŞIKLARI + ER MEYDANI RÜTBE SÜZGECİ (HERKESE AÇIK)
 > Serkan (Instagram DM 09:37): "Kanun bilmece"de (= Hangi Kanun?) Uzman Jandarma K. vb., Er Meydanı'nda Söz. Asb. Yön. çıkıyor;
 > uygulama içi cevabı Destek Talepleri'nde bulamadı (cevap duyuruya gitmişti; Destek'e de yazılmalı).

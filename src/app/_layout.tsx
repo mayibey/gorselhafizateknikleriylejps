@@ -37,6 +37,8 @@ import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
 import { kisiselOzellikAcikMi, useKisiselOzellik } from '@/lib/ozellik';
 import { filigranAdi, isimSorunu } from '@/lib/isim-dogrula';
 import { IsimTamamla } from '@/components/profil/isim-tamamla';
+import { SinavSonucSor } from '@/components/profil/sinav-sonuc-sor';
+import { sinavSonucuVarMi } from '@/lib/sinav-sonuc';
 import { KisiselFiligran } from '@/components/profil/kisisel-filigran';
 import { indirmeDurumYukle, yarimSesleriOnar } from '@/lib/indirme';
 import { bekleyenleriGonder } from '@/lib/deneme-servis';
@@ -240,6 +242,24 @@ function RootNavigator() {
       iptal = true;
     };
   }, [kullanici?.id]);
+  // SINAV SONUCU KAPISI (2 Kas 2026, başkan): bayrak açık + bu hesap sonucunu girmemişse açılışta bir
+  // kez sorulur. Okunamazsa (çevrimdışı) null → açılmaz.
+  const [sonucSor, setSonucSor] = useState(false);
+  useEffect(() => {
+    if (!kullanici) {
+      setSonucSor(false);
+      return;
+    }
+    let iptal = false;
+    void kisiselOzellikAcikMi('sinav-sonuc-sor').then(async (acik) => {
+      if (!acik || iptal) return;
+      const var_ = await sinavSonucuVarMi();
+      if (!iptal) setSonucSor(var_ === false);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [kullanici?.id]);
   const segments = useSegments();
   const router = useRouter();
   // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
@@ -345,6 +365,11 @@ function RootNavigator() {
         }}
       />
     );
+  }
+
+  // SINAV SONUCU: giriş/görev/isim/tur tamamsa, uygulamaya girmeden önce bir kez.
+  if (kullanici && sonucSor && !eksik && !yukleniyor) {
+    return <SinavSonucSor ilkBrans={brans} ilkRutbe={rutbe} onTamam={() => setSonucSor(false)} />;
   }
 
   return (
