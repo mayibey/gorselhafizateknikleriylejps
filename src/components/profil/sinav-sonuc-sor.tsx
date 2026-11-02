@@ -91,7 +91,7 @@ export function SinavSonucSor({
           <AppText variant="govde" color="anaMetin" style={styles.aciklama}>
             {duzenleme
               ? 'Yanlış girdiyseniz düzeltip kaydedin; önceki cevabınızın yerine geçer.'
-              : 'Sonuçlar açıklandı. Kaç aldığınızı paylaşırsanız hazırlık içeriklerimizi buna göre geliştireceğiz. Bilgileriniz yalnızca istatistik için kullanılır, adınız hiçbir yerde yayınlanmaz.'}
+              : 'Kaç aldığınızı paylaşırsanız hazırlık içeriklerimizi buna göre geliştireceğiz. Bilgileriniz yalnızca istatistik için kullanılır, adınız hiçbir yerde yayınlanmaz.'}
           </AppText>
 
           <AppText variant="etiket" color="solukMetin" style={styles.etiket}>
