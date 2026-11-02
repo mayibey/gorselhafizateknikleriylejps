@@ -62,6 +62,7 @@ import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER } from '@/lib/rutbe-store';
 import { getBranches } from '@/db/database';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { SinavSonucSatiri } from '@/components/profil/sinav-sonuc-satiri';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
 // inebilir = erişilebilir ama henüz indirilmemiş (Mevzuat'tan inince çalışılır).
@@ -295,6 +296,7 @@ export default function SicilScreen() {
               <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
             </View>
           </Pressable>
+          <SinavSonucSatiri koyu />
           <SinavProjeksiyonu />
         </>
       ) : null}
@@ -310,6 +312,7 @@ export default function SicilScreen() {
             </AppText>
             <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
           </Pressable>
+          <SinavSonucSatiri />
           {yardimSatirlari}
           <KisiselBilgiler />
           {/* Premium'sa "Üyeliğim" kartı (aktif paketler) — değilse görünmez. */}

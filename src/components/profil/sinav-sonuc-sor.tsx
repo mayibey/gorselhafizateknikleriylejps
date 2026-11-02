@@ -15,7 +15,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { SEED_BRANCHES } from '@/db/seed';
 import { RUTBELER, type Rutbe } from '@/lib/rutbe-store';
-import { puanCoz, RUTBE_BRANSLARI, sinavSonucuKaydet } from '@/lib/sinav-sonuc';
+import { puanCoz, puanYaz, RUTBE_BRANSLARI, sinavSonucuKaydet } from '@/lib/sinav-sonuc';
 
 const BRANS_AD: Record<string, string> = Object.fromEntries(SEED_BRANCHES.map((b) => [b.slug, b.ad]));
 
@@ -23,22 +23,33 @@ const BRANS_AD: Record<string, string> = Object.fromEntries(SEED_BRANCHES.map((b
  * SINAV SONUCU KAPISI (2 Kas 2026, başkan): 10 Ekim 2026 JSPS sonucunu sorar. Uygulamaya girmeden
  * önce bir kez çıkar; puan yazmadan ya da "Sınava girmedim" demeden geçilmez. Branş/rütbe cihazdaki
  * seçimle gelir, yanlışsa burada değiştirilebilir (yalnız bu kayıt için; uygulama ayarına dokunmaz).
+ * `duzenleme`: Evsaf'tan sonradan düzeltme — önceki cevap dolu gelir, "Vazgeç" ile kapanır.
  */
 export function SinavSonucSor({
   ilkBrans,
   ilkRutbe,
+  ilkGirmedi,
+  ilkPuan,
+  duzenleme = false,
   onTamam,
+  onVazgec,
 }: {
   ilkBrans: string | null;
   ilkRutbe: Rutbe | null;
+  ilkGirmedi?: boolean;
+  ilkPuan?: number | null;
+  duzenleme?: boolean;
   onTamam: () => void;
+  onVazgec?: () => void;
 }) {
   const [rutbe, setRutbe] = useState<Rutbe | null>(ilkRutbe);
   const [brans, setBrans] = useState<string | null>(() =>
     ilkRutbe && ilkBrans && RUTBE_BRANSLARI[ilkRutbe].includes(ilkBrans) ? ilkBrans : null,
   );
-  const [secim, setSecim] = useState<'puan' | 'girmedi' | null>(null);
-  const [puanMetin, setPuanMetin] = useState('');
+  const [secim, setSecim] = useState<'puan' | 'girmedi' | null>(
+    ilkGirmedi ? 'girmedi' : ilkPuan != null ? 'puan' : null,
+  );
+  const [puanMetin, setPuanMetin] = useState(ilkPuan != null ? puanYaz(ilkPuan) : '');
   const [hata, setHata] = useState<string | null>(null);
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
@@ -75,12 +86,12 @@ export function SinavSonucSor({
             JSPS · 10 EKİM 2026
           </AppText>
           <AppText variant="baslik" color="lacivert">
-            Sınav sonucunuzu bizimle paylaşmak ister misiniz?
+            {duzenleme ? 'Sınav sonucunuzu düzenleyin' : 'Sınav sonucunuzu bizimle paylaşmak ister misiniz?'}
           </AppText>
           <AppText variant="govde" color="anaMetin" style={styles.aciklama}>
-            Sonuçlar açıklandı. Kaç aldığınızı paylaşırsanız hazırlık içeriklerimizi buna göre
-            geliştireceğiz. Bilgileriniz yalnızca istatistik için kullanılır, adınız hiçbir yerde
-            yayınlanmaz.
+            {duzenleme
+              ? 'Yanlış girdiyseniz düzeltip kaydedin; önceki cevabınızın yerine geçer.'
+              : 'Sonuçlar açıklandı. Kaç aldığınızı paylaşırsanız hazırlık içeriklerimizi buna göre geliştireceğiz. Bilgileriniz yalnızca istatistik için kullanılır, adınız hiçbir yerde yayınlanmaz.'}
           </AppText>
 
           <AppText variant="etiket" color="solukMetin" style={styles.etiket}>
@@ -142,7 +153,7 @@ export function SinavSonucSor({
               placeholderTextColor={Palette.solukMetin}
               keyboardType="decimal-pad"
               maxLength={6}
-              autoFocus
+              autoFocus={!duzenleme}
               style={styles.girdi}
               returnKeyType="done"
               onSubmitEditing={() => void gonder()}
@@ -177,10 +188,17 @@ export function SinavSonucSor({
               <ActivityIndicator color={Palette.beyaz} />
             ) : (
               <AppText variant="govde" bold color="beyaz">
-                Gönder ve devam et
+                {duzenleme ? 'Kaydet' : 'Gönder ve devam et'}
               </AppText>
             )}
           </Pressable>
+          {duzenleme && onVazgec ? (
+            <Pressable onPress={onVazgec} disabled={kaydediliyor} style={styles.vazgec} accessibilityRole="button">
+              <AppText variant="govde" color="solukMetin">
+                Vazgeç
+              </AppText>
+            </Pressable>
+          ) : null}
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -263,4 +281,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   basili: { opacity: 0.7 },
+  vazgec: { alignItems: 'center', paddingVertical: Spacing.three },
 });

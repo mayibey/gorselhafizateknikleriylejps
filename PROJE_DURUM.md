@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 2 Kas (2) — SINAV SONUCU HERKESE AÇIK + EVSAF DÜZENLEME
+> - Evsaf'a "JSPS sonucum: 59,59 puan · Düzenle" satırı (`components/profil/sinav-sonuc-satiri.tsx`): yalnız cevap verende görünür; dokununca aynı ekran önceki cevapla dolu açılır (Modal, `duzenleme` kipi, Kaydet/Vazgeç); kayıt RPC ile üstüne yazılır. `lib/sinav-sonuc.ts` → `sinavSonucumuGetir`, `puanYaz`.
+> - OTA b5db071c (1.0.47) + 92e9f204 (1.0.46). tsc 0.
+> - Başkan "yay herkese" dedi → `sinav-sonuc-sor` `uygulama_ayar.ozellik_herkes`e eklendi (sunucudan, build yok). İlk kayıt: başkan uzmerb/jandarma 59,59.
+> - Duyuru/push/Telegram metni: tam metin gösterilip onay bekleniyor.
+
 > ### ▶ 2 Kas — SINAV SONUCU TOPLAMA (ÖNCE BAŞKAN)
 > Başkan: 10 Ekim JSPS sonuçları açıklandı, üyelerin puanını toplamadık. Tablo `sinav_sonuc` (kişi başı tek kayıt; puan
 > numeric(5,2) virgüllü; `girmedi`; kaynak uygulama/web; RLS: web yalnız ekler, okuma yalnız kendi satırı) + RPC

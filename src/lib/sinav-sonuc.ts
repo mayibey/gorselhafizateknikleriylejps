@@ -49,3 +49,25 @@ export async function sinavSonucuKaydet(p: {
   });
   if (error) throw error;
 }
+
+export type SinavSonucum = { rutbe: Rutbe; brans: string; girmedi: boolean; puan: number | null };
+
+/** Evsaf "sonucum" satırı için kendi kaydı; yoksa/okunamazsa null. */
+export async function sinavSonucumuGetir(): Promise<SinavSonucum | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data, error } = await supabase
+      .from('sinav_sonuc')
+      .select('rutbe, brans, girmedi, puan')
+      .eq('kaynak', 'uygulama')
+      .limit(1);
+    if (error || !data?.length) return null;
+    const r = data[0] as { rutbe: Rutbe; brans: string; girmedi: boolean; puan: number | string | null };
+    return { rutbe: r.rutbe, brans: r.brans, girmedi: r.girmedi, puan: r.puan === null ? null : Number(r.puan) };
+  } catch {
+    return null;
+  }
+}
+
+/** 59.59 → "59,59" (ekranda Türkçe yazım). */
+export const puanYaz = (n: number) => String(n).replace('.', ',');
