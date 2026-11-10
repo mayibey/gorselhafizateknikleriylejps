@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>10 Kasım · Mevzu JSPS</title>
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;color:#fff}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100svh;padding:max(24px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));font-family:Inter,system-ui,sans-serif;text-align:center}
+.foto{width:100%;max-width:420px;aspect-ratio:732/987;background:url(ataturk.jpg) center/cover;
+ -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%);
+ filter:grayscale(1) contrast(1.05);opacity:0;animation:gel 2.4s ease-out .2s forwards}
+.tarih{font-family:'Playfair Display',Georgia,serif;font-size:34px;letter-spacing:.5px;margin-top:-6px;opacity:0;animation:gel 1.6s ease-out 1.4s forwards}
+.yil{font:600 13px/1 Inter,sans-serif;letter-spacing:4px;color:#9a9a9a;margin-top:10px;opacity:0;animation:gel 1.6s ease-out 1.8s forwards}
+.cizgi{width:56px;height:2px;background:#C00000;margin:22px auto 18px;opacity:0;animation:gel 1.2s ease-out 2.2s forwards}
+.soz{font-size:18px;font-weight:500;color:#e8e8e8;opacity:0;animation:gel 1.6s ease-out 2.5s forwards}
+.imza{font:600 12px/1 Inter,sans-serif;letter-spacing:3px;color:#C9A227;margin-top:34px;opacity:0;animation:gel 1.6s ease-out 3s forwards}
+@keyframes gel{to{opacity:1}}
+</style></head>
+<body>
+<div class="foto" role="img" aria-label="Mustafa Kemal Atatürk"></div>
+<div class="tarih">10 Kasım</div>
+<div class="yil">1938 · 2026</div>
+<div class="cizgi"></div>
+<div class="soz">Sevgi, Özlem ve Minnetle</div>
+<div class="imza">MEVZU JSPS</div>
+</body></html>
