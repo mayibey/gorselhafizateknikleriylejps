@@ -3656,3 +3656,8 @@ Ortak 21–60 seviyesi `ortak_kaynak` (subay-mebs) anahtarından okunuyor; yeni 
 (ekim10/<kod>/bilgi_*.json → kayit/konu/soruldu/seviye.json). Sınav metinli `scratchpad/ekim10/` repoya GİRMEZ (telif).
 Açık: Maliye Q76 olası anahtar hatası (257 m.10 "haczedilemez" → A, anahtar D); Altın Özet Maliye kantin satırı (Q88) belirsiz;
 Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı başlangıcı, pilotaj yükümlülüğü 2803, nöbet kıyafeti makamı).
+
+## 10 Kas 2026 — 10 Kasım anma bildirimi
+- mevzujsps.com/10kasim: siyah zemin, Atatürk portresi (kamu malı), "10 Kasım · 193∞ · Sevgi, Özlem ve Minnetle" (9772155 + 193∞ düzeltmesi).
+- Pages izin listesine `sonuc` ve `10kasim` eklendi — **mevzujsps.com/sonuc 2 Kas'tan beri 404'tü**, düzeldi.
+- Push herkese: ilk gönderimde başlık hatalı gitti ("10 Kasım 267E", sed unicode kaçışı, 779 cihaz). Düzeltilmiş "10 Kasım ♾" ikinci kez herkese gitti (787/978 teslim, 191 kayıtsız cihaz).
