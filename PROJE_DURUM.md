@@ -3661,3 +3661,9 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - mevzujsps.com/10kasim: siyah zemin, Atatürk portresi (kamu malı), "10 Kasım · 193∞ · Sevgi, Özlem ve Minnetle" (9772155 + 193∞ düzeltmesi).
 - Pages izin listesine `sonuc` ve `10kasim` eklendi — **mevzujsps.com/sonuc 2 Kas'tan beri 404'tü**, düzeldi.
 - Push herkese: ilk gönderimde başlık hatalı gitti ("10 Kasım 267E", sed unicode kaçışı, 779 cihaz). Düzeltilmiş "10 Kasım ♾" ikinci kez herkese gitti (787/978 teslim, 191 kayıtsız cihaz).
+
+## 11 Kas 2026 — İlk giriş indirimi düzeni
+- Keşif: ilk giriş indirimi sunucuda 48 saatti (başkan 24 sanıyordu) → **24 saat** yapıldı (`uygulama_ayar.ilk_giris_indirim_saat`).
+- iOS'ta ilk giriş indirimi HİÇ çalışmıyordu: `musterek_omurboyu_i20` App Store'a hiç gönderilmemiş (READY_TO_SUBMIT) + `ios_indirim_aktif=0`. Ürün (1.249,99 TL) API ile incelemeye gönderildi → WAITING_FOR_REVIEW. Onaylanınca `ios_indirim_aktif=1` (başkan onayıyla).
+- Hatırlatma pop-up V2 (80efff6, bayrak `indirim-hatirlat-v2`, KAPALI): "Bir daha gösterme" + "Sonra hatırlat"; 3 saatte bir, en çok 5; çalışmaya girmeden de ilk açılıştan 10 dk sonra tetik. OTA 1.0.47 + 1.0.46.
+- Ölçüm (60 gün, ilk satın alma): Android 12 ilk 48 saatte / 12 sonra; iOS 18 / 12. 978 yeni hesap.
