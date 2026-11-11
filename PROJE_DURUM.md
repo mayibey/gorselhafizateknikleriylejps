@@ -3673,3 +3673,9 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Hesap "satıcı (tacir)" olarak beyan edildi; telefon +90 553 083 83 85 SMS ile doğrulandı (WhatsApp Business destek hattı da bu numara).
 - JSPS uygulaması düzeyinde satıcı onayı + Hizmet Şartları (mevzujsps.com/sartlar.html) kaydedildi, Google incelemesine gönderildi (genelde ≤7 gün). Son tarih 1 Şub 2027 karşılandı.
 - YÖKDİL uygulaması ayrı projede; dokunulmadı.
+
+## 11 Kas 2026 — Ortak düzen (karargâh) + güvenlik temizliği + WhatsApp destek hattı
+- Çok-proje düzeni: `D:\Mevzu\CLAUDE.md` (tüm Mevzu projelerinde yüklenen ortak kurallar), `D:\Mevzu\ortak\tecrube-kitabi\` (9 bölüm ~250 ders), `D:\Mevzu\ortak\karargah\PORTFOY.md`. Depo `D:\Mevzu\ortak` → GitHub gizli `mayibey/mevzu-karargah`. Masaüstü kısayolu "Claude - Mevzu Karargah".
+- GÜVENLİK: bu depo PUBLIC. PROJE_DURUM'daki inceleme demo parolası kaldırıldı (geçmişte duruyor → parola değişimi başkan kararı). Hafızadaki Google şifresi / TikTok secret / Meta client token → `D:\Mevzu\ortak\gizli\` (git dışı). Depoda yalnız Supabase anon anahtarı var (role=anon doğrulandı).
+- Hafıza dizini 163→138 satır (25 eski konu arsiv-kapanan-isler.md'ye).
+- WhatsApp Business (0553 083 83 85, WhatsApp Web ayrı Brave profili `D:\Mevzu\ortak\brave-wa`, CDP 9224): açıklama, e-posta, web sitesi, hakkında ("Mevzu JSPS destek hattı", WhatsApp'ta süreli → 10 Kas 2027'de yenile), mesai 09:00–22:00 her gün, hızlı cevaplar /merhaba /eposta /guncelle /tesekkur. İşletme adı hâlâ "MEVZU" (değişiklik başkana soruldu). Karşılama/uzakta mesajı yalnız telefondan kurulur.
