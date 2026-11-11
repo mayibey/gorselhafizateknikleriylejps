@@ -3668,3 +3668,8 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Hatırlatma pop-up V2 (bayrak `indirim-hatirlat-v2`, KAPALI): başkan düzeltti "zamana değil eyleme bağlı olsun" → çalışma/kart/oyun/deneme yapılan oturumda Karargah dönüşünde çıkar; oturumda 1, arada ≥30 dk, sayı sınırı yok; "Bir daha gösterme" + "Sonra hatırlat". OTA 1.0.47 + 1.0.46.
 - Ölçüm (60 gün, ilk satın alma): Android 12 ilk 48 saatte / 12 sonra; iOS 18 / 12. 978 yeni hesap.
 - 11 Kas: başkan "yay" → `indirim-hatirlat-v2` HERKESE AÇIK (ozellik_herkes). iOS'ta `ios_indirim_aktif=0` kaldığı için şimdilik yalnız Android'de görünür; Apple i20'yi onaylayınca şalter açılacak (başkan onayı).
+
+## 11 Kas 2026 — Google Play satıcı beyanı
+- Hesap "satıcı (tacir)" olarak beyan edildi; telefon +90 553 083 83 85 SMS ile doğrulandı (WhatsApp Business destek hattı da bu numara).
+- JSPS uygulaması düzeyinde satıcı onayı + Hizmet Şartları (mevzujsps.com/sartlar.html) kaydedildi, Google incelemesine gönderildi (genelde ≤7 gün). Son tarih 1 Şub 2027 karşılandı.
+- YÖKDİL uygulaması ayrı projede; dokunulmadı.
