@@ -7,7 +7,14 @@ import { AppText } from '@/components/ui/app-text';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { kalanParcala } from '@/lib/geri-sayim';
 import { type IndirimDurumu, indirimDurumuOku } from '@/lib/indirim';
-import { hatirlatGosterildi, hatirlatUygunMu } from '@/lib/indirim-hatirlatma';
+import {
+  hatirlatBirDahaGosterme,
+  hatirlatGosterildi,
+  hatirlatGosterildiV2,
+  hatirlatUygunMu,
+  hatirlatUygunMuV2,
+} from '@/lib/indirim-hatirlatma';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { useUyelik } from '@/lib/uyelik-context';
 import { ayarOku } from '@/lib/uzak-ayar';
 
@@ -34,6 +41,9 @@ function ikiHane(n: number): string {
 export function IndirimHatirlatma() {
   const router = useRouter();
   const { premium } = useUyelik();
+  // V2 (11 Kas 2026): 'bir daha gösterme' + ara ara hatırlatma (3 saatte bir, en çok 5) + çalışmadan
+  // da tetik (ilk açılıştan 10 dk sonra). Kurallar lib/indirim-hatirlatma.ts V2 bölümünde.
+  const v2 = useKisiselOzellik('indirim-hatirlat-v2');
   const [indirimDesteklenir, setDesteklenir] = useState(Platform.OS === 'android');
   useEffect(() => {
     if (Platform.OS !== 'ios') return;
@@ -48,12 +58,12 @@ export function IndirimHatirlatma() {
       let iptal = false;
       void (async () => {
         if (!indirimDesteklenir || premium || seansGosterildi) return;
-        if (!(await hatirlatUygunMu())) return;
+        if (!(await (v2 ? hatirlatUygunMuV2() : hatirlatUygunMu()))) return;
         const d = await indirimDurumuOku();
         if (iptal || !d || d.kaynak !== 'ilk_giris' || !d.bitis) return;
         if (new Date(d.bitis).getTime() <= Date.now()) return; // süresi bitmiş
         seansGosterildi = true;
-        await hatirlatGosterildi();
+        await (v2 ? hatirlatGosterildiV2() : hatirlatGosterildi());
         if (!iptal) {
           setSimdi(Date.now());
           setDurum(d);
@@ -62,7 +72,7 @@ export function IndirimHatirlatma() {
       return () => {
         iptal = true;
       };
-    }, [premium, indirimDesteklenir]),
+    }, [premium, indirimDesteklenir, v2]),
   );
 
   // Modal açıkken saniyede bir tikle.
@@ -127,9 +137,23 @@ export function IndirimHatirlatma() {
           </Pressable>
           <Pressable onPress={kapat} hitSlop={8} style={styles.sonra}>
             <AppText variant="kucuk" color="solukMetin" bold>
-              Şimdilik kapat
+              {v2 ? 'Sonra hatırlat' : 'Şimdilik kapat'}
             </AppText>
           </Pressable>
+          {v2 ? (
+            <Pressable
+              onPress={() => {
+                void hatirlatBirDahaGosterme();
+                kapat();
+              }}
+              hitSlop={8}
+              style={styles.birDaha}
+              accessibilityRole="button">
+              <AppText variant="etiket" color="solukMetin" style={styles.altCizgi}>
+                Bir daha gösterme
+              </AppText>
+            </Pressable>
+          ) : null}
         </View>
       </View>
     </Modal>
@@ -249,5 +273,11 @@ const styles = StyleSheet.create({
   },
   sonra: {
     paddingVertical: Spacing.two,
+  },
+  birDaha: {
+    paddingBottom: Spacing.one,
+  },
+  altCizgi: {
+    textDecorationLine: 'underline',
   },
 });
