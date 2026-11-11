@@ -3679,3 +3679,9 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - GÜVENLİK: bu depo PUBLIC. PROJE_DURUM'daki inceleme demo parolası kaldırıldı (geçmişte duruyor → parola değişimi başkan kararı). Hafızadaki Google şifresi / TikTok secret / Meta client token → `D:\Mevzu\ortak\gizli\` (git dışı). Depoda yalnız Supabase anon anahtarı var (role=anon doğrulandı).
 - Hafıza dizini 163→138 satır (25 eski konu arsiv-kapanan-isler.md'ye).
 - WhatsApp Business (0553 083 83 85, WhatsApp Web ayrı Brave profili `D:\Mevzu\ortak\brave-wa`, CDP 9224): açıklama, e-posta, web sitesi, hakkında ("Mevzu JSPS destek hattı", WhatsApp'ta süreli → 10 Kas 2027'de yenile), mesai 09:00–22:00 her gün, hızlı cevaplar /merhaba /eposta /guncelle /tesekkur. İşletme adı hâlâ "MEVZU" (değişiklik başkana soruldu). Karşılama/uzakta mesajı yalnız telefondan kurulur.
+
+## 11 Kas 2026 (gece) — Play ret: geçersiz gizlilik politikası → düzeltildi, yeniden gönderildi
+- Google, satıcı beyanı gönderimini "Gizlilik politikası bağlantısı dolaylı" diye reddetti: Play Console'da adres eski `mayibey.github.io/gorselhafizateknikleriylejps/` (site kökü → ana sayfa) idi.
+- Adres `https://mevzujsps.com/gizlilik/` yapıldı (200, yönlendirme yok; uygulamadaki `GIZLILIK_URL` ile aynı). Yeniden yüklendiğinde kayıtlı.
+- Yayın özeti → 2 değişiklik (gizlilik adresi + satıcı beyanı) yeniden incelemeye gönderildi; durum "İncelenmekte olan değişiklikler". Uygulama mağazada kalmaya devam ediyor (eski sürüm yayında).
+- WhatsApp destek hattı bütün Mevzu uygulamaları için ortaklaştırıldı (ayrıntı: ortak/karargah/PORTFOY.md).
