@@ -3665,5 +3665,5 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 ## 11 Kas 2026 — İlk giriş indirimi düzeni
 - Keşif: ilk giriş indirimi sunucuda 48 saatti (başkan 24 sanıyordu) → **24 saat** yapıldı (`uygulama_ayar.ilk_giris_indirim_saat`).
 - iOS'ta ilk giriş indirimi HİÇ çalışmıyordu: `musterek_omurboyu_i20` App Store'a hiç gönderilmemiş (READY_TO_SUBMIT) + `ios_indirim_aktif=0`. Ürün (1.249,99 TL) API ile incelemeye gönderildi → WAITING_FOR_REVIEW. Onaylanınca `ios_indirim_aktif=1` (başkan onayıyla).
-- Hatırlatma pop-up V2 (80efff6, bayrak `indirim-hatirlat-v2`, KAPALI): "Bir daha gösterme" + "Sonra hatırlat"; 3 saatte bir, en çok 5; çalışmaya girmeden de ilk açılıştan 10 dk sonra tetik. OTA 1.0.47 + 1.0.46.
+- Hatırlatma pop-up V2 (bayrak `indirim-hatirlat-v2`, KAPALI): başkan düzeltti "zamana değil eyleme bağlı olsun" → çalışma/kart/oyun/deneme yapılan oturumda Karargah dönüşünde çıkar; oturumda 1, arada ≥30 dk, sayı sınırı yok; "Bir daha gösterme" + "Sonra hatırlat". OTA 1.0.47 + 1.0.46.
 - Ölçüm (60 gün, ilk satın alma): Android 12 ilk 48 saatte / 12 sonra; iOS 18 / 12. 978 yeni hesap.
