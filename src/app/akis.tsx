@@ -50,6 +50,7 @@ import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 import type { QueueCard } from '@/lib/queue';
+import { indirimEylemIsaretle } from '@/lib/indirim-hatirlatma';
 import type { SrsCevap } from '@/lib/srs';
 
 type Cozulen = { tekrar: number; yeni: number };
@@ -75,6 +76,10 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
 }
 
 export default function AkisScreen() {
+  // Kart çalışıldı → indirim hatırlatma tetiği (V2: Karargah'a dönünce çıkar).
+  useEffect(() => {
+    indirimEylemIsaretle();
+  }, []);
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   useImzaliTazele(); // web imzalı modda görsel URL'leri gelince yeniden çiz (native no-op)
   const router = useRouter();

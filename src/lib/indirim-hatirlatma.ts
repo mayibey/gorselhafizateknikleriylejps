@@ -41,49 +41,41 @@ export async function hatirlatGosterildi(): Promise<void> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// V2 (11 Kas 2026, başkan): "ilkinde almazsa biraz kullandıktan sonra pop-up çıksın, altında
-// 'bir daha gösterme' olsun; seçerse bir daha göstermeyiz, seçmezse ara ara hatırlatırız."
-// Bayrak: 'indirim-hatirlat-v2'. Kurallar:
-//  - Tetik: çalışmaya (patika) girmiş OLMAK ya da uygulamayı ilk açılıştan ≥ ILK_BEKLE_DK dakika
-//    sonra kullanıyor olmak (biraz gezinmiş/ücretsiz bir şey denemiş).
-//  - "Bir daha gösterme" seçildiyse ASLA.
-//  - İki gösterim arası en az ARA_SAAT saat; toplam en fazla V2_MAX (indirim zaten 24 saat sürer).
+// V2 (11 Kas 2026, başkan): "uygulama içinde bir şeyler yapınca göstermeli; zamana bağlı olmasın.
+// Altında 'bir daha gösterme' olsun." Bayrak: 'indirim-hatirlat-v2'. Kurallar:
+//  - Tetik: BU OTURUMDA bir eylem yapılmış olmalı (çalışma/patika, kart akışı, oyun, deneme bitirme)
+//    → Karargah'a dönünce çıkar. Eylem yoksa çıkmaz (sadece açıp bakana gösterilmez).
+//  - Oturumda en fazla bir kez (bayrak bileşende). Hemen kapat-aç ile sıkıştırmasın diye iki gösterim
+//    arası en az ARA_DK dakika.
+//  - "Bir daha gösterme" seçildiyse ASLA. Sayı sınırı yok; indirim süresi (24 saat) bitince kendiliğinden biter.
 // ─────────────────────────────────────────────────────────────────────────────
-const ILK_ACILIS_KEY = 'jsps.indhat.ilkacilis'; // ilk görülme zamanı (ms)
 const SON_KEY = 'jsps.indhat.son'; // son gösterim zamanı (ms)
 const GOSTERME_KEY = 'jsps.indhat.gosterme'; // '1' = bir daha gösterme
-const ILK_BEKLE_DK = 10;
-const ARA_SAAT = 3;
-const V2_MAX = 5;
+const ARA_DK = 30;
 
-async function sayiOku(k: string): Promise<number> {
-  return parseInt((await AsyncStorage.getItem(k)) ?? '0', 10) || 0;
+// Modül-yerel: uygulama açık kaldığı sürece geçerli (kapat-aç → yeni oturum → sıfır).
+let seansEylem = false;
+
+/** Kullanıcı uygulamada bir şey yaptı (çalışma, kart, oyun, deneme) → hatırlatma tetiği açılır. */
+export function indirimEylemIsaretle(): void {
+  seansEylem = true;
 }
 
 /** V2: hatırlatma şimdi gösterilebilir mi? */
 export async function hatirlatUygunMuV2(simdi = Date.now()): Promise<boolean> {
+  if (!seansEylem) return false;
   try {
     if ((await AsyncStorage.getItem(GOSTERME_KEY)) === '1') return false;
-    let ilk = await sayiOku(ILK_ACILIS_KEY);
-    if (!ilk) {
-      ilk = simdi;
-      await AsyncStorage.setItem(ILK_ACILIS_KEY, String(simdi));
-    }
-    const calisti = (await AsyncStorage.getItem(TCK_KEY)) === '1';
-    const gezindi = simdi - ilk >= ILK_BEKLE_DK * 60_000;
-    if (!calisti && !gezindi) return false;
-    if ((await sayiOku(SAYAC_KEY)) >= V2_MAX) return false;
-    const son = await sayiOku(SON_KEY);
-    return !son || simdi - son >= ARA_SAAT * 3_600_000;
+    const son = parseInt((await AsyncStorage.getItem(SON_KEY)) ?? '0', 10) || 0;
+    return !son || simdi - son >= ARA_DK * 60_000;
   } catch {
     return false;
   }
 }
 
-/** V2: gösterildi → sayaç + son gösterim zamanı. */
+/** V2: gösterildi → son gösterim zamanı. */
 export async function hatirlatGosterildiV2(simdi = Date.now()): Promise<void> {
   try {
-    await AsyncStorage.setItem(SAYAC_KEY, String((await sayiOku(SAYAC_KEY)) + 1));
     await AsyncStorage.setItem(SON_KEY, String(simdi));
   } catch {
     // yut

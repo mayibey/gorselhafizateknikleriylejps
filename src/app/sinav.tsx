@@ -43,6 +43,7 @@ import {
 } from '@/lib/sinav-ilerleme';
 import { HataBildirDugmesi } from '@/components/sinav/hata-bildir';
 import { sonucKaydet, type Yanlis } from '@/lib/deneme-servis';
+import { indirimEylemIsaretle } from '@/lib/indirim-hatirlatma';
 import { AciklamaMetni } from '@/components/sinav/aciklama-metni';
 import { SoruMetni } from '@/components/sinav/soru-metni';
 import { bugunISO } from '@/lib/srs';
@@ -477,6 +478,7 @@ export default function SinavScreen() {
           dogru: q.dogru,
           aciklama: q.aciklama,
         }));
+      indirimEylemIsaretle(); // deneme bitti → indirim hatırlatma tetiği (V2)
       void sonucKaydet({
         takim,
         // Branşa göre karma: sunucuda branş başına ayrı numara (sıralama branşlar arası karışmasın).

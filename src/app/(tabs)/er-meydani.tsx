@@ -1,5 +1,7 @@
 import { useFocusEffect, useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
+
+import { indirimEylemIsaretle } from '@/lib/indirim-hatirlatma';
 import { ActivityIndicator, AppState, BackHandler, ImageBackground, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useKisiselOzellik } from '@/lib/ozellik';
@@ -27,6 +29,10 @@ import { oyunKapsami } from '@/lib/oyun-kapsam';
  * menüsünde takılmasın diye doğrudan lobiye aktarılıyor.
  */
 export default function OyunMerkeziScreen() {
+  // Oyun merkezine girildi → indirim hatırlatma tetiği (V2).
+  useEffect(() => {
+    indirimEylemIsaretle();
+  }, []);
   const geceTema = useKisiselOzellik('talim-mevzuata');
   // YÜKLEME EKRANI (bayraklı, 16 Ağu — yalnız başkan + Kemalettin): sekmeye
   // dokunulduğu ANDA dağ görseli + "Oyunlar hazırlanıyor…" görünür. Eskiden
