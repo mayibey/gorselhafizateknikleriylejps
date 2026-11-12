@@ -3685,3 +3685,9 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Adres `https://mevzujsps.com/gizlilik/` yapıldı (200, yönlendirme yok; uygulamadaki `GIZLILIK_URL` ile aynı). Yeniden yüklendiğinde kayıtlı.
 - Yayın özeti → 2 değişiklik (gizlilik adresi + satıcı beyanı) yeniden incelemeye gönderildi; durum "İncelenmekte olan değişiklikler". Uygulama mağazada kalmaya devam ediyor (eski sürüm yayında).
 - WhatsApp destek hattı bütün Mevzu uygulamaları için ortaklaştırıldı (ayrıntı: ortak/karargah/PORTFOY.md).
+
+## 13 Kas 2026 — iOS ilk giriş indirimi AÇILDI
+- Apple `musterek_omurboyu_i20` (1.249,99 TL) ürününü onayladı (13 Kas e-postası). Başkan "aç" dedi → `uygulama_ayar.ios_indirim_aktif = 1` (00:4x). Kod/OTA gerekmedi.
+- Ürün App Store'a ≤24 saatte yayılır; o arada iPhone satın alma ekranı güvenli şekilde normal fiyata düşer (paywall.tsx yorumu). Sunucu doğrulaması (dogrula-satinalma) i20'yi zaten tanıyor.
+- Geri almak: `ios_indirim_aktif = 0`. Betik: scratchpad/ios-indirim-ac.mjs.
+- Açık iş: inceleme demo parolasını değiştirmek (başkan kararı).
