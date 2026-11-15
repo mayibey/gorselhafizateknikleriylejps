@@ -3701,5 +3701,5 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 ## 15 Kas 2026 (gece) — "Sunucu yavaşladı" uyarıları incelendi: yanlış alarm
 - Nöbetçi günde 0-2 kez tek dakikalık "yavaşladı" uyarısı atıyor (ör. 21:18 giriş 18,7 sn). Makine o anlarda boş.
 - Supabase kayıtları: gecikme Cloudflare Paris ↔ Singapur yolunda; makinenin işlem süresi 0-23 ms. 8-15 Kas gerçek kullanıcı ~16,9 bin istek: 3 sn üstü 0, sunucu hatası 0.
-- Kod değişmedi. ÖNERİ (onay bekliyor): nöbetçi tek yavaş ölçümde uyarmasın, bir kez daha ölçüp yine yavaşsa uyarsın (VPS /opt/mevzu-nobetci, pm2 restart gerekir).
+- DÜZELTİLDİ (başkan onayıyla, 21:28): nöbetçi tek yavaş ölçümde uyarmıyor; 5 sn sonra bir daha ölçer, yine yavaşsa uyarır. Sahte bildirimle denendi, yeniden başlatıldı, ölçüm sürüyor. Yedek VPS'te `nobetci.mjs.yedek-20261115`; kaynak bot deposunda `nobetci/nobetci.mjs`. Uygulama koduna dokunulmadı.
 - Araç: scratchpad/supabase-log-sorgu.mjs (yeni Supabase kayıt ucu; eski logs.all kaldırılmış).
