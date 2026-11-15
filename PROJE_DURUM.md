@@ -3816,3 +3816,36 @@ Müşterek kalite analizinin 6. kanunu (Resmî Yazışmalarda Uygulanacak Usul v
   - Küçük: m24_1 ("bilgi alınacak TEK kişi", "imzacı değildir"); m23_1 ("alt çizgisinde" — doğrusu iletişim alanı üst çizgisinin üzerindeki iki satır); m10_1 (tabela "İl Özel İdaresi", antet "Çankaya Kaymakamlığı"; "T.C. T.C." tekrar); m17_1 ("ASİL MAKAM" yazımı); m18_1 ("ara makam uygular" bozuk ifade); m3_2 (2. panel etiketi yarım: "kullanım"; 4. panelde etiket "elektronik onay", sahne tasfiye).
   - Mehazla tek tek karşılaştırılıp doğru bulunanlar: m2_1, m3_1, m4_1, m5_1, m6_1, m11_1, m16_1, m16_2, m19_1, m26_1, m27_1, m29_1, m32_1, m33_1, ozet_ozet.
 - Ölçülmedi: "eski 2,5 cm" ve "eski ek 15 gün" iddiaları (2014 yönetmeliği elde yok); m13_1'de muhatap örneğindeki "T.C." (örnekler mehaz ekinde, ek elde yok).
+
+
+## 16 Kas 2026 — Personel Yönetmeliği kalite analizi (yalnız rapor, hiçbir içerik DEĞİŞMEDİ)
+Müşterek kalite analizinin 7. kanunu (JGK ve SGK Personel Yönetmeliği; klasör personelyon, kanun no 22). İlerleme: TCK ✅ 7,5 · Disiplin ✅ 7,5 · Kabahatler ✅ 7 · Jandarma Teşkilat Yön. ✅ 6,5 · Jandarma Kanunu ✅ 7,5 · Resmî Yazışma ✅ 7,5 · Personel Yön. ✅ 7 · kalan 18 kanun.
+
+**Personel Yönetmeliği — genel not: 7 / 10.** Ölçülen: emir kapsamı (tamamı, 64 madde; m.43–44 mülga), 29 görselin tamamı tek tek açıldı, 29 ses metninin tamamı okundu, 35 sorunun tamamı mehazla karşılaştırıldı, kart metinleri fıkra fıkra mehazla eşlendi. Alt notlar: kapsam 7 · madde metni 7 · anlatım 7,5 · sorular 7,5 · görseller 6,5.
+
+- **İyi taraf:** 35 soruda yanlış cevap anahtarı yok. Elle yazılmış 7 kart (m.9, 11, 16, 21, 30, 32, 53) mehazla birebir. m.7 kart metni güncel (Hukuk + İnsansız Hava Aracı var). Mülga m.43–44'e hiçbir yerde atıf yok. Anlatım dili temiz ve anlaşılır.
+- **Kapsam:** Kart metni hiç olmayan maddeler: m.6, m.8 (2 sorusu var), m.12 (görseli var, metin yalnız m.11), m.13, m.17, m.22, m.27–29, m.31 (görseli var, metin yalnız m.30), m.34, m.47/1, m.48, m.49, m.57–59, m.61–64.
+- **Madde metni:**
+  - AĞIR: m.46 kartı m.50'yi ESKİ hâliyle veriyor ("fiilen hayatını tehlikeye atarak üstün bir cesaret ve feragatle… üstün cesaret ve feragat madalyası"). 13/11/2025 değişikliğiyle güncel metin: görevini cesaret, feragat, kahramanlık veya üstün başarı ile yerine getirene üstün cesaret ve feragat madalyası, şeref madalyası ve üstün hizmet madalyası; Bakan verir.
+  - m.56 kartında yalnız f.1–2 var; 2021'de eklenen uzman erbaş fıkraları (f.3–5) yok.
+  - Kısaltılmış kartlar: m.4 (14 tanımdan 4'ü), m.5 (f.2–3 yok), m.10 (f.3–5 yok), m.14 (f.1 yok), m.15 (f.2, 3, 5 yok), m.1–3 kartı (m.2/2 kanun listesi yok), m.18–20, m.23–24 (zimmet/Hazine, AİHM yok), m.35–37 (m.37/2 istisnalar yok), m.38–41 (m.40 listesi, m.41/3 yok), m.42 (f.3–8 yok), m.45 (f.2, 5 yok), m.54–55 (bent a, b, d ve f.2, f.4 yok), m.60 (f.4 yok).
+- **Anlatım (ses):**
+  - personelyon_m46_1: madalya eski metinle anlatılıyor (şeref madalyası ve üstün hizmet madalyası yok; "kahramanlık veya üstün başarı" şartı yok). "Bakan verir" kısmı doğru.
+  - personelyon_m15_1: "aynı yerdeki göreve atanan, tebliğ edildiği gün işe başlar" diyor. Mehaz m.15/1: tebliğ gününü İZLEYEN işgünü içinde. (Kart metni doğru.)
+  - personelyon_m11_12: m.12/1'deki 9 atama kriterinden yalnız 3'ü anlatılıyor; "varsa puanlama sistemi"ndeki "varsa" düşmüş.
+  - personelyon_m56_1: yalnız f.1–2.
+  - personelyon_ozet_yasakxayirt: yasakları "tarafsızlık (m.19) / kazanç (m.37–40)" diye ikiye ayırıyor; mehazda böyle bir ayrım yok, toplu eylem–grev (m.35–36) ve gizli bilgi (m.41) iki gruba da girmiyor.
+  - Küçük: m10_1 "hizmet süresini tamamlama esastır" hükmünü bütün personele genelliyor (mehaz: subay ve astsubay); ozet_ozet soruşturma usullerinde 353'ü atlıyor.
+- **Sorular:** Yanlış anahtar yok (35/35). 7 ikiz çift var (aynı hüküm iki kez soruluyor): S-014↔OO-004, S-027↔OO-006, S-018↔OO-007, S-020↔OO-010, S-021↔OO-009, S-023↔OO-011, S-016↔OO-012. Sorusu olmayan önemli hükümler: m.50 madalya, m.56, m.9, m.12 (1.000.000 kuralı), m.16, m.30–31, m.32, m.15/4, m.21, m.35–36, m.40. Doğru şık dağılımı dengesiz: B 11 · A 8 · C 8 · D 6 · E 2. EK-001'de doğru şık en uzun şık.
+- **Görseller (29 görselin 8'i kusurlu, 1'i ağır):**
+  - AĞIR — personelyon_m7_1: Sahil Güvenlik SUBAY çekmecelerinde "Güverte, Makine, Uçak bakım" yazıyor; bunlar astsubay branşları. Mehazda SGK subay: Sahil güvenlik, İkmal, Mühendis, Hukuk. Jandarma SUBAY çekmecesinde "Uçak-helikopter teknisyeni" var; o da astsubay branşı (subayda Pilot).
+  - personelyon_m46_1: vitrin gözleri 1–7 numaralı, mehazda 6 ödül var ("3 başarı = 1 üstün" sayacına da numara verilmiş). Üç madalya adı yok.
+  - personelyon_m11_12: kura toplarında "Komando, İstihbarat, Asayiş, Siber, Kaçakçılık" yazıyor; bunlar m.7'deki branşlar değil. Altıncı top bozuk harfli ikinci "Kaçakçılık". Terazide 9 kriterden 4'ü.
+  - personelyon_m14_1: takvimde 14 ay hücresi (Aralık'tan sonra Ocak–Şubat tekrar); süs kutusu "Altın kural: Zamanın doğrusu, atamanın gücüdür".
+  - personelyon_m32_1: 4. basamakta "4 4" çift rakam; "İkinci amir / Üçüncü amir" uydurma etiket.
+  - personelyon_ozet_ozet: "nüfusu 1.000.000'u aşan İL hariç" — mehaz: ilçe.
+  - personelyon_ozet_yasakxayirt: "Ticaret/esnaflık" tarafsızlık (m.19) tarafına konmuş (m.37 kazanç yasağı); gizli bilgi kazanç tarafında (m.41); iki süs levhası.
+  - personelyon_m15_1: alt kutuda "Aynı yer: tebliğ günü" (izleyen işgünü kaydı yok; üst kısımdaki ok doğru).
+  - Küçük: m54_55 "hamilelikte sivil OLUR" (mehaz: belgelediği takdirde sivil kıyafetle görev yapabilir), kapı tabelası bozuk harfli; m25_1 uydurma zincir; m21_1 "Anayasa, Kanun, Yönetmelik, Genelge" (mehaz: kanun, tüzük, yönetmelik); m4_1 7/14 tanım.
+  - Temiz: ayirt_m53, m10_1, m16_1, m18_1, m1_3, m24_1, m30_31, m33_1, m35_1, m38_1, m42_1, m45_1, m51_1, m56_1 (yalnız f.1–2), m5_1, m60_1, m9_1.
+- Ölçülmedi: seslerin gerçek kaydı dinlenmedi (yalnız metin okundu); m.50'nin 13/11/2025 öncesi resmî metni ayrıca aranmadı (kart metnindeki ifade "eski" diye mehazdaki "Değişik" notuna dayanarak işaretlendi).
