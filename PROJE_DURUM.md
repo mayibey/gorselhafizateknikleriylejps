@@ -3849,3 +3849,33 @@ Müşterek kalite analizinin 7. kanunu (JGK ve SGK Personel Yönetmeliği; klas�
   - Küçük: m54_55 "hamilelikte sivil OLUR" (mehaz: belgelediği takdirde sivil kıyafetle görev yapabilir), kapı tabelası bozuk harfli; m25_1 uydurma zincir; m21_1 "Anayasa, Kanun, Yönetmelik, Genelge" (mehaz: kanun, tüzük, yönetmelik); m4_1 7/14 tanım.
   - Temiz: ayirt_m53, m10_1, m16_1, m18_1, m1_3, m24_1, m30_31, m33_1, m35_1, m38_1, m42_1, m45_1, m51_1, m56_1 (yalnız f.1–2), m5_1, m60_1, m9_1.
 - Ölçülmedi: seslerin gerçek kaydı dinlenmedi (yalnız metin okundu); m.50'nin 13/11/2025 öncesi resmî metni ayrıca aranmadı (kart metnindeki ifade "eski" diye mehazdaki "Değişik" notuna dayanarak işaretlendi).
+
+
+## 16 Kas 2026 — Hizmet Esasları Yönetmeliği kalite analizi (yalnız rapor, hiçbir içerik DEĞİŞMEDİ)
+Müşterek kalite analizinin 8. kanunu (JGK ve SGK Personelinin Hizmet Esasları Hakkında Yönetmelik; klasör hizmetesas, kanun no 23). İlerleme: TCK ✅ 7,5 · Disiplin ✅ 7,5 · Kabahatler ✅ 7 · Jandarma Teşkilat Yön. ✅ 6,5 · Jandarma Kanunu ✅ 7,5 · Resmî Yazışma ✅ 7,5 · Personel Yön. ✅ 7 · Hizmet Esasları Yön. ✅ 7 · kalan 17 kanun.
+
+**Hizmet Esasları Yönetmeliği — genel not: 7 / 10.** Ölçülen: emir kapsamı (tamamı, 35 madde; mehazda mülga/değişik notu yok), 29 görselin tamamı tek tek açıldı, 29 ses metninin tamamı okundu, 33 sorunun tamamı mehazla karşılaştırıldı, kart metinleri fıkra fıkra mehazla eşlendi. Alt notlar: kapsam 7 · madde metni 6,5 · anlatım 8,5 · sorular 7,5 · görseller 6,5.
+
+- **İyi taraf:** 33 soruda yanlış cevap anahtarı yok; açıklamalar madde/fıkra atıflı ve doğru. 29 ses metninde yanlış hüküm yok (m.19 sesi 14 vasfın tamamını sayıyor). Tam metin kartlar (m.4, 12, 16, 20, 21, 25, 28, 30, 32) mehazla birebir. Her maddenin en az bir görseli var.
+- **Kapsam:** Kart metni hiç olmayan maddeler: m.13 (ceza), m.29 (kantin), m.31 (tören), m.33 (yangın) — görselleri var, alttaki metin yalnız m.12 / m.28.
+- **Madde metni (yanlış metin yok, kısaltma çok):**
+  - m.10: 18 fıkradan 13'ü var; f.8 (muhalif ikinci emir), f.12, f.13 (astın emri değiştirmesi), f.16, f.17 yok.
+  - m.18: f.2, f.10 (cephe selamı), f.11 (millî marş), f.13, f.14 yok — ses ve görsel bunları anlatıyor, metin göstermiyor.
+  - m.7: 10 fıkradan 6'sı yok (f.3, 4, 5, 6, 8, 9). m.8: 11/14. m.9: f.8 ve f.11 yok. m.11: f.5 yok. m.14: f.4 yok. m.15: f.6, f.12 ve f.9'un j, k, l, ö, p bentleri yok. m.17: 4/7. m.19: f.1–3 yok, bent açıklamaları "(...)". m.22: f.3, f.6 ve f.5 a-b-c yok. m.23: f.3–4 ve bentlerin çoğu yok. m.26–27: m.26/2 ve m.27/4 yok.
+  - Küçük: m.4 ve m.30 metnine sayfa numarası artığı ("1/17", "2/17") karışmış.
+- **Anlatım (ses):** Yanlış hüküm yok. Küçük kusurlar: hizmetesas_m23_1 "ölçüt rütbe değil kıdemdir, en yüksek rütbeli diyene kanmayın" diye mehazda olmayan bir tuzak kuruyor; hizmetesas_m32_1 "sıralı âmirleri aracılığıyla" (mehaz: sıralı amirleri ile ilgisine göre JGK veya SGK'ya haber); hizmetesas_m15_1 çivisi "yüzük yasak" (nişan, evlilik ve devre yüzüğü serbest; gövdede doğru); hizmetesas_ayirt_m4 kıdem tanımının ikinci yarısını (aynı nasıplılar arasında yeterlik sırası) atlıyor.
+- **Sorular:** Yanlış anahtar yok (33/33). Doğru şık tek başına en uzun şık: 16/33; vaka sorularında 8/11. Şık dağılımı B 12 · C 8 · A 5 · D 4 · E 4. Altı ikiz çift (aynı hüküm iki kez): S-016↔OO-003, S-021↔OO-008, S-026↔OO-009, S-029↔OO-010, S-006↔OO-006, S-013↔OO-002. Kök kusuru: sabit önek yapıştırılınca çift "göre" (S-019, S-023) ve önekten sonra küçük harfle başlayan vaka cümleleri. Hiç sorulmayan sınavlık hükümler: m.10/8 muhalif ikinci emir, m.10/13 astın emri değiştirmesi, m.18/10 cephe selamı, m.18/11 millî marş, m.6/6 devlet memuru, m.24/2, m.30, m.32.
+- **Görseller (29 görselin 9'u mehaza aykırı/yanıltıcı, 3'ünde yazım hatası, 7'sinde küçük kusur, 10'u temiz):**
+  - hizmetesas_m26_1: "en az 3 kişi olmalıdır" kutusunda 2 ile birlikte 5'in de üstü çizili; 5 kişi serbest (en az üç, birliğin tamamına kadar). Ayrıca mehazda olmayan "hazır kıt'a emri" listesi ve nöbet çizelgesi.
+  - hizmetesas_m24_1: "Görev çağırırsa kalmak zorundadır; ayrılmaya engel değildir" — cümle bozuk, ters anlam veriyor (mehaz: 40 saat, göreve çağrılmaya veya görev yerinden ayrılmamaya engel teşkil etmez). Alt şeritte de aynı.
+  - hizmetesas_m5_1: levhada uzun bir ant metni yazıyor; yönetmelikte ant metni yok (m.5/2: mevzuatta belirtildiği şekilde ant içer). Metin uydurma. Kürsüde anlamsız "MÜHÜR" yazısı.
+  - hizmetesas_m32_1: "harekete geçtikten sonra 1) mahallin en büyük mülki âmirine bildir" — m.32/1 (afeti mülki âmire haber verme) ile m.32/2 (yardımdan sonra sıralı âmirlere ve JGK/SGK'ya haber) birbirine karışmış; "sıralı âmir vasıtasıyla" (mehaz: sıralı amirleri ile).
+  - hizmetesas_m19_1: halkada 11 vasıf var, mehazda 14; "göreve hazırlık", "iyi geçinmek", "emel ve fikir birliği" yok; "canını esirgememek" yerine "fedakârlık" yazılmış.
+  - hizmetesas_ozet_ozet: hiyerarşi merdiveninde 7 basamak; astsubay ile uzman jandarma arasında bozuk harfli, var olmayan bir basamak ("UZSUBAY"). Mehaz 6 statü.
+  - hizmetesas_m23_1: "en kıdemli (rütbe değil, kıdem ölçütü)" uydurma tuzak; "karargâh veya kurum âmiri" yok; yasak malzeme için uydurma liste (silah/patlayıcı, alkol/uyuşturucu, izinsiz cihaz, yasak yayın) — mehaz yalnız "yasak edilen malzemeler" der.
+  - hizmetesas_m22_1: "4. kurala aykırı durumu bildir" adımı m.22'de yok; "başka kimse yetkili değildir" eklemesi.
+  - hizmetesas_m1_1: "yükümlü → ayrı" oku ve çivi fazla sade (m.2/2: yükümlüler kapsamda; yalnız yönetmelikte olmayan hususlarda kendi mevzuatı); yükümlü figüründe anlamsız "27" etiketi; "mesai / mesai dışı" (mehaz: görev esnasında / görev dışında).
+  - Yazım hatası: hizmetesas_m30_1 başlıkta "ARAÇLARNDAN"; hizmetesas_m10_2 "İSRADA 2. yapılır" (ısrarda); hizmetesas_ayirt_m4 çekmecede "NASİP" (nasıp) + İngilizce "START" düğmesi.
+  - Küçük: m28_33xcerceve ("esas/oran sorulmaz" iddiası; m.28 başlığı yalnız "sosyal tesisler", vardiya yatakhanesi ve eğitim merkezi yok); m25_1 ("her personel tek tek yoklanır" dolgu cümlesi); m7_1 ("4 unsur" — mehaz "gibi" diyerek örnek sayar); m11_1 (anlamsız dev "MÜHÜR", başvuranlar sivil); m17_1 (uydurma duvar sloganı); m14_1 ("Temmuz" yarı kapalı); m15_2 ("kurum ile ilişki sonlandığında" — ilişiği kesildiğinde).
+  - Temiz: ayirt_m12, m10_1, m15_1, m16_1, m18_1, m20_1, m21_1, m6_1, m8_1, m9_1.
+- Ölçülmedi: seslerin gerçek kaydı dinlenmedi (yalnız metin okundu); hizmetesas_m15_1 görselindeki "açığa alma" ifadesi mehazdaki "görevden uzaklaştırma" ile tek tek karşılaştırılmadı.
