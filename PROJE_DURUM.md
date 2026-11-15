@@ -3691,3 +3691,8 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Ürün App Store'a ≤24 saatte yayılır; o arada iPhone satın alma ekranı güvenli şekilde normal fiyata düşer (paywall.tsx yorumu). Sunucu doğrulaması (dogrula-satinalma) i20'yi zaten tanıyor.
 - Geri almak: `ios_indirim_aktif = 0`. Betik: scratchpad/ios-indirim-ac.mjs.
 - Açık iş: inceleme demo parolasını değiştirmek (başkan kararı).
+
+## 15 Kas 2026 — Gizlilik politikası düzeltildi (yayında, adcf0ad)
+- Sorun: site politikası "reklam kimliği TOPLAMIYORUZ, seni izlemiyoruz" diyordu; uygulamada Meta (fbsdk) + TikTok Business SDK var, Android'de AD_ID izni + reklam kimliği izinsiz toplanıyor.
+- Düzeltme (başkan "yay"): veri sorumlusu "Adem Yılmaz (bireysel geliştirici) — Mevzu markası"; Meta/TikTok reklam ölçümü, reklam kimliği, iPhone izin, Android sıfırlama yolu, yurt dışı aktarım beyan edildi.
+- AÇIK: (1) uygulama içi kopya `src/constants/yasal-metin.ts` hâlâ eski → OTA (onay); (2) Play "Veri güvenliği" formunda reklam kimliği beyanı kontrol edilecek; (3) yurt dışı aktarım onayı kullanım şartlarına bağlı → ayrı onay kutusu (kod, onay); (4) Android'de takip izni yok.
