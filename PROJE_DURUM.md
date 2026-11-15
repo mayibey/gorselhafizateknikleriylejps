@@ -3697,3 +3697,9 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Düzeltme (başkan "yay"): veri sorumlusu "Adem Yılmaz (bireysel geliştirici) — Mevzu markası"; Meta/TikTok reklam ölçümü, reklam kimliği, iPhone izin, Android sıfırlama yolu, yurt dışı aktarım beyan edildi.
 - AÇIK: (1) uygulama içi kopya `src/constants/yasal-metin.ts` hâlâ eski → başkan: acil değil, İLK GÜNCELLEMEDE site metnine eşitle (veri sorumlusu Adem Yılmaz + Meta/TikTok bölümü); (2) Play "Veri güvenliği" formunda reklam kimliği beyanı kontrol edilecek; (3) yurt dışı aktarım onayı kullanım şartlarına bağlı → ayrı onay kutusu (kod, onay); (4) Android'de takip izni yok.
 - 15 Kas Play "Veri güvenliği" formu okundu (değişiklik YAPILMADI): "Üçüncü taraflarla veri paylaşımı yok" diyor; cihaz kimliği amacı yalnız "işlevsellik + sahtekârlık önleme", uygulama işlemleri "işlevsellik + kişiselleştirme". Meta/TikTok'a giden reklam kimliği + uygulama olayları "Paylaşılan" + amaç "Reklam/pazarlama, Analiz" olarak beyan edilmeli → 15 Kas başkan "düzelt": Cihaz kimlikleri + Uygulama işlemleri + İşlem geçmişi "Paylaşıldı" (Analiz, Reklam/pazarlama) + toplama amacına Analiz/Reklam eklendi; kaydedildi ve incelemeye gönderildi (≤7 gün).
+
+## 15 Kas 2026 (gece) — "Sunucu yavaşladı" uyarıları incelendi: yanlış alarm
+- Nöbetçi günde 0-2 kez tek dakikalık "yavaşladı" uyarısı atıyor (ör. 21:18 giriş 18,7 sn). Makine o anlarda boş.
+- Supabase kayıtları: gecikme Cloudflare Paris ↔ Singapur yolunda; makinenin işlem süresi 0-23 ms. 8-15 Kas gerçek kullanıcı ~16,9 bin istek: 3 sn üstü 0, sunucu hatası 0.
+- Kod değişmedi. ÖNERİ (onay bekliyor): nöbetçi tek yavaş ölçümde uyarmasın, bir kez daha ölçüp yine yavaşsa uyarsın (VPS /opt/mevzu-nobetci, pm2 restart gerekir).
+- Araç: scratchpad/supabase-log-sorgu.mjs (yeni Supabase kayıt ucu; eski logs.all kaldırılmış).
