@@ -3703,3 +3703,16 @@ Personel Altın Özet'te yanıltan 3 yer (görevdeki subayda emekli aylığı ba
 - Supabase kayıtları: gecikme Cloudflare Paris ↔ Singapur yolunda; makinenin işlem süresi 0-23 ms. 8-15 Kas gerçek kullanıcı ~16,9 bin istek: 3 sn üstü 0, sunucu hatası 0.
 - DÜZELTİLDİ (başkan onayıyla, 21:28): nöbetçi tek yavaş ölçümde uyarmıyor; 5 sn sonra bir daha ölçer, yine yavaşsa uyarır. Sahte bildirimle denendi, yeniden başlatıldı, ölçüm sürüyor. Yedek VPS'te `nobetci.mjs.yedek-20261115`; kaynak bot deposunda `nobetci/nobetci.mjs`. Uygulama koduna dokunulmadı.
 - Araç: scratchpad/supabase-log-sorgu.mjs (yeni Supabase kayıt ucu; eski logs.all kaldırılmış).
+
+## 15 Kas 2026 (gece) — TCK kalite analizi (yalnız rapor, hiçbir içerik DEĞİŞMEDİ)
+Başkan istedi: "TCK için kalite analizi; Türkçe anlaşılır mı, kapsam tam mı, mehazdaki gibi mi". Müşterek TCK'nın tamamı okundu/ölçüldü: 48 madde metni, 54 anlatım, 45 soru, 54 görsel (hepsi tek tek açıldı). Kaynak: emir Ek-1 + mehaz Word (7550 değişikliği dahil). **Genel not: 7,5 / 10.** Düzeltme için başkan onayı bekleniyor.
+- **Kapsam 10/10:** emirdeki 48 maddenin 48'inde kart + metin + anlatım var. Yan hata: emir süzgeç tablosunda (scripts/_emir-madde-kapsam.json, müşterek TCK) fazladan "8" var.
+- **Madde metni 8/10:** 39 madde mehazla kelimesi kelimesine aynı. 8 madde "(...)" ile kısaltılmış: 248, 254, 260, 265, 317, 319, 322, 323 (eksik fıkralar var).
+- **Anlatım 7,5/10:** Türkçe açık ve akıcı, rakamlar doğru, teşebbüs güncel (14-21 / 10-18). Yanlış/yanıltıcı: m.255 ("memur işin içindeyse yarı artar" → kanun: nüfuz ticaretini yapan kişinin kendisi kamu görevlisiyse; "nüfuzu varmış gibi gösterip"), m.5'e madde dışı kayıt, m.247 "mal devletindir". Sınavlık fıkrası atlananlar: 21, 22, 38, 40, 43, 250/4, 252/4-9, 254/3-4, 255/2+, 265/5, 319, 322/3, 323/2-4-5. Dil sürçmesi: m.38 "yardım edersiniz", m.265, m.20, m.22, özet 247-266 "fazın".
+- **Sorular 7,5/10:** 45 sorunun cevabı ve açıklaması mehazla uyumlu. Sakat senaryo: 5237-OO-004 (gerçek bağlantısı olmayan kişi → aslında dolandırıcılık; "nüfuz ticareti" diye öğretiyor). S-033'te B ve C şıkları birbirini ele veriyor. Sorusu olmayan 18 madde: 3, 5, 38, 41, 249, 251, 253, 254, 258, 259, 261, 262, 264, 266, 319, 320, 322, 325.
+- **Görseller 6,5/10** (54'ün 13'ünde kusur):
+  - Hukuken yanlış/yanıltıcı: **m.22** "bilinçli taksir: neticeyi öngördü ama KABUL ETTİ" (kabul = olası kast; doğrusu "istemedi"); **özet 37-44** fikri içtimada "vücuda karşı suç daha hafif, mala karşı daha ağır" (m.44 kartının tersi); **ayırt 317-325** "317-320: savaşta daha ağır ceza" (yalnız 319'da var); **m.255** "nüfuzu varmış gibi" + "gerçek memur olaydan habersiz"; **m.320** "Türkiye'ye karşı" (kanunda yok); m.252 "görevin kötüye kullanılması" rüşvetin unsuru gibi; zimmet kartları "devlet malı".
+  - Yazım hatası: m.265 "YAPTIRBAM", m.264 "OTOİTESİNİ", m.266 "KULLANİR", m.325 "KULLANİR", m.260 "VATANDAAS ZAKRARDA / KAMU ZAKRARDA", ayırt 35-36 "IRADEN".
+  - Sakıncalı simge: **m.323 düşman figüründe gamalı haç**, **m.325 Alman imparatorluk savaş bayrağı + demir haç** (gerçek bir ülkeyi düşman gösteriyor; mağaza/itibar riski).
+  - Eksik: m.250 kartında ceza rakamı yok; m.254 yalnız 1. fıkra; m.323'te 10-20 yıl kademesi yok.
+- Çalışma dosyaları oturum geçici klasöründe (tck_dok.py, tck_kiyas.py, tck_soru_kontrol.py); yeniden üretilebilir.
