@@ -4212,4 +4212,5 @@ Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altınd
 - **Ölçüldü:** her görevli kuru çalıştırıldı; görev elle tetiklendi (sonuç 0), ilk "Ekip raporu" başkana gitti (Telegram isteği başarılı döndü; başkanın ekranında görüldüğü ölçülmedi); müfettiş sahte arızayla denendi, yakaladı.
 - **İlk ölçümde çıkanlar:** iletisim@ kutusunda 6 bekleyen posta (7 Ağu telif ihtarı — Taktiklerle JSPS; 5 kullanıcı postası, en eskisi 29 Tem) + 24 Ağu'da 10 geri dönen posta; 1 cevap bekleyen destek talebi; 11 bakılmamış soru hatası; son 30 günde 1 cevapsız geri bildirim; site 8/8 açık, sertifika 18 gün; App Store 1.0.47 yayında; Play son bir haftada yorum yok; Kasım'da 1 yeni üyelik kaydı; Instagram 2.221 takipçi, son paylaşım 11 Eki (bağlantı kodundan hesaplandı); oyun yedeğinin GitHub bağlantısı yok.
 - **Erişim bekleyen görevliler:** Instagram sorumlusu (yorum/mesaj), Gmail memuru, reklam memuru, WhatsApp memuru.
-- **Açık:** bekleyen postalara cevap (taslak + başkan onayı); telif ihtarı için başkan kararı. Hiçbirine cevap gönderilmedi.
+- **Başkan (16 Kas):** Taktiklerle JSPS ile görüşülmüş, sorun yok; Ülkü Keleş ve Neşe halledilmiş → 4 posta kapatıldı.
+- **Açık:** Erdoğan Kartal ve Aygün Yılmaz postalarına cevap (taslak başkan onayında). Gönderilmedi.
