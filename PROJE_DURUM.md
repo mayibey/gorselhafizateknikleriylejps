@@ -4203,3 +4203,13 @@ Başkanın sorusu: "Her kartta anlatımlar Türkçe mi, süslü mü, sade mi, az
 
 - **Yöntem ve sınır:** Puanlar okuyarak verildi (tek okuyucu, tek geçiş); sayımlar betikle yapıldı. Ses kaydı dinlenmedi; seslendirmenin vurgu ve hızı ölçülmedi. Kullanıcıların anlatımı ne kadar dinlediği ölçülmedi. Öbür 24 kanunun anlatımı bu testten geçmedi.
 - **Durum:** Yalnız ölçüm; hiçbir ses metni değişmedi. Düzeltme ve öbür kanunlara geçiş başkan kararını bekliyor.
+
+## 16 Kas 2026 — Mevzu ekibi kuruldu (kendi kendine çalışan görevliler; uygulama kodu DEĞİŞMEDİ)
+
+Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altında kuruldu (kadro: `KADRO.md`). Windows görevi 15 dakikada bir çalışır; görevliler yalnız okur, başkana botun özel mesajıyla haber verir.
+
+- **Görevde:** posta memuru, site bekçisi, mağaza memuru, destek memuru, muhasebeci, takvimci, yedekçi (hafıza notlarını da her gün yedekler), Instagram gözcüsü (girişsiz), müfettiş (ekibi ve sunucudaki eski görevlileri denetler).
+- **Ölçüldü:** her görevli kuru çalıştırıldı; görev elle tetiklendi (sonuç 0), ilk "Ekip raporu" başkana gitti (Telegram isteği başarılı döndü; başkanın ekranında görüldüğü ölçülmedi); müfettiş sahte arızayla denendi, yakaladı.
+- **İlk ölçümde çıkanlar:** iletisim@ kutusunda 6 bekleyen posta (7 Ağu telif ihtarı — Taktiklerle JSPS; 5 kullanıcı postası, en eskisi 29 Tem) + 24 Ağu'da 10 geri dönen posta; 1 cevap bekleyen destek talebi; 11 bakılmamış soru hatası; son 30 günde 1 cevapsız geri bildirim; site 8/8 açık, sertifika 18 gün; App Store 1.0.47 yayında; Play son bir haftada yorum yok; Kasım'da 1 yeni üyelik kaydı; Instagram 2.221 takipçi, son paylaşım 11 Eki (bağlantı kodundan hesaplandı); oyun yedeğinin GitHub bağlantısı yok.
+- **Erişim bekleyen görevliler:** Instagram sorumlusu (yorum/mesaj), Gmail memuru, reklam memuru, WhatsApp memuru.
+- **Açık:** bekleyen postalara cevap (taslak + başkan onayı); telif ihtarı için başkan kararı. Hiçbirine cevap gönderilmedi.
