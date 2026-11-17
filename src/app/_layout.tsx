@@ -46,7 +46,7 @@ import { senkronKaydet } from '@/lib/senkron';
 import { takipIzniVeMetaBaslat } from '@/lib/takip-izni';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
-import { UyelikProvider } from '@/lib/uyelik-context';
+import { UyelikProvider, useUyelik } from '@/lib/uyelik-context';
 
 // Fontlar yüklenene kadar splash açık kalsın (yanıp sönme/FOUT önlenir).
 void SplashScreen.preventAutoHideAsync();
@@ -262,6 +262,11 @@ function RootNavigator() {
   }, [kullanici?.id]);
   const segments = useSegments();
   const router = useRouter();
+  // TUR SONU ÖDEME EKRANI (17 Kas 2026, başkan; bayrak 'odeme-tur-sonu'): yeni hesap uygulama turunu
+  // bitirince ödeme ekranı BİR KEZ kendiliğinden açılır (ilk gün indirimi o an geçerli; kapatmak serbest).
+  // Yalnız turu ŞİMDİ bitiren hesapta tetiklenir → eski kullanıcı hiç görmez. Üyeliği olan görmez.
+  const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
+  const [turSonuOdeme, setTurSonuOdeme] = useState(false);
   // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
   // edilir. Girişsiz/offline durumda cihaz-yerel bayrak geçerli (fail-open). null = henüz okunmadı.
   const [tanitimTamam, setTanitimTamam] = useState<boolean | null>(null);
@@ -324,6 +329,17 @@ function RootNavigator() {
     else if (!eksik && onboardingDe) router.replace('/');
   }, [eksik, yukleniyor, tanitimTamam, segments, router]);
 
+  // TUR SONU ÖDEME EKRANI: tur bitti + bütün açılış kapıları (görev, sınav sonucu) geçildi + üyelik
+  // okundu → bayrak açıksa ve üyelik yoksa ödeme ekranını aç. Tek atımlık (durum hemen söndürülür).
+  useEffect(() => {
+    if (!turSonuOdeme || tanitimTamam !== true || eksik || yukleniyor || sonucSor || uyelikYukleniyor) return;
+    setTurSonuOdeme(false);
+    if (!kullanici || premium) return;
+    void kisiselOzellikAcikMi('odeme-tur-sonu').then((acik) => {
+      if (acik) setTimeout(() => router.push('/paywall'), 350);
+    });
+  }, [turSonuOdeme, tanitimTamam, eksik, yukleniyor, sonucSor, uyelikYukleniyor, kullanici, premium, router]);
+
   // Bildirime tıklayınca uygulama açılır. Bildirim bir HEDEF taşıyorsa (data.rota, örn.
   // '/paywall' — kampanya bildirimleri) oraya götürür; taşımıyorsa Karargah'a döner.
   // (22 Ağu 2026: eskiden hedef ne olursa olsun hep Karargah açılıyordu.)
@@ -362,6 +378,7 @@ function RootNavigator() {
           void tanitimTamamla(); // cihaz bayrağı
           void tanitimSunucuyaYaz(); // hesap bayrağı (girişliyse; değilse sessiz no-op)
           setTanitimTamam(true);
+          setTurSonuOdeme(true); // tur ŞİMDİ bitti → (bayrak açıksa) ödeme ekranı bir kez
         }}
       />
     );
