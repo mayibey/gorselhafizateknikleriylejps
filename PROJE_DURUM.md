@@ -4228,3 +4228,10 @@ Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altınd
 - ÖLÇÜM (uyelik_haklari, promo hariç, 17 Kas): ömür boyu 165, aylık 20, yıllık 8, yükseltme 1. 17 Eyl sonrası başlayanlar: ömür boyu 29, aylık 12, yıllık 3, yükseltme 1. (Biten haklar tablodan siliniyorsa aylık/yıllık eksik sayılır; ölçülmedi.)
 - Karşılaştırma: (3) öne çıkan paket = ömür boyu ("EN AVANTAJLI"), alımların çoğu o → UYUYOR. (5) indirim %20 / kodla %30 → sınırın içinde, UYUYOR. (2) ücretsiz deneme yok → geçerli değil. (1) ödeme ekranı ilk açılışta gösterilmiyor, yalnız kilitli içeriğe dokununca / eyleme bağlı hatırlatmada açılıyor → EKSİK. (4) ekranı satın almadan kapatana ikinci teklif yok → EKSİK.
 - Öneri (karar başkanda): (1) kayıt biter bitmez ödeme ekranını bir kez göster (ilk gün indirimi zaten var); (4) kapatana tek teklif olarak mevcut aylık paketi göster (yeni mağaza ürünü gerekmez, indirim oranı büyümez). İkisi de bayrakla, önce yalnız başkana.
+
+## 17 Kas 2026 — Tur sonu ödeme ekranı (başkan: "1 i yap sadece"; KOD YAZILDI, YAYINLANMADI)
+- Ne: yeni hesap uygulama turunu bitirince ödeme ekranı bir kez kendiliğinden açılır. Eski kullanıcı ve üyeliği olan görmez. Bayrak: odeme-tur-sonu (kimseye açık değil). Dosyalar: src/app/_layout.tsx, scripts/bayrak-denetle.mjs.
+- Ölçülen: npx tsc --noEmit 0 hata. Cihazda DENENMEDİ. OTA GÖNDERİLMEDİ.
+- Sıradaki: başkan onayıyla OTA (kod uykuda) → bayrak yalnız başkanın test hesabına → başkan yeni hesapla dener → "yay" gelirse uygulama_ayar.ozellik_herkes.
+- Not: bayrak denetimi isim-zorunlu ve kisisel-filigran için uyarı veriyor (bu işten önce de vardı, dokunulmadı).
+- Kapatana ikinci teklif (videonun 4. maddesi): başkan istemedi, yapılmadı.
