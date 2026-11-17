@@ -4214,3 +4214,10 @@ Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altınd
 - **Erişim bekleyen görevliler:** Instagram sorumlusu (yorum/mesaj), Gmail memuru, reklam memuru, WhatsApp memuru.
 - **Başkan (16 Kas):** Taktiklerle JSPS ile görüşülmüş, sorun yok; Ülkü Keleş ve Neşe halledilmiş → 4 posta kapatıldı.
 - **Gönderildi (16 Kas, başkan onayı):** Erdoğan Kartal ve Aygün Yılmaz postalarına iletisim@ adresinden cevap; sunucu ikisini de kabul etti, kopyalar giden kutusunda. Posta kutusunda bekleyen kalmadı. Kusur: metnin sonuna onaysız "Mevzu JSPS" imza satırı eklendi.
+
+## 17 Kas 2026 — Siteye YÖKDİL sayfaları eklendi (uygulama kodu DEĞİŞMEDİ)
+- YÖKDİL terminalinin isteği, başkan onayı ("Tamam yap"). Amaç: YÖKDİL'de Google ile girişi herkese açmak için Google'ın istediği adresler.
+- Eklenen: `docs/yokdil/` (index, gizlilik, sartlar — içerik YÖKDİL'e ait, aynen kopyalandı) + `docs/googleb6e2b6aa2aa7ae35.html` (YÖKDİL'in Google hesabı için Search Console doğrulaması — SİLME). Commit 09f2f91.
+- TUZAK: ilk yayında dört adres 404 döndü. Site yayın betiği (`.github/workflows/pages.yml`) yalnız İZİN LİSTESİNDEKİ dosyaları siteye çıkarıyor; yeni herkese açık sayfa/klasör listeye de yazılmalı. Liste güncellendi, commit 25ea71f.
+- ÖLÇÜM (canlı): /yokdil/, /yokdil/gizlilik.html, /yokdil/sartlar.html, /googleb6e2b6aa2aa7ae35.html = 200. Eski sayfalar (/, uygulama.html, sartlar.html, hesap-sil.html, sonuc/, eski doğrulama dosyası) = 200. İç notlar hâlâ kapalı (404).
+- Not: doğrulama dosyası o Google hesabına mevzujsps.com için Search Console sahipliği verir. Gizlilik metnindeki "Hesabımı sil" ve "reklam yok" ifadeleri YÖKDİL'e ait, burada ölçülmedi.
