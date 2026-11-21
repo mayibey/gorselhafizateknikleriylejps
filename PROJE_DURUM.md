@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 21 Kas — AYLIK→YILLIK GEÇİŞ V2 (bayrak `yillik-gecis-v2`, yalnız başkan + baskantest1)
+> - Kayıt: aylık alan 21 kişi, yıllığa geçen 0 → eski hata kimseyi etkilemedi.
+> - Android hatası: Google'a çelişen iki geçiş modu gidiyordu (eski yol 2=CHARGE_PRORATED_PRICE, yeni yol WITH_TIME_PRORATION; openiap 2.2.3 ikisini de iletiyor). V2'de ikisi de CHARGE_FULL_PRICE (5 / 'charge-full-price'): yıllık hemen tam alınır, kalan günler sona eklenir.
+> - iPhone: yıllık grupta üst basamak → Apple yükseltmesi; kullanılmayan aylık günleri karta iade, yıllık hemen başlar. Düğme üstüne açık açıklama (iPhone: iade; Android: ek gün).
+> - Commit 5341428 + 7409a85. tsc 0. OTA 1b33eee9 (1.0.47) + bba6717e (1.0.46). Bayrak ozellik_kisi'de 98be2c62 + 4fd74524 (ölçüldü).
+> - SIRADA: başkan TestFlight'ta deneme satın alma (aylık → yıllığa geç), ben Apple kayıtlarından ölçerim. Sonra "yay".
+> - Ömür boyu geçiş planı (fark ürünleri 479,99 / 1.169,99 iki mağaza; fark liste fiyatından, kodlu alımda fark kapalı) BAŞKAN ONAYINI BEKLİYOR.
+>
 > ### ▶ 2 Kas (2) — SINAV SONUCU HERKESE AÇIK + EVSAF DÜZENLEME
 > - Evsaf'a "JSPS sonucum: 59,59 puan · Düzenle" satırı (`components/profil/sinav-sonuc-satiri.tsx`): yalnız cevap verende görünür; dokununca aynı ekran önceki cevapla dolu açılır (Modal, `duzenleme` kipi, Kaydet/Vazgeç); kayıt RPC ile üstüne yazılır. `lib/sinav-sonuc.ts` → `sinavSonucumuGetir`, `puanYaz`.
 > - OTA b5db071c (1.0.47) + 92e9f204 (1.0.46). tsc 0.
