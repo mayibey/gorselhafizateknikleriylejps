@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 21 Kas — EKRAN TURU DÜZELTMELERİ (test ortamında bulundu, emülatörde ÖLÇÜLDÜ, OTA YOK)
+> - Alt menü: Android kaydırmalı gezinmede ev çizgisi "Mevzuat/Oyunlar" yazısına biniyordu → `(tabs)/_layout.tsx` kompakt çubuk alt boşluğun tamamını kullanıyor.
+> - Ödeme ekranı: "EN AVANTAJLI" etiketi iki satıra bölünüp "Ömür boyu"nun üstüne biniyordu → tek satır, sığmazsa küçülür (`paywall.tsx`).
+> - Sınav sonucu kapısı: hata satırı çıkınca "Gönder ve devam et" alt çubuğun altında kalıyordu → altta 120 kaydırma payı (`sinav-sonuc-sor.tsx`).
+> - tsc 0. Test APK'da üçü de görüntüyle doğrulandı (ekran-turu/d2, d3, d4). iPhone'da ölçülmedi. Yayın başkanın "yay"ını bekliyor.
+>
 > ### ▶ 21 Kas — AYLIK→YILLIK GEÇİŞ V2 (bayrak `yillik-gecis-v2`, yalnız başkan + baskantest1)
 > - Kayıt: aylık alan 21 kişi, yıllığa geçen 0 → eski hata kimseyi etkilemedi.
 > - Android hatası: Google'a çelişen iki geçiş modu gidiyordu (eski yol 2=CHARGE_PRORATED_PRICE, yeni yol WITH_TIME_PRORATION; openiap 2.2.3 ikisini de iletiyor). V2'de ikisi de CHARGE_FULL_PRICE (5 / 'charge-full-price'): yıllık hemen tam alınır, kalan günler sona eklenir.

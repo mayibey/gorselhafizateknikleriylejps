@@ -225,7 +225,9 @@ function Isaret({ secili }: { secili: boolean }) {
 
 const styles = StyleSheet.create({
   kok: { flex: 1, backgroundColor: Palette.kremZemin },
-  icerik: { padding: Spacing.four, paddingTop: Spacing.five, gap: Spacing.two, maxWidth: 520, width: '100%', alignSelf: 'center' },
+  // paddingBottom 21 Kas 2026: Android'de hata satırı çıkınca "Gönder ve devam et" alt çubuğun/klavyenin
+  // altında kalıyordu ve yukarı kaydırılamıyordu → altta kaydırma payı.
+  icerik: { padding: Spacing.four, paddingTop: Spacing.five, paddingBottom: 120, gap: Spacing.two, maxWidth: 520, width: '100%', alignSelf: 'center' },
   ust: { letterSpacing: 1.5 },
   aciklama: { marginTop: Spacing.two, marginBottom: Spacing.two, lineHeight: 22 },
   etiket: { marginTop: Spacing.three, letterSpacing: 1 },

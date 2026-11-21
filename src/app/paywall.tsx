@@ -806,7 +806,8 @@ function PlanButon({
       ]}>
       {vurgu ? (
         <View style={styles.planRozet}>
-          <AppText variant="etiket" color="lacivert" bold>
+          {/* 21 Kas 2026: dar kartta iki satıra bölünüp "Ömür boyu" başlığının üstüne biniyordu → tek satır, sığmazsa küçülür. */}
+          <AppText variant="etiket" color="lacivert" bold numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7}>
             EN AVANTAJLI
           </AppText>
         </View>
@@ -947,6 +948,9 @@ const styles = StyleSheet.create({
   planRozet: {
     position: 'absolute',
     top: -10,
+    left: 6,
+    right: 6,
+    alignItems: 'center',
     backgroundColor: Palette.altin,
     borderRadius: Radius.s,
     paddingHorizontal: Spacing.two,

@@ -194,10 +194,11 @@ export default function TabsLayout() {
               // tuşlarının ALTINA giriyor → dokunulamıyor. Test edenlerin hepsi kaydırmalı
               // gezinme kullandığı için fark edilmemişti (orada fark 9 birim, göze batmıyor).
               // ÇÖZÜM: boşluk büyükse (üç tuşlu) TAMAMINI kullan, küçükse kırpmaya devam et.
+              // 🔴 21 Kas 2026 (ekran turu, Android kaydırmalı gezinme): %55 kırpma ev
+              // çizgisini "Mevzuat/Oyunlar" yazılarının ÜSTÜNE bindiriyordu → her durumda
+              // alt boşluğun TAMAMI kullanılır.
               ...(kompakt
-                ? kenar.bottom > 24
-                  ? { height: KOMPAKT_H + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 3 }
-                  : { height: KOMPAKT_H + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
+                ? { height: KOMPAKT_H + Math.max(kenar.bottom, 6), paddingBottom: kenar.bottom, paddingTop: 3 }
                 : EKRAN_OLCEK > 1
                   ? { height: o(49) + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 4 } // tablet: büyüyen yazı kesilmesin
                   : null),
