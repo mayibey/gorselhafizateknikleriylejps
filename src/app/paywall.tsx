@@ -142,10 +142,14 @@ function PaywallIcerik() {
   // → parası alınmış müşteri erişim alamıyordu. Aylık abonenin fark ürününde hakkı yok: TAM fiyat.
   const sahipYillik = !!aboneHak && aboneHak.urun === URUN_YILLIK;
   const sahipAylik = !!aboneHak && !sahipYillik;
-  // iOS'ta ayrı "farkla yükseltme" ürünü YOK (URUN_YUKSELTME oluşturulmadı) → yıllık sahibi ömür boyuna
-  // TAM fiyatla geçer. Abonelik yönetimi de platforma göre (Apple / Google).
+  // iOS FARK ÜRÜNÜ (21 Kas 2026, başkan): App Store'da URUN_YUKSELTME açıldı (479,99, Apple onayında).
+  // Bayrak 'ios-yukseltme' AÇIK değilse eski davranış: iOS yıllık sahibi TAM fiyatla geçer. Bayrak,
+  // ürün Apple'dan onay ALDIKTAN sonra açılır — onaysız SKU'yu çekmek StoreKit'i bozuyordu (2.1 reddi).
+  // Abonelik yönetimi de platforma göre (Apple / Google).
   const ios = Platform.OS === 'ios';
-  const yukseltUrun = ios || sahipAylik ? URUN_OMURBOYU : URUN_YUKSELTME;
+  const iosYukseltmeAcik = useKisiselOzellik('ios-yukseltme');
+  const farkliYukseltme = sahipYillik && (!ios || iosYukseltmeAcik);
+  const yukseltUrun = farkliYukseltme ? URUN_YUKSELTME : URUN_OMURBOYU;
   const ABONELIK_YONETIM = ios
     ? 'https://apps.apple.com/account/subscriptions'
     : PLAY_ABONELIKLER;
@@ -182,10 +186,12 @@ function PaywallIcerik() {
         ? [indirim.omurboyu_urun]
         : [];
     const tekSeferlikSkus =
-      Platform.OS === 'ios' ? [URUN_OMURBOYU, ...iosIndirimliSku] : TEK_SEFERLIK_URUNLERI;
+      Platform.OS === 'ios'
+        ? [URUN_OMURBOYU, ...iosIndirimliSku, ...(iosYukseltmeAcik ? [URUN_YUKSELTME] : [])]
+        : TEK_SEFERLIK_URUNLERI;
     void fetchProducts({ skus: tekSeferlikSkus, type: 'in-app' });
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
-  }, [connected, indirim?.omurboyu_urun]);
+  }, [connected, indirim?.omurboyu_urun, iosYukseltmeAcik]);
 
   // Satın alma başarılı → ÖNCE acknowledge (iade önle) → sunucuda doğrula → hakları yenile.
   async function tamamla(purchase: Purchase) {
@@ -545,7 +551,7 @@ function PaywallIcerik() {
             <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
               {sahipAylik
                 ? 'Aylık planın aktif. İstersen yıllığa ya da ömür boyu tam erişime geçebilirsin.'
-                : ios
+                : !farkliYukseltme
                   ? 'Yıllık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
                   : 'Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.'}
             </AppText>
@@ -578,9 +584,9 @@ function PaywallIcerik() {
               </>
             ) : null}
             <PlanButon
-              baslik={ios || sahipAylik ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
+              baslik={farkliYukseltme ? 'Ömür boyuna yükselt' : 'Ömür boyuna geç'}
               fiyat={fiyat(yukseltUrun)}
-              altYazi={ios || sahipAylik ? 'tek seferlik — tam erişim' : 'tek seferlik fark ödemesi'}
+              altYazi={farkliYukseltme ? 'tek seferlik fark ödemesi' : 'tek seferlik — tam erişim'}
               vurgu
               mesgul={islemUrun === yukseltUrun}
               pasif={!connected || (!!islemUrun && islemUrun !== yukseltUrun)}
