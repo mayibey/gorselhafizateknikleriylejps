@@ -338,19 +338,19 @@ function PaywallIcerik() {
               skus: [urun],
               subscriptionOffers: token ? [{ sku: urun, offerToken: token }] : [],
               obfuscatedAccountId: hesapId,
-              // WITH_TIME_PRORATION: aylıktan kalan süre yıllığa gün olarak aktarılır, kullanıcı
-              // yeni dönemin ücretini hemen öder. Çift abonelik OLUŞMAZ.
-              // İKİ BİÇİM BİRDEN gönderiliyor (ikisi de aynı anlama geliyor): sayısal
-              // `replacementMode` kullanımdan kalkmış ama hâlâ iletiliyor, yeni
-              // `subscriptionProductReplacementParams` ise güncel yol. Hangisini okursa okusun
-              // sonuç aynı — kütüphane sürümü değişirse sessizce çift abonelik doğmasın.
+              // CHARGE_FULL_PRICE (21 Kas 2026, başkan onayı): yıllığın tamamı hemen alınır,
+              // aylıktan kalan günler yıllığın sonuna eklenir. Çift abonelik OLUŞMAZ.
+              // İKİ BİÇİM BİRDEN gönderiliyor ve İKİSİ DE AYNI MOD olmalı: sayısal
+              // `replacementMode` (eski yol, 5 = CHARGE_FULL_PRICE) + yeni
+              // `subscriptionProductReplacementParams`. Kütüphane ikisini de Google'a iletiyor.
+              // (Önceki sürümde 2 = CHARGE_PRORATED_PRICE ile 'with-time-proration' çelişiyordu.)
               ...(degistirilecekJeton
                 ? {
                     purchaseToken: degistirilecekJeton,
-                    replacementMode: 2,
+                    replacementMode: 5,
                     subscriptionProductReplacementParams: {
                       oldProductId: URUN_AYLIK,
-                      replacementMode: 'with-time-proration' as const,
+                      replacementMode: 'charge-full-price' as const,
                     },
                   }
                 : {}),
@@ -547,14 +547,26 @@ function PaywallIcerik() {
             {/* Aylık aboneye YILLIĞA geçiş de sunulur (22 Eyl 2026'da eklendi — daha önce aylık
                 abonenin tek çıkışı aboneliği iptal edip süresinin dolmasını beklemekti). */}
             {sahipAylik ? (
+              <>
+              <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
+                {/* 21 Kas 2026 başkan: "açık bir şekilde bilsin bir kısmının geri iade edileceği" */}
+                {ios
+                  ? 'Yıllığa geçince yıllık ücretin tamamı alınır. Aylık planında kullanmadığın günlerin ücreti Apple tarafından kartına iade edilir. Yıllık planın hemen başlar.'
+                  : 'Yıllığa geçince yıllık ücretin tamamı alınır. Aylık planında kullanmadığın günler yıllığın sonuna eklenir, hiçbir günün boşa gitmez.'}
+              </AppText>
               <PlanButon
                 baslik="Yıllığa geç"
                 fiyat={fiyat(URUN_YILLIK)}
-                altYazi="kalan süren yıllığa aktarılır"
+                altYazi={
+                  ios
+                    ? 'aylığın kullanılmayan günleri iade edilir'
+                    : 'aylıktan kalan günlerin yıllığa eklenir'
+                }
                 mesgul={islemUrun === URUN_YILLIK}
                 pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
                 onPress={() => void yilligaGec()}
               />
+              </>
             ) : null}
             <PlanButon
               baslik={ios || sahipAylik ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
