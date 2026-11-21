@@ -87,6 +87,9 @@ function WebNot() {
 function PaywallIcerik() {
   // GECE KARARLARI S2+S3 (bayraklı): taç → kalkan-yıldız; saniyeli geri sayım yasak.
   const sakinSatis = useKisiselOzellik('talim-mevzuata');
+  // AYLIK→YILLIK GEÇİŞ V2 (21 Kas 2026, başkan; bayrak 'yillik-gecis-v2'): Android'de tek geçiş
+  // modu (CHARGE_FULL_PRICE) + düğme üstünde iade/ek gün açıklaması. Kapalıyken eski davranış.
+  const yeniGecis = useKisiselOzellik('yillik-gecis-v2');
   const router = useRouter();
   const { hazir, kullanici } = useAuth();
   const { aktifHaklar, cihazKilit, yenile } = useUyelik();
@@ -347,10 +350,12 @@ function PaywallIcerik() {
               ...(degistirilecekJeton
                 ? {
                     purchaseToken: degistirilecekJeton,
-                    replacementMode: 5,
+                    replacementMode: yeniGecis ? 5 : 2,
                     subscriptionProductReplacementParams: {
                       oldProductId: URUN_AYLIK,
-                      replacementMode: 'charge-full-price' as const,
+                      replacementMode: yeniGecis
+                        ? ('charge-full-price' as const)
+                        : ('with-time-proration' as const),
                     },
                   }
                 : {}),
@@ -548,17 +553,21 @@ function PaywallIcerik() {
                 abonenin tek çıkışı aboneliği iptal edip süresinin dolmasını beklemekti). */}
             {sahipAylik ? (
               <>
+              {yeniGecis ? (
               <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
                 {/* 21 Kas 2026 başkan: "açık bir şekilde bilsin bir kısmının geri iade edileceği" */}
                 {ios
                   ? 'Yıllığa geçince yıllık ücretin tamamı alınır. Aylık planında kullanmadığın günlerin ücreti Apple tarafından kartına iade edilir. Yıllık planın hemen başlar.'
                   : 'Yıllığa geçince yıllık ücretin tamamı alınır. Aylık planında kullanmadığın günler yıllığın sonuna eklenir, hiçbir günün boşa gitmez.'}
               </AppText>
+              ) : null}
               <PlanButon
                 baslik="Yıllığa geç"
                 fiyat={fiyat(URUN_YILLIK)}
                 altYazi={
-                  ios
+                  !yeniGecis
+                    ? 'kalan süren yıllığa aktarılır'
+                    : ios
                     ? 'aylığın kullanılmayan günleri iade edilir'
                     : 'aylıktan kalan günlerin yıllığa eklenir'
                 }

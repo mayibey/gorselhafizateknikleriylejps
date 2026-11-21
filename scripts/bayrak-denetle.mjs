@@ -16,7 +16,8 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
-  'odeme-tur-sonu': 'TUR SONU ÖDEME EKRANI (17 Kas 2026, başkan) — yeni hesap uygulama turunu bitirince ödeme ekranı bir kez kendiliğinden açılır. ÖNCE BAŞKAN DENEYECEK; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
+  'yillik-gecis-v2': 'AYLIK→YILLIK GEÇİŞ V2 (21 Kas 2026, başkan) — Android tek geçiş modu (tam ücret + kalan gün eklenir) ve düğme üstünde iade açıklaması. ÖNCE BAŞKAN DENEYECEK (TestFlight deneme satın alma); "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
+  'odeme-tur-sonu':'TUR SONU ÖDEME EKRANI (17 Kas 2026, başkan) — yeni hesap uygulama turunu bitirince ödeme ekranı bir kez kendiliğinden açılır. ÖNCE BAŞKAN DENEYECEK; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
   'indirim-hatirlat-v2': 'İNDİRİM HATIRLATMA V2 (11 Kas 2026, başkan) — uygulamada bir şey yapınca (çalışma/kart/oyun/deneme) Karargah dönüşünde çıkar; oturumda 1, arada ≥30 dk; "Bir daha gösterme". 11 Kas 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes).',
   'sinav-sonuc-sor': 'SINAV SONUCU KAPISI (2 Kas 2026, başkan) — açılışta 10 Ekim JSPS puanını sorar. + Evsaf "JSPS sonucum · Düzenle" satırı. 2 Kas 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes).',
   'oyun-brans-kapsam': 'OYUNLARDA BRANŞ KAPSAMI (30 Eki 2026, Serkan Demirci) — oyun soruları müşterek + kendi branşıyla süzülür. 30 Eki 2026 başkan "doğrula, herkese aç" dedi (Edge headless + TS testiyle doğrulandı), HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes). Sonraki build ile YAYIN_BAYRAKLARI listesine alınabilir.',
