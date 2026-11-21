@@ -42,6 +42,11 @@
 - Örnek: hesap oluşturma sayfasında bayağı eksik var. Emülatör turunun ekran görüntüleri burada kullanılacak (`D:\Mevzu\JSPS\ekran-turu\`).
 - Zamanla, gün geçtikçe ayrıntılı düşünülecek.
 
+## 7. Telegram kanalı geliştirme çalışmaları
+- Telegram kanalıyla ilgili geliştirme çalışmaları yapılacak.
+- Ayrıntısı başkanla konuşulup belirlenecek.
+
 ---
 ## Ekleme geçmişi
 - 21 Kas 2026 — liste açıldı (madde 1-6).
+- 21 Kas 2026 — madde 7 eklendi: Telegram kanalı geliştirme çalışmaları.
