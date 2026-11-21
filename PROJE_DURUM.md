@@ -8,7 +8,7 @@
 > - Alt menü: Android kaydırmalı gezinmede ev çizgisi "Mevzuat/Oyunlar" yazısına biniyordu → `(tabs)/_layout.tsx` kompakt çubuk alt boşluğun tamamını kullanıyor.
 > - Ödeme ekranı: "EN AVANTAJLI" etiketi iki satıra bölünüp "Ömür boyu"nun üstüne biniyordu → tek satır, sığmazsa küçülür (`paywall.tsx`).
 > - Sınav sonucu kapısı: hata satırı çıkınca "Gönder ve devam et" alt çubuğun altında kalıyordu → altta 120 kaydırma payı (`sinav-sonuc-sor.tsx`).
-> - tsc 0. Test APK'da üçü de görüntüyle doğrulandı (ekran-turu/d2, d3, d4). iPhone'da ölçülmedi. Yayın başkanın "yay"ını bekliyor.
+> - tsc 0. Test APK'da üçü de görüntüyle doğrulandı (ekran-turu/d2, d3, d4). iPhone'da ölçülmedi. Commit d4a4e20. Başkan "yay" dedi → HERKESE OTA: 1.0.47 grup 8bb8314e, 1.0.46 grup 438086cc (eski runtime'lara basılmadı).
 >
 > ### ▶ 21 Kas — AYLIK→YILLIK GEÇİŞ V2 (bayrak `yillik-gecis-v2`, yalnız başkan + baskantest1)
 > - Kayıt: aylık alan 21 kişi, yıllığa geçen 0 → eski hata kimseyi etkilemedi.
