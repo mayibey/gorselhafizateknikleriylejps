@@ -66,3 +66,5 @@ satin-alanlar.csv
 scratchpad/chrome-*/
 scratchpad/**/User Data/
 gemini_calisma/
+# proje haritası çıktısı (npm run harita:uret ile yeniden üretilir)
+harita/
