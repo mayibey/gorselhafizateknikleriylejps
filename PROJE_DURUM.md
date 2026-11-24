@@ -4293,6 +4293,10 @@ Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altınd
 - Not: bayrak denetimi isim-zorunlu ve kisisel-filigran için uyarı veriyor (bu işten önce de vardı, dokunulmadı).
 - Kapatana ikinci teklif (videonun 4. maddesi): başkan istemedi, yapılmadı.
 
+## 24 Kas — İKİ SORU DÜZELTMESİ (başkan "tüm sorunları düzelt")
+- Düello 24-D-056 (Personel Yön. m.40): kök → "…Personel Yönetmeliği'ne göre, personele 657 sayılı Kanuna tabi kurumlarda aşağıdakilerden hangisi verilemez?" Şıklar aynı. Değişen: Fabrika 00_TUM_DUELLO_SORULAR.json/.md + 24_DUELLO.json, duello-sorulari.ts, genel-denemeler.ts. Üretici aynı metni çıkarıyor (ölçüldü). OTA GİTMEDİ — "yay" bekliyor.
+- Çengel 28. bölüm 2. soru (6458 m.4, cevap TABİİYETİ): ipucu → "6458 sayılı Kanun'a göre hiç kimse; ırkı, dini, hangi özelliği, belli bir toplumsal gruba mensubiyeti veya siyasi fikirleri yüzünden hayatı ya da hürriyeti tehlikeye girecek bir yere gönderilemez?" Sunucuya TASLAK (yalnız başkan) 20261124-1453; canlı 20261030-0944 ile tek fark bu (ölçüldü). Herkese: `node scripts/oyun-sunucuya-yukle.mjs --onayla`.
+
 ## 24 Kas — EVSAF ER MEYDANI ZAYIF MADDE → KART (bayrak `zayif-madde-kart`, yalnız başkan)
 - Sorun: Evsaf > Zayıf Mevziler > Oyunlar > ER MEYDANI satırına dokununca karta gitmiyordu; yalnız madde listesi olan uyarı kutusu açılıyordu.
 - Düzeltme (sicil.tsx OyunZayiflari): kanuna dokun → maddeler yerinde açılır (en çok 8); maddeye dokun → `/akis` o kart. Kartı olmayan madde "Madde X" diye görünür, dokunulmaz. Bayrak kapalıyken eski uyarı kutusu.
