@@ -25,11 +25,13 @@ import {
   type ErMeydaniSonuc,
   type LigSonuc,
   type OdaOyuncu,
+  cevapKaydet,
   dereceliDurumSorgu,
   dereceliSkor,
   ligEslesme,
   ligSonuc,
   odaDurum,
+  odaNabiz,
   odaSkor,
   sonucKaydet,
   zayifKanunEkle,
@@ -55,6 +57,8 @@ export default function ErMeydaniMacScreen() {
   // TEKRAR OYNA (29 Eki, Serkan Demirci): düğme süreyi/konuyu aktarmıyordu → 2. maç 15 sn + tüm
   // banka. Bayrak açıkken hızlı eşleşmeyle aynı: 45 sn + aynı konular. Önce yalnız başkanda.
   const tekrarAyarli = useKisiselOzellik('er-tekrar-45');
+  // 24 Kas 2026: oda nabzı (kapatan = ayrıldı) + soru kaydı. Önce başkan, 'yay' ile herkese (ozellik_herkes).
+  const odaNabizAcik = useKisiselOzellik('oda-nabiz');
   const params = useLocalSearchParams<{
     seed?: string;
     mod?: string;
@@ -205,6 +209,13 @@ export default function ErMeydaniMacScreen() {
     if (yanlisMadde.length) {
       void zayifMaddeEkle(yanlisMadde.map((x) => x.kanun), yanlisMadde.map((x) => x.madde));
     }
+    // Soru kaydı: hangi sorular geldi, ne işaretlendi (yönetim incelemesi).
+    if (odaNabizAcik) void cevapKaydet(
+      dereceliMod ? 'dereceli' : odaMod ? 'oda' : ligMod ? 'lig' : mod,
+      odaMod && odaId ? odaId : null,
+      seed,
+      benAdimlar.map((ad, i) => ({ s: sorular[i]?.id ?? '', k: sorular[i]?.kanun ?? 0, i: ad.secilen ?? null, d: ad.dogru })),
+    );
     const yaz = dereceliMod
       ? dereceliSkor(benim).then((d) => {
           if (!iptal && d) setDereceliSonuc(d); // 'bitti' ise ELO hazır; değilse poll bekler
@@ -275,6 +286,16 @@ export default function ErMeydaniMacScreen() {
       iptal = true;
     };
   }, [odaMod, odaId]);
+
+  // Oda modu: maç SÜRERKEN 10 sn'de bir "buradayım". Uygulamayı kapatan 45 sn sonra "ayrıldı" sayılır,
+  // diğerlerinin sonucu beklemeden çıkar (24 Kas 2026).
+  const oyunda = odaNabizAcik && odaMod && !sonucModu && faz !== 'bitti' && faz !== 'inceleme';
+  useEffect(() => {
+    if (!oyunda || !odaId) return;
+    void odaNabiz(odaId);
+    const t = setInterval(() => void odaNabiz(odaId), 10000);
+    return () => clearInterval(t);
+  }, [oyunda, odaId]);
 
   // Oda modu: maç bitince herkes skorlayana kadar poll → oda sıralaması.
   useEffect(() => {
@@ -387,6 +408,9 @@ export default function ErMeydaniMacScreen() {
                     <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={1}>
                       {o.rumuz}{o.ben ? ' (sen)' : ''}
                     </AppText>
+                    {o.ayrildi ? (
+                      <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>Ayrıldı</AppText>
+                    ) : null}
                     {kazanan ? <AppText variant="etiket" color={gece ? 'altinParlak' : 'altinMetin'} bold>👑 KAZANAN</AppText> : null}
                   </View>
                   <AppText variant="altBaslik" color={gece ? 'altinParlak' : 'altinMetin'} bold>{o.skor ?? 0}</AppText>

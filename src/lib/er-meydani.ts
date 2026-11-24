@@ -216,7 +216,7 @@ export type AcikOda = {
   created_at: string;
   benimki: boolean;
 };
-export type OdaOyuncu = { id: string; rumuz: string; skor: number | null; ben: boolean };
+export type OdaOyuncu = { id: string; rumuz: string; skor: number | null; ben: boolean; ayrildi?: boolean };
 export type KatilBilgi = {
   oda_id: string;
   seed: number;
@@ -346,6 +346,36 @@ export async function odaSkor(odaId: string, skor: number): Promise<OdaSkorSonuc
     return j.hata ? null : j;
   } catch {
     return null;
+  }
+}
+
+/** Oda maçı sırasında "buradayım" (10 sn'de bir). 45 sn susan oyuncu sunucuda "ayrıldı" sayılır. */
+export async function odaNabiz(odaId: string): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_oda_nabiz', { p_oda_id: odaId });
+  } catch {
+    /* sessiz */
+  }
+}
+
+/** Maçta gelen sorular + işaretlenen şık kaydı (yönetim incelemesi için; sessiz). */
+export async function cevapKaydet(
+  mod: string,
+  odaId: string | null,
+  seed: number,
+  cevaplar: { s: string; k: number; i: number | null; d: boolean }[],
+): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_cevap_kaydet', {
+      p_mod: mod,
+      p_oda_id: odaId,
+      p_seed: seed,
+      p_cevaplar: cevaplar,
+    });
+  } catch {
+    /* sessiz */
   }
 }
 
