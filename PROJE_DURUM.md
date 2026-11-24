@@ -4,6 +4,18 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 24 Kas — ER MEYDANI ODA: KAPATAN "AYRILDI" + SORU KAYDI (commit 802b412)
+> Olay: oda 4725'te 3 kişiden biri uygulamayı kapattı, sonuç 13 dk'lık zaman aşımına kadar çıkmadı; diğerleri
+> yeni oda (8379) açınca eski odadaki satırları silindi, oda "oynanıyor"da kaldı.
+> Sunucu (docs/v2/56, CANLI): maçta 10 sn'de bir nabız; 45 sn susan → 0 puan + ayrildi, kalanlar bitmişse oda hemen
+> biter. Nabız atmayan eski sürüme eski 13 dk kuralı. Deneme odasında 3 senaryo ölçüldü (kapatan/eski sürüm/aktif), geri alındı.
+> Soru kaydı: er_meydani_cevap_log (soru id + işaretlenen şık + doğru mu), yalnız yönetim okur. Eski odaların soruları
+> seed'den yeniden kurulabiliyor: scratchpad/_oda-sorular.mjs (kimin ne işaretlediği eskiden tutulmuyordu).
+> İstemci bayrak `oda-nabiz` (yalnız başkan, ozellik_kisi'ye eklendi). OTA 1.0.47 b383aab5 · 1.0.46 d4d0e7b8.
+> Başkan telefonunda ÖLÇÜLMEDİ. "yay" → uygulama_ayar.ozellik_herkes'e oda-nabiz ekle.
+> Soru 24-D-056 (Personel Yön. m.40 "ikinci görev"): cevap maddeye göre doğru ama kök "657'ye tabi kurumlarda" kaydını
+> ve m.40/2 istisnalarını atlıyor — düzeltme başkan kararında.
+>
 > ### ▶ 24 Kas — GÜNLÜK RAPOR: ŞAMPİYON HİTABI + YAĞIZ CEVABI
 > Er Meydanı haftalık şampiyon duyurusu (sunucu fonksiyonu er_meydani_haftalik_takdir) "Tebrikler kahraman!" diyordu →
 > başkan onayıyla "Tebrikler komutanım!" (canlıda ölçüldü). Fonksiyon artık depoda: supabase/sql/er-meydani-haftalik-takdir.sql.
