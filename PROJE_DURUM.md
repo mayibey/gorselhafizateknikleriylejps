@@ -8,6 +8,8 @@
 > Er Meydanı haftalık şampiyon duyurusu (sunucu fonksiyonu er_meydani_haftalik_takdir) "Tebrikler kahraman!" diyordu →
 > başkan onayıyla "Tebrikler komutanım!" (canlıda ölçüldü). Fonksiyon artık depoda: supabase/sql/er-meydani-haftalik-takdir.sql.
 > Yağız Alp'in 30 Eki mülakat sorusuna duyuru ile cevap gitti (id 30af98b8, metin birebir). Destek görevlisi: 0 cevapsız.
+> İLK GERÇEK iOS YÜKSELTME: 24 Kas 09:07 UTC Melike (talep 996f99d4) yıllık→ömür boyu aldı; satin_alma_log dogrulandi,
+> uyelik_haklari omurboyu bitis=null (ölçüldü). Talep kapatıldı.
 > Play satıcı beyanı: Console'da "Tacir", bekleyen iş yok. Site sertifikası 4 Ara biter, yenisi GitHub'da hazır → 1 Ara kontrol (takvimde).
 
 > ### ▶ 24 Kas — iPHONE YILLIK→ÖMÜR BOYU FARK ÜRÜNÜ HERKESE AÇIK
