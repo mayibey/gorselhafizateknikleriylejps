@@ -76,7 +76,7 @@ async function googleUrun(urun, token) {
   const tok = await playErisim();
   const u = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET}/purchases/products/${urun}/tokens/${encodeURIComponent(token)}`;
   const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}` } });
-  if (r.status === 410) return { durum: 'IPTAL', not: 'Google: satın alma iade/iptal (410)' };
+  if (r.status === 410) return { durum: 'BILINMIYOR', not: 'Google 410 (iade kanıtı değil, 24 Kas)' };
   if (!r.ok) return { durum: 'BILINMIYOR', not: `HTTP ${r.status}` };
   const j = await r.json();
   if (j.purchaseState === 1) return { durum: 'IPTAL', not: 'purchaseState=1 (iptal/iade)' };

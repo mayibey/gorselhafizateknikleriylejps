@@ -14,7 +14,7 @@
  * ⛔ DEĞİŞMEZ GÜVENLİK KURALI: ağ/kimlik/HTTP hatası ASLA silme sebebi değildir.
  *    YALNIZCA mağazanın NET cevabı silmeye yol açar:
  *      Apple  → signedTransactionInfo.revocationDate dolu
- *      Google → purchaseState=1 ya da HTTP 410
+ *      Google → purchaseState=1 ya da voidedpurchases listesi (HTTP 410 iade DEĞİL, 24 Kas)
  *    Diğer her şey "bilinmiyor" olarak loglanır, kayda DOKUNULMAZ. Yanlışlıkla ödeme yapmış
  *    kullanıcının erişimini kapatmak, iade alan birine bedava içerik vermekten daha kötüdür.
  *
@@ -181,7 +181,9 @@ async function googleUrunDurum(urun: string, token: string): Promise<Sonuc> {
   const tok = await googleToken();
   const u = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET_ANDROID}/purchases/products/${urun}/tokens/${encodeURIComponent(token)}`;
   const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}` } });
-  if (r.status === 410) return { durum: 'IPTAL', not: 'Google 410 (iade)' };
+  // 410 tek başına iade kanıtı DEĞİL (24 Kas 2026, abonelikte yanlış iade yazdı). Ömür boyu hakkı
+  // böyle bir belirsizlikle kapatma; gerçek iade voidedpurchases listesinden zaten yakalanır.
+  if (r.status === 410) return { durum: 'BILINMIYOR', not: 'Google 410 (iade kanıtı değil)' };
   if (!r.ok) return { durum: 'BILINMIYOR', not: `HTTP ${r.status}` };
   const j = await r.json();
   if (j.purchaseState === 1) return { durum: 'IPTAL', not: 'purchaseState=1' };
@@ -194,7 +196,10 @@ async function googleAbonelikDurum(token: string): Promise<Sonuc> {
   const tok = await googleToken();
   const u = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET_ANDROID}/purchases/subscriptionsv2/tokens/${encodeURIComponent(token)}`;
   const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}` } });
-  if (r.status === 410) return { durum: 'IPTAL', not: 'Google 410 (iade)' };
+  // 410 ABONELİKTE İADE DEĞİL (24 Kas 2026): Google, süresi 60 günden önce dolmuş aboneliği artık
+  // sorgulatmaz ve 410 döner. Bu "iade" sanılınca süresi çoktan bitmiş 3 aylık abone (bitiş 24 Eyl)
+  // iade_kaydi'na yazıldı → haksız yere indirim kapısına takıldı. Gerçek iade voidedpurchases'ta görünür.
+  if (r.status === 410) return { durum: 'SURE_DOLDU', not: 'Google 410 (süresi çoktan doldu)' };
   if (!r.ok) return { durum: 'BILINMIYOR', not: `HTTP ${r.status}` };
   const j = await r.json();
   const durum = String(j.subscriptionState ?? '');
@@ -266,7 +271,7 @@ Deno.serve(async (req) => {
   const db = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SERVICE_ROLE_KEY')!);
   const { data, error } = await db
     .from('uyelik_haklari')
-    .select('user_id, urun, tip, platform, satin_alma_token')
+    .select('user_id, urun, tip, platform, satin_alma_token, bitis')
     .not('satin_alma_token', 'is', null)
     .in('platform', ['ios', 'android']);
   if (error) {
@@ -298,7 +303,14 @@ Deno.serve(async (req) => {
       const appleJeton = /^[0-9]{8,25}$/.test(String(s.satin_alma_token));
       const apple = s.platform === 'ios' || appleJeton;
       // Apple ABONELİĞİNDE tek işleme bakmak YANLIŞ (yukarıdaki açıklama) → abonelik durumu ucu.
-      if (apple && s.tip === 'abonelik') sonuc = await appleAbonelikDurum(s.satin_alma_token as string);
+      // BİTMİŞ ABONELİĞİ TEKRAR SORMA (24 Kas 2026, başkan: "üyeliği biten adamı niye bi daha
+      // sorguluyoz"). Kayıtlı bitişi 7 günden eskiyse mağazaya sorulmaz (iki platform da). Erişim
+      // zaten bitişe bakar; bu satır kimsenin hakkını kapatmaz. Android iadesi yine Google iade
+      // listesinden, Apple iadesi anlık mağaza bildiriminden yakalanır.
+      const bitisEski = s.tip === 'abonelik' && !!s.bitis && new Date(s.bitis as string).getTime() < Date.now() - 7 * 86400000;
+      if (bitisEski && !iadeJetonlari.has(String(s.satin_alma_token)))
+        sonuc = { durum: 'SURE_DOLDU', not: 'kayıtlı bitiş geçmiş, mağazaya sorulmadı' };
+      else if (apple && s.tip === 'abonelik') sonuc = await appleAbonelikDurum(s.satin_alma_token as string);
       else if (apple) sonuc = await appleDurum(s.satin_alma_token as string);
       else if (iadeJetonlari.has(String(s.satin_alma_token))) sonuc = { durum: 'IPTAL', not: 'Google iade listesinde' };
       else if (s.tip === 'abonelik') sonuc = await googleAbonelikDurum(s.satin_alma_token as string);

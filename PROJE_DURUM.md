@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 24 Kas — DENETÇİ "410 = İADE" HATASI DÜZELTİLDİ
+> 24 Kas 03:30 gece denetimi süresi 24 Eyl'de bitmiş 3 aylık aboneyi (Metehan Yıldız, ilkay, Arif Korkmaz) "Google 410 (iade)" diye
+> iade_kaydi'na yazdı → indirim kapısına haksız takıldılar. 410 = süre 60 günden eski, iade DEĞİL. Düzeltme: abonelik 410 → SURE_DOLDU,
+> ürün 410 → BILINMIYOR (dokunma); bitişi 7 günden eski abonelik artık mağazaya sorulmuyor (iki platform). 3 yanlış iade kaydı silindi
+> (kalan 4 gerçek). Canlıya yayınlandı; kuru ölçüm: GECERLI 177, SURE_DOLDU 10, IPTAL 0. Yerel betik scripts/uyelik-denetle.mjs de düzeltildi.
+>
 > ### ▶ 23 Kas — 11 SORU HATA BİLDİRİMİ KAPATILDI
 > Özge'nin 10 "İlgili kartı çalış alakasız" bildirimi → duzeltildi (e7d2e97, 24 Eki herkese açık). 5237-S-019 (nitelikli yağma,
 > mesajsız) → incelendi-dogru. Başkan kararı: Özge'ye MESAJ GÖNDERİLMEDİ. 3713 m.22 kartı artık var; cihazda denenmedi. 'yeni' bildirim: 0.
