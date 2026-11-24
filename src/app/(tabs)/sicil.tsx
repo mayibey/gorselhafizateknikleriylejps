@@ -711,17 +711,26 @@ function oyunKaynagindanKart(ref: string, cards: CardWithLaw[]): CardWithLaw | n
   return ids.length > 0 ? (havuz.find((c) => c.id === ids[0]) ?? null) : null;
 }
 
+type ZayifMaddeSatir = { madde: string; yanlis: number; kart: CardWithLaw | null };
+
 export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId: number) => void }) {
   const [liste, setListe] = useState<ZayifKanunSatir[] | null>(null);
   // Oyun Merkezi defteri (mevzu_zayif_oyun: künye → yanlış sayısı) + kart eşleşmesi.
   const [merkez, setMerkez] = useState<{ ref: string; yanlis: number; kart: CardWithLaw | null }[]>([]);
   const [hepsi, setHepsi] = useState(false);
+  // 24 Kas: Er Meydanı kanununa dokununca maddeler yerinde açılır, maddeye dokununca kart açılır
+  // (eskiden yalnız uyarı kutusunda liste vardı, karta gitmiyordu). Önce kişiye özel bayrak.
+  const maddeKartAcik = useKisiselOzellik('zayif-madde-kart');
+  const [kartlar, setKartlar] = useState<CardWithLaw[]>([]);
+  const [acikKanun, setAcikKanun] = useState<number | null>(null);
+  const [acikMaddeler, setAcikMaddeler] = useState<ZayifMaddeSatir[] | null>(null);
   const yukle = useCallback(() => {
     void erMeydaniZayifKanunlar()
       .then(setListe)
       .catch(() => setListe([]));
     void Promise.all([oyunKaydiYukle(), getAllCards()])
       .then(([kayit, cards]) => {
+        setKartlar(cards);
         const ham = kayit['mevzu_zayif_oyun'];
         if (!ham) {
           setMerkez([]);
@@ -752,6 +761,29 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
         Oyunlarda henüz zorlandığın konu yok — oynadıkça yanlışların burada toplanır.
       </AppText>
     );
+  }
+  function kanunaDokun(kanun: number) {
+    if (!maddeKartAcik) {
+      detayGoster(kanun);
+      return;
+    }
+    if (acikKanun === kanun) {
+      setAcikKanun(null);
+      return;
+    }
+    setAcikKanun(kanun);
+    setAcikMaddeler(null);
+    const havuz = kartlar.filter((c) => c.law_id === kanun);
+    void erMeydaniZayifMaddeler(kanun)
+      .then((maddeler) =>
+        setAcikMaddeler(
+          maddeler.slice(0, 8).map((m) => {
+            const ids = eslesenKartIdleri(`m.${m.madde}`, havuz);
+            return { ...m, kart: ids.length > 0 ? (havuz.find((c) => c.id === ids[0]) ?? null) : null };
+          }),
+        ),
+      )
+      .catch(() => setAcikMaddeler([]));
   }
   function detayGoster(kanun: number) {
     void erMeydaniZayifMaddeler(kanun)
@@ -812,20 +844,58 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
             Maçlarda en çok bu konularda yanlış yaptın (dokun → maddeler):
           </AppText>
           {(hepsi ? liste : liste.slice(0, 6)).map((z) => (
-            <Pressable
-              key={z.kanun}
-              onPress={() => detayGoster(z.kanun)}
-              style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
-              accessibilityRole="button">
-              <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinParlak} />
-              <AppText variant="kucuk" bold color="altinParlak" style={styles.zayifAd} numberOfLines={1}>
-                {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
-              </AppText>
-              <AppText variant="etiket" bold color="kartMetinIkincil">
-                ×{z.yanlis}
-              </AppText>
-              <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
-            </Pressable>
+            <View key={z.kanun}>
+              <Pressable
+                onPress={() => kanunaDokun(z.kanun)}
+                style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+                accessibilityRole="button">
+                <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinParlak} />
+                <AppText variant="kucuk" bold color="altinParlak" style={styles.zayifAd} numberOfLines={1}>
+                  {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
+                </AppText>
+                <AppText variant="etiket" bold color="kartMetinIkincil">
+                  ×{z.yanlis}
+                </AppText>
+                <MaterialCommunityIcons
+                  name={maddeKartAcik && acikKanun === z.kanun ? 'chevron-down' : 'chevron-right'}
+                  size={18}
+                  color={Palette.kartMetinIkincil}
+                />
+              </Pressable>
+              {maddeKartAcik && acikKanun === z.kanun ? (
+                <View style={styles.zayifMaddeListe}>
+                  {acikMaddeler === null ? (
+                    <AppText variant="kucuk" color="kartMetinIkincil">
+                      Yükleniyor…
+                    </AppText>
+                  ) : acikMaddeler.length === 0 ? (
+                    <AppText variant="kucuk" color="kartMetinIkincil">
+                      Madde detayı yok (eski maçlar madde kaydetmiyordu).
+                    </AppText>
+                  ) : (
+                    acikMaddeler.map((m) => (
+                      <Pressable
+                        key={m.madde}
+                        disabled={!m.kart}
+                        onPress={() => m.kart && karttanCalis(m.kart.law_id, m.kart.id)}
+                        style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+                        accessibilityRole="button"
+                        accessibilityLabel="Bu maddeyi çalış">
+                        <AppText variant="kucuk" bold color="beyaz" style={styles.zayifAd} numberOfLines={1}>
+                          {m.kart ? maddeEtiket(m.kart.madde_no, m.kart.baslik) : `Madde ${m.madde}`}
+                        </AppText>
+                        <AppText variant="etiket" bold color="kartMetinIkincil">
+                          ×{m.yanlis}
+                        </AppText>
+                        {m.kart ? (
+                          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
+                        ) : null}
+                      </Pressable>
+                    ))
+                  )}
+                </View>
+              ) : null}
+            </View>
           ))}
           {liste.length > 6 ? (
             <Pressable
@@ -2208,6 +2278,11 @@ const styles = StyleSheet.create({
   },
   zayifAd: {
     flex: 1,
+  },
+  zayifMaddeListe: {
+    paddingLeft: Spacing.four,
+    paddingTop: Spacing.one,
+    gap: Spacing.one,
   },
   zayifRozet: {
     backgroundColor: Palette.kirmizi,

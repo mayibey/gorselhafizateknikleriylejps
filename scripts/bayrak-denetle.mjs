@@ -16,6 +16,7 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
+  'zayif-madde-kart': 'EVSAF ER MEYDANI ZAYIF MADDE -> KART (24 Kas 2026, başkan) — kanuna dokununca maddeler yerinde açılır, maddeye dokununca o kart açılır (eskiden yalnız uyarı kutusu vardı). ÖNCE BAŞKAN DENEYECEK; "yay" gelince ozellik_herkes dizisine eklenir.',
   'oda-nabiz': 'ODA NABZI + SORU KAYDI (24 Kas 2026, başkan) — oda maçında 10 snde bir "buradayım"; uygulamayı kapatan 45 sn sonra "ayrıldı" (0 puan), diğerlerinin sonucu hemen çıkar; her maçın soruları + işaretlenen şık er_meydani_cevap_log tablosuna yazılır. ÖNCE BAŞKAN DENEYECEK; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
   'yillik-gecis-v2': 'AYLIK→YILLIK GEÇİŞ V2 (21 Kas 2026, başkan) — Android tek geçiş modu (tam ücret + kalan gün eklenir) ve düğme üstünde iade açıklaması. ÖNCE BAŞKAN DENEYECEK (TestFlight deneme satın alma); "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
   'odeme-tur-sonu':'TUR SONU ÖDEME EKRANI (17 Kas 2026, başkan) — yeni hesap uygulama turunu bitirince ödeme ekranı bir kez kendiliğinden açılır. ÖNCE BAŞKAN DENEYECEK; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',

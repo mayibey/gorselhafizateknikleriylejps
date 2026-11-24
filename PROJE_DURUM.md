@@ -4292,3 +4292,10 @@ Başkan emri: "önce bi ekibi kur". Ekip `D:\Mevzu\ortak\karargah\ekip\` altınd
 - Sıradaki: başkan onayıyla OTA (kod uykuda) → bayrak yalnız başkanın test hesabına → başkan yeni hesapla dener → "yay" gelirse uygulama_ayar.ozellik_herkes.
 - Not: bayrak denetimi isim-zorunlu ve kisisel-filigran için uyarı veriyor (bu işten önce de vardı, dokunulmadı).
 - Kapatana ikinci teklif (videonun 4. maddesi): başkan istemedi, yapılmadı.
+
+## 24 Kas — EVSAF ER MEYDANI ZAYIF MADDE → KART (bayrak `zayif-madde-kart`, yalnız başkan)
+- Sorun: Evsaf > Zayıf Mevziler > Oyunlar > ER MEYDANI satırına dokununca karta gitmiyordu; yalnız madde listesi olan uyarı kutusu açılıyordu.
+- Düzeltme (sicil.tsx OyunZayiflari): kanuna dokun → maddeler yerinde açılır (en çok 8); maddeye dokun → `/akis` o kart. Kartı olmayan madde "Madde X" diye görünür, dokunulmaz. Bayrak kapalıyken eski uyarı kutusu.
+- Ölçüm: başkanın 81 zayıf maddesinin 69'u karta eşleşti; 12'sinin uygulamada kartı yok. Tüm kullanıcılarda 1555 kaydın 709'u eşleşiyor; 725'inin kanununun hiç kartı yok (branş kanunları), 121'inde o madde kartsız.
+- OTA: 1.0.47 grup 3ca8cbc5-a7a6-45a5-baf5-61e0fc0c79a5 · 1.0.46 grup 978c05bf-e400-4077-bc15-710bf07d7d68. Başkanın telefonunda ÖLÇÜLMEDİ.
+- "yay" gelince: `zayif-madde-kart` → uygulama_ayar.ozellik_herkes.
