@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 24 Kas — GÜNLÜK RAPOR: ŞAMPİYON HİTABI + YAĞIZ CEVABI
+> Er Meydanı haftalık şampiyon duyurusu (sunucu fonksiyonu er_meydani_haftalik_takdir) "Tebrikler kahraman!" diyordu →
+> başkan onayıyla "Tebrikler komutanım!" (canlıda ölçüldü). Fonksiyon artık depoda: supabase/sql/er-meydani-haftalik-takdir.sql.
+> Yağız Alp'in 30 Eki mülakat sorusuna duyuru ile cevap gitti (id 30af98b8, metin birebir). Destek görevlisi: 0 cevapsız.
+> Play satıcı beyanı: Console'da "Tacir", bekleyen iş yok. Site sertifikası 4 Ara biter, yenisi GitHub'da hazır → 1 Ara kontrol (takvimde).
+
 > ### ▶ 24 Kas — iPHONE YILLIK→ÖMÜR BOYU FARK ÜRÜNÜ HERKESE AÇIK
 > Apple musterek_omurboyu_yukseltme'yi onayladı (APPROVED, 175 bölge, TR 479,99 / gelir 322,99 — ölçüldü). Başkan "yay" → 'ios-yukseltme'
 > ozellik_herkes'e eklendi (ölçüldü), bayrak-denetle istisna listesinden çıkarıldı. Kod 1.0.47 OTA 8bb8314e'de. Gerçek satın alma ile cihazda
