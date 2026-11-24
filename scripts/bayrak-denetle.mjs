@@ -16,7 +16,6 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
-  'ios-yukseltme': 'iPHONE YILLIK→ÖMÜR BOYU FARK ÜRÜNÜ (21 Kas 2026, başkan) — App Store\'da musterek_omurboyu_yukseltme 479,99. Apple ürünü ONAYLAMADAN açma (onaysız SKU StoreKit\'i bozar, 2.1 reddi). Onay gelince önce başkana (ozellik_kisi), "yay" gelince uygulama_ayar.ozellik_herkes.',
   'yillik-gecis-v2': 'AYLIK→YILLIK GEÇİŞ V2 (21 Kas 2026, başkan) — Android tek geçiş modu (tam ücret + kalan gün eklenir) ve düğme üstünde iade açıklaması. ÖNCE BAŞKAN DENEYECEK (TestFlight deneme satın alma); "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
   'odeme-tur-sonu':'TUR SONU ÖDEME EKRANI (17 Kas 2026, başkan) — yeni hesap uygulama turunu bitirince ödeme ekranı bir kez kendiliğinden açılır. ÖNCE BAŞKAN DENEYECEK; "yay" gelince uygulama_ayar.ozellik_herkes dizisine eklenir.',
   'indirim-hatirlat-v2': 'İNDİRİM HATIRLATMA V2 (11 Kas 2026, başkan) — uygulamada bir şey yapınca (çalışma/kart/oyun/deneme) Karargah dönüşünde çıkar; oturumda 1, arada ≥30 dk; "Bir daha gösterme". 11 Kas 2026 başkan "yay" dedi, HERKESE AÇIK: sunucudan (uygulama_ayar.ozellik_herkes).',
