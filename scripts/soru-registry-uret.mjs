@@ -155,6 +155,26 @@ for (const { kok, map, ad } of KAYNAKLAR) {
   }
 }
 
+// KİMLİK ÇAKIŞMASI (25 Kas 2026): farklı kaynak klasörleri aynı soru_id'yi kullanabiliyor
+// (müşterek TCK 1 ↔ Jandarma TCK 67, Çevre 39 ↔ 143, 3269 73 ↔ 137, 3466 74 ↔ 138).
+// Uygulama kimlikten soruyu tek haritayla bulduğu için (sinav.ts idHarita) aynı kimlik
+// yanlış kanunun sorusunu getiriyordu. İkinci kanundaki kopya ön ek alır; başka çakışma
+// kalırsa üretim DURUR.
+const ID_ONEK = { 67: 'J', 143: 'B', 137: 'P', 138: 'P' };
+{
+  const sahip = new Map();
+  for (const l of Object.keys(registry).map(Number).sort((a, b) => a - b)) {
+    for (const q of registry[l]) {
+      if (sahip.has(q.id) && ID_ONEK[l]) q.id = ID_ONEK[l] + q.id;
+      if (sahip.has(q.id)) {
+        console.error(`KİMLİK ÇAKIŞMASI: ${q.id} law ${sahip.get(q.id)} ve law ${l} — ID_ONEK'e ekle.`);
+        process.exit(1);
+      }
+      sahip.set(q.id, l);
+    }
+  }
+}
+
 // law_id artan sırada yaz (okunaklı, deterministik çıktı).
 const siraliLaw = Object.keys(registry)
   .map(Number)
