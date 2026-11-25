@@ -11,7 +11,7 @@
 > 2 sorunun bir yanlış şıkkı netleştirildi (2019-12-S-028, 06-D-015). Kara listeye 3 soru: Y4713-S-014, 08-D-029, 17-D-018.
 > Ölçüldü: doğru cevabı değişen soru YOK; düşen yalnız kara listedeki 3; deneme kopyalarında 16 metin yamandı.
 > Branş denemelerinde kara listedeki soru kimlik olarak kalıyor, uygulama atlıyor (o denemeler 49 soru). tsc 0.
-> OTA YAPILMADI — "yay" bekliyor (önce başkana).
+> Başkan "yay" → HERKESE OTA: 1.0.47 grup 76e5a23a, 1.0.46 grup a1988679 (d6a1d2a 24-D-056 düzeltmesi de içinde). Cihazda ÖLÇÜLMEDİ.
 
 > ### ▶ 24 Kas — ER MEYDANI ODA: KAPATAN "AYRILDI" + SORU KAYDI (commit 802b412)
 > Olay: oda 4725'te 3 kişiden biri uygulamayı kapattı, sonuç 13 dk'lık zaman aşımına kadar çıkmadı; diğerleri
