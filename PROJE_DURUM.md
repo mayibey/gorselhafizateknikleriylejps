@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 25 Kas — SİTE SEO (ca6bde8, herkese açık "yay" ile)
+> mevzujsps.com'a "JSPS konuları" sayfaları eklendi: ana liste (müşterek) + 16 branş sayfası. Üreteç: `node scripts/site-konular-uret.mjs` (seed'den üretir; kanun değişince yeniden çalıştır).
+> robots.txt + sitemap.xml (24 adres) + ana sayfaya kanonik ve JSON-LD. Yeni herkese açık dosya pages.yml izin listesine eklenmeli (yoksa yayınlanmaz).
+> Canlıda ölçüldü: sayfalar 200, iç notlar 404. Search Console (mülk https://mevzujsps.com/): site haritası gönderildi, /jsps-konulari/ ve ana sayfa için tarama istendi.
+> Açık: birkaç gün sonra Search Console'da dizine giren sayfa sayısına bak.
+>
 > ### ▶ 25 Kas — SORU KÖKÜ TEMİZLİĞİ (191eb50 + bu commit)
 > Bütün kart + düello soruları tarandı (bozuk kök, madde artığı, konusu belli olmayan "boş kök").
 > 191eb50: temizleyici sıra sayısı noktasında künyeyi yarım bırakıyordu → 135 kök düzeldi.
