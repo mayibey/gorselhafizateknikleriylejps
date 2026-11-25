@@ -1,7 +1,7 @@
 // OTOMATİK ÜRETİLDİ — `npm run soru:uret`. law_id → deneme soru sayısı.
 // Boot'ta soru bankası yüklenmeden metadata için (bkz. lib/sinav.ts lazy bank).
 export const KART_SORU_SAYILARI: Record<number, number> = {
-  1: 45,
+  1: 46,
   2: 43,
   3: 22,
   4: 19,

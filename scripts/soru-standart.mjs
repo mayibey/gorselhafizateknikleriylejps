@@ -280,6 +280,8 @@ function kucukBasla(g) {
   const ilk = (g.split(/\s+/)[0] ?? '').replace(/[,.;:]$/, '');
   if (!/^[A-ZÇĞİÖŞÜ][a-zçğıöşü]{2,}$/.test(ilk)) return g; // "A", "(B)", "TCK" dokunulmaz
   if (OZEL_AD.has(ilk)) return g;
+  // Ekli hâller de özel addır: "Merkezi", "Devletin", "Bakanlığa", "Kanunun" (25 Kas).
+  if ([...OZEL_AD, 'Kanun', 'Yönetmelik', 'Mahalli', 'Mahallî'].some((a) => ilk.startsWith(a))) return g;
   return g.charAt(0).toLocaleLowerCase('tr') + g.slice(1);
 }
 
@@ -538,7 +540,13 @@ export function standartlastir(soru, kaynak, lawId) {
   // öncül listesi (I. / II.) bulunmamalı. Aksi hâlde sorunun ilk öncülü yeniyordu
   // ("…göre, tahsil edilir. II. Nafaka…" — başkan yakaladı, 23 Ağu).
   const giris = s.match(/^(.{0,150}?\bgöre)([,:]?)\s+/);
-  const girisTemiz = !!giris && !/\.\s/.test(giris[1]) && !/\bI+\.\s/.test(giris[1]);
+  // Sıra sayısı noktası ("4. maddesinin 1. fıkrasına göre") cümle sonu DEĞİLDİR (25 Kas: 32 kökte
+  // "Kanunda 1. fıkrasına göre" kırığı kalıyordu). Bu gevşetme YALNIZ giriş doğrudan madde/fıkra/
+  // bent atfıyla bitiyorsa geçerli; "…maddesindeki terör tanımına göre" gibi girişler korunur.
+  const girisTemiz = !!giris && !/\bI+\.\s/.test(giris[1]) && (
+    !/\.\s/.test(giris[1]) ||
+    (!/(?<!\d)\.\s/.test(giris[1]) && /^\d{3,4}\s*sayılı\s/.test(giris[1]) && !/Yönetmeli|Yönerge|Tebliğ/i.test(giris[1]) &&
+      /(?:madde|fıkra|bent|bend)[\p{L}]*\s+göre$/iu.test(giris[1])));
   if (giris && girisTemiz && MADDE.test(giris[1])) {
     const kalan = s.slice(giris[0].length);
     if (kalan.length >= 25) {
@@ -578,6 +586,10 @@ export function standartlastir(soru, kaynak, lawId) {
     .replace(/\s*['’](nin|nın|nun|nün|in|ın|un|ün)\s+\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
     .replace(/\s*(nin|nın|nun|nün)?\s*\b\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
     .replace(/\s*\b(?:geçici\s+|ek\s+)?madde\s?\d+(\/\d+)?\s*['’]?[a-zçğıöşü]*\s*/gi, ' ')
+    // Madde no sökülünce artakalan fıkra kırığı: "5326 sayılı Kanunda ikinci fıkrasına göre," (25 Kas).
+    // Künyeden sonra geliyorsa tümüyle düşer; künyenin kendisiyse "Kanun'a göre," olur.
+    .replace(/(göre,\s*)(?:\d{3,4}\s*sayılı\s+)?Kanunda\s+(?:\d+\.|birinci|ikinci|üçüncü|dördüncü|beşinci|altıncı|yedinci|sekizinci|dokuzuncu|onuncu)\s+fıkra(?:sı|sına|sında)?\s+(?:göre|uyarınca|gereğince),?\s*/gu, '$1')
+    .replace(/(?<![\p{L}])Kanunda\s+(?:\d+\.|birinci|ikinci|üçüncü|dördüncü|beşinci|altıncı|yedinci|sekizinci|dokuzuncu|onuncu)\s+fıkra(?:sı|sına|sında)?\s+(?:göre|uyarınca|gereğince),?\s*/gu, "Kanun'a göre, ")
     .replace(/\s{2,}/g, ' ')
     .replace(/\s+([,.;:?])/g, '$1')
     .trim();
