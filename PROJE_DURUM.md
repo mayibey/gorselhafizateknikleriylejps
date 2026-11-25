@@ -4,6 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 30 Ekim 2026 (Oyunlarda branş kapsamı — HERKESE AÇIK · Er Meydanı tekrar oyna 45 sn · Karargâh geri sayım yerine duyuru — bayraklı, önce başkan · Yeni PC + D diski Mevzu düzeni: proje yolu D:\Mevzu\JSPS\uygulama · İlgili kartı çalış çok kartlı maddede doğru kart · mevzujsps.com/sinavprovasi: rütbe+branşa göre prova, 5 tam deneme · 10 Ekim tahmin denemeleri Jandarma+MEBS · Mülga "ek süre" çıkmış sorusu işaretlendi · Kart madde metni denetimi + düzeltmesi · Resmî Yazışma eski yönetmelik metni düzeltmesi · Şifre sayfasına konu başlığı · Şifre SOL tek başına anlaşılırlık 2. tur 25/25 · Şifre sol kelime okunurluğu 25/25 · Şifre gece incelemesi 25/25 · Şifre mantık temizliği · Şifre yeniden yazımı 25/25 · bot dalkavukluk kilidi · Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 25 Kas — SORU KÖKÜ TEMİZLİĞİ (191eb50 + bu commit)
+> Bütün kart + düello soruları tarandı (bozuk kök, madde artığı, konusu belli olmayan "boş kök").
+> 191eb50: temizleyici sıra sayısı noktasında künyeyi yarım bırakıyordu → 135 kök düzeldi.
+> Bu commit: 72 soru kökü elle yeniden yazıldı (fabrika kaynak JSON'larında; yedek icerik-fabrikasi/_yedek_elle_*),
+> 2 sorunun bir yanlış şıkkı netleştirildi (2019-12-S-028, 06-D-015). Kara listeye 3 soru: Y4713-S-014, 08-D-029, 17-D-018.
+> Ölçüldü: doğru cevabı değişen soru YOK; düşen yalnız kara listedeki 3; deneme kopyalarında 16 metin yamandı.
+> Branş denemelerinde kara listedeki soru kimlik olarak kalıyor, uygulama atlıyor (o denemeler 49 soru). tsc 0.
+> OTA YAPILMADI — "yay" bekliyor (önce başkana).
+
 > ### ▶ 24 Kas — ER MEYDANI ODA: KAPATAN "AYRILDI" + SORU KAYDI (commit 802b412)
 > Olay: oda 4725'te 3 kişiden biri uygulamayı kapattı, sonuç 13 dk'lık zaman aşımına kadar çıkmadı; diğerleri
 > yeni oda (8379) açınca eski odadaki satırları silindi, oda "oynanıyor"da kaldı.

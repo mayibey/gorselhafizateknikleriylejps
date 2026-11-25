@@ -123,7 +123,7 @@ export const KART_SORU_SAYILARI: Record<number, number> = {
   120: 25,
   121: 39,
   122: 80,
-  123: 42,
+  123: 41,
   124: 81,
   125: 92,
   126: 28,

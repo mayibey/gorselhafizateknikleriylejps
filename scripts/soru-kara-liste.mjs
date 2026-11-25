@@ -6,6 +6,10 @@
 //
 // 17 Tem 2026 — başkan dönütü ("mülgadan soru sormuş, ne salakça"). İlk 7 soru:
 export const SORU_KARA_LISTE = new Set([
+  // 25 Kas 2026 — soru okuma: madde/fıkra NUMARASINI ezberleten, numara olmadan anlamsız kalan sorular.
+  'Y4713-S-014', // Yönetmeliğin 6. maddesinde hangi fıkra mülga edildi (fıkra numarası trivia)
+  '08-D-029',    // 6698 m.6'nın 2. fıkrası hakkında (mülga fıkra; numara bilmeden anlamsız)
+  '17-D-018',    // Yönetmelik 4982'nin kaçıncı maddesi uyarınca hazırlandı (madde no trivia)
   // 24 Eyl 2026 — başkan ("sınav formatında böyle soru yok"): başka kanunun MADDE NUMARASINI soruyor.
   '2803-S-015',  // jandarma adli görev suçlarında CMK'nın kaçıncı maddesinin 5. fıkrası uygulanır
   '657-S-006',   // 657 DMK m.4'te hangi bent MÜLGA edilmiştir (kalkmış bendi ezberletme)
